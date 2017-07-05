@@ -1,0 +1,2 @@
+# docs
+Sematext Documentation
