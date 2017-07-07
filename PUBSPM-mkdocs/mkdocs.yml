@@ -1,0 +1,34 @@
+site_name: PUBSPM
+pages:
+    - Home: index.md
+    - Coda Hale Metrics Reporter: Coda-Hale-Metrics-Reporter_9896040.md
+    - Custom Metrics: Custom-Metrics_5373970.md
+    - Database Operations: Database-Operations_48136285.md
+    - Events Integration: Events-Integration_22249482.md
+    - Integration:
+      - Alerts - HipChat Integration: Alerts---HipChat-Integration_34340871.md
+      - Alerts - PagerDuty Integration: Alerts---PagerDuty-Integration_34799627.md
+      - Alerts - Slack Integration: Alerts---Slack-Integration_35553295.md
+    - Network Map: Network-Map_44597258.md
+    - On Demand Profiling: On-Demand-Profiling_51904525.md
+    - On Premises Edition: On-Premises-Edition_25165889.md
+    - SPM API Reference: SPM-API-Reference_40009738.md
+    - SPM Client:
+      - Chef Recipe: Chef-Recipe_12943369.md
+      - SPM Monitor - Javaagent: SPM-Monitor---Javaagent_7340044.md
+      - SPM Monitor - Standalone: SPM-Monitor---Standalone_7766020.md
+      - SPM Monitor - Switching Modes: SPM-Monitor---Switching-Modes_7766040.md
+    - SPM FAQ: SPM-FAQ_6914085.md
+    - SPM for Docker: SPM-for-Docker_40992781.md
+    - SPM for Hadoop: SPM-for-Hadoop_8880133.md
+    - SPM for MongoDB: SPM-for-MongoDB_51609617.md
+    - SPM for Node.js: SPM-for-Node.js_37388345.md
+    - Tag Support: Tag-Support_44597266.md
+    - Transaction Tracing: Transaction-Tracing_35913843.md
+theme: material
+theme_dir: custom_theme
+repo_url: https://github.com/sematext/pubspm/
+edit_uri: edit/master/docs/
+google_analyticsX: ['UA-36723568-3', 'mkdocs.org']
+
+
