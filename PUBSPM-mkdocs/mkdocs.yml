@@ -27,8 +27,8 @@ pages:
     - Transaction Tracing: Transaction-Tracing_35913843.md
 theme: material
 theme_dir: custom_theme
-repo_url: https://github.com/sematext/pubspm/
-edit_uri: edit/master/docs/
+repo_url: https://github.com/sematext/docs/
+edit_uri: edit/master/PUBSPM-mkdocs/docs/
 google_analyticsX: ['UA-36723568-3', 'mkdocs.org']
 
 
