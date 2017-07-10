@@ -1,4 +1,5 @@
 pages:
+    - index.md
     - PUBLOGSENE:
       - Authorizing IPs for Syslog: PUBLOGSENE/Authorizing-IPs-for-Syslog_23855110.md
       - Index Events via Elasticsearch API: PUBLOGSENE/Index-Events-via-Elasticsearch-API_6520850.md
