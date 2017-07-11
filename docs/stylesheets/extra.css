@@ -21,7 +21,6 @@
         touch-action: manipulation;
         cursor: pointer;
         background-image: none;
-        border: 1px solid transparent;
         white-space: nowrap;
         font-size: 14px;
         line-height: 1.42857143;
@@ -33,7 +32,27 @@
     }
     
     .btn-warning {
-        background-color: #fe723c;
+      color: #fff;
+      background-color: #f0ad4e;
+      border-color: #eea236;
+    }
+    .btn-warning:focus,
+    .btn-warning.focus {
+      color: #fff;
+      background-color: #ec971f;
+      border-color: #985f0d;
+    }
+    .btn-warning:hover {
+      color: #fff;
+      background-color: #ec971f;
+      border-color: #d58512;
+    }
+    .btn-warning:active,
+    .btn-warning.active,
+    .open > .dropdown-toggle.btn-warning {
+      color: #fff;
+      background-color: #ec971f;
+      border-color: #d58512;
     }
 
     .btn-primary {
@@ -52,20 +71,6 @@
         color: #fff;
         background-color: #286090;
         border-color: #204d74
-    }
-
-    .btn-primary.btn-outline {
-        color: #fff;
-    }
-
-    .btn-outline {
-        background-color: transparent;
-        color: inherit;
-        transition: all .5s;
-    }
-
-    .btn-primary.btn-outline:hover{
-        color: #fff;
     }
 
     .md-header-nav__free_account .md-source, .md-header-nav__login .md-source {
