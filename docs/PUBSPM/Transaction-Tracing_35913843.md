@@ -1,23 +1,6 @@
-  - [What is Transaction
-    Tracing](#TransactionTracing-WhatisTransactionTracing)
-  - [Enable Tracing](#TransactionTracing-EnableTracing)
-  - [Supported Technologies](#TransactionTracing-SupportedTechnologies)
-  - [Custom Pointcuts](#TransactionTracing-CustomPointcuts)
-      - [Examples](#TransactionTracing-Examples)
-  - [Transactions Naming](#TransactionTracing-TransactionsNaming)
-  - [Tracing Scala Apps](#TransactionTracing-TracingScalaApps)
-  - [Non-JVM Transaction
-    Tracing](#TransactionTracing-Non-JVMTransactionTracing)
-
-  
-
-  
 
 [![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](http://blog.sematext.com/2015/08/06/introducing-appmap/)
-
- 
-
-  
+ 
 
 ### What is Transaction Tracing
 

@@ -1,24 +1,3 @@
-  - [Overview](#SearchSyntax-Overview)
-  - [Terms](#SearchSyntax-Terms)
-  - [Fields](#SearchSyntax-Fields)
-  - [Term Modifiers](#SearchSyntax-TermModifiers)
-      - [Wildcard Searches](#SearchSyntax-WildcardSearches)
-      - [Regular Expression
-        Searches](#SearchSyntax-RegularExpressionSearches)
-      - [Fuzzy Searches](#SearchSyntax-FuzzySearches)
-      - [Proximity Searches](#SearchSyntax-ProximitySearches)
-      - [Range Searches](#SearchSyntax-RangeSearches)
-  - [Boolean Operators](#SearchSyntax-BooleanOperators)
-      - [OR](#SearchSyntax-OR)
-      - [AND](#SearchSyntax-AND)
-      - [+](#SearchSyntax-+)
-      - [NOT](#SearchSyntax-NOT)
-      - [-](#SearchSyntax--)
-  - [Grouping](#SearchSyntax-Grouping)
-  - [Field Grouping](#SearchSyntax-FieldGrouping)
-  - [Escaping Special
-    Characters](#SearchSyntax-EscapingSpecialCharacters)
-
 ## Overview
 
 Although Logsene provides the ability to create your own queries through

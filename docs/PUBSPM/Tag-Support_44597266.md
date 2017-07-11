@@ -1,12 +1,3 @@
-  - [What's a Tag?](#TagSupport-What'saTag?)
-  - [AWS Tags Support](#TagSupport-AWSTagsSupport)
-      - [Excluding Specific Tags](#TagSupport-ExcludingSpecificTags)
-  - [Adding Tags](#TagSupport-AddingTags)
-  - [Adding Tags in SPM for
-    Docker](#TagSupport-AddingTagsinSPMforDocker)
-  - [Adding Tags in SPM for
-    Node.js](#TagSupport-AddingTagsinSPMforNode.js)
-
 ### What's a Tag?
 
 To help you manage your metrics, hosts, and containers, and to help you

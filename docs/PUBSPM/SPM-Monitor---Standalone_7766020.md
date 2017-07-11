@@ -1,29 +1,3 @@
-  - [](#SPMMonitor-Standalone-)
-  - [Introduction](#SPMMonitor-Standalone-Introduction)
-  - [JMX Setups (i.e. How to Configure the Monitored
-    App/Server)](#SPMMonitor-Standalone-JMXSetups\(i.e.HowtoConfiguretheMonitoredApp/Server\))
-      - [No Security Setup](#SPMMonitor-Standalone-NoSecuritySetup)
-      - [Security with Password
-        File](#SPMMonitor-Standalone-SecuritywithPasswordFile)
-      - [Security with SSL and
-        Keystore/Trustore](#SPMMonitor-Standalone-SecuritywithSSLandKeystore/Trustore)
-  - [Specifics Related to Various
-    Servers](#SPMMonitor-Standalone-SpecificsRelatedtoVariousServers)
-      - [Starting with Java
-        Command](#SPMMonitor-Standalone-StartingwithJavaCommand)
-      - [Jetty (to run Solr or other
-        apps)](#SPMMonitor-Standalone-Jetty\(torunSolrorotherapps\))
-      - [Tomcat (to run Solr or other
-        apps)](#SPMMonitor-Standalone-Tomcat\(torunSolrorotherapps\))
-      - [Elasticsearch](#SPMMonitor-Standalone-Elasticsearch)
-      - [HBase](#SPMMonitor-Standalone-HBase)
-      - [Sensei](#SPMMonitor-Standalone-Sensei)
-      - [Hadoop](#SPMMonitor-Standalone-Hadoop)
-      - [ZooKeeper](#SPMMonitor-Standalone-ZooKeeper)
-      - [Kafka](#SPMMonitor-Standalone-Kafka)
-      - [Storm](#SPMMonitor-Standalone-Storm)
-  - [Additional Notes](#SPMMonitor-Standalone-AdditionalNotes)
-
 ## Introduction
 
 Unlike the [Embedded, Javaagent-based

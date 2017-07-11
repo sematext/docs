@@ -9,33 +9,6 @@ indexing](Index-Events-via-Elasticsearch-API_6520850.html) and
 Below, you can find how you can get started, and on the right side, you
 can go to specific pages to get a more in-depth view into using Logsene.
 
-**Table of contents**
-
-  - [Creating a Sematext
-    Account](#LogseneDocumentation-CreatingaSematextAccount)
-  - [Creating a Logsene
-    Application](#LogseneDocumentation-CreatingaLogseneApplication)
-  - [Adding Data to Your
-    Application](#LogseneDocumentation-AddingDatatoYourApplication)
-      - [Elasticsearch API (Logstash &
-        friends)](#LogseneDocumentation-ElasticsearchAPI\(Logstash&friends\))
-      - [Syslog](#LogseneDocumentation-Syslog)
-  - [Searching and Visualizing Your
-    Data](#LogseneDocumentation-SearchingandVisualizingYourData)
-      - [Opening the Native
-        UI](#LogseneDocumentation-OpeningtheNativeUI)
-      - [Opening Kibana](#LogseneDocumentation-OpeningKibana)
-  - [Change Your Application's
-    Settings](#LogseneDocumentation-ChangeYourApplication'sSettings)
-      - [Invite Users](#LogseneDocumentation-InviteUsers)
-      - [Authorize IP for
-        Syslog](#LogseneDocumentation-AuthorizeIPforSyslog)
-      - [Storage and
-        Retention](#LogseneDocumentation-StorageandRetention)
-  - [Getting Support](#LogseneDocumentation-GettingSupport)
-
-**Navigate space**
-
 #### Creating a Sematext Account
 
 If you don't already have an account at Sematext, you'll need to create

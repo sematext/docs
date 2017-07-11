@@ -1,21 +1,4 @@
-  - [Overview](#SPMforMongoDB-Overview)
-  - [Installation and
-    Configuration](#SPMforMongoDB-InstallationandConfiguration)
-  - [Troubleshooting and "How
-    To"](#SPMforMongoDB-Troubleshootingand%22HowTo%22)
-      - [Generate diagnostics file for Sematext
-        Support](#SPMforMongoDB-GeneratediagnosticsfileforSematextSupport)
-      - [Using SPM for MongoDB behind Firewalls / Proxy
-        servers   ](#SPMforMongoDB-UsingSPMforMongoDBbehindFirewalls/Proxyservers)
-      - [Installation of native modules on
-        Windows](#SPMforMongoDB-InstallationofnativemodulesonWindows)
-      - [Upgrading to a new node.js
-        version](#SPMforMongoDB-Upgradingtoanewnode.jsversion)
-      - [Upgrading to the latest version of
-        spm-agent-mongodb](#SPMforMongoDB-Upgradingtothelatestversionofspm-agent-mongodb)
-  - [Github Repository](#SPMforMongoDB-GithubRepository)
-
-# Overview
+## Overview
 
 The client for "SPM for MongoDB" is an open-source [mongodb monitoring
 agent](https://github.com/sematext/spm-agent-mongodb) that collects
@@ -28,7 +11,7 @@ Metrics](Custom-Metrics_5373970.html), such as the number of concurrent
 users, the number of items placed in a shopping cart, or any other kind
 of business transaction or KPI.
 
-# Installation and Configuration
+## Installation and Configuration
 
 1.  Create an SPM App of type "MongoDB" in SPM 
 2.  Click the "**Install Monitor**" button and follow the customized
@@ -36,9 +19,9 @@ of business transaction or KPI.
     the [NPM package](https://www.npmjs.com/package/spm-agent-mongodb)
     and configure the SPM App Token)
 
-# Troubleshooting and "How To"
+## Troubleshooting and "How To"
 
-## Generate diagnostics file for Sematext Support
+### Generate diagnostics file for Sematext Support
 
 If you are not seeing some or all MongoDB metrics, you can create a
 "diagnostics dump" and contact us via chat or email. To create the
@@ -49,13 +32,13 @@ diagnostics dump just run the following in your application directory:
 The output of this script points to the ZIP file and shows the Sematext
 Support email address to which the ZIP file should be sent. 
 
-## Using SPM for MongoDB behind Firewalls / Proxy servers   
+### Using SPM for MongoDB behind Firewalls / Proxy servers   
 
 By default data is transmitted to SPM via HTTPS. If no direct connection
 is possible, a proxy server can be used by setting the environment
 variable HTTPS\_PROXY=[https://your-proxy](https://your-proxy/).
 
-## Installation of native modules on Windows
+### Installation of native modules on Windows
 
 The native modules are automatically compiled during "npm install"
 (using node-gyp). On Windows the required build tools like python or C++
@@ -63,7 +46,7 @@ compilers are typically not installed by default.
 In this case please check <https://github.com/TooTallNate/node-gyp> for
 details about the required compiler and build tools.
 
-## Upgrading to a new node.js version
+### Upgrading to a new node.js version
 
 If you switch the node.js version (e.g. from 0.12 to 4.x), the
 spm-agent-mongodb package will need to be installed again (due to the
@@ -71,14 +54,14 @@ fact that included native modules may change from version to version).
   After the version change please run a fresh installation "npm i
 spm-agent-mongodb -g" 
 
-## Upgrading to the latest version of spm-agent-mongodb
+### Upgrading to the latest version of spm-agent-mongodb
 
 To use the latest version of spm-agent-mongodb we recommend you
 install/upgrade using:
 
     npm i spm-agent-mongodb@latest -g
 
-# Github Repository
+## Github Repository
 
 The latest version and related information is available in the Github
 repository

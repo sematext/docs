@@ -1,34 +1,3 @@
-  - [Introduction](#SPMAPIReference-Introduction)
-  - [Request/Response format](#SPMAPIReference-Request/Responseformat)
-  - [Apps API](#SPMAPIReference-AppsAPI)
-      - [Create SPM App](#SPMAPIReference-CreateSPMApp)
-      - [List Apps](#SPMAPIReference-ListApps)
-  - [Alerts API](#SPMAPIReference-AlertsAPI)
-      - [List Alerts](#SPMAPIReference-ListAlerts)
-      - [Create Alert](#SPMAPIReference-CreateAlert)
-          - [Creating Threshold
-            Alert](#SPMAPIReference-CreatingThresholdAlert)
-          - [Creating Anomaly
-            Alert](#SPMAPIReference-CreatingAnomalyAlert)
-          - [Creating Heartbeat
-            Alert](#SPMAPIReference-CreatingHeartbeatAlert)
-          - [Alert Creation
-            Designer](#SPMAPIReference-AlertCreationDesigner)
-      - [Delete Alert](#SPMAPIReference-DeleteAlert)
-      - [Enable/Disable Alert](#SPMAPIReference-Enable/DisableAlert)
-  - [Metrics API](#SPMAPIReference-MetricsAPI)
-      - [List Metrics](#SPMAPIReference-ListMetrics)
-      - [Metric Keys](#SPMAPIReference-MetricKeys)
-      - [Metrics Data](#SPMAPIReference-MetricsData)
-      - [Metrics Filters](#SPMAPIReference-MetricsFilters)
-  - [Subscriptions API](#SPMAPIReference-SubscriptionsAPI)
-      - [List Subscriptions](#SPMAPIReference-ListSubscriptions)
-      - [Email Report](#SPMAPIReference-EmailReport)
-
- 
-
- 
-
 *Note: This is Reference for v2 of SPM API.*
 
 *  

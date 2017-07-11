@@ -1,10 +1,3 @@
-  - [Switching from In-Process to
-    Standalone](#SPMMonitor-SwitchingModes-SwitchingfromIn-ProcesstoStandalone)
-  - [Switching from Standalone to
-    In-Process](#SPMMonitor-SwitchingModes-SwitchingfromStandalonetoIn-Process)
-
- 
-
 #### Switching from In-Process to Standalone
 
 1\) Adjust your server startup scripts by removing SPM javaagent

@@ -1,11 +1,4 @@
-  - [The Essentials](#IndexEventsviaElasticsearchAPI-TheEssentials)
-  - [Indexing](#IndexEventsviaElasticsearchAPI-Indexing)
-  - [Default Log Index
-    Mapping](#IndexEventsviaElasticsearchAPI-DefaultLogIndexMapping)
-  - [Custom Log Index
-    Mapping](#IndexEventsviaElasticsearchAPI-CustomLogIndexMapping)
-
-# The Essentials
+## The Essentials
 
 With Logsene, we expose the [Elasticsearch
 API](http://www.elasticsearch.org/guide/reference/api/) so you can:
@@ -38,7 +31,7 @@ When you use the API, here are the things you need to know:
     note: **this token should be kept secret** (n.b. you can have N
     Logsene Apps, each with its own token)
 
-# Indexing
+## Indexing
 
 With the same REST API, you can index logs directly from your
 application, or you can craft your own "log sender". 
@@ -97,7 +90,7 @@ echo '{ "index" : { "_index": "LOGSENE_APP_TOKEN_GOES_HERE", "_type" : "mytype" 
 curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 ```
 
-# Default Log Index Mapping
+## Default Log Index Mapping
 
 A
 [mapping](http://www.elasticsearch.org/guide/appendix/glossary.html#mapping)
@@ -119,7 +112,7 @@ mapping that works well for most use-cases:
     default, enabling a search for **message:hello** to match an event
     with **Hello World** in the **message** field
 
-# Custom Log Index Mapping
+## Custom Log Index Mapping
 
 If the default log index fields (also known as index mapping) don't fit
 your needs you can create completely custom index mapping. See [Custom

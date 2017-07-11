@@ -1,17 +1,3 @@
-  - [Custom Metrics](#CustomMetrics-CustomMetrics)
-      - [Terminology](#CustomMetrics-Terminology)
-      - [Introduction](#CustomMetrics-Introduction)
-      - [Counting Metrics](#CustomMetrics-CountingMetrics)
-      - [Max Data Input Rate](#CustomMetrics-MaxDataInputRate)
-      - [Custom Metrics API](#CustomMetrics-CustomMetricsAPI)
-          - [JSON format](#CustomMetrics-JSONformat)
-          - [Raw format](#CustomMetrics-Rawformat)
-      - [Java API](#CustomMetrics-JavaAPI)
-      - [Coda Hale (aka Yammer) Metrics
-        Reporter](#CustomMetrics-CodaHale\(akaYammer\)MetricsReporter)
-      - [Ruby API](#CustomMetrics-RubyAPI)
-      - [Node.js API](#CustomMetrics-Node.jsAPI)
-
 # Custom Metrics
 
 [SPM](http://sematext.com/spm/) lets you extend standard performance

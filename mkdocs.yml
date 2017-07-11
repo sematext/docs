@@ -2,7 +2,7 @@ site_name: Sematext Docs
 site_url: http://sematext.com
 pages:
     - index.md
-    - PUBLOGSENE:
+    - PUB Logsene:
       - Authorizing IPs for Syslog: PUBLOGSENE/Authorizing-IPs-for-Syslog_23855110.md
       - Index Events via Elasticsearch API: PUBLOGSENE/Index-Events-via-Elasticsearch-API_6520850.md
       - JSON: PUBLOGSENE/JSON_53444622.md
@@ -25,7 +25,7 @@ pages:
       - syslogd: PUBLOGSENE/syslogd_6520868.md
       - syslog ng: PUBLOGSENE/syslog-ng_23855119.md
       - X Special Fields: PUBLOGSENE/X-Special-Fields_27983878.md
-    - PUBSPM:
+    - PUB SPM:
       - Coda Hale Metrics Reporter: PUBSPM/Coda-Hale-Metrics-Reporter_9896040.md
       - Custom Metrics: PUBSPM/Custom-Metrics_5373970.md
       - Database Operations: PUBSPM/Database-Operations_48136285.md
@@ -50,7 +50,7 @@ pages:
       - SPM for Node.js: PUBSPM/SPM-for-Node.js_37388345.md
       - Tag Support: PUBSPM/Tag-Support_44597266.md
       - Transaction Tracing: PUBSPM/Transaction-Tracing_35913843.md
-    - SEMATEXTAPPS:
+    - Sematext Apps:
       - On Premises: SEMATEXTAPPS/On-Premises_41451603.md
       - Sematext Apps: SEMATEXTAPPS/Sematext-Apps_41451586.md
       - Sematext Apps FAQ: SEMATEXTAPPS/Sematext-Apps-FAQ_41451574.md
@@ -65,6 +65,8 @@ extra:
   palette:
     primary: 'Brown'
     accent: 'Indigo'
+  font:
+    text: 'Roboto,sans-serif'
   social:
     - type: 'github'
       link: 'https://github.com/sematext'
@@ -84,3 +86,5 @@ extra:
 extra_css:
   - 'stylesheets/extra.css'
     
+markdown_extensions:
+  - toc(permalink=true)

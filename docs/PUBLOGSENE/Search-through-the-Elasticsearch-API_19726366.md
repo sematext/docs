@@ -1,20 +1,4 @@
-  - [](#SearchthroughtheElasticsearchAPI-)
-  - [The Essentials](#SearchthroughtheElasticsearchAPI-TheEssentials)
-  - [Searching](#SearchthroughtheElasticsearchAPI-Searching)
-      - [URI based
-        search](#SearchthroughtheElasticsearchAPI-URIbasedsearch)
-      - [Request body based
-        search](#SearchthroughtheElasticsearchAPI-Requestbodybasedsearch)
-          - [Response
-            format](#SearchthroughtheElasticsearchAPI-Responseformat)
-      - [Real time GET
-        operation](#SearchthroughtheElasticsearchAPI-RealtimeGEToperation)
-      - [Multiple GET operations in a single
-        request](#SearchthroughtheElasticsearchAPI-MultipleGEToperationsinasinglerequest)
-      - [Multiple Search operations in a single
-        request](#SearchthroughtheElasticsearchAPI-MultipleSearchoperationsinasinglerequest)
-
-# The Essentials
+## The Essentials
 
 With Logsene, we expose the [Elasticsearch
 API](http://www.elasticsearch.org/guide/reference/api/) so you can
@@ -33,7 +17,7 @@ When you use the API, here are the things you need to know:
     token](https://apps.sematext.com/users-web/services.do#logsene) -
     note that this token should be kept secret
 
-# Searching
+## Searching
 
 Logsene supports a subset of Elasticsearch API's, with rich query
 language and extensive capabilities of searching through data you've
@@ -52,7 +36,7 @@ In the following examples we will use a "dummy token"
 - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token.  You should use
 your real Logsene App token, of course.
 
-## URI based search
+### URI based search
 
 The simplest search method to get your data out of Logsene is fully
 compatible with URI Search in Elasticsearch
@@ -67,7 +51,7 @@ following:
 to
 <https://lucene.apache.org/core/5_2_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html>
 
-## Request body based search
+### Request body based search
 
 The request body based search lets us leverage full Elasticsearch query
 DSL language
@@ -133,7 +117,7 @@ to find common status responses for
      }
     }'
 
-### Response format
+#### Response format
 
 Logsene, just like Elasticsearch, talks to you using JSON. Here's an
 example response:
@@ -256,7 +240,7 @@ The real example of the results returned look as follows:
       }
     }
 
-## Real time GET operation
+### Real time GET operation
 
 The real time GET operation is very simple and lets us get a single
 document out of a particular Logsene index. To retrieve a document we
@@ -278,7 +262,7 @@ command:
 
     curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/apache/AU29tJz0UV2O9bWZ_KkU'
 
-## Multiple GET operations in a single request
+### Multiple GET operations in a single request
 
 In addition to supporting the real time GET functionality, Logsene lets
 one leverage Elasticsearch MGet API
@@ -324,7 +308,7 @@ The response to the above command would look as follows:
       } ]
     }
 
-## Multiple Search operations in a single request
+### Multiple Search operations in a single request
 
 Similar to MGet, Logsene lets you run multiple search requests in a
 single HTTP request using Elasticsearch Multi Search API

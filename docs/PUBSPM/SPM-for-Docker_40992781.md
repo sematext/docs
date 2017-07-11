@@ -1,16 +1,4 @@
-  - [Overview](#SPMforDocker-Overview)
-  - [Supported Platforms](#SPMforDocker-SupportedPlatforms)
-  - [Installation and
-    Configuration](#SPMforDocker-InstallationandConfiguration)
-  - [Docker Swarm, Docker UCP and Docker
-    Datacenter](#SPMforDocker-DockerSwarm,DockerUCPandDockerDatacenter)
-  - [CoreOS Support](#SPMforDocker-CoreOSSupport)
-  - [Access to the Docker Socket  / Docker
-    API](#SPMforDocker-AccesstotheDockerSocket/DockerAPI)
-  - [Known Issues](#SPMforDocker-KnownIssues)
-  - [Troubleshooting and How-To](#SPMforDocker-TroubleshootingandHow-To)
-
-# Overview
+## Overview
 
   
 The following information is collected and transmitted to SPM (Cloud or
@@ -103,7 +91,7 @@ image](https://registry.hub.docker.com/u/sematext/sematext-agent-docker/).
 </tbody>
 </table>
 
-# Supported Platforms
+## Supported Platforms
 
   - Docker \>= 1.6
   - Platforms using Docker:  
@@ -116,7 +104,7 @@ image](https://registry.hub.docker.com/u/sematext/sematext-agent-docker/).
       - Amazon ECS
       - DEIS PaaS
 
-# Installation and Configuration
+## Installation and Configuration
 
 1.  Create an SPM App of type "Docker" in SPM 
 2.  Click the "**Install Monitor**" button and follow the customized
@@ -294,7 +282,7 @@ using time, level and message fields</li>
 </tbody>
 </table>
 
-# Docker Swarm, Docker UCP and Docker Datacenter
+## Docker Swarm, Docker UCP and Docker Datacenter
 
 Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy following docker-compose.yml file with your SPM and Logsene
@@ -319,7 +307,7 @@ node. 
 docker-compose scale sematext-agent-docker=$(docker info | grep Nodes | awk '{ print $2 }')
 ```
 
-# CoreOS Support
+## CoreOS Support
 
 To install SPM for Docker including log forwarding from journald execute
 these commands:
@@ -346,7 +334,7 @@ The latest documentation, install script, and service files are
 available in the [Github
 repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
 
-# Access to the Docker Socket  / Docker API  
+## Access to the Docker Socket  / Docker API  
 
 **Please note the Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
@@ -378,7 +366,7 @@ it is possible to activate TCP and the Unix socket in parallel, simply
 add  "-H unix:///var/run/docker.sock" and restart dockerd.
 
 ``` syntaxhighlighter-pre
-# /etc/defaults/docker
+## /etc/defaults/docker
 DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
 ```
 
@@ -445,7 +433,7 @@ sematext/sematext-agent-docker
 
  
 
-# Known Issues
+## Known Issues
 
 **Conflict with Docker logging-drivers. Sematext Docker Agent is running
 with a valid Logsene Token, but Logsene does not show container logs. **
@@ -459,7 +447,7 @@ check, run the "docker logs" command. If "docker logs CID" is shows
 container logs then Sematext Docker Agent should be able to collect the
 logs as well. 
 
-# Troubleshooting and How-To
+## Troubleshooting and How-To
 
 The following command enables **debug** information to stdout - to be
 displayed with "docker logs

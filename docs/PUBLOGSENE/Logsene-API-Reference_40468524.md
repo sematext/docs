@@ -1,44 +1,5 @@
-**
-
-  - [Introduction to Management
-    API](#LogseneAPIReference-IntroductiontoManagementAPI)
-  - [Elasticsearch-compatible Search
-    API](#LogseneAPIReference-Elasticsearch-compatibleSearchAPI)
-  - [Request/Response
-    format](#LogseneAPIReference-Request/Responseformat)
-  - [Apps API](#LogseneAPIReference-AppsAPI)
-      - [Create Logsene App](#LogseneAPIReference-CreateLogseneApp)
-      - [List Apps](#LogseneAPIReference-ListApps)
-  - [Alerts API](#LogseneAPIReference-AlertsAPI)
-      - [List Alerts](#LogseneAPIReference-ListAlerts)
-      - [Create Alert](#LogseneAPIReference-CreateAlert)
-          - [Create Threshold
-            Alert](#LogseneAPIReference-CreateThresholdAlert)
-          - [Create Anomaly
-            Alert](#LogseneAPIReference-CreateAnomalyAlert)
-      - [Delete Alert](#LogseneAPIReference-DeleteAlert)
-      - [Enable/Disable Alert](#LogseneAPIReference-Enable/DisableAlert)
-      - [List Alert Notifications (Coming
-        soon\!)](#LogseneAPIReference-ListAlertNotifications\(Comingsoon!\))
-  - [Subscriptions API](#LogseneAPIReference-SubscriptionsAPI)
-      - [List Subscriptions](#LogseneAPIReference-ListSubscriptions)
-      - [Email Report](#LogseneAPIReference-EmailReport)
-  - [Saved Queries API (Coming
-    soon\!)](#LogseneAPIReference-SavedQueriesAPI\(Comingsoon!\))
-      - [List Saved Queries](#LogseneAPIReference-ListSavedQueries)
-      - [Create Saved Query](#LogseneAPIReference-CreateSavedQuery)
-      - [Delete Saved Query](#LogseneAPIReference-DeleteSavedQuery)
-  - [Elasticsearch-compatible
-    API](#LogseneAPIReference-Elasticsearch-compatibleAPI)
-
-  
-
-*  
-*
-
 *Note: This is Reference for v2 of Logsene API.*
 
-*  
 Note: For details on SPM API, see [SPM API
 Reference](https://sematext.atlassian.net/wiki/spaces/PUBSPM/pages/40009738/SPM+API+Reference).*
 

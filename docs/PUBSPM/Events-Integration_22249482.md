@@ -1,13 +1,3 @@
-  - [Events: What, Why, How?](#EventsIntegration-Events:What,Why,How?)
-  - [Event Fields](#EventsIntegration-EventFields)
-  - [Adding Events](#EventsIntegration-AddingEvents)
-      - [Example 1](#EventsIntegration-Example1)
-      - [Example 2](#EventsIntegration-Example2)
-  - [Searching Events in SPM](#EventsIntegration-SearchingEventsinSPM)
-  - [Searching Events
-    Programmatically](#EventsIntegration-SearchingEventsProgrammatically)
-  - [Posting Events via HTTPS](#EventsIntegration-PostingEventsviaHTTPS)
-
 #### Events: What, Why, How?
 
 [SPM](http://sematext.com/spm/) can graph not only performance and

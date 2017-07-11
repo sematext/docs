@@ -1,25 +1,4 @@
- 
-
-  - [Overview](#SPMforNode.js-Overview)
-  - [Supported Platforms](#SPMforNode.js-SupportedPlatforms)
-  - [Installation and
-    Configuration](#SPMforNode.js-InstallationandConfiguration)
-  - [Troubleshooting and "How
-    To"](#SPMforNode.js-Troubleshootingand%22HowTo%22)
-      - [Generate diagnostics file for Sematext
-        Support](#SPMforNode.js-GeneratediagnosticsfileforSematextSupport)
-      - [Using SPM for Node.js behind Firewalls / Proxy
-        servers   ](#SPMforNode.js-UsingSPMforNode.jsbehindFirewalls/Proxyservers)
-      - [Installation of native modules on
-        Windows](#SPMforNode.js-InstallationofnativemodulesonWindows)
-      - [Upgrading to a new node.js
-        version](#SPMforNode.js-Upgradingtoanewnode.jsversion)
-      - [Upgrading to the latest version of
-        spm-agent-nodejs](#SPMforNode.js-Upgradingtothelatestversionofspm-agent-nodejs)
-
-  
-
-# Overview
+## Overview
 
 The client for "SPM for Node.js" is an open-source [node.js monitoring
 agent](https://github.com/sematext/spm-agent-nodejs) that collects
@@ -69,12 +48,12 @@ The following metrics are collected and sent to SPM:
         and a node.js client for it:
         [spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
 
-# Supported Platforms
+## Supported Platforms
 
   - node.js  \>=  0.10  
       
 
-# Installation and Configuration
+## Installation and Configuration
 
 1.  Create an SPM App of type "Node.js" in SPM 
 2.  Click the "**Install Monitor**" button and follow the customized
@@ -83,9 +62,9 @@ The following metrics are collected and sent to SPM:
     configure the SPM App Token, and add require statement to your
     source code to load 'spm-agent-nodejs')
 
-# Troubleshooting and "How To"
+## Troubleshooting and "How To"
 
-## Generate diagnostics file for Sematext Support
+### Generate diagnostics file for Sematext Support
 
 If you are not seeing some or all node.js metrics, you can create a
 "diagnostics dump" and contact us via chat or email. To create the
@@ -96,13 +75,13 @@ diagnostics dump just run the following in your application directory:
 The output of this script points to the ZIP file and shows the Sematext
 Support email address to which the ZIP file should be sent. 
 
-## Using SPM for Node.js behind Firewalls / Proxy servers   
+### Using SPM for Node.js behind Firewalls / Proxy servers   
 
 By default data is transmitted to SPM via HTTPS. If no direct connection
 is possible, a proxy server can be used by setting the environment
 variable HTTPS\_PROXY=<https://your-proxy>.
 
-## Installation of native modules on Windows
+### Installation of native modules on Windows
 
 The native modules are automatically compiled during "npm install"
 (using node-gyp). On Windows the required build tools like python or C++
@@ -110,7 +89,7 @@ compilers are typically not installed by default.
 In this case please check <https://github.com/TooTallNate/node-gyp> for
 details about the required compiler and build tools.
 
-## Upgrading to a new node.js version
+### Upgrading to a new node.js version
 
 If you switch the node.js version (e.g. from 0.12 to 4.4), the
 spm-agent-nodejs package will need to be installed again (due to the
@@ -119,7 +98,7 @@ fact that included native modules may change from version to version).
 added spm-agent-nodejs to the dependencies in your package.json - or at
 the very least run "npm install spm-agent-nodejs" 
 
-## Upgrading to the latest version of spm-agent-nodejs
+### Upgrading to the latest version of spm-agent-nodejs
 
 To use the latest version of spm-agent-nodejs we recommend you
 install/upgrade using:
