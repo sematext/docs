@@ -1,5 +1,5 @@
 site_name: Sematext Docs
-site_url: http://sematext.com
+site_url: http://localhost:8000
 pages:
     - index.md
     - PUB Logsene:

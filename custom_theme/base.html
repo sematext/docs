@@ -117,9 +117,9 @@
             <article class="md-content__inner md-typeset">
               {% block content %}
                 <a href="#" title="Social Share" class="md-icon md-content__icon">share</a>
-                {% set paths = base_url.split("/") %}
-                {% set path = paths[0] + "/" + "pdf/" %}
-                <a href="{{ path }}" title="PDF" class="md-icon md-content__icon">library_books</a>
+                {% set pdf_path = page.canonical_url | reverse | replace('/','fdp.', 1) | replace('/', '/fdp/', 1) | reverse %}
+                
+                <a href="{{ pdf_path }}" title="PDF" class="md-icon md-content__icon">library_books</a>
                 {% if config.edit_uri %}
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">edit</a>
                 {% endif %}
