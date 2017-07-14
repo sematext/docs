@@ -1,5 +1,5 @@
 # PUBSPM
-Mkdocs site for PUBSPM confluence.
+Mkdocs site for pub-SPM, pub-Logsene & SematextApps confluence.
 
 ## Quick start
 Install `python` & `pip` - Check here [Manual Installation](http://www.mkdocs.org/#manual-installation)
