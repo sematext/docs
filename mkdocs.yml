@@ -1,8 +1,8 @@
-site_name: Sematext Docs
+site_name: Sematext Documentation
 site_url: http://localhost:8000
 pages:
     - index.md
-    - PUB Logsene:
+    - Log Management:
       - Authorizing IPs for Syslog: PUBLOGSENE/Authorizing-IPs-for-Syslog_23855110.md
       - Index Events via Elasticsearch API: PUBLOGSENE/Index-Events-via-Elasticsearch-API_6520850.md
       - JSON: PUBLOGSENE/JSON_53444622.md
@@ -25,7 +25,7 @@ pages:
       - syslogd: PUBLOGSENE/syslogd_6520868.md
       - syslog ng: PUBLOGSENE/syslog-ng_23855119.md
       - X Special Fields: PUBLOGSENE/X-Special-Fields_27983878.md
-    - PUB SPM:
+    - Performance Monitoring:
       - Coda Hale Metrics Reporter: PUBSPM/Coda-Hale-Metrics-Reporter_9896040.md
       - Custom Metrics: PUBSPM/Custom-Metrics_5373970.md
       - Database Operations: PUBSPM/Database-Operations_48136285.md
