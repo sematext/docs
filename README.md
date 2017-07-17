@@ -4,14 +4,9 @@ Mkdocs site for pub-SPM, pub-Logsene & SematextApps confluence.
 ### Quick Start - run mkdocs on Docker
 
 ```
-# clone git repository
 git clone git@github.com:sematext/docs.git
-# run mkdocs in a container, including the required material-theme installation
 cd docs
-docker run  -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs pip install mkdocs-material && mkdocs serve
-# save installed material theme, to use 'docker stop/start st-mkdocs' later without re-installing material theme
-docker commit st-mkdocs
-# Open the website in a browser 
+docker run  -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs pip install mkdocs-material && mkdocs serve 
 open http://localhost:8000
 ```
 
