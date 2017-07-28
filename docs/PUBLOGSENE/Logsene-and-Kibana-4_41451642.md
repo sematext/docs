@@ -1,6 +1,3 @@
-  - [How to use Kibana 4 in
-    Logsene](#LogseneandKibana4-HowtouseKibana4inLogsene)
-
 # How to use Kibana 4 in Logsene
 
 You'll find the “Kibana 4” button in the [Logsene App
