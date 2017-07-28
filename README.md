@@ -47,6 +47,14 @@ INFO    -  Cleaning site directory
 
 Open up `http://127.0.0.1:8000/` in your browser, and you'll see the default home page being displayed:
 
+Build the site
+
+```sh
+$ mkdocs build
+```
+
+This will create a new directory, named `site`. We now can deploy `site` to server.
+
 ### Convert Confluence to Markdown
 
 #### Export Confluence to HTML
