@@ -119,10 +119,10 @@
 
                 {% if not page.is_homepage %}
                   {% set fb_path = 'https://www.facebook.com/sharer/sharer.phpstb?u=' + page.canonical_url %}
-                  <a href="{{ fb_path }}" title="Facebook Share" class="md-icon md-content__icon">share</a>
+                  <a href="{{ fb_path }}" title="Facebook Share" class="md-icon md-content__icon" style="display: none">share</a>
 
                   {% set tw_path = 'https://twitter.com/intent/tweet?url=' + page.canonical_url %}
-                  <a href="{{ tw_path }}" title="Twitter Share" class="md-icon md-content__icon">share</a>
+                  <a href="{{ tw_path }}" title="Twitter Share" class="md-icon md-content__icon" style="display: none">share</a>
 
                   {% set li_path = 'https://www.linkedin.com/shareArticle?url=' + page.canonical_url %}
                   <a href="{{ li_path }}" title="Linkedin Share" class="md-icon md-content__icon">share</a>
