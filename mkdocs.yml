@@ -3,57 +3,57 @@ site_url: http://sematext/docs
 pages:
     - index.md
     - Log Management:
-      - Authorizing IPs for Syslog: PUBLOGSENE/Authorizing-IPs-for-Syslog_23855110.md
-      - Index Events via Elasticsearch API: PUBLOGSENE/Index-Events-via-Elasticsearch-API_6520850.md
-      - JSON: PUBLOGSENE/JSON_53444622.md
-      - JSON Messages over Syslog: PUBLOGSENE/JSON-Messages-over-Syslog_6520854.md
-      - Kibana: PUBLOGSENE/Kibana_19726376.md
-      - Logsene and Kibana: PUBLOGSENE/Logsene-and-Kibana-4_41451642.md
-      - Logsene API Reference: PUBLOGSENE/Logsene-API-Reference_40468524.md
-      - Logsene Changelog: PUBLOGSENE/Logsene-Changelog_9601112.md
-      - Logsene CLI: PUBLOGSENE/Logsene-CLI_43221002.md
-      - Logsene Documentation: PUBLOGSENE/Logsene-Documentation_1179704.md
-      - Logsene FAQ: PUBLOGSENE/Logsene-FAQ_6520901.md
-      - Logstash: PUBLOGSENE/Logstash_6520860.md
-      - rsyslog: PUBLOGSENE/rsyslog_23855111.md
-      - Searching Your Events: PUBLOGSENE/Searching-Your-Events_19726362.md
-      - Search Syntax: PUBLOGSENE/Search-Syntax_50429961.md
-      - Search through the Elasticsearch API: PUBLOGSENE/Search-through-the-Elasticsearch-API_19726366.md
-      - Sending Events to Logsene: PUBLOGSENE/Sending-Events-to-Logsene_19726360.md
-      - Supported Date Formats: PUBLOGSENE/Supported-Date-Formats_102150487.md
-      - Syslog: PUBLOGSENE/Syslog_6520863.md
-      - syslogd: PUBLOGSENE/syslogd_6520868.md
-      - syslog ng: PUBLOGSENE/syslog-ng_23855119.md
-      - X Special Fields: PUBLOGSENE/X-Special-Fields_27983878.md
+      - Authorizing IPs for Syslog: PUBLOGSENE/Authorizing-IPs-for-Syslog.md
+      - Index Events via Elasticsearch API: PUBLOGSENE/Index-Events-via-Elasticsearch-API.md
+      - JSON: PUBLOGSENE/JSON.md
+      - JSON Messages over Syslog: PUBLOGSENE/JSON-Messages-over-Syslog.md
+      - Kibana: PUBLOGSENE/Kibana.md
+      - Logsene and Kibana: PUBLOGSENE/Logsene-and-Kibana-4.md
+      - Logsene API Reference: PUBLOGSENE/Logsene-API-Reference.md
+      - Logsene Changelog: PUBLOGSENE/Logsene-Changelog.md
+      - Logsene CLI: PUBLOGSENE/Logsene-CLI.md
+      - Logsene Documentation: PUBLOGSENE/Logsene-Documentation.md
+      - Logsene FAQ: PUBLOGSENE/Logsene-FAQ.md
+      - Logstash: PUBLOGSENE/Logstash.md
+      - rsyslog: PUBLOGSENE/rsyslog.md
+      - Searching Your Events: PUBLOGSENE/Searching-Your-Events.md
+      - Search Syntax: PUBLOGSENE/Search-Syntax.md
+      - Search through the Elasticsearch API: PUBLOGSENE/Search-through-the-Elasticsearch-API.md
+      - Sending Events to Logsene: PUBLOGSENE/Sending-Events-to-Logsene.md
+      - Supported Date Formats: PUBLOGSENE/Supported-Date-Formats.md
+      - Syslog: PUBLOGSENE/Syslog.md
+      - syslogd: PUBLOGSENE/syslogd.md
+      - syslog ng: PUBLOGSENE/syslog-ng.md
+      - X Special Fields: PUBLOGSENE/X-Special-Fields.md
     - Performance Monitoring:
-      - Coda Hale Metrics Reporter: PUBSPM/Coda-Hale-Metrics-Reporter_9896040.md
-      - Custom Metrics: PUBSPM/Custom-Metrics_5373970.md
-      - Database Operations: PUBSPM/Database-Operations_48136285.md
-      - Events Integration: PUBSPM/Events-Integration_22249482.md
+      - Coda Hale Metrics Reporter: PUBSPM/Coda-Hale-Metrics-Reporter.md
+      - Custom Metrics: PUBSPM/Custom-Metrics.md
+      - Database Operations: PUBSPM/Database-Operations.md
+      - Events Integration: PUBSPM/Events-Integration.md
       - Integration:
-        - Alerts - HipChat Integration: PUBSPM/Alerts---HipChat-Integration_34340871.md
-        - Alerts - PagerDuty Integration: PUBSPM/Alerts---PagerDuty-Integration_34799627.md
-        - Alerts - Slack Integration: PUBSPM/Alerts---Slack-Integration_35553295.md
-      - Network Map: PUBSPM/Network-Map_44597258.md
-      - On Demand Profiling: PUBSPM/On-Demand-Profiling_51904525.md
-      - On Premises Edition: PUBSPM/On-Premises-Edition_25165889.md
-      - SPM API Reference: PUBSPM/SPM-API-Reference_40009738.md
+        - Alerts - HipChat Integration: PUBSPM/Alerts---HipChat-Integration.md
+        - Alerts - PagerDuty Integration: PUBSPM/Alerts---PagerDuty-Integration.md
+        - Alerts - Slack Integration: PUBSPM/Alerts---Slack-Integration.md
+      - Network Map: PUBSPM/Network-Map.md
+      - On Demand Profiling: PUBSPM/On-Demand-Profiling.md
+      - On Premises Edition: PUBSPM/On-Premises-Edition.md
+      - SPM API Reference: PUBSPM/SPM-API-Reference.md
       - SPM Client:
-        - Chef Recipe: PUBSPM/Chef-Recipe_12943369.md
-        - SPM Monitor - Javaagent: PUBSPM/SPM-Monitor---Javaagent_7340044.md
-        - SPM Monitor - Standalone: PUBSPM/SPM-Monitor---Standalone_7766020.md
-        - SPM Monitor - Switching Modes: PUBSPM/SPM-Monitor---Switching-Modes_7766040.md
-      - SPM FAQ: PUBSPM/SPM-FAQ_6914085.md
-      - SPM for Docker: PUBSPM/SPM-for-Docker_40992781.md
-      - SPM for Hadoop: PUBSPM/SPM-for-Hadoop_8880133.md
-      - SPM for MongoDB: PUBSPM/SPM-for-MongoDB_51609617.md
-      - SPM for Node.js: PUBSPM/SPM-for-Node.js_37388345.md
-      - Tag Support: PUBSPM/Tag-Support_44597266.md
-      - Transaction Tracing: PUBSPM/Transaction-Tracing_35913843.md
+        - Chef Recipe: PUBSPM/Chef-Recipe.md
+        - SPM Monitor - Javaagent: PUBSPM/SPM-Monitor---Javaagent.md
+        - SPM Monitor - Standalone: PUBSPM/SPM-Monitor---Standalone.md
+        - SPM Monitor - Switching Modes: PUBSPM/SPM-Monitor---Switching-Modes.md
+      - SPM FAQ: PUBSPM/SPM-FAQ.md
+      - SPM for Docker: PUBSPM/SPM-for-Docker.md
+      - SPM for Hadoop: PUBSPM/SPM-for-Hadoop.md
+      - SPM for MongoDB: PUBSPM/SPM-for-MongoDB.md
+      - SPM for Node.js: PUBSPM/SPM-for-Node.js.md
+      - Tag Support: PUBSPM/Tag-Support.md
+      - Transaction Tracing: PUBSPM/Transaction-Tracing.md
     - Sematext Apps:
-      - On Premises: SEMATEXTAPPS/On-Premises_41451603.md
-      - Sematext Apps: SEMATEXTAPPS/Sematext-Apps_41451586.md
-      - Sematext Apps FAQ: SEMATEXTAPPS/Sematext-Apps-FAQ_41451574.md
+      - On Premises: SEMATEXTAPPS/On-Premises.md
+      - Sematext Apps: SEMATEXTAPPS/Sematext-Apps.md
+      - Sematext Apps FAQ: SEMATEXTAPPS/Sematext-Apps-FAQ.md
 theme: material
 theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
