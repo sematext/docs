@@ -1,5 +1,5 @@
 site_name: Sematext Documentation
-site_url: http://localhost:8000
+site_url: http://sematext/docs
 pages:
     - index.md
     - Log Management:
