@@ -3,8 +3,8 @@ you are new to Logsene, think of it as logging as a service - Logsene is
 your own logging box in the cloud, a free alternative to Splunk, or even
 as Hosted Elasticsearch, since one of the APIs Logsene exposes is
 [Elasticsearch API for
-indexing](Index-Events-via-Elasticsearch-API_6520850.html) and
-[searching](Searching-Your-Events_19726362.html).
+indexing](Index-Events-via-Elasticsearch-API.html) and
+[searching](Searching-Your-Events.html).
 
 Below, you can find how you can get started, and on the right side, you
 can go to specific pages to get a more in-depth view into using Logsene.
@@ -43,26 +43,26 @@ And then you'd only have to choose a name:
 
 And you're done\! You will get a confirmation screen that tells you how
 to [send data to your new
-application](Sending-Events-to-Logsene_19726360.html). Once you start
+application](Sending-Events-to-Logsene.html). Once you start
 sending data, you can start [searching and analyzing those
-events](Searching-Your-Events_19726362.html). Click on **Go to Reports**
+events](Searching-Your-Events.html). Click on **Go to Reports**
 to open the native Logsene UI and on **Go to Kibana** to [explore your
-data with Kibana](Kibana_19726376.html).
+data with Kibana](Kibana.html).
 
 #### Adding Data to Your Application
 
 As described in the "Application Added" screen, there are two ways to
 send data: [through Elasticsearch's
-API](Index-Events-via-Elasticsearch-API_6520850.html) or [through
-syslog](Syslog_6520863.html).
+API](Index-Events-via-Elasticsearch-API.html) or [through
+syslog](Syslog.html).
 
 ##### Elasticsearch API (Logstash & friends)
 
 The easiest way to send logs from your files is
-[through](Logstash_6520860.html)[Logstash](Logstash_6520860.html). You
+[through](Logstash.html)[Logstash](Logstash.html). You
 can also use any tool that works with Elasticsearch's REST API, for both
-[indexing](Index-Events-via-Elasticsearch-API_6520850.html) and
-[searching](Search-through-the-Elasticsearch-API_19726366.html). The
+[indexing](Index-Events-via-Elasticsearch-API.html) and
+[searching](Search-through-the-Elasticsearch-API.html). The
 only condition is to use the application's token as the index name, and
 **http://logsene-receiver.sematext.com:80** as the address. The token
 for each of your applications can be found by logging in to
@@ -73,7 +73,7 @@ for each of your applications can be found by logging in to
 
 For more details on using the Elasticsearch REST API with Logsene, visit
 the following page: [Index Events via Elasticsearch
-API](Index-Events-via-Elasticsearch-API_6520850.html). Note that the API
+API](Index-Events-via-Elasticsearch-API.html). Note that the API
 supports both HTTP and HTTPS. The HTTPS endpoint would be
 **https://logsene-receiver.sematext.com:443**
 
@@ -93,7 +93,7 @@ sudo python configure-syslog.py $ADD-YOUR-APPLICATION-TOKEN-HERE
 
  
 
-For more details, take a look at the [Syslog](Syslog_6520863.html) page,
+For more details, take a look at the [Syslog](Syslog.html) page,
 and the pages that are linked from it.
 
 #### Searching and Visualizing Your Data
@@ -102,7 +102,7 @@ For searching and visualizing, you have two UIs that you can use out of
 the box:
 
   - the native Logsene UI
-  - [Kibana](Kibana_19726376.html)
+  - [Kibana](Kibana.html)
 
 ##### Opening the Native UI
 
@@ -111,7 +111,7 @@ Services -\> Logsene tab of your account.
 
 ##### Opening Kibana
 
-To visualize your data using [Kibana](Kibana_19726376.html), you have to
+To visualize your data using [Kibana](Kibana.html), you have to
 click on the **Kibana** button next to the application's name, from the
 Services -\> Logsene tab of your account.
 
@@ -126,7 +126,7 @@ From there, you can:
 
   - invite new users to your application
   - [authorize public IPs to send data to your application via
-    syslog](Authorizing-IPs-for-Syslog_23855110.html)
+    syslog](Authorizing-IPs-for-Syslog.html)
   - adjust the retention time
   - check how much data is currently stored
   - [change your
@@ -143,10 +143,10 @@ too.](http://apps.sematext.com)
 
 ##### Authorize IP for Syslog
 
-When you [send data via TCP/UDP/RELP syslog](Syslog_6520863.html), you
+When you [send data via TCP/UDP/RELP syslog](Syslog.html), you
 can authorize by using the Logsene application token, or by registering
 your public IP address. If you choose registering IPs, [this
-page](Authorizing-IPs-for-Syslog_23855110.html) will guide you on doing
+page](Authorizing-IPs-for-Syslog.html) will guide you on doing
 that from your application's settings or from the Logsene Application
 screen.
 

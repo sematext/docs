@@ -6,12 +6,12 @@ line to your **/etc/syslog.conf**:
 ```
 
 Before you restart syslogd, **[register your public
-IP](Authorizing-IPs-for-Syslog_23855110.html).** If you're behind a NAT
+IP](Authorizing-IPs-for-Syslog.html).** If you're behind a NAT
 or registering IPs doesn't suit your use-case, there are other options:
 
   - if you just want to test sending a few logs to Logsene, you can use
     your Logsene application token in a [CEE-formatted JSON
-    message](JSON-Messages-over-Syslog_6520854.html). For
+    message](JSON-Messages-over-Syslog.html). For
 example:
 
 <!-- end list -->
@@ -21,8 +21,8 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
 ```
 
   - change your syslog daemon from syslogd to
-    [rsyslog](rsyslog_23855111.html) or
-    [syslog-ng](syslog-ng_23855119.html). Or anything else that lets you
+    [rsyslog](rsyslog.html) or
+    [syslog-ng](syslog-ng.html). Or anything else that lets you
     format your messages, so you can build a JSON containing your
     Logsene application token like the one above
   - similar to the solution above, you can use a separate machine for

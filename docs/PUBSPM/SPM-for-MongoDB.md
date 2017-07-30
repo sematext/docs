@@ -7,7 +7,7 @@ as[ npm](https://www.npmjs.com/package/spm-agent-mongodb)[ package](https://ww
 Installation & Configuration section below).
 
 In addition to collecting MongoDB metrics, you can send [Custom
-Metrics](Custom-Metrics_5373970.html), such as the number of concurrent
+Metrics](Custom-Metrics.html), such as the number of concurrent
 users, the number of items placed in a shopping cart, or any other kind
 of business transaction or KPI.
 

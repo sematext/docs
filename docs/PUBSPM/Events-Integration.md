@@ -1,7 +1,7 @@
 #### Events: What, Why, How?
 
 [SPM](http://sematext.com/spm/) can graph not only performance and
-[custom metrics](Custom-Metrics_5373970.html), but also events.  Such
+[custom metrics](Custom-Metrics.html), but also events.  Such
 events may represent what is happening with a server or cluster, with an
 application (e.g., application or server restarts, deployments,
 alerts...), etc, as well as any sort of other event data that you want

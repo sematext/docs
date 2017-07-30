@@ -36,11 +36,11 @@ and you can get an evaluation version to try it out.
 Elasticsearch, Solr/SolrCloud, MySQL, MariaDB, Redis, Memcached, Apache,
 HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc.
  You can also feed it [Custom
-Metrics](Custom-Metrics_5373970.html).
+Metrics](Custom-Metrics.html).
 
 #### Does SPM Integrate with ChatOps like Slack and HipChat?  How about PagerDuty or custom WebHooks
 
-**A:** Yes, see [Integrations](Integrations_34799621.html).
+**A:** Yes, see [Integrations](Integrations.html).
 
 #### Can hostnames in SPM UI be obfuscated or customized
 
@@ -220,8 +220,8 @@ traffic, etc) .
 
 When monitoring Solr, Elasticsearch, HBase, Hadoop and other Java-based
 services, you will have an option to choose between using
-[In-process](SPM-Monitor---Javaagent_7340044.html) (javaagent) or
-[Standalone](SPM-Monitor---Standalone_7766020.html) monitor. The
+[In-process](SPM-Monitor---Javaagent.html) (javaagent) or
+[Standalone](SPM-Monitor---Standalone.html) monitor. The
 workaround described here requires the use of standalone monitor
 variant. Here's what you'd need to do to see your metrics in SPM:
 
@@ -238,8 +238,8 @@ variant. Here's what you'd need to do to see your metrics in SPM:
     instructions from some other tab, keep in mind OS metrics displayed
     in SPM UI will not be OS metrics of your Windows/Mac machine.
 2.  In step 2, if you are given a choice between
-    [In-process](SPM-Monitor---Javaagent_7340044.html) and
-    [Standalone](SPM-Monitor---Standalone_7766020.html) monitor,
+    [In-process](SPM-Monitor---Javaagent.html) and
+    [Standalone](SPM-Monitor---Standalone.html) monitor,
     **choose Standalone monitor**. It will use remote JMX to collect
     metrics from your Windows/Mac machine. Just follow instructions
     given on Standalone tab.  The only difference you will want to make
@@ -357,28 +357,28 @@ to get around this:
 
 #### When should I run Standalone and when Embedded SPM monitor
 
-**A: **[Standalone SPM monitor](SPM-Monitor---Standalone_7766020.html)
+**A: **[Standalone SPM monitor](SPM-Monitor---Standalone.html)
 runs as a separate process, while [Embedded
-monitor](SPM-Monitor---Javaagent_7340044.html) runs embedded in the
+monitor](SPM-Monitor---Javaagent.html) runs embedded in the
 Java/JVM process.  Thus, if you are monitoring a non-Java application,
 Standalone monitor is the only option.  Standalone monitor is a bit more
 complex to set up when one uses it to monitor Java applications because
 it typically requires one to enable out-of-process JMX access, as
 described on [Standalone SPM monitor
-page](SPM-Monitor---Standalone_7766020.html).  With Embedded monitor
+page](SPM-Monitor---Standalone.html).  With Embedded monitor
 this is not needed, but one needs to add the SPM agent to the Java
 command-line and restart the process of the monitored application.  When
 running Standalone monitor one can update the SPM monitor without
 restarting the Java process being monitored, while a restart is needed
 when Embedded SPM monitor is being used.  To be able to [trace
-transactions](Transaction-Tracing_35913843.html) or [database
-operations](Database-Operations_48136285.html) you need to use the
+transactions](Transaction-Tracing.html) or [database
+operations](Database-Operations.html) you need to use the
 Embedded SPM monitor.
 
 #### Can I use SPM for (business) transaction tracing
 
 **A: **Yes, see [Transaction
-Tracing](Transaction-Tracing_35913843.html).
+Tracing](Transaction-Tracing.html).
 
 #### Can I move SPM client to a different directory
 
@@ -422,7 +422,7 @@ sudo bash /opt/spm/bin/move-spm-home-dir.sh /opt/spm /mnt/some_other_dir/spm
 ```
 
 If you are using [in-process
-(javaagent)](SPM-Monitor---Javaagent_7340044.html) versions of SPM
+(javaagent)](SPM-Monitor---Javaagent.html) versions of SPM
 monitor to monitor Java-based applications, please adjust agent path(s)
 you use when starting application(s) you monitor with the SPM agent and
 make sure to use new location where old location was used before. Also
@@ -453,7 +453,7 @@ again move SPM client to location which suits you.
 #### Is there an HTTP API I could use
 
 **A: **Yes, see [SPM API
-Reference](SPM-API-Reference_40009738.html).
+Reference](SPM-API-Reference.html).
 
 #### I have multiple SPM applications installed on my machine, can I uninstall just one of them
 
@@ -599,7 +599,7 @@ with examples.
 #### Is there a Chef Recipe for the SPM client
 
 **A:** Yes, see [SPM client Chef
-Recipe](Chef-Recipe_12943369.html) example.
+Recipe](Chef-Recipe.html) example.
 
 ### General Troubleshooting
 
@@ -1076,7 +1076,7 @@ fetch the actual metrics from CloudWatch.
 
 **A:** SPM has integrations for Slack, HipChat, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
-[Integrations](Integrations_34799621.html). 
+[Integrations](Integrations.html). 
 
 #### What are Threshold-based Alerts
 

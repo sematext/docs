@@ -6,7 +6,7 @@
 
 Transaction tracing lets one trace code execution from beginning to end.
  It also enabled [Database
-Operations](Database-Operations_48136285.html) reporting. In case of
+Operations](Database-Operations.html) reporting. In case of
 SPM, transaction tracing can also cross applications, networks, and
 servers. For example, you can trace code execution from a beginning of
 an HTTP request made to a web application through any calls this web
@@ -26,13 +26,13 @@ running applications and troubleshoot performance issues.
 **Notes:**
 
   - Transaction Tracing requires SPM monitor running in [embedded
-    mode](SPM-Monitor---Javaagent_7340044.html) (in-process/javaagent).
+    mode](SPM-Monitor---Javaagent.html) (in-process/javaagent).
   - Enabling/disabling the tracing agent requires SPM monitor restart,
     which means it requires the restart of the application running the
     embedded SPM monitor.
   - Enabling transaction traces adds only about 1% CPU overhead.
   - Transaction Tracing is different from [On Demand
-    Profiling](On-Demand-Profiling_51904525.html).
+    Profiling](On-Demand-Profiling.html).
 
 **Resources**:
 

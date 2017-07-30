@@ -46,13 +46,13 @@ unpack it, save the above configuration into a file (e.g.,
     bin/logstash -f /tmp/logstash.conf
 
 After it starts, logs from that file will flow to Logsene and you should
-be able to start [searching them](Searching-Your-Events_19726362.html).
+be able to start [searching them](Searching-Your-Events.html).
 
 ### Parsing Unstructured Data
 
 You may want to extract metrics from your logs, to do various analysis
 tasks. For example, you can make a pie chart in
-[Kibana](Kibana_19726376.html) that shows you how often clients get 200
+[Kibana](Kibana.html) that shows you how often clients get 200
 response codes, how often 500 and so on.
 
 With Logstash, you can parse logs by using the [grok
@@ -90,7 +90,7 @@ output {
 ### Tagging Specific Logs
 
 Logstash populates a number of [special
-fields](X-Special-Fields_27983878.html), such as **host**
+fields](X-Special-Fields.html), such as **host**
 and **@timestamp**. You can also configure it to add one or more tags
 to logs matching certain criteria. This is useful when you want to
 quickly identify a special kind of logs. For example, you could tag

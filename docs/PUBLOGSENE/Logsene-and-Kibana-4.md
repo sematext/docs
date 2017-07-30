@@ -5,7 +5,7 @@ Overview](https://apps.sematext.com/users-web/services.do#logsene).
 Simply click on it and Kibana 4 will load the data from your Logsene
 App. For more information about using Kibana with Logsene, see [Kibana
 section](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Logsene+FAQ#LogseneFAQ-Kibana) in [Logsene
-FAQ](Logsene-FAQ_6520901.html).
+FAQ](Logsene-FAQ.html).
 
 ![](https://sematext.files.wordpress.com/2015/06/kibana4-ls-overview.png)
 
@@ -22,4 +22,4 @@ Dashboards\!
 
 For more information about using Kibana with Logsene, see [Kibana
 section](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Logsene+FAQ#LogseneFAQ-Kibana)
-in [Logsene FAQ](Logsene-FAQ_6520901.html).
+in [Logsene FAQ](Logsene-FAQ.html).

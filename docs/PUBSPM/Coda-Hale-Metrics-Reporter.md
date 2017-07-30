@@ -3,7 +3,7 @@ is an extension for the[ Coda Hale
 Metrics](http://metrics.codahale.com/) library version 2.2.0 and 3.x for
 sending metrics to [SPM](http://sematext.com/spm/index.html).  Under the
 hood sematext-metrics Java library is used to send metrics as [Custom
-Metrics](Custom-Metrics_5373970.html) to SPM.
+Metrics](Custom-Metrics.html) to SPM.
 
 ### Quick Start
 

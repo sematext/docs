@@ -376,9 +376,9 @@ field that doesn't contain any time zone information. Fortunately,
 there's a [new specification](http://tools.ietf.org/html/rfc5424) (RFC
 5424) that uses [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 timestamp. That's why we recommend using the new format for syslog
-daemons that support it, such as [rsyslog](rsyslog_23855111.html) or
-[syslog-ng](syslog-ng_23855119.html). If you use an older
-[syslogd](syslogd_6520868.html) implementation, or you simply prefer to
+daemons that support it, such as [rsyslog](rsyslog.html) or
+[syslog-ng](syslog-ng.html). If you use an older
+[syslogd](syslogd.html) implementation, or you simply prefer to
 use the older format, you have two options to have a correct timestamp:
 
   - set the system time on your server to UTC, or
@@ -396,7 +396,7 @@ use the older format, you have two options to have a correct timestamp:
 #### What are the supported timestamp formats
 
 If you send your logs via the [Elasticsearch
-API](Index-Events-via-Elasticsearch-API_6520850.html), you can use:
+API](Index-Events-via-Elasticsearch-API.html), you can use:
 
   - **ISO8601**. For example, **2001-06-08T08:00:01.123Z** or
     **2001-06-08T08:00:01+03:00**. A timezone must be there after the
@@ -413,7 +413,7 @@ timestamp** (like **Oct 11 22:14:15**). The legacy format assumes UTC
 and assumes the current year. It doesn't have sub-second precision,
 either.
 
-See [Supported Date Formats](Supported-Date-Formats_102150487.html) for
+See [Supported Date Formats](Supported-Date-Formats.html) for
 more examples of supported date and time
 formats.
 

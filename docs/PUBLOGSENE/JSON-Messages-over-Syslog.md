@@ -5,9 +5,9 @@ standard. For example, to do a quick test via
 
     $ echo 'my-host my-process[1234]:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"world"}' | nc logsene-receiver-syslog.sematext.com 514
 
-If you have your [rsyslog](rsyslog_23855111.html),
- [syslog-ng](syslog-ng_23855119.html) or
-[syslogd](syslogd_6520868.html) daemon already set up to send logs to
+If you have your [rsyslog](rsyslog.html),
+ [syslog-ng](syslog-ng.html) or
+[syslogd](syslogd.html) daemon already set up to send logs to
 your application, all you need to do is to make your structured messages
 comply to CEE. For
     example:

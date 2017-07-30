@@ -1,7 +1,7 @@
 ## Introduction
 
 Unlike the [Embedded, Javaagent-based
-monitor](SPM-Monitor---Javaagent_7340044.html), the Standalone monitor
+monitor](SPM-Monitor---Javaagent.html), the Standalone monitor
 is started as a separate process on each machine running the
 application(s) you want to monitor. A separate monitor process should be
 started for each application monitored on a machine. The installer adds

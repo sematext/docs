@@ -1,6 +1,6 @@
 ## Introduction
 
-Unlike the [Standalone monitor](SPM-Monitor---Standalone_7766020.html),
+Unlike the [Standalone monitor](SPM-Monitor---Standalone.html),
 the Embedded, Javaagent-based monitor, is started embedded in the
 process of the application it monitors.  To use the Embedded monitor one
 typically has to do the following:

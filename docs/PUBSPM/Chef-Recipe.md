@@ -1,5 +1,5 @@
 The following is an **example** Chef Recipe for installing [SPM
-client](SPM-Client_6914081.html).
+client](SPM-Client.html).
 
 ``` syntaxhighlighter-pre
 # Author: Charles Sullivan (charles@fullcontact.com)
@@ -39,9 +39,9 @@ end
   - line 22: change "es" to appropriate type based on the type seen for
     your SPM app on <https://apps.sematext.com/spm-reports/client.do>
   - line 22: change "standalone" to "javaagent" if you want an
-    [embedded/in-process agent](SPM-Monitor---Javaagent_7340044.html)
+    [embedded/in-process agent](SPM-Monitor---Javaagent.html)
     and not a [standalone process
-    agent](SPM-Monitor---Standalone_7766020.html)
+    agent](SPM-Monitor---Standalone.html)
   - line 24: this is relevant only for "standalone" agent  
       
 

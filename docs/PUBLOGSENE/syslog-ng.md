@@ -83,7 +83,7 @@ plugin. The libjson plugin is typically provided by the
 
 The alternate method for authentication is by pre-authorizing your
 public IP in Logsene's UI. [Here is a complete
-guide](Authorizing-IPs-for-Syslog_23855110.html) on how to do that. If
+guide](Authorizing-IPs-for-Syslog.html) on how to do that. If
 you choose this path, you don't need the template() statement from the
 code snippets below.
 
@@ -196,12 +196,12 @@ log {
 
 Then, restart syslog-ng and you should see your logs in the [Logsene
 UI](https://apps.sematext.com/logsene-reports/mainPage.do) or
-[Kibana](Kibana_19726376.html).
+[Kibana](Kibana.html).
 
 ## Tag Your Logs
 
 From your syslog messages, Logsene will populate a number of [special
-fields](X-Special-Fields_27983878.html), such as the **source** and
+fields](X-Special-Fields.html), such as the **source** and
 **host**. You can also configure syslog-ng to add a tag to logs matching
 certain criteria. This is useful when you want to quickly identify a
 special kind of logs. For example, you could tag events that come to the

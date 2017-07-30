@@ -6,7 +6,7 @@ search your logs from your own application, or by configuring/adapting
 existing Elasticsearch UIs, such as
 [Kibana](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Logsene+FAQ?src=search#LogseneFAQ-Q:CanIdeploymyownKibana?).
 You can also use this API to [index events or change the
-mapping](Index-Events-via-Elasticsearch-API_6520850.html).
+mapping](Index-Events-via-Elasticsearch-API.html).
 
 When you use the API, here are the things you need to know:
 
