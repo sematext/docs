@@ -1,5 +1,5 @@
 site_name: Sematext Documentation
-site_url: http://sematext/docs
+site_url: http://sematext.com/docs
 pages:
     - index.md
     - Log Management:
