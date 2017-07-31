@@ -3,7 +3,7 @@
 The client for "SPM for Node.js" is an open-source [node.js monitoring
 agent](https://github.com/sematext/spm-agent-nodejs) that collects
 node.js processes' metrics and sends them to SPM. It is available
-as[npm](https://www.npmjs.com/package/spm-agent-nodejs)[ package](https://www.npmjs.com/package/spm-agent-nodejs)
+as [npm](https://www.npmjs.com/package/spm-agent-nodejs)[ package](https://www.npmjs.com/package/spm-agent-nodejs)
 that can be added to the JavaScript source code like any other node.js
 module (see Installation & Configuration section below)
 
@@ -44,7 +44,7 @@ The following metrics are collected and sent to SPM:
         number of items placed in a shopping cart, or any other kind of
         business transaction or KPI   
         we provide a [Custom Metrics
-        API](https://sematext.atlassian.net/wiki/display/PUBSPM/Custom+Metrics)
+        API](Custom-Metrics)
         and a node.js client for it:
         [spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
 

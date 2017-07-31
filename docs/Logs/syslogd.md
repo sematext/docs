@@ -6,12 +6,12 @@ line to your **/etc/syslog.conf**:
 ```
 
 Before you restart syslogd, **[register your public
-IP](Authorizing-IPs-for-Syslog.html).** If you're behind a NAT
+IP](Authorizing-IPs-for-Syslog).** If you're behind a NAT
 or registering IPs doesn't suit your use-case, there are other options:
 
   - if you just want to test sending a few logs to Logsene, you can use
     your Logsene application token in a [CEE-formatted JSON
-    message](JSON-Messages-over-Syslog.html). For
+    message](JSON-Messages-over-Syslog). For
 example:
 
 <!-- end list -->
@@ -21,8 +21,8 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
 ```
 
   - change your syslog daemon from syslogd to
-    [rsyslog](rsyslog.html) or
-    [syslog-ng](syslog-ng.html). Or anything else that lets you
+    [rsyslog](rsyslog) or
+    [syslog-ng](syslog-ng). Or anything else that lets you
     format your messages, so you can build a JSON containing your
     Logsene application token like the one above
   - similar to the solution above, you can use a separate machine for
@@ -41,7 +41,7 @@ If your central machine is running syslog-ng, you'll have to add an
 [udp()
 option](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_source_tcpudp.html)
 to your [source()
-statement](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/syslog-ng#syslog-ng-ConfigureSources)
+statement](syslog-ng/#configure-sources)
 in **/etc/syslog-ng/syslog-ng.conf**:
 
 ``` syntaxhighlighter-pre

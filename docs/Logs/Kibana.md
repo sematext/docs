@@ -9,5 +9,5 @@ searches and visualizations to your data.
 
 If you want even more flexibility, you can [install Kibana locally and
 point it to
-Logsene](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Logsene+FAQ#LogseneFAQ-CanIusemyownKibana4).
+Logsene](Logsene-FAQ/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
 

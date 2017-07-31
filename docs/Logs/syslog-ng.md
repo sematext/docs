@@ -71,7 +71,7 @@ application from the [list of Logsene
 applications](https://apps.sematext.com/users-web/services.do#logsene).
 Then, put it in the template() statement of your Logsene destination.
 See working examples below. The end result is a [CEE-formatted JSON
-syslog](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/JSON+Messages+over+Syslog)
+syslog](JSON-Messages-over-Syslog)
 message that contains your token in the **logsene-app-token** field.
 
 IMPORTANT: For JSON formatting that enables token authentication to work
@@ -83,7 +83,7 @@ plugin. The libjson plugin is typically provided by the
 
 The alternate method for authentication is by pre-authorizing your
 public IP in Logsene's UI. [Here is a complete
-guide](Authorizing-IPs-for-Syslog.html) on how to do that. If
+guide](Authorizing-IPs-for-Syslog) on how to do that. If
 you choose this path, you don't need the template() statement from the
 code snippets below.
 
@@ -196,12 +196,12 @@ log {
 
 Then, restart syslog-ng and you should see your logs in the [Logsene
 UI](https://apps.sematext.com/logsene-reports/mainPage.do) or
-[Kibana](Kibana.html).
+[Kibana](Kibana).
 
 ## Tag Your Logs
 
 From your syslog messages, Logsene will populate a number of [special
-fields](X-Special-Fields.html), such as the **source** and
+fields](X-Special-Fields), such as the **source** and
 **host**. You can also configure syslog-ng to add a tag to logs matching
 certain criteria. This is useful when you want to quickly identify a
 special kind of logs. For example, you could tag events that come to the
@@ -211,7 +211,7 @@ To achieve this, you can define a
 [filter](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_filters.html)
 that matches such events. Then, you'd define a destination similar to
 the ones [described
-above](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/syslog-ng#syslog-ng-ConfigureDestinations),
+above](syslog-ng/#configure-destinations),
 where you'd add a **tags** field. Finally, you'd define a **log**
 statement where you bind your source, the newly defined filter and the
 newly defined destination:

@@ -18,10 +18,10 @@ you lots of ways to forward your logs with rsyslog:
   - [RELP](http://www.rsyslog.com/doc/relp.html) (uses application-level
     acknowledgement for increased reliability over plain TCP)
   - HTTP / HTTPS over the [Elasticsearch
-    API](Index-Events-via-Elasticsearch-API.html)
+    API](Index-Events-via-Elasticsearch-API)
 
 You can also send [JSON over
-syslog](JSON-Messages-over-Syslog.html) if you need support for
+syslog](JSON-Messages-over-Syslog) if you need support for
 structured data.
 
 There are 3 steps for configuring your rsyslog for Logsene:
@@ -32,7 +32,7 @@ There are 3 steps for configuring your rsyslog for Logsene:
     on
 2.  Choose a protocol and an authentication method. For UDP, TCP, TLS
     and RELP you can [authorize your public
-    IP](Authorizing-IPs-for-Syslog.html). However, **we
+    IP](Authorizing-IPs-for-Syslog). However, **we
     strongly recommend using the Logsene application's token**, which
     works with all supported protocols
 3.  Configure the output. Based on the chosen protocol and
@@ -108,13 +108,13 @@ To forward logs, you can use HTTP/HTTPS and authenticate by using your
 Logsene application token (recommended\!). Alternatively, you can use
 UDP, TCP/TLS or RELP and authenticate either by using the Logsene
 application token, or by [authorizing your public
-IP](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Authorizing+IPs+for+syslog)
+IP](Authorizing-IPs-for-Syslog)
 in the Logsene application settings.
 
 ### HTTP/HTTPS via the Elasticsearch API
 
 The recommended method is to use the [Elasticsearch
-API](Index-Events-via-Elasticsearch-API.html) to send logs over
+API](Index-Events-via-Elasticsearch-API) to send logs over
 HTTP or HTTPS. This will give you maximum flexibility, reliability and
 encryption, if you need it. This requires rsyslog 6.4.0 or later, and
 the installation of the [Elasticsearch output
@@ -175,7 +175,7 @@ Logsene via any of the following protocols:
 
 Again, with all these protocols, you can either authenticate with your
 Logsene application token, or by [registering your public
-IP](Authorizing-IPs-for-Syslog.html).
+IP](Authorizing-IPs-for-Syslog).
 
 #### Requirements
 
@@ -194,7 +194,7 @@ If you chose to authorize using static IP address, instead of
 authenticating using Logsene application token (which is the recommended
 option), you don't need to make any configuration changes in this step.
 Instead, go to the[ Logsene web application and authorize the public
-IP ](Authorizing-IPs-for-Syslog.html)(or multiple IPs) of the
+IP ](Authorizing-IPs-for-Syslog)(or multiple IPs) of the
 server(s) from where you send your logs.
 
 To use the Logsene application token, you'll first have to obtain it
@@ -203,7 +203,7 @@ applications](https://apps.sematext.com/users-web/services.do#logsene).
 Then, in **/etc/rsyslog.conf**, define a
 [template](http://www.rsyslog.com/doc/rsyslog_conf_templates.html) that
 forwards your messages in [CEE-formatted JSON over
-syslog](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/JSON+Messages+over+Syslog),
+syslog](JSON-Messages-over-Syslog),
 where you should put your token in the `logsene-app-token`
 field:
 
@@ -396,7 +396,7 @@ $ModLoad omrelp
 ## Tag Your Logs
 
 From your syslog messages, Logsene will populate a number of [special
-fields](X-Special-Fields.html), such as the **source** and
+fields](X-Special-Fields), such as the **source** and
 **host**. You can also configure rsyslog to add one or more tags to logs
 matching certain criteria. This is useful when you want to quickly
 identify a special kind of logs. For example, you could tag events that
@@ -406,7 +406,7 @@ in the Logsene web application, which you can then use for filtering,
 sorting, ...
 
 To achieve this, define a template similar to the ones [described
-above](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/rsyslog#rsyslog-ConfiguringOutputs),
+above](rsyslog/#configuring-outputs),
 where you'd add a **tags** field. Then, you'd use a
 [conditional](http://www.rsyslog.com/doc/rsyslog_conf_filter.html) to
 match those messages and send them to Logsene using the newly defined

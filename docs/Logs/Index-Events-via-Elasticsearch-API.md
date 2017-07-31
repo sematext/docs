@@ -7,15 +7,15 @@ API](http://www.elasticsearch.org/guide/reference/api/) so you can:
     any [Elasticsearch
     library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
   - send log events by using existing application such as
-    [Logstash](Logstash.html), or [Apache
+    [Logstash](Logstash), or [Apache
     Flume](http://flume.apache.org/), or [Fluentd Elasticsearch
     plugin](https://github.com/uken/fluent-plugin-elasticsearch), or
      anything that can output to Elasticsearch. Or you can implement
     your own "log shipper".
   - [search for logs from your own
-    application](Search-through-the-Elasticsearch-API.html), or
+    application](Search-through-the-Elasticsearch-API), or
     by configuring/adapting existing Elasticsearch UIs, such as
-    [Kibana](https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Logsene+FAQ?src=search#LogseneFAQ-Q:CanIdeploymyownKibana?)
+    [Kibana](Logsene-FAQ/#can-i-run-kibana-4-locally-and-point-it-to-logsene)
   - optionally define [custom
     mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
     your log types, so you can tweak the way your logs are indexed
@@ -103,7 +103,7 @@ mapping that works well for most use-cases:
   - the **geoip** field is an object that contains a **location** [geo
     point](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html)
     field (this works well if you're using
-    [Logstash](Logstash.html))
+    [Logstash](Logstash))
   - the predefined fields **host**, **facility**, **severity**,
     **syslog-tag**, **source** and **tags** **** are not analyzed, which
     enables only exact matches (you can still use wildcards, for example

@@ -1,7 +1,7 @@
 ## Introduction
 
 Unlike the [Embedded, Javaagent-based
-monitor](SPM-Monitor---Javaagent.html), the Standalone monitor
+monitor](SPM-Monitor---Javaagent), the Standalone monitor
 is started as a separate process on each machine running the
 application(s) you want to monitor. A separate monitor process should be
 started for each application monitored on a machine. The installer adds
@@ -375,7 +375,7 @@ $ env JMX_PORT=9999  bin/kafka-server-start.sh config/server.properties
 
 For enabling JMX on Producer and Consumer nodes do it like you would do
 it for a [simple JVM
-application](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+Monitor+-+Standalone#SPMMonitor-Standalone-JMXSetups\(i.e.HowtoConfiguretheMonitoredApp/Server\)).
+application](SPM-Monitor---Standalone/#jmx-setups-ie-how-to-configure-the-monitored-appserver).
 
 #### Storm
 
