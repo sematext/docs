@@ -1,4 +1,4 @@
-### Can I install Sematext Apps if my server is behind a firewall
+### Can I install Sematext Enterprise if my server is behind a firewall
 
 Yes. If your system is behind a firewall and cannot connect to the
 Internet to download anything, please [contact
@@ -6,7 +6,7 @@ Sematext](https://sematext.com/contact/) to get the packages that have
 all dependencies included in
 them.
 
-### Can I configure Sematext Apps if my server has multiple IP addresses or it is behind a firewall
+### Can I configure Sematext Enterprise if my server has multiple IP addresses or it is behind a firewall
 
 The config script has an option to provide the IP address from the
 config

@@ -39,9 +39,9 @@ end
   - line 22: change "es" to appropriate type based on the type seen for
     your SPM app on <https://apps.sematext.com/spm-reports/client.do>
   - line 22: change "standalone" to "javaagent" if you want an
-    [embedded/in-process agent](SPM-Monitor---Javaagent.html)
+    [embedded/in-process agent](SPM-Monitor---Javaagent)
     and not a [standalone process
-    agent](SPM-Monitor---Standalone.html)
+    agent](SPM-Monitor---Standalone)
   - line 24: this is relevant only for "standalone" agent  
       
 

@@ -29,12 +29,12 @@ FAQ](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+FAQ#SPMFAQ-HowcanIsh
 ### Elasticsearch-compatible Search API
 
 To use the search APIs, see [Search through the Elasticsearch
-API](Search-through-the-Elasticsearch-API_19726366.html). This API
+API](Search-through-the-Elasticsearch-API.html). This API
 is **fully compatible with Elasticsearch's APIs**. To use it you need
 just your Logsene App tokens, not the API key.  The rest of this
 document describes only the app management APIs.  For searching your
 logs from the terminal/console, see [Logsene
-CLI](Logsene-CLI_43221002.html).
+CLI](Logsene-CLI.html).
 
 ### Request/Response format
 
@@ -1205,5 +1205,5 @@ Example of a success response (with HTTP code 200):
 ### Elasticsearch-compatible API
 
 For details [read
-this](Search-through-the-Elasticsearch-API_19726366.html).
+this](Search-through-the-Elasticsearch-API.html).
 

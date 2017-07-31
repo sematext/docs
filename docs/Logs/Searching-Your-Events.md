@@ -4,8 +4,7 @@ through your data, in the same way [you can send
 it](Sending-Events-to-Logsene.html).
 
 Logsene comes with its own UI, which integrates nicely with other
-Sematext apps, such as [SPM](http://sematext.com/spm/) (see [pub-SPM
-Wiki](https://sematext.atlassian.net/wiki/spaces/PUBSPM)). You can also
+Sematext apps, such as [SPM](http://sematext.com/spm/) (see [Monitoring Documentation](http://localhost:8000/Monitoring/Coda-Hale-Metrics-Reporter/)). You can also
 use [Kibana](Kibana.html). Or deploy your own UI or custom
 scripts.
 

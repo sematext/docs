@@ -34,7 +34,7 @@
               title="{{ config.site_name }}"
               class="md-logo md-header-nav__button">
             <img src="{{ base_url }}/{{ config.extra.logo }}"
-                width="24" height="24" />
+                width="32" height="32" />
           </a>
         {% else %}
           <a href="{{ config.site_url | default(nav.homepage.url, true) }}"
@@ -79,12 +79,12 @@
 
       <div class="md-flex__cell md-flex__cell--shrink">
         <div class="md-header-nav__free_account btn btn-warning">
-          <a title="Get Free Account" class="md-source" href="https://apps.sematext.com/users-web/register.do">Get Free Account</a>
+          <a title="Get Free Account" class="md-source" href="https://apps.sematext.com/ui/registration">Get Free Account</a>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <div class="md-header-nav__login btn btn-primary">
-          <a title="Get Free Account" class="md-source" href="https://apps.sematext.com/users-web/login.do">Login</a>
+          <a title="Get Free Account" class="md-source" href="https://apps.sematext.com/ui/login">Login</a>
         </div>
       </div>
       

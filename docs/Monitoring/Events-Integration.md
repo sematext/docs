@@ -1,7 +1,7 @@
 #### Events: What, Why, How?
 
 [SPM](http://sematext.com/spm/) can graph not only performance and
-[custom metrics](Custom-Metrics.html), but also events.  Such
+[custom metrics](Custom-Metrics), but also events.  Such
 events may represent what is happening with a server or cluster, with an
 application (e.g., application or server restarts, deployments,
 alerts...), etc, as well as any sort of other event data that you want
@@ -23,7 +23,7 @@ events.
 
   - To be able to use send Events to SPM, you need a Sematext account.
     If you don't already have it, you can create
-    it [here](https://apps.sematext.com/users-web/register.do), it's
+    it [here](https://apps.sematext.com/ui/registration), it's
     free, no credit card needed. After you have Sematext account, create
     an SPM App to which Events will be sent.
   - If you have already created some SPM Apps under your account in the

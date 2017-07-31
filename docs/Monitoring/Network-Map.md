@@ -23,7 +23,7 @@ The following properties can be changed:
     will be used to start Network Monitor. It requires packet sniffing
     capabilities.
 
-  - **N****ETWORK\_INTERFACES** (default value: "**eth0, eth1**") - the
+  - **NETWORK\_INTERFACES** (default value: "**eth0, eth1**") - the
     list of network interfaces that will be used for packets capture
 
   - **ENABLE\_TRAFFIC\_MONITORING** (default value: "**true**") -

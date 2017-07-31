@@ -15,10 +15,10 @@ Important:
   - This works only for Java applications
 
   - To start capturing this information [enable Transaction
-    Tracing](Transaction-Tracing.html) in your SPM agents
+    Tracing](Transaction-Tracing) in your SPM agents
 
   - Requires SPM monitor running in [embedded
-    mode](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+Monitor+-+Javaagent)
+    mode](SPM-Monitor---Javaagent)
 
 Insights these reports provide:
 
