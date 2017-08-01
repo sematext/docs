@@ -1,7 +1,7 @@
 The following is an **example** Chef Recipe for installing [SPM
 client](SPM-Client.html).
 
-``` syntaxhighlighter-pre
+``` bash
 # Author: Charles Sullivan (charles@fullcontact.com)
 # Based on: https://gist.github.com/CharlieSu/6195243
 if node.spm[:token]  # Will only run if a SPM token is present.
@@ -37,7 +37,7 @@ end
     replace "apt-get" with distribution-specific equivallent (e.q. yum
     on RedHat-based distros)
   - line 22: change "es" to appropriate type based on the type seen for
-    your SPM app on <https://apps.sematext.com/spm-reports/client.do>
+    your SPM app on <https://apps.sematext.com/ui/our-integrations>
   - line 22: change "standalone" to "javaagent" if you want an
     [embedded/in-process agent](SPM-Monitor---Javaagent)
     and not a [standalone process

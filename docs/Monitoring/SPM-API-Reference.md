@@ -25,7 +25,7 @@ Access to API key of some Account is allowed for **OWNER**,
 **cannot** access API key of that Account, though they can always use
 their own Account's API key to manage their own Account, Apps, etc.  For
 more info about Account Sharing please see [SPM
-FAQ](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+FAQ#SPMFAQ-HowcanIsharemyappswithotherusers).
+FAQ](SPM-FAQ/#how-can-i-share-my-apps-with-other-users).
 
 ### Request/Response format
 
@@ -36,7 +36,7 @@ call:
 
  
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "name":"solr-app-1",
@@ -53,7 +53,7 @@ contains data returned by the call). Example of response:
 
  
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Application 'new-solr-app-1' created",
@@ -131,7 +131,7 @@ spark, nodejs*
 Examples of API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/app/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -156,7 +156,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Created application for dto: [name=new-solr-app-1,type=Solr,discountCode=<null>,subType=<null>,fetchFrequency=<null>,region=<null>,awsCloudWatchSecretKey=<null>,awsCloudWatchAccessKey=<null>,apiKey=a9092d95-d062-4499-ad0b-a1b43fadb9b5], token is: 61611d45-6ecd-47f7-b5b4-6faccdb2f8c4",
@@ -183,7 +183,7 @@ Example of a success response (with HTTP code 200):
 
 Few examples of non-200 responses:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : false,
   "message" : "User identified with API key a9092d95-d062-4499-ad0b-a1b43fadb9b4 doesn't exist"
@@ -230,7 +230,7 @@ Few examples of non-200 responses:
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/users-web/api/v2/app/list" -d '
 {
   "apiKey":"a9092d95-d06-4499-ad0b-a1b43fadb9b5"
@@ -241,7 +241,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/u
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -360,7 +360,7 @@ for a particular app.
 Examples of API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/alert/threshold/list" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -384,7 +384,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -453,7 +453,7 @@ API calls for their creation (as you'll see in following sections)
 require 3 important attributes: **reportName**, **chartKey**,
 **metricLabel**. List of all available metrics for some SPM app can be
 fetched using [Metrics
-API](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+API+Reference#SPMAPIReference-ListMetrics)
+API](SPM-API-Reference/#list-metrics)
 call (response provides all 3 important attributes).
 
 ##### Creating Threshold Alert
@@ -482,7 +482,7 @@ call (response provides all 3 important attributes).
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/alert/threshold/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -512,7 +512,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "AlertRule created",
@@ -574,7 +574,7 @@ Example of a success response (with HTTP code 200):
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/alert/anomaly/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -601,7 +601,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "AlertRule created",
@@ -657,7 +657,7 @@ Example of a success response (with HTTP code 200):
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/alert/heartbeat/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -683,7 +683,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "AlertRule created",
@@ -781,14 +781,14 @@ thresholds, etc.).
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
 as a key in [**list
-alerts**](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+API+Reference#SPMAPIv2Reference-ListAlerts)
+alerts**](SPM-API-Reference/#list-alerts)
 API call response.
 
   
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X DELETE -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/alert/delete/141" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631"
@@ -799,7 +799,7 @@ curl -X DELETE -k -H "Content-Type: application/json" "https://apps.sematext.com
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Alert with alertId 141 deleted",
@@ -853,7 +853,7 @@ Example of a success response (with HTTP code 200):
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
 as a key in [**list
-alerts**](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+API+Reference#SPMAPIv2Reference-ListAlerts)
+alerts**](SPM-API-Reference/#list-alerts)
 API call response.
 
  
@@ -861,7 +861,7 @@ API call response.
 Examples of API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/alert/enable/141" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631"
@@ -877,7 +877,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Examples of success responses (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Alert with alertId 141 enabled",
@@ -907,7 +907,7 @@ application.
 For a particular SPM application, this API call will return a list of
 all available **Reports**, **Charts** and **Metrics**. This info is
 especially useful when using Alerts API to [create
-Alerts](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+API+Reference#SPMAPIReference-CreateAlert) since
+Alerts](SPM-API-Reference/#create-alert) since
 it requires 3 important attributes for each
 Alert:**reportName**, **chartKey** and **metricLabel**.
 
@@ -942,7 +942,7 @@ Alert:**reportName**, **chartKey** and **metricLabel**.
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/metrics/list?rcm" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -952,7 +952,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1018,7 +1018,7 @@ are used in other API calls to reference metrics.
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/metrics/list" -d '
 {
   "apiKey": "a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -1030,7 +1030,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1167,7 +1167,7 @@ Rule
 Examples of API calls without
 filtering:
 
-``` syntaxhighlighter-pre
+``` bash
 # data point for last 5 min for metric os.cpu.user, using default granularity
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/metrics/data" -d '
 {
@@ -1204,7 +1204,7 @@ Previous calls will result in data points for specified metric(s) and
 specified time span, using specified or default granularity. Example of
 a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1235,7 +1235,7 @@ In case a metric group prefix is used instead of specific metric group,
 response will contain a property for each metric in a metric group.
 Example response for metric:"os.cpu.\*":
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1284,7 +1284,7 @@ filters API. There is also a special value "all" that can be used.
 Example of API call for returning metric data per
 host:
 
-``` syntaxhighlighter-pre
+``` bash
 # data point for last 5 min for metric os.cpu.user, using default granularity, separate data series for all hosts
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/metrics/data" -d '
 {
@@ -1299,7 +1299,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 And example of response:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1333,7 +1333,7 @@ function (in case of os.cpu.\* it is AVG). The API allows aggregation on
 only a subset of data series, using any aggregation
 function:
 
-``` syntaxhighlighter-pre
+``` bash
 # data point for last 5 min for metric os.cpu.user, using default granularity, separate data series for all hosts
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/metrics/data" -d '
 {
@@ -1394,7 +1394,7 @@ one for returning metric data.
 
 Examples of API calls without filtering:
 
-``` syntaxhighlighter-pre
+``` bash
 # filters and their values for last 5 min for metric os.cpu.user
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/metrics/filters" -d '
 {
@@ -1427,7 +1427,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 Example of a success response for os.cpu.user metric (with HTTP code
 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1448,7 +1448,7 @@ wildcards, it is possible to get a list of filters that cannot actually
 be applied to all metrics in a metric group, e.g. response for
 "metric":"os.\*":
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1471,7 +1471,7 @@ os.cpu.\* metrics.
 Filter values can also be filtered. The last example is returning
 solr.\* filters but only for test1.sematext:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1533,7 +1533,7 @@ existing subscriptions.
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/subscription/list" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -1545,7 +1545,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1619,7 +1619,7 @@ Triggers instant emailing of a report defined by some subscription.
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/spm-reports/api/v2/subscription/send/36" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -1631,7 +1631,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/s
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Report for subscription with ID 36 sent"

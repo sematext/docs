@@ -1,18 +1,20 @@
 You can send structured logs via syslog by putting a JSON within the
 message part of your log, according to the [CEE](http://cee.mitre.org/)
-standard. For example, to do a quick test via
-    netcat:
+standard. For example, to do a quick test via netcat:
 
-    $ echo 'my-host my-process[1234]:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"world"}' | nc logsene-receiver-syslog.sematext.com 514
+``` bash
+$ echo 'my-host my-process[1234]:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"world"}' | nc logsene-receiver-syslog.sematext.com 514
+```
 
-If you have your [rsyslog](rsyslog.html),
- [syslog-ng](syslog-ng.html) or
-[syslogd](syslogd.html) daemon already set up to send logs to
+If you have your [rsyslog](rsyslog),
+ [syslog-ng](syslog-ng) or
+[syslogd](syslogd) daemon already set up to send logs to
 your application, all you need to do is to make your structured messages
-comply to CEE. For
-    example:
+comply to CEE. For example:
 
-    $ logger '@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"world"}'
+``` bash
+$ logger '@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"world"}'
+```
 
 ## How it works
 
@@ -45,16 +47,18 @@ your log:
 
 So the log above will appear similar to this (pretty-printed):
 
-    {
-      "@timestamp":"2012-12-03T11:42:54.644758+01:00",
-      "host":"my-host",
-      "severity":"notice",
-      "facility":"user",
-      "syslog-tag":"my-process:",
-      "source":"my-process:",
-      "logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE",
-      "hello": "world" 
-    }
+``` JSON
+{
+  "@timestamp":"2012-12-03T11:42:54.644758+01:00",
+  "host":"my-host",
+  "severity":"notice",
+  "facility":"user",
+  "syslog-tag":"my-process:",
+  "source":"my-process:",
+  "logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE",
+  "hello": "world" 
+}
+```
 
 ## How do I specify a timestamp, severity and facility via netcat?
 
@@ -66,5 +70,6 @@ field can also be a standard, high-precision, RFC-3339 timestamp. For
 example, let's say you want Severity to be Critical and Facility to be
 User:
 
-    echo "<10>2013-08-29T13:41:03.152+03:00 my-host my-process:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "message":"this is a test message"} | nc logsene-receiver-syslog.sematext.com 514
-
+``` bash
+echo "<10>2013-08-29T13:41:03.152+03:00 my-host my-process:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "message":"this is a test message"} | nc logsene-receiver-syslog.sematext.com 514
+```

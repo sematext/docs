@@ -11,7 +11,7 @@ into SPM and graph it along other reports.
 
   - To be able to use Custom Metrics, you need a Sematext account. If
     you don't already have it, you can create it
-    [here](https://apps.sematext.com/users-web/register.do), it's free,
+    [here](https://apps.sematext.com/ui/registration), it's free,
     no credit card needed. After you have Sematext account, create an
     SPM App to which Custom Metrics will be sent.
   - If you have already created some SPM Apps under your account in the
@@ -69,7 +69,7 @@ example, one can use them to track the number of registered users by
 gender and account type. In registered users example data points can be
 specified as: 
 
-``` syntaxhighlighter-pre
+``` JSON
 {
    "name" : "registered-users-count", 
    "value" : 42, 
@@ -233,7 +233,7 @@ Data point:
 
 Example:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
    "datapoints" : [
       {
@@ -261,14 +261,14 @@ To send metrics using curl, save example above to a file named
 datapoints.json and submit it with the following call, using your own
 token:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -v -H 'Content-type: application/json' -d @datapoints.json http://spm-receiver.sematext.com/receiver/custom/receive.json?token=[spm app token]
 ```
 
 One-liner
 example:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -H 'Content-type: application/json' -d '{"datapoints" : [{"name": "registered-users", "value" : 1, "aggregation" : "sum"}]}' http://spm-receiver.sematext.com/receiver/custom/receive.json?token=[spm app token]
 ```
 
@@ -352,7 +352,7 @@ per request.
 
 Example:
 
-``` syntaxhighlighter-pre
+``` bash
 1369671381221 registered-users-count  1   sum user.gender=male    account.type=free
 1369671381221   registered-users-count  1   sum user.gender=female  account.type=paid
 ```
@@ -362,14 +362,14 @@ preserved) to a file named datapoints.raw and use the following call
 with your own
 token:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -v -H 'Content-type: text/plain' -d @datapoints.raw http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=[spm app token]
 ```
 
 One-liner
 example:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -H 'Content-type: text/plain' -d "`echo -e "\tregistered-users\t1\tsum"`" http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=[spm app token]
 ```
 

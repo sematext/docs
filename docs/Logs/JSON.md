@@ -10,7 +10,7 @@ is **logsene-receiver-syslog.sematext.com** and the port we use is
 A quick way to ship messages via TCP syslog is with
 netcat:
 
-``` syntaxhighlighter-pre
+``` bash
 echo '{"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "message":"Hello, Logsene!"}' | nc logsene-receiver-syslog.sematext.com 12201
 ```
 

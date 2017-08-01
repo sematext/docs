@@ -4,8 +4,7 @@ With Logsene, we expose the [Elasticsearch
 API](http://www.elasticsearch.org/guide/reference/api/) so you can:
 
   - send log events through it directly from your application, using
-    any [Elasticsearch
-    library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
+    any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
   - send log events by using existing application such as
     [Logstash](Logstash), or [Apache
     Flume](http://flume.apache.org/), or [Fluentd Elasticsearch
@@ -54,7 +53,7 @@ your message.
 
 For example, you can send a log like this:
 
-``` syntaxhighlighter-pre
+``` bash
 NOW=`date "+%Y-%m-%dT%H:%M:%S"`
 curl -XPOST https://logsene-receiver.sematext.com/$YOUR_TOKEN_HERE/mytype/ -d '
 {
@@ -77,7 +76,7 @@ API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
 because it allows you to send multiple events with a single request. For
 example, the following request sends three events:
 
-``` syntaxhighlighter-pre
+``` bash
 NOW=`date "+%Y-%m-%dT%H:%M:%S"`
 
 echo '{ "index" : { "_index": "LOGSENE_APP_TOKEN_GOES_HERE", "_type" : "mytype" } }

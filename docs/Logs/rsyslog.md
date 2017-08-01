@@ -47,7 +47,7 @@ Logsene. The most common input module is
 logs from your local /dev/log socket. To start listening on local logs,
 add this line at the beginning of your **/etc/rsyslog.conf**:
 
-``` syntaxhighlighter-pre
+``` bash
 $ModLoad imuxsock
 ```
 
@@ -67,7 +67,7 @@ and related parameters, like this:
 
 **Tailing Files by Polling; Old Config Format**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 # add once
 $ModLoad imfile                     # load the file input module
 $InputFilePollInterval 1            # how often to check files for changes
@@ -90,7 +90,7 @@ which is easier to maintain:
 
 **Tailing Files via Inotify; New Config Format**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 # add once
 module(load="imfile")
 
@@ -135,7 +135,7 @@ formatting them as JSON:
 
 **Configuring Log Template**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 # define a template to specify which fields we send
 template(name="LogseneFormat" type="list" option.json="on") {
   constant(value="{")
@@ -207,7 +207,7 @@ syslog](JSON-Messages-over-Syslog),
 where you should put your token in the `logsene-app-token`
 field:
 
-``` syntaxhighlighter-pre
+``` bash
 $template LogseneFormat,"<%PRI%>%TIMEREPORTED:::date-rfc3339% %HOSTNAME% %syslogtag%@cee: {\"logsene-app-token\": \"LOGSENE_APP_TOKEN_GOES_HERE\", \"message\": \"%msg:::json%\"}\n"
 ```
 
@@ -218,7 +218,7 @@ new fields, reformat messages):
 
 **Configuring Log Template**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
  template(
   name="LogseneFormat"
   type="list"
@@ -255,7 +255,7 @@ LOGSENE\_APP\_TOKEN\_GOES\_HERE with your actual token:
 
 **Configuring Elasticsearch Output**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 module(load="omelasticsearch")
 action(type="omelasticsearch"
     template="LogseneFormat"          # the template that you defined earlier
@@ -276,14 +276,14 @@ If you're using Logsene application token for authentication, specify
 the LogseneFormat template in your *action* line. The host you'll
 connect to is **logsene-receiver-syslog.sematext.com**:
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @logsene-receiver-syslog.sematext.com;LogseneFormat
 ```
 
 If you've authorized your public IPs, the RFC-5424 predefined template
 will do:
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @logsene-receiver-syslog.sematext.com;RSYSLOG_SyslogProtocol23Format
 ```
 
@@ -294,14 +294,14 @@ With TCP, the *action* line looks similar to UDP, except you'll have two
 
 If you're authorizing using Logsene application token:
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @@logsene-receiver-syslog.sematext.com;LogseneFormat
 ```
 
 If you use IP address for
 authorization:
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @@logsene-receiver-syslog.sematext.com;RSYSLOG_SyslogProtocol23Format
 ```
 
@@ -311,7 +311,7 @@ To set up syslog over TLS, you first need to configure the certificates:
 
 **Set up Certificates**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 mkdir /opt/rsyslog  # if it does not already exist
 cd /opt/rsyslog
 wget https://apps.sematext.com/cert/DigiCertCA.pem               # md5sum is fb30c5636d0108b2688d7e1ed59749ac
@@ -323,7 +323,7 @@ Then, configure the TLS driver like this:
 
 **Configure TLS; Old Config Format**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 $DefaultNetstreamDriver gtls
 $DefaultNetstreamDriverCAFile /opt/rsyslog/ca_bundle.pem
  
@@ -338,14 +338,14 @@ except you'll use **port 10514**.
 Again, there are two options, for authorizing with the Logsene
 application token:
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @@logsene-receiver-syslog.sematext.com:10514;LogseneFormat
 ```
 
 And for authorizing using the IP
 address(es):
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @@logsene-receiver-syslog.sematext.com:10514;RSYSLOG_SyslogProtocol23Format
 ```
 
@@ -354,7 +354,7 @@ TLS configuration below:
 
 **Configure TLS; New Config Format**  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
  global (
  defaultNetstreamDriver="gtls"
  defaultNetstreamDriverCAFile="/opt/rsyslog/ca_bundle.pem"
@@ -381,14 +381,14 @@ module](http://www.rsyslog.com/doc/omrelp.html) and then point it to
 As with TCP or UDP, specify the LogseneFormat template for authorizing
 with your Logsene application token:
 
-``` syntaxhighlighter-pre
+``` bash
 $ModLoad omrelp
 *.* :omrelp:logsene-receiver-syslog.sematext.com:20514;LogseneFormat
 ```
 
 And the RFC-5424 template for IP-based authorization:
 
-``` syntaxhighlighter-pre
+``` bash
 $ModLoad omrelp
 *.* :omrelp:logsene-receiver-syslog.sematext.com:20514;RSYSLOG_SyslogProtocol23Format
 ```

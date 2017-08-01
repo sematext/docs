@@ -9,7 +9,7 @@ Metrics](Custom-Metrics) to SPM.
 
 To start sending metrics just create and start SematextMetricsReporter:
 
-``` syntaxhighlighter-pre
+``` java
 MetricRegistry metrics = new MetricRegistry();
 
 SematextClient.initialize("spm token here");

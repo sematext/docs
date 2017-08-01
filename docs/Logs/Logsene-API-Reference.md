@@ -29,12 +29,12 @@ FAQ](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+FAQ#SPMFAQ-HowcanIsh
 ### Elasticsearch-compatible Search API
 
 To use the search APIs, see [Search through the Elasticsearch
-API](Search-through-the-Elasticsearch-API.html). This API
+API](Search-through-the-Elasticsearch-API). This API
 is **fully compatible with Elasticsearch's APIs**. To use it you need
 just your Logsene App tokens, not the API key.  The rest of this
 document describes only the app management APIs.  For searching your
 logs from the terminal/console, see [Logsene
-CLI](Logsene-CLI.html).
+CLI](Logsene-CLI).
 
 ### Request/Response format
 
@@ -43,7 +43,7 @@ call requests should contain **apiKey** attribute (among other
 attributes specific for that API call). Example of content of one such
 call:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "name":"new-logsene-app-1"
@@ -56,7 +56,7 @@ are **message** (which provides textual message about what API call
 did) and **data** (which contains data returned by the call). Example of
 response:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Created application for dto: [name=new-logsene-app-1,apiKey=a9092d95-d062-4499-ad0b-a1b43fadb9b5], token is: 61611d45-6ecd-47f7-b5b4-6faccdb2f8c4",
@@ -118,7 +118,7 @@ Description
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/app/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -128,7 +128,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of success response (with HTTP status 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Created application for dto: [name=new-logsene-app-1,apiKey=a9092d95-d062-4499-ad0b-a1b43fadb9b5], token is: 61611d45-6ecd-47f7-b5b4-6faccdb2f8c4",
@@ -142,7 +142,7 @@ Example of success response (with HTTP status 200):
 
 Example of non-200 response:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : false,
   "message" : "User identified with API key a9092d95-d062-4499-ad0b-a1b43fadb9b4 doesn't exist"
@@ -179,7 +179,7 @@ Example of non-200 response:
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/users-web/api/v2/app/list" -d '
 {
   "apiKey":"a9092d95-d06-4499-ad0b-a1b43fadb9b5"
@@ -188,7 +188,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/u
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -306,7 +306,7 @@ Description
 Examples of API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/threshold/list" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -322,7 +322,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of success response (with HTTP status 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
 
   "success" : true,
@@ -421,7 +421,7 @@ Description
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/threshold/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -447,7 +447,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Alert rule created",
@@ -506,7 +506,7 @@ Description
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/anomaly/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -530,7 +530,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Alert rule created",
@@ -557,7 +557,7 @@ Errors will be returned in case of wrong apiKey or appToken  or if some
 of values are missing. Example of a error response when query is not
 sent (with HTTP code 400):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
  "success" : false,
  "message" : "Missing mandatory param alertRule.query"
@@ -601,7 +601,7 @@ response.
 Example API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X DELETE -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/delete/141" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631"
@@ -610,7 +610,7 @@ curl -X DELETE -k -H "Content-Type: application/json" "https://apps.sematext.com
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Alert with alertId 141 deleted",
@@ -663,7 +663,7 @@ response.
 Example API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/enable/141" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631"
@@ -677,7 +677,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of a success responses (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Alert with alertId 141 enabled",
@@ -729,7 +729,7 @@ Example of a success responses (with HTTP code 200):
 Examples of API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 # alert notifications for last 24h for all apps owned by user with provided key
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/notification/list" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5"
@@ -763,7 +763,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -914,7 +914,7 @@ Description
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/subscription/list -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -924,7 +924,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -975,7 +975,7 @@ Triggers instant emailing of a report defined by some subscription.
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/subscription/send/36" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -985,7 +985,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Report for subscription with ID 36 sent"
@@ -1051,7 +1051,7 @@ Description
 Examples of API
 calls:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/query/list" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -1061,7 +1061,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of success response (with HTTP status 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "data" : {
@@ -1124,7 +1124,7 @@ Description
 Example of API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/query/add" -d '
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -1138,7 +1138,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Query created",
@@ -1183,7 +1183,7 @@ queries](#LogseneAPIReference-ListSavedQueries)** API call response.
 Example API
 call:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -X DELETE -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/query/delete/50" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631"
@@ -1192,7 +1192,7 @@ curl -X DELETE -k -H "Content-Type: application/json" "https://apps.sematext.com
 
 Example of a success response (with HTTP code 200):
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "success" : true,
   "message" : "Query with queryId 50 deleted",
@@ -1205,5 +1205,5 @@ Example of a success response (with HTTP code 200):
 ### Elasticsearch-compatible API
 
 For details [read
-this](Search-through-the-Elasticsearch-API.html).
+this](Search-through-the-Elasticsearch-API).
 

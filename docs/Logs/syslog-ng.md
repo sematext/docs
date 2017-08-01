@@ -24,7 +24,7 @@ system. You can put this at the beginning of your
 **/etc/syslog-ng/syslog-ng.conf**, along with your configuration
 version. We recommend running version 3.3 or later:
 
-``` syntaxhighlighter-pre
+``` bash
 @version:3.3
 source local_logs {
     system();
@@ -48,7 +48,7 @@ need to tell syslog-ng not to try and parse it, and if you need
 multi-line support, you should specify that,
 too:
 
-``` syntaxhighlighter-pre
+``` bash
 source jetty_log { file("/var/log/jetty" flags(no-parse) multi-line-mode(indented)); };
 ```
 
@@ -97,7 +97,7 @@ template() statement should be removed:
 
 ****  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 destination logsene {
     syslog("logsene-receiver-syslog.sematext.com"
       transport("udp")
@@ -116,7 +116,7 @@ there or remove the template() statement if you've authorized your IP:
 
 ****  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 destination logsene {
     syslog("logsene-receiver-syslog.sematext.com"
       transport("tcp")
@@ -135,7 +135,7 @@ First, you need to set up the certificates:
 
 ****  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 mkdir /opt/syslog-ng
 cd /opt/syslog-ng
 wget https://apps.sematext.com/cert/DigiCertCA.pem                # md5sum is 9e028401b52ca7453f6b05caa9643c89
@@ -156,7 +156,7 @@ created certificates directory and **changing the port to 10514**:
 
 ****  Expand source 
 
-``` syntaxhighlighter-pre
+``` bash
 destination logsene {
     syslog("logsene-receiver-syslog.sematext.com"
       transport("tcp")
@@ -176,7 +176,7 @@ destination logsene {
 After configuring your source and destination the last step is binding
 the two:
 
-``` syntaxhighlighter-pre
+``` bash
 log {
     source(local_logs); destination(logsene);
 };
@@ -186,7 +186,7 @@ If you're tailing files or you defined other sources, you need to bind
 them to the **logsene** destination in order to have those messages
 shipped to your Logsene application as well. For example:
 
-``` syntaxhighlighter-pre
+``` bash
 log {
     source(jetty_log); destination(logsene);
 };
@@ -216,7 +216,7 @@ where you'd add a **tags** field. Finally, you'd define a **log**
 statement where you bind your source, the newly defined filter and the
 newly defined destination:
 
-``` syntaxhighlighter-pre
+``` bash
 filter user_tests { facility(kern) and level(err) };
 
 destination logsene_tests {

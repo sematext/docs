@@ -1,7 +1,7 @@
 With plain syslogd, you can send logs to Logsene via UDP if you add this
 line to your **/etc/syslog.conf**:
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @logsene-receiver-syslog.sematext.com
 ```
 
@@ -16,7 +16,7 @@ example:
 
 <!-- end list -->
 
-``` syntaxhighlighter-pre
+``` bash
 logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world!"}'
 ```
 
@@ -33,7 +33,7 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
 
 <!-- end list -->
 
-``` syntaxhighlighter-pre
+``` bash
 *.* @central-syslog-server
 ```
 
@@ -44,7 +44,7 @@ to your [source()
 statement](syslog-ng/#configure-sources)
 in **/etc/syslog-ng/syslog-ng.conf**:
 
-``` syntaxhighlighter-pre
+``` bash
 udp()
 ```
 
@@ -52,7 +52,7 @@ If your central machine is running rsyslog, you'll have to load the [UDP
 input module](http://www.rsyslog.com/doc/imudp.html) and run it on the
 standard **port 514**:
 
-``` syntaxhighlighter-pre
+``` bash
 $ModLoad imudp
 $UDPServerRun 514
 ```

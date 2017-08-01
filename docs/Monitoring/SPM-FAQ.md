@@ -91,7 +91,7 @@ logs detailed info about its monitoring lifecycle). To do that, change
 properties files of your SPM applications. You can find those files
 with:
 
-``` syntaxhighlighter-pre
+``` bash
 ls /opt/spm/spm-monitor/conf/spm-monitor-config-*.properties
 ```
 
@@ -99,7 +99,7 @@ You can adjust one or more of them, depending on which application's
 monitor log output you want to reduce. At the bottom of those files add
 the following line:
 
-``` syntaxhighlighter-pre
+``` bash
 SPM_MONITOR_LOGGING_LEVEL=reduced
 ```
 
@@ -115,7 +115,7 @@ frequency to 30 seconds, for example, simply add the following line to
 your SPM monitor properties files located in
 **/opt/spm/spm-monitor/conf** :
 
-``` syntaxhighlighter-pre
+``` bash
 SPM_MONITOR_COLLECT_INTERVAL=30000
 ```
 
@@ -137,7 +137,7 @@ memory. If you want to be absolutely sure about it, simply lower this
 number in **/opt/spm/spm-monitor/bin/spm-monitor-starter.sh**, with the
 following variable (around line 63):
 
-``` syntaxhighlighter-pre
+``` bash
 JAVA_OPTIONS="$JAVA_OPTIONS -Xmx384m -Xms128m -Xss256k"
 ```
 
@@ -179,7 +179,7 @@ configuration setup", you should add **jvmname** parameter (and value)
 at the end of parameter list, like
 this:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/spm-client-setup-conf.sh 11111111-1111-1111-1111-111111111111 solr javaagent jvmname:solr1
 ```
 
@@ -284,7 +284,7 @@ Yes. The following steps are
     look for a line similar to this (the file name might be a bit
     different, depending on app type you have chosen):
     
-    ``` syntaxhighlighter-pre
+    ``` bash
     SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar"
     ```
     
@@ -293,7 +293,7 @@ Yes. The following steps are
     installed, like
     /opt/wildfly/bin/client/jboss-cli-client.jar):
     
-    ``` syntaxhighlighter-pre
+    ``` bash
     SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jboss-cli-client.jar"
     ```
 
@@ -303,7 +303,7 @@ Yes. The following steps are
     example with password file location
     etc:
     
-    ``` syntaxhighlighter-pre
+    ``` bash
     SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:http-remoting-jmx://localhost:9990"
     ```
 
@@ -317,7 +317,7 @@ run the diagnostics script (sudo bash
 If you see errors similar
 to:
 
-``` syntaxhighlighter-pre
+``` java
 Caused by: javax.security.sasl.SaslException: Authentication failed: all available authentication mechanisms failed:
 
 java.io.FileNotFoundException: /opt/wildfly/standalone/tmp/auth/local8363680782928117445.challenge (Permission denied)
@@ -334,7 +334,7 @@ to get around this:
     that, add an entry like this to the end of
     **/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR\_TOKEN-default.properties**:
     
-    ``` syntaxhighlighter-pre
+    ``` bash
     SPM_MONITOR_USER="wildfly"
     ```
     
@@ -344,7 +344,7 @@ to get around this:
 2.  Change permissions for the problematic directory, adjusting the path
     to match your environment:
     
-    ``` syntaxhighlighter-pre
+    ``` bash
     chmod 777 /opt/wildfly/standalone/tmp/auth 
     ```
     
@@ -396,7 +396,7 @@ and arguments are still valid).
 It accepts 1 parameter: new directory where SPM client should be moved
 to (if such directory doesn't exist, it will be created)
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/move-spm-home-dir-soft.sh /mnt/some_dir
 ```
 
@@ -417,7 +417,7 @@ the new location (if such directory doesn't exist, it will be created).
 It can be run
 as:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/move-spm-home-dir.sh /opt/spm /mnt/some_other_dir/spm
 ```
 
@@ -430,7 +430,7 @@ add the following argument to the monitored application's Java process
 (you can add it right before -javaagent part; adjust the value to match
 directory you used):
 
-``` syntaxhighlighter-pre
+``` bash
 -Dspm.home=/mnt/some_other_dir/spm
 ```
 
@@ -443,7 +443,7 @@ moved to different directory using "**2) Full move script**", you will
 first have to move SPM back to original /opt/spm
 directory:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/move-spm-home-dir.sh /mnt/some_other_dir/spm /opt/spm
 ```
 
@@ -461,7 +461,7 @@ Reference](SPM-API-Reference).
 one parameter, token of SPM application you want to
 uninstall):
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-111111111111
 ```
 
@@ -470,14 +470,14 @@ sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-1111111
 **A:** Yes, just find its .properties file in
 **/opt/spm/spm-monitor/conf** and add to it:
 
-``` syntaxhighlighter-pre
+``` bash
 SPM_MONITOR_ENABLED=false
 ```
 
 After that restart the monitor to apply the change. In case of
 standalone agent, run:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo service spm-monitor restart
 ```
 
@@ -614,7 +614,7 @@ and restart the agent (or the process the agent is attached to).
 
 **A**: Yes.  If you are installing the RPM, add this to /etc/yum.conf:
 
-``` syntaxhighlighter-pre
+``` bash
 proxy=http or https://proxy-host-here:port
 proxy_username=optional_proxy_username
 proxy_password=optional_proxy_password
@@ -624,7 +624,7 @@ proxy_password=optional_proxy_password
 
 If you are using apt-get, set the http\_proxy environmental variable:
 
-``` syntaxhighlighter-pre
+``` bash
 export http_proxy=http://username:password@yourproxyaddress:proxyport
 ```
 
@@ -637,7 +637,7 @@ the /opt/spm/properties/spm-sender.properties file:
 
   
 
-``` syntaxhighlighter-pre
+``` bash
 spm_sender_proxy_host=
 spm_sender_proxy_port=
 spm_sender_proxy_user_name=
@@ -662,7 +662,7 @@ spm_sender_proxy_password=
 
   
 
-``` syntaxhighlighter-pre
+``` bash
 sudo apt-get install ca-certificates
 sudo yum install ca-certificates
 ```
@@ -677,7 +677,7 @@ with curl is failing, add "-k" flag.
 **A**: If you are having issues with SPM, you can create diagnostics
 package on affected machines where SPM client was installed by running:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/spm-client-diagnostics.sh
 ```
 
@@ -729,7 +729,7 @@ ok:
 1\. Try connecting to spm-receiver.sematext.com with the following
 command:
 
-``` syntaxhighlighter-pre
+``` bash
 nc -zv -w 20 spm-receiver.sematext.com 443
 ```
 
@@ -750,7 +750,7 @@ In case you see some other result:
 
 2\. Check if your DNS has correct entries for SPM Receiver:
 
-``` syntaxhighlighter-pre
+``` bash
 nslookup spm-receiver.sematext.com
 ```
 
@@ -758,7 +758,7 @@ The output of this command should look like this, although the IP
 addresses and names may be somewhat different, as they change
 periodically:
 
-``` syntaxhighlighter-pre
+``` bash
 Server:        127.0.1.1
 Address:    127.0.1.1#53
 
@@ -800,7 +800,7 @@ spm-receiver.sematext.com.
 5.  Make sure user spmmon can have more than 1024 files open:  
       
     
-    ``` syntaxhighlighter-pre
+    ``` bash
     sudo vim /etc/security/limits.conf
     spmmon     -    nofile    32000
     
@@ -861,7 +861,7 @@ default.
 
   
 
-``` syntaxhighlighter-pre
+``` bash
 sudo service spm-monitor restart
 ```
 
@@ -885,7 +885,7 @@ metric data to be encrypted when being sent to SPM over the Internet),
 you can adjust that in **/opt/spm/properties/spm-sender.properties** by
 changing protocol to **http** in property:
 
-``` syntaxhighlighter-pre
+``` bash
 spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 ```
 
@@ -933,7 +933,7 @@ node by accessing the Stats API via HTTP.  To allow only local access
 add the following to elasticsearch.yml. Don't forget to restart each ES
 node to whose elasticsearch.yml you add this.
 
-``` syntaxhighlighter-pre
+``` bash
 http.host: "127.0.0.1"
 ```
 
@@ -956,7 +956,7 @@ real username and password):
 
   
 
-``` syntaxhighlighter-pre
+``` bash
 SPM_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
 SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```
@@ -1044,7 +1044,7 @@ secret for a user that can fetch metrics for EC2, EBS and/or ELB,
 depending on which of those you select to be monitored. We recommend
 creating a separate IAM user for this, with the minimum permissions:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -1116,7 +1116,7 @@ Deb, etc.), simply upgrade via apt-get (Debian, Ubuntu, etc.), or yum
 
 Debian/Ubuntu:
 
-``` syntaxhighlighter-pre
+``` bash
 wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -  # NOTE: this will update the sematext gpg key
 sudo apt-get update && sudo apt-get install spm-client  # NOTE: this does not update the whole server, just spm-client
 ```
@@ -1125,7 +1125,7 @@ sudo apt-get update && sudo apt-get install spm-client  # NOTE: this does not up
 
 RedHat/CentOS/...
 
-``` syntaxhighlighter-pre
+``` bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo  # NOTE: this will update sematext repo file
 sudo yum clean all && sudo yum update spm-client        # NOTE: this does not update the whole server, just spm-client
 ```
@@ -1134,7 +1134,7 @@ sudo yum clean all && sudo yum update spm-client        # NOTE: this does not up
 
 SuSE:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo zypper up spm-client
 ```
 
@@ -1157,7 +1157,7 @@ After that is done, also do:
 
 <!-- end list -->
 
-``` syntaxhighlighter-pre
+``` bash
 sudo service spm-monitor restart
 ```
 
@@ -1187,7 +1187,7 @@ Actions-\>Install Monitor for app you have installed)
 directory, you will first have to move SPM back to original /opt/spm
 directory:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/move-spm-home-dir.sh /mnt/some_other_dir/spm /opt/spm
 ```
 

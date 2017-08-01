@@ -33,7 +33,7 @@ Things to check to ensure network connectivity is OK:
 1\. Try to connect to logsene-receiver.sematext.com (port 80 or 443)
 with the following command:
 
-``` syntaxhighlighter-pre
+``` bash
 nc -zv -w 20 logsene-receiver.sematext.com 443
 ```
 
@@ -41,7 +41,7 @@ or if you are using syslog, connect to
 logsene-receiver-syslog.sematext.com (port 514 for TCP and UDP, port
 20514 for RELP, port 10514 for TLS):
 
-``` syntaxhighlighter-pre
+``` bash
 nc -zv -w 20 logsene-receiver-syslog.sematext.com 10514
 ```
 
@@ -61,7 +61,7 @@ In case you see some other result:
 
 2\. Check if your DNS has correct entries for Logsene Receiver:
 
-``` syntaxhighlighter-pre
+``` bash
 nslookup logsene-receiver.sematext.com
 ```
 
@@ -69,7 +69,7 @@ The output of this command should look like this, although the IP
 addresses and names may be somewhat different, as they change
 periodically:
 
-``` syntaxhighlighter-pre
+``` bash
 Server:        127.0.1.1
 Address:    127.0.1.1#53
 
@@ -83,13 +83,13 @@ Address: 34.196.180.172
 
 Or, if you are using syslog, try:
 
-``` syntaxhighlighter-pre
+``` bash
 nslookup logsene-receiver-syslog.sematext.com
 ```
 
 The output should be similar to:
 
-``` syntaxhighlighter-pre
+``` bash
 Server:        127.0.1.1
 Address:    127.0.1.1#53
 
@@ -295,7 +295,7 @@ can use **Logstash's [geoip
 filter](http://logstash.net/docs/latest/filters/geoip)**. For example, a
 configuration like this:
 
-``` syntaxhighlighter-pre
+``` bash
 input {
   stdin {
     type => "human"
@@ -475,21 +475,29 @@ can install:
 
 For RedHat and CentOS:
 
-    % yum install rsyslog-relp
+``` bash
+% yum install rsyslog-relp
+```
 
 For Debian and Ubuntu:
 
-    % apt-get install rsyslog-relp
+``` bash
+% apt-get install rsyslog-relp
+```
 
 For SUSE and OpenSUSE:
 
-    % zypper install rsyslog-module-relp
+``` bash
+% zypper install rsyslog-module-relp
+```
 
 If you compiled rsyslog manually, you need to supply **--enable-relp**
 to the configure script. You can check if rsyslog starts properly by
 starting it in foreground:
 
-    % rsyslogd -n
+``` bash
+% rsyslogd -n
+```
 
 You will get an error if the module is not found or you have any other
 problem. For debug mode, add **-d** as
@@ -644,13 +652,19 @@ uncompressed format, as JSON files.
 A: You can decompress by installing these command line programs (then
 use` man lz4 `or` man lzf` for further instructions):
 
-**Ubuntu/Debian:**  
-`sudo apt-get install liblz4-tool`  
-`sudo apt-get install libcompress-lzf-java` (landed in Ubuntu 15.04)
+**Ubuntu/Debian:** 
+
+``` bash
+sudo apt-get install liblz4-tool
+sudo apt-get install libcompress-lzf-java (landed in Ubuntu 15.04)
+```
 
 **OSX:**  
-`brew install lz4`  
-`brew install liblzf`
+
+``` bash
+brew install lz4
+brew install liblzf
+```
 
 #### **Which folder structure Logsene uses when uploading logs to S3**
 
