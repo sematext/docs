@@ -2,7 +2,7 @@
 
 *  
 Note: For details on Logsene API, see [Logsene API
-Reference](https://sematext.atlassian.net/wiki/spaces/PUBLOGSENE/pages/40468524/Logsene+API+Reference)*
+Reference](../Monitoring/SPM-API-Reference)*
 
 ### Introduction
 

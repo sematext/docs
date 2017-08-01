@@ -1,7 +1,7 @@
 *Note: This is Reference for v2 of Logsene API.*
 
 Note: For details on SPM API, see [SPM API
-Reference](https://sematext.atlassian.net/wiki/spaces/PUBSPM/pages/40009738/SPM+API+Reference).*
+Reference](../Monitoring/SPM-API-Reference).*
 
 ### Introduction to Management API
 
@@ -24,7 +24,7 @@ for **OWNER**, **BILLING\_ADMIN** and **ADMIN** users. Users
 with **USER** role **cannot** access API key of that Account, though
 they can always use their own Account's API key to manage their own
 Account, Apps, etc.  For more info about Account Sharing please see [SPM
-FAQ](https://sematext.atlassian.net/wiki/display/PUBSPM/SPM+FAQ#SPMFAQ-HowcanIsharemyappswithotherusers).
+FAQ](../Monitoring/SPM-FAQ/#how-can-i-share-my-apps-with-other-users).
 
 ### Elasticsearch-compatible Search API
 
