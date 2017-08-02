@@ -17,8 +17,9 @@ Important:
   - To start capturing this information [enable Transaction
     Tracing](Transaction-Tracing) in your SPM agents
 
-  - Requires SPM monitor running in [embedded
-    mode](SPM-Monitor---Javaagent)
+  - Requires SPM monitor running in [embedded mode](SPM-Monitor---Javaagent) 
+    <iframe width="400" height="300" src="https://www.youtube.com/embed/eoZJmAJKuaQ" frameborder="0" allowfullscreen ></iframe>
+
 
 Insights these reports provide:
 
