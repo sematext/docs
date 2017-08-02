@@ -1,3 +1,7 @@
+.md-header-nav__button {
+    margin: 0px;
+    padding: 0px;
+}
 @media only screen and (min-width: 60em) {
     .md-header-nav__source {
       width: initial;

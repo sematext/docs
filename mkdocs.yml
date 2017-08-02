@@ -61,7 +61,7 @@ edit_uri: edit/master/docs/
 google_analyticsX: ['UA-36723568-3', 'mkdocs.org']
 # Options
 extra:
-  logo: 'images/logo.png'
+  logo: 'images/logo.svg'
   palette:
     primary: 'Brown'
     accent: 'Indigo'
