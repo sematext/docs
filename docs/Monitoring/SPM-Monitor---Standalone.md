@@ -1,7 +1,6 @@
 ## Introduction
 
-Unlike the [Embedded, Javaagent-based
-monitor](SPM-Monitor---Javaagent), the Standalone monitor
+Unlike the [Embedded, Javaagent-based monitor](SPM-Monitor---Javaagent), the Standalone monitor
 is started as a separate process on each machine running the
 application(s) you want to monitor. A separate monitor process should be
 started for each application monitored on a machine. The installer adds
@@ -19,7 +18,7 @@ monitor one should first adjusting the following:
   
 After that, SPM monitor can be (re)started with:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo service spm-monitor restart
 ```
 
@@ -41,7 +40,7 @@ of the other types of setup for your production servers.
 This setup requires adding the following arguments to your Java process
 (your Elasticsearch, Solr, HBase...):
 
-``` syntaxhighlighter-pre
+``` ini
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=false
@@ -56,7 +55,7 @@ In this example, **SPM\_MONITOR\_JMX\_PARAMS** property in **monitor
 properties** file should be adjusted as follows (leave other properties
 unchanged):
 
-``` syntaxhighlighter-pre
+``` ini
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000"  # MUST match the port in -Dcom.sun.management.jmxremote.port=3000 above
 ```
 
@@ -78,7 +77,7 @@ rights on these files should be set to **600**.
 These files should contain space-separated role-password pairs, for
 example:
 
-``` syntaxhighlighter-pre
+``` bash
 monitorRole somepassword123
 ```
 
@@ -99,7 +98,7 @@ following arguments (again, port can be adjusted and it has to be
 reflected in SPM **monitor properties** below in **spm.remote.jmx.url**
 argument):
 
-``` syntaxhighlighter-pre
+``` ini
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=false
@@ -112,7 +111,7 @@ while **monitor properties** file should be adjusted like (leave other
 properties in that file
 unchanged):
 
-``` syntaxhighlighter-pre
+``` ini
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000 -Dspm.remote.jmx.password.file=/home/spm/passwordMonitor.txt"
 ```
 
@@ -123,7 +122,7 @@ SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000 -Dspm.remote.jmx.pas
   
 In this case, monitored service should get the following java arguments:
 
-``` syntaxhighlighter-pre
+``` ini
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=true
@@ -139,7 +138,7 @@ Port, password and keystore path should match your local setup.
 **Monitor properties** file should be adjusted like this (change just
 **SPM\_MONITOR\_JMX\_PARAMS** property):
 
-``` syntaxhighlighter-pre
+``` ini
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000
 -Djavax.net.ssl.trustStore=/home/spm/monitor.ts 
 -Djavax.net.ssl.trustStorePassword=password456 
@@ -168,7 +167,7 @@ Here is example of starting Jetty server (any jar could have been used
 here; the Jetty started here could have run Solr or some other
 application):
 
-``` syntaxhighlighter-pre
+``` bash
 java -Dcom.sun.management.jmxremote 
 -Dcom.sun.management.jmxremote.port=3000 
 -Dcom.sun.management.jmxremote.ssl=true 
@@ -180,8 +179,7 @@ java -Dcom.sun.management.jmxremote
 
 #### Jetty (to run Solr or other apps)
 
-See [Starting with Java
-Command](#SPMMonitor-Standalone-StartingwithJavaCommand).
+See [Starting with Java Command](#starting-with-java-command).
 
 #### Tomcat (to run Solr or other apps)
 
@@ -190,7 +188,7 @@ version and on how it was installed (whether you just unpacked tomcat
 package or installed it with apt-get install). One way is editing
 **/etc/default/tomcat6** (if it exists) by adding:
 
-``` syntaxhighlighter-pre
+``` bash
 CATALINA_OPTS="${CATALINA_OPTS} -Dcom.sun.management.jmxremote 
 -Dcom.sun.management.jmxremote.port=3000 
 -Dcom.sun.management.jmxremote.ssl=false 
@@ -212,7 +210,7 @@ Adjust your **hbase-env.sh** file. For instance, **hbase master** could
 get the following
 parameters:
 
-``` syntaxhighlighter-pre
+``` bash
 export HBASE_JMX_BASE="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 export HBASE_MASTER_OPTS="$HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=3000"
 ```
@@ -221,7 +219,7 @@ export HBASE_MASTER_OPTS="$HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=30
 while **region server** could
 get:
 
-``` syntaxhighlighter-pre
+``` bash
 export HBASE_JMX_BASE="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 export HBASE_REGIONSERVER_OPTS="$HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=3000"
 ```
@@ -243,7 +241,7 @@ mentioned in step 3 on
 Adjust your **start-sensei-node.sh** by changing **JAVA\_OPTS** like
 this:
 
-``` syntaxhighlighter-pre
+``` bash
 JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote 
 -Dcom.sun.management.jmxremote.port=3000 
 -Dcom.sun.management.jmxremote.ssl=true 
@@ -264,7 +262,7 @@ subdir, it will automatically be used by Hadoop; please also check with
 your Hadoop distribution docs what is the alternative), you can adjust
 them by adding some of (example for simple no-security jmx setup):
 
-``` syntaxhighlighter-pre
+``` bash
 # both MRv1 (0.22 and earlier, 1.0, 1.1) and YARN (0.23, 2.*)
 export HADOOP_NAMENODE_OPTS="$HADOOP_NAMENODE_OPTS -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
@@ -335,7 +333,7 @@ above.
 **Alternatively**, even when using **CDH** **GUI** to administer Hadoop,
 you can still choose to manually add definitions to **hadoop-env.sh**
 file, you may just have to create it in **conf/** subdir if it doesn't
-exist yet. ****
+exist yet. 
 
 Below is the image of CDH UI:
 
@@ -351,7 +349,7 @@ Adjust your **zkServer.sh **(usually found
 at /usr/lib/zookeeper/bin/zkServer.sh) by changing **JVMFLAGS** as
 follows:
 
-``` syntaxhighlighter-pre
+``` bash
 export JVMFLAGS="$JVMFLAGS -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=false
@@ -363,19 +361,18 @@ export JVMFLAGS="$JVMFLAGS -Dcom.sun.management.jmxremote
 Kafka Broker has no port opened for JMX by default. To fix this
 edit **kafka-server-start.sh** by changing JMX\_PORT as follows:
 
-``` syntaxhighlighter-pre
+``` bash
 export JMX_PORT=9999
 ```
 
 Or start Kafka Broker like:
 
-``` syntaxhighlighter-pre
+``` bash
 $ env JMX_PORT=9999  bin/kafka-server-start.sh config/server.properties
 ```
 
 For enabling JMX on Producer and Consumer nodes do it like you would do
-it for a [simple JVM
-application](SPM-Monitor---Standalone/#jmx-setups-ie-how-to-configure-the-monitored-appserver).
+it for a [simple JVM application](SPM-Monitor---Standalone/#jmx-setups-ie-how-to-configure-the-monitored-appserver).
 
 #### Storm
 
@@ -385,14 +382,14 @@ editing the storm.yaml file:
 For Nimbus (in this example we specify JMX port as
 3000):
 
-``` syntaxhighlighter-pre
+``` bash
 nimbus.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=3000 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 ```
 
 For Supervisor (in this example we specify JMX port as
 4000):
 
-``` syntaxhighlighter-pre
+``` bash
 supervisor.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=4000 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 ```
 
@@ -400,14 +397,14 @@ For Workers (use this approach to have Storm dynamically assign a JMX
 port to each Worker choosing from the port range specified in the
 storm.yaml): 
 
-``` syntaxhighlighter-pre
+``` bash
 worker.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=%ID%"
 ```
 
 For the above to work make sure the JMX port range is defined in
 storm.yml as follows: 
 
-``` syntaxhighlighter-pre
+``` bash
 supervisor.slots.ports:
     - 6700
     - 6701
@@ -427,7 +424,7 @@ supervisor.slots.ports:
 1\) In some cases, monitored server should also get the following
 argument:
 
-``` syntaxhighlighter-pre
+``` ini
  -Djava.rmi.server.hostname=localhost
 ```
 
@@ -437,6 +434,6 @@ If you are having issues connecting SPM standalone monitor to your
 server, you may want to add the said option to your server/java process
 and restart it. After that, also restart SPM monitor:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo service spm-monitor restart
 ```

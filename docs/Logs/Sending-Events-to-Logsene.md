@@ -9,15 +9,15 @@ connect:
     on **logsene-receiver-syslog.sematext.com**
 
 Both options work with existing applications, such as
-[Logstash](Logstash.html),
+[Logstash](Logstash),
 [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch),
-[rsyslog](rsyslog.html) or
-[syslog-ng](syslog-ng.html). And you can always write your own
+[rsyslog](rsyslog) or
+[syslog-ng](syslog-ng). And you can always write your own
 application or script that works with
-[Elasticsearch](Index-Events-via-Elasticsearch-API.html) or
+[Elasticsearch](Index-Events-via-Elasticsearch-API) or
 syslog or Apache Flume or really any other tool that can send data to
 [Logsene's Elasticsearch
-API](Index-Events-via-Elasticsearch-API.html).
+API](Index-Events-via-Elasticsearch-API).
 
 **To see more details on a specific option, click on one of the child
 pages below.**

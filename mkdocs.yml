@@ -33,6 +33,7 @@ pages:
       - Database Operations: Monitoring/Database-Operations.md
       - Events Integration: Monitoring/Events-Integration.md
       - Integration:
+        - Overview: Monitoring/Integrations.md
         - Alerts - HipChat Integration: Monitoring/Alerts---HipChat-Integration.md
         - Alerts - PagerDuty Integration: Monitoring/Alerts---PagerDuty-Integration.md
         - Alerts - Slack Integration: Monitoring/Alerts---Slack-Integration.md
@@ -40,6 +41,7 @@ pages:
       - On Demand Profiling: Monitoring/On-Demand-Profiling.md
       - SPM API Reference: Monitoring/SPM-API-Reference.md
       - SPM Client:
+        - Overview: Monitoring/SPM-Client.md
         - Chef Recipe: Monitoring/Chef-Recipe.md
         - SPM Monitor - Javaagent: Monitoring/SPM-Monitor---Javaagent.md
         - SPM Monitor - Standalone: Monitoring/SPM-Monitor---Standalone.md

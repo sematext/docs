@@ -5,8 +5,7 @@
 ### What is Transaction Tracing
 
 Transaction tracing lets one trace code execution from beginning to end.
- It also enabled [Database
-Operations](Database-Operations.html) reporting. In case of
+ It also enabled [Database Operations](Database-Operations) reporting. In case of
 SPM, transaction tracing can also cross applications, networks, and
 servers. For example, you can trace code execution from a beginning of
 an HTTP request made to a web application through any calls this web
@@ -25,14 +24,12 @@ running applications and troubleshoot performance issues.
 
 **Notes:**
 
-  - Transaction Tracing requires SPM monitor running in [embedded
-    mode](SPM-Monitor---Javaagent.html) (in-process/javaagent).
+  - Transaction Tracing requires SPM monitor running in [embedded mode](SPM-Monitor---Javaagent) (in-process/javaagent).
   - Enabling/disabling the tracing agent requires SPM monitor restart,
     which means it requires the restart of the application running the
     embedded SPM monitor.
   - Enabling transaction traces adds only about 1% CPU overhead.
-  - Transaction Tracing is different from [On Demand
-    Profiling](On-Demand-Profiling.html).
+  - Transaction Tracing is different from [On Demand Profiling](On-Demand-Profiling).
 
 **Resources**:
 
@@ -45,7 +42,7 @@ running applications and troubleshoot performance issues.
 To enable tracing edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
-``` syntaxhighlighter-pre
+``` ini
 # enable tracing agent
 SPM_MONITOR_TRACING_ENABLED=true
  
@@ -88,7 +85,7 @@ extension is set of pointcuts described in XML files placed in
 
 Below is the description of the XML format:
 
-``` syntaxhighlighter-pre
+``` xml
 <instrumentation-descriptor name="descriptor-name">
   <pointcuts>
      <pointcut name="pointcut-1" [entry-point="true"] [transaction-name="custom-transaction-name"]>
@@ -132,7 +129,7 @@ The following rules are supported:
 An extension that enables instrumentation of *all* methods in given
 classes.  
 
-``` syntaxhighlighter-pre
+``` xml
 <instrumentation-descriptor name="spring-petclinic-extension">
   <pointcuts>
     <pointcut name="jpa-repository">
@@ -163,7 +160,7 @@ transaction-name attribute.
 
  
 
-``` syntaxhighlighter-pre
+``` xml
 <instrumentation-descriptor name="custom-description-tracer-test">
   <pointcuts>
     <pointcut name="method-pointcut-test">
@@ -208,7 +205,7 @@ name with the \`@RequestHandler\` annotation). Alternatively,
 transaction names can be redefined using servlet config.  For example,
 here we name them "WorkerTransaction":
 
-``` syntaxhighlighter-pre
+``` xml
 <servlet>
   <servlet-name>WorkerServlet</servlet-name>
   <servlet-class>phi.WorkerServlet</servlet-class>
@@ -254,7 +251,7 @@ define custom pointcuts for a Scala app you need to follow the
 convention Scala uses to generate JVM classes. Below you can find a toy
 example that covers all basic cases:
 
-``` syntaxhighlighter-pre
+``` scala
 trait UserService {
   def getUsers(): List[String]
 }
@@ -303,7 +300,7 @@ object StatisticsService extends App {
 
 Custom pointcuts definition:
 
-``` syntaxhighlighter-pre
+``` xml
 <instrumentation-descriptor name="scala">
   <pointcuts>
     <pointcut name="foo" entry-point="true">

@@ -1,8 +1,7 @@
 *Note: This is Reference for v2 of SPM API.*
 
 *  
-Note: For details on Logsene API, see [Logsene API
-Reference](../Monitoring/SPM-API-Reference)*
+Note: For details on Logsene API, see [Logsene API Reference](../Monitoring/SPM-API-Reference)*
 
 ### Introduction
 
@@ -24,8 +23,7 @@ Access to API key of some Account is allowed for **OWNER**,
 **BILLING\_ADMIN** and **ADMIN** users. Users with **USER** role
 **cannot** access API key of that Account, though they can always use
 their own Account's API key to manage their own Account, Apps, etc.  For
-more info about Account Sharing please see [SPM
-FAQ](SPM-FAQ/#how-can-i-share-my-apps-with-other-users).
+more info about Account Sharing please see [SPM FAQ](SPM-FAQ/#how-can-i-share-my-apps-with-other-users).
 
 ### Request/Response format
 
@@ -452,8 +450,7 @@ different API calls for creating them.
 API calls for their creation (as you'll see in following sections)
 require 3 important attributes: **reportName**, **chartKey**,
 **metricLabel**. List of all available metrics for some SPM app can be
-fetched using [Metrics
-API](SPM-API-Reference/#list-metrics)
+fetched using [Metrics API](SPM-API-Reference/#list-metrics)
 call (response provides all 3 important attributes).
 
 ##### Creating Threshold Alert
@@ -780,8 +777,7 @@ thresholds, etc.).
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in [**list
-alerts**](SPM-API-Reference/#list-alerts)
+as a key in [**list alerts**](SPM-API-Reference/#list-alerts)
 API call response.
 
   
@@ -852,8 +848,7 @@ Example of a success response (with HTTP code 200):
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in [**list
-alerts**](SPM-API-Reference/#list-alerts)
+as a key in [**list alerts**](SPM-API-Reference/#list-alerts)
 API call response.
 
  
@@ -906,8 +901,7 @@ application.
 
 For a particular SPM application, this API call will return a list of
 all available **Reports**, **Charts** and **Metrics**. This info is
-especially useful when using Alerts API to [create
-Alerts](SPM-API-Reference/#create-alert) since
+especially useful when using Alerts API to [create Alerts](SPM-API-Reference/#create-alert) since
 it requires 3 important attributes for each
 Alert:**reportName**, **chartKey** and **metricLabel**.
 
@@ -1039,10 +1033,8 @@ Example of a success response (with HTTP code 200):
 }
 ```
 
-Returned metric keys can be used to obtain data points using [metrics
-data API](#SPMAPIReference-SPMAPIReference-MetricsData), or list of
-available filters using [metrics filters
-API](#SPMAPIReference-SPMAPIReference-MetricsFilters).
+Returned metric keys can be used to obtain data points using [metrics data API](#metrics-data), or list of
+available filters using [metrics filters API](#metrics-filters).
 
 #### Metrics Data
 

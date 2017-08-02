@@ -67,6 +67,5 @@ channels such as e-mail, PagerDuty, Nagios, Slack, custom Web Hook, etc.
 - at the same time, the alert is displayed in the SPM event graph to
 overlay it with the triggering metrics:
 
-![Event graph showing
-alerts](attachments/34340871/34865154.png?width=900
+![Event graph showing alerts](attachments/34340871/34865154.png?width=900
 "Event graph showing alerts")

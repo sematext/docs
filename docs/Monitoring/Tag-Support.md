@@ -29,7 +29,7 @@ To exclude tags and thus not send them to SPM just edit the monitor
 configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
-``` syntaxhighlighter-pre
+``` ini
 # uncomment and add tags which should be excluded
 # SPM_SUPPRESS_TAGS=project:baz, node:qux
 ```
@@ -41,7 +41,7 @@ collection adjust the following in the
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties
 file:
 
-``` syntaxhighlighter-pre
+``` ini
 # use true|false if you want/don't want to send AWS tags to SPM
 COLLECT_AWS_TAGS=true
 ```
@@ -51,7 +51,7 @@ COLLECT_AWS_TAGS=true
 To add tags edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
-``` syntaxhighlighter-pre
+``` ini
 # uncomment and specify tags you want to send to SPM
 # SPM_MONITOR_TAGS="env:local, project:projectName, role:slave"
 ```
@@ -61,7 +61,7 @@ To add tags edit the monitor configuration file -
 Tags are provided by the environment variable SPM\_MONITOR\_TAGS for
 example:
 
-``` syntaxhighlighter-pre
+``` bash
 docker run -e SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend" ... sematext/sematext-agent-docker
 ```
 
@@ -70,13 +70,13 @@ docker run -e SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend" 
 Tags could be configured in the config file "./.spmagentrc" or
 /etc/spmagentrc
 
-``` syntaxhighlighter-pre
+``` ini
 SPM_MONITOR_TAGS = env:dev, project:projectName, role:webfrontend
 ```
 
 or by the environment variable SPM\_MONITOR\_TAGS, e.g. on Linux:
 
-``` syntaxhighlighter-pre
+``` ini
 export SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
 

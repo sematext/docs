@@ -14,8 +14,7 @@ Important:
 
   - This works only for Java applications
 
-  - To start capturing this information [enable Transaction
-    Tracing](Transaction-Tracing) in your SPM agents
+  - To start capturing this information [enable Transaction Tracing](Transaction-Tracing) in your SPM agents
 
   - Requires SPM monitor running in [embedded mode](SPM-Monitor---Javaagent) 
     <iframe width="400" height="300" src="https://www.youtube.com/embed/eoZJmAJKuaQ" frameborder="0" allowfullscreen ></iframe>
@@ -39,8 +38,7 @@ Insights these reports provide:
 
   - Top 10 slowest individual operations and drill-in details 
 
-  - Integration with [Transaction
-    Tracing](http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
+  - Integration with [Transaction Tracing](http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
     correlation of a specific slow operation with the actual
     transaction/request that triggered it
 

@@ -195,7 +195,7 @@ the /opt/sematext/data/kibana/\<DATE\> dir.
 To restore these indices, just run the following
 command.
 
-``` syntaxhighlighter-pre
+``` bash
 /opt/sematext/script/es-index.py --location /opt/sematext/data/kibana/<DATE> restore
 ```
 
@@ -204,7 +204,7 @@ command.
  In case you are having issues with SematextApps, you can create
 diagnostics package on affected nodes by running:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo /opt/sematext/script/diag.sh
 ```
 

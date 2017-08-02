@@ -91,8 +91,6 @@ curl -O https://apps.sematext.com/logsene/configure-syslog.py
 sudo python configure-syslog.py $ADD-YOUR-APPLICATION-TOKEN-HERE
 ```
 
- 
-
 For more details, take a look at the [Syslog](Syslog) page,
 and the pages that are linked from it.
 

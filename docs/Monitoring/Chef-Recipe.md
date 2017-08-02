@@ -40,8 +40,7 @@ end
     your SPM app on <https://apps.sematext.com/ui/our-integrations>
   - line 22: change "standalone" to "javaagent" if you want an
     [embedded/in-process agent](SPM-Monitor---Javaagent)
-    and not a [standalone process
-    agent](SPM-Monitor---Standalone)
+    and not a [standalone process agent](SPM-Monitor---Standalone)
   - line 24: this is relevant only for "standalone" agent  
       
 

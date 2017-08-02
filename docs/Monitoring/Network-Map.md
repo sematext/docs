@@ -6,14 +6,14 @@ started on each host in the system. This can be done using the
 spm-client-setup-conf.sh
 script:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo bash /opt/spm/bin/spm-client-setup-conf.sh {token} network standalone network
 ```
 
 Then you can tweak monitor
 properties:
 
-``` syntaxhighlighter-pre
+``` bash
 sudo vim /opt/spm/spm-monitor/conf/spm-monitor-network-config-{token}-default.properties
 ```
 
@@ -44,7 +44,7 @@ file:
 
   
 
-``` syntaxhighlighter-pre
+``` bash
 sudo service spm-monitor restart
 ```
 

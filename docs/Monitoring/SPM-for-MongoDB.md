@@ -1,3 +1,5 @@
+<iframe width="400" height="300" src="https://www.youtube.com/embed/BIERrXzbiNM" frameborder="0" allowfullscreen ></iframe>
+
 ## Overview
 
 The client for "SPM for MongoDB" is an open-source [mongodb monitoring
@@ -6,8 +8,7 @@ MongoDB metrics and sends them to SPM. It is available
 as[ npm](https://www.npmjs.com/package/spm-agent-mongodb)[ package](https://www.npmjs.com/package/spm-agent-mongodb) (see
 Installation & Configuration section below).
 
-In addition to collecting MongoDB metrics, you can send [Custom
-Metrics](Custom-Metrics.html), such as the number of concurrent
+In addition to collecting MongoDB metrics, you can send [Custom Metrics](Custom-Metrics), such as the number of concurrent
 users, the number of items placed in a shopping cart, or any other kind
 of business transaction or KPI.
 

@@ -1,12 +1,10 @@
+<iframe width="400" height="300" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
 ## Overview
-
   
-The following information is collected and transmitted to SPM (Cloud or
-On-Premises version):SPM for Docker uses the open-source [Docker
-monitoring
-agent](https://github.com/sematext/sematext-agent-docker) available on
-Docker Registry as a ready-to-go [sematext-agent-docker
-image](https://registry.hub.docker.com/u/sematext/sematext-agent-docker/).
+The following information is collected and transmitted to SPM 
+(Cloud or On-Premises version):SPM for Docker uses the open-source
+ [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
+Docker Registry as a ready-to-go [sematext-agent-docker image](https://registry.hub.docker.com/u/sematext/sematext-agent-docker/).
 
 <table>
 <tbody>
@@ -116,7 +114,7 @@ for this general procedure:
 
 **Installation** of the Docker Image of the monitoring agent:
 
-``` syntaxhighlighter-pre
+``` bash
 docker pull sematext/sematext-agent-docker
 ```
 
@@ -129,7 +127,7 @@ container
 
 <!-- end list -->
 
-``` syntaxhighlighter-pre
+``` bash
 docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM-TOKEN -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
 ```
 
@@ -288,7 +286,7 @@ Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy following docker-compose.yml file with your SPM and Logsene
 token: 
 
-``` syntaxhighlighter-pre
+``` bash
 sematext-agent-docker:
 image: 'sematext/sematext-agent-docker:latest'
 environment:
@@ -303,7 +301,7 @@ environment:
 Then use docker-compose scale to deploy the agent to each
 node. 
 
-``` syntaxhighlighter-pre
+``` bash
 docker-compose scale sematext-agent-docker=$(docker info | grep Nodes | awk '{ print $2 }')
 ```
 
@@ -312,7 +310,7 @@ docker-compose scale sematext-agent-docker=$(docker info | grep Nodes | awk '{ p
 To install SPM for Docker including log forwarding from journald execute
 these commands:
 
-``` syntaxhighlighter-pre
+``` bash
 export $SPM_TOKEN=YOUR-SPM-TOKEN
 export $LOGSENE_TOKEN=YOUR-SPM-TOKEN
 etcdctl set /sematext.com/myapp/spm/token $SPM_TOKEN
@@ -331,8 +329,7 @@ An alternative way to install the services is to include the content of
 the unit files in the cloud-init config file. 
 
 The latest documentation, install script, and service files are
-available in the [Github
-repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
+available in the [Github repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
 
 ## Access to the Docker Socket  / Docker API  
 
@@ -351,7 +348,7 @@ run the "docker run" command.
 
 Check your permissions first:
 
-``` syntaxhighlighter-pre
+``` bash
 ls -la /var/run/docker.sock
 srw-rw---- 1 root docker 0 Dec  3 07:52 /var/run/docker.sock
 ```
@@ -365,7 +362,7 @@ Check the configuration of the Docker Daemon in /etc/defaults/docker -
 it is possible to activate TCP and the Unix socket in parallel, simply
 add  "-H unix:///var/run/docker.sock" and restart dockerd.
 
-``` syntaxhighlighter-pre
+``` bash
 ## /etc/defaults/docker
 DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
 ```
@@ -373,7 +370,7 @@ DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
   
 Run Sematext Agent with access to the Unix socket:
 
-``` syntaxhighlighter-pre
+``` bash
 docker run --name sematext-agent --restart=always \
 -v /var/run/docker.sock:/var/run/docker.sock \ 
 -e SPM_TOKEN=YOUR_SPM_TOKEN -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \ 
@@ -391,7 +388,7 @@ port 2375).
 Run Sematext Agent with Access to Docker TCP
 socket:
 
-``` syntaxhighlighter-pre
+``` bash
 docker run --name sematext-agent -e DOCKER_PORT=2375 -e SPM_TOKEN=YOUR_SPM_TOKEN -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN sematext/sematextagent-docker
 ```
 
@@ -417,7 +414,7 @@ following parameters to configure TLS access:
 
 Run Sematext Agent with access to Docker TLS socket:
 
-``` syntaxhighlighter-pre
+``` bash
 # Example with docker-machine
 docker-machine env --swarm swarm-master
 # export DOCKER_TLS_VERIFY="1"
@@ -453,7 +450,7 @@ The following command enables **debug** information to stdout - to be
 displayed with "docker logs
 container\_id\_of\_sematext-agent-docker":
 
-``` syntaxhighlighter-pre
+``` bash
 docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM_TOKEN -e spmagent_logger__console=true -e spmagent_logger__level=debug -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
 docker logs sematext-agent
 ```
@@ -461,7 +458,7 @@ docker logs sematext-agent
 Parameters for debug
 output:
 
-``` syntaxhighlighter-pre
+``` bash
 -e SPM_LOG_TO_CONSOLE=true - enables internal log messages to the console. Normally only metrics and errors are logged to the console
 -e SPM_LOG_LEVEL=debug - "info|warn|error|debug" - set this to "debug" to see all messages on console
 -e DEBUG_SPM_LOGGING=enabled - very detailed logging before parsing, after parsing, inserts to Logsene, etc. - please activate it only on demand from our support
@@ -476,7 +473,7 @@ below.
 Run the following to collect basic information for our support, such as
 environment variables, and configuration:
 
-``` syntaxhighlighter-pre
+``` bash
 $ docker exec -it sematext-agent spm-client-diagnostics
 ...
 SPM diagnostics info is in /tmp/spm-diagnose.zip
@@ -487,7 +484,7 @@ Please contact us via chat or email us the output of that command and
 the generated ZIP file (to support@sematext.com). You can copy the ZIP
 file to your host using "docker cp":
 
-``` syntaxhighlighter-pre
+``` bash
 docker cp sematext-agent:/tmp/spm-diagnose.zip .
 ```
 
@@ -495,6 +492,5 @@ Github Repository
 
 Latest information
 for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
-and [open
-issues](https://github.com/sematext/sematext-agent-docker/issues)
+and [open issues](https://github.com/sematext/sematext-agent-docker/issues)
 

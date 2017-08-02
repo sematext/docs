@@ -100,7 +100,7 @@ An event has the following set of fields, most of which are optional:
 
 To post an event to your event stream use the following base endpoint:
 
-``` syntaxhighlighter-pre
+``` bash
 http://event-receiver.sematext.com/APPLICATION_TOKEN/event
 ```
 
@@ -124,7 +124,7 @@ type:
 
 with POST content in JSON format like this:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "timestamp" : "2014-02-17T15:29:04+0100",
   "message": "Application MyApp on MyHost04 restarted",
@@ -137,7 +137,7 @@ with POST content in JSON format like this:
 To post the above event with curl
 use: 
 
-``` syntaxhighlighter-pre
+``` bash
 curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
   "timestamp" : "2014-02-17T15:29:04+0100",
@@ -155,11 +155,11 @@ Same SPM Solr application, but we want to post **deployment** event with
 more event properties populated. In this case the HTTP endpoint would
 be:
 
-**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)[/](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)**[**1111111-2222-3333-4444-555555555555/event**](http://localhost:8448/event-receiver/1111111-2222-3333-4444-555555555555/server_restart)****
+**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)[/](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)[1111111-2222-3333-4444-555555555555/event](http://localhost:8448/event-receiver/1111111-2222-3333-4444-555555555555/server_restart)**
 
 with HTTP POST content:
 
-``` syntaxhighlighter-pre
+``` JSON
 {
   "timestamp" : "2014-02-17T15:58:04+0100",
   "message": "Solr 4.6.1 version deployed on prodhost06",
@@ -176,7 +176,7 @@ with HTTP POST content:
 or, again with
 curl:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
   "timestamp" : "2014-02-17T15:58:04+0100",
@@ -212,13 +212,12 @@ it.
 
 #### Searching Events Programmatically
 
-SPM exposes the Events Search HTTP API - as [Elasticsearch search
-API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
+SPM exposes the Events Search HTTP API - as [Elasticsearch search API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
 events can be searched and retrieved programmatically/remotely, via
 HTTP, using curl or any other Elasticsearch client.  The API endpoint
 is:
 
-``` syntaxhighlighter-pre
+``` bash
 http://event-receiver.sematext.com/APPLICATION_TOKEN
 ```
 
@@ -228,14 +227,13 @@ Alternatively, you can also use the same endpoint which was used when
 adding events, where event type is specified, in which case the matching
 events will be limited to the type specified in the URI:
 
-``` syntaxhighlighter-pre
+``` bash
 http://event-receiver.sematext.com/APPLICATION_TOKEN/event
 ```
 
   
 
-The simplest way to run a query is using [URI
-search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
+The simplest way to run a query is using [URI search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
 like this:
 
 $ curl -XGET
@@ -243,11 +241,10 @@ $ curl -XGET
 
   
 
-More query options are available when using [request body
-search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
+More query options are available when using [request body search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
 e.g.:
 
-``` syntaxhighlighter-pre
+``` bash
 curl -XGET "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search" -d '
   "query" : {
     "query_string" : {
@@ -262,8 +259,7 @@ curl -XGET "http://event-receiver.sematext.com/1111111-2222-3333-4444-5555555555
 
 This example shows how to use one of the simpler query types -
 query\_string. To see which other query types are available, please
-check [Elasticsearch
-docs](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).
+check [Elasticsearch docs](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).
 
   
 
@@ -272,7 +268,7 @@ docs](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/quer
 You can use HTTPS instead of HTTP for all calls, in which case the
 endpoint becomes:
 
-``` syntaxhighlighter-pre
+``` bash
 https://event-receiver.sematext.com/APPLICATION_TOKEN
 ```
 

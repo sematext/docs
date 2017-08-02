@@ -9,8 +9,7 @@ tweet [@sematext](http://twitter.com/sematext).
 
 #### **Is there an On Premises version of SPM that I can run on my own servers**
 
-**A**: Yes there is.  Please see [SPM On Premises
-Edition](https://sematext.atlassian.net/wiki/spaces/SEMATEXTAPPS/overview).
+**A**: Yes there is.  Please see [SPM On Premises Edition](https://sematext.atlassian.net/wiki/spaces/SEMATEXTAPPS/overview).
 
 #### Is there a limit to how many servers I can monitor with SPM
 
@@ -20,13 +19,11 @@ monitor more servers just let us know.
 #### Can I use SPM to monitor any application
 
 **A**: SPM can be used to monitor any UNIX server and any Java
-application in addition to monitoring [specific
-applications](SPM-FAQ/#which-applications-can-spm-monitor).
+application in addition to monitoring [specific applications](SPM-FAQ/#which-applications-can-spm-monitor).
 
 #### Can I run the complete SPM on my own servers
 
-**A:** Yes, [SPM On Premises
-Edition](https://sematext.atlassian.net/wiki/spaces/SEMATEXTAPPS/overview)
+**A:** Yes, [SPM On Premises Edition](https://sematext.atlassian.net/wiki/spaces/SEMATEXTAPPS/overview)
  is available. The On Premises version is identical to the Cloud version
 and you can get an evaluation version to try it out.
 
@@ -35,8 +32,7 @@ and you can get an evaluation version to try it out.
 **A**: SPM can monitor Hadoop, HBase, Kafka, Spark, Storm, Cassandra,
 Elasticsearch, Solr/SolrCloud, MySQL, MariaDB, Redis, Memcached, Apache,
 HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc.
- You can also feed it [Custom
-Metrics](Custom-Metrics).
+ You can also feed it [Custom Metrics](Custom-Metrics).
 
 #### Does SPM Integrate with ChatOps like Slack and HipChat?  How about PagerDuty or custom WebHooks
 
@@ -99,7 +95,7 @@ You can adjust one or more of them, depending on which application's
 monitor log output you want to reduce. At the bottom of those files add
 the following line:
 
-``` bash
+``` ini
 SPM_MONITOR_LOGGING_LEVEL=reduced
 ```
 
@@ -115,7 +111,7 @@ frequency to 30 seconds, for example, simply add the following line to
 your SPM monitor properties files located in
 **/opt/spm/spm-monitor/conf** :
 
-``` bash
+``` ini
 SPM_MONITOR_COLLECT_INTERVAL=30000
 ```
 
@@ -137,7 +133,7 @@ memory. If you want to be absolutely sure about it, simply lower this
 number in **/opt/spm/spm-monitor/bin/spm-monitor-starter.sh**, with the
 following variable (around line 63):
 
-``` bash
+``` ini
 JAVA_OPTIONS="$JAVA_OPTIONS -Xmx384m -Xms128m -Xss256k"
 ```
 
@@ -284,7 +280,7 @@ Yes. The following steps are
     look for a line similar to this (the file name might be a bit
     different, depending on app type you have chosen):
     
-    ``` bash
+    ``` ini
     SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar"
     ```
     
@@ -293,7 +289,7 @@ Yes. The following steps are
     installed, like
     /opt/wildfly/bin/client/jboss-cli-client.jar):
     
-    ``` bash
+    ``` ini
     SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jboss-cli-client.jar"
     ```
 
@@ -303,7 +299,7 @@ Yes. The following steps are
     example with password file location
     etc:
     
-    ``` bash
+    ``` ini
     SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:http-remoting-jmx://localhost:9990"
     ```
 
@@ -334,7 +330,7 @@ to get around this:
     that, add an entry like this to the end of
     **/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR\_TOKEN-default.properties**:
     
-    ``` bash
+    ``` ini
     SPM_MONITOR_USER="wildfly"
     ```
     
@@ -358,27 +354,23 @@ to get around this:
 #### When should I run Standalone and when Embedded SPM monitor
 
 **A: **[Standalone SPM monitor](SPM-Monitor---Standalone)
-runs as a separate process, while [Embedded
-monitor](SPM-Monitor---Javaagent) runs embedded in the
+runs as a separate process, while [Embedded monitor](SPM-Monitor---Javaagent) runs embedded in the
 Java/JVM process.  Thus, if you are monitoring a non-Java application,
 Standalone monitor is the only option.  Standalone monitor is a bit more
 complex to set up when one uses it to monitor Java applications because
 it typically requires one to enable out-of-process JMX access, as
-described on [Standalone SPM monitor
-page](SPM-Monitor---Standalone).  With Embedded monitor
+described on [Standalone SPM monitor page](SPM-Monitor---Standalone).  With Embedded monitor
 this is not needed, but one needs to add the SPM agent to the Java
 command-line and restart the process of the monitored application.  When
 running Standalone monitor one can update the SPM monitor without
 restarting the Java process being monitored, while a restart is needed
-when Embedded SPM monitor is being used.  To be able to [trace
-transactions](Transaction-Tracing) or [database
-operations](Database-Operations) you need to use the
+when Embedded SPM monitor is being used.  To be able to [trace transactions](Transaction-Tracing) 
+or [database operations](Database-Operations) you need to use the
 Embedded SPM monitor.
 
 #### Can I use SPM for (business) transaction tracing
 
-**A: **Yes, see [Transaction
-Tracing](Transaction-Tracing).
+**A: **Yes, see [Transaction Tracing](Transaction-Tracing).
 
 #### Can I move SPM client to a different directory
 
@@ -421,8 +413,7 @@ as:
 sudo bash /opt/spm/bin/move-spm-home-dir.sh /opt/spm /mnt/some_other_dir/spm
 ```
 
-If you are using [in-process
-(javaagent)](SPM-Monitor---Javaagent) versions of SPM
+If you are using [in-process (javaagent)](SPM-Monitor---Javaagent) versions of SPM
 monitor to monitor Java-based applications, please adjust agent path(s)
 you use when starting application(s) you monitor with the SPM agent and
 make sure to use new location where old location was used before. Also
@@ -430,7 +421,7 @@ add the following argument to the monitored application's Java process
 (you can add it right before -javaagent part; adjust the value to match
 directory you used):
 
-``` bash
+``` ini
 -Dspm.home=/mnt/some_other_dir/spm
 ```
 
@@ -452,8 +443,7 @@ again move SPM client to location which suits you.
 
 #### Is there an HTTP API I could use
 
-**A: **Yes, see [SPM API
-Reference](SPM-API-Reference).
+**A: **Yes, see [SPM API Reference](SPM-API-Reference).
 
 #### I have multiple SPM applications installed on my machine, can I uninstall just one of them
 
@@ -470,7 +460,7 @@ sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-1111111
 **A:** Yes, just find its .properties file in
 **/opt/spm/spm-monitor/conf** and add to it:
 
-``` bash
+``` ini
 SPM_MONITOR_ENABLED=false
 ```
 
@@ -598,8 +588,7 @@ with examples.
 
 #### Is there a Chef Recipe for the SPM client
 
-**A:** Yes, see [SPM client Chef
-Recipe](Chef-Recipe) example.
+**A:** Yes, see [SPM client Chef Recipe](Chef-Recipe) example.
 
 ### General Troubleshooting
 
@@ -614,7 +603,7 @@ and restart the agent (or the process the agent is attached to).
 
 **A**: Yes.  If you are installing the RPM, add this to /etc/yum.conf:
 
-``` bash
+``` ini
 proxy=http or https://proxy-host-here:port
 proxy_username=optional_proxy_username
 proxy_password=optional_proxy_password
@@ -637,7 +626,7 @@ the /opt/spm/properties/spm-sender.properties file:
 
   
 
-``` bash
+``` ini
 spm_sender_proxy_host=
 spm_sender_proxy_port=
 spm_sender_proxy_user_name=
@@ -688,8 +677,7 @@ chat.
 
 #### I see only my system metrics (e.g. CPU, Memory, Network, Disk...), but where is the rest of my data
 
-**A**: Make sure you have followed all steps listed on [installation
-instructions page](https://apps.sematext.com/spm-reports/client.do).
+**A**: Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/spm-reports/client.do).
 **Package installation** steps should be done first, followed by
 **Client configuration setup**. If you have done that and you still
 don't see application metrics, run **sudo
@@ -700,8 +688,7 @@ problem.
 
 #### I DO NOT see any system metrics (e.g. CPU, Memory, Network, Disk), what could be the problem
 
-**A**: Make sure you have followed all steps listed on [installation
-instructions page](https://apps.sematext.com/spm-reports/client.do). It
+**A**: Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/spm-reports/client.do). It
 is possible you missed **Client configuration setup** step. If you have
 done that and you still don't see application metrics, run **sudo
 bash /opt/spm/bin/spm-client-diagnostics.sh** to generate diagnostics
@@ -792,8 +779,7 @@ spm-receiver.sematext.com.
     and restart any other javaagent (in-process) based SPM Monitors by
     restarting your server which is being monitored.
 
-3.  Check [network
-    connectivity](SPM-FAQ/#i-am-not-seeing-any-data-in-spm-charts-how-do-i-check-if-network-connectivity-is-ok)
+3.  Check [network connectivity](SPM-FAQ/#i-am-not-seeing-any-data-in-spm-charts-how-do-i-check-if-network-connectivity-is-ok)
 
 4.  Make sure disks are not full.
 
@@ -885,7 +871,7 @@ metric data to be encrypted when being sent to SPM over the Internet),
 you can adjust that in **/opt/spm/properties/spm-sender.properties** by
 changing protocol to **http** in property:
 
-``` bash
+``` ini
 spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 ```
 
@@ -956,7 +942,7 @@ real username and password):
 
   
 
-``` bash
+``` ini
 SPM_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
 SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```

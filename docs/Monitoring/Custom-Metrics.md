@@ -106,8 +106,7 @@ values.**
 ## Counting Metrics
 
 Each SPM plan allows for a different number of metrics and a different
-number of datapoints per calendar month.  Please see [SPM
-Plans](http://sematext.com/spm/plans.html) page.
+number of datapoints per calendar month.  Please see [SPM Plans](http://sematext.com/spm/plans.html) page.
 
 To stay within your plan limits pay attention to the number of distinct
 metrics.  A metric is a (metric name, filter1, filter2) triple. For
@@ -385,8 +384,7 @@ start.
 ## Coda Hale (aka Yammer) Metrics Reporter
 
 [Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter)
-is a [Coda
-Metrics](https://github.com/sematext/sematext-metrics-reporter) library
+is a [Coda Metrics](https://github.com/sematext/sematext-metrics-reporter) library
 Reporter for sending metrics to SPM that uses
 [sematext-metrics](https://github.com/sematext/sematext-metrics) under
 the hood.

@@ -1,9 +1,7 @@
 [Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter)
-is an extension for the[ Coda Hale
-Metrics](http://metrics.codahale.com/) library version 2.2.0 and 3.x for
+is an extension for the[ Coda Hale Metrics](http://metrics.codahale.com/) library version 2.2.0 and 3.x for
 sending metrics to [SPM](https://sematext.com/spm/).  Under the
-hood sematext-metrics Java library is used to send metrics as [Custom
-Metrics](Custom-Metrics) to SPM.
+hood sematext-metrics Java library is used to send metrics as [Custom Metrics](Custom-Metrics) to SPM.
 
 ### Quick Start
 
