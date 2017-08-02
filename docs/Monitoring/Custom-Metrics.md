@@ -141,8 +141,8 @@ at <https://apps.sematext.com/users-web/home.do?homeTab=spm>
 ### JSON format
 
 URL:
-http://spm-receiver.sematext.com/receiver/custom/receive.json?token=\[spm[ app
-token\]](http://sematext.com)
+http://spm-receiver.sematext.com/receiver/custom/receive.json?token=\[spm app
+token]
 
 Content-type: application/json
 
@@ -277,8 +277,8 @@ curl -H 'Content-type: application/json' -d '{"datapoints" : [{"name": "register
 ### Raw format
 
 URL:
-http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=\[[spm
-app token\]](http://sematext.com)
+http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=\[spm
+app token]
 
 Content-type: text/plain
 
@@ -354,7 +354,7 @@ Example:
 
 ``` bash
 1369671381221 registered-users-count  1   sum user.gender=male    account.type=free
-1369671381221   registered-users-count  1   sum user.gender=female  account.type=paid
+1369671381221 registered-users-count  1   sum user.gender=female  account.type=paid
 ```
 
 To post these data using curl, save the example above (ensure tabs are
