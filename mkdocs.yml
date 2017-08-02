@@ -63,7 +63,7 @@ google_analyticsX: ['UA-36723568-3', 'mkdocs.org']
 extra:
   logo: 'images/logo.svg'
   palette:
-    primary: 'Brown'
+    primary: 'Indigo'
     accent: 'Indigo'
   font:
     text: 'Roboto,sans-serif'
