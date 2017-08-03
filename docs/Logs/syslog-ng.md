@@ -4,17 +4,14 @@ syslog-ng is a modern syslog daemon that's focused on flexibility and
 portability. It also has an easy to use configuration format, that helps
 you ship your logs to Logsene in 3 steps:
 
-1.  **sources**. syslog-ng can listen to local [syslog traffic on
-    /dev/log](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_source_unixstream.html),
-    can [tail
-    files](http://www.balabit.com/sites/default/files/documents/syslog-ng-pe-4.2-guides/en/syslog-ng-pe-v4.2-guide-admin-en/html/reference_source_file.html)and
+1.  **sources**. syslog-ng can listen to local [syslog traffic on /dev/log](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_source_unixstream.html),
+    can [tail files](http://www.balabit.com/sites/default/files/documents/syslog-ng-pe-4.2-guides/en/syslog-ng-pe-v4.2-guide-admin-en/html/reference_source_file.html)and
     more
 2.  **destinations**. You can send your logs to Logsene via UDP, TCP or
     [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425)
 3.  **bind sources to destinations**. Once you have your sources and
     destinations defined, you have to define paths by linking sources
-    and destinations with the [log
-    statement](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.4-guides/en/syslog-ng-ose-v3.4-guide-admin/html/logpath.html)
+    and destinations with the [log statement](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.4-guides/en/syslog-ng-ose-v3.4-guide-admin/html/logpath.html)
 
 ## Configure Sources
 
@@ -32,15 +29,13 @@ source local_logs {
 ```
 
 To download a more recent version of syslog-ng than the one on your
-system, take a look at the [download page of
-syslog-ng](http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party).
+system, take a look at the [download page of syslog-ng](http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party).
 
 ### Tailing Files
 
 syslog-ng can also listen to other inputs, such as
 [files](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/configuring_sources_file.html),
-[TCP or
-UDP](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/configuring_sources_tcpudp.html).
+[TCP or UDP](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/configuring_sources_tcpudp.html).
 
 To tail a file, you'll use the file() source and point it to the right
 file. If that file doesn't contain syslog-formatted messages, you'll
@@ -67,11 +62,9 @@ all cases, your endpoint will be
 ### Token Authentication
 
 To enable token authentication, get the token of your Logsene
-application from the [list of Logsene
-applications](https://apps.sematext.com/users-web/services.do#logsene).
+application from the [list of Logsene applications](https://apps.sematext.com/users-web/services.do#logsene).
 Then, put it in the template() statement of your Logsene destination.
-See working examples below. The end result is a [CEE-formatted JSON
-syslog](JSON-Messages-over-Syslog)
+See working examples below. The end result is a [CEE-formatted JSON syslog](JSON-Messages-over-Syslog)
 message that contains your token in the **logsene-app-token** field.
 
 IMPORTANT: For JSON formatting that enables token authentication to work
@@ -82,8 +75,7 @@ plugin. The libjson plugin is typically provided by the
 ### IP-based Authentication
 
 The alternate method for authentication is by pre-authorizing your
-public IP in Logsene's UI. [Here is a complete
-guide](Authorizing-IPs-for-Syslog) on how to do that. If
+public IP in Logsene's UI. [Here is a complete guide](Authorizing-IPs-for-Syslog) on how to do that. If
 you choose this path, you don't need the template() statement from the
 code snippets below.
 
@@ -94,8 +86,6 @@ destination like the one below to **/etc/syslog-ng/syslog-ng.conf**. If
 you're using token-based authentication, you'll have to fill in your
 Logsene application token. If you've authorized your public IP, the
 template() statement should be removed:
-
-****  Expand source 
 
 ``` bash
 destination logsene {
@@ -114,8 +104,6 @@ For TCP, the destination will look similar to the one for UDP, the only
 change is in the protocol() statement. Make sure your real token is
 there or remove the template() statement if you've authorized your IP:
 
-****  Expand source 
-
 ``` bash
 destination logsene {
     syslog("logsene-receiver-syslog.sematext.com"
@@ -129,11 +117,8 @@ destination logsene {
 
 ### TLS
 
-For configuring [RFC-5425 TLS
-Syslog](https://tools.ietf.org/html/rfc5425), there are two steps.
+For configuring [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425), there are two steps.
 First, you need to set up the certificates:
-
-****  Expand source 
 
 ``` bash
 mkdir /opt/syslog-ng
@@ -153,8 +138,6 @@ ln -s DigiCertCA.pem 85cf5865.0
 Then, you'll configure the destination in a similar fashion to plain
 TCP, except for adding tls() statement and pointing it to your newly
 created certificates directory and **changing the port to 10514**:
-
-****  Expand source 
 
 ``` bash
 destination logsene {
@@ -194,14 +177,12 @@ log {
 
  
 
-Then, restart syslog-ng and you should see your logs in the [Logsene
-UI](https://apps.sematext.com/logsene-reports/mainPage.do) or
+Then, restart syslog-ng and you should see your logs in the [Logsene UI](https://apps.sematext.com/logsene-reports/mainPage.do) or
 [Kibana](Kibana).
 
 ## Tag Your Logs
 
-From your syslog messages, Logsene will populate a number of [special
-fields](X-Special-Fields), such as the **source** and
+From your syslog messages, Logsene will populate a number of [special fields](X-Special-Fields), such as the **source** and
 **host**. You can also configure syslog-ng to add a tag to logs matching
 certain criteria. This is useful when you want to quickly identify a
 special kind of logs. For example, you could tag events that come to the
@@ -210,8 +191,7 @@ special kind of logs. For example, you could tag events that come to the
 To achieve this, you can define a
 [filter](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_filters.html)
 that matches such events. Then, you'd define a destination similar to
-the ones [described
-above](syslog-ng/#configure-destinations),
+the ones [described above](syslog-ng/#configure-destinations),
 where you'd add a **tags** field. Finally, you'd define a **log**
 statement where you bind your source, the newly defined filter and the
 newly defined destination:

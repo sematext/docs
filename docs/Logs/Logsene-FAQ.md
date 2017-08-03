@@ -19,9 +19,7 @@ Logsene app.  For example, if you have sent logs with field "priority"
 as integer field then Logsene will expect all future values of
 "priority" field to be integers.  Sending a string value in a "priority"
 field will fail.  Note that you *can* change the underlying field
-"mapping" at any time - see [I have multiple different log structures,
-each with a different set of fields. How should I handle
-that](Logsene-FAQ/#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that).
+"mapping" at any time - see [I have multiple different log structures, each with a different set of fields. How should I handle that](Logsene-FAQ/#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that).
 
 If none of the above turns out to be a problem in your case, please let
 us know via <support@sematext.com> or via our live chat\!
@@ -116,8 +114,7 @@ Volume.
 #### How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene
 
 A: From the application, click the `App Actions` button and select
-`Storage`. There's also `Settings` button next to [any of your Logsene
-applications](https://apps.sematext.com/users-web/services.do#logsene) in
+`Storage`. There's also `Settings` button next to [any of your Logsene applications](https://apps.sematext.com/users-web/services.do#logsene) in
 the `Services > See all Logsene apps`. You can also do that from Kibana
 by searching for all your logs without adding any time filters. The
 number of hits represents the number of all your logs.
@@ -169,8 +166,7 @@ plan.
 
 A: Yes, if the default log index fields (also known as index mapping)
 don't fit your needs you can create completely custom index mapping.
-See [Custom Logsene Mapping Template
-How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
+See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
 
 #### I have multiple log sources - should I send them all to the same Logsene app
 
@@ -203,8 +199,7 @@ Apps or make sure there are no conflicting fields.
 
 #### How much does Logsene cost
 
-A: Check the [Logsene Plans &
-Prices](http://www.sematext.com/logsene/#plans-and-pricing)
+A: Check the [Logsene Plans & Prices](http://www.sematext.com/logsene/#plans-and-pricing)
 table.
 
 #### What happens with my logs when I change from the free to a paid plan or vice versa
@@ -277,8 +272,7 @@ apps.  Backups are stored in S3 and kept for 90 days.
 
 #### Can I use my own Kibana 4
 
-A: Yes.  Please see [How to use Kibana 4 with Logsene Log
-Management](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
+A: Yes.  Please see [How to use Kibana 4 with Logsene Log Management](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
 
 #### How can I get a nice map of the world in Kibana
 
@@ -291,8 +285,7 @@ settings, you need to specify a field from your logs to be used to build
 the map. That field has to contain a country code.
 
 If you don't have a country field in your logs, but you have an IP, you
-can use **Logstash's [geoip
-filter](http://logstash.net/docs/latest/filters/geoip)**. For example, a
+can use **Logstash's [geoip filter](http://logstash.net/docs/latest/filters/geoip)**. For example, a
 configuration like this:
 
 ``` bash
@@ -318,7 +311,7 @@ output {
 If you then start Logstash and type in an IP, you'll see in Kibana an
 object called **geoip**, which contains lots of information, including
 country codes. Back to Kibana, you can type in
-***geoip.country\_code2*** **** as your field in the map panel.
+***geoip.country\_code2*** as your field in the map panel.
 
 #### Why are new fields not visible in Kibana 4 and how do I fix it
 
@@ -335,8 +328,7 @@ visualizations and searches.
 
 Yes.** I**f you prefer to run Kibana locally (e.g., on your laptop or
 one of your company's servers) and point it to Logsene, yes, you can do
-that - see [How to use Kibana 4 with
-Logsene](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
+that - see [How to use Kibana 4 with Logsene](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
 
 #### How do I create a dashboard in Kibana 4
 
@@ -370,8 +362,7 @@ dashboards. Logsene also creates automatically a field called
 
 #### Why does my syslog timestamp have a different time zone
 
-A: The [original syslog
-specification](http://tools.ietf.org/html/rfc3164) (RFC 3164) has a date
+A: The [original syslog specification](http://tools.ietf.org/html/rfc3164) (RFC 3164) has a date
 field that doesn't contain any time zone information. Fortunately,
 there's a [new specification](http://tools.ietf.org/html/rfc5424) (RFC
 5424) that uses [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
@@ -395,8 +386,7 @@ use the older format, you have two options to have a correct timestamp:
 
 #### What are the supported timestamp formats
 
-If you send your logs via the [Elasticsearch
-API](Index-Events-via-Elasticsearch-API), you can use:
+If you send your logs via the [Elasticsearch API](Index-Events-via-Elasticsearch-API), you can use:
 
   - **ISO8601**. For example, **2001-06-08T08:00:01.123Z** or
     **2001-06-08T08:00:01+03:00**. A timezone must be there after the
@@ -438,15 +428,12 @@ later.
 
 #### Which log shippers, logging libraries, and platform integrations are supported
 
-A: You can use [numerous log shippers, logging libraries, and platform
-integrations](https://apps.sematext.com/logsene-reports/client.do).
+A: You can use [numerous log shippers, logging libraries, and platform integrations](https://apps.sematext.com/logsene-reports/client.do).
 
 #### How can I import logs from an existing Elasticsearch / ELK stack system
 
 A: You can use [elk2logsene](https://github.com/sematext/elk2logsene) to
-do that or even just Logstash - see [Elastic Stack Import-Export with
-Logstash &
-Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
+do that or even just Logstash - see [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
 
 #### How can I ship logs from Android and iOS apps
 
@@ -459,17 +446,14 @@ use <https://github.com/sematext/sematext-logsene-ios>.
 
 A: Use the
 <https://github.com/sematext/logsene-aws-lambda-cloudwatch> AWS Lambda
-function. See [Forwarding CloudTrail or Other Logs from AWS S3 to
-Logsene](https://sematext.com/blog/2016/01/05/forwarding-cloudtrail-or-other-logs-from-aws-s3-to-logsene/)
-and [Sending AWS Cloudwatch Logs to
-Logsene](https://sematext.com/blog/2016/03/21/sending-aws-cloudwatchvpc-logs-to-logsene/)
+function. See [Forwarding CloudTrail or Other Logs from AWS S3 to Logsene](https://sematext.com/blog/2016/01/05/forwarding-cloudtrail-or-other-logs-from-aws-s3-to-logsene/)
+and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/2016/03/21/sending-aws-cloudwatchvpc-logs-to-logsene/)
 for detailed description of how to do
 this.
 
 #### Why is it that I can forward logs with rsyslog via TCP or UDP, but not via RELP
 
-A: You probably need to install the [omrelp
-module](http://www.rsyslog.com/doc/omrelp.html) first. If you have
+A: You probably need to install the [omrelp module](http://www.rsyslog.com/doc/omrelp.html) first. If you have
 rsyslog installed in your system, there's probably a package that you
 can install:
 
@@ -505,8 +489,7 @@ well.
 
 #### How do I ship exception stack traces and other multi-line logs with Logstash without breaking them into multiple log events
 
-A: Please see [Handling Stack Traces with
-Logstash](http://blog.sematext.com/2015/05/26/handling-stack-traces-with-logstash/).
+A: Please see [Handling Stack Traces with Logstash](http://blog.sematext.com/2015/05/26/handling-stack-traces-with-logstash/).
 
   
 
@@ -640,8 +623,7 @@ remove `s3:DeleteObject` permission from the bucket policy.
 #### How are logs compressed in S3
 
 A: You have the option of choosing between two modern, lossless
-compression codecs from the [`LZ77`
-family](https://en.wikipedia.org/wiki/LZ77_and_LZ78), with excellent
+compression codecs from the [`LZ77` family](https://en.wikipedia.org/wiki/LZ77_and_LZ78), with excellent
 speed/compression ratio, **`LZ4`** and **`LZF`**.  
 
 If you choose `No compression` option, logs will be stored in raw,

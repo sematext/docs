@@ -1,22 +1,17 @@
 ## The Essentials
 
-With Logsene, we expose the [Elasticsearch
-API](http://www.elasticsearch.org/guide/reference/api/) so you can:
+With Logsene, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can:
 
   - send log events through it directly from your application, using
     any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
   - send log events by using existing application such as
-    [Logstash](Logstash), or [Apache
-    Flume](http://flume.apache.org/), or [Fluentd Elasticsearch
-    plugin](https://github.com/uken/fluent-plugin-elasticsearch), or
+    [Logstash](Logstash), or [Apache Flume](http://flume.apache.org/), or [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or
      anything that can output to Elasticsearch. Or you can implement
     your own "log shipper".
-  - [search for logs from your own
-    application](Search-through-the-Elasticsearch-API), or
+  - [search for logs from your own application](Search-through-the-Elasticsearch-API), or
     by configuring/adapting existing Elasticsearch UIs, such as
     [Kibana](Logsene-FAQ/#can-i-run-kibana-4-locally-and-point-it-to-logsene)
-  - optionally define [custom
-    mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
+  - optionally define [custom mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
     your log types, so you can tweak the way your logs are indexed
 
 When you use the API, here are the things you need to know:
@@ -25,8 +20,7 @@ When you use the API, here are the things you need to know:
   - port: **80** or **443** (depending on whether you want to use plain
     HTTP or HTTPS)**  
     **
-  - index name: your [Logsene application
-    token](https://apps.sematext.com/users-web/services.do#logsene) -
+  - index name: your [Logsene application token](https://apps.sematext.com/users-web/services.do#logsene) -
     note: **this token should be kept secret** (n.b. you can have N
     Logsene Apps, each with its own token)
 
@@ -38,9 +32,7 @@ application, or you can craft your own "log sender". 
 **NOTE:**  
 If you are sending logs from your application use the Elasticsearch HTTP
 API. If you are sending logs from a Java application use a library like
-[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http)[ or ](https://github.com/jprante/log4j2-elasticsearch-http)[Jest](https://github.com/searchbox-io/Jest)[instead
-of Elasticsearch
-TransportClient.](https://github.com/jprante/log4j2-elasticsearch-http)
+[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http)[ or ](https://github.com/jprante/log4j2-elasticsearch-http)[Jest](https://github.com/searchbox-io/Jest)[instead of Elasticsearch TransportClient.](https://github.com/jprante/log4j2-elasticsearch-http)
 
   
 
@@ -71,8 +63,7 @@ types. For example, syslog messages in a type called "syslog", apache
 logs in a type called "apache". Essentially, the type can be anything,
 it's the token of your application that has to match.
 
-For performance reasons, we highly recommend using the [Bulk
-API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
+For performance reasons, we highly recommend using the [Bulk API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
 because it allows you to send multiple events with a single request. For
 example, the following request sends three events:
 
@@ -99,8 +90,7 @@ mapping that works well for most use-cases:
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date
-  - the **geoip** field is an object that contains a **location** [geo
-    point](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html)
+  - the **geoip** field is an object that contains a **location** [geo point](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html)
     field (this works well if you're using
     [Logstash](Logstash))
   - the predefined fields **host**, **facility**, **severity**,
@@ -114,9 +104,7 @@ mapping that works well for most use-cases:
 ## Custom Log Index Mapping
 
 If the default log index fields (also known as index mapping) don't fit
-your needs you can create completely custom index mapping. See [Custom
-Logsene Mapping Template
-How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
+your needs you can create completely custom index mapping. See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
  Note that if you have N different log structures, the best way to
 handle that is by creating N Logsene Apps, each with its own index
 mapping.  For example, you may have web server logs, your system logs in
@@ -126,8 +114,7 @@ use Apache Common Log format, the logs in /var/log/messages have syslog
 structure, and your own application's logs can be in any format your
 application happens to use.  To handle all 3 log formats elegantly
 simply create 3 separate Logsene Apps and use a different format for
-each of them.  See [Custom Logsene Mapping Template
-How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/) for
+each of them.  See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/) for
 details.
 
  

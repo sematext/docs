@@ -9,9 +9,7 @@ we use are:
 
   - for Syslog over UDP: **514**
   - for Syslog over TCP: **514**
-  - for Syslog over TLS: **10514** (get [root
-    certificate](https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem) and [intermediate
-    certificate](https://apps.sematext.com/cert/DigiCertCA.pem) to get
+  - for Syslog over TLS: **10514** (get [root certificate](https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem) and [intermediate certificate](https://apps.sematext.com/cert/DigiCertCA.pem) to get
     TLS working)
   - for RELP: **20514**
 
@@ -25,8 +23,7 @@ Step-by-step instructions for [rsyslog](rsyslog) and
 [syslog-ng](syslog-ng),
 and a raw example are below.
 
-Alternatively, [authorize your public
-IPs](Authorizing-IPs-for-Syslog) and then send messages
+Alternatively, [authorize your public IPs](Authorizing-IPs-for-Syslog) and then send messages
 directly.  Note that configuring your log shipper to send your Logsene
 App token is preferred to authorizing source IPs. You can see specific
 instructions for [rsyslog](rsyslog),
@@ -61,9 +58,7 @@ compliant Syslog over TLS. See instructions for
 ### HTTP or HTTPS
 
 If you use a recent version of rsyslog (6.4.0 or later), you might want
-to send logs directly to [Logsene's Elasticsearch
-API](Index-Events-via-Elasticsearch-API), through the
-[omelasticsearch
-module](http://www.rsyslog.com/doc/omelasticsearch.html). Details on how
+to send logs directly to [Logsene's Elasticsearch API](Index-Events-via-Elasticsearch-API), through the
+[omelasticsearch module](http://www.rsyslog.com/doc/omelasticsearch.html). Details on how
 to do that are on the [rsyslog howto page](rsyslog).
 

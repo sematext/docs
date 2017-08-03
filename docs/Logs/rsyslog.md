@@ -17,11 +17,9 @@ you lots of ways to forward your logs with rsyslog:
   - TCP (you can also encrypt logs with TLS)
   - [RELP](http://www.rsyslog.com/doc/relp.html) (uses application-level
     acknowledgement for increased reliability over plain TCP)
-  - HTTP / HTTPS over the [Elasticsearch
-    API](Index-Events-via-Elasticsearch-API)
+  - HTTP / HTTPS over the [Elasticsearch API](Index-Events-via-Elasticsearch-API)
 
-You can also send [JSON over
-syslog](JSON-Messages-over-Syslog) if you need support for
+You can also send [JSON over syslog](JSON-Messages-over-Syslog) if you need support for
 structured data.
 
 There are 3 steps for configuring your rsyslog for Logsene:
@@ -31,8 +29,7 @@ There are 3 steps for configuring your rsyslog for Logsene:
     [remote logs over TCP](http://www.rsyslog.com/doc/imtcp.html) and so
     on
 2.  Choose a protocol and an authentication method. For UDP, TCP, TLS
-    and RELP you can [authorize your public
-    IP](Authorizing-IPs-for-Syslog). However, **we
+    and RELP you can [authorize your public IP](Authorizing-IPs-for-Syslog). However, **we
     strongly recommend using the Logsene application's token**, which
     works with all supported protocols
 3.  Configure the output. Based on the chosen protocol and
@@ -53,15 +50,12 @@ $ModLoad imuxsock
 
 ### Tailing Files
 
-You can also have rsyslog [tail
-files](http://www.rsyslog.com/doc/imfile.html), listen for syslog
+You can also have rsyslog [tail files](http://www.rsyslog.com/doc/imfile.html), listen for syslog
 messages over [TCP](http://www.rsyslog.com/doc/imtcp.html),
 [UDP](http://www.rsyslog.com/doc/imudp.html),
-[RELP](http://www.rsyslog.com/doc/imrelp.html), [pick up messages from
-the journal](http://www.rsyslog.com/doc/imjournal.html) and more.
+[RELP](http://www.rsyslog.com/doc/imrelp.html), [pick up messages from the journal](http://www.rsyslog.com/doc/imjournal.html) and more.
 
-To tail a file, load the [file input
-module](http://www.rsyslog.com/doc/imfile.html) and optionally decide
+To tail a file, load the [file input module](http://www.rsyslog.com/doc/imfile.html) and optionally decide
 how often to pool for changes. Then, for every file, specify its path
 and related parameters, like this:
 
@@ -84,8 +78,7 @@ If you have issues with `logrotate` or other utilities that truncate or
 organize the files you monitor, upgrade rsyslog to version 8.1.5 or
 later and the problems should go away. The file input module gets
 [inotify](http://en.wikipedia.org/wiki/Inotify)support and you also have
-a [new configuration
-format](http://www.rsyslog.com/doc/rainerscript.html) at your disposal,
+a [new configuration format](http://www.rsyslog.com/doc/rainerscript.html) at your disposal,
 which is easier to maintain:
 
 **Tailing Files via Inotify; New Config Format**  Expand source 
@@ -107,24 +100,19 @@ input(type="imfile"
 To forward logs, you can use HTTP/HTTPS and authenticate by using your
 Logsene application token (recommended\!). Alternatively, you can use
 UDP, TCP/TLS or RELP and authenticate either by using the Logsene
-application token, or by [authorizing your public
-IP](Authorizing-IPs-for-Syslog)
+application token, or by [authorizing your public IP](Authorizing-IPs-for-Syslog)
 in the Logsene application settings.
 
 ### HTTP/HTTPS via the Elasticsearch API
 
-The recommended method is to use the [Elasticsearch
-API](Index-Events-via-Elasticsearch-API) to send logs over
+The recommended method is to use the [Elasticsearch API](Index-Events-via-Elasticsearch-API) to send logs over
 HTTP or HTTPS. This will give you maximum flexibility, reliability and
 encryption, if you need it. This requires rsyslog 6.4.0 or later, and
-the installation of the [Elasticsearch output
-module](http://www.rsyslog.com/doc/omelasticsearch.html). HTTPS is
+the installation of the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html). HTTPS is
 supported in rsyslog 8.2.0 or later (see info about rsyslog update
-above). To enable the [Elasticsearch output
-module](http://www.rsyslog.com/doc/omelasticsearch.html), install the
+above). To enable the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html), install the
 **rsyslog-elasticsearch** package or use **--enable-elasticsearch** when
-[compiling from
-sources](http://www.rsyslog.com/doc/build_from_repo.html).
+[compiling from sources](http://www.rsyslog.com/doc/build_from_repo.html).
 
 #### Configuration
 
@@ -174,16 +162,14 @@ Logsene via any of the following protocols:
     application-level acknowledgments
 
 Again, with all these protocols, you can either authenticate with your
-Logsene application token, or by [registering your public
-IP](Authorizing-IPs-for-Syslog).
+Logsene application token, or by [registering your public IP](Authorizing-IPs-for-Syslog).
 
 #### Requirements
 
 UDP and TCP support is built into `rsyslog`. For TLS, you need to
 install the **gtls driver**, typically provided by the
 **rsyslog-gnutls** package (or by adding **--enable-gnutls** when
-[compiling rsyslog from
-source](http://www.rsyslog.com/doc/build_from_repo.html)). For RELP,
+[compiling rsyslog from source](http://www.rsyslog.com/doc/build_from_repo.html)). For RELP,
 you'll need the RELP output module, usually provided by the
 **rsyslog-relp** package (or by adding **--enable-relp** when compiling
 from source).
@@ -193,17 +179,14 @@ from source).
 If you chose to authorize using static IP address, instead of
 authenticating using Logsene application token (which is the recommended
 option), you don't need to make any configuration changes in this step.
-Instead, go to the[ Logsene web application and authorize the public
-IP ](Authorizing-IPs-for-Syslog)(or multiple IPs) of the
+Instead, go to the[ Logsene web application and authorize the public IP ](Authorizing-IPs-for-Syslog)(or multiple IPs) of the
 server(s) from where you send your logs.
 
 To use the Logsene application token, you'll first have to obtain it
-from your [list of Logsene
-applications](https://apps.sematext.com/users-web/services.do#logsene).
+from your [list of Logsene applications](https://apps.sematext.com/users-web/services.do#logsene).
 Then, in **/etc/rsyslog.conf**, define a
 [template](http://www.rsyslog.com/doc/rsyslog_conf_templates.html) that
-forwards your messages in [CEE-formatted JSON over
-syslog](JSON-Messages-over-Syslog),
+forwards your messages in [CEE-formatted JSON over syslog](JSON-Messages-over-Syslog),
 where you should put your token in the `logsene-app-token`
 field:
 
@@ -211,8 +194,7 @@ field:
 $template LogseneFormat,"<%PRI%>%TIMEREPORTED:::date-rfc3339% %HOSTNAME% %syslogtag%@cee: {\"logsene-app-token\": \"LOGSENE_APP_TOKEN_GOES_HERE\", \"message\": \"%msg:::json%\"}\n"
 ```
 
-If you are using rsyslog version 7 or later, you can use the [new
-configuration format](http://www.rsyslog.com/doc/rainerscript.html) to
+If you are using rsyslog version 7 or later, you can use the [new configuration format](http://www.rsyslog.com/doc/rainerscript.html) to
 define the template. It's more verbose, but easier to maintain (e.g. add
 new fields, reformat messages):
 
@@ -248,8 +230,7 @@ Logsene. This depends on your chosen protocol.
 
 ### HTTP / HTTPS via Omelasticsearch
 
-To send your logs over HTTP, load the [Elasticsearch output
-module](http://www.rsyslog.com/doc/omelasticsearch.html) and point it to
+To send your logs over HTTP, load the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html) and point it to
 **logsene-receiver.sematext.com** on port **80**. Make sure you replace
 LOGSENE\_APP\_TOKEN\_GOES\_HERE with your actual token:
 
@@ -374,8 +355,7 @@ action(
 
 ### RELP
 
-To forward via RELP, load the [RELP output
-module](http://www.rsyslog.com/doc/omrelp.html) and then point it to
+To forward via RELP, load the [RELP output module](http://www.rsyslog.com/doc/omrelp.html) and then point it to
 **logsene-receiver-syslog.sematext.com** on **port 20514**.
 
 As with TCP or UDP, specify the LogseneFormat template for authorizing
@@ -395,8 +375,7 @@ $ModLoad omrelp
 
 ## Tag Your Logs
 
-From your syslog messages, Logsene will populate a number of [special
-fields](X-Special-Fields), such as the **source** and
+From your syslog messages, Logsene will populate a number of [special fields](X-Special-Fields), such as the **source** and
 **host**. You can also configure rsyslog to add one or more tags to logs
 matching certain criteria. This is useful when you want to quickly
 identify a special kind of logs. For example, you could tag events that
@@ -405,8 +384,7 @@ come to the "kernel" facility with a severity/level of "error" as both
 in the Logsene web application, which you can then use for filtering,
 sorting, ...
 
-To achieve this, define a template similar to the ones [described
-above](rsyslog/#configuring-outputs),
+To achieve this, define a template similar to the ones [described above](rsyslog/#configuring-outputs),
 where you'd add a **tags** field. Then, you'd use a
 [conditional](http://www.rsyslog.com/doc/rsyslog_conf_filter.html) to
 match those messages and send them to Logsene using the newly defined

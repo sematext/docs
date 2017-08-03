@@ -16,8 +16,7 @@ Both options work with existing applications, such as
 application or script that works with
 [Elasticsearch](Index-Events-via-Elasticsearch-API) or
 syslog or Apache Flume or really any other tool that can send data to
-[Logsene's Elasticsearch
-API](Index-Events-via-Elasticsearch-API).
+[Logsene's Elasticsearch API](Index-Events-via-Elasticsearch-API).
 
 **To see more details on a specific option, click on one of the child
 pages below.**

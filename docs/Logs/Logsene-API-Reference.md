@@ -1,7 +1,6 @@
 *Note: This is Reference for v2 of Logsene API.*
 
-Note: For details on SPM API, see [SPM API
-Reference](../Monitoring/SPM-API-Reference).*
+Note: For details on SPM API, see [SPM API Reference](../Monitoring/SPM-API-Reference).*
 
 ### Introduction to Management API
 
@@ -23,18 +22,15 @@ Access to API key of some Account is allowed
 for **OWNER**, **BILLING\_ADMIN** and **ADMIN** users. Users
 with **USER** role **cannot** access API key of that Account, though
 they can always use their own Account's API key to manage their own
-Account, Apps, etc.  For more info about Account Sharing please see [SPM
-FAQ](../Monitoring/SPM-FAQ/#how-can-i-share-my-apps-with-other-users).
+Account, Apps, etc.  For more info about Account Sharing please see [SPM FAQ](../Monitoring/SPM-FAQ/#how-can-i-share-my-apps-with-other-users).
 
 ### Elasticsearch-compatible Search API
 
-To use the search APIs, see [Search through the Elasticsearch
-API](Search-through-the-Elasticsearch-API). This API
+To use the search APIs, see [Search through the Elasticsearch API](Search-through-the-Elasticsearch-API). This API
 is **fully compatible with Elasticsearch's APIs**. To use it you need
 just your Logsene App tokens, not the API key.  The rest of this
 document describes only the app management APIs.  For searching your
-logs from the terminal/console, see [Logsene
-CLI](Logsene-CLI).
+logs from the terminal/console, see [Logsene CLI](Logsene-CLI).
 
 ### Request/Response format
 
@@ -1177,8 +1173,7 @@ Example of a success response (with HTTP code 200):
 
 **Note**: {queryId} value in URL should be replaced with real id of
 saved query which should be deleted - queryId of each saved query is
-returned as a key in **[list saved
-queries](#LogseneAPIReference-ListSavedQueries)** API call response.
+returned as a key in **[list saved queries](#LogseneAPIReference-ListSavedQueries)** API call response.
 
 Example API
 call:
@@ -1204,6 +1199,5 @@ Example of a success response (with HTTP code 200):
 
 ### Elasticsearch-compatible API
 
-For details [read
-this](Search-through-the-Elasticsearch-API).
+For details [read this](Search-through-the-Elasticsearch-API).
 

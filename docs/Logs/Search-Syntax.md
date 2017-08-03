@@ -1,8 +1,7 @@
 ## Overview
 
 Although Logsene provides the ability to create your own queries through
-[its Elasticsearch
-API](Search-through-the-Elasticsearch-API), it also
+[its Elasticsearch API](Search-through-the-Elasticsearch-API), it also
 provides a rich, yet simple query syntax very much like the query syntax
 used by Google.
 

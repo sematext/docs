@@ -1,8 +1,7 @@
 ### Can I install Sematext Enterprise if my server is behind a firewall
 
 Yes. If your system is behind a firewall and cannot connect to the
-Internet to download anything, please [contact
-Sematext](https://sematext.com/contact/) to get the packages that have
+Internet to download anything, please [contact Sematext](https://sematext.com/contact/) to get the packages that have
 all dependencies included in
 them.
 
@@ -120,8 +119,7 @@ more VMs/nodes, or give the existing VMs more CPU or disk.
 
 The SematextApps VM has an initial trial license that will expire in 30
 days.  When the trial license or the real license expires, you will not
-be able log into the Web UI.  To get a new license, please [contact
-Sematext](https://sematext.com/contact/).
+be able log into the Web UI.  To get a new license, please [contact Sematext](https://sematext.com/contact/).
 
 ### Where do I put a new license file
 
@@ -138,8 +136,7 @@ expiry date approaches (and passes), license holders and owner of
 default on-premises account will be notified by email.
 
 After the license expires, you will be able to continue using
-applications only for a few more days, so [contact
-Sematext](https://sematext.com/contact/) early about the new license to
+applications only for a few more days, so [contact Sematext](https://sematext.com/contact/) early about the new license to
 avoid any service interruptions.
 
 ### How do SPM license limits work

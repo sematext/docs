@@ -21,8 +21,7 @@ $ logger '@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"wor
 The only special thing here is to begin your message with a "CEE cookie"
 that says "@cee:". Optionally, the cookie can be followed by a
 whitespace. Then, insert a JSON with fields and values of your choice,
-although CEE and [Project
-Lumberjack](https://fedorahosted.org/lumberjack/) suggest a [list of
+although CEE and [Project Lumberjack](https://fedorahosted.org/lumberjack/) suggest a [list of
 standard fields](https://fedorahosted.org/lumberjack/wiki/FieldList)
 which should have the same name across applications.
 

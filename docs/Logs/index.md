@@ -2,8 +2,7 @@ Welcome to [Logsene](http://sematext.com/logsene/) documentation\!  If
 you are new to Logsene, think of it as logging as a service - Logsene is
 your own logging box in the cloud, a free alternative to Splunk, or even
 as Hosted Elasticsearch, since one of the APIs Logsene exposes is
-[Elasticsearch API for
-indexing](Index-Events-via-Elasticsearch-API) and
+[Elasticsearch API for indexing](Index-Events-via-Elasticsearch-API) and
 [searching](Searching-Your-Events).
 
 Below, you can find how you can get started, and on the right side, you
@@ -42,19 +41,14 @@ And then you'd only have to choose a name:
 ![](attachments/1179704/19857428.png)
 
 And you're done\! You will get a confirmation screen that tells you how
-to [send data to your new
-application](Sending-Events-to-Logsene). Once you start
-sending data, you can start [searching and analyzing those
-events](Searching-Your-Events). Click on **Go to Reports**
-to open the native Logsene UI and on **Go to Kibana** to [explore your
-data with Kibana](Kibana).
+to [send data to your new application](Sending-Events-to-Logsene). Once you start
+sending data, you can start [searching and analyzing those events](Searching-Your-Events). Click on **Go to Reports**
+to open the native Logsene UI and on **Go to Kibana** to [explore your data with Kibana](Kibana).
 
 #### Adding Data to Your Application
 
 As described in the "Application Added" screen, there are two ways to
-send data: [through Elasticsearch's
-API](Index-Events-via-Elasticsearch-API) or [through
-syslog](Syslog).
+send data: [through Elasticsearch's API](Index-Events-via-Elasticsearch-API) or [through syslog](Syslog).
 
 ##### Elasticsearch API (Logstash & friends)
 
@@ -72,8 +66,7 @@ for each of your applications can be found by logging in to
 ![](attachments/1179704/15564806.png)
 
 For more details on using the Elasticsearch REST API with Logsene, visit
-the following page: [Index Events via Elasticsearch
-API](Index-Events-via-Elasticsearch-API). Note that the API
+the following page: [Index Events via Elasticsearch API](Index-Events-via-Elasticsearch-API). Note that the API
 supports both HTTP and HTTPS. The HTTPS endpoint would be
 **https://logsene-receiver.sematext.com:443**
 
@@ -123,19 +116,15 @@ who has access to your application from their own Sematext account.
 From there, you can:
 
   - invite new users to your application
-  - [authorize public IPs to send data to your application via
-    syslog](Authorizing-IPs-for-Syslog)
+  - [authorize public IPs to send data to your application via syslog](Authorizing-IPs-for-Syslog)
   - adjust the retention time
   - check how much data is currently stored
-  - [change your
-    plan](Logsene-FAQ/#plans-prices)
+  - [change your plan](Logsene-FAQ/#plans-prices)
 
 ##### Invite Users
 
 Inviting new users makes them see your Logsene application in their
-Sematext[account. You can also make them ADMINs, which enables them to
-change some of the application's settings,
-too.](http://apps.sematext.com)
+Sematext[account. You can also make them ADMINs, which enables them to change some of the application's settings, too.](http://apps.sematext.com)
 
 ![](attachments/1179704/15564812.png)
 
@@ -143,16 +132,14 @@ too.](http://apps.sematext.com)
 
 When you [send data via TCP/UDP/RELP syslog](Syslog), you
 can authorize by using the Logsene application token, or by registering
-your public IP address. If you choose registering IPs, [this
-page](Authorizing-IPs-for-Syslog) will guide you on doing
+your public IP address. If you choose registering IPs, [this page](Authorizing-IPs-for-Syslog) will guide you on doing
 that from your application's settings or from the Logsene Application
 screen.
 
 ##### Storage and Retention
 
 The Storage tab shows you how many logs are stored in your application,
-out of the total number of logs[allowed by your
-plan](Logsene-FAQ/#plans-prices).
+out of the total number of logs[allowed by your plan](Logsene-FAQ/#plans-prices).
 To prevent you from hitting the limit, old logs are being removed based
 on how long you choose to keep them. By default, the retention time is 7
 days, which implies that logs with the value of the **@timestamp** field
@@ -164,6 +151,5 @@ the Storage tab:
 #### Getting Support
 
 We hope you enjoy using Logsene. If you need further support, or have
-any feedback regarding our products, please don't hesitate to [contact
-us](mailto:logsene-support@sematext.com)\!
+any feedback regarding our products, please don't hesitate to [contact us](mailto:logsene-support@sematext.com)\!
 

@@ -1,14 +1,12 @@
 In order make [Logstash](http://logstash.net/) send logs to Logsene, you
-need to configure it with the [Elasticsearch
-plugin](http://logstash.net/docs/latest/outputs/elasticsearch_http) to
+need to configure it with the [Elasticsearch plugin](http://logstash.net/docs/latest/outputs/elasticsearch_http) to
 output to the Logsene endpoint, while specifying:
 
   - **logsene-receiver.sematext.com** as the host
 
   - **80** or **443** as the **port**
 
-  - [your Logsene App
-    token](https://apps.sematext.com/users-web/services.do#logsene) as
+  - [your Logsene App token](https://apps.sematext.com/users-web/services.do#logsene) as
     the index name
 
   - **http** as the **protocol**
@@ -38,8 +36,7 @@ output {
 }
 ```
 
-To get started quickly, you can simply [download
-Logstash](http://www.elasticsearch.org/overview/logstash/download/),
+To get started quickly, you can simply [download Logstash](http://www.elasticsearch.org/overview/logstash/download/),
 unpack it, save the above configuration into a file (e.g.,
 /etc/logstash/conf.d/logsene.conf), then start Logstash:
 
@@ -55,8 +52,7 @@ tasks. For example, you can make a pie chart in
 [Kibana](Kibana) that shows you how often clients get 200
 response codes, how often 500 and so on.
 
-With Logstash, you can parse logs by using the [grok
-filter](https://sematext.atlassian.net/wiki/logstash.net/docs/latest/filters/grok).
+With Logstash, you can parse logs by using the [grok filter](https://sematext.atlassian.net/wiki/logstash.net/docs/latest/filters/grok).
 For example, you can enhance the previous configuration to parse your
 Apache combined log format by changing it to the following:
 
@@ -89,8 +85,7 @@ output {
 
 ### Tagging Specific Logs
 
-Logstash populates a number of [special
-fields](X-Special-Fields), such as **host**
+Logstash populates a number of [special fields](X-Special-Fields), such as **host**
 and **@timestamp**. You can also configure it to add one or more tags
 to logs matching certain criteria. This is useful when you want to
 quickly identify a special kind of logs. For example, you could tag
