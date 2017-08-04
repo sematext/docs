@@ -42,7 +42,7 @@ running applications and troubleshoot performance issues.
 To enable tracing edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
-``` ini
+``` properties
 # enable tracing agent
 SPM_MONITOR_TRACING_ENABLED=true
  

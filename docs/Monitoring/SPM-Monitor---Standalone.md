@@ -40,7 +40,7 @@ of the other types of setup for your production servers.
 This setup requires adding the following arguments to your Java process
 (your Elasticsearch, Solr, HBase...):
 
-``` ini
+``` properties
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=false
@@ -55,7 +55,7 @@ In this example, **SPM\_MONITOR\_JMX\_PARAMS** property in **monitor
 properties** file should be adjusted as follows (leave other properties
 unchanged):
 
-``` ini
+``` properties
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000"  # MUST match the port in -Dcom.sun.management.jmxremote.port=3000 above
 ```
 
@@ -98,7 +98,7 @@ following arguments (again, port can be adjusted and it has to be
 reflected in SPM **monitor properties** below in **spm.remote.jmx.url**
 argument):
 
-``` ini
+``` properties
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=false
@@ -111,7 +111,7 @@ while **monitor properties** file should be adjusted like (leave other
 properties in that file
 unchanged):
 
-``` ini
+``` properties
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000 -Dspm.remote.jmx.password.file=/home/spm/passwordMonitor.txt"
 ```
 
@@ -122,7 +122,7 @@ SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000 -Dspm.remote.jmx.pas
   
 In this case, monitored service should get the following java arguments:
 
-``` ini
+``` properties
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=3000
 -Dcom.sun.management.jmxremote.ssl=true
@@ -138,7 +138,7 @@ Port, password and keystore path should match your local setup.
 **Monitor properties** file should be adjusted like this (change just
 **SPM\_MONITOR\_JMX\_PARAMS** property):
 
-``` ini
+``` properties
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000
 -Djavax.net.ssl.trustStore=/home/spm/monitor.ts 
 -Djavax.net.ssl.trustStorePassword=password456 
@@ -424,7 +424,7 @@ supervisor.slots.ports:
 1\) In some cases, monitored server should also get the following
 argument:
 
-``` ini
+``` properties
  -Djava.rmi.server.hostname=localhost
 ```
 

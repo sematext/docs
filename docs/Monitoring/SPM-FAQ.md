@@ -95,7 +95,7 @@ You can adjust one or more of them, depending on which application's
 monitor log output you want to reduce. At the bottom of those files add
 the following line:
 
-``` ini
+``` properties
 SPM_MONITOR_LOGGING_LEVEL=reduced
 ```
 
@@ -111,7 +111,7 @@ frequency to 30 seconds, for example, simply add the following line to
 your SPM monitor properties files located in
 **/opt/spm/spm-monitor/conf** :
 
-``` ini
+``` properties
 SPM_MONITOR_COLLECT_INTERVAL=30000
 ```
 
@@ -133,7 +133,7 @@ memory. If you want to be absolutely sure about it, simply lower this
 number in **/opt/spm/spm-monitor/bin/spm-monitor-starter.sh**, with the
 following variable (around line 63):
 
-``` ini
+``` properties
 JAVA_OPTIONS="$JAVA_OPTIONS -Xmx384m -Xms128m -Xss256k"
 ```
 
@@ -280,7 +280,7 @@ Yes. The following steps are
     look for a line similar to this (the file name might be a bit
     different, depending on app type you have chosen):
     
-    ``` ini
+    ``` properties
     SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar"
     ```
     
@@ -289,7 +289,7 @@ Yes. The following steps are
     installed, like
     /opt/wildfly/bin/client/jboss-cli-client.jar):
     
-    ``` ini
+    ``` properties
     SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jboss-cli-client.jar"
     ```
 
@@ -299,7 +299,7 @@ Yes. The following steps are
     example with password file location
     etc:
     
-    ``` ini
+    ``` properties
     SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:http-remoting-jmx://localhost:9990"
     ```
 
@@ -330,7 +330,7 @@ to get around this:
     that, add an entry like this to the end of
     **/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR\_TOKEN-default.properties**:
     
-    ``` ini
+    ``` properties
     SPM_MONITOR_USER="wildfly"
     ```
     
@@ -421,7 +421,7 @@ add the following argument to the monitored application's Java process
 (you can add it right before -javaagent part; adjust the value to match
 directory you used):
 
-``` ini
+``` properties
 -Dspm.home=/mnt/some_other_dir/spm
 ```
 
@@ -460,7 +460,7 @@ sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-1111111
 **A:** Yes, just find its .properties file in
 **/opt/spm/spm-monitor/conf** and add to it:
 
-``` ini
+``` properties
 SPM_MONITOR_ENABLED=false
 ```
 
@@ -603,7 +603,7 @@ and restart the agent (or the process the agent is attached to).
 
 **A**: Yes.  If you are installing the RPM, add this to /etc/yum.conf:
 
-``` ini
+``` properties
 proxy=http or https://proxy-host-here:port
 proxy_username=optional_proxy_username
 proxy_password=optional_proxy_password
@@ -626,7 +626,7 @@ the /opt/spm/properties/spm-sender.properties file:
 
   
 
-``` ini
+``` properties
 spm_sender_proxy_host=
 spm_sender_proxy_port=
 spm_sender_proxy_user_name=
@@ -871,7 +871,7 @@ metric data to be encrypted when being sent to SPM over the Internet),
 you can adjust that in **/opt/spm/properties/spm-sender.properties** by
 changing protocol to **http** in property:
 
-``` ini
+``` properties
 spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 ```
 
@@ -942,7 +942,7 @@ real username and password):
 
   
 
-``` ini
+``` properties
 SPM_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
 SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```
