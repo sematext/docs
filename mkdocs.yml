@@ -28,12 +28,13 @@ pages:
         - X Special Fields: Logs/X-Special-Fields.md
         - Supported Date Formats: Logs/Supported-Date-Formats.md
     - Performance Monitoring:
+      - Overview: Monitoring/index.md
       - Coda Hale Metrics Reporter: Monitoring/Coda-Hale-Metrics-Reporter.md
       - Custom Metrics: Monitoring/Custom-Metrics.md
       - Database Operations: Monitoring/Database-Operations.md
       - Events Integration: Monitoring/Events-Integration.md
       - Integration:
-        - Overview: Monitoring/Integrations.md
+        - Overview: Monitoring/Integration.md
         - Alerts - HipChat Integration: Monitoring/Alerts---HipChat-Integration.md
         - Alerts - PagerDuty Integration: Monitoring/Alerts---PagerDuty-Integration.md
         - Alerts - Slack Integration: Monitoring/Alerts---Slack-Integration.md
@@ -60,7 +61,7 @@ theme: material
 theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
-google_analyticsX: ['UA-36723568-3', 'mkdocs.org']
+google_analytics: ['UA-2365268-3', 'mkdocs.org']
 # Options
 extra:
   logo: 'images/logo.svg'

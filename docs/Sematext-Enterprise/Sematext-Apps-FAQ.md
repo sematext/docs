@@ -11,7 +11,7 @@ The config script has an option to provide the IP address from the
 config
 script:
 
-``` 
+``` bash
   ./config.py init --ip ADDR
 ```
 
@@ -20,13 +20,13 @@ script:
 The config script has an option to remove a node from the cluster, but
 not for the primary node:
 
-``` 
+``` bash
   ./config.py remove --id <node_id>
 ```
 
 The ID of the node can be found by running the status command:
 
-``` 
+``` bash
   ./config.py status 
 ```
 
@@ -48,7 +48,7 @@ For sending emails, a local SMTP server is used. To use a different
 server changes need to be done in
 **/opt/sematext/conf/common/common.onpremises.properties**:
 
-``` 
+``` properties
   email.host=email_server_addr
   email.port=email_server_port
   email.user=email_username
@@ -86,7 +86,7 @@ cluster has stabilized. There is also a setting that controls how long
 logs are kept before being discarded in /opt/sematext/kafka/config. The
 default value is:
 
-``` 
+``` properties
   log.retention.hours=24
 ```
 
@@ -100,7 +100,7 @@ bump into a Google Chrome bug regarding cookies for “localhost”.
 The I/O scheduler should be set to NOOP at
 runtime:
 
-``` 
+``` bash
   echo noop | sudo tee /sys/block/xvdh/queue/scheduler (xvdh is the SSD drive)
 ```
 
