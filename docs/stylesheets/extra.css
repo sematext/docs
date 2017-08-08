@@ -15,6 +15,10 @@
         margin-right:0
     }
 
+    .md-footer-social {
+        float: right;
+        padding: 1.2rem 110px;
+    }
     .md-header-nav__source {
       width: initial;
       max-width: initial;
