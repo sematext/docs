@@ -1,7 +1,7 @@
 site_name: Sematext Documentation
 site_url: http://sematext.com/docs
 pages:
-    - index.md
+    - Getting Started: index.md
     - Log Management:
       - Overview: Logs/index.md
       - Logsene and Kibana 4: Logs/Logsene-and-Kibana-4.md
