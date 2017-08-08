@@ -111,3 +111,9 @@
     font-size: 13px;
     font-weight: bold;
 }
+
+@media only screen and (min-width: 60em) {
+    .md-search__input {
+        background-color: rgba(210,210,210,.26);
+    }
+}
