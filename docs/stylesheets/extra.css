@@ -1,9 +1,3 @@
-[data-md-color-primary=indigo] .md-nav__link--active, [data-md-color-primary=indigo] .md-nav__link:active {
-    background: #5E58AE;
-    font-weight: 600;
-    color: #FFF;
-    padding-left: 10px;
-}
 
 .md-header-nav__button {
     margin: 0px;
@@ -116,4 +110,15 @@
     .md-search__input {
         background-color: rgba(210,210,210,.26);
     }
+}
+
+[data-md-color-primary=indigo] .md-nav__link--active {
+    background: #5E58AE;
+    font-weight: 600;
+    color: #FFF;
+    padding-left: 10px;
+}
+
+[data-md-color-primary=indigo] .md-nav__link:active {
+    background: #f5f7fb;
 }

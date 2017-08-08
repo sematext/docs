@@ -54,7 +54,7 @@ pages:
       - SPM for Node.js: Monitoring/SPM-for-Node.js.md
       - Tag Support: Monitoring/Tag-Support.md
       - Transaction Tracing: Monitoring/Transaction-Tracing.md
-    - Sematext Apps:
+    - Sematext Enterprise:
       - On Premises: Sematext-Enterprise/On-Premises.md
       - Sematext Apps FAQ: Sematext-Enterprise/Sematext-Apps-FAQ.md
 theme: material
