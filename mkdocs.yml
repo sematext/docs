@@ -6,18 +6,16 @@ pages:
       - Overview: Logs/index.md
       - Sending Log Events: 
         - Overview: Logs/Sending-Events-to-Logsene.md
-        - Index Events via Elasticsearch API: Logs/Index-Events-via-Elasticsearch-API.md
+        - Using Elasticsearch API: Logs/Index-Events-via-Elasticsearch-API.md
         - Logstash: Logs/Logstash.md
         - Syslog:
           - Overview: Logs/Syslog.md
-          - Authorizing IPs for Syslog: Logs/Authorizing-IPs-for-Syslog.md
           - JSON Messages over Syslog: Logs/JSON-Messages-over-Syslog.md
           - rsyslog: Logs/rsyslog.md
           - syslogd: Logs/syslogd.md
           - syslog ng: Logs/syslog-ng.md
+          - Authorizing IPs for Syslog: Logs/Authorizing-IPs-for-Syslog.md
         - JSON: Logs/JSON.md
-        - Special Fields: Logs/X-Special-Fields.md
-        - Supported Date Formats: Logs/Supported-Date-Formats.md
       - Searching Log Events:
         - Overview: Logs/Searching-Your-Events.md
         - Logsene CLI: Logs/Logsene-CLI.md
@@ -26,6 +24,8 @@ pages:
         - Kibana Integration: Logs/Logsene-and-Kibana-4.md
         - Kibana: Logs/Kibana.md
       - API Reference: Logs/Logsene-API-Reference.md
+      - Supported Date Formats: Logs/Supported-Date-Formats.md
+      - Special Fields: Logs/X-Special-Fields.md
       - FAQ: Logs/Logsene-FAQ.md
     - Performance Monitoring:
       - Overview: Monitoring/index.md
@@ -40,10 +40,10 @@ pages:
         - Slack: Monitoring/Alerts---Slack-Integration.md
       - SPM Client:
         - Overview: Monitoring/SPM-Client.md
-        - Chef Recipe: Monitoring/Chef-Recipe.md
         - SPM Monitor - Javaagent: Monitoring/SPM-Monitor---Javaagent.md
         - SPM Monitor - Standalone: Monitoring/SPM-Monitor---Standalone.md
         - SPM Monitor - Switching Modes: Monitoring/SPM-Monitor---Switching-Modes.md
+        - Chef Recipe: Monitoring/Chef-Recipe.md
       - Events Integration: Monitoring/Events-Integration.md
       - Tag Support: Monitoring/Tag-Support.md
       - Network Map: Monitoring/Network-Map.md
