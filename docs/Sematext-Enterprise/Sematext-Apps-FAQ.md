@@ -188,7 +188,7 @@ unable to view data in charts.
 ### Where are Kibana indices backed up
 
 Kibana indices are backed up daily in
-the /opt/sematext/data/kibana/\<DATE\> dir.  
+the /opt/sematext/data/kibana/<DATE\> dir.  
 To restore these indices, just run the following
 command.
 

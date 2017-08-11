@@ -247,9 +247,9 @@ The real time GET operation is very simple and lets us get a single
 document out of a particular Logsene index. To retrieve a document we
 need to provide Logsene with the following information:
 
-  - **index name** - it will be *\<token\>\_free* if your Logsene app
+  - **index name** - it will be *<token\>\_free* if your Logsene app
     trial has expired and you don't have a paid plan, or
-    *\<token\>\_\<date\>* (where *date* is *YYYY-MM-DD*) when you have a
+    *<token\>\_<date\>* (where *date* is *YYYY-MM-DD*) when you have a
     paid plan for the Logsene service,
   - **type name** - the type of the document you want to retrieve,
   - **document identifier** - the identifier of the document

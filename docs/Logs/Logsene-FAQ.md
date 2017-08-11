@@ -533,7 +533,7 @@ A: If you have a clear idea about how many logs should be matching a
 given Alert Query, then simply use threshold-based Alerts. In other
 words, if you know that you always have some ERROR-level log events, you
 may want to use threshold-based alerts for that. For example, if your
-logs typically have \< 100 ERROR-level messages per minute you may want
+logs typically have < 100 ERROR-level messages per minute you may want
 to create an Alert Query that matches ERROR log events and notifies you
 when there are more than 100 such matches in 1 minute.  
 
