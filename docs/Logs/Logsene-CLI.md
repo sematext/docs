@@ -51,7 +51,7 @@ A quick rundown of most notable features of Logsene:
 
   
 
-# Logsene CLI
+## Logsene CLI
 
 Logsene CLI gives you capability to search through your logs from the
 command-line, which brings the awesome benefit of being able to pipe
@@ -75,7 +75,7 @@ $ logsene search -t 3h -f host | sort | uniq -c | sort -r | head
 You can find more useful examples in [the blog post](http://blog.sematext.com/2015/07/07/logsene-cli/) that announced
 the release of Logsene CLI.
 
-## Logsene CLI Session
+### Logsene CLI Session
 
 We define L-CLI session as a set of commands issued by the user, with no
 more than 30m between them. Every session has a set of configuration
@@ -101,9 +101,9 @@ account and possibly even the same Logsene application.
 
   
 
-# Commands
+## Commands
 
-##  **`logsene search`**
+###  **`logsene search`**
 
 ``` bash
 Usage: logsene search [query] [OPTIONS]
@@ -267,7 +267,7 @@ Allowed "human" formats (all in local time):
   note: it is recommended to avoid human format, as it may yield unexpected results
 ```
 
-## **`logsene config set`**
+### **`logsene config set`**
 
 ``` bash
 Usage: logsene config set [OPTIONS]
@@ -302,7 +302,7 @@ Examples:
 ```
  
 
-## **`logsene config get`**
+### **`logsene config get`**
 
 ``` bash
 Usage: logsene config get [OPTION]  Where OPTION may be:
