@@ -31,36 +31,30 @@
 
 ## In SPM or Logsene
 
-1\. Navigate to “App Settings“ of your App by clicking the “App Actions“
-button.   
+1.  Navigate to “App Settings“ of your App by clicking the “App Actions“
+    button.   
  
+    ![](attachments/34340871/67862535.png?width=400)
 
-![](attachments/34340871/67862535.png?width=400)
+2.  Navigate to “Alerts / HipChat“
 
- 
+    -  Add your HipChat token and Room Id. 
 
-2\. Navigate to “Alerts / HipChat“
+       ![](attachments/34340871/67862536.png?width=500)
 
-  - Add your HipChat token and Room Id. 
+       **Note:** You could add Room Id or Room Name. Both options are possible.
 
-![](attachments/34340871/67862536.png?width=500)
-
-**Note:** You could add Room Id or Room Name. Both options are possible.
-
-  - Click the “Test” button and when HipChat returns status code 200 or
-    204 you will know everything is configured correctly. Check your
-    HipChat channel for the test message from Sematext.
+    -  Click the “Test” button and when HipChat returns status code 200 or
+       204 you will know everything is configured correctly. Check your
+       HipChat channel for the test message from Sematext.
     
-    ![](attachments/34340871/34504707.png?width=1235)
+       ![](attachments/34340871/34504707.png?width=1235)
 
-<!-- end list -->
 
-  - To enable alerting to HipChat activate the “Enabled” checkbox, as
-    shown in the screenshot above.
+        -  To enable alerting to HipChat activate the “Enabled” checkbox, as
+           shown in the screenshot above.
 
-<!-- end list -->
-
-  - Click the “Save” button.
+        -  Click the “Save” button.
 
 That's it. Notifications sent to HipChat can also be sent via other
 channels such as e-mail, PagerDuty, Nagios, Slack, custom Web Hook, etc.
