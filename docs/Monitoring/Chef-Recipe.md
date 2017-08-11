@@ -1,5 +1,4 @@
-The following is an **example** Chef Recipe for installing [SPM
-client](SPM-Client.html).
+The following is an **example** Chef Recipe for installing [SPM client](SPM-Client).
 
 ``` bash
 # Author: Charles Sullivan (charles@fullcontact.com)
