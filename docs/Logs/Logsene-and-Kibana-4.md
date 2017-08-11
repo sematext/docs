@@ -1,4 +1,4 @@
-# How to use Kibana 4 in Logsene
+## How to use Kibana 4 in Logsene
 
 You'll find the “Kibana 4” button in the [Logsene App Overview](https://apps.sematext.com/users-web/services.do#logsene).
 Simply click on it and Kibana 4 will load the data from your Logsene

@@ -1,4 +1,4 @@
-# Essentials
+## Essentials
 
 We support receiving syslog messages from any application, as long as
 they comply to either [RFC-3164](http://tools.ietf.org/html/rfc3164) or

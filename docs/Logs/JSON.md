@@ -1,4 +1,4 @@
-# Essentials
+## Essentials
 
 We support receiving JSON messages from any application, as long as they
 they contain a valid token. The destination host

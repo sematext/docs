@@ -1,4 +1,4 @@
-# Custom Metrics
+## Custom Metrics
 
 [SPM](http://sematext.com/spm/) lets you extend standard performance
 metrics reports.  SPM exposes APIs and provides libraries that let you
