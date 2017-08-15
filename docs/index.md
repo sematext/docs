@@ -1,6 +1,6 @@
-<p align="center"> 
-<iframe width="560" height="340" src="https://www.youtube.com/embed/fY-j6g_oTmA" frameborder="0" allowfullscreen=""></iframe>
-</p>
+<div class="video_container">
+<iframe class="video" src="https://www.youtube.com/embed/fY-j6g_oTmA" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 *How Sematext works*
 

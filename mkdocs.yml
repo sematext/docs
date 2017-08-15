@@ -30,7 +30,7 @@ pages:
     - Performance Monitoring:
       - Overview: Monitoring/index.md
       - Integrations:
-        - Overview: Monitoring/Integration.md
+        - Overview: Monitoring/Integrations.md
         - Monitoring Docker: Monitoring/SPM-for-Docker.md
         - Monitoring Hadoop: Monitoring/SPM-for-Hadoop.md
         - Monitoring MongoDB: Monitoring/SPM-for-MongoDB.md
