@@ -165,3 +165,7 @@
     width: 100%;
     height: 100%;
 }
+
+.md-typeset a {
+    vertical-align: text-top;
+}
