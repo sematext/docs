@@ -166,6 +166,6 @@
     height: 100%;
 }
 
-.md-typeset a {
+.md-nav--secondary .md-typeset a {
     vertical-align: text-top;
 }
