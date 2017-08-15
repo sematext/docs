@@ -51,7 +51,7 @@ to
 
 The request body based search lets us leverage full Elasticsearch query
 DSL language
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-queries.html>)
+(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html>)
 along with its filtering capabilities
 (<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-filters.html>)
 and aggregations
@@ -320,7 +320,7 @@ single HTTP request using Elasticsearch Multi Search API
 The request needs to be run against \_msearch REST end-point and each
 query needs to include two lines - meta line defining the index name and
 a line defining the query using Elasticsearch query DSL
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-queries.html>).
+(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html>).
 
 For example, the following example shows the usage of Multiple Search
 API:
