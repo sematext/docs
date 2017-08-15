@@ -106,7 +106,7 @@ values.**
 ## Counting Metrics
 
 Each SPM plan allows for a different number of metrics and a different
-number of datapoints per calendar month.  Please see [SPM Plans](http://sematext.com/spm/plans.html) page.
+number of datapoints per calendar month.  Please see [SPM Plans](https://sematext.com/spm/#plans-and-pricing) page.
 
 To stay within your plan limits pay attention to the number of distinct
 metrics.  A metric is a (metric name, filter1, filter2) triple. For
