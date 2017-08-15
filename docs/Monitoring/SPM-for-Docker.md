@@ -357,7 +357,7 @@ srw-rw---- 1 root docker 0 Dec  3 07:52 /var/run/docker.sock
 
 If you like to create a docker group, to access docker without super
 user permissions,
-see <https://docs.docker.com/engine/installation/ubuntulinux/#create-a-docker-group>
+see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
 
 **How to activate the Unix socket in parallel to a TCP socket?**  
 Check the configuration of the Docker Daemon in /etc/defaults/docker -

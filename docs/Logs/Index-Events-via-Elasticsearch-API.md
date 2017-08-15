@@ -83,14 +83,14 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 ## Default Log Index Mapping
 
 A
-[mapping](http://www.elasticsearch.org/guide/appendix/glossary.html#mapping)
+[mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/glossary.html#mapping)
 is a way to define how your logs are indexed - which fields are in each
 log event and how each field is indexed. Logsene provides a default
 mapping that works well for most use-cases:
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date
-  - the **geoip** field is an object that contains a **location** [geo point](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html)
+  - the **geoip** field is an object that contains a **location** [geo point](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html)
     field (this works well if you're using
     [Logstash](Logstash))
   - the predefined fields **host**, **facility**, **severity**,

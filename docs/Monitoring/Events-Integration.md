@@ -52,7 +52,7 @@ An event has the following set of fields, most of which are optional:
 <td>timestamp</td>
 <td>date</td>
 <td>no</td>
-<td>Represents time when event happened (if not specified, current time will be assumed). The format is <a href="http://joda-time.sourceforge.net/api-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser%28%29" class="external-link">dateOptionalTime</a> e.g.: <span>2014-02-17T21:37:04+0100 or </span><span class="jsonPretty-string">2014-02-17T14:15:01.534471+02:00 or ...<br />
+<td>Represents time when event happened (if not specified, current time will be assumed). The format is <a href="http://joda-time.sourceforge.net/api-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser" class="external-link">dateOptionalTime</a> e.g.: <span>2014-02-17T21:37:04+0100 or </span><span class="jsonPretty-string">2014-02-17T14:15:01.534471+02:00 or ...<br />
 </span></td>
 </tr>
 <tr class="even">

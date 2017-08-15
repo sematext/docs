@@ -93,9 +93,9 @@ events that come from the apache log and contain the word "error" as
 "apache errors".
 
 To achieve this, you can use the
-[mutate](http://logstash.net/docs/latest/filters/mutate) filter to add
+[mutate](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html) filter to add
 the tags, and wrap it in a
-[conditional](http://logstash.net/docs/latest/configuration#conditionals)
+[conditional](https://www.elastic.co/guide/en/logstash/current/configuration.html#conditionals)
 that matches those specific logs:
 
 ``` bash

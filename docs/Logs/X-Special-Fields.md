@@ -19,7 +19,7 @@ a file name or even a full path to a filename, or the name of the
 application or process.
 
 **facility** is a single-valued field used by syslog to indicate the
-[facility level](http://en.wikipedia.org/wiki/Syslog#Facility_levels).
+[facility level](https://en.wikipedia.org/wiki/Syslog#Facility_levels).
 Logsene stores the keyword values of these levels (such as *user* or
 *auth*).
 

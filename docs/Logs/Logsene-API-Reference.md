@@ -591,7 +591,7 @@ sent (with HTTP code 400):
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in [**list alerts**](#LogseneAPIReference-ListAlerts) API call
+as a key in [**list alerts**](#list-alerts) API call
 response.
 
 Example API
@@ -653,7 +653,7 @@ Example of a success response (with HTTP code 200):
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in **[list alerts](#LogseneAPIReference-ListAlerts)** API call
+as a key in **[list alerts](#list-alerts)** API call
 response.
 
 Example API
