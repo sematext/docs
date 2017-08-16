@@ -8,6 +8,31 @@ pages:
         - Overview: Logs/Sending-Events-to-Logsene.md
         - Using Elasticsearch API: Logs/Index-Events-via-Elasticsearch-API.md
         - Logstash: Logs/Logstash.md
+        - Logagent:
+            - Overview: Logs/logagent/index.md
+            - Installation: 
+              - Linux & Mac OS X: Logs/logagent/installation.md
+              - Windows: Logs/logagent/windows.md         
+            - Usage: 
+              - Command Line Parameter: Logs/logagent/cli-parameters.md 
+              - Configuration file: Logs/logagent/config-file.md      
+              - Log Parser and pattern definitions: Logs/logagent/parser.md
+              - Plugins: 
+                - Overview: Logs/logagent/plugins.md
+                - Input plugins: 
+                  - TCP input: Logs/logagent/input-plugin-tcp.md
+                  - Command input: Logs/logagent/input-plugin-command.md
+                  - Elasticsearch query: Logs/logagent/input-plugin-elasticsearch-query.md
+                  - MSSQL query: Logs/logagent/input-plugin-mssql.md
+                  - MySql query: Logs/logagent/input-plugin-mysql.md
+                  - Postgresql query: Logs/logagent/input-plugin-postgresql.md
+                - Output plugins: 
+                  - Elasticsearch: Logs/logagent/output-elasticsearch.md
+                  - Slack webhook: Logs/logagent/output-plugin-slack.md
+                - Filter: 
+                  - About filters: Logs/logagent/filters.md
+                  - Grep input filter: Logs/logagent/input-filter-grep.md
+                  - SQL output filter: Logs/logagent/output-filter-sql.md
         - Syslog:
           - Overview: Logs/Syslog.md
           - JSON Messages over Syslog: Logs/JSON-Messages-over-Syslog.md
