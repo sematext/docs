@@ -13,7 +13,7 @@ monitor one should first adjusting the following:
   - Depending on JMX configuration of monitored server, adjust SPM
     monitor's JMX settings in **monitor properties** file (whose exact
     location and name for your application are mentioned in step 3 on
-    <http://apps.sematext.com/spm-reports/client.do>)
+    <https://apps.sematext.com/ui/monitoring>)
 
   
 After that, SPM monitor can be (re)started with:
@@ -232,7 +232,7 @@ of their **monitor properties** files).
 When installing spm client, both **monitor properties** files will be
 prepared for you (exact locations and names for your application are
 mentioned in step 3 on
-<http://apps.sematext.com/spm-reports/client.do>).
+<https://apps.sematext.com/ui/monitoring>).
 
  
 

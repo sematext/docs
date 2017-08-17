@@ -183,7 +183,7 @@ Instead, go to the[ Logsene web application and authorize the public IP ](Auth
 server(s) from where you send your logs.
 
 To use the Logsene application token, you'll first have to obtain it
-from your [list of Logsene applications](https://apps.sematext.com/users-web/services.do#logsene).
+from your [list of Logsene applications](https://apps.sematext.com/ui/logs).
 Then, in **/etc/rsyslog.conf**, define a
 [template](http://www.rsyslog.com/doc/rsyslog_conf_templates.html) that
 forwards your messages in [CEE-formatted JSON over syslog](JSON-Messages-over-Syslog),

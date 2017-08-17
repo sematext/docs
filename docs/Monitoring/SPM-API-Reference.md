@@ -708,7 +708,7 @@ Example of a success response (with HTTP code 200):
 
 The best way to prepare alert rule definitions to be used in API calls
 is by using the Create Alert dialog available in SPM. To access it, go
-to SPM reports<https://apps.sematext.com/spm-reports/mainPage.do> and
+to SPM reports<https://apps.sematext.com/ui/monitoring> and
 open application for which you want to create alert.  
   
 For **Anomaly**/**Threshold** alerts, navigate to Report (by selecting a

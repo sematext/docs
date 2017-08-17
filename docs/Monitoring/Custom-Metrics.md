@@ -18,7 +18,7 @@ into SPM and graph it along other reports.
     past, you can send Custom Metrics to any of them.
   - If you just registered, you can create SPM Apps by following the
     steps after Sematext account registration, or by clicking directly
-    [here](https://apps.sematext.com/spm-reports/registerApplication.do).
+    [here](https://apps.sematext.com/ui/registration).
 
 ## Terminology
 
@@ -135,7 +135,7 @@ app token\]
 The format can be either 'json' or 'raw'.
 
 Applications' tokens are listed
-at <https://apps.sematext.com/users-web/home.do?homeTab=spm>
+at <https://apps.sematext.com/ui/monitoring>
 
 ### JSON format
 

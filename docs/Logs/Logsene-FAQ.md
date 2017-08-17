@@ -114,7 +114,7 @@ Volume.
 #### How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene
 
 A: From the application, click the `App Actions` button and select
-`Storage`. There's also `Settings` button next to [any of your Logsene applications](https://apps.sematext.com/users-web/services.do#logsene) in
+`Storage`. There's also `Settings` button next to [any of your Logsene applications](https://apps.sematext.com/ui/logs) in
 the `Services > See all Logsene apps`. You can also do that from Kibana
 by searching for all your logs without adding any time filters. The
 number of hits represents the number of all your logs.
@@ -247,7 +247,7 @@ selection. 
 
 A: Yes, all data can be shipped both over encrypted channels like
 TLS/SSL and HTTPS, or via their unencrypted counter-parts.
- See <https://apps.sematext.com/logsene-reports/client.do> for more
+ See <https://apps.sematext.com/ui/logs> for more
 information about how to configure log shipping.
 
 #### **How secure is my data**
@@ -428,7 +428,7 @@ later.
 
 #### Which log shippers, logging libraries, and platform integrations are supported
 
-A: You can use [numerous log shippers, logging libraries, and platform integrations](https://apps.sematext.com/logsene-reports/client.do).
+A: You can use [numerous log shippers, logging libraries, and platform integrations](https://apps.sematext.com/ui/logs).
 
 #### How can I import logs from an existing Elasticsearch / ELK stack system
 

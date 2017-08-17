@@ -5,7 +5,7 @@ portability. It also has an easy to use configuration format, that helps
 you ship your logs to Logsene in 3 steps:
 
 1.  **sources**. syslog-ng can listen to local [syslog traffic on /dev/log](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_source_unixstream.html),
-    can [tail files](http://www.balabit.com/sites/default/files/documents/syslog-ng-pe-4.2-guides/en/syslog-ng-pe-v4.2-guide-admin-en/html/reference_source_file.html)and
+    can [tail files](http://www.balabit.com/sites/default/files/documents/syslog-ng-pe-4.2-guides/en/syslog-ng-pe-v4.2-guide-admin-en/html/reference_source_file.html) and
     more
 2.  **destinations**. You can send your logs to Logsene via UDP, TCP or
     [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425)
@@ -62,7 +62,7 @@ all cases, your endpoint will be
 ### Token Authentication
 
 To enable token authentication, get the token of your Logsene
-application from the [list of Logsene applications](https://apps.sematext.com/users-web/services.do#logsene).
+application from the [list of Logsene applications](https://apps.sematext.com/ui/logs).
 Then, put it in the template() statement of your Logsene destination.
 See working examples below. The end result is a [CEE-formatted JSON syslog](JSON-Messages-over-Syslog)
 message that contains your token in the **logsene-app-token** field.
@@ -177,7 +177,7 @@ log {
 
  
 
-Then, restart syslog-ng and you should see your logs in the [Logsene UI](https://apps.sematext.com/logsene-reports/mainPage.do) or
+Then, restart syslog-ng and you should see your logs in the [Logsene UI](https://apps.sematext.com/ui/logs) or
 [Kibana](Kibana).
 
 ## Tag Your Logs

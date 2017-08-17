@@ -53,7 +53,7 @@ send data: [through Elasticsearch's API](Index-Events-via-Elasticsearch-API) or 
 ##### Elasticsearch API (Logstash & friends)
 
 The easiest way to send logs from your files is
-[through](Logstash)[Logstash](Logstash). You
+[through Logstash](Logstash). You
 can also use any tool that works with Elasticsearch's REST API, for both
 [indexing](Index-Events-via-Elasticsearch-API) and
 [searching](Search-through-the-Elasticsearch-API). The
@@ -61,7 +61,7 @@ only condition is to use the application's token as the index name, and
 **http://logsene-receiver.sematext.com:80** as the address. The token
 for each of your applications can be found by logging in to
 <https://apps.sematext.com> and going to your Services -\> Logsene tab:
-<https://apps.sematext.com/users-web/services.do#logsene>
+<https://apps.sematext.com/ui/logs>
 
 ![](attachments/1179704/15564806.png)
 
@@ -124,7 +124,7 @@ From there, you can:
 ##### Invite Users
 
 Inviting new users makes them see your Logsene application in their
-Sematext[account. You can also make them ADMINs, which enables them to change some of the application's settings, too.](http://apps.sematext.com)
+Sematext [account](http://apps.sematext.com). You can also make them ADMINs, which enables them to change some of the application's settings, too.
 
 ![](attachments/1179704/15564812.png)
 
@@ -139,7 +139,7 @@ screen.
 ##### Storage and Retention
 
 The Storage tab shows you how many logs are stored in your application,
-out of the total number of logs[allowed by your plan](Logsene-FAQ/#plans-prices).
+out of the total number of logs [allowed by your plan](Logsene-FAQ/#plans-prices).
 To prevent you from hitting the limit, old logs are being removed based
 on how long you choose to keep them. By default, the retention time is 7
 days, which implies that logs with the value of the **@timestamp** field

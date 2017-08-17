@@ -11,7 +11,7 @@ When you use the API, here are the things you need to know:
   - host name: **logsene-receiver.sematext.com**
   - port: **80** (**443** for HTTPS)**  
     **
-  - index name: your [Logsene application token](https://apps.sematext.com/users-web/services.do#logsene) -
+  - index name: your [Logsene application token](https://apps.sematext.com/ui/logs) -
     note that this token should be kept secret
 
 ## Searching
@@ -26,7 +26,7 @@ sent to Logsene. The supported Search API's are:
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logsene application token](https://apps.sematext.com/users-web/services.do#logsene) when
+For each of the operations you'll need your [Logsene application token](https://apps.sematext.com/ui/logs) when
 calling **[logsene-receiver.sematext.com](http://logsene-receiver.sematext.com)**.
 In the following examples we will use a "dummy token"
 - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token.  You should use

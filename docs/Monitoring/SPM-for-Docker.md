@@ -143,7 +143,7 @@ docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM-TOKEN -v /var/run/dock
 </tr>
 <tr class="even">
 <td><em>SPM_TOKEN </em></td>
-<td>The identifier of your SPM App for Docker. SPM Overview of your Apps: <a href="https://apps.sematext.com/users-web/services.do#spm" class="uri" class="external-link">https://apps.sematext.com/users-web/services.do#spm</a></td>
+<td>The identifier of your SPM App for Docker. SPM Overview of your Apps: <a href="https://apps.sematext.com/ui/monitoring" class="uri" class="external-link">https://apps.sematext.com/ui/monitoring</a></td>
 </tr>
 <tr class="odd">
 <td>HOSTNAME_LOOKUP_URL</td>

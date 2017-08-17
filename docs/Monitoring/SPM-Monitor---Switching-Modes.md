@@ -26,7 +26,7 @@ which you want to change the mode). Set:
 
 1. Add SPM javaagent definition to startup script of your server
 according to notes
-on [https://apps.sematext.com/spm-reports/client.do](http://apps.sematext.com/spm-reports/client.do)
+on [https://apps.sematext.com/ui/monitoring](https://apps.sematext.com/ui/monitoring)
 (under in-process tab)
 
 2.  Edit **properties** file of your system found in

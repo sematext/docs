@@ -20,7 +20,7 @@ When you use the API, here are the things you need to know:
   - port: **80** or **443** (depending on whether you want to use plain
     HTTP or HTTPS)**  
     **
-  - index name: your [Logsene application token](https://apps.sematext.com/users-web/services.do#logsene) -
+  - index name: your [Logsene application token](https://apps.sematext.com/ui/logs) -
     note: **this token should be kept secret** (n.b. you can have N
     Logsene Apps, each with its own token)
 

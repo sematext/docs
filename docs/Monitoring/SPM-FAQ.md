@@ -677,7 +677,7 @@ chat.
 
 #### I see only my system metrics (e.g. CPU, Memory, Network, Disk...), but where is the rest of my data
 
-**A**: Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/spm-reports/client.do).
+**A**: Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/ui/monitoring).
 **Package installation** steps should be done first, followed by
 **Client configuration setup**. If you have done that and you still
 don't see application metrics, run **sudo
@@ -688,7 +688,7 @@ problem.
 
 #### I DO NOT see any system metrics (e.g. CPU, Memory, Network, Disk), what could be the problem
 
-**A**: Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/spm-reports/client.do). It
+**A**: Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/ui/monitoring). It
 is possible you missed **Client configuration setup** step. If you have
 done that and you still don't see application metrics, run **sudo
 bash /opt/spm/bin/spm-client-diagnostics.sh** to generate diagnostics
@@ -879,7 +879,7 @@ spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 
 #### How do I enable JMX in Solr
 
-**A:** Add or uncomment the **\<jmx/\>** directive in solrconfig.xml and
+**A:** Add or uncomment the **<jmx/\>** directive in solrconfig.xml and
 restart Solr.  See <http://wiki.apache.org/solr/SolrJmx> for more
 info.
 
@@ -888,7 +888,7 @@ info.
 #### I am using SPM for Solr and I don't see any data on Solr and JVM reports, what is the problem
 
 **A:** You should probably enable JMX in your Solr. Add or uncomment
-the **\<jmx /\>** directive in **solrconfig.xml** and restart Solr.
+the **<jmx /\>** directive in **solrconfig.xml** and restart Solr.
  See <http://wiki.apache.org/solr/SolrJmx> for more
 info.
 
