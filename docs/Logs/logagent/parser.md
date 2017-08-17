@@ -42,7 +42,7 @@ Properties:
 
 - patterns: list of patterns, each pattern starts with "-"
 - match: group of patterns for a specific log source
-- blockStart: regular experssion indicating a new message block for multi-line logs
+- blockStart: regular expression indicating a new message block for multi-line logs
 - sourceName: a regular expression matching the name of the log source (e.g. file or container image name)
 - regex: JS regular expression 
 - fields: field list of extracted match groups from the regex
