@@ -1,6 +1,4 @@
-<div class="video_container">
-<iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
-</div>
+__Table of contents__
 
 - [Overview](#overview)
 - [Supported Platforms](#supported-platforms)
@@ -13,6 +11,12 @@
 - [Integrated Log Parser](#integrated-log-parser)
   - [Known Issues](#known-issues)
   - [Troubleshooting and How-To](#troubleshooting-and-how-to)
+
+
+<div class="video_container">
+<iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
+</div>
+
 
 ## Overview
   
