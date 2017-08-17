@@ -24,7 +24,7 @@ options:
   # Enable/disable GeoIP lookups
   # Startup of logagent might be slower, when downloading the GeoIP database
   geoipEnabled: false
-  # Directory to store Logagent status nad temporary files
+  # Directory to store Logagent status and temporary files
   diskBufferDir: ./tmp
 ```
 
@@ -82,7 +82,8 @@ In addtion it is possible to route logs from different files to different indici
 ```
 output:
   # index logs in Elasticsearch or Logsene
-  elasticsearch: 
+  logsene: 
+    module: elasticsearch
     # URL to Elasticearch server, defaults to Logsene SaaS if not set
     url: https://logsene-receiver.sematext.com
     

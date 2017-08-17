@@ -2,18 +2,17 @@
 
 The parser detects log formats based on a pattern library (yaml file) and converts it to a JSON Object:
 
+- JSON lines are detected, parsed, and scanned for "@timestamp" and "time" fields (logstash and bunyan format)
 - find matching regex in pattern library
 - tag it with the recognized type
 - extract fields using regex
-- if 'autohash' is enabled, sensitive data is replaced with its sha1 hash code
+- if 'autohash' is enabled, sensitive data is replaced with its sha256 hash code (or alternative sha512 hash code by configuration)
 - parse dates and detect date format
   (use 'ts' field for date and time combined) 
 - create ISO timestamp in '@timestamp' field
-- transform function to manipulate parsed objects
+- call patterns "transform" function to manipulate parsed objects
 - unmatched lines end up with timestamp and original line in the message field
-- JSON lines are parsed, and scanned for @timestamp and time fields (logstash and bunyan format)
-- default patterns for many applications (see below)
-- Heroku logs
+- Logagent includes default patterns for many applications (see below)
 
 The default pattern definition file comes with patterns for:
 
@@ -32,7 +31,7 @@ The default pattern definition file comes with patterns for:
 - Apache Solr
 - various Linux/Mac OS X system log files
 
-The file format is based on [JS-YAML](https://nodeca.github.io/js-yaml/), in short:
+The file format for pattern definitions is based on [JS-YAML](https://nodeca.github.io/js-yaml/), in short:
 ```
 - - indicates an  array
 - !js/regexp - indicates a JS regular expression
@@ -43,6 +42,8 @@ Properties:
 
 - patterns: list of patterns, each pattern starts with "-"
 - match: group of patterns for a specific log source
+- blockStart: regular experssion indicating a new message block for multi-line logs
+- sourceName: a regular expression matching the name of the log source (e.g. file or container image name)
 - regex: JS regular expression 
 - fields: field list of extracted match groups from the regex
 - type: type used in Logsene (Elasticsearch Mapping)
