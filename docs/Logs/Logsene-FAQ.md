@@ -432,8 +432,7 @@ A: You can use [numerous log shippers, logging libraries, and platform integrati
 
 #### How can I import logs from an existing Elasticsearch / ELK stack system
 
-A: You can use [elk2logsene](https://github.com/sematext/elk2logsene) to
-do that or even just Logstash - see [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
+A: You can use Logstash to copy logs from your own ELK / Elastic Stack to Logsene as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
 
 #### How can I ship logs from Android and iOS apps
 
