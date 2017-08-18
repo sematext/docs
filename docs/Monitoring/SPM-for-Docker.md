@@ -1,18 +1,3 @@
-__Table of contents__
-
-- [Overview](#overview)
-- [Supported Platforms](#supported-platforms)
-- [Installation and Configuration](#installation-and-configuration)
-- [Configuration Parameters](#configuration-parameters)
-- [Docker Swarm and Docker Enterprise](#docker-swarm-and-docker-enterprise)
-- [Kubernetes Support](#kubernetes-support)
-- [CoreOS Support](#coreos-support)
-- [Access to the Docker Socket  / Docker API](#access-to-the-docker-socket-docker-api)
-- [Integrated Log Parser](#integrated-log-parser)
-  - [Known Issues](#known-issues)
-  - [Troubleshooting and How-To](#troubleshooting-and-how-to)
-
-
 <div class="video_container">
 <iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
 </div>
@@ -344,7 +329,7 @@ docker run -d --name sematext-agent --restart=always
 sematext/sematext-agent-docker
 ```
 
- # Log Routing
+ ## Log Routing
 
 Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
 Sematext Agent inspects the containers for this Label and ships the logs to the defined Logsene App. 
@@ -362,7 +347,7 @@ docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGSENE_TOKEN -p 80:80 nginx
 
 All other container logs will be shipped to the Logsene App specified in the docker run command for ```sematext/sematext-agent-docker``` with the environment variable ```LOGSENE_TOKEN```.
 
-# Integrated Log Parser
+## Integrated Log Parser
 
 SPM for Docker recognizes log formats - so your logs arrive in a structured format in Logsene!
 The format recognition, data extractions, date parsing etc. is provided by [logagent-js](https://github.com/sematext/logagent-js) and covers:
@@ -385,7 +370,7 @@ To use a custom pattern definition simply mount a volume to '/etc/logagent/patte
 
 Feel free to contribute to [logagent-js](https://github.com/sematext/logagent-js) to enrich the default pattern set.
 
-## Known Issues
+### Known Issues
 
 **Conflict with Docker logging-drivers. Sematext Docker Agent is running
 with a valid Logsene Token, but Logsene does not show container logs. **
@@ -399,7 +384,7 @@ check, run the "docker logs" command. If "docker logs CID" is shows
 container logs then Sematext Docker Agent should be able to collect the
 logs as well. 
 
-## Troubleshooting and How-To
+### Troubleshooting and How-To
 
 The following command enables **debug** information to stdout - to be
 displayed with "docker logs
