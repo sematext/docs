@@ -30,7 +30,7 @@ instructions for [rsyslog](rsyslog),
 [syslog-ng](syslog-ng) and [syslogd](syslogd)
 for how to forward messages in this case.  
 
-# Example
+## Example
 
 A quick way to ship messages via TCP syslog is with
 netcat:
@@ -39,7 +39,7 @@ netcat:
 echo 'my-host my-process:@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world2!"}' | nc logsene-receiver-syslog.sematext.com 514
 ```
 
-# Ways to Ship Logs
+## Ways to Ship Logs
 
 In production, you're probably going to use a syslog daemon. Details on
 configuring syslog daemons to send logs over TCP/UDP/RELP are below:

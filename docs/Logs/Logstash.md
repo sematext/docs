@@ -6,7 +6,7 @@ output to the Logsene endpoint, while specifying:
 
   - **80** or **443** as the **port**
 
-  - [your Logsene App token](https://apps.sematext.com/users-web/services.do#logsene) as
+  - [your Logsene App token](https://apps.sematext.com/ui/logs) as
     the index name
 
   - **http** as the **protocol**

@@ -30,7 +30,7 @@ events.
     past, you can send Events to any of them.
   - If you just registered, you can create SPM Apps by following the
     steps after Sematext account registration, or by clicking
-    directly [here](https://apps.sematext.com/spm-reports/registerApplication.do).
+    directly [here](https://apps.sematext.com/ui/registration).
 
   
 
@@ -115,7 +115,7 @@ event types (1-10) to keep things manageable.
 ##### **Example** **1**
 
 Consider some SPM application whose token (your app tokens are at:
-<https://apps.sematext.com/users-web/services.do>) is
+<https://apps.sematext.com/ui/integrations/apps>) is
 **1111111-2222-3333-4444-555555555555**.  To send
 a **server\_restart** event call the Events API with token and event
 type:

@@ -1003,7 +1003,7 @@ you are managing saved queries for apps that belong to some other
 account (and your are just a guest in that account with
 role **BILLING\_ADMIN** or **ADMIN**), you will have to use API key of
 that account (in both cases the key can be
-found [here](https://apps.sematext.com/users-web/account.do#api), you
+found [here](https://apps.sematext.com/ui/account/api), you
 just have to consider which account you are currently logged into).
 
 #### List Saved Queries

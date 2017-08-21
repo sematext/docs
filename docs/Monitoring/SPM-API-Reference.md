@@ -13,7 +13,7 @@ definition of Alert Rules, etc.
 To use the API, you need the API key for your Account (or, if you are a
 guest to some other Account under which you want to manage Apps,
 Alerts..., then API key of that Account) - it can be found
-**[here](https://apps.sematext.com/users-web/account.do#api)**. API key
+**[here](https://apps.sematext.com/ui/account/api)**. API key
 needs to be passed as an attribute to all API calls and is used by SPM
 to authenticate Account under which some API call is done.  API keys and
 App tokens used in this document are fake.  Use your own API key and App
@@ -303,7 +303,7 @@ for your apps, then just use your API key. If you are managing alerts
 for apps that belong to some other account (and your are just a guest in
 that account with role **BILLING\_ADMIN** or **ADMIN**), you will have
 to use API key of that account (in both cases the key can be found
-[here](https://apps.sematext.com/users-web/account.do#api), you just
+[here](https://apps.sematext.com/ui/account/api), you just
 have to consider which account you are currently logged into).
 
 #### List Alerts
