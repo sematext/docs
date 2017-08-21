@@ -33,6 +33,7 @@ pages:
                   - About filters: Logs/logagent/filters.md
                   - Grep input filter: Logs/logagent/input-filter-grep.md
                   - SQL output filter: Logs/logagent/output-filter-sql.md
+                  - Access Watch output filter: Logs/logagent/output-filter-accesswatch.md
         - Syslog:
           - Overview: Logs/Syslog.md
           - JSON Messages over Syslog: Logs/JSON-Messages-over-Syslog.md
