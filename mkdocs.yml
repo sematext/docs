@@ -12,7 +12,7 @@ pages:
             - Overview: Logs/logagent/index.md
             - Installation: 
               - Linux & Mac OS X: Logs/logagent/installation.md
-              - Windows: Logs/logagent/windows.md         
+              - Windows: Logs/logagent/installation-windows.md         
             - Usage: 
               - Command Line Parameter: Logs/logagent/cli-parameters.md 
               - Configuration file: Logs/logagent/config-file.md      
