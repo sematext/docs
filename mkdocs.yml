@@ -8,32 +8,6 @@ pages:
         - Overview: Logs/Sending-Events-to-Logsene.md
         - Using Elasticsearch API: Logs/Index-Events-via-Elasticsearch-API.md
         - Logstash: Logs/Logstash.md
-        - Logagent:
-            - Overview: Logs/logagent/index.md
-            - Installation: 
-              - Linux & Mac OS X: Logs/logagent/installation.md
-              - Windows: Logs/logagent/installation-windows.md         
-            - Usage: 
-              - Command Line Parameter: Logs/logagent/cli-parameters.md 
-              - Configuration file: Logs/logagent/config-file.md      
-              - Log Parser and pattern definitions: Logs/logagent/parser.md
-              - Plugins: 
-                - Overview: Logs/logagent/plugins.md
-                - Input plugins: 
-                  - TCP input: Logs/logagent/input-plugin-tcp.md
-                  - Command input: Logs/logagent/input-plugin-command.md
-                  - Elasticsearch query: Logs/logagent/input-plugin-elasticsearch-query.md
-                  - MSSQL query: Logs/logagent/input-plugin-mssql.md
-                  - MySql query: Logs/logagent/input-plugin-mysql.md
-                  - Postgresql query: Logs/logagent/input-plugin-postgresql.md
-                - Output plugins: 
-                  - Elasticsearch: Logs/logagent/output-elasticsearch.md
-                  - Slack webhook: Logs/logagent/output-plugin-slack.md
-                - Filter: 
-                  - About filters: Logs/logagent/filters.md
-                  - Grep input filter: Logs/logagent/input-filter-grep.md
-                  - SQL output filter: Logs/logagent/output-filter-sql.md
-                  - Access Watch output filter: Logs/logagent/output-filter-accesswatch.md
         - Syslog:
           - Overview: Logs/Syslog.md
           - JSON Messages over Syslog: Logs/JSON-Messages-over-Syslog.md
@@ -83,6 +57,32 @@ pages:
     - Sematext Enterprise:
       - Overview: Sematext-Enterprise/On-Premises.md
       - FAQ: Sematext-Enterprise/Sematext-Apps-FAQ.md
+    - Logagent:
+      - Overview: Logagent/index.md
+      - Installation: 
+        - Linux & Mac OS X: Logagent/installation.md
+        - Windows: Logagent/installation-windows.md         
+      - Usage: 
+        - Command Line Parameter: Logagent/cli-parameters.md 
+        - Configuration file: Logagent/config-file.md      
+        - Log Parser and pattern definitions: Logagent/parser.md
+        - Plugins: 
+          - Overview: Logagent/plugins.md
+          - Input plugins: 
+            - TCP input: Logagent/input-plugin-tcp.md
+            - Command input: Logagent/input-plugin-command.md
+            - Elasticsearch query: Logagent/input-plugin-elasticsearch-query.md
+            - MSSQL query: Logagent/input-plugin-mssql.md
+            - MySql query: Logagent/input-plugin-mysql.md
+            - Postgresql query: Logagent/input-plugin-postgresql.md
+          - Output plugins: 
+            - Elasticsearch: Logagent/output-elasticsearch.md
+            - Slack webhook: Logagent/output-plugin-slack.md
+          - Filter: 
+            - About filters: Logagent/filters.md
+            - Grep input filter: Logagent/input-filter-grep.md
+            - SQL output filter: Logagent/output-filter-sql.md
+            - Access Watch output filter: Logagent/output-filter-accesswatch.md
 theme: material
 theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
