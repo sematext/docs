@@ -1,4 +1,6 @@
-# Install Node.js 
+# Installation for Linux & Mac OS X
+
+## Install Node.js 
 
 Official Node.js [downloads and instructions](https://nodejs.org/en/download/).
 E.g. for Debian/Ubuntu:
@@ -7,7 +9,7 @@ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-# Install Logagent
+## Install Logagent npm package
 ```
 sudo npm i -g @sematext/logagent 
 ```
@@ -19,12 +21,15 @@ sudo npm i -g @sematext/logagent
 3. Install logagent as system service
 Logagent detects the init system and installs systemd or upstart service scripts. 
 On Mac OS X it creates a launchd service. Simply run:
+
 ```
-# Install logagent package globally 
-sudo npm i -g @sematext/logagent
-sudo logagent-setup -i LOGSENE_TOKEN
-# for EU region: 
-# sudo logagent-setup -i LOGSENE_TOKEN -u logsene-receiver.eu.sematext.com
+  # Install logagent package globally 
+  sudo npm i -g @sematext/logagent
+  sudo logagent-setup -i LOGSENE_TOKEN
+  # for EU region: 
+  # sudo logagent-setup -i LOGSENE_TOKEN -u logsene-receiver.eu.sematext.com
+  # for local Elasticsearch
+  # sudo logagent-setup -i indexName -u http://localhost:9200
 ```
 
 The setup script generates the configuraton file in ```/etc/sematext/logagent.conf```.
