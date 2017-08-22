@@ -79,7 +79,7 @@ inputFilter:
 			}
 ```
 
-# Output filter
+## Output filter
 
 Function parameters for output filters:
 
@@ -129,10 +129,11 @@ outputFilter:
 			}
 ```
 
-# List of available filters
+## List of available filters
 
 - [Grep input filter](./input-filter-grep) - module alias "grep"
 - [SQL output filter](./output-filter-sql) - module alias "sql"
+- [Access Watch output filter](./output-filter-access-watch) - module alias "access-watch"
 
 
 

@@ -2,7 +2,7 @@
 
 The architecture of logagent is modular and each input or output module is implemented as plugin for the logagent framework. Plugins are loaded on demand depending on the configurations. 
 
-# How plugins work
+## How plugins work
 
 - Logagent checks the configuration file for properties with a "module" key for the nodejs module name. External plugins needs to be installed via npm. 
 - Plugins are initialized with the logagent configuration from (command line arguments + configuration file) and the event emitter for logagent. Plugins should provide a start and stop method.
@@ -14,6 +14,7 @@ The architecture of logagent is modular and each input or output module is imple
 - Output plugins listen to "data.parsed" events and store or forward the data to the target. 
 
 ## Examples 
+
 ### Input plugin
 
  [This example](https://github.com/megastef/logagent-tcp-input) implements a plugin to receive data via TCP socket with a configurable rate limit. 

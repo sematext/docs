@@ -79,7 +79,7 @@ pages:
           - Output plugins: 
             - Elasticsearch: Logagent/output-elasticsearch.md
             - Slack webhook: Logagent/output-plugin-slack.md
-          - Filter: 
+          - Filter plugins: 
             - About filters: Logagent/filters.md
             - Grep input filter: Logagent/input-filter-grep.md
             - SQL output filter: Logagent/output-filter-sql.md
