@@ -31,11 +31,13 @@ The setup script generates the configuraton file in ```/etc/sematext/logagent.co
 The default settings ship all logs from ```/var/log/**/*.log``` to Logsene. 
 
 Location of service scripts:
+
 - upstart: /etc/init/logagent.conf
 - systemd: /etc/systemd/system/logagent.service
 - launchd: /Library/LaunchDaemons/com.sematext.logagent.plist
 
 Start/stop service: 
+
 - upstart: ```service logagent stop/start```
 - systemd: ```systemctl stop/start logagent```
 - launchd: ```launchctl start/stop com.sematext.logagent```
