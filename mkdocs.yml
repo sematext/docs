@@ -61,7 +61,8 @@ pages:
       - Overview: Logagent/index.md
       - Installation: 
         - Linux & Mac OS X: Logagent/installation.md
-        - Windows: Logagent/installation-windows.md         
+        - Windows: Logagent/installation-windows.md 
+        - Heroku: Logagent/installation-heroku.md        
       - Usage: 
         - Command Line Parameter: Logagent/cli-parameters.md 
         - Configuration file: Logagent/config-file.md      
