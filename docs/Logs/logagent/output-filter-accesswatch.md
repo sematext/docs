@@ -1,4 +1,4 @@
-# Aceess Watch output filter
+# Access Watch output filter
 
 Web traffic insights and robot detection are key for teams to stay in control of what is happening on their infrastructure and web assets. Automated robotic traffic now represents a larger share of website activity over human customers. These bots have a significant impact, with many working hard to disguise their identity and activity, thereby increasing risk and costs while harming performance for online businesses. Access Watch deploys the industry’s most precise robot intelligence to be easily plugged into any existing data pipeline.
 
@@ -9,12 +9,11 @@ Example config to enrich nginx web server logs with Access Watch robot informati
 ```
 
 options:
-  includeOriginalLine: false
-  printStats: 10
-  maxInputRate: 1mb # per second
+  includeOriginalLine: false # don't log original log line
+  printStats: 60             # print stats every minute
+  maxInputRate: 1mb          # per second
 
 input:
-  stdin: true
   files:
       - '/var/log/nginx/access_log'
 
