@@ -3,87 +3,87 @@ site_url: http://sematext.com/docs
 pages:
     - Getting Started: index.md
     - Log Management:
-      - Overview: Logs/index.md
+      - Overview: logs/index.md
       - Sending Log Events: 
-        - Overview: Logs/Sending-Events-to-Logsene.md
-        - Using Elasticsearch API: Logs/Index-Events-via-Elasticsearch-API.md
-        - Logstash: Logs/Logstash.md
+        - Overview: logs/sending-events-to-logsene.md
+        - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
+        - Logstash: logs/logstash.md
         - Syslog:
-          - Overview: Logs/Syslog.md
-          - JSON Messages over Syslog: Logs/JSON-Messages-over-Syslog.md
-          - rsyslog: Logs/rsyslog.md
-          - syslogd: Logs/syslogd.md
-          - syslog ng: Logs/syslog-ng.md
-          - Authorizing IPs for Syslog: Logs/Authorizing-IPs-for-Syslog.md
-        - JSON: Logs/JSON.md
+          - Overview: logs/syslog.md
+          - JSON Messages over Syslog: logs/json-messages-over-syslog.md
+          - rsyslog: logs/rsyslog.md
+          - syslogd: logs/syslogd.md
+          - syslog ng: logs/syslog-ng.md
+          - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
+        - JSON: logs/json.md
       - Searching Log Events:
-        - Overview: Logs/Searching-Your-Events.md
-        - Logsene CLI: Logs/Logsene-CLI.md
-        - Search Syntax: Logs/Search-Syntax.md
-        - Using Elasticsearch API: Logs/Search-through-the-Elasticsearch-API.md
-        - Kibana Integration: Logs/Logsene-and-Kibana-4.md
-        - Kibana: Logs/Kibana.md
-      - API Reference: Logs/Logsene-API-Reference.md
-      - Supported Date Formats: Logs/Supported-Date-Formats.md
-      - Special Fields: Logs/X-Special-Fields.md
-      - FAQ: Logs/Logsene-FAQ.md
+        - Overview: logs/searching-your-events.md
+        - Logsene CLI: logs/logsene-cli.md
+        - Search Syntax: logs/search-syntax.md
+        - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
+        - Kibana Integration: logs/logsene-and-kibana-4.md
+        - Kibana: logs/kibana.md
+      - API Reference: logs/logsene-api-reference.md
+      - Supported Date Formats: logs/supported-date-formats.md
+      - Special Fields: logs/special-fields.md
+      - FAQ: logs/faq.md
     - Performance Monitoring:
-      - Overview: Monitoring/index.md
+      - Overview: monitoring/index.md
       - Integrations:
-        - Overview: Monitoring/Integrations.md
-        - Monitoring Docker: Monitoring/SPM-for-Docker.md
-        - Monitoring Hadoop: Monitoring/SPM-for-Hadoop.md
-        - Monitoring MongoDB: Monitoring/SPM-for-MongoDB.md
-        - Monitoring Node.js: Monitoring/SPM-for-Node.js.md
-        - HipChat: Monitoring/Alerts---HipChat-Integration.md
-        - PagerDuty: Monitoring/Alerts---PagerDuty-Integration.md
-        - Slack: Monitoring/Alerts---Slack-Integration.md
+        - Overview: monitoring/integrations.md
+        - Monitoring Docker: monitoring/docker.md
+        - Monitoring Hadoop: monitoring/hadoop.md
+        - Monitoring MongoDB: monitoring/mongodb.md
+        - Monitoring Node.js: monitoring/node.js.md
+        - HipChat: monitoring/alerts-hipchat-integration.md
+        - PagerDuty: monitoring/alerts-pagerduty-integration.md
+        - Slack: monitoring/alerts-slack-integration.md
       - SPM Client:
-        - Overview: Monitoring/SPM-Client.md
-        - SPM Monitor - Javaagent: Monitoring/SPM-Monitor---Javaagent.md
-        - SPM Monitor - Standalone: Monitoring/SPM-Monitor---Standalone.md
-        - SPM Monitor - Switching Modes: Monitoring/SPM-Monitor---Switching-Modes.md
-        - Chef Recipe: Monitoring/Chef-Recipe.md
-      - Events Integration: Monitoring/Events-Integration.md
-      - Tag Support: Monitoring/Tag-Support.md
-      - Network Map: Monitoring/Network-Map.md
-      - Transaction Tracing: Monitoring/Transaction-Tracing.md
-      - Database Operations: Monitoring/Database-Operations.md
-      - On Demand Profiling: Monitoring/On-Demand-Profiling.md
-      - Custom Metrics: Monitoring/Custom-Metrics.md
-      - Coda Hale Metrics Reporter: Monitoring/Coda-Hale-Metrics-Reporter.md
-      - API Reference: Monitoring/SPM-API-Reference.md
-      - FAQ: Monitoring/SPM-FAQ.md
+        - Overview: monitoring/spm-client.md
+        - SPM Monitor - Javaagent: monitoring/spm-monitor-javaagent.md
+        - SPM Monitor - Standalone: monitoring/spm-monitor-standalone.md
+        - SPM Monitor - Switching Modes: monitoring/spm-monitor-switching-modes.md
+        - Chef Recipe: monitoring/chef-recipe.md
+      - Events Integration: monitoring/events-integration.md
+      - Tag Support: monitoring/tag-support.md
+      - Network Map: monitoring/network-map.md
+      - Transaction Tracing: monitoring/transaction-tracing.md
+      - Database Operations: monitoring/database-operations.md
+      - On Demand Profiling: monitoring/on-demand-profiling.md
+      - Custom Metrics: monitoring/custom-metrics.md
+      - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
+      - API Reference: monitoring/spm-api-reference.md
+      - FAQ: monitoring/spm-faq.md
     - Sematext Enterprise:
-      - Overview: Sematext-Enterprise/On-Premises.md
-      - FAQ: Sematext-Enterprise/Sematext-Apps-FAQ.md
+      - Overview: sematext-enterprise/on-premises.md
+      - FAQ: sematext-enterprise/sematext-apps-faq.md
     - Logagent:
-      - Overview: Logagent/index.md
+      - Overview: logagent/index.md
       - Installation: 
-        - Linux & Mac OS X: Logagent/installation.md
-        - Windows: Logagent/installation-windows.md 
-        - Heroku: Logagent/installation-heroku.md        
+        - Linux & Mac OS X: logagent/installation.md
+        - Windows: logagent/installation-windows.md 
+        - Heroku: logagent/installation-heroku.md        
       - Usage: 
-        - Command Line Parameter: Logagent/cli-parameters.md 
-        - Configuration file: Logagent/config-file.md      
-        - Log Parser and pattern definitions: Logagent/parser.md
+        - Command Line Parameter: logagent/cli-parameters.md 
+        - Configuration file: logagent/config-file.md      
+        - Log Parser and pattern definitions: logagent/parser.md
         - Plugins: 
-          - Overview: Logagent/plugins.md
+          - Overview: logagent/plugins.md
           - Input plugins: 
-            - TCP input: Logagent/input-plugin-tcp.md
-            - Command input: Logagent/input-plugin-command.md
-            - Elasticsearch query: Logagent/input-plugin-elasticsearch-query.md
-            - MSSQL query: Logagent/input-plugin-mssql.md
-            - MySql query: Logagent/input-plugin-mysql.md
-            - Postgresql query: Logagent/input-plugin-postgresql.md
+            - TCP input: logagent/input-plugin-tcp.md
+            - Command input: logagent/input-plugin-command.md
+            - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
+            - MSSQL query: logagent/input-plugin-mssql.md
+            - MySql query: logagent/input-plugin-mysql.md
+            - Postgresql query: logagent/input-plugin-postgresql.md
           - Output plugins: 
-            - Elasticsearch: Logagent/output-elasticsearch.md
-            - Slack webhook: Logagent/output-plugin-slack.md
+            - Elasticsearch: logagent/output-elasticsearch.md
+            - Slack webhook: logagent/output-plugin-slack.md
           - Filter plugins: 
-            - About filters: Logagent/filters.md
-            - Grep input filter: Logagent/input-filter-grep.md
-            - SQL output filter: Logagent/output-filter-sql.md
-            - Access Watch output filter: Logagent/output-filter-accesswatch.md
+            - About filters: logagent/filters.md
+            - Grep input filter: logagent/input-filter-grep.md
+            - SQL output filter: logagent/output-filter-sql.md
+            - Access Watch output filter: logagent/output-filter-accesswatch.md
 theme: material
 theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
