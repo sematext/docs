@@ -108,3 +108,8 @@ We also use `pandoc` to convert markdown to PDF.
 ```
   PROJECT_FOLDER/bin/to_pdf 
 ```
+
+### Run link checker
+
+Check 404 links for sematext.com/docs using w3c linkchecker
+https://validator.w3.org/checklink?uri=http%3A%2F%2Fsematext.com%2Fdocs&hide_type=dir&recursive=on&depth=&check=Check
