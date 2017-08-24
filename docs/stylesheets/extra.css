@@ -123,6 +123,12 @@
     }
 }
 
+.md-nav--primary .md-nav__link:hover {
+    background: #f5f7fb;
+    color: #595b61;
+    padding-left: 10px;
+}
+
 .md-nav--primary .md-nav__link {
     padding: 7px 10px 7px 0;
 }
