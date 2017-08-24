@@ -848,7 +848,7 @@ Example of a success response (with HTTP code 200):
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in [**list alerts**](spm-api-Reference/#list-alerts)
+as a key in [**list alerts**](spm-api-reference/#list-alerts)
 API call response.
 
  

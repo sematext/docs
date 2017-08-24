@@ -77,7 +77,7 @@ $InputRunFileMonitor                # start monitoring this file
 If you have issues with `logrotate` or other utilities that truncate or
 organize the files you monitor, upgrade rsyslog to version 8.1.5 or
 later and the problems should go away. The file input module gets
-[inotify](http://en.wikipedia.org/wiki/Inotify)support and you also have
+[inotify](https://en.wikipedia.org/wiki/Inotify)support and you also have
 a [new configuration format](http://www.rsyslog.com/doc/rainerscript.html) at your disposal,
 which is easier to maintain:
 
@@ -147,8 +147,8 @@ template(name="LogseneFormat" type="list" option.json="on") {
 
 ### UDP, TCP, TLS or RELP
 
-You can send [RFC-3164](http://tools.ietf.org/html/rfc3164) and
-[RFC-5424](http://tools.ietf.org/html/rfc5424) compatible syslog to
+You can send [RFC-3164](https://tools.ietf.org/html/rfc3164) and
+[RFC-5424](https://tools.ietf.org/html/rfc5424) compatible syslog to
 Logsene via any of the following protocols:
 
   - UDP: fire-and-forget protocol that doesn't guarantee any reliability
