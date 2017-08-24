@@ -880,7 +880,7 @@ spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 #### How do I enable JMX in Solr
 
 **A:** Add or uncomment the **<jmx/\>** directive in solrconfig.xml and
-restart Solr.  See <http://wiki.apache.org/solr/SolrJmx> for more
+restart Solr.  See <https://wiki.apache.org/solr/SolrJmx> for more
 info.
 
   
@@ -889,7 +889,7 @@ info.
 
 **A:** You should probably enable JMX in your Solr. Add or uncomment
 the **<jmx /\>** directive in **solrconfig.xml** and restart Solr.
- See <http://wiki.apache.org/solr/SolrJmx> for more
+ See <https://wiki.apache.org/solr/SolrJmx> for more
 info.
 
 #### I am using SPM for Solr and I don't see any data only in Solr Components or Errors reports, what should I do

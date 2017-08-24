@@ -114,7 +114,7 @@ The following rules are supported:
 
   - **class **- all non-static methods of this class. The 'name'
     parameter should be a fully qualified java class name
-    (see <http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html#getCanonicalName> )
+    (see <http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html> )
   - **constructor **- constructor for a given class which matches given
     parameter types. The 'signature' should specify a fully qualified
     java class name followed by a list of comma-separated
