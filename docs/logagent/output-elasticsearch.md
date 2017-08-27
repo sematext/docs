@@ -1,8 +1,8 @@
-# Elasticsearch Output Plugin
+## Elasticsearch Output Plugin
 
 The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://www.elastic.co/products/elasticsearch) or [Logsene](https://sematext.com/logsene). 
 
-## Features
+### Features
 - log routing by log source to multiple Elasticsearch servers
 - log routing by log source to multiple Elasticearch indices (or Logsene Apps)
 - SSL/TLS by default, when using Logsene
@@ -12,7 +12,7 @@ The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://
 - renaming of invalid field names
 - limit field size (240k by default)
 
-# Simple config
+## Simple config
 
 The following example configuration ships all log files in /var/log (including sub-directories) to one Elasticsearch index. 
 
@@ -27,7 +27,7 @@ output:
     index: bb308f80-0453-485e-894c-f80c054a0f10 
 ```
 
-# Log routing to multiple targets
+## Log routing to multiple targets
 
 In some situations it is required to ship data from different sources to differnt Elasticsearch servers. The output section in the Logagnet configuration file accepts multiple definitions for the Elasticsearch output module. 
 
@@ -35,7 +35,7 @@ Each Elasticsearch output might have a a list list of indices followed by a list
 
 The following expamle ships logs from wireless devices and authentication logs to a local Elasticsearch server and other server logs to multiple Logsene applications. 
 
-```yml
+```yaml
 input:
   files:
       - '/var/log/**/*.log'
@@ -67,11 +67,11 @@ output:
    	   	- myapp2\/app.log
 ```
 
-# HTTP and HTTPS options
+## HTTP and HTTPS options
 
 The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api/https.html#https_https_request_options_callback). Client side certifictes and keys are specified with a file name. If you use self signed certifictes, set  _rejectUnauthorized_ to _false_.
 
-```yml
+```yaml
 output:
   secure-elasticsearch: 
     module: elasticsearch

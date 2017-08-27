@@ -1,4 +1,4 @@
-# Filters
+## Filters
 
 Filters can drop, transform or aggregate log events and hook into the processing chain. 
 
@@ -21,7 +21,7 @@ Example:
 
 Filters can be declared inline as JavaScript in function or as reference to a npm modules in Logagent config file. 
 
-## Input filter
+### Input filter
 
 Function parameters for input filters:
 
@@ -37,7 +37,7 @@ Node.js modules can be loaded as filter function with the ```module``` keyword.
 A module can be declared inline as JavaScript function using ```!!js/function >>``` in the module property. Properties in the config section are passed to the filter function as "config" object.
 
 Example, using npm modules: 
-```
+```yaml
 inputFilter:
   - module: logagent-filter-input-grep
     config:
@@ -48,7 +48,7 @@ inputFilter:
 
 Example, inline JavaScript function:
 
-```
+```yaml
 inputFilter:
   - module: logagent-filter-input-grep
     config:
@@ -79,7 +79,7 @@ inputFilter:
 			}
 ```
 
-## Output filter
+### Output filter
 
 Function parameters for output filters:
 
@@ -129,7 +129,7 @@ outputFilter:
 			}
 ```
 
-## List of available filters
+### List of available filters
 
 - [Grep input filter](./input-filter-grep) - module alias "grep"
 - [SQL output filter](./output-filter-sql) - module alias "sql"

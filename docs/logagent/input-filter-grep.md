@@ -1,12 +1,12 @@
-# Grep Input Filter
+## Grep Input Filter
 
 Apply regex to filter raw input from @sematext/logagent before logs are parsed
 
-# Configuration 
+## Configuration 
 
 Add following section to @sematext/logagent configuration file. Please note you could use the plugin with multiple configurations. Output of the first filter is passed into the next one ...: 
 
-```
+```yaml
 input: 
   files:
     - '/var/log/**/*.log'
