@@ -89,6 +89,7 @@ theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
 google_analytics: ['UA-2365268-3', 'mkdocs.org']
+site_favicon: 'images/favicon.png'
 # Options
 extra:
   logo: 'images/logo.svg'
