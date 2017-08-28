@@ -1,4 +1,4 @@
-# Plugin: Elasticsearch query
+## Plugin: Elasticsearch query
 
 Plugin to receive documents from scheduled Elasticsearch queries.
 Use cases: 
@@ -8,9 +8,9 @@ Use cases:
 - Replicating data to other Elasticsearch clusters
 - Storing results of aggregation queries in a new index
 
-## Configuration
+### Configuration
 
-```
+```yaml
 input:
   queryLogs: 
     module: elasticsearch-query

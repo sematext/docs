@@ -14,7 +14,7 @@ When logagent is istalled as [system service](http://sematext.github.io/logagent
 
 ### Section: options
 
-```
+```yaml
 # Global options
 options:
   # print stats every 60 seconds 
@@ -30,7 +30,7 @@ options:
 
 ### Section: input
 
-```
+```yaml
 input:
   # a list of glob patterns to watch files to tail
   files:
@@ -51,7 +51,7 @@ input:
 
 In this section defines loading of custom pattern files or inline pattern definitions for the log parser.
 
-```
+```yaml
 # optional, if not specified default patterns are used
 parser:
   patternFiles:
@@ -79,7 +79,7 @@ Logs could be shipped to Elasticsearch or to rtail for realtime log view.
 The Elasticsearch output supports HTTPS, username/password in the url. 
 In addtion it is possible to route logs from different files to different indicies in Elasticsearch. All logs, which don't match the rules in the indices section are routed to the default index (elasticsearch.index). 
 
-```
+```yaml
 output:
   # index logs in Elasticsearch or Logsene
   logsene: 

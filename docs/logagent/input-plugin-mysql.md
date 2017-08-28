@@ -1,4 +1,4 @@
-# Plugin: MySQL Input
+## Plugin: MySQL Input
 
 Input plugin to use my sql queries as input and stream the output into logagent.
 
@@ -13,9 +13,9 @@ Applications:
 - index for SQL data in elasticsearch
 - create alerts based SQL data
 
-## Configuration
+### Configuration
 
-```
+```yaml
 
 input:
   mysql-json:

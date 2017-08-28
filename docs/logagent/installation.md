@@ -1,20 +1,20 @@
-# Installation for Linux & Mac OS X
+## Installation for Linux & Mac OS X
 
-## Install Node.js 
+### Install Node.js 
 
 Official Node.js [downloads and instructions](https://nodejs.org/en/download/).
 E.g. for Debian/Ubuntu:
-```
+``` bash
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-## Install Logagent npm package
-```
+### Install Logagent npm package
+``` bash
 sudo npm i -g @sematext/logagent 
 ```
 
-## Install service (Linux, Mac OS X)
+### Install service (Linux, Mac OS X)
 
 1. Get a free account at [sematext.com](https://apps.sematext.com/users-web/register.do)
 2. [create a Logsene App](https://apps.sematext.com/logsene-reports/registerApplication.do) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/) 
@@ -22,7 +22,7 @@ sudo npm i -g @sematext/logagent
 Logagent detects the init system and installs systemd or upstart service scripts. 
 On Mac OS X it creates a launchd service. Simply run:
 
-```
+``` bash
   # Install logagent package globally 
   sudo npm i -g @sematext/logagent
   sudo logagent-setup -i LOGSENE_TOKEN

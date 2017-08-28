@@ -90,6 +90,7 @@ theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
 google_analytics: ['UA-2365268-3', 'mkdocs.org']
+site_favicon: 'images/favicon.png'
 # Options
 extra:
   logo: 'images/logo.svg'
@@ -104,13 +105,13 @@ extra:
     - type: 'twitter'
       link: 'https://twitter.com/sematext'
     - type: 'linkedin'
-      link: 'http://www.linkedin.com/company/sematext-international-llc'
+      link: 'https://www.linkedin.com/company/sematext-international-llc'
     - type: 'facebook'
       link: 'https://www.facebook.com/Sematext'
     - type: 'google-plus'
       link: 'https://plus.google.com/+SematextGroup'
     - type: 'slideshare'
-      link: 'http://slideshare.net/sematext'
+      link: 'https://www.slideshare.net/sematext'
     - type: 'feed'
       link: 'http://feeds.feedburner.com/SematextBlog'
 

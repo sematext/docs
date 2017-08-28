@@ -362,9 +362,9 @@ dashboards. Logsene also creates automatically a field called
 
 #### Why does my syslog timestamp have a different time zone
 
-A: The [original syslog specification](http://tools.ietf.org/html/rfc3164) (RFC 3164) has a date
+A: The [original syslog specification](https://tools.ietf.org/html/rfc3164) (RFC 3164) has a date
 field that doesn't contain any time zone information. Fortunately,
-there's a [new specification](http://tools.ietf.org/html/rfc5424) (RFC
+there's a [new specification](https://tools.ietf.org/html/rfc5424) (RFC
 5424) that uses [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 timestamp. That's why we recommend using the new format for syslog
 daemons that support it, such as [rsyslog](rsyslog) or

@@ -50,9 +50,9 @@ Properties:
 - dateFormat: format of the special fields 'ts', if the date format matches, a new field @timestamp is generated
 - transform: JS function to manipulate the result of regex and date parsing
 
-# Example
+## Example
 
-```
+```yaml
 # Sensitive data can be replaced with a hashcode (sha1)
 # it applies to fields matching the field names by a regular expression
 # Note: this function is not optimized (yet) and might take 10-15% of performance
@@ -101,7 +101,7 @@ The handling of JSON is different, regular expressions are not matched against J
 Logagent parse JSON and provides post processing functions in the pattern definition.
 The following example masks fields in JSON and removes fields from the parsed event. 
 
-```
+```yaml
 hashFunction: sha512
 # post process journald JSON format
 # logagent feature to hash fields
@@ -123,7 +123,7 @@ json:
 
 The default patterns are available [here](https://github.com/sematext/logagent-js/blob/master/patterns.yml) - contributions are welcome!
 
-# Node.js API for the parser 
+## Node.js API for the parser 
 
 Install logagent as local module and save the dependency to your package.json
 

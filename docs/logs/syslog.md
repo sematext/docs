@@ -1,10 +1,10 @@
 ## Essentials
 
 We support receiving syslog messages from any application, as long as
-they comply to either [RFC-3164](http://tools.ietf.org/html/rfc3164) or
-[RFC-5424](http://tools.ietf.org/html/rfc5424) (and
+they comply to either [RFC-3164](https://tools.ietf.org/html/rfc3164) or
+[RFC-5424](https://tools.ietf.org/html/rfc5424) (and
 [RFC-5425](https://tools.ietf.org/html/rfc5425) for TLS). The
-destination host is **logsene-receiver-syslog.sematext.com** and ports
+destination host is **logsene-receiver-syslog.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe) and ports
 we use are:
 
   - for Syslog over UDP: **514**

@@ -1,5 +1,5 @@
-By connecting to port **80** on **logsene-receiver.sematext.com** (or
-443, if you want HTTPS), you can use the Elasticsearch API to search
+By connecting to port **80** (or 443, if you want HTTPS)
+on **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe), you can use the Elasticsearch API to search
 through your data, in the same way [you can send it](sending-events-to-logsene).
 
 Logsene comes with its own UI, which integrates nicely with other

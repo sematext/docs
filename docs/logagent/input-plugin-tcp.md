@@ -1,11 +1,11 @@
-# Plugin: TCP input
+## Plugin: TCP input
 
 Plugin to receive log data via TCP.
 Optionally it can send parsed JSON back to the client. 
 
-## Configuration
+### Configuration
 
-```
+```yaml
 input:
   tcp: 
     module: input-tcp

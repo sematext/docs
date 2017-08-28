@@ -1,4 +1,4 @@
-# Installation on Windows
+## Installation on Windows
 
 1) Download and install node
 
@@ -6,7 +6,7 @@ Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and execute t
 
 2) Install Logagent and Windows event plugin
 
-```
+``` bash
 npm i -g @sematext/logagent
 npm i -g logagent-input-windows-events
 # run logagent windows version 
@@ -29,7 +29,7 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment\
 
 Example config file to collect Windows events to Elasticsearch: 
 
-```
+```yaml
 options:
   includeOriginalLine: false
   suppress: true

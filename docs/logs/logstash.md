@@ -52,7 +52,7 @@ tasks. For example, you can make a pie chart in
 [Kibana](kibana) that shows you how often clients get 200
 response codes, how often 500 and so on.
 
-With Logstash, you can parse logs by using the [grok filter](https://sematext.atlassian.net/wiki/logstash.net/docs/latest/filters/grok).
+With Logstash, you can parse logs by using the [grok filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html).
 For example, you can enhance the previous configuration to parse your
 Apache combined log format by changing it to the following:
 
@@ -95,7 +95,7 @@ events that come from the apache log and contain the word "error" as
 To achieve this, you can use the
 [mutate](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html) filter to add
 the tags, and wrap it in a
-[conditional](https://www.elastic.co/guide/en/logstash/current/configuration.html#conditionals)
+[conditional](https://www.elastic.co/guide/en/logstash/current/configuration.html)
 that matches those specific logs:
 
 ``` bash

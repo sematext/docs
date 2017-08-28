@@ -11,7 +11,7 @@ The supported SQL syntax for SELECT statements are described in the [alasql docu
 
 Add following section 'outputFilter' to @sematext/logagent configuration file. Please note you could use the plugin with multiple configurations for different event sources. 
 
-```
+```yaml
 input: 
   files:
     - './access.log'

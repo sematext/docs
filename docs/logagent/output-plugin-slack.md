@@ -1,13 +1,13 @@
-# Plugin: Slack output
+## Plugin: Slack output
 
 Plugin to forward messages via Slack "Incoming-Webhook" integration.
 
 Applications: 
 - Alert Notifications
 
-## Configuration
+### Configuration
 
-```
+```yaml
 
 output:
   stdout: yaml 

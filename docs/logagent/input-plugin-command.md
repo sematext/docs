@@ -1,4 +1,4 @@
-# Plugin: Command 
+## Plugin: Command 
 
 Input plugin to schedule commands and stream the output into logagent.
 Similar to 'tail -n 10 test.log | logagent --yaml'. 
@@ -7,9 +7,9 @@ Applications:
 - collect journald logs via `journalctl`
 - collect information via http / curl 
 
-## Configuration
+### Configuration
 
-```
+```yaml
 
 input:
   journald-json: 
