@@ -30,7 +30,7 @@ There are 3 steps for configuring your rsyslog for Logsene:
     on
 2.  Choose a protocol and an authentication method. For UDP, TCP, TLS
     and RELP you can [authorize your public IP](authorizing-ips-for-syslog). However, **we
-    strongly recommend using the Logsene application's token**, which
+    strongly recommend using the Logsene app's token**, which
     works with all supported protocols
 3.  Configure the output. Based on the chosen protocol and
     authentication method, you'll have to configure the appropriate
@@ -231,10 +231,10 @@ Logsene. This depends on your chosen protocol.
 ### HTTP / HTTPS via Omelasticsearch
 
 To send your logs over HTTP, load the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html) and point it to
-**logsene-receiver.sematext.com** on port **80**. Make sure you replace
+**logsene-receiver.sematext.com** (or **logsene-receiver.sematext.com** is using Sematext Cloud Europe) on port **80**. Make sure you replace
 LOGSENE\_APP\_TOKEN\_GOES\_HERE with your actual token:
 
-**Configuring Elasticsearch Output**  Expand source 
+**Configuring Elasticsearch Output** 
 
 ``` bash
 module(load="omelasticsearch")
@@ -255,7 +255,7 @@ change **`serverport`** to `"443"` and add `usehttps="on"`.
 
 If you're using Logsene application token for authentication, specify
 the LogseneFormat template in your *action* line. The host you'll
-connect to is **logsene-receiver-syslog.sematext.com**:
+connect to is **logsene-receiver-syslog.sematext.com** or **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe):
 
 ``` bash
 *.* @logsene-receiver-syslog.sematext.com;LogseneFormat
@@ -290,7 +290,7 @@ authorization:
 
 To set up syslog over TLS, you first need to configure the certificates:
 
-**Set up Certificates**  Expand source 
+**Set up Certificates**
 
 ``` bash
 mkdir /opt/rsyslog  # if it does not already exist
@@ -302,7 +302,7 @@ cat {DigiCert_Global_Root_CA.pem,DigiCertCA.pem} > ca_bundle.pem
 
 Then, configure the TLS driver like this:
 
-**Configure TLS; Old Config Format**  Expand source 
+**Configure TLS; Old Config Format** 
 
 ``` bash
 $DefaultNetstreamDriver gtls
@@ -356,7 +356,7 @@ action(
 ### RELP
 
 To forward via RELP, load the [RELP output module](http://www.rsyslog.com/doc/omrelp.html) and then point it to
-**logsene-receiver-syslog.sematext.com** on **port 20514**.
+**logsene-receiver-syslog.sematext.com** (or **logsene-receiver-syslog.eu.sematext.com** if using Sematext Cloud Europe) on **port 20514**.
 
 As with TCP or UDP, specify the LogseneFormat template for authorizing
 with your Logsene application token:
