@@ -84,6 +84,7 @@ The architecture of logagent is modular and each input or output module is imple
 | elasticsearch       | output                    | Stores parsed messages in Elasticsearch                                                                  |
 | rtail               | output                    | Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
 | output-kafka        | output                    | Sends parsed messages to Apache Kafka topics                                                             |
+| slack-webhook        | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 
 
 
