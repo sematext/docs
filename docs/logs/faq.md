@@ -28,7 +28,7 @@ us know via <support@sematext.com> or via our live chat\!
 
 Things to check to ensure network connectivity is OK:
 
-1\. Try to connect to logsene-receiver.sematext.com (port 80 or 443)
+1\. Try to connect to logsene-receiver.sematext.com / logsene-receiver.eu.sematext.com (port 80 or 443)
 with the following command:
 
 ``` bash
@@ -36,7 +36,7 @@ nc -zv -w 20 logsene-receiver.sematext.com 443
 ```
 
 or if you are using syslog, connect to
-logsene-receiver-syslog.sematext.com (port 514 for TCP and UDP, port
+logsene-receiver-syslog.sematext.com / logsene-receiver-syslog.eu.sematext.com (port 514 for TCP and UDP, port
 20514 for RELP, port 10514 for TLS):
 
 ``` bash
@@ -44,7 +44,7 @@ nc -zv -w 20 logsene-receiver-syslog.sematext.com 10514
 ```
 
 The output should show something like: Connection to
-[logsene-receiver.sematext.com](http://spm-receiver.sematext.com) 443
+logsene-receiver.sematext.com 443
 port \[tcp/https\] succeeded\!
 
 In case you see some other result:
@@ -61,9 +61,10 @@ In case you see some other result:
 
 ``` bash
 nslookup logsene-receiver.sematext.com
+nslookup logsene-receiver.eu.sematext.com
 ```
 
-The output of this command should look like this, although the IP
+The output of these commands should look like this, although the IP
 addresses and names may be somewhat different, as they change
 periodically:
 
@@ -83,6 +84,7 @@ Or, if you are using syslog, try:
 
 ``` bash
 nslookup logsene-receiver-syslog.sematext.com
+nslookup logsene-receiver-syslog.eu.sematext.com
 ```
 
 The output should be similar to:
@@ -114,7 +116,7 @@ Volume.
 #### How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene
 
 A: From the application, click the `App Actions` button and select
-`Storage`. There's also `Settings` button next to [any of your Logsene applications](https://apps.sematext.com/ui/logs) in
+`Storage`. There's also `Settings` button next to [any of your Logsene apps](https://apps.sematext.com/ui/logs) in
 the `Services > See all Logsene apps`. You can also do that from Kibana
 by searching for all your logs without adding any time filters. The
 number of hits represents the number of all your logs.
@@ -261,7 +263,7 @@ security and compliance certifications see:
 
 #### **Where is my data stored**
 
-Logsene runs and stores data in Amazon AWS in the US.
+Logsene runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
 
 #### **How long is my data stored**
 
@@ -270,9 +272,9 @@ apps.  Backups are stored in S3 and kept for 90 days.
 
 ## Kibana
 
-#### Can I use my own Kibana 4
+#### Can I use my own Kibana
 
-A: Yes.  Please see [How to use Kibana 4 with Logsene Log Management](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
+A: Yes.  Please see [How to use Kibana with Logsene Log Management](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
 
 #### How can I get a nice map of the world in Kibana
 
@@ -313,9 +315,9 @@ object called **geoip**, which contains lots of information, including
 country codes. Back to Kibana, you can type in
 ***geoip.country\_code2*** as your field in the map panel.
 
-#### Why are new fields not visible in Kibana 4 and how do I fix it
+#### Why are new fields not visible in Kibana and how do I fix it
 
-Kibana 4 doesn't update field lists automatically. This problem is not
+Kibana doesn't update field lists automatically. This problem is not
 specific to Logsene, but is a general Kibana issue. If you add new
 fields to an index you must navigate to 'Settings / Index' in Kibana and
 refresh the fields using the refresh button as shown in the screenshot
@@ -324,15 +326,15 @@ visualizations and searches.
 
 ![](attachments/6520901/48136227.png?width=800)
 
-#### Can I run Kibana 4 locally and point it to Logsene
+#### Can I run Kibana locally and point it to Logsene
 
-Yes.** I**f you prefer to run Kibana locally (e.g., on your laptop or
+Yes.  If you prefer to run Kibana locally (e.g., on your laptop or
 one of your company's servers) and point it to Logsene, yes, you can do
-that - see [How to use Kibana 4 with Logsene](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
+that - see [How to use Kibana with Logsene](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
 
-#### How do I create a dashboard in Kibana 4
+#### How do I create a dashboard in Kibana
 
-Kibana 4 requires the following high level steps to create a dashboard:
+Kibana requires the following high level steps to create a dashboard:
 
 1.  Create a visualization - click to 'Visualize' and save it when
     finished. See
