@@ -1,7 +1,6 @@
 *Note: This is Reference for v2 of SPM API.*
 
-*  
-Note: For details on Logsene API, see [Logsene API Reference](../logs/logsene-api-reference)*
+*Note: For details on Logsene API, see [Logsene API Reference](../logs/logsene-api-reference)*
 
 ### Introduction
 
