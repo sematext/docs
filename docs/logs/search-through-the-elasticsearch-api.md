@@ -9,8 +9,7 @@ You can also use this API to [index events or change the mapping](index-events-v
 When you use the API, here are the things you need to know:
 
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe)
-  - port: **80** (**443** for HTTPS)**  
-    **
+  - port: **80** (**443** for HTTPS)
   - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) -
     note that this token should be kept secret
 
