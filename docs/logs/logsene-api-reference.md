@@ -1,6 +1,6 @@
 *Note: This is Reference for v2 of Logsene API.*
 
-Note: For details on SPM API, see [SPM API Reference](../monitoring/spm-api-reference).*
+*Note: For details on SPM API, see [SPM API Reference](../monitoring/spm-api-reference).*
 
 ### Introduction to Management API
 
