@@ -8,15 +8,14 @@ You can also use this API to [index events or change the mapping](index-events-v
 
 When you use the API, here are the things you need to know:
 
-  - host name: **logsene-receiver.sematext.com**
-  - port: **80** (**443** for HTTPS)**  
-    **
-  - index name: your [Logsene application token](https://apps.sematext.com/ui/logs) -
+  - host name: **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe)
+  - port: **80** (**443** for HTTPS)
+  - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) -
     note that this token should be kept secret
 
 ## Searching
 
-Logsene supports a subset of Elasticsearch API's, with rich query
+Logsene supports a subset of Elasticsearch APIs, with rich query
 language and extensive capabilities of searching through data you've
 sent to Logsene. The supported Search API's are:
 
@@ -26,8 +25,8 @@ sent to Logsene. The supported Search API's are:
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logsene application token](https://apps.sematext.com/ui/logs) when
-calling **[logsene-receiver.sematext.com](http://logsene-receiver.sematext.com)**.
+For each of the operations you'll need your [Logsene app token](https://apps.sematext.com/ui/logs) when
+calling **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe).
 In the following examples we will use a "dummy token"
 - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token.  You should use
 your real Logsene App token, of course.
@@ -45,7 +44,7 @@ following:
 
 **Note:** To learn more about Apache Lucene query syntax, please refer
 to
-<https://lucene.apache.org/core/5_2_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html>
+<https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html>
 
 ### Request body based search
 

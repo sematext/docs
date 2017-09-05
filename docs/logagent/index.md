@@ -1,11 +1,11 @@
 ## What is Logagent
 
-Logagent is a modern, open-source, light-weight log shipper. It is like Filebeat and Logstash in one, without the JVM memory footprint.  It comes with out of the box and extensible log parsing, on-disk buffering, secure transport, and bulk indexing to Elasticsearch, Logsene, and other destinations. Its low memory footprint and low CPU overhead makes it suitable for deploying on edge nodes and devices, while its ability to parse and structure logs makes it a great Logstash alternative. 
+[Logagent](https://sematext.com/logagent) is a modern, open-source, light-weight log shipper. It is like Filebeat and Logstash in one, without the JVM memory footprint.  It comes with out of the box and extensible log parsing, on-disk buffering, secure transport, and bulk indexing to Elasticsearch, Logsene, and other destinations. Its low memory footprint and low CPU overhead makes it suitable for deploying on edge nodes and devices, while its ability to parse and structure logs makes it a great Logstash alternative. 
 
 
 ### Features
 
-This project contains a library and patterns for log parsing and cli tools and installers to use logagent-js as log shipper with the following features: 
+This project contains a library and patterns for log parsing and cli tools and installers to use Logagent as log shipper with the following features: 
 
 #### Pluggable inputs 
 
@@ -41,10 +41,9 @@ This project contains a library and patterns for log parsing and cli tools and i
 - Pattern library included, covering a set of standard application like databases, web servers and message queue services
 - Easy to extend with custom patterns and JS transform functions
 - Hot reload of changed pattern definitions without service restart
-- Recognition of Date and Number fields
-- Replace sensitive data with configurable hashing algorithms (SHA-1, SHA-256, SHA-512, …)
-- GeoIP lookup with automatic GeoIP db updates (maxmind geopip-lite files)
-
+- Auto-detection of Date and Number fields
+- Replacement of sensitive data with configurable hashing algorithms (SHA-1, SHA-256, SHA-512, …)
+- GeoIP lookup with automatic GeoIP DB updates (maxmind geopip-lite files)
 
 #### Command-line tool
 
@@ -60,7 +59,7 @@ This project contains a library and patterns for log parsing and cli tools and i
 
 #### Plugins
 
-The architecture of logagent is modular and each input or output module is implemented as plugin for the logagent framework. Plugins are loaded on demand depending on the configurations.
+The architecture of Logagent is modular and each input or output module is implemented as plugin for the logagent framework. Plugins are loaded on demand depending on the configurations.
 
 
 | Plugin              | Type                      | Description                                                                                              |
@@ -84,14 +83,12 @@ The architecture of logagent is modular and each input or output module is imple
 | elasticsearch       | output                    | Stores parsed messages in Elasticsearch                                                                  |
 | rtail               | output                    | Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
 | output-kafka        | output                    | Sends parsed messages to Apache Kafka topics                                                             |
-
-
+| slack-webhook        | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 
 
 #### Reliable log shipping with disk buffer
 
 Logagent doesn't lose data.  It stores parsed logs to a disk buffer if the network connection to the Elasticsearch API fails.  Logagent retries shipping logs later, when the network or Elasticsearch is available again.  
-
 
 #### Deployment options
 - Deployable as a system service: systemd, upstart (Linux), or launchd (Mac OS X)
@@ -103,17 +100,9 @@ Logagent doesn't lose data.  It stores parsed logs to a disk buffer if the netwo
 - Node.js module to integrate parsers into Node.js programs
 - logagent-js is a part of [Sematext Docker Agent](https://github.com/sematext/sematext-agent-docker) to parse container logs
 
-
 ### Related packages
-
 - [Sematext Agent for Docker](https://github.com/sematext/sematext-agent-docker) - collects metrics, events and logs from Docker API and CoreOS. Logagent-js is a component of sematext-agent-docker. More Information: [Innovative Docker Log Management](http://blog.sematext.com/2015/08/12/docker-log-management/)
 - [Logsene-CLI](https://github.com/sematext/logsene-cli) - Enables searching Logsene log entries from the command-line. 
 - [SPM Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node and io.js applications
 - [Custom Metrics](https://github.com/sematext/spm-metrics-js) - Custom Metrics for SPM 
 - [Winston-Logsene](https://github.com/sematext/winston-logsene) - Logging for Node.js - Winston transport layer for Logsene
-
-### Support 
-
-- Twitter: [@sematext](http://twitter.com/sematext)
-- Blog: [sematext.com/blog](http://sematext.com/blog)
-- Homepage: [sematext.com](http://sematext.com)

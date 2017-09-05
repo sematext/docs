@@ -1,7 +1,6 @@
 *Note: This is Reference for v2 of SPM API.*
 
-*  
-Note: For details on Logsene API, see [Logsene API Reference](../logs/logsene-api-reference)*
+*Note: For details on Logsene API, see [Logsene API Reference](../logs/logsene-api-reference)*
 
 ### Introduction
 
@@ -70,6 +69,10 @@ failure. In case of a successful call, HTTP code will be **200** (OK).
 Any other non-2XX HTTP code represents an error (most commonly used
 codes are **400** - Bad Request, **401** - Unauthorized, **403** -
 Forbidden and **500** - Internal Server Error).
+
+### Regions
+
+API call examples use apps.sematext.com.  If you are using Sematext Cloud Europe replace apps.sematext.com hostname with apps.eu.sematext.com hostname.
 
 ### Apps API
 

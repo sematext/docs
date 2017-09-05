@@ -5,10 +5,9 @@
 
 ## Overview
   
-The following information is collected and transmitted to SPM 
-(Cloud or On-Premises version):SPM for Docker uses the open-source
+The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.  Sematext Cloud integration for Docker uses the open-source
  [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
-Docker Registry as a ready-to-go [sematext-agent-docker image](https://registry.hub.docker.com/u/sematext/sematext-agent-docker/).
+Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docker.com/r/sematext/sematext-agent-docker/).
 
 <table>
 <tbody>

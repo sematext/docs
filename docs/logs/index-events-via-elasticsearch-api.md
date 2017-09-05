@@ -16,15 +16,15 @@ With Logsene, we expose the [Elasticsearch API](http://www.elasticsearch.org/gui
 
 When you use the API, here are the things you need to know:
 
-  - host name: **logsene-receiver.sematext.com**
+  - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (only is using Sematext Cloud Europe)
   - port: **80** or **443** (depending on whether you want to use plain HTTP or HTTPS)**  
     **
-  - index name: your [Logsene application token](https://apps.sematext.com/ui/logs) -
+  - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) -
     note: **this token should be kept secret** (n.b. you can have N Logsene Apps, each with its own token)
 
 ## Indexing
 
-With the same REST API, you can index logs directly from your
+With the same REST API, you can index logs directly from your own
 application, or you can craft your own "log sender". 
 
 **NOTE:**  

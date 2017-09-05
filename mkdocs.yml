@@ -1,5 +1,6 @@
 site_name: Sematext Documentation
 site_url: http://sematext.com/docs
+site_favicon: assets/images/favicon.png
 pages:
     - Getting Started: index.md
     - Log Management:
