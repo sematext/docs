@@ -70,7 +70,7 @@ geoIP: true
 maxmindDbDir: /tmp/
 
 patterns: 
-  - # APACHE  Web Logs
+ - # APACHE  Web Logs
   sourceName: httpd
   match: 
     # Common Log Format
