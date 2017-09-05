@@ -1,3 +1,13 @@
+## General 
+
+1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
+2. [Create an SPM App](https://apps.sematext.com/spm-reports/registerApplication.do)  
+3. For logs (optional) [create a Logsene App](https://apps.sematext.com/logsene-reports/registerApplication.do) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
+
+Follow the installation instructions in Sematext user interface. The user interface provides copy/paste instructions for various platforms including Docker Cloud, Docker Swarm, Kubernetes, Mesos and Rancher.
+
+To use Logging and Monitoring with a single agent, the provided instructions would need to be extended with with application tokens LOGSENE_TOKEN or SPM_TOKEN as described in the examples below. 
+
 ## Installation using Docker client
 
 1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
@@ -14,8 +24,35 @@
    ```
 
     You’ll see your Docker metrics in SPM after about a minute. 
+
 **Installation** of the Docker Image of the monitoring agent:
 
+## Installation using Docker compose
+
+Create a Logsene and SPM App and replace the actual LOGSENE_TOKEN and SPM_TOKEN with your individual tokens in the following compose file: 
+
+```
+
+# docker-compose.yml
+sematext-agent:
+  image: 'sematext/sematext-agent-docker:latest'
+  environment:
+    - LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN 
+    - SPM_TOKEN=YOU_SPM_TOKEN
+  cap_add:
+    - SYS_ADMIN
+  restart: always
+  volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock'
+    - '/:/rootfs:ro'
+
+```
+
+Start Sematext Docker agent with the docker-compose file file: 
+
+```
+docker-compose up -d
+```
 
 ## Docker Swarm and Docker Enterprise
 
