@@ -82,16 +82,14 @@ Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docke
 <li>Redis</li>
 <li>Elasticsearch</li>
 <li>NSQ  / <a href="http://Nsq.io" class="external-link">Nsq.io</a></li>
+<li>JSON, plain text</li>
 <li>patterns are maintained here: 
 <ul>
 <li><a href="https://github.com/sematext/logagent-js" class="uri" class="external-link">https://github.com/sematext/logagent-js</a></li>
 </ul></li>
 </ul></td>
 </tr>
-<tr class="even">
-<td> </td>
-<td><span>JSON, Plain Text</span></td>
-</tr>
+
 </tbody>
 </table>
 
