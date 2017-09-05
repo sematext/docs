@@ -32,7 +32,6 @@ pages:
       - Overview: monitoring/index.md
       - Integrations:
         - Overview: monitoring/integrations.md
-        - Monitoring Docker: monitoring/docker.md
         - Monitoring Hadoop: monitoring/hadoop.md
         - Monitoring MongoDB: monitoring/mongodb.md
         - Monitoring Node.js: monitoring/node.js.md
@@ -58,6 +57,12 @@ pages:
     - Sematext Enterprise:
       - Overview: sematext-enterprise/on-premises.md
       - FAQ: sematext-enterprise/sematext-apps-faq.md
+    - Sematext Docker Agent: 
+        - Overview: sematext-docker-agent/index.md
+        - Installation: sematext-docker-agent/installation.md
+        - Configuration: sematext-docker-agent/configuration.md
+        - Troubleshooting: sematext-docker-agent/troubleshooting.md
+
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 

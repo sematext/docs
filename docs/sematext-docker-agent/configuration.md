@@ -1,138 +1,6 @@
-<div class="video_container">
-<iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
-</div>
+## Configuration guide
 
-
-## Overview
-  
-The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.  Sematext Cloud integration for Docker uses the open-source
- [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
-Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docker.com/r/sematext/sematext-agent-docker/).
-
-<table>
-<tbody>
-<tr class="odd">
-<td><strong>Type</strong></td>
-<td><strong>Description</strong></td>
-</tr>
-<tr class="even">
-<td><strong>Operating System Metrics</strong></td>
-<td><p>Host machine metrics</p>
-<ul>
-<li>CPU Usage</li>
-<li>Memory Usage</li>
-<li>Network Stats</li>
-<li>Disk I/O Stats</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><strong>Docker Container Metrics/Stats</strong></td>
-<td><ul>
-<li>CPU Usage / limits</li>
-<li>Memory Usage / Limits / Fail Counters</li>
-<li>Network Stats</li>
-<li>Disk I/O Stats</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><strong>Events</strong></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td> Agent Startup Event</td>
-<td>server-info – created by spm-agent framework with node.js and OS version info on startup. Please note the agent is implemented in node.js.</td>
-</tr>
-<tr class="even">
-<td> </td>
-<td>Docker-info – Docker Version, API Version, Kernel Version on startup</td>
-</tr>
-<tr class="odd">
-<td>Docker Events</td>
-<td>Container Lifecycle Events| create, exec_create, destroy, export, ...</td>
-</tr>
-<tr class="even">
-<td>Container Runtime Events</td>
-<td>die, exec_start, kill, pause, restart, start, stop, unpause, ...</td>
-</tr>
-<tr class="odd">
-<td><strong>Docker Logs</strong></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>Default Fields</td>
-<td><ul>
-<li>hostname / IP address</li>
-<li>container id</li>
-<li>container name</li>
-<li>image name</li>
-<li>message</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Log formats</p>
-<p>(detection and log parsers)</p></td>
-<td><ul>
-<li>NGINX</li>
-<li>APACHE httpd, Kafka, Solr, HBase, Zookeeper, Cassandra</li>
-<li>MySQL</li>
-<li>MongoDB</li>
-<li>Redis</li>
-<li>Elasticsearch</li>
-<li>NSQ  / <a href="http://Nsq.io" class="external-link">Nsq.io</a></li>
-<li>patterns are maintained here: 
-<ul>
-<li><a href="https://github.com/sematext/logagent-js" class="uri" class="external-link">https://github.com/sematext/logagent-js</a></li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td> </td>
-<td><span>JSON, Plain Text</span></td>
-</tr>
-</tbody>
-</table>
-
-## Supported Platforms
-
-  - Docker \>= 1.6
-  - Platforms using Docker:  
-      - Docker Cloud
-      - Docker Data Center
-      - Kubernetes
-      - Mesos
-      - CoreOS
-      - RancherOS
-      - Amazon ECS
-      - DEIS PaaS
-
-## Installation and Configuration
-
-1.  Create an SPM App of type "Docker" in SPM 
-2.  Click the "**Install Monitor**" button and follow the customized
-    instructions for the created SPM App  
-      
-
-Step 2) provides customized instructions (including the SPM App Token)
-for this general procedure:
-
-**Installation** of the Docker Image of the monitoring agent:
-
-``` bash
-docker pull sematext/sematext-agent-docker
-```
-
-**Configuration** during start of sematext-agent-docker:
-
-  - Set the SPM\_TOKEN
-  - Pass the Docker UNIX domain socket to the
-container  
-      
-
-<!-- end list -->
-
-``` bash
-docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM-TOKEN -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
-```
+Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/) including detailed feature descriptions and configuration examples for Sematext Docker Agent. 
 
 ## Configuration Parameters
 
@@ -173,63 +41,6 @@ docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM-TOKEN -v /var/run/dock
 | MAXMIND_DB_DIR | Directory for the Geo-IP lite database, must end with ```/```. Storing the DB in a volume could save downloads for updates after restarts. Using ```/tmp/``` (ramdisk) could speed up Geo-IP lookups (consumes add. ~30 MB main memory).|
 |ENABLE_LOGSENE_STATS | Enables logging of transmission stats to Logsene. Default value 'false'. Provides a number of logs received, a number of logs shipped, number of failed/successful HTTP transmissions (bulk requests to Logsene) and retransmissions of failed requests. |
 
-
-
-## Docker Swarm and Docker Enterprise
-
-Connect your Docker client to Swarm or UCP remote API endpoint and
-deploy Sematext Docker Agent with following docker command with your SPM and Logsene token: 
-
-```bash
-docker service create –mode global –name sematext-agent-docker \
-–mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
--e SPM_TOKEN=”REPLACE THIS WITH YOUR SPM TOKEN” \
--e LOGSENE_TOKEN=”REPLACE THIS WITH YOUR LOGSENE TOKEN” \
-sematext/sematext-agent-docker
-```
-
-Please refer to [Monitoring and Logging for Docker Enterprise Edition](https://sematext.com/docker-enterprise-monitoring-and-logging/) for further information. 
-
-## Kubernetes Support
-
-Run Sematext Agent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
-
-1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
-2. [Create an SPM App](https://apps.sematext.com/spm-reports/registerApplication.do) of type "Docker" and copy the SPM Application Token 
-   - For logs (optional) [create a Logsene App](https://apps.sematext.com/logsene-reports/registerApplication.do) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)
-3. Create [sematext-agent.yml](https://github.com/sematext/sematext-agent-docker/blob/master/kubernetes/sematext-agent.yml) - and set your SPM and Logsene App Token in the section spec.env.
-4. Run the DaemonSet
-
-```
-kubectl create -f sematext-agent.yml 
-```
-
-
-## CoreOS Support
-
-To install SPM for Docker including log forwarding from journald execute
-these commands:
-
-``` bash
-export $SPM_TOKEN=YOUR-SPM-TOKEN
-export $LOGSENE_TOKEN=YOUR-SPM-TOKEN
-etcdctl set /sematext.com/myapp/spm/token $SPM_TOKEN
-etcdctl set /sematext.com/myapp/logsene/token $LOGSENE_TOKEN
-wget https://raw.githubusercontent.com/sematext/sematext-agent-docker/master/coreos/sematext-agent.service
-fleetctl load sematext-agent.service; fleetctl start sematext-agent.service
-wget https://raw.githubusercontent.com/sematext/sematext-agent-docker/master/coreos/logsene.service
-fleetctl load logsene.service; fleetctl start logsene.service; 
-```
-
-Please note the provided .service scripts use port 9000 for the logging
-service. The provided service templates could be changed after the
-download.
-
-An alternative way to install the services is to include the content of
-the unit files in the cloud-init config file. 
-
-The latest documentation, install script, and service files are
-available in the [Github repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
 
 ## Access to the Docker Socket  / Docker API  
 
@@ -346,6 +157,8 @@ docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGSENE_TOKEN -p 80:80 nginx
 
 All other container logs will be shipped to the Logsene App specified in the docker run command for ```sematext/sematext-agent-docker``` with the environment variable ```LOGSENE_TOKEN```.
 
+Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2017/05/15/docker-log-management-enrichment/) for further details.
+
 ## Integrated Log Parser
 
 SPM for Docker recognizes log formats - so your logs arrive in a structured format in Logsene!
@@ -369,7 +182,7 @@ To use a custom pattern definition simply mount a volume to '/etc/logagent/patte
 
 Feel free to contribute to [logagent-js](https://github.com/sematext/logagent-js) to enrich the default pattern set.
 
-### Known Issues
+## Known Issues
 
 **Conflict with Docker logging-drivers. Sematext Docker Agent is running
 with a valid Logsene Token, but Logsene does not show container logs. **
@@ -382,54 +195,4 @@ driver. This ensures that logs are exposed via Docker Remote API. To
 check, run the "docker logs" command. If "docker logs CID" is shows
 container logs then Sematext Docker Agent should be able to collect the
 logs as well. 
-
-### Troubleshooting and How-To
-
-The following command enables **debug** information to stdout - to be
-displayed with "docker logs
-container\_id\_of\_sematext-agent-docker":
-
-``` bash
-docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM_TOKEN -e spmagent_logger__console=true -e spmagent_logger__level=debug -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
-docker logs sematext-agent
-```
-
-Parameters for debug
-output:
-
-``` bash
--e SPM_LOG_TO_CONSOLE=true - enables internal log messages to the console. Normally only metrics and errors are logged to the console
--e SPM_LOG_LEVEL=debug - "info|warn|error|debug" - set this to "debug" to see all messages on console
--e DEBUG_SPM_LOGGING=enabled - very detailed logging before parsing, after parsing, inserts to Logsene, etc. - please activate it only on demand from our support
-```
-
-  
-
-If running Sematext Docker Agent in debug mode doesn't help you spot and
-solve the problem please send us the diagnostics package as described
-below.
-
-Run the following to collect basic information for our support, such as
-environment variables, and configuration:
-
-``` bash
-$ docker exec -it sematext-agent spm-client-diagnostics
-...
-SPM diagnostics info is in /tmp/spm-diagnose.zip
-Please e-mail the file to support@sematext.com
-```
-
-Please contact us via chat or email us the output of that command and
-the generated ZIP file (to support@sematext.com). You can copy the ZIP
-file to your host using "docker cp":
-
-``` bash
-docker cp sematext-agent:/tmp/spm-diagnose.zip .
-```
-
-Github Repository
-
-Latest information
-for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
-and [open issues](https://github.com/sematext/sematext-agent-docker/issues)
 
