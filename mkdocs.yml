@@ -59,6 +59,7 @@ pages:
       - FAQ: sematext-enterprise/sematext-apps-faq.md
     - Sematext Docker Agent: 
         - Overview: sematext-docker-agent/index.md
+        - Supported Platforms: sematext-docker-agent/supported-platforms.md
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
