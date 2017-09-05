@@ -4,8 +4,11 @@ Input plugin to schedule commands and stream the output into logagent.
 Similar to 'tail -n 10 test.log | logagent --yaml'. 
 
 Applications: 
-- collect journald logs via `journalctl`
-- collect information via http / curl 
+
+- collect output from command line tools
+    - collect journald logs via `journalctl`
+    - collect information via http with `curl` or `wget`
+
 
 ### Configuration
 
