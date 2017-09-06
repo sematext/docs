@@ -182,7 +182,7 @@ For example, Sematext Docker Agent can parse logs from official images like:
 In addition, you can define your own patterns for any log format you need to be able to parse and structure. There are three options to pass individual log parser patterns:
 
 - Configuration file in a mounted volume: ```-v PATH_TO_YOUR_FILE:/etc/logagent/patterns.yml```
-- Kubernetes ConfigMap example: [Template for patterns.yml as ConfigMap](https://github.com/sematext/sematext-agent-docker/blob/4944ae2eb81512dd490d1ebfbda76cb6ea88dd63/kubernetes/sematext-agent-patterns.yml)
+  - Kubernetes ConfigMap example: [Template for patterns.yml as ConfigMap](https://github.com/sematext/sematext-agent-docker/blob/4944ae2eb81512dd490d1ebfbda76cb6ea88dd63/kubernetes/sematext-agent-patterns.yml)
 - Content of the configuration file in an environment variable: ```-e LOGAGENT_PATTERNS=”$(cat patterns.yml)”```
 - Set patterns URL as environment variable: ```-e PATTERNS_URL=http://yourserver/patterns.yml```
 
