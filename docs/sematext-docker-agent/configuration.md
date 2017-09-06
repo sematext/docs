@@ -187,6 +187,7 @@ In addition, you can define your own patterns for any log format you need to be 
 - Set patterns URL as environment variable: ```-e PATTERNS_URL=http://yourserver/patterns.yml```
 
 The file format for the patterns.yml file is based on JS-YAML, in short:
+
 - `–` indicates an array element
 - `!js/regexp` – indicates a JavaScript regular expression
 - `!!js/function >` – indicates a JavaScript function
@@ -212,7 +213,7 @@ This example shows a few very interesting features:
 - Automatic Geo-IP lookupsincluding automatic updates for Maxmind Geo-IP lite database. See section 9.2.5.
 - Post-processing of parsed logs with JavaScript functions. See section 9.2.6.
 
-The component for detecting and parsing log messages — logagent-js — is open source and contributions for even more log formats are welcome.
+The component for detecting and parsing log messages — [logagent-js](http://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
 
 
  ## Log Routing
