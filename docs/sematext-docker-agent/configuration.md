@@ -216,7 +216,7 @@ This example shows a few very interesting features:
 The component for detecting and parsing log messages — [logagent-js](http://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
 
 
- ## Log Routing
+## Log Routing
 
 Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
 Sematext Agent inspects the containers for this Label and ships the logs to the defined Logsene App. 
