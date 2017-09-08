@@ -8,7 +8,7 @@ Here are the steps:
 
 To ship your Heroku logs to Logsene or Elasticsearch deploy Logagent on Heroku. It will act as an HTTPS log drain. 
 
-1. Get a free account [apps.sematext.com](https://apps.sematext.com/users-web/register.do)
+1. Get a free account [apps.sematext.com](https://apps.sematext.com/ui/registration)
 2. Create a [Logsene](http://www.sematext.com/logsene/) App to obtain the Logsene Token
 3. Deploy logagent-js to Heroku using the Deploy to Heroku button
 
@@ -31,11 +31,11 @@ To ship your Heroku logs to Logsene or Elasticsearch deploy Logagent on Heroku. 
   heroku drains:add --app YOUR_HEROKU_MAIN_APPLICATION `heroku info -s | grep web-url | cut -d= -f2`$LOGSENE_TOKEN
 ```
 
-Now you can see your logs in Logsene, define Alert-Queries or use Kibana for Dashboards. 
+Now you can see your logs in Logsene, define Alert Queries or use Kibana for Dashboards. 
 
-3. Scale Logagent service on Heroku
+5. Scale Logagent service on Heroku
 
-In case of high log volume, scale logagent-js on demand using 
+To handle high log volume, scale Logagent on demand using 
 ``` bash
 heroku scale web=3
 ```
