@@ -1,8 +1,8 @@
 ## Installation on Windows
 
-1) Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and install it
+1. Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and install it
 
-2) Install Logagent and Windows event plugin
+2. Install Logagent and Windows event plugin
 
 ``` bash
 npm i -g @sematext/logagent
@@ -11,7 +11,7 @@ npm i -g logagent-input-windows-events
 logagent-windows --help 
 ```
 
-3) Optional service installer
+3. Optional service installer
 
 Create a configuration file for Logagent in 
 ```
