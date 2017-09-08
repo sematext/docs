@@ -1,6 +1,6 @@
 ## Plugin: MySQL Input
 
-Input plugin to use my sql queries as input and stream the output into logagent.
+Input plugin to use MySQL queries as input and stream the output into Logagent.
 
 Features:
 
@@ -10,8 +10,8 @@ Features:
 
 Applications:
 
-- index for SQL data in elasticsearch
-- create alerts based SQL data
+- index SQL data to elasticsearch
+- create alerts based on data in MySQL database
 
 ### Configuration
 
@@ -40,7 +40,7 @@ output:
 
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config mysql.yaml
