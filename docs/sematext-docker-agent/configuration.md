@@ -12,14 +12,14 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 | ```-v /var/run/docker.sock ```  | Path to the docker socket (optional, if dockerd provides TCP on 2375, see also DOCKER_PORT and DOCKER_HOST parameter) |
 |**TCP and TLS connection** | If the Unix socket is not available Sematext Agent assumes the Container Gateway Address (autodetect) and port 2375 as default (no TLS) - this needs no configuration. In case the Docker Daemon TCP settings are different, you have to configure the TCP settings. The TCP settings can be modified with the following parameters|
 |DOCKER_HOST| e.g. tcp://ip-reachable-from-container:2375/ - default value 'unix:///var/run/docker.sock'. When the Unix socket is not available the agent tries to connect to tcp://gateway:2375. In case a TCP socket is used there is no need to mount the Docker Unix socket as volume |
-| DOCKER_PORT | Sematext Agent will use its gateway address (autodetect) with the given DOCKER_PORT|
+| DOCKER_PORT | Sematext Agent will use its gateway address (auto detect) with the given DOCKER_PORT|
 |DOCKER_TLS_VERIFY | 0 or 1|
 |DOCKER_CERT_PATH | Path to your certificate files, mount the path to the container with "-v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH" |  
 |**Configuration via docker swarm secrets:**| |
 | CONFIG_FILE| Path to the configuration file, containing environment variables `key=value`. Default value: `/run/secrets/sematext-agent`. Create a secret with  `docker secret create sematext-agent ./sematext-agent.cfg`. Start Sematext Docker agent with `docker service create --mode global --secret sematext-agent --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock sematext/sematext-agent-docker |
 |**Optional Parameters:**| |
 | --privileged | The parameter might be helpful when Sematext Agent could not start because of limited permission to connect and write to the Docker socket /var/run/docker.sock. The privileged mode is a potential security risk, we recommend to enable the appropriate security. Please read about Docker security: https://docs.docker.com/engine/security/security/ |
-| HOSTNAME_LOOKUP_URL | On Amazon ECS, a [metadata query](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) must be used to get the instance hostname (e.g. "169.254.169.254/latest/meta-data/local-hostname")|
+| HOSTNAME_LOOKUP_URL | On Amazon ECS, a [meta data query](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) must be used to get the instance hostname (e.g. "169.254.169.254/latest/meta-data/local-hostname")|
 | HTTPS_PROXY | URL for a proxy server (behind firewalls)|
 | LOGSENE_RECEIVER_URL | URL for bulk inserts into Logsene. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://logsene-receiver.eu.sematext.com |
 | SPM_RECEIVER_URL | URL for bulk inserts into SPM. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://spm-receiver.eu.sematext.com/receiver/v1. |
@@ -38,7 +38,7 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 | -v /yourpatterns/patterns.yml:/etc/logagent/patterns.yml | to provide custom patterns for log parsing, see [logagent-js](https://github.com/sematext/logagent-js)|
 | -v /tmp:/logsene-log-buffer | Directory to store logs, in a case of a network or service outage. Docker Agent deletes these files after successful transmission.|
 | GEOIP_ENABLED | ```true```enables GeoIP lookups in the log parser, default value: ```false```| 
-| MAXMIND_DB_DIR | Directory for the Geo-IP lite database, must end with ```/```. Storing the DB in a volume could save downloads for updates after restarts. Using ```/tmp/``` (ramdisk) could speed up Geo-IP lookups (consumes add. ~30 MB main memory).|
+| MAXMIND_DB_DIR | Directory for the Geo-IP lite database, must end with ```/```. Storing the DB in a volume could save downloads for updates after restarts. Using ```/tmp/``` (ramdisk) could speed up Geo-IP lookups (requires add. ~30 MB main memory).|
 |ENABLE_LOGSENE_STATS | Enables logging of transmission stats to Logsene. Default value 'false'. Provides a number of logs received, a number of logs shipped, number of failed/successful HTTP transmissions (bulk requests to Logsene) and retransmissions of failed requests. |
 
 
@@ -120,7 +120,7 @@ following parameters to configure TLS access:
   - \-e DOCKER\_HOST - e.g. tcp://ip-reachable-from-container:2375/
   - \-e DOCKER\_TLS\_VERIFY - 0 or 1
   - \-e DOCKER\_CERT\_PATH - path to your certificate files, mount the
-    path to the countainer with "-v
+    path to the container with "-v
     $DOCKER\_CERT\_PATH:$DOCKER\_CERT\_PATH"
 
 Run Sematext Agent with access to Docker TLS socket:
@@ -160,11 +160,11 @@ Using this “log metadata” you can whitelist or blacklist log outputs by imag
 
 ## Automatic Parser for Container Logs
 
-In Docker logs are console output streams from containers. They might be a mix of plain text messages from start scripts and structured logs from applications.  The problem is obvious – you can’t just take a stream of log events all mixed up and treat them like a blob.  You need to be able to tell which log event belongs to what container, what app, parse it correctly in order to structure it so you can later derive more insight and operational intelligence from logs, etc.
+In Docker, logs are console output streams from containers. They might be a mix of plain text messages from start scripts and structured logs from applications.  The problem is obvious – you can’t just take a stream of log events all mixed up and treat them like a blob.  You need to be able to tell which log event belongs to what container, what app, parse it correctly in order to structure it so you can later derive more insight and operational intelligence from logs, etc.
 
-Sematext Docker Agent analyzes the event format, parses out data, and turns logs into structured JSON.  This is important, because the value of logs increases when you structure them — you can then slice and dice them and gain a lot more insight about how your containers, servers, and applications operate.
+Sematext Docker Agent analyzes the event format, parses out data, and turns logs into structured JSON.  This is important because the value of logs increases when you structure them — you can then slice and dice them and gain a lot more insight about how your containers, servers, and applications operate.
 
-Traditionally it was necessary to use log shippers like Logstash, Fluentd or rsyslog to parse log messages.  The problem is that such setups are typically deployed in a very static fashion and configured for each input source. That does not work well in the hyper-dynamic world of containers! We have seen people struggling with the syslog drivers, parsers configurations, log routing, and more! With its integrated automatic format detection Sematext Docker Agent eliminates this struggle — and the waste of resources — both computing and human time that goes into dealing with such things! This integration has a low footprint, doesn’t need retransmissions of logs to external services, and it detects log types for the most popular applications and generic JSON and line-oriented log formats out of the box!
+Traditionally it was necessary to use log shippers like Logstash, Fluentd or Rsyslog to parse log messages.  The problem is that such setups are typically deployed in a very static fashion and configured for each input source. That does not work well in the hyper-dynamic world of containers! We have seen people struggling with the Syslog drivers, parsers configurations, log routing, and more! With its integrated automatic format detection, Sematext Docker Agent eliminates this struggle — and the waste of resources — both computing and human time that goes into dealing with such things! This integration has a low footprint, doesn’t need retransmissions of logs to external services, and it detects log types for the most popular applications and generic JSON and line-oriented log formats out of the box!
 
 ![Example: Apache Access Log fields generated by Sematext Docker Agent](https://sematext.com/wp-content/uploads/2016/06/image17.png)
 
@@ -195,13 +195,14 @@ The file format for the patterns.yml file is based on JS-YAML, in short:
 
 The file has the following properties:
 
-- patterns: list of patterns, each pattern starts with “-“
-- match: group of patterns for a specific log source (image / container)
-- regex: JS regular expression
-- fields: field list of extracted match groups from the regex
-- type: type used in Logsene (Elasticsearch Mapping)
-- dateFormat: format of the special fields ‘ts’, if the date format matches, a new field @timestamp is generated
-- transform: JavaScript function to manipulate the result of regex and date parsing
+- patterns: list of patterns, each pattern starts with “-“ 
+	- match: a list of pattern definition for a specific log source (image/container)
+		- sourceName: a regular expression matching the name of the log source. The source name is a combination of image name and container name.
+	  - regex: JS regular expression
+	  - fields: field list of extracted match groups from the regex
+	  - type: type used in Logsene (Elasticsearch Mapping)
+	  - dateFormat: format of the special fields ‘ts’, if the date format matches, a new field @timestamp is generated
+	  - transform: A JavaScript function to manipulate the result of regex and date parsing
 
 The following example shows pattern definitions for web server logs, which is one of the patterns available by default:
 ![Example from https://sematext.github.io/logagent-js/parser/](https://sematext.com/wp-content/uploads/2016/06/image05-1.png)
@@ -210,7 +211,7 @@ The following example shows pattern definitions for web server logs, which is on
 This example shows a few very interesting features:
 
 - Masking sensitive data with “autohash” property, listing fields to be replaced with a hash code
-- Automatic Geo-IP lookupsincluding automatic updates for Maxmind Geo-IP lite database
+- Automatic Geo-IP lookups including automatic updates for Maxmind Geo-IP lite database
 - Post-processing of parsed logs with JavaScript functions
 
 The component for detecting and parsing log messages — [logagent-js](http://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.

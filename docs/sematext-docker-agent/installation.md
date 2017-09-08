@@ -91,7 +91,7 @@ oc apply -f sematext-agent.yml
 
 ## CoreOS using fleet
 
-Please note due the end of support for fleet on CoreOS, we recommend to use Kubernetes installation. 
+Please note due to the end of support for Fleet on CoreOS, we recommend using Kubernetes installation. 
 
 
 To install SPM for Docker including log forwarding from journald execute these commands:
@@ -128,7 +128,7 @@ See an example of the [job description](https://github.com/sematext/sematext-age
 
 ## Installation on Mesos / Marathon
 
-The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances), SPM App Token and Logsene App Token. Example call to the Marathon API:
+The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances), SPM App Token and Logsene App Token. An example call to the Marathon API:
 
 ```
 curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080/v2/apps  -d '
