@@ -1,13 +1,13 @@
 ## Logagent plugins
 
-The architecture of logagent is modular and each input or output module is implemented as plugin for the logagent framework. Plugins are loaded on demand depending on the configurations. 
+Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
 
 ### How plugins work
 
-- Logagent checks the configuration file for properties with a "module" key for the nodejs module name. External plugins needs to be installed via npm. 
-- Plugins are initialized with the logagent configuration from (command line arguments + configuration file) and the event emitter for logagent. Plugins should provide a start and stop method.
-- Input plugins read data from a data source and emit events to logagent event emitter.
-  This events have the identifier "data.raw" and 2 parameters: 
+- Logagent checks the configuration file for properties with a "module" key for the nodejs module name. External plugins need to be installed via npm. 
+- Plugins are initialized with the Logagent configuration (from command line arguments + configuration file) and the event emitter for Logagent. Plugins should provide a start and stop method.
+- Input plugins read data from a data source and emit events to the Logagent event emitter.
+  hese events have the identifier "data.raw" and 2 parameters: 
   - data - data read from a data source 
   - context - an object with meta data e.g. {sourceName: '/var/log/httpd/access.log'}
     The "context" helps other plugins to process the data coreectly, e.g. to handle multiple open files. 
@@ -17,9 +17,9 @@ The architecture of logagent is modular and each input or output module is imple
 
 #### Input plugin
 
- [This example](https://github.com/megastef/logagent-tcp-input) implements a plugin to receive data via TCP socket with a configurable rate limit. 
+[This example](https://github.com/megastef/logagent-tcp-input) implements a plugin to receive data via TCP socket with a configurable rate limit. 
 
- The plugin config file: 
+The plugin config file: 
 
 ```
 # Global options
@@ -154,14 +154,3 @@ OutputStdout.prototype.stop = function (cb) {
 
 module.exports = OutputStdout
 ```
-
-
-
-
-
-
-
-
-
-
-
