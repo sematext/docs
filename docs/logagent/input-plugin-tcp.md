@@ -21,13 +21,13 @@ output:
     index: logs
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config myconfig.yml
 ```
 
-Ship logs to the tcp port:
+Ship logs to a TCP port:
 
 ```
 tail -F  access.log |  nc localhost 45900
