@@ -1,19 +1,19 @@
 ## General 
 
-1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
-2. [Create an SPM App](https://apps.sematext.com/spm-reports/registerApplication.do)  
-3. For logs (optional) [create a Logsene App](https://apps.sematext.com/logsene-reports/registerApplication.do) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
+1. Get a free account at [sematext.com/spm](https://apps.sematext.com/ui/registration)  
+2. [Create an SPM App](https://apps.sematext.com/ui/integrations)  
+3. For logs (optional) [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
 
-Follow the installation instructions in Sematext user interface. The user interface provides copy/paste instructions for various platforms including Docker Cloud, Docker Swarm, Kubernetes, Mesos and Rancher.
+Follow the installation instructions in Sematext user interface. The user interface provides copy/paste instructions for various platforms including Docker Cloud, Docker Swarm, Kubernetes, Mesos, and Rancher.
 
-To use Logging and Monitoring with a single agent, the provided instructions would need to be extended with with application tokens LOGSENE_TOKEN or SPM_TOKEN as described in the examples below. 
+To use Logging and Monitoring with a single agent, the provided instructions need to be extended with application tokens LOGSENE_TOKEN or SPM_TOKEN as described in the examples below. 
 
 ## Installation using Docker client
 
 1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
-2. [Create an SPM App](https://apps.sematext.com/spm-reports/registerApplication.do) of type "Docker" and copy the SPM Application Token 
-   - For logs (optional) [create a Logsene App](https://apps.sematext.com/logsene-reports/registerApplication.do) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
-3. Run the image (please use your individual SPM and Logsene token!)
+2. [Create an SPM App](https://apps.sematext.com/ui/integrations) of type "Docker" and copy the SPM Application Token 
+   - For logs (optional) [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
+3. Run the image after adding your SPM and/or Logsene tokens:
 
    ```
    docker pull sematext/sematext-agent-docker
@@ -22,8 +22,6 @@ To use Logging and Monitoring with a single agent, the provided instructions wou
    -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
    -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker -->
    ```
-
-    You’ll see your Docker metrics in SPM after about a minute. 
 
 **Installation** of the Docker Image of the monitoring agent:
 
@@ -48,7 +46,7 @@ sematext-agent:
 
 ```
 
-Start Sematext Docker agent with the docker-compose file file: 
+Start Sematext Docker agent with the docker-compose file: 
 
 ```
 docker-compose up -d
@@ -73,9 +71,9 @@ Please refer to [Monitoring and Logging for Docker Enterprise Edition](https://s
 
 Run Sematext Agent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
-1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
-2. [Create an SPM App](https://apps.sematext.com/spm-reports/registerApplication.do) of type "Docker" and copy the SPM Application Token 
-   - For logs (optional) [create a Logsene App](https://apps.sematext.com/logsene-reports/registerApplication.do) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)
+1. Get a [free account](https://apps.sematext.com/ui/registration)  
+2. [Create an SPM App](https://apps.sematext.com/ui/integrations) of type "Docker" and copy the SPM App Token 
+   - For logs (optional) [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)
 3. Create [sematext-agent.yml](https://github.com/sematext/sematext-agent-docker/blob/master/kubernetes/sematext-agent.yml) - and set your SPM and Logsene App Token in the section spec.env.
 4. Run the DaemonSet
 
@@ -96,8 +94,7 @@ oc apply -f sematext-agent.yml
 Please note due the end of support for fleet on CoreOS, we recommend to use Kubernetes installation. 
 
 
-To install SPM for Docker including log forwarding from journald execute
-these commands:
+To install SPM for Docker including log forwarding from journald execute these commands:
 
 ``` bash
 export $SPM_TOKEN=YOUR-SPM-TOKEN
@@ -121,9 +118,9 @@ The latest documentation, install script, and service files are
 available in the [Github repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
 
 
-## RancherOS
+## Rancher
 
-Please read [RancherOS Monitoring and Logging Support](https://sematext.com/blog/2016/08/31/rancheros-monitoring-and-logging-support/) there are various deployment options for Rancher, Swarm, Kubernetes or Mesos. In addition, we recommend reading Rancher Labs blog post about the [RancherOS Catalog Entry](http://rancher.com/new-rancher-community-catalog-monitoring-logging-sematext/). 
+Please read [Rancher Monitoring and Logging Support](https://sematext.com/blog/2016/08/31/rancheros-monitoring-and-logging-support/). There are various deployment options for Rancher, Swarm, Kubernetes or Mesos. In addition, we recommend reading Rancher Labs blog post about the [Rancher Catalog Entry](http://rancher.com/new-rancher-community-catalog-monitoring-logging-sematext/). 
 
 ## Installation on Nomad by Hashicorp
 
