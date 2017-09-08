@@ -1,6 +1,6 @@
 ## Plugin: Microsoft SQL Input
 
-Input plugin to use Microsoft SQL queries as input and stream the output into logagent.
+Input plugin to use Microsoft SQL queries as input and stream the output into Logagent.
 
 Features:
 
@@ -10,8 +10,8 @@ Features:
 
 Applications:
 
-- index for SQL data in elasticsearch
-- create alerts based SQL data
+- index SQL data to Elasticsearch
+- create alerts based on data from MSSQL database
 
 ### Configuration
 
