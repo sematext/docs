@@ -44,7 +44,7 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 
 ## Access to the Docker Socket  / Docker API  
 
-**Please note the Docker Daemon can be configured to use Unix sockets
+**Note that Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
 (authentication with certificates). Depending on your Docker setup,
 Sematext Agent needs to be configured to access the Docker Socket (API
@@ -54,7 +54,7 @@ access).
 **Docker Unix Socket**
 
 Make sure that you have the permissions to access /var/run/docker.sock
-(or the actual location of the docker  unix socket). E.g. use 'sudo' to
+(or the actual location of the docker unix socket). E.g. use 'sudo' to
 run the "docker run" command.
 
 Check your permissions first:
@@ -64,13 +64,13 @@ ls -la /var/run/docker.sock
 srw-rw---- 1 root docker 0 Dec  3 07:52 /var/run/docker.sock
 ```
 
-If you like to create a docker group, to access docker without super
+If you prefer to create a docker group to access docker without super
 user permissions,
 see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
 
 **How to activate the Unix socket in parallel to a TCP socket?**  
 Check the configuration of the Docker Daemon in /etc/defaults/docker -
-it is possible to activate TCP and the Unix socket in parallel, simply
+it is possible to activate TCP and the Unix socket in parallel - simply
 add  "-H unix:///var/run/docker.sock" and restart dockerd.
 
 ``` bash
@@ -114,7 +114,7 @@ tcp://ip-of-docker-host-reachable-from-container-network:2375/
 **Docker TLS Socket**
 
 To access the Docker TLS socket (on port 2376 or 3376 for Docker Swarm
-Master), Sematext Agent needs access to the certifcates. Please use the
+Master), Sematext Agent needs access to the certificates. Please use the
 following parameters to configure TLS access:
 
   - \-e DOCKER\_HOST - e.g. tcp://ip-reachable-from-container:2375/
@@ -209,9 +209,9 @@ The following example shows pattern definitions for web server logs, which is on
 
 This example shows a few very interesting features:
 
-- Masking sensitive data with “autohash” property, listing fields to be replaced with a hash code. See section 9.2.4.
-- Automatic Geo-IP lookupsincluding automatic updates for Maxmind Geo-IP lite database. See section 9.2.5.
-- Post-processing of parsed logs with JavaScript functions. See section 9.2.6.
+- Masking sensitive data with “autohash” property, listing fields to be replaced with a hash code
+- Automatic Geo-IP lookupsincluding automatic updates for Maxmind Geo-IP lite database
+- Post-processing of parsed logs with JavaScript functions
 
 The component for detecting and parsing log messages — [logagent-js](http://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
 
@@ -219,12 +219,12 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 ## Log Routing
 
 Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
-Sematext Agent inspects the containers for this Label and ships the logs to the defined Logsene App. 
+Sematext Agent inspects the containers for this label and ships the logs to the specified Logsene App. 
 
-To disable logging to Logsene/Elasticsearch label the application container with ```LOGSENE_ENABLED=false```. ```LOGSENE_ENABLED=true``` enables logging for the container again. 
+To disable logging to Logsene/Elasticsearch simply label the container with ```LOGSENE_ENABLED=false```. ```LOGSENE_ENABLED=true``` enables logging for the container again. 
 
 __Example:__ 
-The following command will start nginx webserver and logs for this container will be shipped to the related Logsene App. 
+The following command will start Nginx webserver and logs for this container will be shipped to the related Logsene App. 
 
 ```
 docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGSENE_TOKEN -p 80:80 nginx
@@ -247,7 +247,7 @@ API. If you use a Docker logging-driver other than the default json-file
 driver, logs will not be available via the Docker Remote API. Please
 make sure that your container or docker daemon uses json-file logging
 driver. This ensures that logs are exposed via Docker Remote API. To
-check, run the "docker logs" command. If "docker logs CID" is shows
+check, run the "docker logs" command. If "docker logs CID" shows
 container logs then Sematext Docker Agent should be able to collect the
 logs as well. 
 
