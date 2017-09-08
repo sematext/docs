@@ -1,8 +1,7 @@
 # Troubleshooting 
 
 The following command enables **debug** information to stdout - to be
-displayed with `docker logs
-container\_id\_of\_sematext-agent-docker`:
+displayed with `docker logs container\_id\_of\_sematext-agent-docker`:
 
 ```sh
 docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM_TOKEN \
@@ -18,7 +17,7 @@ Parameters for debug
 output:
 
 ``` sh
--e SPM_LOG_TO_CONSOLE=true - enables internal log messages to the console. Normally only metrics and errors are logged to the console
+-e SPM_LOG_TO_CONSOLE=true - enables internal log messages to the console. Normally only metrics and errors are logged to the console.
 -e SPM_LOG_LEVEL=debug - "info|warn|error|debug" - set this to "debug" to see all messages on console
 -e DEBUG_SPM_LOGGING=enabled - very detailed logging before parsing, after parsing, inserts to Logsene, etc. - please activate it only on demand from our support
 ```
