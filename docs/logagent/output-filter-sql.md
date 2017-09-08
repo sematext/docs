@@ -1,7 +1,7 @@
 ## SQL output filter
 Filter and aggregate parsed logs with SQL.
 
-This filer applies SQL queries on parsed log events. The result of the query is emitted as a new event, while the original events are omitted. 
+This filter applies SQL queries on parsed log events. The result of the query is emitted as a new event, while the original events are omitted. 
 
 Using SQL it is very easy to aggregate values, e.g. group HTTP requests by status codes. The SQL WHERE statement is useful to filter events before they get shipped to Elasticsearch or [Logsene](https://sematext.com/logsene). 
 
@@ -39,7 +39,7 @@ output:
     index: mylogs
 ```
 
-Run logagent with your config: 
+Run Logagent with your config: 
 ```
 logagent --config logagent-example-config.yml 
 ```
