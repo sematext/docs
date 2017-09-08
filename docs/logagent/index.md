@@ -67,7 +67,8 @@ The architecture of Logagent is modular and each input or output module is imple
 | Plugin              | Type                      | Description                                                                                              |
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
 | stdin (default)              | input                     | Reads from standard input                                                                                |
-| [files](input-plugin-files)               | input                     | Watching and tailing files                                                                               |
+| [files](input-plugin-files)               | input                     | Watching and tailing files 
+| [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events)               | input                     | Collect Windows Windows Events available as separate npm package |
 | syslog              | input                     | Receive syslog messages (UDP)                                                                            |
 | [input-tcp](input-plugin-tcp)           | input                     | Receive data via TCP                                                                                     |
 | [heroku](installation-heroku)             | input                     | Receive logs from Heroku log drains (HTTP)                                                               |
