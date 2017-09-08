@@ -8,6 +8,6 @@
       - Red Hat OpenShift
       - Mesos
       - CoreOS
-      - RancherOS
+      - Rancher
       - Amazon ECS
       - DEIS PaaS
