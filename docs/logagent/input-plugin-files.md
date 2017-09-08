@@ -9,11 +9,11 @@ Plugin to tail logs from files. A list of [glob patterns](https://www.npmjs.com/
 
 diskBufferDir: /tmp
 input:
-  # a list of glob patterns to watch files to tail
   files:
     - '/var/log/**/*.log'
     - '/opt/myapp/**/*.log'
-
+    - '/opt/another-log-directory/another.log'
+    
 output:
   stdout: yaml
   elasticsearch:
