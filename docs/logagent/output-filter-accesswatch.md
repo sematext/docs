@@ -4,7 +4,7 @@ Web traffic insights and robot detection are key for teams to stay in control of
 
 This plugin provides a seamless integration with the [Access Watch](https://access.watch/reveal) service to all [Sematext](https://sematext.com) clients. 
 
-Example config to enrich nginx web server logs with Access Watch robot information (requires [Access Watch API key](https://access.watch/reveal) and [Sematext Logsene](https://sematext.com/logsene) Token):
+Example config to enrich Nginx web server logs with Access Watch robot information (requires [Access Watch API key](https://access.watch/reveal) and [Sematext Logsene](https://sematext.com/logsene) Token):
 
 ```yaml
 
@@ -31,7 +31,7 @@ output:
 
 ```
 
-Run logagent with your config: 
+Run Logagent with your config: 
 ```
 logagent --config logagent-example-config.yml 
 ```
