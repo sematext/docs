@@ -8,7 +8,7 @@ Sematext Docker Agent is a modern, Docker-native monitoring and log collection a
   <iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
 </div>
 
-The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.  Sematext Cloud integration for Docker uses the open-source
+The following information is collected and transmitted to Sematext Cloud or [Sematext Enterprise](sematext-enterprise/on-premises).  Sematext Cloud integration for Docker uses the open-source
  [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
 Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docker.com/r/sematext/sematext-agent-docker/).
 
@@ -75,18 +75,15 @@ Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docke
 <td><p>Log formats</p>
 <p>(detection and log parsers)</p></td>
 <td><ul>
-<li>NGINX</li>
-<li>APACHE httpd, Kafka, Solr, HBase, Zookeeper, Cassandra</li>
+<li>Nginx</li>
+<li>Apache httpd, Kafka, Solr, HBase, Zookeeper, Cassandra</li>
 <li>MySQL</li>
 <li>MongoDB</li>
 <li>Redis</li>
 <li>Elasticsearch</li>
-<li>NSQ  / <a href="http://Nsq.io" class="external-link">Nsq.io</a></li>
+<li>NSQ / Nsq.io</li>
 <li>JSON, plain text</li>
-<li>patterns are maintained here: 
-<ul>
-<li><a href="https://github.com/sematext/logagent-js" class="uri" class="external-link">https://github.com/sematext/logagent-js</a></li>
-</ul></li>
+<li>patterns are maintained at <a href="https://github.com/sematext/logagent-js" class="uri" class="external-link">https://github.com/sematext/logagent-js</a></li>
 </ul></td>
 </tr>
 
