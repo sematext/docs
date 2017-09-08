@@ -75,9 +75,9 @@ parser:
 
 ### Section: output
 
-Logs could be shipped to Elasticsearch or to rtail for realtime log view. 
+Logs could be shipped to Elasticsearch or to rtail for real-time log view. 
 The Elasticsearch output supports HTTPS and username/password in the URL. 
-In addition, it is possible to route logs from different files to different indices in Elasticsearch. All logs that don't match any rules in the indices section are routed to the default index (elasticsearch.index). 
+In addition, it is possible to route logs from different files to different indices in Elasticsearch. All logs that don't match any rules in the indices section are routed to the default Elasticsearch index. 
 
 ```yaml
 output:
@@ -123,4 +123,3 @@ output:
 ```
 
 A collection of example config files are [here](https://github.com/sematext/logagent-js/tree/master/config/examples)
-

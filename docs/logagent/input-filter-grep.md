@@ -4,7 +4,7 @@ Apply regex to filter raw input from Logagent before logs are parsed
 
 ## Configuration 
 
-Add the following section to the Logagent configuration file. Please note you could use the plugin with multiple configurations. Output of the first filter is passed into the next one ...: 
+Add the following section to the Logagent configuration file. Please note you could use the plugin with multiple configurations. The output of the first filter is passed into the next one ...: 
 
 ```yaml
 input: 
@@ -26,7 +26,7 @@ output:
 
 ```
 
-The example above filters all log files with the content "info" or "error", and drops all lines with the keyword "test". 
+The example above filters all log files with the content "info" or "error" and drops all lines with the keyword "test". 
 
 Run Logagent: 
 ```

@@ -19,8 +19,8 @@ sudo npm i -g @sematext/logagent
 1. Get a free account at [sematext.com](https://apps.sematext.com/ui/registration)
 2. [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/) 
 3. Install Logagent as system service
-Logagent detects the init system and installs systemd or upstart service scripts. 
-On Mac OSX it creates a launchd service. Simply run:
+Logagent detects the init system and installs Systemd or Upstart service scripts. 
+On Mac OSX it creates a Launchd service. Simply run:
 
 ``` bash
   # Install logagent package globally 

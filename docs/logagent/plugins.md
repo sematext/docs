@@ -10,7 +10,7 @@ Logagent features a modular architecture. Each input or output module is impleme
   hese events have the identifier "data.raw" and 2 parameters: 
   - data - data read from a data source 
   - context - an object with meta data e.g. {sourceName: '/var/log/httpd/access.log'}
-    The "context" helps other plugins to process the data coreectly, e.g. to handle multiple open files. 
+    The "context" helps other plugins to process the data correctly, e.g. to handle multiple open files. 
 - Output plugins listen to "data.parsed" events and store or forward the data to the target. 
 
 ### Examples 

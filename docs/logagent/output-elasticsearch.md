@@ -29,11 +29,11 @@ output:
 
 ## Log routing to multiple targets
 
-In some situations it is required to ship data from different sources to different Elasticsearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the Elasticsearch output module. 
+In some situations, it is required to ship data from different sources to different Elasticsearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the Elasticsearch output module. 
 
 Each Elasticsearch output might have a list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
 
-The following example ships logs from wireless devices and authentication logs to a local Elasticsearch server and other server logs to multiple Logsene applications. 
+The following example ships logs from wireless devices and authentication log to a local Elasticsearch server and other server logs to multiple Logsene applications. 
 
 ```yaml
 input:
@@ -50,21 +50,21 @@ output:
     # specific indices to use per logSource field of parsed logs
     indices: 
       wireless_logs: # use regex to match log source e.g. /var/log/wifi.log
-	    - wifi|bluetooth
-	  security_logs: 
+        - wifi|bluetooth
+      security_logs: 
         - auth\.log
    logsene-saas:
-   	 module: elasticsearch
-   	 url: https://logsene-receiver.sematext.com
-   	 indices:
-   	   bb308f80-0453-485e-894c-f80c054a0f10:
-   	   	- [nginx|httpd]\.log
-   	   a0ca5032-62da-467d-b6d5-e465a7ce45bb
-   	   	- mysql|postgres|oracle
-   	   969020b4-f11c-41dd-86e4-24e67759cdb3
-   	   	- mongo.*\.log
-   	   	- myapp1\/app.log
-   	   	- myapp2\/app.log
+        module: elasticsearch
+        url: https://logsene-receiver.sematext.com
+        indices:
+          bb308f80-0453-485e-894c-f80c054a0f10:
+              - [nginx|httpd]\.log
+          a0ca5032-62da-467d-b6d5-e465a7ce45bb
+              - mysql|postgres|oracle
+          969020b4-f11c-41dd-86e4-24e67759cdb3
+              - mongo.*\.log
+              - myapp1\/app.log
+              - myapp2\/app.log
 ```
 
 ## HTTP and HTTPS options

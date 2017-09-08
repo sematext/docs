@@ -16,10 +16,10 @@ Example:
 2. Input-Filter: Grep URLs of interest 'login|register|upgrade'   
 3. Parser: Parse Log and generate fields like URL, status code, size, referrer, country etc.
 5. Output Filter: Drop non-relevant log events like redirects (status=302)
-6. Output Plugin: Store filtered log events in Elasticsearch
+6. Output Plugin: Store filtered log-events in Elasticsearch
 ```
 
-Filters can be declared inline as JavaScript in function or as reference to npm modules in Logagent config file. 
+Filters can be declared inline as JavaScript in function or as a reference to npm modules in a Logagent config file. 
 
 ### Input filter
 
@@ -30,11 +30,11 @@ Function parameters for input filters:
 - data - the raw (input filter) or parsed data (output filter)
 - callback - MUST be called. 
   - callback() without parameters drops the event. 
-  - callback (null,data) will pass the log event to the next filter or output plugin. 
+  - callback (null, data) will pass the log event to the next filter or output plugin. 
   - callback(error) will report an error and drops the event
 
 Node.js modules can be loaded as filter function with the ```module``` keyword.
-A module can be declared inline as JavaScript function using ```!!js/function >>``` in the module property. Properties in the config section are passed to the filter function as "config" object.
+A module can be declared inline as a JavaScript function using ```!!js/function >>``` in the module property. Properties in the config section are passed to the filter function as "config" object.
 
 Example, using npm modules: 
 ```yaml
@@ -56,27 +56,27 @@ inputFilter:
       include: !!js/regexp /info|error/i
       exclude: !!js/regexp /test/i
     module: !!js/function >> 
-    	function (sourceName, config, data, callback) {
-			  try {
-			    var drop = false
-			    if (config.matchSource) {
-			      if (!config.matchSource.test(sourceName)) {
-			        // pass data for unmatched source names
-			        return callback(null, data)
-			      }
-			    }
-			    // filter data for matched source names
-			    if (config.include) {
-			      drop = !config.include.test(data)
-			    }
-			    if (config.exclude) {
-			      drop = config.exclude.test(data) || drop
-			    }
-			    drop ? callback() : callback(null, data)
-			  } catch (err) {
-			    return callback(null, data)
-			  }
-			}
+        function (sourceName, config, data, callback) {
+              try {
+                var drop = false
+                if (config.matchSource) {
+                  if (!config.matchSource.test(sourceName)) {
+                    // pass data for unmatched source names
+                    return callback(null, data)
+                  }
+                }
+                // filter data for matched source names
+                if (config.include) {
+                  drop = !config.include.test(data)
+                }
+                if (config.exclude) {
+                  drop = config.exclude.test(data) || drop
+                }
+                drop ? callback() : callback(null, data)
+              } catch (err) {
+                return callback(null, data)
+              }
+            }
 ```
 
 ### Output filter
@@ -89,13 +89,13 @@ Function parameters for output filters:
 - data - the raw (input filter) or parsed data (output filter)
 - callback - MUST be called. 
   - callback() without parameters drops the event. 
-  - callback (null,data) will pass the log event to the next filter or output plugin. 
+  - callback (null, data) will pass the log event to the next filter or output plugin. 
   - callback(error) will report an error and drops the event.
 
 Node.js modules can be loaded as filter function with the ```module``` keyword.
-A module can be declared inline as JavaScript function using ```!!js/function >>``` in the module property. Properties in the config section are passed to the filter function as "config" object.
+A module can be declared inline as a JavaScript function using ```!!js/function >>``` in the module property. Properties in the config section are passed to the filter function as "config" object.
 
-Example, inline declaration to implement the grep filter from above applied to data.message field. 
+Example, an inline declaration to implement the grep filter from above applied to data.message field. 
 
 ```
 outputFilter:
@@ -104,29 +104,29 @@ outputFilter:
       include: !!js/regexp /info|error/i
       exclude: !!js/regexp /test/i
     module: !!js/function >> 
-    	function (context, config, eventEmitter, data, callback)  {
-			  try {
-			    var sourceName = context.source
-			    var drop = false
-			    if (config.matchSource) {
-			      if (!config.matchSource.test(sourceName)) {
-			        // pass data for unmatched source names
-			        return callback(null, data)
-			      }
-			    }
-			    // filter data for matched source names
-			    if (config.include) {
-			      drop = !config.include.test(data.message)
-			    }
-			    if (config.exclude) {
-			      drop = config.exclude.test(data) || drop
-			    }
-			    drop ? callback() : callback(null, data)
-			  } catch (err) {
-			    // pass all events to next filter
-			    return callback(null, data)
-			  }
-			}
+        function (context, config, eventEmitter, data, callback)  {
+              try {
+                var sourceName = context.source
+                var drop = false
+                if (config.matchSource) {
+                  if (!config.matchSource.test(sourceName)) {
+                    // pass data for unmatched source names
+                    return callback(null, data)
+                  }
+                }
+                // filter data for matched source names
+                if (config.include) {
+                  drop = !config.include.test(data.message)
+                }
+                if (config.exclude) {
+                  drop = config.exclude.test(data) || drop
+                }
+                drop ? callback() : callback(null, data)
+              } catch (err) {
+                // pass all events to next filter
+                return callback(null, data)
+              }
+            }
 ```
 
 ### List of available filters

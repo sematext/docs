@@ -2,15 +2,15 @@
 
 The parser detects log formats based on a pattern library (YAML file) and converts it to a JSON Object:
 
-- JSON lines are detected, parsed, and scanned for "@timestamp" and "time" fields (logstash and bunyan format)
-- find matching regex in pattern library
+- JSON lines are detected, parsed, and scanned for "@timestamp" and "time" fields (Logstash and Bunyan format)
+- find matching regex in the pattern library
 - tag it with the recognized type
 - extract fields using regex
 - if 'autohash' is enabled, sensitive data is replaced with its sha256 hash code (or alternative sha512 hash code by configuration)
 - parse dates and detect date format (use 'ts' field for date and time combined) 
 - create ISO timestamp in '@timestamp' field
 - call patterns "transform" function to manipulate parsed objects
-- unmatched lines end up with timestamp and original line in the message field
+- unmatched lines end up with a timestamp and original line in the message field
 - Logagent includes default patterns for many applications (see below)
 
 The default pattern definition file comes with patterns for:
@@ -20,7 +20,7 @@ The default pattern definition file comes with patterns for:
 - Nginx
 - Redis
 - Elasticsearch
-- Webserver (nginx, apache httpd)
+- Webserver (Nginx, Apache Httpd)
 - Zookeeper
 - Cassandra
 - Kafka
@@ -64,7 +64,7 @@ originalLine: false
 # activate GeoIP lookup
 geoIP: true
 
-# logagent updates geoip db files automatically
+# Logagent updates GeoIP DB files automatically
 # pls. note write access to this directory is required
 maxmindDbDir: /tmp/
 
@@ -143,7 +143,7 @@ lp.parseLine('log message', 'source name', function (err, data) {
 })
 ```
 
-To test patterns or convert logs from text to JSON use the command line tool 'logagent'. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Logsene](http://sematext.com/logsene) or Elasticsearch.
+Use the command line tool 'logagent' to test patterns or convert logs from text to JSON. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Logsene](http://sematext.com/logsene) or Elasticsearch.
 
 Test your patterns:
 ```

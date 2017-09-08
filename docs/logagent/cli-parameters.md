@@ -41,13 +41,13 @@
 | --rtailWebPort <port> | starts rtail UI webserver (if not installed install with: - npm i rtail -g) |
 | --rtailWebHost <host> | rtail UI webserver and bind hostname. E.g. ```logagent --rtailWebPort 9000 --rtailPort 8989  --rtailWebHost $(hostname) -g \'/var/log/**/*.log``` |
 
-The default output is line-delimited JSON for parsed log lines, as long as no format options like -yaml (YAML format), -p (pretty JSON), or -s (silent, no output to console) are specified. 
+The default output is line-delimited JSON for parsed log lines, as long as no format options like '-y' (YAML format), '-p' (pretty JSON), or '-s' (silent, no output to console) are specified. 
 
 
 ## Environment variables
 |Variable|Description|
 |--------|-----------|
-|LOGSENE_TMP_DIR | Directory to store failed bulk requests for later re-transmission.|
+|LOGSENE_TMP_DIR | Directory to store failed bulk requests for later retransmission.|
 |LOGSENE_LOG_INTERVAL | Time to batch logs before a bulk request is done. Default is 10000 ms (10 seconds)|
 |LOGSENE_BULK_SIZE | Maximum size of a bulk request. Default is 1000.|
 |LOGSENE_URL | URL for the Logsene receiver. For a local Elasticsearch server or for Sematext Enterprise version of Logsene. Defaults to Sematext Logsene SaaS receiver https://logsene-receiver.sematext.com/_bulk. Example for Elasticsearch: ```LOGSENE_URL=http://localhost:9200/_bulk```|
@@ -65,10 +65,10 @@ logagent -i LOGSENE_TOKEN /var/log/*.log
 # stream logs to local Elasticsearch  
 logagent -e http://localhost:9200 -i myindex /var/log/*.log 
 
-# Act as syslog server on UDP and forward messages to Logsene
+# Act as Syslog server on UDP and forward messages to Logsene
 logagent -u 514 -i LOGSENE_TOKEN  
 
-# Act as syslog server on UDP and write YAML formatted messages to console
+# Act as Syslog server on UDP and write YAML formatted messages to console
 logagent -u 514 -y  
 ```
 
@@ -101,6 +101,6 @@ sudo npm i rtail -g
 logagent -s -i $LOGSENE_TOKEN --rtailWebPort 8080 --rtailPort 9999 /var/log/*.log
 ```
 
-And of course you can combine rtail and Logagent in the traditional way, simply connect both via Unix pipes. An example with rtail and Logsene storage and charts:
+And of course, you can combine rtail and Logagent in the traditional way, simply connect both via Unix pipes. An example with rtail and Logsene storage and charts:
 ![](http://g.recordit.co/usjLitb3Dd.gif)
 

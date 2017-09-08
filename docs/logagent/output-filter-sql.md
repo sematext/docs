@@ -3,7 +3,7 @@ Filter and aggregate parsed logs with SQL.
 
 This filter applies SQL queries on parsed log events. The result of the query is emitted as a new event, while the original events are omitted. 
 
-Using SQL it is very easy to aggregate values, e.g. group HTTP requests by status codes. The SQL WHERE statement is useful to filter events before they get shipped to Elasticsearch or [Logsene](https://sematext.com/logsene). 
+Using SQL it is very easy to aggregate values, e.g. group HTTP requests by status codes. The SQL WHERE statement is used to filter events before they get shipped to Elasticsearch or [Logsene](https://sematext.com/logsene). 
 
 
 ### Configuration 
