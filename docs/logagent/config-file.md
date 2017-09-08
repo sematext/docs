@@ -6,7 +6,7 @@ To use the config file run:
 logagent --config configFileName.yml
 ```
 
-When logagent is istalled as [system service](http://sematext.github.io/logagent-js/installation/#install-service-linux-mac-os-x) the default config file is located in 
+When Logagent is installed as [system service](http://sematext.github.io/logagent-js/installation/#install-service-linux-mac-os-x) the default config file is located in 
 ```
 /etc/sematext/logagent.conf
 ```
@@ -49,7 +49,7 @@ input:
 
 ### Section: parser
 
-In this section defines loading of custom pattern files or inline pattern definitions for the log parser.
+This section defines loading of custom pattern files or inline pattern definitions for the log parser.
 
 ```yaml
 # optional, if not specified default patterns are used
@@ -76,8 +76,8 @@ parser:
 ### Section: output
 
 Logs could be shipped to Elasticsearch or to rtail for realtime log view. 
-The Elasticsearch output supports HTTPS, username/password in the url. 
-In addtion it is possible to route logs from different files to different indicies in Elasticsearch. All logs, which don't match the rules in the indices section are routed to the default index (elasticsearch.index). 
+The Elasticsearch output supports HTTPS and username/password in the URL. 
+In addition, it is possible to route logs from different files to different indices in Elasticsearch. All logs that don't match any rules in the indices section are routed to the default index (elasticsearch.index). 
 
 ```yaml
 output:
