@@ -1,14 +1,13 @@
 ## How does the parser work?
 
-The parser detects log formats based on a pattern library (yaml file) and converts it to a JSON Object:
+The parser detects log formats based on a pattern library (YAML file) and converts it to a JSON Object:
 
 - JSON lines are detected, parsed, and scanned for "@timestamp" and "time" fields (logstash and bunyan format)
 - find matching regex in pattern library
 - tag it with the recognized type
 - extract fields using regex
 - if 'autohash' is enabled, sensitive data is replaced with its sha256 hash code (or alternative sha512 hash code by configuration)
-- parse dates and detect date format
-  (use 'ts' field for date and time combined) 
+- parse dates and detect date format (use 'ts' field for date and time combined) 
 - create ISO timestamp in '@timestamp' field
 - call patterns "transform" function to manipulate parsed objects
 - unmatched lines end up with timestamp and original line in the message field
@@ -43,11 +42,11 @@ Properties:
 - patterns: list of patterns, each pattern starts with "-"
 - match: group of patterns for a specific log source
 - blockStart: regular expression indicating a new message block for multi-line logs
-- sourceName: a regular expression matching the name of the log source (e.g. file or container image name)
+- sourceName: regular expression matching the name of the log source (e.g. file or container image name)
 - regex: JS regular expression 
 - fields: field list of extracted match groups from the regex
 - type: type used in Logsene (Elasticsearch Mapping)
-- dateFormat: format of the special fields 'ts', if the date format matches, a new field @timestamp is generated
+- dateFormat: format of the special fields 'ts'.  If the date format matches, a new field @timestamp is generated.
 - transform: JS function to manipulate the result of regex and date parsing
 
 ## Example
@@ -97,8 +96,8 @@ patterns:
         }
 ```
 
-The handling of JSON is different, regular expressions are not matched against JSON data. 
-Logagent parse JSON and provides post processing functions in the pattern definition.
+The handling of JSON is different - regular expressions are not matched against JSON data. 
+Logagent parses JSON and provides post processing functions in the pattern definition.
 The following example masks fields in JSON and removes fields from the parsed event. 
 
 ```yaml
@@ -125,7 +124,7 @@ The default patterns are available [here](https://github.com/sematext/logagent-j
 
 ## Node.js API for the parser 
 
-Install logagent as local module and save the dependency to your package.json
+Install Logagent as a local module and save the dependency to your package.json
 
 ```
 npm i logagent-js --save
