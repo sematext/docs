@@ -29,11 +29,11 @@ output:
 
 ## Log routing to multiple targets
 
-In some situations it is required to ship data from different sources to differnt Elasticsearch servers. The output section in the Logagnet configuration file accepts multiple definitions for the Elasticsearch output module. 
+In some situations it is required to ship data from different sources to different Elasticsearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the Elasticsearch output module. 
 
-Each Elasticsearch output might have a a list list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
+Each Elasticsearch output might have a list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
 
-The following expamle ships logs from wireless devices and authentication logs to a local Elasticsearch server and other server logs to multiple Logsene applications. 
+The following example ships logs from wireless devices and authentication logs to a local Elasticsearch server and other server logs to multiple Logsene applications. 
 
 ```yaml
 input:
@@ -69,7 +69,7 @@ output:
 
 ## HTTP and HTTPS options
 
-The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api/https.html#https_https_request_options_callback). Client side certifictes and keys are specified with a file name. If you use self signed certifictes, set  _rejectUnauthorized_ to _false_.
+The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api/https.html#https_https_request_options_callback). Client side certificates and keys are specified with a file name. If you use self-signed certificates, set _rejectUnauthorized_ to _false_.
 
 ```yaml
 output:
@@ -82,8 +82,3 @@ output:
       cert: /ssl-keys/client.crt
       rejectUnauthorized: true
 ```
-
-
-
-
-
