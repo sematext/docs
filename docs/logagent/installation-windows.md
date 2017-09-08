@@ -1,8 +1,6 @@
 ## Installation on Windows
 
-1) Download and install node
-
-Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and execute the installer. 
+1) Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and install it
 
 2) Install Logagent and Windows event plugin
 
@@ -60,9 +58,3 @@ To uninstall the service run
 ```
 logagent-windows -uninstall
 ```
-
-
-
-
-
-
