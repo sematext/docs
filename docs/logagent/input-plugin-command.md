@@ -1,6 +1,6 @@
 ## Plugin: Command 
 
-Input plugin to schedule commands and stream the output into logagent.
+Input plugin to schedule commands and stream the output into Logagent.
 Similar to 'tail -n 10 test.log | logagent --yaml'. 
 
 Applications: 
@@ -30,7 +30,7 @@ output:
 
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config myconfig.yml
