@@ -9,12 +9,12 @@ This project contains a library and patterns for log parsing, a command line too
 - Build-in data parser with configurable patterns
 - Command line tool 
 - Plugins
-	- Input filters (e.g. grep filter)
   - Inputs (files, streams, sockets, databases)
-  - Output filters (SQL aggreagation of parsed data, enrichment of data)
+  - Input filters (e.g. grep filter)
   - Outputs (Elasticsearch, Sematext Cloud, Kafka, ...)
+  - Output filters (SQL aggregation of parsed data, enrichment of data)
 - Reliable log shipping with disk buffer
-- Various deployment options (Systemd, Upstart, Windwos Service, Mac OSX service, Docker)
+- Various deployment options (Systemd, Upstart, Windows service, Mac OS-X service, Docker)
 - Node.js API 
 
 #### Build-in data parser
