@@ -78,6 +78,7 @@ pages:
           - Overview: logagent/plugins.md
           - Input plugins: 
             - File input: logagent/input-plugin-files.md
+            - Syslog input: logagent/input-plugin-syslog.md
             - TCP input: logagent/input-plugin-tcp.md
             - Command input: logagent/input-plugin-command.md
             - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
