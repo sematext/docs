@@ -79,6 +79,7 @@ pages:
           - Input plugins: 
             - File input: logagent/input-plugin-files.md
             - Syslog input: logagent/input-plugin-syslog.md
+            - Apache Kafka input: logagent/input-plugin-kafka.md
             - TCP input: logagent/input-plugin-tcp.md
             - Command input: logagent/input-plugin-command.md
             - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
@@ -87,6 +88,7 @@ pages:
             - Postgresql query: logagent/input-plugin-postgresql.md
           - Output plugins: 
             - Elasticsearch: logagent/output-elasticsearch.md
+            - Apache Kafka: logagent/output-plugin-kafka.md
             - Slack webhook: logagent/output-plugin-slack.md
           - Filter plugins: 
             - About filters: logagent/filters.md

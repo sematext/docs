@@ -61,14 +61,14 @@ The architecture of Logagent is modular and each input or output module is imple
 | [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                                   |
 | [postgresql-query](input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
 | [elasticsearch-query](input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
-| input-kafka         | input 					| Receiver messages from Apache Kafka topics                                                               |
+| [input-kafka](input-plugin-kafka)         | input 					| Receiver messages from Apache Kafka topics                                                               |
 | [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
 | [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
 | stdout (default)             							| output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
 | [elasticsearch](output-elasticsearch)     | output                    | Stores parsed messages in Elasticsearch                                                                  |
 | rtail               											| output              			| Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
-| output-kafka        											| output  									| Sends parsed messages to Apache Kafka topics                                                             |
+| [output-kafka](output-plugin-kafka)       | output  									| Sends parsed messages to Apache Kafka topics                                                            |
 | [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
