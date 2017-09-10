@@ -6,34 +6,16 @@
 ### Features
 
 This project contains a library and patterns for log parsing, a command line tool and installer to use Logagent as log shipper with the following features: 
-
-#### Pluggable inputs 
-
-- Standard input (stdin) that can read the output stream from any Linux command line tool
-- TCP input that can read from a TCP socket
-- File input, watching a list of files defined by glob patterns (e.g. /var/log/**/*.log). The tail file functions can deal with rotated logs (renaming/moving files) and stores the last position read for each file descriptor to recover after a service restart.
-- Syslog Server (UDP) listener - Logagent can also act as a Syslog server and receive Syslog messages via UDP. The parser is applied to the message field.
-- Heroku Log Drain makes it easy to receive Heroku logs for processing
-- Cloud Foundry Log Drain 
-- Command - run commands frequently and process the command output
-- Elasticsearch - run Elasticsearch queries frequently and process the search results
-- Database - run MySQL, PostgreSQL, MS-SQL commands frequently and process query results
-- Custom plugins via Logagent plugin API
-
-#### Pluggable processors
-
-- Grep input filter - filters raw messages by regular expression 
-- SQL output filter - transforms or aggregates parsed log messages 
-- [Access.watch](https://access.watch/reveal/logagent) - Enrich web server logs with robot detection and traffic intelligence. Access Watch is the reference intelligence for the thousands of good and bad robots active on the web. With Reveal, easily integrate this knowledge in your logs and dashboards. 
-- Custom input and output processors via Logagent plugin API, defined in separate npm modules or inline JavaScript in the configuration file
-
-#### Pluggable outputs
-
-- Standard output in JSON, line delimited JSON or YAML format. 
-- Elasticsearch output -  efficient bulk indexing and reliable transmission. 
-  - Logagent doesn't lose data. It stores parsed logs to a disk buffer if the network connection to the Elasticsearch API fails. Logagent retries shipping logs later, when the network or Elasticsearch is available again. 
-  - Log routing functions are available to map log inputs to different Elasticsearch servers or different indices. Full SSL/TLS support, authentication via SSL client certificates or basic authentication. 
-- rtail output: UDP forwarding to rtail-server for realtime log view
+- Build-in data parser with configurable patterns
+- Command line tool 
+- Plugins
+	- Input filters (e.g. grep filter)
+  - Inputs (files, streams, sockets, databases)
+  - Output filters (SQL aggreagation of parsed data, enrichment of data)
+  - Outputs (Elasticsearch, Sematext Cloud, Kafka, ...)
+- Reliable log shipping with disk buffer
+- Various deployment options (Systemd, Upstart, Windwos Service, Mac OSX service, Docker)
+- Node.js API 
 
 #### Build-in data parser
 
