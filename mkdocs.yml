@@ -89,6 +89,7 @@ pages:
           - Output plugins: 
             - Elasticsearch: logagent/output-elasticsearch.md
             - Apache Kafka: logagent/output-plugin-kafka.md
+            - rTail: logagent/output-plugin-rtail.md
             - Slack webhook: logagent/output-plugin-slack.md
           - Filter plugins: 
             - About filters: logagent/filters.md
