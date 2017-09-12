@@ -77,6 +77,7 @@ pages:
         - Plugins: 
           - Overview: logagent/plugins.md
           - Input plugins: 
+            - Standard input: logagent/input-plugin-stdin.md
             - File input: logagent/input-plugin-files.md
             - Syslog input: logagent/input-plugin-syslog.md
             - Apache Kafka input: logagent/input-plugin-kafka.md
@@ -87,6 +88,7 @@ pages:
             - MySql query: logagent/input-plugin-mysql.md
             - Postgresql query: logagent/input-plugin-postgresql.md
           - Output plugins: 
+            - Standard output: logagent/output-plugin-stdout.md
             - Elasticsearch: logagent/output-elasticsearch.md
             - Apache Kafka: logagent/output-plugin-kafka.md
             - rTail: logagent/output-plugin-rtail.md

@@ -48,7 +48,7 @@ The architecture of Logagent is modular and each input or output module is imple
 
 | Plugin              | Type                      | Description                                                                                              |
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
-| stdin (default)              					| input 	| Reads from standard input                                                                                |
+| [stdin (default)](input-plugin-stdin)              					| input 	| Reads from standard input                                                                                |
 | [files](input-plugin-files) 					| input 	| Watching and tailing files 																																							 |
 | [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events) | input 	| Collect Windows Events. Available as separate npm package |
 | [logagent-input-elasticsearch-stas](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
@@ -65,7 +65,7 @@ The architecture of Logagent is modular and each input or output module is imple
 | [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
 | [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
-| stdout (default)             							| output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
+| [stdout (default)](output-plugin-stdout)             							| output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
 | [elasticsearch](output-elasticsearch)     | output                    | Stores parsed messages in Elasticsearch                                                                  |
 | [rtail](output-plugin-rtail)							| output              			| Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
 | [output-kafka](output-plugin-kafka)       | output  									| Sends parsed messages to Apache Kafka topics                                                            |
