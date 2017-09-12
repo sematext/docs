@@ -55,7 +55,7 @@ The architecture of Logagent is modular and each input or output module is imple
 | [syslog](input-plugin-syslog.md) 			| input | Receive Syslog messages via UDP |
 | [input-tcp](input-plugin-tcp)					| input | Receive data via TCP                                                                                     |
 | [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                                               |
-| cloudfoundry        									| input | Receive logs from Cloud Foundry log drains (HTTP)                                                        |
+| [cloudfoundry](input-plugin-cloudfoundry)       									| input | Receive logs from Cloud Foundry log drains (HTTP)                                                        |
 | [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically                          |
 | [mysql-query](input-plugin-mysql)			| input | Receive results from SQL queries, which could run once or periodically                                   |
 | [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                                   |

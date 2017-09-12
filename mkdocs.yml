@@ -87,6 +87,7 @@ pages:
             - MSSQL query: logagent/input-plugin-mssql.md
             - MySql query: logagent/input-plugin-mysql.md
             - Postgresql query: logagent/input-plugin-postgresql.md
+            - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
           - Output plugins: 
             - Standard output: logagent/output-plugin-stdout.md
             - Elasticsearch: logagent/output-elasticsearch.md
