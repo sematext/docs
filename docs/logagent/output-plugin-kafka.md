@@ -1,6 +1,12 @@
 ## Plugin: Apache Kafka Output
 
-Acts as producer to ingest parsed messages to Apache Kafka topics
+Acts as producer to ingest parsed messages to Apache Kafka topics.
+This plugin depends on two additional node modules, which should be installed first: 
+
+```
+npm i -g kafka-node 
+npm i -g kafka-stream
+```
  
 ### Configuration
 

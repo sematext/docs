@@ -1,6 +1,12 @@
 ## Plugin: Apache Kafka Input
 
 Input plugin to receive and act as consumer for an Apache Kafka Topic.
+This plugin depends on two additional node modules, which should be installed first: 
+
+```
+npm i -g kafka-node 
+npm i -g kafka-stream
+```
  
 ### Configuration
 
