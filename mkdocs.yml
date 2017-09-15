@@ -56,7 +56,7 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/on-premises.md
-      - FAQ: sematext-enterprise/sematext-apps-faq.md
+      - FAQ: sematext-enterprise/faq.md
     - Sematext Docker Agent: 
         - Overview: sematext-docker-agent/index.md
         - Supported Platforms: sematext-docker-agent/supported-platforms.md
