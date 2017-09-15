@@ -1,11 +1,14 @@
-## Plugin: Apache Kafka Input
+## Logagent Plugin: Apache Kafka
 
-Input plugin to receive and act as consumer for an Apache Kafka Topic.
-This plugin depends on two additional node modules, which should be installed first: 
+Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer for Apache Kafka.
+
+## Installation 
+
+Install [@sematext/logagent](https://www.npmjs.com/package/@sematext/logagent) and [logagent-input-kafka](https://www.npmjs.com/package/logagent-input-kafka) npm package: 
 
 ```
-npm i -g kafka-node 
-npm i -g kafka-stream
+npm i -g @sematext/logagent 
+npm i -g logagent-input-kafka
 ```
  
 ### Configuration
@@ -17,8 +20,8 @@ options:
 
 input:
   kafka: 
-    module: input-kafka
-    kafkaHost: localhost
+    module: logagent-input-kafka
+    kafkaHost: localhost:9092
     groupId: ExampleTestGroup
     topic: test
     autoCommit: true
@@ -31,14 +34,14 @@ input:
 output:
   stdout: yaml # use 'pretty' for pretty json and 'ldjson' for line delimited json (default)
   elasticsearch: 
-  	module: elasticsearch
-  	url: http://localhost:9200
-  	index: test
+    module: elasticsearch
+    url: http://localhost:9200
+    index: test
 
 ```
 
 Start logagent
 
 ```
-logagent --config kafka-input.yaml
+logagent --config logagent-kafka-input.yaml
 ```
