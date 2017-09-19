@@ -558,7 +558,7 @@ logs).
 A: Logsene lets one configure arbitrary WebHooks to call with Alert
 event information when Alert events are triggered. The details for
 HipChat integration are
-described [here](../monitoring/alerts-hipchat-integration/). 
+described [here](../integration/alerts-hipchat-integration/). 
 
   
 

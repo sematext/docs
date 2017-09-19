@@ -35,9 +35,6 @@ pages:
         - Monitoring Hadoop: monitoring/hadoop.md
         - Monitoring MongoDB: monitoring/mongodb.md
         - Monitoring Node.js: monitoring/node.js.md
-        - HipChat: monitoring/alerts-hipchat-integration.md
-        - PagerDuty: monitoring/alerts-pagerduty-integration.md
-        - Slack: monitoring/alerts-slack-integration.md
       - SPM Client:
         - Overview: monitoring/spm-client.md
         - SPM Monitor - Javaagent: monitoring/spm-monitor-javaagent.md
@@ -54,6 +51,10 @@ pages:
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - API Reference: monitoring/spm-api-reference.md
       - FAQ: monitoring/spm-faq.md
+    - Integration:
+        - HipChat: integration/alerts-hipchat-integration.md
+        - PagerDuty: integration/alerts-pagerduty-integration.md
+        - Slack: integration/alerts-slack-integration.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/on-premises.md
       - FAQ: sematext-enterprise/faq.md
@@ -63,7 +64,6 @@ pages:
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
-
     - Logagent:
       - Overview: logagent/overview.md
       - Installation: 

@@ -7,9 +7,9 @@ Alerts of the following types can be sent to 3rd party systems:
 Notifications can be sent to
 
   - Email
-  - [PagerDuty](alerts-pagerduty-integration)
-  - [HipChat](alerts-hipchat-integration)
-  - [Slack](alerts-slack-integration)
+  - [PagerDuty](../integration/alerts-pagerduty-integration)
+  - [HipChat](../integration/alerts-hipchat-integration)
+  - [Slack](../integration/alerts-slack-integration)
   - VictorOps
   - OpsGenie
   - BigPanda
