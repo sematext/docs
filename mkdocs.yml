@@ -4,7 +4,7 @@ site_favicon: assets/images/favicon.png
 pages:
     - Getting Started: index.md
     - Log Management:
-      - Overview: logs/index.md
+      - Overview: logs/overview.md
       - Sending Log Events: 
         - Overview: logs/sending-events-to-logsene.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
@@ -29,7 +29,7 @@ pages:
       - Special Fields: logs/special-fields.md
       - FAQ: logs/faq.md
     - Performance Monitoring:
-      - Overview: monitoring/index.md
+      - Overview: monitoring/overview.md
       - Integrations:
         - Overview: monitoring/integrations.md
         - Monitoring Hadoop: monitoring/hadoop.md
@@ -58,14 +58,14 @@ pages:
       - Overview: sematext-enterprise/on-premises.md
       - FAQ: sematext-enterprise/faq.md
     - Sematext Docker Agent: 
-        - Overview: sematext-docker-agent/index.md
+        - Overview: sematext-docker-agent/overview.md
         - Supported Platforms: sematext-docker-agent/supported-platforms.md
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
 
     - Logagent:
-      - Overview: logagent/index.md
+      - Overview: logagent/overview.md
       - Installation: 
         - Linux & Mac OS X: logagent/installation.md
         - Windows: logagent/installation-windows.md 

@@ -128,15 +128,6 @@
                   <a href="{{ li_path }}" title="Linkedin Share" class="md-icon md-content__icon" style="display: none">share</a>
 
                   {% set pdf_path = page.canonical_url | reverse | replace('/','fdp.', 1) | replace('/', '/fdp/', 1) | reverse %}
-                  {% if pdf_path == "http://sematext.com/docs/pdf/logs.pdf" %}
-                    {% set pdf_path = "http://sematext.com/docs/logs/pdf/logs.pdf" %}
-                  {% elif pdf_path == "http://sematext.com/docs/pdf/monitoring.pdf" %}
-                    {% set pdf_path = "http://sematext.com/docs/monitoring/pdf/monitoring.pdf" %}
-                  {% elif pdf_path == "http://sematext.com/docs/pdf/sematext-docker-agent.pdf" %}
-                    {% set pdf_path = "http://sematext.com/docs/sematext-docker-agent/pdf/sematext-docker-agent.pdf" %}
-                  {% elif pdf_path == "http://sematext.com/docs/pdf/logagent.pdf" %}
-                    {% set pdf_path = "http://sematext.com/docs/logagent/pdf/logagent.pdf" %}
-                  {% endif %}
                   <a href="{{ pdf_path }}" title="PDF" class="md-icon md-content__icon">library_books</a>
                 {% endif %}
 
