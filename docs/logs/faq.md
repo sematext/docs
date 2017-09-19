@@ -287,7 +287,7 @@ settings, you need to specify a field from your logs to be used to build
 the map. That field has to contain a country code.
 
 If you don't have a country field in your logs, but you have an IP, you
-can use **Logstash's [geoip filter](http://logstash.net/docs/latest/filters/geoip)**. For example, a
+can use **Logstash's [geoip filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html)**. For example, a
 configuration like this:
 
 ``` bash

@@ -1,5 +1,5 @@
-In order make [Logstash](http://logstash.net/) send logs to Logsene, you
-need to configure it with the [Elasticsearch plugin](http://logstash.net/docs/latest/outputs/elasticsearch_http) to
+In order make [Logstash](https://www.elastic.co/products/logstash) send logs to Logsene, you
+need to configure it with the [Elasticsearch plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html) to
 output to the Logsene endpoint, while specifying:
 
   - **logsene-receiver.sematext.com** as the host
