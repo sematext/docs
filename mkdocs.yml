@@ -32,7 +32,6 @@ pages:
       - Overview: monitoring/index.md
       - Integrations:
         - Overview: monitoring/integrations.md
-        - Monitoring Docker: monitoring/docker.md
         - Monitoring Hadoop: monitoring/hadoop.md
         - Monitoring MongoDB: monitoring/mongodb.md
         - Monitoring Node.js: monitoring/node.js.md
@@ -57,7 +56,14 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/on-premises.md
-      - FAQ: sematext-enterprise/sematext-apps-faq.md
+      - FAQ: sematext-enterprise/faq.md
+    - Sematext Docker Agent: 
+        - Overview: sematext-docker-agent/index.md
+        - Supported Platforms: sematext-docker-agent/supported-platforms.md
+        - Installation: sematext-docker-agent/installation.md
+        - Configuration: sematext-docker-agent/configuration.md
+        - Troubleshooting: sematext-docker-agent/troubleshooting.md
+
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 
@@ -71,14 +77,22 @@ pages:
         - Plugins: 
           - Overview: logagent/plugins.md
           - Input plugins: 
+            - Standard input: logagent/input-plugin-stdin.md
+            - File input: logagent/input-plugin-files.md
+            - Syslog input: logagent/input-plugin-syslog.md
+            - Apache Kafka input: logagent/input-plugin-kafka.md
             - TCP input: logagent/input-plugin-tcp.md
             - Command input: logagent/input-plugin-command.md
             - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
             - MSSQL query: logagent/input-plugin-mssql.md
             - MySql query: logagent/input-plugin-mysql.md
             - Postgresql query: logagent/input-plugin-postgresql.md
+            - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
           - Output plugins: 
+            - Standard output: logagent/output-plugin-stdout.md
             - Elasticsearch: logagent/output-elasticsearch.md
+            - Apache Kafka: logagent/output-plugin-kafka.md
+            - rTail: logagent/output-plugin-rtail.md
             - Slack webhook: logagent/output-plugin-slack.md
           - Filter plugins: 
             - About filters: logagent/filters.md

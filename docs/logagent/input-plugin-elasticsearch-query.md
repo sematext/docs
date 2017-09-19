@@ -3,7 +3,7 @@
 Plugin to receive documents from scheduled Elasticsearch queries.
 Use cases: 
 
-- Alerting. Logagent can report the results of any elasticsearch query to supported output modules (e.g. Slack channels).  
+- Alerting. Logagent can report the results of any Elasticsearch query to supported output modules (e.g. Slack channels).  
 - Re-indexing and transforming documents 
 - Replicating data to other Elasticsearch clusters
 - Storing results of aggregation queries in a new index
@@ -40,7 +40,7 @@ output:
 
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config myconfig.yml

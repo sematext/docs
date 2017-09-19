@@ -1,15 +1,15 @@
-## Plugin: PostgresSQL Input
+## Plugin: PostgreSQL Input
 
-Input plugin to use PostgreSQL queries as input and stream the output into logagent.
+Input plugin to use PostgreSQL queries as input and stream the output into Logagent.
 
 - run queries frequently
-- choose timezone and format for query time
-- use multiple SQL-query statements 
+- choose time zone and format for query time
+- use multiple SQL query statements 
 
 Applications:
 
-- index for SQL data in elasticsearch
-- create alerts based SQL data
+- index SQL data to Elasticsearch
+- create alerts based on data in PostgreSQL database
 
 ### Configuration
 
@@ -39,7 +39,7 @@ output:
 
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config postgresql.yaml

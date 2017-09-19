@@ -1,17 +1,16 @@
 ## How does the parser work?
 
-The parser detects log formats based on a pattern library (yaml file) and converts it to a JSON Object:
+The parser detects log formats based on a pattern library (YAML file) and converts it to a JSON Object:
 
-- JSON lines are detected, parsed, and scanned for "@timestamp" and "time" fields (logstash and bunyan format)
-- find matching regex in pattern library
+- JSON lines are detected, parsed, and scanned for "@timestamp" and "time" fields (Logstash and Bunyan format)
+- find matching regex in the pattern library
 - tag it with the recognized type
 - extract fields using regex
 - if 'autohash' is enabled, sensitive data is replaced with its sha256 hash code (or alternative sha512 hash code by configuration)
-- parse dates and detect date format
-  (use 'ts' field for date and time combined) 
+- parse dates and detect date format (use 'ts' field for date and time combined) 
 - create ISO timestamp in '@timestamp' field
 - call patterns "transform" function to manipulate parsed objects
-- unmatched lines end up with timestamp and original line in the message field
+- unmatched lines end up with a timestamp and original line in the message field
 - Logagent includes default patterns for many applications (see below)
 
 The default pattern definition file comes with patterns for:
@@ -21,7 +20,7 @@ The default pattern definition file comes with patterns for:
 - Nginx
 - Redis
 - Elasticsearch
-- Webserver (nginx, apache httpd)
+- Webserver (Nginx, Apache Httpd)
 - Zookeeper
 - Cassandra
 - Kafka
@@ -43,11 +42,11 @@ Properties:
 - patterns: list of patterns, each pattern starts with "-"
 - match: group of patterns for a specific log source
 - blockStart: regular expression indicating a new message block for multi-line logs
-- sourceName: a regular expression matching the name of the log source (e.g. file or container image name)
+- sourceName: regular expression matching the name of the log source (e.g. file or container image name)
 - regex: JS regular expression 
 - fields: field list of extracted match groups from the regex
 - type: type used in Logsene (Elasticsearch Mapping)
-- dateFormat: format of the special fields 'ts', if the date format matches, a new field @timestamp is generated
+- dateFormat: format of the special fields 'ts'.  If the date format matches, a new field @timestamp is generated.
 - transform: JS function to manipulate the result of regex and date parsing
 
 ## Example
@@ -65,12 +64,12 @@ originalLine: false
 # activate GeoIP lookup
 geoIP: true
 
-# logagent updates geoip db files automatically
+# Logagent updates GeoIP DB files automatically
 # pls. note write access to this directory is required
 maxmindDbDir: /tmp/
 
 patterns: 
-  - # APACHE  Web Logs
+ - # APACHE  Web Logs
   sourceName: httpd
   match: 
     # Common Log Format
@@ -97,8 +96,8 @@ patterns:
         }
 ```
 
-The handling of JSON is different, regular expressions are not matched against JSON data. 
-Logagent parse JSON and provides post processing functions in the pattern definition.
+The handling of JSON is different - regular expressions are not matched against JSON data. 
+Logagent parses JSON and provides post processing functions in the pattern definition.
 The following example masks fields in JSON and removes fields from the parsed event. 
 
 ```yaml
@@ -125,7 +124,7 @@ The default patterns are available [here](https://github.com/sematext/logagent-j
 
 ## Node.js API for the parser 
 
-Install logagent as local module and save the dependency to your package.json
+Install Logagent as a local module and save the dependency to your package.json
 
 ```
 npm i logagent-js --save
@@ -144,7 +143,7 @@ lp.parseLine('log message', 'source name', function (err, data) {
 })
 ```
 
-To test patterns or convert logs from text to JSON use the command line tool 'logagent'. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Logsene](http://sematext.com/logsene) or Elasticsearch.
+Use the command line tool 'logagent' to test patterns or convert logs from text to JSON. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Logsene](http://sematext.com/logsene) or Elasticsearch.
 
 Test your patterns:
 ```

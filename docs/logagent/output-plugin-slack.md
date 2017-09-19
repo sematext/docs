@@ -5,6 +5,7 @@ Plugin to forward messages via Slack "Incoming-Webhook" integration.
 Applications: 
 - Alert Notifications
 
+
 ### Configuration
 
 ```yaml
@@ -44,9 +45,8 @@ output:
 
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config myconfig.yml
 ```
-

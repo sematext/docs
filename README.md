@@ -1,7 +1,6 @@
-## Sematext Docs
-Mkdocs site for pub-SPM, pub-Logsene & SematextApps confluence.
+## Sematext Documentation
 
-### Quick Start - run mkdocs on Docker
+### Quick Start - run mkdocs in a container
 
 ```
 git clone git@github.com:sematext/docs.git
@@ -11,7 +10,7 @@ open http://localhost:8000
 ```
 
 ### Manual installation  
-Install `python` & `pip` - Check here [Manual Installation](http://www.mkdocs.org/#manual-installation)
+Install `python` & `pip` - see [Manual Installation](http://www.mkdocs.org/#manual-installation)
 
 ``` sh
 $ python --version
@@ -53,50 +52,8 @@ Build the site
 $ mkdocs build
 ```
 
-This will create a new directory, named `site`. We now can deploy `site` to server.
+This will create a new directory, named `site`. Now, we can deploy `site` to server.
 
-### Convert Confluence to Markdown
-
-#### Export Confluence to HTML
-We use Confluence export feature to export HTML, It can export the whole space or individual page. Here are step:
-
-* go to Space tools.
-* go to tab Content Tools.
-* go to tab Export.
-* chose HTML option.
-* chose Normal Export option to extract the whole space and Custom Export if you want to extract individual page.
-
-* click export
-
-#### Extract main content from HTML
-
-The exported HTML from previous step contains layout format from Confluence, we need to extract only main content from it before convert to Markdown
-First we need extract the export zip file to folder.
-
-```
-unzip Confluence-space-export-XXX.zip
-```
-
-Then extract main content to another folder
-
-```
-java -jar bin/extract.jar inputDir ouputDir
-   - inputDir the extracted space folder Or a html file
-   - outputDir the output folder
-```
-
-#### Convert to Markdown
-
-We use `pandoc` to convert Html to Markdown. So first you need to install `pandoc` using instruction from this page
-`https://pandoc.org/installing.html`
-
-Convert the HTML extract from previous step to Markdown
-
-```
-bin/to_md.sh inputDir outputDir
-   - inputDir: the extracted html folder
-   - outputDir: the markdown folder
-```
 
 ### Generate PDF
 
@@ -113,3 +70,48 @@ We also use `pandoc` to convert markdown to PDF.
 
 Check 404 links for sematext.com/docs using w3c linkchecker
 https://validator.w3.org/checklink?uri=http%3A%2F%2Fsematext.com%2Fdocs&hide_type=dir&recursive=on&depth=&check=Check
+
+
+
+### Convert Confluence to Markdown
+
+#### Export Confluence to HTML
+Use Confluence export feature to export HTML.  It can export the whole space or individual page. Here are steps:
+
+* go to Space tools
+* go to Content Tools tab
+* go to Export tab
+* choose HTML option
+* choose Normal Export option to extract the whole space and Custom Export if you want to extract individual page
+* click Export
+
+#### Extract main content from HTML
+
+The exported HTML from the previous step contains layout format from Confluence.  Extract only the main content from it before converting to Markdown.
+
+Extract the export zip file to folder
+
+```
+unzip Confluence-space-export-XXX.zip
+```
+
+Then extract main content to another folder
+
+```
+java -jar bin/extract.jar inputDir ouputDir
+   - inputDir the extracted space folder Or a html file
+   - outputDir the output folder
+```
+
+#### Convert to Markdown
+
+Use `pandoc` to convert HTML to Markdown. Install `pandoc` using instructions from
+`https://pandoc.org/installing.html`
+
+Convert the HTML extracted in the previous step to Markdown
+
+```
+bin/to_md.sh inputDir outputDir
+   - inputDir: the extracted html folder
+   - outputDir: the markdown folder
+```
