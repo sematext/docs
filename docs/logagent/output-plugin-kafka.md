@@ -1,4 +1,4 @@
-## Plugin: Apache Kafka Output
+## Output Plugin: Apache Kafka 
 
 Acts as producer to ingest parsed messages to Apache Kafka topics.
 This plugin depends on [logagent-output-kakfa](https://www.npmjs.com/package/logagent-output-kafka), which should be installed first. 

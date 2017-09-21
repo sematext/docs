@@ -1,4 +1,4 @@
-## Plugin: Command 
+## Input Plugin: Command 
 
 Input plugin to schedule commands and stream the output into Logagent.
 Similar to 'tail -n 10 test.log | logagent --yaml'. 

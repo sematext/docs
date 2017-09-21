@@ -1,4 +1,4 @@
-## Plugin: MySQL Input
+## Input Plugin: MySQL
 
 Input plugin to use MySQL queries as input and stream the output into Logagent.
 

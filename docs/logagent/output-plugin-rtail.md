@@ -1,5 +1,5 @@
 
-## Plugin: rTail output 
+## Output Plugin: rTail  
 
 [rTail](http://rtail.org/) shows real-time logs in a browser. This plugins ships messages to rTail servers and is able to launch rTail web server. 
 

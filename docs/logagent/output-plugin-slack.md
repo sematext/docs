@@ -1,4 +1,4 @@
-## Plugin: Slack output
+## Output Plugin: Slack 
 
 Plugin to forward messages via Slack "Incoming-Webhook" integration.
 

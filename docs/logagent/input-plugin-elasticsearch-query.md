@@ -1,4 +1,4 @@
-## Plugin: Elasticsearch query
+## Input Plugin: Elasticsearch Query
 
 Plugin to receive documents from scheduled Elasticsearch queries.
 Use cases: 

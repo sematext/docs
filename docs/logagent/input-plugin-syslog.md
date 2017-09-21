@@ -1,4 +1,4 @@
-## Plugin: Syslog input
+## Input Plugin: Syslog UDP
 
 Receives Syslog messages via UDP.  
 

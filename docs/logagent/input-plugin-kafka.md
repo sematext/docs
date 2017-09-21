@@ -1,4 +1,4 @@
-## Logagent Plugin: Apache Kafka
+## Input Plugin: Apache Kafka
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer for Apache Kafka.
 

@@ -1,4 +1,4 @@
-## Plugin: Standard output
+## Output Plugin: Standard output (stdout)
 
 This plugin writes the result of Logagent parser to the standard output stream (stdout) and is activated by default. 
 

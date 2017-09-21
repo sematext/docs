@@ -1,4 +1,4 @@
-## Plugin: Microsoft SQL Input
+## Input Plugin: Microsoft SQL 
 
 Input plugin to use Microsoft SQL queries as input and stream the output into Logagent.
 

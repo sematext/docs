@@ -1,4 +1,4 @@
-## Grep Input Filter
+## Input Filter: Grep 
 
 Apply regex to filter raw input from Logagent before logs are parsed
 
