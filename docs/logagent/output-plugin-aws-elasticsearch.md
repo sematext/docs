@@ -21,7 +21,7 @@ output:
     # Elasticsearch client logging options
     log:
       - type: 'stdio'
-        # empty array to supress ES node client logs
+        # empty array to suppress ES node client logs
         levels: []
         # or configure log level for individually 
         # levels:
