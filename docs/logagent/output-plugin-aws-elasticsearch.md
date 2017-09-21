@@ -1,6 +1,6 @@
-## Output Plugin: AWS Elasticsearch
+## Output Plugin: Amazon Elasticsearch Service
 
-Writes Logagent output to AWS Elasticsearch (using AWS signed http headers). 
+Writes Logagent output to Amazon Elasticsearch Service (using AWS signed HTTP headers). 
  
 ### Configuration
 
