@@ -5,5 +5,5 @@ name, from the [Logsene tab of your account](https://apps.sematext.com/ui/logs).
 Once you're there, you can customize your dashboard to do all kinds of
 searches and visualizations to your data.
 
-If you want even more flexibility, you can [install Kibana locally and point it to Logsene](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
+If you want even more flexibility, you can [install Kibana locally and point it to Logsene](faq/#can-i-run-kibana-locally-and-point-it-to-logsene).
 
