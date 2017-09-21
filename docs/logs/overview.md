@@ -1,5 +1,5 @@
 If you are new to Logsene, think of it as logging as a service - Logsene is
-your own logging box in the cloud (or [running on your own infrastructure](sematext-enterprise/on-premises)),
+your own logging box in the cloud (or [running on your own infrastructure](../sematext-enterprise/on-premises)),
 a cheaper alternative to Splunk, or even
 as Hosted Elasticsearch, since one of the APIs Logsene exposes is
 [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and
@@ -27,7 +27,7 @@ send data: [through Elasticsearch's API](index-events-via-elasticsearch-api) or 
 ##### Elasticsearch API (Logstash & friends)
 
 The easiest way to send logs from your files is
-[through Logstash](logstash), Filebeat, or [Logagent](logagent). You
+[through Logstash](logstash), Filebeat, or [Logagent](../logagent). You
 can also use any tool that works with Elasticsearch's REST API, for both
 [indexing](index-events-via-elasticsearch-api) and
 [searching](search-through-the-elasticsearch-api). The
