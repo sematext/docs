@@ -22,7 +22,6 @@ pages:
         - Logsene CLI: logs/logsene-cli.md
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
-        - Kibana Integration: logs/logsene-and-kibana-4.md
         - Kibana: logs/kibana.md
       - API Reference: logs/logsene-api-reference.md
       - Supported Date Formats: logs/supported-date-formats.md
@@ -71,12 +70,12 @@ pages:
         - Windows: logagent/installation-windows.md 
         - Heroku: logagent/installation-heroku.md        
       - Usage: 
-        - Command Line Parameter: logagent/cli-parameters.md 
-        - Configuration file: logagent/config-file.md      
-        - Log Parser and pattern definitions: logagent/parser.md
+        - Command Line Parameters: logagent/cli-parameters.md 
+        - Configuration: logagent/config-file.md      
+        - Log Parser Patterns: logagent/parser.md
         - Plugins: 
           - Overview: logagent/plugins.md
-          - Input plugins: 
+          - Input Plugins: 
             - Standard input: logagent/input-plugin-stdin.md
             - File input: logagent/input-plugin-files.md
             - Syslog input: logagent/input-plugin-syslog.md
@@ -88,13 +87,13 @@ pages:
             - MySql query: logagent/input-plugin-mysql.md
             - Postgresql query: logagent/input-plugin-postgresql.md
             - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
-          - Output plugins: 
+          - Output Plugins: 
             - Standard output: logagent/output-plugin-stdout.md
             - Elasticsearch: logagent/output-elasticsearch.md
             - Apache Kafka: logagent/output-plugin-kafka.md
             - rTail: logagent/output-plugin-rtail.md
             - Slack webhook: logagent/output-plugin-slack.md
-          - Filter plugins: 
+          - Filter Plugins: 
             - About filters: logagent/filters.md
             - Grep input filter: logagent/input-filter-grep.md
             - SQL output filter: logagent/output-filter-sql.md
