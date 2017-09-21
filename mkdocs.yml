@@ -89,7 +89,9 @@ pages:
             - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
           - Output Plugins: 
             - Standard output: logagent/output-plugin-stdout.md
+            - Files: logagent/output-plugin-files.md
             - Elasticsearch: logagent/output-elasticsearch.md
+            - AWS Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
             - Apache Kafka: logagent/output-plugin-kafka.md
             - rTail: logagent/output-plugin-rtail.md
             - Slack webhook: logagent/output-plugin-slack.md
