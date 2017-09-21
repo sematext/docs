@@ -2,7 +2,7 @@
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer for Apache Kafka.
 
-## Installation 
+### Installation 
 
 Install [@sematext/logagent](https://www.npmjs.com/package/@sematext/logagent) and [logagent-input-kafka](https://www.npmjs.com/package/logagent-input-kafka) npm package: 
 
@@ -40,7 +40,7 @@ output:
 
 ```
 
-Start logagent
+### Start logagent
 
 ```
 logagent --config logagent-kafka-input.yaml

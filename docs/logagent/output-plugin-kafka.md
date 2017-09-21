@@ -1,11 +1,16 @@
 ## Plugin: Apache Kafka Output
 
 Acts as producer to ingest parsed messages to Apache Kafka topics.
-This plugin depends on two additional node modules, which should be installed first: 
+This plugin depends on [logagent-output-kakfa](https://www.npmjs.com/package/logagent-output-kafka), which should be installed first. 
+
+
+### Installation 
+
+Install [@sematext/logagent](https://www.npmjs.com/package/@sematext/logagent) and [logagent-output-kafka](https://www.npmjs.com/package/logagent-output-kafka) npm package: 
 
 ```
-npm i -g kafka-node 
-npm i -g kafka-stream
+npm i -g @sematext/logagent 
+npm i -g logagent-output-kafka
 ```
  
 ### Configuration
@@ -20,7 +25,7 @@ input:
 
 output:
   kafka: 
-   module: output-kafka
+   module: logagent-output-kafka
    kafkaHost: localhost
    topic: test
    #Configuration for consider message as  acknowledged acknowledged
@@ -35,7 +40,7 @@ output:
 
 ```
 
-Start logagent
+### Start logagent
 
 ```
 logagent --config kafka-input.yaml
