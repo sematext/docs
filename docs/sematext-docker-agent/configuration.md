@@ -34,7 +34,7 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 | SKIP_BY_IMAGE | Regular expression to black list image names for logging | 
 | PATTERNS_URL | Load pattern.yml via HTTP e.g. ```-e PATTERNS_URL=https://raw.githubusercontent.com/sematext/logagent-js/master/patterns.yml``` |
 | LOGAGENT_PATTERNS | Pass patterns.yml via env. variable e.g. ```-e LOGAGENT_PATTERNS="$(cat ./patters.yml)"``` |
-| PATTERN_MATCHING_ENABLED | Activate [logagent-js parser](https://sematext.github.io/logagent-js/parser/), default value is ```true```. To disable the log parser set the value to ```false```. This could increase the throughput of log processing for nodes with a very high log volume.|
+| PATTERN_MATCHING_ENABLED | Activate [logagent-js parser](http://sematext.com/docs/logagent/parser/), default value is ```true```. To disable the log parser set the value to ```false```. This could increase the throughput of log processing for nodes with a very high log volume.|
 | -v /yourpatterns/patterns.yml:/etc/logagent/patterns.yml | to provide custom patterns for log parsing, see [logagent-js](https://github.com/sematext/logagent-js)|
 | -v /tmp:/logsene-log-buffer | Directory to store logs, in a case of a network or service outage. Docker Agent deletes these files after successful transmission.|
 | GEOIP_ENABLED | ```true```enables GeoIP lookups in the log parser, default value: ```false```| 
