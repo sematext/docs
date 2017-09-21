@@ -23,7 +23,7 @@ output:
       - type: 'stdio'
         # empty array to suppress ES node client logs
         levels: []
-        # or configure log level for individually 
+        # or configure log level individually 
         # levels:
         #   - 'error' 
         #   - 'warning'
