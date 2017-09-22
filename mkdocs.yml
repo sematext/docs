@@ -4,7 +4,7 @@ site_favicon: assets/images/favicon.png
 pages:
     - Getting Started: index.md
     - Log Management:
-      - Overview: logs/overview.md
+      - Overview: logs/index.md
       - Sending Log Events: 
         - Overview: logs/sending-events-to-logsene.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
@@ -28,7 +28,7 @@ pages:
       - Special Fields: logs/special-fields.md
       - FAQ: logs/faq.md
     - Performance Monitoring:
-      - Overview: monitoring/overview.md
+      - Overview: monitoring/index.md
       - Integrations:
         - Overview: monitoring/integrations.md
         - Monitoring Hadoop: monitoring/hadoop.md
