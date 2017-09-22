@@ -64,7 +64,7 @@ pages:
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
     - Logagent:
-      - Overview: logagent/overview.md
+      - Overview: logagent/index.md
       - Installation: 
         - Linux & Mac OS X: logagent/installation.md
         - Windows: logagent/installation-windows.md 
