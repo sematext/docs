@@ -50,7 +50,7 @@ pages:
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - API Reference: monitoring/spm-api-reference.md
       - FAQ: monitoring/spm-faq.md
-    - Integration:
+    - Integrations:
         - HipChat: integration/alerts-hipchat-integration.md
         - PagerDuty: integration/alerts-pagerduty-integration.md
         - Slack: integration/alerts-slack-integration.md
