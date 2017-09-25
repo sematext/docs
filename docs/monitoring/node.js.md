@@ -87,6 +87,38 @@ compilers are typically not installed by default.
 In this case please check <https://github.com/TooTallNate/node-gyp> for
 details about the required compiler and build tools.
 
+### How to configure spm-agent-nodejs for my app using PM2 process manager
+
+Install spm-agent-nodejs as global module: 
+
+```
+sudo npm i -g spm-agent-nodejs
+```
+
+Check the location (full path) for spm-agent-nodejs using 
+
+```
+sudo npm root -g
+```
+
+The result of the command above is typicall `/usr/local/lib/node_modules` or `/usr/lib/node_modules`. 
+Remember the path to use it in the following step "interpreter_args" in the pm2 configuration file. 
+
+If you use PM2 to start your node.js process, then use in your [pm2 application config file](http://pm2.keymetrics.io/docs/usage/application-declaration/#application-declaration-file) following environment section: 
+
+```js
+{ 
+   "interpreter_args": "-r /usr/local/lib/node_modules/spm-agent-nodejs"
+   "env": { 
+      "SPM_TOKEN": "YOUR_SPM_TOKEN",
+      "spmagent_dbDir": "./spmdb",
+      "spmagent_logger__dir": "./spmlogs",
+      "spmagent_logger__silent" = false,
+      "spmagent_logger__level": "error"
+}
+```
+
+
 ### Upgrading to a new node.js version
 
 If you switch the node.js version (e.g. from 0.12 to 4.4), the
