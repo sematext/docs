@@ -55,7 +55,7 @@ pages:
         - PagerDuty: integration/alerts-pagerduty-integration.md
         - Slack: integration/alerts-slack-integration.md
     - Sematext Enterprise:
-      - Overview: sematext-enterprise/on-premises.md
+      - Overview: sematext-enterprise/index.md
       - FAQ: sematext-enterprise/faq.md
     - Sematext Docker Agent: 
         - Overview: sematext-docker-agent/index.md

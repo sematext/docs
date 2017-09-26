@@ -8,7 +8,7 @@ Sematext Docker Agent is a modern, Docker-native monitoring and log collection a
   <iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
 </div>
 
-The following information is collected and transmitted to Sematext Cloud or [Sematext Enterprise](sematext-enterprise/on-premises).  Sematext Cloud integration for Docker uses the open-source
+The following information is collected and transmitted to Sematext Cloud or [Sematext Enterprise](sematext-enterprise).  Sematext Cloud integration for Docker uses the open-source
  [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
 Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docker.com/r/sematext/sematext-agent-docker/).
 
