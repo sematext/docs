@@ -35,6 +35,7 @@ pages:
         - Monitoring MongoDB: monitoring/mongodb.md
         - Monitoring Node.js: monitoring/node.js.md
         - Monitoring Docker: monitoring/docker.md
+        - Monitoring AWS: monitoring/aws.md
       - SPM Client:
         - Overview: monitoring/spm-client.md
         - SPM Monitor - Javaagent: monitoring/spm-monitor-javaagent.md
@@ -64,6 +65,7 @@ pages:
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
+
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 
@@ -71,12 +73,12 @@ pages:
         - Windows: logagent/installation-windows.md 
         - Heroku: logagent/installation-heroku.md        
       - Usage: 
-        - Command Line Parameters: logagent/cli-parameters.md 
-        - Configuration: logagent/config-file.md      
+        - Command Line Parameters: logagent/cli-parameters.md
+        - Configuration: logagent/config-file.md
         - Log Parser Patterns: logagent/parser.md
         - Plugins: 
           - Overview: logagent/plugins.md
-          - Input Plugins: 
+          - Input Plugins:
             - Standard input: logagent/input-plugin-stdin.md
             - File input: logagent/input-plugin-files.md
             - Syslog input: logagent/input-plugin-syslog.md
@@ -88,7 +90,7 @@ pages:
             - MySql query: logagent/input-plugin-mysql.md
             - Postgresql query: logagent/input-plugin-postgresql.md
             - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
-          - Output Plugins: 
+          - Output Plugins:
             - Standard output: logagent/output-plugin-stdout.md
             - Files: logagent/output-plugin-files.md
             - Elasticsearch: logagent/output-elasticsearch.md
@@ -96,7 +98,7 @@ pages:
             - Apache Kafka: logagent/output-plugin-kafka.md
             - rTail: logagent/output-plugin-rtail.md
             - Slack webhook: logagent/output-plugin-slack.md
-          - Filter Plugins: 
+          - Filter Plugins:
             - About filters: logagent/filters.md
             - Grep input filter: logagent/input-filter-grep.md
             - SQL output filter: logagent/output-filter-sql.md
