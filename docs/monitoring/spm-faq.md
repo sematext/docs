@@ -104,7 +104,7 @@ using standalone variant, run: **sudo service spm-monitor restart** ,
 otherwise restart your application/java
 process.
 
-#### How frequently does SPM monitor collects metrics and can I adjust that interval
+#### How frequently does SPM monitor collect metrics and can I adjust that interval
 
 SPM monitor by default collects metrics every 10 seconds. To reduce this
 frequency to 30 seconds, for example, simply add the following line to
@@ -441,11 +441,11 @@ sudo bash /opt/spm/bin/move-spm-home-dir.sh /mnt/some_other_dir/spm /opt/spm
 and then proceed with regular update. After update is done, you can
 again move SPM client to location which suits you.
 
-#### Is there an HTTP API I could use
+#### Is there an HTTP API
 
 **A:** Yes, see [SPM API Reference](spm-api-reference).
 
-#### I have multiple SPM applications installed on my machine, can I uninstall just one of them
+#### I have multiple SPM apps installed on my machine, can I uninstall just one of them
 
 **A:** Yes, you can use the following command for that (it accepts only
 one parameter, token of SPM application you want to
@@ -502,9 +502,9 @@ these two sharing types at the same time. You could Share Account with
 some users, and use App Sharing to share specific apps with other
 users.  
   
-To Share Account with other users, go to
+To share Account with other users, go to
 <https://apps.sematext.com/ui/team/accounts>  
-To Share App, go
+To share App, go
 to <https://apps.sematext.com/ui/team/apps>
 
 ####   
@@ -1147,27 +1147,11 @@ After that is done, also do:
 sudo service spm-monitor restart
 ```
 
-  
-
-If you used **bash script** based installer, then just run the
-installation command again ("`curl -ko installer.sh` ...." or "`wget
---no-check-certificate -O installer.sh` ..."). There is no need to go
-through "**Client configuration setup**" steps since the existing
-configuration will be preserved.
-
-After that is done, next step is the same as with apt-get/yum/zipper
-upgrade - you should restart monitored server (if using
-in-process/javaagent monitor) or standalone SPM monitor.
-
-  
-
 **Note**: In case of **Memcached**, **Apache** and plain **Nginx** -
 after completing upgrade steps described above, you must also run
 commands described in Step 2 - Client Configuration Setup (which is
 accessible from <https://apps.sematext.com/ui/monitoring>, click
 Actions-\>Install Monitor for app you have installed)
-
-  
 
 **Note**: If you moved SPM client from **/opt/spm** to different
 directory, you will first have to move SPM back to original /opt/spm
