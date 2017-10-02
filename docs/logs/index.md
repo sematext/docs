@@ -1,5 +1,5 @@
 If you are new to Logsene, think of it as logging as a service - Logsene is
-your own logging box in the cloud (or [running on your own infrastructure](../sematext-enterprise/on-premises)),
+your own logging box in the cloud (or [running on your own infrastructure](../sematext-enterprise)),
 a cheaper alternative to Splunk, or even
 as Hosted Elasticsearch, since one of the APIs Logsene exposes is
 [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and

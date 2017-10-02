@@ -18,7 +18,6 @@ setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent
 /* end act-on code */
 
 /* begin GA code */
-<script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
@@ -32,5 +31,4 @@ setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-2365268-3', 'auto');
     ga('send', 'pageview');
-</script>
 /* end GA code */
