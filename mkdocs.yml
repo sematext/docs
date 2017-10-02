@@ -50,7 +50,6 @@ pages:
         - Monitoring Hadoop: integration/hadoop.md
         - Monitoring MongoDB: integration/mongodb.md
         - Monitoring Node.js: integration/node.js.md
-        - Monitoring Docker: integration/docker.md
         - Monitoring AWS: integration/aws.md
         - HipChat: integration/alerts-hipchat-integration.md
         - PagerDuty: integration/alerts-pagerduty-integration.md
