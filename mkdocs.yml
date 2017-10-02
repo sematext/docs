@@ -101,7 +101,7 @@ pages:
             - Grep input filter: logagent/input-filter-grep.md
             - SQL output filter: logagent/output-filter-sql.md
             - Access Watch output filter: logagent/output-filter-accesswatch.md
-      - Logagent FAQ: logagent/faq.md
+      - FAQ: logagent/faq.md
 
 theme: material
 theme_dir: custom_theme
