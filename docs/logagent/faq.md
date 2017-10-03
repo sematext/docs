@@ -2,22 +2,22 @@
 ## Logagent FAQ
 
 
-### Is there a verbose / debug mode and how is it enabled
+### Is there a verbose / debug mode and how is it enabled?
 
-Yes. Add following property to your pattern definition file (patterns.yml): 
+Yes. Add the following property to your pattern definition file (patterns.yml): 
 
 ```
 debug: true
 ```
 
-You could create a file containing only the debug setting and load it via command line. 
+You could also create a file containing only the debug setting and load it via command line. 
 
 ```
 echo "debug: true" > debug-enable.yml
 logagent -f patterns.yml -f ./debug-enable.yml  -g '/var/log/**/*.log'
 ```
 
-Logagent prints then every pattern match, e.g.: 
+When debug is enabled, Logagent will print every pattern match, e.g.: 
 
 ```
 Pattern match: log #4 /^([\w|\s]+\s\d{2}\s[\d|\:|\.]+)\s+(<.+?>)\s(.*)/ ["ts","service","message"]
@@ -26,7 +26,7 @@ Pattern match: system_log #3 /^([\w|\s]+\s+\d{1,2}\s[\d|\:|\.]+)\s+(\S+)\s+(.*)\
 {"logSource":"/var/log/wifi.log","_type":"log","service":"<kernel>","message":"IO80211Interface::updateReport _peerManager is missing","@timestamp":"2017-09-30T10:24:39.063Z"}
 ```
 
-In case you want to load multiple pattern files, then make sure the pattern file having the debug option enabled is the last file loaded because each loaded config could overwrite settings of previously loaded pattern files:
+To load multiple pattern files make sure the pattern file with the the debug option enabled is the last file loaded because each loaded config could overwrite settings of the previously loaded pattern files:
 
 ``` 
 echo "debug: true" > debug-enable.yml
@@ -35,14 +35,14 @@ logagent -f patterns.yml -f ./debug-enable.yml  -g '/var/log/**/*.log'
 
 ### Why does Logagent use stderr for its own logs?
 
-Logagent could be used as command line tool with other Linux tools to pipe data from stdin and output processed data to stdout. Therefore Logagent writes its own log messages to stderr to avoid any interference with the data processing pipes. 
+Logagent can be used as a command line tool with other Linux tools.  It can read data from stdin and output processed data to stdout. Logagent writes its own log messages to stderr in order to avoid any interference with data processing pipeline. 
 
 Plugin developers should use the console.error function for logs produced by the plugin itself. 
 
 
 ### Where are Logagent's own logs? 
 
-When Logagent is installed as service, Logagent log files are captured by upstart or systemd. 
+When Logagent is installed as a service, Logagent log files are captured by upstart or systemd. 
 
 - systemd - `journalctl -u logagent`
 - upstart - `/var/log/upstart/logagent`
@@ -50,7 +50,7 @@ When Logagent is installed as service, Logagent log files are captured by upstar
 - docker - `docker logs container-name`
 - Windows - Windows does not capture stderr stream of services 
 
-### Where are Logagent service scripts and how to restart the service
+### Where are Logagent service scripts and how to restart the service?
 
 Location of service scripts:
 
@@ -60,7 +60,7 @@ Location of service scripts:
 
 Restart Logagent service:
 
-- upstart: `service logagent restart
+- upstart: `service logagent restart`
 - systemd: `systemctl stop logagent && systemctl start logagent`
 - launchd: `launchctl stop com.sematext.logagent && launchctl stop com.sematext.logagent`
 
@@ -68,13 +68,13 @@ Restart Logagent service:
 Default location of Logagent service configuration file:
 
 - Linux and Mac OS X: `/etc/sematext/logagent.conf`
-  The location could be changed by setting the LOGAGENT_CONFIG environment variable. 
+  The location can be changed by setting the LOGAGENT_CONFIG environment variable. 
 - Windows: `%ProgramData%\Sematext\logagent.conf`
-  The location could be changed with following registry key: 
+  The location can be changed with following registry key: 
   `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment\LOGAGENT_CONFIG`
 
 
-### How do I tail multiple files
+### How do I tail multiple files?
 
 On the command line you could use one or more glob patterns: 
 
@@ -83,7 +83,7 @@ logagent -g '/var/log/**/*.log'
 logagent -g '{/var/log/**/*.log, /myapp/logs/*.log}'
 ```
 
-Logagent configuration files use a list of glob patterns in the [input.files](https://www.sematext.com/docs/logagent/input-plugin-files/) section, each glob pattern might result in watching multiple files. New files are detected automatically after periodical scans (once a minute):  
+Logagent configuration files use a list of glob patterns in the [input.files](https://www.sematext.com/docs/logagent/input-plugin-files/) section. Each glob pattern might result in watching multiple files. New files are detected automatically after periodical scans (once a minute):
 
 ```
 input:
@@ -93,15 +93,14 @@ input:
     - '/opt/another-log-directory/another.log'
 ```
 
-input  
 
-### How do I ship logs to multiple destinations / Sematext Logs apps
+### How do I ship logs to multiple destinations / Sematext Logs apps?
 
 Logagent supports multiple instances of output plugins (Kafka, Elasticsearch, Files, ...). 
 
 The Elasticseach plugin supports routing to different indices (or Sematext Logsene Tokens), by configuring a list of patterns matching the log file name. 
 
-The following example ships logs from wireless devices and authentication log to a local Elasticsearch server and other server logs to multiple Logsene applications. 
+The following example ships logs from wireless devices and authentication log to a local Elasticsearch server and other server logs to multiple Logsene apps. 
 
 ```
 
@@ -112,7 +111,7 @@ input:
 output:
   # index logs in Elasticsearch or Logsene
   local-elasticsearch: 
-    modul: elasticsearch
+    module: elasticsearch
     url: http://localhost:9200
     # default index to use, for all logs that don't match any other configuration
     index: other_logs
@@ -136,7 +135,7 @@ output:
               - myapp2\/app.log
 ```
 
-### How do I ship only error logs
+### How do I ship only error logs?
 
 Use the ["grep" input filter](http://sematext.com/docs/logagent/input-filter-grep/): 
 
@@ -162,7 +161,7 @@ output:
 ```
 
 
-### How do I drop logs that match a certain pattern
+### How do I drop logs that match a certain pattern?
 
 Use the ["grep" input filter](http://sematext.com/docs/logagent/input-filter-grep/): 
 
@@ -186,9 +185,9 @@ output:
 
 ```
 
-### How do I ship logs that match different patterns to different destinations / Sematext Logs apps
+### How do I ship logs that match different patterns to different destinations / Sematext Logs apps?
 
-An output filter function could do the trick, by setting data._index field, depending on various conditions. The following example creates an output filter with a configurable field name, a regular expression to match the content of the given field,  and index name for the output. 
+An output filter function could do the trick, by setting data.\_index field, depending on various conditions. The following example creates an output filter with a configurable field name, a regular expression to match the content of the given field,  and index name for the output. 
 
 ```
 outputFilter:
@@ -204,8 +203,3 @@ outputFilter:
         cb(null, data)
        }
 ```
-
-
-      
-
-
