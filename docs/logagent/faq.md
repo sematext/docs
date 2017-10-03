@@ -78,8 +78,10 @@ Default location of Logagent service configuration file:
 
 On the command line you could use one or more glob patterns: 
 
+```
 logagent -g '/var/log/**/*.log'
 logagent -g '{/var/log/**/*.log, /myapp/logs/*.log}'
+```
 
 Logagent configuration files use a list of glob patterns in the [input.files](https://www.sematext.com/docs/logagent/input-plugin-files/) section, each glob pattern might result in watching multiple files. New files are detected automatically after periodical scans (once a minute):  
 
