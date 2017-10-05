@@ -47,13 +47,17 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Integrations:
         - Overview: integration/index.md
-        - Monitoring Hadoop: integration/hadoop.md
-        - Monitoring MongoDB: integration/mongodb.md
-        - Monitoring Node.js: integration/node.js.md
-        - Monitoring AWS: integration/aws.md
+        - Hadoop: integration/hadoop.md
+        - MongoDB: integration/mongodb.md
+        - Node.js: integration/node.js.md
+        - AWS: integration/aws.md
         - HipChat: integration/alerts-hipchat-integration.md
         - PagerDuty: integration/alerts-pagerduty-integration.md
         - Slack: integration/alerts-slack-integration.md
+        - Solr: integration/solr.md
+        - Elasticsearch: integration/elasticsearch.md
+        - HBase: integration/hbase.md
+        - Kafka: integration/kafka.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - FAQ: sematext-enterprise/faq.md
