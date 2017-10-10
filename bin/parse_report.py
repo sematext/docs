@@ -83,7 +83,7 @@ class ReportHandler( xml.sax.ContentHandler):
 
 if (__name__ == "__main__"):
 
-  spmpath = '/home/tiennm/workspace/sematext/spm-master/spm-reports/src/main/resources/cr-report-config/report/'
+  spmpath = '~/workspace/sematext/spm-master/spm-reports/src/main/resources/cr-report-config/report/'
 
   for (spmdirpath, spmdirnames, spmfilenames) in walk(spmpath):
     for spmdirname in spmdirnames:
