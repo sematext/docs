@@ -139,7 +139,93 @@ To add the dependency to your package.json simply use:
 
     npm install spm-agent-nodejs@latest --save
 
- 
+## Metrics
+
+### Report: GC
+
+#### Chart: Process Memory
+Metric Name | Metric Description
+--- | ---
+heap used | 
+heap total | 
+memory rss | 
+
+#### Chart: Garbage Collection
+Metric Name | Metric Description
+--- | ---
+full gc | 
+inc gc | 
+
+#### Chart: GC Released Memory
+Metric Name | Metric Description
+--- | ---
+total released | 
+released per run | 
+
+#### Chart: Garbage Collection Time
+Metric Name | Metric Description
+--- | ---
+total duration | 
+avg. run duration | 
+
+
+
+### Report: Cluster
+
+#### Chart: Workers
+Metric Name | Metric Description
+--- | ---
+workers count | 
+
+
+
+### Report: HTTP Server
+
+#### Chart: Response Time
+Metric Name | Metric Description
+--- | ---
+response latency | 
+max response latency | 
+min response latency | 
+
+#### Chart: Request Rate
+Metric Name | Metric Description
+--- | ---
+request rate | 
+error rate | 
+request count | 
+error count | 
+
+#### Chart: Error Breakdown
+Metric Name | Metric Description
+--- | ---
+3xx count | 
+4xx count | 
+5xx count | 
+3xx rate | 
+4xx rate | 
+5xx rate | 
+
+#### Chart: Request/Response Content Size
+Metric Name | Metric Description
+--- | ---
+avg. req. size | 
+avg. res. size | 
+total req. size | 
+total res. size | 
+
+
+
+### Report: Event Loop
+
+#### Chart: Event Loop Latency
+Metric Name | Metric Description
+--- | ---
+max latency | 
+min latency | 
+latency | 
+
+
 
  
 

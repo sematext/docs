@@ -55,3 +55,167 @@ Elasticsearch node which hosts only replicas. The same is also true for
 Refresh/Flush and Merge stats. Also note that SPM Elasticsearch monitor
 should be installed on all your Elasticsearch nodes to get the complete
 picture of your cluster in SPM Reports UI.
+
+## Metrics
+
+### Report: Cache
+
+#### Chart: Request
+Metric Name | Metric Description
+--- | ---
+maximum size | 
+estimated size | 
+overhead | 
+
+#### Chart: Fielddata
+Metric Name | Metric Description
+--- | ---
+maximum size | 
+estimated size | 
+overhead | 
+
+
+
+### Report: Cluster Health
+
+#### Chart: ES Shards
+Metric Name | Metric Description
+--- | ---
+active primary shards | 
+active shards | 
+relocating shards | 
+initializing shards | 
+unassigned shards | 
+
+#### Chart: ES Nodes
+Metric Name | Metric Description
+--- | ---
+nodes | 
+data nodes | 
+
+
+
+### Report: Cache
+
+#### Chart: Warmer
+Metric Name | Metric Description
+--- | ---
+current | 
+total | 
+total time | 
+
+#### Chart: Field Cache
+Metric Name | Metric Description
+--- | ---
+field cache evictions | 
+field cache size | 
+
+#### Chart: Query/Filter Cache
+Metric Name | Metric Description
+--- | ---
+filter cache count | 
+filter cache evictions | 
+filter cache size | 
+
+
+
+### Report: Connections
+
+#### Chart: Connections/Sockets
+Metric Name | Metric Description
+--- | ---
+open TCP sockets (current_estab) | 
+open TCP conns (server_open) | 
+open HTTP conns (current_open) | 
+total opened HTTP conns (total_opened) | 
+
+#### Chart: TCP Traffic
+Metric Name | Metric Description
+--- | ---
+inbound segments (in_segs) | 
+outbound segments (out_segs) | 
+retransmitted segments (retrans_segs) | 
+
+#### Chart: Transport (Node-to-Node)
+Metric Name | Metric Description
+--- | ---
+received count (rx_count) | 
+transmitted count (tx_count) | 
+received size (rx_size) | 
+transmitted size (tx_size) | 
+
+#### Chart: TCP Socket Stats
+Metric Name | Metric Description
+--- | ---
+active conn openings (active_opens) | 
+passive conn openings (passive_opens) | 
+failed socket open (attempt_fails) | 
+socket resets sent (out_rsts) | 
+open sockets (current_estab) | 
+socket resets (estab_resets) | 
+
+
+
+### Report: Cluster Topology
+
+#### Chart: Shards
+Metric Name | Metric Description
+--- | ---
+active primary shards | 
+active shards | 
+relocating shards | 
+initializing shards | 
+unassigned shards | 
+
+
+
+### Report: Thread Pool
+
+#### Chart: Thread Pool
+Metric Name | Metric Description
+--- | ---
+active | 
+size | 
+queue | 
+queue size | 
+rejected | 
+largest | 
+completed | 
+min | 
+max | 
+
+
+
+### Report: Index Stats
+
+#### Chart: Documents
+Metric Name | Metric Description
+--- | ---
+docs count (prim) | docs count on primary shards
+docs count (all) | docs count on all (primary and replica) shards
+docs deleted (prim) | docs deleted on primary shards
+docs deleted (all) | docs deleted on all (primary and replica) shards
+size on disk (prim) | size on the disk of primary shards
+size on disk (all) | size on the disk of all (primary and replica) shards
+
+#### Chart: Merged Documents
+Metric Name | Metric Description
+--- | ---
+docs count (prim) | merge docs count on primary shards
+docs count (all) | merge docs count on all (primary and replica) shards
+docs size (prim) | merged docs size on primary shards
+docs size (all) | merge docs size on all (primary and replica) shards
+
+#### Chart: Indexing
+Metric Name | Metric Description
+--- | ---
+indexed docs (prim) | docs indexed on primary shards
+indexed docs (all) | docs indexed on all (primary and replica) shards
+delete total (prim) | docs deleted on primary shards
+delete total (all) | docs deleted on all (primary and replica) shards
+indexing rate (prim) | indexing rate on primary shards
+indexing rate (all) | indexing rate on all (primary and replica) shards
+deleting rate (prim) | deleting rate on primary shards
+deleting rate (all) | deleting rate on all (primary and replica) shards
+
+
