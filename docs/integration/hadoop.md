@@ -61,23 +61,23 @@ should be good enough for most situations.
 #### Chart: NodeManager Containers
 Metric Name | Metric Description
 --- | ---
-allocated GB | 
-available GB | 
-num allocated containers | 
-containers completed | 
-containers failed | 
-containers inited | 
-containers killed | 
-containers launched | 
-containers running | 
+allocated GB | Allocated Memory
+available GB | Available Memory
+num allocated containers | Number of containers allocated in this pool
+containers completed | Containers Completed
+containers failed | Containers Failed
+containers inited | Containers Initializing
+containers killed | Containers Killed
+containers launched | Containers Launched
+containers running | Containers Running
 
 #### Chart: NodeManager Shuffle
 Metric Name | Metric Description
 --- | ---
-shuffle connections | 
-shuffle outputs failed | 
-shuffle outputs ok | 
-containers completed | 
+shuffle connections | Number of current shuffle connections
+shuffle outputs failed | Number of failed shuffle outputs
+shuffle outputs ok | Number of succeeded shuffle outputs
+containers completed | Total number of successfully completed containers
 
 
 
@@ -86,38 +86,38 @@ containers completed |
 #### Chart: ResourceManager Queue Containers
 Metric Name | Metric Description
 --- | ---
-containers allocated | 
-containers released | 
-containers pending | 
-containers reserved | 
+containers allocated | Current number of allocated containers
+containers released | Total number of released containers
+containers pending | Current pending resource requests that are not yet fulfilled by the scheduler
+containers reserved | Current number of reserved containers
 
 #### Chart: JobTracker Queue Running
 Metric Name | Metric Description
 --- | ---
-running 0 | 
-running 60 | 
-running 300 | 
-running 1440 | 
+running 0 | Current number of running applications whose elapsed time are less than 60 minutes
+running 60 | Current number of running applications whose elapsed time are between 60 and 300 minutes
+running 300 | Current number of running applications whose elapsed time are between 300 and 1440 minutes
+running 1440 | Current number of running applications elapsed time are more than 1440 minutes
 
 #### Chart: ResourceManager Queue Applications
 Metric Name | Metric Description
 --- | ---
-applications completed | 
-applications failed | 
-applications killed | 
-applications pending | 
-applications running | 
-applications submitted | 
+applications completed | Total number of completed applications
+applications failed | Total number of failed applications
+applications killed | Total number of killed applications
+applications pending | Current number of applications that have not yet been assigned by any containers
+applications running | Current number of running applications
+applications submitted | Total number of submitted applications
 
 #### Chart: ResourceManager Queue Status
 Metric Name | Metric Description
 --- | ---
-active applications | 
-active users | 
-allocated MB | 
-available MB | 
-pending MB | 
-reserved MB | 
+active applications | Current number of active applications
+active users | Current number of active users
+allocated MB | Current allocated memory in MB
+available MB | Current available memory in MB
+pending MB | Current pending memory resource requests in MB that are not yet fulfilled by the scheduler
+reserved MB | Current reserved memory in MB
 
 
 
@@ -126,11 +126,11 @@ reserved MB |
 #### Chart: ResourceManager NMs
 Metric Name | Metric Description
 --- | ---
-active NMs | 
-decom NMs | 
-lost NMs | 
-rebooted NMs | 
-unhealthy NMs | 
+active NMs | Current number of active NodeManagers
+decom NMs | Current number of decommissioned NodeManagers
+lost NMs | Current number of lost NodeManagers for not sending heartbeats
+rebooted NMs | Current number of rebooted NodeManagers
+unhealthy NMs | Current number of unhealthy NodeManagers
 
 
 
@@ -139,39 +139,39 @@ unhealthy NMs |
 #### Chart: DataNode Read/Write
 Metric Name | Metric Description
 --- | ---
-bytes read | 
-bytes written | 
-read from local client | 
-reads from remote client | 
-writes from local client | 
-writes from remote client | 
+bytes read | Total number of bytes read from DataNode
+bytes written | Total number of bytes written to DataNode
+read from local client | Total number of read operations from local client
+reads from remote client | Total number of read operations from remote clientv
+writes from local client | Total number of write operations from local client
+writes from remote client | Total number of write operations from remote client
 
 #### Chart: DataNode Heartbeats
 Metric Name | Metric Description
 --- | ---
-heartbeats avg time | 
-heartbeats num ops | 
+heartbeats avg time | Average heartbeat time in milliseconds
+heartbeats num ops | Total number of heartbeats
 
 #### Chart: DataNode Blocks
 Metric Name | Metric Description
 --- | ---
-blocks read | 
-blocks written | 
-blocks removed | 
-blocks replicated | 
-blocks verified | 
+blocks read | Total number of blocks read from DataNode
+blocks written | Total number of blocks written to DataNode
+blocks removed | Total number of blocks removed
+blocks replicated | Total number of blocks replicated
+blocks verified | Total number of blocks verified
 
 #### Chart: DataNode Block Ops
 Metric Name | Metric Description
 --- | ---
-copy block op avg time | 
-copy block num ops | 
-read block op avg time | 
-read block num ops | 
-replace block op avg time | 
-replace block num ops | 
-write block op avg time | 
-write block num ops | 
+copy block op avg time | Average time of block copy operations in milliseconds
+copy block num ops | Total number of block copy operations
+read block op avg time | Average time of read operations in milliseconds
+read block num ops | Total number of read operations
+replace block op avg time | Average time of block replace operations in milliseconds
+replace block num ops | Total number of block replace operations
+write block op avg time | Average time of write operations in milliseconds
+write block num ops | Total number of write operations
 
 
 
@@ -180,13 +180,13 @@ write block num ops |
 #### Chart: TaskTracker Tasks
 Metric Name | Metric Description
 --- | ---
-map task slots | 
-reduce task slots | 
-maps running | 
-reduces running | 
-tasks completed | 
-tasks failed ping | 
-tasks failed timeout | 
+map task slots | Total number of map task slots on the TaskTracker
+reduce task slots | Total number of reduce task slots on the TaskTracker
+maps running | Current number of running map tasks on the TaskTracker
+reduces running | Current number of running reduce tasks on the TaskTarcker
+tasks completed | Total number of completed tasks
+tasks failed ping | Total number of failed tasks by child JVM failed to ping TaskTracker
+tasks failed timeout | Total number of failed tasks by not reporting progress for a specific period
 
 
 
@@ -195,40 +195,40 @@ tasks failed timeout |
 #### Chart: JobTracker Queue Maps
 Metric Name | Metric Description
 --- | ---
-maps completed | 
-maps failed | 
-maps killled | 
-maps launched | 
-map slots | 
-waiting maps | 
+maps completed | Total number of map tasks completed
+maps failed | Total number of map tasks failed
+maps killled | Total number of map tasks killed
+maps launched | Total number of map tasks launched
+map slots | Current map slots in cluster
+waiting maps | Current number of waiting map tasks
 
 #### Chart: JobTracker Queue Reduces
 Metric Name | Metric Description
 --- | ---
-reduces completed | 
-reduces failed | 
-reduces killled | 
-reduces launched | 
-reduce slots | 
-waiting reduces | 
+reduces completed | Total number of reduce tasks completed
+reduces failed | Total number of reduce tasks failed
+reduces killled | Total number of reduce tasks killed
+reduces launched | Total number of reduce tasks launched
+reduce slots | Current reduce slots in cluster
+waiting reduces | Current number of waiting reduce tasks
 
 #### Chart: JobTracker Queue Jobs
 Metric Name | Metric Description
 --- | ---
-jobs completed | 
-jobs failed | 
-jobs killled | 
-jobs preparing | 
-jobs running | 
-jobs submitted | 
+jobs completed | Total number of jobs completed
+jobs failed | Total number of failed jobs
+jobs killled | Total number of killed jobs
+jobs preparing | Current number of preparing jobs
+jobs running | Current number of running jobs
+jobs submitted | Total number of jobs submitted
 
 #### Chart: JobTracker Queue Running
 Metric Name | Metric Description
 --- | ---
-running 0 | 
-running 60 | 
-running 300 | 
-running 1440 | 
+running 0 | Counts the number of running jobs
+running 60 | Counts the number of jobs running for more than one hour
+running 300 | Counts the number of jobs running for more than five hours
+running 1440 | Counts the number of jobs running for more than 24 hours
 
 
 
@@ -237,41 +237,41 @@ running 1440 |
 #### Chart: NameNode HDFS Nodes
 Metric Name | Metric Description
 --- | ---
-live nodes | 
-dead nodes | 
-decom nodes | 
+live nodes | Calculates the number of live nodes in a cluster
+dead nodes | Counts the number of dead nodes that exist in a cluster
+decom nodes | Counts the number of decommissioned nodes that exist in a cluster
 
 #### Chart: NameNode Files
 Metric Name | Metric Description
 --- | ---
-total files | 
-created files | 
-appended files | 
-renamed files | 
-deleted files | 
-create file ops | 
-get listing ops | 
-delete file ops | 
-file info ops | 
+total files | Counts the total number of files in a cluster
+created files | Counts the number of files created in a cluster
+appended files | Counts the number of files appended in a cluster
+renamed files | Counts the number of files renamed in a cluster
+deleted files | Counts the number of files deleted in a cluster
+create file ops | Counts the number of create file operations occurring in a cluster
+get listing ops | Counts the number of get listing operations occurring in a cluster
+delete file ops | Counts the number of delete file operations occurring in HDFS
+file info ops | Counts the number of file access operations occurring in the cluster
 
 #### Chart: NameNode Fs Blocks
 Metric Name | Metric Description
 --- | ---
-blocks total | 
-corrupt blocks | 
-excess blocks | 
-missing blocks | 
-blocks pending deletion | 
-blocks pending replication | 
-scheduled replication blocks | 
-under replicated blocks | 
+blocks total | Counts the current number of blocks allocated in a cluster.
+corrupt blocks | Counts the number of corrupt blocks in a cluster. Corrupt blocks can be caused by one or more datanodes being down. This value should be zero or below an acceptable threshold
+excess blocks | Counts the number of excess blocks in a cluster. Excess blocks can be caused by a namenode losing heartbeats from one or more datanodes, and this causes the scheduling of extra replicas
+missing blocks | Counts the number of missing blocks in a cluster. Missing blocks can be caused by datanodes being down. This value should be zero or below an acceptable threshold
+blocks pending deletion | Counts the number of blocks that are waiting for deletion. Datanodes that are back online after being down reduces the number of blocks waiting for deletion
+blocks pending replication | Counts the number of blocks that are waiting for replication. Datanodes that are back online after being down reduces the number of blocks waiting for replication
+scheduled replication blocks | Counts the number of blocks scheduled for replication. This value varies from datanodes being online or offline, and the number of replicas being changed in the hdfs-site.xml(dfs.replication)
+under replicated blocks | Counts the number of under replicated blocks in a cluster. Datanodes being down or a sudden increased load on the cluster can cause under replicated blocks
 
 #### Chart: NameNode HDFS Capacity
 Metric Name | Metric Description
 --- | ---
-capacity total | 
-capacity used | 
-capacity remaining | 
+capacity total | Calculates the total capacity remaining in HDFS and other distributed file systems in GB
+capacity used | Calculates the current capacity Usage in GB
+capacity remaining | Calculates the total capacity remaining in HDFS space in GB
 
 
 
@@ -280,26 +280,26 @@ capacity remaining |
 #### Chart: JobTracker Heartbeats
 Metric Name | Metric Description
 --- | ---
-heartbeats | 
+heartbeats | Counts the total number of JobTracker heartbeats
 
 #### Chart: MapReduce Runtime
 Metric Name | Metric Description
 --- | ---
-map slots | 
-reduce slots | 
-occupied map slots | 
-occupied reduce slots | 
-running maps | 
-running reduces | 
+map slots | Counts the number of map slots
+reduce slots | Counts the number of reduce slots
+occupied map slots | Counts the number of occupied map slots
+occupied reduce slots | Counts the number of occupied reduce slots
+running maps | Counts the number of running maps
+running reduces | Counts the number of running reduce
 waiting maps | 
 waiting reduces | 
 
 #### Chart: JobTracker Health
 Metric Name | Metric Description
 --- | ---
-blacklisted maps | 
-blacklisted reduces | 
-trackers | 
-blacklisted trackers | 
-decommissioned trackers | 
-graylisted trackers | 
+blacklisted maps | Counts the number of blacklisted map slots in each TaskTracker
+blacklisted reduces | Counts the number of blacklisted reduce slots in each TaskTracker
+trackers | Counts the number of TaskTrackers
+blacklisted trackers | Counts the number of blacklisted TaskTrackers
+decommissioned trackers | Counts the number of decommissioned TaskTrackers
+graylisted trackers | Counts the number of greylisted TaskTrackers
