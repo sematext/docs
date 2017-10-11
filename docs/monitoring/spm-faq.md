@@ -1033,7 +1033,7 @@ server A, and sending metrics to a different Monitoring App Bar, that's another 
 If you are not sending metrics from a server A for a Monitoring App Foo between
 02:00 and 03:00 then you pay $0 for that hour.
 
-A single agent monitoring 24/7 will end up being ~ $25/month.  If you you run another agent on another server it will be 2 x ~ $25/mo.
+A single agent monitoring 24/7 will end up being ~ $25/month.  If you run another agent on another server it will be 2 x ~ $25/mo.
 
 #### How do you bill for Docker container monitoring
 
