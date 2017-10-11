@@ -1,3 +1,8 @@
+## Integration
+
+- Agent: https://github.com/sematext/sematext-agent-httpd
+- Instructions: https://apps.sematext.com/ui/howto/Apache/overview
+
 ## Metrics
 
 ### Report: Apache Worker Stats
