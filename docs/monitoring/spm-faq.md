@@ -9,7 +9,7 @@ tweet [@sematext](http://twitter.com/sematext).
 
 #### **Is there an On Premises version of SPM that I can run on my own servers**
 
-**A**: Yes there is.  Please see [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/on-premises/).
+**A**: Yes there is.  Please see [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/).
 
 #### Is there a limit to how many servers I can monitor with SPM
 
@@ -23,7 +23,7 @@ application in addition to monitoring [specific applications](spm-faq/#which-ap
 
 #### Can I run the complete SPM on my own servers
 
-**A:** Yes,  [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/on-premises/)
+**A:** Yes,  [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/)
  is available. The Sematext Enterprise version is identical to the Sematext Cloud version
 and you can get an evaluation version to try it out.
 
