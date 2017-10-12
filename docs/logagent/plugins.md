@@ -17,7 +17,8 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                                   |
 | [postgresql-query](input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
 | [elasticsearch-query](input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
-| [logagent-input-kafka](input-plugin-kafka)         | input          | Receiver messages from Apache Kafka topics. 3rd party module.                                                             |
+| [logagent-input-kafka](input-plugin-kafka)         | input          | Receives messages from Apache Kafka topics. 3rd party module.  
+| [input-influx-http](input-plugin-influx-http)         | input          | Receives metrics from InfluxDB compatible monitoring agents like Telegraf. |
 | [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
 | [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
