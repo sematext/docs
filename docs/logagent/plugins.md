@@ -2,7 +2,6 @@
 
 Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
 
-
 | Plugin              | Type                      | Description                                                                                              |
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
 | [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                                                |
@@ -32,7 +31,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
 
-### For Developers: How Logagent plugins work 
+## For Developers: How Logagent plugins work 
 
 - Logagent checks the configuration file for properties with a "module" key for the nodejs module name. External plugins need to be installed via npm. 
 - Plugins are initialized with the Logagent configuration (from command line arguments + configuration file) and the event emitter for Logagent. Plugins should provide a start and stop method.
