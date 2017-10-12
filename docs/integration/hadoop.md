@@ -54,6 +54,10 @@ same way as **SecondaryNameNode** can be monitored in **MRv1** setups.
 You can also define any alerts which are based on JVM metrics which
 should be good enough for most situations.
 
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Hadoop/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

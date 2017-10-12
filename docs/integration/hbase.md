@@ -32,6 +32,10 @@ SPM has been tested with HBase 0.90, 0.92, 0.94, and 0.98, but
 will work for newer versions, including all CDH
 versions.
 
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/HBase/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

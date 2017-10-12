@@ -1,3 +1,8 @@
+## Integration
+
+- Agent: https://github.com/sematext/sematext-agent-nginx
+- Instructions: https://apps.sematext.com/ui/howto/Nginx/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

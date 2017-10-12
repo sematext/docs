@@ -1,3 +1,9 @@
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Storm/overview
+
+## Metrics
+
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
 supervisors | storm.supervisors | Avg | Long | The number of Nodes in the cluster currently.

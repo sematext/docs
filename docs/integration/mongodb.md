@@ -70,6 +70,10 @@ The latest version and related information is available in the Github
 repository
  [sematext/spm-agent-mongodb](https://github.com/sematext/spm-agent-mongodb)
 
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/MongoDB/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

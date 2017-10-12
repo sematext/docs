@@ -1,3 +1,9 @@
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Redis/overview
+
+## Metrics
+
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
 Connected clients | redis.clients.connected | Avg | Long | 

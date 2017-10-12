@@ -21,6 +21,10 @@ when running in-process. If so, switch to in-process (javaagent) version
 of SPM
 monitor.
 
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Solr/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

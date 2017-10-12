@@ -139,6 +139,10 @@ To add the dependency to your package.json simply use:
 
     npm install spm-agent-nodejs@latest --save
 
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Node.js/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

@@ -56,6 +56,10 @@ Refresh/Flush and Merge stats. Also note that SPM Elasticsearch monitor
 should be installed on all your Elasticsearch nodes to get the complete
 picture of your cluster in SPM Reports UI.
 
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Elasticsearch/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description
