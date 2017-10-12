@@ -1,13 +1,14 @@
 # Supported Platforms
 
   - Docker \>= 1.6
-  - Platforms using Docker:  
+  - Platforms using Docker:
       - Docker Cloud
-      - Docker Data Center
+      - Docker Community Edition (CE)
+      - Docker Enterprise Edition (EE)
       - Kubernetes
       - Red Hat OpenShift
+      - Rancher
       - Mesos
       - CoreOS
-      - Rancher
       - Amazon ECS
       - DEIS PaaS
