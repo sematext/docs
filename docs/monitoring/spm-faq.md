@@ -9,7 +9,7 @@ tweet [@sematext](http://twitter.com/sematext).
 
 #### **Is there an On Premises version of SPM that I can run on my own servers**
 
-**A**: Yes there is.  Please see [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/on-premises/).
+**A**: Yes there is.  Please see [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/).
 
 #### Is there a limit to how many servers I can monitor with SPM
 
@@ -23,7 +23,7 @@ application in addition to monitoring [specific applications](spm-faq/#which-ap
 
 #### Can I run the complete SPM on my own servers
 
-**A:** Yes,  [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/on-premises/)
+**A:** Yes,  [Sematext Enterprise](http://sematext.com/docs/sematext-enterprise/)
  is available. The Sematext Enterprise version is identical to the Sematext Cloud version
 and you can get an evaluation version to try it out.
 
@@ -1020,24 +1020,22 @@ let you change it via the SPM\_RECEIVER\_URL environmental variable.
 
 ### Billing
 
-#### How exactly is usage metered for billing purposes
+#### How do you bill for infrastructure and server monitoring
 
-**A:** Usage is metered hourly per-server-per-app. For example:
+**A:** Usage is metered hourly on a per-agent basis. For example:
 
-If you send metrics from a server A for SPM app Foo between 01:00 and
+If you send metrics from a server A to Monitoring App Foo between 01:00 and
 02:00 that's $0.035 for the Standard plan.
 
-If you send metrics for a different SPM app Bar, even if from the same
-server A, that's another $0.035.
+If another agent is monitoring something else, even if that is running on the same
+server A, and sending metrics to a different Monitoring App Bar, that's another $0.035.
 
-If you are not sending metric from a server A for SPM app Foo between
+If you are not sending metrics from a server A for a Monitoring App Foo between
 02:00 and 03:00 then you pay $0 for that hour.
 
-If you send metrics from a server for that app X 24/7 that ends up being
-~ $25/month.  If you do that from 2 servers it ends up being 2 x ~
-$25/mo.
+A single agent monitoring 24/7 will end up being ~ $25/month.  If you run another agent on another server it will be 2 x ~ $25/mo.
 
-#### How do you bill for monitoring of Docker containers.
+#### How do you bill for Docker container monitoring
 
 **A:** Docker monitoring is based on the base price and per-container
 price.  The base price includes monitoring of a Docker host and free
@@ -1086,7 +1084,7 @@ this FAQ for information about BILLING\_ADMIN role.
 #### Do I have to commit or can I stop using SPM at any time
 
 **A:** There is no commitment and no contract. When/if you want to stop
-using SPM you simply stop sending us your metrics and/or switch to the
+using Sematext you simply stop sending us your metrics and/or switch to the
 Free plan.
 
 #### Can I get invoices
@@ -1095,4 +1093,3 @@ Free plan.
  If you don't see invoices there then you likely need to switch to a
 different account.  To do that look for a pull-down menu at the
 top-right of the UI.
-
