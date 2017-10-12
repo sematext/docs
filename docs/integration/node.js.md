@@ -141,91 +141,24 @@ To add the dependency to your package.json simply use:
 
 ## Metrics
 
-### Report: GC
-
-#### Chart: Process Memory
-Metric Name | Metric Description
---- | ---
-heap used | 
-heap total | 
-memory rss | 
-
-#### Chart: Garbage Collection
-Metric Name | Metric Description
---- | ---
-full gc | 
-inc gc | 
-
-#### Chart: GC Released Memory
-Metric Name | Metric Description
---- | ---
-total released | 
-released per run | 
-
-#### Chart: Garbage Collection Time
-Metric Name | Metric Description
---- | ---
-total duration | 
-avg. run duration | 
-
-
-
-### Report: Cluster
-
-#### Chart: Workers
-Metric Name | Metric Description
---- | ---
-workers count | 
-
-
-
-### Report: HTTP Server
-
-#### Chart: Response Time
-Metric Name | Metric Description
---- | ---
-response latency | 
-max response latency | 
-min response latency | 
-
-#### Chart: Request Rate
-Metric Name | Metric Description
---- | ---
-request rate | 
-error rate | 
-request count | 
-error count | 
-
-#### Chart: Error Breakdown
-Metric Name | Metric Description
---- | ---
-3xx count | 
-4xx count | 
-5xx count | 
-3xx rate | 
-4xx rate | 
-5xx rate | 
-
-#### Chart: Request/Response Content Size
-Metric Name | Metric Description
---- | ---
-avg. req. size | 
-avg. res. size | 
-total req. size | 
-total res. size | 
-
-
-
-### Report: Event Loop
-
-#### Chart: Event Loop Latency
-Metric Name | Metric Description
---- | ---
-max latency | 
-min latency | 
-latency | 
-
-
-
- 
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+heap used | nodejs.heap.used | Avg | Long | 
+full gc | nodejs.gc.full | Sum | Long | 
+inc gc | nodejs.gc.inc | Sum | Long | 
+total released | nodejs.gc.heap.diff | Sum | Double | 
+heap total | nodejs.heap.size | Avg | Long | 
+total duration | nodejs.gc.time | Sum | Double | 
+memory rss | nodejs.memory.rss | Avg | Long | 
+workers count | nodejs.workers | Avg | Long | 
+5xx count | nodejs.errors.5xx | Sum | Long | 
+request count | nodejs.requests | Sum | Long | 
+4xx count | nodejs.errors.4xx | Sum | Long | 
+total res. size | nodejs.response.size.total | Sum | Long | 
+total req. size | nodejs.requests.size.total | Sum | Long | 
+min response latency | nodejs.responses.latency.min | Min | Long | 
+3xx count | nodejs.errors.3xx | Sum | Long | 
+max response latency | nodejs.responses.latency.max | Max | Long | 
+error count | nodejs.errors | Sum | Long | 
+min latency | nodejs.eventloop.latency.min | Min | Long | 
+max latency | nodejs.eventloop.latency.max | Max | Long | 

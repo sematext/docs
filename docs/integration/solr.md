@@ -23,145 +23,31 @@ monitor.
 
 ## Metrics
 
-### Report: Request Rate & Latency
-
-#### Chart: Req. Rate
-Metric Name | Metric Description
---- | ---
-req. count | 
-req. count | 
-req. rate | 
-
-#### Chart: Req. Latency
-Metric Name | Metric Description
---- | ---
-perc. latency | 
-avg. latency | 
-
-
-
-### Report: Solr Components
-
-#### Chart: Solr Components Times (Avg)
-Metric Name | Metric Description
---- | ---
-avg. time | 
-
-
-
-### Report: Warmup
-
-#### Chart: Warmup Times
-Metric Name | Metric Description
---- | ---
-warmup time | 
-
-
-
-### Report: Error
-
-#### Chart: Errors Count
-Metric Name | Metric Description
---- | ---
-error count | 
-
-
-
-### Report: Indexing
-
-#### Chart: Other Events
-Metric Name | Metric Description
---- | ---
-update errors | 
-expunge deletes | 
-optimizes | 
-rollbacks | 
-
-#### Chart: Added Docs
-Metric Name | Metric Description
---- | ---
-added docs | 
-added docs rate | 
-docs pending | 
-
-#### Chart: Commit Events
-Metric Name | Metric Description
---- | ---
-commits | 
-autocommits | 
-soft commits | 
-autocommit max time | 
-
-#### Chart: Deletes
-Metric Name | Metric Description
---- | ---
-deletes by id | 
-deletes by query | 
-
-
-
-### Report: Cache
-
-#### Chart: Per Segment Filter Cache
-Metric Name | Metric Description
---- | ---
-autowarm count or % | 
-evictions | 
-hits % | 
-hits | 
-lookups | 
-max. size | 
-size | 
-
-#### Chart: Document Cache
-Metric Name | Metric Description
---- | ---
-autowarm count or % | 
-evictions | 
-hits % | 
-hits | 
-lookups | 
-max. size | 
-size | 
-
-#### Chart: Query Result Cache
-Metric Name | Metric Description
---- | ---
-autowarm count or % | 
-evictions | 
-hits % | 
-hits | 
-lookups | 
-max.size | 
-size | 
-
-#### Chart: Filter Cache
-Metric Name | Metric Description
---- | ---
-autowarm count or % | 
-evictions | 
-hits % | 
-hits | 
-lookups | 
-max. size | 
-size | 
-
-
-
-### Report: Index
-
-#### Chart: Solr Index Stats
-Metric Name | Metric Description
---- | ---
-max doc | 
-num docs | 
-segments | 
-deleted docs | 
-
-#### Chart: File System Stats
-Metric Name | Metric Description
---- | ---
-num of files | 
-size on the disk | 
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+req. count | solr.request.count | Sum | Long | 
+warmup time | solr.warmup.time | Max | Long | 
+error count | solr.error.count | Count | Metric | 
+autocommits | solr.indexing.commits.auto | Sum | Long | 
+commits | solr.indexing.commits | Sum | Long | 
+update errors | solr.indexing.errors | Sum | Long | 
+deletes by id | solr.indexing.deletes.id | Sum | Long | 
+added docs | solr.indexing.docs.added | Sum | Long | 
+optimizes | solr.indexing.optimizes | Sum | Long | 
+deletes by query | solr.indexing.deletes.query | Sum | Long | 
+rollbacks | solr.indexing.rollbacks | Sum | Long | 
+expunge deletes | solr.indexing.deletes.expunge | Sum | Long | 
+docs pending | solr.indexing.docs.pending | Avg | Long | 
+soft commits | solr.indexing.commits.soft | Sum | Long | 
+autocommit max time | solr.indexing.commits.auto.time.max | Max | Long | 
+lookups | solr.cache.segment.lookups | Sum | Long | 
+evictions | solr.cache.segment.evicted | Sum | Long | 
+autowarm count or % | solr.cache.segment.autowarm.count | Max | Long | 
+size | solr.cache.segment.size | Max | Long | 
+max. size | solr.cache.segment.size.max | Max | Long | 
+hits | solr.cache.segment.hits | Sum | Long | 
+max doc | solr.index.docs.max | Max | Long | 
+num docs | solr.index.docs | Max | Long | 
+num of files | solr.index.files | Max | Long | 
+size on the disk | solr.index.files.size | Max | Long | 
+segments | solr.index.segments | Max | Long | 

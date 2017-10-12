@@ -433,3 +433,30 @@ Latest information
 for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
 and [open issues](https://github.com/sematext/sematext-agent-docker/issues)
 
+## Metrics
+
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+container count | docker.containers | Avg | Long | 
+write wait time | docker.io.write.wait.time | Sum | Double | 
+write time | docker.io.write.time | Sum | Double | 
+read | docker.io.read | Sum | Long | 
+read wait time | docker.io.read.wait.time | Sum | Double | 
+read time | docker.io.read.time | Sum | Double | 
+write | docker.io.write | Sum | Long | 
+mem fail counter | docker.memory.fail.count | Sum | Long | 
+pages in | docker.swap.pages.in | Sum | Long | 
+mem usage | docker.memory.usage | Avg | Long | 
+pages fault | docker.swap.pages.fault | Sum | Long | 
+pages out | docker.swap.pages.out | Sum | Long | 
+mem limit | docker.memory.limit | Avg | Long | 
+cpu throttled time | docker.cpu.throttled.time | Sum | Double | 
+cpu usage | docker.cpu.percent | Avg | Double | 
+tx dropped | docker.network.tx.dropped | Sum | Long | 
+received | docker.network.rx.bytes | Sum | Long | 
+transmitted | docker.network.tx.bytes | Sum | Long | 
+received | docker.network.rx.packets | Sum | Long | 
+rx errors | docker.network.rx.errors | Sum | Long | 
+transmitted | docker.network.tx.packets | Sum | Long | 
+rx dropped | docker.network.rx.dropped | Sum | Long | 
+tx errors | docker.network.tx.errors | Sum | Long | 

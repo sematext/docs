@@ -1,65 +1,14 @@
 ## Metrics
 
-### Report: CPU & Mem
-
-#### Chart: CPU Details
-Metric Name | Metric Description
---- | ---
-'user' | 
-'system' | 
-'wait' | 
-'interruption' | 
-'soft interrupt' | 
-'nice' | 
-'steal' | 
-'idle' | 
-
-#### Chart: Load
-Metric Name | Metric Description
---- | ---
-'load' | 
-
-#### Chart: Memory Details
-Metric Name | Metric Description
---- | ---
-used | 
-cached | 
-buffered | 
-free | 
-
-#### Chart: Swap
-Metric Name | Metric Description
---- | ---
-'swap size' | 
-'swap IO in' | 
-'swap IO out' | 
-
-
-
-### Report: Net
-
-#### Chart: Network Traffic
-Metric Name | Metric Description
---- | ---
-transmitted | 
-received | 
-
-
-
-### Report: Disk
-
-#### Chart: IO Read/Write
-Metric Name | Metric Description
---- | ---
-read | 
-write | 
-
-#### Chart: Disk Space Used
-Metric Name | Metric Description
---- | ---
-used space | 
-used space (bytes) | 
-free space (bytes) | 
-
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+'swap size' | os.swap.size | Avg | Long | 
+cached | os.memory.cached | Avg | Long | 
+free | os.memory.free | Avg | Long | 
+buffered | os.memory.buffered | Avg | Long | 
+'swap IO out' | os.swap.io.out | Avg | Double | 
+'swap IO in' | os.swap.io.in | Avg | Double | 
+used | os.memory.used | Avg | Long | 
+'load' | os.load | Avg | Double | 
+used space (bytes) | os.disk.used.bytes | Avg | Long | 
+free space (bytes) | os.disk.free.bytes | Avg | Long | 

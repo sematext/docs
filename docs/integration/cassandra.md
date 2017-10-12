@@ -1,183 +1,39 @@
 ## Metrics
 
-### Report: Pending Cluster Ops
-
-#### Chart: Pending Cluster Ops
-Metric Name | Metric Description
---- | ---
-manual repair tasks pending | 
-gossip tasks pending | 
-hinted handoff pending | 
-internal responses pending | 
-migrations pending | 
-misc tasks pending | 
-request responses pending | 
-
-
-
-### Report: Compactions
-
-#### Chart: Compactions
-Metric Name | Metric Description
---- | ---
-bytes compacted | 
-compactions count | 
-
-
-
-### Report: Pending Reads
-
-#### Chart: Pending Reads
-Metric Name | Metric Description
---- | ---
-read requests pending | 
-read repair tasks pending | 
-compactions pending | 
-
-
-
-### Report: Local Writes
-
-#### Chart: Local Write Latency
-Metric Name | Metric Description
---- | ---
-write latency | 
-avg. write latency | 
-
-#### Chart: Local Writes Count
-Metric Name | Metric Description
---- | ---
-writes count | 
-
-
-
-### Report: Bloom Filter
-
-#### Chart: Bloom Filter False Positives
-Metric Name | Metric Description
---- | ---
-false positives | 
-
-#### Chart: Bloom Filter Space Used
-Metric Name | Metric Description
---- | ---
-space used | 
-
-#### Chart: Bloom Filter False Positive Ratio
-Metric Name | Metric Description
---- | ---
-false positive ratio | 
-
-
-
-### Report: Cluster
-
-#### Chart: Cluster
-Metric Name | Metric Description
---- | ---
-'leaving nodes' | 
-'moving nodes' | 
-'joining nodes' | 
-'live nodes' | 
-'unreachable nodes' | 
-
-
-
-### Report: SSTable
-
-#### Chart: SSTable
-Metric Name | Metric Description
---- | ---
-tables size | 
-tables count | 
-
-
-
-### Report: Local Writes
-
-#### Chart: Local Read Latency
-Metric Name | Metric Description
---- | ---
-read latency | 
-avg. read latency | 
-
-#### Chart: Local Reads Count
-Metric Name | Metric Description
---- | ---
-reads count | 
-
-#### Chart: Number of SSTables per read
-Metric Name | Metric Description
---- | ---
-reads count | 
-
-
-
-### Report: Cache
-
-#### Chart: Row Cache Requests
-Metric Name | Metric Description
---- | ---
-requests | 
-hits | 
-
-#### Chart: Key Cache Hit Ratio
-Metric Name | Metric Description
---- | ---
-hits | 
-
-#### Chart: Key Cache Requests
-Metric Name | Metric Description
---- | ---
-requests | 
-hits | 
-
-#### Chart: Row Cache Hit Ratio
-Metric Name | Metric Description
---- | ---
-hits | 
-
-
-
-### Report: Pending Wrties
-
-#### Chart: Pending Writes
-Metric Name | Metric Description
---- | ---
-flushes pending | 
-post flushes pending | 
-write requests pending | 
-repl. on write pending | 
-
-
-
-### Report: Read Requests
-
-#### Chart: Read Requests Latency
-Metric Name | Metric Description
---- | ---
-request latency | 
-avg. request latency | 
-
-#### Chart: Read Requests Count
-Metric Name | Metric Description
---- | ---
-requests count | 
-
-
-
-### Report: Write Requests
-
-#### Chart: Write Requests Count
-Metric Name | Metric Description
---- | ---
-requests count | 
-
-#### Chart: Write Requests Latency
-Metric Name | Metric Description
---- | ---
-request latency | 
-avg. request latency | 
-
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+hinted handoff pending | casandra.cluster.tasks.handoff.pending | Avg | Long | 
+migrations pending | casandra.cluster.tasks.migration.pending | Avg | Long | 
+misc tasks pending | casandra.cluster.tasks.misc.pending | Avg | Long | 
+manual repair tasks pending | casandra.cluster.tasks.repair.pending | Avg | Long | 
+gossip tasks pending | casandra.cluster.tasks.gossip.pending | Avg | Long | 
+internal responses pending | casandra.cluster.tasks.response.internal.pending | Avg | Long | 
+request responses pending | casandra.cluster.tasks.response.pending | Avg | Long | 
+compactions count | casandra.compaction.completed | Sum | Long | 
+bytes compacted | casandra.compaction.bytes | Sum | Long | 
+read repair tasks pending | casandra.read.repair.pending | Avg | Long | 
+read requests pending | casandra.read.requests.pending | Avg | Long | 
+compactions pending | casandra.compaction.pending | Avg | Long | 
+writes count | casandra.local.write.requests | Sum | Long | 
+false positives | casandra.bloom.falsepositives | Sum | Long | 
+space used | casandra.bloom.disk.space | Avg | Long | 
+false positive ratio | casandra.bloom.falsepositives.ratio | Avg | Double | 
+'joining nodes' | casandra.cluster.nodes.joining | Max | Long | 
+'moving nodes' | casandra.cluster.nodes.moving | Max | Long | 
+'live nodes' | casandra.cluster.nodes.live | Max | Long | 
+'leaving nodes' | casandra.cluster.nodes.leaving | Max | Long | 
+'unreachable nodes' | casandra.cluster.nodes.unreachable | Avg | Double | 
+tables count | casandra.sstable.count | Avg | Long | 
+tables size | casandra.sstable.size | Avg | Long | 
+reads count | casandra.local.read.requests | Sum | Long | 
+reads count | casandra.number.of.sstables.per.read | Avg | Long | 
+requests | casandra.cache.row.requests | Sum | Long | 
+hits | casandra.cache.key.hits | Sum | Long | 
+requests | casandra.cache.key.requests | Sum | Long | 
+hits | casandra.cache.row.hits | Sum | Long | 
+post flushes pending | casandra.write.postflushes.pending | Avg | Long | 
+repl. on write pending | casandra.write.replications.pending | Avg | Long | 
+flushes pending | casandra.write.flushes.pending | Avg | Long | 
+write requests pending | casandra.write.pending | Avg | Long | 
+requests count | casandra.read.requests | Sum | Long | 
+requests count | casandra.write.requests | Sum | Long | 

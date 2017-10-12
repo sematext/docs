@@ -1,128 +1,41 @@
 ## Metrics
 
-### Report: Bobo
-
-#### Chart: SortCollector Memory Manager (Float)
-Metric Name | Metric Description
---- | ---
-cache hits num | 
-cache misses num | 
-hit ratio | 
-
-#### Chart: SortCollector Memory Manager (Int)
-Metric Name | Metric Description
---- | ---
-cache hits num | 
-cache misses num | 
-hit ratio | 
-
-#### Chart: FacetCount Collector Memory Manager
-Metric Name | Metric Description
---- | ---
-cache hits num | 
-cache misses num | 
-hit ratio | 
-
-
-
-### Report: Zoie
-
-#### Chart: Zoie Stats
-Metric Name | Metric Description
---- | ---
-disk index size | 
-RamA index size | 
-RamB index size | 
-disk index segments | 
-RamA index segments | 
-RamB index segments | 
-
-#### Chart: Zoie Disk Index Stats
-Metric Name | Metric Description
---- | ---
-disk index size | 
-disk free space | 
-
-
-
-### Report: Partitions
-
-#### Chart: Requests to Partitions
-Metric Name | Metric Description
---- | ---
-request time | 
-num. of requests | 
-
-
-
-### Report: Norbert
-
-#### Chart: Norbert Request Processor Stats
-Metric Name | Metric Description
---- | ---
-requests rejected | 
-
-#### Chart: Norbert Client Stats
-Metric Name | Metric Description
---- | ---
-average request processing time | 
-requests per second | 
-queue size | 
-
-
-
-### Report: Brokers
-
-#### Chart: Requests to Brokers
-Metric Name | Metric Description
---- | ---
-num. of requests | 
-req. to unknown partition (empty) | 
-errors | 
-
-#### Chart: Brokers Timings
-Metric Name | Metric Description
---- | ---
-total time | 
-scatter time | 
-gather time | 
-
-
-
-### Report: Nodes
-
-#### Chart: Nodes Timings
-Metric Name | Metric Description
---- | ---
-total search time | 
-search time | 
-prune time | 
-merge time | 
-get reader time | 
-other time | 
-
-
-
-### Report: Indexers
-
-#### Chart: Indexer Managers Stats
-Metric Name | Metric Description
---- | ---
-manager indexer events | 
-indexing events | 
-
-#### Chart: Indexer Batch Sizes
-Metric Name | Metric Description
---- | ---
-batch size | 
-update batch size | 
-
-#### Chart: Gateways
-Metric Name | Metric Description
---- | ---
-flush time | 
-docs indexed | 
-docs leftover | 
-
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+cache misses num | sensei.bobo.facet.cache.misses | Sum | Long | 
+cache misses num | sensei.bobo.sort.cache.misses | Sum | Long | 
+cache hits num | sensei.bobo.sort.float.cache.hits | Sum | Long | 
+cache hits num | sensei.bobo.sort.cache.hits | Sum | Long | 
+cache hits num | sensei.bobo.facet.cache.hits | Sum | Long | 
+cache misses num | sensei.bobo.sort.float.cache.misses | Sum | Long | 
+disk index size | sensei.zoie.disk.index.size.metric | Avg | Long | 
+RamB index segments | sensei.zoie.ram.b.index.segments | Avg | Long | 
+disk index segments | sensei.zoie.disk.index.segments | Avg | Long | 
+disk free space | sensei.zoie.disk.free | Avg | Long | 
+RamA index segments | sensei.zoie.ram.a.index.segments | Avg | Long | 
+RamB index size | sensei.zoie.ram.b.index.size | Avg | Long | 
+RamA index size | sensei.zoie.ram.a.index.size | Avg | Long | 
+request time | sensei.shards.requests.time | Avg | Long | 
+num. of requests | sensei.shards.requests | Sum | Long | 
+average request processing time | sensei.norbert.requests.processing.time | Avg | Double | 
+queue size | sensei.norbert.request.queued | Avg | Long | 
+requests per second | sensei.norbert.requests.rate | Avg | Double | 
+requests rejected | sensei.norbert.requests.rejected | Avg | Double | 
+req. to unknown partition (empty) | sensei.brokers.requests.unknownpartition | Sum | Long | 
+scatter time | sensei.brokers.requests.time.scatter | Avg | Long | 
+gather time | sensei.brokers.requests.time.gather | Avg | Long | 
+errors | sensei.brokers.errors | Sum | Long | 
+total time | sensei.brokers.requests.time | Avg | Long | 
+num. of requests | sensei.brokers.requests | Sum | Long | 
+total search time | sensei.nodes.search.time.total | Avg | Long | 
+get reader time | sensei.nodes.reader.get.time | Avg | Long | 
+merge time | sensei.nodes.merge.time | Avg | Long | 
+search time | sensei.nodes.search.time | Avg | Long | 
+prune time | sensei.nodes.prune.time | Avg | Long | 
+batch size | sensei.gateway.indexer.batches.size | Avg | Long | 
+indexing events | sensei.gateway.indexing.events | Avg | Long | 
+docs indexed | sensei.gateway.docs.indexed | Avg | Long | 
+docs leftover | sensei.gateway.docs.leftover | Avg | Long | 
+update batch size | sensei.gateway.indexer.batches.update.size | Avg | Long | 
+flush time | sensei.gateway.fulshes.time | Avg | Long | 
+manager indexer events | sensei.gateway.indexer.events | Avg | Long | 

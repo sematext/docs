@@ -28,167 +28,20 @@ The Describe* permissions are needed to identify the resources which need to be 
 
 ## Metrics
 
-### Report: Health
-
-#### Chart: Health
-Metric Name | Metric Description
---- | ---
-'healthy instances' | 
-'unhealthy instances' | 
-
-
-
-### Report: CPU
-
-#### Chart: Read/Write Operations
-Metric Name | Metric Description
---- | ---
-'disk reads' | 
-'disk writes' | 
-
-#### Chart: Disk Reads/Writes (Bytes)
-Metric Name | Metric Description
---- | ---
-'reads' | 
-'writes' | 
-
-
-
-### Report: Requests Queue
-
-#### Chart: Rejected Requests
-Metric Name | Metric Description
---- | ---
-'rejected requests' | 
-
-#### Chart: Pending Requests
-Metric Name | Metric Description
---- | ---
-'pending requests count' | 
-
-
-
-### Report: CPU
-
-#### Chart: CPU Utilization
-Metric Name | Metric Description
---- | ---
-'cpu utilization' | 
-
-
-
-### Report: Status Check
-
-#### Chart: Status Check
-Metric Name | Metric Description
---- | ---
-'status check failed' | 
-'status check failed (instance)' | 
-'status check failed (system)' | 
-
-
-
-### Report: CPU
-
-#### Chart: Network
-Metric Name | Metric Description
---- | ---
-'network in' | 
-'network out' | 
-
-
-
-### Report: EBS
-
-#### Chart: % Time Spent Idle
-Metric Name | Metric Description
---- | ---
-'% Time Spent Idle' | 
-
-#### Chart: Average Queue Length
-Metric Name | Metric Description
---- | ---
-'avg queue length' | 
-
-#### Chart: Average Read/Write Latency
-Metric Name | Metric Description
---- | ---
-'avg. read latency' | 
-'avg. write latency' | 
-
-#### Chart: Read/Write Bandwidth
-Metric Name | Metric Description
---- | ---
-'read bandwidth' | 
-'write bandwidth' | 
-
-#### Chart: Average Read/Write Size
-Metric Name | Metric Description
---- | ---
-'avg. read size' | 
-'avg. write size' | 
-
-#### Chart: Read/Write Throughput
-Metric Name | Metric Description
---- | ---
-'read throughput' | 
-'write throughput' | 
-
-
-
-### Report: ELB Responses
-
-#### Chart: ELB Responses
-Metric Name | Metric Description
---- | ---
-'4xx' | 
-'5xx' | 
-
-
-
-### Report: Provisioned IOPS
-
-#### Chart: Consumed Read/Write Ops
-Metric Name | Metric Description
---- | ---
-'consumed read/write ops' | 
-
-#### Chart: Volume Throughput Percentage
-Metric Name | Metric Description
---- | ---
-'throughtput percentage' | 
-
-
-
-### Report: Requests
-
-#### Chart: Latency
-Metric Name | Metric Description
---- | ---
-'latency min' | 
-'latency max' | 
-'latency avg' | 
-
-#### Chart: Requests
-Metric Name | Metric Description
---- | ---
-'requests count' | 
-
-
-
-### Report: Backend Responses
-
-#### Chart: Backend Responses
-Metric Name | Metric Description
---- | ---
-'2xx' | 
-'3xx' | 
-'4xx' | 
-'5xx' | 
-
-#### Chart: Connection Errors
-Metric Name | Metric Description
---- | ---
-'connection errors' | 
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+'reads' | aws.ec2.disk.read.bytes | Sum | Double | 
+'writes' | aws.ec2.disk.write.bytes | Sum | Double | 
+'rejected requests' | aws.elb.requests.rejected | Sum | Double | 
+'pending requests count' | aws.elb.requests.pending | Max | Long | 
+'network out' | aws.ec2.network.tx.bytes | Sum | Double | 
+'network in' | aws.ec2.network.rx.bytes | Sum | Double | 
+'5xx' | aws.elb.reponse.code.5xx | Sum | Double | 
+'4xx' | aws.elb.reponse.code.4xx | Sum | Double | 
+'consumed read/write ops' | aws.ebs.provisioned.ops.total | Sum | Double | 
+'requests count' | aws.elb.requests | Sum | Double | 
+'2xx' | aws.elb.backend.response.code.2xx | Sum | Double | 
+'4xx' | aws.elb.backend.response.code.4xx | Sum | Double | 
+'3xx' | aws.elb.backend.response.code.3xx | Sum | Double | 
+'5xx' | aws.elb.backend.response.code.5xx | Sum | Double | 
+'connection errors' | aws.elb.backend.connection.errors | Sum | Double | 

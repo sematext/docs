@@ -47,27 +47,27 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Integrations:
         - Overview: integration/index.md
-        - Monitoring Hadoop: integration/hadoop.md
-        - Monitoring MongoDB: integration/mongodb.md
-        - Monitoring Node.js: integration/node.js.md
-        - Monitoring AWS: integration/aws.md
-        - Monitoring Solr: integration/solr.md
-        - Monitoring Elasticsearch: integration/elasticsearch.md
-        - Monitoring HBase: integration/hbase.md
-        - Monitoring Kafka: integration/kafka.md
         - Monitoring Akka: integration/akka.md
         - Monitoring Apache: integration/apache.md
         - Monitoring Api: integration/api.md
+        - Monitoring AWS: integration/aws.md
         - Monitoring Cassandra: integration/cassandra.md
+        - Monitoring Elasticsearch: integration/elasticsearch.md
+        - Monitoring Hadoop: integration/hadoop.md
         - Monitoring HAProxy: integration/haproxy.md
+        - Monitoring HBase: integration/hbase.md
         - Monitoring JVM: integration/jvm.md
+        - Monitoring Kafka: integration/kafka.md
         - Monitoring MySQL: integration/mysql.md
+        - Monitoring MongoDB: integration/mongodb.md
         - Monitoring Nginx: integration/nginx.md
         - Monitoring Nginx Plus: integration/nginxplus.md
+        - Monitoring Node.js: integration/node.js.md
         - Monitoring OS: integration/os.md
         - Monitoring PHP: integration/php.md
         - Monitoring Redis: integration/redis.md
         - Monitoring Sensei: integration/sensei.md
+        - Monitoring Solr: integration/solr.md
         - Monitoring Spark: integration/spark.md
         - Monitoring Storm: integration/storm.md
         - Monitoring Tomcat: integration/tomcat.md

@@ -1,286 +1,49 @@
-## Metrics
-
-### Report: GC
-
-#### Chart: Garbage Collectors Summary
-Metric Name | Metric Description
---- | ---
-'collection time' | 
-'collection count' | 
-
-
-
-### Report: FS
-
-#### Chart: Disk
-Metric Name | Metric Description
---- | ---
-'reads' | 
-'writes' | 
-
-
-
-### Report: Memory Pool
-
-#### Chart: Memory pool
-Metric Name | Metric Description
---- | ---
-used | 
-committed | 
-max | 
-
-
-
-### Report: Actor
-
-#### Chart: Mailbox Size
-Metric Name | Metric Description
---- | ---
-'avg' | 
-
-#### Chart: Processing Time
-Metric Name | Metric Description
---- | ---
-'min' | 
-'max' | 
-'avg' | 
-
-#### Chart: Errors count
-Metric Name | Metric Description
---- | ---
-'count' | 
-
-#### Chart: Time in Mailbox
-Metric Name | Metric Description
---- | ---
-'min' | 
-'max' | 
-'avg' | 
-
-
-
-### Report: Throughput/Latency
-
-#### Chart: Http Throughput
-Metric Name | Metric Description
---- | ---
-Http Throughput | 
-
-#### Chart: HTTP Requests Count
-Metric Name | Metric Description
---- | ---
-http requests count | 
-
-#### Chart: Trace Response Time
-Metric Name | Metric Description
---- | ---
-max response time | 
-avg. response time | 
-min response time | 
-50% response time | 
-90% response time | 
-99% response time | 
-
-
-
-### Report: Actor
-
-#### Chart: CPU
-Metric Name | Metric Description
---- | ---
-'user' | 
-'system' | 
-'wait' | 
-'stolen' | 
-'idle' | 
-
-#### Chart: Memory
-Metric Name | Metric Description
---- | ---
-'used' | 
-'cache and buffer' | 
-'free' | 
-
-#### Chart: Process CPU
-Metric Name | Metric Description
---- | ---
-'total' | 
-'user' | 
-'system' | 
-
-#### Chart: Load Average
-Metric Name | Metric Description
---- | ---
-'one minute' | 
-'five minutes' | 
-'fifteen minutes' | 
-
-#### Chart: Swap
-Metric Name | Metric Description
---- | ---
-'used' | 
-'free' | 
-
-
-
-### Report: JVM
-
-#### Chart: JVM Memory
-Metric Name | Metric Description
---- | ---
-'used' | 
-'max' | 
-'committed' | 
-
-#### Chart: Non JVM Memory
-Metric Name | Metric Description
---- | ---
-'used' | 
-'max' | 
-'committed' | 
-
-
-
-### Report: Transactions
-
-
-
-### Report: ClassLoading
-
-#### Chart: Class Loading
-Metric Name | Metric Description
---- | ---
-'loaded' | 
-'unloaded' | 
-'currently loaded' | 
-
-
-
-### Report: Throughput/Latency
-
-#### Chart: Trace Errors
-Metric Name | Metric Description
---- | ---
-trace error count | 
-
-#### Chart: HTTP Error Responses
-Metric Name | Metric Description
---- | ---
-4xx | 
-5xx | 
-
-
-
-### Report: Custom Metrics
-
-#### Chart: Histogram
-Metric Name | Metric Description
---- | ---
-min value | 
-'avg value' | 
-max value | 
-50% | 
-90% | 
-99% | 
-
-#### Chart: Min Max Counter
-Metric Name | Metric Description
---- | ---
-min value | 
-'avg value' | 
-max value | 
-
-#### Chart: Counter
-Metric Name | Metric Description
---- | ---
-count | 
-
-#### Chart: Gauge
-Metric Name | Metric Description
---- | ---
-min value | 
-'avg value' | 
-max value | 
-
-
-
-### Report: Network
-
-#### Chart: Network
-Metric Name | Metric Description
---- | ---
-'received' | 
-'transmitted' | 
-
-#### Chart: Network Errors
-Metric Name | Metric Description
---- | ---
-'rx errors' | 
-'tx errors' | 
-'rx dropped' | 
-'tx dropped' | 
-
-
-
-### Report: Dispatcher
-
-#### Chart: Thread Pool Executor
-Metric Name | Metric Description
---- | ---
-'core pool size' | 
-'max pool size' | 
-'pool size' | 
-'active threads' | 
-'processed tasks' | 
-
-#### Chart: Fork Join Pool
-Metric Name | Metric Description
---- | ---
-'parallelism' | 
-'pool size' | 
-'active threads' | 
-'running threads' | 
-'queued tasks' | 
-
-
-
-### Report: Threads
-
-#### Chart: Threads
-Metric Name | Metric Description
---- | ---
-'daemon thread count' | 
-'peak thread count' | 
-'thread count' | 
-
-
-
-### Report: Router
-
-#### Chart: Errors count
-Metric Name | Metric Description
---- | ---
-'count' | 
-
-#### Chart: Time in Mailbox
-Metric Name | Metric Description
---- | ---
-'min' | 
-'max' | 
-'avg' | 
-
-#### Chart: Routing Time
-Metric Name | Metric Description
---- | ---
-'min' | 
-'max' | 
-'avg' | 
-
-#### Chart: Processing Time
-Metric Name | Metric Description
---- | ---
-'min' | 
-'max' | 
-'avg' | 
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+'collection time' | akka.jvm.gc.collection.time | Sum | Long | 
+'collection count' | akka.jvm.gc.collection.count | Sum | Long | 
+max | akka.memory.pool.max | Avg | Long | 
+committed | akka.memory.pool.committed | Avg | Long | 
+used | akka.memory.pool.used | Avg | Long | 
+'max' | akka.actor.mailbox.time.max | Max | Long | 
+'min' | akka.actor.processing.time.min | Min | Long | 
+'max' | akka.actor.processing.time.max | Max | Long | 
+'min' | akka.actor.mailbox.time.min | Min | Long | 
+'count' | akka.actor.errors | Sum | Long | 
+http requests count | tracing.akka.requests | Sum | Long | 
+max response time | tracing.akka.requests.time.max | Max | Long | 
+50% response time | tracing.akka.requests.time.p50 | Avg | Long | 
+min response time | tracing.akka.requests.time.min | Min | Long | 
+90% response time | tracing.akka.requests.time.p90 | Avg | Long | 
+99% response time | tracing.akka.requests.time.p99 | Avg | Long | 
+'loaded' | akka.jvm.classes.loaded.total | Max | Long | 
+'currently loaded' | akka.jvm.classes.loaded | Max | Long | 
+'unloaded' | akka.jvm.classes.unloaded | Max | Long | 
+trace error count | tracing.akka.requests.errors | Sum | Long | 
+4xx | tracing.akka.requests.errors.4xx | Sum | Long | 
+5xx | tracing.akka.requests.errors.5xx | Sum | Long | 
+min value | akka.custom.histogram.min | Min | Long | 
+count | akka.custom.counter.count | Sum | Long | 
+90% | akka.custom.histogram.p90 | Avg | Long | 
+max value | akka.custom.min.max.counter.max | Max | Long | 
+99% | akka.custom.histogram.p99 | Avg | Long | 
+max value | akka.custom.gauge.max | Max | Long | 
+50% | akka.custom.histogram.p50 | Avg | Long | 
+min value | akka.custom.min.max.counter.min | Min | Long | 
+max value | akka.custom.histogram.max | Max | Long | 
+min value | akka.custom.gauge.min | Min | Long | 
+'queued tasks' | akka.dispatcher.fj.tasks.queued | Max | Long | 
+'core pool size' | akka.dispatcher.executor.pool.core | Max | Long | 
+'pool size' | akka.dispatcher.executor.pool | Max | Long | 
+'max pool size' | akka.dispatcher.executor.pool.max | Max | Long | 
+'active threads' | akka.dispatcher.executor.threads.active | Max | Long | 
+'parallelism' | akka.dispatcher.fj.parallelism | Max | Long | 
+'processed tasks' | akka.dispatcher.executor.tasks.processed | Max | Long | 
+'running threads' | akka.dispatcher.fj.threads.running | Max | Long | 
+'min' | akka.router.processing.time.min | Min | Long | 
+'min' | akka.router.routing.time.min | Min | Long | 
+'min' | akka.router.mailbox.time.min | Min | Long | 
+'count' | akka.router.processing.errors | Sum | Long | 
+'max' | akka.router.routing.time.max | Max | Long | 
+'max' | akka.router.processing.time.max | Max | Long | 
+'max' | akka.router.mailbox.time.max | Max | Long | 

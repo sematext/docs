@@ -58,164 +58,71 @@ picture of your cluster in SPM Reports UI.
 
 ## Metrics
 
-### Report: Cache
-
-#### Chart: Request
-Metric Name | Metric Description
---- | ---
-maximum size | 
-estimated size | 
-overhead | 
-
-#### Chart: Fielddata
-Metric Name | Metric Description
---- | ---
-maximum size | 
-estimated size | 
-overhead | 
-
-
-
-### Report: Cluster Health
-
-#### Chart: ES Shards
-Metric Name | Metric Description
---- | ---
-active primary shards | 
-active shards | 
-relocating shards | 
-initializing shards | 
-unassigned shards | 
-
-#### Chart: ES Nodes
-Metric Name | Metric Description
---- | ---
-nodes | 
-data nodes | 
-
-
-
-### Report: Cache
-
-#### Chart: Warmer
-Metric Name | Metric Description
---- | ---
-current | 
-total | 
-total time | 
-
-#### Chart: Field Cache
-Metric Name | Metric Description
---- | ---
-field cache evictions | 
-field cache size | 
-
-#### Chart: Query/Filter Cache
-Metric Name | Metric Description
---- | ---
-filter cache count | 
-filter cache evictions | 
-filter cache size | 
-
-
-
-### Report: Connections
-
-#### Chart: Connections/Sockets
-Metric Name | Metric Description
---- | ---
-open TCP sockets (current_estab) | 
-open TCP conns (server_open) | 
-open HTTP conns (current_open) | 
-total opened HTTP conns (total_opened) | 
-
-#### Chart: TCP Traffic
-Metric Name | Metric Description
---- | ---
-inbound segments (in_segs) | 
-outbound segments (out_segs) | 
-retransmitted segments (retrans_segs) | 
-
-#### Chart: Transport (Node-to-Node)
-Metric Name | Metric Description
---- | ---
-received count (rx_count) | 
-transmitted count (tx_count) | 
-received size (rx_size) | 
-transmitted size (tx_size) | 
-
-#### Chart: TCP Socket Stats
-Metric Name | Metric Description
---- | ---
-active conn openings (active_opens) | 
-passive conn openings (passive_opens) | 
-failed socket open (attempt_fails) | 
-socket resets sent (out_rsts) | 
-open sockets (current_estab) | 
-socket resets (estab_resets) | 
-
-
-
-### Report: Cluster Topology
-
-#### Chart: Shards
-Metric Name | Metric Description
---- | ---
-active primary shards | 
-active shards | 
-relocating shards | 
-initializing shards | 
-unassigned shards | 
-
-
-
-### Report: Thread Pool
-
-#### Chart: Thread Pool
-Metric Name | Metric Description
---- | ---
-active | 
-size | 
-queue | 
-queue size | 
-rejected | 
-largest | 
-completed | 
-min | 
-max | 
-
-
-
-### Report: Index Stats
-
-#### Chart: Documents
-Metric Name | Metric Description
---- | ---
-docs count (prim) | docs count on primary shards
-docs count (all) | docs count on all (primary and replica) shards
-docs deleted (prim) | docs deleted on primary shards
-docs deleted (all) | docs deleted on all (primary and replica) shards
-size on disk (prim) | size on the disk of primary shards
-size on disk (all) | size on the disk of all (primary and replica) shards
-
-#### Chart: Merged Documents
-Metric Name | Metric Description
---- | ---
-docs count (prim) | merge docs count on primary shards
-docs count (all) | merge docs count on all (primary and replica) shards
-docs size (prim) | merged docs size on primary shards
-docs size (all) | merge docs size on all (primary and replica) shards
-
-#### Chart: Indexing
-Metric Name | Metric Description
---- | ---
-indexed docs (prim) | docs indexed on primary shards
-indexed docs (all) | docs indexed on all (primary and replica) shards
-delete total (prim) | docs deleted on primary shards
-delete total (all) | docs deleted on all (primary and replica) shards
-indexing rate (prim) | indexing rate on primary shards
-indexing rate (all) | indexing rate on all (primary and replica) shards
-deleting rate (prim) | deleting rate on primary shards
-deleting rate (all) | deleting rate on all (primary and replica) shards
-
-
+Metric Name | Key | Agg | Type | Description
+--- | --- | --- | --- | ---
+overhead | es.circuitBreaker.fieldData.size.overhead | Avg | Double | 
+maximum size | es.circuitBreaker.fieldData.size.max | Max | Long | 
+estimated size | es.circuitBreaker.request.size.estimate | Avg | Long | 
+estimated size | es.circuitBreaker.fieldData.size.estimate | Avg | Long | 
+overhead | es.circuitBreaker.request.size.overhead | Avg | Double | 
+maximum size | es.circuitBreaker.request.size.max | Max | Long | 
+initializing shards | es.cluster.health.shards.initializing | Avg | Long | 
+relocating shards | es.cluster.health.shards.relocating | Avg | Long | 
+nodes | es.cluster.nodes | Avg | Long | 
+data nodes | es.cluster.nodes.data | Avg | Long | 
+active primary shards | es.cluster.health.shards.primary | Avg | Long | 
+unassigned shards | es.cluster.health.shards.unassigned | Avg | Long | 
+active shards | es.cluster.health.shards.active | Avg | Long | 
+filter cache size | es.cache.filter.size.max | Avg | Long | 
+field cache evictions | es.cache.field.evicted | Sum | Long | 
+current | es.cache.warmer.current | Avg | Long | 
+filter cache evictions | es.cache.filter.evicted | Sum | Long | 
+total | es.cache.warmer.total | Sum | Long | 
+filter cache count | es.cache.filter.size | Avg | Long | 
+total time | es.cache.warmer.time | Sum | Long | 
+field cache size | es.cache.field.cache.size | Avg | Long | 
+open HTTP conns (current_open) | es.connection.http.current.open | Avg | Long | 
+socket resets sent (out_rsts) | es.connections.tcp.out.rsts | Sum | Long | 
+received count (rx_count) | es.transport.rx.packets | Sum | Long | 
+passive conn openings (passive_opens) | es.connections.tcp.passive.opens | Sum | Long | 
+outbound segments (out_segs) | es.connection.out.segs | Sum | Long | 
+received size (rx_size) | es.transport.rx.bytes | Sum | Long | 
+open TCP conns (server_open) | es.connection.tcp.server.open | Avg | Long | 
+transmitted size (tx_size) | es.transport.tx.bytes | Sum | Long | 
+failed socket open (attempt_fails) | es.connections.tcp.attempt.fails | Sum | Long | 
+socket resets (estab_resets) | es.connections.tcp.estab.resets | Sum | Long | 
+total opened HTTP conns (total_opened) | es.connection.http.total.opened | Avg | Long | 
+inbound segments (in_segs) | es.connection.in.segs | Sum | Long | 
+open sockets (current_estab) | es.connections.tcp.current.estab | Avg | Long | 
+active conn openings (active_opens) | es.connections.tcp.avtive.opens | Sum | Long | 
+retransmitted segments (retrans_segs) | es.connection.retrans.segs | Sum | Long | 
+transmitted count (tx_count) | es.transport.tx.packets | Sum | Long | 
+queue | es.thread.pool.queue | Avg | Long | 
+completed | es.thread.pool.completed | Sum | Long | 
+active | es.thread.pool.active | Avg | Long | 
+min | es.thread.pool.min | Min | Long | 
+rejected | es.thread.pool.rejected | Sum | Long | 
+queue size | es.thread.pool.queue.size | Avg | Long | 
+size | es.thread.pool.size | Avg | Long | 
+max | es.thread.pool.max | Max | Long | 
+largest | es.thread.pool.largest | Max | Long | 
+flush count (all) | es.indexing.flushes.total | Sum | Long | flush count on all (primary and replica) shards
+refresh count (prim) | es.indexing.refreshes | Sum | Long | refresh count on primary shards
+docs count (prim) | es.indexing.merges.docs | Sum | Long | merge docs count on primary shards
+refresh count (all) | es.indexing.docs.refreshes.total | Sum | Long | refresh count on all (primary and replica) shards
+merge count (all) | es.indexing.merges.total | Sum | Long | merge count on all (primary and replica) shards
+flush time (all) | es.indexing.flushes.time.total | Sum | Long | flush time on all (primary and replica) shards
+flush count (prim) | es.indexing.flushes | Sum | Long | flush count on primary shards
+indexed docs (prim) | es.indexing.docs | Sum | Long | docs indexed on primary shards
+merge time (all) | es.indexing.merges.time.total | Sum | Long | merge time on all (primary and replica) shards
+indexed docs (all) | es.indexing.docs.total | Sum | Long | docs indexed on all (primary and replica) shards
+flush time (prim) | es.indexing.flushes.time | Sum | Long | flush time on primary shards
+refresh time (prim) | es.indexing.refreshes.time | Sum | Long | refresh time on primary shards
+merge time (prim) | es.indexing.merges.time | Sum | Long | merge time on primary shards
+docs count (all) | es.indexing.merges.docs.total | Sum | Long | merge docs count on all (primary and replica) shards
+merge count (prim) | es.indexing.merges | Sum | Long | merge count on primary shards
+refresh time (all) | es.indexing.refreshes.time.total | Sum | Long | refresh time on all (primary and replica) shards
+docs size (all) | es.indexing.merges.docs.size.total | Sum | Long | merge docs size on all (primary and replica) shards
+docs size (prim) | es.indexing.merges.docs.size | Sum | Long | merged docs size on primary shards
+delete total (prim) | es.indexing.docs.deleted | Sum | Long | docs deleted on primary shards
+delete total (all) | es.indexing.docs.deleted.total | Sum | Long | docs deleted on all (primary and replica) shards
