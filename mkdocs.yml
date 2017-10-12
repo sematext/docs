@@ -104,6 +104,7 @@ pages:
             - File input: logagent/input-plugin-files.md
             - Syslog input: logagent/input-plugin-syslog.md
             - Apache Kafka input: logagent/input-plugin-kafka.md
+            - InfluxDB input: logagent/input-plugin-influx-http.md
             - TCP input: logagent/input-plugin-tcp.md
             - Command input: logagent/input-plugin-command.md
             - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md

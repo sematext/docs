@@ -1,3 +1,9 @@
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Akka/overview
+
+## Metrics
+
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
 'collection time' | akka.jvm.gc.collection.time | Sum | Long | 

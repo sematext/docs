@@ -1,7 +1,7 @@
 ## Integration
 
 - Agent: https://github.com/sematext/sematext-agent-nginx
-- Instructions: https://apps.sematext.com/ui/howto/Nginx/overview
+- Instructions: https://apps.sematext.com/ui/howto/Nginx-Plus/overview
 
 ## Metrics
 
