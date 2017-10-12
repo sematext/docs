@@ -1,13 +1,46 @@
-## Logagent plugins
+## Logagent Plugins
 
 Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
 
-### How plugins work
+### Existing Logagent plugins
+
+The architecture of Logagent is modular and each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand depending on the configuration.
+
+| Plugin              | Type                      | Description                                                                                              |
+|---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
+| [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                                                |
+| [files](input-plugin-files)           | input   | Watching and tailing files                                                                               |
+| [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events) | input  | Collect Windows Events. Available as separate npm package |
+| [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
+| [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
+| [input-tcp](input-plugin-tcp)         | input | Receive data via TCP                                                                                     |
+| [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                                               |
+| [cloudfoundry](input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)                                                        |
+| [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically                          |
+| [mysql-query](input-plugin-mysql)     | input | Receive results from SQL queries, which could run once or periodically                                   |
+| [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                                   |
+| [postgresql-query](input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
+| [elasticsearch-query](input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
+| [logagent-input-kafka](input-plugin-kafka)         | input          | Receiver messages from Apache Kafka topics. 3rd party module.                                                             |
+| [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
+| [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
+| [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
+| [stdout (default)](output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
+| [elasticsearch](output-elasticsearch)     | output                    | Stores parsed messages in Elasticsearch 
+| [output-aws-elasticsearch](output-plugin-aws-elasticsearch)     | output                    | Stores parsed messages in Amazon Elasticsearch 
+| [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
+| [rtail](output-plugin-rtail)              | output                    | Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
+| [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
+| [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
+| [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
+
+
+### For Developers: How Logagent plugins work 
 
 - Logagent checks the configuration file for properties with a "module" key for the nodejs module name. External plugins need to be installed via npm. 
 - Plugins are initialized with the Logagent configuration (from command line arguments + configuration file) and the event emitter for Logagent. Plugins should provide a start and stop method.
 - Input plugins read data from a data source and emit events to the Logagent event emitter.
-  hese events have the identifier "data.raw" and 2 parameters: 
+  These events have the identifier "data.raw" and 2 parameters: 
   - data - data read from a data source 
   - context - an object with meta data e.g. {sourceName: '/var/log/httpd/access.log'}
     The "context" helps other plugins to process the data correctly, e.g. to handle multiple open files. 
