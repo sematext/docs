@@ -2,9 +2,6 @@
 
 Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
 
-### Existing Logagent plugins
-
-The architecture of Logagent is modular and each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand depending on the configuration.
 
 | Plugin              | Type                      | Description                                                                                              |
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
