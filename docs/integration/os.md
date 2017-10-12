@@ -1,7 +1,3 @@
-## Integration
-
-- Instructions: https://apps.sematext.com/ui/howto/os/overview
-
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description
