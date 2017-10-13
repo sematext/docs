@@ -43,7 +43,7 @@ Logagent can also be used as a command-line tool.
 
 #### Plugins 
 
-A comprehensive collection of plugins for data input, processing, and output are available. See the complete list of [Logagent Plugins](https://sematext.com/docs/logagent/plugins/). 
+A comprehensive collection of plugins for data input, processing, and output are available. See the complete list of [Logagent Plugins](./plugins). 
 
 #### Reliable log shipping with disk buffer
 
