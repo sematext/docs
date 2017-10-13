@@ -1,3 +1,7 @@
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Kafka/overview
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

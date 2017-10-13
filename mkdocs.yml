@@ -69,6 +69,7 @@ pages:
         - Monitoring Redis: integration/redis.md
         - Monitoring Sensei: integration/sensei.md
         - Monitoring Solr: integration/solr.md
+        - Monitoring SolrCloud: integration/solrcloud.md
         - Monitoring Spark: integration/spark.md
         - Monitoring Storm: integration/storm.md
         - Monitoring Tomcat: integration/tomcat.md

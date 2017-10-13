@@ -237,8 +237,7 @@ available in the [Github repository](https://github.com/sematext/sematext-agent-
 (default), TCP sockets (default port 2375) and TLS sockets
 (authentication with certificates). Depending on your Docker setup,
 Sematext Agent needs to be configured to access the Docker Socket (API
-access).  
-**
+access).**
 
 **Docker Unix Socket**
 
@@ -432,6 +431,10 @@ Github Repository
 Latest information
 for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
 and [open issues](https://github.com/sematext/sematext-agent-docker/issues)
+
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/Docker/overview
 
 ## Metrics
 

@@ -1,3 +1,9 @@
+## Integration
+
+- Instructions: https://apps.sematext.com/ui/howto/MySQL/overview
+
+## Metrics
+
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
 opened table definitions | mysql.tables.definition.opened | Sum | Long | <b>Opened_table_definitions</b>: The number of .frm files that have been cached

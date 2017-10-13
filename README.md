@@ -23,7 +23,7 @@ Install Mkdocs
 Install the `mkdocs` package using `pip`:
 
 ```sh
-pip install mkdocs===.16.3
+pip install mkdocs===0.16.3
 ```
 
 Install Material theme
