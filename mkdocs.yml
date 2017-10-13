@@ -97,34 +97,34 @@ pages:
         - Command Line Parameters: logagent/cli-parameters.md
         - Configuration: logagent/config-file.md
         - Log Parser Patterns: logagent/parser.md
-        - Plugins: 
-          - Overview: logagent/plugins.md
-          - Input Plugins:
-            - Standard input: logagent/input-plugin-stdin.md
-            - File input: logagent/input-plugin-files.md
-            - Syslog input: logagent/input-plugin-syslog.md
-            - Apache Kafka input: logagent/input-plugin-kafka.md
-            - InfluxDB input: logagent/input-plugin-influxdb-http.md
-            - TCP input: logagent/input-plugin-tcp.md
-            - Command input: logagent/input-plugin-command.md
-            - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
-            - MSSQL query: logagent/input-plugin-mssql.md
-            - MySql query: logagent/input-plugin-mysql.md
-            - Postgresql query: logagent/input-plugin-postgresql.md
-            - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
-          - Output Plugins:
-            - Standard output: logagent/output-plugin-stdout.md
-            - Files: logagent/output-plugin-files.md
-            - Elasticsearch: logagent/output-elasticsearch.md
-            - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
-            - Apache Kafka: logagent/output-plugin-kafka.md
-            - rTail: logagent/output-plugin-rtail.md
-            - Slack webhook: logagent/output-plugin-slack.md
-          - Filter Plugins:
-            - About filters: logagent/filters.md
-            - Grep input filter: logagent/input-filter-grep.md
-            - SQL output filter: logagent/output-filter-sql.md
-            - Access Watch output filter: logagent/output-filter-accesswatch.md
+      - Plugins: 
+        - Overview: logagent/plugins.md
+        - Input Plugins:
+          - Standard input: logagent/input-plugin-stdin.md
+          - File input: logagent/input-plugin-files.md
+          - Syslog input: logagent/input-plugin-syslog.md
+          - Apache Kafka input: logagent/input-plugin-kafka.md
+          - InfluxDB input: logagent/input-plugin-influxdb-http.md
+          - TCP input: logagent/input-plugin-tcp.md
+          - Command input: logagent/input-plugin-command.md
+          - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
+          - MSSQL query: logagent/input-plugin-mssql.md
+          - MySql query: logagent/input-plugin-mysql.md
+          - Postgresql query: logagent/input-plugin-postgresql.md
+          - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
+        - Output Plugins:
+          - Standard output: logagent/output-plugin-stdout.md
+          - Files: logagent/output-plugin-files.md
+          - Elasticsearch: logagent/output-elasticsearch.md
+          - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
+          - Apache Kafka: logagent/output-plugin-kafka.md
+          - rTail: logagent/output-plugin-rtail.md
+          - Slack webhook: logagent/output-plugin-slack.md
+        - Filter Plugins:
+          - About filters: logagent/filters.md
+          - Grep input filter: logagent/input-filter-grep.md
+          - SQL output filter: logagent/output-filter-sql.md
+          - Access Watch output filter: logagent/output-filter-accesswatch.md
       - FAQ: logagent/faq.md
 
 theme: material
