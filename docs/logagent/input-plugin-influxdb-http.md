@@ -7,8 +7,8 @@ Receives metrics from InfluxDB compatible agents like telegraf. Logagent behaves
 ```
 # Logagent configuration file: influx.yml
 input:
-  influx: 
-    module: input-influx-http
+  influxDb: 
+    module: input-influxdb-http
     port: 8086
     workers: 1
 
@@ -23,7 +23,7 @@ output:
 Run Logagent
 
 ```
-logagent --config influx.yml 
+logagent --config influxdb.yml 
 ```
 
 Then start e.g. [Telegraf](https://github.com/influxdata/telegraf) configured for InfluxDB, pointing to Logagent server.
