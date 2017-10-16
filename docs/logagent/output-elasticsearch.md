@@ -43,7 +43,7 @@ input:
 output:
   # index logs in Elasticsearch or Logsene
   local-elasticsearch: 
-    modul: elasticsearch
+    module: elasticsearch
     url: http://localhost:9200
     # default index to use, for all logs that don't match any other configuration
     index: other_logs
