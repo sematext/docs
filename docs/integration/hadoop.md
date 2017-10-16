@@ -56,7 +56,7 @@ should be good enough for most situations.
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Hadoop/overview
+- Instructions: https://apps.sematext.com/ui/howto/Hadoop-YARN/overview
 
 ## Metrics
 
