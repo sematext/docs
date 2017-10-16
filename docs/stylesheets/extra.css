@@ -186,3 +186,34 @@
 .md-nav.md-nav--secondary > .md-nav__list > li > nav > ul > li {
     list-style-type: disc;
 }
+
+.breadcrumbs {
+    list-style:none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 5px 15px !important;
+    margin-bottom: 20px;
+    margin-left: 0px !important;
+}
+.breadcrumbs>li {
+    display:inline-block;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+    margin-left: 5px !important;
+}
+.breadcrumbs>li+li:before {
+    padding:0 5px;
+    color:#ccc;
+    content:"/\00a0"
+}
+.breadcrumbs .active {
+    font-weight:normal;
+    color:#999
+}
+.breadcrumbs-nav {
+    margin:8px 0 9px
+}
+.breadcrumb:before {
+    content:"\e7c3";
+    font-family:"Material-Design-Icons"
+}
