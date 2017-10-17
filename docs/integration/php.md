@@ -1,8 +1,8 @@
 ## Overview
 
-Monitoring of PHP FPM module is supported together with Nginx monitoring [sematext-agent-nginx](https://github.com/sematext/sematext-agent-nginx/blob/master/php-fpm.md) and Apache Webserver monitoring [sematext-agent-httpd](https://github.com/sematext/sematext-agent-httpd/blob/master/php-fpm.md).
+Monitoring of PHP FPM module is supported together with [Nginx monitoring] [sematext-agent-nginx](https://sematext.com/docs/integration/nginx/) and [Apache monitoring] (https://sematext.com/docs/integration/apache/).
 
-PHP FPM metrics are displayed in the Nginx/Apache application:
+PHP FPM metrics are displayed as part of Nginx and Apache monitoring:
 
 ![](https://sematext.com/wp-content/uploads/2017/10/php-fpm-nginx.png)
 
