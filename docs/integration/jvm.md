@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/JVM/overview
+- Instructions: [https://apps.sematext.com/ui/howto/JVM/overview](https://apps.sematext.com/ui/howto/JVM/overview)
 
 ## Metrics
 

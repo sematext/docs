@@ -23,7 +23,7 @@ monitor.
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Solr/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Solr/overview](https://apps.sematext.com/ui/howto/Solr/overview)
 
 ## Metrics
 

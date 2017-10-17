@@ -434,7 +434,7 @@ and [open issues](https://github.com/sematext/sematext-agent-docker/issues)
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Docker/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Docker/overview](https://apps.sematext.com/ui/howto/Docker/overview)
 
 ## Metrics
 

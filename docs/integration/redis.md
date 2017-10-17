@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Redis/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Redis/overview](https://apps.sematext.com/ui/howto/Redis/overview)
 
 ## Metrics
 

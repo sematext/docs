@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/MySQL/overview
+- Instructions: [https://apps.sematext.com/ui/howto/MySQL/overview](https://apps.sematext.com/ui/howto/MySQL/overview)
 
 ## Metrics
 

@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Kafka/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Kafka/overview](https://apps.sematext.com/ui/howto/Kafka/overview)
 
 ## Metrics
 

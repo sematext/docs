@@ -34,7 +34,7 @@ versions.
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/HBase/overview
+- Instructions: [https://apps.sematext.com/ui/howto/HBase/overview](https://apps.sematext.com/ui/howto/HBase/overview)
 
 ## Metrics
 

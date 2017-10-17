@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Akka/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Akka/overview](https://apps.sematext.com/ui/howto/Akka/overview)
 
 ## Metrics
 

@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Tomcat/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Tomcat/overview](https://apps.sematext.com/ui/howto/Tomcat/overview)
 
 ## Metrics
 

@@ -141,7 +141,7 @@ To add the dependency to your package.json simply use:
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Node.js/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Node.js/overview](https://apps.sematext.com/ui/howto/Node.js/overview)
 
 ## Metrics
 

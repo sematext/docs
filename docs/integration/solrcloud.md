@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/SolrCloud/overview
+- Instructions: [https://apps.sematext.com/ui/howto/SolrCloud/overview](https://apps.sematext.com/ui/howto/SolrCloud/overview)
 
 ## Metrics
 

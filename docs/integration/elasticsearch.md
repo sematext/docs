@@ -58,7 +58,7 @@ picture of your cluster in SPM Reports UI.
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Elasticsearch/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Elasticsearch/overview](https://apps.sematext.com/ui/howto/Elasticsearch/overview)
 
 ## Metrics
 

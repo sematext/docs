@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Spark/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Spark/overview](https://apps.sematext.com/ui/howto/Spark/overview)
 
 ## Metrics
 

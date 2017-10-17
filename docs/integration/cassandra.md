@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Cassandra/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Cassandra/overview](https://apps.sematext.com/ui/howto/Cassandra/overview)
 
 ## Metrics
 

@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/HAProxy/overview
+- Instructions: [https://apps.sematext.com/ui/howto/HAProxy/overview](https://apps.sematext.com/ui/howto/HAProxy/overview)
 
 ## Metrics
 

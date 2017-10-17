@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Storm/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Storm/overview](https://apps.sematext.com/ui/howto/Storm/overview)
 
 ## Metrics
 

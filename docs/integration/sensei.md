@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/Sensei/overview
+- Instructions: [https://apps.sematext.com/ui/howto/Sensei/overview](https://apps.sematext.com/ui/howto/Sensei/overview)
 
 ## Metrics
 

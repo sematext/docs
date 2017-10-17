@@ -1,7 +1,7 @@
 ## Integration
 
-- Agent: https://github.com/sematext/sematext-agent-httpd
-- Instructions: https://apps.sematext.com/ui/howto/Apache/overview
+- Agent: [https://github.com/sematext/sematext-agent-httpd](https://github.com/sematext/sematext-agent-httpd)
+- Instructions: [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview)
 
 ## Metrics
 

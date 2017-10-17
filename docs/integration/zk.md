@@ -1,6 +1,6 @@
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/ZooKeeper/overview
+- Instructions: [https://apps.sematext.com/ui/howto/ZooKeeper/overview](https://apps.sematext.com/ui/howto/ZooKeeper/overview)
 
 ## Metrics
 

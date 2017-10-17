@@ -72,7 +72,7 @@ repository
 
 ## Integration
 
-- Instructions: https://apps.sematext.com/ui/howto/MongoDB/overview
+- Instructions: [https://apps.sematext.com/ui/howto/MongoDB/overview](https://apps.sematext.com/ui/howto/MongoDB/overview)
 
 ## Metrics
 
