@@ -45,7 +45,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 
 ### Examples 
 
-#### Example Input Plugin
+__Example Input Plugin (TCP Input)__
 
 [This example](https://github.com/megastef/logagent-tcp-input) implements a plugin to receive data via TCP socket with a configurable rate limit. 
 
@@ -149,7 +149,7 @@ function Throttle (maxRate) {
 }
 ```
 
-#### Example Output Plugin
+__Example Output Plugin (stdout)__
 
 ```
 'use strict'
