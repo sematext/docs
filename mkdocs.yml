@@ -49,7 +49,6 @@ pages:
         - Overview: integration/index.md
         - Monitoring Akka: integration/akka.md
         - Monitoring Apache: integration/apache.md
-        - Monitoring Api: integration/api.md
         - Monitoring AWS: integration/aws.md
         - Monitoring Cassandra: integration/cassandra.md
         - Monitoring Docker: integration/docker.md
@@ -64,7 +63,6 @@ pages:
         - Monitoring Nginx: integration/nginx.md
         - Monitoring Nginx Plus: integration/nginxplus.md
         - Monitoring Node.js: integration/node.js.md
-        - Monitoring OS: integration/os.md
         - Monitoring PHP: integration/php.md
         - Monitoring Redis: integration/redis.md
         - Monitoring Sensei: integration/sensei.md
@@ -73,7 +71,6 @@ pages:
         - Monitoring Spark: integration/spark.md
         - Monitoring Storm: integration/storm.md
         - Monitoring Tomcat: integration/tomcat.md
-        - Monitoring Tracing: integration/tracing.md
         - Monitoring ZooKeeper: integration/zk.md
         - HipChat: integration/alerts-hipchat-integration.md
         - PagerDuty: integration/alerts-pagerduty-integration.md
