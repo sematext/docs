@@ -127,7 +127,7 @@
                         {% endif %}
                       {% endfor %}
                     {% endif %}
-                    {{ page.title | default(config.site_name, true) }}
+                    <li>{{ page.title | default(config.site_name, true) }}</li>
                   {% endblock %}
               </ol>
               {% block content %}
