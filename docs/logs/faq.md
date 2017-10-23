@@ -204,20 +204,23 @@ be given the opportunity to reindex your data.
 
 ![](attachments/6520901/102003302.png?width=300)
 
-Please keep in mind, that depending on the amount of data that is needed
-to be reindexed the process can take significant amount of time and you
-may hit your application limits.
+Please keep in mind that the speed of reindexing depends on how much
+data needs to be reindexed and that reindexing is treated like original
+ingestion, which means it counts towards your daily volume and could
+result in you hitting your Max Daily Volume Limit.
 
 #### Is automatic reindex free
 
-A: Using Logsene reindex functionality is available for all plans, but
-the normal plan charges apply. Before reindexing you will be shown the
-estimated cost of the reindexing process.
+A: Using Logsene reindex functionality is available for all plans and
+the normal plan charges apply. Because reindexing counts just like
+the original data ingestion, before reindexing the estimated cost of
+reindexing is shown in the UI.
 
 ![](attachments/6520901/102003301.png?width=300)
 
-If the amount of data that you have to reindex is smaller than your plan
-limits no additional charges will be applied.
+If the amount of data ingested for the day, plus data to be reindexed
+is smaller than your Max Daily Log Volume Limit then no additional charges
+will be applied.
 
 ## Plans & Prices
 
