@@ -99,7 +99,7 @@ Name:    ec2-52-44-248-43.compute-1.amazonaws.com
 Address: 52.44.248.43
 ```
 
-  
+
 
 ## General
 
@@ -196,6 +196,31 @@ has a purely numeric field "size" and another log source also has a
 field "size", but can have non-numeric values, this will cause issues.
  Thus, either keep logs of different structures in separate Logsene
 Apps or make sure there are no conflicting fields.
+
+#### My data structure changed, can I reindex my data automatically
+
+A: Yes, when you change your index structure using Field Editor you will
+be given the opportunity to reindex your data.
+
+![](attachments/6520901/102003302.png?width=300)
+
+Please keep in mind that the speed of reindexing depends on how much
+data needs to be reindexed and that reindexing is treated like original
+ingestion, which means it counts towards your daily volume and could
+result in you hitting your Max Daily Volume Limit.
+
+#### Is automatic reindex free
+
+A: Using Logsene reindex functionality is available for all plans and
+the normal plan charges apply. Because reindexing counts just like
+the original data ingestion, before reindexing the estimated cost of
+reindexing is shown in the UI.
+
+![](attachments/6520901/102003301.png?width=300)
+
+If the amount of data ingested for the day, plus data to be reindexed
+is smaller than your Max Daily Log Volume Limit then no additional charges
+will be applied.
 
 ## Plans & Prices
 
@@ -492,7 +517,7 @@ well.
 
 A: Please see [Handling Stack Traces with Logstash](http://blog.sematext.com/2015/05/26/handling-stack-traces-with-logstash/).
 
-  
+
 
 ## Logsene Alerts
 
@@ -511,7 +536,7 @@ A: Logsene Alerts are added by clicking the disk icon on the right side
 of the search box. Please see screenshots
 below.
 
-  
+
 
  ![](attachments/6520901/42237954.png) ![](attachments/6520901/42237953.png?height=250)
 
@@ -524,7 +549,7 @@ with bell icon on "Saved" tab. If you want to see only Alert Queries
 choose the "Alert"
 tab.
 
-  
+
 
 ![](attachments/6520901/42237955.png?height=250) 
 
@@ -538,7 +563,7 @@ logs typically have < 100 ERROR-level messages per minute you may want
 to create an Alert Query that matches ERROR log events and notifies you
 when there are more than 100 such matches in 1 minute.  
 
-  
+
 
 If you do not have a sense of how many matches a given Alert Query
 matches on a regular bases, but you want to watch out for sudden changes
@@ -560,7 +585,7 @@ event information when Alert events are triggered. The details for
 HipChat integration are
 described [here](../integration/alerts-hipchat-integration/). 
 
-  
+
 
 ## S3 Archiving
 
@@ -635,7 +660,7 @@ uncompressed format, as JSON files.
 A: You can decompress by installing these command line programs (then
 use` man lz4 `or` man lzf` for further instructions):
 
-**Ubuntu/Debian:** 
+**Ubuntu/Debian:**
 
 ``` bash
 sudo apt-get install liblz4-tool
@@ -672,5 +697,3 @@ Before **May 01, 2017 **the folder hierarchy was more flat:
 `/<tokenMD5HexHash>/logsene_<date>/<hour>`
 
 For example: `856f4f9c3c084da08ec7ea9ad5d4cadf/logsene_2016-07-20/18`
-
-  
