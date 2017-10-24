@@ -116,20 +116,7 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               <!-- Header title -->
-              <ol class="breadcrumbs">
-                  {% block site_name %}
-                    {% if page %}
-                      {% for parent in page.ancestors %}
-                        {% if parent.link %}
-                          <li><a href="{{ parent.link|e }}">{{ parent.title }}</a></li>
-                        {% else %}
-                          <li>{{ parent.title }}</li>
-                        {% endif %}
-                      {% endfor %}
-                    {% endif %}
-                    <li>{{ page.title | default(config.site_name, true) }}</li>
-                  {% endblock %}
-              </ol>
+              
               {% block content %}
 
                 {% if not page.is_homepage %}
@@ -150,9 +137,20 @@
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">edit</a>
                 {% endif %}
 
-                {% if not "\x3ch1" in page.content %}
-                  <h1>{{ page.title | default(config.site_name, true)}}</h1>
-                {% endif %}
+                <ol class="breadcrumb">
+                  {% block site_name %}
+                    {% if page %}
+                      {% for parent in page.ancestors %}
+                        {% if parent.link %}
+                          <li><a href="{{ parent.link|e }}">{{ parent.title }}</a></li>
+                        {% else %}
+                          <li>{{ parent.title }}</li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                    <li><h1>{{ page.title | default(config.site_name, true) }}</h1></li>
+                  {% endblock %}
+                </ol>
 
                 {% if page.toc %}
                     {% include "partials/toc.html" %}
