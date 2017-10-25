@@ -201,7 +201,7 @@
 .breadcrumb {
     list-style: none;
     border-radius: 4px;
-    font-size: 13px;
+    font-weight: 700;
 }
 .md-typeset .breadcrumb {
     margin: 0;
