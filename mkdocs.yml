@@ -6,7 +6,7 @@ pages:
     - Log Management:
       - Overview: logs/index.md
       - Sending Log Events: 
-        - Overview: logs/sending-events-to-logsene.md
+        - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
         - Logstash: logs/logstash.md
         - Syslog:
@@ -18,7 +18,7 @@ pages:
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
         - JSON: logs/json.md
       - Searching Log Events:
-        - Overview: logs/searching-your-events.md
+        - Overview: logs/searching-log-events.md
         - Logsene CLI: logs/logsene-cli.md
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
@@ -160,7 +160,7 @@ extra_css:
 extra_javascript:
   - 'javascripts/extra.js'
 
-    
 markdown_extensions:
   - toc(permalink=true)
   - codehilite
+  - meta

@@ -115,11 +115,10 @@
           {% endblock %}
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-              <!-- Header title -->
               
+              <!-- Social links -->
               {% block content %}
-
-                {% if not page.is_homepage %}
+                  {% if not page.is_homepage %}
                   {% set fb_path = 'https://www.facebook.com/sharer/sharer.phpstb?u=' + page.canonical_url %}
                   <a href="{{ fb_path }}" title="Facebook Share" class="md-icon md-content__icon" style="display: none">share</a>
 
@@ -137,6 +136,7 @@
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">edit</a>
                 {% endif %}
 
+                <!-- Header title & Breadcrumb-->
                 <ol class="breadcrumb">
                   {% block site_name %}
                     {% if page %}
@@ -144,7 +144,18 @@
                         {% if parent.link %}
                           <li><a href="{{ parent.link|e }}">{{ parent.title }}</a></li>
                         {% else %}
-                          <li>{{ parent.title }}</li>
+                          {% set top_parent = page.canonical_url.split("/")[4] %}
+
+                          {% set first_children = parent.children | first %}
+                          {% if first_children.title != 'Overview' or (page.title == 'Overview' and loop.index == page.ancestors | length) %}
+                            <li>{{ parent.title }}</li>
+                          {% else %}
+                            {% if parent.is_top_level  %}
+                              <li><a href="{{ base_url }}/{{ top_parent | lower }}">{{ parent.title }}</a></li>
+                            {% else %}
+                              <li><a href="{{ base_url }}/{{ top_parent | lower }}/{{ parent.title | replace(" ", "-") | lower }}">{{ parent.title }}</a></li>
+                            {% endif %}
+                          {% endif %}
                         {% endif %}
                       {% endfor %}
                     {% endif %}
