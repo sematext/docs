@@ -6,7 +6,7 @@
 ### Features
 
 This project contains a library and patterns for log parsing, a command line tool and installer to use Logagent as log shipper with the following features: 
-- Build-in data parser with configurable patterns
+- Built-in data parser with configurable patterns
 - Command line tool 
 - Plugins
   - Inputs (files, streams, sockets, databases)
@@ -14,10 +14,10 @@ This project contains a library and patterns for log parsing, a command line too
   - Outputs (Elasticsearch, Sematext Cloud, Kafka, ...)
   - Output filters (SQL aggregation of parsed data, enrichment of data)
 - Reliable log shipping with disk buffer
-- Various deployment options (Systemd, Upstart, Windows service, Mac OS-X service, Docker)
+- Various deployment options (Systemd, Upstart, Windows service, Mac OS X Launchd service, Docker)
 - Node.js API 
 
-#### Build-in data parser
+#### Built-in data parser
 
 - Log format detection and intelligent pattern matching
 - Pattern library included covering a set of common databases, web servers, message queues, etc.
@@ -47,7 +47,7 @@ A comprehensive collection of plugins for data input, processing, and output are
 
 #### Reliable log shipping with disk buffer
 
-Logagent doesn't lose data.  It stores parsed logs to a disk buffer if the network connection to the Elasticsearch API fails.  Logagent retries shipping logs later, when the network or Elasticsearch is available again.  
+Logagent doesn't lose data. It stores parsed logs to a disk buffer if the network connection to the Elasticsearch API fails. Logagent retries shipping logs later, when the network or Elasticsearch is available again.  
 
 #### Deployment options
 - Deployable as a system service: Systemd, Upstart (Linux), or Launchd (Mac OS X)
@@ -62,6 +62,6 @@ Logagent doesn't lose data.  It stores parsed logs to a disk buffer if the netwo
 ### Related packages
 - [Sematext Agent for Docker](https://github.com/sematext/sematext-agent-docker) - collects metrics, events and logs from Docker API and CoreOS. Logagent-js is a component of sematext-agent-docker. More Information: [Innovative Docker Log Management](http://blog.sematext.com/2015/08/12/docker-log-management/)
 - [Logsene-CLI](https://github.com/sematext/logsene-cli) - Enables searching Logsene log entries from the command-line. 
-- [SPM Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node and io.js applications
+- [SPM Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node applications
 - [Custom Metrics](https://github.com/sematext/spm-metrics-js) - Custom Metrics for SPM 
 - [Winston-Logsene](https://github.com/sematext/winston-logsene) - Logging for Node.js - Winston transport layer for Logsene
