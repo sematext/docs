@@ -101,8 +101,9 @@ Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docke
       - Kubernetes
       - Mesos
       - CoreOS
-      - RancherOS
+      - Rancher
       - Amazon ECS
+      - Red Hat OpenShift
       - DEIS PaaS
 
 ## Installation and Configuration
@@ -231,7 +232,7 @@ the unit files in the cloud-init config file. 
 The latest documentation, install script, and service files are
 available in the [Github repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
 
-## Access to the Docker Socket  / Docker API  
+## Access to the Docker Socket / Docker API  
 
 **Please note the Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
@@ -256,7 +257,7 @@ If you like to create a docker group, to access docker without super
 user permissions,
 see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
 
-**How to activate the Unix socket in parallel to a TCP socket?**  
+**How to activate the Unix Socket in parallel to a TCP socket?**  
 Check the configuration of the Docker Daemon in /etc/defaults/docker -
 it is possible to activate TCP and the Unix socket in parallel, simply
 add  "-H unix:///var/run/docker.sock" and restart dockerd.
