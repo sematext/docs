@@ -327,7 +327,7 @@ docker run -d --name sematext-agent --restart=always
 sematext/sematext-agent-docker
 ```
 
- ## Log Routing
+## Log Routing
 
 Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
 Sematext Agent inspects the containers for this Label and ships the logs to the defined Logsene App. 
