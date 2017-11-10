@@ -5,9 +5,10 @@
 
 ### Features
 
-This project contains a library and patterns for log parsing, a command line tool and installer to use Logagent as log shipper with the following features: 
+This project contains a library and patterns for log parsing, a command line tool and installer to use Logagent as log shipper with the following features:
+
 - Built-in data parser with configurable patterns
-- Command line tool 
+- Command line tool
 - Plugins
   - Inputs (files, streams, sockets, databases)
   - Input filters (e.g. grep filter)
@@ -24,7 +25,7 @@ This project contains a library and patterns for log parsing, a command line too
 - Easy to extend with custom patterns and JS transform functions
 - Hot reload of changed pattern definitions without service restart
 - Auto-detection of date and numeric fields
-- Replacement of sensitive data with configurable hashing algorithms (SHA-1, SHA-256, SHA-512, …)
+- Masking of sensitive data with configurable hashing algorithms (SHA-1, SHA-256, SHA-512, …)
 - GeoIP lookup with automatic GeoIP DB updates (Maxmind GeoIP-Lite files)
 
 #### Command-line tool
