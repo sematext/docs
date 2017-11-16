@@ -1,10 +1,19 @@
 ## Input Filter: Grok
 
-Apply Grok to filter raw input from Logagent before data are parsed
+Input plugin for [@sematext/logagent](http://sematext.com/logagent/). Uses Grok patterns to filter data from input plugins before data are parsed.
 
-## Configuration 
+### Installation 
 
-Add the following section to the Logagent configuration file. Please note you could use the plugin with multiple configurations. The output of the first filter is passed into the next one ...: 
+Install [@sematext/logagent](https://www.npmjs.com/package/@sematext/logagent) and [logagent-input-filter-grok](https://www.npmjs.com/package/logagent-input-filter-grok) npm package: 
+
+```
+npm i -g @sematext/logagent
+npm i -g logagent-input-filter-grok
+```
+
+## Configuration
+
+Add the following section to the Logagent configuration file. Please note you could use the plugin with multiple configurations. The output of the first filter is passed into the next one ...:
 
 ```yaml
 input: 
@@ -25,7 +34,6 @@ output:
     module: elasticsearch
     url: http://localhost:9200
     index: mylogs
-
 ```
 
 
