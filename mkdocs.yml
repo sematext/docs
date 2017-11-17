@@ -51,7 +51,7 @@ pages:
         - Monitoring Apache: integration/apache.md
         - Monitoring AWS: integration/aws.md
         - Monitoring Cassandra: integration/cassandra.md
-        - Monitoring Docker: integration/docker.md
+        - Monitoring Docker: integration/docker-autodiscovery.md
         - Monitoring Elasticsearch: integration/elasticsearch.md
         - Monitoring Hadoop: integration/hadoop.md
         - Monitoring HAProxy: integration/haproxy.md
