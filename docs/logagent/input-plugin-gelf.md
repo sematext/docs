@@ -1,6 +1,6 @@
 ## Input Plugin: GELF 
 
-Plugin to receive log with GELF protocol v1.1 via UDP. GELF (Graylog Extended Log Format)  is a log format that avoids the shortcomings of classic plain syslog.
+Plugin to receive logs with GELF protocol v1.1 via UDP. GELF (Graylog Extended Log Format) is a log format that avoids the shortcomings of classic plain syslog.
 
 ### Configuration
 
