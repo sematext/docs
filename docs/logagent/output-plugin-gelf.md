@@ -1,6 +1,6 @@
 ## Output Plugin: GELF output plugin
 
-This plugin send data to a GELF server using protocol v1.1 via UDP  
+This plugin sends data to a GELF server using protocol v1.1 via UDP.
 
 ### Configuration
 
