@@ -15,7 +15,7 @@ input:
 output: 
   gelf:
     module: output-gelf
-    address: localhost
+    host: localhost
     # graylog port (default: 12201)
     port: 12201
     # compression 'gzip' or 'deflate' (default: 'deflate')
