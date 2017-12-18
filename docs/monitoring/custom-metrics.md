@@ -400,3 +400,8 @@ a gem for sending custom metrics from Ruby applications.
 module for sending custom metrics from Node.js applications.  Github
 repo: <https://github.com/sematext/spm-metrics-js>.
 
+## .Net API
+
+[Sematext-Metrics](https://github.com/wshaddix/sematext-metrics) is an open source library for sending custom metrics from a .Net application. It is a .Net Standard 2.0 library so it will work with both .Net Core and .Net Framework applications.
+
+
