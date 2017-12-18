@@ -1,12 +1,13 @@
-### Import Logagent :
+### Logagent Debugging with Visual Source Code:
 
-Here we try explain how to debug and improve using Visual source Code. After [downloaded](https://code.visualstudio.com/Download) and import Logagent project, is possible to debug configuring `launch configuration` like this:
+Here we try explain how to debug Logagent using Visual Source
+Code. After [downloading](https://code.visualstudio.com/Download) VSC
+and importing Logagent project, you can debug Logagent configuration
+with `launch configuration` like this - you'll want to adjust the path
+below, obviously:
 
 ```
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
 
@@ -26,26 +27,21 @@ Here we try explain how to debug and improve using Visual source Code. After [do
 }
 
 ```
-`"console": "externalTerminal"` configuration permit us to open an external console for use stdin/stdout in case your configuration use console plugin to interact with user.
+`"console": "externalTerminal"` lets you open an external console for stdin/stdout in case your Logagent configuration uses console plugin.
 
 ### Example :
-Now its time to try to resolve our problem tring to figure out a solution, for example we can put a **breakpoint** in gelf input plugin on event message 
+Say we are trying to pinpoint a problem in GELF Input Plugin. We can add a **breakpoint** in GELF Input Plugin on the event message:
 
 s![img1](./img/img1.png)
 
-for complete this example we need to produce a message from gelf client for example typing from termina tab
+Next, we need to produce a message from a GELF client.  We could do that by typing in the terminal:
 
 ![img2](./img/img2.png)
 
-then our will stop on our breakpoint start to figure out a solution.
+Logagent will stop at our breakpoint and we can then start to debug:
 
 ![img3](./img/img3.png)
 
+### Useful Plugins to install:
 
-Can be useful to install EsLint plugin to check our code during our works
-
-### Useful Plugins to install : 
-
-Visual source Code provide al lot of plugins, one of those very useful is ESLint plugin that permit us to find bugs and permit us to create a more consistent code
-
-
+Visual Source Code provides a lot of plugins, including ESLint, which helps keep the code more consistent and easier to debug.
