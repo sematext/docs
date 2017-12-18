@@ -104,6 +104,7 @@ pages:
           - Apache Kafka input: logagent/input-plugin-kafka.md
           - InfluxDB input: logagent/input-plugin-influxdb-http.md
           - TCP input: logagent/input-plugin-tcp.md
+          - GELF input: logagent/input-plugin-gelf.md
           - Command input: logagent/input-plugin-command.md
           - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
           - MSSQL query: logagent/input-plugin-mssql.md
@@ -112,6 +113,7 @@ pages:
           - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
         - Output Plugins:
           - Standard output: logagent/output-plugin-stdout.md
+          - GELF output: logagent/output-plugin-gelf.md
           - Files: logagent/output-plugin-files.md
           - Elasticsearch: logagent/output-elasticsearch.md
           - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
