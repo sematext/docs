@@ -426,22 +426,19 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631",
-  "alertRule":{
+  "alertRule" :{
     "name":"Apache alert",
     "query":"apache",
-    "enabled":true,
-    "estimateValue":500,
-    "estimateOperation":"MORE",
-    "analyzingTime":5,
-    "backToNormalNeeded":false,
-    "ignoreRegularEventsEnabled":false,
-    "muteTimePeriodInMinutes":30,
-    "minDelayBetweenNotificationsInMinutes":1,
-    "maxNotificationsInMutePeriod":3,
-    "muteIsGlobal":false,
     "sendToEmail":"email-to-send-alerts-to@your-company.com",
-    "ruleType": "AFValuesRule"
-   }
+    "ignoreRegularEventsEnabled" : false,
+    "analyzingTime" : 5,
+    "minDelayBetweenNotificationsInMinutes" : "10",
+    "enabled" : true,
+    "estimateOperation" : "MORE",
+    "estimateValue" : 400.0,
+    "backToNormalNeeded" : false,
+    "ruleType": "LogseneAlertRule"
+  }
 }'
 ```
 
@@ -454,18 +451,16 @@ Example of a success response (with HTTP code 200):
   "data" : {
     "alertRule" : {
       "sendToEmail" : "email-to-send-alerts-to@your-company.com",
-      "muteTimePeriodInMinutes" : "30",
-      "minDelayBetweenNotificationsInMinutes" : "1",
-      "maxNotificationsInMutePeriod" : 3,
+      "minDelayBetweenNotificationsInMinutes" : "10",
       "ignoreRegularEventsEnabled" : false,
-      "muteIsGlobal" : false,
-      "analyzingTime" : "05",
-      "systemId" : 2199,
+      "analyzingTime" : "5",
+      "systemId" : 1,
       "enabled" : true,
-      "name" : "Apache Alert",
+      "name" : "Apache alert",
       "query" : "apache",
+      "useOnlyAlertRuleIntegrations" : false,
       "estimateOperation" : "MORE",
-      "estimateValue" : 500.0,
+      "estimateValue" : 400.0,
       "backToNormalNeeded" : false
     }
   }
@@ -511,20 +506,17 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
 {
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631",
-  "alertRule":{
-    "name":"Anomaly apache alert",
+  "alertRule" :{
+    "name":"Apache alert",
     "query":"apache",
-    "enabled":"true",
-    "backToNormalNeeded":false,
-    "ignoreRegularEventsEnabled":true,
-    "muteTimePeriodInMinutes":"30",
-    "analyzingTime" : "05",
-    "minDelayBetweenNotificationsInMinutes":"1",
-    "maxNotificationsInMutePeriod":"3",
-    "muteIsGlobal":false,
     "sendToEmail":"email-to-send-alerts-to@your-company.com",
-    "ruleType": "AFAnomalyValuesRule"
-   }
+    "minDelayBetweenNotificationsInMinutes" : "10",
+    "ignoreRegularEventsEnabled" : false,
+    "analyzingTime" : 60,
+    "enabled" : true,
+    "backToNormalNeeded" : false,
+    "ruleType": "LogseneAnomalyAlertRule"
+  }
 }'
 ```
 
@@ -537,16 +529,14 @@ Example of a success response (with HTTP code 200):
   "data" : {
     "alertRule" : {
       "sendToEmail" : "email-to-send-alerts-to@your-company.com",
-      "muteTimePeriodInMinutes" : "30",
-      "minDelayBetweenNotificationsInMinutes" : "1",
-      "maxNotificationsInMutePeriod" : 3,
-      "ignoreRegularEventsEnabled" : true,
-      "muteIsGlobal" : false,
+      "minDelayBetweenNotificationsInMinutes" : "10",
+      "ignoreRegularEventsEnabled" : false,
       "analyzingTime" : "60",
-      "systemId" : 2199,
+      "systemId" : 1,
       "enabled" : true,
-      "name" : "Anomaly apache alert",
+      "name" : "Apache alert",
       "query" : "apache",
+      "useOnlyAlertRuleIntegrations" : false,
       "backToNormalNeeded" : false
     }
   }
