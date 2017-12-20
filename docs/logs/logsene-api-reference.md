@@ -507,7 +507,7 @@ curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/l
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631",
   "alertRule" :{
-    "name":"Apache alert",
+    "name":"Apache anomaly alert",
     "query":"apache",
     "sendToEmail":"email-to-send-alerts-to@your-company.com",
     "minDelayBetweenNotificationsInMinutes" : "10",
@@ -534,7 +534,7 @@ Example of a success response (with HTTP code 200):
       "analyzingTime" : "60",
       "systemId" : 1,
       "enabled" : true,
-      "name" : "Apache alert",
+      "name" : "Apache anomaly alert",
       "query" : "apache",
       "useOnlyAlertRuleIntegrations" : false,
       "backToNormalNeeded" : false
