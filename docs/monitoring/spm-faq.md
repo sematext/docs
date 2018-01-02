@@ -145,7 +145,7 @@ We don't recommend changing this setting if you are monitoring
 Elasticsearch or Solr clusters with a high number of indices or shards.
 In those cases SPM monitor has to parse and gather large amounts of
 metrics data returned by Elasticsearch or Solr.  You can contact us in
-chat or via email (spm-support@sematext.com) if you'd like to get more
+chat or via email (support@sematext.com) if you'd like to get more
 info and help around making this
 adjustment.
 
@@ -672,7 +672,7 @@ sudo bash /opt/spm/bin/spm-client-diagnostics.sh
 
 The resulting package will contain all relevant info needed for our
 investigation. You can send it, along with short description of your
-problem, to <spm-support@sematext.com> or contact us in
+problem, to <support@sematext.com> or contact us in
 chat.
 
 #### I see only my system metrics (e.g. CPU, Memory, Network, Disk...), but where is the rest of my data
@@ -682,7 +682,7 @@ chat.
 **Client configuration setup**. If you have done that and you still
 don't see application metrics, run **sudo
 bash /opt/spm/bin/spm-client-diagnostics.sh** to generate diagnostics
-package and send it to <spm-support@sematext.com> with description of
+package and send it to <support@sematext.com> with description of
 your
 problem.
 
