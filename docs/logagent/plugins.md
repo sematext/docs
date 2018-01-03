@@ -10,13 +10,14 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
 | [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
 | [input-tcp](input-plugin-tcp)         | input | Receive data via TCP                                                                                     |
-| [input-mqtt-client](input-plugin-mqtt-client) | input | Receive data via MQTT client (subscriber)                                                                           |
-| [input-gelf](input-plugin-gelf) | input | Receive data via GELF protocol                                                                           |
-| [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                                               |
-| [cloudfoundry](input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)                                                        |
-| [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically                          |
-| [mysql-query](input-plugin-mysql)     | input | Receive results from SQL queries, which could run once or periodically                                   |
-| [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                                   |
+| [input-mqtt-client](input-plugin-mqtt-client) | input | Receive data via MQTT client (subscriber for N topics)                          |
+| [input-mqtt-broker](input-plugin-mqtt-broker) | input | Starts an MQTT broker and emits all received events from all topics to Logagent |
+| [input-gelf](input-plugin-gelf) | input | Receive data via GELF protocol                                                                |
+| [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                              |
+| [cloudfoundry](input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)           |
+| [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically         |
+| [mysql-query](input-plugin-mysql)     | input | Receive results from SQL queries, which could run once or periodically                  |
+| [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                  |
 | [postgresql-query](input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
 | [elasticsearch-query](input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
 | [logagent-input-kafka](input-plugin-kafka)         | input          | Receives messages from Apache Kafka topics. 3rd party module.  

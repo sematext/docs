@@ -33,3 +33,11 @@ output:
 ```
 logagent --config mqtt-input.yaml
 ```
+
+### Send MQTT messages to subscribed topics
+
+```
+npm i -g mqtt
+mqtt pub -h test.mosquitto.org -t log-messages -m "Hello MQTT"
+mqtt pub -h test.mosquitto.org -t sensor-data -m '{"temperature": 11}'
+```

@@ -104,7 +104,8 @@ pages:
           - Apache Kafka input: logagent/input-plugin-kafka.md
           - InfluxDB input: logagent/input-plugin-influxdb-http.md
           - TCP input: logagent/input-plugin-tcp.md
-          - MQTT input: logagent/input-plugin-mqtt-client.md
+          - MQTT client input: logagent/input-plugin-mqtt-client.md
+          - MQTT broker input: logagent/input-plugin-mqtt-broker.md
           - GELF input: logagent/input-plugin-gelf.md
           - Command input: logagent/input-plugin-command.md
           - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
