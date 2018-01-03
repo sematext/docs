@@ -11,6 +11,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
 | [input-tcp](input-plugin-tcp)         | input | Receive data via TCP                                                                                     |
 | [input-mqtt-client](input-plugin-mqtt-client) | input | Receive data via MQTT client (subscriber)                                                                           |
+| [input-gelf](input-plugin-gelf) | input | Receive data via GELF protocol                                                                           |
 | [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                                               |
 | [cloudfoundry](input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)                                                        |
 | [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically                          |
@@ -29,6 +30,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
 | [rtail](output-plugin-rtail)              | output                    | Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
 | [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
+| [output-gelf](output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
 | [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
