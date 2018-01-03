@@ -28,7 +28,7 @@ output:
 
 ```
 
-### Start logagent
+### Start Logagent
 
 ```
 logagent --config mqtt-input.yaml
