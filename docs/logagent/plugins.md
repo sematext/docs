@@ -10,6 +10,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
 | [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
 | [input-tcp](input-plugin-tcp)         | input | Receive data via TCP                                                                                     |
+| [input-mqtt-client](input-plugin-mqtt-client) | input | Receive data via MQTT client (subscriber)                                                                           |
 | [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                                               |
 | [cloudfoundry](input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)                                                        |
 | [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically                          |
