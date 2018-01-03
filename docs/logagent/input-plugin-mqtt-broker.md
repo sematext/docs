@@ -10,8 +10,10 @@ input:
   mqtt-broker:
     module: input-mqtt-broker
     port: 1883
-    debug: true
-    
+    # regular expression to ignore topics
+    ignoreTopic: ^\$SYS
+    debug: false
+
 output:
   stdout: yaml
   elasticsearch: 
