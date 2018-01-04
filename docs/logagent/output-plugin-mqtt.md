@@ -40,7 +40,7 @@ output:
 
 ```
 
-Start logagent
+Start Logagent
 
 ```
 logagent --config mqtt-output.yaml
