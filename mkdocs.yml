@@ -115,7 +115,8 @@ pages:
           - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
         - Output Plugins:
           - Standard output: logagent/output-plugin-stdout.md
-          - GELF output: logagent/output-plugin-gelf.md
+          - GELF: logagent/output-plugin-gelf.md
+          - MQTT: logagent/output-plugin-mqtt.md 
           - Files: logagent/output-plugin-files.md
           - Elasticsearch: logagent/output-elasticsearch.md
           - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
