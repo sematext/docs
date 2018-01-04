@@ -1,6 +1,6 @@
 ## Input Plugin: MQTT Client
 
-Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin subscribes for MQTT topics. 
+Input plugin for [@sematext/logagent](http://sematext.com/logagent/). This plugin subscribes to MQTT topics. 
 
 ### Configuration
 
@@ -28,7 +28,7 @@ output:
 
 ```
 
-### Start logagent
+### Start Logagent
 
 ```
 logagent --config mqtt-input.yaml
