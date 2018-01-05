@@ -79,7 +79,7 @@ var net = require('net')
 var safeStringify = require('fast-safe-stringify')
 
 /**
- * Constructor called by logagent, when the config file contains tis entry: 
+ * Constructor called by logagent, when the config file contains this entry: 
  * input
  *  tcp:
  *    module: megastef/logagent-input-tcp
