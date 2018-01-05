@@ -108,6 +108,7 @@ pages:
           - MQTT broker input: logagent/input-plugin-mqtt-broker.md
           - GELF input: logagent/input-plugin-gelf.md
           - Command input: logagent/input-plugin-command.md
+          - Elasticsearch HTTP: logagent/input-plugin-elasticsearch-http.md
           - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
           - MSSQL query: logagent/input-plugin-mssql.md
           - MySql query: logagent/input-plugin-mysql.md
