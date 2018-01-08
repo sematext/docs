@@ -112,6 +112,7 @@ pages:
           - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
           - MSSQL query: logagent/input-plugin-mssql.md
           - MySql query: logagent/input-plugin-mysql.md
+          - Zeromq input: logagent/input-plugin-zeromq.md
           - Postgresql query: logagent/input-plugin-postgresql.md
           - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
         - Output Plugins:
@@ -122,6 +123,7 @@ pages:
           - Elasticsearch: logagent/output-elasticsearch.md
           - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
           - Apache Kafka: logagent/output-plugin-kafka.md
+          - Zeromq output: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
         - Filter Plugins:
@@ -131,6 +133,9 @@ pages:
           - SQL output filter: logagent/output-filter-sql.md
           - Access Watch output filter: logagent/output-filter-accesswatch.md
       - FAQ: logagent/faq.md
+      - Contributing to Logagent:
+          - IDE Integration and debugging: logagent/logagent-ide-conf.md
+         
 
 theme: material
 theme_dir: custom_theme
