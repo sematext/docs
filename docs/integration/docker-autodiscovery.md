@@ -1,3 +1,7 @@
+## Integration
+
+- Instructions: [https://apps.sematext.com/ui/howto/Docker/overview](https://apps.sematext.com/ui/howto/Docker/overview)
+
 ## Autodiscovery for containerized application performance monitoring
 
 Container orchestration tools like Docker Enterprise, Google Kubernetes or RedHat OpenShift are a perfect fit for agile DevOps teams. The orchestration tools make an automatic decision on which node in the cluster the application containers are deployed - no worries anymore to scale applications according to the current workload! The dynamic nature of container deployments make it more difficult to track where which application is running - and in case of performance issues, it is critical to have a full picture of cluster, server and application performance. How can you monitor application metrics in such dynamic environment?
@@ -17,9 +21,9 @@ Sematext SPM-Client Auto-Discovery solves the issues above by the automatic disc
 - SPM-Client connects to container networks and Kubernetes pods for monitoring 
 - Application containers can be tagged with the SPM_TOKEN,  and SPM-Client uses the SPM_TOKEN label or environment variable to ship metrics to the right Monitoring App in Sematext Cloud (or Sematext Enterprise). 
 
-## How does SPM-Client Autodiscovery work? 
+## How does SPM Client Autodiscovery work? 
 
-The SPM-Client container gets distributed to every Kuberntes, Docker Swarm or Docker Enterprise node. Then it starts watching container events and compares the image name of started containers with a list of application images defined in a configuration template called `autoDiscovery.yml`. Then SPM-Client joins the container network and configures SPM-Client for the right IP-address and port and other settings according to the configuration template. 
+The SPM Client container gets distributed to every Kubernetes, Docker Swarm or Docker Enterprise node. Then it starts watching container events and compares the image name of started containers with a list of application images defined in a configuration template called `autoDiscovery.yml`. Then SPM-Client joins the container network and configures SPM-Client for the right IP-address and port and other settings according to the configuration template. 
 
 Monitoring with Sematext Cloud requires the SPM_TOKEN for each application type. The SPM_TOKEN is read from the application container environment or container labels. 
 
