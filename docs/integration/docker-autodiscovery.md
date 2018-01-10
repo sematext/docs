@@ -10,7 +10,7 @@ Container orchestration tools like Docker Enterprise, Google Kubernetes or RedHa
 
 A basic coverage for server and container monitoring provides [Sematext Docker Agent](https://sematext.com/docs/sematext-docker-agent/), which collects general host- and container metrics, container events, and container logs. 
 
-Container metrics do not include application-specific metrics like index rate of Elasticsearch clusters or the number of Database operations or web server request rates. Such metrics must be monitored with application-specific monitoring agents, such as  Sematext SPM-Client. 
+Container metrics do not include application-specific metrics like index rate of Elasticsearch clusters or the number of Database operations or web server request rates. Such metrics must be monitored with application-specific monitoring agents, such as  [Sematext SPM-Client](https://hub.docker.com/r/sematext/spm-client/). 
 
 ## Application monitoring for containerized applications 
 
@@ -28,6 +28,7 @@ The SPM Client container gets distributed to every Kubernetes, Docker Swarm or D
 Monitoring with Sematext Cloud requires the SPM_TOKEN for each application type. The SPM_TOKEN is read from the application container environment or container labels. 
 
 Example: To monitor a containerized application like Elasticsearch with SPM-Client Autodiscovery we need only 3 steps: 
+
 1) Create a monitoring app for Elasticsearch in Sematext UI.
 2) Deploy SPM-Client container as Kubernetes DaemonSet or global Swarm Service. Instructions are displayed in Sematext UI.  
 3) Add the displayed SPM_TOKEN to the environment of your Elasticsearch container. 
