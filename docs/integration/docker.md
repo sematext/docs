@@ -6,7 +6,7 @@
 ## Overview
   
 The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.  Sematext Cloud integration for Docker uses the open-source
- [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
+ [Docker monitoring agent](https://sematext.com/docs/sematext-docker-agent/) available on
 Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docker.com/r/sematext/sematext-agent-docker/).
 
 <table>
