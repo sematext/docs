@@ -5,7 +5,7 @@
 ### What is Transaction Tracing
 
 Transaction tracing lets one trace code execution from beginning to end.
- It also enabled [Database Operations](database-operations) reporting. In case of
+ It also enables [Database Operations](database-operations) reporting. In case of
 SPM, transaction tracing can also cross applications, networks, and
 servers. For example, you can trace code execution from a beginning of
 an HTTP request made to a web application through any calls this web
