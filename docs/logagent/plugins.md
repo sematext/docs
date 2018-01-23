@@ -23,6 +23,8 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [postgresql-query](input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
 | [logagent-input-kafka](input-plugin-kafka)         | input          | Receives messages from Apache Kafka topics. 3rd party module.  
 | [input-influxdb-http](input-plugin-influxdb-http)         | input          | Receives metrics from InfluxDB compatible monitoring agents like Telegraf. |
+| [logagent-apple-location](logagent-apple-location)         | input          | Tracking of GPS positions from Apple devices via "find-my-iphone" API |
+| [logagent-novasds](logagent-novasds)         | input          | Read PM10 and PM2.5 values from Nova SDS011 dust sensor (USB to serial interface) |
 | [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
 | [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |

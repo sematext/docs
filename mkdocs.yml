@@ -114,6 +114,8 @@ pages:
           - MySql query: logagent/input-plugin-mysql.md
           - Zeromq input: logagent/input-plugin-zeromq.md
           - Postgresql query: logagent/input-plugin-postgresql.md
+          - Apple device location: logagent/logagent-apple-location.md
+          - Nova dust sensor: logagent/logagent-novasds.md
           - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
         - Output Plugins:
           - Standard output: logagent/output-plugin-stdout.md
