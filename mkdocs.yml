@@ -135,6 +135,7 @@ pages:
       - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
+    - Sematext Cloud API : api/rest-api.md
          
 
 theme: material
