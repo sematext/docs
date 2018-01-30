@@ -5,7 +5,7 @@ as Hosted Elasticsearch, since one of the APIs Logsene exposes is
 [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and
 [searching](searching-your-events).
 
-Below, you can find how you can get started
+Below, you can find how you can get started.
 
 #### Creating a Logsene App
 
@@ -16,8 +16,8 @@ environment, it might make sense to have one app for each. You
 can create as many apps as you want.
 
 After creating an app you will get a confirmation screen that tells you how
-to [send data to your new application](sending-events-to-logsene). Once you start
-sending data, you can start [searching and analyzing those events](searching-your-events) via the native Logsene UI or [explore your data with Kibana](kibana).
+to [send data to your new application](sending-log-events). Once you start
+sending data, you can start [searching and analyzing those events](searching-log-events) via the native Logsene UI or [explore your data with Kibana](kibana).
 
 #### Adding Data to Your App
 
@@ -27,7 +27,7 @@ send data: [through Elasticsearch's API](index-events-via-elasticsearch-api) or 
 ##### Elasticsearch API (Logstash & friends)
 
 The easiest way to send logs from your files is
-[through Logstash](logstash), Filebeat, or [Logagent](../logagent). You
+[through Logstash](logstash), Filebeat, or [Logagent](/logagent). You
 can also use any tool that works with Elasticsearch's REST API, for both
 [indexing](index-events-via-elasticsearch-api) and
 [searching](search-through-the-elasticsearch-api). The
