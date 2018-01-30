@@ -1,6 +1,6 @@
 #### Events: What, Why, How?
 
-[Sematext Cloud](http://sematext.com/could/) can graph not only performance and
+[Sematext Cloud](http://sematext.com/cloud/) can graph not only performance and
 [custom metrics](custom-metrics) or logs, but also events.  Such
 events may represent what is happening with a server or cluster, with an
 application (e.g., application or server restarts, deployments,
