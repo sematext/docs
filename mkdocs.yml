@@ -3,7 +3,7 @@ site_url: http://sematext.com/docs
 site_favicon: assets/images/favicon.png
 pages:
     - Getting Started: index.md
-    - Log Management:
+    - Logs:
       - Overview: logs/index.md
       - Sending Log Events: 
         - Overview: logs/sending-log-events.md
@@ -27,7 +27,7 @@ pages:
       - Supported Date Formats: logs/supported-date-formats.md
       - Special Fields: logs/special-fields.md
       - FAQ: logs/faq.md
-    - Performance Monitoring:
+    - Monitoring:
       - Overview: monitoring/index.md
       - SPM Client:
         - Overview: monitoring/spm-client.md
@@ -35,7 +35,6 @@ pages:
         - SPM Monitor - Standalone: monitoring/spm-monitor-standalone.md
         - SPM Monitor - Switching Modes: monitoring/spm-monitor-switching-modes.md
         - Chef Recipe: monitoring/chef-recipe.md
-      - Events Integration: monitoring/events-integration.md
       - Tag Support: monitoring/tag-support.md
       - Network Map: monitoring/network-map.md
       - Transaction Tracing: monitoring/transaction-tracing.md
@@ -45,6 +44,8 @@ pages:
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - API Reference: monitoring/spm-api-reference.md
       - FAQ: monitoring/spm-faq.md
+    - Events:
+        - Overview: events/index.md
     - Integrations:
         - Overview: integration/index.md
         - Monitoring Akka: integration/akka.md
