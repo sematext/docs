@@ -42,7 +42,7 @@ The following metrics are collected and sent to SPM:
       - To track custom metrics like the number of concurrent users, the
         number of items placed in a shopping cart, or any other kind of
         business transaction or KPI   
-        we provide a [Custom Metrics API](custom-metrics)
+        we provide a [Custom Metrics API](/monitoring/custom-metrics)
         and a node.js client for it:
         [spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
 
