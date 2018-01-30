@@ -19,9 +19,9 @@ events.
 
   
 
-**NOTE: **
+**NOTE:**
 
-  - To be able to use send Events to SPM, you need a Sematext account.
+  - To be able to use send Events to Sematext, you need a Sematext account.
     If you don't already have it, you can create
     it [here](https://apps.sematext.com/ui/registration), it's
     free, no credit card needed. After you have Sematext account, create
