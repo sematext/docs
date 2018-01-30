@@ -6,7 +6,7 @@ To use the config file run:
 logagent --config configFileName.yml
 ```
 
-When Logagent is installed as [system service](logagent/installation/#installation-for-linux-mac-os-x) the default config file is located in 
+When Logagent is installed as [system service](installation/#installation-for-linux-mac-os-x) the default config file is located in 
 ```
 /etc/sematext/logagent.conf
 ```
