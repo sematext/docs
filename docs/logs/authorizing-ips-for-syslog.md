@@ -10,12 +10,12 @@ logs originating from some IP should be routed.  As such, a given IP
 address can be authorized in only one Logsene app. 
 
 You can authorize IPs from the Logsene application's Settings within
-your Sematext account ([click here](https://apps.sematext.com/integrations/apps) to go to the list of
+your Sematext account ([click here](https://apps.sematext.com/ui/logs) to go to the list of
 your Logsene applications), or from the Logsene application itself.
 
 ## Method 1: From the Application Settings
 
-First, you have to get to your [list of Applications](https://apps.sematext.com/integrations/apps). You can do
+First, you have to get to your [list of Apps](https://apps.sematext.com/ui/logs). You can do
 that from anywhere by going to **Integrations-\> Apps**:
 
 ![](attachments/23855110/101418634.png?height=250)
