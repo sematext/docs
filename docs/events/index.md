@@ -1,15 +1,15 @@
 #### Events: What, Why, How?
 
-[SPM](http://sematext.com/spm/) can graph not only performance and
-[custom metrics](custom-metrics), but also events.  Such
+[Sematext Cloud](http://sematext.com/could/) can graph not only performance and
+[custom metrics](custom-metrics) or logs, but also events.  Such
 events may represent what is happening with a server or cluster, with an
 application (e.g., application or server restarts, deployments,
 alerts...), etc, as well as any sort of other event data that you want
-to correlate to metrics in SPM.  Events are graphed in timeseries charts
-and these charts can be shown next to all SPM metrics charts.  This
-makes it possible to easily correlate events and metrics.  In addition
+to correlate to metrics or logs.  Events are graphed in timeseries charts
+and these charts can be shown next to metrics or logs charts.  This
+makes it possible to easily correlate events with metrics and/or logs.  In addition
 to showing events as timeseries charts, a detailed listing of events can
-be seen and, of course, events can have tags and priority, and can be
+be seen and, of course, events can have tags, and can be
 searched and filtered.
 
 Events are also exposed via a REST API that let's you post, retrieve,
@@ -25,10 +25,10 @@ events.
     If you don't already have it, you can create
     it [here](https://apps.sematext.com/ui/registration), it's
     free, no credit card needed. After you have Sematext account, create
-    an SPM App to which Events will be sent.
-  - If you have already created some SPM Apps under your account in the
+    an App of any type.
+  - If you have already created some Apps under your account in the
     past, you can send Events to any of them.
-  - If you just registered, you can create SPM Apps by following the
+  - If you just registered, you can create Apps by following the
     steps after Sematext account registration, or by clicking
     directly [here](https://apps.sematext.com/ui/registration).
 
@@ -59,7 +59,7 @@ An event has the following set of fields, most of which are optional:
 <td>message</td>
 <td>string</td>
 <td>yes</td>
-<td>Short description of event, e.g. &quot;Elasticsearch node03 on host somehost06 restarted&quot;. This is a default search field in SPM UI, so it is good to keep it concise, but search-friendly.</td>
+<td>Short description of event, e.g. &quot;Elasticsearch node03 on host somehost06 restarted&quot;. This is a default search field in Sematext UI, so it is good to keep it concise, but search-friendly.</td>
 </tr>
 <tr class="odd">
 <td>name</td>
@@ -104,23 +104,23 @@ To post an event to your event stream use the following base endpoint:
 http://event-receiver.sematext.com/APPLICATION_TOKEN/event
 ```
 
-A single application token must be specified in the URL. Thus, to send
-multiple events associated with multiple applications, separate call to
-the API will need to be made for each application.  You can add event
-type as a field in json message
+A single App token must be specified in the URL. Thus, to send
+multiple events associated with multiple Apps, separate call to
+the API will need to be made for each App.  You can add event
+type as a field in JSON message
 (e.g, **alert**, **app\_restart**, **server\_restart**, **reboot**,
 **deployment**...), but we suggest using a smaller number of distinct
 event types (1-10) to keep things manageable.
 
 ##### **Example** **1**
 
-Consider some SPM application whose token (your app tokens are at:
+Consider an App whose token (your App tokens are at:
 <https://apps.sematext.com/ui/integrations/apps>) is
 **1111111-2222-3333-4444-555555555555**.  To send
 a **server\_restart** event call the Events API with token and event
 type:
 
-**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)[/**1111111-2222-3333-4444-555555555555**/event](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)**
+**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[/**1111111-2222-3333-4444-555555555555**/event](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)**
 
 with POST content in JSON format like this:
 
@@ -151,11 +151,11 @@ curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 
 ##### **Example 2**
 
-Same SPM Solr application, but we want to post **deployment** event with
+Same App, but we want to post a **deployment** event with
 more event properties populated. In this case the HTTP endpoint would
 be:
 
-**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)[/](http://event-receiver.sematext.com/receive/YOUR_SPM_APPLICATION_TOKEN/EVENT_TYPE)[1111111-2222-3333-4444-555555555555/event](http://localhost:8448/event-receiver/1111111-2222-3333-4444-555555555555/server_restart)**
+**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[/](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[1111111-2222-3333-4444-555555555555/event](http://localhost:8448/event-receiver/1111111-2222-3333-4444-555555555555/server_restart)**
 
 with HTTP POST content:
 
@@ -191,9 +191,9 @@ curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 
   
 
-#### Searching Events in SPM
+#### Searching Events
 
-SPM user interface lets you to show events and metrics from a specific
+Sematext user interface lets you find events, metrics, and logs from a specific
 time period. Additionally, the event chart has a search box where you
 can further narrow down events to only those that match the input query.
 
@@ -212,9 +212,9 @@ it.
 
 #### Searching Events Programmatically
 
-SPM exposes the Events Search HTTP API - as [Elasticsearch search API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
+Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
 events can be searched and retrieved programmatically/remotely, via
-HTTP, using curl or any other Elasticsearch client.  The API endpoint
+HTTP(S), using curl or any other Elasticsearch client.  The API endpoint
 is:
 
 ``` bash
@@ -275,7 +275,7 @@ https://event-receiver.sematext.com/APPLICATION_TOKEN
   
 
 Note: when using curl, you may experience **"SSL certificate
-problem" **errors. The reason is that curl doesn't bundle any CA certs
-any more, for more info see
+problem"** errors. The reason is that curl doesn't bundle any CA certs
+any more.  For more info see
 [this](http://curl.haxx.se/docs/sslcerts.html). Regardless of curl
 errors, HTTPS communication should be functional.
