@@ -31,12 +31,12 @@ and you can get an evaluation version to try it out.
 
 **A:** SPM can monitor Docker/containers, Hadoop, HBase, Kafka, Spark, Storm, Cassandra,
 Elasticsearch, Solr/SolrCloud, MySQL, MariaDB, Redis, Memcached, Apache,
-HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc. See [SPM integrations](http://sematext.com/spm/integratons) for more.
+HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc. See [SPM integrations](http://sematext.com/spm/integrations) for more.
  You can also feed it [Custom Metrics](custom-metrics).
 
 #### Does SPM Integrate with ChatOps like Slack and HipChat?  How about PagerDuty or custom WebHooks
 
-**A:** Yes, see [Integrations](integrations).
+**A:** Yes, see [Integrations](/integrations).
 
 #### Can hostnames in SPM UI be obfuscated or customized
 
