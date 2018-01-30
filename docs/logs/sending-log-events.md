@@ -10,7 +10,7 @@ connect - using Elasticsearch API or using syslog.
 
 All options work with log shippers such as
 [Logstash](logstash),
-[Logagent](logagent),
+[Logagent](logagent/),
 [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch),
 [rsyslog](rsyslog) or
 [syslog-ng](syslog-ng). And you can always write your own
