@@ -3,7 +3,7 @@ your own logging box in the cloud (or [running on your own infrastructure](../se
 a cheaper alternative to Splunk, or even
 as Hosted Elasticsearch, since one of the APIs Logsene exposes is
 [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and
-[searching](searching-your-events).
+[searching](searching-log-events).
 
 Below, you can find how you can get started.
 
