@@ -2,6 +2,15 @@
 
 This plugin sends data to a GELF server using protocol v1.1 via UDP.
 
+#### Installation 
+
+Install graygelf module 
+
+```
+npm i -g graygelf
+# sudo npm i -g --unsafe-perm graygelf 
+```
+
 ### Configuration
 
 ```

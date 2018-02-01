@@ -2,6 +2,15 @@
 
 Plugin to receive logs with GELF protocol v1.1 via UDP. GELF (Graylog Extended Log Format) is a log format that avoids the shortcomings of classic plain syslog.
 
+### Installation 
+
+Install graygelf module 
+
+```
+npm i -g graygelf
+# sudo npm i -g --unsafe-perm graygelf 
+```
+
 ### Configuration
 
 ```yaml
