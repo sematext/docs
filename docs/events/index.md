@@ -197,10 +197,6 @@ Sematext user interface lets you find events, metrics, and logs from a specific
 time period. Additionally, the event chart has a search box where you
 can further narrow down events to only those that match the input query.
 
-![](attachments/22249482/22511618.png)
-
-  
-
 The query syntax is specified by Elasticsearch's query string query, as
 described
 [here](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax).
