@@ -223,8 +223,6 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
 Sematext Agent inspects the containers for this label and ships the logs to the specified Logsene App. 
 
-To disable logging to Logsene/Elasticsearch simply label the container with ```LOGSENE_ENABLED=false```. ```LOGSENE_ENABLED=true``` enables logging for the container again. 
-
 __Example:__ 
 The following command will start Nginx webserver and logs for this container will be shipped to the related Logsene App. 
 
@@ -235,6 +233,8 @@ docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGSENE_TOKEN -p 80:80 nginx
 ```
 
 All other container logs will be shipped to the Logsene App specified in the docker run command for ```sematext/sematext-agent-docker``` with the environment variable ```LOGSENE_TOKEN```.
+
+By default, all logs from all containers are collected and sent to Logsene/Elasticsearch. You can change this default by setting the ```LOGSENE_ENABLED_DEFAULT=false``` label for the Sematext Docker Agent container. This default can be overridden, on each container, through the ```LOGSENE_ENABLED``` label.
 
 Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2017/05/15/docker-log-management-enrichment/) for further details.
 
