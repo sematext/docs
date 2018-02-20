@@ -34,6 +34,6 @@ API Documentation is available <a href="/docs/rest-api" target="_blank">here</a>
 
 Try out the REST APIs using the API Key of your Sematext account at :
 
-* <a href="https://apps.sematext.com/docs/api/" target="_blank">Sematext Cloud US Region</a>
+* <a href="https://apps.sematext.com/api-explorer" target="_blank">Sematext Cloud US Region</a>
 
-* <a href="https://apps.eu.sematext.com/docs/api/" target="_blank">Sematext Cloud EU Region</a>
+* <a href="https://apps.eu.sematext.com/api-explorer" target="_blank">Sematext Cloud EU Region</a>
