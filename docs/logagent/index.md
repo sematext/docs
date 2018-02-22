@@ -52,7 +52,7 @@ Logagent doesn't lose data. It stores parsed logs to a disk buffer if the networ
 
 #### Deployment options
 - Deployable as a system service: Systemd, Upstart (Linux), or Launchd (Mac OS X)
-- Docker Container 
+- [Docker Container](https://hub.docker.com/r/sematext/logagent/) 
 - Deployment to Heroku as Heroku Log drain
 - Deployment to Cloud Foundry as Cloud Foundry Log drain (thus usable with Pivotal, IBM Bluemix, etc.)
 
