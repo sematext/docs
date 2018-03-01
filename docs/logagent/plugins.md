@@ -29,10 +29,11 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
 | [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
 | [stdout (default)](output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
+| [elasticsearch](output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
 | [output-gelf](output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
 | [output-mqtt](output-plugin-mqtt)         | output | Sends messages via MQTT protocol |
-| [elasticsearch](output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
-| [output-aws-elasticsearch](output-plugin-aws-elasticsearch)     | output                    | Stores parsed messages in Amazon Elasticsearch 
+| [output-influxdb](output-plugin-influxdb)     | output                    | Stores parsed messages in InfluxDb |
+| [output-aws-elasticsearch](output-plugin-aws-elasticsearch)     | output                    | Stores parsed messages in Amazon Elasticsearch |
 | [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
 | [rtail](output-plugin-rtail)              | output                    | Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
 | [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
