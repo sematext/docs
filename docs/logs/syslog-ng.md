@@ -4,14 +4,14 @@ syslog-ng is a modern syslog daemon that's focused on flexibility and
 portability. It also has an easy to use configuration format, that helps
 you ship your logs to Logsene in 3 steps:
 
-1.  **sources**. syslog-ng can listen to local [syslog traffic on /dev/log](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_source_unixstream.html),
-    can [tail files](http://www.balabit.com/sites/default/files/documents/syslog-ng-pe-4.2-guides/en/syslog-ng-pe-v4.2-guide-admin-en/html/reference_source_file.html) and
+1.  **sources**. syslog-ng can listen to local [syslog traffic](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-source-system.html),
+    can [tail files](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-file.html) and
     more
 2.  **destinations**. You can send your logs to Logsene via UDP, TCP or
     [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425)
 3.  **bind sources to destinations**. Once you have your sources and
     destinations defined, you have to define paths by linking sources
-    and destinations with the [log statement](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.4-guides/en/syslog-ng-ose-v3.4-guide-admin/html/logpath.html)
+    and destinations with the [log statement](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/logpath.html)
 
 ## Configure Sources
 
@@ -19,23 +19,23 @@ Sources enable syslog-ng collect the logs you want to send to Logsene.
 You can use system() to collect all the local syslog messages from that
 system. You can put this at the beginning of your
 **/etc/syslog-ng/syslog-ng.conf**, along with your configuration
-version. We recommend running version 3.3 or later:
+version. We recommend running version 3.4 or later:
 
 ``` bash
-@version:3.3
+@version:3.4
 source local_logs {
     system();
 };
 ```
 
 To download a more recent version of syslog-ng than the one on your
-system, take a look at the [download page of syslog-ng](http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/downloads/3rd-party).
+system, take a look at the [download page of syslog-ng](https://syslog-ng.com/3rd-party-binaries).
 
 ### Tailing Files
 
 syslog-ng can also listen to other inputs, such as
-[files](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/configuring_sources_file.html),
-[TCP or UDP](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/configuring_sources_tcpudp.html).
+[files](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-file.html),
+[TCP or UDP](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-tcpudp.html).
 
 To tail a file, you'll use the file() source and point it to the right
 file. If that file doesn't contain syslog-formatted messages, you'll
@@ -123,7 +123,7 @@ First, you need to set up the certificates:
 ``` bash
 mkdir /opt/syslog-ng
 cd /opt/syslog-ng
-wget https://apps.sematext.com/cert/DigiCertCA.pem                # md5sum is 9e028401b52ca7453f6b05caa9643c89
+wget https://apps.sematext.com/cert/DigiCertCA.pem                # md5sum is fb30c5636d0108b2688d7e1ed59749ac
 wget https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem   # md5sum is 3816293340b05c52bcbc99a4f00b1b04
 
 # openssl x509 -subject_hash -noout -in DigiCert_Global_Root_CA.pem 
@@ -142,7 +142,7 @@ created certificates directory and **changing the port to 10514**:
 ``` bash
 destination logsene {
     syslog("logsene-receiver-syslog.sematext.com"
-      transport("tcp")
+      transport("tls")
       port(10514)
 # template() statement should be removed if you authorized your IP
       template("@cee: $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n")
@@ -189,7 +189,7 @@ special kind of logs. For example, you could tag events that come to the
 "kern" facility with a severity/level of "err" as "kernel errors".
 
 To achieve this, you can define a
-[filter](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_filters.html)
+[filter](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-filters.html)
 that matches such events. Then, you'd define a destination similar to
 the ones [described above](syslog-ng/#configure-destinations),
 where you'd add a **tags** field. Finally, you'd define a **log**
