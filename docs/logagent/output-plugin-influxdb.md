@@ -23,6 +23,10 @@ output:
     url: http://username:password@127.0.0.1:8086
     # InfluxdB datbase name
     db: sensor_data
+    # static tags for all metrics
+    tags: 
+      role: backend
+      region: eu
     # flush interval in seconds
     flushInterval: 5
     # max buffer size to force flush
