@@ -15,13 +15,13 @@ To use Logging and Monitoring with a single agent, the provided instructions nee
    - For logs (optional) [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
 3. Run the image after adding your SPM and/or Logsene tokens:
 
-   ```
-   docker pull sematext/sematext-agent-docker
-   docker run -d --name sematext-agent-docker \
-   -e SPM_TOKEN=YOUR_SPM_TOKEN \
-   -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
-   -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker -->
-   ```
+```
+docker pull sematext/sematext-agent-docker
+docker run -d --name sematext-agent-docker \
+-e SPM_TOKEN=YOUR_SPM_TOKEN \
+-e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
+-v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
+```
 
 **Installation** of the Docker Image of the monitoring agent:
 
