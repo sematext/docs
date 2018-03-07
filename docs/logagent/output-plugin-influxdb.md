@@ -1,12 +1,12 @@
 
 ## Output Plugin: InfluxDB
 
-This plugin converts any message object to influx-line protocol. 
+This plugin converts any message object to influx-line protocol: 
+
 - Numeric fields are converted to InfluxDB fields
 - Text fields are converted to InfluxDB tags 
-- Field names in nested objects (e.g. from  JSON logs) are flatten using a dot as separator 
-
-Messages should have a "measurement" field for the InfluxDB measurement name. When the "measurement" field is missing, the measurement name is taken from the "logSource" field.
+- Field names in nested objects (e.g. from  JSON logs) are flatten using a dot as separator
+- Messages should have a "measurement" field for the InfluxDB measurement name. When the "measurement" field is missing, the measurement name is taken from the "logSource" field.
 
 
 ### Configuration
