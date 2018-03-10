@@ -10,8 +10,52 @@
 /**
  * Custom Styles
  */
- 
-.md-typeset h1 {
+
+ a {
+    color: #00a1ed;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 76.25em) {
+.md-sidebar--secondary {
+    margin-left: 122rem;
+}
+}
+
+.md-sidebar a {
+    color: rgba(0,0,0,.87);
+}
+
+.md-nav__link--active, .md-nav__link:active {
+    font-weight: bold;
+}
+
+.md-nav__link[data-md-state=blur] {
+    color: rgba(0,0,0,.87);
+    font-weight: bold;
+}
+
+.md-typeset a {
+    color: #00a1ed;
+    word-break: break-word;
+}
+.md-header {
+    background-color: #fff;
+    color: #1fa0ed;
+}
+.md-content__inner {
+    margin: 0 1.6rem 300px;
+}
+.md-footer-nav {
+    background-color: #002532;
+}
+.md-footer-meta {
+    background-color: #00425D;
+}
+.mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+    background-color: #1EC172;
+}
+/**  .md-typeset h1 {
     font-size: 2em;
     font-weight: bold;
 }
@@ -23,7 +67,7 @@
 
 .md-content {
     margin-right:0
-}
+} 
 
 .md-button {
     padding-top: 4px;
@@ -240,3 +284,4 @@
 .breadcrumb > .active {
     color: #777;
 }
+*/

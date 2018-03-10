@@ -142,9 +142,8 @@ pages:
     - Sematext Cloud API : api/rest-api.md
          
 
-theme:
-    name: material
-    custom_dir: 'mkdocs-material/material'
+theme: material
+theme_dir: custom_theme
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
 google_analytics: ['UA-2365268-3', 'mkdocs.org']
