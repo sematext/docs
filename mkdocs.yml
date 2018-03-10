@@ -144,7 +144,7 @@ pages:
 
 theme:
     name: material
-    custom_dir: 'mkdocs-material/material'
+    custom_dir: 'mkdocs-material-custom'
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
 google_analytics: ['UA-2365268-3', 'mkdocs.org']
