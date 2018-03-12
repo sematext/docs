@@ -5,7 +5,7 @@
 ```
 git clone git@github.com:sematext/docs.git
 cd docs
-docker run  -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs pip install mkdocs-material && mkdocs serve 
+docker run  -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs pip install mkdocs-material===2.7.0 && mkdocs serve 
 open http://localhost:8000
 ```
 
@@ -23,13 +23,13 @@ Install Mkdocs
 Install the `mkdocs` package using `pip`:
 
 ```sh
-pip install mkdocs===0.16.3
+pip install mkdocs===0.17.3
 ```
 
 Install Material theme
 
 ```sh
-pip install mkdocs-material===1.10.1
+pip install mkdocs-material===2.7.0
 ```
 
 Getting started
