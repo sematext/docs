@@ -1,1 +1,44 @@
 {% extends "base.html" %}
+
+{% block content %}
+{% if not page.is_homepage %}
+{% set fb_path = 'https://www.facebook.com/sharer/sharer.phpstb?u=' + page.canonical_url %}
+<a href="{{ fb_path }}" title="Facebook Share" class="md-icon md-content__icon" style="display: none">share</a>
+
+{% set tw_path = 'https://twitter.com/intent/tweet?url=' + page.canonical_url %}
+<a href="{{ tw_path }}" title="Twitter Share" class="md-icon md-content__icon">share</a>
+
+{% set li_path = 'https://www.linkedin.com/shareArticle?url=' + page.canonical_url %}
+<a href="{{ li_path }}" title="Linkedin Share" class="md-icon md-content__icon" style="display: none">share</a>
+
+{% set pdf_path = page.canonical_url | reverse | replace('/','fdp.', 1) | replace('/', '/fdp/', 1) | reverse %}
+<a href="{{ pdf_path }}" title="PDF" class="md-icon md-content__icon">library_books</a>
+{% endif %}
+{% if page.edit_url %}
+<a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">&#xE3C9;</a>
+{% endif %}
+{% if not "\x3ch1" in page.content %}
+<h1>{{ page.title | default(config.site_name, true)}}</h1>
+{% endif %}
+{{ page.content }}
+{% block source %}
+{% if page and page.meta and page.meta.source %}
+    <h2 id="__source">{{ lang.t("meta.source") }}</h2>
+    {% set repo = config.repo_url %}
+    {% if repo | last == "/" %}
+    {% set repo = repo[:-1] %}
+    {% endif %}
+    {% set path = page.meta.path | default([""]) %}
+    {% set file = page.meta.source %}
+    <a href="{{ [repo, path, file] | join('/') }}" title="{{ file }}" class="md-source-file">
+    {{ file }}
+    </a>
+{% endif %}
+{% endblock %}
+{% endblock %}
+{% block disqus %}
+{% if (config.extra.disqus and not page.is_homepage) or
+    (page and page.meta and page.meta.disqus) %}
+{% include "partials/integrations/disqus.html" %}
+{% endif %}
+{% endblock %}
