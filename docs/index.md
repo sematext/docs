@@ -221,7 +221,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
       </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <a href="/docs/logs/logsene-api-reference/">
+      <a href="/docs/api/rest-api/">
         <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
