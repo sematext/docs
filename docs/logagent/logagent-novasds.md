@@ -4,7 +4,7 @@ Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin
 
 ## Installation 
 
-Install [@sematext/logagent](https://www.npmjs.com/package/@sematext/logagent) and [logagent-input-nova-sda011](https://www.npmjs.com/package/logagent-input-nova-sda011) npm package: 
+Install [@sematext/logagent](https://www.npmjs.com/package/@sematext/logagent) and [logagent-novasds](https://www.npmjs.com/package/logagent-novasds) npm package: 
 
 ```
 npm i -g @sematext/logagent 
