@@ -11,7 +11,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--4-col">
-		<a href="/logs/">
+		<a href="/docs/logs/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp logs-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
