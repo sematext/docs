@@ -10,87 +10,171 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-        <a href="/logs/">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp logs-card">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Logs
-          </h4>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-        <a href="/monitoring/">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Monitoring
-          </h4>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-      <a href="/events/">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Events
-          </h4>
-        </div>
-      </div>
-    </a>
-  </div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/logs/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp logs-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Logs
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/monitoring/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Monitoring
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/events/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Events
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Integrations
-          </h4>
-          <ul class="demo-list-icon mdl-list integrations-card-list">
-  <li class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-    <a href="/integration/solr/"><img src="https://cdn.svgporn.com/logos/solr.svg" alt="Solr"></a>
-</span>
-  </li>
-  <li class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-        <a href="/integration/elasticsearch/"><img src="https://cdn.svgporn.com/logos/elasticsearch.svg" style="width:36px;" alt="Elasticsearch"></a>
-  </span>
-  </li>
-  <li class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-        <a href="/integration/docker/"><img src="https://cdn.svgporn.com/logos/docker.svg" alt="Docker"></a>
-  </span>
-  </li>
-</ul>
-<ul class="demo-list-icon mdl-list integrations-card-list">
-    <li class="mdl-list__item">
-      <span class="mdl-list__item-primary-content">
-      <a href="/integration/akka/"><img src="https://cdn.svgporn.com/logos/akka.svg" alt="Akka"></a>
-  </span>
-    </li>
-    <li class="mdl-list__item">
-      <span class="mdl-list__item-primary-content">
-          <a href="/integration/aws/"><img src="https://cdn.svgporn.com/logos/aws.svg"  alt="AWS"></a>
-    </span>
-    </li>
-    <li class="mdl-list__item">
-      <span class="mdl-list__item-primary-content">
-          <a href="/integration/nginx/"><img src="https://cdn.svgporn.com/logos/nginx.svg" alt="Nginx"></a>
-    </span>
-    </li>
-  </ul>
-        </div>
-      </div>
-    </div>
+	<div class="mdl-cell mdl-cell--12-col">
+		<div class="demo-card-event mdl-card mdl-shadow--2dp">
+			<div class="mdl-card__title mdl-card--expand">
+				<h4>
+					Integrations
+				</h4>
+				<ul class="demo-list-icon mdl-list integrations-card-list">
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/solr/">
+								<img src="https://cdn.svgporn.com/logos/solr.svg" alt="Solr" title="Apache Solr">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/elasticsearch/">
+								<img src="https://cdn.svgporn.com/logos/elasticsearch.svg" style="width:36px; height:36px;" alt="Elasticsearch" title="Elasticsearch">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/docker/">
+								<img src="https://cdn.svgporn.com/logos/docker.svg" alt="Docker" title="Docker">
+							</a>
+						</span>
+					</li>
+				</ul>
+				<ul class="demo-list-icon mdl-list integrations-card-list">
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/akka/">
+								<img src="https://cdn.svgporn.com/logos/akka.svg" alt="Akka" title="Akka">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/aws/">
+								<img src="https://cdn.svgporn.com/logos/aws.svg" alt="AWS" title="AWS - Amazon Web Services">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/nginx/">
+								<img src="https://cdn.svgporn.com/logos/nginx.svg" alt="Nginx" title="Nginx">
+							</a>
+						</span>
+					</li>
+				</ul>
+				<ul class="demo-list-icon mdl-list integrations-card-list">
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/cassandra/">
+								<img src="https://cdn.svgporn.com/logos/cassandra.svg" alt="Cassandra" title="Cassandra">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/apache/">
+								<img src="https://cdn.svgporn.com/logos/apache.svg" alt="Apache" title="Apache" style="height: 48px;">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/tomcat/">
+								<img src="https://cdn.svgporn.com/logos/tomcat.svg" alt="Tomcat" title="Tomcat">
+							</a>
+						</span>
+					</li>
+				</ul>
+				<ul class="demo-list-icon mdl-list integrations-card-list">
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/node.js/">
+								<img src="https://cdn.svgporn.com/logos/nodejs-icon.svg" alt="Node.js" title="Node.js">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/hbase/">
+								<img src="https://cdn.svgporn.com/logos/hbase.svg" alt="Hbase" title="Hbase">
+							</a>
+						</span>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">
+							<a href="/integration/hadoop/">
+								<img src="https://cdn.svgporn.com/logos/hadoop.svg" alt="Hadoop" title="Hadoop">
+							</a>
+						</span>
+					</li>
+				</ul>
+				<ul class="demo-list-icon mdl-list integrations-card-list">
+						<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+								<a href="/integration/kafka/">
+									<img src="https://cdn.svgporn.com/logos/kafka.svg" alt="Kafka" style="height: 48px;" title="Kafka">
+								</a>
+							</span>
+						</li>
+						<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+								<a href="/integration/php/">
+									<img src="https://cdn.svgporn.com/logos/php.svg" alt="PHP" title="PHP">
+								</a>
+							</span>
+						</li>
+						<li class="mdl-list__item">
+							<span class="mdl-list__item-primary-content">
+								<a href="/integration/jvm/">
+									<img src="https://cdn.svgporn.com/logos/java.svg" alt="Java JVM" title="Java JVM">
+								</a>
+							</span>
+						</li>
+					</ul>
+				<h4>
+					<a href="/integration/" style="padding-left:50px;">See all ...</a>
+				</h4>
+			</div>
+		</div>
+	</div>
 </div>
 
-<!-- ####Cloud or On Premise 
+<!-- Cloud or On Premise 
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
@@ -114,38 +198,46 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 </div>
 --> 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Logagent
-          </h4>
+    <div class="mdl-cell mdl-cell--4-col">
+      <a href="/logagent/">
+        <div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
+          <div class="mdl-card__title mdl-card--expand">
+            <h4>
+              Logagent
+            </h4>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Docker Agent
-          </h4>
+      <a href="/sematext-docker-agent/">
+        <div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
+          <div class="mdl-card__title mdl-card--expand">
+            <h4>
+              Docker Agent
+            </h4>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Kubernetes Agent
-          </h4>
+      <a href="/api/rest-api/">
+        <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
+          <div class="mdl-card__title mdl-card--expand">
+            <h4>
+              Cloud API
+            </h4>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 
 *If you have questions, we’re here to help.* Don’t hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
 
 
+<!-- Comment out outdated video / reuse code for video embeds
 <div class="video_container">
 <iframe class="video" src="https://www.youtube.com/embed/fY-j6g_oTmA" frameborder="0" allowfullscreen=""></iframe>
 </div>
+-->
