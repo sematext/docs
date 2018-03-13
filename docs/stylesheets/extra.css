@@ -63,6 +63,8 @@ a {
 }
 .integrations-card-list img{
     width: 48px;
+    min-width: 48px;
+    min-height: 48px;
 }
 .md-footer-nav {
     background-color: #002532;
