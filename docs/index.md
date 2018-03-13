@@ -22,7 +22,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--4-col">
-		<a href="/monitoring/">
+		<a href="/docs/monitoring/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
@@ -199,7 +199,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 --> 
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col">
-      <a href="/logagent/">
+      <a href="/docs/logagent/">
         <div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
@@ -210,7 +210,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
       </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <a href="/sematext-docker-agent/">
+      <a href="/docs/sematext-docker-agent/">
         <div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
@@ -221,7 +221,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
       </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <a href="/api/rest-api/">
+      <a href="/docs/logs/logsene-api-reference/">
         <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
