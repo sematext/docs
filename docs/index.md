@@ -33,7 +33,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--4-col">
-		<a href="/events/">
+		<a href="/docs/events/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
