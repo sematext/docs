@@ -84,6 +84,12 @@ a {
 .md-footer-meta {
     background-color: #00425D;
 }
+@media only screen and (min-width: 45em){
+.md-footer-social {
+    padding: 1.2rem 1.2rem 1.2rem 0;
+    float: left;
+}
+} 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
     background-color: #1EC172;
 }
