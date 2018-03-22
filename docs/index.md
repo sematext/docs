@@ -46,11 +46,11 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 </div>
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--12-col">
+	<h3>
+					Integrations
+				</h3>
 		<div class="demo-card-event mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title mdl-card--expand">
-				<h4>
-					Integrations
-				</h4>
 				<ul class="demo-list-icon mdl-list integrations-card-list">
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
@@ -85,7 +85,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/aws/">
-								<img src="https://cdn.svgporn.com/logos/aws.svg" alt="AWS" title="AWS - Amazon Web Services">
+								<img src="https://cdn.svgporn.com/logos/aws.svg" alt="AWS" style="min-width: 72px;" title="AWS - Amazon Web Services">
 							</a>
 						</span>
 					</li>
@@ -166,37 +166,13 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 							</span>
 						</li>
 					</ul>
-				<h4>
-					<a href="/docs/integration/" style="padding-left:50px;">See all ...</a>
-				</h4>
 			</div>
+			<h4>
+					<a href="/docs/integration/" style="padding-right:8%; float:right;">See all integrations...</a>
+				</h4>
 		</div>
 	</div>
 </div>
-
-<!-- Cloud or On Premise 
-
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="demo-card-event mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title mdl-card--expand">
-        <h4>
-          Integrations
-        </h4>
-      </div>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Integrations
-          </h4>
-        </div>
-      </div>
-  </div>
-</div>
---> 
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col">
       <a href="/docs/logagent/">
