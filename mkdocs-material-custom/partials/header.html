@@ -3,13 +3,14 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo">
-          {% if config.theme.logo.icon %}
+          <img src="https://sematext.com/docs/images/octi-sematext-logo.svg" style="margin-top: -12px;" alt="Sematext Documentation">
+         <!-- {% if config.theme.logo.icon %}
             <i class="md-icon">{{ config.theme.logo.icon }}</i>
           {% elif config.theme.logo.startswith("http") %}
             <img src="{{ config.theme.logo }}" width="24" height="24">
           {% else %}
             <img src="{{ base_url }}/{{ config.theme.logo }}" width="24" height="24">
-          {% endif %}
+          {% endif %} =-->
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
