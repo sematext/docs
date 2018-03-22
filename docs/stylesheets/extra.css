@@ -11,14 +11,33 @@
  * Custom Styles
  */
 
+table {
+    table-layout:fixed;
+    width:100%; 
+}
 a {
     color: #00a1ed;
 }
-
+.md-nav--primary .md-nav__title {
+    display: none;
+}
+.md-content {
+    padding: 1.5rem;
+}
 .md-sidebar a {
     color: rgba(0,0,0,.87);
 }
-
+@media only screen and (min-width: 76.25em){
+.md-sidebar--secondary {
+    margin-left: 98%;
+}
+}
+.md-nav--secondary .md-nav__item {
+    padding: 0;
+}
+.md-nav--secondary .md-nav__title{
+    padding-left: 0;
+}
 .md-nav__link--active, .md-nav__link:active {
     font-weight: bold;
 }
