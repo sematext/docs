@@ -1,5 +1,3 @@
-### Supported Technologies
-
 Currently, only Java applications can be traced. The agent is compiled
 with Java 1.6 target, so applications using Java 1.6 and up are
 supported.

@@ -1,9 +1,9 @@
 ### Tracing Scala Apps
 
-Yes, you can trace transactions for Scala apps, too\!  In order to
-define custom pointcuts for a Scala app you need to follow the
-convention Scala uses to generate JVM classes. Below you can find a toy
-example that covers all basic cases:
+Sematext let's you trace transactions for Scala apps, too\!  In order
+to define custom pointcuts for a Scala app you need to follow the
+convention Scala uses to generate JVM classes. Below you can find a
+simple example that covers all basic cases:
 
 ``` scala
 trait UserService {

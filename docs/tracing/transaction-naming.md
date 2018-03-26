@@ -1,11 +1,9 @@
-### Transactions Naming
-
 To name web transactions (i.e., transactions triggered by an HTTP
 request) the SPM Java tracing agent uses method signature of entry point
 as the transaction name. Entry point methods can be last filter/servlet
 executed in a chain, or a Spring handler method name (i.e., a method
 name with the \`@RequestHandler\` annotation). Alternatively,
-transaction names can be redefined using servlet config.  For example,
+transaction names can be redefined using servlet config.  For example,
 here we name them "WorkerTransaction":
 
 ``` xml
@@ -45,4 +43,4 @@ Precedence rules for resolving transaction names:
 </table>
 
 Non-web transactions can be (re)named using the transaction-name
-attribute as described in [Custom Pointcuts].
+attribute as described in \[Custom Pointcuts\].

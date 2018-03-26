@@ -1,5 +1,3 @@
-### Enable Tracing
-
 To enable tracing edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 

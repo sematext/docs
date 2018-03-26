@@ -1,5 +1,3 @@
-### Custom Pointcuts
-
 The built-in extension mechanism can be used to instrument custom method
 calls that are not handled by the SPM tracing agent out of the box. An
 extension is set of pointcuts described in XML files placed in
