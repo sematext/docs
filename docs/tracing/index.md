@@ -27,7 +27,7 @@ running applications and troubleshoot performance issues.
     which means it requires the restart of the application running the
     embedded SPM monitor.
   - Enabling transaction traces adds only about 1% CPU overhead.
-  - Transaction Tracing is different from [On Demand Profiling](monitoring/on-demand-profiling).
+  - Transaction Tracing is different from [On Demand Profiling](/monitoring/on-demand-profiling).
 
 **Resources**:
 

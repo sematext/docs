@@ -45,7 +45,7 @@ pages:
     - Tracing:
         - Overview: tracing/index.md
         - Enabling: tracing/enable.md
-        - Tracing Database calls: tracing/database-operations.md
+        - Tracing Database Calls: tracing/database-operations.md
         - Supported Tech: tracing/supported-technologies.md
         - Custom Pointcuts: tracing/custom-pointcuts.md
         - Transaction Naming: tracing/transaction-naming.md
