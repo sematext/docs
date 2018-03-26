@@ -43,4 +43,4 @@ Precedence rules for resolving transaction names:
 </table>
 
 Non-web transactions can be (re)named using the transaction-name
-attribute as described in \[Custom Pointcuts\].
+attribute as described in [Custom Pointcuts](custom-pointcuts).

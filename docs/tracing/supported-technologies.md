@@ -18,3 +18,6 @@ supported.
   - java.net.URL
   - Apache HttpClient 3.x, 4.x
   - JAX-RS
+
+Support for tracing your own JVM applications and other JVM-based
+technologies can be added via [Custom Pointcuts](custom-pointcuts).
