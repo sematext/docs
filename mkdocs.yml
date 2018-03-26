@@ -37,8 +37,6 @@ pages:
         - Chef Recipe: monitoring/chef-recipe.md
       - Tag Support: monitoring/tag-support.md
       - Network Map: monitoring/network-map.md
-      - Transaction Tracing: monitoring/transaction-tracing.md
-      - Database Operations: monitoring/database-operations.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
@@ -47,8 +45,9 @@ pages:
     - Tracing:
         - Overview: tracing/index.md
         - Enabling: tracing/enable.md
-        - Custom Pointcuts: tracing/custom-pointcuts.md
+        - Tracing Database calls: tracing/database-operations.md
         - Supported Tech: tracing/supported-technologies.md
+        - Custom Pointcuts: tracing/custom-pointcuts.md
         - Transaction Naming: tracing/transaction-naming.md
         - Tracing Scala: tracing/scala.md
     - Events:
