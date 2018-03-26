@@ -44,6 +44,13 @@ pages:
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - API Reference: monitoring/spm-api-reference.md
       - FAQ: monitoring/spm-faq.md
+    - Tracing:
+        - Overview: tracing/index.md
+        - Enabling: tracing/enable.md
+        - Custom Pointcuts: tracing/custom-pointcuts.md
+        - Supported Tech: tracing/supported-technologies.md
+        - Transaction Naming: tracing/transaction-naming.md
+        - Tracing Scala: tracing/scala.md
     - Events:
         - Overview: events/index.md
     - Integrations:
