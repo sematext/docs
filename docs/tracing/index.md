@@ -22,7 +22,7 @@ running applications and troubleshoot performance issues.
 
 **Notes:**
 
-  - Transaction Tracing requires SPM monitor running in [embedded mode](monitoring/spm-monitor-javaagent).
+  - Transaction Tracing requires SPM monitor running in [embedded mode](/monitoring/spm-monitor-javaagent).
   - Enabling/disabling the tracing agent requires SPM monitor restart,
     which means it requires the restart of the application running the
     embedded SPM monitor.
