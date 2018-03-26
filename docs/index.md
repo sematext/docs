@@ -209,7 +209,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
     </div>
   </div>
 
-*If you have questions, we’re here to help.* Don’t hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
+If you have questions, we’re here to help. Don’t hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
 
 
 <!-- Comment out outdated video / reuse code for video embeds
