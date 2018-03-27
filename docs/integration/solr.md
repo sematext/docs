@@ -1,5 +1,3 @@
-## Solr Monitoring
-
 ### How do I enable JMX in Solr
 
 Add or uncomment the **<jmx/\>** directive in solrconfig.xml and
