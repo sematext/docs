@@ -1,1 +1,0 @@
-**Interations logos**
