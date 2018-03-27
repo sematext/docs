@@ -1,6 +1,4 @@
 
-## Elasticsearch Monitoring
-
 ### Why doesn't the number of documents I see in SPM match the number of documents in my Elasticsearch index
 
 SPM collects index stats from primary shards only.  To see the
