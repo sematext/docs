@@ -1,6 +1,4 @@
 
-## HBase Monitoring
-
 ### How do I enable JMX in HBase
 
 Please see [HBase Metrics](http://hbase.apache.org/metrics.html)
