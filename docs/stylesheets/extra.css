@@ -13,6 +13,11 @@
 a {
     color: #00a1ed;
 }
+@media (min-width: 840px){
+.mdl-grid.integrations {
+    padding: 1px;
+}
+}
 .md-nav--primary .md-nav__title {
     display: none;
 }
@@ -110,14 +115,14 @@ a {
     position: relative;
   }
   .flip-card-container img{
-    width: 96px;
+    width: 72px;
     height: 150px;
   } 
   .flip-card {
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+    transition: all .3s ease-in-out;
     width: 100%;
     text-align: center;
   }
@@ -133,9 +138,14 @@ a {
     width: 100%;
   }
   .flip-card .back {
-    background: #eaeaed;
-    color: #0087cc;
-    line-height: 150px;
+    color: #000;
     text-align: center;
     transform: rotateY(180deg);
+    font-size: 1rem;
+    padding: 4px;
+  }
+  .flip-card .back h5 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: .4rem 0
   }
