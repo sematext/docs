@@ -11,7 +11,7 @@
  */
 
 a {
-    color: #00a1ed;
+    color: #00A3EF;
 }
 @media (min-width: 840px){
 .mdl-grid.integrations {
@@ -58,22 +58,22 @@ a {
     min-height: 150px
 }
 .logs-card{
-    background: #FF9800;
+    background: #00A3EF;
 }
 .monitoring-card{
-    background: #FFC107;
+    background: #09C177;
 }
 .events-card{
-    background: #FFEB3B;
+    background: #FF9325;
 }
 .logagent-card{
-    background: #4CAF50;
+    background: #7E72DA;
 }
 .docker-card{
-    background: #8BC34A;
+    background: #E6374C;
 }
 .kubernetes-card{
-    background: #CDDC39;
+    background: #00202F;
 }
 .logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .events-card .mdl-card__title{
     color: #fff;
