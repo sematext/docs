@@ -254,7 +254,7 @@
 						<div class="side">
 							<img src="/images/integrations/hadoop.svg" alt="hadoop" title="Hadoop Monitoring" style="width: 74px;">
 						</div>
-						<div class="side back"><h5>JVM</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time / time,...</div>
+						<div class="side back"><h5>Hadoop</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time / time,...</div>
 					</div>
 				</div>
 			</div>
@@ -367,7 +367,7 @@
 	</div>
 </div>
 
-####Log Shippers 
+#### Log Shippers 
 
 #### Notifications
 
