@@ -1,5 +1,5 @@
 
-### Why doesn't the number of documents I see in SPM match the number of documents in my Elasticsearch index
+** Why doesn't the number of documents I see in SPM match the number of documents in my Elasticsearch index **
 
 SPM collects index stats from primary shards only.  To see the
 total number of documents in an index, select all shards in that index
@@ -7,7 +7,7 @@ and choose "sum".  The list of shards and the "sum" function can be
 found in the "Shard filter" in the Index Stats
 report.
 
-### Can SPM collect metrics even when Elasticsearch HTTP API is disabled
+** Can SPM collect metrics even when Elasticsearch HTTP API is disabled **
 
 Each SPM agent collects Elasticsearch metrics only from the local
 node by accessing the Stats API via HTTP.  To allow only local access
@@ -18,7 +18,7 @@ node to whose elasticsearch.yml you add this.
 http.host: "127.0.0.1"
 ```
 
-### Can I point SPM monitor to a non-localhost Elasticsearch node
+** Can I point SPM monitor to a non-localhost Elasticsearch node **
 
 Yes.  Adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
@@ -28,7 +28,7 @@ that restart SPM monitor (if you are running a standalone version) or
 Elasticsearch process(es) with embedded SPM
 monitor. 
 
-### My Elasticsearch is protected by basic HTTP authentication, can I use SPM  
+** My Elasticsearch is protected by basic HTTP authentication, can I use SPM  **
 
 Yes. You just need to adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
@@ -45,7 +45,7 @@ spm-monitor restart** in case of standalone monitor or by restarting
 Elasticsearch node if you are using in-process
 javaagent).
 
-### I am using SPM for Elasticsearch monitor and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that
+** I am using SPM for Elasticsearch monitor and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
 
 SPM for Elasticsearch monitor collects Index stats only from
 primary shards, so it is possible that you installed SPM monitor on some
