@@ -2,7 +2,7 @@
 <iframe class="video" src="https://www.youtube.com/embed/BIERrXzbiNM" frameborder="0" allowfullscreen ></iframe>
 </div>
 
-** Overview **
+## Overview
 
 The client for "SPM for MongoDB" is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb) that collects MongoDB metrics and sends them to SPM. It is available as[ npm](https://www.npmjs.com/package/spm-agent-mongodb)[ package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
 
