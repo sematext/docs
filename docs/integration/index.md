@@ -96,7 +96,7 @@
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/integration/">
+		<a href="/docs/integration/hbase/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
