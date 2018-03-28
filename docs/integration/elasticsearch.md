@@ -1,3 +1,5 @@
+## Overview
+
 
 ** Why doesn't the number of documents I see in SPM match the number of documents in my Elasticsearch index **
 
