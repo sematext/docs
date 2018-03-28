@@ -27,6 +27,9 @@ a {
 .md-sidebar a {
     color: rgba(0,0,0,.87);
 }
+.mdl-button {
+    font-weight: 600;
+}
 .md-nav--secondary .md-nav__item {
     padding: 0;
 }
