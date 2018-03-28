@@ -1,4 +1,4 @@
-## Overview **
+## Overview
 
 The client for "SPM for Node.js" is an open-source [node.js monitoring agent](https://github.com/sematext/spm-agent-nodejs) that collects
 node.js processes' metrics and sends them to SPM. It is available
