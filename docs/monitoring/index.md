@@ -1,9 +1,4 @@
-Welcome to SPM documentation\!
+Welcome to Sematext Monitoring documentation\!
 
-To use SPM go to <http://apps.sematext.com/> and on the left side you
-can go to specific pages to get a more information about using SPM.
-
+To start using Sematext Monitoring go to <http://apps.sematext.com/>.  To learn more about Sematext Monitoring exlore the documentation via specific pages on the left.
  
-
- 
-
