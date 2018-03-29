@@ -1,4 +1,4 @@
-### Which IAM permissions are needed to fetch Amazon EC2, EBS and ELB metrics
+** Which IAM permissions are needed to fetch Amazon EC2, EBS and ELB metrics **
 
 When you create an AWS app, you need to provide the access key and secret for a user that can fetch metrics for EC2, EBS and/or ELB, depending on which of those you select to be monitored. We recommend creating a separate IAM user for this, with the minimum permissions:
 ``` bash
