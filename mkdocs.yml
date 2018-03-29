@@ -91,7 +91,6 @@ pages:
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
-
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 
@@ -145,7 +144,7 @@ pages:
       - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
-    - Sematext Cloud API : api/rest-api.md
+    - API: api/rest-api.md
          
 
 theme:
