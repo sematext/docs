@@ -1,6 +1,6 @@
 site_name: Sematext Documentation
 site_url: http://sematext.com/docs
-site_favicon: assets/images/favicon.png
+strict: true
 pages:
     - Getting Started: index.md
     - Logs:
@@ -149,12 +149,11 @@ pages:
          
 
 theme:
-    name: material
-    custom_dir: 'mkdocs-material-custom'
+  name: material
+  custom_dir: 'mkdocs-material-custom'
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
 google_analytics: ['UA-2365268-3', 'mkdocs.org']
-site_favicon: 'images/favicon.png'
 # Options
 extra:
   logo: 'images/logo.svg'
