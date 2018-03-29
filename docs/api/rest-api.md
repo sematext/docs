@@ -30,7 +30,7 @@ Also, all responses contain an HTTP code which describes success or failure. In 
 
 #### API Explorer
 
-API Documentation is available <a href="/docs/rest-api" target="_blank">here</a>
+API Documentation is available <a href="/api-docs" target="_blank">here</a>
 
 Try out the REST APIs using the API Key of your Sematext account at :
 
