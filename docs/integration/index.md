@@ -18,7 +18,7 @@
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/integration/logs/">
+		<a href="/docs/integration/apache/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
@@ -452,11 +452,11 @@ Log From Amazon Web Services
 
 If you're an EC2 user, you can log to Logsene from your instances by setting up a <a class="" href="https://apps.sematext.com/ui/logs#">log shipper</a> like you would from any other physical or virtual machine.
 
-S3
+AWS S3
 
 If you have logs stored in S3, you can ship them to Logsene <a href="https://github.com/sematext/logsene-aws-lambda-s3" target="_blank" rel="noopener">via this AWS Lambda function</a>. This method also works for when you periodically upload logs to S3 buckets, like Amazon CloudTrail does.
 
-CloudWatch
+AWS CloudWatch
 
 If you want to ship CloudWatch logs, you can use <a href="https://github.com/sematext/logsene-aws-lambda-cloudwatch" target="_blank" rel="noopener">another AWS Lambda function</a>. If logs are VPC flowlogs, the Lambda function will also parse them and add geoIP information on the source IP addresses.
 
