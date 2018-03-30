@@ -6,7 +6,7 @@ Supported integrations let you collect metrics, logs and events across your whol
 
 Sematext includes a fully integrated Kibana and exposes the Elasticsearch API. It works with all standard logging facilities and agents (such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, etc) and integrates in minutes.
 
-Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our documentation is split into Log Management and Performance Monitoring, plus a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on customer’s own infrastructure.
+Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management solution, our documentation is split into Monitoring and Logs sections. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
 
 
 <div class="mdl-grid">
