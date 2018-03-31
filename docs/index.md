@@ -197,11 +197,11 @@ Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management 
       </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <a href="/docs/api/rest-api/">
+      <a href="/docs/api/">
         <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
-              Cloud API
+              API
             </h4>
           </div>
         </div>
