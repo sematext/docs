@@ -144,7 +144,7 @@ pages:
       - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
-    - API: api/rest-api.md
+    - API: api/index.md
          
 
 theme:
