@@ -118,6 +118,7 @@ pages:
           - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
           - MSSQL query: logagent/input-plugin-mssql.md
           - MySql query: logagent/input-plugin-mysql.md
+          - Cassandra query: logagent/input-plugin-cassandra.md
           - Zeromq input: logagent/input-plugin-zeromq.md
           - Postgresql query: logagent/input-plugin-postgresql.md
           - Apple device location: logagent/logagent-apple-location.md
