@@ -5,14 +5,14 @@
 If you want to monitor the used and free disk space on your docker host, the Sematext Docker Agent needs access to the relevant disks.
 When you mount `-v /:/rootfs` the filesystem might include symbolic link loops (typically in `/proc/sys/fs/binfmt_misc`), which cause the error in `df` command: `Error in df() for disk-usage metrics:Error: Command failed: df -kP`.
 
-Please see related Ubuntu bug: [https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1555760](https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1555760)
-
 Potential workarounds: 
 
 1. Mount another directory to Sematext Docker Agent container e.g. `-v /etc:/rootfs` 
 2. Make sure `Docker.service` starts after `proc-sys-fs-binfmt_misc.mount` service 
 3. Unmount binfmt_misc directory: `umount /proc/sys/fs/binfmt_misc`
 4. Disable binfmt service: `sudo /usr/sbin/update-binfmts --disable`
+
+Please see the information about a related [Ubuntu bug](https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1555760).
 
 ## Why is the `HTTPS_PROXY` setting not working?
 
@@ -27,5 +27,5 @@ The default Logging driver “json-file” writes logs to the local disk, and th
 
 More details: 
 
-- [https://github.com/moby/moby/issues/30887][https://github.com/moby/moby/issues/30887]
+- [Docker Github issue #30887](https://github.com/moby/moby/issues/30887)
 - [Top 10 Docker Logging Gotchas](https://sematext.com/blog/top-10-docker-logging-gotchas/)
