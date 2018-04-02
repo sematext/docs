@@ -90,6 +90,7 @@ pages:
         - Supported Platforms: sematext-docker-agent/supported-platforms.md
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
+        - FAQ: sematext-docker-agent/faq.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
     - Logagent:
       - Overview: logagent/index.md
