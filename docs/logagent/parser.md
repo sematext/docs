@@ -44,10 +44,11 @@ Properties:
 - blockStart: regular expression indicating a new message block for multi-line logs
 - sourceName: regular expression matching the name of the log source (e.g. file or container image name)
 - regex: JS regular expression 
-- fields: field list of extracted match groups from the regex
+- fields: field list of extracted match groups from the regex e.g. `[url:string, size:number]`
 - type: type used in Logsene (Elasticsearch Mapping)
 - dateFormat: format of the special fields 'ts'.  If the date format matches, a new field @timestamp is generated.
-- transform: JS function to manipulate the result of regex and date parsing
+  The format string needs to be recognized by [date-fns parse function](https://date-fns.org/v2.0.0-alpha.6/docs/parse). 
+- transform: JavaScript function to manipulate the result of regex and date parsing
 
 ## Example
 
