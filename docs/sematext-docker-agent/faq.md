@@ -3,7 +3,7 @@
 ## How can I add patterns to parse my container logs?
 
 If the predefined log patterns don't match your container logs, then see the section ["Add patterns for Log parsing"](https://sematext.com/docs/sematext-docker-agent/configuration/#add-patterns-for-log-parsing). 
-You can find more details about pattern definitions in the [Logagent documentation](https://sematext.com/docs/logagent/parser/) 
+You can find more details about pattern definitions in the [Logagent documentation](https://sematext.com/docs/logagent/parser/) and the [Logagent FAQ](https://sematext.com/docs/logagent/faq/). 
 Please note the regular expression in the property `sourceName` should match to the image name or container name.
 
 You can use Logagent to test log patterns before you use the pattern file with Sematext Docker Agent. 
