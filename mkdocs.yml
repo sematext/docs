@@ -90,8 +90,8 @@ pages:
         - Supported Platforms: sematext-docker-agent/supported-platforms.md
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
-        - FAQ: sematext-docker-agent/faq.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
+        - FAQ: sematext-docker-agent/faq.md
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 
@@ -143,9 +143,9 @@ pages:
           - Grok input filter: logagent/input-filter-grok.md
           - SQL output filter: logagent/output-filter-sql.md
           - Access Watch output filter: logagent/output-filter-accesswatch.md
-      - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
+      - FAQ: logagent/faq.md
     - API: api/index.md
          
 
