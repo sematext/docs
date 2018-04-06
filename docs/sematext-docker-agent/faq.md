@@ -32,20 +32,29 @@ If you use `https` URL in the `HTTPS_PROXY` environment variable like `https://m
 Alternatively, use the `http` protocol in the proxy URL, e.g. `HTTPS_PROXY=http://myproxy:8080`. 
 All requests will be sent via `http` to the proxy (internal network), and the proxy will then establish the `https` connection to Sematext receivers (external network).  
 
+## How do I get the agent from behind the firewall/proxy?   
+
+1. Export sematext-agent-docker from public Docker Hub:
+
+```
+	docker pull sematext/sematext-agent-docker
+	docker save -o sematext-agent-docker.tar sematext/sematext-agent-docker
+```
+
+2. Copy the file to a host behind the firewall (e.g. using an USB flash drive). 
+
+3. Import the image from .tar file into local Docker registry
+
+```
+	docker load --input sematext-agent-docker.tar
+	docker tag ...
+	docker push ...
+```
+
 ## Why is 'docker logs' not working?   
 
 As long as the `docker logs` command works, Sematext Docker Agent will work as well. 
 The default Logging driver “json-file” writes logs to the local disk, and the json-file driver is the driver one that works in parallel to “docker logs” command. As soon as one uses alternative logging drivers, such as Syslog, Gelf or Splunk, the Docker logs API calls start failing, and the `docker logs` command shows an error reporting the limitations instead of displaying the logs on the console. Not only does the docker log command fail, but many other tools using the Docker API for logs, such as Docker user interfaces like Portainer or log collection containers like Logspout are not able to show the container logs in this situation.
-
-## How do I get the agent from behind the firewall/proxy?   
-
-Import sematext-agent-docker from the local image:
-```
-docker save -o sematext-agent-docker.tar sematext/sematext-agent-docker
-docker load --input sematext-agent-docker.tar
-docker tag ...
-docker push ...
-```
 
 More details: 
 
