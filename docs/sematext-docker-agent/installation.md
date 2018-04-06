@@ -23,11 +23,10 @@ docker run -d --name sematext-agent-docker \
 -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
 ```
 
-**Installation** of the Docker Image of the monitoring agent:
 
-## Installation using Docker compose
+## Installation using Docker Compose
 
-Create a Logs and Monitoring App and replace the actual LOGSENE_TOKEN and SPM_TOKEN with your individual tokens in the following compose file: 
+Create a Logs and Monitoring App and replace the actual LOGSENE_TOKEN and SPM_TOKEN with your individual tokens in the following [Docker Compose](https://docs.docker.com/compose/) file: 
 
 ```
 
@@ -94,30 +93,6 @@ oc apply -f sematext-agent.yml
 Please note due to the end of support for Fleet on CoreOS, we recommend using Kubernetes installation. 
 
 
-To install Sematext for Docker including log forwarding from journald execute these commands:
-
-``` bash
-export $SPM_TOKEN=YOUR-SPM-TOKEN
-export $LOGSENE_TOKEN=YOUR-SPM-TOKEN
-etcdctl set /sematext.com/myapp/spm/token $SPM_TOKEN
-etcdctl set /sematext.com/myapp/logsene/token $LOGSENE_TOKEN
-wget https://raw.githubusercontent.com/sematext/sematext-agent-docker/master/coreos/sematext-agent.service
-fleetctl load sematext-agent.service; fleetctl start sematext-agent.service
-wget https://raw.githubusercontent.com/sematext/sematext-agent-docker/master/coreos/logsene.service
-fleetctl load logsene.service; fleetctl start logsene.service; 
-```
-
-Please note the provided .service scripts use port 9000 for the logging
-service. The provided service templates could be changed after the
-download.
-
-An alternative way to install the services is to include the content of
-the unit files in the cloud-init config file. 
-
-The latest documentation, install script, and service files are
-available in the [Github repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
-
-
 ## Rancher
 
 Please read [Rancher Monitoring and Logging Support](https://sematext.com/blog/2016/08/31/rancheros-monitoring-and-logging-support/). There are various deployment options for Rancher, Swarm, Kubernetes or Mesos. In addition, we recommend reading Rancher Labs blog post about the [Rancher Catalog Entry](http://rancher.com/new-rancher-community-catalog-monitoring-logging-sematext/). 
@@ -163,3 +138,4 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
   ]
 }
 ```
+
