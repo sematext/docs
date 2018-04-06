@@ -9,7 +9,7 @@ Please note the regular expression in the property `sourceName` should match the
 You can use [Logagent](/docs/logagent) to test log patterns before you use the pattern file with Sematext Docker Agent. 
 An example command to test log parsing for a `Cassandra` database container:
 ```
-docker run --rm cassandra | logagent -f mypatterns.yml --yml
+docker run --rm cassandra | logagent -f mypatterns.yml --yml -n cassandra
 ```
 
 ## Why do I see an error in 'df' command in SDA logs?
