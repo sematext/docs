@@ -41,9 +41,9 @@ All requests will be sent via `http` to the proxy (internal network), and the pr
 	docker save -o sematext-agent-docker.tar sematext/sematext-agent-docker
 ```
 
-2. Copy the file to a host behind the firewall (e.g. using an USB flash drive). 
+2. Copy the file to a host behind the firewall (e.g. using a USB flash drive). 
 
-3. Import the image from .tar file into local Docker registry
+3. Import the image from the .tar file into local Docker registry
 
 ```
 	docker load --input sematext-agent-docker.tar
