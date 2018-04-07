@@ -31,7 +31,7 @@ and you can get an evaluation version to try it out.
 
 **A:** SPM can monitor Docker/containers, Hadoop, HBase, Kafka, Spark, Storm, Cassandra,
 Elasticsearch, Solr/SolrCloud, MySQL, MariaDB, Redis, Memcached, Apache,
-HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc. See [SPM integrations](http://sematext.com/spm/integrations) for more.
+HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc. See [Integrations](/integrations) for more.
  You can also feed it [Custom Metrics](custom-metrics).
 
 #### Does SPM Integrate with ChatOps like Slack and HipChat?  How about PagerDuty or custom WebHooks
@@ -880,7 +880,7 @@ spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 
 **A:** SPM has integrations for Slack, HipChat, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
-[Integrations](integrations). 
+[Integrations](/integrations). 
 
 #### What are Threshold-based Alerts
 
