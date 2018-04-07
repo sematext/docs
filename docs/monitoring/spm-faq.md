@@ -443,7 +443,7 @@ again move SPM client to location which suits you.
 
 #### Is there an HTTP API
 
-**A:** Yes, see [SPM API Reference](spm-api-reference).
+**A:** Yes, see [API Reference](/api).
 
 #### I have multiple SPM apps installed on my machine, can I uninstall just one of them
 
@@ -507,8 +507,7 @@ To share Account with other users, go to
 To share App, go
 to <https://apps.sematext.com/ui/team/apps>
 
-####   
-What is the difference between OWNER, ADMIN, BILLING\_ADMIN, and USER roles
+#### What is the difference between OWNER, ADMIN, BILLING\_ADMIN, and USER roles
 
 **A:** There are 3 common roles available when Sharing Account and
 Sharing App (**OWNER**, **ADMIN**, **USER**), and one role which is
