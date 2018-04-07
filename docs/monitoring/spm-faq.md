@@ -370,7 +370,7 @@ Embedded SPM monitor.
 
 #### Can I use SPM for (business) transaction tracing
 
-**A:** Yes, see [Transaction Tracing](/tracing/transaction-tracing).
+**A:** Yes, see [Transaction Tracing](/tracing/).
 
 #### Can I move SPM client to a different directory
 
