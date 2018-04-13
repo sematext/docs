@@ -9,13 +9,11 @@ SPM Monitor or SPM Client is monitoring agent available in two versions:
   - [Embedded](spm-monitor-javaagent) (aka Javaagent-based, aka in-process)
   - [Standalone](spm-monitor-standalone)
   
-  The [API Reference](spm-api-reference) provides more detailed information on account and apps management as well as automation of certain tasks, such as creation of new Apps, definition of Alert Rules, etc.
+The [API Reference](spm-api-reference) provides more detailed information on account and apps management as well as automation of certain tasks, such as creation of new apps, definition of alert rules, etc.
   
-For all available integrations check [Integrations](../integration) and for general SPM information check [FAQ](spm-faq) page.
+These are available [Monitoring Integrations](../integration) and for general SPM Monitoring information check [FAQ](spm-faq) page.
 
 ###Creating Monitoring Apps
-
-To start using Sematext Monitoring go to <http://apps.sematext.com/>. 
 
 The first step is to create an app. Go  to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
 
@@ -36,17 +34,15 @@ The first step is to create an app. Go  to [monitoring view](https://apps.semate
 
 In order to start sending data to your app you need:
  
-Step 1 - Package Installation
+Step 1 - Install Client Package
 
 SPM client packages are available for various Linux distributions. After you are done with package installation, proceed to Client Configuration Setup.
 
-Step 2 - Client Configuration Setup
+Step 2 - Configure Client
 
 Monitoring Agent collects performance metrics of your application. It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later SPM Monitor upgrades don't require you to restart your application and SPM Monitor not having any effect on your app (since it runs in its own process).
 
 <p>You should start seeing your performance data in SPM in a few minutes. If you do not see performance charts in 5 minutes, have a look at <a href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a> page.</p>
-
-<!-- ###Visualizing and Analyzing Your Data -->
 
 ###App's Settings
 
@@ -55,10 +51,25 @@ App's settings include, but are not limited to:
   - inviting new users to your application
   - alert-rules
   - changing your app's plan
-  - connect to apps
+  - connecting apps
   - create heartbeat alert
   - transfer app owner
   - subscriptions
+  
+<a  href="#app-settings-menu"><img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen"></a>
+
+<div class="css-modal-container">
+<div id="app-settings-menu" class="modal-window">
+<div>
+<h2>App Settings Menu </h2>
+<img alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
+
+<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
+</div>
+</div>
+</div>
+  
+<!-- ###Visualizing and Analyzing Your Data -->
 
 ###Additional Features
 
