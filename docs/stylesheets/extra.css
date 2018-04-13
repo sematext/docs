@@ -66,6 +66,11 @@ a {
 .md-content__inner {
     margin: 0 0 480px;
 }
+.md-content__inner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .mdl-card {
     width: 100%;
     min-width:150px;
@@ -167,3 +172,62 @@ a {
     font-size: 1.2rem;
     margin: .4rem 0
   }
+  
+  .css-modal-container {
+    display: table;
+    width: 100%;
+    height: auto;
+  }
+  .modal-window {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;   
+  }
+  .modal-window img {
+    max-width: 100%;
+    height:auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto
+  } 
+  .modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-window>div {
+    width: 1200px;
+    position: relative;
+    margin: 5% auto;
+    padding: 2rem;
+    background: #fff;
+    color: #444;
+    text-align: center;
+    border: none;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-window header {
+    font-weight: bold;
+  }
+  
+  .modal-close {
+    line-height: 100px;
+    font-size: 200%;
+    text-decoration: none;
+  }
+
+  .content-modal-image {
+      width: 640px;
+      text-align: middle;
+  }
+
+  
