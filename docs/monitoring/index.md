@@ -79,7 +79,7 @@ Check [Tag Support](tag-support) page for different ways of Tags organization.
 
 Network Map can help you visualize the network topology of a system monitored by SPM.  It can discover hosts and collect information about communication between them, such as the amount of received/transmitted data on each port.
 
-For more information on Network Map check [Network Map](tag-suppot) page.
+For more information on Network Map check [Network Map](network-map) page.
 
 On-demand profiling lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
 
