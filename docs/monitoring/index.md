@@ -49,7 +49,7 @@ Monitoring Agent collects performance metrics of your application. It can run in
 App settings include, but are not limited to:
 
   - inviting new users to your application
-  - alert-rules
+  - alert rules
   - changing your app's plan
   - connecting apps
   - create heartbeat alert
@@ -91,4 +91,4 @@ For more information on how to extend standard performance metrics reports check
 
 ###Getting Support
 
-We hope you enjoy using Sematext Monitoring and Log Manaagement tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com) ! You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext). 
+We hope you enjoy using Sematext App and Infrastructure Monitoring and Log Management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com) ! You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext). 
