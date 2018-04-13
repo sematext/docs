@@ -44,9 +44,9 @@ Monitoring Agent collects performance metrics of your application. It can run in
 
 <p>You should start seeing your performance data in SPM in a few minutes. If you do not see performance charts in 5 minutes, have a look at <a href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a> page.</p>
 
-###App's Settings
+###App Settings
 
-App's settings include, but are not limited to:
+App settings include, but are not limited to:
 
   - inviting new users to your application
   - alert-rules
@@ -91,5 +91,4 @@ For more information on how to extend standard performance metrics reports check
 
 ###Getting Support
 
-
-We hope you enjoy using Sematext Monitoring and Log Manaagement tools. If you need further support, or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)\! You can also contact or talk to us using chat widget at the bottom right corner of the page or give us a shout  [@Sematext](http://twitter.com/sematext). 
+We hope you enjoy using Sematext Monitoring and Log Manaagement tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com) ! You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext). 
