@@ -1,7 +1,7 @@
 #### Events: What, Why, How?
 
 [Sematext Cloud](http://sematext.com/cloud/) can graph not only performance and
-[custom metrics](/monitoring/custom-metrics) or logs, but also events.  Such
+[custom metrics](/monitoring/custom-metrics) or [logs](/logs), but also events.  Such
 events may represent what is happening with a server or cluster, with an
 application (e.g., application or server restarts, deployments,
 alerts...), etc, as well as any sort of other event data that you want
@@ -16,23 +16,6 @@ Events are also exposed via a REST API that let's you post, retrieve,
 and search your events.  This REST API matches the Elasticsearch API, so
 you can use any Elasticsearch tool or client to post, get, and search
 events.
-
-  
-
-**NOTE:**
-
-  - To be able to use send Events to Sematext, you need a Sematext account.
-    If you don't already have it, you can create
-    it [here](https://apps.sematext.com/ui/registration), it's
-    free, no credit card needed. After you have Sematext account, create
-    an App of any type.
-  - If you have already created some Apps under your account in the
-    past, you can send Events to any of them.
-  - If you just registered, you can create Apps by following the
-    steps after Sematext account registration, or by clicking
-    directly [here](https://apps.sematext.com/ui/registration).
-
-  
 
 #### Event Fields
 
@@ -94,42 +77,43 @@ An event has the following set of fields, most of which are optional:
 </tbody>
 </table>
 
-  
-
 #### Adding Events
 
-Events can be added via the UI, but you can also add them via the API:
+Events can be added interactively via the UI, but you can also add them via the API:
 
-``` bash
-https://event-receiver.sematext.com/APPLICATION_TOKEN
+```
+https://event-receiver.sematext.com/APPLICATION_TOKEN/event
 ```
 
-A single App token must be specified in the URL. Thus, to send
+Because an event is always associated with a Sematext App, the App token must be specified in the URL. Thus, to send
 multiple events associated with multiple Apps, separate call to
-the API will need to be made for each App.  You can add event
-type as a field in JSON message
-(e.g, **alert**, **app\_restart**, **server\_restart**, **reboot**,
-**deployment**...), but we suggest using a smaller number of distinct
+the API will need to be made for each App.  
+
+** Event Types **
+
+Each event has a type.  This helps you distinguish between different kinds of events.
+You can specify the event type as a field in the even JSON structure as shown further below.
+You may want to use types such as
+**alert**, **app\_restart**, **server\_restart**, **reboot**, **deployment**...
+To get the most value out of typed events we strongly suggest using a smaller number of distinct
 event types (1-10) to keep things manageable.
 
-Note: when using curl, you may experience **"SSL certificate
+Note: when using curl to call the Events API, you may experience **"SSL certificate
 problem"** errors. The reason is that curl doesn't bundle any CA certs
 any more.  For more info see
 [this](http://curl.haxx.se/docs/sslcerts.html). Regardless of curl
-errors, HTTPS communication should be functional.
-
+errors, HTTPS communication should be successful.
 
 **Example 1**
 
 Consider an App whose token (your App tokens are at:
 <https://apps.sematext.com/ui/integrations/apps>) is
 **1111111-2222-3333-4444-555555555555**.  To send
-a **server\_restart** event call the Events API with token and event
-type:
+a **server\_restart** event call the Events API with the App token in the URL:
 
-**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[/**1111111-2222-3333-4444-555555555555**/event](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)**
+[http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
 
-with POST content in JSON format like this:
+and with POST content, including event type, in JSON format like this:
 
 ``` JSON
 {
@@ -142,7 +126,7 @@ with POST content in JSON format like this:
 To add the above event with curl use: 
 
 ``` bash
-curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
+curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
   "timestamp" : "2014-02-17T15:29:04+0100",
   "message" : "Application MyApp on MyHost04 restarted",
@@ -153,19 +137,18 @@ curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 
 **Example 2**
 
-Same App, but we want to post a **deployment** event with more event properties populated. In this case the HTTP endpoint would
-be:
+Same App, but we want to post a **deployment** event with more event properties populated. In this case the HTTP endpoint would be:
 
-**[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[/](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[1111111-2222-3333-4444-555555555555/event](http://localhost:8448/event-receiver/1111111-2222-3333-4444-555555555555/server_restart)**
+[http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
 
 with HTTP POST content:
 
 ``` JSON
 {
-  "timestamp" : "2014-02-17T15:58:04+0100",
-  "message": "Solr 4.6.1 version deployed on prodhost06",
-  "name" : "Solr 4.6.1 deployment",
-  "tags" : ["solr", "4.6.1", "deployment", "upgrade"],
+  "timestamp" : "2018-02-17T15:58:04+0100",
+  "message": "Solr 7.0.0 version deployed on prodhost06",
+  "name" : "Solr 7.0.0 deployment",
+  "tags" : ["solr", "7.0.0", "deployment", "upgrade"],
   "priority" : "High",
   "creator" : "John Smith",
   "type" : "deployment"
@@ -177,11 +160,12 @@ or, again with curl:
 ``` bash
 curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
-  "timestamp" : "2014-02-17T15:58:04+0100",
-  "message" : "Solr 4.6.1 version deployed on prodhost06",
-  "name" : "Solr 4.6.1 deployment",
-  "tags" : ["solr", "4.6.1", "deployment", "upgrade"],
-  "priority" : "High", "creator" : "John Smith",
+  "timestamp" : "2018-02-17T15:58:04+0100",
+  "message" : "Solr 7.0.0 version deployed on prodhost06",
+  "name" : "Solr 7.0.0 deployment",
+  "tags" : ["solr", "7.0.0", "deployment", "upgrade"],
+  "priority" : "High",
+  "creator" : "John Smith",
   "type" : "deployment"
 }
 '
@@ -202,8 +186,8 @@ events can be searched and retrieved programmatically via
 HTTP(S), using curl or any other Elasticsearch client.  The API endpoint
 is:
 
-``` bash
-http://event-receiver.sematext.com/APPLICATION_TOKEN
+```
+https://event-receiver.sematext.com/APPLICATION_TOKEN
 ```
 
 Alternatively, you can also use the same endpoint which was used when
@@ -211,20 +195,20 @@ adding events, where event type is specified, in which case the matching
 events will be limited to the type specified in the URI:
 
 ``` bash
-http://event-receiver.sematext.com/APPLICATION_TOKEN/eventType
+https://event-receiver.sematext.com/APPLICATION_TOKEN/event
 ```
 
 The simplest way to run a query is using [URI search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
 like this:
 
 $ curl -XGET
-"[http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/](http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/server_restart/)\_search?q=creator:john"
+"[https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/server_restart/)\_search?q=creator:john"
 
 More query options are available when using [request body search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
 e.g.:
 
 ``` bash
-curl -XGET "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search" -d '
+curl -XGET "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search" -d '
   "query" : {
     "query_string" : {
       "query" : "MyHost04",
