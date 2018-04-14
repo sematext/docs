@@ -37,14 +37,6 @@ The following metrics are collected and sent to SPM:
       - Content-Length
       - Error rates (total, 3xx, 4xx, 5xx)
 
-## Custom Metrics
-    
-To track custom metrics like the number of concurrent users, the
-number of items placed in a shopping cart, or any other kind of
-business transaction or KPI we provide a [Custom Metrics
-API](/monitoring/custom-metrics) and a node.js client for it:
-[spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
-
 ## Troubleshooting
 
 ** Generate diagnostics file for Sematext Support **
@@ -68,26 +60,33 @@ address to which the ZIP file should be sent.
 
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
+heap total | nodejs.heap.size | Avg | Long | 
 heap used | nodejs.heap.used | Avg | Long | 
+total released | nodejs.gc.heap.diff | Sum | Double | 
+total duration | nodejs.gc.time | Sum | Double | 
 full gc | nodejs.gc.full | Sum | Long | 
 inc gc | nodejs.gc.inc | Sum | Long | 
-total released | nodejs.gc.heap.diff | Sum | Double | 
-heap total | nodejs.heap.size | Avg | Long | 
-total duration | nodejs.gc.time | Sum | Double | 
 memory rss | nodejs.memory.rss | Avg | Long | 
 workers count | nodejs.workers | Avg | Long | 
-5xx count | nodejs.errors.5xx | Sum | Long | 
 request count | nodejs.requests | Sum | Long | 
-4xx count | nodejs.errors.4xx | Sum | Long | 
-total res. size | nodejs.response.size.total | Sum | Long | 
-total req. size | nodejs.requests.size.total | Sum | Long | 
-min response latency | nodejs.responses.latency.min | Min | Long | 
-3xx count | nodejs.errors.3xx | Sum | Long | 
-max response latency | nodejs.responses.latency.max | Max | Long | 
 error count | nodejs.errors | Sum | Long | 
+5xx count | nodejs.errors.5xx | Sum | Long | 
+4xx count | nodejs.errors.4xx | Sum | Long | 
+3xx count | nodejs.errors.3xx | Sum | Long | 
+total req. size | nodejs.requests.size.total | Sum | Long | 
+total res. size | nodejs.response.size.total | Sum | Long | 
+min response latency | nodejs.responses.latency.min | Min | Long | 
+max response latency | nodejs.responses.latency.max | Max | Long | 
 min latency | nodejs.eventloop.latency.min | Min | Long | 
 max latency | nodejs.eventloop.latency.max | Max | Long | 
 
+## Custom Metrics
+    
+To track custom metrics like the number of concurrent users, the
+number of items placed in a shopping cart, or any other kind of
+business transaction or KPI we provide a [Custom Metrics
+API](/monitoring/custom-metrics) and a node.js client for it:
+[spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
 
 ## FAQ
 
@@ -96,7 +95,7 @@ max latency | nodejs.eventloop.latency.max | Max | Long |
 Yes.  The native modules are automatically compiled during "npm
 install" (using node-gyp). On Windows the required build tools like
 python or C++ compilers are typically not installed by default.  See
- <https://github.com/TooTallNate/node-gyp> for details about the
+<https://github.com/TooTallNate/node-gyp> for details about the
 required compiler and build tools.
 
 ** How can I configure spm-agent-nodejs for my app using PM2 process manager? **
@@ -147,10 +146,10 @@ to the dependencies in your package.json or at the very least run
 To use the latest version of spm-agent-nodejs we recommend you
 install/upgrade using:
 ```
-    npm install spm-agent-nodejs@latest
+npm install spm-agent-nodejs@latest
 ```
 
 To add the dependency to your package.json simply use:
 ```
-    npm install spm-agent-nodejs@latest --save
+npm install spm-agent-nodejs@latest --save
 ```
