@@ -98,10 +98,10 @@ An event has the following set of fields, most of which are optional:
 
 #### Adding Events
 
-To post an event to your event stream use the following base endpoint:
+Events can be added via the UI, but you can also add them via the API:
 
 ``` bash
-http://event-receiver.sematext.com/APPLICATION_TOKEN/event
+https://event-receiver.sematext.com/APPLICATION_TOKEN
 ```
 
 A single App token must be specified in the URL. Thus, to send
@@ -112,7 +112,14 @@ type as a field in JSON message
 **deployment**...), but we suggest using a smaller number of distinct
 event types (1-10) to keep things manageable.
 
-##### **Example** **1**
+Note: when using curl, you may experience **"SSL certificate
+problem"** errors. The reason is that curl doesn't bundle any CA certs
+any more.  For more info see
+[this](http://curl.haxx.se/docs/sslcerts.html). Regardless of curl
+errors, HTTPS communication should be functional.
+
+
+**Example 1**
 
 Consider an App whose token (your App tokens are at:
 <https://apps.sematext.com/ui/integrations/apps>) is
@@ -132,10 +139,7 @@ with POST content in JSON format like this:
 }
 ```
 
-  
-
-To post the above event with curl
-use: 
+To add the above event with curl use: 
 
 ``` bash
 curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
@@ -147,12 +151,9 @@ curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 '
 ```
 
-  
+**Example 2**
 
-##### **Example 2**
-
-Same App, but we want to post a **deployment** event with
-more event properties populated. In this case the HTTP endpoint would
+Same App, but we want to post a **deployment** event with more event properties populated. In this case the HTTP endpoint would
 be:
 
 **[http://event-receiver.sematext.com](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[/](http://event-receiver.sematext.com/receive/YOUR_APPLICATION_TOKEN/EVENT_TYPE)[1111111-2222-3333-4444-555555555555/event](http://localhost:8448/event-receiver/1111111-2222-3333-4444-555555555555/server_restart)**
@@ -171,10 +172,7 @@ with HTTP POST content:
 }
 ```
 
-  
-
-or, again with
-curl:
+or, again with curl:
 
 ``` bash
 curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
@@ -189,27 +187,18 @@ curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 '
 ```
 
-  
-
 #### Searching Events
 
-Sematext user interface lets you find events, metrics, and logs from a specific
+Sematext lets you find events, metrics, and logs from a specific
 time period. Additionally, the event chart has a search box where you
 can further narrow down events to only those that match the input query.
-
-The query syntax is specified by Elasticsearch's query string query, as
-described
-[here](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax).
-
 You can search on any event field you included in the event when posting
-it.
+it.  The query syntax is the same as the [logs search syntax](/logs/search-syntax/).
 
-  
-
-#### Searching Events Programmatically
+#### Event Search API
 
 Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
-events can be searched and retrieved programmatically/remotely, via
+events can be searched and retrieved programmatically via
 HTTP(S), using curl or any other Elasticsearch client.  The API endpoint
 is:
 
@@ -217,25 +206,19 @@ is:
 http://event-receiver.sematext.com/APPLICATION_TOKEN
 ```
 
-  
-
 Alternatively, you can also use the same endpoint which was used when
 adding events, where event type is specified, in which case the matching
 events will be limited to the type specified in the URI:
 
 ``` bash
-http://event-receiver.sematext.com/APPLICATION_TOKEN/event
+http://event-receiver.sematext.com/APPLICATION_TOKEN/eventType
 ```
-
-  
 
 The simplest way to run a query is using [URI search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
 like this:
 
 $ curl -XGET
 "[http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/](http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/server_restart/)\_search?q=creator:john"
-
-  
 
 More query options are available when using [request body search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
 e.g.:
@@ -251,27 +234,6 @@ curl -XGET "http://event-receiver.sematext.com/1111111-2222-3333-4444-5555555555
 '
 ```
 
-  
-
 This example shows how to use one of the simpler query types -
 query\_string. To see which other query types are available, please
 check [Elasticsearch docs](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).
-
-  
-
-#### Posting Events via HTTPS
-
-You can use HTTPS instead of HTTP for all calls, in which case the
-endpoint becomes:
-
-``` bash
-https://event-receiver.sematext.com/APPLICATION_TOKEN
-```
-
-  
-
-Note: when using curl, you may experience **"SSL certificate
-problem"** errors. The reason is that curl doesn't bundle any CA certs
-any more.  For more info see
-[this](http://curl.haxx.se/docs/sslcerts.html). Regardless of curl
-errors, HTTPS communication should be functional.
