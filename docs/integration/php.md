@@ -88,12 +88,12 @@ Run the setup command using HTTP URLs for status pages:
 
 ## Integration with Nginx
 
-** Install sematext-agent-nginx via npm (Node package manager) **
+** Install sematext-agent-nginx via npm ***
 ```sh
 sudo npm i sematext-agent-httpd -g
 ```
 
-# Setup Nginx Agent with php-fpm UNIX socket (recommended)
+** Setup Nginx Agent with php-fpm UNIX socket (recommended) **
 
 Run the service setup for the PHP-FPM monitoring agent. Pass the
 Sematext Monitoring App token (aka SPM token), Nginx status URL, and
@@ -102,7 +102,7 @@ the PHP-FPM status URL to the setup command:
 sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://unix:/var/run/php-fpm.sock:/status
 ```
 
-# Setup with PHP-FPM status page via HTTP
+** Setup with PHP-FPM status page via HTTP **
 
 In some scenarios, e.g. in Docker containers, the monitoring agent
 might not have access to the local UNIX socket. In such cases the
@@ -124,11 +124,9 @@ location ~ ^/(status|ping)$ {
 ```
 
 Then run the setup command using HTTP URLs for status pages:
-```
+```sh
 sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://localhost/status
 ```
-
-
 
 ## Metrics
 
