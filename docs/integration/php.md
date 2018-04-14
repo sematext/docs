@@ -47,8 +47,6 @@ sudo npm i sematext-agent-httpd -g
 
 Run the service setup for the PHP-FPM monitoring agent. Pass your Sematext Monitoring App token (aka SPM_TOKEN), Apache status URL, and the PHP-FPM status URL to the setup command:
 ```sh
-# If you use Sematext Cloud EU, set region for API endpoints
-# sematext-httpd-setup  -r EU
 # sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u HTTPD_STATUS_URL -p PHP_FPM_STATUS_URL
 sudo sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u http://localhost/server-status -p http://unix:/var/run/php-fpm.sock:/status
 ```
@@ -83,12 +81,12 @@ Run the setup command using HTTP URLs for status pages:
 
 ```sh
   # sematext-httpd-setup YOUR_SPM_TOKEN_HERE HTTPD_STATUS_URL PHP_FPM_STATUS_URL
-  sudo sematext-httpd-setup YOUR_SPM_TOKEN_HERE http://localhost/server-status http://localhost/status
+  sudo sematext-httpd-setup YOUR_SPM_TOKEN_HERE -u http://localhost/server-status http://localhost/status
 ```
 
 ## Integration with Nginx
 
-** Install sematext-agent-nginx via npm ***
+** Install sematext-agent-nginx via npm **
 ```sh
 sudo npm i sematext-agent-httpd -g
 ```
@@ -125,6 +123,7 @@ location ~ ^/(status|ping)$ {
 
 Then run the setup command using HTTP URLs for status pages:
 ```sh
+# sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n NGINX_STATUS_URL -p PHP_FPM_STATUS_URL
 sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://localhost/status
 ```
 
