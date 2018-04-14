@@ -27,7 +27,7 @@ pm.status_path = /status
 ``` 
 
 Restart php-fpm:
-``sh`
+```sh
 # for upstart
 sudo service php-fpm restart 
 
