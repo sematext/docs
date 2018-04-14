@@ -1,12 +1,13 @@
 ## Overview
 
-The client for "SPM for Node.js" is an open-source [node.js monitoring agent](https://github.com/sematext/spm-agent-nodejs) that collects
-node.js processes' metrics and sends them to SPM. It is available
-as [npm](https://www.npmjs.com/package/spm-agent-nodejs)[ package](https://www.npmjs.com/package/spm-agent-nodejs)
-that can be added to the JavaScript source code like any other node.js
-module (see Installation & Configuration section below)
+The client for Node.js monitoring is the open-source [Node.js
+monitoring agent](https://github.com/sematext/spm-agent-nodejs) that
+collects Node.js processes' metrics and sends them to Sematext. It is
+available as [npm
+package](https://www.npmjs.com/package/spm-agent-nodejs) that can be
+added to the JavaScript source code like any other Node.js module.
 
-The following metrics are collected and sent to SPM:
+The following metrics are collected:
 
   - **Operating System**
     
@@ -45,7 +46,7 @@ If you are not seeing some or any Node.js metrics, you can create a
 "diagnostics dump" and contact us via chat or email. To create the
 diagnostics dump just run the following in your application directory:
 ```
-    node ./node_modules/spm-agent-nodejs/bin/spm-client-diagnostics.js 
+node ./node_modules/spm-agent-nodejs/bin/spm-client-diagnostics.js 
 ```
 
 This will create a ZIP file and show the Sematext Support email
@@ -85,8 +86,8 @@ max latency | nodejs.eventloop.latency.max | Max | Long |
 To track custom metrics like the number of concurrent users, the
 number of items placed in a shopping cart, or any other kind of
 business transaction or KPI we provide a [Custom Metrics
-API](/monitoring/custom-metrics) and a node.js client for it:
-[spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
+API](/monitoring/custom-metrics) and a Node.js client for it:
+[spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js)
 
 ## FAQ
 
