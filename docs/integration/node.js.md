@@ -166,3 +166,38 @@ max response latency | nodejs.responses.latency.max | Max | Long |
 error count | nodejs.errors | Sum | Long | 
 min latency | nodejs.eventloop.latency.min | Min | Long | 
 max latency | nodejs.eventloop.latency.max | Max | Long | 
+
+
+## FAQ
+
+** Can I install spm-agent-nodejs on Windows? **
+
+Yes. Please check [node-gyp install instructions](https://github.com/nodejs/node-gyp#installation) and install the C++ compiler first. 
+
+** How can I configure spm-agent-nodejs for my app using PM2 process manager? **
+
+Install spm-agent-nodejs as global module: 
+```
+sudo npm i -g spm-agent-nodejs
+```
+
+Check the location (full path) for spm-agent-nodejs using 
+```
+> sudo npm root -g
+```
+The result is typically `/usr/local/lib/node_modules` or `/usr/lib/node_modules`. 
+Remember the path to use it in the "interpreter_args" step below in the PM2 configuration file. 
+
+If you use PM2 to start your Node.js process, then use the following environment section in your [PM2 application config file](http://pm2.keymetrics.io/docs/usage/application-declaration/#application-declaration-file):
+
+```js
+{ 
+   "interpreter_args": "-r /usr/local/lib/node_modules/spm-agent-nodejs"
+   "env": { 
+      "SPM_TOKEN": "YOUR_SPM_TOKEN",
+      "spmagent_dbDir": "./spmdb",
+      "spmagent_logger__dir": "./spmlogs",
+      "spmagent_logger__silent" = false,
+      "spmagent_logger__level": "error"
+}
+```
