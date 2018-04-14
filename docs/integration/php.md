@@ -37,9 +37,9 @@ sudo systemctl restart php-fpm.service
 
 Make sure that Node.js > 4.x is installed: [https://nodejs.org/en/download/package-manager/](https://nodejs.org/en/download/package-manager/)
 
-Install sematext-agent-httpd via npm (Node package manager)
+## Integration with Apache
+** Install sematext-agent-httpd via npm **
 ```sh
-# Install sematext-agent-httpd (assuming nodejs is already installed)
 sudo npm i sematext-agent-httpd -g
 ```
 
@@ -71,11 +71,11 @@ LoadModule fastcgi_module modules/mod_fastcgi.so
           Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
           FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /var/run/php-fpm.sock -pass-header Authorization
  
- # For monitoring status with e.g. SPM for Apache httpd
- <LocationMatch "/(ping|status)">
-                SetHandler php5-fcgi-virt
-                           Action php5-fcgi-virt /php5-fcgi virtual
-                           </LocationMatch>
+   # For monitoring status with e.g. SPM for Apache httpd
+   <LocationMatch "/(ping|status)">
+                  SetHandler php5-fcgi-virt
+                  Action php5-fcgi-virt /php5-fcgi virtual
+   </LocationMatch>
 </IfModule>
 ```
 
@@ -83,8 +83,52 @@ Run the setup command using HTTP URLs for status pages:
 
 ```sh
   # sematext-httpd-setup YOUR_SPM_TOKEN_HERE HTTPD_STATUS_URL PHP_FPM_STATUS_URL
-  sudo sematext-nginx-setup YOUR_SPM_TOKEN_HERE http://localhost/server-status http://localhost/status
+  sudo sematext-httpd-setup YOUR_SPM_TOKEN_HERE http://localhost/server-status http://localhost/status
 ```
+
+## Integration with Nginx
+
+** Install sematext-agent-nginx via npm (Node package manager) **
+```sh
+sudo npm i sematext-agent-httpd -g
+```
+
+# Setup Nginx Agent with php-fpm UNIX socket (recommended)
+
+Run the service setup for the PHP-FPM monitoring agent. Pass the
+Sematext Monitoring App token (aka SPM token), Nginx status URL, and
+the PHP-FPM status URL to the setup command:
+```sh
+sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://unix:/var/run/php-fpm.sock:/status
+```
+
+# Setup with PHP-FPM status page via HTTP
+
+In some scenarios, e.g. in Docker containers, the monitoring agent
+might not have access to the local UNIX socket. In such cases the
+PHP-FPM status page needs to be exposed via Nginx.  To expose the
+PHP-FPM status page via Nginx change the Nginx configuration
+```/etc/nginx/sites-enabled/default```:
+
+```
+location ~ ^/(status|ping)$ {
+       # access_log off;
+       allow all;
+       # allow SPM-MONITOR-IP;
+       # deny all;
+       fastcgi_pass unix:/var/run/php-fpm.sock;
+       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+       fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+       include fastcgi_params;
+}
+```
+
+Then run the setup command using HTTP URLs for status pages:
+```
+sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://localhost/status
+```
+
+
 
 ## Metrics
 
