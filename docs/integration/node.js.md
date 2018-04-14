@@ -1,9 +1,8 @@
 ## Overview
 
-The client for Node.js monitoring is the open-source [Node.js
-monitoring agent](https://github.com/sematext/spm-agent-nodejs) that
-collects Node.js processes' metrics and sends them to Sematext. It is
-available as [npm
+A light-weight, open-source [Node.js monitoring
+agent](https://github.com/sematext/spm-agent-nodejs) collects Node.js
+processes' metrics and sends them to Sematext. It is available as [npm
 package](https://www.npmjs.com/package/spm-agent-nodejs) that can be
 added to the JavaScript source code like any other Node.js module.
 
@@ -12,7 +11,6 @@ The following metrics are collected:
   - **Operating System**
     
       - CPU usage 
-    
       - Memory usage
 
   - **Process Memory Usage**
@@ -55,6 +53,7 @@ address to which the ZIP file should be sent.
 
 ## Integration
 
+- Agent: [https://github.com/sematext/spm-agent-nodejs](https://github.com/sematext/spm-agent-nodejs)
 - Instructions: [https://apps.sematext.com/ui/howto/Node.js/overview](https://apps.sematext.com/ui/howto/Node.js/overview)
 
 ## Metrics
