@@ -53,3 +53,8 @@ min value | akka.custom.gauge.min | Min | Long |
 'max' | akka.router.routing.time.max | Max | Long | 
 'max' | akka.router.processing.time.max | Max | Long | 
 'max' | akka.router.mailbox.time.max | Max | Long | 
+
+## FAQ
+** Why are some of the metric charts empty? **
+
+Some of the charts show metrics that are available only if you are using Kamon 0.6.x.  In Kamon 1.x some of those metrics have been removed.
