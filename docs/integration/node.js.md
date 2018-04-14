@@ -37,107 +37,28 @@ The following metrics are collected and sent to SPM:
       - Content-Length
       - Error rates (total, 3xx, 4xx, 5xx)
 
-  - **Custom Metrics**
+## Custom Metrics
     
-      - To track custom metrics like the number of concurrent users, the
-        number of items placed in a shopping cart, or any other kind of
-        business transaction or KPI   
-        we provide a [Custom Metrics API](/monitoring/custom-metrics)
-        and a node.js client for it:
-        [spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
+To track custom metrics like the number of concurrent users, the
+number of items placed in a shopping cart, or any other kind of
+business transaction or KPI we provide a [Custom Metrics
+API](/monitoring/custom-metrics) and a node.js client for it:
+[spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) 
 
-** Supported Platforms **
-
-  - node.js  \>=  0.10  
-      
-
-** Installation and Configuration **
-
-1.  Create an SPM App of type "Node.js" in SPM 
-2.  Click the "**Install Monitor**" button and follow the customized
-    instructions for the created SPM App (basically how to install the
-    [NPM package](https://www.npmjs.com/package/spm-agent-nodejs),
-    configure the SPM App Token, and add require statement to your
-    source code to load 'spm-agent-nodejs')
-
-** Troubleshooting and "How To" **
+## Troubleshooting
 
 ** Generate diagnostics file for Sematext Support **
 
-If you are not seeing some or all node.js metrics, you can create a
+If you are not seeing some or any Node.js metrics, you can create a
 "diagnostics dump" and contact us via chat or email. To create the
 diagnostics dump just run the following in your application directory:
-
+```
     node ./node_modules/spm-agent-nodejs/bin/spm-client-diagnostics.js 
-
-The output of this script points to the ZIP file and shows the Sematext
-Support email address to which the ZIP file should be sent. 
-
-** Using SPM for Node.js behind Firewalls / Proxy servers **
-
-By default data is transmitted to SPM via HTTPS. If no direct connection
-is possible, a proxy server can be used by setting the environment
-variable HTTPS\_PROXY=<https://your-proxy>.
-
-** Installation of native modules on Windows **
-
-The native modules are automatically compiled during "npm install"
-(using node-gyp). On Windows the required build tools like python or C++
-compilers are typically not installed by default.  
-In this case please check <https://github.com/TooTallNate/node-gyp> for
-details about the required compiler and build tools.
-
-** How to configure spm-agent-nodejs for my app using PM2 process manager **
-
-Install spm-agent-nodejs as global module: 
-
-```
-sudo npm i -g spm-agent-nodejs
 ```
 
-Check the location (full path) for spm-agent-nodejs using 
+This will create a ZIP file and show the Sematext Support email
+address to which the ZIP file should be sent.
 
-```
-sudo npm root -g
-```
-
-The result of the command above is typicall `/usr/local/lib/node_modules` or `/usr/lib/node_modules`. 
-Remember the path to use it in the following step "interpreter_args" in the pm2 configuration file. 
-
-If you use PM2 to start your node.js process, then use in your [pm2 application config file](http://pm2.keymetrics.io/docs/usage/application-declaration/#application-declaration-file) following environment section: 
-
-```js
-{ 
-   "interpreter_args": "-r /usr/local/lib/node_modules/spm-agent-nodejs"
-   "env": { 
-      "SPM_TOKEN": "YOUR_SPM_TOKEN",
-      "spmagent_dbDir": "./spmdb",
-      "spmagent_logger__dir": "./spmlogs",
-      "spmagent_logger__silent" = false,
-      "spmagent_logger__level": "error"
-}
-```
-
-
-** Upgrading to a new node.js version **
-
-If you switch the node.js version (e.g. from 0.12 to 4.4), the
-spm-agent-nodejs package will need to be installed again (due to the
-fact that included native modules may change from version to version).
-  After the version change please run a fresh "npm install" if you
-added spm-agent-nodejs to the dependencies in your package.json - or at
-the very least run "npm install spm-agent-nodejs" 
-
-** Upgrading to the latest version of spm-agent-nodejs **
-
-To use the latest version of spm-agent-nodejs we recommend you
-install/upgrade using:
-
-    npm install spm-agent-nodejs@latest
-
-To add the dependency to your package.json simply use:
-
-    npm install spm-agent-nodejs@latest --save
 
 ## Integration
 
@@ -172,7 +93,11 @@ max latency | nodejs.eventloop.latency.max | Max | Long |
 
 ** Can I install spm-agent-nodejs on Windows? **
 
-Yes. Please check [node-gyp install instructions](https://github.com/nodejs/node-gyp#installation) and install the C++ compiler first. 
+Yes.  The native modules are automatically compiled during "npm
+install" (using node-gyp). On Windows the required build tools like
+python or C++ compilers are typically not installed by default.  See
+ <https://github.com/TooTallNate/node-gyp> for details about the
+required compiler and build tools.
 
 ** How can I configure spm-agent-nodejs for my app using PM2 process manager? **
 
@@ -181,9 +106,9 @@ Install spm-agent-nodejs as global module:
 sudo npm i -g spm-agent-nodejs
 ```
 
-Check the location (full path) for spm-agent-nodejs using 
+Check the location (full path) for spm-agent-nodejs using:
 ```
-> sudo npm root -g
+sudo npm root -g
 ```
 The result is typically `/usr/local/lib/node_modules` or `/usr/lib/node_modules`. 
 Remember the path to use it in the "interpreter_args" step below in the PM2 configuration file. 
@@ -200,4 +125,32 @@ If you use PM2 to start your Node.js process, then use the following environment
       "spmagent_logger__silent" = false,
       "spmagent_logger__level": "error"
 }
+```
+
+** How can I use spm-agent-nodejs behind Firewalls / Proxy servers? **
+
+By default data is transmitted via HTTPS. If no direct connection is
+possible, a proxy server can be used by setting the environment
+variable HTTPS\_PROXY=<https://your-proxy>.
+
+** What should I do after upgrading to a new Node.js version? **
+
+If you switch the Node.js version the spm-agent-nodejs package will
+need to be installed again (due to the fact that included native
+modules may change from version to version).  After the version
+change please run a fresh "npm install" if you added spm-agent-nodejs
+to the dependencies in your package.json or at the very least run
+"npm install spm-agent-nodejs".
+
+** How do I upgrade to the latest version of spm-agent-nodejs? **
+
+To use the latest version of spm-agent-nodejs we recommend you
+install/upgrade using:
+```
+    npm install spm-agent-nodejs@latest
+```
+
+To add the dependency to your package.json simply use:
+```
+    npm install spm-agent-nodejs@latest --save
 ```
