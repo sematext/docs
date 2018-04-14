@@ -16,7 +16,7 @@ their integration instructions.
 
 Activate PHP-FPM status page in your php-fpm config by removing the leading semicolon in the ```;pm.status_path = /status``` entry:
 
-```
+```sh
 sudo sed -i -e "s/^;pm.status_path/pm.status_path/" /etc/php-fpm.d/www.conf
 ```
 
@@ -27,7 +27,7 @@ pm.status_path = /status
 ``` 
 
 Restart php-fpm:
-```
+``sh`
 # for upstart
 sudo service php-fpm restart 
 
@@ -46,7 +46,7 @@ sudo npm i sematext-agent-httpd -g
 ** Setup monitoring with PHP-FPM status page via UNIX socket (recommended) **
 
 Run the service setup for the PHP-FPM monitoring agent. Pass your Sematext Monitoring App token (aka SPM_TOKEN), Apache status URL, and the PHP-FPM status URL to the setup command:
-```
+```sh
 # If you use Sematext Cloud EU, set region for API endpoints
 # sematext-httpd-setup  -r EU
 # sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u HTTPD_STATUS_URL -p PHP_FPM_STATUS_URL
@@ -81,11 +81,10 @@ LoadModule fastcgi_module modules/mod_fastcgi.so
 
 Run the setup command using HTTP URLs for status pages:
 
-```
+```sh
   # sematext-httpd-setup YOUR_SPM_TOKEN_HERE HTTPD_STATUS_URL PHP_FPM_STATUS_URL
   sudo sematext-nginx-setup YOUR_SPM_TOKEN_HERE http://localhost/server-status http://localhost/status
 ```
-
 
 ## Metrics
 
