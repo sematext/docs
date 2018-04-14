@@ -35,7 +35,12 @@ sudo service php-fpm restart
 sudo systemctl restart php-fpm.service
 ```
 
-Make sure that Node.js > 4.x is installed: [https://nodejs.org/en/download/package-manager/](https://nodejs.org/en/download/package-manager/)
+** Get Node.js **
+
+Sematext Nginx and Apache monitoring agents are written in
+Node.js. Ensure Node.js > 4.x is installed where Nginx or Apache are
+running.  See
+[https://nodejs.org/en/download/package-manager/](https://nodejs.org/en/download/package-manager/)
 
 ## Integration with Apache
 ** Install sematext-agent-httpd via npm **
@@ -45,7 +50,10 @@ sudo npm i sematext-agent-httpd -g
 
 ** Setup monitoring with PHP-FPM status page via UNIX socket (recommended) **
 
-Run the service setup for the PHP-FPM monitoring agent. Pass your Sematext Monitoring App token (aka SPM_TOKEN), Apache status URL, and the PHP-FPM status URL to the setup command:
+Run the service setup for the PHP-FPM monitoring agent. Pass your
+Sematext Monitoring App token (aka SPM_TOKEN), Apache status URL, and
+the PHP-FPM status URL to the setup command:
+
 ```sh
 # sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u HTTPD_STATUS_URL -p PHP_FPM_STATUS_URL
 sudo sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u http://localhost/server-status -p http://unix:/var/run/php-fpm.sock:/status
