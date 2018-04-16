@@ -22,15 +22,7 @@ The first step is to create an app. Go  to [monitoring view](https://apps.semate
 <div class="css-modal-container">
 <div id="create-spm-app" class="modal-window">
 <div>
-<h2>Create a Monitoring App </h2>
-<div class="player-container">
-    <input type="checkbox" id="playing" />  
-    <img class="gif" src="../images/monitoring/gif-test.gif">
-    <label class="player-btn btn-stop" for="playing"><span class="icon-stop">&#9632;</span> Stop</label>
-    <label class="player-btn btn-play" for="playing">&#9658; Play</label>
-  </div>
-
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
+<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen">
 </div>
 </div>
 </div>
