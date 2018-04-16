@@ -207,7 +207,7 @@ The simplest way to run a query is using [URI search](http://www.elasticsearch.o
 like this:
 
 $ curl -XGET
-"[https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/server_restart/)\_search?q=creator:john"
+"[https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/\_search?q=creator:john](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/\_search?q=creator:john)"
 
 More query options are available when using [request body search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
 e.g.:
