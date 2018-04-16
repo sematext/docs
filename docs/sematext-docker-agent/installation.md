@@ -88,14 +88,9 @@ On Red Hat OpenShift use the "oc" command instead of kubectl.
 oc apply -f sematext-agent.yml 
 ```
 
-## CoreOS using fleet
-
-Please note due to the end of support for Fleet on CoreOS, we recommend using Kubernetes installation. 
-
-
 ## Rancher
 
-Please read [Rancher Monitoring and Logging Support](https://sematext.com/blog/2016/08/31/rancheros-monitoring-and-logging-support/). There are various deployment options for Rancher, Swarm, Kubernetes or Mesos. In addition, we recommend reading Rancher Labs blog post about the [Rancher Catalog Entry](http://rancher.com/new-rancher-community-catalog-monitoring-logging-sematext/). 
+Please read [Rancher Monitoring and Logging Support](https://sematext.com/blograncheros-monitoring-and-logging-support/). There are various deployment options for Rancher, Swarm, Kubernetes or Mesos. In addition, we recommend reading Rancher Labs blog post about the [Rancher Catalog Entry](http://rancher.com/new-rancher-community-catalog-monitoring-logging-sematext/). 
 
 ## Installation on Nomad by Hashicorp
 
