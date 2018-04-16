@@ -22,7 +22,7 @@ The first step is to create an app. Go  to [monitoring view](https://apps.semate
 <div class="css-modal-container">
 <div id="create-spm-app" class="modal-window">
 <div>
-<h2>Monitoring AIntegrations UI</h2>
+<h2>Monitoring Integrations UI</h2>
 <img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen">
 <a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
 </div>
