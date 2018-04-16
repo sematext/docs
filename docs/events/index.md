@@ -1,21 +1,26 @@
 #### Events: What, Why, How?
 
-[Sematext Cloud](http://sematext.com/cloud/) can graph not only performance and
-[custom metrics](/monitoring/custom-metrics) or [logs](/logs), but also events.  Such
-events may represent what is happening with a server or cluster, with an
-application (e.g., application or server restarts, deployments,
-alerts...), etc, as well as any sort of other event data that you want
-to correlate to metrics or logs.  Events are graphed in timeseries charts
-and these charts can be shown next to metrics or logs charts.  This
-makes it possible to easily correlate events with metrics and/or logs.  In addition
-to showing events as timeseries charts, a detailed listing of events can
-be seen and, of course, events can have tags, and can be
-searched and filtered.
+[Sematext Cloud](http://sematext.com/cloud/) can graph not only
+performance and [custom metrics](/monitoring/custom-metrics) or
+[logs](/logs), but also events. Such events may represent what is
+happening with a server or cluster, with an application, etc.  Think
+application or server restarts, builds, deployments, alerts, etc.
+Events are graphed in timeseries charts and these charts can be shown
+next to metrics or logs charts. This makes it possible to easily
+correlate events with metrics and/or logs. In addition to showing
+events as timeseries charts, a detailed listing of events can be seen
+and, of course, events can have tags, and can be searched and
+filtered.
 
-Events are also exposed via a REST API that let's you post, retrieve,
-and search your events.  This REST API matches the Elasticsearch API, so
-you can use any Elasticsearch tool or client to post, get, and search
-events.
+Beyond events that you want to see as part of your operations
+intelligence think about events that matter to your team or your
+organization in general.  Such "business events" can be shipped to
+Sematext, too.
+
+Besides being shown in the UI events are also exposed via a REST API
+that lets you post, retrieve, and search your events. This REST API
+matches the Elasticsearch API, so you can use any Elasticsearch tool
+or client to post, get, and search events.
 
 #### Event Fields
 
@@ -111,7 +116,7 @@ Consider an App whose token (your App tokens are at:
 **1111111-2222-3333-4444-555555555555**.  To send
 a **server\_restart** event call the Events API with the App token in the URL:
 
-[http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
+[https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
 
 and with POST content, including event type, in JSON format like this:
 
@@ -139,7 +144,7 @@ curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-55555555
 
 Same App, but we want to post a **deployment** event with more event properties populated. In this case the HTTP endpoint would be:
 
-[http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
+[https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
 
 with HTTP POST content:
 
@@ -158,7 +163,7 @@ with HTTP POST content:
 or, again with curl:
 
 ``` bash
-curl -XPOST "http://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
+curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
   "timestamp" : "2018-02-17T15:58:04+0100",
   "message" : "Solr 7.0.0 version deployed on prodhost06",
