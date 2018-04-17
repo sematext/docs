@@ -1,7 +1,7 @@
 ### Alert Types
 [Sematext Cloud](http://sematext.com/cloud/) includes multiple types
 of alerts that integrate with PagerDuty, Slack, email, and [other 3rd
-party services](#integrations).  
+party services](#alert-integrations).  
 
 1. **Threshold** alerts are the classic threshold based alerts.  They are
 triggeed when something crosses a pre-defiend threshold.
