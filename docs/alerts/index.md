@@ -15,7 +15,7 @@ to Sematext.
 Alerts can be triggered on both Metrics and Logs:
 
 Alert type | Metrics | Logs
---- | --- | --- |
+--- | --- | ---
 Threshold | yes | yes |
 Anomaly | yes | yes |
 Heartbeat | yes | no |
@@ -25,4 +25,3 @@ You can manage Alert rules interactively via the UI, or you can
 
 
 ### Alert Integrations
-:bell:
