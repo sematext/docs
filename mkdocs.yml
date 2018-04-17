@@ -50,6 +50,8 @@ pages:
         - Custom Pointcuts: tracing/custom-pointcuts.md
         - Transaction Naming: tracing/transaction-naming.md
         - Tracing Scala: tracing/scala.md
+    - Alerts:
+        - Overview: alerts/index.md
     - Events:
         - Overview: events/index.md
     - Integrations:
