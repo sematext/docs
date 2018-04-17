@@ -23,7 +23,6 @@ pages:
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
         - Kibana: logs/kibana.md
-      - API Reference: logs/logsene-api-reference.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Special Fields: logs/special-fields.md
       - FAQ: logs/faq.md
@@ -40,7 +39,6 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
-      - API Reference: monitoring/spm-api-reference.md
       - FAQ: monitoring/spm-faq.md
     - Tracing:
         - Overview: tracing/index.md
