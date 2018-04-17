@@ -462,4 +462,4 @@ If you want to ship CloudWatch logs, you can use <a href="https://github.com/se
 
 ### Alerting
 
-Multiple types of [Alert notifications](/docs/alerts) can be triggered on metrics and on logs and sent to several 3rd party services. See [Alerts](/docs/alerts) for more info.
+Multiple types of [alert notifications](/alerts) can be triggered on metrics and on logs and sent to several 3rd party services. See [Alerts](/alerts) for more info.

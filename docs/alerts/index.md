@@ -27,7 +27,7 @@ You can manage Alert rules interactively via the UI, or you can
 
 ### Alert Integrations
 
-Alert notifications can be sent to
+Alert notifications can be sent to a number of different destinations:
 
   - Email
   - [PagerDuty](../integration/alerts-pagerduty-integration)
