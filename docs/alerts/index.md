@@ -26,3 +26,17 @@ You can manage Alert rules interactively via the UI, or you can
 
 
 ### Alert Integrations
+
+Alert notifications can be sent to
+
+  - Email
+  - [PagerDuty](../integration/alerts-pagerduty-integration)
+  - [Slack](../integration/alerts-slack-integration)
+  - [HipChat](../integration/alerts-hipchat-integration)
+  - VictorOps
+  - OpsGenie
+  - BigPanda
+  - Pushover
+  - Nagios
+  - Zapier
+  - WebHooks for any other service

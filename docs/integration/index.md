@@ -460,24 +460,6 @@ AWS CloudWatch
 
 If you want to ship CloudWatch logs, you can use <a href="https://github.com/sematext/logsene-aws-lambda-cloudwatch" target="_blank" rel="noopener">another AWS Lambda function</a>. If logs are VPC flowlogs, the Lambda function will also parse them and add geoIP information on the source IP addresses.
 
-### Notifications
+### Alerting
 
-Alerts of the following types can be sent to 3rd party systems:
-
-  - threshold-based alerts
-  - metric anomalies
-  - server and application heartbeats
-
-Notifications can be sent to
-
-  - Email
-  - [PagerDuty](../integration/alerts-pagerduty-integration)
-  - [HipChat](../integration/alerts-hipchat-integration)
-  - [Slack](../integration/alerts-slack-integration)
-  - VictorOps
-  - OpsGenie
-  - BigPanda
-  - Pushover
-  - Nagios  
-  - WebHooks for any other service
-  
+Multiple types of [Alert notifications](/docs/alerts) can be triggered on metrics and on logs and sent to several 3rd party services. See [Alerts](/docs/alerts) for more info.
