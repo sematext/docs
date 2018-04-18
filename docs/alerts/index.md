@@ -59,6 +59,22 @@ whole Sematext Cloud account, without needing to modify each and every
 alert rule individually, Sematext has the concept of "account default
 hook".
 
+<a href="#alert-default-hook"><img class="content-modal-image"
+alt="Alert rule default notification hook setting"
+src="../images/alerts/alert-rule-default-hook.png"
+title="Alert rule default notification hook setting"></a>
+
+<div class="css-modal-container">
+<div id="alert-default-hook" class="modal-window">
+<div>
+<h2>Alert Rule Default Notification Hook</h2>
+<img alt="Alert rule default notification hook setting" src="../images/alerts/alert-rule-default-hook.png" title="Alert rule default notification hook setting">
+
+<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
+</div>
+</div>
+</div>
+
 Each notification hook can be marked as "account default hook".  While
 creating or modifying an alert rule one can choose whether to send
 notifications to whichever hook (or hooks!) is defined as default.
