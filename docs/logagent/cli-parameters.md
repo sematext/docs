@@ -55,6 +55,7 @@ The default output is line-delimited JSON for parsed log lines, as long as no fo
 |HTTP_PROXY| Proxy URL for HTTP endpoints (e.g. On-Premises or local Elasticsearch). ```export HTTP_PROXY=http://my-proxy.example```|
 |LOGAGENT_CONFIG | Filename to read Logagent CLI parameters from a file, defaults to ```/etc/sematext/logagent.conf`` |
 |PATTERN_MATCHING_ENABLED | Default is 'true'. The value 'false' disables parsing of logs. |
+|SCAN_ALL_PATTERNS | Default is 'false'. For performance reasons, patterns are matched by source name. Setting the value to 'true' enables pattern search regardless of source name |
 
 
 ## Examples 

@@ -130,12 +130,18 @@ pages:
           - Zeromq output: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
-        - Filter Plugins:
+        - Input Filter:
           - About filters: logagent/filters.md
           - Grep input filter: logagent/input-filter-grep.md
           - Grok input filter: logagent/input-filter-grok.md
-          - SQL output filter: logagent/output-filter-sql.md
+        - Output Filter: 
           - Access Watch output filter: logagent/output-filter-accesswatch.md
+          - SQL output filter: logagent/output-filter-sql.md
+          - AES encrypt fields: logagent/output-filter-aesencryptfields.md
+          - Hash fields: logagent/output-filter-hashfields.md
+          - Remove fields: logagent/output-filter-removefields.md
+          - IP truncate fields: logagent/output-filter-iptruncatefields.md
+          
       - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md

@@ -28,6 +28,10 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
 | [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
+| [aes-encrypt-fields](output-filter-aesencryptfields) | Processor / output filter | Encrypt field values with AES before any output happens |
+| [hash-fields](output-filter-hashfields) | Processor / output filter | Hashing of field values before any output happens |
+| [ip-truncate-fields](output-filter-iptruncatefields) | Processor / output filter | Replaces the last block of IPv4 and IPv6 address fields with "0" to anonymize IP addresses |
+| [remove-fields](output-filter-removefields) | Processor / output filter | Removes fields before any output happens |
 | [stdout (default)](output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
 | [elasticsearch](output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
 | [output-gelf](output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
