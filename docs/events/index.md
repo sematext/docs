@@ -1,4 +1,4 @@
-#### Events: What, Why, How?
+### Events: What, Why, How?
 
 [Sematext Cloud](http://sematext.com/cloud/) can graph not only
 performance and [custom metrics](/monitoring/custom-metrics) or
@@ -17,12 +17,12 @@ intelligence think about events that matter to your team or your
 organization in general.  Such "business events" can be shipped to
 Sematext, too.
 
-Besides being shown in the UI events are also exposed via a REST API
+Besides being shown in the UI events are also exposed via a [REST API](../api)
 that lets you post, retrieve, and search your events. This REST API
 matches the Elasticsearch API, so you can use any Elasticsearch tool
 or client to post, get, and search events.
 
-#### Event Fields
+### Event Fields
 
 An event has the following set of fields, most of which are optional:
 
@@ -82,7 +82,7 @@ An event has the following set of fields, most of which are optional:
 </tbody>
 </table>
 
-#### Adding Events
+### Adding Events
 
 Events can be added interactively via the UI, but you can also add them via the API:
 
@@ -176,7 +176,7 @@ curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-55555555
 '
 ```
 
-#### Searching Events
+### Searching Events
 
 Sematext lets you find events, metrics, and logs from a specific
 time period. Additionally, the event chart has a search box where you
@@ -184,7 +184,7 @@ can further narrow down events to only those that match the input query.
 You can search on any event field you included in the event when posting
 it.  The query syntax is the same as the [logs search syntax](/logs/search-syntax/).
 
-#### Event Search API
+### Event Search API
 
 Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
 events can be searched and retrieved programmatically via
