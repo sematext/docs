@@ -52,6 +52,7 @@ pages:
         - Tracing Scala: tracing/scala.md
     - Alerts:
         - Overview: alerts/index.md
+        - Account Default Hooks: alerts/account-default-hooks.md
     - Events:
         - Overview: events/index.md
     - Integrations:
