@@ -1,5 +1,3 @@
-### Account Default Hooks
-
 Each alert rule can be configured to send notifications to one or more
 notification hooks.  But what do you do when you want to change where
 all alert notifications are sent?  For example, what if you had them
@@ -15,7 +13,7 @@ creating or modifying an alert rule one can choose whether to send
 notifications to whichever hook (or hooks!) is defined as default.
 
 <img alt="Alert rule default notification hook setting"
-src="../images/alerts/alert-rule-default-hook.png"
+src="../../images/alerts/alert-rule-default-hook.png"
 title="Alert rule default notification hook setting">
 
 When alerts are defined to use default notification hooks then where
