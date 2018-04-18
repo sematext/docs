@@ -92,7 +92,7 @@ Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docke
 </tbody>
 </table>
 
-## Supported Platforms
+**Supported Platforms**
 
   - Docker \>= 1.6
   - Platforms using Docker:  
@@ -106,7 +106,7 @@ Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docke
       - Red Hat OpenShift
       - DEIS PaaS
 
-## Installation and Configuration
+**Installation and Configuration**
 
 1.  Create an SPM App of type "Docker" in SPM 
 2.  Click the "**Install Monitor**" button and follow the customized
@@ -135,7 +135,7 @@ container
 docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM-TOKEN -v /var/run/docker.sock:/var/run/docker.sock sematext/sematext-agent-docker
 ```
 
-## Configuration Parameters
+**Configuration Parameters**
 
 | Parameter / Environment variable | Description |
 |-----------|-------------|
@@ -176,7 +176,7 @@ docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM-TOKEN -v /var/run/dock
 
 
 
-## Docker Swarm and Docker Enterprise
+**Docker Swarm and Docker Enterprise**
 
 Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy Sematext Docker Agent with following docker command with your SPM and Logsene token: 
@@ -191,7 +191,7 @@ sematext/sematext-agent-docker
 
 Please refer to [Monitoring and Logging for Docker Enterprise Edition](https://sematext.com/docker-enterprise-monitoring-and-logging/) for further information. 
 
-## Kubernetes Support
+**Kubernetes Support**
 
 Run Sematext Agent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
@@ -206,7 +206,7 @@ kubectl create -f sematext-agent.yml
 ```
 
 
-## CoreOS Support
+**CoreOS Support**
 
 To install SPM for Docker including log forwarding from journald execute
 these commands:
@@ -232,7 +232,7 @@ the unit files in the cloud-init config file. 
 The latest documentation, install script, and service files are
 available in the [Github repository](https://github.com/sematext/sematext-agent-docker/tree/master/coreos)
 
-## Access to the Docker Socket / Docker API  
+**Access to the Docker Socket / Docker API** 
 
 **Please note the Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
@@ -327,8 +327,7 @@ docker run -d --name sematext-agent --restart=always
  -e DOCKER_TLS_VERIFY -e DOCKER_CERT_PATH -e DOCKER_HOST -v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH \ 
 sematext/sematext-agent-docker
 ```
-
-## Log Routing
+**Log Routing**
 
 Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
 Sematext Agent inspects the containers for this Label and ships the logs to the defined Logsene App. 
@@ -346,7 +345,7 @@ docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGSENE_TOKEN -p 80:80 nginx
 
 All other container logs will be shipped to the Logsene App specified in the docker run command for ```sematext/sematext-agent-docker``` with the environment variable ```LOGSENE_TOKEN```.
 
-## Integrated Log Parser
+**Integrated Log Parser**
 
 SPM for Docker recognizes log formats - so your logs arrive in a structured format in Logsene!
 The format recognition, data extractions, date parsing etc. is provided by [logagent-js](https://github.com/sematext/logagent-js) and covers:
@@ -369,7 +368,7 @@ To use a custom pattern definition simply mount a volume to '/etc/logagent/patte
 
 Feel free to contribute to [logagent-js](https://github.com/sematext/logagent-js) to enrich the default pattern set.
 
-### Known Issues
+**Known Issues**
 
 **Conflict with Docker logging-drivers. Sematext Docker Agent is running
 with a valid Logsene Token, but Logsene does not show container logs. **
@@ -383,7 +382,7 @@ check, run the "docker logs" command. If "docker logs CID" is shows
 container logs then Sematext Docker Agent should be able to collect the
 logs as well. 
 
-### Troubleshooting and How-To
+**Troubleshooting and How-To**
 
 The following command enables **debug** information to stdout - to be
 displayed with "docker logs

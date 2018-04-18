@@ -6,7 +6,7 @@ Supported integrations let you collect metrics, logs and events across your whol
 
 Sematext includes a fully integrated Kibana and exposes the Elasticsearch API. It works with all standard logging facilities and agents (such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, etc) and integrates in minutes.
 
-Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our documentation is split into Log Management and Performance Monitoring, plus a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on customer’s own infrastructure.
+Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management solution, our documentation is split into Monitoring and Logs sections. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
 
 
 <div class="mdl-grid">
@@ -46,30 +46,30 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 </div>
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--12-col">
+	<h3>
+					Integrations
+				</h3>
 		<div class="demo-card-event mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title mdl-card--expand">
-				<h4>
-					Integrations
-				</h4>
 				<ul class="demo-list-icon mdl-list integrations-card-list">
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/solr/">
-								<img src="https://cdn.svgporn.com/logos/solr.svg" alt="Solr" title="Apache Solr">
+								<img src="/docs/images/integrations/solr.svg" alt="Solr" title="Apache Solr">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/elasticsearch/">
-								<img src="https://cdn.svgporn.com/logos/elasticsearch.svg" style="width:36px; height:36px;" alt="Elasticsearch" title="Elasticsearch">
+								<img src="/docs/images/integrations/elasticsearch.svg" style="width:36px; height:36px;" alt="Elasticsearch" title="Elasticsearch">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/docker/">
-								<img src="https://cdn.svgporn.com/logos/docker.svg" alt="Docker" title="Docker">
+								<img src="/docs/images/integrations/docker.svg" alt="Docker" title="Docker">
 							</a>
 						</span>
 					</li>
@@ -78,21 +78,21 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/akka/">
-								<img src="https://cdn.svgporn.com/logos/akka.svg" alt="Akka" title="Akka">
+								<img src="/docs/images/integrations/akka.svg" alt="Akka" title="Akka">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/aws/">
-								<img src="https://cdn.svgporn.com/logos/aws.svg" alt="AWS" title="AWS - Amazon Web Services">
+								<img src="/docs/images/integrations/aws.svg" alt="AWS" style="min-width: 72px;" title="AWS - Amazon Web Services">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/nginx/">
-								<img src="https://cdn.svgporn.com/logos/nginx.svg" alt="Nginx" title="Nginx">
+								<img src="/docs/images/integrations/nginx.svg" alt="Nginx" title="Nginx">
 							</a>
 						</span>
 					</li>
@@ -101,21 +101,21 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/cassandra/">
-								<img src="https://cdn.svgporn.com/logos/cassandra.svg" alt="Cassandra" title="Cassandra">
+								<img src="/docs/images/integrations/cassandra.svg" alt="Cassandra" title="Cassandra">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/apache/">
-								<img src="https://cdn.svgporn.com/logos/apache.svg" alt="Apache" title="Apache" style="height: 48px;">
+								<img src="/docs/images/integrations/apache.svg" alt="Apache" title="Apache" style="height: 48px;">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/tomcat/">
-								<img src="https://cdn.svgporn.com/logos/tomcat.svg" alt="Tomcat" title="Tomcat">
+								<img src="/docs/images/integrations/tomcat.svg" alt="Tomcat" title="Tomcat">
 							</a>
 						</span>
 					</li>
@@ -124,21 +124,21 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/node.js/">
-								<img src="https://cdn.svgporn.com/logos/nodejs-icon.svg" alt="Node.js" title="Node.js">
+								<img src="/docs/images/integrations/nodejs-icon.svg" alt="Node.js" title="Node.js">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/hbase/">
-								<img src="https://cdn.svgporn.com/logos/hbase.svg" alt="Hbase" title="Hbase">
+								<img src="/docs/images/integrations/hbase.svg" alt="Hbase" title="Hbase">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/hadoop/">
-								<img src="https://cdn.svgporn.com/logos/hadoop.svg" alt="Hadoop" title="Hadoop">
+								<img src="/docs/images/integrations/hadoop.svg" alt="Hadoop" title="Hadoop">
 							</a>
 						</span>
 					</li>
@@ -147,56 +147,32 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
 						<li class="mdl-list__item">
 							<span class="mdl-list__item-primary-content">
 								<a href="/docs/integration/kafka/">
-									<img src="https://cdn.svgporn.com/logos/kafka.svg" alt="Kafka" style="height: 48px;" title="Kafka">
+									<img src="/docs/images/integrations/kafka.svg" alt="Kafka" style="height: 48px;" title="Kafka">
 								</a>
 							</span>
 						</li>
 						<li class="mdl-list__item">
 							<span class="mdl-list__item-primary-content">
 								<a href="/docs/integration/php/">
-									<img src="https://cdn.svgporn.com/logos/php.svg" alt="PHP" title="PHP">
+									<img src="/docs/images/integrations/php.svg" alt="PHP" title="PHP">
 								</a>
 							</span>
 						</li>
 						<li class="mdl-list__item">
 							<span class="mdl-list__item-primary-content">
 								<a href="/docs/integration/jvm/">
-									<img src="https://cdn.svgporn.com/logos/java.svg" alt="Java JVM" title="Java JVM">
+									<img src="/docs/images/integrations/java.svg" alt="Java JVM" title="Java JVM">
 								</a>
 							</span>
 						</li>
 					</ul>
-				<h4>
-					<a href="/docs/integration/" style="padding-left:50px;">See all ...</a>
-				</h4>
 			</div>
+			<h4>
+					<a href="/docs/integration/" style="padding-right:8%; float:right;">See all integrations...</a>
+				</h4>
 		</div>
 	</div>
 </div>
-
-<!-- Cloud or On Premise 
-
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="demo-card-event mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title mdl-card--expand">
-        <h4>
-          Integrations
-        </h4>
-      </div>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-      <div class="demo-card-event mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h4>
-            Integrations
-          </h4>
-        </div>
-      </div>
-  </div>
-</div>
---> 
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col">
       <a href="/docs/logagent/">
@@ -221,11 +197,11 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
       </a>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
-      <a href="/docs/api/rest-api/">
+      <a href="/docs/api/">
         <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
           <div class="mdl-card__title mdl-card--expand">
             <h4>
-              Cloud API
+              API
             </h4>
           </div>
         </div>
@@ -233,7 +209,7 @@ Since Sematext Cloud is an all-in-one Monitoring and Logging solution, our docum
     </div>
   </div>
 
-*If you have questions, we’re here to help.* Don’t hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
+If you have questions, we’re here to help. Don’t hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
 
 
 <!-- Comment out outdated video / reuse code for video embeds

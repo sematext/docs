@@ -31,7 +31,7 @@ and you can get an evaluation version to try it out.
 
 **A:** SPM can monitor Docker/containers, Hadoop, HBase, Kafka, Spark, Storm, Cassandra,
 Elasticsearch, Solr/SolrCloud, MySQL, MariaDB, Redis, Memcached, Apache,
-HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc. See [SPM integrations](http://sematext.com/spm/integrations) for more.
+HAProxy, ZooKeeper, AWS/CloudWatch, SenseiDB, JVM, NodeJS, Express, etc. See [Integrations](/integrations) for more.
  You can also feed it [Custom Metrics](custom-metrics).
 
 #### Does SPM Integrate with ChatOps like Slack and HipChat?  How about PagerDuty or custom WebHooks
@@ -370,7 +370,7 @@ Embedded SPM monitor.
 
 #### Can I use SPM for (business) transaction tracing
 
-**A:** Yes, see [Transaction Tracing](transaction-tracing).
+**A:** Yes, see [Transaction Tracing](/tracing/).
 
 #### Can I move SPM client to a different directory
 
@@ -443,7 +443,7 @@ again move SPM client to location which suits you.
 
 #### Is there an HTTP API
 
-**A:** Yes, see [SPM API Reference](spm-api-reference).
+**A:** Yes, see [API Reference](/api).
 
 #### I have multiple SPM apps installed on my machine, can I uninstall just one of them
 
@@ -507,8 +507,7 @@ To share Account with other users, go to
 To share App, go
 to <https://apps.sematext.com/ui/team/apps>
 
-####   
-What is the difference between OWNER, ADMIN, BILLING\_ADMIN, and USER roles
+#### What is the difference between OWNER, ADMIN, BILLING\_ADMIN, and USER roles
 
 **A:** There are 3 common roles available when Sharing Account and
 Sharing App (**OWNER**, **ADMIN**, **USER**), and one role which is
@@ -881,7 +880,7 @@ spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
 
 **A:** SPM has integrations for Slack, HipChat, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
-[Integrations](integrations). 
+[Integrations](/integrations). 
 
 #### What are Threshold-based Alerts
 

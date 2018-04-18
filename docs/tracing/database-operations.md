@@ -12,11 +12,11 @@ Important:
     backend apps talk to via JDBC). This is because the *SPM agent
     captures operations at that client layer, not in the server itself*.
 
-  - This works only for Java applications
+  - This works only for Java applications
 
-  - To start capturing this information [enable Transaction Tracing](transaction-tracing) in your SPM agents
+  - To start capturing this information [enable Transaction Tracing](enable) in your SPM agents
 
-  - Requires SPM monitor running in [embedded mode](spm-monitor-javaagent) 
+  - Requires SPM monitor running in [embedded mode](/monitoring/spm-monitor-javaagent) 
   <div class="video_container">
     <iframe class="video" src="https://www.youtube.com/embed/eoZJmAJKuaQ" frameborder="0" allowfullscreen ></iframe>
   </div>
@@ -39,9 +39,6 @@ Insights these reports provide:
 
   - Top 10 slowest individual operations and drill-in details 
 
-  - Integration with [Transaction Tracing](http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
+  - Integration with [Transaction Tracing](http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
     correlation of a specific slow operation with the actual
     transaction/request that triggered it
-
- 
-

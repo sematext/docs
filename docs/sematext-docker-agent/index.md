@@ -91,24 +91,24 @@ Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docke
 </table>
 
 
-## Certified and public images 
+## Certified and Public Images 
 
 There are several places to obtain Sematext Docker Agent images: 
 
-1. Docker Certified images in the [Docker Store](https://store.docker.com/images/sematext-agent-monitoring-and-logging) 
+Docker Certified images in the [Docker Store](https://store.docker.com/images/sematext-agent-monitoring-and-logging) 
 
 ```
 docker pull store/sematext/sematext-agent-docker
 ``` 
 
-2. Red Hat certified images in the [Red Hat Container Catalog](https://access.redhat.com/containers/?tab=overview&platform=docker#/registry.connect.redhat.com/sematext/sematext-agent-docker)
+Red Hat certified images in the [Red Hat Container Catalog](https://access.redhat.com/containers/?tab=overview&platform=docker#/registry.connect.redhat.com/sematext/sematext-agent-docker)
 
 ```
 docker login registry.connect.redhat.com
 docker pull registry.connect.redhat.com/sematext/sematext-agent-docker
 ```
 
-3. Public images from [Docker Hub](https://hub.docker.com/r/sematext/sematext-agent-docker/) 
+Public images from [Docker Hub](https://hub.docker.com/r/sematext/sematext-agent-docker/) 
 
 ```
 docker pull sematext/sematext-agent-docker
@@ -119,5 +119,4 @@ docker pull sematext/sematext-agent-docker
 
 Latest information
 for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
-and [open issues](https://github.com/sematext/sematext-agent-docker/issues)
-
+and [open issues](https://github.com/sematext/sematext-agent-docker/issues).

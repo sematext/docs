@@ -30,7 +30,7 @@ application, or you can craft your own "log sender". 
 **NOTE:**  
 If you are sending logs from your application use the Elasticsearch HTTP
 API. If you are sending logs from a Java application use a library like
-[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http)[ or ](https://github.com/jprante/log4j2-elasticsearch-http)[Jest](https://github.com/searchbox-io/Jest)[instead of Elasticsearch TransportClient.](https://github.com/jprante/log4j2-elasticsearch-http)
+[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http)[ or ](https://github.com/jprante/log4j2-elasticsearch-http)[Jest](https://github.com/searchbox-io/Jest) [instead of Elasticsearch TransportClient.](https://github.com/jprante/log4j2-elasticsearch-http)
 
   
 

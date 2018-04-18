@@ -1,6 +1,6 @@
 site_name: Sematext Documentation
-site_url: http://sematext.com/docs
-site_favicon: assets/images/favicon.png
+site_url: https://sematext.com/docs
+strict: true
 pages:
     - Getting Started: index.md
     - Logs:
@@ -23,9 +23,9 @@ pages:
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
         - Kibana: logs/kibana.md
-      - API Reference: logs/logsene-api-reference.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Special Fields: logs/special-fields.md
+      - API: logs/logsene-api-reference.md
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
@@ -37,13 +37,21 @@ pages:
         - Chef Recipe: monitoring/chef-recipe.md
       - Tag Support: monitoring/tag-support.md
       - Network Map: monitoring/network-map.md
-      - Transaction Tracing: monitoring/transaction-tracing.md
-      - Database Operations: monitoring/database-operations.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
-      - API Reference: monitoring/spm-api-reference.md
+      - API: monitoring/spm-api-reference.md
       - FAQ: monitoring/spm-faq.md
+    - Tracing:
+        - Overview: tracing/index.md
+        - Enabling: tracing/enable.md
+        - Tracing Database Calls: tracing/database-operations.md
+        - Supported Tech: tracing/supported-technologies.md
+        - Custom Pointcuts: tracing/custom-pointcuts.md
+        - Transaction Naming: tracing/transaction-naming.md
+        - Tracing Scala: tracing/scala.md
+    - Alerts:
+        - Overview: alerts/index.md
     - Events:
         - Overview: events/index.md
     - Integrations:
@@ -85,7 +93,7 @@ pages:
         - Installation: sematext-docker-agent/installation.md
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
-
+        - FAQ: sematext-docker-agent/faq.md
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 
@@ -113,6 +121,7 @@ pages:
           - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
           - MSSQL query: logagent/input-plugin-mssql.md
           - MySql query: logagent/input-plugin-mysql.md
+          - Cassandra query: logagent/input-plugin-cassandra.md
           - Zeromq input: logagent/input-plugin-zeromq.md
           - Postgresql query: logagent/input-plugin-postgresql.md
           - Apple device location: logagent/logagent-apple-location.md
@@ -141,20 +150,19 @@ pages:
           - Hash fields: logagent/output-filter-hashfields.md
           - Remove fields: logagent/output-filter-removefields.md
           - IP truncate fields: logagent/output-filter-iptruncatefields.md
-          
       - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
-    - Sematext Cloud API : api/rest-api.md
+      - FAQ: logagent/faq.md
+    - API: api/index.md
          
 
 theme:
-    name: material
-    custom_dir: 'mkdocs-material-custom'
+  name: material
+  custom_dir: 'mkdocs-material-custom'
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/
 google_analytics: ['UA-2365268-3', 'mkdocs.org']
-site_favicon: 'images/favicon.png'
 # Options
 extra:
   logo: 'images/logo.svg'

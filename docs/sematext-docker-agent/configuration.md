@@ -41,6 +41,7 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 | GEOIP_ENABLED | ```true```enables GeoIP lookups in the log parser, default value: ```false```| 
 | MAXMIND_DB_DIR | Directory for the Geo-IP lite database, must end with ```/```. Storing the DB in a volume could save downloads for updates after restarts. Using ```/tmp/``` (ramdisk) could speed up Geo-IP lookups (requires add. ~30 MB main memory).|
 |ENABLE_LOGSENE_STATS | Enables logging of transmission stats to Logsene. Default value 'false'. Provides a number of logs received, a number of logs shipped, number of failed/successful HTTP transmissions (bulk requests to Logsene) and retransmissions of failed requests. |
+| LOGSENE_REMOVE_FIELDS | Removes fields from parsed/enriched logs. E.g. LOGSENE_REMOVE_FIELDS=logSource,container_host_name,swarm_node,password,creditCardNo | 
 
 
 ## Access to the Docker Socket  / Docker API  

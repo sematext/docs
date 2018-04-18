@@ -1,7 +1,6 @@
-SPM Client is available in two versions:
+Sematext Monitoring agent is also known as SPM Monitor or SPM Client.  The SPM Client is available in two versions:
 
-  - [Embedded](spm-monitor-javaagent) (aka
-    Javaagent-based, aka in-process)
+  - [Embedded](spm-monitor-javaagent) (aka Javaagent-based, aka in-process)
   - [Standalone](spm-monitor-standalone)
 
 The Embedded version can be used only for monitoring Java-based
@@ -19,4 +18,3 @@ enabled, one will have to adjust application's command-line parameters
 to enable JMX and that will require application process restart.
  However, once that is set up, subsequent SPM client updates will not
 require the application restart.  See [SPM Monitor - Standalone](spm-monitor-standalone) for more info.
-
