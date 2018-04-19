@@ -1,3 +1,6 @@
+Title: Monitoring events 
+Description: APM, performance monitoring, server events, container events, business events, docker events
+
 ### Events: What, Why, How?
 
 [Sematext Cloud](http://sematext.com/cloud/) can graph not only

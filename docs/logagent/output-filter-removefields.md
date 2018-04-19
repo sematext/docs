@@ -1,3 +1,7 @@
+Title: Remove fields from logs 
+Description: GDPR, log anonymizer, reduce log volume
+
+
 ## Output filter: remove-fields
 
 This plugin removes fields before the output happens. All occurrences of the original field value are replaced in the log "message" field with the string "!REMOVED!". 

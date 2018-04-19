@@ -1,3 +1,5 @@
+Title: Use Grok patterns to filter raw logs 
+
 ## Input Filter: Grok
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). Uses Grok patterns to filter data from input plugins before data are parsed.

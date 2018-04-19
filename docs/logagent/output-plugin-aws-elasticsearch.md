@@ -1,3 +1,6 @@
+Title: Store logs in AWS Elasticsearch Service
+Description: log forwarding, log shipper, AWS ELasticsearch Service
+
 ## Output Plugin: Amazon Elasticsearch Service
 
 Writes Logagent output to Amazon Elasticsearch Service (using AWS signed HTTP headers). 

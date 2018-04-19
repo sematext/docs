@@ -1,3 +1,6 @@
+Title: Filter raw input with regular expressions
+Description: log filter, grep, reduce log volume 
+
 ## Input Filter: Grep 
 
 Apply regex to filter raw input from Logagent before logs are parsed

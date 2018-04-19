@@ -1,3 +1,5 @@
+Title: Ingest parsed logs and metrics in InfluxDB
+Description: metrics, log shipper, InfluxDB, telegraf alternative
 
 ## Output Plugin: InfluxDB
 

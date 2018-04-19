@@ -1,4 +1,5 @@
-## Logagent Plugins
+Title: Logagent plugins 
+Description: logging, plugins, elasticsearch, syslog, gelf, cassandra, mysql, postgres, mqtt, log anonymization, apache kafka
 
 Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
 

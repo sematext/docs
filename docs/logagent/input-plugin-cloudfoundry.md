@@ -1,3 +1,5 @@
+Title: Receive logs from Cloud Foundry log drains
+
 ## Input Plugin: Cloud Foundry 
 
 Recieves logs from Cloud Foundry log drains via HTTP.

@@ -1,3 +1,6 @@
+Title: Send data to slack 
+Description: log alerting, log shipper, slack, chatops
+
 ## Output Plugin: Slack 
 
 Plugin to forward messages via Slack "Incoming-Webhook" integration.

@@ -1,3 +1,6 @@
+Title: Parse logs 
+Description: log parser, regular expressions, JSON, log formats, web server logs, database logs
+
 ## How does the parser work?
 
 The parser detects log formats based on a pattern library (YAML file) and converts it to a JSON Object:

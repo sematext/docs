@@ -1,3 +1,6 @@
+Title: Akka performance monitoring
+Description: APM, Akka, Java, Performance Monitoring
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/Akka/overview](https://apps.sematext.com/ui/howto/Akka/overview)

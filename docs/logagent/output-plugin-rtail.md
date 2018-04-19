@@ -1,3 +1,5 @@
+Title: Send data to Rtail real-time log viewer
+Description: log shipper, rtail, real-time log view
 
 ## Output Plugin: rTail  
 

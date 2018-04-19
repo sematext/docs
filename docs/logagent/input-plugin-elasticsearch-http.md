@@ -1,3 +1,5 @@
+Title: Receive data via Elasticsearch index API 
+
 ## Input Plugin: Elasticsearch HTTP
 
 Plugin to receive documents via Elasticsearch HTTP indexing API (bulk and post requests). You can scale the HTTP service by setting 'worker' property > 0. 

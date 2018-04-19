@@ -1,3 +1,6 @@
+Title: Send parsed logs to stdout
+Description: log shipper, stdout, unix pipe, parse logs
+
 ## Output Plugin: Standard output (stdout)
 
 This plugin writes the result of Logagent parser to the standard output stream (stdout) and is activated by default. 

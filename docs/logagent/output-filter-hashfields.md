@@ -1,3 +1,6 @@
+Title: Hash log content 
+Description: GDPR, log anonymizer, hash log data, sha1, sha256, sha512
+
 ## Output filter: hash-fields
 
 This plugin replaces field values with its hash code. All occurrences of the original field value are replaced in the log "message" field with the hash code. 

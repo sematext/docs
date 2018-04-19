@@ -1,3 +1,6 @@
+Title: Tuncate IP addresses 
+Description: GDPR, anonymize IP addresses, log anonymizer, truncate IP addresses
+
 ## Output filter: ip-truncate-fields 
 
 This plugin replaces IP addresses with an anonymized string, replacing the last block of an IP address with "0". 

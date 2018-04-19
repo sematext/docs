@@ -1,3 +1,5 @@
+Title: Ingest data from Elasticsearch queries
+
 ## Input Plugin: Elasticsearch Query
 
 Plugin to receive documents from scheduled Elasticsearch queries.

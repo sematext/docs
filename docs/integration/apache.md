@@ -1,3 +1,6 @@
+Title: Apache web server monitoring
+Description: APM, Performance Monitoring, Apache web server, httpd, metrics
+
 ## Integration
 
 - Agent: [https://github.com/sematext/sematext-agent-httpd](https://github.com/sematext/sematext-agent-httpd)

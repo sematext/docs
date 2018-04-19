@@ -1,3 +1,6 @@
+Title: Ingest parsed logs in Apache Kafka 
+Description: logging pipeline, log shipper, Apache Kafka, durable logging pipeline
+
 ## Output Plugin: Apache Kafka 
 
 Acts as producer to ingest parsed messages to Apache Kafka topics.

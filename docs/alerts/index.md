@@ -1,3 +1,5 @@
+Title: Alerting on logs and metrics  
+
 ### Alert Types
 [Sematext Cloud](http://sematext.com/cloud/) includes multiple types
 of alerts that integrate with PagerDuty, Slack, email, and [other 3rd

@@ -1,3 +1,6 @@
+Title: Export data from Cassandra 
+Description: Data export from Apache Cassandra, periodic Cassandra queries in CQL
+
 ## Input Plugin: Apache Cassandra
 
 Input plugin to use Cassandra queries as input and stream the output into Logagent.

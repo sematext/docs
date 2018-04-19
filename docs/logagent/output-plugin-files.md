@@ -1,3 +1,6 @@
+Title: Store parsed logs in files 
+Description: log transformation, log shipper, ETL, JSON, log management
+
 ## Output Plugin: Files
 
 Writes Logagent output into files. The file name could be dynamically generated using extracted field values in the template for the file name. Following file formats are supported: 

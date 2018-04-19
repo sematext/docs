@@ -1,3 +1,6 @@
+Title: Send data to MQTT brokers 
+Description: sensor data, log shipper, MQTT, real-time log processing
+
 ## Output Plugin: MQTT
 
 This plugin publishes the result of Logagent parser as JSON message to MQTT topics.

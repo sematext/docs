@@ -1,4 +1,5 @@
-###Sematext Monitoring 
+Title: Sematext Monitoring
+Description: APM, Perfromance Monitoring,
 
 Welcome to Sematext Monitoring documentation!
 

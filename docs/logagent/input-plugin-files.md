@@ -1,3 +1,4 @@
+Title: Tail multiple log files 
 
 ## Input Plugin: File
 

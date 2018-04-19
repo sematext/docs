@@ -1,3 +1,5 @@
+Title: Use output of commands as data source
+
 ## Input Plugin: Command 
 
 Input plugin to schedule commands and stream the output into Logagent.

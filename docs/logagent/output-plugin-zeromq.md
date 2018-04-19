@@ -1,3 +1,6 @@
+Title: Send data to ZeroMQ
+Description: log shipper, 0mq, zeromq, logging pipeline
+
 ## Logagent Plugin: ZeroMQ
 
 Output plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer using ZeroMQ.
