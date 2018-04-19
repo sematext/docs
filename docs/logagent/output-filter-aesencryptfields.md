@@ -1,3 +1,6 @@
+Title: Encrypt fields with AES 
+Description: GDPR, log anonymizer, AES encryption, log shipper 
+
 ## Output filter: aes-encrypt-fields 
 
 This plugin encrypts data fields with AES. The original field value gets replaced with its AES encrypted HEX string. All occurrences of the original field value are replaced in the log "message" field with the encrypted value. 
