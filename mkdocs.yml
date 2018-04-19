@@ -107,6 +107,10 @@ pages:
         - Log Parser Patterns: logagent/parser.md
       - Plugins: 
         - Overview: logagent/plugins.md
+        - Input Filter:
+          - About filters: logagent/filters.md
+          - Grep input filter: logagent/input-filter-grep.md
+          - Grok input filter: logagent/input-filter-grok.md
         - Input Plugins:
           - Standard input: logagent/input-plugin-stdin.md
           - File input: logagent/input-plugin-files.md
@@ -128,6 +132,13 @@ pages:
           - Apple device location: logagent/logagent-apple-location.md
           - Nova dust sensor: logagent/logagent-novasds.md
           - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
+        - Output Filter: 
+          - Access Watch output filter: logagent/output-filter-accesswatch.md
+          - SQL output filter: logagent/output-filter-sql.md
+          - AES encrypt fields: logagent/output-filter-aesencryptfields.md
+          - Hash fields: logagent/output-filter-hashfields.md
+          - Remove fields: logagent/output-filter-removefields.md
+          - IP truncate fields: logagent/output-filter-iptruncatefields.md
         - Output Plugins:
           - Standard output: logagent/output-plugin-stdout.md
           - GELF: logagent/output-plugin-gelf.md
@@ -140,18 +151,6 @@ pages:
           - Zeromq output: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
-        - Input Filter:
-          - About filters: logagent/filters.md
-          - Grep input filter: logagent/input-filter-grep.md
-          - Grok input filter: logagent/input-filter-grok.md
-        - Output Filter: 
-          - Access Watch output filter: logagent/output-filter-accesswatch.md
-          - SQL output filter: logagent/output-filter-sql.md
-          - AES encrypt fields: logagent/output-filter-aesencryptfields.md
-          - Hash fields: logagent/output-filter-hashfields.md
-          - Remove fields: logagent/output-filter-removefields.md
-          - IP truncate fields: logagent/output-filter-iptruncatefields.md
-      - FAQ: logagent/faq.md
       - Contributing to Logagent:
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
       - FAQ: logagent/faq.md
