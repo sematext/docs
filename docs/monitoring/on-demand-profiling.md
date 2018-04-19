@@ -6,7 +6,7 @@ Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
 
 **Notes**:
 
-  - Profiling is different from [Transaction Tracing](transaction-tracing).  Profiling is something
+  - Profiling is different from [Transaction Tracing](../tracing).  Profiling is something
     you run on demand, for a short period of time, on a specific
     app/server.  It detects application hotspots, just like a typical
     profiler.  Transaction Tracing traces individual *transactions*,
