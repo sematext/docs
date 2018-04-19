@@ -29,13 +29,12 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - Agents: monitoring/agents.md
-        - SPM Client:
-          - Overview: monitoring/spm-client.md
-          - Javaagent: monitoring/spm-monitor-javaagent.md
-          - Standalone: monitoring/spm-monitor-standalone.md
-          - Switching Modes: monitoring/spm-monitor-switching-modes.md
-          - Chef Recipe: monitoring/chef-recipe.md
+      - SPM Client:
+        - Overview: monitoring/spm-client.md
+        - Javaagent: monitoring/spm-monitor-javaagent.md
+        - Standalone: monitoring/spm-monitor-standalone.md
+        - Switching Modes: monitoring/spm-monitor-switching-modes.md
+        - Chef Recipe: monitoring/chef-recipe.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
