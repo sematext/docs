@@ -1,4 +1,4 @@
-## Introduction
+### Introduction
 
 Unlike the [Embedded, Javaagent-based monitor](spm-monitor-javaagent), the Standalone monitor
 is started as a separate process on each machine running the
@@ -22,7 +22,7 @@ After that, SPM monitor can be (re)started with:
 sudo service spm-monitor restart
 ```
 
-## JMX Setups (i.e. How to Configure the Monitored App/Server)
+### JMX Setups (i.e. How to Configure the Monitored App/Server)
 
 There are 3 basic JMX setups (all explained below):
 
@@ -30,7 +30,6 @@ There are 3 basic JMX setups (all explained below):
   - Security with password file
   - Security with SSL and keystore/trustore
 
- 
 
 #### No Security Setup
 

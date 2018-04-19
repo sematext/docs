@@ -1,7 +1,7 @@
-#### Switching from In-Process to Standalone
+### From In-Process to Standalone
 
 1.  Adjust your server startup scripts by removing SPM javaagent
-definition and adding parameters described on [SPM Monitor - Standalone](spm-monitor-standalone)
+definition and adding parameters described in [Java App Agent Standalone](spm-monitor-standalone)
 
 2.  Edit **properties** file of your system found in
 /spm/spm-monitor/conf/ directory (in case you are using Hadoop or HBase
@@ -10,7 +10,7 @@ which you want to change the mode). Set:
 
     - **SPM\_MONITOR\_IN\_PROCESS**="false"
     - **SPM\_MONITOR\_JMX\_PARAMS** should be adjusted according to
-      instructions on [SPM Monitor - Standalone](spm-monitor-standalone)
+      instructions in [Java App Agent Standalone](spm-monitor-standalone)
 
 3.  Restart SPM Monitor:
 
@@ -20,9 +20,8 @@ which you want to change the mode). Set:
 
 4. restart your server
 
- 
 
-#### Switching from Standalone to In-Process
+### From Standalone to In-Process
 
 1. Add SPM javaagent definition to startup script of your server
 according to notes
@@ -44,5 +43,3 @@ which you want to change the mode). Set:
     ```
 
 4. restart your server  
-  
-

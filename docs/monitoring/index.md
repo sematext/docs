@@ -1,20 +1,9 @@
 Title: Infrastructure monitoring
 Description: Sematext infrastructure and application performance monitoring docs
 
-To start using monitoring tools it is crucial to set up SPM Client to collect data. 
-
-SPM Monitor or SPM Client is monitoring agent available in two versions:
-
-  - [Embedded](spm-monitor-javaagent) (aka Javaagent-based, aka in-process)
-  - [Standalone](spm-monitor-standalone)
-  
-The [API Reference](../api) provides more detailed information on account and apps management as well as automation of certain tasks, such as creation of new apps, definition of alert rules, etc.
-  
-These are available [Monitoring Integrations](../integration) and for general SPM Monitoring information check [FAQ](spm-faq) page.
-
 ### Creating Monitoring Apps
 
-The first step is to create an app. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
+The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
 
 <a href="#create-spm-app"><img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
 
@@ -28,19 +17,33 @@ The first step is to create an app. Go to [monitoring view](https://apps.sematex
 </div>
 </div>
 
-### Sending Data to Your App
+You can have any number of Monitoring Apps and each App can be shared
+with different people, giving them different access roles.  Very
+importantly, you can pick different plans for different Apps - some
+can be free, some paid and using different plans, etc., giving you a
+lot of flexibility around cost management.
 
-In order to start sending data to your app you need:
- 
-Step 1 - Install Client Package
+A number of App management operations, such as creation of new Apps, definition of alert rules, etc., are exposed via the [API](../api).
 
-SPM client packages are available for various Linux distributions. After you are done with package installation, proceed to Client Configuration Setup.
+### Setting up Monitoring Agents
 
-Step 2 - Configure Client
+To start monitoring your infrastructure you need to set up the
+appropriate Sematext monitoring agent. You can choose from:
 
-Monitoring Agent collects performance metrics of your application. It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later SPM Monitor upgrades don't require you to restart your application and SPM Monitor not having any effect on your app (since it runs in its own process).
+  - [Java-based App Agent](spm-client) (aka SPM Client or SPM
+    Monitor), which you can run in [embedded](spm-monitor-javaagent)
+    (aka Javaagent-based, aka in-process) or
+    [standalone](spm-monitor-standalone) mode
+  - [Node-based App Agent](node-agent)
+  - [Docker Agent](../sematext-docker-agent)
 
-<p>You should start seeing your performance data in SPM in a few minutes. If you do not see performance charts in 5 minutes, have a look at <a href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a> page.</p>
+The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
+
+Once the agent is set up metrics will start coming to Sematext
+instantly. If you do not see performance charts in 5 minutes, have a
+look at the <a
+href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a>
+page.</p>
 
 ### App Settings
 
@@ -79,7 +82,7 @@ Network Map can help you visualize the network topology of a system monitored by
 
 For more information on Network Map check [Network Map](network-map) page.
 
-On-demand profiling lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
+[On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
 
 It works with both embedded and standalone agent and you can find more information [here](on-demand-profiling).
 
