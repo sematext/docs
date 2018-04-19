@@ -1,4 +1,8 @@
-### Monitoring Integrations
+Title: Integrations
+Descriptions: Sematext integrations for infrastructure monitoring, log management, alerting, chatops, etc.
+
+### Monitoring
+
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/akka/">
@@ -367,7 +371,7 @@
 	</div>
 </div>
 
-### Logging 
+### Logging
 
 Stored data is received through the Elasticsearch API and also through a variety of Syslog protocols.
 
