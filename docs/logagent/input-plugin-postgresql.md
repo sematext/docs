@@ -1,3 +1,5 @@
+Title: Query data from PostgreSQL
+
 ## Input Plugin: PostgreSQL 
 
 Input plugin to use PostgreSQL queries as input and stream the output into Logagent.

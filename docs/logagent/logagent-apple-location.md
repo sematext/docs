@@ -1,3 +1,5 @@
+Title: Receive Apple iPhone positions 
+
 ## Input plugin: logagent-apple-location
 
 [Logagent](https://sematext.com/logagent) plugin to track the GPS position of Apple devices using the find-my-iphone API. 

@@ -1,3 +1,5 @@
+Title: Logagent Debugging
+
 ### Logagent Debugging with Visual Source Code:
 
 Here we try explain how to debug Logagent using Visual Source

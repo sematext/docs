@@ -1,3 +1,4 @@
+Title: Logagent FAQ
 
 ## Logagent FAQ
 

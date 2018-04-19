@@ -1,3 +1,5 @@
+Title: Receive data via syslog protocol
+
 ## Input Plugin: Syslog UDP
 
 Receives Syslog messages via UDP.  

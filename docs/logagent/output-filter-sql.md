@@ -1,3 +1,5 @@
+Title: Aggregate and filter logs with SQL
+
 ## SQL output filter
 Filter and aggregate parsed logs with SQL.
 

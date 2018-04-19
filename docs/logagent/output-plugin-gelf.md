@@ -2,6 +2,7 @@ Title: Store logs in Graylog
 Description: log shipper, Graylog, Graylog2
 
 ## Output Plugin: GELF output plugin
+Title: Ingest data in Graylog  
 
 This plugin sends data to a GELF server using protocol v1.1 via UDP.
 

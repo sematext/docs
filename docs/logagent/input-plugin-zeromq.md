@@ -1,3 +1,5 @@
+Title: Receive data from ZeroMQ
+
 ## Logagent Plugin: ZeroMQ
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as messages consumer using ZeroMQ.

@@ -1,3 +1,5 @@
+Title: Measure air pollution 
+
 ## Input plugin: Nova SDS011 sensor
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin collects PM10 and PM2.5 values from Nova SDS011 dust sensor from USB via serial port. The sensor data can be enriched with location data from other plugins, e.g. from [Logagent apple location](logagent-apple-location) tracker plugin. 

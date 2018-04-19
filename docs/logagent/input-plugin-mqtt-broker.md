@@ -1,3 +1,6 @@
+Title: Receive messages via MQTT broker
+Description: MQTT, IoT, log shipper
+
 ## Input Plugin: MQTT Broker
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin starts a MQTT Broker and emits each received message (all topics) to Logagent processing pipeline.  

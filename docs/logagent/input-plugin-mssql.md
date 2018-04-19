@@ -1,3 +1,5 @@
+Title: Query data from Microsoft SQL 
+
 ## Input Plugin: Microsoft SQL 
 
 Input plugin to use Microsoft SQL queries as input and stream the output into Logagent.

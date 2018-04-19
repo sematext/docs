@@ -1,3 +1,5 @@
+Title: Ingest data in Elasticsearch
+
 ## Elasticsearch Output Plugin
 
 The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://www.elastic.co/products/elasticsearch) or [Logsene](https://sematext.com/logsene). 

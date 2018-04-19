@@ -1,3 +1,5 @@
+Title: Install Logagent 
+
 ## Installation for Linux & Mac OS X
 
 ### Install Node.js 

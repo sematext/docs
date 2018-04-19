@@ -1,3 +1,5 @@
+Title: Installation on Heroku
+
 ## Run Logagent as Heroku Log Drain
 
 You can forward your [Heroku](http://www.heroku.com) logs to Logsene using Heroku [Log Drain](https://devcenter.heroku.com/articles/log-drains) like this:

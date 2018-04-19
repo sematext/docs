@@ -1,3 +1,5 @@
+Title: Install Logagent on Windows
+
 ## Installation on Windows
 
 1. Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and install it

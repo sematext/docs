@@ -1,3 +1,6 @@
+Title: Enrich web server logs 
+Description: malicious bots, threat detection, geoip
+
 ## Access Watch output filter
 
 Web traffic insights and robot detection are key for teams to stay in control of what is happening on their infrastructure and web assets. Automated robotic traffic now represents a larger share of website activity over human customers. These bots have a significant impact, with many working hard to disguise their identity and activity, thereby increasing risk and costs while harming performance for online businesses. Access Watch deploys the industry’s most precise robot intelligence to be easily plugged into any existing data pipeline.

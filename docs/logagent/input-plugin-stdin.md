@@ -1,3 +1,5 @@
+Title: Read data from standard input 
+
 ## Input Plugin: Standard input (stdin)
 
 This plugin reads data from the standard input stream and is activated by default. 

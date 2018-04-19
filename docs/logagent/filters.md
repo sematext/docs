@@ -1,3 +1,5 @@
+Title: Logagent filter functions
+
 ## Filters
 
 Filters can drop, transform or aggregate log events and hook into the processing chain. 

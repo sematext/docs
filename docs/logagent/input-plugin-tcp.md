@@ -1,3 +1,5 @@
+Title: Recieve data via TCP socket
+
 ## Input Plugin: TCP input
 
 Plugin to receive log data via TCP.

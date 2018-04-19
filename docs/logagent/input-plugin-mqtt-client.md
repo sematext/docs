@@ -1,3 +1,6 @@
+Title: Receive messages via MQTT 
+Description: MQTT, IoT, log shipper
+
 ## Input Plugin: MQTT Client
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). This plugin subscribes to MQTT topics. 

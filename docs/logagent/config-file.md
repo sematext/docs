@@ -1,3 +1,6 @@
+Title: Logagent configuration file
+Description: log shipper, logagent, configuration
+
 ## Config File 
 
 Logagent can be configured via config files in YAML format. 
