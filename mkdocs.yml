@@ -29,18 +29,21 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - SPM Client:
-        - Overview: monitoring/spm-client.md
-        - SPM Monitor - Javaagent: monitoring/spm-monitor-javaagent.md
-        - SPM Monitor - Standalone: monitoring/spm-monitor-standalone.md
-        - SPM Monitor - Switching Modes: monitoring/spm-monitor-switching-modes.md
-        - Chef Recipe: monitoring/chef-recipe.md
-      - Tag Support: monitoring/tag-support.md
+      - Agents: monitoring/agents.md
+        - SPM Client:
+          - Overview: monitoring/spm-client.md
+          - Javaagent: monitoring/spm-monitor-javaagent.md
+          - Standalone: monitoring/spm-monitor-standalone.md
+          - Switching Modes: monitoring/spm-monitor-switching-modes.md
+          - Chef Recipe: monitoring/chef-recipe.md
+        - Node: monitoring/node-agent.md
+        - Docker: sematext-docker-agent/index.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
-      - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
+      - Tags: monitoring/tag-support.md
       - API: monitoring/spm-api-reference.md
+      - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - FAQ: monitoring/spm-faq.md
     - Tracing:
         - Overview: tracing/index.md
