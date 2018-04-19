@@ -19,15 +19,22 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           {% block site_name %}
-            {% if config.site_name == page.title %}
-              {{ config.site_name }}
+            {% if page and page.meta and page.meta.title  %}
+               <span class="md-header-nav__topic">
+                {{ page.meta.title }}
+              </span>
             {% else %}
-              <span class="md-header-nav__topic">
+              {% if config.site_name == page.title %}
                 {{ config.site_name }}
-              </span>
-              <span class="md-header-nav__topic">
-                {{ page.title }}
-              </span>
+              {% else %}
+                <span class="md-header-nav__topic">
+                  {{ config.site_name }}
+                </span>
+                <span class="md-header-nav__topic">
+                  {{ page.title }}
+                  {{ page.meta_title }}
+                </span>
+              {% endif %}
             {% endif %}
           {% endblock %}
         </div>
