@@ -29,6 +29,7 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
+      - Agents: monitoring/agents.md
       - SPM Client:
         - Overview: monitoring/spm-client.md
         - Javaagent: monitoring/spm-monitor-javaagent.md
