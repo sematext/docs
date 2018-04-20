@@ -32,16 +32,25 @@ appropriate Sematext monitoring agent. You can choose from:
   - [Java-based App Agent](spm-client) (aka SPM Client or SPM
     Monitor), which you can run in [embedded](spm-monitor-javaagent)
     (aka Javaagent-based, aka in-process) or
-    [standalone](spm-monitor-standalone) mode
-  - [Node-based App Agent](node-agent)
-  - [Docker Agent](../sematext-docker-agent)
+    [standalone](spm-monitor-standalone) mode.  This agent can also
+    instrument JVM-based apps to collect transaction traces and
+    perform [on demand profiling](on-demand-profiling).
+
+  - [Node-based App Agent](node-agent), which can [monitor
+    Apache](../integration/apache) and [Nginx](../integration/nginx)
+    (including [Nginx Plus](../integration/nginxplus)).
+
+  - [Docker Agent](../sematext-docker-agent), which can collect not
+    only container and host metrics, but also container events and
+    also logs, it can parse and structure out of the box.
+
 
 The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
 
 Once the agent is set up metrics will start coming to Sematext
 instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
 look at the <a
-href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a>
+href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a>
 page.</p>
 
 ### App Settings
