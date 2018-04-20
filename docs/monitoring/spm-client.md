@@ -31,11 +31,12 @@ bottlenecks in your code.
 
 The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
 
-!!! abstract "Red Hat"
-    sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
-    sudo yum clean all
-    sudo yum install spm-client
-
+#### "Red Hat"
+```sh
+sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
+sudo yum clean all
+sudo yum install spm-client
+```
 #### CentOS
 ```sh
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
