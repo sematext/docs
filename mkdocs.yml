@@ -198,3 +198,5 @@ markdown_extensions:
   - toc(permalink=true)
   - codehilite
   - meta
+  - markdown_fenced_code_tabs:
+      single_block_as_tab: False
