@@ -1,21 +1,26 @@
-Title: Sematext Monitoring Agent Java
+Title: Sematext Monitoring Java Agent
 
 Sematext Monitoring agent is also known as SPM Monitor or SPM Client.
 
-The agent is open-source and its built-in integrations are published
-in
+The agent is open-source, written in Java (but not limited to
+monitoring Java!), with a number of built-in integrations available
+from the
 [sematext-agent-integrations](https://github.com/sematext/sematext-agent-integrations)
-repo.  You can add your own integrations for monitoring
-additional infrastructure and services.  Pull requests welcome!
+repo.  You can add your own integrations for monitoring additional
+infrastructure and services.  Pull requests welcome!
 
 
 ### Capabilities
+
+This agent communicates with Sematext via HTTPS.  It buffers data on
+disk in case it cannot immediately ship it, ensuring data is never
+lost.
 
 #### Infrastructure monitoring
 
 Lightweight and pluggable, this agent comes with a number of out of
 the box integrations. It has built-in support for collecting metrics
-from JMX, REST APIs, and from databases that support JDBC.  
+from JMX, REST APIs, and from databases that support JDBC.
 
 #### Tracing
 
