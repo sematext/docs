@@ -1,8 +1,7 @@
-On-demand profiling lets you profile your own JVM-based applications or
-even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch,
-Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
-
- 
+On-demand profiling is a feature of the [Java Agent](spm-client) that
+lets you profile your own JVM-based applications or even any 3rd party
+JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka,
+Hadoop, Storm, Cassandra, HBase, etc.).
 
 **Notes**:
 
@@ -25,7 +24,7 @@ Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
 
   - In order to profile Elasticsearch server you must enable remote JMX
     connection (as described [standalone monitor setup instructions page](spm-monitor-standalone)) and
-    set SPM\_MONITOR\_JMX\_PARAMS property in a .properties file under
+    set SPM\_MONITOR\_JMX\_PARAMS property in a .properties file under
     the /opt/spm/spm-monitor/conf/ directory.
 
 **Resources**:
