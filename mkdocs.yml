@@ -30,9 +30,9 @@ pages:
     - Monitoring:
       - Overview: monitoring/index.md
       - Java App Agent: monitoring/spm-client.md
-      - Java Agent Embedded: monitoring/spm-monitor-javaagent.md
-      - Java Agent Standalone: monitoring/spm-monitor-standalone.md
-      - Switching Java Agent Modes: monitoring/spm-monitor-switching-modes.md
+        - Java Agent Embedded: monitoring/spm-monitor-javaagent.md
+        - Java Agent Standalone: monitoring/spm-monitor-standalone.md
+        - Switching Java Agent Modes: monitoring/spm-monitor-switching-modes.md
       - Node Agent: monitoring/node-agent.md
       - Docker Agent: sematext-docker-agent/index.md
       - Chef Recipe: monitoring/chef-recipe.md
@@ -153,7 +153,7 @@ pages:
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
       - Contributing to Logagent:
-          - IDE Integration and debugging: logagent/logagent-ide-conf.md
+        - IDE Integration and debugging: logagent/logagent-ide-conf.md
       - FAQ: logagent/faq.md
     - API: api/index.md
          
