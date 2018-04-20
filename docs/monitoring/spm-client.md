@@ -1,3 +1,5 @@
+Title: Sematext Monitoring Agent Java
+
 Sematext Monitoring agent is also known as SPM Monitor or SPM Client.
 
 The agent is open-source and its built-in integrations are published
@@ -15,7 +17,6 @@ Lightweight and pluggable, this agent comes with a number of out of
 the box integrations. It has built-in support for collecting metrics
 from JMX, REST APIs, and from databases that support JDBC.  
 
-
 #### Tracing
 
 SPM Monitor agent can also instrument JVM-based apps using bytecode
@@ -30,12 +31,11 @@ bottlenecks in your code.
 
 The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
 
-#### RedHat
-```sh
-sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
-sudo yum clean all
-sudo yum install spm-client
-```
+!!! abstract "Red Hat"
+    sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
+    sudo yum clean all
+    sudo yum install spm-client
+
 #### CentOS
 ```sh
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
