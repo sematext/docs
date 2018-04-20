@@ -76,6 +76,10 @@ a {
     min-width:150px;
     min-height: 150px
 }
+md-nav--secondary .md-nav__item > nav {
+    padding-left: 1.2rem;
+}
+
 .logs-card{
     background: #00A3EF;
 }
