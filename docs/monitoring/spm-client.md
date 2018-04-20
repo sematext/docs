@@ -28,41 +28,48 @@ bottlenecks in your code.
 
 ### Installation
 
-The SPM Monitor is packaged as a DEB and RPM package called spm-client.
+The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
 
-```redhat fct_label="RedHat"
+#### RedHat
+```sh
 sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
 ```
-```centos fct_label="CentOS"
+#### CentOS
+```sh
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
 ```
-```debian fct_label="Debian"
+#### Debian
+```sh
 echo "deb http://pub-repo.sematext.com/debian sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
 wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install spm-client
 ```
-```ubuntu fct_label="Ubuntu"
+#### Ubuntu
+```sh
 echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
 wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install spm-client
 ```
-```amazonlinux fct_label="Amazon Linux"
+#### Amazon Linux
+```sh
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
 ```
-```fedora fct_label="Fedora"
+#### Fedora
+```sh
 sudo wget https://pub-repo.sematext.com/fedora/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
 ```
-```suse fct_label="SuSE"
+#### SuSE
+```sh
 sudo zypper ar -r https://pub-repo.sematext.com/suse/11/sematext.repo
 sudo zypper up
 sudo zypper in spm-client
