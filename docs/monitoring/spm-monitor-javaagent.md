@@ -1,4 +1,4 @@
-## Introduction
+Title: Embedded Agent Mode
 
 Unlike the [Standalone monitor](spm-monitor-standalone),
 the Embedded, Javaagent-based monitor, is started embedded in the

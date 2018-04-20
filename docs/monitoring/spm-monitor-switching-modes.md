@@ -1,3 +1,5 @@
+Title Switching Agent Modes
+
 ### From In-Process to Standalone
 
 1. Adjust your service startup scripts by removing the javaagent

@@ -1,4 +1,4 @@
-### Introduction
+Title: Standalone Agent Mode
 
 Unlike the [Embedded, Javaagent-based monitor](spm-monitor-javaagent), the Standalone monitor
 is started as a separate process on each machine running the
