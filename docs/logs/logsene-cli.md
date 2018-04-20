@@ -226,27 +226,22 @@ Allowed range formats
   duration/datetime
   note: / is default range separator; + or - sign is duration direction
   note: duration must begin with either + or - when used in end of range position
+```
 
   The following table shows how ranges are calculated, given the different input parameters
-┌──────────────────────────────────────┬─────────────────────────────┬──────────────────────┐
-│ -t parameter                         │ range start                 │ range end            │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2016-06-24T18:42                     │ timestamp                   │ now                  │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2016-06-24T18:42/2016-06-24T18:52:30 │ timestamp                   │ timestamp            │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2016-06-24T18:42/+1d                 │ timestamp                   │ timestamp + duration │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2016-06-24T18:42/-1d                 │ timestamp - duration        │ timestamp            │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2h30m8s                              │ now - duration              │ now                  │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2h/+1h                               │ now - duration1             │ start + duration2    │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 2h/-1h                               │ now - duration1 - duration2 │ now - duration1      │
-├──────────────────────────────────────┼─────────────────────────────┼──────────────────────┤
-│ 5d10h25/2016-06-24T18:42             │ now - duration              │ timestamp            │
-└──────────────────────────────────────┴─────────────────────────────┴──────────────────────┘
+
+-t parameter | range start | range end
+--- | --- | ---
+2016-06-24T18:42 | timestamp | now |
+2016-06-24T18:42/2016-06-24T18:52:30 | timestamp | timestamp |
+2016-06-24T18:42/+1d | timestamp | timestamp + duration |
+2016-06-24T18:42/-1d | timestamp | timestamp |
+2h30m8s | now - duration | now |
+2h/+1h | now - duration1 | start + duration2 |
+2h/-1h | now - duration1 - duration2 | now - duration1 |
+5d10h25/2016-06-24T18:42 | now - duration | timestamp |
+
+```
   note: all allowable datetime formats are also permitted when specifying ranges
   note: disallowed range separators:
        Y, y, M, D, d, H, h, m, S, s, -, +, P, p, T, t
