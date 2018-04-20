@@ -45,58 +45,58 @@ pages:
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - FAQ: monitoring/spm-faq.md
     - Tracing:
-        - Overview: tracing/index.md
-        - Enabling: tracing/enable.md
-        - Tracing Database Calls: tracing/database-operations.md
-        - Supported Tech: tracing/supported-technologies.md
-        - Custom Pointcuts: tracing/custom-pointcuts.md
-        - Transaction Naming: tracing/transaction-naming.md
-        - Tracing Scala: tracing/scala.md
+      - Overview: tracing/index.md
+      - Enabling: tracing/enable.md
+      - Tracing Database Calls: tracing/database-operations.md
+      - Supported Tech: tracing/supported-technologies.md
+      - Custom Pointcuts: tracing/custom-pointcuts.md
+      - Transaction Naming: tracing/transaction-naming.md
+      - Tracing Scala: tracing/scala.md
     - Alerts:
-        - Overview: alerts/index.md
-        - Account Default Hooks: alerts/account-default-hooks.md
+      - Overview: alerts/index.md
+      - Account Default Hooks: alerts/account-default-hooks.md
     - Events:
-        - Overview: events/index.md
+      - Overview: events/index.md
     - Integrations:
-        - Overview: integration/index.md
-        - Monitoring Akka: integration/akka.md
-        - Monitoring Apache: integration/apache.md
-        - Monitoring AWS: integration/aws.md
-        - Monitoring Cassandra: integration/cassandra.md
-        - Monitoring Docker: integration/docker.md
-        - Monitoring Elasticsearch: integration/elasticsearch.md
-        - Monitoring Hadoop: integration/hadoop.md
-        - Monitoring HAProxy: integration/haproxy.md
-        - Monitoring HBase: integration/hbase.md
-        - Monitoring JVM: integration/jvm.md
-        - Monitoring Kafka: integration/kafka.md
-        - Monitoring MySQL: integration/mysql.md
-        - Monitoring MongoDB: integration/mongodb.md
-        - Monitoring Nginx: integration/nginx.md
-        - Monitoring Nginx Plus: integration/nginxplus.md
-        - Monitoring Node.js: integration/node.js.md
-        - Monitoring PHP: integration/php.md
-        - Monitoring Redis: integration/redis.md
-        - Monitoring Sensei: integration/sensei.md
-        - Monitoring Solr: integration/solr.md
-        - Monitoring SolrCloud: integration/solrcloud.md
-        - Monitoring Spark: integration/spark.md
-        - Monitoring Storm: integration/storm.md
-        - Monitoring Tomcat: integration/tomcat.md
-        - Monitoring ZooKeeper: integration/zk.md
-        - HipChat: integration/alerts-hipchat-integration.md
-        - PagerDuty: integration/alerts-pagerduty-integration.md
-        - Slack: integration/alerts-slack-integration.md
+      - Overview: integration/index.md
+      - Monitoring Akka: integration/akka.md
+      - Monitoring Apache: integration/apache.md
+      - Monitoring AWS: integration/aws.md
+      - Monitoring Cassandra: integration/cassandra.md
+      - Monitoring Docker: integration/docker.md
+      - Monitoring Elasticsearch: integration/elasticsearch.md
+      - Monitoring Hadoop: integration/hadoop.md
+      - Monitoring HAProxy: integration/haproxy.md
+      - Monitoring HBase: integration/hbase.md
+      - Monitoring JVM: integration/jvm.md
+      - Monitoring Kafka: integration/kafka.md
+      - Monitoring MySQL: integration/mysql.md
+      - Monitoring MongoDB: integration/mongodb.md
+      - Monitoring Nginx: integration/nginx.md
+      - Monitoring Nginx Plus: integration/nginxplus.md
+      - Monitoring Node.js: integration/node.js.md
+      - Monitoring PHP: integration/php.md
+      - Monitoring Redis: integration/redis.md
+      - Monitoring Sensei: integration/sensei.md
+      - Monitoring Solr: integration/solr.md
+      - Monitoring SolrCloud: integration/solrcloud.md
+      - Monitoring Spark: integration/spark.md
+      - Monitoring Storm: integration/storm.md
+      - Monitoring Tomcat: integration/tomcat.md
+      - Monitoring ZooKeeper: integration/zk.md
+      - HipChat: integration/alerts-hipchat-integration.md
+      - PagerDuty: integration/alerts-pagerduty-integration.md
+      - Slack: integration/alerts-slack-integration.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - FAQ: sematext-enterprise/faq.md
     - Sematext Docker Agent: 
-        - Overview: sematext-docker-agent/index.md
-        - Supported Platforms: sematext-docker-agent/supported-platforms.md
-        - Installation: sematext-docker-agent/installation.md
-        - Configuration: sematext-docker-agent/configuration.md
-        - Troubleshooting: sematext-docker-agent/troubleshooting.md
-        - FAQ: sematext-docker-agent/faq.md
+      - Overview: sematext-docker-agent/index.md
+      - Supported Platforms: sematext-docker-agent/supported-platforms.md
+      - Installation: sematext-docker-agent/installation.md
+      - Configuration: sematext-docker-agent/configuration.md
+      - Troubleshooting: sematext-docker-agent/troubleshooting.md
+      - FAQ: sematext-docker-agent/faq.md
     - Logagent:
       - Overview: logagent/index.md
       - Installation: 
