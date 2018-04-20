@@ -32,6 +32,14 @@ Install Material theme
 pip install mkdocs-material===2.7.0
 ```
 
+Install Markdown Code Tabs Extension
+```sh
+pip install markdown-fenced-code-tabs
+```
+In mkdocs.yml:
+- add extry under markdown_extensions shown on https://github.com/yacir/markdown-fenced-code-tabs for more info:
+- add ```- 'stylesheets/code-tabs.css'``` under extra_css
+
 Getting started
 Start the server by running the `mkdocs serve` command:
 
