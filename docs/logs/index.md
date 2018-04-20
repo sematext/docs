@@ -1,4 +1,4 @@
-Think of Logsene as logging as a service or your own logging box in the cloud (or [running on your own infrastructure](../sematext-enterprise)). It is cheaper alternative to Splunk or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and [searching](searching-log-events).
+Think of Logsene as logging as a service or your own logging box in the cloud (or [running on your own infrastructure](../sematext-enterprise)). It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and [searching](searching-log-events).
 
 Below, you can find how you can get started.
 
@@ -50,18 +50,19 @@ App's settings include, but are not limited to:
   - [changing your app's plan](faq/#plans-prices)
   - checking how much data is, or has been shipped to your app
 
-##### Invite Users
+#### Invite Users
 
 Inviting new users lets them see your app(s). You can also make them ADMINs, which enables them to change some of the app's settings, too.
 
-##### Authorize IP for Syslog
+#### Authorize IP for Syslog
 
 When you [send data via TCP/UDP/RELP syslog](syslog), you can authorize by using the Logsene app token, or by registering your public IP address. If you choose registering IPs, [this page](authorizing-ips-for-syslog) will guide you on doing that from your app's settings or from the Logsene App screen.
 
-##### Storage and Retention
+#### Storage and Retention
 
 The Storage section shows how many logs (in count and as bytes) are stored in your app. Old logs are being removed based on how long you choose to keep them. For example, if the retention time is 7 days then logs with the value of the **@timestamp** field older than 7 days will be removed.
 
 ### Getting Support
 
 We hope you enjoy using Sematext App and Infrastructure Monitoring and Log Management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com) ! You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext). 
+
