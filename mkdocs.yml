@@ -201,5 +201,9 @@ markdown_extensions:
   - codehilite
   - meta
   - admonition
+  - pymdownx.superfences:
+# upgrade to pymdownx 4.10... first      preserve_tabs: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
   - markdown_fenced_code_tabs:
       single_block_as_tab: False
