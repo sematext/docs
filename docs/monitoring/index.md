@@ -19,9 +19,8 @@ The first step to monitoring with Sematext is to create a Monitoring App. Go to 
 
 You can have any number of Monitoring Apps and each App can be shared
 with different people, giving them different access roles.  Very
-importantly, you can pick different plans for different Apps - some
-can be free, some paid and using different plans, etc., giving you a
-lot of flexibility around cost management.
+importantly, each App has its own plan. Some Apps can use the free plan,
+while others can use paid plans, thus enabling a lot of flexibility around cost management.
 
 A number of App management operations, such as creation of new Apps, definition of alert rules, etc., are exposed via the [API](../api).
 
@@ -40,22 +39,22 @@ appropriate Sematext monitoring agent. You can choose from:
 The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
 
 Once the agent is set up metrics will start coming to Sematext
-instantly. If you do not see performance charts in 5 minutes, have a
+instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
 look at the <a
 href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a>
 page.</p>
 
 ### App Settings
 
-App settings include, but are not limited to:
+App settings and actions include, but are not limited to:
 
-  - inviting new users to your application
+  - inviting others to your App
   - [alert rules](../alerts)
-  - changing your app's plan
-  - connecting apps
-  - create heartbeat alert
-  - transfer app owner
-  - subscriptions
+  - changing your App's plan
+  - connecting Apps
+  - heartbeat alert cration
+  - App ownership transfer
+  - scheduled report emails (aka Subscriptions)
   
 <a href="#app-settings-menu"><img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen"></a>
 
@@ -78,17 +77,15 @@ To help you manage your metrics, hosts, and containers, and to help you create m
 
 Check [Tag Support](tag-support) page for different ways of Tags organization.
 
-Network Map can help you visualize the network topology of a system monitored by SPM.  It can discover hosts and collect information about communication between them, such as the amount of received/transmitted data on each port.
+Network Map can help you visualize the network topology of a system monitored by Sematext.  It can discover hosts and collect information about communication between them, such as the amount of received/transmitted data on each port.
 
 For more information on Network Map check [Network Map](network-map) page.
 
 [On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
 
-It works with both embedded and standalone agent and you can find more information [here](on-demand-profiling).
+It works with both embedded and standalone agent and has negligible overhead.
 
-[SPM](http://sematext.com/spm/) also exposes APIs and provides libraries that let you send custom metrics (any numerical data, not just performance metrics) into SPM and graph it along other reports.
-
-For more information on how to extend standard performance metrics reports check [Custom Metrics](custom-metrics) page.
+[Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports.
 
 ### Getting Support
 
