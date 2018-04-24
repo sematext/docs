@@ -38,75 +38,70 @@ The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
-     <a href="#starks-panel" class="mdl-tabs__tab is-active">Red Hat</a>
-     <a href="#lannisters-panel" class="mdl-tabs__tab">CentOS</a>
-     <a href="#targaryens-panel" class="mdl-tabs__tab">Debian</a>
+     <a href="#redhat" class="mdl-tabs__tab is-active">Red Hat</a>
+     <a href="#centos" class="mdl-tabs__tab">CentOS</a>
+     <a href="#debian" class="mdl-tabs__tab">Debian</a>
  </div>
- <div class="mdl-tabs__panel is-active" id="starks-panel">
-<pre>
+
+ <div class="mdl-tabs__panel is-active" id="redhat">
+   <pre>
 sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
-</pre>
+   </pre>
  </div>
- <div class="mdl-tabs__panel" id="lannisters-panel">
- </div>
- <div class="mdl-tabs__panel" id="targaryens-panel">
-<pre>
-echo "deb http://pub-repo.sematext.com/debian sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
-wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install spm-client
-</pre>
- </div>
-</div>
-
-
-
-#### Red Hat
-```sh
-sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
-sudo yum clean all
-sudo yum install spm-client
-```
-#### CentOS
-```sh
+ <div class="mdl-tabs__panel" id="centos">
+   <pre>
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
-```
-#### Debian
-```sh
+   </pre>
+ </div>
+ <div class="mdl-tabs__panel" id="debian">
+   <pre>
 echo "deb http://pub-repo.sematext.com/debian sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
 wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install spm-client
-```
-#### Ubuntu
-```sh
+   </pre>
+ </div>
+
+ <div class="mdl-tabs__panel" id="ubuntu">
+   <pre>
 echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
 wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install spm-client
-```
-#### Amazon Linux
-```sh
+   </pre>
+ </div>
+
+ <div class="mdl-tabs__panel" id="amazonlinux">
+   <pre>
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
-```
-#### Fedora
-```sh
+   </pre>
+ </div>
+
+ <div class="mdl-tabs__panel" id="fedora">
+   <pre>
 sudo wget https://pub-repo.sematext.com/fedora/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
-```
-#### SuSE
-```sh
+   </pre>
+ </div>
+
+ <div class="mdl-tabs__panel" id="suse">
+   <pre>
 sudo zypper ar -r https://pub-repo.sematext.com/suse/11/sematext.repo
 sudo zypper up
 sudo zypper in spm-client
-```
+   </pre>
+ </div>
+
+</div>
+
+
 
 ### Run modes
 
