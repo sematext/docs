@@ -44,9 +44,11 @@ The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
  </div>
 
  <div class="mdl-tabs__panel is-active" id="starks-panel">
+```
 sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install spm-client
+```
  </div>
  <div class="mdl-tabs__panel" id="lannisters-panel">
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
