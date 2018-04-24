@@ -42,7 +42,6 @@ The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
      <a href="#lannisters-panel" class="mdl-tabs__tab">CentOS</a>
      <a href="#targaryens-panel" class="mdl-tabs__tab">Debian</a>
  </div>
-
  <div class="mdl-tabs__panel is-active" id="starks-panel">
 <pre>
 sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
@@ -51,11 +50,6 @@ sudo yum install spm-client
 </pre>
  </div>
  <div class="mdl-tabs__panel" id="lannisters-panel">
-<pre>
-sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
-sudo yum clean all
-sudo yum install spm-client
-</pre>
  </div>
  <div class="mdl-tabs__panel" id="targaryens-panel">
 <pre>
