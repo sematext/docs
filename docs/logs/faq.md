@@ -1,5 +1,237 @@
 Title: Sematext Logs FAQ
 
+### General
+
+**How many logs can I store?**
+
+There is no limit to how many logs you can store in your Logsene app.
+ That said, you should try to pick the ideal Daily Volume when picking
+your Logsene plan, as that is going to give you the most optimal $/GB
+price.  If you pick too small Daily Volume and often go over the
+selected volume your $/GB price will be higher than if you picked the
+next higher Daily
+Volume.
+
+**How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene?**
+
+From the application, click the `App Actions` button and select
+`Storage`. There's also `Settings` button next to [any of your Logsene apps](https://apps.sematext.com/ui/logs) in
+the `Services > See all Logsene apps`. You can also do that from Kibana
+by searching for all your logs without adding any time filters. The
+number of hits represents the number of all your logs.
+
+**How long are my logs stored?**
+
+How long your logs are stored depends on what Data Retention you
+selected when you picked your Logsene plan.  Each Logsene app can have a
+different Daily Retention, Daily Volume, and plan.  You can change
+retention, volume, and plan at any time.
+
+**Can I send old logs?**
+
+Yes, you can send all logs.  However, keep in mind your Logsene app's
+Data Retention settings.  For example, if your retention is set to 7
+days and you send logs that are 10 days old (i.e. they contain a
+timestamp from 10 days ago), they will get accepted, but will get
+removed shortly after. Thus, check your app's data retention before
+importing old data.
+
+**How can I send old logs?**
+
+Use [Logagent](/logagent).  With Logagent you can then do: ```cat
+/path/to/old/log | logagent -t YOUR_LOGSENE_APP_TOKEN```
+
+**What is data retention and how does it work?**
+
+Data retention mechanism is responsible for removing old log events.
+If a log is 15 days old and you have retention set to 7 days, that log
+will remain in Logsene until the retention mechanism deletes it. For
+paid plans we remove whole 24-hour periods once a day. For free plans we
+remove old data every 30
+minutes.
+
+**Is data retention based on index/import/upload time or the actual log event @timestamp?**
+
+Data retention is based on log event @timestamp. Logsene app's
+retention removes data whose @timestamp is older than the retention
+setting.
+
+**Are logs shipped to Logsene ever rejected?**
+
+When you pick a Daily Volume we automatically set another Logsene App
+property called *Max* Daily Volume.  By default we set it to 2x the
+selected Daily Volume.  When this limit is hit Logsene will stop
+accepting new logs for that Logsene app until the next day (00:00 UTC).
+ This Max Daily Volume is adjustable, so you can set it to whichever
+value you'd like.  This Max Daily Volume limit prevents run-away logging
+from causing over-billing.  Logsene will send email notifications before
+this limit is reached.
+
+**What is the maximum log size Logsene will accept?**
+
+That depends on the plan you selected for your application. If your
+application is using the *Basic* plan, Logsene will accept logs up to 64
+KB in size. If your application is using the *Standard* plan, Logsene
+will allow logs up to 128 KB. If your application is using the *Pro*
+plan, Logsene will accept logs up to 256 KB in size. If your logs are
+larger than the mentioned limits, please consider using the *Enterprise*
+plan.
+
+**My logs have special structure.  Can Logsene handle that?**
+
+Yes, if the default log index fields (also known as index mapping)
+don't fit your needs you can create completely custom index mapping.
+See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
+
+**I have multiple log sources - should I send them all to the same Logsene app?**
+
+Sending logs from multiple log sources to the same Logsene app is not
+a problem at all.  However, if you have multiple different log
+structures (different "fields" in the logs), see the next FAQ
+entry.
+
+**I have multiple different log structures, each with a different set of fields.  How should I handle that?**
+
+If you have N different log structures, the best way to handle that
+is by creating N Logsene Apps, each with its own index mapping.  For
+example, you may have web server logs, your system logs in
+/var/log/messages, and your custom application logs.  Each of these 3
+types of logs has a different structure.  The web server logs probably
+use Apache Common Log format, the logs in /var/log/messages have syslog
+structure, and your own application's logs can be in any format your
+application happens to use.  To handle all 3 log formats elegantly
+simply create 3 separate Logsene Apps and use a different format for
+each of them.  If you want to be able to search all logs together, even
+when they have different fields, you can do that - just ship them all to
+the same Logsene App.  The thing to watch out for are fields that have
+the same name, but different data type.  For example, if one log source
+has a purely numeric field "size" and another log source also has a
+field "size", but can have non-numeric values, this will cause issues.
+ Thus, either keep logs of different structures in separate Logsene
+Apps or make sure there are no conflicting fields.
+
+**My data structure changed, can I reindex my data automatically?**
+
+Yes, when you change your index structure using Field Editor you will
+be given the opportunity to reindex your data.
+
+![](attachments/6520901/102003302.png?width=300)
+
+Please keep in mind that the speed of reindexing depends on how much
+data needs to be reindexed and that reindexing is treated like original
+ingestion, which means it counts towards your daily volume and could
+result in you hitting your Max Daily Volume Limit.
+
+**Is automatic reindex free?**
+
+Using Logsene reindex functionality is available for all plans and
+the normal plan charges apply. Because reindexing counts just like
+the original data ingestion, before reindexing the estimated cost of
+reindexing is shown in the UI.
+
+![](attachments/6520901/102003301.png?width=300)
+
+If the amount of data ingested for the day, plus data to be reindexed
+is smaller than your Max Daily Log Volume Limit then no additional charges
+will be applied.
+
+### Log Shipping
+
+**Which log shippers, logging libraries, and platform integrations are supported?**
+
+You can use [numerous log shippers, logging libraries, and platform integrations](/integration/#logging).
+
+**How can I import logs from my existing Elasticsearch / ELK / Elastic stack?**
+
+You can use Logstash to copy logs from your own ELK / Elastic Stack to Logsene as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
+
+**How can I ship logs from Android and iOS apps?**
+
+For shipping logs from Android apps use
+<https://github.com/sematext/sematext-logsene-android> and for
+shipping logs from iOS apps use
+<https://github.com/sematext/sematext-logsene-ios>.
+
+**How can I ship AWS CloudTrail logs, AWS VPC logs, and other logs from S3?**
+
+Use the
+<https://github.com/sematext/logsene-aws-lambda-cloudwatch> AWS Lambda
+function. See [Forwarding CloudTrail or Other Logs from AWS S3 to Logsene](https://sematext.com/blog/2016/01/05/forwarding-cloudtrail-or-other-logs-from-aws-s3-to-logsene/)
+and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/2016/03/21/sending-aws-cloudwatchvpc-logs-to-logsene/)
+for detailed description of how to do
+this.
+
+**Why is it that I can forward logs with rsyslog via TCP or UDP, but not via RELP?**
+
+You probably need to install the [omrelp module](http://www.rsyslog.com/doc/omrelp.html) first. If you have
+rsyslog installed in your system, there's probably a package that you
+can install:
+
+For RedHat and CentOS:
+
+``` bash
+% yum install rsyslog-relp
+```
+
+For Debian and Ubuntu:
+
+``` bash
+% apt-get install rsyslog-relp
+```
+
+For SUSE and OpenSUSE:
+
+``` bash
+% zypper install rsyslog-module-relp
+```
+
+If you compiled rsyslog manually, you need to supply `--enable-relp`
+to the configure script. You can check if rsyslog starts properly by
+starting it in foreground:
+
+``` bash
+% rsyslogd -n
+```
+
+You will get an error if the module is not found or you have any other
+problem. For debug mode, add `-d` as
+well.
+
+**How do I ship exception stack traces and other multi-line logs with Logstash without breaking them into multiple log events?**
+
+Please see [Handling Stack Traces with Logstash](http://blog.sematext.com/2015/05/26/handling-stack-traces-with-logstash/).
+
+### Plans & Prices
+
+**How much does Logsene cost?**
+
+Check the [Logsene Plans &
+Prices](http://www.sematext.com/logsene/pricing).
+
+**What happens with my logs when I change from the free to a paid plan or vice versa?**
+
+You don't have to worry about your data when you switch from the free
+plan to a paid one. Your logs will remain safe and you can still be able
+to search them. Your data will remain accessible based on your data
+retention settings.  However, when you move from a paid plan to a free
+plan, free plan restrictions will be applied to your data, which
+including data retention, too. 
+
+**What happens if I go over the selected daily log volume and how much does that cost?**
+
+The GB/day volume is **not** a limit. That number controls only *cost
+per GB*. When you go over the GB/day number you had selected we do not
+reject your data (for protection, use Max Daily Volume). Instead, we
+keep track of how much data over the selected daily volume was shipped
+and add that to the monthly cost using the $/GB rate for the selected
+daily volume.  The higher daily volume you select, the lower the per GB
+price.  For example, if you picked 1 GB/day and you typically don't go
+over it, or go over very little, then it pays to keep that 1 GB/day
+selection.  However, if you ship closer to 5 GB/day, then you should
+select 5 GB/day volume, because that will give you a lower $/GB rate
+than if you stay with 1 GB/day
+selection. 
+
 ### Troubleshooting
 
 **Why am I not seeing my logs?**
@@ -101,174 +333,6 @@ Name:    ec2-52-44-248-43.compute-1.amazonaws.com
 Address: 52.44.248.43
 ```
 
-
-
-### General
-
-**How many logs can I store?**
-
-There is no limit to how many logs you can store in your Logsene app.
- That said, you should try to pick the ideal Daily Volume when picking
-your Logsene plan, as that is going to give you the most optimal $/GB
-price.  If you pick too small Daily Volume and often go over the
-selected volume your $/GB price will be higher than if you picked the
-next higher Daily
-Volume.
-
-**How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene?**
-
-From the application, click the `App Actions` button and select
-`Storage`. There's also `Settings` button next to [any of your Logsene apps](https://apps.sematext.com/ui/logs) in
-the `Services > See all Logsene apps`. You can also do that from Kibana
-by searching for all your logs without adding any time filters. The
-number of hits represents the number of all your logs.
-
-**How long are my logs stored?**
-
-How long your logs are stored depends on what Data Retention you
-selected when you picked your Logsene plan.  Each Logsene app can have a
-different Daily Retention, Daily Volume, and plan.  You can change
-retention, volume, and plan at any time.
-
-**Can I send old logs?**
-
-Yes, you can send all logs.  However, keep in mind your Logsene app's
-Data Retention settings.  For example, if your retention is set to 7
-days and you send logs that are 10 days old (i.e. they contain a
-timestamp from 10 days ago), they will get accepted, but will get
-removed shortly after. Thus, check your app's data retention before
-importing old data.
-
-**How can I send old logs?**
-
-Use [Logagent](/logagent).  With Logagent you can then do: ```cat
-/path/to/old/log | logagent -t YOUR_LOGSENE_APP_TOKEN```
-
-**Are logs shipped to Logsene ever rejected?**
-
-When you pick a Daily Volume we automatically set another Logsene App
-property called *Max* Daily Volume.  By default we set it to 2x the
-selected Daily Volume.  When this limit is hit Logsene will stop
-accepting new logs for that Logsene app until the next day (00:00 UTC).
- This Max Daily Volume is adjustable, so you can set it to whichever
-value you'd like.  This Max Daily Volume limit prevents run-away logging
-from causing over-billing.  Logsene will send email notifications before
-this limit is reached.
-
-**What is the maximum log size Logsene will accept?**
-
-That depends on the plan you selected for your application. If your
-application is using the *Basic* plan, Logsene will accept logs up to 64
-KB in size. If your application is using the *Standard* plan, Logsene
-will allow logs up to 128 KB. If your application is using the *Pro*
-plan, Logsene will accept logs up to 256 KB in size. If your logs are
-larger than the mentioned limits, please consider using the *Enterprise*
-plan.
-
-**My logs have special structure.  Can Logsene handle that?**
-
-Yes, if the default log index fields (also known as index mapping)
-don't fit your needs you can create completely custom index mapping.
-See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
-
-**I have multiple log sources - should I send them all to the same Logsene app?**
-
-Sending logs from multiple log sources to the same Logsene app is not
-a problem at all.  However, if you have multiple different log
-structures (different "fields" in the logs), see the next FAQ
-entry.
-
-**I have multiple different log structures, each with a different set of fields.  How should I handle that?**
-
-If you have N different log structures, the best way to handle that
-is by creating N Logsene Apps, each with its own index mapping.  For
-example, you may have web server logs, your system logs in
-/var/log/messages, and your custom application logs.  Each of these 3
-types of logs has a different structure.  The web server logs probably
-use Apache Common Log format, the logs in /var/log/messages have syslog
-structure, and your own application's logs can be in any format your
-application happens to use.  To handle all 3 log formats elegantly
-simply create 3 separate Logsene Apps and use a different format for
-each of them.  If you want to be able to search all logs together, even
-when they have different fields, you can do that - just ship them all to
-the same Logsene App.  The thing to watch out for are fields that have
-the same name, but different data type.  For example, if one log source
-has a purely numeric field "size" and another log source also has a
-field "size", but can have non-numeric values, this will cause issues.
- Thus, either keep logs of different structures in separate Logsene
-Apps or make sure there are no conflicting fields.
-
-**My data structure changed, can I reindex my data automatically?**
-
-Yes, when you change your index structure using Field Editor you will
-be given the opportunity to reindex your data.
-
-![](attachments/6520901/102003302.png?width=300)
-
-Please keep in mind that the speed of reindexing depends on how much
-data needs to be reindexed and that reindexing is treated like original
-ingestion, which means it counts towards your daily volume and could
-result in you hitting your Max Daily Volume Limit.
-
-**Is automatic reindex free?**
-
-Using Logsene reindex functionality is available for all plans and
-the normal plan charges apply. Because reindexing counts just like
-the original data ingestion, before reindexing the estimated cost of
-reindexing is shown in the UI.
-
-![](attachments/6520901/102003301.png?width=300)
-
-If the amount of data ingested for the day, plus data to be reindexed
-is smaller than your Max Daily Log Volume Limit then no additional charges
-will be applied.
-
-### Plans & Prices
-
-**How much does Logsene cost?**
-
-Check the [Logsene Plans &
-Prices](http://www.sematext.com/logsene/pricing).
-
-**What happens with my logs when I change from the free to a paid plan or vice versa?**
-
-You don't have to worry about your data when you switch from the free
-plan to a paid one. Your logs will remain safe and you can still be able
-to search them. Your data will remain accessible based on your data
-retention settings.  However, when you move from a paid plan to a free
-plan, free plan restrictions will be applied to your data, which
-including data retention, too. 
-
-**What is data retention and how does it work?**
-
-Data retention mechanism is responsible for removing old log events.
-If a log is 15 days old and you have retention set to 7 days, that log
-will remain in Logsene until the retention mechanism deletes it. For
-paid plans we remove whole 24-hour periods once a day. For free plans we
-remove old data every 30
-minutes.
-
-**Is data retention based on index/import/upload time or the actual log event @timestamp?**
-
-Data retention is based on log event @timestamp. Logsene app's
-retention removes data whose @timestamp is older than the retention
-setting.
-
-**What happens if I go over the selected daily log volume and how much does that cost?**
-
-The GB/day volume is **not** a limit. That number controls only *cost
-per GB*. When you go over the GB/day number you had selected we do not
-reject your data (for protection, use Max Daily Volume). Instead, we
-keep track of how much data over the selected daily volume was shipped
-and add that to the monthly cost using the $/GB rate for the selected
-daily volume.  The higher daily volume you select, the lower the per GB
-price.  For example, if you picked 1 GB/day and you typically don't go
-over it, or go over very little, then it pays to keep that 1 GB/day
-selection.  However, if you ship closer to 5 GB/day, then you should
-select 5 GB/day volume, because that will give you a lower $/GB rate
-than if you stay with 1 GB/day
-selection. 
-
 ### Security
 
 **Can I ship data to Logsene using a secure and encrypted transport like TLS/SSL or HTTPS?**
@@ -300,20 +364,12 @@ apps.  Backups are stored in S3 and kept for 90 days.
 
 **Can I use my own Kibana?**
 
-Yes.  Please see [How to use Kibana with Logsene Log Management](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
+Yes.  Please see [How to use Kibana with Logsene Log Management](http://sematext.com/bloghow-to-use-kibana-4-log-management/).
 
 **How can I get a nice map of the world in Kibana?**
 
-Like this:
-
-![](attachments/6520901/16056321.png?width=300)
-
-In Kibana itself, you need to add a new **map** panel. In the panel's
-settings, you need to specify a field from your logs to be used to build
-the map. That field has to contain a country code.
-
-If you don't have a country field in your logs, but you have an IP, you
-can use **Logstash's [geoip filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html)**. For example, a
+Ensure you have a country field in your logs.  If you only have IP you
+can use Logstash [geoip filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html). For example, a
 configuration like this:
 
 ``` bash
@@ -338,19 +394,16 @@ output {
 
 If you then start Logstash and type in an IP, you'll see in Kibana an
 object called **geoip**, which contains lots of information, including
-country codes. Back to Kibana, you can type in
-***geoip.country_code2*** as your field in the map panel.
+country codes. You can then use `geoip.country_code2` as your field in
+Kibana.
 
 **Why are new fields not visible in Kibana and how do I fix it?**
 
 Kibana doesn't update field lists automatically. This problem is not
 specific to Logsene, but is a general Kibana issue. If you add new
-fields to an index you must navigate to 'Settings / Index' in Kibana and
-refresh the fields using the refresh button as shown in the screenshot
-below. The new fields will appear and will be ready to use in your
-visualizations and searches.
-
-![](attachments/6520901/48136227.png?width=800)
+fields to an index you must refresh the fields in Kibana. New fields
+will appear and will be ready to use in your visualizations and
+searches.
 
 **Can I run Kibana locally and point it to Logsene?**
 
@@ -374,7 +427,7 @@ Kibana requires the following high level steps to create a dashboard:
     also: <https://www.elastic.co/guide/en/kibana/current/dashboard.html>
 4.  Save the Dashboard
 
-**Why I cannot draw charts (dashboards) using a given field?**
+**Why can't I draw charts (dashboards) using a given field?**
 
 By default all string values sent to Logsene are analyzed. For each
 analyzed fields we also create .raw field which is not analyzed. If you
@@ -450,75 +503,10 @@ example, if you send logs that are "2 hours ahead of real time" they
 will be accepted, but will not be displayed until 2 hours
 later.
 
-### Log Shipping
-
-**Which log shippers, logging libraries, and platform integrations are supported?**
-
-You can use [numerous log shippers, logging libraries, and platform integrations](https://apps.sematext.com/ui/logs).
-
-**How can I import logs from my existing Elasticsearch / ELK / Elastic stack?**
-
-You can use Logstash to copy logs from your own ELK / Elastic Stack to Logsene as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
-
-**How can I ship logs from Android and iOS apps?**
-
-For shipping logs from Android apps use
-<https://github.com/sematext/sematext-logsene-android> and for
-shipping logs from iOS apps use
-<https://github.com/sematext/sematext-logsene-ios>.
-
-**How can I ship AWS CloudTrail logs, AWS VPC logs, and other logs from S3?**
-
-Use the
-<https://github.com/sematext/logsene-aws-lambda-cloudwatch> AWS Lambda
-function. See [Forwarding CloudTrail or Other Logs from AWS S3 to Logsene](https://sematext.com/blog/2016/01/05/forwarding-cloudtrail-or-other-logs-from-aws-s3-to-logsene/)
-and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/2016/03/21/sending-aws-cloudwatchvpc-logs-to-logsene/)
-for detailed description of how to do
-this.
-
-**Why is it that I can forward logs with rsyslog via TCP or UDP, but not via RELP?**
-
-You probably need to install the [omrelp module](http://www.rsyslog.com/doc/omrelp.html) first. If you have
-rsyslog installed in your system, there's probably a package that you
-can install:
-
-For RedHat and CentOS:
-
-``` bash
-% yum install rsyslog-relp
-```
-
-For Debian and Ubuntu:
-
-``` bash
-% apt-get install rsyslog-relp
-```
-
-For SUSE and OpenSUSE:
-
-``` bash
-% zypper install rsyslog-module-relp
-```
-
-If you compiled rsyslog manually, you need to supply `--enable-relp`
-to the configure script. You can check if rsyslog starts properly by
-starting it in foreground:
-
-``` bash
-% rsyslogd -n
-```
-
-You will get an error if the module is not found or you have any other
-problem. For debug mode, add `-d` as
-well.
-
-**How do I ship exception stack traces and other multi-line logs with Logstash without breaking them into multiple log events?**
-
-Please see [Handling Stack Traces with Logstash](http://blog.sematext.com/2015/05/26/handling-stack-traces-with-logstash/).
 
 
 
-### Logsene Alerts
+### Alerts
 
 **What are Logsene Alerts?**
 
@@ -577,16 +565,12 @@ timeouts, or some such), or why logging volume suddenly dropped (e.g.
 maybe some of your server(s) or app(s) stopped working and sending
 logs).
 
-**Can I send Alerts to HipChat, Slack, Nagios, or other WebHooks?**
+**Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?**
 
-Logsene lets one configure arbitrary WebHooks to call with Alert
-event information when Alert events are triggered. The details for
-HipChat integration are
-described [here](../integration/alerts-hipchat-integration/). 
+Yes. Logsene lets one configure arbitrary WebHooks to call with Alert
+event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
 
-
-
-### S3 Archiving
+### Log Archiving
 
 **How to obtain credentials from AWS?**
 
