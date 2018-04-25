@@ -5,8 +5,8 @@ Title: Sematext FAQ
 **What should I do if I can't find the answer to my question in the FAQ?**
 
 Check out [monitoring FAQ](/monitoring/spm-faq) and [logging
-FAQ](/logs/faq). If you can't find the answer to your
-[@sematext](http://twitter.com/sematext) or use our live chat.
+FAQ](/logs/faq). If you can't find the answer to your question please
+email <support@sematext.com> or use our live chat.
 
 **Is there an On Premises version of Sematext that I can run on my own servers?**
 
@@ -14,7 +14,7 @@ Yes there is.  Please see [Sematext Enterprise](/sematext-enterprise).
 
 **Does Sematext integrate with ChatOps like Slack and HipChat? How about PagerDuty or custom WebHooks?**
 
-Yes, see [integrations](/integration) and [alerts](/alerts).
+Yes, see [integrations](/integration) [alerts FAQ](#alerts) and [alerts docs](/alerts).
 
 **Can I use Sematext for (business) transaction tracing?**
 
@@ -128,7 +128,7 @@ credit cards and choose plans to be used for apps under your account.
 
 Sematext has integrations for Slack, HipChat, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
-[integrations](/integration).
+[integrations](/integration) and [alerts docs](/alerts).
 
 **What are Threshold-based Alerts?**
 
@@ -158,17 +158,17 @@ choose it yourself when you create a Heartbeat Alert.
 
 ### Security
 
-See [monitoring FAQ]() and [logging FAQ]().
+See [monitoring FAQ](/monitoring/spm-faq) and [logging FAQ](/logs/faq).
 
 ### Billing
 
 **How do you bill for infrastructure and server monitoring?**
 
-See [monitoring billing]().
+See [monitoring billing FAQ](/monitoring/spm-faq#billing).
 
 **How do you bill for Docker container monitoring?**
 
-See [monitoring billing]().
+See [monitoring billing FAQ](/monitoring/spm-faq#billing).
 
 **Which credit cards are accepted?**
 

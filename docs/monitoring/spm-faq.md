@@ -292,8 +292,8 @@ this is not needed, but one needs to add the SPM agent to the Java
 command-line and restart the process of the monitored application. When
 running Standalone monitor one can update the SPM monitor without
 restarting the Java process being monitored, while a restart is needed
-when Embedded SPM monitor is being used.  To be able to [trace transactions](transaction-tracing) 
-or [database operations](database-operations) you need to use the
+when Embedded SPM monitor is being used.  To be able to [trace transactions](/tracing) 
+or [database operations](/tracing/database-operations) you need to use the
 Embedded SPM monitor.
 
 **Can I use Sematext for (business) transaction tracing?**
@@ -400,13 +400,13 @@ monitor's `javaagent` parameter.
 
 **How can I share my Sematext Apps with other users?**
 
-See [sharing FAQ]().
+See [sharing FAQ](/faq/#sharing).
 
 **What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?**
 
-See [user roles FAQ]().
+See info about user roles in [sharing FAQ](/faq/#sharing).
 
-### Agent Setup Automation
+### Agent Automation
 
 **Is there an Ansible Playbook for the SPM client?**
 
@@ -426,7 +426,7 @@ with examples.
 
 Yes, see [SPM client Chef Recipe](chef-recipe) example.
 
-### Upgrading
+### Agent Updating
 
 **How do I upgrade the SPM client?**
 
@@ -491,7 +491,7 @@ sudo bash /opt/spm/bin/move-spm-home-dir.sh /mnt/some_other_dir/spm /opt/spm
 and then proceed with regular update. After update is done, you can
 again move SPM client to location which suits you.
 
-### Uninstalling
+### Agent Uninstalling
 
 **How do I uninstall the SPM client?**
 
@@ -515,11 +515,20 @@ proceed with steps 2 and 3 described above.
 ### Alerts
 
 **Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?**
+
+See [alerts FAQ](/faq/#alerts).
+
 **What are Threshold-based Alerts?**
+
+See [alerts FAQ](/faq/#alerts).
+
 **What is Anomaly Detection?**
+
+See [alerts FAQ](/faq/#alerts).
+
 **What are Heartbeat Alerts?**
 
-See [alerts FAQ]()
+See [alerts FAQ](/faq/#alerts).
 
 ### Troubleshooting
 
@@ -867,10 +876,25 @@ metering and billing is concerned. For plans and price details
 see <https://sematext.com/spm/pricing>.
 
 **Which credit cards are accepted?**
+
+See [billing FAQ](/faq/#billing).
+
 **Can I be invoiced instead of paying with a credit card?**
+
+See [billing FAQ](/faq/#billing).
+
 **How often will I get billed?**
+
+See [billing FAQ](/faq/#billing).
+
 **Can the billing email be sent to our Accounts Payable/Accounting instead of me?**
+
+See [billing FAQ](/faq/#billing).
+
 **Do I have to commit or can I stop using Sematext at any time?**
+
+See [billing FAQ](/faq/#billing).
+
 **Can I get invoices?**
 
-See [billing FAQ]().
+See [billing FAQ](/faq/#billing).
