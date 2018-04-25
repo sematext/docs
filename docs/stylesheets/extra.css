@@ -80,7 +80,7 @@ a {
     padding-left: 1.2rem;
 }
 .mdl-tabs__tab {
-    padding: 0 18px;
+    padding: 0 18px!important;
 }
 
 .logs-card{
