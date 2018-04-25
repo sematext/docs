@@ -81,7 +81,7 @@ plan.
 
 Yes, if the default log index fields (also known as index mapping)
 don't fit your needs you can create completely custom index mapping.
-See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
+See [Custom Logsene Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
 
 **I have multiple log sources - should I send them all to the same Logsene app?**
 
@@ -143,7 +143,7 @@ You can use [numerous log shippers, logging libraries, and platform integrations
 
 **How can I import logs from my existing Elasticsearch / ELK / Elastic stack?**
 
-You can use Logstash to copy logs from your own ELK / Elastic Stack to Logsene as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/2016/08/22/logstash-migrating-data-logsene/).
+You can use Logstash to copy logs from your own ELK / Elastic Stack to Logsene as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
 
 **How can I ship logs from Android and iOS apps?**
 
@@ -156,8 +156,8 @@ shipping logs from iOS apps use
 
 Use the
 <https://github.com/sematext/logsene-aws-lambda-cloudwatch> AWS Lambda
-function. See [Forwarding CloudTrail or Other Logs from AWS S3 to Logsene](https://sematext.com/blog/2016/01/05/forwarding-cloudtrail-or-other-logs-from-aws-s3-to-logsene/)
-and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/2016/03/21/sending-aws-cloudwatchvpc-logs-to-logsene/)
+function. See [Forwarding CloudTrail or Other Logs from AWS S3 to Logsene](https://sematext.com/blog/forwarding-cloudtrail-or-other-logs-from-aws-s3-to-logsene/)
+and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/sending-aws-cloudwatchvpc-logs-to-logsene/)
 for detailed description of how to do
 this.
 
@@ -199,14 +199,14 @@ well.
 
 **How do I ship exception stack traces and other multi-line logs with Logstash without breaking them into multiple log events?**
 
-Please see [Handling Stack Traces with Logstash](http://blog.sematext.com/2015/05/26/handling-stack-traces-with-logstash/).
+Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handling-stack-traces-with-logstash/).
 
 ### Plans & Prices
 
 **How much does Logsene cost?**
 
 Check the [Logsene Plans &
-Prices](http://www.sematext.com/logsene/pricing).
+Prices](https://www.sematext.com/logsene/pricing).
 
 **What happens with my logs when I change from the free to a paid plan or vice versa?**
 
@@ -253,7 +253,7 @@ Logsene app.  For example, if you have sent logs with field "priority"
 as integer field then Logsene will expect all future values of
 "priority" field to be integers.  Sending a string value in a "priority"
 field will fail.  Note that you *can* change the underlying field
-"mapping" at any time - see [I have multiple different log structures, each with a different set of fields. How should I handle that](faq/#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that).
+"mapping" at any time - see elsewhere in this FAQ.
 
 If none of the above turns out to be a problem in your case, please let
 us know via <support@sematext.com> or via our live chat!
@@ -262,7 +262,7 @@ us know via <support@sematext.com> or via our live chat!
 
 Things to check to ensure network connectivity is OK:
 
-1\. Try to connect to logsene-receiver.sematext.com / logsene-receiver.eu.sematext.com (port 80 or 443)
+1. Try to connect to logsene-receiver.sematext.com / logsene-receiver.eu.sematext.com (port 80 or 443)
 with the following command:
 
 ``` bash
@@ -291,7 +291,7 @@ In case you see some other result:
     ports are open for outbound traffic
   - check your DNS (see below)
 
-2\. Check if your DNS has correct entries for Logsene Receiver:
+2. Check if your DNS has correct entries for Logsene Receiver:
 
 ``` bash
 nslookup logsene-receiver.sematext.com
@@ -364,7 +364,7 @@ apps.  Backups are stored in S3 and kept for 90 days.
 
 **Can I use my own Kibana?**
 
-Yes.  Please see [How to use Kibana with Logsene Log Management](http://sematext.com/bloghow-to-use-kibana-4-log-management/).
+Yes.
 
 **How can I get a nice map of the world in Kibana?**
 
@@ -405,12 +405,6 @@ fields to an index you must refresh the fields in Kibana. New fields
 will appear and will be ready to use in your visualizations and
 searches.
 
-**Can I run Kibana locally and point it to Logsene?**
-
-Yes.  If you prefer to run Kibana locally (e.g., on your laptop or
-one of your company's servers) and point it to Logsene, yes, you can do
-that - see [How to use Kibana with Logsene](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
-
 **How do I create a dashboard in Kibana?**
 
 Kibana requires the following high level steps to create a dashboard:
@@ -433,7 +427,7 @@ By default all string values sent to Logsene are analyzed. For each
 analyzed fields we also create .raw field which is not analyzed. If you
 want to use string field for drawing charts you should either use .raw
 field or change index templates to use not_analyzed type
-(<https://sematext.com/blog/2015/01/20/custom-elasticsearch-index-templates-in-logsene/>).
+(<https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/>).
  Let's consider and example. We have a field called 'title'. Logsene
 uses this field as analyzed one so it is not possible to use it in
 dashboards. Logsene also creates automatically a field called
