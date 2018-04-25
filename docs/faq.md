@@ -14,7 +14,7 @@ Yes there is.  Please see [Sematext Enterprise](/sematext-enterprise).
 
 **Does Sematext integrate with ChatOps like Slack and HipChat? How about PagerDuty or custom WebHooks?**
 
-Yes, see [integrations](/integration) [alerts FAQ](#alerts) and [alerts docs](/alerts).
+Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](/alerts).
 
 **Can I use Sematext for (business) transaction tracing?**
 

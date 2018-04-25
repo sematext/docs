@@ -91,7 +91,7 @@ info and help making this adjustment.
 
 Yes. There are really 2 different scenarios here:
 
-1\) If each of those applications should be monitored under a different
+1.  If each of those applications should be monitored under a different
 Monitoring App (e.g., you could have Solr running on your server along
 with some Java app and you want to monitor both - Solr would be
 monitored with Monitoring App of Solr or SolrCloud type, while the Java
@@ -100,7 +100,7 @@ all installation steps (which are accessible
 from <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
 Monitor for app you are installing) for each of them separately.
 
-2\) If you want them monitored under the same Monitoring App (e.g., you
+2.  If you want them monitored under the same Monitoring App (e.g., you
 have 3 Solr instances running on a server), you must use different JVM
 name for each of them. To do this, "1. Package installation" step should
 be run only once on this machine, while "2. Client configuration setup"
@@ -306,7 +306,7 @@ Yes. Starting with version 1.22.25, SPM client provides two
 scripts that can be used to move SPM client files/directories to another
 location:
 
-1\) **Soft move script** - Moves all SPM files/directories to a new
+1.  **Soft move script** - Moves all SPM files/directories to a new
 location, but symlinks `/opt/spm` to the new location. Use this script if
 you are OK with having `/opt/spm` symlinked. This script is recommended
 for most situations since it keeps your SPM client installation
@@ -322,7 +322,7 @@ sudo bash /opt/spm/bin/move-spm-home-dir-soft.sh /mnt/some_dir
 
 And that is it.
 
-2\) **Full move script** - Moves all SPM files/directories to a new
+2.  **Full move script** - Moves all SPM files/directories to a new
 location without leaving any SPM artifacts in /opt directory. Please
 note that using this script will make management of SPM client a bit
 harder (for example, there will be some required actions before running
@@ -534,7 +534,7 @@ See [alerts FAQ](/faq/#alerts).
 
 **Can I enable debugging in the SPM agent?**
 
-Yes. Simply add or edit the SPM_MONITOR_LOGGING_LEVEL property in
+Yes. Simply add or edit the `SPM_MONITOR_LOGGING_LEVEL` property in
 any of the `/opt/spm/spm-monitor/conf/spm-monitor/*.properties`
 files and restart the agent (or the process the agent is attached to).
 Available levels are: FATAL, ERROR, WARN, INFO, DEBUG, TRACE
