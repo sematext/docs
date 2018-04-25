@@ -211,7 +211,7 @@ single Linux helper box. Just do this:
 
 Yes. The following steps are needed:
 
-1.  In `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.rt`
+- In `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.rt`
     look for a line similar to this (the file name might be a bit
     different, depending on app type you have chosen):
 
@@ -228,7 +228,7 @@ Replace this line with something like the following (e.g. in case of
 SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jboss-cli-client.jar"
 ```
 
-2.  Change the value of `SPM_MONITOR_JMX_PARAMS` in
+-  Change the value of `SPM_MONITOR_JMX_PARAMS` in
     `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.properties.`
     Of course, you can append to that additional JMX parameters, for
     example with password file location etc:
@@ -237,7 +237,7 @@ SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jbos
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:http-remoting-jmx://localhost:9990"
 ```
 
-3.  Restart spm-monitor with: ```sudo service spm-monitor restart```
+-  Restart spm-monitor with: ```sudo service spm-monitor restart```
 
 At this point the metrics will start appearing in charts. If they don't,
 run the diagnostics script to get fresh output of errors:
@@ -306,7 +306,7 @@ Yes. Starting with version 1.22.25, SPM client provides two
 scripts that can be used to move SPM client files/directories to another
 location:
 
-1.  **Soft move script** - Moves all SPM files/directories to a new
+- **Soft move script** - Moves all SPM files/directories to a new
 location, but symlinks `/opt/spm` to the new location. Use this script if
 you are OK with having `/opt/spm` symlinked. This script is recommended
 for most situations since it keeps your SPM client installation
@@ -322,7 +322,7 @@ sudo bash /opt/spm/bin/move-spm-home-dir-soft.sh /mnt/some_dir
 
 And that is it.
 
-2.  **Full move script** - Moves all SPM files/directories to a new
+- **Full move script** - Moves all SPM files/directories to a new
 location without leaving any SPM artifacts in /opt directory. Please
 note that using this script will make management of SPM client a bit
 harder (for example, there will be some required actions before running
@@ -701,9 +701,9 @@ Here are a few things to check and do:
     and restart any other javaagent (in-process) based SPM monitors by
     restarting your server which is being monitored.
 
-3.  Check [network connectivity](spm-faq/#i-am-not-seeing-any-data-in-spm-charts-how-do-i-check-if-network-connectivity-is-ok)
+3.  Check network connectivity as described elsewhere in the FAQ
 
-4.  Make sure disks are not full.
+4.  Make sure disks are not full
 
 5.  Make sure user spmmon can have more than 1024 files open:  
 
