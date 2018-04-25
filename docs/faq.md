@@ -262,16 +262,16 @@ Yes. The following steps are needed:
 1.  In `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.rt`
     look for a line similar to this (the file name might be a bit
     different, depending on app type you have chosen):
-    
+
 ``` properties
 SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar"
 ```
-    
-    Replace this line with something like the following (e.g. in case of
+
+Replace this line with something like the following (e.g. in case of
     WildFly adjust the path depending on where your WildFly is
     installed, like
     `/opt/wildfly/bin/client/jboss-cli-client.jar`):
-    
+
 ``` properties
 SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jboss-cli-client.jar"
 ```
@@ -280,7 +280,7 @@ SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/jbos
     `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.properties.`
     Of course, you can append to that additional JMX parameters, for
     example with password file location etc:
-    
+
 ``` properties
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:http-remoting-jmx://localhost:9990"
 ```
@@ -307,22 +307,22 @@ to get around this:
 1.  Run SPM monitor with the same user that is running WildFly. To do
     that, add an entry like this to the end of
     `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.properties`:
-    
+
 ``` properties
 SPM_MONITOR_USER="wildfly"
 ```
-    
-    After that restart spm-monitor with: ```sudo service spm-monitor
-    restart```
+
+    After that restart spm-monitor with: `sudo service spm-monitor
+    restart`
 
 2.  Change permissions for the problematic directory, adjusting the path
     to match your environment:
 
 ``` bash
-chmod 777 /opt/wildfly/standalone/tmp/auth 
+chmod 777 /opt/wildfly/standalone/tmp/auth
 ```
 
-    This approach is not encouraged because of the obvious security
+This approach is not encouraged because of the obvious security
     problem, so use such approach only while testing, or if other
     options are not possible. As usual, restart spm-monitor after this
     change.
@@ -355,8 +355,8 @@ scripts that can be used to move SPM client files/directories to another
 location:
 
 1\) **Soft move script** - Moves all SPM files/directories to a new
-location, but symlinks /opt/spm to the new location. Use this script if
-you are OK with having /opt/spm symlinked. This script is recommended
+location, but symlinks `/opt/spm` to the new location. Use this script if
+you are OK with having `/opt/spm` symlinked. This script is recommended
 for most situations since it keeps your SPM client installation
 completely in line with standard setup (all standard SPM client commands
 and arguments are still valid).
@@ -742,12 +742,13 @@ Here are a few things to check and do:
 sudo vim /etc/security/limits.conf
 spmmon     -    nofile    32000
 ```
+and
 ```    
 sudo vim /etc/pam.d/su
 session    required   pam_limits.so
 ```
     
-    Restart SPM monitor after the above changes.
+Restart SPM monitor after the above changes.
 
 6.  Check if hostname of your server is defined in `/etc/hosts`
 
