@@ -298,7 +298,7 @@ apps.  Backups are stored in S3 and kept for 90 days.
 
 ### Kibana
 
-##Can I use my own Kibana?**
+**Can I use my own Kibana?**
 
 Yes.  Please see [How to use Kibana with Logsene Log Management](http://blog.sematext.com/2015/04/21/how-to-use-kibana-4-log-management/).
 
