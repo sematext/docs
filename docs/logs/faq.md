@@ -12,6 +12,13 @@ selected volume your $/GB price will be higher than if you picked the
 next higher Daily
 Volume.
 
+**How many fields can my log events have?**
+
+There is no limit, though you will want to pay attention to how you
+structure your logs in order to get the most value out of them, and
+that typically includes having a manageable number of fields in your
+logs.
+
 **How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene?**
 
 From the application, click the `App Actions` button and select
