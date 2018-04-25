@@ -145,7 +145,7 @@ with some Java app and you want to monitor both - Solr would be
 monitored with Monitoring App of Solr or SolrCloud type, while the Java
 app would be monitored with Monitoring App of JVM type), just complete
 all installation steps (which are accessible
-from <https://apps.sematext.com/ui/monitoring>, click Actions\>Install
+from <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
 Monitor for app you are installing) for each of them separately.
 
 2\) If you want them monitored under the same Monitoring App (e.g., you
@@ -154,7 +154,7 @@ name for each of them. To do this, "1. Package installation" step should
 be run only once on this machine, while "2. Client configuration setup"
 step should be run once for each of the 3 Solr instances (installation
 instructions are accessible
-from <https://apps.sematext.com/ui/monitoring>, click Actions\>Install
+from <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
 Monitor for app you are installing). When running
 script `/opt/spm/bin/spm-client-setup-conf.sh` in step "2. Client
 configuration setup", you should add `jvmname` parameter (and value)
@@ -211,7 +211,7 @@ variant. Here's what you'd need to do to see your metrics in SPM:
     collects metrics and sends them to Sematext). Installation
     instructions are accessible
     from <https://apps.sematext.com/ui/monitoring>, just click
-    Actions\>Install Monitor for app are installing. In step 1 choose
+    Actions \> Install Monitor for app are installing. In step 1 choose
     the "Other" tab to create a minimal installation.  This will not
     install modules needed for monitoring OS metrics - if those modules
     were installed, they would collect OS metrics of your Linux box,
@@ -249,7 +249,7 @@ single Linux helper box. Just do this:
     through installation process presented after the app was created
     (installation instructions are accessible
     from <https://apps.sematext.com/ui/monitoring>, just click
-    Actions\>Install Monitor for app your are installing). Note: Since
+    Actions \> Install Monitor for app your are installing). Note: Since
     each Monitoring App uses its own token, they all have slightly
     different installation commands. Besides different token, you will
     also use different addresses of Windows/Mac machines that host the
@@ -312,7 +312,7 @@ to get around this:
 SPM_MONITOR_USER="wildfly"
 ```
 
-    After that restart spm-monitor with: `sudo service spm-monitor
+After that restart spm-monitor with: `sudo service spm-monitor
     restart`
 
 2.  Change permissions for the problematic directory, adjusting the path
@@ -378,22 +378,21 @@ SPM client upgrade; also, if you are using in-process (javaagent) type
 of monitor you will need to adjust some paths in java arguments - more
 about that below).
 
-It accepts 2 parameters: the current location (by default /opt/spm), and
-the new location (if such directory doesn't exist, it will be created).
-It can be run
-as:
+It accepts 2 parameters: the current location (by default `/opt/spm`),
+and the new location (if such directory doesn't exist, it will be
+created).  It can be run as:
 
 ``` bash
 sudo bash /opt/spm/bin/move-spm-home-dir.sh /opt/spm /mnt/some_other_dir/spm
 ```
 
-If you are using [in-process (javaagent)](spm-monitor-javaagent) versions of SPM
-monitor to monitor Java-based applications, please adjust agent path(s)
-you use when starting application(s) you monitor with the SPM agent and
-make sure to use new location where old location was used before. Also
-add the following argument to the monitored application's Java process
-(you can add it right before -javaagent part; adjust the value to match
-directory you used):
+If you are using [in-process (javaagent)](spm-monitor-javaagent)
+versions of SPM monitor to monitor Java-based applications, please
+adjust agent path(s) you use when starting application(s) you monitor
+with the SPM agent and make sure to use new location where old
+location was used before. Also add the following argument to the
+monitored application's Java process (you can add it right before
+-javaagent part; adjust the value to match directory you used):
 
 ``` properties
 -Dspm.home=/mnt/some_other_dir/spm
@@ -904,7 +903,7 @@ sudo service spm-monitor restart
 after completing upgrade steps described above, you must also run
 commands described in Step 2 - Client Configuration Setup (which is
 accessible from <https://apps.sematext.com/ui/monitoring>, click
-Actions\>Install Monitor for app you have installed)
+Actions \> Install Monitor for app you have installed)
 
 **Note**: If you moved SPM client from `/opt/spm` to different
 directory, you will first have to move SPM client back to original
@@ -933,7 +932,7 @@ following:
     monitored
 
 **Note**: in case you used installer described on "Other" tab (found on
-<https://apps.sematext.com/ui/monitoring>, click Actions\>Install
+<https://apps.sematext.com/ui/monitoring>, click Actions \> Install
 Monitor for app your are installing), instead of commands from step 1
 run: `sudo bash /opt/spm/bin/spm-client-uninstall.sh` . After that
 proceed with steps 2 and 3 described above.
