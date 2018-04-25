@@ -157,7 +157,7 @@ pages:
         - IDE Integration and debugging: logagent/logagent-ide-conf.md
       - FAQ: logagent/faq.md
     - API: api/index.md
-    - API: faq.md
+    - FAQ: faq.md
          
 
 theme:
