@@ -300,7 +300,7 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="/docs/images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 64px;">
+							<img src="/docs/images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 96px;">
 						</div>
 						<div class="side back"><h5>Spark</h5>last received delay, unprocessed batches, receivers, waiting batches, active jobs, driver memory used, all jobs, executors, cores free, write ops, ...</div>
 					</div>
