@@ -265,20 +265,6 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/integration/sensei/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="/docs/images/integrations/sensei.svg" alt="SenseiDB" title="Sensei DB Monitoring" style="width: 80%;">
-						</div>
-						<div class="side back"><h5>SenseiDB</h5>cache misses num / hits num, disk index size, RamB index segments, disk index segments, request time, errors, scatter time, rejected requests, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/solr/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
