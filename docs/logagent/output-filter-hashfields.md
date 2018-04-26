@@ -18,7 +18,7 @@ Add the following section 'outputFilter' to the Logagent configuration file. Ple
 # tail web server logs
 input: 
   files:
-    - '/var/log/*/access.log'
+    - '/var/log/*/access_log'
 
 # log agent parses web server logs out of the box ...
 # output filter to encrypt client_ip and user field in web server logs
@@ -26,7 +26,7 @@ outputFilter:
   hashfields: 
     module: hash-fields
     # JS regeular expression to match log source name
-    matchSource: !!js/regexp access.log
+    matchSource: !!js/regexp access_log
     # algorithms supported by nodejs crypto module, e.g. sha1, sha256, sha512, md5, ...
     algorithm: sha256
     fields:
