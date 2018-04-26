@@ -5,70 +5,70 @@
 
 ## Metrics
 
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-fails | nginxp.upstream.health.fails | Sum | Long | <b>fails</b>: The number of failed health checks
-weight | nginxp.upstream.server.weight | Avg | Double | <b>weight</b>: Weight of the server
-checks | nginxp.upstream.health.checks | Sum | Long | <b>checks</b>: The total number of health check requests made
-sent | nginxp.upstream.traffic.tx.bytes | Sum | Long | <b>sent</b>: The number of bytes sent to this server
-unhealthy | nginxp.upstream.state.unhealthy | Avg | Double | <b>unhealthy</b>: Server is unhealthy
-2xx | nginxp.upstream.responses.2xx | Sum | Long | <b>2xx</b>: The number of responses with status codes 2xx
-keepalive | nginxp.upstream.connections.keepalive | Avg | Double | <b>keepalive</b>: The current number of idle keepalive connections
-1xx | nginxp.upstream.responses.1xx | Sum | Long | <b>1xx</b>: The number of responses with status codes 1xx
-received | nginxp.upstream.traffic.rx.bytes | Sum | Long | <b>received</b>: The number of bytes received from this server
-fails | nginxp.upstream.checks.fail | Sum | Long | <b>fails</b>: The total number of unsuccessful attempts to communicate with the server
-last passed | nginxp.upstream.health.passed | Avg | Double | <b>lass passed</b>: The time health check request was successful and passed
-4xx | nginxp.upstream.responses.4xx | Sum | Long | <b>4xx</b>: The number of responses with status codes 4xx
-requests | nginxp.upstream.server.requests | Sum | Long | <b>requests</b>: The number of client requests forwarded to this server
-3xx | nginxp.upstream.responses.3xx | Sum | Long | <b>3xx</b>: The number of responses with status codes 3xx
-5xx | nginxp.upstream.responses.5xx | Sum | Long | <b>5xx</b>: The number of responses with status codes 5xx
-backup | nginxp.upstream.server.backup | Avg | Long | <b>backup</b>: Server is backup server
-total | nginxp.upstream.responses | Sum | Long | <b>total</b>: The total number of responses obtained from this server
-unavail | nginxp.upstream.checks.unavailable | Sum | Long | <b>unavail</b>: How many times the server became unavailable for client requests (state “unavail”) due to the number of unsuccessful attempts reaching the max_fails threshold
-downtime | nginxp.upstream.downtime | Sum | Long | <b>downtime</b>: Total time the server was in the “unavail” and “unhealthy” states
-unavailable | nginxp.upstream.state.unavailable | Avg | Double | <b>unavailable</b>: Server is unavailable
-down | nginxp.upstream.state.down | Avg | Double | <b>down</b>: Server is down
-up | nginxp.upstream.state.up | Avg | Double | <b>up</b>: Server is up
-unhealthy | nginxp.upstream.health.unhealthy | Sum | Long | <b>unhealthy</b>: Boolean indicating if the last health check request was successful and passed tests
-limit | nginxp.upstream.connections.max | Max | Long | 
-active | nginxp.upstream.connections.active | Avg | Double | <b>active</b>: The current number of active connections
-downstart | nginxp.upstream.downstart | Sum | Long | <b>downstart</b>: The time (in milliseconds since Epoch) when the server became “unavail” or “unhealthy”
-active | nginxp.connections.active | Avg | Long | <b>active</b>: The current number of active client connections
-requests | nginxp.requests | Sum | Long | <b>requests</b>: The total number of client requests
-accepted | nginxp.connections.accepted | Avg | Long | <b>accepted</b>: The total number of accepted client connections
-dropped | nginxp.connections.dropped | Avg | Long | <b>dropped</b>: The total number of dropped client connections
-current | nginxp.requests.current | Avg | Long | <b>current</b>: The current number of client requests
-idle | nginxp.connections.idle | Avg | Long | <b>idle</b>: The current number of idle client connections
-bytes written | nginxp.cache.bypass.bytes.written | Sum | Long | <b>bytes written</b>: The total number of bytes written to the cache
-responses | nginxp.cache.revalidated.responses | Sum | Long | <b>responses</b>: The total number of responses read from the cache
-size | nginxp.cache.size | Avg | Long | <b>size</b>: The current size of the cache
-max size | nginxp.cache.size.max | Max | Long | <b>max size</b>: The limit on the maximum size of the cache specified in the configuration
-responses written | nginxp.cache.miss.responses.written | Sum | Long | <b>responses written</b>: The total number of responses written to the cache
-responses | nginxp.cache.bypass.responses | Sum | Long | <b>responses</b>: The total number of responses not taken from the cache
-bytes | nginxp.cache.updating.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the cache
-bytes | nginxp.cache.bypass.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the proxied server
-responses | nginxp.cache.expired.responses | Sum | Long | <b>responses</b>: The total number of responses not taken from the cache
-bytes written | nginxp.cache.miss.bytes.written | Sum | Long | <b>bytes written</b>: The total number of bytes written to the cache
-responses | nginxp.cache.hits.responses | Sum | Long | <b>responses</b>: The total number of responses read from the cache
-responses | nginxp.cache.updating.responses | Sum | Long | <b>responses</b>: The total number of responses read from the cache
-cold state | nginxp.cache.cold | Avg | Double | <b>cold state</b>: The number of time cach in cold state
-bytes | nginxp.cache.hits.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the cache
-bytes | nginxp.cache.revalidated.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the cache
-responses | nginxp.cache.miss.responses | Sum | Long | <b>responses</b>: The total number of responses not taken from the cache
-bytes written | nginxp.cache.expired.bytes.written | Sum | Long | <b>bytes written</b>: The total number of bytes written to the cache
-responses | nginxp.cache.stale.responses | Sum | Long | <b>responses</b>: The total number of responses read from the cache
-bytes | nginxp.cache.expired.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the proxied server
-bytes | nginxp.cache.stale.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the cache
-bytes | nginxp.cache.miss.bytes | Sum | Long | <b>bytes</b>: The total number of bytes read from the proxied server
-responses written | nginxp.cache.expired.responses.written | Sum | Long | <b>responses written</b>: The total number of responses written to the cache
-responses written | nginxp.cache.bypass.responses.written | Sum | Long | <b>responses written</b>: The total number of responses written to the cache
-total | nginxp.zone.responses | Sum | Long | <b>total</b>: The total number of responses sent to clients
-3xx | nginxp.zone.responses.3xx | Sum | Long | <b>3xx</b>: The number of responses with status codes 3xx
-requests | nginxp.zone.requests | Sum | Long | <b>requests</b>: The number of client requests received from clients
-1xx | nginxp.zone.responses.1xx | Sum | Long | <b>1xx</b>: The number of responses with status codes 1xx
-processing | nginxp.zone.requests.processing | Avg | Double | <b>processing</b>: The number of client requests that are currently being processed
-2xx | nginxp.zone.responses.2xx | Sum | Long | <b>2xx</b>: The number of responses with status codes 2xx
-received | nginxp.zone.traffic.rx.bytes | Sum | Long | <b>received</b>: The number of bytes received from clients
-5xx | nginxp.zone.responses.5xx | Sum | Long | <b>5xx</b>: The number of responses with status codes 5xx
-sent | nginxp.zone.traffic.tx.bytes | Sum | Long | <b>sent</b>: The number of bytes sent to clients
-4xx | nginxp.zone.responses.4xx | Sum | Long | <b>4xx</b>: The number of responses with status codes 4xx
+Metric Name                     |  Key                                     |  Metric Type  |  Numeric Type  |  Unit   |  Description
+--------------------------------|------------------------------------------|---------------|----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------
+accepted connections            |  nginxp.connections.accepted             |  counter      |  long          |         |  The number of accepted client connections
+dropped connections             |  nginxp.connections.dropped              |  counter      |  long          |         |  The number of idle client connections
+active connections              |  nginxp.connections.active               |  gauge        |  long          |         |  The current number of active connections
+idle connections                |  nginxp.connections.idle                 |  gauge        |  long          |         |  The current number of idle client connections
+current active requests         |  nginxp.requests.current                 |  gauge        |  long          |         |  The current number of client requests
+total requests                  |  nginxp.requests                         |  counter      |  long          |         |  The total number of client requests
+zone total requests             |  nginxp.zone.requests                    |  counter      |  long          |         |  The total number of client requests received from clients
+processing requests             |  nginxp.zone.requests.processing         |  gauge        |  long          |         |  The number of client requests that are currently being processed
+discarded requests              |  nginxp.zone.requests.discarded          |  counter      |  long          |         |  The number of requests completed without sending a response
+received clients data           |  nginxp.zone.traffic.rx.bytes            |  counter      |  long          |  bytes  |  Bytes received from clients
+sent clients data               |  nginxp.zone.traffic.tx.bytes            |  counter      |  long          |  bytes  |  Bytes sent to clients
+1xx responses                   |  nginxp.zone.responses.1xx               |  counter      |  long          |         |  The number of responses with status codes 1xx
+2xx responses                   |  nginxp.zone.responses.2xx               |  counter      |  long          |         |  The number of responses with status codes 2xx
+3xx responses                   |  nginxp.zone.responses.3xx               |  counter      |  long          |         |  The number of responses with status codes 3xx
+4xx responses                   |  nginxp.zone.responses.4xx               |  counter      |  long          |         |  The number of responses with status codes 4xx
+5xx responses                   |  nginxp.zone.responses.5xx               |  counter      |  long          |         |  The number of responses with status codes 4xx
+total responses                 |  nginxp.zone.responses                   |  counter      |  long          |         |  The total number of responses
+cache size                      |  nginxp.cache.size                       |  gauge        |  long          |         |  The current size of the cache
+max cache size                  |  nginxp.cache.size.max                   |  gauge        |  long          |         |  The limit on the maximum size of the cache specified in the configuration
+cold state                      |  nginxp.cache.cold                       |  gauge        |  long          |         |  The number of time cache in cold state
+responses hits                  |  nginxp.cache.hits.responses             |  counter      |  long          |         |  The number of responses read from the cache
+responses hits size             |  nginxp.cache.hits.bytes                 |  counter      |  long          |  bytes  |  The number of bytes read from the cache
+stale responses                 |  nginxp.cache.stale.responses            |  counter      |  long          |         |  The number of stale responses read from the cache
+stale responses size            |  nginxp.cache.stale.bytes                |  counter      |  long          |  bytes  |  The number of stale bytes read from the cache
+updating responses              |  nginxp.cache.updating.responses         |  counter      |  long          |         |  The number of updating responses read from the cache
+updating responses size         |  nginxp.cache.updating.bytes             |  counter      |  long          |  bytes  |  The number of updating bytes read from the cache
+revalidated responses           |  nginxp.cache.revalidated.responses      |  counter      |  long          |         |  The number of revalidated responses read from the cache
+revalidated responses size      |  nginxp.cache.revalidated.bytes          |  counter      |  long          |  bytes  |  The number of revalidated bytes read from the cache
+cache missed responses          |  nginxp.cache.miss.responses             |  counter      |  long          |         |  The number of responses not taken from the cache
+miss responses size             |  nginxp.cache.miss.bytes                 |  counter      |  long          |  bytes  |  The number of bytes read from the proxied server
+miss responses written          |  nginxp.cache.miss.responses.written     |  counter      |  long          |         |  The number of miss responses written to the cache
+miss written size               |  nginxp.cache.miss.bytes.written         |  counter      |  long          |  bytes  |  The number of miss bytes written to the cache
+expired responses               |  nginxp.cache.expired.responses          |  counter      |  long          |         |  The number of expired responses not taken from the cache
+expired responses size          |  nginxp.cache.expired.bytes              |  counter      |  long          |  bytes  |  The number of expired bytes written to the cache
+expired responses written       |  nginxp.cache.expired.responses.written  |  counter      |  long          |         |  The number of expired responses written to the cache
+expired responses written size  |  nginxp.cache.expired.bytes.written      |  counter      |  long          |  bytes  |  The number of expired bytes written to the cache
+bypass responses                |  nginxp.cache.bypass.responses           |  counter      |  long          |         |  The number of bypass responses not taken from the cache
+bypass responses size           |  nginxp.cache.bypass.bytes               |  counter      |  long          |  bytes  |  The number of bypass bytes written to the cache
+bypass responses written        |  nginxp.cache.bypass.responses.written   |  counter      |  long          |         |  The number of bypass responses written to the cache
+bypass responses written size   |  nginxp.cache.bypass.bytes.written       |  counter      |  long          |  bytes  |  The number of bypass bytes written to the cache
+status backup                   |  nginxp.upstream.server.backup           |  gauge        |  long          |         |  A value indicating whether the server is a backup server
+server weight                   |  nginxp.upstream.server.weight           |  gauge        |  long          |         |  Weight of the server
+state up                        |  nginxp.upstream.state.up                |  counter      |  long          |         |  Server is up
+state down                      |  nginxp.upstream.state.down              |  counter      |  long          |         |  Server is down
+state unavailable               |  nginxp.upstream.state.unavailable       |  counter      |  long          |         |  Server is unavailable
+state unhealthy                 |  nginxp.upstream.state.unhealthy         |  counter      |  long          |         |  Server is unhealthy
+received data                   |  nginxp.upstream.traffic.rx.bytes        |  counter      |  long          |  bytes  |  The number of bytes sent to this server.
+sent data                       |  nginxp.upstream.traffic.tx.bytes        |  counter      |  long          |  bytes  |  The number of bytes received from this server.
+downtime                        |  nginxp.upstream.downtime                |  counter      |  long          |  ms     |  Total time the server was in the unavail/checking/unhealthy states
+downstart                       |  nginxp.upstream.downstart               |  gauge        |  long          |  ms     |  The time (in milliseconds since Epoch) when the server became unavail/checking/unhealthy
+total responses                 |  nginxp.upstream.responses               |  counter      |  long          |         |  The total number of responses obtained from this server
+1xx responses                   |  nginxp.upstream.responses.1xx           |  counter      |  long          |         |  The number of responses with status codes 1xx
+2xx responses                   |  nginxp.upstream.responses.2xx           |  counter      |  long          |         |  The number of responses with status codes 2xx
+3xx responses                   |  nginxp.upstream.responses.3xx           |  counter      |  long          |         |  The number of responses with status codes 3xx
+4xx responses                   |  nginxp.upstream.responses.4xx           |  counter      |  long          |         |  The number of responses with status codes 4xx
+5xx responses                   |  nginxp.upstream.responses.5xx           |  counter      |  long          |         |  The number of responses with status codes 5xx
+upstream check fails            |  nginxp.upstream.checks.fail             |  counter      |  long          |         |  The number of unsuccessful attempts to communicate with the server
+upstream check unavailable      |  nginxp.upstream.checks.unavailable      |  counter      |  long          |         |  How many times the server became unavailable for client requests (state “unavail”) due to the number of unsuccessful attempts reaching the max_fails threshold
+upstream health checks          |  nginxp.upstream.health.checks           |  counter      |  long          |         |  The total number of health check requests made
+upstream health fails           |  nginxp.upstream.health.fails            |  counter      |  long          |         |  The number of failed health checks
+upstream unhealthy count        |  nginxp.upstream.health.unhealthy        |  gauge        |  long          |         |  How many times the server became unhealthy (state unhealthy)
+upstream health last passed     |  nginxp.upstream.health.passed           |  gauge        |  long          |         |  Value indicating if the last health check request was successful and passed tests
+active connections              |  nginxp.upstream.connections.active      |  gauge        |  long          |         |  The current number of active connections
+keepalive connections           |  nginxp.upstream.connections.keepalive   |  gauge        |  long          |         |  The current number of idle keepalive connections
+zombie connections              |  nginxp.upstream.connections.zombies     |  gauge        |  long          |         |  The current number of servers removed from the group but still processing active client requests

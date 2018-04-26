@@ -60,131 +60,136 @@ should be good enough for most situations.
 
 ## Metrics
 
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-num allocated containers | hadoop.nm.containers.allocated | Avg | Double | 
-containers launched | hadoop.nm.containers.launched | Sum | Long | 
-containers killed | hadoop.nm.containers.killed | Sum | Long | 
-containers completed | hadoop.nm.shuffle.output.bytes | Sum | Long | 
-containers completed | hadoop.nm.containers.completed | Sum | Long | 
-available GB | hadoop.nm.available | Avg | Double | 
-shuffle connections | hadoop.nm.shuffle.connections | Sum | Long | 
-shuffle outputs failed | hadoop.nm.shuffle.output.failed | Sum | Long | 
-containers running | hadoop.nm.containers.running | Avg | Double | 
-containers failed | hadoop.nm.containers.failed | Sum | Long | 
-containers inited | hadoop.nm.containers.initiating | Avg | Double | 
-shuffle outputs ok | hadoop.nm.shuffle.output.ok | Sum | Long | 
-allocated GB | hadoop.nm.allocated | Avg | Double | 
-applications killed | hadoop.rm.apps.killed | Sum | Long | 
-running 300 | hadoop.rm.running.300 | Avg | Double | 
-available MB | hadoop.rm.memory.available | Avg | Double | 
-applications failed | hadoop.rm.apps.failed | Sum | Long | 
-applications submitted | hadoop.rm.apps.submitted | Sum | Long | 
-running 60 | hadoop.rm.running.60 | Avg | Double | 
-pending MB | hadoop.rm.memory.pending | Avg | Double | 
-applications pending | hadoop.rm.apps.pending | Avg | Double | 
-active applications | hadoop.rm.apps.active | Avg | Double | 
-containers allocated | hadoop.rm.containers.alloc | Sum | Long | 
-running 0 | hadoop.rm.running.0 | Avg | Double | 
-containers pending | hadoop.rm.containers.pending | Avg | Double | 
-applications completed | hadoop.rm.apps.completed | Sum | Long | 
-allocated MB | hadoop.rm.memory.alloc | Avg | Double | 
-containers reserved | hadoop.rm.containers.reserved | Avg | Double | 
-active users | hadoop.rm.users.active | Avg | Double | 
-containers released | hadoop.rm.containers.released | Sum | Long | 
-reserved MB | hadoop.rm.memory.reserved | Avg | Double | 
-applications running | hadoop.rm.apps.running | Avg | Double | 
-running 1440 | hadoop.rm.running.1440 | Avg | Double | 
-active NMs | hadoop.rm.nm.active | Avg | Double | 
-decom NMs | hadoop.rm.nm.active.decom | Avg | Double | 
-rebooted NMs | hadoop.rm.nm.active.rebooted | Avg | Double | 
-lost NMs | hadoop.rm.nm.active.lost | Avg | Double | 
-unhealthy NMs | hadoop.rm.nm.active.unhealthy | Avg | Double | 
-blocks replicated | hadoop.dn.blocks.replicated | Sum | Long | 
-blocks read | hadoop.dn.blocks.read | Sum | Long | 
-writes from local client | hadoop.dn.io.write.local | Sum | Long | 
-copy block op avg time | hadoop.dn.blocks.op.copies.time | Avg | Double | 
-heartbeats num ops | hadoop.dn.io.write.hartbeats | Sum | Long | 
-reads from remote client | hadoop.dn.io.read.remote | Sum | Long | 
-read from local client | hadoop.dn.io.read.local | Sum | Long | 
-write block num ops | hadoop.dn.blocks.op.writes | Sum | Long | 
-blocks removed | hadoop.dn.blocks.removed | Sum | Long | 
-blocks verified | hadoop.dn.blocks.verified | Sum | Long | 
-replace block op avg time | hadoop.dn.blocks.op.replaces.time | Avg | Double | 
-writes from remote client | hadoop.dn.io.write.remote | Sum | Long | 
-replace block num ops | hadoop.dn.blocks.op.replaces | Sum | Long | 
-copy block num ops | hadoop.dn.blocks.op.copies | Sum | Long | 
-write block op avg time | hadoop.dn.blocks.op.writes.time | Avg | Double | 
-blocks written | hadoop.dn.blocks.write | Sum | Long | 
-read block op avg time | hadoop.dn.blocks.op.reads.time | Avg | Double | 
-heartbeats avg time | hadoop.dn.io.write.hartbeats.time | Avg | Double | 
-bytes read | hadoop.dn.io.read | Sum | Long | 
-read block num ops | hadoop.dn.blocks.op.reads | Sum | Long | 
-bytes written | hadoop.dn.io.write | Sum | Long | 
-map task slots | hadoop.tt.maps.slots | Avg | Double | 
-reduces running | hadoop.tt.reduces.running | Avg | Double | 
-tasks failed timeout | hadoop.tt.tasks.failed.timeout | Sum | Long | 
-tasks failed ping | hadoop.tt.tasks.failed.ping | Sum | Long | 
-tasks completed | hadoop.tt.tasks.completed | Sum | Long | 
-reduce task slots | hadoop.tt.reduces.slots | Avg | Double | 
-maps running | hadoop.tt.maps.running | Avg | Double | 
-waiting reduces | hadoop.jt.reduces.waiting | Avg | Double | 
-waiting maps | hadoop.jt.maps.waiting | Avg | Double | 
-jobs killled | hadoop.jt.jobs.killed | Sum | Long | 
-jobs submitted | hadoop.jt.jobs.submitted | Sum | Long | 
-maps failed | hadoop.jt.maps.failed | Sum | Long | 
-running 300 | hadoop.jt.running.300 | Avg | Double | 
-maps killled | hadoop.jt.maps.killed | Sum | Long | 
-reduce slots | hadoop.jt.reduces.slots | Avg | Double | 
-running 60 | hadoop.jt.running.60 | Avg | Double | 
-maps launched | hadoop.jt.maps.launched | Sum | Long | 
-jobs preparing | hadoop.jt.jobs.preparing | Avg | Double | 
-reduces completed | hadoop.jt.reduces.completed | Sum | Long | 
-jobs failed | hadoop.jt.jobs.failed | Sum | Long | 
-running 1440 | hadoop.jt.running.1440 | Avg | Double | 
-reduces launched | hadoop.jt.reduces.launched | Sum | Long | 
-map slots | hadoop.jt.maps.slots | Avg | Double | 
-reduces killled | hadoop.jt.reduces.killed | Sum | Long | 
-maps completed | hadoop.jt.maps.completed | Sum | Long | 
-jobs running | hadoop.jt.jobs.running | Avg | Double | 
-reduces failed | hadoop.jt.reduces.failed | Sum | Long | 
-jobs completed | hadoop.jt.jobs.completed | Sum | Long | 
-running 0 | hadoop.jt.running.0 | Avg | Double | 
-get listing ops | hadoop.nn.files.ops.listing | Sum | Long | 
-renamed files | hadoop.nn.files.renamed | Sum | Long | 
-decom nodes | hadoop.nn.nodes.decom | Avg | Double | 
-dead nodes | hadoop.nn.nodes.dead | Avg | Double | 
-create file ops | hadoop.nn.files.ops.create | Sum | Long | 
-blocks pending replication | hadoop.nn.blocks.pending.replication | Avg | Long | 
-missing blocks | hadoop.nn.blocks.missing | Avg | Long | 
-under replicated blocks | hadoop.nn.blocks.underreplicated | Avg | Long | 
-file info ops | hadoop.nn.files.ops.info | Sum | Long | 
-blocks total | hadoop.nn.blocks | Avg | Long | 
-blocks pending deletion | hadoop.nn.blocks.pending.deletion | Avg | Long | 
-corrupt blocks | hadoop.nn.blocks.corrupt | Avg | Long | 
-capacity remaining | hadoop.nn.capacity.remaining | Avg | Long | 
-total files | hadoop.nn.files | Avg | Long | 
-appended files | hadoop.nn.files.appended | Sum | Long | 
-excess blocks | hadoop.nn.blocks.excess | Avg | Long | 
-capacity used | hadoop.nn.capacity.used | Avg | Long | 
-deleted files | hadoop.nn.files.deleted | Sum | Long | 
-delete file ops | hadoop.nn.files.ops.delete | Sum | Long | 
-capacity total | hadoop.nn.capacity | Avg | Long | 
-created files | hadoop.nn.files.created | Sum | Long | 
-live nodes | hadoop.nn.nodes.live | Avg | Double | 
-scheduled replication blocks | hadoop.nn.blocks.scheduled.replication | Avg | Long | 
-heartbeats | hadoop.jt.heartbeats | Sum | Long | 
-blacklisted trackers | hadoop.jt.reduces.trackers.blacklisted | Sum | Long | 
-running reduces | hadoop.jt.reduces.running | Avg | Double | 
-occupied map slots | hadoop.jt.slots.map.occupied | Avg | Double | 
-running maps | hadoop.jt.maps.running | Avg | Double | 
-blacklisted maps | hadoop.jt.maps.blacklisted | Sum | Long | 
-blacklisted reduces | hadoop.jt.reduces.blacklisted | Sum | Long | 
-occupied reduce slots | hadoop.jt.slots.reduce.occupied | Avg | Double | 
-decommissioned trackers | hadoop.jt.reduces.trackers.decommissioned | Sum | Long | 
-trackers | hadoop.jt.reduces.trackers | Sum | Long | 
-waiting reduces | hadoop.jt.waiting.reduces | Avg | Double | 
-waiting maps | hadoop.jt.waiting.maps | Avg | Double | 
-map slots | hadoop.jt.slots.map | Avg | Double | 
-graylisted trackers | hadoop.jt.reduces.trackers.graylisted | Sum | Long | 
-reduce slots | hadoop.jt.slots.reduce | Avg | Double | 
+Metric Name                          |  Key                                        |  Metric Type  |  Numeric Type  |  Unit   |  Description
+-------------------------------------|---------------------------------------------|---------------|----------------|---------|-------------
+copy block ops                       |  hadoop.dn.blocks.op.copies                 |  counter      |  long          |         |
+copy block op avg time               |  hadoop.dn.blocks.op.copies.time            |  gauge        |  double        |  ms     |
+block checksum op avg time           |  hadoop.dn.blocks.op.checksum.time          |  gauge        |  double        |  ms     |
+block checksum num ops               |  hadoop.dn.blocks.op.checksum               |  counter      |  long          |         |
+block report op avg time             |  hadoop.dn.blocks.op.reports.time           |  gauge        |  double        |  ms     |
+block report ops                     |  hadoop.dn.blocks.op.reports                |  counter      |  long          |         |
+read block ops                       |  hadoop.dn.blocks.op.reads                  |  counter      |  long          |         |
+read block op avg time               |  hadoop.dn.blocks.op.reads.time             |  gauge        |  double        |  ms     |
+replace block ops                    |  hadoop.dn.blocks.op.replaces               |  counter      |  long          |         |
+replace block op avg time            |  hadoop.dn.blocks.op.replaces.time          |  gauge        |  double        |  ms     |
+write block ops                      |  hadoop.dn.blocks.op.writes                 |  counter      |  long          |         |
+write block op avg time              |  hadoop.dn.blocks.op.writes.time            |  gauge        |  double        |  ms     |
+blocks read                          |  hadoop.dn.blocks.read                      |  counter      |  long          |         |
+blocks removed                       |  hadoop.dn.blocks.removed                   |  counter      |  long          |         |
+blocks replicated                    |  hadoop.dn.blocks.replicated                |  counter      |  long          |         |
+blocks verified                      |  hadoop.dn.blocks.verified                  |  counter      |  long          |         |
+blocks written                       |  hadoop.dn.blocks.write                     |  counter      |  long          |         |
+data node bytes read                 |  hadoop.dn.io.read                          |  counter      |  long          |         |
+data node reads from local client    |  hadoop.dn.io.read.local                    |  counter      |  long          |         |
+data node reads from remote client   |  hadoop.dn.io.read.remote                   |  counter      |  long          |         |
+data node bytes written              |  hadoop.dn.io.write                         |  counter      |  long          |         |
+data node heartbeats ops             |  hadoop.dn.io.write.heartbeats              |  counter      |  long          |         |
+data node heartbeats avg time        |  hadoop.dn.io.write.heartbeats.time         |  gauge        |  double        |  ms     |
+data node writes from local client   |  hadoop.dn.io.write.local                   |  counter      |  long          |         |
+data node writes from remote client  |  hadoop.dn.io.write.remote                  |  counter      |  long          |         |
+jobtracker heartbeats                |  hadoop.jt.heartbeats                       |  counter      |  long          |         |
+jobs completed                       |  hadoop.jt.jobs.completed                   |  counter      |  long          |         |
+jobs failed                          |  hadoop.jt.jobs.failed                      |  counter      |  long          |         |
+jobs killled                         |  hadoop.jt.jobs.killed                      |  counter      |  long          |         |
+jobs preparing                       |  hadoop.jt.jobs.preparing                   |  gauge        |  long          |         |
+jobs running                         |  hadoop.jt.jobs.running                     |  gauge        |  long          |         |
+jobs submitted                       |  hadoop.jt.jobs.submitted                   |  counter      |  long          |         |
+blacklisted maps                     |  hadoop.jt.maps.blacklisted                 |  counter      |  long          |         |
+maps completed                       |  hadoop.jt.maps.completed                   |  counter      |  long          |         |
+maps failed                          |  hadoop.jt.maps.failed                      |  counter      |  long          |         |
+maps killled                         |  hadoop.jt.maps.killed                      |  counter      |  long          |         |
+maps launched                        |  hadoop.jt.maps.launched                    |  counter      |  long          |         |
+running maps                         |  hadoop.jt.maps.running                     |  gauge        |  long          |         |
+map slots                            |  hadoop.jt.maps.slots                       |  gauge        |  long          |         |
+waiting maps                         |  hadoop.jt.maps.waiting                     |  gauge        |  long          |         |
+blacklisted reduces                  |  hadoop.jt.reduces.blacklisted              |  counter      |  long          |         |
+reduces completed                    |  hadoop.jt.reduces.completed                |  counter      |  long          |         |
+reduces failed                       |  hadoop.jt.reduces.failed                   |  counter      |  long          |         |
+reduces killled                      |  hadoop.jt.reduces.killed                   |  counter      |  long          |         |
+reduces launched                     |  hadoop.jt.reduces.launched                 |  counter      |  long          |         |
+running reduces                      |  hadoop.jt.reduces.running                  |  gauge        |  long          |         |
+reduce slots                         |  hadoop.jt.reduces.slots                    |  gauge        |  long          |         |
+trackers                             |  hadoop.jt.reduces.trackers                 |  counter      |  long          |         |
+blacklisted trackers                 |  hadoop.jt.reduces.trackers.blacklisted     |  counter      |  long          |         |
+decommissioned trackers              |  hadoop.jt.reduces.trackers.decommissioned  |  counter      |  long          |         |
+graylisted trackers                  |  hadoop.jt.reduces.trackers.graylisted      |  counter      |  long          |         |
+waiting reduces                      |  hadoop.jt.reduces.waiting                  |  gauge        |  long          |         |
+running 0                            |  hadoop.jt.running.0                        |  gauge        |  long          |         |
+running 1440                         |  hadoop.jt.running.1440                     |  gauge        |  long          |         |
+running 300                          |  hadoop.jt.running.300                      |  gauge        |  long          |         |
+running 60                           |  hadoop.jt.running.60                       |  gauge        |  long          |         |
+map slots                            |  hadoop.jt.slots.map                        |  gauge        |  long          |         |
+occupied map slots                   |  hadoop.jt.slots.map.occupied               |  gauge        |  long          |         |
+reduce slots                         |  hadoop.jt.slots.reduce                     |  gauge        |  long          |         |
+occupied reduce slots                |  hadoop.jt.slots.reduce.occupied            |  gauge        |  long          |         |
+waiting maps                         |  hadoop.jt.waiting.maps                     |  gauge        |  long          |         |
+waiting reduces                      |  hadoop.jt.waiting.reduces                  |  gauge        |  long          |         |
+allocated GB                         |  hadoop.nm.allocated.gb                     |  gauge        |  long          |  GB     |
+available GB                         |  hadoop.nm.available.gb                     |  gauge        |  long          |  GB     |
+num allocated containers             |  hadoop.nm.containers.allocated             |  gauge        |  long          |         |
+containers completed                 |  hadoop.nm.containers.completed             |  counter      |  long          |         |
+containers failed                    |  hadoop.nm.containers.failed                |  counter      |  long          |         |
+containers inited                    |  hadoop.nm.containers.initiating            |  gauge        |  long          |         |
+containers killed                    |  hadoop.nm.containers.killed                |  counter      |  long          |         |
+containers launched                  |  hadoop.nm.containers.launched              |  counter      |  long          |         |
+containers running                   |  hadoop.nm.containers.running               |  gauge        |  long          |         |
+shuffle connections                  |  hadoop.nm.shuffle.connections              |  counter      |  long          |         |
+shuffle output size                  |  hadoop.nm.shuffle.output.bytes             |  counter      |  long          |  bytes  |
+shuffle outputs failed               |  hadoop.nm.shuffle.output.failed            |  counter      |  long          |         |
+shuffle outputs ok                   |  hadoop.nm.shuffle.output.ok                |  counter      |  long          |         |
+blocks total                         |  hadoop.nn.blocks                           |  gauge        |  long          |         |
+corrupt blocks                       |  hadoop.nn.blocks.corrupt                   |  gauge        |  long          |         |
+excess blocks                        |  hadoop.nn.blocks.excess                    |  gauge        |  long          |         |
+missing blocks                       |  hadoop.nn.blocks.missing                   |  gauge        |  long          |         |
+blocks pending deletion              |  hadoop.nn.blocks.pending.deletion          |  gauge        |  long          |         |
+blocks pending replication           |  hadoop.nn.blocks.pending.replication       |  gauge        |  long          |         |
+scheduled replication blocks         |  hadoop.nn.blocks.scheduled.replication     |  gauge        |  long          |         |
+under replicated blocks              |  hadoop.nn.blocks.underreplicated           |  gauge        |  long          |         |
+capacity total                       |  hadoop.nn.capacity                         |  gauge        |  long          |         |
+capacity remaining                   |  hadoop.nn.capacity.remaining               |  gauge        |  long          |         |
+capacity used                        |  hadoop.nn.capacity.used                    |  gauge        |  long          |         |
+total files                          |  hadoop.nn.files                            |  gauge        |  long          |         |
+appended files                       |  hadoop.nn.files.appended                   |  counter      |  long          |         |
+created files                        |  hadoop.nn.files.created                    |  counter      |  long          |         |
+deleted files                        |  hadoop.nn.files.deleted                    |  counter      |  long          |         |
+create file ops                      |  hadoop.nn.files.ops.create                 |  counter      |  long          |         |
+delete file ops                      |  hadoop.nn.files.ops.delete                 |  counter      |  long          |         |
+file info ops                        |  hadoop.nn.files.ops.info                   |  counter      |  long          |         |
+get listing ops                      |  hadoop.nn.files.ops.listing                |  counter      |  long          |         |
+renamed files                        |  hadoop.nn.files.renamed                    |  counter      |  long          |         |
+dead nodes                           |  hadoop.nn.nodes.dead                       |  gauge        |  long          |         |
+decom nodes                          |  hadoop.nn.nodes.decom                      |  gauge        |  long          |         |
+live nodes                           |  hadoop.nn.nodes.live                       |  gauge        |  long          |         |
+active applications                  |  hadoop.rm.apps.active                      |  gauge        |  long          |         |
+applications completed               |  hadoop.rm.apps.completed                   |  counter      |  long          |         |
+applications failed                  |  hadoop.rm.apps.failed                      |  counter      |  long          |         |
+applications killed                  |  hadoop.rm.apps.killed                      |  counter      |  long          |         |
+applications pending                 |  hadoop.rm.apps.pending                     |  gauge        |  long          |         |
+applications running                 |  hadoop.rm.apps.running                     |  gauge        |  long          |         |
+applications submitted               |  hadoop.rm.apps.submitted                   |  counter      |  long          |         |
+containers allocated                 |  hadoop.rm.containers.alloc                 |  gauge        |  long          |         |
+containers pending                   |  hadoop.rm.containers.pending               |  gauge        |  long          |         |
+containers released                  |  hadoop.rm.containers.released              |  counter      |  long          |         |
+agg containers allocated             |  hadoop.rm.agg.containers.alloc             |  counter      |  long          |         |
+containers reserved                  |  hadoop.rm.containers.reserved              |  gauge        |  long          |         |
+allocated MB                         |  hadoop.rm.memory.alloc.mb                  |  gauge        |  long          |  MB     |
+available MB                         |  hadoop.rm.memory.available.mb              |  gauge        |  long          |  MB     |
+pending MB                           |  hadoop.rm.memory.pending.mb                |  gauge        |  long          |  MB     |
+reserved MB                          |  hadoop.rm.memory.reserved.mb               |  gauge        |  long          |  MB     |
+active NMs                           |  hadoop.rm.nm.active                        |  gauge        |  long          |         |
+decom NMs                            |  hadoop.rm.nm.active.decom                  |  gauge        |  long          |         |
+lost NMs                             |  hadoop.rm.nm.active.lost                   |  gauge        |  long          |         |
+rebooted NMs                         |  hadoop.rm.nm.active.rebooted               |  gauge        |  long          |         |
+unhealthy NMs                        |  hadoop.rm.nm.active.unhealthy              |  gauge        |  long          |         |
+running 0                            |  hadoop.rm.running.0                        |  gauge        |  long          |         |
+running 1440                         |  hadoop.rm.running.1440                     |  gauge        |  long          |         |
+running 300                          |  hadoop.rm.running.300                      |  gauge        |  long          |         |
+running 60                           |  hadoop.rm.running.60                       |  gauge        |  long          |         |
+active users                         |  hadoop.rm.users.active                     |  gauge        |  long          |         |
+maps running                         |  hadoop.tt.maps.running                     |  gauge        |  long          |         |
+map task slots                       |  hadoop.tt.maps.slots                       |  gauge        |  long          |         |
+reduces running                      |  hadoop.tt.reduces.running                  |  gauge        |  long          |         |
+reduce task slots                    |  hadoop.tt.reduces.slots                    |  gauge        |  long          |         |
+tasks completed                      |  hadoop.tt.tasks.completed                  |  counter      |  long          |         |
+tasks failed ping                    |  hadoop.tt.tasks.failed.ping                |  counter      |  long          |         |
+tasks failed timeout                 |  hadoop.tt.tasks.failed.timeout             |  counter      |  long          |         |
