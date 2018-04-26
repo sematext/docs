@@ -294,9 +294,6 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 			</div>
 		</a>
 	</div>
-</div>
-
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/spark/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -311,6 +308,9 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 			</div>
 		</a>
 	</div>
+</div>
+
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/storm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
