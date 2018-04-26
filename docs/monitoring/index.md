@@ -5,17 +5,9 @@ Description: Sematext infrastructure and application performance monitoring docs
 
 The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
 
-<a href="#create-spm-app"><img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
+<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
 
-<div class="css-modal-container">
-<div id="create-spm-app" class="modal-window">
-<div>
-<h2>Monitoring Integrations UI</h2>
-<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen">
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
-</div>
-</div>
-</div>
+
 
 You can have any number of Monitoring Apps and each App can be shared
 with different people, giving them different access roles.  Very
@@ -65,20 +57,7 @@ App settings and actions include, but are not limited to:
   - App ownership transfer
   - scheduled report emails (aka Subscriptions)
   
-<a href="#app-settings-menu"><img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen"></a>
-
-<div class="css-modal-container">
-<div id="app-settings-menu" class="modal-window">
-<div>
-<h2>App Settings Menu </h2>
-<img alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
-
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
-</div>
-</div>
-</div>
-  
-<!-- ###Visualizing and Analyzing Your Data -->
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
 
 ### Additional Features
 
