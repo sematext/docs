@@ -35,7 +35,7 @@
 }
 .modal:target {
 	opacity: 1;
-	top: 50%;
+	top: 10%;
 	visibility: visible;
 }
 .modal .header, .modal .footer {
@@ -214,11 +214,6 @@ svg {
 /**
  * Custom Styles
  */
- /**
- * Import Inter UI font
- */
-
-@import url('https://rsms.me/inter/inter-ui.css');
 
  body{
     font-family: Inter UI,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
