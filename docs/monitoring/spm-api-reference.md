@@ -1,4 +1,4 @@
-**Note: This API (v2) is deprecated. See [current API](/docs/api).**
+**Note: This API (v2) is deprecated. See [current API](/api).**
 
 ### Introduction
 
