@@ -35,5 +35,19 @@ outputFilter:
 Run Logagent with your config: 
 
 ```
-logagent --config logagent-example-config.yml --yaml
+logagent --config logagent-example-config.yml -n httpd --yaml
+```
+
+The output does not contain client_ip and user field: 
+
+```
+logSource:    httpd
+_type:        access_common
+remote_id:    -
+method:       GET
+path:         /
+http_version: HTTP/1.1
+status_code:  304
+size:         0
+@timestamp:   Thu Apr 26 2018 22:02:26 GMT+0200 (CEST)
 ```

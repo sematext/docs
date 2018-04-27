@@ -31,12 +31,29 @@ outputFilter:
     algorithm: sha256
     fields:
       - client_ip
-      - user
-  
+
 ```
 
 Run Logagent with your config: 
 
 ```
-logagent --config logagent-example-config.yml --yaml
+logagent --config logagent-example-config.yml -n httpd --yaml
 ```
+
+The output in YAML format shows the hased IP address in the field client_ip: 
+
+```
+logSource:    httpd
+_type:        access_common
+client_ip:    eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3
+remote_id:    -
+user:         -
+method:       GET
+path:         /
+http_version: HTTP/1.1
+status_code:  304
+size:         0
+@timestamp:   Thu Apr 26 2018 22:02:26 GMT+0200 (CEST)
+```
+
+
