@@ -118,5 +118,5 @@ docker pull sematext/sematext-agent-docker
 ## Github Repository
 
 Latest information
-for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
+for [sematext-agent-docker](https://github.com/sematext/sematext-agent-docker)
 and [open issues](https://github.com/sematext/sematext-agent-docker/issues).

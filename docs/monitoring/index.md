@@ -1,94 +1,80 @@
-Title: Sematext Monitoring
-Description: APM, Perfromance Monitoring,
+Title: Infrastructure monitoring
+Description: Sematext infrastructure and application performance monitoring docs
 
-Welcome to Sematext Monitoring documentation!
+### Creating Monitoring Apps
 
-In order to start using monitoring tools it is crucial to set up SPM Client to collect data. 
+The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
 
-SPM Monitor or SPM Client is monitoring agent available in two versions:
+<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
 
-  - [Embedded](spm-monitor-javaagent) (aka Javaagent-based, aka in-process)
-  - [Standalone](spm-monitor-standalone)
+
+
+You can have any number of Monitoring Apps and each App can be shared
+with different people, giving them different access roles.  Very
+importantly, each App has its own plan. Some Apps can use the free plan,
+while others can use paid plans, thus enabling a lot of flexibility around cost management.
+
+A number of App management operations, such as creation of new Apps, definition of alert rules, etc., are exposed via the [API](../api).
+
+### Setting up Monitoring Agents
+
+To start monitoring your infrastructure you need to set up the
+appropriate Sematext monitoring agent. You can choose from:
+
+  - [Java-based App Agent](spm-client) (aka SPM Client or SPM
+    Monitor), which you can run in [embedded](spm-monitor-javaagent)
+    (aka Javaagent-based, aka in-process) or
+    [standalone](spm-monitor-standalone) mode.  This agent can also
+    instrument JVM-based apps to collect transaction traces and
+    perform [on demand profiling](on-demand-profiling).
+
+  - [Node-based App Agent](node-agent), which can [monitor
+    Apache](../integration/apache) and [Nginx](../integration/nginx)
+    (including [Nginx Plus](../integration/nginxplus)).
+
+  - [Docker Agent](../sematext-docker-agent), which can collect not
+    only container and host metrics, but also container events and
+    also logs, it can parse and structure out of the box.
+
+
+The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
+
+Once the agent is set up metrics will start coming to Sematext
+instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
+look at the <a
+href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a>
+page.</p>
+
+### App Settings
+
+App settings and actions include, but are not limited to:
+
+  - inviting others to your App
+  - [alert rules](../alerts)
+  - changing your App's plan
+  - connecting Apps
+  - heartbeat alert cration
+  - App ownership transfer
+  - scheduled report emails (aka Subscriptions)
   
-The [API Reference](spm-api-reference) provides more detailed information on account and apps management as well as automation of certain tasks, such as creation of new apps, definition of alert rules, etc.
-  
-These are available [Monitoring Integrations](../integration) and for general SPM Monitoring information check [FAQ](spm-faq) page.
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
 
-###Creating Monitoring Apps
-
-The first step is to create an app. Go  to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
-
-<a  href="#create-spm-app"><img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
-
-<div class="css-modal-container">
-<div id="create-spm-app" class="modal-window">
-<div>
-<h2>Monitoring Integrations UI</h2>
-<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen">
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
-</div>
-</div>
-</div>
-
-###Sending Data to Your App
-
-In order to start sending data to your app you need:
- 
-Step 1 - Install Client Package
-
-SPM client packages are available for various Linux distributions. After you are done with package installation, proceed to Client Configuration Setup.
-
-Step 2 - Configure Client
-
-Monitoring Agent collects performance metrics of your application. It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later SPM Monitor upgrades don't require you to restart your application and SPM Monitor not having any effect on your app (since it runs in its own process).
-
-<p>You should start seeing your performance data in SPM in a few minutes. If you do not see performance charts in 5 minutes, have a look at <a href="http://sematext.com/docs/monitoring/spm-faq/">Troubleshooting</a> page.</p>
-
-###App Settings
-
-App settings include, but are not limited to:
-
-  - inviting new users to your application
-  - alert rules
-  - changing your app's plan
-  - connecting apps
-  - create heartbeat alert
-  - transfer app owner
-  - subscriptions
-  
-<a  href="#app-settings-menu"><img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen"></a>
-
-<div class="css-modal-container">
-<div id="app-settings-menu" class="modal-window">
-<div>
-<h2>App Settings Menu </h2>
-<img alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
-
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
-</div>
-</div>
-</div>
-  
-<!-- ###Visualizing and Analyzing Your Data -->
-
-###Additional Features
+### Additional Features
 
 To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each host/server/container in the form of tags.
 
 Check [Tag Support](tag-support) page for different ways of Tags organization.
 
-Network Map can help you visualize the network topology of a system monitored by SPM.  It can discover hosts and collect information about communication between them, such as the amount of received/transmitted data on each port.
+Network Map can help you visualize the network topology of a system monitored by Sematext.  It can discover hosts and collect information about communication between them, such as the amount of received/transmitted data on each port.
 
 For more information on Network Map check [Network Map](network-map) page.
 
-On-demand profiling lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
+[On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
 
-It works with both embedded and standalone agent and you can find more information [here](on-demand-profiling).
+It works with both embedded and standalone agent and has negligible overhead.
 
-[SPM](http://sematext.com/spm/) also exposes APIs and provides libraries that let you send custom metrics (any numerical data, not just performance metrics) into SPM and graph it along other reports.
+[Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports.
 
-For more information on how to extend standard performance metrics reports check [Custom Metrics](custom-metrics) page.
-
-###Getting Support
+### Getting Support
 
 We hope you enjoy using Sematext App and Infrastructure Monitoring and Log Management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com) ! You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext). 

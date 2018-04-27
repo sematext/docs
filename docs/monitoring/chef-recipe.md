@@ -1,3 +1,5 @@
+Title: Sematext Java Agent Chef Recipe
+
 The following is an **example** Chef Recipe for installing [SPM client](spm-client).
 
 ``` bash
@@ -41,7 +43,3 @@ end
     [embedded/in-process agent](spm-monitor-javaagent)
     and not a [standalone process agent](spm-monitor-standalone)
   - line 24: this is relevant only for "standalone" agent  
-      
-
- 
-

@@ -1,4 +1,8 @@
-### Monitoring Integrations
+Title: Integrations
+Descriptions: Sematext integrations for infrastructure monitoring, log management, alerting, chatops, etc.
+
+### Monitoring
+
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/akka/">
@@ -261,20 +265,6 @@
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/integration/sensei/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="/docs/images/integrations/sensei.svg" alt="SenseiDB" title="Sensei DB Monitoring" style="width: 80%;">
-						</div>
-						<div class="side back"><h5>SenseiDB</h5>cache misses num / hits num, disk index size, RamB index segments, disk index segments, request time, errors, scatter time, rejected requests, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/solr/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
@@ -304,16 +294,13 @@
 			</div>
 		</a>
 	</div>
-</div>
-
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/spark/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="/docs/images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 64px;">
+							<img src="/docs/images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 96px;">
 						</div>
 						<div class="side back"><h5>Spark</h5>last received delay, unprocessed batches, receivers, waiting batches, active jobs, driver memory used, all jobs, executors, cores free, write ops, ...</div>
 					</div>
@@ -321,6 +308,9 @@
 			</div>
 		</a>
 	</div>
+</div>
+
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/storm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -367,7 +357,7 @@
 	</div>
 </div>
 
-### Logging 
+### Logging
 
 Stored data is received through the Elasticsearch API and also through a variety of Syslog protocols.
 
