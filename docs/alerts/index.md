@@ -166,7 +166,7 @@ An email notification hook is created automatically during signup.  Additional n
                             <img src="/docs/images/alerts/notifications/slack.svg" alt="Slack" title="Slack Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
-                            <h5>Slack Integration</h5>Still using Nagios? Yes, you can get your Sematext alerts sent to Nagios.</div>
+                            <h5>Slack</h5>Easy Sematext alerts integration with Slack's team collaboration tools and services.</div>
                     </div>
                 </div>
             </div>
