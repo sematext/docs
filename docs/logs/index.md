@@ -49,6 +49,8 @@ App's settings include, but are not limited to:
   - adjusting data retention time, daily volume, and limits
   - [changing your app's plan](faq/#plans-prices)
   - checking how much data is, or has been shipped to your app
+  
+  <img alt="Sematext Logging App Settings" src="../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
 
 ### Getting Support
 
