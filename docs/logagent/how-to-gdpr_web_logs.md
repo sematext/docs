@@ -8,10 +8,10 @@ The GDPR suggests to anonymize, mask or remove personal data before you hand ove
 
 There are several methods to anonymize or mask data fields: 
 
-1. __Truncate the data.__ In case of IP addresses, it could be sufficient to replace the last digits of an IP address. This breaks the potential correlation to a specific user, so it protects the personal data. A part of the network information is still available for analytics (e.g. Country of a user based on the partial IP address). 
-2. __Hash field values.__ Strong hash algorithms don't allow to calculate the original value out of the hash code. You can use the resulting hash code for analytics, e.g. count unique entries. 
-3. __Encrypt field values.__ Encryption might be even more interesting than hashing because you don't lose the information, while you protect the data. For 3rd parties, the encrypted content is not readable. But you could decrypt the data field in case you really need to access the content. E.g. for forensics after a security breach. Depending on the encryption method you might be able to use the encrypted value for analytics, like hash codes. 
-4. __Remove data fields.__ The removal of data fields provides has the lowest risk of data leaking, but you might lose the information for troubleshooting or statistics.  
+1. __Truncate field values in logs.__ In case of IP addresses, it could be sufficient to replace the last digits of an IP address. This breaks the potential correlation to a specific user, so it protects the personal data. A part of the network information is still available for analytics (e.g. Country of a user based on the partial IP address). 
+2. __Hash field values in logs.__ Strong hash algorithms don't allow to calculate the original value out of the hash code. You can use the resulting hash code for analytics, e.g. count unique entries. 
+3. __Encrypt field values in logs.__ Encryption might be even more interesting than hashing because you don't lose the information, while you protect the data. For 3rd parties, the encrypted content is not readable. But you could decrypt the data field in case you really need to access the content. E.g. for forensics after a security breach. Depending on the encryption method you might be able to use the encrypted value for analytics, like hash codes. 
+4. __Remove fields from logs.__ The removal of data fields provides has the lowest risk of data leaking, but you might lose the information for troubleshooting or statistics.  
 
 You can combine all mentioned methods depending on nature of data and your needs to analyze or restore the information in specific cases. 
 
@@ -21,7 +21,7 @@ Sematext Logagent is an open-source, light-weight log shipper parsing many log f
 
 In the following examples, we will tail log files and ship the anonymized logs to Elasticsearch. We will mask the field client_ip with the methods mentioned above. 
 
-### Truncating IP addresses using Logagent ¶
+### Truncate IP address fields in logs
 
 The [ip-truncate-fields output filter](output-filter-iptruncatefields.md) replaces IP addresses with an anonymized string, replacing the last block of an IP address with "0".
 Example (client_ip field):
@@ -31,7 +31,7 @@ IPv6: 2001:db8:0:0:0:ff00:42:8329 results in 2001:db8:0:0:0:ff00:42:0
 
 All occurrences of the IP address are replaced in the log "message" fields with the new value. Example (message field): "Client connect 192.168.1.22" would result in "Client connect 192.168.1.0". 
 
-#### Configuration:
+__Configuration:__
 
 ```
 # tail web server logs
@@ -60,11 +60,11 @@ Run Logagent with your config:
 
 The output shows then the last IP block with the value "0" in the field client_ip. 
 
-### Hash the IP address with Logagent 
+### Hash fields in logs
 
 The [hash-fields output filter](output-filter-hashfields.md) replaces field values with its hash code. All occurrences of the original field value are replaced in the log "message" field with the hash code.
 
-#### Configuration
+__Configuration:__
 
 ```yaml
 # tail web server logs
@@ -96,13 +96,13 @@ Run Logagent with your config:
 
 The output shows has codes in the fields user and client_ip. 
 
-### Encrypt data fields with Logagent
+### Encrypt fields in logs 
 
 The [aes-encrypt-fields output filter](output-filter-aesencryptfields) encrypts data fields with AES. The original field value gets replaced with its AES encrypted HEX string. All occurrences of the original field value are replaced in the log "message" field with the encrypted value. 
 
 Encrypting the same text with the same password results in the same encrypted text. This could be helpful when you need to search for specific encrypted field value. You could encrypt your search term and search the encrypted term in Elasticsearch to find relevant log entries. 
 
-#### Configuration 
+__Configuration:__ 
 
 Add the following section 'outputFilter' to the Logagent configuration file. Please note you could use the plugin with multiple configurations for different event sources. 
 
@@ -145,12 +145,12 @@ logagent --config laes-encrypt-config.yml -n httpd --yaml
 The output shows the encrypted values in the fields client_ip and user. 
 
 
-### Remove data fields with Logagent
+### Remove fields from logs
 
 The [remove-fields output filter](output-filter-removefields) removes fields before the output happens. All occurrences of the original field value are replaced in the log "message" field with the string "!REMOVED!".
 
 
-#### Configuration 
+__Configuration:__
 
 Add the following section 'outputFilter' to the Logagent configuration file. Please note you could use the plugin with multiple configurations for different event sources. 
 
@@ -193,7 +193,9 @@ size:         0
 @timestamp:   Thu Apr 26 2018 22:02:26 GMT+0200 (CEST)
 ```
 
-#### Summary 
+
+
+### Summary 
 
 The examples above shows that Loagagent provides all required methods to truncate IP addresses, hash, encrypt or remove sensitive data fields. Don't hesitate to contact us for any further question. 
 
