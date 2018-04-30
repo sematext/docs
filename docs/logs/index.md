@@ -2,6 +2,8 @@ Think of Logsene as logging as a service or your own logging box in the cloud (
 
 It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and [searching](searching-log-events).
 
+<img alt="Sematext Monitoring UI screen" src="../images/logs/logsene-ui.png" title="Sematext Logging UI screen"></a>
+
 ### Creating a Logsene App
 
 After you get logged in to Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step
