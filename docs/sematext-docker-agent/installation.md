@@ -1,5 +1,3 @@
-## General 
-
 1. Get a free account at [sematext.com/spm](https://apps.sematext.com/ui/registration)
 2. [Create an Monitoring App](https://apps.sematext.com/ui/integrations)
 3. For logs (optional) [create a Logs App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/)  
@@ -8,7 +6,7 @@ Follow the installation instructions in Sematext user interface. The user interf
 
 To use Logging and Monitoring with a single agent, the provided instructions need to be extended with application tokens LOGSENE_TOKEN or SPM_TOKEN as described in the examples below. 
 
-## Installation using Docker client
+## Docker Client
 
 1. Get a free account at [sematext.com/spm](https://apps.sematext.com/users-web/register.do)  
 2. [Create a Monitoring App](https://apps.sematext.com/ui/integrations) of type "Docker" and copy the SPM Token 
@@ -24,7 +22,7 @@ docker run -d --name sematext-agent-docker \
 ```
 
 
-## Installation using Docker Compose
+## Docker Compose
 
 Create a Logs and Monitoring App and replace the actual LOGSENE_TOKEN and SPM_TOKEN with your individual tokens in the following [Docker Compose](https://docs.docker.com/compose/) file: 
 
@@ -92,11 +90,11 @@ oc apply -f sematext-agent.yml
 
 Please read [Rancher Monitoring and Logging Support](https://sematext.com/blograncheros-monitoring-and-logging-support/). There are various deployment options for Rancher, Swarm, Kubernetes or Mesos. In addition, we recommend reading Rancher Labs blog post about the [Rancher Catalog Entry](http://rancher.com/new-rancher-community-catalog-monitoring-logging-sematext/). 
 
-## Installation on Nomad by Hashicorp
+## Nomad by Hashicorp
 
 See an example of the [job description](https://github.com/sematext/sematext-agent-docker/blob/master/hashicorp-nomad/sematext-docker-agent.nomad) for [Nomad by Hashicorp](https://www.nomadproject.io/)
 
-## Installation on Mesos / Marathon
+## Mesos / Marathon
 
 The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances), SPM App Token and Logsene App Token. An example call to the Marathon API:
 
