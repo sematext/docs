@@ -134,7 +134,7 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 <td>Activate <a href="http://sematext.com/docs/logagent/parser/">logagent-js parser</a>, default value is <code>true</code>. To disable the log parser set the value to <code>false</code>. This could increase the throughput of log processing for nodes with a very high log volume.</td>
 </tr>
 <tr>
-<td>-v /yourpatterns/patterns.yml:/etc/logagent/patterns.yml</td>
+<td style="word-break: break-all;">-v /yourpatterns/patterns.yml:/etc/logagent/patterns.yml</td>
 <td>to provide custom patterns for log parsing, see <a href="https://github.com/sematext/logagent-js">logagent-js</a></td>
 </tr>
 <tr>
@@ -155,7 +155,7 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 </tr>
 <tr>
 <td>LOGSENE_REMOVE_FIELDS</td>
-<td>Removes fields from parsed/enriched logs. E.g. LOGSENE_REMOVE_FIELDS=logSource,container_host_name,swarm_node,password,creditCardNo</td>
+<td style="word-break: break-all;">Removes fields from parsed/enriched logs. E.g. LOGSENE_REMOVE_FIELDS=logSource,container_host_name,swarm_node,password,creditCardNo</td>
 </tr>
 </tbody>
 </table>
@@ -373,4 +373,3 @@ driver. This ensures that logs are exposed via Docker Remote API. To
 check, run the "docker logs" command. If "docker logs CID" shows
 container logs then Sematext Docker Agent should be able to collect the
 logs as well. 
-
