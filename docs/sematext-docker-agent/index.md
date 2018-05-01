@@ -2,17 +2,19 @@
 
 # Overview
 
-Sematext Docker Agent is a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers. The agent discovers all containers on all nodes managed by Docker Swarm, Docker Cloud, Kubernetes, Red Hat OpenShift, Rancher or Mesos. After the deployment of Sematext Docker Agent, all logs, Docker events, and metrics are immediately available out of the box.
+Sematext Docker Agent is a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers. 
+
+The agent discovers all containers on all nodes managed by Docker Swarm, Docker Cloud, Kubernetes, Red Hat OpenShift, Rancher or Mesos. After the deployment of Sematext Docker Agent, all logs, Docker events, and metrics are immediately available out of the box.
 
 <div class="video_container">
   <iframe class="video" src="https://www.youtube.com/embed/cLKnn1Qbxlc" frameborder="0" allowfullscreen ></iframe>
 </div>
 
-The following information is collected and transmitted to Sematext Cloud or [Sematext Enterprise](sematext-enterprise).  Sematext Cloud integration for Docker uses the open-source
- [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker) available on
+The following information is collected and transmitted to Sematext Cloud or [Sematext Enterprise](../sematext-enterprise).  Sematext Cloud integration for Docker uses the open-source
+ [Docker monitoring agent](https://github.com/sematext/sematext-agent-docker)  available on
 Docker Registry as a ready-to-go [sematext-agent-docker image](https://hub.docker.com/r/sematext/sematext-agent-docker/).
 
-<table>
+<table class="mdl-data-table mdl-shadow--2dp" style="white-space: normal;">
 <tbody>
 <tr class="odd">
 <td><strong>Type</strong></td>
