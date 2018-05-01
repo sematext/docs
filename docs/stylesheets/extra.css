@@ -21,7 +21,6 @@
 **/
 .modal {
 	left: 50%;
-	margin: -250px 0 0 -32%;
 	opacity: 0;
 	position: absolute;
 	top: -50%;
@@ -55,7 +54,7 @@
 	float: right;
 }
 .modal .copy, .modal .header, .modal .footer {
-	padding: 5px;
+	padding: 6px 18px;;
 	color: #333333;
 }
 .modal-content {
@@ -305,6 +304,9 @@ pre {
     width: 100%;
     min-width:150px;
     min-height: 150px
+}
+.mdl-data-table td {
+    text-align: left;
 }
 .logs-card{
     background: #00A3EF;
