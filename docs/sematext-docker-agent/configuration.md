@@ -1,4 +1,3 @@
-## Configuration guide
 
 Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/) including detailed feature descriptions and configuration examples for Sematext Docker Agent. 
 
