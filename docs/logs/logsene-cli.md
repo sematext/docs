@@ -1,4 +1,4 @@
-*[Logsene](http://sematext.com/logsene) Command-line Interface*
+*[Logsene](http://sematext.com/logsene)  Command-line Interface*
 
 Enables searching Logsene log entries from the command-line. Currently
 supports OS X and Linux.
