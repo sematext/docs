@@ -39,12 +39,9 @@ the original log line or some other free text)
 **@timestamp** is a date field, on which log retention is based. If it's
 not present, Logsene will add a timestamp upon event receipt
 
-  
-
 All of these fields are optional, but their use is strongly encouraged.
  If found in logs with low-enough cardinality, all distinct values of
 these fields will be loaded and shown in the UI as filters and thus
 allowing one to very quickly narrow down the search.
 
-  
-
+<img alt="Logsene Special Fields" src="/docs/images/logs/logsene-special-fields.gif" title="Logsene Special Fields">
