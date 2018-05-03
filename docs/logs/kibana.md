@@ -2,6 +2,8 @@ To visualize your data using [Kibana integrated into Logsene](http://blog.semate
 you have to click on the **Kibana** button next to the application's
 name, from the [Logsene tab of your account](https://apps.sematext.com/ui/logs).
 
+<img alt="Kibana Integration" src="../images/logs/kibana-integration.gif" title="Sematext Logging UI - Kibana Integration">
+
 Once you're there, you can customize your dashboard to do all kinds of
 searches and visualizations to your data.
 
