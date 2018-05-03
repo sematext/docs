@@ -67,7 +67,7 @@ $ logsene search -t 3h -f host | sort | uniq -c | sort -r | head
 
 ![](https://camo.githubusercontent.com/9cc0b66e3432426d11f65e81c4dbc196d1fe2d21/687474703a2f2f69313332392e70686f746f6275636b65742e636f6d2f616c62756d732f773534382f6d626f6e6163692f53656d61746578742532304c2d434c49253230524541444d452f3368736f7274756e6971686561645f7a7073687461666a36376a2e706e67)
 
-You can find more useful examples in [the blog post](http://blog.sematext.com/2015/07/07/logsene-cli/) that announced
+You can find more useful examples in  [the blog post](http://blog.sematext.com/2015/07/07/logsene-cli/)  that announced
 the release of Logsene CLI.
 
 ### Logsene CLI Session
