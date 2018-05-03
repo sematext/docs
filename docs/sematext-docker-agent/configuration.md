@@ -1,5 +1,9 @@
+Title: Configuring Sematext Docker Agent
 
-Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/) including detailed feature descriptions and configuration examples for Sematext Docker Agent. 
+Please note [Monitoring & Logging for Docker
+Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/)
+including detailed feature descriptions and configuration examples for
+Sematext Docker Agent.
 
 ## Configuration Parameters
 
@@ -163,19 +167,18 @@ Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/do
 
 
 
-## Access to the Docker Socket  / Docker API  
+## Access to the Docker Socket  / Docker API  
 
-**Note that Docker Daemon can be configured to use Unix sockets
+*Note that Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
 (authentication with certificates). Depending on your Docker setup,
 Sematext Agent needs to be configured to access the Docker Socket (API
-access).  
-**
+access).*
 
 **Docker Unix Socket**
 
 Make sure that you have the permissions to access /var/run/docker.sock
-(or the actual location of the docker unix socket). E.g. use 'sudo' to
+(or the actual location of the docker unix socket). E.g. use 'sudo' to
 run the "docker run" command.
 
 Check your permissions first:
@@ -187,12 +190,12 @@ srw-rw---- 1 root docker 0 Dec  3 07:52 /var/run/docker.sock
 
 If you prefer to create a docker group to access docker without super
 user permissions,
-see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
+see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
 
 **How to activate the Unix socket in parallel to a TCP socket?**  
 Check the configuration of the Docker Daemon in /etc/defaults/docker -
 it is possible to activate TCP and the Unix socket in parallel - simply
-add  "-H unix:///var/run/docker.sock" and restart dockerd.
+add  "-H unix:///var/run/docker.sock" and restart dockerd.
 
 ``` bash
 ## /etc/defaults/docker
@@ -279,7 +282,7 @@ Using this “log metadata” you can whitelist or blacklist log outputs by imag
 - SKIP_BY_NAME — a regular expression to blacklist container names
 - SKIP_BY_IMAGE — a regular expression to blacklist image names
 
-## Automatic Parser for Container Logs
+## Container Log Parsing
 
 In Docker, logs are console output streams from containers. They might be a mix of plain text messages from start scripts and structured logs from applications.  The problem is obvious – you can’t just take a stream of log events all mixed up and treat them like a blob.  You need to be able to tell which log event belongs to what container, what app, parse it correctly in order to structure it so you can later derive more insight and operational intelligence from logs, etc.
 
@@ -298,7 +301,7 @@ For example, Sematext Docker Agent can parse logs from official images like:
 - Plain text messages with or without timestamps in various formats
 - Various Linux and Mac OSX system logs
 
-### Add patterns for log parsing 
+### Adding log parsing patterns
 
 In addition, you can define your own patterns for any log format you need to be able to parse and structure. There are three options to pass individual log parser patterns:
 
@@ -362,7 +365,7 @@ Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2
 ## Known Issues
 
 **Conflict with Docker logging-drivers. Sematext Docker Agent is running
-with a valid Logsene Token, but Logsene does not show container logs. **
+with a valid Logsene Token, but Logsene does not show container logs. **
 
 Please note that Sematext Docker Agent collects logs via Docker Remote
 API. If you use a Docker logging-driver other than the default json-file
@@ -371,4 +374,4 @@ make sure that your container or docker daemon uses json-file logging
 driver. This ensures that logs are exposed via Docker Remote API. To
 check, run the "docker logs" command. If "docker logs CID" shows
 container logs then Sematext Docker Agent should be able to collect the
-logs as well. 
+logs as well.
