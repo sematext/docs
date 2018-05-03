@@ -1,7 +1,4 @@
-*[Logsene](http://sematext.com/logsene) Command-line Interface*
-
-Enables searching Logsene log entries from the command-line. Currently
-supports OS X and Linux.
+[Logsene](http://sematext.com/logsene)  *Command-line Interface* enables searching log entries from the command-line. Currently it supports OS X and Linux.
 
 ## Installation
 
@@ -33,7 +30,7 @@ Those logs are then aggregated by time and shown in the Logsene web
 application, where you have the ability to search for specific terms,
 narrow down time ranges, filter fields, setup alerts and more.
 
-<img alt="Sematext Monitoring UI screen" src="/docs/images/logs/logsene-ui.png" title="Sematext Logging UI screen">
+<img alt="Sematext Logsene - Logging Management" src="/docs/images/logs/logsene-ui.png" title="Sematext Logging Management UI screen">
 
 A quick rundown of most notable features of Logsene:
 
@@ -47,7 +44,7 @@ A quick rundown of most notable features of Logsene:
   - CoreOS Log Collection
   - Docker container monitoring
   - REST API
-  
+
 ## Logsene CLI
 
 Logsene CLI gives you capability to search through your logs from the
@@ -56,8 +53,8 @@ results to `awk`, `sed`, `cut`, `sort`, `head` and friends from the
 \*nix command-line.
 
 Imagine a situation where you suspected that your site were under a DoS
-attack. 
- 
+attack.
+
 You'd be interested in quickly finding out the top offenders. Here’s a
 one-liner that shows top originating IP addresses in the last 3 hours
 (also shows how to use the `-f` switch to specify which field(s) to
@@ -97,7 +94,7 @@ multi-user experience, where all users may possibly be accessing L-CLI
 from the same box (while being SSHd into it), using the same Sematext
 account and possibly even the same Logsene application.
 
-  
+
 
 ## Commands
 
