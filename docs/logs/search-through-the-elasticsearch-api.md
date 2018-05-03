@@ -1,23 +1,16 @@
-## The Essentials
 
-With Logsene, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can
-search your logs from your own application, or by configuring/adapting
-existing Elasticsearch UIs, such as
-[Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
+With Logsene, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
 You can also use this API to [index events or change the mapping](index-events-via-elasticsearch-api).
 
 When you use the API, here are the things you need to know:
 
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe)
   - port: **80** (**443** for HTTPS)
-  - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) -
-    note that this token should be kept secret
+  - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
 
 ## Searching
 
-Logsene supports a subset of Elasticsearch APIs, with rich query
-language and extensive capabilities of searching through data you've
-sent to Logsene. The supported Search API's are:
+Logsene supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to Logsene. The supported Search API's are:
 
   - URI based search
   - Request body based search
@@ -25,36 +18,24 @@ sent to Logsene. The supported Search API's are:
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logsene app token](https://apps.sematext.com/ui/logs) when
-calling **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe).
-In the following examples we will use a "dummy token"
-- *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token.  You should use
-your real Logsene App token, of course.
+For each of the operations you'll need your [Logsene app token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe).
+
+In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logsene App token, of course.
 
 ### URI based search
 
-The simplest search method to get your data out of Logsene is fully
-compatible with URI Search in Elasticsearch
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html>).
-You need to provide the query using the *q* parameter. For example, to
-search for the *internal* and *connection* terms you would run the
-following:
+The simplest search method to get your data out of Logsene is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html).
+
+You need to provide the query using the *q* parameter. For example, to search for the *internal* and *connection* terms you would run the following:
 
     curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
 
-**Note:** To learn more about Apache Lucene query syntax, please refer
-to
-<https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html>
+**Note:** Please check [Apache Lucene query syntax](https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html) for reference.
 
 ### Request body based search
 
-The request body based search lets us leverage full Elasticsearch query
-DSL language
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html>)
-along with its filtering capabilities
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-filters.html>)
-and aggregations
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html>).
+The request body based search lets us leverage full [Elasticsearch query DSL language](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) along with its [filtering capabilities](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-filters.html) and [aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
+
 With full featured Elasticsearch query API we can search and find any
 data we are really looking for.
 
@@ -81,9 +62,7 @@ curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_
  }
 }'
 ```
-To analyze this data further we can add aggregations to our query
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html>)
-to find common status responses for example:
+To analyze this data further we can [add aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html) to our query to find common status responses for example:
 
 ```bash
 curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
@@ -253,26 +232,16 @@ need to provide Logsene with the following information:
   - **type name** - the type of the document you want to retrieve,
   - **document identifier** - the identifier of the document
 
-For example, to retrieve a document with
-identifier *AU29tJz0UV2O9bWZ\_KkU* and type *apache* from our example
-application identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token
-(application is free, which means that we need to append the token with
-*\_free* postfix to get the index name) we would run the following
-command:
+For example, to retrieve a document with identifier  *AU29tJz0UV2O9bWZ\_KkU* and type *apache* from our example application identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token (application is free, which means that we need to append the token with *\_free* postfix to get the index name) we would run the following command:
 
     curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/apache/AU29tJz0UV2O9bWZ_KkU'
 
 ### Multiple GET operations in a single request
 
-In addition to supporting the real time GET functionality, Logsene lets
-one leverage Elasticsearch MGet API
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-multi-get.html>),
-which allows us to retrieve multiple document using the real time GET
-API in a single request. For example, to retrieve documents with
-identifier *AU29tJz0UV2O9bWZ\_KkU* and *AU29rlOPUV2O9bWZ-Daw* which are
-of type *apache* from our example application identified by
-*cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following
-request:
+In addition to supporting the real time GET functionality, Logsene lets one leverage [Elasticsearch MGet API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-multi-get.html), which allows us to retrieve multiple document using the real time GET API in a single request. 
+
+For example, to retrieve documents with identifier *AU29tJz0UV2O9bWZ\_KkU* and *AU29rlOPUV2O9bWZ-Daw* 
+which areof type *apache* from our example application identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following request:
 
 ``` bash
 curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/_mget?pretty' -d '{
@@ -282,12 +251,7 @@ curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_f
  ]
 }'
 ```
-As you can see, we are sending a *HTTP GET* request to the *\_mget* REST
-end-point of Logsene receiver and get back a JSON object that contains
-the *docs* array. Each entry of the *docs* array is identifying a single
-document by providing the index name (the *\_index* property), the type
-name (the *\_type* property) and the document identifier (the *\_id*
-property).
+As you can see, we are sending a *HTTP GET* request to the *\_mget* REST end-point of Logsene receiver and get back a JSON object that contains the *docs* array. Each entry of the *docs* array is identifying a single document by providing the index name (the *\_index* property), the type name (the *\_type* property) and the document identifier (the *\_id* property).
 
 The response to the above command would look as follows:
 
@@ -313,16 +277,11 @@ The response to the above command would look as follows:
 
 ### Multiple Search operations in a single request
 
-Similar to MGet, Logsene lets you run multiple search requests in a
-single HTTP request using Elasticsearch Multi Search API
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html>).
-The request needs to be run against \_msearch REST end-point and each
-query needs to include two lines - meta line defining the index name and
-a line defining the query using Elasticsearch query DSL
-(<https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html>).
+Similar to MGet, Logsene lets you run multiple search requests in a single HTTP request using [Elasticsearch Multi Search API](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html).
 
-For example, the following example shows the usage of Multiple Search
-API:
+The request needs to be run against \_msearch REST end-point and each query needs to include two lines - meta line defining the index name and a line defining the query using [Elasticsearch query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html).
+
+For example, the following example shows the usage of Multiple Search API:
 
 ``` bash    
 curl -XGET 'logsene-receiver.sematext.com/_msearch?pretty' --data-binary '{ "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
@@ -331,12 +290,10 @@ curl -XGET 'logsene-receiver.sematext.com/_msearch?pretty' --data-binary '{ "ind
 { "query" : { "term" : { "status" : 200 } }, "size" : 1 }'
 ```
 
-Keep in mind that Multiple Search API is using *--data-binary* switch in
-the *curl* command to keep the new line characters in the request. This
+Keep in mind that Multiple Search API is using *--data-binary* switch in the *curl* command to keep the new line characters in the request. This
 is crucial to make the Multiple Search API working correctly.
 
-The response includes standard search response for each of the included
-queries and for the above query will look as follows:
+The response includes standard search response for each of the included queries and for the above query will look as follows:
 
 ```JSON
 {
