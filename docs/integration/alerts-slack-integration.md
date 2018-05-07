@@ -34,7 +34,7 @@ Enter required parameters and copy incoming webhook Slack URL into url field. Cl
 
 ![Slack Incoming Webhooks Integration](https://sematext.com/docs/images/integrations/create-slack-integration.png  "Create Slack Incoming Webhooks Integration")
 
-## Slack API Intergration
+## Slack API Integration
 
 ### In Slack
 
