@@ -16,7 +16,9 @@ Once your WebHooks integration is complete you will receive alert notifications 
 
 Navigate to Slack's Custom Integrations Section “/apps/manage/custom-integrations”
 
-![Slack Webhook Custom Integration](/docs/images/integrations/slack-integration-webhook.png  "Slack Webhook Custom Integration")
+![]()
+
+![Slack Webhook Custom Integration](https://sematext.com/docs/images/integrations/slack-integration-webhook.png  "Slack Webhook Custom Integration")
 
 Choose “Incoming Webhook”. Create Webhook and copy provided Webhook URL.
 
@@ -24,13 +26,13 @@ Choose “Incoming Webhook”. Create Webhook and copy provided Webhook URL.
 
 Navigate to [Sematext Integrations Overview](https://apps.sematext.com/ui/integrations/), scroll down to notification hooks section, and select Slack card to create a new notification hook.
 
-![Sematext Notification Hooks](/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
+![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
 
 Enter required parameters and copy incoming webhook Slack URL into url field. Click Test button to confirm that Sematext app is sending data to Slack and save your Slack notification hook.
 
 
-![Slack Incoming Webhooks Integration](/docs/images/integrations/create-slack-integration.png  "Create Slack Incoming Webhooks Integration")
+![Slack Incoming Webhooks Integration](https://sematext.com/docs/images/integrations/create-slack-integration.png  "Create Slack Incoming Webhooks Integration")
 
 ## Slack API Intergration
 
@@ -51,11 +53,11 @@ Visit [Building Slack apps](https://api.slack.com/slack-apps) for more informati
 
 Navigate to [Sematext Integrations Overview](https://apps.sematext.com/ui/integrations/), scroll down to notification hooks section, and select Slack card to create a new notification hook.
 
-![Sematext Notification Hooks](/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
+![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
 Select **Slack Web API** option in the form, enter required parameters and copy Slack **TOKEN** into token field. Click Test button to confirm that Sematext app is sending data to Slack and save your Slack notification hook.
 
-![Slack Incoming Webhooks Integration](/docs/images/integrations/slack-api-integration.png  "Slack API integration")
+![Slack Incoming Webhooks Integration](https://sematext.com/docs/images/integrations/slack-api-integration.png  "Slack API integration")
 
 That's it. Notifications sent to Slack can also be sent via other channels such as e-mail, PagerDuty, Nagios, etc. Check [Alerts](integration) documentation page to learn more about other channels and types of alerts available.  
 
