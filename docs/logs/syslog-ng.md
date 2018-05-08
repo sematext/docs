@@ -1,7 +1,7 @@
 ## Overview
 
 syslog-ng is a modern syslog daemon that's focused on flexibility and
-portability. It also has an easy to use configuration format, that helps
+portability. It also has an easy to use configuration format that helps
 you ship your logs to Logsene in 3 steps:
 
 1.  **sources**. syslog-ng can listen to local [syslog traffic](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-source-system.html),
@@ -15,7 +15,7 @@ you ship your logs to Logsene in 3 steps:
 
 ## Configure Sources
 
-Sources enable syslog-ng collect the logs you want to send to Logsene.
+Sources enable syslog-ng collect the logs you want to send to Logs Management App.
 You can use system() to collect all the local syslog messages from that
 system. You can put this at the beginning of your
 **/etc/syslog-ng/syslog-ng.conf**, along with your configuration
@@ -49,10 +49,10 @@ source jetty_log { file("/var/log/jetty" flags(no-parse) multi-line-mode(indente
 
 ## Configure Destinations
 
-To properly configure your destination, you'll first need to decide how
-to authenticate to Logsene. There are two options: with your Logsene
-application token (which is what we recommend), or by authorizing your
-public IPs from the Logsene UI.
+There are two options to properly configure your destination:
+
+- with your Logs Management application token (which is what we recommend)
+- or by authorizing your public IPs from the Logs Management App UI.
 
 After you choose your authentication method, you'll configure your
 destination according to the protocol you prefer: UDP, TCP or TLS. For
@@ -61,9 +61,9 @@ all cases, your endpoint will be
 
 ### Token Authentication
 
-To enable token authentication, get the token of your Logsene
-application from the [list of Logsene applications](https://apps.sematext.com/ui/logs).
-Then, put it in the template() statement of your Logsene destination.
+To enable token authentication, get the token of your Logs Management
+application from the [list of Logs Maangement applications](https://apps.sematext.com/ui/logs).
+Then, put it in the template() statement of your Logs Management App destination.
 See working examples below. The end result is a [CEE-formatted JSON syslog](json-messages-over-syslog)
 message that contains your token in the **logsene-app-token** field.
 
@@ -75,7 +75,7 @@ plugin. The libjson plugin is typically provided by the
 ### IP-based Authentication
 
 The alternate method for authentication is by pre-authorizing your
-public IP in Logsene's UI. [Here is a complete guide](authorizing-ips-for-syslog) on how to do that. If
+public IP in Logs Management App's UI. [Here is a complete guide](authorizing-ips-for-syslog) on how to do that. If
 you choose this path, you don't need the template() statement from the
 code snippets below.
 
@@ -84,7 +84,7 @@ code snippets below.
 To send logs over the fire-and-forget UDP protocol, your can add a
 destination like the one below to **/etc/syslog-ng/syslog-ng.conf**. If
 you're using token-based authentication, you'll have to fill in your
-Logsene application token. If you've authorized your public IP, the
+Logs Management application token. If you've authorized your public IP, the
 template() statement should be removed:
 
 ``` bash
@@ -126,11 +126,11 @@ cd /opt/syslog-ng
 wget https://apps.sematext.com/cert/DigiCertCA.pem                # md5sum is fb30c5636d0108b2688d7e1ed59749ac
 wget https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem   # md5sum is 3816293340b05c52bcbc99a4f00b1b04
 
-# openssl x509 -subject_hash -noout -in DigiCert_Global_Root_CA.pem 
+# openssl x509 -subject_hash -noout -in DigiCert_Global_Root_CA.pem
 # 3513523f
 ln -s DigiCert_Global_Root_CA.pem 3513523f.0
- 
-# openssl x509 -subject_hash -noout -in DigiCertCA.pem 
+
+# openssl x509 -subject_hash -noout -in DigiCertCA.pem
 # 85cf5865
 ln -s DigiCertCA.pem 85cf5865.0
 ```
@@ -167,7 +167,7 @@ log {
 
 If you're tailing files or you defined other sources, you need to bind
 them to the **logsene** destination in order to have those messages
-shipped to your Logsene application as well. For example:
+shipped to your Logs Management application as well. For example:
 
 ``` bash
 log {
@@ -180,9 +180,9 @@ log {
 Then, restart syslog-ng and you should see your logs in the [Logsene UI](https://apps.sematext.com/ui/logs) or
 [Kibana](kibana).
 
-## Tag Your Logs
+## Logs Tagging
 
-From your syslog messages, Logsene will populate a number of [special fields](special-fields), such as the **source** and
+From your syslog messages, Logs Management App will populate a number of [special fields](special-fields), such as the **source** and
 **host**. You can also configure syslog-ng to add a tag to logs matching
 certain criteria. This is useful when you want to quickly identify a
 special kind of logs. For example, you could tag events that come to the
@@ -216,5 +216,4 @@ log { source(all_syslog); filter(user_tests); destination(logsene_tests); flags(
 Notice the **final** flag to this log statement - this prevents
 syslog-ng from sending matched events twice (once with tags and once
 without). Make sure you place the log statement with tags before your
-main Logsene log statement.
-
+main Logs Management App log statement.
