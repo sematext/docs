@@ -2,12 +2,12 @@
 
 syslog-ng is a modern syslog daemon that's focused on flexibility and
 portability. It also has an easy to use configuration format that helps
-you ship your logs to Logsene in 3 steps:
+you ship your logs to Logs Management App in 3 steps:
 
 1.  **sources**. syslog-ng can listen to local [syslog traffic](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-source-system.html),
     can [tail files](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-file.html) and
     more
-2.  **destinations**. You can send your logs to Logsene via UDP, TCP or
+2.  **destinations**. You can send your logs to Logs Management App via UDP, TCP or
     [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425)
 3.  **bind sources to destinations**. Once you have your sources and
     destinations defined, you have to define paths by linking sources
@@ -177,7 +177,7 @@ log {
 
  
 
-Then, restart syslog-ng and you should see your logs in the [Logsene UI](https://apps.sematext.com/ui/logs) or
+Then, restart syslog-ng and you should see your logs in the [Logs Management App UI](https://apps.sematext.com/ui/logs) or
 [Kibana](kibana).
 
 ## Logs Tagging
