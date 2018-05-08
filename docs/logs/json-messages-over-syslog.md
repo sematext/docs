@@ -6,8 +6,7 @@ standard. For example, to do a quick test via netcat:
 $ echo 'my-host my-process[1234]:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"world"}' | nc logsene-receiver-syslog.sematext.com 514
 ```
 
-If you have your [rsyslog](rsyslog),
- [syslog-ng](syslog-ng) or
+If you have your [rsyslog](rsyslog), [syslog-ng](syslog-ng) or
 [syslogd](syslogd) daemon already set up to send logs to
 your application, all you need to do is to make your structured messages
 comply to CEE. For example:
@@ -18,11 +17,8 @@ $ logger '@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "hello":"wor
 
 ## How it works
 
-The only special thing here is to begin your message with a "CEE cookie"
-that says "@cee:". Optionally, the cookie can be followed by a
-whitespace. Then, insert a JSON with fields and values of your choice,
-although CEE and [Project Lumberjack](https://fedorahosted.org/lumberjack/) suggest a [list of
-standard fields](https://fedorahosted.org/lumberjack/wiki/FieldList)
+Begin your message with a "CEE cookie" that says "@cee:". Optionally, the cookie can be followed by a whitespace. Then, insert a JSON with fields and values of your choice,
+although CEE and [Project Lumberjack](https://fedorahosted.org/lumberjack/) suggest a [list of standard fields](https://fedorahosted.org/lumberjack/wiki/FieldList)
 which should have the same name across applications.
 
 We'll parse your JSON and index it, along with the following fields from
@@ -71,4 +67,3 @@ User:
 
 ``` bash
 echo "<10>2013-08-29T13:41:03.152+03:00 my-host my-process:@cee: {"logsene-app-token":"LOGSENE_APP_TOKEN_GOES_HERE", "message":"this is a test message"} | nc logsene-receiver-syslog.sematext.com 514
-```
