@@ -5,7 +5,7 @@ need to configure it with the [Elasticsearch plugin](https://www.elastic.co/guid
 
   - **80** or **443** as the **port**
 
-  - [your Logsene App token](https://apps.sematext.com/ui/logs) as
+  - [your Logs Management App token](https://apps.sematext.com/ui/logs) as
     the index name
 
   - **http** as the **protocol**
