@@ -1,6 +1,6 @@
 ## The Essentials
 
-Sematext's Logs Management app exposes the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can:
+Sematext's Logs Management App exposes the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can:
 
   - send log events through it directly from your application, using
     any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
@@ -13,7 +13,7 @@ Sematext's Logs Management app exposes the [Elasticsearch API](http://www.elasti
 When you use the API, here are the things you need to know:
 
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (only is using Sematext Cloud Europe)
-  - port: **80** or **443** (depending on whether you want to use plain HTTP or HTTPS)**  
+  - port: **80** or **443** (depending on whether you want to use plain HTTP or HTTPS)**
     **
   - index name: your [Logs Management app token](https://apps.sematext.com/ui/logs) -
     note: **this token should be kept secret** (n.b. you can have N Logs Management apps, each with its own token)
@@ -23,17 +23,16 @@ When you use the API, here are the things you need to know:
 With the same REST API, you can index logs directly from your own
 application, or you can craft your own "log sender".
 
-**NOTE:**  
+**NOTE:**
 If you are sending logs from your application use the Elasticsearch HTTP
 API. If you are sending logs from a Java application use a library like
 [log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http)[or](https://github.com/jprante/log4j2-elasticsearch-http)[Jest](https://github.com/searchbox-io/Jest) [instead of Elasticsearch TransportClient.](https://github.com/jprante/log4j2-elasticsearch-http)
 
-  
-
 Besides specifying your Logs Management app token as the index name, it's nice
 to have a field named "@timestamp".  Its value should be a valid
-[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp. This will
-be used for searching and sorting when/if you use Kibana with Sematext platform.
+[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp.
+
+This will be used for searching and sorting when/if you use Kibana with Sematext platform.
 If you don't provide a timestamp, Logs Management app will add one when it receives
 your message.
 
@@ -52,6 +51,7 @@ This will index a simple "hello world" message to Logs Management app. That even
 would have the current timestamp and will go to your app
 (provided that the $YOUR\_TOKEN\_HERE variable contains your token),
 within a type named "mytype". The type is a logical division of events.
+
 Typically, you'd put events with different structures in different
 types. For example, syslog messages in a type called "syslog", apache
 logs in a type called "apache". Essentially, the type can be anything,
@@ -99,13 +99,16 @@ mapping that works well for most use-cases:
 
 If the default log index fields (also known as index mapping) don't fit
 your needs you can create completely custom index mapping. See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
- Note that if you have N different log structures, the best way to
+
+Note that if you have N different log structures, the best way to
 handle that is by creating N Logs Management Apps, each with its own index
 mapping. For example, you may have web server logs, your system logs in
 /var/log/messages, and your custom application logs. Each of these 3
-types of logs has a different structure. The web server logs probably
-use Apache Common Log format, the logs in /var/log/messages have syslog
+types of logs has a different structure.
+
+The web server logs probably use Apache Common Log format, the logs in /var/log/messages have syslog
 structure, and your own application's logs can be in any format your
-application happens to use. To handle all 3 log formats elegantly
-simply create 3 separate Logs Management apps and use a different format for
+application happens to use.
+
+To handle all 3 log formats elegantly simply create 3 separate Logs Management apps and use a different format for
 each of them. See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/) for details.
