@@ -1,4 +1,4 @@
-To send new events to your Logsene app, you have two ways to
+To send new events to your Logs Managemet app, you have two ways to
 connect - using Elasticsearch API or using syslog.
 
   - HTTP / HTTPS (ports 80 / 443), by using the Elasticsearch API on
