@@ -1,6 +1,5 @@
-In order make [Logstash](https://www.elastic.co/products/logstash) send logs to Logsene, you
-need to configure it with the [Elasticsearch plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html) to
-output to the Logsene endpoint, while specifying:
+In order make [Logstash](https://www.elastic.co/products/logstash) send logs to Sematext Logs Management app, you
+need to configure it with the [Elasticsearch plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html) to output app's endpoint, while specifying:
 
   - **logsene-receiver.sematext.com** as the host
 
@@ -42,7 +41,7 @@ unpack it, save the above configuration into a file (e.g.,
 
     bin/logstash -f /tmp/logstash.conf
 
-After it starts, logs from that file will flow to Logsene and you should
+After it starts, logs from that file will flow to Logs Management app and you should
 be able to start [searching them](searching-your-events).
 
 ### Parsing Unstructured Data
