@@ -54,7 +54,7 @@ messages over [TCP](http://www.rsyslog.com/doc/imtcp.html),
 [UDP](http://www.rsyslog.com/doc/imudp.html),
 [RELP](http://www.rsyslog.com/doc/imrelp.html), [pick up messages from the journal](http://www.rsyslog.com/doc/imjournal.html) and more.
 
-To tail a file, load the [file input module](http://www.rsyslog.com/doc/imfile.html) and optionally decide
+To tail a file, load the [file input module](http://www.rsyslog.com/doc/imfile.html) and optionally decide
 how often to pool for changes. Then, for every file, specify its path
 and related parameters, like this:
 
@@ -76,8 +76,8 @@ $InputRunFileMonitor                # start monitoring this file
 If you have issues with `logrotate` or other utilities that truncate or
 organize the files you monitor, upgrade rsyslog to version 8.1.5 or
 later and the problems should go away. The file input module gets
-[inotify](https://en.wikipedia.org/wiki/Inotify)support and you also have
-a [new configuration format](http://www.rsyslog.com/doc/rainerscript.html) at your disposal,
+[inotify](https://en.wikipedia.org/wiki/Inotify) support and you also have
+a [new configuration format](http://www.rsyslog.com/doc/rainerscript.html) at your disposal,
 which is easier to maintain:
 
 **Tailing Files via Inotify; New Config Format**  Expand source
@@ -178,13 +178,13 @@ from source).
 If you chose to authorize using static IP address, instead of
 authenticating using Logs Management application token (which is the recommended
 option), you don't need to make any configuration changes in this step.
-Instead, go to the[ Logs Management web application and authorize the public IP ](authorizing-ips-for-syslog)(or multiple IPs) of the
+Instead, go to the [Logs Management web application and authorize the public IP ](authorizing-ips-for-syslog) (or multiple IPs) of the
 server(s) from where you send your logs.
 
 To use the Logs Management application token, you'll first have to obtain it
 from your [list of Logs Management applications](https://apps.sematext.com/ui/logs).
 Then, in **/etc/rsyslog.conf**, define a
-[template](http://www.rsyslog.com/doc/rsyslog_conf_templates.html) that
+[template](http://www.rsyslog.com/doc/rsyslog_conf_templates.html) that
 forwards your messages in [CEE-formatted JSON over syslog](json-messages-over-syslog),
 where you should put your token in the `logsene-app-token`
 field:
@@ -229,7 +229,7 @@ Logs Management App. This depends on your chosen protocol.
 
 ### HTTP / HTTPS via Omelasticsearch
 
-To send your logs over HTTP, load the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html) and point it to
+To send your logs over HTTP, load the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html) and point it to
 **logsene-receiver.sematext.com** (or **logsene-receiver.sematext.com** is using Sematext Cloud Europe) on port **80**. Make sure you replace
 LOGSENE\_APP\_TOKEN\_GOES\_HERE with your actual token:
 
