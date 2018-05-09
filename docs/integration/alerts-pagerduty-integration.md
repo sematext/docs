@@ -38,6 +38,6 @@ Enter required parameters and copy incoming PagerDuty Service API Key. Click Tes
 
 Check PagerDuty's [Generating a General Access REST API Key](https://support.pagerduty.com/docs/using-the-api#section-generating-an-api-key) documentation for more information on Service API Key.
 
-**Done. **Every alert from your SPM app will be forwarded to PagerDuty,
+**Done.** Every alert from your SPM app will be forwarded to PagerDuty,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.
