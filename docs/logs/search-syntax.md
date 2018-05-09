@@ -1,5 +1,5 @@
 
-Although Logsene provides the ability to create your own queries through
+Although Sematext's centralized logging management solution  provides the ability to create your own queries through
 [its Elasticsearch API](search-through-the-elasticsearch-api), it also
 provides a rich, yet simple query syntax very much like the query syntax
 used by Google.
