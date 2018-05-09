@@ -1,8 +1,7 @@
-## Overview
 
 Although Logsene provides the ability to create your own queries through
 [its Elasticsearch API](search-through-the-elasticsearch-api), it also
-provides a rich, yet simple query syntax very much like the query syntax
+provides a rich, yet simple query syntax very much like the query syntax
 used by Google.
 
 ## Terms
@@ -36,7 +35,7 @@ message:"connection closed" AND hostname:foo.example.com
 ```
 
 Since *message* and *hostname* fields will be included in the default
-field that is searched, which Logsene creates for you behind the scenes,
+field that is searched, which Sematext's centralized logging management solution creates for you behind the scenes,
 the field indicator is not required.
 
 Note: The field is only valid for the term that it directly precedes, so
@@ -51,12 +50,12 @@ Will only find "connection" in the *message* field. It will find
 
 ## Term Modifiers
 
-Logsene supports modifying query terms to provide a wide range of
+Our Logs Management App supports modifying query terms to provide a wide range of
 searching options.
 
 ### Wildcard Searches
 
-Logsene supports single and multiple character wildcard searches within
+It also supports single and multiple character wildcard searches within
 single terms (not within phrase queries).
 
 To perform a single character wildcard search use the "?" symbol.
@@ -89,7 +88,7 @@ search.
 
 ### Regular Expression Searches
 
-Logsene supports regular expression searches matching a pattern between
+Our in cloud or on premise logging management solution supports regular expression searches matching a pattern between
 forward slashes "/". For example, to find events containing "moat" or
 "boat":
 
@@ -99,7 +98,7 @@ forward slashes "/". For example, to find events containing "moat" or
 
 ### Fuzzy Searches
 
-Logsene supports fuzzy searches based on Damerau-Levenshtein Distance.
+It also supports fuzzy searches based on Damerau-Levenshtein Distance.
 To do a fuzzy search use the tilde, "~", symbol at the end of a Single
 word Term. For example to search for a term similar in spelling to
 "roam" use the fuzzy search:
@@ -122,7 +121,7 @@ distances.
 
 ### Proximity Searches
 
-Logsene supports finding words are a within a specific distance away. To
+Logging management app search supports finding words are a within a specific distance away. To
 do a proximity search use the tilde, "~", symbol at the end of a Phrase.
 For example to search for a "database" and "error" within 10 words of
 each other in an event use the search:
@@ -159,9 +158,7 @@ queries are denoted by curly brackets.
 
 ## Boolean Operators
 
-Boolean operators allow terms to be combined through logic operators.
-Logsene supports AND, "+", OR, NOT and "-" as Boolean operators(Note:
-Boolean operators must be ALL CAPS).
+Boolean operators allow terms to be combined through logic operators, supports AND, "+", OR, NOT and "-" as Boolean operators(Note: Boolean operators must be ALL CAPS).
 
 ### OR
 
@@ -235,11 +232,9 @@ to" use the query:
 +"database connection" -"failed to"
 ```
 
- 
-
 ## Grouping
 
-Logsene supports using parentheses to group clauses to form sub queries.
+Sematext's centralized logging management solution supports using parentheses to group clauses to form sub queries.
 This can be very useful if you want to control the boolean logic for a
 query.
 
@@ -254,7 +249,7 @@ exist and either term "database" or "solr" exist.
 
 ## Field Grouping
 
-Logsene supports using parentheses to group multiple clauses to a single
+It also supports using parentheses to group multiple clauses to a single
 field.
 
 To search for a title that contains both the word "closed" and the
@@ -263,13 +258,10 @@ phrase "database connection" use the query:
 ``` code
 message:(+closed +"database connection")
 ```
-
- 
-
 ## Escaping Special Characters
 
-Logsene supports escaping special characters that are part of the query
-syntax. The current list special characters are
+Escaping special characters that are part of the query
+syntax is another feature in our logs management application. The current list special characters are
 
 \+ - && || \! ( ) { } \[ \] ^ " ~ \* ? : \\ /
 
@@ -279,4 +271,3 @@ to search for (1+1):2 use the query:
 ``` code
 \(1\+1\)\:2
 ```
-
