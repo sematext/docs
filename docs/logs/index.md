@@ -2,7 +2,7 @@ Title: Log management
 
 Think of Sematext Logs as logging as a service or your own logging box in the cloud (or [on your own infrastructure](../sematext-enterprise) if you really can't ship logs out to the cloud). 
 
-It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and [searching](searching-log-events).
+It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is [Elasticsearch API for indexing](index-events-via-elasticsearch-api) and [searching](searching-log-events).
 
 <img alt="Sematext Monitoring UI screen" src="../images/logs/logsene-ui.png" title="Sematext Logging UI screen">
 
