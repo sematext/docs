@@ -28,7 +28,7 @@ Please refer to [PagerDuty's guide](https://www.pagerduty.com/docs/guides/semate
 
 ## **In Sematext**
 
-Navigate to [Sematext Integrations Overview](https://apps.sematext.com/ui/integrations/), scroll down to notification hooks section, and select PagerDuty card to create a new notification hook.
+Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Pagerduty card to create a new Slack notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
