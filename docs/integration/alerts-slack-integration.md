@@ -51,7 +51,7 @@ Visit [Building Slack apps](https://api.slack.com/slack-apps) for more informati
 
 ### In Sematext
 
-Navigate to [Sematext Integrations Overview](https://apps.sematext.com/ui/integrations/), scroll down to notification hooks section, and select Slack card to create a new notification hook.
+Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Slack card to create a new Slack notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
@@ -59,6 +59,6 @@ Select **Slack Web API** option in the form, enter required parameters and copy 
 
 ![Slack Incoming Webhooks Integration](https://sematext.com/docs/images/integrations/slack-api-integration.png  "Slack API integration")
 
-That's it. Notifications sent to Slack can also be sent via other channels such as e-mail, PagerDuty, Nagios, etc. Check [Alerts](integration) documentation page to learn more about other channels and types of alerts available.  
+That's it. Notifications sent to Slack can also be sent via other channels such as e-mail, PagerDuty, Nagios, etc. Check [Alerts](/integration) to learn more about other channels and types of alerts available.  
 
 We hope you enjoy using Sematext App and Infrastructure Monitoring and Log Management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com) ! You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext).
