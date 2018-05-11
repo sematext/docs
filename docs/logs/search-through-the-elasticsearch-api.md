@@ -10,7 +10,7 @@ When you use the API, here are the things you need to know:
 
 ## Searching
 
-Our centralized logging management solution supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to Logsene. The supported Search API's are:
+Our centralized logging management solution supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search API's are:
 
   - URI based search
   - Request body based search
