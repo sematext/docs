@@ -4,13 +4,12 @@ Title: Sematext Logs FAQ
 
 **How many logs can I store?**
 
-There is no limit to how many logs you can store in your Logsene app.
+There is no limit to how many logs you can store in your logging management app.
  That said, you should try to pick the ideal Daily Volume when picking
-your Logsene plan, as that is going to give you the most optimal $/GB
+your plan, as that is going to give you the most optimal $/GB
 price.  If you pick too small Daily Volume and often go over the
 selected volume your $/GB price will be higher than if you picked the
-next higher Daily
-Volume.
+next higher Daily Volume.
 
 **How many fields can my log events have?**
 
@@ -19,24 +18,24 @@ structure your logs in order to get the most value out of them, and
 that typically includes having a manageable number of fields in your
 logs.
 
-**How can I check the number of logs I currently have in a Logsene app or how many GB/day I am shipping to Logsene?**
+**How can I check the number of logs I currently have in a logging app or how many GB/day I am shipping to your  centralized logging management solution ?**
 
 From the application, click the `App Actions` button and select
-`Storage`. There's also `Settings` button next to [any of your Logsene apps](https://apps.sematext.com/ui/logs) in
-the `Services > See all Logsene apps`. You can also do that from Kibana
+`Storage`. There's also `Settings` button next to [any of your Logs apps](https://apps.sematext.com/ui/logs) in
+the `Services > See all Logs apps`. You can also do that from Kibana
 by searching for all your logs without adding any time filters. The
 number of hits represents the number of all your logs.
 
 **How long are my logs stored?**
 
 How long your logs are stored depends on what Data Retention you
-selected when you picked your Logsene plan.  Each Logsene app can have a
+selected when you picked your Logging Management App plan.  Each such app can have a
 different Daily Retention, Daily Volume, and plan.  You can change
 retention, volume, and plan at any time.
 
 **Can I send old logs?**
 
-Yes, you can send all logs.  However, keep in mind your Logsene app's
+Yes, you can send all logs.  However, keep in mind your logging app's
 Data Retention settings.  For example, if your retention is set to 7
 days and you send logs that are 10 days old (i.e. they contain a
 timestamp from 10 days ago), they will get accepted, but will get
@@ -52,47 +51,46 @@ Use [Logagent](/logagent).  With Logagent you can then do: ```cat
 
 Data retention mechanism is responsible for removing old log events.
 If a log is 15 days old and you have retention set to 7 days, that log
-will remain in Logsene until the retention mechanism deletes it. For
+will remain in our centralized logging management platform until the retention mechanism deletes it. For
 paid plans we remove whole 24-hour periods once a day. For free plans we
-remove old data every 30
-minutes.
+remove old data every 30 minutes.
 
 **Is data retention based on index/import/upload time or the actual log event @timestamp?**
 
-Data retention is based on log event @timestamp. Logsene app's
+Data retention is based on log event @timestamp. Logging app's
 retention removes data whose @timestamp is older than the retention
 setting.
 
-**Are logs shipped to Logsene ever rejected?**
+**Are logs shipped to Logs Management App ever rejected?**
 
-When you pick a Daily Volume we automatically set another Logsene App
+When you pick a Daily Volume we automatically set another logging system
 property called *Max* Daily Volume.  By default we set it to 2x the
-selected Daily Volume.  When this limit is hit Logsene will stop
-accepting new logs for that Logsene app until the next day (00:00 UTC).
+selected Daily Volume.  When this limit is hit, our centralized logging management solution will stop
+accepting new logs for that logging app until the next day (00:00 UTC).
  This Max Daily Volume is adjustable, so you can set it to whichever
 value you'd like.  This Max Daily Volume limit prevents run-away logging
-from causing over-billing.  Logsene will send email notifications before
+from causing over-billing. Logs Management App will send email notifications before
 this limit is reached.
 
-**What is the maximum log size Logsene will accept?**
+**What is the maximum log size Logs Management App will accept?**
 
 That depends on the plan you selected for your application. If your
-application is using the *Basic* plan, Logsene will accept logs up to 64
-KB in size. If your application is using the *Standard* plan, Logsene
+application is using the *Basic* plan, our logging management platform will accept logs up to 64
+KB in size. If your application is using the *Standard* plan, it
 will allow logs up to 128 KB. If your application is using the *Pro*
-plan, Logsene will accept logs up to 256 KB in size. If your logs are
+plan, it will accept logs up to 256 KB in size. If your logs are
 larger than the mentioned limits, please consider using the *Enterprise*
 plan.
 
-**My logs have special structure.  Can Logsene handle that?**
+**My logs have special structure.  Can Logs Management App handle that?**
 
 Yes, if the default log index fields (also known as index mapping)
 don't fit your needs you can create completely custom index mapping.
-See [Custom Logsene Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
+See [Custom Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
 
-**I have multiple log sources - should I send them all to the same Logsene app?**
+**I have multiple log sources - should I send them all to the same logging app?**
 
-Sending logs from multiple log sources to the same Logsene app is not
+Sending logs from multiple log sources to the same logging app is not
 a problem at all.  However, if you have multiple different log
 structures (different "fields" in the logs), see the next FAQ
 entry.
@@ -100,22 +98,22 @@ entry.
 **I have multiple different log structures, each with a different set of fields.  How should I handle that?**
 
 If you have N different log structures, the best way to handle that
-is by creating N Logsene Apps, each with its own index mapping.  For
+is by creating N logging apps, each with its own index mapping.  For
 example, you may have web server logs, your system logs in
 /var/log/messages, and your custom application logs.  Each of these 3
 types of logs has a different structure.  The web server logs probably
 use Apache Common Log format, the logs in /var/log/messages have syslog
 structure, and your own application's logs can be in any format your
 application happens to use.  To handle all 3 log formats elegantly
-simply create 3 separate Logsene Apps and use a different format for
+simply create 3 separate logging apps and use a different format for
 each of them.  If you want to be able to search all logs together, even
 when they have different fields, you can do that - just ship them all to
-the same Logsene App.  The thing to watch out for are fields that have
+the same logging app.  The thing to watch out for are fields that have
 the same name, but different data type.  For example, if one log source
 has a purely numeric field "size" and another log source also has a
 field "size", but can have non-numeric values, this will cause issues.
- Thus, either keep logs of different structures in separate Logsene
-Apps or make sure there are no conflicting fields.
+ Thus, either keep logs of different structures in separate logging
+app or make sure there are no conflicting fields.
 
 **My data structure changed, can I reindex my data automatically?**
 
@@ -131,7 +129,7 @@ result in you hitting your Max Daily Volume Limit.
 
 **Is automatic reindex free?**
 
-Using Logsene reindex functionality is available for all plans and
+Using Sematext's Logs Management App reindex functionality is available for all plans and
 the normal plan charges apply. Because reindexing counts just like
 the original data ingestion, before reindexing the estimated cost of
 reindexing is shown in the UI.
@@ -150,7 +148,7 @@ You can use [numerous log shippers, logging libraries, and platform integrations
 
 **How can I import logs from my existing Elasticsearch / ELK / Elastic stack?**
 
-You can use Logstash to copy logs from your own ELK / Elastic Stack to Logsene as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
+You can use Logstash to copy logs from your own ELK / Elastic Stack to our Logs Management App as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
 
 **How can I ship logs from Android and iOS apps?**
 
@@ -210,9 +208,9 @@ Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handl
 
 ### Plans & Prices
 
-**How much does Logsene cost?**
+**How much does your centralized logging management solution cost?**
 
-Check the [Logsene Plans &
+Check the [Logs Management App Plans &
 Prices](https://www.sematext.com/logsene/pricing).
 
 **What happens with my logs when I change from the free to a paid plan or vice versa?**
@@ -250,14 +248,14 @@ UTC) and you send logs with timestamps in your local time, but without
 specifying your local timezone, like this: 2016-01-30T14:00:00.000Z –
 this timestamp actually represents 14:00 in UTC.  However, if it 14:00
 in your timezone, which is 1 hour ahead of UTC, that means that 14:00
-UTC is actually 1 hours in the future.  Currently, Logsene does not
+UTC is actually 1 hours in the future.  Currently, our Logs Management App does not
 display logs that have timestamps in the future, but it does accept
 them, and shows them when those timestamps stop being in the future.
 
 Another possibility why you are not seeing your logs is that their
 structure clashes with the structure of your existing logs in the same
-Logsene app.  For example, if you have sent logs with field "priority"
-as integer field then Logsene will expect all future values of
+logging app.  For example, if you have sent logs with field "priority"
+as integer field then Sematext's Logging Platform will expect all future values of
 "priority" field to be integers.  Sending a string value in a "priority"
 field will fail.  Note that you *can* change the underlying field
 "mapping" at any time - see elsewhere in this FAQ.
@@ -298,7 +296,7 @@ In case you see some other result:
     ports are open for outbound traffic
   - check your DNS (see below)
 
-2. Check if your DNS has correct entries for Logsene Receiver:
+2. Check if your DNS has correct entries for Logs Management App Receiver:
 
 ``` bash
 nslookup logsene-receiver.sematext.com
@@ -342,7 +340,7 @@ Address: 52.44.248.43
 
 ### Security
 
-**Can I ship data to Logsene using a secure and encrypted transport like TLS/SSL or HTTPS?**
+**Can I ship data to your centralized logging management solution using a secure and encrypted transport like TLS/SSL or HTTPS?**
 
 Yes, all data can be shipped both over encrypted channels like
 TLS/SSL and HTTPS, or via their unencrypted counter-parts.
@@ -351,7 +349,7 @@ information about how to configure log shipping.
 
 **How secure is my data?**
 
-Logsene runs on Amazon AWS, whose infrastructure follows IT security
+Our Logging Management Platform runs on Amazon AWS, whose infrastructure follows IT security
 best practices and adheres to a number of compliance standards such
 as SOC 1/SSAE, SOC 2, SOC 3,16/ISAE 3402 (formerly SAS 70 Type II),
 FISMA, DIACAP, FedRAMP, and HIPAA.  For more information about AWS
@@ -360,11 +358,11 @@ security and compliance certifications see:
 
 **Where is my data stored?**
 
-Logsene runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
+Logs Management App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
 
 **How long is my data stored?**
 
-This depends on the data retention you selected for each of your Logsene
+This depends on the data retention you selected for each of your logging
 apps.  Backups are stored in S3 and kept for 90 days.
 
 ### Kibana
@@ -407,7 +405,7 @@ Kibana.
 **Why are new fields not visible in Kibana and how do I fix it?**
 
 Kibana doesn't update field lists automatically. This problem is not
-specific to Logsene, but is a general Kibana issue. If you add new
+specific to our Logs Management App, but is a general Kibana issue. If you add new
 fields to an index you must refresh the fields in Kibana. New fields
 will appear and will be ready to use in your visualizations and
 searches.
@@ -430,14 +428,14 @@ Kibana requires the following high level steps to create a dashboard:
 
 **Why can't I draw charts (dashboards) using a given field?**
 
-By default all string values sent to Logsene are analyzed. For each
+By default all string values sent to Logs Management App are analyzed. For each
 analyzed fields we also create .raw field which is not analyzed. If you
 want to use string field for drawing charts you should either use .raw
 field or change index templates to use not_analyzed type
 (<https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/>).
- Let's consider and example. We have a field called 'title'. Logsene
+ Let's consider and example. We have a field called 'title'. Our logging management solution
 uses this field as analyzed one so it is not possible to use it in
-dashboards. Logsene also creates automatically a field called
+dashboards. It also creates automatically a field called
 'title.raw' and this one can be used for charts.
 
 ### Timestamps
@@ -489,7 +487,7 @@ formats.
 
 **What happens if I try to send data with @timestamp older than my retention time?**
 
-You can send old logs.  However, keep in mind your Logsene app's
+You can send old logs.  However, keep in mind your logging app's
 retention settings.  For example, if your retention is set to 7 days and
 you send logs that are 10 days old (i.e. they contain a timestamp from
 10 days ago), they will get accepted and processed, but will get removed
@@ -499,7 +497,7 @@ hours.
 **What happens if I try to send data with @timestamp that is in the future?**
 
 You can send logs with timestamps in the future, but they will not be
-shown in Logsene until their timestamps stops being in the future.  For
+shown in Logs Management App until their timestamps stops being in the future.  For
 example, if you send logs that are "2 hours ahead of real time" they
 will be accepted, but will not be displayed until 2 hours
 later.
@@ -509,18 +507,18 @@ later.
 
 ### Alerts
 
-**What are Logsene Alerts?**
+**What are Logs Management App Alerts?**
 
-Logsene alerts are based on saved searches that trigger alert
+Logging app alerts are based on saved searches that trigger alert
 notifications when these saved searches meet a certain threshold
 condition in your logs - e.g. less than N matches in 5 minutes, more
 than M matches in 3 minutes, etc., or when such saved searches detect
 *sudden changes* in the number/volume of matching logs - i.e.,
 anomalies.
 
-**How to create Logsene Alerts?**
+**How to create Alerts in Logs Management App?**
 
-Logsene Alerts are added by clicking the disk icon on the right side
+Alerts are added by clicking the disk icon on the right side
 of the search box. Please see screenshots
 below.
 
@@ -528,7 +526,7 @@ below.
 
  ![](attachments/6520901/42237954.png) ![](attachments/6520901/42237953.png?height=250)
 
-**How to view Logsene Alerts?**
+**How to view Alerts?**
 
 All saved queries are listed in "Search Queries" modal because all
 Alert Queries are also Saved Queries. To view this modal just click a
@@ -558,7 +556,7 @@ matches on a regular bases, but you want to watch out for sudden changes
 in volume, whether dips or spikes, use Algolerts (Anomaly
 Detection-based Alerts). An extreme example that you may actually like
 is an Alert Query that matches all logs - "\*" - a single wildcard
-character for a query. If you use that for an Algolert then Logsene will
+character for a query. If you use that for an Algolert then Logs Management App will
 notify you when the overall volume of your logs suddenly changes, which
 may be a signal that you should look for what suddenly increased logging
 (e.g. maybe something started logging lots of errors, exceptions,
@@ -568,14 +566,14 @@ logs).
 
 **Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?**
 
-Yes. Logsene lets one configure arbitrary WebHooks to call with Alert
+Yes. Our centralized logging management solution lets one configure arbitrary WebHooks to call with Alert
 event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
 
 ### Log Archiving
 
 **How to obtain credentials from AWS?**
 
-For Logsene AWS S3 Settings, besides S3 bucket name, you'll need
+For our Logs Management App AWS S3 Settings, besides S3 bucket name, you'll need
 `Access Key ID` and `Secret Access Key`. 
 
 Log in to your AWS account, go to `IAM > Users` and open (or create) a
@@ -590,7 +588,7 @@ Click on `Create Access Key`:
 Note down `Access Key ID` and `Secret Access Key` (you can `Download
 Credentials` to a safe place if you like, but it's not necessary).
 
-**How do I setup S3 archiving for my Logsene app?**
+**How do I setup S3 archiving for my logging app?**
 
 In Sematext web app, go to `Integrations > Apps` view
 and choose `Configure S3` using row context menu (*three-dots* icon)
@@ -605,7 +603,7 @@ Enter `Bucket name` (just the simple name, not fully qualified ARN) and
 choose `Compression` (read on for more details about compression) and
 confirm with `Verify and save`.
 
-At this point, Logsene is going to check whether the information is
+At this point, Logs Management App is going to check whether the information is
 valid using the AWS S3 API.
 
 After the check is done you'll see a feedback message confirming
@@ -614,7 +612,7 @@ message.
 
 **Which credentials are required when using AWS S3 Bucket Access Policy?**
 
-In order to verify access to your S3 bucket, Logsene will first use
+In order to verify access to your S3 bucket, Logs Management App will first use
 the credentials to log in and, if successful, it will proceed to create
 a dummy object inside the bucket.
 
@@ -658,7 +656,7 @@ brew install lz4
 brew install liblzf
 ```
 
-**Which folder structure Logsene uses when uploading logs to S3?**
+**Which folder structure your centralized logging management solution uses when uploading logs to S3?**
 
 Inside a bucket that you specify in settings, the following folder
 hierarchy is created:
