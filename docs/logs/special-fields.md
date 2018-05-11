@@ -1,4 +1,4 @@
-Logsene looks for the following fields in logs and gives them a special
+Sematext's Logs Management App looks for the following fields in logs and gives them a special
 treatment:
 
   - host
