@@ -2,7 +2,7 @@ By connecting to port **80** (or 443, if you want HTTPS)
 on **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe), you can use the Elasticsearch API to search
 through your data, in the same way [you can send it](sending-log-events).
 
-Logsene comes with its own UI, which integrates nicely with other Sematext Apps, such as [SPM](http://sematext.com/spm/) (see  [Monitoring Documentation](../monitoring/coda-hale-metrics-reporter)). 
+Logs Management App comes with its own UI, which integrates nicely with other Sematext Apps, such as [SPM](http://sematext.com/spm/) (see  [Monitoring Documentation](../monitoring/coda-hale-metrics-reporter)). 
 
 <img alt="Sematext Monitoring UI screen" src="/docs/images/logs/logsene-ui.png" title="Sematext Logging UI screen">
 
