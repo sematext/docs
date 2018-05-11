@@ -15,7 +15,7 @@ A Phrase is a group of words surrounded by double quotes such as "hello
 dolly".
 
 Multiple terms can be combined together with Boolean operators to form a
-more complex query (see below). 
+more complex query (see below).
 
 ## Fields
 
@@ -27,7 +27,7 @@ You can search any field by typing the field name followed by a colon
 ":" and then the term you are looking for.
 
 As an example, let's assume your logs contain two fields, *message* and
-*hostname. *If you want to find an event mentioning "connection closed"
+*hostname. *If you want to find an event mentioning "connection closed"
 from a host "foo.example.com", you can enter:
 
 ``` code
@@ -35,8 +35,7 @@ message:"connection closed" AND hostname:foo.example.com
 ```
 
 Since *message* and *hostname* fields will be included in the default
-field that is searched, which Sematext's centralized logging management solution creates for you behind the scenes,
-the field indicator is not required.
+field that is searched, which Sematext's centralized logging management solution creates for you behind the scenes, the field indicator is not required.
 
 Note: The field is only valid for the term that it directly precedes, so
 the query
@@ -121,7 +120,7 @@ distances.
 
 ### Proximity Searches
 
-Logging management app search supports finding words are a within a specific distance away. To
+Logging management app search supports finding words are a within a specific distance away. To
 do a proximity search use the tilde, "~", symbol at the end of a Phrase.
 For example to search for a "database" and "error" within 10 words of
 each other in an event use the search:
@@ -235,8 +234,7 @@ to" use the query:
 ## Grouping
 
 Sematext's centralized logging management solution supports using parentheses to group clauses to form sub queries.
-This can be very useful if you want to control the boolean logic for a
-query.
+This can be very useful if you want to control the boolean logic for a query.
 
 To search for either "database" or "solr" and "error" use the query:
 
@@ -261,7 +259,7 @@ message:(+closed +"database connection")
 ## Escaping Special Characters
 
 Escaping special characters that are part of the query
-syntax is another feature in our logs management application. The current list special characters are
+syntax is another feature in our logs management app. The current list special characters are
 
 \+ - && || \! ( ) { } \[ \] ^ " ~ \* ? : \\ /
 
