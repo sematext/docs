@@ -16,6 +16,4 @@ Usage example of a `geo` field which has geo-point type is demonstrated below:
 
 **Please note:**
 
-If you want to use this field type you can either send documents with a field in a format presented above. Data in such a format will be automatically detected as geo-point. Alternatively you can go to
-[Field Editor](https://apps.sematext.com/ui/integrations/apps/6938/wizard)
-to manually create a field of geo-point type.
+If you want to use this field type you can either send documents with a field in a format presented above. Data in such a format will be automatically detected as geo-point. Alternatively you can go to Field Editor to manually create a field of geo-point type.
