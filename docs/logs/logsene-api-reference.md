@@ -2,7 +2,7 @@
 
 ### Introduction to Management API
 
-Logsene HTTP API is used to easily manage and access your Logsene Apps
+Logs Management App HTTP API is used to easily manage and access your logging apps
 and their data remotely, without the need to be logged-in via a browser.
 It also makes it possible to automate certain tasks, such as creation of
 new Apps, definition of Alert Rules, etc.  
@@ -12,7 +12,7 @@ if you are a guest to some other Account under which you want to manage
 Apps, Alerts..., then API key of that Account) - it can be
 found **[here](https://apps.sematext.com/ui/team/accounts)**.
 API key needs to be passed as an attribute to all API calls and is used
-by Logsene to authenticate Account under which some API call is done.
+by our centralized logging management solution to authenticate Account under which some API call is done.
  API keys and App tokens used in this document are fake.  Use your own
 API key and App tokens.
 
@@ -26,9 +26,9 @@ Account, Apps, etc.  For more info about Account Sharing please see [SPM FAQ](..
 
 To use the search APIs, see [Search through the Elasticsearch API](search-through-the-elasticsearch-api). This API
 is **fully compatible with Elasticsearch's APIs**. To use it you need
-just your Logsene App tokens, not the API key.  The rest of this
+just your Logs Management App tokens, not the API key.  The rest of this
 document describes only the app management APIs.  For searching your
-logs from the terminal/console, see [Logsene CLI](logsene-cli).
+logs from the terminal/console, see [Logs Management App CLI](logsene-cli).
 
 ### Request/Response format
 
@@ -74,9 +74,9 @@ API call examples use apps.sematext.com.  If you are using Sematext Cloud Europe
 
 ### Apps API
 
-#### Create Logsene App
+#### Create Logs App
 
-Creates new Logsene app under referenced account.
+Creates new logging app under referenced account.
 
 <table>
 <colgroup>
@@ -108,7 +108,7 @@ Description
 <td><p><strong>apiKey</strong> (of account under which app will be created)</p>
 <p><strong>name </strong>(of app which will be created)</p>
 <p><strong>discountCode</strong> (optional parameter, send only if you have a valid code)</p></td>
-<td><p>Creates new <strong>Logsene</strong> application under account defined by <strong>apiKey</strong>, with name<strong> name </strong>(such name should be unique among other Logsene apps under this account)</p></td>
+<td><p>Creates new logging management apps under account defined by <strong>apiKey</strong>, with name<strong> name </strong>(such name should be unique among other apps under this account)</p></td>
 </tr>
 </tbody>
 </table>
@@ -235,18 +235,18 @@ Example of a success response (with HTTP code 200):
 ```
 
 **Note**: It will return all apps registered under provided account, not
-just Logsene apps.
+just logging management apps.
 
 ### Alerts API
 
-Logsene Alerts HTTP API lets you:
+Logs Management App Alerts HTTP API lets you:
 
   - list all alerts defined for some app
   - delete/enable/disable individual alerts
   - create new alerts (of any type: threshold, anomaly)
   - list alert notifications
 
-When using Logsene Alerts API, you will need to use API key which
+When using our centralized logging management solution Alerts API, you will need to use API key which
 belongs to OWNER of the app to which alerts are related. If you are
 managing alerts for your apps, then just use your API key. If you are
 managing alerts for apps that belong to some other account (and your are
@@ -258,7 +258,7 @@ just have to consider which account you are currently logged into).
 #### List Alerts
 
 Fetches all alerts of specific type (threshold, anomaly) for a
-particular Logsene app.
+particular logging management app.
 
 <table>
 <colgroup>
@@ -373,7 +373,7 @@ adjust some attributes).
 
 #### Create Alert
 
-There are 2 types of alerts available in Logsene - threshold and
+There are 2 types of alerts available in Logs Management App - threshold and
 anomaly. Each of them has different attributes so there are 2 different
 API calls for creating them.
 
@@ -411,7 +411,7 @@ Description
 <td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
 <p><strong>appToken </strong>(of app for which alert is created)</p>
 <p>+ attributes specific to threshold alert</p></td>
-<td>Creates new <strong>threshold</strong> based query alert for Logsene app<strong> </strong>defined with <strong>appToken</strong></td>
+<td>Creates new <strong>threshold</strong> based query alert for logging management app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -491,7 +491,7 @@ Description
 <td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
 <p><strong>appToken </strong>(of app for which alert is created)</p>
 <p>+ attributes specific to anomaly alert</p></td>
-<td>Creates new <strong>anomaly</strong> query alert for Logsene app<strong> </strong>defined with <strong>appToken</strong></td>
+<td>Creates new <strong>anomaly</strong> query alert for logging management app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -859,7 +859,7 @@ subscriptions and for triggering emailing of reports.
 
 #### List Subscriptions
 
-For particular Logsene application, this API call will return a list of
+For particular Logs Management apps, this API call will return a list of
 all existing subscriptions.
 
 <table>
@@ -893,7 +893,7 @@ Description
 <td>POST</td>
 <td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
 <p><strong>appToken</strong> (token of app whose metrics info is being fetched)</p></td>
-<td><p>Fetches subscriptions for Logsene app defined with <strong>appToken</strong>.</p>
+<td><p>Fetches subscriptions for logging app defined with <strong>appToken</strong>.</p>
 <p> </p></td>
 </tr>
 </tbody>
@@ -982,13 +982,13 @@ Example of a success response (with HTTP code 200):
 
 ### Saved Queries API (Coming soon\!)
 
-Logsene Saved Queries HTTP API lets you:
+Logs Management App Saved Queries HTTP API lets you:
 
   - list all saved queries defined for some app
   - delete individual saved queries
   - create new saved query
 
-When using Logsene Saved Queries API, you will need to use API key which
+When using our Saved Queries API, you will need to use API key which
 belongs to OWNER of the app to which saved queries are related. If you
 are managing saved queries for your apps, then just use your API key. If
 you are managing saved queries for apps that belong to some other
@@ -1000,7 +1000,7 @@ just have to consider which account you are currently logged into).
 
 #### List Saved Queries
 
-Fetches saved queries for a particular Logsene app.
+Fetches saved queries for a particular logging management app.
 
 <table>
 <colgroup>
@@ -1104,7 +1104,7 @@ Description
 <p><strong>appToken </strong>(of app for which saved query is created)</p>
 <p><strong>queryName</strong> (display name, does not have to be unique)</p>
 <p><strong>queryString</strong> (saved query string)</p></td>
-<td>Creates new saved query with provided name and query string for Logsene app<strong> </strong>defined with <strong>appToken</strong></td>
+<td>Creates new saved query with provided name and query string for logging management app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
