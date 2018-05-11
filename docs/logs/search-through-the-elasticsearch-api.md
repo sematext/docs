@@ -1,5 +1,5 @@
 
-With Logsene, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
+With Logs Management App, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
 You can also use this API to [index events or change the mapping](index-events-via-elasticsearch-api).
 
 When you use the API, here are the things you need to know:
@@ -10,7 +10,7 @@ When you use the API, here are the things you need to know:
 
 ## Searching
 
-Logsene supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to Logsene. The supported Search API's are:
+Our centralized logging management solution supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to Logsene. The supported Search API's are:
 
   - URI based search
   - Request body based search
@@ -18,13 +18,13 @@ Logsene supports a subset of Elasticsearch APIs, with rich query language and ex
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logsene app token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe).
+For each of the operations you'll need your [Logs management app token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe).
 
-In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logsene App token, of course.
+In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logs management app token, of course.
 
 ### URI based search
 
-The simplest search method to get your data out of Logsene is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html).
+The simplest search method to get your data out of our logging management platform is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html).
 
 You need to provide the query using the *q* parameter. For example, to search for the *internal* and *connection* terms you would run the following:
 
@@ -94,7 +94,7 @@ curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_
 
 #### Response format
 
-Logsene, just like Elasticsearch, talks to you using JSON. Here's an
+Our Logs Management App, just like Elasticsearch, talks to you using JSON. Here's an
 example response:
 
 ``` JSON
@@ -223,7 +223,7 @@ The real example of the results returned look as follows:
 
 The real time GET operation is very simple and lets us get a single
 document out of a particular Logsene index. To retrieve a document we
-need to provide Logsene with the following information:
+need to provide Logs Management App with the following information:
 
   - **index name** - it will be *<token\>\_free* if your Logsene app
     trial has expired and you don't have a paid plan, or
@@ -251,7 +251,7 @@ curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_f
  ]
 }'
 ```
-As you can see, we are sending a *HTTP GET* request to the *\_mget* REST end-point of Logsene receiver and get back a JSON object that contains the *docs* array. Each entry of the *docs* array is identifying a single document by providing the index name (the *\_index* property), the type name (the *\_type* property) and the document identifier (the *\_id* property).
+As you can see, we are sending a *HTTP GET* request to the *\_mget* REST end-point of Logs Management App receiver and get back a JSON object that contains the *docs* array. Each entry of the *docs* array is identifying a single document by providing the index name (the *\_index* property), the type name (the *\_type* property) and the document identifier (the *\_id* property).
 
 The response to the above command would look as follows:
 
@@ -277,7 +277,7 @@ The response to the above command would look as follows:
 
 ### Multiple Search operations in a single request
 
-Similar to MGet, Logsene lets you run multiple search requests in a single HTTP request using [Elasticsearch Multi Search API](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html).
+Similar to MGet, our centralized logging management platform lets you run multiple search requests in a single HTTP request using [Elasticsearch Multi Search API](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html).
 
 The request needs to be run against \_msearch REST end-point and each query needs to include two lines - meta line defining the index name and a line defining the query using [Elasticsearch query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html).
 
@@ -290,8 +290,7 @@ curl -XGET 'logsene-receiver.sematext.com/_msearch?pretty' --data-binary '{ "ind
 { "query" : { "term" : { "status" : 200 } }, "size" : 1 }'
 ```
 
-Keep in mind that Multiple Search API is using *--data-binary* switch in the *curl* command to keep the new line characters in the request. This
-is crucial to make the Multiple Search API working correctly.
+Keep in mind that Multiple Search API is using *--data-binary* switch in the *curl* command to keep the new line characters in the request. This is crucial to make the Multiple Search API working correctly.
 
 The response includes standard search response for each of the included queries and for the above query will look as follows:
 
