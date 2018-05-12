@@ -382,7 +382,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/syslog">syslog-ng</a> - very fast and very light on resources, good docs, available as both free and paid version</li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/syslogd">syslogd</a> - quite old, light on resources, not very feature rich</li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/fluentd">Fluentd</a> - cross platform, easy to get started, horizontally scalable, available as both free and paid version</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/nxlog">Log</a> - cross platform but mostly used on Windows, easy to get started, available as both free and paid version</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/nxlog">NXLog</a> - cross platform but mostly used on Windows, easy to get started, available as both free and paid version</li>
 </ul>
 
 ** Programming Languages **
@@ -408,7 +408,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rancheros">RancherOS</a></li>
 </ul>
 
-** Docker **
+** Containers **
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/docker">Docker</a></li>
@@ -416,7 +416,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/mesosmarathon">Mesos Marathon</a></li>
 </ul>
 
-** Cloud Iass / Pass **
+** Cloud IaaS / PaaS **
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awss3">AWS S3</a></li>
