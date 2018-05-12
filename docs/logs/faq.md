@@ -553,7 +553,7 @@ anomalies.
 
 **How to create Alerts in Logs Management App?**
 
-Alerts are added by clicking Save Query Icon located next to the Logs Management App input field. Enter query info and select option to enable alerts. Alerts specific panel will expand and allow you to customize alert specific to that particular search query.
+Alerts are added by clicking Save Query icon located next to the Logs Management App input field. Enter query info and select option to enable alerts. Alerts panel will expand and allow you to customize alert specific to that particular search query.
 
 <img alt="Save Alert in Logging App" src="/docs/images/logs/save-alert-in-logging-app.gif" title="Save Alert in Logging App">
 
@@ -563,7 +563,7 @@ Click on Saved Queries Icon located next to the app's search input field.
 
 <img alt="Saved Queries" src="/docs/images/logs/saved-queries.png" title="Saved Queries">
 
-Saved Queries page will open and your queries and reelated alerts will be displayed here
+Saved Queries page will open and your queries and related alerts will be displayed here
 
 <img alt="Saved Alerts" src="/docs/images/logs/saved-alerts-tab.png" title="Saved Alerts">
 
