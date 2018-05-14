@@ -23,8 +23,8 @@ pages:
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
         - Kibana: logs/kibana.md
+      - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
-      - Geo-point: logs/geo-point.md
       - Special Fields: logs/special-fields.md
       - API: logs/logsene-api-reference.md
       - FAQ: logs/faq.md

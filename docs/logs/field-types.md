@@ -1,0 +1,106 @@
+You can see field types that you can chose in Field Editor when adding or modifying a field.
+
+## Float/Double
+
+Use this type for all fields that contain floating point numerical values. For
+example, a field with request latency values should use Float type.
+Logsene detects automatically all floating point numbers as double precision
+numbers.
+
+
+**Please note:**
+
+
+Sometimes fields that carry measurements also include units or other
+**non-numerical** data. Imagine an example of a latency field. It may
+contain values like 200ms and a size field may contain values like 5KB.
+Do not use Float type for such fields (unless you don't extract a numeric value
+inside log shipper). You can use Analyzed String or Non-Analyzed String types,
+but note that this will prevent you from applying functions like min, max, avg, etc.
+on such field.
+A better option is to configure your log shipper to strip non-numeric portion and
+ship only numerical values. This will allow you to use this field for aggregations and reports.
+
+
+Example of a document containing a floating point number:
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "latency": 11.123
+    }'
+
+## Integer/Long
+
+Use this type if you are sure that all values in this field will be always integers
+(for example counts).If you know that field contains numeric values but some of them
+can be floating point use type Float instead.
+
+Example of a document containing integer:
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "count": 11
+    }'
+
+
+## Boolean
+
+Use this type if you are sure that all values in this field will always
+be either true or false, and never anything else.
+
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "debug": true
+    }'
+
+## String
+
+### Not analyzed string
+
+Use this type if you do not need to perform full-text searches on a field. Use this type if you
+want to be able to filter on exact values and perform aggregation queries for building reports. 
+For example, labels, tags, and log severity levels, maybe even names of hosts,
+containers, etc. if you only need to filter and group by them, and do not need partial matching.
+
+Example of a document containing string field:
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "severity": "error"
+    }'
+
+### Analyzed string
+
+Use this type if you need to perform full-text, non-exact searches on a field. Note that
+we also make a Not Analyzed copy of this field (fields with .raw suffix), which
+you can use or aggregations and sorting.
+
+Example of a document containing string field:
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "message": "foo bar baz"
+    }'
+
+## Date
+
+Use this type for all date and time fields. One such field is @timestamp, which
+contains log event creation time. See [examples](supported-date-formats)
+
+## Geo-Point
+
+Geo-point data type accept latitude-longitude pairs, which can be used to store
+information about the geographical location of a point. This can be used to
+search log events geographically or by distance from a central point. This
+can be useful for example on dashboards presenting maps.
+
+Usage example of a `geo` field which has geo-point type is demonstrated below:
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "geo" : {
+        "lat": 52.40,
+        "lon": 16.93
+      },
+      "message": "Hello, Logsene!"
+    }'
+
+
+**Please note:**
+
+If you want to use this field type you can either send documents with a field in a format presented above. Data in such a format will be automatically detected as geo-point. Alternatively you can go to Field Editor to manually create a field of geo-point type.
