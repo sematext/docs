@@ -1,3 +1,5 @@
+Title: Field types
+
 You can see field types that you can chose in Field Editor when adding or modifying a field.
 
 ## Float/Double
