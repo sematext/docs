@@ -83,7 +83,7 @@ Data retention is based on log event @timestamp. Logging app's
 retention removes data whose @timestamp is older than the retention
 setting.
 
-**Are logs shipped to Logs Management App ever rejected?**
+**Are logs shipped to Logs App ever rejected?**
 
 When you pick a Daily Volume we automatically set another logging system
 property called *Max* Daily Volume.  By default we set it to 2x the
@@ -93,10 +93,10 @@ accepting new logs for that logging app until the next day (00:00 UTC).
 value you'd like.
 
 This Max Daily Volume limit prevents run-away logging
-from causing over-billing. Logs Management App will send email notifications before
+from causing over-billing. Logs App will send email notifications before
 this limit is reached.
 
-**What is the maximum log size Logs Management App will accept?**
+**What is the maximum log size Logs App will accept?**
 
 That depends on the plan you selected for your application. If your
 application is using the *Basic* plan, our logging management platform will accept logs up to 64
@@ -106,7 +106,7 @@ plan, it will accept logs up to 256 KB in size. If your logs are
 larger than the mentioned limits, please consider using the *Enterprise*
 plan.
 
-**My logs have special structure.  Can Logs Management App handle that?**
+**My logs have special structure.  Can Logs App handle that?**
 
 Yes, if the default log index fields (also known as index mapping)
 don't fit your needs you can create completely custom index mapping.
@@ -158,7 +158,7 @@ result in you hitting your Max Daily Volume Limit.
 
 **Is automatic reindex free?**
 
-Using Sematext's Logs Management App reindex functionality is available for all plans and
+Using Sematext's Logs App reindex functionality is available for all plans and
 the normal plan charges apply. Because reindexing counts just like
 the original data ingestion, before reindexing the estimated cost of
 reindexing is shown in the UI.
@@ -177,7 +177,7 @@ You can use [numerous log shippers, logging libraries, and platform integrations
 
 **How can I import logs from my existing Elasticsearch / ELK / Elastic stack?**
 
-You can use Logstash to copy logs from your own ELK / Elastic Stack to our Logs Management App as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
+You can use Logstash to copy logs from your own ELK / Elastic Stack to our Logs App as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
 
 **How can I ship logs from Android and iOS apps?**
 
@@ -239,7 +239,7 @@ Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handl
 
 **How much does your centralized logging management solution cost?**
 
-Check the [Logs Management App Plans &
+Check the [Logs App Plans &
 Prices](https://www.sematext.com/logsene/pricing).
 
 **What happens with my logs when I change from the free to a paid plan or vice versa?**
@@ -281,9 +281,9 @@ this timestamp actually represents 14:00 in UTC.  However, if it 14:00
 in your timezone, which is 1 hour ahead of UTC, that means that 14:00
 UTC is actually 1 hours in the future.
 
-Currently, our Logs Management App does not
-display logs that have timestamps in the future, but it does accept
-them, and shows them when those timestamps stop being in the future.
+Currently, our Logs App does not display logs that have timestamps in
+the future, but it does accept them, and shows them when those
+timestamps stop being in the future.
 
 Another possibility why you are not seeing your logs is that their
 structure clashes with the structure of your existing logs in the same
@@ -331,7 +331,7 @@ In case you see some other result:
     ports are open for outbound traffic
   - check your DNS (see below)
 
-2. Check if your DNS has correct entries for Logs Management App Receiver:
+2. Check if your DNS has correct entries for Logs App Receiver:
 
 ``` bash
 nslookup logsene-receiver.sematext.com
@@ -393,7 +393,7 @@ security and compliance certifications see:
 
 **Where is my data stored?**
 
-Logs Management App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
+Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
 
 **How long is my data stored?**
 
@@ -440,7 +440,7 @@ Kibana.
 **Why are new fields not visible in Kibana and how do I fix it?**
 
 Kibana doesn't update field lists automatically. This problem is not
-specific to our Logs Management App, but is a general Kibana issue. If you add new
+specific to our Logs App, but is a general Kibana issue. If you add new
 fields to an index you must refresh the fields in Kibana. New fields
 will appear and will be ready to use in your visualizations and
 searches.
@@ -463,7 +463,7 @@ Kibana requires the following high level steps to create a dashboard:
 
 **Why can't I draw charts (dashboards) using a given field?**
 
-By default all string values sent to Logs Management App are analyzed. For each
+By default all string values sent to Logs App are analyzed. For each
 analyzed fields we also create .raw field which is not analyzed. If you
 want to use string field for drawing charts you should either use .raw
 field or change index templates to use not_analyzed type
@@ -532,7 +532,7 @@ hours.
 **What happens if I try to send data with @timestamp that is in the future?**
 
 You can send logs with timestamps in the future, but they will not be
-shown in Logs Management App until their timestamps stops being in the future.  For
+shown in Logs App until their timestamps stops being in the future.  For
 example, if you send logs that are "2 hours ahead of real time" they
 will be accepted, but will not be displayed until 2 hours
 later.
@@ -542,7 +542,7 @@ later.
 
 ### Alerts
 
-**What are Logs Management App Alerts?**
+**What are Logs App Alerts?**
 
 Logging app alerts are based on saved searches that trigger alert
 notifications when these saved searches meet a certain threshold
@@ -551,9 +551,9 @@ than M matches in 3 minutes, etc., or when such saved searches detect
 *sudden changes* in the number/volume of matching logs - i.e.,
 anomalies.
 
-**How to create Alerts in Logs Management App?**
+**How to create Alerts in Logs App?**
 
-Alerts are added by clicking Save Query icon located next to the Logs Management App input field. Enter query info and select option to enable alerts. Alerts panel will expand and allow you to customize alert specific to that particular search query.
+Alerts are added by clicking Save Query icon located next to the Logs App input field. Enter query info and select option to enable alerts. Alerts panel will expand and allow you to customize alert specific to that particular search query.
 
 <img alt="Save Alert in Logging App" src="/docs/images/logs/save-alert-in-logging-app.gif" title="Save Alert in Logging App">
 
@@ -585,7 +585,7 @@ Detection-based Alerts).
 
 An extreme example that you may actually like
 is an Alert Query that matches all logs - "\*" - a single wildcard
-character for a query. If you use that for an Algolert then Logs Management App will
+character for a query. If you use that for an Algolert then Logs App will
 notify you when the overall volume of your logs suddenly changes, which
 may be a signal that you should look for what suddenly increased logging
 (e.g. maybe something started logging lots of errors, exceptions,
@@ -602,7 +602,7 @@ event information when Alert events are triggered. See [alerts FAQ](/faq#alerts)
 
 **How to obtain credentials from AWS?**
 
-For our Logs Management App AWS S3 Settings, besides S3 bucket name, you'll need
+For our Logs App AWS S3 Settings, besides S3 bucket name, you'll need
 `Access Key ID` and `Secret Access Key`.
 
 Log in to your AWS account, go to `IAM > Users` and open (or create) a
@@ -632,7 +632,7 @@ Enter `Bucket name` (just the simple name, not fully qualified ARN) and
 choose `Compression` (read on for more details about compression) and
 confirm with `Verify and save`.
 
-At this point, Logs Management App is going to check whether the information is
+At this point, Logs App is going to check whether the information is
 valid using the AWS S3 API.
 
 After the check is done you'll see a feedback message confirming
@@ -641,7 +641,7 @@ message.
 
 **Which credentials are required when using AWS S3 Bucket Access Policy?**
 
-In order to verify access to your S3 bucket, Logs Management App will first use
+In order to verify access to your S3 bucket, Logs App will first use
 the credentials to log in and, if successful, it will proceed to create
 a dummy object inside the bucket.
 
