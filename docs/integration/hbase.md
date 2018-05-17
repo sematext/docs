@@ -4,486 +4,303 @@
 
 ## Metrics
 
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-total max | jvm.memory.size.max | Max | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemMaxM</i>
-info | jvm.log.info | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogInfo</i>
-non heap used | jvm.nonheap.used | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemNonHeapUsedM</i>
-error | jvm.log.error | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogError</i>
-heap committed | jvm.heap.committed | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemHeapCommittedM</i>
-heap max | jvm.heap.size.max | Max | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemHeapMaxM</i>
-blocked | jvm.threads.blocked | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsBlocked</i>
-terminated | jvm.threads.terminated | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsTerminated</i>
-warn | jvm.log.warn | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogWarn</i>
-timed waiting | jvm.threads.waiting.timed | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsTimedWaiting</i>
-heap used | jvm.heap.used | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemHeapUsedM</i>
-fatal | jvm.log.fatal | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogFatal</i>
-non heap max | jvm.nonheap.size.max | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemNonHeapMaxM</i>
-waiting | jvm.threads.waiting | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsWaiting</i>
-new | jvm.threads.new | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsNew</i>
-non heap committed | jvm.nonheap.committed | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemNonHeapCommittedM</i>
-runnable | jvm.threads.runnable | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsRunnable</i>
-ops | hbase.ugi.groups.gets | Sum | Long | <i>Hadoop:service=HBase,name=UgiMetrics#GetGroupsNumOps</i>
-failure time | hbase.ugi.login.failure.time | Sum | Double | <i>Hadoop:service=HBase,name=UgiMetrics#LoginFailureAvgTime * LoginFailureNumOps</i>
-success time | hbase.ugi.login.success.time | Sum | Double | <i>Hadoop:service=HBase,name=UgiMetrics#LoginSuccessAvgTime * LoginSuccessNumOps</i>
-success ops | hbase.ugi.login.success | Sum | Long | <i>Hadoop:service=HBase,name=UgiMetrics#LoginSuccessNumOps</i>
-failure ops | hbase.ugi.login.failure | Sum | Long | <i>Hadoop:service=HBase,name=UgiMetrics#LoginFailureNumOps</i>
-time | hbase.ugi.groups.gets.time | Sum | Double | <i>Hadoop:service=HBase,name=UgiMetrics#v * GetGroupsNumOps</i>
-syncs | hbase.rs.wal.syncs | Sum | Long | Count of syncs the HLog to HDFS.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_num_ops</i>
-append time | hbase.rs.wal.appends.time | Sum | Double | Time an append to the log took.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendTime_num_ops * AppendTime_mean</i>
-append max time | hbase.rs.wal.appends.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendTime_max</i>
-sync time | hbase.rs.wal.syncs.time | Sum | Double | The time it took to sync the HLog to HDFS.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_num_ops * SyncTime_mean</i>
-appends | hbase.rs.wal.appends | Sum | Long | Count of appends to the log.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#appendCount</i>
-append size | hbase.rs.wal.appends.size | Sum | Double | Size (in bytes) of the data appended to the HLog.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_num_ops * AppendSize_mean</i>
-append max size | hbase.rs.wal.appends.size.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_max</i>
-append min time | hbase.rs.wal.appends.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendTime_min</i>
-appends | hbase.rs.wal.appends | Sum | Long | Count of appends to the log.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_num_ops</i>
-sync max time | hbase.rs.wal.syncs.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_max</i>
-appends | hbase.rs.wal.appends | Sum | Long | Count of appends to the log.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_num_ops</i>
-append min size | hbase.rs.wal.appends.size.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_min</i>
-sync min time | hbase.rs.wal.syncs.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_min</i>
-slow appends | hbase.rs.wal.appends.slow | Sum | Long | Number of appends that were slow.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#slowAppendCount</i>
-compaction queue | hbase.rs.compaction.queue | Avg | Long | Current depth of the compaction request queue. If increasing, we are falling behind with storefile compaction.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#compactionQueueLength</i>
-compacted cells size | hbase.rs.compaction.cells.size | Sum | Long | The total amount of data processed during minor compactions, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#compactedCellsSize</i>
-updates blocked time | hbase.rs.updates.blocked.time | Sum | Long | Number of MS updates have been blocked so that the memstore can be flushed.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#updatesBlockedTime</i>
-major compacted cells | hbase.rs.compaction.major.cells | Sum | Long | The number of cells processed during major compactions.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#majorCompactedCellsCount</i>
-flush queue | hbase.rs.compaction.queue.size | Avg | Long | Length of the queue for region flushes.If increasing, we are falling behind with clearing memstores out to HDFS.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#flushQueueLength</i>
-compacted cells | hbase.rs.compaction.cells | Sum | Long | The number of cells processed during minor compactions.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#compactedCellsCount</i>
-flushed cells | hbase.rs.flushes.cells | Sum | Long | The number of cells flushed to disk.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#flushedCellsCount</i>
-flushed cells size | hbase.rs.flushes.cells.size | Sum | Long | The total amount of data flushed to disk, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#flushedCellsSize</i>
-major compacted cells size | hbase.rs.compaction.major.cells.size | Sum | Long | The total amount of data processed during major compactions, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#majorCompactedCellsSize</i>
-assign min time | hbase.master.assigns.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_min</i>
-rit count over threshold | hbase.master.rit.count.overthreshold | Avg | Long | The number of regions that have been in transition longer than a threshold time (default: 60 seconds).<br/><i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#ritCountOverThreshold</i>
-rit count | hbase.master.rit.count | Avg | Long | The number of regions in transition.<br/><i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#ritCount</i>
-assigns | hbase.master.assigns | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_num_ops</i>
-assign time | hbase.master.assigns.time | Sum | Double | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_mean * Assign_num_ops</i>
-bulk assign time | hbase.master.assigns.bulk.time | Sum | Double | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_mean * BulkAssign_num_ops</i>
-rit oldest age | hbase.master.rit.oldest | Max | Long | The age of the longest region in transition.<br/><i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#ritOldestAge</i>
-bulk assign max time | hbase.master.assigns.bulk.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_max</i>
-assign max time | hbase.master.assigns.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_max</i>
-bulk assign min time | hbase.master.assigns.bulk.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_min</i>
-bulk assigns | hbase.master.assigns.bulk | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_num_ops</i>
-increment time | hbase.rs.ops.increments.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_num_ops * Increment_mean</i>
-slow_puts | hbase.rs.ops.puts.slow | Sum | Long | The number of Puts that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowPutCount</i>
-get max time | hbase.rs.ops.gets.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_max</i>
-append time | hbase.rs.ops.appends.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_num_ops * Append_mean</i>
-deletes | hbase.rs.ops.deletes | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_num_ops</i>
-replay min time | hbase.rs.ops.replays.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_min</i>
-mutate min time | hbase.rs.ops.mutates.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_min</i>
-get time | hbase.rs.ops.gets.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_num_ops * Get_mean</i>
-increment max time | hbase.rs.ops.increments.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_max</i>
-slow appends | hbase.rs.ops.appends.slow | Sum | Long | The number of Appends that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowAppendCount</i>
-mutate max time | hbase.rs.ops.mutates.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_max</i>
-get min time | hbase.rs.ops.gets.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_min</i>
-increments | hbase.rs.ops.increments | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_num_ops</i>
-replay max time | hbase.rs.ops.replays.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_max</i>
-delete time | hbase.rs.ops.deletes.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_num_ops * Delete_mean</i>
-slow deletes | hbase.rs.ops.deletes.slow | Sum | Long | The number of Deletes that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowDeleteCount</i>
-delete max time | hbase.rs.ops.deletes.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_max</i>
-appends | hbase.rs.ops.appends | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_num_ops</i>
-append max time | hbase.rs.ops.append.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_max</i>
-delete min time | hbase.rs.ops.deletes.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_min</i>
-mutates | hbase.rs.ops.mutates | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_num_ops</i>
-increment min time | hbase.rs.ops.increments.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_min</i>
-append min time | hbase.rs.ops.appends.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_min</i>
-replay time | hbase.rs.ops.replays.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_num_ops * Replay_mean</i>
-slow increments | hbase.rs.ops.increments.slow | Sum | Long | The number of Increments that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowIncrementCount</i>
-replays | hbase.rs.ops.replays | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_num_ops</i>
-gets | hbase.rs.ops.gets | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_num_ops</i>
-slow gets | hbase.rs.ops.gets.slow | Sum | Long | The number of Gets that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowGetCount</i>
-mutate time | hbase.rs.ops.mutates.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_num_ops * Mutate_mean</i>
-restore max time | hbase.snapshots.restore.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_max</i>
-snapshot time | hbase.snapshots.time | Sum | Double | Time it takes to finish snapshot().<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_num_ops * SnapshotTime_mean</i>
-snapshot max time | hbase.snapshots.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_max</i>
-clone time | hbase.snapshots.clone.time | Sum | Double | Time it takes to finish cloneSnapshot().<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_num_ops * SnapshotCloneTime_mean</i>
-snapshots | hbase.snapshots | Sum | Long | Count of snapshot() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_num_ops</i>
-restores | hbase.snapshots.restores | Sum | Long | Count of restoreSnapshot() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_num_ops</i>
-clone min time | hbase.snapshots.clone.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_min</i>
-clones | hbase.snapshots.clones | Sum | Long | Count of cloneSnapshot() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_num_ops</i>
-snapshot min time | hbase.snapshots.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_min</i>
-clone max time | hbase.snapshots.clone.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_max</i>
-restore time | hbase.snapshots.restore.time | Sum | Double | Time it takes to finish restoreSnapshot().<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_num_ops * SnapshotRestoreTime_mean</i>
-restore min time | hbase.snapshots.restore.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_min</i>
-meta hlog split max size | hbase.master.hlog.meta.splits.size.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_max</i>
-hlog split size | hbase.master.meta.splits.size | Sum | Double | Size of HLog files being split.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_num_ops * HlogSplitSize_mean</i>
-hlog split min time | hbase.master.hlog.splits.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_min</i>
-hlog split max size | hbase.master.hlog.splits.size.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_max</i>
-hlog splits | hbase.master.hlog.splits | Sum | Long | Count of HLog.splitLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_num_ops</i>
-meta hlog split time | hbase.master.hlog.meta.splits.time | Sum | Double | Time it takes to finish splitMetaLog().<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_num_ops * MetaHlogSplitTime_mean</i>
-meta hlog split max time | hbase.master.hlog.meta.splits.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_max</i>
-hlog split time | hbase.master.hlog.splits.time | Sum | Double | Time it takes to finish HLog.splitLog().<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_num_ops * HlogSplitTime_mean</i>
-hlog split min size | hbase.master.hlog.splits.size.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_min</i>
-meta hlog splits | hbase.master.hlog.meta.splits | Sum | Long | Count of splitMetaLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_num_ops</i>
-meta hlog split min size | hbase.master.hlog.meta.splits.size.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_min</i>
-meta hlog split min time | hbase.master.hlog.meta.splits.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_min</i>
-meta hlog splits | hbase.master.hlog.meta.splits | Sum | Long | Count of splitMetaLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_num_ops</i>
-hlog split max time | hbase.master.hlog.splits.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_max</i>
-hlog splits | hbase.master.hlog.splits | Sum | Long | Count of HLog.splitLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_num_ops</i>
-meta hlog split size | hbase.master.hlog.meta.splits.size | Sum | Double | Size of hbase:meta HLog files being split.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_num_ops * MetaHlogSplitSize_mean</i>
-lower limit | hbase.rs.memstore.size.limit.lower | Avg | Long | Property 'hbase.regionserver.global.memstore.lowerLimit' value.
-static bloom size | hbase.rs.static.bloom.size | Avg | Long | Uncompressed size of the static bloom filters.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#staticBloomSize</i>
-store files | hbase.rs.stores.files | Avg | Long | Number of Store Files.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeFileCount</i>
-store file index size | hbase.rs.stores.index.size | Avg | Long | Size of indexes in storefiles on disk.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeFileIndexSize</i>
-store file size | hbase.rs.stores.files.size | Avg | Long | Size of storefiles being served.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeFileSize</i>
-mem store size | hbase.rs.memstore.size | Avg | Long | Size of the memstore.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#memStoreSize
-static index size | hbase.rs.static.index.size | Avg | Long | Uncompressed size of the static indexes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#staticIndexSize</i>
-upper limit | hbase.rs.memstore.size.limit.upper | Avg | Long | Property 'hbase.regionserver.global.memstore.upperLimit' value.
-stores | hbase.rs.stores | Avg | Long | Number of Stores.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeCount</i>
-regions | hbase.rs.regions | Avg | Long | Number of regions.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#regionCount</i>
-active handlers | hbase.ipc.handlers.active | Avg | Long | Number of active rpc handlers.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numActiveHandler</i>
-process call time | hbase.ipc.handlers.process.calls.time | Sum | Double | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_mean * ProcessCallTime_num_ops</i>
-process call min time | hbase.ipc.process.call.time.min | Min | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_min</i>
-calls in priority queue | hbase.ipc.queue.priority.size | Avg | Long | The number of currently enqueued priority (internal housekeeping) requests.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numCallsInPriorityQueue</i>
-authorization successes | hbase.ipc.authorization.successes | Sum | Long | Number of authorization successes.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authorizationSuccesses</i>
-received bytes | hbase.ipc.bytes.received | Sum | Long | Number of bytes received.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#receivedBytes</i>
-sent bytes | hbase.ipc.bytes.sent | Sum | Long | Number of bytes sent.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#sentBytes</i>
-authorization failures | hbase.ipc.authorization.failures | Sum | Long | Number of authorization failures.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authorizationFailures</i>
-process call max time | hbase.ipc.process.call.time.max | Max | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_max</i>
-calls in replication queue | hbase.ipc.queue.replication.size | Avg | Long | Number of calls in the replication call queue.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numCallsInReplicationQueue</i>
-process calls | hbase.ipc.handlers.process.calls | Sum | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_num_ops</i>
-calls in general queue | hbase.ipc.queue.size | Avg | Long | The number of currently enqueued user requests.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numCallsInGeneralQueue</i>
-queue call time | hbase.ipc.handlers.queue.calls.time | Sum | Double | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_mean * QueueCallTime_num_ops</i>
-queue call min time | hbase.ipc.queue.call.time.min | Min | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_min</i>
-queue call max time | hbase.ipc.queue.call.time.max | Max | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_max</i>
-queue size | hbase.ipc.queue.bytes | Avg | Long | Number of bytes in the call queues.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#queueSize</i>
-authentication failures | hbase.ipc.authentication.failures | Sum | Long | Number of authentication failures.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authenticationFailures</i>
-queue calls | hbase.ipc.handlers.queue.calls | Sum | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_num_ops</i>
-open connections | hbase.ipc.connections.open | Avg | Long | The number of open connections at the RPC layer.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numOpenConnections</i>
-authentication successes | hbase.ipc.authentication.successes | Sum | Long | Number of authentication successes.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authenticationSuccesses</i>
-total requests | hbase.rs.requests | Sum | Long | Total number of requests this RegionServer has answered.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#totalRequestCount</i>
-read requests | hbase.rs.requests.read | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#readRequestCount</i>
-write requests | hbase.rs.requests.write | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#writeRequestCount</i>
-applied ops | hbase.rs.replication.ops.applied | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#sink.appliedOps</i>
-applied batches | hbase.rs.replication.batches.applied | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#sink.appliedBatches</i>
-balancer min time | hbase.master.balancer.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_min</i>
-ops | hbase.master.balancer.ops | Avg | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_num_ops</i>
-time | hbase.master.balancer.time | Sum | Double | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_num_ops * BalancerCluster_mean</i>
-misc invocations | hbase.master.balancer.invocations | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#miscInvocationCount</i>
-balancer max time | hbase.master.balancer.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_max</i>
-flushed cells | hbase.rs.mob.flushes.cells | Sum | Long | The number of mob cells flushed to disk.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFlushedCellsCount</i>
-scan cells size | hbase.rs.mob.scan.cells.size | Sum | Long | The total amount of scanned mob cells, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobScanCellsSize</i>
-file cache hits | hbase.rs.mob.cache.files.hits | Avg | Long | The hit percent to the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheHitPercent</i>
-file caches | hbase.rs.mob.cache.files | Avg | Long | The count of cached mob files.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheCount</i>
-compacted into mob cells | hbase.rs.mob.compactions.cells.into | Sum | Long | The number of cells moved to mob during compaction.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedIntoMobCellsCount</i>
-file cache accesses | hbase.rs.mob.cache.files.accesses | Sum | Long | The count of accesses to the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheAccessCount</i>
-scan cells | hbase.rs.mob.scan.cells | Sum | Long | The number of scanned mob cells.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobScanCellsCount</i>
-file cache misses | hbase.rs.mob.cache.files.misses | Sum | Long | The count of misses to the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheMissCount</i>
-compacted from mob cells | hbase.rs.mob.compactions.cells.from | Sum | Long | The number of cells moved from mob during compaction.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedFromMobCellsCount</i>
-compacted into mob cells size | hbase.rs.mob.compactions.cells.into.size | Sum | Long | The total amount of cells move to mob during compaction, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedIntoMobCellsSize</i>
-compacted from mob cells size | hbase.rs.mob.compactions.cells.from.size | Sum | Long | The total amount of cells move from mob during compaction, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedFromMobCellsSize</i>
-file cache evictions | hbase.rs.mob.cache.files.evictions | Sum | Long | The number of items evicted from the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheEvictedCount</i>
-flushes | hbase.rs.mob.flushes | Sum | Long | The number of the flushes in mob-enabled stores.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFlushCount</i>
-flushed cells size | hbase.rs.mob.flushes.cells.size | Sum | Long | The total amount of mob cells flushed to disk, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFlushedCellsSize</i>
-local files | hbase.rs.files.local | Avg | Long | The percent of HFiles that are stored on the local hdfs data node.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#percentFilesLocal</i>
-hlog files | hbase.rs.files.hlog | Avg | Long | The number of write ahead logs not yet archived.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hlogFileCount</i>
-hlog files size | hbase.rs.files.hlog.size | Avg | Long | Size of all HLog Files.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hlogFileSize</i>
-cluster requests | hbase.master.requests | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=Server#clusterRequests</i>
-dead region servers | hbase.master.servers.region.dead | Avg | Double | <i>Hadoop:service=HBase,name=Master,sub=Server#numDeadRegionServers</i>
-region servers | hbase.master.servers.region | Avg | Double | <i>Hadoop:service=HBase,name=Master,sub=Server#numRegionServers</i>
-average load | hbase.master.load | Avg | Double | <i>Hadoop:service=HBase,name=Master,sub=Server#averageLoad</i>
-mutations without wal | hbase.ops.mutates.nowal | Sum | Long | Number of mutations that have been sent by clients with the write ahead logging turned off.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mutationsWithoutWALCount</i>
-mutate failed ops | hbase.ops.mutates.failed | Sum | Long | Number of Check and Mutate calls that failed the checks.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#checkMutateFailedCount</i>
-mutate passed ops | hbase.ops.mutates.passed | Sum | Long | Number of Check and Mutate calls that passed the checks.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#checkMutatePassedCount</i>
-mutations without wal size | hbase.ops.mutates.nowal.size | Sum | Long | Size of data that has been sent by clients with the write ahead logging turned off.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mutationsWithoutWALSize</i>
-hits | hbase.cache.hits | Sum | Long | Count of the hit on the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheHitCount</i>
-express hit% | hbase.cache.hits.express.rate | Avg | Long | The percent of the time that requests with the cache turned on hit the cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheExpressHitPercent</i>
-hit% | hbase.cache.hits.rate | Avg | Long | Percent of block cache requests that are hits.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCountHitPercent</i>
-cache free size | hbase.cache.block.free | Avg | Long | Size of the block cache that is not occupied.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheFreeSize</i>
-block cache size | hbase.cache.block.size | Avg | Long | Size of the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheSize</i>
-miss | hbase.cache.misses | Sum | Long | Number of requests for a block that missed the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheMissCount</i>
-cache count | hbase.cache.block.count | Avg | Long | Number of block in the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheCount</i>
-evictions | hbase.cache.evictions | Sum | Long | Count of the number of blocks evicted from the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheEvictionCount</i>
-shipped batches | hbase.rs.replication.batches.shipped | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.shippedBatches</i>
-shipped ops | hbase.rs.replication.ops.shipped | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.shippedOps</i>
-log edits read | hbase.rs.replication.log.edits.read | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.logEditsRead</i>
-log queue | hbase.rs.replication.log.queue | Avg | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.sizeOfLogQueue</i>
-shipped bytes | hbase.rs.replication.batches.shipped.size | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.shippedKBs</i>
-log edits filtered | hbase.rs.replication.log.edits.filtered | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.logEditsFiltered</i>
-log read bytes | hbase.rs.replication.log.edits.read.bytes | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.logReadInBytes</i>
-hedged read wins | hbase.reads.hedged.wins | Sum | Long | The number of times we started a hedged read and a hedged read won.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hedgedReadWins</i>
-hedged reads | hbase.reads.hedged | Sum | Long | The number of times we started a hedged read.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hedgedReads</i>
-stores | hbase.stores | Avg | Long | 
-flushes | hbase.flushes | Sum | Long | 
-compactions | hbase.compactions | Sum | Long | 
-store files | hbase.store.files | Avg | Long | 
-store file index size | hbase.store.index.size | Avg | Long | 
-sync | hbase.fs.sync.latency.max | Max | Long | 
-read | hbase.fs.read.latency.max | Max | Long | 
-write | hbase.fs.write.latency.max | Max | Long | 
-sync | hbase.fs.sync.latency.min | Min | Long | 
-read | hbase.fs.read.latency.min | Min | Long | 
-write | hbase.fs.write.latency.min | Min | Long | 
-flush queue | hbase.flushes.queue.size | Avg | Double | 
-max | hbase.memstore.flushes.time.max | Max | Long | 
-min | hbase.flushes.size.min | Min | Long | 
-flushes | hbase.memstore.flushes | Sum | Long | 
-max | hbase.flushes.size.max | Max | Long | 
-memstore size | hbase.memstore.size | Avg | Long | 
-min | hbase.memstore.flushes.time.min | Min | Long | 
-min | hbase.compactions.time.min | Min | Long | 
-max | hbase.compactions.time.max | Max | Long | 
-max | hbase.compactions.size.max | Max | Long | 
-compactions | hbase.compactions | Sum | Long | 
-compaction queue | hbase.compactions.queue.size | Avg | Double | 
-min | hbase.compactions.size.min | Min | Long | 
-cache size | hbase.cache.block.size | Avg | Long | 
-miss count | hbase.cache.block.misses | Sum | Long | 
-cache free | hbase.cache.block.free | Avg | Long | 
-hit count | hbase.cache.block.hits | Sum | Long | 
-block cache count | hbase.cache.block.count | Avg | Long | 
-blockCacheHitRatio | hbase.cache.block.hits.ratio | Avg | Long | 
-evicted count | hbase.cache.block.evictions | Sum | Long | 
-blockCacheHitCachingRatio | hbase.cache.block.caching.hits.ratio | Avg | Long | 
-max | hbase.splits.time.max | Max | Long | 
-splits | hbase.splits | Sum | Long | 
-max | hbase.splits.size.max | Max | Long | 
-min | hbase.splits.size.min | Min | Long | 
-splits | hbase.splits | Sum | Long | 
-regions | hbase.regions | Avg | Long | 
+Metric Name                           |  Key                                                             |  Metric Type     |  Numeric Type  |  Unit   |  Description
+--------------------------------------|------------------------------------------------------------------|------------------|----------------|---------|--------------------------------------------------------------------------------------------------------------------------------
+compacted in size                     |  hbase.rs.compacted.in.size                                      |  counter         |  long          |  bytes  |  Total number of bytes that is read for compaction both major and minor
+major compacted out size              |  hbase.rs.major.compacted.out.bytes                              |  counter         |  long          |         |
+flushed memostore size                |  hbase.rs.flushed.memostore.size                                 |  counter         |  long          |  bytes  |  Total number of bytes of cells in memstore from flush
+compacted out size                    |  hbase.rs.compacted.out.size                                     |  counter         |  long          |  bytes  |  Total number of bytes that is output from compaction major only
+splits requests                       |  hbase.rs.split.requests                                         |  counter         |  long          |         |  Number of splits requested
+flushed out size                      |  hbase.rs.flushed.out.size                                       |  counter         |  long          |  bytes  |  Total number of bytes written from flush
+cache failed insertions               |  hbase.rs.cache.block.failed.insertions                          |  counter         |  long          |         |  Number of times that a block cache insertion failed. Usually due to size restrictions
+cache hits rate                       |  hbase.rs.cache.block.hits.rate                                  |  gauge           |  double        |         |  Percent of block cache requests that are hits
+cache primary evictions               |  hbase.rs.cache.block.primary.evictions                          |  counter         |  long          |         |  Count of the number of blocks evicted from primary replica in the block cache
+cache primary misses                  |  hbase.rs.cache.block.primary.misses                             |  counter         |  long          |         |  Number of requests for a block of primary replica that missed the block cache
+cache primary hits                    |  hbase.rs.cache.block.primary.hits                               |  counter         |  long          |         |  Count of hit on primary replica in the block cache
+large compaction queue                |  hbase.rs.large.compaction.queue                                 |  gauge           |  long          |         |  Length of the queue for compactions with input size larger than throttle threshold (2.5GB by default)
+small compactions queue               |  hbase.rs.small.compactions.queue                                |  gauge           |  long          |         |  Length of the queue for compactions
+splits queue                          |  hbase.rs.splits.queue                                           |  gauge           |  long          |         |  Length of the queue for splits
+secondary regions local files rate    |  hbase.rs.files.local.rate.secondary.regions                     |  gauge           |  double        |         |  The percent of HFiles used by secondary regions that are stored on the local hdfs data node
+rpc mutation requests                 |  hbase.rs.rpc.mutate.requests                                    |  counter         |  long          |         |  Number of rpc mutation requests this RegionServer has answered
+rpc multi requests                    |  hbase.rs.rpc.multi.requests                                     |  counter         |  long          |         |  Number of rpc multi requests this RegionServer has answered
+rpc scan requests                     |  hbase.rs.rpc.scan.requests                                      |  counter         |  long          |         |  Number of rpc scan requests this RegionServer has answered
+rpc get requests                      |  hbase.rs.rpc.get.requests                                       |  counter         |  long          |         |  Number of rpc get requests this RegionServer has answered
+avg region size                       |  hbase.rs.region.size.avg                                        |  gauge           |  long          |  bytes  |  Average region size over the RegionServer including memstore and storefile sizes
+reference files                       |  hbase.rs.reference.files                                        |  gauge           |  long          |         |  Number of reference file on this RegionServer
+blocked requests                      |  hbase.rs.blocked.requests                                       |  counter         |  long          |         |  The number of blocked requests because of memstore size is larger than blockingMemStoreSize
+cache trailer hits                    |  hbase.rs.cache.block.trailer.hits                               |  counter         |  long          |         |  Block cache trailer hits
+cache delete family bloom hits        |  hbase.rs.cache.block.delete.family.bloom.hits                   |  counter         |  long          |         |  Block cache delete family bloom hits
+cache general bloom meta hits         |  hbase.rs.cache.block.general.bloom.meta.hits                    |  counter         |  long          |         |  Block cache general bloom meta hits
+cache file info hits                  |  hbase.rs.cache.block.file.info.hits                             |  counter         |  long          |         |  Block cache file info hits
+cache intermediate index hits         |  hbase.rs.cache.block.intermediate.index.hits                    |  counter         |  long          |         |  Block cache intermediate index hits
+cache root index hits                 |  hbase.rs.cache.block.root.index.hits                            |  counter         |  long          |         |  Block cache root index hits
+cache meta hits                       |  hbase.rs.cache.block.meta.hits                                  |  counter         |  long          |         |  Block cache meta hits
+cache bloom chunk hits                |  hbase.rs.cache.block.bloom.chunk.hits                           |  counter         |  long          |         |  Block cache bloom chunk hits count
+cache leaf index hits                 |  hbase.rs.cache.block.leaf.index.hits                            |  counter         |  long          |         |  Block cache leaf index hits
+cache data hits                       |  hbase.rs.cache.block.data.hits                                  |  counter         |  long          |         |  Block cache data hits
+cache trailer misses                  |  hbase.rs.cache.block.trailer.misses                             |  counter         |  long          |         |  Block cache trailer misses
+cache delete family bloom misses      |  hbase.rs.cache.block.delete.family.bloom.misses                 |  counter         |  long          |         |  Block cache delete family bloom misses
+cache general bloom meta misses       |  hbase.rs.cache.block.general.bloom.meta.misses                  |  counter         |  long          |         |  Block cache general bloom meta misses
+cache file info misses                |  hbase.rs.cache.block.file.info.misses                           |  counter         |  long          |         |  Block cache file info misses
+cache intermediate index misses       |  hbase.rs.cache.block.intermediate.index.misses                  |  counter         |  long          |         |  Block cache intermediate index misses
+cache root index misses               |  hbase.rs.cache.block.root.index.misses                          |  counter         |  long          |         |  Block cache root index misses
+cache meta misses                     |  hbase.rs.cache.block.meta.misses                                |  counter         |  long          |         |  Block cache meta misses
+cache bloom chunk misses              |  hbase.rs.cache.block.bloom.chunk.misses                         |  counter         |  long          |         |  Block cache bloom chunk misses count
+cache leaf index misses               |  hbase.rs.cache.block.leaf.index.misses                          |  counter         |  long          |         |  Block cache leaf index misses
+cache data misses                     |  hbase.rs.cache.block.data.misses                                |  counter         |  long          |         |  Block cache data misses
+success splits                        |  hbase.rs.success.splits                                         |  counter         |  long          |         |  Number of successfully executed splits
+regions                               |  hbase.rs.regions                                                |  gauge           |  long          |         |  Number of regions
+stores                                |  hbase.rs.stores                                                 |  gauge           |  long          |         |  Number of Stores
+hlog files                            |  hbase.rs.files.hlog                                             |  gauge           |  long          |         |  Number of WAL Files
+hlog files size                       |  hbase.rs.files.hlog.size                                        |  gauge           |  long          |  bytes  |  Size of all WAL Files
+stores files                          |  hbase.rs.stores.files                                           |  gauge           |  long          |         |  Number of Store Files
+memstore size                         |  hbase.rs.memstore.size                                          |  gauge           |  long          |  bytes  |  Size of the memstore
+stores files size                     |  hbase.rs.stores.files.size                                      |  gauge           |  long          |  bytes  |  Size of storefiles being served
+total requests                        |  hbase.rs.total.requests                                         |  counter         |  long          |         |  Total number of requests this RegionServer has answered; increments the count once for EVERY access whether an admin operation
+read requests                         |  hbase.rs.requests.read                                          |  counter         |  long          |         |  Number of read requests with non-empty Results that this RegionServer has answered
+write requests                        |  hbase.rs.requests.write                                         |  counter         |  long          |         |  Number of mutation requests this RegionServer has answered
+failed mutates                        |  hbase.rs.ops.mutates.failed                                     |  counter         |  long          |         |  Number of Check and Mutate calls that failed the checks
+passed mutates                        |  hbase.rs.ops.mutates.passed                                     |  counter         |  long          |         |  Number of Check and Mutate calls that passed the checks
+store files indexes size              |  hbase.rs.stores.index.size                                      |  gauge           |  long          |  bytes  |  Size of indexes in storefiles on disk
+static indexes size                   |  hbase.rs.static.index.size                                      |  gauge           |  long          |  bytes  |  Uncompressed size of the static indexes
+static bloom filters size             |  hbase.rs.static.bloom.size                                      |  gauge           |  long          |  bytes  |  Uncompressed size of the static bloom filters
+mutations without wal                 |  hbase.rs.ops.mutates.nowal                                      |  counter         |  long          |         |  Number of mutations that have been sent by clients with the write ahead logging turned off
+mutations size without wal            |  hbase.rs.ops.mutates.nowal.size                                 |  counter         |  long          |  bytes  |  Size of data that has been sent by clients with the write ahead logging turned off
+local files rate                      |  hbase.rs.files.local.rate                                       |  gauge           |  long          |         |  The percent of HFiles that are stored on the local hdfs data node
+compaction queue                      |  hbase.rs.compaction.queue                                       |  gauge           |  long          |         |  Length of the queue for compactions
+flush queue                           |  hbase.rs.flush.queue                                            |  gauge           |  long          |         |  Length of the queue for region flushes
+cache free size                       |  hbase.rs.cache.block.free.size                                  |  gauge           |  long          |  bytes  |
+cache blocks                          |  hbase.rs.cache.block.count                                      |  gauge           |  long          |         |  Number of block in the block cache
+cache size                            |  hbase.rs.cache.block.size                                       |  gauge           |  long          |  bytes  |  Size of the block cache
+cache hits                            |  hbase.rs.cache.block.hits                                       |  counter         |  long          |         |  Count of the hit on the block cache
+cache misses                          |  hbase.rs.cache.block.misses                                     |  counter         |  long          |         |  Number of requests for a block that missed the block cache
+cache evictions                       |  hbase.rs.cache.block.evictions                                  |  counter         |  long          |         |  Count of the number of blocks evicted from the block cache (Not including blocks evicted because of HFile removal)
+cache express hits rate               |  hbase.rs.cache.block.hits.express.rate                          |  gauge           |  long          |         |  The percent of the time that requests with the cache turned on hit the cache
+blocked updates                       |  hbase.rs.updates.blocked.time                                   |  counter         |  long          |         |  Number of MS updates have been blocked so that the memstore can be flushed
+flushed cells                         |  hbase.rs.flushed.cells                                          |  counter         |  long          |         |  The number of cells flushed to disk
+compaction cells                      |  hbase.rs.compaction.cells                                       |  counter         |  long          |         |  The number of cells processed during minor compactions
+major compaction cells                |  hbase.rs.compaction.major.cells                                 |  counter         |  long          |         |  The number of cells processed during major compactions
+flushed cells size                    |  hbase.rs.flushed.cells.size                                     |  counter         |  long          |  bytes  |  The total amount of mob cells flushed to disk
+compaction cells size                 |  hbase.rs.compaction.cells.size                                  |  counter         |  long          |  bytes  |  The total amount of data processed during major compactions
+major compaction cells size           |  hbase.rs.compaction.major.cells.size                            |  counter         |  long          |  bytes  |  The total amount of data processed during major compactions
+hedged reads                          |  hbase.rs.reads.hedged                                           |  counter         |  long          |         |  The number of times we started a hedged read
+hedged reads wins                     |  hbase.rs.reads.hedged.wins                                      |  counter         |  long          |         |  The number of times we started a hedged read and a hedged read won
+mob cached files                      |  hbase.rs.mob.cache.files                                        |  gauge           |  long          |         |  The count of cached mob files
+mob cache files accesses              |  hbase.rs.mob.cache.files.accesses                               |  counter         |  long          |         |  The count of accesses to the mob file cache
+mob cache files misses                |  hbase.rs.mob.cache.files.misses                                 |  counter         |  long          |         |  The count of misses to the mob file cache
+mob cache files evictions             |  hbase.rs.mob.cache.files.evictions                              |  counter         |  long          |         |  The number of items evicted from the mob file cache
+mob flushes                           |  hbase.rs.mob.flushes                                            |  counter         |  long          |         |  The number of the flushes in mob-enabled stores
+flushed cells                         |  hbase.rs.mob.flushed.cells                                      |  counter         |  long          |         |  The number of mob cells flushed to disk
+mob flushed cells size                |  hbase.rs.mob.flushed.cells.size                                 |  counter         |  long          |  bytes  |  The total amount of mob cells flushed to disk
+scanned cells                         |  hbase.rs.mob.scan.cells                                         |  counter         |  long          |         |  The number of scanned mob cells
+scanned cells size                    |  hbase.rs.mob.scan.cells.size                                    |  counter         |  long          |  bytes  |  The total amount of scanned mob cells
+mob cache files hits rate             |  hbase.rs.mob.cache.files.hits.rate                              |  gauge           |  long          |         |  The hit percent to the mob file cache
+appends                               |  hbase.rs.ops.appends                                            |  counter         |  long          |         |  The number of batches containing puts
+deletes                               |  hbase.rs.ops.deletes                                            |  counter         |  long          |         |  The number of batches containing delete(s)
+mutates                               |  hbase.rs.ops.mutates                                            |  counter         |  long          |         |  The number of Mutates
+gets                                  |  hbase.rs.ops.gets                                               |  counter         |  long          |         |  The number of Gets
+replays                               |  hbase.rs.ops.replays                                            |  counter         |  long          |         |  The numbers of Replays
+increments                            |  hbase.rs.ops.increments                                         |  counter         |  long          |         |  The number of Increments
+slow appends                          |  hbase.rs.ops.appends.slow                                       |  counter         |  long          |         |  The number of batches containing puts that took over 1000ms to complete
+slow deletes                          |  hbase.rs.ops.deletes.slow                                       |  counter         |  long          |         |  The number of batches containing delete(s) that took over 1000ms to complete
+slow increments                       |  hbase.rs.ops.increments.slow                                    |  counter         |  long          |         |  The number of Increments that took over 1000ms to complete
+slow gets                             |  hbase.rs.ops.gets.slow                                          |  counter         |  long          |         |  The number of Gets that took over 1000ms to complete
+slow puts                             |  hbase.rs.ops.puts.slow                                          |  counter         |  long          |         |  The number of batches containing puts that took over 1000ms to complete
+scan min size                         |  hbase.rs.ops.scan.size.min                                      |  gauge           |  long          |  bytes  |  Min scan size
+scan max size                         |  hbase.rs.ops.scan.size.max                                      |  gauge           |  long          |  bytes  |  Max scan size
+flushes                               |  hbase.rs.ops.flushes                                            |  counter         |  long          |         |  Number of flushes
+flush output min size                 |  hbase.rs.ops.flushes.out.size.min                               |  gauge           |  long          |  bytes  |  Min number of bytes in the resulting file for a flush
+flush output max size                 |  hbase.rs.ops.flushes.out.size.max                               |  gauge           |  long          |  bytes  |  Max number of bytes in the resulting file for a flush
+compaction input min size             |  hbase.rs.ops.major.compaction.in.size.min                       |  gauge           |  long          |  bytes  |  Compaction min total input file sizes major only
+compaction input max size             |  hbase.rs.ops.major.compaction.in.size.max                       |  gauge           |  long          |  bytes  |  Compaction max total input file sizes major only
+compactions                           |  hbase.rs.ops.compactions                                        |  counter         |  long          |  bytes  |  Compactions both major and minor
+compactions input min size            |  hbase.rs.ops.compactions.in.size.min                            |  gauge           |  long          |  bytes  |  Min compaction total input file sizes both major and minor
+compactions input max size            |  hbase.rs.ops.compactions.in.size.max                            |  gauge           |  long          |  bytes  |  Max compaction total input file sizes both major and minor
+flush min time                        |  hbase.rs.ops.flushes.time.min                                   |  gauge           |  long          |  ms     |  Min time for memstore flush
+flush max time                        |  hbase.rs.ops.flushes.time.max                                   |  gauge           |  long          |  ms     |  Max time for memstore flush
+compactions output min size           |  hbase.rs.ops.compactions.out.size.min                           |  gauge           |  long          |  bytes  |  Min compaction total output file sizes
+compactions output max size           |  hbase.rs.ops.compactions.out.size.max                           |  gauge           |  long          |  bytes  |  Max compaction total output file sizes both major and minor
+splits                                |  hbase.rs.ops.splits                                             |  counter         |  long          |         |  The number of Splits
+split min time                        |  hbase.rs.ops.split.time.min                                     |  gauge           |  long          |  ms     |  Min split time
+split max time                        |  hbase.rs.ops.split.time.max                                     |  gauge           |  long          |  ms     |  Max split time
+flush memstore min size               |  hbase.rs.ops.flushes.memstore.size.min                          |  gauge           |  long          |  bytes  |  Min number of bytes in the memstore for a flush
+flush memstore max size               |  hbase.rs.ops.flushes.memstore.size.max                          |  gauge           |  long          |  bytes  |  Max number of bytes in the memstore for a flush
+scans                                 |  hbase.rs.ops.scans                                              |  counter         |  long          |         |  The number of Scans
+scan min time                         |  hbase.rs.ops.scan.time.min                                      |  gauge           |  long          |  ms     |  Min scan time
+scan max time                         |  hbase.rs.ops.scan.time.max                                      |  gauge           |  long          |  ms     |  Max scan time
+major compactions                     |  hbase.rs.ops.major.compactions                                  |  counter         |  long          |         |  Compactions major only
+major compaction min time             |  hbase.rs.ops.major.compaction.time.min                          |  gauge           |  long          |  ms     |  Min time for compaction major only
+major compaction max time             |  hbase.rs.ops.major.compaction.time.max                          |  gauge           |  long          |  ms     |  Max time for compaction major only
+major compactions time                |  hbase.rs.ops.major.compactions.time                             |  counter         |  long          |  ms     |  Time for compactions  major only
+scans time                            |  hbase.rs.ops.scans.time                                         |  counter         |  long          |  ms     |  Scans time
+flushes memstore size                 |  hbase.rs.ops.flushes.memstore.size                              |  counter         |  long          |  bytes  |  Number of bytes in the memstore for a flushes
+major compactions input files         |  hbase.rs.ops.major.compactions.in.files                         |  counter         |  long          |         |  Compactions input number of files major only
+compactions input files               |  hbase.rs.ops.compactions.in.files                               |  counter         |  long          |         |  Compactions input number of files both major and minor
+splits time                           |  hbase.rs.ops.splits.time                                        |  counter         |  long          |  ms     |  Splits time
+compactions output size               |  hbase.rs.ops.compactions.out.size                               |  counter         |  long          |  bytes  |  Compaction total output file sizes both major and minor
+major compactions.output size         |  hbase.rs.ops.major.compactions.out.size                         |  counter         |  long          |  bytes  |  Compactions total output file sizes major only
+compactions output files              |  hbase.rs.ops.compactions.out.files                              |  counter         |  long          |  bytes  |  Compactions output number of files both major and minor
+flushes time                          |  hbase.rs.ops.flushes.time                                       |  counter         |  long          |  ms     |  Time for memstore flushes
+major compactions output files        |  hbase.rs.ops.major.compactions.out.files                        |  counter         |  long          |         |  Compactions output number of files major only
+compactions input size                |  hbase.rs.ops.compactions.in.size                                |  counter         |  long          |  bytes  |  Compactions total input file sizes both major and minor
+major compactions input size          |  hbase.rs.ops.major.compactions.in.size                          |  counter         |  long          |  bytes  |  Compactions total input file sizes major only
+flushes output size                   |  hbase.rs.ops.flushes.out.size                                   |  counter         |  long          |  bytes  |  Number of bytes in the resulting file for a flushes
+scans size                            |  hbase.rs.ops.scans.size                                         |  counter         |  long          |  bytes  |  Scans size
+wal roll requests                     |  hbase.rs.wal.roll.requests                                      |  counter         |  long          |         |  How many times a log roll has been requested total
+wal written size                      |  hbase.rs.wal.written.size                                       |  counter         |  long          |  bytes  |  Size of the data written to the WAL
+wal low replica roll requests         |  hbase.rs.wal.low.replica.roll.requests                          |  counter         |  long          |         |  How many times a log roll was requested due to too few DN's in the write pipeline
+wal syncs                             |  hbase.rs.wal.syncs                                              |  counter         |  long          |         |  The number of syncs the WAL to HDFS
+wal sync min time                     |  hbase.rs.wal.sync.time.min                                      |  gauge           |  long          |  ms     |  Min time it took to sync the WAL to HDFS
+wal sync max time                     |  hbase.rs.wal.sync.time.max                                      |  gauge           |  long          |  ms     |  Max time it took to sync the WAL to HDFS
+wal append min size                   |  hbase.rs.wal.append.size.min                                    |  gauge           |  long          |  bytes  |  Min size of the data appended to the WAL
+wal append max size                   |  hbase.rs.wal.append.size.max                                    |  gauge           |  long          |  bytes  |  Max size of the data appended to the WAL
+wal append min time                   |  hbase.rs.wal.append.time.min                                    |  gauge           |  long          |  ms     |  Min time an append to the WAL took
+wal append max time                   |  hbase.rs.wal.append.time.max                                    |  gauge           |  long          |  ms     |  Max time an append to the WAL took
+wal slow appends                      |  hbase.rs.wal.appends.slow                                       |  counter         |  long          |         |  Number of appends that were slow
+wal appends                           |  hbase.rs.wal.appends                                            |  counter         |  long          |         |  Number of appends to the write ahead log
+wal syncs time                        |  hbase.rs.wal.syncs.time                                         |  counter         |  long          |  ms     |  The time it took to syncs the WAL to HDFS
+wal appends size                      |  hbase.rs.wal.appends.size                                       |  counter         |  long          |  bytes  |  Size of the data appended to the WAL
+wal appends time                      |  hbase.rs.wal.appends.time                                       |  counter         |  long          |  ms     |  Time an appends to the WAL took
+applied replication batches           |  hbase.rs.replication.batches.applied                            |  counter         |  long          |         |  Applied replication batches
+ppplied replication ops               |  hbase.rs.replication.ops.applied                                |  counter         |  long          |         |  Applied replication ops
+applied replication hfiles            |  hbase.rs.replication.hfiles.applied                             |  counter         |  long          |         |  Applied replication hfiles
+oldest regions in transition          |  hbase.master.rit.oldest                                         |  gauge           |  long          |  ms     |  Timestamp of the oldest Region In Transition
+total duration regions in transition  |  hbase.master.rit.duration                                       |  double_counter  |  double        |  ms     |  Total durations in milliseconds for all Regions in Transition
+regions in transition                 |  hbase.master.rit.count                                          |  gauge           |  long          |         |  Current number of Regions In Transition
+regions in transition long time       |  hbase.master.rit.count.overthreshold                            |  gauge           |  long          |         |  Current number of Regions In Transition over threshold time
+bulk assigns                          |  hbase.master.assigns.bulk                                       |  counter         |  long          |         |  Number of bulk assign operations
+bulk assign min time                  |  hbase.master.assigns.bulk.time.min                              |  gauge           |  long          |  ms     |  Min time for bulk assign operation
+bulk assign max time                  |  hbase.master.assigns.bulk.time.max                              |  gauge           |  long          |  ms     |  Max time for bulk assign operation
+master assigns                        |  hbase.master.assigns                                            |  counter         |  long          |         |  Number of assign operations
+assign min time                       |  hbase.master.assigns.time.min                                   |  gauge           |  long          |  ms     |  Min time for assign operation
+assign max time                       |  hbase.master.assigns.time.max                                   |  gauge           |  long          |  ms     |  Max time for assign operation
+bulk assigns time                     |  hbase.master.assigns.bulk.time                                  |  double_counter  |  double        |  ms     |  Time for bulk assign operations
+assigns time                          |  hbase.master.assigns.time                                       |  double_counter  |  double        |  ms     |  Time for assign operations
+balancer ops                          |  hbase.master.balancer.ops                                       |  counter         |  long          |         |  Balancer invocations
+balance min time                      |  hbase.master.balancer.time.min                                  |  gauge           |  long          |  ms     |  Min time for balance operation
+balance max time                      |  hbase.master.balancer.time.max                                  |  gauge           |  long          |  ms     |  Max time for balance operation
+balancer misc invocations             |  hbase.master.balancer.misc.invocations                          |  counter         |  long          |         |  Balancer misc invocations
+balances time                         |  hbase.master.balancer.time                                      |  counter         |  long          |  ms     |  Time for balance operations
+wal splits                            |  hbase.master.hlog.splits                                        |  counter         |  long          |         |  Number of WAL files splits
+wal split min time                    |  hbase.master.hlog.split.time.min                                |  gauge           |  long          |  ms     |  Min time it takes to finish WAL.splitLog()
+wal split max time                    |  hbase.master.hlog.split.time.max                                |  gauge           |  long          |  ms     |  Max time it takes to finish WAL.splitLog()
+meta wal splits                       |  hbase.master.hlog.meta.splits                                   |  counter         |  long          |         |  Meta WAL files splits
+meta wal split min time               |  hbase.master.hlog.meta.split.time.min                           |  gauge           |  long          |  ms     |  Min time it takes to finish splitMetaLog()
+meta wal split max time               |  hbase.master.hlog.meta.split.time.max                           |  gauge           |  long          |  ms     |  Max time it takes to finish splitMetaLog()
+meta wal split min size               |  hbase.master.hlog.meta.split.size.min                           |  gauge           |  long          |  bytes  |  Min size of hbase:meta WAL files being split
+meta wal split max size               |  hbase.master.hlog.meta.split.size.max                           |  gauge           |  long          |  bytes  |  Max size of hbase:meta WAL files being split
+wal split min size                    |  hbase.master.hlog.split.size.min                                |  gauge           |  long          |  bytes  |  Min size of WAL files being split
+wal split max size                    |  hbase.master.hlog.split.size.max                                |  gauge           |  long          |  bytes  |  Max size of WAL files being split
+meta wal splits size                  |  hbase.master.hlog.meta.splits.size                              |  counter         |  long          |  bytes  |  Size of hbase:meta WAL files being split
+meta wal splits time                  |  hbase.master.hlog.meta.splits.time                              |  counter         |  long          |  ms     |  Time it takes to finish splitMetaLog()
+wal splits time                       |  hbase.master.hlog.splits.time                                   |  counter         |  long          |  ms     |  Time it takes to finish WAL.splitLog()
+wal splits size                       |  hbase.master.hlog.splits.size                                   |  counter         |  long          |  bytes  |  Size of WAL files being split
+plan splits                           |  hbase.master.plan.splits                                        |  gauge           |  long          |         |  Number of Region Split Plans executed
+plan merges                           |  hbase.master.plan.merges                                        |  gauge           |  long          |         |  Number of Region Merge Plans executed
+region servers                        |  hbase.master.servers.region                                     |  gauge           |  long          |         |  Number of RegionServers
+dead region servers                   |  hbase.master.servers.region.dead                                |  gauge           |  long          |         |  Number of dead RegionServers
+requests                              |  hbase.master.requests                                           |  counter         |  long          |         |  Number of cluster requests
+average load                          |  hbase.master.load                                               |  gauge           |  double        |         |  Average Load
+snapshots restores                    |  hbase.master.snapshots.restores                                 |  counter         |  long          |         |  Number of restoreSnapshot() calls
+snapshot restore min time             |  hbase.master.snapshots.restore.time.min                         |  gauge           |  long          |  ms     |  Min time it takes to finish restoreSnapshot() call
+snapshot restore max time             |  hbase.master.snapshots.restore.time.max                         |  gauge           |  long          |  ms     |  Max time it takes to finish restoreSnapshot() call
+snapshots clones                      |  hbase.master.snapshots.clones                                   |  counter         |  long          |         |  Number of cloneSnapshot() calls
+snapshots clone min time              |  hbase.master.snapshots.clone.time.min                           |  gauge           |  long          |  ms     |  Min time it takes to finish cloneSnapshot() call
+snapshots clone max time              |  hbase.master.snapshots.clone.time.max                           |  gauge           |  long          |  ms     |  Max time it takes to finish cloneSnapshot() call
+snapshots                             |  hbase.master.snapshots                                          |  counter         |  long          |         |  Number of snapshot() calls
+snapshot min time                     |  hbase.master.snapshot.time.min                                  |  gauge           |  long          |  ms     |  Max time it takes to finish snapshot() call
+snapshot max time                     |  hbase.master.snapshot.time.max                                  |  gauge           |  long          |  ms     |  Max time it takes to finish snapshot() call
+snapshots restores time               |  hbase.master.snapshots.restores.time                            |  double_counter  |  double        |  ms     |  Time it takes to finish restoreSnapshot() calls
+snapshots clones time                 |  hbase.master.snapshots.clones.time                              |  double_counter  |  double        |  ms     |  Time it takes to finish cloneSnapshot() calls
+snapshots time                        |  hbase.master.snapshots.time                                     |  double_counter  |  double        |  ms     |  Time it takes to finish snapshot() calls
+complated logs                        |  hbase.rs.replication.completed.logs                             |  gauge           |  long          |         |  Source completed logs
+repeated log files size               |  hbase.rs.replication.repeated.log.file.size                     |  gauge           |  long          |  bytes  |  Source repeated log files size
+restarted load readings               |  hbase.rs.replication.restarted.log.reads                        |  gauge           |  long          |         |  Source restarted load readings
+closed logs                           |  hbase.rs.replication.closed.logs.with.unknown.file.length       |  gauge           |  long          |         |  Source closed logs with unknows file length
+uncleanly closed logs                 |  hbase.rs.replication.uncleanly.closed.logs                      |  gauge           |  long          |         |  Source uncleanly closed logs
+ignored uncleanly closed logs size    |  hbase.rs.replication.ignored.uncleanly.closed.log.content.size  |  gauge           |  long          |  bytes  |  Source ignored uncleanly closed logs content size
+log queue                             |  hbase.rs.replication.log.queue                                  |  gauge           |  long          |         |  Source log queue
+log edits read                        |  hbase.rs.replication.log.edits.read                             |  counter         |  long          |         |  Source log edits read
+log edits filtered                    |  hbase.rs.replication.log.edits.filtered                         |  counter         |  long          |         |  Source log edits filtered
+shipped batches                       |  hbase.rs.replication.batches.shipped                            |  counter         |  long          |         |  Source shipped batches
+shipped operations                    |  hbase.rs.replication.ops.shipped                                |  counter         |  long          |         |  Source shipped operations
+shipped size                          |  hbase.rs.replication.batches.shipped.size                       |  counter         |  long          |  bytes  |  Source shipped size
+log read size                         |  hbase.rs.replication.log.edits.read.bytes                       |  counter         |  long          |  bytes  |  Source log read size
+lifo mode switches                    |  hbase.ipc.lifo.mode.switches                                    |  counter         |  long          |         |  Total number of calls in general queue which were served from the tail of the queue
+general dropped calls                 |  hbase.ipc.general.dropped.calls                                 |  counter         |  long          |         |  Total number of calls in general queue which were dropped by CoDel RPC executor
+fallbacks to insecure auth            |  hbase.ipc.authentication.fallbacks                              |  counter         |  long          |         |  Number of fallbacks to insecure authentication
+requests exceptions                   |  hbase.ipc.exceptions                                            |  counter         |  long          |         |  Exceptions caused by requests
+sanity check exceptions               |  hbase.ipc.exceptions.failed.sanity.check                        |  counter         |  long          |         |  Number of requests that resulted in FailedSanityCheckException
+region too busy exceptions            |  hbase.ipc.exceptions.region.too.busy                            |  counter         |  long          |         |  Number of requests that resulted in RegionTooBusyException
+scanner reset exceptions              |  hbase.ipc.exceptions.scanner.reset                              |  counter         |  long          |         |  Number of requests that resulted in ScannerResetException
+full queue exceptions                 |  hbase.ipc.exceptions.call.queue.too.big                         |  counter         |  long          |         |  Call queue is full
+not serving region exceptions         |  hbase.ipc.exceptions.not.serving.region                         |  counter         |  long          |         |  Number of requests that resulted in NotServingRegionException
+out of order scanner next exceptions  |  hbase.ipc.exceptions.out.of.order.scanner.next                  |  counter         |  long          |         |  Number of requests that resulted in OutOfOrderScannerNextException
+unknown scanner exceptions            |  hbase.ipc.exceptions.unknown.scanner                            |  counter         |  long          |         |  Number of requests that resulted in UnknownScannerException
+too large response exceptions         |  hbase.ipc.exceptions.multi.response.too.large                   |  counter         |  long          |         |  A response to a multi request was too large and the rest of the requests will have to be retried
+region moved exceptions               |  hbase.ipc.exceptions.region.moved                               |  counter         |  long          |         |  Number of requests that resulted in RegionMovedException
+requests                              |  hbase.ipc.requests                                              |  counter         |  long          |         |  Number of requests
+request min size                      |  hbase.ipc.request.size.min                                      |  gauge           |  long          |  bytes  |  Min Request size
+request max size                      |  hbase.ipc.request.size.max                                      |  gauge           |  long          |  bytes  |  Max Request size
+requests size                         |  hbase.ipc.requests.size                                         |  counter         |  long          |  bytes  |  Requests size
+responses                             |  hbase.ipc.responses                                             |  counter         |  long          |         |  Number of responses
+response min size                     |  hbase.ipc.response.size.min                                     |  gauge           |  long          |  bytes  |  Min Response size
+response max size                     |  hbase.ipc.response.size.max                                     |  gauge           |  long          |  bytes  |  Max Response size
+responses size                        |  hbase.ipc.responses.size                                        |  counter         |  long          |  bytes  |  Responses size
+total calls                           |  hbase.ipc.total.calls                                           |  counter         |  long          |         |  Total calls
+total call min time                   |  hbase.ipc.total.call.time.min                                   |  gauge           |  long          |  ms     |  Total call min time including both queued and processing time
+total call max time                   |  hbase.ipc.total.call.time.max                                   |  gauge           |  long          |  ms     |  Total call max time including both queued and processing time
+total calls time                      |  hbase.ipc.total.calls.time                                      |  counter         |  long          |  ms     |  Total calls time including both queued and processing time
+queue size                            |  hbase.ipc.queue.bytes                                           |  gauge           |  long          |  bytes  |  Number of bytes in the call queues; request has been read and parsed and is waiting to run or is currently being executed
+general queue calls                   |  hbase.ipc.queue.size                                            |  gauge           |  long          |         |  Number of calls in the general call queue; parsed requests waiting in scheduler to be executed
+replication queue calls               |  hbase.ipc.queue.replication.size                                |  gauge           |  long          |         |  Number of calls in the replication call queue waiting to be run
+priority queue calls                  |  hbase.ipc.queue.priority.size                                   |  gauge           |  long          |         |  Number of calls in the priority call queue waiting to be run
+open connections                      |  hbase.ipc.connections.open                                      |  gauge           |  long          |         |  Number of open connections
+active handlers                       |  hbase.ipc.handlers.active                                       |  gauge           |  long          |         |  Total number of active rpc handlers
+queue calls                           |  hbase.ipc.queue.calls                                           |  counter         |  long          |         |  Queue Calls
+queue call min time                   |  hbase.ipc.queue.call.time.min                                   |  gauge           |  long          |  ms     |  Queue Call Min Time
+queue call max time                   |  hbase.ipc.queue.call.time.max                                   |  gauge           |  long          |  ms     |  Queue Call Max Time
+auth failures                         |  hbase.ipc.authentication.failures                               |  counter         |  long          |         |  Number of authentication failures
+authorization failures                |  hbase.ipc.authorization.failures                                |  counter         |  long          |         |  Number of authorization failures
+auth successes                        |  hbase.ipc.authentication.successes                              |  counter         |  long          |         |  Number of authentication successes
+authorization successes               |  hbase.ipc.authorization.successes                               |  counter         |  long          |         |  Number of authorization successes
+processing calls                      |  hbase.ipc.process.calls                                         |  counter         |  long          |         |  Processing calls
+processing call min time              |  hbase.ipc.process.call.time.min                                 |  gauge           |  long          |  ms     |  Processing call min time
+processing call max time              |  hbase.ipc.process.call.time.max                                 |  gauge           |  long          |  ms     |  Processing call max time
+sent bytes                            |  hbase.ipc.bytes.sent                                            |  counter         |  long          |  bytes  |  Number of bytes sent
+received bytes                        |  hbase.ipc.bytes.received                                        |  counter         |  long          |  bytes  |  Number of bytes received
+processing calls time                 |  hbase.ipc.process.calls.time                                    |  counter         |  long          |  ms     |  Processing call time
+queue calls time                      |  hbase.ipc.queue.calls.time                                      |  counter         |  long          |  ms     |  Queue Call Time
+new threads                           |  jvm.threads.new                                                 |  gauge           |  long          |         |  Current number of NEW threads
+runnable threads                      |  jvm.threads.runnable                                            |  gauge           |  long          |         |  Current number of RUNNABLE threads
+blocked threads                       |  jvm.threads.blocked                                             |  gauge           |  long          |         |  Current number of BLOCKED threads
+waiting threads                       |  jvm.threads.waiting                                             |  gauge           |  long          |         |  Current number of WAITING threads
+timed waiting threads                 |  jvm.threads.waiting.timed                                       |  gauge           |  long          |         |  Current number of TIMED_WAITING threads
+terminated threads                    |  jvm.threads.terminated                                          |  gauge           |  long          |         |  Current number of TERMINATED threads
+fatal logs                            |  jvm.log.fatal                                                   |  counter         |  long          |         |  Total number of FATAL logs
+error logs                            |  jvm.log.error                                                   |  counter         |  long          |         |  Total number of ERROR logs
+warn logs                             |  jvm.log.warn                                                    |  counter         |  long          |         |  Total number of WARN logs
+info logs                             |  jvm.log.info                                                    |  counter         |  long          |         |  Total number of INFO logs
+non-heap memory used                  |  jvm.nonheap.used                                                |  gauge           |  long          |  bytes  |  Current non-heap memory used
+non-heap memory committed             |  jvm.nonheap.committed                                           |  gauge           |  long          |  bytes  |  Current non-heap memory committed
+max non-heap memory                   |  jvm.nonheap.size.max                                            |  gauge           |  long          |  bytes  |  Max non-heap memory size
+heap memory                           |  jvm.heap.used                                                   |  gauge           |  long          |  bytes  |  Current heap memory used
+heap memory commited                  |  jvm.heap.committed                                              |  gauge           |  long          |  bytes  |  Current heap memory committed
+max heap memory                       |  jvm.heap.size.max                                               |  gauge           |  long          |  bytes  |  Max heap memory size
+max memory size                       |  jvm.memory.size.max                                             |  gauge           |  long          |  bytes  |  Max memory size
+successful logins                     |  hbase.ugi.login.success                                         |  counter         |  long          |         |  Successful kerberos logins
+failed logins                         |  hbase.ugi.login.failure                                         |  counter         |  long          |         |  Failed kerberos logins
+group resolutions                     |  hbase.ugi.groups.gets                                           |  counter         |  long          |         |  Total number of group resolutions
+failed logins latency                 |  hbase.ugi.login.failure.time                                    |  counter         |  long          |  ms     |  Failed kerberos logins latency
+successful logins latency             |  hbase.ugi.login.success.time                                    |  counter         |  long          |  ms     |  Successful kerberos logins latency
+group resolutions time                |  hbase.ugi.groups.gets.time                                      |  counter         |  long          |  ms     |  Time for group resolution
+tables                                |  hbase.rs.tables                                                 |  gauge           |  long          |         |  Number of tables in the metrics system
+read requests                         |  hbase.rs.table.read.requests                                    |  counter         |  long          |         |  Number of read requests
+write requests                        |  hbase.rs.table.write.requests                                   |  counter         |  long          |         |  Number of write requests
+memstore size                         |  hbase.rs.table.memstore.size                                    |  gauge           |  long          |  bytes  |  The size of memory stores
+store files size                      |  hbase.rs.table.store.files.size                                 |  gauge           |  long          |  bytes  |  The size of store files size
+table size                            |  hbase.rs.table.size                                             |  gauge           |  long          |  bytes  |  Total size of the table in the region server
 
-### 0.98
-
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-total max | jvm.memory.size.max | Max | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemMaxM</i>
-info | jvm.log.info | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogInfo</i>
-non heap used | jvm.nonheap.used | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemNonHeapUsedM</i>
-error | jvm.log.error | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogError</i>
-heap committed | jvm.heap.committed | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemHeapCommittedM</i>
-heap max | jvm.heap.size.max | Max | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemHeapMaxM</i>
-blocked | jvm.threads.blocked | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsBlocked</i>
-terminated | jvm.threads.terminated | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsTerminated</i>
-warn | jvm.log.warn | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogWarn</i>
-timed waiting | jvm.threads.waiting.timed | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsTimedWaiting</i>
-heap used | jvm.heap.used | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemHeapUsedM</i>
-fatal | jvm.log.fatal | Sum | Long | <i>Hadoop:service=HBase,name=JvmMetrics#LogFatal</i>
-non heap max | jvm.nonheap.size.max | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemNonHeapMaxM</i>
-waiting | jvm.threads.waiting | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsWaiting</i>
-new | jvm.threads.new | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsNew</i>
-non heap committed | jvm.nonheap.committed | Avg | Double | <i>Hadoop:service=HBase,name=JvmMetrics#MemNonHeapCommittedM</i>
-runnable | jvm.threads.runnable | Avg | Long | <i>Hadoop:service=HBase,name=JvmMetrics#ThreadsRunnable</i>
-ops | hbase.ugi.groups.gets | Sum | Long | <i>Hadoop:service=HBase,name=UgiMetrics#GetGroupsNumOps</i>
-failure time | hbase.ugi.login.failure.time | Sum | Double | <i>Hadoop:service=HBase,name=UgiMetrics#LoginFailureAvgTime * LoginFailureNumOps</i>
-success time | hbase.ugi.login.success.time | Sum | Double | <i>Hadoop:service=HBase,name=UgiMetrics#LoginSuccessAvgTime * LoginSuccessNumOps</i>
-success ops | hbase.ugi.login.success | Sum | Long | <i>Hadoop:service=HBase,name=UgiMetrics#LoginSuccessNumOps</i>
-failure ops | hbase.ugi.login.failure | Sum | Long | <i>Hadoop:service=HBase,name=UgiMetrics#LoginFailureNumOps</i>
-time | hbase.ugi.groups.gets.time | Sum | Double | <i>Hadoop:service=HBase,name=UgiMetrics#v * GetGroupsNumOps</i>
-syncs | hbase.rs.wal.syncs | Sum | Long | Count of syncs the HLog to HDFS.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_num_ops</i>
-append time | hbase.rs.wal.appends.time | Sum | Double | Time an append to the log took.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendTime_num_ops * AppendTime_mean</i>
-append max time | hbase.rs.wal.appends.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendTime_max</i>
-sync time | hbase.rs.wal.syncs.time | Sum | Double | The time it took to sync the HLog to HDFS.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_num_ops * SyncTime_mean</i>
-appends | hbase.rs.wal.appends | Sum | Long | Count of appends to the log.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#appendCount</i>
-append size | hbase.rs.wal.appends.size | Sum | Double | Size (in bytes) of the data appended to the HLog.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_num_ops * AppendSize_mean</i>
-append max size | hbase.rs.wal.appends.size.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_max</i>
-append min time | hbase.rs.wal.appends.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendTime_min</i>
-appends | hbase.rs.wal.appends | Sum | Long | Count of appends to the log.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_num_ops</i>
-sync max time | hbase.rs.wal.syncs.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_max</i>
-appends | hbase.rs.wal.appends | Sum | Long | Count of appends to the log.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_num_ops</i>
-append min size | hbase.rs.wal.appends.size.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#AppendSize_min</i>
-sync min time | hbase.rs.wal.syncs.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=WAL#SyncTime_min</i>
-slow appends | hbase.rs.wal.appends.slow | Sum | Long | Number of appends that were slow.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=WAL#slowAppendCount</i>
-compaction queue | hbase.rs.compaction.queue | Avg | Long | Current depth of the compaction request queue. If increasing, we are falling behind with storefile compaction.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#compactionQueueLength</i>
-compacted cells size | hbase.rs.compaction.cells.size | Sum | Long | The total amount of data processed during minor compactions, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#compactedCellsSize</i>
-updates blocked time | hbase.rs.updates.blocked.time | Sum | Long | Number of MS updates have been blocked so that the memstore can be flushed.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#updatesBlockedTime</i>
-major compacted cells | hbase.rs.compaction.major.cells | Sum | Long | The number of cells processed during major compactions.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#majorCompactedCellsCount</i>
-flush queue | hbase.rs.compaction.queue.size | Avg | Long | Length of the queue for region flushes.If increasing, we are falling behind with clearing memstores out to HDFS.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#flushQueueLength</i>
-compacted cells | hbase.rs.compaction.cells | Sum | Long | The number of cells processed during minor compactions.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#compactedCellsCount</i>
-flushed cells | hbase.rs.flushes.cells | Sum | Long | The number of cells flushed to disk.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#flushedCellsCount</i>
-flushed cells size | hbase.rs.flushes.cells.size | Sum | Long | The total amount of data flushed to disk, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#flushedCellsSize</i>
-major compacted cells size | hbase.rs.compaction.major.cells.size | Sum | Long | The total amount of data processed during major compactions, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#majorCompactedCellsSize</i>
-assign min time | hbase.master.assigns.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_min</i>
-rit count over threshold | hbase.master.rit.count.overthreshold | Avg | Long | The number of regions that have been in transition longer than a threshold time (default: 60 seconds).<br/><i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#ritCountOverThreshold</i>
-rit count | hbase.master.rit.count | Avg | Long | The number of regions in transition.<br/><i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#ritCount</i>
-assigns | hbase.master.assigns | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_num_ops</i>
-assign time | hbase.master.assigns.time | Sum | Double | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_mean * Assign_num_ops</i>
-bulk assign time | hbase.master.assigns.bulk.time | Sum | Double | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_mean * BulkAssign_num_ops</i>
-rit oldest age | hbase.master.rit.oldest | Max | Long | The age of the longest region in transition.<br/><i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#ritOldestAge</i>
-bulk assign max time | hbase.master.assigns.bulk.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_max</i>
-assign max time | hbase.master.assigns.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#Assign_max</i>
-bulk assign min time | hbase.master.assigns.bulk.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_min</i>
-bulk assigns | hbase.master.assigns.bulk | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=AssignmentManger#BulkAssign_num_ops</i>
-increment time | hbase.rs.ops.increments.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_num_ops * Increment_mean</i>
-slow_puts | hbase.rs.ops.puts.slow | Sum | Long | The number of Puts that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowPutCount</i>
-get max time | hbase.rs.ops.gets.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_max</i>
-append time | hbase.rs.ops.appends.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_num_ops * Append_mean</i>
-deletes | hbase.rs.ops.deletes | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_num_ops</i>
-replay min time | hbase.rs.ops.replays.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_min</i>
-mutate min time | hbase.rs.ops.mutates.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_min</i>
-get time | hbase.rs.ops.gets.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_num_ops * Get_mean</i>
-increment max time | hbase.rs.ops.increments.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_max</i>
-slow appends | hbase.rs.ops.appends.slow | Sum | Long | The number of Appends that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowAppendCount</i>
-mutate max time | hbase.rs.ops.mutates.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_max</i>
-get min time | hbase.rs.ops.gets.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_min</i>
-increments | hbase.rs.ops.increments | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_num_ops</i>
-replay max time | hbase.rs.ops.replays.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_max</i>
-delete time | hbase.rs.ops.deletes.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_num_ops * Delete_mean</i>
-slow deletes | hbase.rs.ops.deletes.slow | Sum | Long | The number of Deletes that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowDeleteCount</i>
-delete max time | hbase.rs.ops.deletes.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_max</i>
-appends | hbase.rs.ops.appends | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_num_ops</i>
-append max time | hbase.rs.ops.append.time.max | Max | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_max</i>
-delete min time | hbase.rs.ops.deletes.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Delete_min</i>
-mutates | hbase.rs.ops.mutates | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_num_ops</i>
-increment min time | hbase.rs.ops.increments.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Increment_min</i>
-append min time | hbase.rs.ops.appends.time.min | Min | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Append_min</i>
-replay time | hbase.rs.ops.replays.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_num_ops * Replay_mean</i>
-slow increments | hbase.rs.ops.increments.slow | Sum | Long | The number of Increments that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowIncrementCount</i>
-replays | hbase.rs.ops.replays | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Replay_num_ops</i>
-gets | hbase.rs.ops.gets | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Get_num_ops</i>
-slow gets | hbase.rs.ops.gets.slow | Sum | Long | The number of Gets that took over 1000ms to complete.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#slowGetCount</i>
-mutate time | hbase.rs.ops.mutates.time | Sum | Double | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#Mutate_num_ops * Mutate_mean</i>
-restore max time | hbase.snapshots.restore.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_max</i>
-snapshot time | hbase.snapshots.time | Sum | Double | Time it takes to finish snapshot().<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_num_ops * SnapshotTime_mean</i>
-snapshot max time | hbase.snapshots.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_max</i>
-clone time | hbase.snapshots.clone.time | Sum | Double | Time it takes to finish cloneSnapshot().<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_num_ops * SnapshotCloneTime_mean</i>
-snapshots | hbase.snapshots | Sum | Long | Count of snapshot() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_num_ops</i>
-restores | hbase.snapshots.restores | Sum | Long | Count of restoreSnapshot() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_num_ops</i>
-clone min time | hbase.snapshots.clone.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_min</i>
-clones | hbase.snapshots.clones | Sum | Long | Count of cloneSnapshot() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_num_ops</i>
-snapshot min time | hbase.snapshots.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotTime_min</i>
-clone max time | hbase.snapshots.clone.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotCloneTime_max</i>
-restore time | hbase.snapshots.restore.time | Sum | Double | Time it takes to finish restoreSnapshot().<br/><i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_num_ops * SnapshotRestoreTime_mean</i>
-restore min time | hbase.snapshots.restore.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Snapshots#SnapshotRestoreTime_min</i>
-meta hlog split max size | hbase.master.hlog.meta.splits.size.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_max</i>
-hlog split size | hbase.master.meta.splits.size | Sum | Double | Size of HLog files being split.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_num_ops * HlogSplitSize_mean</i>
-hlog split min time | hbase.master.hlog.splits.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_min</i>
-hlog split max size | hbase.master.hlog.splits.size.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_max</i>
-hlog splits | hbase.master.hlog.splits | Sum | Long | Count of HLog.splitLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_num_ops</i>
-meta hlog split time | hbase.master.hlog.meta.splits.time | Sum | Double | Time it takes to finish splitMetaLog().<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_num_ops * MetaHlogSplitTime_mean</i>
-meta hlog split max time | hbase.master.hlog.meta.splits.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_max</i>
-hlog split time | hbase.master.hlog.splits.time | Sum | Double | Time it takes to finish HLog.splitLog().<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_num_ops * HlogSplitTime_mean</i>
-hlog split min size | hbase.master.hlog.splits.size.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_min</i>
-meta hlog splits | hbase.master.hlog.meta.splits | Sum | Long | Count of splitMetaLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_num_ops</i>
-meta hlog split min size | hbase.master.hlog.meta.splits.size.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_min</i>
-meta hlog split min time | hbase.master.hlog.meta.splits.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_min</i>
-meta hlog splits | hbase.master.hlog.meta.splits | Sum | Long | Count of splitMetaLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitTime_num_ops</i>
-hlog split max time | hbase.master.hlog.splits.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitTime_max</i>
-hlog splits | hbase.master.hlog.splits | Sum | Long | Count of HLog.splitLog() invocations.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#HlogSplitSize_num_ops</i>
-meta hlog split size | hbase.master.hlog.meta.splits.size | Sum | Double | Size of hbase:meta HLog files being split.<br/><i>Hadoop:service=HBase,name=Master,sub=FileSystem#MetaHlogSplitSize_num_ops * MetaHlogSplitSize_mean</i>
-lower limit | hbase.rs.memstore.size.limit.lower | Avg | Long | Property 'hbase.regionserver.global.memstore.lowerLimit' value.
-static bloom size | hbase.rs.static.bloom.size | Avg | Long | Uncompressed size of the static bloom filters.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#staticBloomSize</i>
-store files | hbase.rs.stores.files | Avg | Long | Number of Store Files.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeFileCount</i>
-store file index size | hbase.rs.stores.index.size | Avg | Long | Size of indexes in storefiles on disk.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeFileIndexSize</i>
-store file size | hbase.rs.stores.files.size | Avg | Long | Size of storefiles being served.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeFileSize</i>
-mem store size | hbase.rs.memstore.size | Avg | Long | Size of the memstore.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#memStoreSize
-static index size | hbase.rs.static.index.size | Avg | Long | Uncompressed size of the static indexes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#staticIndexSize</i>
-upper limit | hbase.rs.memstore.size.limit.upper | Avg | Long | Property 'hbase.regionserver.global.memstore.upperLimit' value.
-stores | hbase.rs.stores | Avg | Long | Number of Stores.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#storeCount</i>
-regions | hbase.rs.regions | Avg | Long | Number of regions.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#regionCount</i>
-active handlers | hbase.ipc.handlers.active | Avg | Long | Number of active rpc handlers.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numActiveHandler</i>
-process call time | hbase.ipc.handlers.process.calls.time | Sum | Double | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_mean * ProcessCallTime_num_ops</i>
-process call min time | hbase.ipc.process.call.time.min | Min | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_min</i>
-calls in priority queue | hbase.ipc.queue.priority.size | Avg | Long | The number of currently enqueued priority (internal housekeeping) requests.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numCallsInPriorityQueue</i>
-authorization successes | hbase.ipc.authorization.successes | Sum | Long | Number of authorization successes.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authorizationSuccesses</i>
-received bytes | hbase.ipc.bytes.received | Sum | Long | Number of bytes received.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#receivedBytes</i>
-sent bytes | hbase.ipc.bytes.sent | Sum | Long | Number of bytes sent.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#sentBytes</i>
-authorization failures | hbase.ipc.authorization.failures | Sum | Long | Number of authorization failures.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authorizationFailures</i>
-process call max time | hbase.ipc.process.call.time.max | Max | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_max</i>
-calls in replication queue | hbase.ipc.queue.replication.size | Avg | Long | Number of calls in the replication call queue.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numCallsInReplicationQueue</i>
-process calls | hbase.ipc.handlers.process.calls | Sum | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#ProcessCallTime_num_ops</i>
-calls in general queue | hbase.ipc.queue.size | Avg | Long | The number of currently enqueued user requests.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numCallsInGeneralQueue</i>
-queue call time | hbase.ipc.handlers.queue.calls.time | Sum | Double | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_mean * QueueCallTime_num_ops</i>
-queue call min time | hbase.ipc.queue.call.time.min | Min | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_min</i>
-queue call max time | hbase.ipc.queue.call.time.max | Max | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_max</i>
-queue size | hbase.ipc.queue.bytes | Avg | Long | Number of bytes in the call queues.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#queueSize</i>
-authentication failures | hbase.ipc.authentication.failures | Sum | Long | Number of authentication failures.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authenticationFailures</i>
-queue calls | hbase.ipc.handlers.queue.calls | Sum | Long | <i>Hadoop:service=HBase,name=IPC,sub=IPC#QueueCallTime_num_ops</i>
-open connections | hbase.ipc.connections.open | Avg | Long | The number of open connections at the RPC layer.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#numOpenConnections</i>
-authentication successes | hbase.ipc.authentication.successes | Sum | Long | Number of authentication successes.<br/><i>Hadoop:service=HBase,name=IPC,sub=IPC#authenticationSuccesses</i>
-total requests | hbase.rs.requests | Sum | Long | Total number of requests this RegionServer has answered.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#totalRequestCount</i>
-read requests | hbase.rs.requests.read | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#readRequestCount</i>
-write requests | hbase.rs.requests.write | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Server#writeRequestCount</i>
-applied ops | hbase.rs.replication.ops.applied | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#sink.appliedOps</i>
-applied batches | hbase.rs.replication.batches.applied | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#sink.appliedBatches</i>
-balancer min time | hbase.master.balancer.time.min | Min | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_min</i>
-ops | hbase.master.balancer.ops | Avg | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_num_ops</i>
-time | hbase.master.balancer.time | Sum | Double | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_num_ops * BalancerCluster_mean</i>
-misc invocations | hbase.master.balancer.invocations | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#miscInvocationCount</i>
-balancer max time | hbase.master.balancer.time.max | Max | Long | <i>Hadoop:service=HBase,name=Master,sub=Balancer#BalancerCluster_max</i>
-flushed cells | hbase.rs.mob.flushes.cells | Sum | Long | The number of mob cells flushed to disk.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFlushedCellsCount</i>
-scan cells size | hbase.rs.mob.scan.cells.size | Sum | Long | The total amount of scanned mob cells, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobScanCellsSize</i>
-file cache hits | hbase.rs.mob.cache.files.hits | Avg | Long | The hit percent to the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheHitPercent</i>
-file caches | hbase.rs.mob.cache.files | Avg | Long | The count of cached mob files.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheCount</i>
-compacted into mob cells | hbase.rs.mob.compactions.cells.into | Sum | Long | The number of cells moved to mob during compaction.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedIntoMobCellsCount</i>
-file cache accesses | hbase.rs.mob.cache.files.accesses | Sum | Long | The count of accesses to the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheAccessCount</i>
-scan cells | hbase.rs.mob.scan.cells | Sum | Long | The number of scanned mob cells.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobScanCellsCount</i>
-file cache misses | hbase.rs.mob.cache.files.misses | Sum | Long | The count of misses to the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheMissCount</i>
-compacted from mob cells | hbase.rs.mob.compactions.cells.from | Sum | Long | The number of cells moved from mob during compaction.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedFromMobCellsCount</i>
-compacted into mob cells size | hbase.rs.mob.compactions.cells.into.size | Sum | Long | The total amount of cells move to mob during compaction, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedIntoMobCellsSize</i>
-compacted from mob cells size | hbase.rs.mob.compactions.cells.from.size | Sum | Long | The total amount of cells move from mob during compaction, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobCompactedFromMobCellsSize</i>
-file cache evictions | hbase.rs.mob.cache.files.evictions | Sum | Long | The number of items evicted from the mob file cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFileCacheEvictedCount</i>
-flushes | hbase.rs.mob.flushes | Sum | Long | The number of the flushes in mob-enabled stores.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFlushCount</i>
-flushed cells size | hbase.rs.mob.flushes.cells.size | Sum | Long | The total amount of mob cells flushed to disk, in bytes.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mobFlushedCellsSize</i>
-local files | hbase.rs.files.local | Avg | Long | The percent of HFiles that are stored on the local hdfs data node.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#percentFilesLocal</i>
-hlog files | hbase.rs.files.hlog | Avg | Long | The number of write ahead logs not yet archived.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hlogFileCount</i>
-hlog files size | hbase.rs.files.hlog.size | Avg | Long | Size of all HLog Files.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hlogFileSize</i>
-cluster requests | hbase.master.requests | Sum | Long | <i>Hadoop:service=HBase,name=Master,sub=Server#clusterRequests</i>
-dead region servers | hbase.master.servers.region.dead | Avg | Double | <i>Hadoop:service=HBase,name=Master,sub=Server#numDeadRegionServers</i>
-region servers | hbase.master.servers.region | Avg | Double | <i>Hadoop:service=HBase,name=Master,sub=Server#numRegionServers</i>
-average load | hbase.master.load | Avg | Double | <i>Hadoop:service=HBase,name=Master,sub=Server#averageLoad</i>
-mutations without wal | hbase.ops.mutates.nowal | Sum | Long | Number of mutations that have been sent by clients with the write ahead logging turned off.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mutationsWithoutWALCount</i>
-mutate failed ops | hbase.ops.mutates.failed | Sum | Long | Number of Check and Mutate calls that failed the checks.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#checkMutateFailedCount</i>
-mutate passed ops | hbase.ops.mutates.passed | Sum | Long | Number of Check and Mutate calls that passed the checks.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#checkMutatePassedCount</i>
-mutations without wal size | hbase.ops.mutates.nowal.size | Sum | Long | Size of data that has been sent by clients with the write ahead logging turned off.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#mutationsWithoutWALSize</i>
-hits | hbase.cache.hits | Sum | Long | Count of the hit on the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheHitCount</i>
-express hit% | hbase.cache.hits.express.rate | Avg | Long | The percent of the time that requests with the cache turned on hit the cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheExpressHitPercent</i>
-hit% | hbase.cache.hits.rate | Avg | Long | Percent of block cache requests that are hits.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCountHitPercent</i>
-cache free size | hbase.cache.block.free | Avg | Long | Size of the block cache that is not occupied.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheFreeSize</i>
-block cache size | hbase.cache.block.size | Avg | Long | Size of the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheSize</i>
-miss | hbase.cache.misses | Sum | Long | Number of requests for a block that missed the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheMissCount</i>
-cache count | hbase.cache.block.count | Avg | Long | Number of block in the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheCount</i>
-evictions | hbase.cache.evictions | Sum | Long | Count of the number of blocks evicted from the block cache.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#blockCacheEvictionCount</i>
-shipped batches | hbase.rs.replication.batches.shipped | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.shippedBatches</i>
-shipped ops | hbase.rs.replication.ops.shipped | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.shippedOps</i>
-log edits read | hbase.rs.replication.log.edits.read | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.logEditsRead</i>
-log queue | hbase.rs.replication.log.queue | Avg | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.sizeOfLogQueue</i>
-shipped bytes | hbase.rs.replication.batches.shipped.size | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.shippedKBs</i>
-log edits filtered | hbase.rs.replication.log.edits.filtered | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.logEditsFiltered</i>
-log read bytes | hbase.rs.replication.log.edits.read.bytes | Sum | Long | <i>Hadoop:service=HBase,name=RegionServer,sub=Replication#source.logReadInBytes</i>
-hedged read wins | hbase.reads.hedged.wins | Sum | Long | The number of times we started a hedged read and a hedged read won.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hedgedReadWins</i>
-hedged reads | hbase.reads.hedged | Sum | Long | The number of times we started a hedged read.<br/><i>Hadoop:service=HBase,name=RegionServer,sub=Server#hedgedReads</i>
-
-### 0.94
-
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-stores | hbase.stores | Avg | Long | 
-flushes | hbase.flushes | Sum | Long | 
-compactions | hbase.compactions | Sum | Long | 
-store files | hbase.store.files | Avg | Long | 
-store file index size | hbase.store.index.size | Avg | Long | 
-sync | hbase.fs.sync.latency.max | Max | Long | 
-read | hbase.fs.read.latency.max | Max | Long | 
-write | hbase.fs.write.latency.max | Max | Long | 
-sync | hbase.fs.sync.latency.min | Min | Long | 
-read | hbase.fs.read.latency.min | Min | Long | 
-write | hbase.fs.write.latency.min | Min | Long | 
-flush queue | hbase.flushes.queue.size | Avg | Double | 
-max | hbase.memstore.flushes.time.max | Max | Long | 
-min | hbase.flushes.size.min | Min | Long | 
-flushes | hbase.memstore.flushes | Sum | Long | 
-max | hbase.flushes.size.max | Max | Long | 
-memstore size | hbase.memstore.size | Avg | Long | 
-min | hbase.memstore.flushes.time.min | Min | Long | 
-min | hbase.compactions.time.min | Min | Long | 
-max | hbase.compactions.time.max | Max | Long | 
-max | hbase.compactions.size.max | Max | Long | 
-compactions | hbase.compactions | Sum | Long | 
-compaction queue | hbase.compactions.queue.size | Avg | Double | 
-min | hbase.compactions.size.min | Min | Long | 
-cache size | hbase.cache.block.size | Avg | Long | 
-miss count | hbase.cache.block.misses | Sum | Long | 
-cache free | hbase.cache.block.free | Avg | Long | 
-hit count | hbase.cache.block.hits | Sum | Long | 
-block cache count | hbase.cache.block.count | Avg | Long | 
-blockCacheHitRatio | hbase.cache.block.hits.ratio | Avg | Long | 
-evicted count | hbase.cache.block.evictions | Sum | Long | 
-blockCacheHitCachingRatio | hbase.cache.block.caching.hits.ratio | Avg | Long | 
-max | hbase.splits.time.max | Max | Long | 
-splits | hbase.splits | Sum | Long | 
-max | hbase.splits.size.max | Max | Long | 
-min | hbase.splits.size.min | Min | Long | 
-splits | hbase.splits | Sum | Long | 
-regions | hbase.regions | Avg | Long | 
 
 ## FAQ
 
@@ -514,6 +331,5 @@ There could be 2 possible reasons:
 
 ** Which versions of HBase does SPM support **
 
-SPM has been tested with HBase 0.90, 0.92, 0.94, and 0.98, but
-will work for newer versions, including all CDH
-versions.
+SPM has been tested with HBase 0.98, but will work for newer versions,
+including all CDH versions.
