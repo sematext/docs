@@ -29,7 +29,7 @@ All your notification hooks are listed on [Notification Hooks page](https://apps
 
 ## Add New Email Hook
 
-There are two ways to create a new notification hook. Use [Notification Hooks page](https://apps.sematext.com/ui/hooks) and use green add hook button.
+There are two ways to create a new notification hook. On [Notification Hooks page](https://apps.sematext.com/ui/hooks) use green add hook button.
 
 <img alt="Add new Notification Hook" src="/docs/images/integrations/add-new-hook.png" title="Add new Notification Hook">
 
