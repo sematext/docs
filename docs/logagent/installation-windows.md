@@ -56,6 +56,7 @@ output:
   logsene:
     module: elasticsearch
     url: https://logsene-receiver.sematext.com
+    # for the EU datacenter, it's https://logsene-receiver.eu.sematext.com
     index: LOGSENE-APP-TOKEN-GOES-HERE
 ```
 
