@@ -1,7 +1,7 @@
 Email used when you first sign up for Sematext account also becomes your **Default Notification Hook** email for alerts. It is account default and automatically enabled. You can edit hook's details, copy it or delete it using actions dropdown menu.
 
 
-<a href="#email-hook"><img alt="Email Notification Hook" src="/images/integrations/default-email-notification-hook.png" title="Email Notification Hook"></a>
+<a href="#email-hook"><img alt="Email Notification Hook" src="/docs/images/integrations/default-email-notification-hook.png" title="Email Notification Hook"></a>
 
 
 <div id="email-hook" class="modal" role="dialog" aria-labelledby="Email Notification Hook" aria-describedby="Email Notification Hook">
