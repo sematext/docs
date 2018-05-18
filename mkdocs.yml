@@ -85,6 +85,7 @@ pages:
       - Monitoring Storm: integration/storm.md
       - Monitoring Tomcat: integration/tomcat.md
       - Monitoring ZooKeeper: integration/zk.md
+      - Email: integration/alerts-email-integration.md
       - HipChat: integration/alerts-hipchat-integration.md
       - PagerDuty: integration/alerts-pagerduty-integration.md
       - Slack: integration/alerts-slack-integration.md
