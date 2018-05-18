@@ -25,7 +25,7 @@ Email used when you first sign up for Sematext account also becomes your **Defau
   </a>
 </div>
 
-All your notification hooks are listed on [Notification Hooks page](https://apps.sematext.com/ui/hooks) in Sematext's Metrics, Traces and Logs platform. Here you can see your default email notification hook, create new, edit or delete an existing email hook and other 3rd party notification services such as Slack, PagerDuty, HipChat and more.
+All your notification hooks are listed on [Notification Hooks page](https://apps.sematext.com/ui/hooks) in Sematext's Metrics, Traces and Logs platform. Here you can see your default email notification hook, create new, edit or delete existing email hook, and also integrate other 3rd party notification services such as Slack, PagerDuty, HipChat and more.
 
 ## Add New Email Hook
 
