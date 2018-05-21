@@ -4,51 +4,51 @@
 
 ## Metrics
 
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-bytes sent | tomcat.requests.transfer.tx.bytes | Sum | Long | Bytes sent by all the request processors running on the Apache Tomcat (without headers)
-error requests | tomcat.requests.errors | Sum | Long | Error count on all the request processors running on the Apache Tomcat container
-processing time | tomcat.requests.processing.time | Sum | Long | Cumulated processing time
-request count | tomcat.requests | Sum | Long | Cumulative request count of the Apache Tomcat container
-bytes received | tomcat.requests.transfer.rx.bytes | Sum | Long | Bytes received by all the request processors running on the Apache Tomcat container (without headers)
-max connections | tomcat.connections.max | Avg | Long | The maximum number of connections that the server will accept and process at any given time
-poller thread count | tomcat.threads.pollers | Avg | Double | The number of threads used to poll kept alive connections
-max threads | tomcat.threads.max | Avg | Long | Additional threads will be created up to the configured maximum
-current threads busy | tomcat.threads.busy | Avg | Double | Thread pool usage. Current worker threads busy count
-current thread count | tomcat.threads | Avg | Double | Thread pool usage. Current worker threads count
-connection count | tomcat.connections | Avg | Double | The current count of connections handled by this endpoint
-acceptor thread count | tomcat.threads.acceptors | Avg | Double | The number of threads to be used to accept connections
-queue size | tomcat.executors.queue.size | Avg | Double | Number of tasks waiting to be processed
-max queue size  | tomcat.executors.queue.size.max | Avg | Long | Maximum number of tasks for the pending task queue
-completed task count | tomcat.executors.tasks.completed | Sum | Long | Number of tasks completed by the executor
-max threads | tomcat.executors.max | Avg | Long | Maximum number of allocated threads
-min spare threads | tomcat.executors.spare.min | Avg | Long | Minimum number of allocated threads
-pool size | tomcat.executors.pool | Avg | Double | Number of threads in the pool
-core pool size | tomcat.executors.core | Avg | Double | Core size of the thread pool
-active threads | tomcat.executors.active | Avg | Double | Number of threads currently processing a task
-jsp unload count | tomcat.jsp.unloaded | Sum | Long | The number of JSPs that have been unloaded
-jsp reload count | tomcat.jsp.reloaded | Sum | Long | The number of JSPs that have been reloaded
-jsp loaded count | tomcat.jsp.loaded | Sum | Long | The number of JSPs that have been loaded into a webapp
-processing time  | tomcat.web.execution.time.total | Sum | Long | Cumulative execution times of all servlets in this context
-max time | tomcat.web.execution.time.max | Avg | Long | Maximum execution time of all servlets in this context
-min time  | tomcat.web.execution.time.min | Avg | Long | Minimum execution time of all servlets in this context
-error count | tomcat.web.errors | Sum | Long | Cumulative error count of all servlets in this context
-request count | tomcat.web.requests | Sum | Long | Cumulative request count of all servlets in this context
-max size | tomcat.cache.size.max | Avg | Long | The maximum size of the static resource cache
-size | tomcat.cache.size | Avg | Long | Current size
-lookups | tomcat.cache.lookups | Sum | Long | Number of times the cache was accessed
-hits | tomcat.cache.hits | Sum | Long | Number of times the cache was hit
-num active | tomcat.datasource.active | Avg | Double | Current Active
-max active | tomcat.datasource.active.max | Avg | Long | The maximum number of active connections that can be allocated from this pool at the same time
-init size | tomcat.datasource.init | Avg | Long | The initial number of connections that are created when the pool is started
-max idle | tomcat.datasource.idle.max | Avg | Long | The maximum number of connections that should be kept in the pool at all times
-num idle | tomcat.datasource.idle | Avg | Double | The number of established connections in the pool that are idle
-min idle | tomcat.datasource.idle.min | Avg | Long | The minimum number of established connections that should be kept in the pool at all times
-rejected sessions | tomcat.sessions.rejected | Sum | Long | How often was a configured maxActiveSessions limit reached
-processing time | tomcat.sessions.processing.time | Sum | Long | Total processing time since startup, cumulated elapsed milliseconds needed for session expiration handling.
-created sessions | tomcat.sessions | Sum | Long | Total number of sessions created since startup
-expired sessions | tomcat.sessions.expired | Sum | Long | Number of sessions that expired (doesn't include explicit invalidations)
-session max alive time | tomcat.sessions.alive.time.max | Avg | Long | Measured from session creation to expiration (be it logout or session idle timeout)
-max active | tomcat.sessions.active.max | Avg | Double | Max number of concurrent active sessions
-active sessions | tomcat.sessions.active | Avg | Double | Number of active sessions at this moment
-session average alive time | tomcat.sessions.alive.time | Avg | Long | Average time an expired session had been alive
+Metric Name                      |  Key                                |  Metric Type  |  Numeric Type  |  Unit                                                                   |  Description
+---------------------------------|-------------------------------------|---------------|----------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------
+bytes sent                       |  tomcat.requests.transfer.tx.bytes  |  counter      |  long          |  bytes                                                                  |  Bytes sent by all the request processors running on the Apache Tomcat (without headers)
+error requests                   |  tomcat.requests.errors             |  counter      |  long          |                                                                         |  Error count on all the request processors running on the Apache Tomcat container
+req processing time              |  tomcat.requests.processing.time    |  counter      |  long          |  ms                                                                     |  Cumulated processing time
+requests                         |  tomcat.requests                    |  counter      |  long          |                                                                         |  Cumulative request count of the Apache Tomcat container
+bytes received                   |  tomcat.requests.transfer.rx.bytes  |  counter      |  long          |  bytes                                                                  |  Bytes received by all the request processors running on the Apache Tomcat container (without headers)
+max connections                  |  tomcat.connections.max             |  gauge        |  long          |                                                                         |  The maximum number of connections that the server will accept and process at any given time
+poller thread count              |  tomcat.threads.pollers             |  gauge        |  long          |                                                                         |  The number of threads used to poll kept alive connections
+max threads                      |  tomcat.threads.max                 |  gauge        |  long          |                                                                         |  Additional threads will be created up to the configured maximum
+current busy threads             |  tomcat.threads.busy                |  gauge        |  long          |                                                                         |  Thread pool usage. Current worker threads busy count
+current threads                  |  tomcat.threads                     |  gauge        |  long          |                                                                         |  Thread pool usage. Current worker threads count
+connections                      |  tomcat.connections                 |  gauge        |  long          |                                                                         |  The current count of connections handled by this endpoint
+acceptor threads                 |  tomcat.threads.acceptors           |  gauge        |  long          |                                                                         |  The number of threads to be used to accept connections
+executor queue                   |  tomcat.executors.queue.size        |  gauge        |  long          |                                                                         |  Number of tasks waiting to be processed
+executor max queue size          |  tomcat.executors.queue.size.max    |  gauge        |  long          |                                                                         |  Maximum number of tasks for the pending task queue
+executor completed tasks         |  tomcat.executors.tasks.completed   |  counter      |  long          |                                                                         |  Number of tasks completed by the executor
+max executor threads             |  tomcat.executors.max               |  gauge        |  long          |                                                                         |  Maximum number of allocated threads
+min spare executor threads       |  tomcat.executors.spare.min         |  gauge        |  long          |                                                                         |  Minimum number of allocated threads
+executor threads pool size       |  tomcat.executors.pool              |  gauge        |  long          |                                                                         |  Number of threads in the pool
+executor core thread pool size   |  tomcat.executors.core              |  gauge        |  long          |                                                                         |  Core size of the thread pool
+executor active threads          |  tomcat.executors.active            |  gauge        |  long          |                                                                         |  Number of threads currently processing a task
+jsp unload count                 |  tomcat.jsp.unloaded                |  counter      |  long          |                                                                         |  The number of JSPs that have been unloaded
+jsp reload count                 |  tomcat.jsp.reloaded                |  counter      |  long          |                                                                         |  The number of JSPs that have been reloaded
+jsp loaded count                 |  tomcat.jsp.loaded                  |  counter      |  long          |                                                                         |  The number of JSPs that have been loaded into a webapp
+servlets processing time         |  tomcat.web.execution.time.total    |  counter      |  long          |  ms                                                                     |  Cumulative execution times of all servlets in this context
+max servlet processing time      |  tomcat.web.execution.time.max      |  gauge        |  long          |  ms                                                                     |  Maximum execution time of all servlets in this context
+min servlet processing time      |  tomcat.web.execution.time.min      |  gauge        |  long          |  ms                                                                     |  Minimum execution time of all servlets in this context
+servlet errors                   |  tomcat.web.errors                  |  counter      |  long          |                                                                         |  Cumulative error count of all servlets in this context
+servlet requests                 |  tomcat.web.requests                |  counter      |  long          |                                                                         |  Cumulative request count of all servlets in this context
+max cache size                   |  tomcat.cache.size.max              |  gauge        |  long          |  bytes                                                                  |  The maximum size of the static resource cache
+size                             |  tomcat.cache.size                  |  gauge        |  long          |  bytes                                                                  |  current cache size
+cache lookups                    |  tomcat.cache.lookups               |  counter      |  long          |                                                                         |  Number of times the cache was accessed
+cache hits                       |  tomcat.cache.hits                  |  counter      |  long          |                                                                         |  Number of times the cache was hit
+active connections               |  tomcat.datasource.active           |  gauge        |  long          |                                                                         |  Current Active
+max active connections           |  tomcat.datasource.active.max       |  gauge        |  long          |                                                                         |  The maximum number of active connections that can be allocated from this pool at the same time
+datasource connection init size  |  tomcat.datasource.init             |  gauge        |  long          |                                                                         |  The initial number of connections that are created when the pool is started
+max idle datasource connections  |  tomcat.datasource.idle.max         |  gauge        |  long          |                                                                         |  The maximum number of connections that should be kept in the pool at all times
+idle datasource connections      |  tomcat.datasource.idle             |  gauge        |  long          |                                                                         |  The number of established connections in the pool that are idle
+min idle datasource connections  |  tomcat.datasource.idle.min         |  gauge        |  long          |                                                                         |  The minimum number of established connections that should be kept in the pool at all times
+rejected sessions                |  tomcat.sessions.rejected           |  counter      |  long          |                                                                         |  How often was a configured maxActiveSessions limit reached
+session processing time          |  tomcat.sessions.processing.time    |  counter      |  long          |  cumulated elapsed milliseconds needed for session expiration handling  |  Total processing time since startup
+created sessions                 |  tomcat.sessions                    |  counter      |  long          |                                                                         |  Total number of sessions created since startup
+expired sessions                 |  tomcat.sessions.expired            |  counter      |  long          |                                                                         |  Number of sessions that expired (doesn't include explicit invalidations)
+session max alive time           |  tomcat.sessions.alive.time.max     |  gauge        |  long          |  ms                                                                     |  Measured from session creation to expiration (be it logout or session idle timeout)
+max active sessions              |  tomcat.sessions.active.max         |  gauge        |  long          |                                                                         |  Max number of concurrent active sessions
+active sessions                  |  tomcat.sessions.active             |  gauge        |  long          |                                                                         |  Number of active sessions at this moment
+session average alive time       |  tomcat.sessions.alive.time         |  gauge        |  long          |  ms                                                                     |  Average time an expired session had been alive
