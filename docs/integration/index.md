@@ -265,20 +265,6 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/integration/sensei/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="/docs/images/integrations/sensei.svg" alt="SenseiDB" title="Sensei DB Monitoring" style="width: 80%;">
-						</div>
-						<div class="side back"><h5>SenseiDB</h5>cache misses num / hits num, disk index size, RamB index segments, disk index segments, request time, errors, scatter time, rejected requests, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/solr/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
@@ -308,16 +294,13 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 			</div>
 		</a>
 	</div>
-</div>
-
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/spark/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="/docs/images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 64px;">
+							<img src="/docs/images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 96px;">
 						</div>
 						<div class="side back"><h5>Spark</h5>last received delay, unprocessed batches, receivers, waiting batches, active jobs, driver memory used, all jobs, executors, cores free, write ops, ...</div>
 					</div>
@@ -325,6 +308,9 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 			</div>
 		</a>
 	</div>
+</div>
+
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/storm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -382,21 +368,21 @@ Elasticsearch API which lets you:
 - search for logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
 - optionally define custom mappings for your log types, so you can tweak the way your logs are indexed
 
-Syslog Protocols
+** Syslog Protocols **
 
-We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
+We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
 
 ** Log Shippers **
 
 <ul>
- 	<li><a  href="https://apps.sematext.com/ui/howto/Logsene/logagent">Logagent</a> - cross platform, Smart and lightweight Log Parser and Log Shipper written in Node.js</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rsyslog">rsyslog</a> - easy to get started, very fast and very light on resources, docs are harder to navigate for beginners though.</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/logstash">Logstash</a> - cross platform, very simple to set up, well documented, but a little heavy on resource usage</li>
- 	<li><a  href="https://apps.sematext.com/ui/howto/Logsene/filebeat">Filebeat</a> - cross platform, much lighter on resource usage, requires a Logstash instance to aggregate logs</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/syslog">syslog-ng</a> - very fast and very light on resources, good docs, available as both free and paid version</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/syslogd">syslogd</a> - quite old, light on resources, not very feature rich</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/fluentd">Fluentd</a> - cross platform, easy to get started, horizontally scalable, available as both free and paid version</li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/nxlog">Log</a> - cross platform but mostly used on Windows, easy to get started, available as both free and paid version</li>
+ 	<li><a  href="https://apps.sematext.com/ui/howto/Logsene/logagent">Logagent</a> - cross platform, Smart and lightweight Log Parser and Log Shipper written in Node.js</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rsyslog">rsyslog</a> - easy to get started, very fast and very light on resources, docs are harder to navigate for beginners though.</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/logstash">Logstash</a> - cross platform, very simple to set up, well documented, but a little heavy on resource usage</li>
+ 	<li><a  href="https://apps.sematext.com/ui/howto/Logsene/filebeat">Filebeat</a> - cross platform, much lighter on resource usage, requires a Logstash instance to aggregate logs</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/syslog">syslog-ng</a> - very fast and very light on resources, good docs, available as both free and paid version</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/syslogd">syslogd</a> - quite old, light on resources, not very feature rich</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/fluentd">Fluentd</a> - cross platform, easy to get started, horizontally scalable, available as both free and paid version</li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/nxlog">NXLog</a> - cross platform but mostly used on Windows, easy to get started, available as both free and paid version</li>
 </ul>
 
 ** Programming Languages **
@@ -422,7 +408,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rancheros">RancherOS</a></li>
 </ul>
 
-** Docker **
+** Containers **
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/docker">Docker</a></li>
@@ -430,7 +416,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/mesosmarathon">Mesos Marathon</a></li>
 </ul>
 
-** Cloud Iass / Pass **
+** Cloud IaaS / PaaS **
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awss3">AWS S3</a></li>
@@ -442,28 +428,38 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/gae">Google App Engine</a></li>
 </ul>
 
-** IOS **
+** iOS **
 
-<div>For iOS apps use <a href="https://github.com/sematext/sematext-logsene-ios" target="_blank" rel="noopener">Logsene for iOS</a> library.</div>
+<div>For iOS apps use <a href="https://github.com/sematext/sematext-logsene-ios" target="_blank" rel="noopener">Logsene for iOS</a> library.</div>
 
 ** Android ** 
 
-<div>For Android apps use<a href="https://github.com/sematext/sematext-logsene-android" target="_blank" rel="noopener"> Logsene for Android</a> library.</div>
+<div>For Android apps use<a href="https://github.com/sematext/sematext-logsene-android" target="_blank" rel="noopener"> Logsene for Android</a> library.</div>
 
-** Mobile **
+** AWS EC2 **
 
-Log From Amazon Web Services
+If you're an EC2 user, you can log Sematext  from your instances by
+setting up a <a class="" href="https://apps.sematext.com/ui/logs#">log
+shipper</a> like you would from any other physical or virtual machine.
 
-If you're an EC2 user, you can log to Logsene from your instances by setting up a <a class="" href="https://apps.sematext.com/ui/logs#">log shipper</a> like you would from any other physical or virtual machine.
+** AWS S3 (CloudTrail, Flow logs, ELB access logs, etc.) **
 
-AWS S3
+If you have logs stored in S3, you can ship them to Logsene <a
+href="https://github.com/sematext/logsene-aws-lambda-s3"
+target="_blank" rel="noopener">via this AWS Lambda function</a>. This
+method also works for when you periodically upload logs to S3 buckets,
+like Amazon CloudTrail does.
 
-If you have logs stored in S3, you can ship them to Logsene <a href="https://github.com/sematext/logsene-aws-lambda-s3" target="_blank" rel="noopener">via this AWS Lambda function</a>. This method also works for when you periodically upload logs to S3 buckets, like Amazon CloudTrail does.
+** AWS CloudWatch Logs **
 
-AWS CloudWatch
-
-If you want to ship CloudWatch logs, you can use <a href="https://github.com/sematext/logsene-aws-lambda-cloudwatch" target="_blank" rel="noopener">another AWS Lambda function</a>. If logs are VPC flowlogs, the Lambda function will also parse them and add geoIP information on the source IP addresses.
+If you want to ship CloudWatch logs, you can use <a
+href="https://github.com/sematext/logsene-aws-lambda-cloudwatch"
+target="_blank" rel="noopener">another AWS Lambda function</a>. If
+logs are VPC flowlogs, the Lambda function will also parse them and
+add geoIP information on the source IP addresses.
 
 ### Alerting
 
-Multiple types of [alert notifications](/alerts) can be triggered on metrics and on logs and sent to several 3rd party services. See [Alerts](/alerts) for more info.
+Multiple types of [alert notifications](/alerts) can be triggered on
+metrics and on logs and sent to several 3rd party services. See
+[Alerts](/alerts) for more info.

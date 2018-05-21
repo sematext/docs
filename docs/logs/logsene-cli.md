@@ -1,7 +1,4 @@
-*[Logsene](http://sematext.com/logsene) Command-line Interface*
-
-Enables searching Logsene log entries from the command-line. Currently
-supports OS X and Linux.
+[Logsene](http://sematext.com/logsene)  *Command-line Interface* enables searching log entries from the command-line. Currently it supports OS X and Linux.
 
 ## Installation
 
@@ -25,16 +22,15 @@ npm test
 
 ## Logsene
 
-[Logsene](http://sematext.com/logsene) is a centralized log management
-solution. You basically upload your logs in bulk or real-time from all
+[Logsene](http://sematext.com/logsene)  is a centralized log management
+solution where you can upload your logs in bulk or real-time from all
 your servers.
 
 Those logs are then aggregated by time and shown in the Logsene web
 application, where you have the ability to search for specific terms,
-narrow down time ranges, filter fields, setup alerts,
-...
+narrow down time ranges, filter fields, setup alerts and more.
 
-![](https://camo.githubusercontent.com/3746de0a69ab9dd51d20b3d96e7bbe296ad3eb3f/687474703a2f2f69313332392e70686f746f6275636b65742e636f6d2f616c62756d732f773534382f6d626f6e6163692f53656d61746578742532304c2d434c49253230524541444d452f4c6f6773656e652d7765622d6170705f7a70737564766473706f342e706e67)
+<img alt="Sematext Logsene - Logging Management" src="/docs/images/logs/logsene-ui.png" title="Sematext Logging Management UI screen">
 
 A quick rundown of most notable features of Logsene:
 
@@ -49,8 +45,6 @@ A quick rundown of most notable features of Logsene:
   - Docker container monitoring
   - REST API
 
-  
-
 ## Logsene CLI
 
 Logsene CLI gives you capability to search through your logs from the
@@ -59,7 +53,8 @@ results to `awk`, `sed`, `cut`, `sort`, `head` and friends from the
 \*nix command-line.
 
 Imagine a situation where you suspected that your site were under a DoS
-attack.  
+attack.
+
 You'd be interested in quickly finding out the top offenders. Here’s a
 one-liner that shows top originating IP addresses in the last 3 hours
 (also shows how to use the `-f` switch to specify which field(s) to
@@ -72,7 +67,7 @@ $ logsene search -t 3h -f host | sort | uniq -c | sort -r | head
 
 ![](https://camo.githubusercontent.com/9cc0b66e3432426d11f65e81c4dbc196d1fe2d21/687474703a2f2f69313332392e70686f746f6275636b65742e636f6d2f616c62756d732f773534382f6d626f6e6163692f53656d61746578742532304c2d434c49253230524541444d452f3368736f7274756e6971686561645f7a7073687461666a36376a2e706e67)
 
-You can find more useful examples in [the blog post](http://blog.sematext.com/2015/07/07/logsene-cli/) that announced
+You can find more useful examples in  [the blog post](http://blog.sematext.com/2015/07/07/logsene-cli/)  that announced
 the release of Logsene CLI.
 
 ### Logsene CLI Session
@@ -99,7 +94,7 @@ multi-user experience, where all users may possibly be accessing L-CLI
 from the same box (while being SSHd into it), using the same Sematext
 account and possibly even the same Logsene application.
 
-  
+
 
 ## Commands
 

@@ -1,15 +1,15 @@
-With plain syslogd, you can send logs to Logsene via UDP if you add this
+With plain syslogd, you can send logs to Sematext Logs Management App via UDP if you add this
 line to your **/etc/syslog.conf**:
 
 ``` bash
 *.* @logsene-receiver-syslog.sematext.com
 ```
 
-Before you restart syslogd, **[register your public IP](authorizing-ips-for-syslog).** If you're behind a NAT
+Before you restart syslogd, **[register your public IP](authorizing-ips-for-syslog).** If you're behind a NAT
 or registering IPs doesn't suit your use-case, there are other options:
 
-  - if you just want to test sending a few logs to Logsene, you can use
-    your Logsene application token in a [CEE-formatted JSON message](json-messages-over-syslog). For
+  - if you just want to test sending a few logs to Logs Management App, you can use
+    your application token in a [CEE-formatted JSON message](json-messages-over-syslog). For
 example:
 
 <!-- end list -->
@@ -22,10 +22,10 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
     [rsyslog](rsyslog) or
     [syslog-ng](syslog-ng). Or anything else that lets you
     format your messages, so you can build a JSON containing your
-    Logsene application token like the one above
+    Logs Management application token like the one above
   - similar to the solution above, you can use a separate machine for
     consolidating your logs, where you'd install rsyslog or syslog-ng.
-    Configure that machine to send logs to Logsene, and configure your
+    Configure that machine to send logs to Logs Management App, and configure your
     syslogd to send logs to your logs to your "central"
     rsyslog/syslog-ng via UDP:
 
@@ -51,6 +51,3 @@ standard **port 514**:
 $ModLoad imudp
 $UDPServerRun 514
 ```
-
-  
-

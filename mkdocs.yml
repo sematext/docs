@@ -23,6 +23,7 @@ pages:
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
         - Kibana: logs/kibana.md
+      - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Special Fields: logs/special-fields.md
       - API: logs/logsene-api-reference.md
@@ -84,6 +85,7 @@ pages:
       - Monitoring Storm: integration/storm.md
       - Monitoring Tomcat: integration/tomcat.md
       - Monitoring ZooKeeper: integration/zk.md
+      - Email: integration/alerts-email-integration.md
       - HipChat: integration/alerts-hipchat-integration.md
       - PagerDuty: integration/alerts-pagerduty-integration.md
       - Slack: integration/alerts-slack-integration.md
@@ -92,7 +94,6 @@ pages:
       - FAQ: sematext-enterprise/faq.md
     - Sematext Docker Agent: 
       - Overview: sematext-docker-agent/index.md
-      - Supported Platforms: sematext-docker-agent/supported-platforms.md
       - Installation: sematext-docker-agent/installation.md
       - Configuration: sematext-docker-agent/configuration.md
       - Troubleshooting: sematext-docker-agent/troubleshooting.md
@@ -153,8 +154,9 @@ pages:
           - Zeromq output: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
-      - Contributing to Logagent:
-        - IDE Integration and debugging: logagent/logagent-ide-conf.md
+      - How-To: 
+          - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
+          - IDE Integration and debugging: logagent/logagent-ide-conf.md
       - FAQ: logagent/faq.md
     - API: api/index.md
     - FAQ: faq.md

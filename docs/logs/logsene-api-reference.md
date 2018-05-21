@@ -1,10 +1,8 @@
-**Note: This API (v2) is deprecated. See [current API](/docs/api).**
-
-*Note: For details on SPM API, see [SPM API Reference](../monitoring/spm-api-reference).*
+**Note: This API (v2) is deprecated. See [current API](/api).**
 
 ### Introduction to Management API
 
-Logsene HTTP API is used to easily manage and access your Logsene Apps
+Logs Management App HTTP API is used to easily manage and access your logging apps
 and their data remotely, without the need to be logged-in via a browser.
 It also makes it possible to automate certain tasks, such as creation of
 new Apps, definition of Alert Rules, etc.  
@@ -12,30 +10,30 @@ new Apps, definition of Alert Rules, etc.
 To use the management APIs, you need the API key for your Account (or,
 if you are a guest to some other Account under which you want to manage
 Apps, Alerts..., then API key of that Account) - it can be
-found **[here](https://apps.sematext.com/ui/team/accounts)**.
+found **[here](https://apps.sematext.com/ui/team/accounts)**.
 API key needs to be passed as an attribute to all API calls and is used
-by Logsene to authenticate Account under which some API call is done.
- API keys and App tokens used in this document are fake.  Use your own
+by our centralized logging management solution to authenticate Account under which some API call is done.
+ API keys and App tokens used in this document are fake.  Use your own
 API key and App tokens.
 
 Access to API key of some Account is allowed
-for **OWNER**, **BILLING\_ADMIN** and **ADMIN** users. Users
-with **USER** role **cannot** access API key of that Account, though
+for **OWNER**, **BILLING\_ADMIN** and **ADMIN** users. Users
+with **USER** role **cannot** access API key of that Account, though
 they can always use their own Account's API key to manage their own
-Account, Apps, etc.  For more info about Account Sharing please see [SPM FAQ](../monitoring/spm-faq/#how-can-i-share-my-apps-with-other-users).
+Account, Apps, etc.  For more info about Account Sharing please see [SPM FAQ](../monitoring/spm-faq/#how-can-i-share-my-apps-with-other-users).
 
 ### Elasticsearch-compatible Search API
 
 To use the search APIs, see [Search through the Elasticsearch API](search-through-the-elasticsearch-api). This API
-is **fully compatible with Elasticsearch's APIs**. To use it you need
-just your Logsene App tokens, not the API key.  The rest of this
-document describes only the app management APIs.  For searching your
-logs from the terminal/console, see [Logsene CLI](logsene-cli).
+is **fully compatible with Elasticsearch's APIs**. To use it you need
+just your Logs Management App tokens, not the API key.  The rest of this
+document describes only the app management APIs.  For searching your
+logs from the terminal/console, see [Logs Management App CLI](logsene-cli).
 
 ### Request/Response format
 
 All API calls accept JSON in requests and return JSON response. All API
-call requests should contain **apiKey** attribute (among other
+call requests should contain **apiKey** attribute (among other
 attributes specific for that API call). Example of content of one such
 call:
 
@@ -46,10 +44,10 @@ call:
 }
 ```
 
-All API responses contain attribute **success** which has
-value **true** or **false**. Optional response attributes
-are **message** (which provides textual message about what API call
-did) and **data** (which contains data returned by the call). Example of
+All API responses contain attribute **success** which has
+value **true** or **false**. Optional response attributes
+are **message** (which provides textual message about what API call
+did) and **data** (which contains data returned by the call). Example of
 response:
 
 ``` JSON
@@ -65,10 +63,10 @@ response:
 ```
 
 Also, all responses contain an HTTP code which describes success or
-failure. In case of a successful call, HTTP code will be **200** (OK).
+failure. In case of a successful call, HTTP code will be **200** (OK).
 Any other non-2XX HTTP code represents an error (most commonly used
-codes are **400** - Bad Request, **401** - Unauthorized, **403** -
-Forbidden and **500** - Internal Server Error).
+codes are **400** - Bad Request, **401** - Unauthorized, **403** -
+Forbidden and **500** - Internal Server Error).
 
 ### Regions
 
@@ -76,9 +74,9 @@ API call examples use apps.sematext.com.  If you are using Sematext Cloud Europe
 
 ### Apps API
 
-#### Create Logsene App
+#### Create Logs App
 
-Creates new Logsene app under referenced account.
+Creates new logging app under referenced account.
 
 <table>
 <colgroup>
@@ -107,10 +105,10 @@ Description
 <tr class="odd">
 <td><a href="https://apps.sematext.com/logsene-reports/api/v2/app/add" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/app/add</a></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of account under which app will be created)</p>
-<p><strong>name </strong>(of app which will be created)</p>
-<p><strong>discountCode</strong> (optional parameter, send only if you have a valid code)</p></td>
-<td><p>Creates new <strong>Logsene</strong> application under account defined by <strong>apiKey</strong>, with name<strong> name </strong>(such name should be unique among other Logsene apps under this account)</p></td>
+<td><p><strong>apiKey</strong> (of account under which app will be created)</p>
+<p><strong>name </strong>(of app which will be created)</p>
+<p><strong>discountCode</strong> (optional parameter, send only if you have a valid code)</p></td>
+<td><p>Creates new logging management apps under account defined by <strong>apiKey</strong>, with name<strong> name </strong>(such name should be unique among other apps under this account)</p></td>
 </tr>
 </tbody>
 </table>
@@ -237,30 +235,30 @@ Example of a success response (with HTTP code 200):
 ```
 
 **Note**: It will return all apps registered under provided account, not
-just Logsene apps.
+just logging management apps.
 
 ### Alerts API
 
-Logsene Alerts HTTP API lets you:
+Logs Management App Alerts HTTP API lets you:
 
   - list all alerts defined for some app
   - delete/enable/disable individual alerts
   - create new alerts (of any type: threshold, anomaly)
   - list alert notifications
 
-When using Logsene Alerts API, you will need to use API key which
+When using our centralized logging management solution Alerts API, you will need to use API key which
 belongs to OWNER of the app to which alerts are related. If you are
 managing alerts for your apps, then just use your API key. If you are
 managing alerts for apps that belong to some other account (and your are
-just a guest in that account with role **BILLING\_ADMIN** or **ADMIN**),
+just a guest in that account with role **BILLING\_ADMIN** or **ADMIN**),
 you will have to use API key of that account (in both cases the key can
-be found [here](https://apps.sematext.com/ui/account/api), you
+be found [here](https://apps.sematext.com/ui/account/api), you
 just have to consider which account you are currently logged into).
 
 #### List Alerts
 
 Fetches all alerts of specific type (threshold, anomaly) for a
-particular Logsene app.
+particular logging management app.
 
 <table>
 <colgroup>
@@ -289,16 +287,16 @@ Description
 <tr class="odd">
 <td><a href="https://apps.sematext.com/logsene-reports/api/v2/alert/threshold/list" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/alert/threshold/list</a></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
-<p><strong>appToken </strong>(of app whose alerts are fetched)</p></td>
-<td>Fetches all <strong>threshold</strong> based alerts for app<strong> </strong>defined with <strong>appToken</strong></td>
+<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
+<p><strong>appToken </strong>(of app whose alerts are fetched)</p></td>
+<td>Fetches all <strong>threshold</strong> based alerts for app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 <tr class="even">
 <td><span class="nolink"><a href="https://apps.sematext.com/logsene-reports/api/v2/alert/anomaly/list" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/alert/anomaly/list</a></span></td>
 <td>POST</td>
-<td><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)
-<p><strong>appToken </strong>(of app whose alerts are fetched)</p></td>
-<td>Fetches all <strong>anomaly</strong> alerts for app<strong> </strong>defined with <strong>appToken</strong></td>
+<td><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)
+<p><strong>appToken </strong>(of app whose alerts are fetched)</p></td>
+<td>Fetches all <strong>anomaly</strong> alerts for app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -375,11 +373,11 @@ adjust some attributes).
 
 #### Create Alert
 
-There are 2 types of alerts available in Logsene - threshold and
+There are 2 types of alerts available in Logs Management App - threshold and
 anomaly. Each of them has different attributes so there are 2 different
 API calls for creating them.
 
-**Threshold** and **Anomaly** Alerts are created for a specific query.
+**Threshold** and **Anomaly** Alerts are created for a specific query.
 
 ##### Create Threshold Alert
 
@@ -410,10 +408,10 @@ Description
 <tr class="odd">
 <td><span class="nolink"><a href="https://apps.sematext.com/logsene-reports/api/v2/alert/threshold/add" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/alert/threshold/add</a></span></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
-<p><strong>appToken </strong>(of app for which alert is created)</p>
+<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
+<p><strong>appToken </strong>(of app for which alert is created)</p>
 <p>+ attributes specific to threshold alert</p></td>
-<td>Creates new <strong>threshold</strong> based query alert for Logsene app<strong> </strong>defined with <strong>appToken</strong></td>
+<td>Creates new <strong>threshold</strong> based query alert for logging management app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -490,10 +488,10 @@ Description
 <tr class="odd">
 <td><span class="nolink"><a href="https://apps.sematext.com/logsene-reports/api/v2/alert/anomaly/add" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/alert/anomaly/add</a></span></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
-<p><strong>appToken </strong>(of app for which alert is created)</p>
+<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
+<p><strong>appToken </strong>(of app for which alert is created)</p>
 <p>+ attributes specific to anomaly alert</p></td>
-<td>Creates new <strong>anomaly</strong> query alert for Logsene app<strong> </strong>defined with <strong>appToken</strong></td>
+<td>Creates new <strong>anomaly</strong> query alert for logging management app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -543,7 +541,7 @@ Example of a success response (with HTTP code 200):
 }
 ```
 
-Errors will be returned in case of wrong apiKey or appToken  or if some
+Errors will be returned in case of wrong apiKey or appToken  or if some
 of values are missing. Example of a error response when query is not
 sent (with HTTP code 400):
 
@@ -577,7 +575,7 @@ sent (with HTTP code 400):
 <td>DELETE</td>
 <td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
 <p><strong>appToken</strong> (of app to which alert belongs)</p>
-<p> </p></td>
+<p> </p></td>
 <td>Deletes a single alert rule</td>
 </tr>
 </tbody>
@@ -585,7 +583,7 @@ sent (with HTTP code 400):
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in [**list alerts**](#list-alerts) API call
+as a key in [**list alerts**](#list-alerts) API call
 response.
 
 Example API
@@ -647,7 +645,7 @@ Example of a success response (with HTTP code 200):
 
 **Note**: {alertId} value in URL should be replaced with real id of
 alert rule which should be deleted - alertId of each alert is returned
-as a key in **[list alerts](#list-alerts)** API call
+as a key in **[list alerts](#list-alerts)** API call
 response.
 
 Example API
@@ -724,26 +722,26 @@ calls:
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/notification/list" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5"
 }'
- 
+ 
 # alert notifications for last 24h for app with provided token
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/notification/list" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "appToken":"12c91563-ba95-4a73-aa5a-08fe04b94631"
 }'
- 
+ 
 # alert notifications for one hour interval specified with start and end
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/notification/list" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "start":"2015-07-28 12:36:14",
   "end":"2015-07-28 13:36:14",
 }'
- 
+ 
 # alert notifications for last hour
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/notification/list" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
   "interval":"1h",
 }'
- 
+ 
 # alert notifications created after timestamp provided in start
 curl -X POST -k -H "Content-Type: application/json" "https://apps.sematext.com/logsene-reports/api/v2/alert/notification/list" -d '{
   "apiKey":"a9092d95-d062-4499-ad0b-a1b43fadb9b5",
@@ -852,7 +850,7 @@ combined.
 </tbody>
 </table>
 
- 
+ 
 
 ### Subscriptions API
 
@@ -861,7 +859,7 @@ subscriptions and for triggering emailing of reports.
 
 #### List Subscriptions
 
-For particular Logsene application, this API call will return a list of
+For particular Logs Management apps, this API call will return a list of
 all existing subscriptions.
 
 <table>
@@ -893,10 +891,10 @@ Description
 <p><span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink"><a href="http://list.do/" class="external-link"><br />
 </a></span></span></span></span></span></p></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
-<p><strong>appToken</strong> (token of app whose metrics info is being fetched)</p></td>
-<td><p>Fetches subscriptions for Logsene app defined with <strong>appToken</strong>.</p>
-<p> </p></td>
+<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
+<p><strong>appToken</strong> (token of app whose metrics info is being fetched)</p></td>
+<td><p>Fetches subscriptions for logging app defined with <strong>appToken</strong>.</p>
+<p> </p></td>
 </tr>
 </tbody>
 </table>
@@ -949,7 +947,7 @@ Triggers instant emailing of a report defined by some subscription.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td> </td>
+<td> </td>
 </tr>
 <tr class="even">
 <td>API call</td>
@@ -984,25 +982,25 @@ Example of a success response (with HTTP code 200):
 
 ### Saved Queries API (Coming soon\!)
 
-Logsene Saved Queries HTTP API lets you:
+Logs Management App Saved Queries HTTP API lets you:
 
   - list all saved queries defined for some app
   - delete individual saved queries
   - create new saved query
 
-When using Logsene Saved Queries API, you will need to use API key which
+When using our Saved Queries API, you will need to use API key which
 belongs to OWNER of the app to which saved queries are related. If you
 are managing saved queries for your apps, then just use your API key. If
 you are managing saved queries for apps that belong to some other
 account (and your are just a guest in that account with
-role **BILLING\_ADMIN** or **ADMIN**), you will have to use API key of
+role **BILLING\_ADMIN** or **ADMIN**), you will have to use API key of
 that account (in both cases the key can be
-found [here](https://apps.sematext.com/ui/account/api), you
+found [here](https://apps.sematext.com/ui/account/api), you
 just have to consider which account you are currently logged into).
 
 #### List Saved Queries
 
-Fetches saved queries for a particular Logsene app.
+Fetches saved queries for a particular logging management app.
 
 <table>
 <colgroup>
@@ -1031,9 +1029,9 @@ Description
 <tr class="odd">
 <td><a href="https://apps.sematext.com/logsene-reports/api/v2/query/list" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/query/list</a></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
-<p><strong>appToken </strong>(of app whose saved queries are fetched)</p></td>
-<td>Fetches all saved queries for app<strong> </strong>defined with <strong>appToken</strong></td>
+<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
+<p><strong>appToken </strong>(of app whose saved queries are fetched)</p></td>
+<td>Fetches all saved queries for app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1102,11 +1100,11 @@ Description
 <tr class="odd">
 <td><span class="nolink"><a href="https://apps.sematext.com/logsene-reports/api/v2/query/add" class="uri" class="external-link">https://apps.sematext.com/logsene-reports/api/v2/query/add</a></span></td>
 <td>POST</td>
-<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
-<p><strong>appToken </strong>(of app for which saved query is created)</p>
+<td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
+<p><strong>appToken </strong>(of app for which saved query is created)</p>
 <p><strong>queryName</strong> (display name, does not have to be unique)</p>
 <p><strong>queryString</strong> (saved query string)</p></td>
-<td>Creates new saved query with provided name and query string for Logsene app<strong> </strong>defined with <strong>appToken</strong></td>
+<td>Creates new saved query with provided name and query string for logging management app<strong> </strong>defined with <strong>appToken</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1134,7 +1132,7 @@ Example of a success response (with HTTP code 200):
   "message" : "Query created",
   "data" : {
     "query":{
-      "id" : 50,
+      "id" : 50,
       "queryName" : "Hot",
       "queryString" : "tag:(hot)"
     }
@@ -1159,7 +1157,7 @@ Example of a success response (with HTTP code 200):
 <td>DELETE</td>
 <td><p><strong>apiKey</strong> (of owner of app represented with &quot;token&quot;)</p>
 <p><strong>appToken</strong> (of app to which saved query belongs to)</p>
-<p> </p></td>
+<p> </p></td>
 <td>Deletes a single saved query</td>
 </tr>
 </tbody>
@@ -1167,7 +1165,7 @@ Example of a success response (with HTTP code 200):
 
 **Note**: {queryId} value in URL should be replaced with real id of
 saved query which should be deleted - queryId of each saved query is
-returned as a key in **[list saved queries](#list-saved-queries)** API call response.
+returned as a key in **[list saved queries](#list-saved-queries)** API call response.
 
 Example API
 call:

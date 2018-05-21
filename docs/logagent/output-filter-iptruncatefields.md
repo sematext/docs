@@ -31,14 +31,14 @@ Add the following section 'outputFilter' to the Logagent configuration file. Ple
 # tail web server logs
 input: 
   files:
-    - '/var/log/*/access.log'
+    - '/var/log/*/access_log'
 
 # log agent parses web server logs out of the box ...
 outputFilter:
   iptruncate:
     module: ip-truncate-fields
     # JS regeular expression to match log source name
-    matchSource: !!js/regexp access.log
+    matchSource: !!js/regexp access_log
     fields:
       - client_ip
       
@@ -48,5 +48,21 @@ outputFilter:
 Run Logagent with your config: 
 
 ```
-logagent --config logagent-example-config.yml --yaml
+logagent --config logagent-example-config.yml -n httpd --yaml
+```
+
+The output replaced IP '::1' with '::0': 
+
+```
+logSource:    httpd
+_type:        access_common
+client_ip:    ::0
+remote_id:    -
+user:         null
+method:       GET
+path:         /
+http_version: HTTP/1.1
+status_code:  304
+size:         0
+@timestamp:   Thu Apr 26 2018 22:02:26 GMT+0200 (CEST)
 ```

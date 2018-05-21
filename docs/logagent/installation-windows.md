@@ -8,6 +8,7 @@ Title: Install Logagent on Windows
 
 ``` bash
 npm i -g @sematext/logagent
+npm i -g node-windows
 npm i -g logagent-input-windows-events
 # run logagent windows version 
 logagent-windows --help 
@@ -46,6 +47,17 @@ output:
     module: elasticsearch
     url: http://localhost:9200
     index: windows_events
+```
+
+If you're using [Logsene](https://sematext.com/logsene/), the output would be:
+
+```
+output:  
+  logsene:
+    module: elasticsearch
+    url: https://logsene-receiver.sematext.com
+    # for the EU datacenter, it's https://logsene-receiver.eu.sematext.com
+    index: LOGSENE-APP-TOKEN-GOES-HERE
 ```
 
 Run service installer: 

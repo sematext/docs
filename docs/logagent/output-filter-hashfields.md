@@ -18,7 +18,7 @@ Add the following section 'outputFilter' to the Logagent configuration file. Ple
 # tail web server logs
 input: 
   files:
-    - '/var/log/*/access.log'
+    - '/var/log/*/access_log'
 
 # log agent parses web server logs out of the box ...
 # output filter to encrypt client_ip and user field in web server logs
@@ -26,17 +26,34 @@ outputFilter:
   hashfields: 
     module: hash-fields
     # JS regeular expression to match log source name
-    matchSource: !!js/regexp access.log
+    matchSource: !!js/regexp access_log
     # algorithms supported by nodejs crypto module, e.g. sha1, sha256, sha512, md5, ...
     algorithm: sha256
     fields:
       - client_ip
-      - user
-  
+
 ```
 
 Run Logagent with your config: 
 
 ```
-logagent --config logagent-example-config.yml --yaml
+logagent --config logagent-example-config.yml -n httpd --yaml
 ```
+
+The output in YAML format shows the hased IP address in the field client_ip: 
+
+```
+logSource:    httpd
+_type:        access_common
+client_ip:    eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3
+remote_id:    -
+user:         -
+method:       GET
+path:         /
+http_version: HTTP/1.1
+status_code:  304
+size:         0
+@timestamp:   Thu Apr 26 2018 22:02:26 GMT+0200 (CEST)
+```
+
+

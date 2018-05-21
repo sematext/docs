@@ -3,19 +3,11 @@ Description: Sematext infrastructure and application performance monitoring docs
 
 ### Creating Monitoring Apps
 
-The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring app.
+The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring App.
 
-<a href="#create-spm-app"><img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
+<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
 
-<div class="css-modal-container">
-<div id="create-spm-app" class="modal-window">
-<div>
-<h2>Monitoring Integrations UI</h2>
-<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen">
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
-</div>
-</div>
-</div>
+
 
 You can have any number of Monitoring Apps and each App can be shared
 with different people, giving them different access roles.  Very
@@ -65,34 +57,17 @@ App settings and actions include, but are not limited to:
   - App ownership transfer
   - scheduled report emails (aka Subscriptions)
   
-<a href="#app-settings-menu"><img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen"></a>
-
-<div class="css-modal-container">
-<div id="app-settings-menu" class="modal-window">
-<div>
-<h2>App Settings Menu </h2>
-<img alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
-
-<a href="#modal-close" title="Close" class="modal-close">&times; Close</a>
-</div>
-</div>
-</div>
-  
-<!-- ###Visualizing and Analyzing Your Data -->
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings UI screen">
 
 ### Additional Features
 
 To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each host/server/container in the form of tags.
 
-Check [Tag Support](tag-support) page for different ways of Tags organization.
+Check [Tag Support](tag-support) page for different ways to use tags.
 
-Network Map can help you visualize the network topology of a system monitored by Sematext.  It can discover hosts and collect information about communication between them, such as the amount of received/transmitted data on each port.
+The [Network Map](network-map) visualizes your network topology.  It show discovered hosts and the communication between them, including  details such as the amount of received or transmitted data on each port.
 
-For more information on Network Map check [Network Map](network-map) page.
-
-[On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).
-
-It works with both embedded and standalone agent and has negligible overhead.
+[On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).  It works with both embedded and standalone agent and has negligible overhead.
 
 [Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports.
 

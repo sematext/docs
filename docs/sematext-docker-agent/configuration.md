@@ -1,62 +1,184 @@
-## Configuration guide
+Title: Configuring Sematext Docker Agent
 
-Please note [Monitoring & Logging for Docker Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/) including detailed feature descriptions and configuration examples for Sematext Docker Agent. 
+Please note [Monitoring & Logging for Docker
+Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/)
+including detailed feature descriptions and configuration examples for
+Sematext Docker Agent.
 
 ## Configuration Parameters
 
-| Parameter / Environment variable | Description |
-|-----------|-------------|
-|**Required Parameters**| |
-| SPM_TOKEN        | SPM Application Token enables metric and event collection |
-| LOGSENE_TOKEN    | Logsene Application Token enables logging to Logsene, see logging specific parameters for filter options and Log Routing section to route logs from different containers to separate Logsene applications| 
-| ```-v /var/run/docker.sock ```  | Path to the docker socket (optional, if dockerd provides TCP on 2375, see also DOCKER_PORT and DOCKER_HOST parameter) |
-|**TCP and TLS connection** | If the Unix socket is not available Sematext Agent assumes the Container Gateway Address (autodetect) and port 2375 as default (no TLS) - this needs no configuration. In case the Docker Daemon TCP settings are different, you have to configure the TCP settings. The TCP settings can be modified with the following parameters|
-|DOCKER_HOST| e.g. tcp://ip-reachable-from-container:2375/ - default value 'unix:///var/run/docker.sock'. When the Unix socket is not available the agent tries to connect to tcp://gateway:2375. In case a TCP socket is used there is no need to mount the Docker Unix socket as volume |
-| DOCKER_PORT | Sematext Agent will use its gateway address (auto detect) with the given DOCKER_PORT|
-|DOCKER_TLS_VERIFY | 0 or 1|
-|DOCKER_CERT_PATH | Path to your certificate files, mount the path to the container with "-v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH" |  
-|**Configuration via docker swarm secrets:**| |
-| CONFIG_FILE| Path to the configuration file, containing environment variables `key=value`. Default value: `/run/secrets/sematext-agent`. Create a secret with  `docker secret create sematext-agent ./sematext-agent.cfg`. Start Sematext Docker agent with `docker service create --mode global --secret sematext-agent --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock sematext/sematext-agent-docker |
-|**Optional Parameters:**| |
-| --privileged | The parameter might be helpful when Sematext Agent could not start because of limited permission to connect and write to the Docker socket /var/run/docker.sock. The privileged mode is a potential security risk, we recommend to enable the appropriate security. Please read about Docker security: https://docs.docker.com/engine/security/security/ |
-| HOSTNAME_LOOKUP_URL | On Amazon ECS, a [meta data query](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) must be used to get the instance hostname (e.g. "169.254.169.254/latest/meta-data/local-hostname")|
-| HTTPS_PROXY | URL for a proxy server (behind firewalls)|
-| LOGSENE_RECEIVER_URL | URL for bulk inserts into Logsene. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://logsene-receiver.eu.sematext.com |
-| SPM_RECEIVER_URL | URL for bulk inserts into SPM. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://spm-receiver.eu.sematext.com/receiver/v1. |
-| EVENTS_RECEIVER_URL | URL for SPM events receiver. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://event-receiver.eu.sematext.com |
-|**Docker Logs Parameters**| |
-| TAGGING_LABELS | A list of docker label names or environment variable names to tag container logs. Supporting wildcards e.g. TAGGING_LABELS='com.docker.swarm*,com.myapp.*' |
-|   __Whitelist containers for logging__ | |
-| MATCH_BY_NAME |  Regular expression to white list container names |
-| MATCH_BY_IMAGE | Regular expression to white list image names |
-|   __Blacklist containers__ | |
-| SKIP_BY_NAME | Regular expression to black list container names |
-| SKIP_BY_IMAGE | Regular expression to black list image names for logging | 
-| PATTERNS_URL | Load pattern.yml via HTTP e.g. ```-e PATTERNS_URL=https://raw.githubusercontent.com/sematext/logagent-js/master/patterns.yml``` |
-| LOGAGENT_PATTERNS | Pass patterns.yml via env. variable e.g. ```-e LOGAGENT_PATTERNS="$(cat ./patters.yml)"``` |
-| LOGAGENT_PATTERNS_BASE64 | Set to "true" if the LOGAGENT_PATTERNS patterns file you are passing in via env. variable is base64 encoded e.g ```-e LOGAGENT_PATTERNS="$(cat ./patterns.yml | base64)"```. Useful if your params file is not getting set properly due to shell interpretation or otherwise. |
-| PATTERN_MATCHING_ENABLED | Activate [logagent-js parser](http://sematext.com/docs/logagent/parser/), default value is ```true```. To disable the log parser set the value to ```false```. This could increase the throughput of log processing for nodes with a very high log volume.|
-| -v /yourpatterns/patterns.yml:/etc/logagent/patterns.yml | to provide custom patterns for log parsing, see [logagent-js](https://github.com/sematext/logagent-js)|
-| -v /tmp:/logsene-log-buffer | Directory to store logs, in a case of a network or service outage. Docker Agent deletes these files after successful transmission.|
-| GEOIP_ENABLED | ```true```enables GeoIP lookups in the log parser, default value: ```false```| 
-| MAXMIND_DB_DIR | Directory for the Geo-IP lite database, must end with ```/```. Storing the DB in a volume could save downloads for updates after restarts. Using ```/tmp/``` (ramdisk) could speed up Geo-IP lookups (requires add. ~30 MB main memory).|
-|ENABLE_LOGSENE_STATS | Enables logging of transmission stats to Logsene. Default value 'false'. Provides a number of logs received, a number of logs shipped, number of failed/successful HTTP transmissions (bulk requests to Logsene) and retransmissions of failed requests. |
-| LOGSENE_REMOVE_FIELDS | Removes fields from parsed/enriched logs. E.g. LOGSENE_REMOVE_FIELDS=logSource,container_host_name,swarm_node,password,creditCardNo | 
+<div class="table-responsive">
+<table class="mdl-data-table mdl-shadow--2dp" style="white-space: normal;">
+<thead>
+<tr>
+<th>Parameter / Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Required Parameters</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>SPM_TOKEN</td>
+<td>SPM Application Token enables metric and event collection</td>
+</tr>
+<tr>
+<td>LOGSENE_TOKEN</td>
+<td>Logsene Application Token enables logging to Logsene, see logging specific parameters for filter options and Log Routing section to route logs from different containers to separate Logsene applications</td>
+</tr>
+<tr>
+<td><code>-v /var/run/docker.sock</code></td>
+<td>Path to the docker socket (optional, if dockerd provides TCP on 2375, see also DOCKER_PORT and DOCKER_HOST parameter)</td>
+</tr>
+<tr>
+<td><strong>TCP and TLS connection</strong></td>
+<td>If the Unix socket is not available Sematext Agent assumes the Container Gateway Address (autodetect) and port 2375 as default (no TLS) - this needs no configuration. In case the Docker Daemon TCP settings are different, you have to configure the TCP settings. The TCP settings can be modified with the following parameters</td>
+</tr>
+<tr>
+<td>DOCKER_HOST</td>
+<td>e.g. tcp://ip-reachable-from-container:2375/ - default value 'unix:///var/run/docker.sock'. When the Unix socket is not available the agent tries to connect to tcp://gateway:2375. In case a TCP socket is used there is no need to mount the Docker Unix socket as volume</td>
+</tr>
+<tr>
+<td>DOCKER_PORT</td>
+<td>Sematext Agent will use its gateway address (auto detect) with the given DOCKER_PORT</td>
+</tr>
+<tr>
+<td>DOCKER_TLS_VERIFY</td>
+<td>0 or 1</td>
+</tr>
+<tr>
+<td>DOCKER_CERT_PATH</td>
+<td>Path to your certificate files, mount the path to the container with "-v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH"</td>
+</tr>
+<tr>
+<td><strong>Configuration via docker swarm secrets:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>CONFIG_FILE</td>
+<td>Path to the configuration file, containing environment variables <code>key=value</code>. Default value: <code>/run/secrets/sematext-agent</code>. Create a secret with  <code>docker secret create sematext-agent ./sematext-agent.cfg</code>. Start Sematext Docker agent with `docker service create --mode global --secret sematext-agent --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock sematext/sematext-agent-docker</td>
+</tr>
+<tr>
+<td><strong>Optional Parameters:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>--privileged</td>
+<td>The parameter might be helpful when Sematext Agent could not start because of limited permission to connect and write to the Docker socket /var/run/docker.sock. The privileged mode is a potential security risk, we recommend to enable the appropriate security. Please read about Docker security: https://docs.docker.com/engine/security/security/</td>
+</tr>
+<tr>
+<td>HOSTNAME_LOOKUP_URL</td>
+<td>On Amazon ECS, a <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">meta data query</a> must be used to get the instance hostname (e.g. "169.254.169.254/latest/meta-data/local-hostname")</td>
+</tr>
+<tr>
+<td>HTTPS_PROXY</td>
+<td>URL for a proxy server (behind firewalls)</td>
+</tr>
+<tr>
+<td>LOGSENE_RECEIVER_URL</td>
+<td>URL for bulk inserts into Logsene. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://logsene-receiver.eu.sematext.com</td>
+</tr>
+<tr>
+<td>SPM_RECEIVER_URL</td>
+<td>URL for bulk inserts into SPM. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://spm-receiver.eu.sematext.com/receiver/v1.</td>
+</tr>
+<tr>
+<td>EVENTS_RECEIVER_URL</td>
+<td>URL for SPM events receiver. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://event-receiver.eu.sematext.com</td>
+</tr>
+<tr>
+<td><strong>Docker Logs Parameters</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>TAGGING_LABELS</td>
+<td>A list of docker label names or environment variable names to tag container logs. Supporting wildcards e.g. TAGGING_LABELS='com.docker.swarm<em>,com.myapp.</em>'</td>
+</tr>
+<tr>
+<td><strong>Whitelist containers for logging</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>MATCH_BY_NAME</td>
+<td>Regular expression to white list container names</td>
+</tr>
+<tr>
+<td>MATCH_BY_IMAGE</td>
+<td>Regular expression to white list image names</td>
+</tr>
+<tr>
+<td><strong>Blacklist containers</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>SKIP_BY_NAME</td>
+<td>Regular expression to black list container names</td>
+</tr>
+<tr>
+<td>SKIP_BY_IMAGE</td>
+<td>Regular expression to black list image names for logging</td>
+</tr>
+<tr>
+<td>PATTERNS_URL</td>
+<td>Load pattern.yml via HTTP e.g. <code>-e PATTERNS_URL=https://raw.githubusercontent.com/sematext/logagent-js/master/patterns.yml</code></td>
+</tr>
+<tr>
+<td>LOGAGENT_PATTERNS</td>
+<td>Pass patterns.yml via env. variable e.g. <code>-e LOGAGENT_PATTERNS="$(cat ./patters.yml)"</code></td>
+</tr>
+<tr>
+<td>LOGAGENT_PATTERNS_BASE64</td>
+<td>Set to "true" if the LOGAGENT_PATTERNS patterns file you are passing in via env. variable is base64 encoded e.g <code>-e LOGAGENT_PATTERNS="$(cat ./patterns.yml | base64)"</code>. Useful if your params file is not getting set properly due to shell interpretation or otherwise.</td>
+</tr>
+<tr>
+<td>PATTERN_MATCHING_ENABLED</td>
+<td>Activate <a href="http://sematext.com/docs/logagent/parser/">logagent-js parser</a>, default value is <code>true</code>. To disable the log parser set the value to <code>false</code>. This could increase the throughput of log processing for nodes with a very high log volume.</td>
+</tr>
+<tr>
+<td style="word-break: break-all;">-v /yourpatterns/patterns.yml:/etc/logagent/patterns.yml</td>
+<td>to provide custom patterns for log parsing, see <a href="https://github.com/sematext/logagent-js">logagent-js</a></td>
+</tr>
+<tr>
+<td>-v /tmp:/logsene-log-buffer</td>
+<td>Directory to store logs, in a case of a network or service outage. Docker Agent deletes these files after successful transmission.</td>
+</tr>
+<tr>
+<td>GEOIP_ENABLED</td>
+<td><code>true</code>enables GeoIP lookups in the log parser, default value: <code>false</code></td>
+</tr>
+<tr>
+<td>MAXMIND_DB_DIR</td>
+<td>Directory for the Geo-IP lite database, must end with <code>/</code>. Storing the DB in a volume could save downloads for updates after restarts. Using <code>/tmp/</code> (ramdisk) could speed up Geo-IP lookups (requires add. ~30 MB main memory).</td>
+</tr>
+<tr>
+<td>ENABLE_LOGSENE_STATS</td>
+<td>Enables logging of transmission stats to Logsene. Default value 'false'. Provides a number of logs received, a number of logs shipped, number of failed/successful HTTP transmissions (bulk requests to Logsene) and retransmissions of failed requests.</td>
+</tr>
+<tr>
+<td>LOGSENE_REMOVE_FIELDS</td>
+<td style="word-break: break-all;">Removes fields from parsed/enriched logs. E.g. LOGSENE_REMOVE_FIELDS=logSource,container_host_name,swarm_node,password,creditCardNo</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
-## Access to the Docker Socket  / Docker API  
 
-**Note that Docker Daemon can be configured to use Unix sockets
+
+## Access to the Docker Socket  / Docker API  
+
+*Note that Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
 (authentication with certificates). Depending on your Docker setup,
 Sematext Agent needs to be configured to access the Docker Socket (API
-access).  
-**
+access).*
 
 **Docker Unix Socket**
 
 Make sure that you have the permissions to access /var/run/docker.sock
-(or the actual location of the docker unix socket). E.g. use 'sudo' to
+(or the actual location of the docker unix socket). E.g. use 'sudo' to
 run the "docker run" command.
 
 Check your permissions first:
@@ -68,12 +190,12 @@ srw-rw---- 1 root docker 0 Dec  3 07:52 /var/run/docker.sock
 
 If you prefer to create a docker group to access docker without super
 user permissions,
-see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
+see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
 
 **How to activate the Unix socket in parallel to a TCP socket?**  
 Check the configuration of the Docker Daemon in /etc/defaults/docker -
 it is possible to activate TCP and the Unix socket in parallel - simply
-add  "-H unix:///var/run/docker.sock" and restart dockerd.
+add  "-H unix:///var/run/docker.sock" and restart dockerd.
 
 ``` bash
 ## /etc/defaults/docker
@@ -160,7 +282,7 @@ Using this “log metadata” you can whitelist or blacklist log outputs by imag
 - SKIP_BY_NAME — a regular expression to blacklist container names
 - SKIP_BY_IMAGE — a regular expression to blacklist image names
 
-## Automatic Parser for Container Logs
+## Container Log Parsing
 
 In Docker, logs are console output streams from containers. They might be a mix of plain text messages from start scripts and structured logs from applications.  The problem is obvious – you can’t just take a stream of log events all mixed up and treat them like a blob.  You need to be able to tell which log event belongs to what container, what app, parse it correctly in order to structure it so you can later derive more insight and operational intelligence from logs, etc.
 
@@ -179,7 +301,7 @@ For example, Sematext Docker Agent can parse logs from official images like:
 - Plain text messages with or without timestamps in various formats
 - Various Linux and Mac OSX system logs
 
-### Add patterns for log parsing 
+### Adding log parsing patterns
 
 In addition, you can define your own patterns for any log format you need to be able to parse and structure. There are three options to pass individual log parser patterns:
 
@@ -243,7 +365,7 @@ Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2
 ## Known Issues
 
 **Conflict with Docker logging-drivers. Sematext Docker Agent is running
-with a valid Logsene Token, but Logsene does not show container logs. **
+with a valid Logsene Token, but Logsene does not show container logs. **
 
 Please note that Sematext Docker Agent collects logs via Docker Remote
 API. If you use a Docker logging-driver other than the default json-file
@@ -252,5 +374,4 @@ make sure that your container or docker daemon uses json-file logging
 driver. This ensures that logs are exposed via Docker Remote API. To
 check, run the "docker logs" command. If "docker logs CID" shows
 container logs then Sematext Docker Agent should be able to collect the
-logs as well. 
-
+logs as well.
