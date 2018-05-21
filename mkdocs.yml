@@ -84,7 +84,7 @@ pages:
       - Monitoring Spark: integration/spark.md
       - Monitoring Storm: integration/storm.md
       - Monitoring Tomcat: integration/tomcat.md
-      - Monitoring ZooKeeper: integration/zk.md
+      - Monitoring ZooKeeper: integration/zookeeper.md
       - Email: integration/alerts-email-integration.md
       - HipChat: integration/alerts-hipchat-integration.md
       - PagerDuty: integration/alerts-pagerduty-integration.md
