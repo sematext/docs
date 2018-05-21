@@ -3,7 +3,19 @@ Email used when you first sign up for Sematext account also becomes your **Defau
 
 <a href="#email-hook"><img alt="Email Notification Hook" src="/docs/images/integrations/default-email-notification-hook.png" title="Email Notification Hook"></a>
 
+All your notification hooks are listed on [Notification Hooks page](https://apps.sematext.com/ui/hooks) in Sematext's Metrics, Traces and Logs platform. Here you can see your default email notification hook, create new, edit or delete existing email hook, and also integrate other 3rd party notification services such as Slack, PagerDuty, HipChat and more.
 
+## Add New Email Hook
+
+There are two ways to create a new notification hook. On [Notification Hooks page](https://apps.sematext.com/ui/hooks) use green add hook button.
+
+<img alt="Add new Notification Hook" src="/docs/images/integrations/add-new-hook.png" title="Add new Notification Hook">
+
+Alternatively, navigate to [Create new Notification Hook](https://apps.sematext.com/ui/webhook-create) page. Enter required hook name and email address. You can test the email before you save it and noreply email will be generated and sent to that address. 
+
+Confirm that you have received the test email, save new email notification hook and it is ready to be used for you apps alerts. It can be used with single or multiple apps as your notification hook.
+
+<img alt="Add new Email Notification Hook" src="/docs/images/integrations/create-new-email-notification-hook.gif" title="Add new Email Notification Hook">
 <div id="email-hook" class="modal" role="dialog" aria-labelledby="Email Notification Hook" aria-describedby="Email Notification Hook">
   <div class="modal-content">
     <div class="header">
@@ -24,17 +36,3 @@ Email used when you first sign up for Sematext account also becomes your **Defau
     <div class="overlay"></div>
   </a>
 </div>
-
-All your notification hooks are listed on [Notification Hooks page](https://apps.sematext.com/ui/hooks) in Sematext's Metrics, Traces and Logs platform. Here you can see your default email notification hook, create new, edit or delete existing email hook, and also integrate other 3rd party notification services such as Slack, PagerDuty, HipChat and more.
-
-## Add New Email Hook
-
-There are two ways to create a new notification hook. On [Notification Hooks page](https://apps.sematext.com/ui/hooks) use green add hook button.
-
-<img alt="Add new Notification Hook" src="/docs/images/integrations/add-new-hook.png" title="Add new Notification Hook">
-
-Alternatively, navigate to [Create new Notification Hook](https://apps.sematext.com/ui/webhook-create) page. Enter required hook name and email address. You can test the email before you save it and noreply email will be generated and sent to that address. 
-
-Confirm that you have received the test email, save new email notification hook and it is ready to be used for you apps alerts. It can be used with single or multiple apps as your notification hook.
-
-<img alt="Add new Email Notification Hook" src="/docs/images/integrations/create-new-email-notification-hook.gif" title="Add new Email Notification Hook">
