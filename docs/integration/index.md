@@ -340,7 +340,7 @@ Descriptions: Sematext integrations for infrastructure monitoring, log managemen
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/integration/zk/">
+		<a href="/docs/integration/zookeeper/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
