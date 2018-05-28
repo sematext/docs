@@ -102,13 +102,13 @@ consumer requests time<br>**kafka.consumer.old.requests.time** <br>*(double coun
 consumer throttle mean time<br>**kafka.consumer.old.requests.throttle.mean.time** <br>*(double gauge)* *(ms)*            |
 consumer throtles<br>**kafka.consumer.old.requests.throttles** <br>*(long counter)*                                      |
 consumer throttles time<br>**kafka.consumer.old.requests.throttle.time** <br>*(double counter)* *(ms)*                   |
-bytes consumed rate<br>**kafka.consumer.bytes.rate** <br>*(double gauge)* *(betes/sec)*                                  |  The average number of bytes consumed per second
+bytes consumed rate<br>**kafka.consumer.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                                  |  The average number of bytes consumed per second
 records consumed rate<br>**kafka.consumer.records.rate** <br>*(double gauge)* *(rec/sec)*                                |  The average number of records consumed per second
 consumer records max lag<br>**kafka.consumer.records.lag.max** <br>*(double gauge)*                                      |  The maximum lag in terms of number of records for any partition
 consumer records per request<br>**kafka.consumer.requests.records.avg** <br>*(double gauge)* *(rec/req)*                 |  The average number of records per request
 consumer fetch rate<br>**kafka.consumer.fetch.rate** <br>*(double gauge)* *(fetches/sec)*                                |  The number of fetch requests per second
 consumer fetch avg size<br>**kafka.consumer.fetch.size** <br>*(double gauge)* *(bytes)*                                  |  The average number of bytes fetched per request
-consumer fetch max size<br>**kafka.consumer.fetch.size.max** <br>*(double gauge)* *(betes)*                              |  The maximum number of bytes fetched per request
+consumer fetch max size<br>**kafka.consumer.fetch.size.max** <br>*(double gauge)* *(bytes)*                              |  The maximum number of bytes fetched per request
 consumer fetch latency<br>**kafka.consumer.fetch.latency** <br>*(double gauge)* *(ms)*                                   |  The average time taken for a fetch request
 consumer fetch max latency<br>**kafka.consumer.fetch.latency.max** <br>*(double gauge)* *(ms)*                           |  The maximum time taken for a fetch request
 consumer throttle time<br>**kafka.consumer.throttle.time** <br>*(double gauge)* *(ms)*                                   |  The avarage throttle time in ms
