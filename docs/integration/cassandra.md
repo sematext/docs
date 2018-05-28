@@ -4,48 +4,48 @@
 
 ## Metrics
 
-Metric Name                 |  Key                                                |  Metric Type  |  Numeric Type  |  Unit                               |  Description
-----------------------------|-----------------------------------------------------|---------------|----------------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------
-leaving nodes               |  cassandra.cluster.nodes.leaving                    |  gauge        |  long          |                                     |
-moving nodes                |  cassandra.cluster.nodes.moving                     |  gauge        |  long          |                                     |
-joining nodes               |  cassandra.cluster.nodes.joining                    |  gauge        |  long          |                                     |
-live nodes                  |  cassandra.cluster.nodes.live                       |  gauge        |  long          |  from the perspective of this node  |  Count of nodes which are visible and live
-unreachable nodes           |  cassandra.cluster.nodes.unreachable                |  gauge        |  long          |                                     |  Count of the nodes which this node knows about which are currently unreachable
-write requests              |  cassandra.write.requests                           |  counter      |  long          |                                     |  The number of write requests
-write latency total         |  cassandra.write.requests.latency.time              |  counter      |  long          |  ms                                 |
-avg write latency           |  cassandra.write.latency.avg                        |  gauge        |  double        |  ms                                 |
-read requests               |  cassandra.read.requests                            |  counter      |  long          |                                     |  The number of read requests
-read latency total          |  cassandra.read.requests.latency.time               |  counter      |  long          |  ms                                 |
-avg read latency            |  cassandra.read.latency.avg                         |  gauge        |  double        |  ms                                 |
-read repairs pending        |  cassandra.read.repair.pending                      |  gauge        |  long          |                                     |  The number of read repair operations that are queued and waiting for system resources in order to run
-compactions pending         |  cassandra.compaction.pending                       |  gauge        |  long          |                                     |  The number of compactions that are queued and waiting for system resources in order to run
-bytes compacted             |  cassandra.compaction.bytes                         |  counter      |  long          |  bytes                              |  Total number of bytes compacted since server [re]start
-compactions completed       |  cassandra.compaction.completed                     |  counter      |  long          |                                     |  Number of compaction tasks completed
-key cache requests          |  cassandra.cache.key.requests                       |  counter      |  long          |                                     |  The number of key cache requests
-key cache hits              |  cassandra.cache.key.hits                           |  counter      |  long          |                                     |  The number of key cache hits. This will avoid possible disk seeks when finding a partition in an SSTable
-row cache requests          |  cassandra.cache.row.requests                       |  counter      |  long          |                                     |  The number of row cache requests
-row cache hits              |  cassandra.cache.row.hits                           |  counter      |  long          |                                     |  The number of row cache hits
-repl. on write pending      |  cassandra.write.replications.pending               |  gauge        |  long          |                                     |  When an insert or update to a row is written, the affected row is replicated to all other nodes that manage a replica for that row
-write flushes pending       |  cassandra.write.flushes.pending                    |  gauge        |  long          |                                     |  Number of Flush Writer(writes memtables to disk) tasks pending
-write requests pending      |  cassandra.write.pending                            |  gauge        |  long          |                                     |  The number of write requests that have arrived into the cluster but are waiting to be handled
-write post flushes pending  |  cassandra.write.postflushes.pending                |  gauge        |  long          |                                     |  Number of Post Flush(cleans up commit log after memtable is written to disk) tasks pending
-read requests pending       |  cassandra.read.requests.pending                    |  gauge        |  long          |                                     |  The number of read requests that have arrived into the cluster but are waiting to be handled
-repair tasks pending        |  cassandra.cluster.tasks.repair.pending             |  gauge        |  long          |                                     |  Repair tasks pending, such as handling the merkle tree transfer after the validation compaction
-gossip tasks pending        |  cassandra.cluster.tasks.gossip.pending             |  gauge        |  long          |                                     |  Number of gossip messages and acknowledgments queued and waiting to be sent or received
-hints handoff pending       |  cassandra.cluster.tasks.handoff.pending            |  gauge        |  long          |                                     |  Number of hints that are queued and waiting to be delivered after a failed node is back online again
-internal responses pending  |  cassandra.cluster.tasks.response.internal.pending  |  gauge        |  long          |                                     |  Number of pending tasks from internal tasks, such as nodes joining and leaving the cluster
-migrations pending          |  cassandra.cluster.tasks.migration.pending          |  gauge        |  long          |                                     |  Number of pending tasks from system methods that modified the schema
-misc tasks pending          |  cassandra.cluster.tasks.misc.pending               |  gauge        |  long          |                                     |  Number of pending tasks from infrequently run operations, such as taking a snapshot or processing the notification of a completed replication
-cluster responses pending   |  cassandra.cluster.tasks.response.pending           |  gauge        |  long          |                                     |  Number of pending callbacks to execute after a task on a remote node completes
-sstable size                |  cassandra.sstable.size                             |  gauge        |  long          |  bytes                              |  Disk space used by SSTables belonging to this table
-sstables count              |  cassandra.sstable.count                            |  gauge        |  long          |                                     |  Number of SSTables on disk for this table
-bloom false positives       |  cassandra.bloom.falsepositives                     |  counter      |  long          |                                     |  The number of Bloom filter false positives
-bloom false positive ratio  |  cassandra.bloom.falsepositives.ratio               |  gauge        |  double        |                                     |  The ratio of Bloom filter false positives to total checks
-bloom disk space            |  cassandra.bloom.disk.space                         |  gauge        |  long          |  bytes                              |  Disk space used by the Bloom filters
-sstables per read           |  cassandra.number.of.sstables.per.read              |  gauge        |  double        |                                     |  Number of SSTables are accessed during a read. Includes sstables that undergo bloom-filter checks, even if no data is read from the sstable
-local write request         |  cassandra.local.write.requests                     |  counter      |  long          |                                     |  Local writes update the table's memtable and appends to a commitlog
-local write latency total   |  cassandra.local.write.requests.latency.time        |  counter      |  long          |  ms                                 |
-avg local write latency     |  cassandra.local.write.latency.avg                  |  gauge        |  double        |  ms                                 |
-local read request          |  cassandra.local.read.requests                      |  counter      |  long          |                                     |  Local reads retrieve data from a table's memtable and any necessary SSTables on disk
-local read latency total    |  cassandra.local.read.requests.latency.time         |  counter      |  long          |  ms                                 |
-avg local read latency      |  cassandra.local.read.latency.avg                   |  gauge        |  double        |  ms                                 |
+Metric Name<br> Key *(Type)* *(Unit)*                                                                     |  Description
+----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------
+leaving nodes<br>**cassandra.cluster.nodes.leaving** <br>*(long gauge)*                                   |
+moving nodes<br>**cassandra.cluster.nodes.moving** <br>*(long gauge)*                                     |
+joining nodes<br>**cassandra.cluster.nodes.joining** <br>*(long gauge)*                                   |
+live nodes<br>**cassandra.cluster.nodes.live** <br>*(long gauge)* *(from the perspective of this node)*   |  Count of nodes which are visible and live
+null<br>**cassandra.cluster.nodes.unreachable** <br>*(long gauge)*                                        |
+write requests<br>**cassandra.write.requests** <br>*(long counter)*                                       |  The number of write requests
+write latency total<br>**cassandra.write.requests.latency.time** <br>*(long counter)* *(ms)*              |
+avg write latency<br>**cassandra.write.latency.avg** <br>*(double gauge)* *(ms)*                          |
+read requests<br>**cassandra.read.requests** <br>*(long counter)*                                         |  The number of read requests
+read latency total<br>**cassandra.read.requests.latency.time** <br>*(long counter)* *(ms)*                |
+avg read latency<br>**cassandra.read.latency.avg** <br>*(double gauge)* *(ms)*                            |
+read repairs pending<br>**cassandra.read.repair.pending** <br>*(long gauge)*                              |  The number of read repair operations that are queued and waiting for system resources in order to run
+compactions pending<br>**cassandra.compaction.pending** <br>*(long gauge)*                                |  The number of compactions that are queued and waiting for system resources in order to run
+bytes compacted<br>**cassandra.compaction.bytes** <br>*(long counter)* *(bytes)*                          |  Total number of bytes compacted since server [re]start
+compactions completed<br>**cassandra.compaction.completed** <br>*(long counter)*                          |  Number of compaction tasks completed
+key cache requests<br>**cassandra.cache.key.requests** <br>*(long counter)*                               |  The number of key cache requests
+key cache hits<br>**cassandra.cache.key.hits** <br>*(long counter)*                                       |  The number of key cache hits. This will avoid possible disk seeks when finding a partition in an SSTable
+row cache requests<br>**cassandra.cache.row.requests** <br>*(long counter)*                               |  The number of row cache requests
+row cache hits<br>**cassandra.cache.row.hits** <br>*(long counter)*                                       |  The number of row cache hits
+repl. on write pending<br>**cassandra.write.replications.pending** <br>*(long gauge)*                     |  When an insert or update to a row is written, the affected row is replicated to all other nodes that manage a replica for that row
+write flushes pending<br>**cassandra.write.flushes.pending** <br>*(long gauge)*                           |  Number of Flush Writer(writes memtables to disk) tasks pending
+write requests pending<br>**cassandra.write.pending** <br>*(long gauge)*                                  |  The number of write requests that have arrived into the cluster but are waiting to be handled
+write post flushes pending<br>**cassandra.write.postflushes.pending** <br>*(long gauge)*                  |  Number of Post Flush(cleans up commit log after memtable is written to disk) tasks pending
+null<br>**cassandra.read.requests.pending** <br>*(long gauge)*                                            |
+repair tasks pending<br>**cassandra.cluster.tasks.repair.pending** <br>*(long gauge)*                     |  Repair tasks pending, such as handling the merkle tree transfer after the validation compaction
+gossip tasks pending<br>**cassandra.cluster.tasks.gossip.pending** <br>*(long gauge)*                     |  Number of gossip messages and acknowledgments queued and waiting to be sent or received
+hints handoff pending<br>**cassandra.cluster.tasks.handoff.pending** <br>*(long gauge)*                   |  Number of hints that are queued and waiting to be delivered after a failed node is back online again
+internal responses pending<br>**cassandra.cluster.tasks.response.internal.pending** <br>*(long gauge)*    |  Number of pending tasks from internal tasks, such as nodes joining and leaving the cluster
+migrations pending<br>**cassandra.cluster.tasks.migration.pending** <br>*(long gauge)*                    |  Number of pending tasks from system methods that modified the schema
+misc tasks pending<br>**cassandra.cluster.tasks.misc.pending** <br>*(long gauge)*                         |  Number of pending tasks from infrequently run operations, such as taking a snapshot or processing the notification of a completed replication
+cluster responses pending<br>**cassandra.cluster.tasks.response.pending** <br>*(long gauge)*              |  Number of pending callbacks to execute after a task on a remote node completes
+sstable size<br>**cassandra.sstable.size** <br>*(long gauge)* *(bytes)*                                   |  Disk space used by SSTables belonging to this table
+sstables count<br>**cassandra.sstable.count** <br>*(long gauge)*                                          |  Number of SSTables on disk for this table
+bloom false positives<br>**cassandra.bloom.falsepositives** <br>*(long counter)*                          |  The number of Bloom filter false positives
+bloom false positive ratio<br>**cassandra.bloom.falsepositives.ratio** <br>*(double gauge)*               |  The ratio of Bloom filter false positives to total checks
+bloom disk space<br>**cassandra.bloom.disk.space** <br>*(long gauge)* *(bytes)*                           |  Disk space used by the Bloom filters
+sstables per read<br>**cassandra.number.of.sstables.per.read** <br>*(double gauge)*                       |  Number of SSTables are accessed during a read. Includes sstables that undergo bloom-filter checks, even if no data is read from the sstable
+local write request<br>**cassandra.local.write.requests** <br>*(long counter)*                            |  Local writes update the table's memtable and appends to a commitlog
+local write latency total<br>**cassandra.local.write.requests.latency.time** <br>*(long counter)* *(ms)*  |
+avg local write latency<br>**cassandra.local.write.latency.avg** <br>*(double gauge)* *(ms)*              |
+local read request<br>**cassandra.local.read.requests** <br>*(long counter)*                              |  Local reads retrieve data from a table's memtable and any necessary SSTables on disk
+local read latency total<br>**cassandra.local.read.requests.latency.time** <br>*(long counter)* *(ms)*    |
+avg local read latency<br>**cassandra.local.read.latency.avg** <br>*(double gauge)* *(ms)*                |

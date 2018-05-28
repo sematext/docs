@@ -4,173 +4,173 @@
 
 ## Metrics
 
-Metric Name                                      |  Key                                                     |  Metric Type     |  Numeric Type  |  Unit                     |  Description
--------------------------------------------------|----------------------------------------------------------|------------------|----------------|---------------------------|---------------------------------------------------------------------------------------------------------
-producer node in bytes rate                      |  kafka.producer.node.in.bytes.rate                       |  gauge           |  double        |  bytes                    |  Bytes/second read off socket
-producer node out bytes rate                     |  kafka.producer.node.out.bytes.rate                      |  gauge           |  double        |  bytes                    |  The average number of outgoing bytes sent per second to servers.
-producer node requests rate                      |  kafka.producer.node.requests.rate                       |  gauge           |  double        |  req/sec                  |  The average number of requests sent per second.
-producer node responses rate                     |  kafka.producer.node.responses.rate                      |  gauge           |  double        |  res/sec                  |  The average number of responses received per second.
-producer node request latency                    |  kafka.producer.node.requests.latency                    |  gauge           |  double        |  ms                       |  The average request latency
-producer node request max latency                |  kafka.producer.node.requests.latency.max                |  gauge           |  double        |  ms                       |  The maximum request latency
-producer request size                            |  kafka.producer.requests.size                            |  gauge           |  double        |  bytes                    |  The average size of all requests in the window.
-producer request max size                        |  kafka.producer.requests.size.max                        |  gauge           |  double        |  bytes                    |  The maximum size of any request sent in the window.
-broker isr expands                               |  kafka.broker.isr.expands                                |  counter         |  long          |                           |  Number of times ISR for a partition expanded
-broker isr shrinks                               |  kafka.broker.isr.shrinks                                |  counter         |  long          |                           |  Number of times ISR for a partition shrank
-broker log flushes                               |  kafka.broker.log.flushes                                |  counter         |  long          |  flushes/sec              |  Rate of flushing Kafka logs to disk
-broker log flushes time                          |  kafka.broker.log.flushes.time                           |  double_counter  |  double        |  ms                       |  Time of flushing Kafka logs to disk
-broker log cleaner buffer utilization            |  kafka.broker.log.cleaner.clean.buffer.utilization       |  gauge           |  long          |  %                        |
-broker log cleaner dirty                         |  kafka.broker.log.cleaner.dirty.percentage               |  gauge           |  long          |  %                        |
-broker log cleaner max time                      |  kafka.broker.log.cleaner.clean.time                     |  gauge           |  long          |  ms                       |
-broker log cleaner recopy                        |  kafka.broker.log.cleaner.recopy.percentage              |  gauge           |  long          |  %                        |
-producer sends failed                            |  kafka.producer.old.sends.failed                         |  counter         |  long          |                           |
-producer resends                                 |  kafka.producer.old.resends                              |  counter         |  long          |                           |
-producer serialization errors                    |  kafka.producer.errors.serialization                     |  counter         |  long          |                           |
-producer out bytes rate                          |  kafka.producer.out.bytes.rate                           |  gauge           |  double        |  bytes/sec                |
-producer metadata age                            |  kafka.producer.metadata.age                             |  gauge           |  double        |  ms                       |
-producer requests rate                           |  kafka.producer.requests.rate                            |  gauge           |  double        |  req/sec                  |
-producer request latency                         |  kafka.producer.request.latency                          |  gauge           |  double        |  ms                       |
-producer request max latency                     |  kafka.producer.request.latency.max                      |  gauge           |  double        |  ms                       |
-producer responses rate                          |  kafka.producer.responses.rate                           |  gauge           |  double        |  res/sec                  |
-producer in bytes rate                           |  kafka.producer.in.bytes.rate                            |  gauge           |  double        |  bytes/sec                |
-producer request size                            |  kafka.producer.request.size                             |  gauge           |  double        |  bytes                    |
-broker leader  elections                         |  kafka.broker.leader.elections                           |  counter         |  long          |                           |
-broker leader unclean elections                  |  kafka.broker.leader.elections.unclean                   |  counter         |  long          |                           |
-broker leader elections time                     |  kafka.broker.leader.elections.time                      |  double_counter  |  double        |  ms                       |
-records consumed rate                            |  kafka.consumer.records.rate                             |  gauge           |  double        |  rec/sec                  |  The average number of records consumed per second
-consumer records per request                     |  kafka.consumer.requests.records.avg                     |  gauge           |  double        |  rec/req                  |  The average number of records per request
-consumer requests rate                           |  kafka.consumer.requests.rate                            |  gauge           |  double        |  req/sec                  |
-consumer request size                            |  kafka.consumer.request.size                             |  gauge           |  double        |  bytes                    |
-consumer responses rate                          |  kafka.consumer.responses.rate                           |  gauge           |  double        |  res/sec                  |
-consumer out bytes rate                          |  kafka.consumer.outgoing.bytes.rate                      |  gauge           |  double        |  bytes/sec                |
-consumer selects rate                            |  kafka.consumer.selects.rate                             |  gauge           |  double        |  sel/sec                  |
-consumer fetch rate                              |  kafka.consumer.fetch.rate                               |  gauge           |  double        |  fetches/sec              |  The number of fetch requests per second
-consumer fetch latency                           |  kafka.consumer.fetch.latency                            |  gauge           |  double        |  ms                       |  The average time taken for a fetch request
-consumer fetch max latency                       |  kafka.consumer.fetch.latency.max                        |  gauge           |  double        |  ms                       |  The maximum time taken for a fetch request
-bytes consumed rate                              |  kafka.consumer.bytes.rate                               |  gauge           |  double        |  betes/sec                |  The average number of bytes consumed per second
-consumer fetch avg size                          |  kafka.consumer.fetch.size                               |  gauge           |  double        |  bytes                    |  The average number of bytes fetched per request
-consumer fetch max size                          |  kafka.consumer.fetch.size.max                           |  gauge           |  double        |  betes                    |  The maximum number of bytes fetched per request
-consumer throttle time                           |  kafka.consumer.throttle.time                            |  gauge           |  double        |  ms                       |  The avarage throttle time in ms
-consumer throttle max time                       |  kafka.consumer.throttle.time.max                        |  gauge           |  double        |  ms                       |  The max throttle time in ms
-producer connection creation rate                |  kafka.producer.connections.create.rate                  |  gauge           |  double        |  conn/sec                 |  New connections established per second in the window.
-producer connection close rate                   |  kafka.producer.connections.close.rate                   |  gauge           |  double        |  conn/sec                 |  Connections closed per second in the window.
-producer connections count                       |  kafka.producer.connections                              |  gauge           |  double        |                           |  The current number of active connections.
-producer network io rate                         |  kafka.producer.io.rate                                  |  gauge           |  double        |  op/sec                   |  The average number of network operations (reads or writes) on all connections per second.
-producer io wait ratio                           |  kafka.producer.io.wait.ratio                            |  gauge           |  double        |  %                        |  The fraction of time the I/O thread spent waiting.
-producer io ratio                                |  kafka.producer.io.ratio                                 |  gauge           |  double        |  %                        |  The fraction of time the I/O thread spent doing I/O
-producer io wait time                            |  kafka.producer.io.wait.time.ns                          |  gauge           |  double        |  ms                       |  The average length of time the I/O thread spent waiting for a socket ready for reads or writes.
-producer io time                                 |  kafka.producer.io.time.ns                               |  gauge           |  double        |  ms                       |  The average length of time for I/O per select call.
-producer requests                                |  kafka.producer.old.requests                             |  counter         |  long          |                           |
-producer request size                            |  kafka.producer.old.requests.size                        |  double_counter  |  double        |  bytes                    |
-producer request time                            |  kafka.producer.old.requests.time                        |  double_counter  |  double        |  ms                       |
-consumer node in bytes rate                      |  kafka.consumer.node.in.bytes.rate                       |  gauge           |  double        |  bytes/sec                |  Bytes/second read off socket
-consumer node out bytes rate                     |  kafka.consumer.node.out.bytes.rate                      |  gauge           |  double        |  bytes/sec                |  The average number of outgoing bytes sent per second to servers.
-consumer node requests rate                      |  kafka.consumer.node.request.rate                        |  gauge           |  double        |  req/sec                  |  The average number of requests sent per second.
-consumer node responses rate                     |  kafka.consumer.node.response.rate                       |  gauge           |  double        |  res/sec                  |  The average number of responses received per second.
-consumer node request latency                    |  kafka.consumer.node.request.latency                     |  gauge           |  double        |  ms                       |  The average request latency
-consumer node request max latency                |  kafka.consumer.node.request.latency.max                 |  gauge           |  double        |  ms                       |  The maximum request latency
-consumer node request size                       |  kafka.consumer.node.request.size                        |  gauge           |  double        |  bytes                    |  The average size of all requests in the window..
-consumer node request max size                   |  kafka.consumer.node.request.size.max                    |  gauge           |  double        |  bytes                    |  The maximum size of any request sent in the window.
-broker requests                                  |  kafka.broker.requests                                   |  counter         |  long          |                           |
-broker requests total time                       |  kafka.broker.requests.time.total                        |  double_counter  |  double        |  ms                       |
-broker requests local time                       |  kafka.broker.requests.time.local                        |  double_counter  |  double        |  ms                       |
-broker requests remote time                      |  kafka.broker.requests.time.remote                       |  double_counter  |  double        |  ms                       |
-broker request queue time                        |  kafka.broker.requests.time.queue                        |  double_counter  |  double        |  ms                       |
-broker response queue time                       |  kafka.broker.responses.time.queue                       |  double_counter  |  double        |  ms                       |
-broker response send time                        |  kafka.broker.responses.time.send                        |  double_counter  |  double        |  ms                       |
-broker topic messages in                         |  kafka.broker.topic.in.messages                          |  counter         |  long          |                           |
-broker topic in                                  |  kafka.broker.topic.in.bytes                             |  counter         |  long          |  bytes                    |
-broker topic out                                 |  kafka.broker.topic.out.bytes                            |  counter         |  long          |  bytes                    |
-broker topic rejected                            |  kafka.broker.topic.in.bytes.rejected                    |  counter         |  long          |  bytes                    |
-broker topic failed fetch requests               |  kafka.broker.topic.requests.fetch.failed                |  counter         |  long          |                           |
-broker topic failed produce requests             |  kafka.broker.topic.requests.produce.failed              |  counter         |  long          |                           |
-consumer requests                                |  kafka.consumer.old.requests                             |  counter         |  long          |                           |
-consumer responses                               |  kafka.consumer.old.responses                            |  counter         |  long          |                           |
-consumer fetcher bytes                           |  kafka.consumer.old.requests.bytes                       |  counter         |  long          |                           |
-consumer response bytes                          |  kafka.consumer.old.responses.bytes                      |  double_counter  |  double        |                           |
-consumer response mean bytes                     |  kafka.consumer.old.responses.mean.bytes                 |  gauge           |  double        |                           |
-consumer requests time                           |  kafka.consumer.old.requests.time                        |  double_counter  |  double        |  ms                       |
-consumer request mean time                       |  kafka.consumer.old.requests.mean.time                   |  gauge           |  double        |  ms                       |
-consumer throttles time                          |  kafka.consumer.old.requests.throttle.time               |  double_counter  |  double        |  ms                       |
-consumer throtles                                |  kafka.consumer.old.requests.throttles                   |  counter         |  long          |                           |
-consumer throttle mean time                      |  kafka.consumer.old.requests.throttle.mean.time          |  gauge           |  double        |  ms                       |
-consumer assigned partitions                     |  kafka.consumer.partitions.assigned                      |  gauge           |  double        |                           |  The number of partitions currently assigned to consumer
-consumer heartbeats rate                         |  kafka.consumer.coordinator.heartbeat.rate               |  gauge           |  double        |  beats/sec                |  The number of hearthbeats per second
-consumer heartbeat response max time             |  kafka.consumer.coordinator.heartbeat.time               |  gauge           |  double        |  ms                       |  The max time taken to receive a response to a heartbeat request
-consumer last heartbeat                          |  kafka.consumer.coordinator.heartbeat.last               |  gauge           |  double        |  sec                      |  The number of seconds since the last controller heartbeat
-consumer join rate                               |  kafka.consumer.coordinator.join.rate                    |  gauge           |  double        |  joins/sec                |  The number of group joins per second
-consumer join time                               |  kafka.consumer.coordinator.join.time                    |  gauge           |  double        |  ms                       |  The average time taken for a group rejoin
-consumer join max time                           |  kafka.consumer.coordinator.join.time.max                |  gauge           |  double        |  ms                       |  The max time taken for a group rejoin
-consumer syncs rate                              |  kafka.consumer.coordinator.sync.rate                    |  gauge           |  double        |  syncs/sec                |  The number of group syncs per second
-consumer sync time                               |  kafka.consumer.coordinator.sync.time                    |  gauge           |  double        |  ms                       |  The average time taken for a group sync
-consumer sync max time                           |  kafka.consumer.coordinator.sync.time.max                |  gauge           |  double        |  ms                       |  The max time taken for a group sync
-consumer commit latency                          |  kafka.consumer.coordinator.commit.latency               |  gauge           |  double        |  ms                       |
-consumer commit max latency                      |  kafka.consumer.coordinator.commit.latency.max           |  gauge           |  double        |  ms                       |
-consumer commits rate                            |  kafka.consumer.coordinator.commit.rate                  |  gauge           |  double        |  commits/sec              |
-producer batch size                              |  kafka.producer.batch.size                               |  gauge           |  double        |  bytes/req                |  The average number of bytes sent per partition per-request.
-producer max batch size                          |  kafka.producer.batch.size.max                           |  gauge           |  double        |  bytes/req                |  The max number of bytes sent per partition per-request.
-producer compression rate                        |  kafka.producer.compression.rate                         |  gauge           |  double        |  %                        |  The average compression rate of record batches.
-producer buffer available bytes                  |  kafka.producer.buffer.available                         |  gauge           |  double        |  bytes                    |  The total amount of buffer memory that is not being used (either unallocated or in the free list).
-producer buffer total bytes                      |  kafka.producer.buffer.size                              |  gauge           |  double        |  bytes                    |  The maximum amount of buffer memory the client can use (whether or not it is currently used).
-producer buffer pool wait ratio                  |  kafka.producer.buffer.pool.wait.ratio                   |  gauge           |  double        |  %                        |  The fraction of time an appender waits for space allocation.
-broker active controllers                        |  kafka.broker.controllers.active                         |  gauge           |  long          |                           |  Is controller active on broker
-broker preferred replica imbalance count         |  kafka.broker.replica.imbalance                          |  gauge           |  long          |                           |
-broker replica max lag                           |  kafka.broker.replica.lag.max                            |  gauge           |  long          |                           |
-broker replica min fetch                         |  kafka.broker.replica.fetch.min                          |  gauge           |  double        |                           |
-broker response queue                            |  kafka.broker.queue.response.size                        |  gauge           |  long          |  bytes                    |  Response Queue Size
-broker request queue                             |  kafka.broker.queue.request.size                         |  gauge           |  long          |  bytes                    |  Request Queue Size
-broker expires consumers                         |  kafka.broker.expires.consumer                           |  counter         |  long          |                           |  Number of expired delayed consumer fetch requests
-broker expires followers                         |  kafka.broker.expires.follower                           |  counter         |  long          |                           |  Number of expired delayed follower fetch requests
-broker all expires                               |  kafka.broker.expires.all                                |  counter         |  long          |                           |  Number of expired delayed producer requests
-consumer connection creation rate                |  kafka.consumer.connections.create.rate                  |  gauge           |  double        |  conn/sec                 |  New connections established per second in the window.
-consumer connection close rate                   |  kafka.consumer.connections.close.rate                   |  gauge           |  double        |  conn/sec                 |  Connections closed per second in the window.
-consumer connection count                        |  kafka.consumer.connections                              |  gauge           |  double        |                           |  The current number of active connections.
-consumer network io rate                         |  kafka.consumer.io.rate                                  |  gauge           |  double        |  op/sec                   |  The average number of network operations (reads or writes) on all connections per second.
-consumer io wait ratio                           |  kafka.consumer.io.wait.ratio                            |  gauge           |  double        |  ms                       |  The fraction of time the I/O thread spent waiting.
-consumer io ratio                                |  kafka.consumer.io.ratio                                 |  gauge           |  double        |  %                        |  The fraction of time the I/O thread spent doing I/O
-consumer io wait time                            |  kafka.consumer.io.wait.time.ns                          |  gauge           |  double        |  ns                       |  The average length of time the I/O thread spent waiting for a socket ready for reads or writes.
-consumer io time                                 |  kafka.consumer.io.time.ns                               |  gauge           |  double        |  ns                       |  The average length of time for I/O per select call.
-consumer kafka commits                           |  kafka.consumer.old.commits.kafka                        |  counter         |  long          |                           |
-consumer zk commits                              |  kafka.consumer.old.commits.zookeeper                    |  counter         |  long          |                           |
-consumer rebalances count                        |  kafka.consumer.old.rebalances                           |  counter         |  long          |                           |
-consumer rebalances time                         |  kafka.consumer.old.rebalances.time                      |  double_counter  |  double        |  ms                       |
-consumer in bytes rate                           |  kafka.consumer.incomming.bytes.rate                     |  gauge           |  double        |  bytes/sec                |
-broker log segments                              |  kafka.broker.log.segments                               |  gauge           |  long          |                           |
-broker log size                                  |  kafka.broker.log.size                                   |  gauge           |  long          |  bytes                    |
-broker log offset increasing                     |  kafka.broker.log.offset.end                             |  counter         |  long          |                           |
-broker partitions under replicated               |  kafka.broker.partition.underreplicated                  |  gauge           |  double        |                           |
-producer topic messages                          |  kafka.producer.old.topic.messages                       |  counter         |  long          |                           |
-producer topic dropped messages                  |  kafka.producer.old.topic.messages.dropped               |  counter         |  long          |                           |
-producer topic                                   |  kafka.producer.old.topic.bytes                          |  counter         |  long          |  bytes                    |
-broker purgatory fetch delayed requests          |  kafka.broker.purgatory.requests.fetch.delayed           |  gauge           |  long          |                           |  Number of requests delayed in the fetch purgatory
-broker purgatory fetch delayed requests size     |  kafka.broker.purgatory.requests.fetch.size              |  gauge           |  long          |                           |  Requests waiting in the fetch purgatory. This depends on value of fetch.wait.max.ms in the consumer
-broker purgatory producer delayed requests       |  kafka.broker.purgatory.producer.requests.fetch.delayed  |  gauge           |  long          |                           |  Number of requests delayed in the producer purgatory
-broker purgatory producer delayed requests size  |  kafka.broker.purgatory.producer.requests.fetch.size     |  gauge           |  long          |                           |  Requests waiting in the producer purgatory. This should be non-zero when acks = -1 is used in producers
-broker partitions                                |  kafka.broker.partitions                                 |  gauge           |  long          |                           |  Number of partitions (lead or follower replicas) on broker
-broker leader partitions                         |  kafka.broker.partitions.leader                          |  gauge           |  long          |                           |  Number of leader replicas on broker
-broker offline partitions                        |  kafka.broker.partitions.offline                         |  gauge           |  long          |                           |  Number of unavailable partitions
-broker under replicated partitions               |  kafka.broker.partitions.underreplicated                 |  gauge           |  long          |                           |  Number of partitions with unavailable replicas
-consumer topic messages                          |  kafka.consumer.old.topic.messages                       |  counter         |  long          |                           |
-consumer topic                                   |  kafka.consumer.old.topic.bytes                          |  counter         |  long          |  bytes                    |
-consumer topic queue size                        |  kafka.consumer.old.topic.queue                          |  gauge           |  long          |                           |
-consumer owned partitions                        |  kafka.consumer.old.partitions.owned                     |  gauge           |  long          |                           |
-producer records send rate                       |  kafka.producer.records.send.rate                        |  gauge           |  double        |  rec/sec                  |  The average number of records sent per second.
-producer records retry rate                      |  kafka.producer.records.retry.rate                       |  gauge           |  double        |  rec/sec                  |  The average per-second number of retried record sends
-producer records error rate                      |  kafka.producer.records.error.rate                       |  gauge           |  double        |  errors/sec               |  The average per-second number of record sends that resulted in errors
-producer records queue max time                  |  kafka.producer.records.queued.time.max                  |  gauge           |  double        |  ms                       |  The maximum time record batches spent in the record accumulator.
-producer records queue time                      |  kafka.producer.records.queued.time                      |  gauge           |  double        |  ms                       |  The average time record batches spent in the record accumulator.
-record size                                      |  kafka.producer.records.size                             |  gauge           |  double        |  The average record size  |  producer record size
-producer record max size                         |  kafka.producer.records.size.max                         |  gauge           |  double        |  bytes                    |  The maximum record size
-producer records per request                     |  kafka.producer.requests.records                         |  gauge           |  double        |  rec/req                  |  The average number of records per request.
-producer requests max size                       |  kafka.producer.request.size.max                         |  gauge           |  double        |                           |
-producer selects rate                            |  kafka.producer.selects.rate                             |  gauge           |  double        |  sel/sec                  |  Number of times the I/O layer checked for new I/O to perform per second
-producer requests in flight                      |  kafka.producer.requests.inflight                        |  gauge           |  double        |                           |  The current number of in-flight requests awaiting a response.
-producer waiting threads                         |  kafka.producer.threads.waiting                          |  gauge           |  double        |                           |  The number of user threads blocked waiting for buffer memory to enqueue their records
-consumer records max lag                         |  kafka.consumer.records.lag.max                          |  gauge           |  double        |                           |  The maximum lag in terms of number of records for any partition
-producer topic bytes rate                        |  kafka.producer.topic.bytes.rate                         |  gauge           |  double        |  bytes/sec                |  The average rate of bytes.
-producer topic compression rate                  |  kafka.producer.topic.compression.rate                   |  gauge           |  double        |                           |  The average compression rate of records.
-producer records sends rate                      |  kafka.producer.topic.records.send.rate                  |  gauge           |  double        |  sends/sec                |  The average number of records sent per second.
-producer records retries rate                    |  kafka.producer.topic.records.retry.rate                 |  gauge           |  double        |  retries/sec              |  The average per-second number of retried record sends
-producer records errors rate                     |  kafka.producer.topic.records.error.rate                 |  gauge           |  double        |  errors/sec               |  The average per-second number of record sends that resulted in errors
-consumer fetcher lag                             |  kafka.consumer.fetcher.lag                              |  gauge           |  double        |                           |  Lag in messages per topic partition
-consumer fetcher max lag                         |  kafka.consumer.fetcher.max.lag                          |  gauge           |  double        |                           |  Max lag in messages per topic partition
-consumer fetcher avg lag                         |  kafka.consumer.fetcher.avg.lag                          |  gauge           |  double        |                           |  Average lag in messages per topic partition
+Metric Name<br> Key *(Type)* *(Unit)*                                                                                    |  Description
+-------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------
+producer records queue time<br>**kafka.producer.records.queued.time** <br>*(double gauge)* *(ms)*                        |  The average time record batches spent in the record accumulator.
+producer io ratio<br>**kafka.producer.io.ratio** <br>*(double gauge)* *(%)*                                              |  The fraction of time the I/O thread spent doing I/O
+producer record max size<br>**kafka.producer.records.size.max** <br>*(double gauge)* *(bytes)*                           |  The maximum record size
+producer request size<br>**kafka.producer.request.size** <br>*(double gauge)* *(bytes)*                                  |
+producer requests max size<br>**kafka.producer.request.size.max** <br>*(double gauge)*                                   |
+record size<br>**kafka.producer.records.size** <br>*(double gauge)* *(The average record size)*                          |  producer record size
+producer request max latency<br>**kafka.producer.request.latency.max** <br>*(double gauge)* *(ms)*                       |
+producer requests in flight<br>**kafka.producer.requests.inflight** <br>*(double gauge)*                                 |  The current number of in-flight requests awaiting a response.
+producer buffer pool wait ratio<br>**kafka.producer.buffer.pool.wait.ratio** <br>*(double gauge)* *(%)*                  |  The fraction of time an appender waits for space allocation.
+producer network io rate<br>**kafka.producer.io.rate** <br>*(double gauge)* *(op/sec)*                                   |  The average number of network operations (reads or writes) on all connections per second.
+producer records queue max time<br>**kafka.producer.records.queued.time.max** <br>*(double gauge)* *(ms)*                |  The maximum time record batches spent in the record accumulator.
+producer in bytes rate<br>**kafka.producer.in.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                            |
+producer connections count<br>**kafka.producer.connections** <br>*(double gauge)*                                        |  The current number of active connections.
+producer metadata age<br>**kafka.producer.metadata.age** <br>*(double gauge)* *(ms)*                                     |
+producer records per request<br>**kafka.producer.requests.records** <br>*(double gauge)* *(rec/req)*                     |  The average number of records per request.
+producer records retry rate<br>**kafka.producer.records.retry.rate** <br>*(double gauge)* *(rec/sec)*                    |  The average per-second number of retried record sends
+producer buffer total bytes<br>**kafka.producer.buffer.size** <br>*(double gauge)* *(bytes)*                             |  The maximum amount of buffer memory the client can use (whether or not it is currently used).
+producer compression rate<br>**kafka.producer.compression.rate** <br>*(double gauge)* *(%)*                              |  The average compression rate of record batches.
+producer buffer available bytes<br>**kafka.producer.buffer.available** <br>*(double gauge)* *(bytes)*                    |  The total amount of buffer memory that is not being used (either unallocated or in the free list).
+producer requests rate<br>**kafka.producer.requests.rate** <br>*(double gauge)* *(req/sec)*                              |
+producer records send rate<br>**kafka.producer.records.send.rate** <br>*(double gauge)* *(rec/sec)*                      |  The average number of records sent per second.
+producer selects rate<br>**kafka.producer.selects.rate** <br>*(double gauge)* *(sel/sec)*                                |  Number of times the I/O layer checked for new I/O to perform per second
+producer request latency<br>**kafka.producer.request.latency** <br>*(double gauge)* *(ms)*                               |
+producer records error rate<br>**kafka.producer.records.error.rate** <br>*(double gauge)* *(errors/sec)*                 |  The average per-second number of record sends that resulted in errors
+producer connection creation rate<br>**kafka.producer.connections.create.rate** <br>*(double gauge)* *(conn/sec)*        |  New connections established per second in the window.
+producer max batch size<br>**kafka.producer.batch.size.max** <br>*(double gauge)* *(bytes/req)*                          |  The max number of bytes sent per partition per-request.
+producer connection close rate<br>**kafka.producer.connections.close.rate** <br>*(double gauge)* *(conn/sec)*            |  Connections closed per second in the window.
+producer waiting threads<br>**kafka.producer.threads.waiting** <br>*(double gauge)*                                      |  The number of user threads blocked waiting for buffer memory to enqueue their records
+producer batch size<br>**kafka.producer.batch.size** <br>*(double gauge)* *(bytes/req)*                                  |  The average number of bytes sent per partition per-request.
+producer io wait ratio<br>**kafka.producer.io.wait.ratio** <br>*(double gauge)* *(%)*                                    |  The fraction of time the I/O thread spent waiting.
+producer io wait time<br>**kafka.producer.io.wait.time.ns** <br>*(double gauge)* *(ms)*                                  |  The average length of time the I/O thread spent waiting for a socket ready for reads or writes.
+producer out bytes rate<br>**kafka.producer.out.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                          |
+producer io time<br>**kafka.producer.io.time.ns** <br>*(double gauge)* *(ms)*                                            |  The average length of time for I/O per select call.
+producer responses rate<br>**kafka.producer.responses.rate** <br>*(double gauge)* *(res/sec)*                            |
+producer sends failed<br>**kafka.producer.old.sends.failed** <br>*(long counter)*                                        |
+producer resends<br>**kafka.producer.old.resends** <br>*(long counter)*                                                  |
+producer serialization errors<br>**kafka.producer.errors.serialization** <br>*(long counter)*                            |
+consumer topic queue size<br>**kafka.consumer.old.topic.queue** <br>*(long gauge)*                                       |
+consumer owned partitions<br>**kafka.consumer.old.partitions.owned** <br>*(long gauge)*                                  |
+producer topic messages<br>**kafka.producer.old.topic.messages** <br>*(long counter)*                                    |
+broker topic in<br>**kafka.broker.topic.in.bytes** <br>*(long counter)* *(bytes)*                                        |
+broker topic out<br>**kafka.broker.topic.out.bytes** <br>*(long counter)* *(bytes)*                                      |
+broker topic failed fetch requests<br>**kafka.broker.topic.requests.fetch.failed** <br>*(long counter)*                  |
+broker topic failed produce requests<br>**kafka.broker.topic.requests.produce.failed** <br>*(long counter)*              |
+broker topic messages in<br>**kafka.broker.topic.in.messages** <br>*(long counter)*                                      |
+broker topic rejected<br>**kafka.broker.topic.in.bytes.rejected** <br>*(long counter)* *(bytes)*                         |
+consumer kafka commits<br>**kafka.consumer.old.commits.kafka** <br>*(long counter)*                                      |
+consumer zk commits<br>**kafka.consumer.old.commits.zookeeper** <br>*(long counter)*                                     |
+consumer rebalances count<br>**kafka.consumer.old.rebalances** <br>*(long counter)*                                      |
+consumer rebalances time<br>**kafka.consumer.old.rebalances.time** <br>*(double counter)* *(ms)*                         |
+producer topic<br>**kafka.producer.old.topic.bytes** <br>*(long counter)* *(bytes)*                                      |
+producer node requests rate<br>**kafka.producer.node.requests.rate** <br>*(double gauge)* *(req/sec)*                    |  The average number of requests sent per second.
+producer request size<br>**kafka.producer.requests.size** <br>*(double gauge)* *(bytes)*                                 |  The average size of all requests in the window.
+producer node in bytes rate<br>**kafka.producer.node.in.bytes.rate** <br>*(double gauge)* *(bytes)*                      |  Bytes/second read off socket
+producer request max size<br>**kafka.producer.requests.size.max** <br>*(double gauge)* *(bytes)*                         |  The maximum size of any request sent in the window.
+producer node out bytes rate<br>**kafka.producer.node.out.bytes.rate** <br>*(double gauge)* *(bytes)*                    |  The average number of outgoing bytes sent per second to servers.
+producer node request max latency<br>**kafka.producer.node.requests.latency.max** <br>*(double gauge)* *(ms)*            |  The maximum request latency
+producer node request latency<br>**kafka.producer.node.requests.latency** <br>*(double gauge)* *(ms)*                    |  The average request latency
+producer node responses rate<br>**kafka.producer.node.responses.rate** <br>*(double gauge)* *(res/sec)*                  |  The average number of responses received per second.
+consumer node requests rate<br>**kafka.consumer.node.request.rate** <br>*(double gauge)* *(req/sec)*                     |  The average number of requests sent per second.
+consumer node request size<br>**kafka.consumer.node.request.size** <br>*(double gauge)* *(bytes)*                        |  The average size of all requests in the window..
+consumer node in bytes rate<br>**kafka.consumer.node.in.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                  |  Bytes/second read off socket
+consumer node request max size<br>**kafka.consumer.node.request.size.max** <br>*(double gauge)* *(bytes)*                |  The maximum size of any request sent in the window.
+consumer node out bytes rate<br>**kafka.consumer.node.out.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                |  The average number of outgoing bytes sent per second to servers.
+consumer node request max latency<br>**kafka.consumer.node.request.latency.max** <br>*(double gauge)* *(ms)*             |  The maximum request latency
+consumer node request latency<br>**kafka.consumer.node.request.latency** <br>*(double gauge)* *(ms)*                     |  The average request latency
+consumer node responses rate<br>**kafka.consumer.node.response.rate** <br>*(double gauge)* *(res/sec)*                   |  The average number of responses received per second.
+consumer fetcher max lag<br>**kafka.consumer.fetcher.max.lag** <br>*(double gauge)*                                      |  Max lag in messages per topic partition
+consumer fetcher avg lag<br>**kafka.consumer.fetcher.avg.lag** <br>*(double gauge)*                                      |  Average lag in messages per topic partition
+consumer fetcher lag<br>**kafka.consumer.fetcher.lag** <br>*(double gauge)*                                              |  Lag in messages per topic partition
+producer records retries rate<br>**kafka.producer.topic.records.retry.rate** <br>*(double gauge)* *(retries/sec)*        |  The average per-second number of retried record sends
+producer topic compression rate<br>**kafka.producer.topic.compression.rate** <br>*(double gauge)*                        |  The average compression rate of records.
+producer topic bytes rate<br>**kafka.producer.topic.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                      |  The average rate of bytes.
+producer records sends rate<br>**kafka.producer.topic.records.send.rate** <br>*(double gauge)* *(sends/sec)*             |  The average number of records sent per second.
+producer records errors rate<br>**kafka.producer.topic.records.error.rate** <br>*(double gauge)* *(errors/sec)*          |  The average per-second number of record sends that resulted in errors
+consumer topic<br>**kafka.consumer.old.topic.bytes** <br>*(long counter)* *(bytes)*                                      |
+consumer io ratio<br>**kafka.consumer.io.ratio** <br>*(double gauge)* *(%)*                                              |  The fraction of time the I/O thread spent doing I/O
+consumer request size<br>**kafka.consumer.request.size** <br>*(double gauge)* *(bytes)*                                  |
+consumer network io rate<br>**kafka.consumer.io.rate** <br>*(double gauge)* *(op/sec)*                                   |  The average number of network operations (reads or writes) on all connections per second.
+consumer in bytes rate<br>**kafka.consumer.incomming.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                     |
+consumer connection count<br>**kafka.consumer.connections** <br>*(double gauge)*                                         |  The current number of active connections.
+consumer requests rate<br>**kafka.consumer.requests.rate** <br>*(double gauge)* *(req/sec)*                              |
+consumer selects rate<br>**kafka.consumer.selects.rate** <br>*(double gauge)* *(sel/sec)*                                |
+consumer connection creation rate<br>**kafka.consumer.connections.create.rate** <br>*(double gauge)* *(conn/sec)*        |  New connections established per second in the window.
+consumer connection close rate<br>**kafka.consumer.connections.close.rate** <br>*(double gauge)* *(conn/sec)*            |  Connections closed per second in the window.
+consumer io wait ratio<br>**kafka.consumer.io.wait.ratio** <br>*(double gauge)* *(ms)*                                   |  The fraction of time the I/O thread spent waiting.
+consumer io wait time<br>**kafka.consumer.io.wait.time.ns** <br>*(double gauge)* *(ns)*                                  |  The average length of time the I/O thread spent waiting for a socket ready for reads or writes.
+consumer out bytes rate<br>**kafka.consumer.outgoing.bytes.rate** <br>*(double gauge)* *(bytes/sec)*                     |
+consumer io time<br>**kafka.consumer.io.time.ns** <br>*(double gauge)* *(ns)*                                            |  The average length of time for I/O per select call.
+consumer responses rate<br>**kafka.consumer.responses.rate** <br>*(double gauge)* *(res/sec)*                            |
+consumer request mean time<br>**kafka.consumer.old.requests.mean.time** <br>*(double gauge)* *(ms)*                      |
+consumer requests<br>**kafka.consumer.old.requests** <br>*(long counter)*                                                |
+consumer requests time<br>**kafka.consumer.old.requests.time** <br>*(double counter)* *(ms)*                             |
+consumer throttle mean time<br>**kafka.consumer.old.requests.throttle.mean.time** <br>*(double gauge)* *(ms)*            |
+consumer throtles<br>**kafka.consumer.old.requests.throttles** <br>*(long counter)*                                      |
+consumer throttles time<br>**kafka.consumer.old.requests.throttle.time** <br>*(double counter)* *(ms)*                   |
+bytes consumed rate<br>**kafka.consumer.bytes.rate** <br>*(double gauge)* *(betes/sec)*                                  |  The average number of bytes consumed per second
+records consumed rate<br>**kafka.consumer.records.rate** <br>*(double gauge)* *(rec/sec)*                                |  The average number of records consumed per second
+consumer records max lag<br>**kafka.consumer.records.lag.max** <br>*(double gauge)*                                      |  The maximum lag in terms of number of records for any partition
+consumer records per request<br>**kafka.consumer.requests.records.avg** <br>*(double gauge)* *(rec/req)*                 |  The average number of records per request
+consumer fetch rate<br>**kafka.consumer.fetch.rate** <br>*(double gauge)* *(fetches/sec)*                                |  The number of fetch requests per second
+consumer fetch avg size<br>**kafka.consumer.fetch.size** <br>*(double gauge)* *(bytes)*                                  |  The average number of bytes fetched per request
+consumer fetch max size<br>**kafka.consumer.fetch.size.max** <br>*(double gauge)* *(betes)*                              |  The maximum number of bytes fetched per request
+consumer fetch latency<br>**kafka.consumer.fetch.latency** <br>*(double gauge)* *(ms)*                                   |  The average time taken for a fetch request
+consumer fetch max latency<br>**kafka.consumer.fetch.latency.max** <br>*(double gauge)* *(ms)*                           |  The maximum time taken for a fetch request
+consumer throttle time<br>**kafka.consumer.throttle.time** <br>*(double gauge)* *(ms)*                                   |  The avarage throttle time in ms
+consumer throttle max time<br>**kafka.consumer.throttle.time.max** <br>*(double gauge)* *(ms)*                           |  The max throttle time in ms
+consumer response mean bytes<br>**kafka.consumer.old.responses.mean.bytes** <br>*(double gauge)*                         |
+consumer responses<br>**kafka.consumer.old.responses** <br>*(long counter)*                                              |
+consumer response bytes<br>**kafka.consumer.old.responses.bytes** <br>*(double counter)*                                 |
+broker leader elections<br>**kafka.broker.leader.elections** <br>*(long counter)*                                        |
+broker leader elections time<br>**kafka.broker.leader.elections.time** <br>*(double counter)* *(ms)*                     |
+broker leader unclean elections<br>**kafka.broker.leader.elections.unclean** <br>*(long counter)*                        |
+broker active controllers<br>**kafka.broker.controllers.active** <br>*(long gauge)*                                      |  Is controller active on broker
+broker offline partitions<br>**kafka.broker.partitions.offline** <br>*(long gauge)*                                      |  Number of unavailable partitions
+broker preferred replica imbalances<br>**kafka.broker.replica.imbalance** <br>*(long gauge)*                             |
+broker response queue<br>**kafka.broker.queue.response.size** <br>*(long gauge)* *(bytes)*                               |  Response queue size
+broker request queue<br>**kafka.broker.queue.request.size** <br>*(long gauge)* *(bytes)*                                 |  Request queue size
+broker expires consumers<br>**kafka.broker.expires.consumer** <br>*(long counter)*                                       |  Number of expired delayed consumer fetch requests
+broker expires followers<br>**kafka.broker.expires.follower** <br>*(long counter)*                                       |  Number of expired delayed follower fetch requests
+broker all expires<br>**kafka.broker.expires.all** <br>*(long counter)*                                                  |  Number of expired delayed producer requests
+purgatory fetch delayed reqs<br>**kafka.broker.purgatory.requests.fetch.delayed** <br>*(long gauge)*                     |  Number of requests delayed in the fetch purgatory
+purgatory fetch delayed reqs size<br>**kafka.broker.purgatory.requests.fetch.size** <br>*(long gauge)*                   |  Requests waiting in the fetch purgatory. This depends on value of fetch.wait.max.ms in the consumer
+purgatory producer delayed reqs<br>**kafka.broker.purgatory.producer.requests.fetch.delayed** <br>*(long gauge)*         |  Number of requests delayed in the producer purgatory
+purgatory producer delayed reqs size<br>**kafka.broker.purgatory.producer.requests.fetch.size** <br>*(long gauge)*       |  Requests waiting in the producer purgatory. This should be non-zero when acks = -1 is used in producers
+broker replica max lag<br>**kafka.broker.replica.lag.max** <br>*(long gauge)*                                            |
+broker replica min fetch<br>**kafka.broker.replica.fetch.min** <br>*(double gauge)*                                      |
+broker isr expands<br>**kafka.broker.isr.expands** <br>*(long counter)*                                                  |  Number of times ISR for a partition expanded
+broker isr shrinks<br>**kafka.broker.isr.shrinks** <br>*(long counter)*                                                  |  Number of times ISR for a partition shrank
+broker leader partitions<br>**kafka.broker.partitions.leader** <br>*(long gauge)*                                        |  Number of leader replicas on broker
+broker partitions<br>**kafka.broker.partitions** <br>*(long gauge)*                                                      |  Number of partitions (lead or follower replicas) on broker
+broker under replicated partitions<br>**kafka.broker.partitions.underreplicated** <br>*(long gauge)*                     |  Number of partitions with unavailable replicas
+broker log flushes<br>**kafka.broker.log.flushes** <br>*(long counter)* *(flushes/sec)*                                  |  Rate of flushing Kafka logs to disk
+broker log flushes time<br>**kafka.broker.log.flushes.time** <br>*(double counter)* *(ms)*                               |  Time of flushing Kafka logs to disk
+broker requests local time<br>**kafka.broker.requests.time.local** <br>*(double counter)* *(ms)*                         |
+broker requests remote time<br>**kafka.broker.requests.time.remote** <br>*(double counter)* *(ms)*                       |
+broker request queue time<br>**kafka.broker.requests.time.queue** <br>*(double counter)* *(ms)*                          |
+broker requests<br>**kafka.broker.requests** <br>*(long counter)*                                                        |
+broker response queue time<br>**kafka.broker.responses.time.queue** <br>*(double counter)* *(ms)*                        |
+broker response send time<br>**kafka.broker.responses.time.send** <br>*(double counter)* *(ms)*                          |
+broker requests total time<br>**kafka.broker.requests.time.total** <br>*(double counter)* *(ms)*                         |
+producer topic dropped messages<br>**kafka.producer.old.topic.messages.dropped** <br>*(long counter)*                    |
+producer requests<br>**kafka.producer.old.requests** <br>*(long counter)*                                                |
+producer request size<br>**kafka.producer.old.requests.size** <br>*(double counter)* *(bytes)*                           |
+producer request time<br>**kafka.producer.old.requests.time** <br>*(double counter)* *(ms)*                              |
+consumer fetcher bytes<br>**kafka.consumer.old.requests.bytes** <br>*(long counter)*                                     |
+broker partitions under replicated<br>**kafka.broker.partition.underreplicated** <br>*(double gauge)*                    |
+broker log offset increasing<br>**kafka.broker.log.offset.end** <br>*(long counter)*                                     |
+broker log segments<br>**kafka.broker.log.segments** <br>*(long gauge)*                                                  |
+broker log size<br>**kafka.broker.log.size** <br>*(long gauge)* *(bytes)*                                                |
+consumer assigned partitions<br>**kafka.consumer.partitions.assigned** <br>*(double gauge)*                              |  The number of partitions currently assigned to consumer
+consumer commits rate<br>**kafka.consumer.coordinator.commit.rate** <br>*(double gauge)* *(commits/sec)*                 |
+consumer commit latency<br>**kafka.consumer.coordinator.commit.latency** <br>*(double gauge)* *(ms)*                     |
+consumer commit max latency<br>**kafka.consumer.coordinator.commit.latency.max** <br>*(double gauge)* *(ms)*             |
+consumer join rate<br>**kafka.consumer.coordinator.join.rate** <br>*(double gauge)* *(joins/sec)*                        |  The number of group joins per second
+consumer join time<br>**kafka.consumer.coordinator.join.time** <br>*(double gauge)* *(ms)*                               |  The average time taken for a group rejoin
+consumer join max time<br>**kafka.consumer.coordinator.join.time.max** <br>*(double gauge)* *(ms)*                       |  The max time taken for a group rejoin
+consumer syncs rate<br>**kafka.consumer.coordinator.sync.rate** <br>*(double gauge)* *(syncs/sec)*                       |  The number of group syncs per second
+consumer sync time<br>**kafka.consumer.coordinator.sync.time** <br>*(double gauge)* *(ms)*                               |  The average time taken for a group sync
+consumer sync max time<br>**kafka.consumer.coordinator.sync.time.max** <br>*(double gauge)* *(ms)*                       |  The max time taken for a group sync
+consumer heartbeats rate<br>**kafka.consumer.coordinator.heartbeat.rate** <br>*(double gauge)* *(beats/sec)*             |  The number of hearthbeats per second
+consumer heartbeat response max time<br>**kafka.consumer.coordinator.heartbeat.time** <br>*(double gauge)* *(ms)*        |  The max time taken to receive a response to a heartbeat request
+consumer last heartbeat<br>**kafka.consumer.coordinator.heartbeat.last** <br>*(double gauge)* *(sec)*                    |  The number of seconds since the last controller heartbeat
+consumer topic messages<br>**kafka.consumer.old.topic.messages** <br>*(long counter)*                                    |
+broker log cleaner buffer utilization<br>**kafka.broker.log.cleaner.clean.buffer.utilization** <br>*(long gauge)* *(%)*  |
+broker log cleaner recopy<br>**kafka.broker.log.cleaner.recopy.percentage** <br>*(long gauge)* *(%)*                     |
+broker log cleaner max time<br>**kafka.broker.log.cleaner.clean.time** <br>*(long gauge)* *(ms)*                         |
+broker log cleaner dirty<br>**kafka.broker.log.cleaner.dirty.percentage** <br>*(long gauge)* *(%)*                       |

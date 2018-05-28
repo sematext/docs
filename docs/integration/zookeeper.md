@@ -4,19 +4,19 @@
 
 ## Metrics
 
-Metric Name                    |  Key                               |  Metric Type  |  Numeric Type  |  Unit   |  Description
--------------------------------|------------------------------------|---------------|----------------|---------|------------------------------------------------------------------------
-alive connections              |  zk.connections.alive              |  gauge        |  long          |         |  Total number of alive client connections to this server
-max client conns per host      |  zk.connections.perhost            |  gauge        |  long          |         |  Maximum number of connections allowed from particular host
-watch count                    |  zk.connections.watch              |  gauge        |  long          |         |  Number of watches set
-ephemeral nodes                |  zk.data.ephemerals                |  gauge        |  long          |         |  Number of ephemeral nodes in the data tree
-znodes                         |  zk.data.nodes                     |  gauge        |  long          |         |  Number of znodes in the data tree
-packets received               |  zk.data.packets.received          |  gauge        |  long          |         |  Total number of packets received
-packets sent                   |  zk.data.packets.sent              |  gauge        |  long          |         |  Total number of packets sent
-approximate data size          |  zk.data.size.approximate          |  gauge        |  long          |  bytes  |  Data tree size in bytes.The size includes the znode path and its value
-quorum size                    |  zk.quorum                         |  gauge        |  long          |         |  quorum size
-avg req latency                |  zk.request.latency.avg            |  gauge        |  long          |  ms     |  Avg request latency
-max req latency                |  zk.request.latency.max            |  gauge        |  long          |  ms     |  Max request latency
-min req latency                |  zk.request.latency.min            |  gauge        |  long          |  ms     |  Min request latency
-outstanding requests           |  zk.requests.outstanding           |  gauge        |  long          |         |  Outstanding requests in the queue yet to be processed
-pending revalidation sessions  |  zk.requests.session.revalidation  |  gauge        |  long          |         |  Count of pending revalidations
+Metric Name<br> Key *(Type)* *(Unit)*                                                     |  Description
+------------------------------------------------------------------------------------------|------------------------------------------------------------------------
+znodes<br>**zk.data.nodes** <br>*(long gauge)*                                            |  Number of znodes in the data tree
+watch count<br>**zk.connections.watch** <br>*(long gauge)*                                |  Number of watches set
+ephemeral nodes<br>**zk.data.ephemerals** <br>*(long gauge)*                              |  Number of ephemeral nodes in the data tree
+approximate data size<br>**zk.data.size.approximate** <br>*(long gauge)* *(bytes)*        |  Data tree size in bytes.The size includes the znode path and its value
+pending revalidation sessions<br>**zk.requests.session.revalidation** <br>*(long gauge)*  |  Count of pending revalidations
+avg req latency<br>**zk.request.latency.avg** <br>*(long gauge)* *(ms)*                   |  Avg request latency
+max req latency<br>**zk.request.latency.max** <br>*(long gauge)* *(ms)*                   |  Max request latency
+min req latency<br>**zk.request.latency.min** <br>*(long gauge)* *(ms)*                   |  Min request latency
+alive connections<br>**zk.connections.alive** <br>*(long gauge)*                          |  Total number of alive client connections to this server
+max client conns per host<br>**zk.connections.perhost** <br>*(long gauge)*                |  Maximum number of connections allowed from particular host
+outstanding requests<br>**zk.requests.outstanding** <br>*(long gauge)*                    |  Outstanding requests in the queue yet to be processed
+packets sent<br>**zk.data.packets.sent** <br>*(long gauge)*                               |  Total number of packets sent
+packets received<br>**zk.data.packets.received** <br>*(long gauge)*                       |  Total number of packets received
+quorum size<br>**zk.quorum** <br>*(long gauge)*                                           |  quorum size
