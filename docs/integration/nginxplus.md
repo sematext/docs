@@ -7,31 +7,6 @@
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                    |  Description
 ---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------
-status backup<br>**nginxp.upstream.server.backup** <br>*(long gauge)*                                    |  A value indicating whether the server is a backup server
-server weight<br>**nginxp.upstream.server.weight** <br>*(long gauge)*                                    |  Weight of the server
-state up<br>**nginxp.upstream.state.up** <br>*(long counter)*                                            |  Server is up
-state down<br>**nginxp.upstream.state.down** <br>*(long counter)*                                        |  Server is down
-state unavailable<br>**nginxp.upstream.state.unavailable** <br>*(long counter)*                          |  Server is unavailable
-state unhealthy<br>**nginxp.upstream.state.unhealthy** <br>*(long counter)*                              |  Server is unhealthy
-received data<br>**nginxp.upstream.traffic.rx.bytes** <br>*(long counter)* *(bytes)*                     |  The number of bytes sent to this server.
-sent data<br>**nginxp.upstream.traffic.tx.bytes** <br>*(long counter)* *(bytes)*                         |  The number of bytes received from this server.
-upstream check fails<br>**nginxp.upstream.checks.fail** <br>*(long counter)*                             |  The number of unsuccessful attempts to communicate with the server
-upstream check unavailable<br>**nginxp.upstream.checks.unavailable** <br>*(long counter)*                |  How many times the server became unavailable for client requests (state “unavail”) due to the number of unsuccessful attempts reaching the max_fails threshold
-downtime<br>**nginxp.upstream.downtime** <br>*(long counter)* *(ms)*                                     |  Total time the server was in the unavail/checking/unhealthy states
-downstart<br>**nginxp.upstream.downstart** <br>*(long gauge)* *(ms)*                                     |  The time (in milliseconds since Epoch) when the server became unavail/checking/unhealthy
-total responses<br>**nginxp.upstream.responses** <br>*(long counter)*                                    |  The total number of responses obtained from this server
-1xx responses<br>**nginxp.upstream.responses.1xx** <br>*(long counter)*                                  |  The number of responses with status codes 1xx
-2xx responses<br>**nginxp.upstream.responses.2xx** <br>*(long counter)*                                  |  The number of responses with status codes 2xx
-3xx responses<br>**nginxp.upstream.responses.3xx** <br>*(long counter)*                                  |  The number of responses with status codes 3xx
-4xx responses<br>**nginxp.upstream.responses.4xx** <br>*(long counter)*                                  |  The number of responses with status codes 4xx
-5xx responses<br>**nginxp.upstream.responses.5xx** <br>*(long counter)*                                  |  The number of responses with status codes 5xx
-upstream health checks<br>**nginxp.upstream.health.checks** <br>*(long counter)*                         |  The total number of health check requests made
-upstream health fails<br>**nginxp.upstream.health.fails** <br>*(long counter)*                           |  The number of failed health checks
-upstream unhealthy count<br>**nginxp.upstream.health.unhealthy** <br>*(long gauge)*                      |  How many times the server became unhealthy (state unhealthy)
-upstream health last passed<br>**nginxp.upstream.health.passed** <br>*(long gauge)*                      |  Value indicating if the last health check request was successful and passed tests
-active connections<br>**nginxp.upstream.connections.active** <br>*(long gauge)*                          |  The current number of active connections
-keepalive connections<br>**nginxp.upstream.connections.keepalive** <br>*(long gauge)*                    |  The current number of idle keepalive connections
-zombie connections<br>**nginxp.upstream.connections.zombies** <br>*(long gauge)*                         |  The current number of servers removed from the group but still processing active client requests
 cache size<br>**nginxp.cache.size** <br>*(long gauge)*                                                   |  The current size of the cache
 max cache size<br>**nginxp.cache.size.max** <br>*(long gauge)*                                           |  The limit on the maximum size of the cache specified in the configuration
 cold state<br>**nginxp.cache.cold** <br>*(long gauge)*                                                   |  The number of time cache in cold state
@@ -72,3 +47,28 @@ sent clients data<br>**nginxp.zone.traffic.tx.bytes** <br>*(long counter)* *(byt
 4xx responses<br>**nginxp.zone.responses.4xx** <br>*(long counter)*                                      |  The number of responses with status codes 4xx
 5xx responses<br>**nginxp.zone.responses.5xx** <br>*(long counter)*                                      |  The number of responses with status codes 4xx
 total responses<br>**nginxp.zone.responses** <br>*(long counter)*                                        |  The total number of responses
+status backup<br>**nginxp.upstream.server.backup** <br>*(long gauge)*                                    |  A value indicating whether the server is a backup server
+server weight<br>**nginxp.upstream.server.weight** <br>*(long gauge)*                                    |  Weight of the server
+state up<br>**nginxp.upstream.state.up** <br>*(long counter)*                                            |  Server is up
+state down<br>**nginxp.upstream.state.down** <br>*(long counter)*                                        |  Server is down
+state unavailable<br>**nginxp.upstream.state.unavailable** <br>*(long counter)*                          |  Server is unavailable
+state unhealthy<br>**nginxp.upstream.state.unhealthy** <br>*(long counter)*                              |  Server is unhealthy
+received data<br>**nginxp.upstream.traffic.rx.bytes** <br>*(long counter)* *(bytes)*                     |  The number of bytes sent to this server.
+sent data<br>**nginxp.upstream.traffic.tx.bytes** <br>*(long counter)* *(bytes)*                         |  The number of bytes received from this server.
+upstream check fails<br>**nginxp.upstream.checks.fail** <br>*(long counter)*                             |  The number of unsuccessful attempts to communicate with the server
+upstream check unavailable<br>**nginxp.upstream.checks.unavailable** <br>*(long counter)*                |  How many times the server became unavailable for client requests (state “unavail”) due to the number of unsuccessful attempts reaching the max_fails threshold
+downtime<br>**nginxp.upstream.downtime** <br>*(long counter)* *(ms)*                                     |  Total time the server was in the unavail/checking/unhealthy states
+downstart<br>**nginxp.upstream.downstart** <br>*(long gauge)* *(ms)*                                     |  The time (in milliseconds since Epoch) when the server became unavail/checking/unhealthy
+total responses<br>**nginxp.upstream.responses** <br>*(long counter)*                                    |  The total number of responses obtained from this server
+1xx responses<br>**nginxp.upstream.responses.1xx** <br>*(long counter)*                                  |  The number of responses with status codes 1xx
+2xx responses<br>**nginxp.upstream.responses.2xx** <br>*(long counter)*                                  |  The number of responses with status codes 2xx
+3xx responses<br>**nginxp.upstream.responses.3xx** <br>*(long counter)*                                  |  The number of responses with status codes 3xx
+4xx responses<br>**nginxp.upstream.responses.4xx** <br>*(long counter)*                                  |  The number of responses with status codes 4xx
+5xx responses<br>**nginxp.upstream.responses.5xx** <br>*(long counter)*                                  |  The number of responses with status codes 5xx
+upstream health checks<br>**nginxp.upstream.health.checks** <br>*(long counter)*                         |  The total number of health check requests made
+upstream health fails<br>**nginxp.upstream.health.fails** <br>*(long counter)*                           |  The number of failed health checks
+upstream unhealthy count<br>**nginxp.upstream.health.unhealthy** <br>*(long gauge)*                      |  How many times the server became unhealthy (state unhealthy)
+upstream health last passed<br>**nginxp.upstream.health.passed** <br>*(long gauge)*                      |  Value indicating if the last health check request was successful and passed tests
+active connections<br>**nginxp.upstream.connections.active** <br>*(long gauge)*                          |  The current number of active connections
+keepalive connections<br>**nginxp.upstream.connections.keepalive** <br>*(long gauge)*                    |  The current number of idle keepalive connections
+zombie connections<br>**nginxp.upstream.connections.zombies** <br>*(long gauge)*                         |  The current number of servers removed from the group but still processing active client requests
