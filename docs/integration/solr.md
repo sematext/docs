@@ -4,38 +4,39 @@
 
 ## Metrics
 
-Metric Name             |  Key                                  |  Metric Type  |  Numeric Type  |  Unit   |  Description
-------------------------|---------------------------------------|---------------|----------------|---------|--------------------------------
-autowarm count or %     |  solr.cache.autowarm.count            |  gauge        |  long          |         |  cache autowarm count or %
-cache evictions         |  solr.cache.evicted                   |  counter      |  long          |         |  count of evictions
-cache hits              |  solr.cache.hits                      |  counter      |  long          |         |  hits count
-cache lookups           |  solr.cache.lookups                   |  counter      |  long          |         |  lookups count
-cache size              |  solr.cache.size                      |  gauge        |  long          |         |  cache size (count of elements)
-cache memory used       |  solr.cache.size.bytes                |  gauge        |  long          |  bytes  |  cache size in bytes
-cache max size          |  solr.cache.size.max                  |  gauge        |  long          |         |  cache max size
-index num docs          |  solr.index.docs                      |  gauge        |  long          |  docs   |  number of docs in the index
-index max doc           |  solr.index.docs.max                  |  gauge        |  long          |  docs   |  max doc in the index
-index num of files      |  solr.index.files                     |  gauge        |  long          |         |  number of files in solr index
-index size on the disk  |  solr.index.files.size                |  gauge        |  long          |  bytes  |  size of solr index on the disk
-index segments          |  solr.index.segments                  |  gauge        |  long          |         |  index segments count
-commits                 |  solr.indexing.commits                |  counter      |  long          |         |  total count of commits
-autocommits             |  solr.indexing.commits.auto           |  counter      |  long          |         |  count of auto commits
-autocommit max time     |  solr.indexing.commits.auto.time.max  |  gauge        |  long          |  ms     |  autocommit max time
-soft autocommits        |  solr.indexing.commits.soft           |  counter      |  long          |         |  count of soft auto commits
-expunge deletes         |  solr.indexing.deletes.expunge        |  counter      |  long          |         |  count of expunge deletes
-deletes by id           |  solr.indexing.deletes.id             |  counter      |  long          |         |  deletes by id
-deletes by query        |  solr.indexing.deletes.query          |  counter      |  long          |         |  deletes by query
-index docs added        |  solr.indexing.docs.added             |  counter      |  long          |  docs   |  added docs
-index docs pending      |  solr.indexing.docs.pending           |  gauge        |  long          |  docs   |  count of pending docs
-update errors           |  solr.indexing.errors                 |  counter      |  long          |         |  count of update errors
-optimizes               |  solr.indexing.optimizes              |  counter      |  long          |         |  count of optimizes
-rollbacks               |  solr.indexing.rollbacks              |  counter      |  long          |         |  count of rollbacks
-req.count               |  solr.requests                        |  counter      |  long          |  req    |  request count
-request error count     |  solr.requests.error.count            |  counter      |  long          |         |  request error count
-request time            |  solr.requests.time                   |  counter      |  long          |  ms     |  request time
-avg. request latency    |  solr.requests.latency.avg            |  gauge        |  double        |         |   avg. request latency
-request timeout count   |  solr.requests.timeout.count          |  counter      |  long          |         |  request timeout count
-warmup time             |  solr.warmup.time                     |  counter      |  long          |  ms     |  warmup time
+Metric Name<br> Key *(Type)* *(Unit)*                                                     |  Description
+------------------------------------------------------------------------------------------|--------------------------------
+req.count<br>**solr.requests** <br>*(long counter)* *(req)*                               |  request count
+request error count<br>**solr.requests.error.count** <br>*(long counter)*                 |  request error count
+request timeout count<br>**solr.requests.timeout.count** <br>*(long counter)*             |  request timeout count
+request time<br>**solr.requests.time** <br>*(long counter)* *(ms)*                        |  request time
+avg. request latency<br>**solr.requests.latency.avg** <br>*(double gauge)*                |  avg. request latency
+index max doc<br>**solr.index.docs.max** <br>*(long gauge)* *(docs)*                      |  max doc in the index
+index num docs<br>**solr.index.docs** <br>*(long gauge)* *(docs)*                         |  number of docs in the index
+index segments<br>**solr.index.segments** <br>*(long gauge)*                              |  index segments count
+index num of files<br>**solr.index.files** <br>*(long gauge)*                             |  number of files in solr index
+index size on the disk<br>**solr.index.files.size** <br>*(long gauge)* *(bytes)*          |  size of solr index on the disk
+warmup time<br>**solr.warmup.time** <br>*(long counter)* *(ms)*                           |  warmup time
+cache lookups<br>**solr.cache.lookups** <br>*(long counter)*                              |  lookups count
+cache hits<br>**solr.cache.hits** <br>*(long counter)*                                    |  hits count
+cache size<br>**solr.cache.size** <br>*(long gauge)*                                      |  cache size (count of elements)
+cache evictions<br>**solr.cache.evicted** <br>*(long counter)*                            |  count of evictions
+cache max size<br>**solr.cache.size.max** <br>*(long gauge)*                              |  cache max size
+autowarm count or %<br>**solr.cache.autowarm.count** <br>*(long gauge)*                   |  cache autowarm count or %
+commits<br>**solr.indexing.commits** <br>*(long counter)*                                 |  total count of commits
+autocommit max time<br>**solr.indexing.commits.auto.time.max** <br>*(long gauge)* *(ms)*  |  autocommit max time
+autocommits<br>**solr.indexing.commits.auto** <br>*(long counter)*                        |  count of auto commits
+soft autocommits<br>**solr.indexing.commits.soft** <br>*(long counter)*                   |  count of soft auto commits
+optimizes<br>**solr.indexing.optimizes** <br>*(long counter)*                             |  count of optimizes
+rollbacks<br>**solr.indexing.rollbacks** <br>*(long counter)*                             |  count of rollbacks
+expunge deletes<br>**solr.indexing.deletes.expunge** <br>*(long counter)*                 |  count of expunge deletes
+index docs pending<br>**solr.indexing.docs.pending** <br>*(long gauge)* *(docs)*          |  count of pending docs
+index docs added<br>**solr.indexing.docs.added** <br>*(long counter)* *(docs)*            |  added docs
+deletes by id<br>**solr.indexing.deletes.id** <br>*(long counter)*                        |  deletes by id
+deletes by query<br>**solr.indexing.deletes.query** <br>*(long counter)*                  |  deletes by query
+update errors<br>**solr.indexing.errors** <br>*(long counter)*                            |  count of update errors
+cache memory used<br>**solr.cache.size.bytes** <br>*(long gauge)* *(bytes)*               |  cache size in bytes
+
 
 ## FAQ
 

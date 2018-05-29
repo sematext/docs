@@ -4,17 +4,17 @@
 
 ## Metrics
 
-Metric Name                |  Key                        |  Metric Type  |  Numeric Type  |  Unit   |  Description
----------------------------|-----------------------------|---------------|----------------|---------|---------------------------------
-max open files             |  jvm.files.max              |  gauge        |  long          |         |  jvm max open files limit
-open files                 |  jvm.files.open             |  gauge        |  long          |         |  jvm currently open files
-gc collection count        |  jvm.gc.collection.count    |  counter      |  long          |         |  count of GC collections
-gc collection time         |  jvm.gc.collection.time     |  counter      |  long          |  ms     |  duration of GC collections
-jvm heap used              |  jvm.heap.used              |  gauge        |  long          |  bytes  |  jvm heap used memory
-jvm non-heap used          |  jvm.nonheap.used           |  gauge        |  long          |  bytes  |  jvm non-heap used memory
-jvm pool used max          |  jvm.pool.max               |  gauge        |  long          |  bytes  |  jvm pool max memory
-jvm pool used              |  jvm.pool.used              |  gauge        |  long          |  bytes  |  jvm pool used memory
-jvm threads                |  jvm.threads                |  gauge        |  long          |         |  current jvm thread count
-jvm daemon threads         |  jvm.threads.deamon         |  gauge        |  long          |         |  current jvm daemon thread count
-jvm peak threads           |  jvm.threads.peak           |  gauge        |  long          |         |  peak jvm thread count
-jvm total started threads  |  jvm.threads.started.total  |  gauge        |  long          |         |  total started jvm thread count
+Metric Name<br> Key *(Type)* *(Unit)*                                         |  Description
+------------------------------------------------------------------------------|---------------------------------
+gc collection count<br>**jvm.gc.collection.count** <br>*(long counter)*       |  count of GC collections
+gc collection time<br>**jvm.gc.collection.time** <br>*(long counter)* *(ms)*  |  duration of GC collections
+jvm threads<br>**jvm.threads** <br>*(long gauge)*                             |  current jvm thread count
+jvm peak threads<br>**jvm.threads.peak** <br>*(long gauge)*                   |  peak jvm thread count
+jvm daemon threads<br>**jvm.threads.deamon** <br>*(long gauge)*               |  current jvm daemon thread count
+**jvm.threads.started.total** <br>*(long gauge)*                      |
+open files<br>**jvm.files.open** <br>*(long gauge)*                           |  jvm currently open files
+**jvm.files.max** <br>*(long gauge)*                                  |
+jvm heap used<br>**jvm.heap.used** <br>*(long gauge)* *(bytes)*               |  jvm heap used memory
+jvm non-heap used<br>**jvm.nonheap.used** <br>*(long gauge)* *(bytes)*        |  jvm non-heap used memory
+jvm pool used<br>**jvm.pool.used** <br>*(long gauge)* *(bytes)*               |  jvm pool used memory
+jvm pool used max<br>**jvm.pool.max** <br>*(long gauge)* *(bytes)*            |  jvm pool max memory
