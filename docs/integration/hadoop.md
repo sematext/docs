@@ -87,75 +87,6 @@ blocks removed<br>**hadoop.dn.blocks.removed** <br>*(long counter)*             
 blocks replicated<br>**hadoop.dn.blocks.replicated** <br>*(long counter)*                            |
 blocks verified<br>**hadoop.dn.blocks.verified** <br>*(long counter)*                                |
 blocks written<br>**hadoop.dn.blocks.write** <br>*(long counter)*                                    |
-live nodes<br>**hadoop.nn.nodes.live** <br>*(long gauge)*                                            |
-dead nodes<br>**hadoop.nn.nodes.dead** <br>*(long gauge)*                                            |
-decom nodes<br>**hadoop.nn.nodes.decom** <br>*(long gauge)*                                          |
-active NMs<br>**hadoop.rm.nm.active** <br>*(long gauge)*                                             |
-decom NMs<br>**hadoop.rm.nm.active.decom** <br>*(long gauge)*                                        |
-lost NMs<br>**hadoop.rm.nm.active.lost** <br>*(long gauge)*                                          |
-rebooted NMs<br>**hadoop.rm.nm.active.rebooted** <br>*(long gauge)*                                  |
-unhealthy NMs<br>**hadoop.rm.nm.active.unhealthy** <br>*(long gauge)*                                |
-active applications<br>**hadoop.rm.apps.active** <br>*(long gauge)*                                  |
-active users<br>**hadoop.rm.users.active** <br>*(long gauge)*                                        |
-agg containers allocated<br>**hadoop.rm.agg.containers.alloc** <br>*(long counter)*                  |
-containers released<br>**hadoop.rm.containers.released** <br>*(long counter)*                        |
-containers allocated<br>**hadoop.rm.containers.alloc** <br>*(long gauge)*                            |
-allocated MB<br>**hadoop.rm.memory.alloc.mb** <br>*(long gauge)* *(MB)*                              |
-applications completed<br>**hadoop.rm.apps.completed** <br>*(long counter)*                          |
-applications failed<br>**hadoop.rm.apps.failed** <br>*(long counter)*                                |
-applications killed<br>**hadoop.rm.apps.killed** <br>*(long counter)*                                |
-applications pending<br>**hadoop.rm.apps.pending** <br>*(long gauge)*                                |
-applications running<br>**hadoop.rm.apps.running** <br>*(long gauge)*                                |
-applications submitted<br>**hadoop.rm.apps.submitted** <br>*(long counter)*                          |
-available MB<br>**hadoop.rm.memory.available.mb** <br>*(long gauge)* *(MB)*                          |
-containers pending<br>**hadoop.rm.containers.pending** <br>*(long gauge)*                            |
-pending MB<br>**hadoop.rm.memory.pending.mb** <br>*(long gauge)* *(MB)*                              |
-containers reserved<br>**hadoop.rm.containers.reserved** <br>*(long gauge)*                          |
-reserved MB<br>**hadoop.rm.memory.reserved.mb** <br>*(long gauge)* *(MB)*                            |
-running 0<br>**hadoop.rm.running.0** <br>*(long gauge)*                                              |
-running 60<br>**hadoop.rm.running.60** <br>*(long gauge)*                                            |
-running 300<br>**hadoop.rm.running.300** <br>*(long gauge)*                                          |
-running 1440<br>**hadoop.rm.running.1440** <br>*(long gauge)*                                        |
-map task slots<br>**hadoop.tt.maps.slots** <br>*(long gauge)*                                        |
-maps running<br>**hadoop.tt.maps.running** <br>*(long gauge)*                                        |
-reduce task slots<br>**hadoop.tt.reduces.slots** <br>*(long gauge)*                                  |
-reduces running<br>**hadoop.tt.reduces.running** <br>*(long gauge)*                                  |
-tasks completed<br>**hadoop.tt.tasks.completed** <br>*(long counter)*                                |
-tasks failed ping<br>**hadoop.tt.tasks.failed.ping** <br>*(long counter)*                            |
-tasks failed timeout<br>**hadoop.tt.tasks.failed.timeout** <br>*(long counter)*                      |
-num allocated containers<br>**hadoop.nm.containers.allocated** <br>*(long gauge)*                    |
-allocated GB<br>**hadoop.nm.allocated.gb** <br>*(long gauge)* *(GB)*                                 |
-available GB<br>**hadoop.nm.available.gb** <br>*(long gauge)* *(GB)*                                 |
-containers completed<br>**hadoop.nm.containers.completed** <br>*(long counter)*                      |
-containers failed<br>**hadoop.nm.containers.failed** <br>*(long counter)*                            |
-containers inited<br>**hadoop.nm.containers.initiating** <br>*(long gauge)*                          |
-containers killed<br>**hadoop.nm.containers.killed** <br>*(long counter)*                            |
-containers launched<br>**hadoop.nm.containers.launched** <br>*(long counter)*                        |
-containers running<br>**hadoop.nm.containers.running** <br>*(long gauge)*                            |
-shuffle connections<br>**hadoop.nm.shuffle.connections** <br>*(long counter)*                        |
-shuffle output size<br>**hadoop.nm.shuffle.output.bytes** <br>*(long counter)* *(bytes)*             |
-shuffle outputs failed<br>**hadoop.nm.shuffle.output.failed** <br>*(long counter)*                   |
-shuffle outputs ok<br>**hadoop.nm.shuffle.output.ok** <br>*(long counter)*                           |
-blocks total<br>**hadoop.nn.blocks** <br>*(long gauge)*                                              |
-corrupt blocks<br>**hadoop.nn.blocks.corrupt** <br>*(long gauge)*                                    |
-excess blocks<br>**hadoop.nn.blocks.excess** <br>*(long gauge)*                                      |
-missing blocks<br>**hadoop.nn.blocks.missing** <br>*(long gauge)*                                    |
-blocks pending deletion<br>**hadoop.nn.blocks.pending.deletion** <br>*(long gauge)*                  |
-blocks pending replication<br>**hadoop.nn.blocks.pending.replication** <br>*(long gauge)*            |
-scheduled replication blocks<br>**hadoop.nn.blocks.scheduled.replication** <br>*(long gauge)*        |
-under replicated blocks<br>**hadoop.nn.blocks.underreplicated** <br>*(long gauge)*                   |
-capacity remaining<br>**hadoop.nn.capacity.remaining** <br>*(long gauge)*                            |
-capacity total<br>**hadoop.nn.capacity** <br>*(long gauge)*                                          |
-capacity used<br>**hadoop.nn.capacity.used** <br>*(long gauge)*                                      |
-total files<br>**hadoop.nn.files** <br>*(long gauge)*                                                |
-create file ops<br>**hadoop.nn.files.ops.create** <br>*(long counter)*                               |
-get listing ops<br>**hadoop.nn.files.ops.listing** <br>*(long counter)*                              |
-delete file ops<br>**hadoop.nn.files.ops.delete** <br>*(long counter)*                               |
-file info ops<br>**hadoop.nn.files.ops.info** <br>*(long counter)*                                   |
-created files<br>**hadoop.nn.files.created** <br>*(long counter)*                                    |
-appended files<br>**hadoop.nn.files.appended** <br>*(long counter)*                                  |
-renamed files<br>**hadoop.nn.files.renamed** <br>*(long counter)*                                    |
-deleted files<br>**hadoop.nn.files.deleted** <br>*(long counter)*                                    |
 jobtracker heartbeats<br>**hadoop.jt.heartbeats** <br>*(long counter)*                               |
 running maps<br>**hadoop.jt.maps.running** <br>*(long gauge)*                                        |
 running reduces<br>**hadoop.jt.reduces.running** <br>*(long gauge)*                                  |
@@ -193,3 +124,72 @@ running 0<br>**hadoop.jt.running.0** <br>*(long gauge)*                         
 running 60<br>**hadoop.jt.running.60** <br>*(long gauge)*                                            |
 running 300<br>**hadoop.jt.running.300** <br>*(long gauge)*                                          |
 running 1440<br>**hadoop.jt.running.1440** <br>*(long gauge)*                                        |
+live nodes<br>**hadoop.nn.nodes.live** <br>*(long gauge)*                                            |
+dead nodes<br>**hadoop.nn.nodes.dead** <br>*(long gauge)*                                            |
+decom nodes<br>**hadoop.nn.nodes.decom** <br>*(long gauge)*                                          |
+blocks total<br>**hadoop.nn.blocks** <br>*(long gauge)*                                              |
+corrupt blocks<br>**hadoop.nn.blocks.corrupt** <br>*(long gauge)*                                    |
+excess blocks<br>**hadoop.nn.blocks.excess** <br>*(long gauge)*                                      |
+missing blocks<br>**hadoop.nn.blocks.missing** <br>*(long gauge)*                                    |
+blocks pending deletion<br>**hadoop.nn.blocks.pending.deletion** <br>*(long gauge)*                  |
+blocks pending replication<br>**hadoop.nn.blocks.pending.replication** <br>*(long gauge)*            |
+scheduled replication blocks<br>**hadoop.nn.blocks.scheduled.replication** <br>*(long gauge)*        |
+under replicated blocks<br>**hadoop.nn.blocks.underreplicated** <br>*(long gauge)*                   |
+capacity remaining<br>**hadoop.nn.capacity.remaining** <br>*(long gauge)*                            |
+capacity total<br>**hadoop.nn.capacity** <br>*(long gauge)*                                          |
+capacity used<br>**hadoop.nn.capacity.used** <br>*(long gauge)*                                      |
+total files<br>**hadoop.nn.files** <br>*(long gauge)*                                                |
+create file ops<br>**hadoop.nn.files.ops.create** <br>*(long counter)*                               |
+get listing ops<br>**hadoop.nn.files.ops.listing** <br>*(long counter)*                              |
+delete file ops<br>**hadoop.nn.files.ops.delete** <br>*(long counter)*                               |
+file info ops<br>**hadoop.nn.files.ops.info** <br>*(long counter)*                                   |
+created files<br>**hadoop.nn.files.created** <br>*(long counter)*                                    |
+appended files<br>**hadoop.nn.files.appended** <br>*(long counter)*                                  |
+renamed files<br>**hadoop.nn.files.renamed** <br>*(long counter)*                                    |
+deleted files<br>**hadoop.nn.files.deleted** <br>*(long counter)*                                    |
+num allocated containers<br>**hadoop.nm.containers.allocated** <br>*(long gauge)*                    |
+allocated GB<br>**hadoop.nm.allocated.gb** <br>*(long gauge)* *(GB)*                                 |
+available GB<br>**hadoop.nm.available.gb** <br>*(long gauge)* *(GB)*                                 |
+containers completed<br>**hadoop.nm.containers.completed** <br>*(long counter)*                      |
+containers failed<br>**hadoop.nm.containers.failed** <br>*(long counter)*                            |
+containers inited<br>**hadoop.nm.containers.initiating** <br>*(long gauge)*                          |
+containers killed<br>**hadoop.nm.containers.killed** <br>*(long counter)*                            |
+containers launched<br>**hadoop.nm.containers.launched** <br>*(long counter)*                        |
+containers running<br>**hadoop.nm.containers.running** <br>*(long gauge)*                            |
+shuffle connections<br>**hadoop.nm.shuffle.connections** <br>*(long counter)*                        |
+shuffle output size<br>**hadoop.nm.shuffle.output.bytes** <br>*(long counter)* *(bytes)*             |
+shuffle outputs failed<br>**hadoop.nm.shuffle.output.failed** <br>*(long counter)*                   |
+shuffle outputs ok<br>**hadoop.nm.shuffle.output.ok** <br>*(long counter)*                           |
+active applications<br>**hadoop.rm.apps.active** <br>*(long gauge)*                                  |
+active users<br>**hadoop.rm.users.active** <br>*(long gauge)*                                        |
+agg containers allocated<br>**hadoop.rm.agg.containers.alloc** <br>*(long counter)*                  |
+containers released<br>**hadoop.rm.containers.released** <br>*(long counter)*                        |
+containers allocated<br>**hadoop.rm.containers.alloc** <br>*(long gauge)*                            |
+allocated MB<br>**hadoop.rm.memory.alloc.mb** <br>*(long gauge)* *(MB)*                              |
+applications completed<br>**hadoop.rm.apps.completed** <br>*(long counter)*                          |
+applications failed<br>**hadoop.rm.apps.failed** <br>*(long counter)*                                |
+applications killed<br>**hadoop.rm.apps.killed** <br>*(long counter)*                                |
+applications pending<br>**hadoop.rm.apps.pending** <br>*(long gauge)*                                |
+applications running<br>**hadoop.rm.apps.running** <br>*(long gauge)*                                |
+applications submitted<br>**hadoop.rm.apps.submitted** <br>*(long counter)*                          |
+available MB<br>**hadoop.rm.memory.available.mb** <br>*(long gauge)* *(MB)*                          |
+containers pending<br>**hadoop.rm.containers.pending** <br>*(long gauge)*                            |
+pending MB<br>**hadoop.rm.memory.pending.mb** <br>*(long gauge)* *(MB)*                              |
+containers reserved<br>**hadoop.rm.containers.reserved** <br>*(long gauge)*                          |
+reserved MB<br>**hadoop.rm.memory.reserved.mb** <br>*(long gauge)* *(MB)*                            |
+running 0<br>**hadoop.rm.running.0** <br>*(long gauge)*                                              |
+running 60<br>**hadoop.rm.running.60** <br>*(long gauge)*                                            |
+running 300<br>**hadoop.rm.running.300** <br>*(long gauge)*                                          |
+running 1440<br>**hadoop.rm.running.1440** <br>*(long gauge)*                                        |
+active NMs<br>**hadoop.rm.nm.active** <br>*(long gauge)*                                             |
+decom NMs<br>**hadoop.rm.nm.active.decom** <br>*(long gauge)*                                        |
+lost NMs<br>**hadoop.rm.nm.active.lost** <br>*(long gauge)*                                          |
+rebooted NMs<br>**hadoop.rm.nm.active.rebooted** <br>*(long gauge)*                                  |
+unhealthy NMs<br>**hadoop.rm.nm.active.unhealthy** <br>*(long gauge)*                                |
+map task slots<br>**hadoop.tt.maps.slots** <br>*(long gauge)*                                        |
+maps running<br>**hadoop.tt.maps.running** <br>*(long gauge)*                                        |
+reduce task slots<br>**hadoop.tt.reduces.slots** <br>*(long gauge)*                                  |
+reduces running<br>**hadoop.tt.reduces.running** <br>*(long gauge)*                                  |
+tasks completed<br>**hadoop.tt.tasks.completed** <br>*(long counter)*                                |
+tasks failed ping<br>**hadoop.tt.tasks.failed.ping** <br>*(long counter)*                            |
+tasks failed timeout<br>**hadoop.tt.tasks.failed.timeout** <br>*(long counter)*                      |

@@ -6,6 +6,18 @@
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                     |  Description
 ----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------
+sstable size<br>**cassandra.sstable.size** <br>*(long gauge)* *(bytes)*                                   |  Disk space used by SSTables belonging to this table
+sstables count<br>**cassandra.sstable.count** <br>*(long gauge)*                                          |  Number of SSTables on disk for this table
+bloom false positives<br>**cassandra.bloom.falsepositives** <br>*(long counter)*                          |  The number of Bloom filter false positives
+bloom false positive ratio<br>**cassandra.bloom.falsepositives.ratio** <br>*(double gauge)*               |  The ratio of Bloom filter false positives to total checks
+bloom disk space<br>**cassandra.bloom.disk.space** <br>*(long gauge)* *(bytes)*                           |  Disk space used by the Bloom filters
+sstables per read<br>**cassandra.number.of.sstables.per.read** <br>*(double gauge)*                       |  Number of SSTables are accessed during a read. Includes sstables that undergo bloom-filter checks, even if no data is read from the sstable
+local write request<br>**cassandra.local.write.requests** <br>*(long counter)*                            |  Local writes update the table's memtable and appends to a commitlog
+local write latency total<br>**cassandra.local.write.requests.latency.time** <br>*(long counter)* *(ms)*  |
+avg local write latency<br>**cassandra.local.write.latency.avg** <br>*(double gauge)* *(ms)*              |
+local read request<br>**cassandra.local.read.requests** <br>*(long counter)*                              |  Local reads retrieve data from a table's memtable and any necessary SSTables on disk
+local read latency total<br>**cassandra.local.read.requests.latency.time** <br>*(long counter)* *(ms)*    |
+avg local read latency<br>**cassandra.local.read.latency.avg** <br>*(double gauge)* *(ms)*                |
 leaving nodes<br>**cassandra.cluster.nodes.leaving** <br>*(long gauge)*                                   |
 moving nodes<br>**cassandra.cluster.nodes.moving** <br>*(long gauge)*                                     |
 joining nodes<br>**cassandra.cluster.nodes.joining** <br>*(long gauge)*                                   |
@@ -37,15 +49,3 @@ internal responses pending<br>**cassandra.cluster.tasks.response.internal.pendin
 migrations pending<br>**cassandra.cluster.tasks.migration.pending** <br>*(long gauge)*                    |  Number of pending tasks from system methods that modified the schema
 misc tasks pending<br>**cassandra.cluster.tasks.misc.pending** <br>*(long gauge)*                         |  Number of pending tasks from infrequently run operations, such as taking a snapshot or processing the notification of a completed replication
 cluster responses pending<br>**cassandra.cluster.tasks.response.pending** <br>*(long gauge)*              |  Number of pending callbacks to execute after a task on a remote node completes
-sstable size<br>**cassandra.sstable.size** <br>*(long gauge)* *(bytes)*                                   |  Disk space used by SSTables belonging to this table
-sstables count<br>**cassandra.sstable.count** <br>*(long gauge)*                                          |  Number of SSTables on disk for this table
-bloom false positives<br>**cassandra.bloom.falsepositives** <br>*(long counter)*                          |  The number of Bloom filter false positives
-bloom false positive ratio<br>**cassandra.bloom.falsepositives.ratio** <br>*(double gauge)*               |  The ratio of Bloom filter false positives to total checks
-bloom disk space<br>**cassandra.bloom.disk.space** <br>*(long gauge)* *(bytes)*                           |  Disk space used by the Bloom filters
-sstables per read<br>**cassandra.number.of.sstables.per.read** <br>*(double gauge)*                       |  Number of SSTables are accessed during a read. Includes sstables that undergo bloom-filter checks, even if no data is read from the sstable
-local write request<br>**cassandra.local.write.requests** <br>*(long counter)*                            |  Local writes update the table's memtable and appends to a commitlog
-local write latency total<br>**cassandra.local.write.requests.latency.time** <br>*(long counter)* *(ms)*  |
-avg local write latency<br>**cassandra.local.write.latency.avg** <br>*(double gauge)* *(ms)*              |
-local read request<br>**cassandra.local.read.requests** <br>*(long counter)*                              |  Local reads retrieve data from a table's memtable and any necessary SSTables on disk
-local read latency total<br>**cassandra.local.read.requests.latency.time** <br>*(long counter)* *(ms)*    |
-avg local read latency<br>**cassandra.local.read.latency.avg** <br>*(double gauge)* *(ms)*                |
