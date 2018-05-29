@@ -10,7 +10,7 @@ leaving nodes<br>**cassandra.cluster.nodes.leaving** <br>*(long gauge)*         
 moving nodes<br>**cassandra.cluster.nodes.moving** <br>*(long gauge)*                                     |
 joining nodes<br>**cassandra.cluster.nodes.joining** <br>*(long gauge)*                                   |
 live nodes<br>**cassandra.cluster.nodes.live** <br>*(long gauge)* *(from the perspective of this node)*   |  Count of nodes which are visible and live
-null<br>**cassandra.cluster.nodes.unreachable** <br>*(long gauge)*                                        |
+**cassandra.cluster.nodes.unreachable** <br>*(long gauge)*                                        |
 write requests<br>**cassandra.write.requests** <br>*(long counter)*                                       |  The number of write requests
 write latency total<br>**cassandra.write.requests.latency.time** <br>*(long counter)* *(ms)*              |
 avg write latency<br>**cassandra.write.latency.avg** <br>*(double gauge)* *(ms)*                          |
@@ -29,7 +29,7 @@ repl. on write pending<br>**cassandra.write.replications.pending** <br>*(long ga
 write flushes pending<br>**cassandra.write.flushes.pending** <br>*(long gauge)*                           |  Number of Flush Writer(writes memtables to disk) tasks pending
 write requests pending<br>**cassandra.write.pending** <br>*(long gauge)*                                  |  The number of write requests that have arrived into the cluster but are waiting to be handled
 write post flushes pending<br>**cassandra.write.postflushes.pending** <br>*(long gauge)*                  |  Number of Post Flush(cleans up commit log after memtable is written to disk) tasks pending
-null<br>**cassandra.read.requests.pending** <br>*(long gauge)*                                            |
+**cassandra.read.requests.pending** <br>*(long gauge)*                                            |
 repair tasks pending<br>**cassandra.cluster.tasks.repair.pending** <br>*(long gauge)*                     |  Repair tasks pending, such as handling the merkle tree transfer after the validation compaction
 gossip tasks pending<br>**cassandra.cluster.tasks.gossip.pending** <br>*(long gauge)*                     |  Number of gossip messages and acknowledgments queued and waiting to be sent or received
 hints handoff pending<br>**cassandra.cluster.tasks.handoff.pending** <br>*(long gauge)*                   |  Number of hints that are queued and waiting to be delivered after a failed node is back online again
