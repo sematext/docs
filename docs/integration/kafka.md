@@ -11,7 +11,7 @@ producer io ratio<br>**kafka.producer.io.ratio** <br>*(double gauge)* *(%)*     
 producer record max size<br>**kafka.producer.records.size.max** <br>*(double gauge)* *(bytes)*                           |  The maximum record size
 producer request size<br>**kafka.producer.request.size** <br>*(double gauge)* *(bytes)*                                  |
 producer requests max size<br>**kafka.producer.request.size.max** <br>*(double gauge)*                                   |
-record size<br>**kafka.producer.records.size** <br>*(double gauge)* *(The average record size)*                          |  producer record size
+record size<br>**kafka.producer.records.size** <br>*(double gauge)* *(bytes)*                                            |  The average producer record size
 producer request max latency<br>**kafka.producer.request.latency.max** <br>*(double gauge)* *(ms)*                       |
 producer requests in flight<br>**kafka.producer.requests.inflight** <br>*(double gauge)*                                 |  The current number of in-flight requests awaiting a response.
 producer buffer pool wait ratio<br>**kafka.producer.buffer.pool.wait.ratio** <br>*(double gauge)* *(%)*                  |  The fraction of time an appender waits for space allocation.
