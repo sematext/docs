@@ -35,7 +35,7 @@ jsp unload count<br>**tomcat.jsp.unloaded** <br>*(long counter)*                
 session average alive time<br>**tomcat.sessions.alive.time** <br>*(long gauge)* *(ms)*       |  Average time an expired session had been alive
 rejected sessions<br>**tomcat.sessions.rejected** <br>*(long counter)*                       |  How often was a configured maxActiveSessions limit reached
 session max alive time<br>**tomcat.sessions.alive.time.max** <br>*(long gauge)* *(ms)*       |  Measured from session creation to expiration (be it logout or session idle timeout)
-session processing time<br>**tomcat.sessions.processing.time** <br>*(long counter)* *(ms)*   |  Total processing time since startup. Cumulated elapsed milliseconds needed for session expiration handling
+session processing time<br>**tomcat.sessions.processing.time** <br>*(long counter)* *(ms)*   |  Total processing time since startup
 active sessions<br>**tomcat.sessions.active** <br>*(long gauge)*                             |  Number of active sessions at this moment
 expired sessions<br>**tomcat.sessions.expired** <br>*(long counter)*                         |  Number of sessions that expired (doesn't include explicit invalidations)
 max active sessions<br>**tomcat.sessions.active.max** <br>*(long gauge)*                     |  Max number of concurrent active sessions
