@@ -26,7 +26,6 @@ pages:
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Special Fields: logs/special-fields.md
-      - API: logs/logsene-api-reference.md
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
@@ -42,7 +41,6 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
-      - API: monitoring/spm-api-reference.md
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - FAQ: monitoring/spm-faq.md
     - Tracing:
