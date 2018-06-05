@@ -44,7 +44,7 @@
             {{ config.copyright }}
           </div>
         {% endif %}
-        <div class="trademark"> <a href="https://sematext.com">&copy; Sematext</a></div> 
+        <div class="trademark"> <a href="https://sematext.com">&copy; Sematext</a></div>
         powered by
         <a href="http://www.mkdocs.org">MkDocs</a>
         and
@@ -57,3 +57,20 @@
     </div>
   </div>
 </footer>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#00445c"
+    },
+    "button": {
+      "background": "#00a1eb"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "href": "sematext.com/legal/privacy"
+  }
+})});
+</script>
