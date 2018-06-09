@@ -169,6 +169,50 @@ If the amount of data ingested for the day, plus data to be reindexed
 is smaller than your Max Daily Log Volume Limit then no additional charges
 will be applied.
 
+####**How to avoid 'failed events'?**
+
+Semeatext Cloud is a schema-less storage and used Elasticsearch as log storage. 
+When your app receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
+So you don't need to specify a schema (called 'mapping' in Elasticsearch) upfront. 
+When your application create logs (Elasticsearch document) with the same field name and different types (string, number, object) an errer called `mapper_parsing_exception` happens in Elasticsearch. This means the document can't be indexed because of a mismatch in the data schema. 
+Sematext Cloud catches this error and produces then a `failed event` entry in your Logs App. 
+The `failed event` entry contains the error message and the original document as JSON string in the field `logsene_orig_log`. 
+
+You can resolve the problem with the `mapper_parsing_exception` with the following procedure: 
+1) Check the `logsene_error` message, it contains details which field caused the conflict
+2) Make sure that the fields use only one type (no mix of string, number, object ...)
+
+You could do 3 different things to avoid schema conflicts:
+1) Adjust your log output to match the schema. E.g. rename the fields in your logs. 
+2) Ship logs with different schema to different Sematext Cloud Log Apps. 
+
+__Example:__ 
+
+Service A produces a log with a field "detail" with a text message. 
+
+```
+{"detail": "Some error details here ..."}
+```
+Service B produces a log with a field "detail" with a JSON object 
+
+```
+{"detail": {"code": -1, "error":  "Some Error message here", "module": "mycode"}
+```
+What could be done in this situation?  There are basically two options:
+
+1) You could rename the field the log output of in "Service B" e.g. "detail_object".
+
+```
+{"detail_object": {"code": -1, "error":  "Some Error message here", "module": "myapp"}
+```
+
+The renaming could take place in your apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
+
+2) You could ship the logs of "Service B" to a separate Log App (different Log token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
+
+Option #2 is probably the simplest way to resolve the issue. 
+
+
 ### Log Shipping
 
 ####**Which log shippers, logging libraries, and platform integrations are supported?**
@@ -732,45 +776,3 @@ For example: `856f4f9c3c084da08ec7ea9ad5d4cadf/logsene_2016-07-20/18`
 </div>
 
 
-####**How to avoid 'failed events'?**
-
-Semeatext Cloud is a schema-less storage and used Elasticsearch as log storage. 
-When your app receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
-So you don't need to specify a schema (called 'mapping' in Elasticsearch) upfront. 
-When your application create logs (Elasticsearch document) with the same field name and different types (string, number, object) an errer called `mapper_parsing_exception` happens in Elasticsearch. This means the document can't be indexed because of a mismatch in the data schema. 
-Sematext Cloud catches this error and produces then a `failed event` entry in your Logs App. 
-The `failed event` entry contains the error message and the original document as JSON string in the field `logsene_orig_log`. 
-
-You can resolve the problem with the `mapper_parsing_exception` with the following procedure: 
-1) Check the `logsene_error` message, it contains details which field caused the conflict
-2) Make sure that the fields use only one type (no mix of string, number, object ...)
-
-You could do 3 different things to avoid schema conflicts:
-1) Adjust your log output to match the schema. E.g. rename the fields in your logs. 
-2) Ship logs with different schema to different Sematext Cloud Log Apps. 
-
-__Example:__ 
-
-Service A produces a log with a field "detail" with a text message. 
-
-```
-{"detail": "Some error details here ..."}
-```
-Service B produces a log with a field "detail" with a JSON object 
-
-```
-{"detail": {"code": -1, "error":  "Some Error message here", "module": "mycode"}
-```
-What could be done in this situation?  There are basically two options:
-
-1) You could rename the field the log output of in "Service B" e.g. "detail_object".
-
-```
-{"detail_object": {"code": -1, "error":  "Some Error message here", "module": "myapp"}
-```
-
-The renaming could take place in your apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
-
-2) You could ship the logs of "Service B" to a separate Log App (different Log token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
-
-Option #2 is probably the simplest way to resolve the issue. 
