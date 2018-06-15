@@ -167,6 +167,7 @@ svg {
   }
   .flip-card .side {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 6px;
     height: 100%;
     position: absolute;
@@ -190,8 +191,8 @@ svg {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (-webkit-min-device-pixel-ratio: 2) {
-.flip-card .back {
-    display: none;
+.flip-card:hover {
+    transform: none;
 }
 }
 
