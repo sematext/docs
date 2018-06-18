@@ -377,7 +377,7 @@ Address: 52.44.248.43
 
 **How to avoid 'failed events'?**
 
-Sematext Cloud is a schema-less storage and used Elasticsearch as log storage. 
+Sematext Cloud is a schema-less storage and uses Elasticsearch as log storage. 
 When your app receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
 So you don't need to specify a schema (called 'mapping' in Elasticsearch) upfront. 
 When your application create logs (Elasticsearch document) with the same field name and different types (string, number, object) an errer called `mapper_parsing_exception` happens in Elasticsearch. This means the document can't be indexed because of a mismatch in the data schema. 
