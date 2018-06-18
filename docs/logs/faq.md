@@ -112,12 +112,15 @@ Yes, if the default log index fields (also known as index mapping)
 don't fit your needs you can create completely custom index mapping.
 See [Custom Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
 
+
 **I have multiple log sources - should I send them all to the same logging app?**
 
 Sending logs from multiple log sources to the same logging app is not
 a problem at all.  However, if you have multiple different log
 structures (different "fields" in the logs), see the next FAQ
 entry.
+
+<a name="i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that"></a>
 
 **I have multiple different log structures, each with a different set of fields.  How should I handle that?**
 
@@ -378,17 +381,17 @@ Address: 52.44.248.43
 **How to avoid 'failed events'?**
 
 Sematext Cloud is a schema-less storage and uses Elasticsearch as log storage. 
-When your app receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
+When your App receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
 So you don't need to specify a schema (called 'mapping' in Elasticsearch) upfront. 
-When your application create logs (Elasticsearch document) with the same field name and different types (string, number, object) an errer called `mapper_parsing_exception` happens in Elasticsearch. This means the document can't be indexed because of a mismatch in the data schema. 
-Sematext Cloud catches this error and produces then a `failed event` entry in your Logs App. 
+When you ship logs (Elasticsearch document) with the same field name and different types (string, number, object) an error called `mapper_parsing_exception` happens in Elasticsearch. This means the document can't be indexed because of a mismatch in the data schema. 
+Sematext Cloud catches this error and produces a `failed event` entry in your Logs App. 
 The `failed event` entry contains the error message and the original document as JSON string in the field `logsene_orig_log`. 
 
 You can resolve the problem with the `mapper_parsing_exception` with the following procedure: 
 1) Check the `logsene_error` message, it contains details which field caused the conflict
-2) Make sure that the fields use only one type (no mix of string, number, object ...)
+2) Make sure that the fields use only one type (not a mix of string, number, object ...)
 
-You could do 3 different things to avoid schema conflicts:
+You could do three different things to avoid schema conflicts:
 1) Adjust your log output to match the schema. E.g. rename the fields in your logs. 
 2) Ship logs with different schema to different Sematext Cloud Log Apps. 
 
@@ -406,7 +409,7 @@ Service B produces a log with a field "detail" with a JSON object
 ```
 What could be done in this situation?  There are basically two options:
 
-1) You could rename the field the log output of in "Service B" e.g. "detail_object".
+1) You could rename the field in the log output of in "Service B" e.g. `detail -> detail_object`.
 
 ```
 {"detail_object": {"code": -1, "error":  "Some Error message here", "module": "myapp"}
@@ -414,9 +417,12 @@ What could be done in this situation?  There are basically two options:
 
 The renaming could take place in your apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
 
-2) You could ship the logs of "Service B" to a separate Log App (different Log token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
+3) You could ship the logs of "Service B" to a separate Logs App (different App token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
 
 Option #2 is probably the simplest way to resolve the issue. 
+
+In case you created only one time logs with a wroong structure, you could use the Field Editor to change the schmema/mapping. 
+Please refer to related FAQ section: [I have multiple different log structures, each with a different set of fields.  How should I handle that](#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that)
 
 ### Security
 
