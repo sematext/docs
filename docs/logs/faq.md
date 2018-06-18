@@ -421,8 +421,7 @@ The renaming could take place in your apps logging code, or in a log shipper con
 
 Option #2 is probably the simplest way to resolve the issue. 
 
-In case you created only one time logs with a wroong structure, you could use the Field Editor to change the schmema/mapping. 
-Please refer to related FAQ section: [I have multiple different log structures, each with a different set of fields.  How should I handle that](#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that)
+In case you created only one time logs with a wrong structure, you could use the Field Editor to change the schmema/mapping. Please refer to related FAQ section: [I have multiple different log structures, each with a different set of fields.  How should I handle that](#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that)
 
 ### Security
 
