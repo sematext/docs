@@ -32,8 +32,6 @@ Also, all responses contain an HTTP code which describes success or failure. In 
 
 #### API Explorer
 
-API Documentation is available <a href="/api-docs" target="_blank">here</a>
-
 Try out the REST APIs using the API Key of your Sematext account at :
 
 * <a href="https://apps.sematext.com/api-explorer" target="_blank">Sematext Cloud US Region</a>
