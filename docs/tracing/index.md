@@ -1,7 +1,7 @@
 ### What is Transaction Tracing
 
 Transaction tracing lets one trace code execution from beginning to end.
- It also enables [Database Operations](database-operations) reporting. In case of
+It also enables [Database Operations](database-operations) reporting. In case of
 SPM, transaction tracing can also cross applications, networks, and
 servers. For example, you can trace code execution from a beginning of
 an HTTP request made to a web application through any calls this web
@@ -18,7 +18,7 @@ Starting with version 1.24.10, the SPM client provides ability to track
 application transactions, thus making it easier to find bottleneck in
 running applications and troubleshoot performance issues.
 
-[![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](http://blog.sematext.com/2015/08/06/introducing-appmap/)
+[![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](http://blog.sematext.com/blog/introducing-appmap/)
 
 **Notes:**
 
@@ -31,6 +31,6 @@ running applications and troubleshoot performance issues.
 
 **Resources**:
 
-  - <http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/>
-  - <http://blog.sematext.com/2015/08/05/transaction-tracing-reports/>
-  - <http://blog.sematext.com/2015/08/06/introducing-appmap/>
+  - <http://blog.sematext.com/blog/transaction-tracing-performance-monitoring/>
+  - <http://blog.sematext.com/blog/transaction-tracing-reports/>
+  - <http://blog.sematext.com/blog/introducing-appmap/>
