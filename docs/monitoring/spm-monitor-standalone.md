@@ -1,10 +1,10 @@
 Title: Standalone Agent Mode
 
-Unlike the [Embedded, Javaagent-based monitor](spm-monitor-javaagent), the Standalone monitor
-is started as a separate process on each machine running the
+Unlike the [Embedded, Javaagent-based monitor](spm-monitor-javaagent), the Standalone monitor
+is started as a separate process on each machine running the
 application(s) you want to monitor. A separate monitor process should be
 started for each application monitored on a machine. The installer adds
-the /etc/init.d/spm-monitor startup script and adjusts your rc.local to
+the /etc/init.d/spm-monitor startup script and adjusts your rc.local to
 start it automatically when your machine starts. Before starting the
 monitor one should first adjusting the following:  
   
@@ -50,7 +50,7 @@ This setup requires adding the following arguments to your Java process
 The only thing you can customize here is the port. This port has to be
 reflected in monitor config, in **spm.remote.jmx.url** argument, as
 shown below.  
-In this example, **SPM\_MONITOR\_JMX\_PARAMS** property in **monitor
+In this example, **SPM\_MONITOR\_JMX\_PARAMS** property in **monitor
 properties** file should be adjusted as follows (leave other properties
 unchanged):
 
@@ -58,13 +58,10 @@ unchanged):
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000"  # MUST match the port in -Dcom.sun.management.jmxremote.port=3000 above
 ```
 
- 
-
 #### Security with Password File
 
-  
 You should define the role and its password in separate files for
-monitored service (say for your tomcat server 
+monitored service (say for your tomcat server 
 **/home/tomcat/passwordServer.tx**t) and for monitor itself (say
 **/home/spm/passwordMonitor.txt**). Each file should be owned by the
 user which runs the process (in case of **passwordServer.txt**, owner
@@ -88,10 +85,10 @@ out-of-the-box. If you want to use some other role name, you should
 first define it in jmxremote.access file.
 
   
-The **passwordServer.txt** file can have multiple such lines,
-while **passwordMonitor.txt** must contain only one line and this line
-has to exist in the **passwordServer.txt** file.  
-  
+The **passwordServer.txt** file can have multiple such lines,
+while **passwordMonitor.txt** must contain only one line and this line
+has to exist in the **passwordServer.txt** file.  
+
 In this case, Java process of monitored service should be started with
 following arguments (again, port can be adjusted and it has to be
 reflected in SPM **monitor properties** below in **spm.remote.jmx.url**
@@ -107,18 +104,14 @@ argument):
 
   
 while **monitor properties** file should be adjusted like (leave other
-properties in that file
-unchanged):
+properties in that file unchanged):
 
 ``` properties
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000 -Dspm.remote.jmx.password.file=/home/spm/passwordMonitor.txt"
 ```
 
- 
-
 #### Security with SSL and Keystore/Trustore
 
-  
 In this case, monitored service should get the following java arguments:
 
 ``` properties
@@ -130,8 +123,6 @@ In this case, monitored service should get the following java arguments:
 -Dcom.sun.management.jmxremote.authenticate=false
 ```
 
-  
-  
 Port, password and keystore path should match your local setup.  
   
 **Monitor properties** file should be adjusted like this (change just
@@ -144,21 +135,15 @@ SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000
 -Dcom.sun.management.jmxremote.ssl.need.client.auth=true"
 ```
 
-  
 where **spm.remote.jmx.url** argument, **trustStore** path and
 **trustStorePassword** match your setup.
 
- 
-
 ## Specifics Related to Various Servers
 
-  
 SPM monitor is always configured and started in the same way (by
 adjusting **monitor properties** file, see description above). However,
 there are different ways in which you can start your server, so here are
 some examples:
-
- 
 
 #### Starting with Java Command
 
@@ -172,13 +157,13 @@ java -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.ssl=true 
 -Djavax.net.ssl.keyStorePassword=password123 
 -Djavax.net.ssl.keyStore=/home/jetty/server.ks 
--Dcom.sun.management.jmxremote.authenticate=false 
+-Dcom.sun.management.jmxremote.authenticate=false 
 -jar start.jar
 ```
 
 #### Jetty (to run Solr or other apps)
 
-See [Starting with Java Command](#starting-with-java-command).
+See [Starting with Java Command](#starting-with-java-command).
 
 #### Tomcat (to run Solr or other apps)
 
@@ -233,7 +218,7 @@ prepared for you (exact locations and names for your application are
 mentioned in step 3 on
 <https://apps.sematext.com/ui/monitoring>).
 
- 
+ 
 
 #### Sensei
 
@@ -249,7 +234,7 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.authenticate=false"
 ```
 
- 
+ 
 
 #### Hadoop
 
@@ -317,12 +302,12 @@ export YARN_PROXYSERVER_OPTS="$YARN_PROXYSERVER_OPTS -Dcom.sun.management.jmxrem
 -Dcom.sun.management.jmxremote.authenticate=false"
 ```
 
- 
+ 
 
 If you are using **CDH GUI** to administer your Hadoop setup, you can
 adjust "**Java Configuration Options**" for each Hadoop node through the
 console. For instance, for DataNode, you would go to **Services** ==\>
-**hdfs** ==\> **DataNode **(link in status column) ==\>
+**hdfs** ==\> **DataNode **(link in status column) ==\>
 **Configuration**. Expanding options shown for datanode **under Search
 column** (click on arrow) shows **Advanced**. Under Advanced, **Value**
 for "**Java Configuration Options for DataNode**" should be with same
@@ -331,21 +316,18 @@ above.
 
 **Alternatively**, even when using **CDH** **GUI** to administer Hadoop,
 you can still choose to manually add definitions to **hadoop-env.sh**
-file, you may just have to create it in **conf/** subdir if it doesn't
+file, you may just have to create it in **conf/** subdir if it doesn't
 exist yet. 
 
 Below is the image of CDH UI:
 
-``` 
- 
-```
 
 ![](attachments/7766020/8978434.png)
 
 #### ZooKeeper
 
-Adjust your **zkServer.sh **(usually found
-at /usr/lib/zookeeper/bin/zkServer.sh) by changing **JVMFLAGS** as
+Adjust your **zkServer.sh **(usually found
+at /usr/lib/zookeeper/bin/zkServer.sh) by changing **JVMFLAGS** as
 follows:
 
 ``` bash
@@ -357,8 +339,8 @@ export JVMFLAGS="$JVMFLAGS -Dcom.sun.management.jmxremote
 
 #### Kafka
 
-Kafka Broker has no port opened for JMX by default. To fix this
-edit **kafka-server-start.sh** by changing JMX\_PORT as follows:
+Kafka Broker has no port opened for JMX by default. To fix this
+edit **kafka-server-start.sh** by changing JMX\_PORT as follows:
 
 ``` bash
 export JMX_PORT=9999
@@ -371,7 +353,7 @@ $ env JMX_PORT=9999  bin/kafka-server-start.sh config/server.properties
 ```
 
 For enabling JMX on Producer and Consumer nodes do it like you would do
-it for a [simple JVM application](spm-monitor-standalone/#jmx-setups-ie-how-to-configure-the-monitored-appserver).
+it for a [simple JVM application](spm-monitor-standalone/#jmx-setups-ie-how-to-configure-the-monitored-appserver).
 
 #### Storm
 
@@ -393,15 +375,15 @@ supervisor.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxre
 ```
 
 For Workers (use this approach to have Storm dynamically assign a JMX
-port to each Worker choosing from the port range specified in the
-storm.yaml): 
+port to each Worker choosing from the port range specified in the
+storm.yaml): 
 
 ``` bash
 worker.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=%ID%"
 ```
 
 For the above to work make sure the JMX port range is defined in
-storm.yml as follows: 
+storm.yml as follows: 
 
 ``` bash
 supervisor.slots.ports:
@@ -411,14 +393,7 @@ supervisor.slots.ports:
     - 6703
 ```
 
- 
-
- 
-
- 
-
 ## Additional Notes
-
   
 1\) In some cases, monitored server should also get the following
 argument:
@@ -426,8 +401,6 @@ argument:
 ``` properties
  -Djava.rmi.server.hostname=localhost
 ```
-
- 
 
 If you are having issues connecting SPM standalone monitor to your
 server, you may want to add the said option to your server/java process
