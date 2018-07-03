@@ -1,6 +1,6 @@
 Looking for On Premises Monitoring and/or Logging Solution?
 
-Please [contact us](http://sematext.com/about/contact.html) and we'll provide you with the evaluation copy of Sematext Enterprise, which includes both [SPM](http://sematext.com/spm/), infrastructure, application, and container monitoring and alerting and [Logsene](http://sematext.com/logsene/), log management and hosted ELK stack.
+Please [contact us](http://sematext.com/about/contact.html) and we'll provide you with the evaluation copy of Sematext Enterprise, which includes both [SPM](http://sematext.com/spm/), private infrastructure, application, and container monitoring and alerting and [Logsene](http://sematext.com/logsene/), on-premises log management platform and ELK stack.
 
 Sematext Enterprise is available either as pre-built VM (Ubuntu 14.04), DEB repo (Ubuntu 14.04 and 16.04) and RPM repo (RHEL / CentOS 6 and 7) and contain the basic setup for all services that make up SPM and Logsene.  
 
