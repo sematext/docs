@@ -1,6 +1,6 @@
 Hipchat is a tool for team collaboration and messaging by Atlassian. It provides integration with a wide range of other tools in your environment, including Sematext monitoring and logging management platform.
 
-Both our On Premise as well as Cloud service provide two-way integration with HipChat where alerts go right into HipChat rooms, and in turn, users can acknowledge, close, or assign these alerts. Our alert notifications are automatically forwarded to your Hipchat room.
+Both our On Premise as well as Cloud service provide two-way integration with Hipchat where alerts go right into Hipchat rooms, and in turn, users can acknowledge, close, or assign these alerts. Our alert notifications are automatically forwarded to your Hipchat room.
 
 ## In Hipchat
 
@@ -11,7 +11,7 @@ Both our On Premise as well as Cloud service provide two-way integration with Hi
 Link: [Log into Hipchat](https://sematexttest.hipchat.com/rooms)
 
 ![Hipchat Notification Token](attachments/34340871/34504710.png?height=400
-"HipChat Notification Token")
+"Hipchat Notification Token")
 
 If you already have a Hipchat token, please check whether
 it contains only lower case letters. If so, it is probably an OAuth1
