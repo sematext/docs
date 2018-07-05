@@ -77,7 +77,7 @@ The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api
 output:
   secure-elasticsearch: 
     module: elasticsearch
-    url: https://user:password@localhost 
+    url: "https://user:password@localhost"  # password characters will have to be urlencoded
     index: logs 
     httpOptions:
       key: /ssl-keys/client.key
