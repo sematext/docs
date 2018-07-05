@@ -69,7 +69,7 @@ output:
               - myapp2\/app.log
 ```
 
-## HTTP and HTTPS options
+## HTTP, HTTPS and authentication options
 
 The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api/https.html#https_https_request_options_callback). Client side certificates and keys are specified with a file name. If you use self-signed certificates, set _rejectUnauthorized_ to _false_.
 
@@ -77,10 +77,11 @@ The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api
 output:
   secure-elasticsearch: 
     module: elasticsearch
-    url: https://localhost 
+    url: https://user:password@localhost 
     index: logs 
     httpOptions:
       key: /ssl-keys/client.key
       cert: /ssl-keys/client.crt
+      ca: /ssl-keys/ca.pem
       rejectUnauthorized: true
 ```
