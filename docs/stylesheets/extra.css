@@ -37,13 +37,13 @@
     padding-left: 33px;
 }
 
-
 /**
 * modal.css
 * Author: Pedro Laxe
 * Version: 1.0.6
 * License: GPLv2
 **/
+
 .modal {
 	left: 50%;
 	opacity: 0;
@@ -106,7 +106,9 @@
 	color: #333333;
 	text-decoration: none;
 }
+
 /* Responsive Options */
+
 @media screen and (min-width: 768px) {
 	.modal{
 		width: 1200px;
@@ -114,7 +116,9 @@
 		top: -10%;
 	}
 }
+
 /* Responsive Video */
+
 .video iframe,
 .video object,
 .video embed {
@@ -144,6 +148,7 @@ svg {
 /**
  * Flip Cards
  */
+ 
  .flip-card-container {
     cursor: pointer;
     height: 150px;
@@ -195,7 +200,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     transform: none;
 }
 }
-
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 812px)
@@ -207,6 +211,7 @@ and (-webkit-device-pixel-ratio : 3) {
  /**
  * Gif Player
  */
+ 
   .player-container {
     display: table;
     background-color: #00a1ed;
@@ -251,6 +256,7 @@ and (-webkit-device-pixel-ratio : 3) {
   /**
  * Responsive Table
  */
+ 
   .table-responsive {
     min-height: .01%;
     overflow-x: auto;
@@ -483,6 +489,7 @@ pre {
 /**
  * CSS Accordion
 */
+
 .accordion {
   margin: 12px auto;
 }
@@ -520,12 +527,10 @@ pre {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 .title:after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-
 .content {
   max-height: 0;
   overflow: hidden;
@@ -546,7 +551,14 @@ pre {
           transform: rotate(90deg) !important;
 }
 
-.md-typeset pre {
+/**
+ * Code Blocks
+*/
+
+.md-typeset .codehilite code, .md-typeset .codehilite pre, .md-typeset .highlight code, .md-typeset .highlight pre, .md-typeset code, .md-typeset pre {
     background-color: #192f3b;;
     color: #D0D4D7;
+}
+.md-clipboard:before {
+    color: #fff;
 }
