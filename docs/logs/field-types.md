@@ -1,6 +1,9 @@
-Title: Field types
+title: Field Types
+description: Field Types supported by Sematext Cloud based SaaS / On-premises logging as a service platform
 
 You can see available field types when adding or modifying a field in Field Editor.
+
+<img src="/docs/images/logs/field-editor-logs-ui.png" alt="Field types editor" title="Field types editor">
 
 ## Float/Double
 
@@ -56,7 +59,7 @@ be either true or false, and never anything else.
 ### Not analyzed string
 
 Use this type if you do not need to perform full-text searches on a field. Use this type if you
-want to be able to filter on exact values and perform aggregation queries for building reports. 
+want to be able to filter on exact values and perform aggregation queries for building reports.
 For example, labels, tags, and log severity levels, maybe even names of hosts,
 containers, etc. if you only need to filter and group by them, and do not need partial matching.
 
