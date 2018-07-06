@@ -1,6 +1,7 @@
-Title: Sematext FAQ
+title: Sematext Documentation FAQ
+description: FAQ about Sematext monitoring and logging products, integrations, alerts, api, billing, security, private vs SaaS options and more
 
-### General
+## General
 
 **What should I do if I can't find the answer to my question in the FAQ?**
 
@@ -24,7 +25,7 @@ Yes, see [Transaction Tracing](/tracing).
 
 Yes, see [API Reference](/api).
 
-### Sharing
+## Sharing
 
 **How can I share my Sematext Apps with other users?**
 
@@ -122,7 +123,7 @@ OWNER will not be able to handle billing related info and will want to
 invite 1 or more BILLING_ADMINs who will be able to define/edit/delete
 credit cards and choose plans to be used for apps under your account.
 
-### Alerts
+## Alerts
 
 **Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?**
 
@@ -156,11 +157,11 @@ minutes, it will alert you.  N can be as low as 2 minutes and you
 choose it yourself when you create a Heartbeat Alert.
 
 
-### Security
+## Security
 
 See [monitoring FAQ](/monitoring/spm-faq) and [logging FAQ](/logs/faq).
 
-### Billing
+## Billing
 
 **How do you bill for infrastructure and server monitoring?**
 
