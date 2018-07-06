@@ -1,5 +1,5 @@
-Title: Sematext Documentation
-Description: Private on-premises and cloud SaaS infrastructure & application performance monitoring, log management & hosted ELK stack, docker metrics and logs, events and more
+title: Sematext Documentation
+description: Private on-premises and cloud SaaS infrastructure & application performance monitoring, log management & hosted ELK stack, docker metrics and logs, events and more
 
 **How Sematext works**
 
