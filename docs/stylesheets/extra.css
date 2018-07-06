@@ -407,13 +407,9 @@ pre {
 .md-content__inner {
     margin: 0 0 480px;
 }
-.md-content__inner img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 .md-content__inner h1{
   visibility: hidden;
+  margin: 0 0 .5rem;
 }
 .mdl-card {
     width: 100%;
