@@ -1,6 +1,7 @@
-Title: Sematext Logs FAQ
+title: Log Management FAQ
+description:  Cloud based SaaS / On-premises logging as a service platform FAQ on log shipping, log events fields and count, data retention and daily volumes, Kibana, log archiving and more 
 
-### General
+## General
 
 **How many logs can I store?**
 
@@ -172,7 +173,7 @@ If the amount of data ingested for the day, plus data to be reindexed
 is smaller than your Max Daily Log Volume Limit then no additional charges
 will be applied.
 
-### Log Shipping
+## Log Shipping
 
 **Which log shippers, logging libraries, and platform integrations are supported?**
 
@@ -238,7 +239,7 @@ well.
 
 Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handling-stack-traces-with-logstash/).
 
-### Plans & Prices
+## Plans & Prices
 
 **How much does your centralized logging management solution cost?**
 
@@ -271,7 +272,7 @@ select 5 GB/day volume, because that will give you a lower $/GB rate
 than if you stay with 1 GB/day
 selection.
 
-### Troubleshooting
+## Troubleshooting
 
 **Why am I not seeing my logs?**
 
@@ -423,7 +424,7 @@ Option #2 is probably the simplest way to resolve the issue.
 
 In case you created only one time logs with a wrong structure, you could use the Field Editor to change the schmema/mapping. Please refer to related FAQ section: [I have multiple different log structures, each with a different set of fields.  How should I handle that](#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that)
 
-### Security
+## Security
 
 **Can I ship data to your centralized logging management solution using a secure and encrypted transport like TLS/SSL or HTTPS?**
 
@@ -450,7 +451,7 @@ Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choos
 This depends on the data retention you selected for each of your logging
 apps.  Backups are stored in S3 and kept for 90 days.
 
-### Kibana
+## Kibana
 
 **Can I use my own Kibana?**
 
@@ -523,7 +524,7 @@ uses this field as analyzed one so it is not possible to use it in
 dashboards. It also creates automatically a field called
 'title.raw' and this one can be used for charts.
 
-### Timestamps
+## Timestamps
 
 **Why does my syslog timestamp have a different time zone?**
 
@@ -587,10 +588,7 @@ example, if you send logs that are "2 hours ahead of real time" they
 will be accepted, but will not be displayed until 2 hours
 later.
 
-
-
-
-### Alerts
+## Alerts
 
 **What are Logs App Alerts?**
 
@@ -648,7 +646,7 @@ logs).
 Yes. Our centralized logging management solution lets one configure arbitrary WebHooks to call with Alert
 event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
 
-### Log Archiving
+## Log Archiving
 
 **How to obtain credentials from AWS?**
 
