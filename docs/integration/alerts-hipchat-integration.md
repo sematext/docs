@@ -47,7 +47,7 @@ own nickname. 
 
 Next, click the “Test” button. Hipchat returns status code 200 or 204 indicating everything is configured correctly. Check your Hipchat channel for the test message from Sematext.
 
-That's it. Notifications sent to Hipchat can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
+That's it. Notifications sent to Hipchat can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/alerts) to learn more about other channels and types of alerts available.
 
 We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
 
