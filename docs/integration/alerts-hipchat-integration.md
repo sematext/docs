@@ -1,3 +1,6 @@
+title: Hipchat
+description: Infrastructure and application monitoring alerts integration with Hipchat collaboration and messaging tool.
+
 Hipchat is a tool for team collaboration and messaging by Atlassian. It provides integration with a wide range of other tools in your environment, including Sematext monitoring and logging management platform.
 
 Both our [On Premise](https://sematext.com/enterprise/) as well as [Cloud](https://sematext.com/cloud/) service for infrastructure and application montoring provide two-way integration with Hipchat where alerts go right into Hipchat rooms, and in turn, users can acknowledge, close, or assign these alerts. Our alert notifications are automatically forwarded to your Hipchat room.
