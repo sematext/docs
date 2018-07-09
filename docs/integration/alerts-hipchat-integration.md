@@ -1,14 +1,12 @@
 Hipchat is a tool for team collaboration and messaging by Atlassian. It provides integration with a wide range of other tools in your environment, including Sematext monitoring and logging management platform.
 
-Both our On Premise as well as Cloud service provide two-way integration with Hipchat where alerts go right into Hipchat rooms, and in turn, users can acknowledge, close, or assign these alerts. Our alert notifications are automatically forwarded to your Hipchat room.
+Both our [On Premise](https://sematext.com/enterprise/) as well as [Cloud](https://sematext.com/cloud/) service for infrastructure and application montoring provide two-way integration with Hipchat where alerts go right into Hipchat rooms, and in turn, users can acknowledge, close, or assign these alerts. Our alert notifications are automatically forwarded to your Hipchat room.
 
 ## In Hipchat
 
 **1.**  Navigate to Rooms / YOUR ROOM NAME / Tokens and create a new token.
 
 **NOTE:** we support OAuth2 and not OAuth1 tokens.
-
-Link: [Log into Hipchat](https://sematexttest.hipchat.com/rooms)
 
 ![Hipchat Notification Token](attachments/34340871/34504710.png?height=400
 "Hipchat Notification Token")
@@ -25,10 +23,9 @@ token: **
 messages from SPM with the nickname you define in the Token Label
 input.
 
-- Under user via [Hipchat Account API](https://sematexttest.hipchat.com/account/api).
+- Under user via Hipchat Account API.
 If you use this option you will see all messages from Sematext monitoring and logging management platform with your
 own nickname. 
-
 
 **2.**  Copy the Hipchat Room Token because you'll need to paste it in later
     (see below). 
@@ -47,7 +44,7 @@ own nickname. 
 
 Next, click the “Test” button. Hipchat returns status code 200 or 204 indicating everything is configured correctly. Check your Hipchat channel for the test message from Sematext.
 
-That's it. Notifications sent to Hipchat can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/alerts) to learn more about other channels and types of alerts available.
+That's it. Notifications sent to Hipchat can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
 
 We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
 
