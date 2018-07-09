@@ -1,3 +1,6 @@
+title: On-premises vs Saas
+description: Deployment model differences for Sematext infrastructure & application performance monitoring, and
+log management service.
 
 ## On-premises vs SaaS
 
