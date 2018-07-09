@@ -5,7 +5,7 @@ pages:
     - Getting Started: index.md
     - Logs:
       - Overview: logs/index.md
-      - Sending Log Events: 
+      - Sending Log Events:
         - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
         - Logstash: logs/logstash.md
@@ -90,7 +90,8 @@ pages:
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - FAQ: sematext-enterprise/faq.md
-    - Sematext Docker Agent: 
+      - Licensing: sematext-enterprise/licensing.md
+    - Sematext Docker Agent:
       - Overview: sematext-docker-agent/index.md
       - Installation: sematext-docker-agent/installation.md
       - Configuration: sematext-docker-agent/configuration.md
@@ -98,15 +99,15 @@ pages:
       - FAQ: sematext-docker-agent/faq.md
     - Logagent:
       - Overview: logagent/index.md
-      - Installation: 
+      - Installation:
         - Linux & Mac OS X: logagent/installation.md
-        - Windows: logagent/installation-windows.md 
-        - Heroku: logagent/installation-heroku.md        
-      - Usage: 
+        - Windows: logagent/installation-windows.md
+        - Heroku: logagent/installation-heroku.md
+      - Usage:
         - Command Line Parameters: logagent/cli-parameters.md
         - Configuration: logagent/config-file.md
         - Log Parser Patterns: logagent/parser.md
-      - Plugins: 
+      - Plugins:
         - Overview: logagent/plugins.md
         - Input Filter:
           - About filters: logagent/filters.md
@@ -133,7 +134,7 @@ pages:
           - Apple device location: logagent/logagent-apple-location.md
           - Nova dust sensor: logagent/logagent-novasds.md
           - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
-        - Output Filter: 
+        - Output Filter:
           - Access Watch output filter: logagent/output-filter-accesswatch.md
           - SQL output filter: logagent/output-filter-sql.md
           - AES encrypt fields: logagent/output-filter-aesencryptfields.md
@@ -143,7 +144,7 @@ pages:
         - Output Plugins:
           - Standard output: logagent/output-plugin-stdout.md
           - GELF: logagent/output-plugin-gelf.md
-          - MQTT: logagent/output-plugin-mqtt.md 
+          - MQTT: logagent/output-plugin-mqtt.md
           - Files: logagent/output-plugin-files.md
           - Elasticsearch: logagent/output-elasticsearch.md
           - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
@@ -152,13 +153,13 @@ pages:
           - Zeromq output: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
-      - How-To: 
+      - How-To:
           - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
       - FAQ: logagent/faq.md
     - API: api/index.md
     - FAQ: faq.md
-         
+
 
 theme:
   name: material
