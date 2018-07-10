@@ -1,4 +1,4 @@
-title: On-premises vs Saas
+title: On-premises vs SaaS
 description: Deployment model differences for Sematext infrastructure & application performance monitoring, and
 log management service.
 
@@ -9,105 +9,59 @@ log management service.
     <tr>
       <th>Feature &amp; Capability
       </th>
-      <th>Sematext Enterprise
+      <th><a href="https://sematext.com/enterprise/">Sematext Enterprise</a>
       </th>
-      <th>Sematext Cloud
+      <th><a href="https://sematext.com/cloud/">Sematext Cloud</a>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Server Location
+      <td>Location
       </td>
-      <td>In your data center on your hardware or private cloud.
+      <td>Your data center on your hardware or private cloud
       </td>
-      <td>In the cloud (Amazon EC2) US and EU Regions are available
-      </td>
-    </tr>
-    <tr>
-      <td>Server Installation
-      </td>
-      <td>Manual installation of Sematext Enterprise
-      </td>
-      <td><a href="https://sematext.com/cloud/">Cloud version</a> is fully managed SaaS on AWS infrastructure. Both private and cloud version provide infrastructure monitoring, application performance monitoring, log management, docker metrics and logs, and more. Metrics, Traces, Logs, Alerts, and Events in one.
+      <td>In the cloud (Amazon AWS); US and EU Regions are available
       </td>
     </tr>
     <tr>
-      <td>Software Updates
+      <td>Infrastructure
       </td>
-      <td>Manual / On-demand
+      <td>Provided, run, and managed by you
       </td>
-      <td>Automated
-      </td>
-    </tr>
-    <tr>
-      <td>Backups
-      </td>
-      <td>Manual
-      </td>
-      <td>On-demand / Automated
+      <td>Operated by Sematext
       </td>
     </tr>
     <tr>
-      <td>Supported Agents
+      <td>Installation & Management
       </td>
-      <td>
-      Logstash, rsyslog, Apache Flume, Fluentd, or anything that can output to Elasticsearch for logging management. SPM Performance Monitoring Agent for Apache, Docker, and many other <a href="https://sematext.com/infrastructure-monitoring/">integrations</a>
+      <td>Installed and managed by your team
       </td>
-      <td>
-      Logstash, rsyslog, Apache Flume, Fluentd, or anything that can output to Elasticsearch for logging management. SPM Performance Monitoring Agent for Apache, Docker, and many other <a href="https://sematext.com/infrastructure-monitoring/">integrations</a>
+      <td>Fully managed by Sematext, including backups, security, etc.
       </td>
     </tr>
     <tr>
-      <td>Deployment Size
+      <td>New Features & Upgrades
       </td>
-      <td>Medium and Large
+      <td>New features available as new releases become available. Upgrades performed by your team.
       </td>
-      <td>Small, Medium and Large
+      <td>New features continuously added without service interruption or downtime
       </td>
     </tr>
     <tr>
       <td>Data Retention
       </td>
-      <td>Flexible, limited by provisioned disk space
+      <td>Unlimited - limited only by provisioned disk space
       </td>
-      <td>Depends on what Data Retention you selected when you picked your Logging Management App plan. Usage is metered hourly on a per-agent basis for server and infrastructure monitoring. Docker monitoring is based on the base price and per-container price. The base price includes monitoring of a Docker host and free monitoring of up to N containers.
-      </td>
-    </tr>
-    <tr>
-      <td>Collector Settings
-      </td>
-      <td>Flexible
-      </td>
-      <td>Optimized for cloud:
-        <ul class="list">
-          <li>Encryption: on (SSL)</li>
-          <li>Compression: on</li>
-        </ul>
+      <td>Depends on your plan selection and configuration.  Custom plans are available.
       </td>
     </tr>
     <tr>
-      <td>Memory Dumps
+      <td>Pricing
       </td>
-      <td>Enabled
+      <td>Per agent for monitoring and based on daily log volume for log management
       </td>
-      <td>Enabled
-      </td>
-    </tr>
-    <tr>
-      <td>Mail Server for notifications
-      </td>
-      <td>Provided by customers
-      </td>
-      <td>Fully Managed
-      </td>
-    </tr>
-    <tr>
-      <td>LDAP
-      </td>
-      <td>Provided by customers
-      </td>
-      <td>Fully Managed
+      <td>See <a href="https://sematext.com/spm/pricing">Monitoring pricing</a> and <a href="https://sematext.com/logsene/pricing">Logs pricing</a> for log management pricing
       </td>
     </tr>
   </tbody>
