@@ -7,7 +7,7 @@ Kibana is fully intergrated with Sematext's analytics and visualization platform
 
 To visualize your data using [Kibana integrated into Logs Management App](http://blog.sematext.com/2015/06/11/1-click-elk-stack-hosted-kibana-4/),
 you have to click on the **Kibana** button in the App Settings dropdown next to the application's
-name, from the [Logs tab of your account](https://apps.sematext.com/ui/logs).
+name, from the [Logs section](https://apps.sematext.com/ui/logs) in our infrastructure & application monitoring and log management platform.
 
 <img alt="Kibana Integration" src="/docs/images/logs/kibana-integration.gif" title="Sematext Logging UI - Kibana Integration">
 
