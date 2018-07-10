@@ -91,6 +91,7 @@ pages:
       - Overview: sematext-enterprise/index.md
       - FAQ: sematext-enterprise/faq.md
       - Licensing: sematext-enterprise/licensing.md
+      - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
     - Sematext Docker Agent:
       - Overview: sematext-docker-agent/index.md
       - Installation: sematext-docker-agent/installation.md
