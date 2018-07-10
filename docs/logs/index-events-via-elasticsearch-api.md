@@ -1,3 +1,6 @@
+title: Index events via Elasticsearch API
+description: Sending, custom & default mapping, and indexing log events using Elasticsearch API. Use other applications such as Logstash, Apache Flume, Fluentd Plugin to send log events and search for logs using UI.
+
 ## The Essentials
 
 Sematext's Logs Management App exposes the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can:
@@ -12,10 +15,10 @@ Sematext's Logs Management App exposes the [Elasticsearch API](http://www.elasti
 
 When you use the API, here are the things you need to know:
 
-  - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (only is using Sematext Cloud Europe)
+  - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (only if using Sematext Cloud Europe)
   - port: **80** or **443** (depending on whether you want to use plain HTTP or HTTPS)**
     **
-  - index name: your [Logs Management app token](https://apps.sematext.com/ui/logs) -
+  - index name: your [Logs Management app token](https://apps.sematext.com/ui/logs) -
     note: **this token should be kept secret** (n.b. you can have N Logs Management apps, each with its own token)
 
 ## Indexing
