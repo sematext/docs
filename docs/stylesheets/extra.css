@@ -553,7 +553,7 @@ pre {
 /**
  * Code Blocks
 */
-.md-typeset .codehilite code, .md-typeset .codehilite pre, .md-typeset .highlight code, .md-typeset .highlight pre, .md-typeset code, .md-typeset pre {
+.md-typeset .codehilite code, .md-typeset .codehilite pre, .md-typeset .highlight code, .md-typeset .highlight pre, .md-typeset pre {
     background-color: #192f3b;;
     color: #D0D4D7;
 }
