@@ -1,3 +1,6 @@
+title: Authorizing IPs for Syslog
+description:  Syslog IPs authorization details for Sematext Logs Management application
+
 When you send syslog to Sematext Logs Management App, we strongly recommend you do that by
 adding your application token as part of your CEE-formatted JSON over
 syslog.
