@@ -1,8 +1,6 @@
 title: Licensing
 description: Licenisng details for Sematext infrastructure & application performance monitoring, and log management service.
 
-## Licensing
-
 <div class="accordion">
   <div class="option">
     <input type="checkbox" id="toggle15" class="toggle" />
