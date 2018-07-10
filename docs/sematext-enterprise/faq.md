@@ -1,4 +1,5 @@
-## Installation
+title: FAQ
+description: FAQ about Sematext Enterprise, private or on-premises platform for infrastructure, app, and container monitoring and alerting as well as the log management platform.
 
 <div class="accordion">
   <div class="option">
