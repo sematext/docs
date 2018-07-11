@@ -2,7 +2,7 @@ title: Logsene CLI
 description: Logging CLI used to view, filter, and analyze logs in Sematext's centralized log management
 solution.
 
-[Logsene](http://sematext.com/logsene)  *Command-line Interface* enables viewing, searching, filtering, and analyzing log entries. Currently it supports OS X and Linux.
+[Logsene](http://sematext.com/logsene)  *Command-line Interface* enables viewing, searching, filtering, and analyzing of log entries. Currently it supports OS X and Linux.
 
 ## Installation
 
