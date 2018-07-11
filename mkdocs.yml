@@ -26,6 +26,7 @@ pages:
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Special Fields: logs/special-fields.md
+      - Logsene Changelog: logs/logsene-changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
