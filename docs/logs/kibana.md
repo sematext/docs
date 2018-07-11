@@ -1,5 +1,5 @@
 title: Kibana
-desrciption: The first true hosted ELK Stack as a serivce with Elasticsearch API and integrated Kibana
+desrciption: The first true hosted ELK Stack as a service with Elasticsearch API and integrated Kibana
 
 Kibana is analytics and visualization platform used to perform various searches and create logging analytics dashboards.
 
