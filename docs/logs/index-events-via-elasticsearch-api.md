@@ -29,7 +29,7 @@ application, or you can craft your own "log sender".
 **NOTE:**
 If you are sending logs from your application use the Elasticsearch HTTP
 API. If you are sending logs from a Java application use a library like
-[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http)[or](https://github.com/jprante/log4j2-elasticsearch-http)[Jest](https://github.com/searchbox-io/Jest) [instead of Elasticsearch TransportClient.](https://github.com/jprante/log4j2-elasticsearch-http)
+[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http) or [Jest](https://github.com/searchbox-io/Jest) [instead of Elasticsearch Transport Client.](https://github.com/jprante/log4j2-elasticsearch-http)
 
 Besides specifying your Logs Management app token as the index name, it's nice
 to have a field named "@timestamp".  Its value should be a valid
@@ -57,10 +57,10 @@ within a type named "mytype". The type is a logical division of events.
 
 Typically, you'd put events with different structures in different
 types. For example, syslog messages in a type called "syslog", apache
-logs in a type called "apache". Essentially, the type can be anything,
-it's the token of your application that has to match.
+logs in a type called "apache". Essentially, the type can be anything
+and it is the token of your application that has to match.
 
-For performance reasons, we highly recommend using the [Bulk API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
+For performance reasons we highly recommend using the [Bulk API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
 because it allows you to send multiple events with a single request. For
 example, the following request sends three events:
 
@@ -79,11 +79,8 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 
 ## Default Log Index Mapping
 
-A
-[mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/glossary.html#mapping)
-is a way to define how your logs are indexed - which fields are in each
-log event and how each field is indexed. Logs Management app provides a default
-mapping that works well for most use-cases:
+A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/glossary.html#mapping)
+is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Logs Management app provides a default mapping that works well for most use-cases:
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date
