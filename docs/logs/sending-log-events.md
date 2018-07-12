@@ -1,4 +1,7 @@
-To send new events to your Logs Management app, you have two ways to
+title: Sending Log Events
+description: Send new events to Sematext logging management app, using Elasticsearch API or syslog, and log shippers such as logstash, logagent, fluentd, rsyslog, syslog-ng, apache flume and more
+
+To send new events to Logs Management app, you have two ways to
 connect - using Elasticsearch API or using syslog.
 
   - HTTP / HTTPS (ports 80 / 443), by using the Elasticsearch API on
