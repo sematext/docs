@@ -1,3 +1,6 @@
+title: Syslogd
+description: Ship your logs to Sematext centralized monitoring and logging plafrom with syslogd via UDP. 
+
 With plain syslogd, you can send logs to Sematext Logs Management App via UDP if you add this
 line to your **/etc/syslog.conf**:
 
@@ -20,7 +23,7 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
 
   - change your syslog daemon from syslogd to
     [rsyslog](rsyslog) or
-    [syslog-ng](syslog-ng). Or anything else that lets you
+    [syslog-ng](syslog-ng) or anything else that lets you
     format your messages, so you can build a JSON containing your
     Logs Management application token like the one above
   - similar to the solution above, you can use a separate machine for
