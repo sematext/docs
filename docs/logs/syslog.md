@@ -1,9 +1,11 @@
-We support receiving syslog messages from any application, as long as
+title: Syslog
+description: Send syslog messages from any application to Sematext log management app. Token and IP based authorization for shipping logs over TCP/UDP/RELP
+
+Sematext centralized monitoring and logging solution supports receiving syslog messages from any application, as long as
 they comply to either [RFC-3164](https://tools.ietf.org/html/rfc3164) or
 [RFC-5424](https://tools.ietf.org/html/rfc5424) (and
 [RFC-5425](https://tools.ietf.org/html/rfc5425) for TLS). The
-destination host is **logsene-receiver-syslog.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe) and ports
-we use are:
+destination host is **logsene-receiver-syslog.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe) and ports we use are:
 
   - for Syslog over UDP: **514**
   - for Syslog over TCP: **514**
@@ -13,12 +15,7 @@ we use are:
 
 ## Authorization
 
-There are two ways to authorize when you send logs. Authorizing means
-telling Sematext Platform which Logs Management App to send logs to. We recommend you
-embed your Logs Management App token in your syslog daemon's config in a
-[CEE-formatted JSON message](json-messages-over-syslog).
-Step-by-step instructions for [rsyslog](rsyslog) and
-[syslog-ng](syslog-ng), and a raw example are below.
+There are two ways to authorize when you send logs. Authorizing means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](json-messages-over-syslog). Step-by-step instructions for [rsyslog](rsyslog) and [syslog-ng](syslog-ng), and a raw example are below.
 
 Alternatively, [authorize your public IPs](authorizing-ips-for-syslog) and then send messages directly. Note that configuring your log shipper to send your Logs Management App token is preferred to authorizing source IPs. You can see specific instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng) and [syslogd](syslogd) for how to forward messages in this case.  
 
