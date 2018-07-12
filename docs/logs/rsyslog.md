@@ -1,3 +1,5 @@
+title: Rsyslog
+description: Forward logs to Sematext logging management service with rsyslog. Query and visualise logs, create alerts, narrow down events of interest and locate system or app errors 
 
 **IMPORTANT**
 
