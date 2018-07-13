@@ -1,11 +1,11 @@
-## Custom Metrics
+title: Custom Metrics
+description: Sematext infrastructure and application monitoring service exposes APIs and provides libraries that let you
+send custom metrics and turn them into dashboards and real-time visualizations
 
 [SPM](http://sematext.com/spm/) lets you extend standard performance
-metrics reports.  SPM exposes APIs and provides libraries that let you
+metrics reports. SPM exposes APIs and provides libraries that let you
 send custom metrics (any numerical data, not just performance metrics)
 into SPM and graph it along other reports.
-
- 
 
 **NOTE:**
 
@@ -13,10 +13,10 @@ into SPM and graph it along other reports.
     you don't already have it, you can create it
     [here](https://apps.sematext.com/ui/registration), it's free,
     no credit card needed. After you have Sematext account, create an
-    SPM App to which Custom Metrics will be sent.
+    SPM Monitoring App to which Custom Metrics will be sent.
   - If you have already created some SPM Apps under your account in the
     past, you can send Custom Metrics to any of them.
-  - If you just registered, you can create SPM Apps by following the
+  - If you just registered, you can create SPM Monitoring Apps by following the
     steps after Sematext account registration, or by clicking directly
     [here](https://apps.sematext.com/ui/registration).
 
@@ -106,7 +106,7 @@ values.**
 ## Counting Metrics
 
 Each SPM plan allows for a different number of metrics and a different
-number of datapoints per calendar month.  Please see [SPM Plans](https://sematext.com/spm/#plans-and-pricing) page.
+number of datapoints per calendar month.  Please see [SPM Plans](https://sematext.com/spm/#plans-and-pricing) page.
 
 To stay within your plan limits pay attention to the number of distinct
 metrics.  A metric is a (metric name, filter1, filter2) triple. For
@@ -129,19 +129,16 @@ The API allows up to 3,600,000,000 (3.6 billion) data points per hour.
 SPM provides REST API for sending data points for custom
 metrics:
 
-http://spm-receiver.sematext.com/receiver/custom/receive.\[format\]?token=\[spm
-app token\]
+http://spm-receiver.sematext.com/receiver/custom/receive.\[format\]?token=\[spm app token\]
 
 The format can be either 'json' or 'raw'.
 
-Applications' tokens are listed
-at <https://apps.sematext.com/ui/monitoring>
+Applications' tokens are listed in [Monitoring](https://apps.sematext.com/ui/monitoring)
 
 ### JSON format
 
 URL:
-http://spm-receiver.sematext.com/receiver/custom/receive.json?token=\[spm app
-token]
+http://spm-receiver.sematext.com/receiver/custom/receive.json?token=\[spm app token]
 
 Content-type: application/json
 
@@ -254,8 +251,6 @@ Example:
 }
 ```
 
- 
-
 To send metrics using curl, save example above to a file named
 datapoints.json and submit it with the following call, using your own
 token:
@@ -276,8 +271,7 @@ curl -H 'Content-type: application/json' -d '{"datapoints" : [{"name": "register
 ### Raw format
 
 URL:
-http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=\[spm
-app token]
+http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=\[spm app token]
 
 Content-type: text/plain
 
@@ -288,8 +282,7 @@ Each line is tab delimited sequence of fields:
 (timestamp)\\t(name)\\t(value)\\t(aggregation
 type)\\t(filter1)\\t(filter2)
 
-Lines are separated by new line character ('\\n'). Limit is 100 lines
-per request.
+Lines are separated by new line character ('\\n'). Limit is 100 lines per request.
 
 <table>
 <thead>
@@ -356,10 +349,7 @@ Example:
 1369671381221 registered-users-count  1   sum user.gender=female  account.type=paid
 ```
 
-To post these data using curl, save the example above (ensure tabs are
-preserved) to a file named datapoints.raw and use the following call
-with your own
-token:
+To post these data using curl, save the example above (ensure tabs are preserved) to a file named datapoints.raw and use the following call with your own token:
 
 ``` bash
 curl -v -H 'Content-type: text/plain' -d @datapoints.raw http://spm-receiver.sematext.com/receiver/custom/receive.raw?token=[spm app token]
@@ -374,19 +364,14 @@ curl -H 'Content-type: text/plain' -d "`echo -e "\tregistered-users\t1\tsum"`" h
 
 ## Java API
 
-[Sematext-metrics](https://github.com/sematext/sematext-metrics) is an
-open source Java library for sending custom metrics from Java
-applications. Please refer to
-[README](https://github.com/sematext/sematext-metrics/blob/master/README.md)
-for a quick
-start.
+[Sematext-metrics](https://github.com/sematext/sematext-metrics) is an open source Java library for sending custom metrics from Java applications. Please refer to [README](https://github.com/sematext/sematext-metrics/blob/master/README.md)
+for a quick start.
 
 ## Coda Hale (aka Yammer) Metrics Reporter
 
-[Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter)
-is a [Coda Metrics](https://github.com/sematext/sematext-metrics-reporter) library
-Reporter for sending metrics to SPM that uses
-[sematext-metrics](https://github.com/sematext/sematext-metrics) under
+[Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter) is a [Coda Metrics](https://github.com/sematext/sematext-metrics-reporter) library.
+
+Reporter for sending metrics to SPM that uses [sematext-metrics](https://github.com/sematext/sematext-metrics) under
 the hood.
 
 ## Ruby API
@@ -397,8 +382,8 @@ a gem for sending custom metrics from Ruby applications.
 ## Node.js API
 
 [spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) is an npm
-module for sending custom metrics from Node.js applications.  Github
-repo: <https://github.com/sematext/spm-metrics-js>.
+module for sending custom metrics from Node.js applications. (Github
+repo)[https://github.com/sematext/spm-metrics-js].
 
 ## .Net API
 
