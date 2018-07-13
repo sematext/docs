@@ -1,11 +1,14 @@
+title: Coda Hale Metric Reporter
+description: Sematext extension for Metrics, a powerful toolkit of modules for common libraries providing a full-stack visibility and ways to measure the behavior of critical components in your production devops environment
+
 [Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter)
-is an extension for the[ Coda Hale Metrics](http://metrics.dropwizard.io/) library version 2.2.0 and 3.x for
+is an extension for the [ Coda Hale Metrics](http://metrics.dropwizard.io/) library version 2.2.0 and 3.x for
 sending metrics to [SPM](https://sematext.com/spm/).  Under the
-hood sematext-metrics Java library is used to send metrics as [Custom Metrics](custom-metrics) to SPM.
+hood sematext-metrics Java library is used to send metrics as [Custom Metrics](custom-metrics) to SPM.
 
 ### Quick Start
 
-To start sending metrics just create and start SematextMetricsReporter:
+To start sending metrics just create and start `SematextMetricsReporter`:
 
 ``` java
 MetricRegistry metrics = new MetricRegistry();
