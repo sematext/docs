@@ -1,5 +1,5 @@
-Title: Infrastructure monitoring
-Description: Sematext infrastructure and application performance monitoring docs
+title: Infrastructure Monitoring
+description: Sematext Infrastructure Monitoring is server and app monitoring platform with alerts, available in SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire devops ecosystem
 
 ### Creating Monitoring Apps
 
