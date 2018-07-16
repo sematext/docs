@@ -9,13 +9,13 @@ destination host is **logsene-receiver-syslog.sematext.com** / **logsene-receive
 
   - for Syslog over UDP: **514**
   - for Syslog over TCP: **514**
-  - for Syslog over TLS: **10514** (get [root certificate](https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem) and [intermediate certificate](https://apps.sematext.com/cert/DigiCertCA.pem) to get
+  - for Syslog over TLS: **10514** (get [root certificate](https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem) and [intermediate certificate](https://apps.sematext.com/cert/DigiCertCA.pem) to get
     TLS working)
   - for RELP: **20514**
 
 ## Authorization
 
-There are two ways to authorize when you send logs. Authorizing means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](json-messages-over-syslog). Step-by-step instructions for [rsyslog](rsyslog) and [syslog-ng](syslog-ng), and a raw example are below.
+There are two ways to authorize when you send logs. Authorizing means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](json-messages-over-syslog). Step-by-step instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng), and a raw example are below.
 
 Alternatively, [authorize your public IPs](authorizing-ips-for-syslog) and then send messages directly. Note that configuring your log shipper to send your Logs Management App token is preferred to authorizing source IPs. You can see specific instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng) and [syslogd](syslogd) for how to forward messages in this case.  
 
