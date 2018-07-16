@@ -1,5 +1,5 @@
 title: Sematext Java Agent Chef Recipe
-description: Example of Chef automated configuration management recepie for Sematext infrastructure and services monitoring java agent
+description: Automated configuration management Chef recipe for Sematext infrastructure and services monitoring java agent
 
 The following is an **example** Chef Recipe for installing [SPM client](spm-client).
 
