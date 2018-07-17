@@ -1,4 +1,7 @@
-### What's a Tag?
+title: Tag Support
+description: Asssign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
+
+## What's a Tag?
 
 To help you manage your metrics, hosts, and containers, and to help you
 create more useful dashboards, you can assign metadata to each
@@ -6,24 +9,20 @@ host/server/container in the form of *tags*.
 
 Tags let you to organize your SPM hosts/servers/containers in different
 ways – for example by role, owner, or environment. Each tag consists of
-a key and a value, separated by the ':' character. We recommend that you
-devise a set of tag keys that meet your needs for each host and to keep
-the tag set small and clean. Using a consistent and not overly broad set
-of tag keys makes it easier for you make the most of SPM and avoid
-chaos. Tags will help you create Alerts for hosts/servers/containers
-under certain tags or add dashboard widgets based on tags you have
-defined.
+a key and a value, separated by the ':' character. 
 
-### **AWS Tags Support**
+We recommend that you devise a set of tag keys that meet your needs for each host and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of SPM and avoid chaos. Tags will help you create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
+
+## **AWS Tags Support**
 
 SPM client has the ability to:
 
 1.  Collect AWS/EC2 tags and send them to SPM. EC2 Instances should be
     created with AWS IAM Role that has policy 'AmazonEC2ReadOnlyAccess'.
-     See <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html> 
+     See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)
 2.  Send EC2 Instance Type and Availability Zone as tags.
 
-#### **Excluding Specific Tags**
+### **Excluding Specific Tags**
 
 To exclude tags and thus not send them to SPM just edit the monitor
 configuration file -
@@ -33,8 +32,6 @@ configuration file -
 # uncomment and add tags which should be excluded
 # SPM_SUPPRESS_TAGS=project:baz, node:qux
 ```
-
- 
 
 AWS tag collection is enabled by default.  To disable AWS tags
 collection adjust the following in the
@@ -46,7 +43,7 @@ file:
 COLLECT_AWS_TAGS=true
 ```
 
-### Adding Tags
+## Adding Tags
 
 To add tags edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
@@ -56,7 +53,7 @@ To add tags edit the monitor configuration file -
 # SPM_MONITOR_TAGS="env:local, project:projectName, role:slave"
 ```
 
-### Adding Tags in SPM for Docker
+## Adding Tags in SPM for Docker
 
 Tags are provided by the environment variable SPM\_MONITOR\_TAGS for
 example:
@@ -65,7 +62,7 @@ example:
 docker run -e SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend" ... sematext/sematext-agent-docker
 ```
 
-### Adding Tags in SPM for Node.js
+## Adding Tags in SPM for Node.js
 
 Tags could be configured in the config file "./.spmagentrc" or
 /etc/spmagentrc
