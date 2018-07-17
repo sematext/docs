@@ -1,4 +1,6 @@
-Title: Sematext Monitoring Java Agent
+title: Sematext Monitoring Java Agent
+description: Sematext Java agent is used for IT infrastructure monitoring, collecting metrics
+from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling 
 
 Sematext Monitoring agent is also known as SPM Monitor or SPM Client.
 
@@ -9,30 +11,29 @@ from the
 repo.  You can add your own integrations for monitoring additional
 infrastructure and services.  Pull requests welcome!
 
-
-### Capabilities
+## Capabilities
 
 This agent communicates with Sematext via HTTPS.  It buffers data on
 disk in case it cannot immediately ship it, ensuring data is never
 lost.
 
-#### Infrastructure monitoring
+### Infrastructure monitoring
 
 Lightweight and pluggable, this agent comes with a number of out of
 the box integrations. It has built-in support for collecting metrics
 from JMX, REST APIs, and from databases that support JDBC.
 
-#### Tracing
+### Tracing
 
 SPM Monitor agent can also instrument JVM-based apps using bytecode
 instrumentation to collect [transaction traces](../tracing).
 
-#### Profiling
+### Profiling
 
 On demand [JVM profiling](on-demand-profiling) to help you find
 bottlenecks in your code.
 
-### Installation
+## Installation
 
 The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
 
@@ -102,14 +103,11 @@ sudo zypper up
 sudo zypper in spm-client
    </pre>
  </div>
-
 </div>
 
+## Run modes
 
-
-### Run modes
-
-#### Embedded
+### Embedded
 
 The [Embedded](spm-monitor-javaagent) mode can be used only for
 monitoring Java-based applications since it runs as a Java Agent
@@ -120,7 +118,7 @@ is running (i.e., the process of the application being monitored), but
 once that is done, the monitor runs seamlessly in-process. See [SPM
 Monitor - Javaagent](spm-monitor-javaagent) for more info.
 
-#### Standalone
+### Standalone
 
 In the [Standalone](spm-monitor-standalone) mode the agent runs in a
 separate process and can thus be used for monitoring both Java and
@@ -132,7 +130,6 @@ up, subsequent agent updates will not require the application
 restart. See [SPM Monitor - Standalone](spm-monitor-standalone) for
 more info.
 
-
-### Requirements
+## Requirements
 
 Java 6 and above.
