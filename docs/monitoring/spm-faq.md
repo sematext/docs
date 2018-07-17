@@ -1,4 +1,5 @@
-Title: Sematext Monitoring FAQ
+title: Sematext Monitoring FAQ
+description: FAQ about Sematext server, application, and container monitoring platform with integrated alerts, dashboards, reports, and 3rd party notifications, and available in cloud as SaaS or private on-premises installation
 
 ### General
 **What should I do if I can't find the answer to my question in this FAQ?**
