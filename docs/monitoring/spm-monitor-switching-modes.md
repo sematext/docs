@@ -27,8 +27,8 @@ which you want to change the mode). Set:
 ## From Standalone to In-Process
 
 1. Add javaagent definition to startup script of your service according
-to notes on <https://apps.sematext.com/ui/monitoring> (under
-in-process tab)
+to notes on [Monitoring](https://apps.sematext.com/ui/monitoring) page under
+in-process tab
 
 2. Edit **properties** file of your system found in
 /spm/spm-monitor/conf/ directory (in case you are monitoring a service
