@@ -14,7 +14,7 @@ monitor one should first adjusting the following:
   - Depending on JMX configuration of monitored server, adjust SPM
     monitor's JMX settings in **monitor properties** file (whose exact
     location and name for your application are mentioned in step 3 on
-    <https://apps.sematext.com/ui/monitoring>)
+    [Monitoring](https://apps.sematext.com/ui/monitoring) page.
 
   
 After that, SPM monitor can be (re)started with:
