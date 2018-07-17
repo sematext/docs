@@ -1,6 +1,7 @@
-Title: Standalone Agent Mode
+title: Standalone Agent Mode
+description: Sematext standalone monitoring Java agent is started as a separate process on each machine running the application, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
 
-Unlike the [Embedded, Javaagent-based monitor](spm-monitor-javaagent), the Standalone monitor
+Unlike the [Embedded](spm-monitor-javaagent) Java agent-based monitor, the Standalone monitor
 is started as a separate process on each machine running the
 application(s) you want to monitor. A separate monitor process should be
 started for each application monitored on a machine. The installer adds
@@ -22,7 +23,7 @@ After that, SPM monitor can be (re)started with:
 sudo service spm-monitor restart
 ```
 
-### JMX Setups (i.e. How to Configure the Monitored App/Server)
+## JMX Setups (i.e. How to Configure the Monitored App/Server)
 
 There are 3 basic JMX setups (all explained below):
 
@@ -31,7 +32,7 @@ There are 3 basic JMX setups (all explained below):
   - Security with SSL and keystore/trustore
 
 
-#### No Security Setup
+### No Security Setup
 
   
 Simple setup useful for testing, but you may want to consider using one
@@ -58,7 +59,7 @@ unchanged):
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000"  # MUST match the port in -Dcom.sun.management.jmxremote.port=3000 above
 ```
 
-#### Security with Password File
+### Security with Password File
 
 You should define the role and its password in separate files for
 monitored service (say for your tomcat server 
@@ -110,7 +111,7 @@ properties in that file unchanged):
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000 -Dspm.remote.jmx.password.file=/home/spm/passwordMonitor.txt"
 ```
 
-#### Security with SSL and Keystore/Trustore
+### Security with SSL and Keystore/Trustore
 
 In this case, monitored service should get the following java arguments:
 
@@ -145,7 +146,7 @@ adjusting **monitor properties** file, see description above). However,
 there are different ways in which you can start your server, so here are
 some examples:
 
-#### Starting with Java Command
+### Starting with Java Command
 
 Here is example of starting Jetty server (any jar could have been used
 here; the Jetty started here could have run Solr or some other
@@ -161,11 +162,11 @@ java -Dcom.sun.management.jmxremote
 -jar start.jar
 ```
 
-#### Jetty (to run Solr or other apps)
+### Jetty (to run Solr or other apps)
 
 See [Starting with Java Command](#starting-with-java-command).
 
-#### Tomcat (to run Solr or other apps)
+### Tomcat (to run Solr or other apps)
 
 There are various ways of adjusting your Tomcat, depending on the
 version and on how it was installed (whether you just unpacked tomcat
@@ -183,12 +184,12 @@ CATALINA_OPTS="${CATALINA_OPTS} -Dcom.sun.management.jmxremote
 In some other cases, you may want to make similar addition for
 **CATALINA\_OPTS** variable in your **bin/catalina.sh** file.
 
-#### Elasticsearch
+### Elasticsearch
 
 No need for any adjustments since SPM monitor uses JSON API calls to
 collect Elasticsearch metrics.
 
-#### HBase
+### HBase
 
 Adjust your **hbase-env.sh** file. For instance, **hbase master** could
 get the following
@@ -220,7 +221,7 @@ mentioned in step 3 on
 
  
 
-#### Sensei
+### Sensei
 
 Adjust your **start-sensei-node.sh** by changing **JAVA\_OPTS** like
 this:
@@ -236,7 +237,7 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote
 
  
 
-#### Hadoop
+### Hadoop
 
 With Hadoop, each Hadoop node has a separate configuration of java
 arguments. If you are using **hadoop-env.sh** file (located in
@@ -324,7 +325,7 @@ Below is the image of CDH UI:
 
 ![](attachments/7766020/8978434.png)
 
-#### ZooKeeper
+### ZooKeeper
 
 Adjust your **zkServer.sh **(usually found
 at /usr/lib/zookeeper/bin/zkServer.sh) by changing **JVMFLAGS** as
@@ -337,7 +338,7 @@ export JVMFLAGS="$JVMFLAGS -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.authenticate=false"
 ```
 
-#### Kafka
+### Kafka
 
 Kafka Broker has no port opened for JMX by default. To fix this
 edit **kafka-server-start.sh** by changing JMX\_PORT as follows:
@@ -355,7 +356,7 @@ $ env JMX_PORT=9999  bin/kafka-server-start.sh config/server.properties
 For enabling JMX on Producer and Consumer nodes do it like you would do
 it for a [simple JVM application](spm-monitor-standalone/#jmx-setups-ie-how-to-configure-the-monitored-appserver).
 
-#### Storm
+### Storm
 
 Storm lets you specify Nimbus, Supervisor, and Workers' JMX ports by
 editing the storm.yaml file:
