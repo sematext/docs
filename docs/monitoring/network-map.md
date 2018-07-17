@@ -1,10 +1,12 @@
-SPM can visualize the network topology of a system monitored by SPM.  It
+title: Network Map
+description: Use NetMap to visualize the network topology and to discover and collect various data information on your hosts
+
+You can visualize the network topology of a system monitored by Sematext monitoring and logging service. It
 can discover hosts and collect information about communication between
 them, such as the amount of received/transmitted data on each port. In
 order to build this NetMap the Network Monitoring Agent needs to be
 started on each host in the system. This can be done using the
-spm-client-setup-conf.sh
-script:
+spm-client-setup-conf.sh script:
 
 ``` bash
 sudo bash /opt/spm/bin/spm-client-setup-conf.sh {token} network standalone network
@@ -37,16 +39,8 @@ To disable network monitor add the following property:
 
   - **SPM\_MONITOR\_ENABLED=false**
 
-  
-
-Network Monitor should be restarted to apply any change in properties
-file:
-
-  
+Network Monitor should be restarted to apply any change in properties file:
 
 ``` bash
 sudo service spm-monitor restart
 ```
-
-  
-
