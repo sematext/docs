@@ -1,6 +1,7 @@
-Title: Sematext Java Agent Ansible Install
+title: Sematext Java Agent Ansible Install
+description: Automated IT infrastructure configuration management for Sematext Java agent, used for IT infrastructure monitoring, transaction traces collection, and on demand JVM profiling
 
-To set up Sematext Java Agent using Ansible simply run:
+To set up Sematext Java Agent using Ansible automated provisioning and conifuration management tools simply run:
 ```sh
 ansible-galaxy install sematext.spm-monitor-install
 ansible-galaxy install sematext.spm-monitor-config
