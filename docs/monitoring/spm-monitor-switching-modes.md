@@ -1,6 +1,7 @@
-Title Switching Agent Modes
+title: Switching Agent Modes
+description: Switching modes feature allows Sematext Java monitoring agent to be switched from In-Process to Standalone mode, and from Standalone to In-Process mode on each machine running the application
 
-### From In-Process to Standalone
+## From In-Process to Standalone
 
 1. Adjust your service startup scripts by removing the javaagent
 definition and adding parameters described in [standalone mode](spm-monitor-standalone)
@@ -23,7 +24,7 @@ which you want to change the mode). Set:
 4. restart the service you are monitoring
 
 
-### From Standalone to In-Process
+## From Standalone to In-Process
 
 1. Add javaagent definition to startup script of your service according
 to notes on <https://apps.sematext.com/ui/monitoring> (under
