@@ -1,4 +1,4 @@
-title: Alerts Email Integrations
+title: Alerts Email Integration
 description: Sending emails for threshold, anomaly and / or heartbeat alerts with Sematext infrastructure and application monitoring platform. Email is default notification hook and additional integrations that can be used to send notifications to PagerDuty, Slack, and other 3rd party messaging services are also available  
 
 Email used when you first sign up for Sematext account also becomes your **Default Notification Hook** email for alerts. It is account default and automatically enabled. You can edit hook's details, copy it or delete it using actions dropdown menu.
