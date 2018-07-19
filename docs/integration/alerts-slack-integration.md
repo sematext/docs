@@ -1,3 +1,6 @@
+title: Slack Alert Integration
+description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Slack's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
+
 Slack Integration with Sematext Monitoring Alerts can be created:
 
 - using incoming WebHooks with URL
