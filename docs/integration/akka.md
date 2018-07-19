@@ -1,5 +1,5 @@
-Title: Akka performance monitoring
-Description: APM, Akka, Java, Performance Monitoring
+title: Akka performance monitoring
+description: Sematext APM monitoring integration for Akka actors, dispatchers, and routers reports as well as OS, JVM heap, garbage collection, class loading, threads, memory pool, and other real-time visualizations with with dashboards, notification channels and alerts.
 
 ## Integration
 
