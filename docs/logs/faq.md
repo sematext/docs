@@ -153,8 +153,8 @@ app or make sure there are no conflicting fields.
 Yes, when you change your index structure using Field Editor you will
 be given the opportunity to reindex your data.
 
-![](attachments/6520901/102003302.png?width=300)
-
+<img src="https://sematext.com/wp-content/uploads/2018/07/reindex-field-editor.png"/ alt="Reindex your data using Field Editor">
+          
 Please keep in mind that the speed of reindexing depends on how much
 data needs to be reindexed and that reindexing is treated like original
 ingestion, which means it counts towards your daily volume and could
