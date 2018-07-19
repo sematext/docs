@@ -1,3 +1,6 @@
+title: Pagerduty Alerts Integration
+description: Sematext threshold, anomaly and / or heartbeat Alerts integration with PagerDuty devops management and analytics platform. Use them together to gain full visibility into enterprise services, systems, incident response, and IT infrastructure health.
+
 Use PagerDuty’s on-call schedules and escalation policies so that the right people are notified when events are triggered from Sematext 's server and application performance monitoring, alerting, and anomaly detection platform.
 
 ## **In PagerDuty**
