@@ -31,7 +31,7 @@ the `Logs > All Logs Apps` section in our centralized logging and monitoring man
 
 On click, `App Settings > Usage` page will present both Total Volume in Gb and Total Count of indexed logs for that particular logging app.
 
-<img src="https://sematext.com/wp-content/uploads/2018/07/reindex-field-editor.png" alt="Reindex your data using Field Editor" />
+<img alt="Logging App Log Count" src="/docs/images/logs/logging-app-usage-page.png" title="Logging app usage page">
 
 **How can I check the number of logs I currently have in a logging app?**
 
@@ -153,7 +153,7 @@ app or make sure there are no conflicting fields.
 Yes, when you change your index structure using Field Editor you will
 be given the opportunity to reindex your data.
 
-<img src="https://sematext.com/wp-content/uploads/2018/07/reindex-field-editor.png"/ alt="Reindex your data using Field Editor">
+<img alt="Logging App Log Count" src="/docs/images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
           
 Please keep in mind that the speed of reindexing depends on how much
 data needs to be reindexed and that reindexing is treated like original
@@ -778,5 +778,3 @@ For example: `856f4f9c3c084da08ec7ea9ad5d4cadf/logsene_2016-07-20/18`
     <div class="overlay"></div>
   </a>
 </div>
-
-
