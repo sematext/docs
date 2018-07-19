@@ -31,7 +31,7 @@ the `Logs > All Logs Apps` section in our centralized logging and monitoring man
 
 On click, `App Settings > Usage` page will present both Total Volume in Gb and Total Count of indexed logs for that particular logging app.
 
-<img alt="Logging App Total Volume / Count Page" src="/docs/images/logs/logging-app-usage-page.png" title="Logging App Total Volume / Count Page">
+<img src="https://sematext.com/wp-content/uploads/2018/07/reindex-field-editor.png" alt="Reindex your data using Field Editor" />
 
 **How can I check the number of logs I currently have in a logging app?**
 
