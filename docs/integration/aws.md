@@ -1,3 +1,6 @@
+title: AWS Integration 
+description: Sematext monitoring integration for AWS - Amazon Web Services EC2, EBS and/or ELB metrics reporting. Monitor, search, analyze and explore AWS resources with comprehensive, real-time view of your host's performance and status
+
 ** Which IAM permissions are needed to fetch Amazon EC2, EBS and ELB metrics **
 
 When you create an AWS app, you need to provide the access key and secret for a user that can fetch metrics for EC2, EBS and/or ELB, depending on which of those you select to be monitored. We recommend creating a separate IAM user for this, with the minimum permissions:
