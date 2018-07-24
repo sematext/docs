@@ -131,7 +131,7 @@ The default patterns are available [here](https://github.com/sematext/logagent-j
 Install Logagent as a local module and save the dependency to your package.json
 
 ```
-npm i logagent-js --save
+npm i @sematext/logagent --save
 ```
 
 Use the Logparser module in your source code
@@ -146,6 +146,8 @@ lp.parseLine('log message', 'source name', function (err, data) {
     console.log(JSON.stringify(data))
 })
 ```
+
+## How to test log patterns? 
 
 Use the command line tool 'logagent' to test patterns or convert logs from text to JSON. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Logsene](http://sematext.com/logsene) or Elasticsearch.
 
