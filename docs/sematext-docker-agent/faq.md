@@ -6,7 +6,7 @@ If the predefined log patterns don't match your container logs, you can [add you
 You can find more details about pattern definitions in the [Logagent documentation](https://sematext.com/docs/logagent/parser/) and the [Logagent FAQ](https://sematext.com/docs/logagent/faq/). 
 Please note the regular expression in the property `sourceName` should match the image name or container name.
 
-You can use [Logagent](/docs/logagent) to test log patterns before you use the pattern file with Sematext Docker Agent. 
+You can use [Logagent](/logagent) to test log patterns before you use the pattern file with Sematext Docker Agent. 
 An example command to test log parsing for a `Cassandra` database container:
 ```
 docker run --rm cassandra | logagent -f mypatterns.yml --yml -n cassandra
