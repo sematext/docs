@@ -100,9 +100,9 @@ the API will need to be made for each App.  
 ** Event Types **
 
 Each event has a type.  This helps you distinguish between different kinds of events.
-You can specify the event type as a field in the even JSON structure as shown further below.
+You can specify the event type as a field in the event JSON structure as shown further below.
 You may want to use types such as
-**alert**, **app\_restart**, **server\_restart**, **reboot**, **deployment**...
+**alert**, **app\_restart**, **server\_restart**, **reboot**, **deployment**...
 To get the most value out of typed events we strongly suggest using a smaller number of distinct
 event types (1-10) to keep things manageable.
 
@@ -116,8 +116,7 @@ errors, HTTPS communication should be successful.
 
 Consider an App whose token (your App tokens are at:
 <https://apps.sematext.com/ui/integrations/apps>) is
-**1111111-2222-3333-4444-555555555555**.  To send
-a **server\_restart** event call the Events API with the App token in the URL:
+**1111111-2222-3333-4444-555555555555**.  To send a **server\_restart** event call the Events API with the App token in the URL:
 
 [https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
 
@@ -145,7 +144,7 @@ curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-55555555
 
 **Example 2**
 
-Same App, but we want to post a **deployment** event with more event properties populated. In this case the HTTP endpoint would be:
+Same App, but we want to post a **deployment** event with more event properties populated. In this case the HTTP endpoint would be:
 
 [https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event](https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event)
 
