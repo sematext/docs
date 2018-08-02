@@ -1,5 +1,5 @@
-Title: Monitoring events 
-Description: APM, performance monitoring, server events, container events, business events, docker events
+title: Monitoring Events 
+description: Event stream captures all your key IT and operations such as server, container, docker, and business events, and lets you search and filter historical alerts and add custom events via the UI or the REST API
 
 ### Events: What, Why, How?
 
