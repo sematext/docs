@@ -9,7 +9,7 @@ When you use the API, here are the things you need to know:
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe)
   - port: **80** (**443** for HTTPS)
   - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
-  - apiKey provided in one of ways:
+  - apiKey provided in one of the following ways:
     * basic auth credentials
       ```
       username:apiKey
@@ -22,7 +22,9 @@ When you use the API, here are the things you need to know:
       ```
 
 
-    Note that `31d28ff8-ae02-4ff9-b504-ea8013661412` is just an example. You can find and regenerate you apiKey here: https://apps.sematext.com/ui/account/api)
+    Note that `31d28ff8-ae02-4ff9-b504-ea8013661412` is just an example. You can find and regenerate your apiKey:
+       - https://apps.sematext.com/ui/account/api (US),
+       - https://apps.eu.sematext.com/ui/account/api (EU).
 
 ## Searching
 
