@@ -442,6 +442,9 @@ FISMA, DIACAP, FedRAMP, and HIPAA.  For more information about AWS
 security and compliance certifications see:
 <http://aws.amazon.com/security> and <https://aws.amazon.com/compliance/>.
 
+Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
+your API calls using `apiKey`. You can read more about this [here](search-through-the-elasticsearch-api) and [here](/apiKey).
+
 **Where is my data stored?**
 
 Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.

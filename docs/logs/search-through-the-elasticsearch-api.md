@@ -9,6 +9,22 @@ When you use the API, here are the things you need to know:
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe)
   - port: **80** (**443** for HTTPS)
   - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
+  - apiKey provided in one of the following ways:
+    * basic auth credentials
+      ```
+      username:apiKey
+      password:31d28ff8-ae02-4ff9-b504-ea8013661412
+      ```
+  
+    * apiKey in `Authorization` HTTP header:
+      ```
+      Authorization: apiKey 31d28ff8-ae02-4ff9-b504-ea8013661412
+      ```
+
+
+    Note that `31d28ff8-ae02-4ff9-b504-ea8013661412` is just an example. You can find and regenerate your apiKey:
+       - https://apps.sematext.com/ui/account/api (US),
+       - https://apps.eu.sematext.com/ui/account/api (EU).
 
 ## Searching
 
@@ -30,7 +46,7 @@ The simplest search method to get your data out of our logging management platfo
 
 You need to provide the query using the *q* parameter. For example, to search for the *internal* and *connection* terms you would run the following:
 
-    curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
+    curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
 
 **Note:** Please check [Apache Lucene query syntax](https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html) for reference.
 
@@ -45,7 +61,7 @@ For example, to find documents that match the *internal* and
 *connection* terms run the following:
 
 ``` bash
-curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
  "query" : {
   "bool" : {
    "must" : [
@@ -67,7 +83,7 @@ curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_
 To analyze this data further we can [add aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html) to our query to find common status responses for example:
 
 ```bash
-curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
  "query" : {
   "bool" : {
    "must" : [
@@ -246,7 +262,7 @@ For example, to retrieve documents with identifier *AU29tJz0UV2O9bWZ\_KkU* and 
 which areof type *apache* from our example application identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following request:
 
 ``` bash
-curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/_mget?pretty' -d '{
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/_mget?pretty' -d '{
  "docs" : [
   { "_index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free", "_type" : "apache", "_id" : "AU29tJz0UV2O9bWZ_KkU"},
   { "_index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free", "_type" : "apache", "_id" : "AU29rlOPUV2O9bWZ-Daw"}
@@ -286,7 +302,7 @@ The request needs to be run against \_msearch REST end-point and each query need
 For example, the following example shows the usage of Multiple Search API:
 
 ``` bash    
-curl -XGET 'logsene-receiver.sematext.com/_msearch?pretty' --data-binary '{ "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/_msearch?pretty' --data-binary '{ "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
 { "query" : { "match_all" : {} }, "size" : 1 }
 { "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
 { "query" : { "term" : { "status" : 200 } }, "size" : 1 }'
