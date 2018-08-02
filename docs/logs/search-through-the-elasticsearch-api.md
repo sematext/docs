@@ -23,8 +23,9 @@ When you use the API, here are the things you need to know:
 
 
     Note that `31d28ff8-ae02-4ff9-b504-ea8013661412` is just an example. You can find and regenerate your apiKey:
-       - https://apps.sematext.com/ui/account/api (US),
-       - https://apps.eu.sematext.com/ui/account/api (EU).
+
+      * [https://apps.sematext.com/ui/account/api](https://apps.sematext.com/ui/account/api) (US),
+      * [https://apps.eu.sematext.com/ui/account/api](https://apps.eu.sematext.com/ui/account/api) (EU).
 
 ## Searching
 
