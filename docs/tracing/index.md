@@ -1,7 +1,7 @@
 title: Transaction Tracing
 description: Trace code execution from beginning to end, see insights into operations about various data stores with database operations report, and trace arbitrary applications, including backend and command-line apps, batch jobs like MapReduce and more
 
-### What is Transaction Tracing
+## What is Transaction Tracing
 
 Transaction tracing lets one trace code execution from beginning to end.
 It also enables [Database Operations](database-operations) reporting. In case of
@@ -27,7 +27,7 @@ running applications and troubleshoot performance issues.
 
 [![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](http://blog.sematext.com/blog/introducing-appmap/)
 
-**Notes:**
+## Notes
 
   - Transaction Tracing requires SPM monitor running in [embedded mode](/monitoring/spm-monitor-javaagent).
   - Enabling/disabling the tracing agent requires SPM monitor restart,
@@ -36,7 +36,7 @@ running applications and troubleshoot performance issues.
   - Enabling transaction traces adds only about 1% CPU overhead.
   - Transaction Tracing is different from [On Demand Profiling](/monitoring/on-demand-profiling).
 
-**Resources**:
+## Resources
 
   - <http://blog.sematext.com/blog/transaction-tracing-performance-monitoring/>
   - <http://blog.sematext.com/blog/transaction-tracing-reports/>
