@@ -1,3 +1,6 @@
+title: Database Operations
+description: Detailed insight report into operations about various data stores such as Solr, Elasticsearch or any backend with which your application communicates using SQL - MySQL, Apache Cassandra (CQL), Apache Phoenix, Drill, Impala, and any other backend apps talk to via JDBC
+
 Database Operations reports provide detailed insight (details further
 below) into operations about various data stores - this includes
 operations executed against Solr or Elasticsearch clusters, as well as
@@ -5,8 +8,8 @@ other types of data stores.
 
 Important:
 
-  - To get this information **add SPM agent to the *application that is
-    talking to a data store* **(e.g. Solr or Elasticsearch or any
+  - To get this information **add SPM agent to the *application that is
+    talking to a data store* **(e.g. Solr or Elasticsearch or any
     backend with which your application communicates using SQL - MySQL,
     Apache Cassandra (CQL), Apache Phoenix, Drill, Impala, and any other
     backend apps talk to via JDBC). This is because the *SPM agent
