@@ -1,3 +1,6 @@
+title: Custom Pointcuts
+description: Instrument custom method calls with the build-in extension mechanism not handled by the Sematext infrastructure  and monitoing tracing agent
+
 The built-in extension mechanism can be used to instrument custom method
 calls that are not handled by the SPM tracing agent out of the box. An
 extension is set of pointcuts described in XML files placed in
