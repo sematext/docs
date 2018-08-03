@@ -1,6 +1,9 @@
-### Tracing Scala Apps
+title: Scala 
+description: Sematext infrasctructure and application monitoring service provides Scala transaction tracing, giving insight into end-to-end request code execution that can span across multiple running applications and multiple servers
 
-Sematext let's you trace transactions for Scala apps, too\!  In order
+## Tracing Scala Apps
+
+Sematext application and infrastructure monitoring platform lets you trace transactions for Scala apps. In order
 to define custom pointcuts for a Scala app you need to follow the
 convention Scala uses to generate JVM classes. Below you can find a
 simple example that covers all basic cases:
@@ -49,8 +52,6 @@ object StatisticsService extends App {
   serve()
 } 
 ```
-
- 
 
 [Custom pointcuts](custom-pointcuts) definition:
 
