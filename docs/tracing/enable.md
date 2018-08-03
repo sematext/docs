@@ -1,3 +1,6 @@
+title: Enabling Transaction Tracing
+description: Enable transaction tracing in monitoring agent configuration file and start tracing code execution from beginning to end, and identify performance bottlenecks in running code across applications, networks, and servers. 
+
 To enable tracing edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
