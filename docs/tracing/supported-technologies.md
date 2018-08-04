@@ -1,3 +1,6 @@
+title: Supported Technologies
+description: Sematext APM platform provides Java applications distributed tracing support for automatically tracing requests to web servers such as Tomcat and Jetty as well as techologies like Spring Boot, Elasticsearch TransportClient and more
+
 Currently, only Java applications can be traced. The agent is compiled
 with Java 1.6 target, so applications using Java 1.6 and up are
 supported.
