@@ -1,4 +1,5 @@
 title: Sematext Enterprise Overview
+description: Sematext Enterprise is on-premises version of our managed SaaS platform with application, server, and container monitoring, log management, and alerting for devops running dynamic infrastructure. All in one private solution for metrics, traces, logs, alerts, and events. 
 
 <a href="https://sematext.com/enterprise">Sematext Enterprise</a> is private or on-premises version of <a href="https://sematext.com/cloud">Sematext Cloud</a>.
 
