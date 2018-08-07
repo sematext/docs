@@ -1,5 +1,5 @@
 title: Sematext Enterprise Licensing
-description: Licensing details for Sematext infrastructure & application performance monitoring, and log management
+description: Licensing details for our on-premises infrastructure & application performance monitoring, and log management & analytics tools, all in one private solution for busines metrics, traces, logs, alerts, and events
 
 <div class="accordion">
   <div class="option">
