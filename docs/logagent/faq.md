@@ -1,7 +1,5 @@
 Title: Logagent FAQ
 
-## Logagent FAQ
-
 
 ### Is there a verbose / debug mode and how is it enabled?
 
