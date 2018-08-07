@@ -1,3 +1,5 @@
+title: Elastisearch Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/Elasticsearch/overview](https://apps.sematext.com/ui/howto/Elasticsearch/overview)

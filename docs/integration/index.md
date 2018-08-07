@@ -1,5 +1,5 @@
-Title: Integrations
-Descriptions: Sematext integrations for infrastructure monitoring, log management, alerting, chatops, etc.
+title: Integrations
+descriptions: Sematext integrations for infrastructure monitoring, log management, alerting, chatops, etc.
 
 ### Monitoring
 

@@ -1,5 +1,4 @@
-Title: Sematext Cloud / APM API 
-Description: APM, API, Performance Monitoring
+Title: Sematext Cloud API 
 
 #### Introduction
 Sematext Cloud exposes REST API to access its functionalities. The REST API can be used to easily manage your Account and Apps remotely, without the need to be logged-in via a browser. It also makes it possible to automate certain tasks, such as creation of new Apps, definition of Alert Rules, etc.

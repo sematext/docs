@@ -1,4 +1,4 @@
-title: Apache Web Server Monitoring
+title: Apache Web Server Monitoring Integration
 description: Apache monitoring integration sends workers, scoreboard, php fpm, and httpd server performance metrics and other inventory data from your OS and web server to Sematext in cloud SaaS / private on-premises infrastructure and application monitoring & log management service 
 
 ## Integration

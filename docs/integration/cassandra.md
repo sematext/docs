@@ -1,4 +1,4 @@
-title: Cassandra Integration 
+title: Cassandra Monitoring Integration
 description: Sematext integration used to capture and report Cassandra metrics, including throughput requests, errors, latency, compaction activity, and more. Use built-in reports and monitoring dashboards to capture and troubleshoot Cassandra issues in real-time by cluster or specific node in production
 
 ## Integration

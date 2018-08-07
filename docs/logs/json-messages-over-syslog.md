@@ -1,4 +1,4 @@
-title: JSON messages over Syslog
+title: Index JSON Messages over Syslog
 description: Forwarding your logs with rsyslog using Sematext log management and analysis tools. Configuring log management app inputs and outputs, logs tagging, protocol and authentication.
 
 <span><div class="material-icons icon-warning ">error_outline</div><strong> IMPORTANT</strong> </span>

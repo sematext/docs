@@ -1,4 +1,4 @@
-title: Syslog
+title: Sematext Syslog Integration
 description: Send syslog messages from any application to Sematext log management app. Token and IP based authorization for shipping logs over TCP/UDP/RELP
 
 Sematext centralized monitoring and logging solution supports receiving syslog messages from any application, as long as

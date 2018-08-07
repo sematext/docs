@@ -1,3 +1,5 @@
+title: ZooKeeper Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/ZooKeeper/overview](https://apps.sematext.com/ui/howto/ZooKeeper/overview)

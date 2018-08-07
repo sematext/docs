@@ -1,3 +1,5 @@
+title: MongoDB Monitoring Integration
+
 <div class="video_container">
 <iframe class="video" src="https://www.youtube.com/embed/BIERrXzbiNM" frameborder="0" allowfullscreen ></iframe>
 </div>

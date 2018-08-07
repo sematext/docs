@@ -1,3 +1,5 @@
+Title: Spark Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/Spark/overview](https://apps.sematext.com/ui/howto/Spark/overview)

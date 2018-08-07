@@ -1,3 +1,5 @@
+title: PHP FPM Monitoring Integration
+
 ## Overview
 
 [PHP FPM](http://php.net/manual/en/install.fpm.php) module is integrated with Nginx and Apache and its metrics are displayed as part of Nginx and Apache monitoring in Sematext.

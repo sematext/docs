@@ -1,4 +1,4 @@
-title: Field Types
+title: Logs Field Types
 description: Field Types supported by Sematext Cloud based SaaS / On-premises logging as a service platform
 
 You can see available field types when adding or modifying a field in Field Editor.

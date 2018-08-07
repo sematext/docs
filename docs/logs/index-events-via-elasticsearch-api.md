@@ -1,4 +1,4 @@
-title: Index events via Elasticsearch API
+title: Index Events via Elasticsearch API
 description: Sending, custom & default mapping, and indexing log events using Elasticsearch API. Use other applications such as Logstash, Apache Flume, Fluentd Plugin to send log events and search for logs using UI.
 
 ## The Essentials

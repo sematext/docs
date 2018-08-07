@@ -1,3 +1,5 @@
+title: Sematext Enterprise Overview
+
 <a href="https://sematext.com/enterprise">Sematext Enterprise</a> is private or on-premises version of <a href="https://sematext.com/cloud">Sematext Cloud</a>.
 
 Sematext Enterprise is available either as pre-built VM (Ubuntu

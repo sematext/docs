@@ -1,4 +1,4 @@
-title: Hipchat
+title: Alerts Hipchat Integration
 description: Infrastructure and application monitoring alerts integration with Hipchat collaboration and messaging tool.
 
 Hipchat is a tool for team collaboration and messaging by Atlassian. It provides integration with a wide range of other tools in your environment, including Sematext monitoring and logging management platform.

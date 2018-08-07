@@ -1,4 +1,4 @@
-title: Syslogd
+title: Sematext Syslogd Integration
 description: Ship your logs to Sematext centralized monitoring and logging plafrom with syslogd via UDP. 
 
 With plain syslogd, you can send logs to Sematext Logs Management App via UDP if you add this

@@ -1,3 +1,5 @@
+title: HAProxy Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/HAProxy/overview](https://apps.sematext.com/ui/howto/HAProxy/overview)

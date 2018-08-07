@@ -1,4 +1,4 @@
-title: Logstash
+title: Sematext Logstash Integration
 description: Logstash can be used to send logs to Sematext monitoring and logging platform. Parse logs with grok filter, tag specific events, aggregate and index data and metrics from different sources
 
 In order make [Logstash](https://www.elastic.co/products/logstash) send logs to Sematext Logs Management app, you

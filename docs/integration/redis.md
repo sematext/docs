@@ -1,3 +1,5 @@
+title: Redis Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/Redis/overview](https://apps.sematext.com/ui/howto/Redis/overview)

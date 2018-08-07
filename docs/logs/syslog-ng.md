@@ -1,4 +1,4 @@
-title: Syslog-ng
+title: Sematext Syslog-ng Integration
 description: Ship your logs to Sematext centralized monitoring and logging plafrom with syslog-ng. Configure sources to collect all system messages and tail files, tag logs, configure destination with Token and IP-based authentication, and bind sources to destinations
 
 

@@ -1,5 +1,5 @@
-title: Licensing
-description: Licenisng details for Sematext infrastructure & application performance monitoring, and log management service.
+title: Sematext Enterprise Licensing
+description: Licensing details for Sematext infrastructure & application performance monitoring, and log management
 
 <div class="accordion">
   <div class="option">

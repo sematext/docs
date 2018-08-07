@@ -1,4 +1,4 @@
-# FAQ 
+title: Sematext Docker Agent FAQ
 
 ## How can I add patterns to parse my container logs?
 

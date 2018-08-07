@@ -1,3 +1,5 @@
+title: NodeJS Monitoring Integration
+
 ## Overview
 
 A light-weight, open-source [Node.js monitoring

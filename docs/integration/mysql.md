@@ -1,3 +1,5 @@
+title: MySQL Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/MySQL/overview](https://apps.sematext.com/ui/howto/MySQL/overview)

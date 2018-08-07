@@ -1,4 +1,4 @@
-title: Rsyslog
+title: Sematext Rsyslog Integration
 description: Forward logs to Sematext logging management service with rsyslog. Query and visualise logs, create alerts, narrow down events of interest and locate system or app errors 
 
 <span><div class="material-icons icon-warning ">error_outline</div><strong> IMPORTANT</strong> </span>

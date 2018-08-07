@@ -1,4 +1,4 @@
-title: Search Syntax
+title: Sematext Logs Search Syntax
 description: Create your own queries with Sematext logging management solution using terms and term modifiers, regular expressions, fuzzy searches, boolean operators, proximity and range searches, field grouping and more
 
 Although Sematext's centralized logging management solution  provides the ability to create your own queries through

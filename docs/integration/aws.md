@@ -1,4 +1,4 @@
-title: AWS Integration 
+title: AWS Monitoring Integration 
 description: Sematext monitoring integration for AWS - Amazon Web Services EC2, EBS and/or ELB metrics reporting. Monitor, search, analyze and explore AWS resources with comprehensive, real-time view of your host's performance and status
 
 ** Which IAM permissions are needed to fetch Amazon EC2, EBS and ELB metrics **

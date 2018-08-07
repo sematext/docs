@@ -1,3 +1,5 @@
+title: Tomcat Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/Tomcat/overview](https://apps.sematext.com/ui/howto/Tomcat/overview)

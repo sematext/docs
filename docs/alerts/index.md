@@ -1,4 +1,4 @@
-Title: Alerting on logs and metrics  
+title: Alerting on logs and metrics  
 
 ### Alert Types
 [Sematext Cloud](http://sematext.com/cloud/) includes multiple types

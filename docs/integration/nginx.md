@@ -1,3 +1,5 @@
+title: Nginx Monitoring Integration
+
 ## Integration
 
 - Agent: [https://github.com/sematext/sematext-agent-nginx](https://github.com/sematext/sematext-agent-nginx)

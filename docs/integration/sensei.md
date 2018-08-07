@@ -1,3 +1,5 @@
+title: Sensei Monitoring Integration
+
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/Sensei/overview](https://apps.sematext.com/ui/howto/Sensei/overview)

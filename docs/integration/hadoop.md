@@ -1,3 +1,5 @@
+title: Hadoop Monitoring Integration
+
 ## Overview
 
 SPM supports monitoring of both **MRv1** (0.22 and earlier, 1.0, 1.1)
