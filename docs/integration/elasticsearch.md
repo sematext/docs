@@ -1,4 +1,5 @@
 title: Elastisearch Monitoring Integration
+description: Collect and monitor key elasticsearch metrics such as request latency, indexing rate, segment merges with built-in anomaly detection, threshold, and heartbeat alerts. Correlate events & logs, connect with various chatops integrations, filter metrics by server, node, time or index, and visualize your cluster's health with out of the box graphs and custom dashboards
 
 ## Integration
 
