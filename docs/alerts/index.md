@@ -1,4 +1,5 @@
-title: Alerting on logs and metrics  
+title: Alerting on logs and metrics
+description: Threshold, anomaly, and heartbeat alerts for your logs and infrastructure metrics with email notifications and various 3rd party integrations and notification hooks such as PagerDuty, Slack and more
 
 ### Alert Types
 [Sematext Cloud](http://sematext.com/cloud/) includes multiple types
