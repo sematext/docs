@@ -32,7 +32,7 @@ Also, all responses contain an HTTP code which describes success or failure. In 
 
 #### API Explorer
 
-Try out the REST APIs using the API Key of your Sematext account at :
+Try out the REST APIs using the API Key of your Sematext account at:
 
 * <a href="https://apps.sematext.com/api-explorer" target="_blank">Sematext Cloud US Region</a>
 
