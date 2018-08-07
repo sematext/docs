@@ -1,4 +1,5 @@
 title: Default Alert Notification Hooks
+description: Default account notification hook(s) is used to easily change where alert notifications are sent without needing to modify each and every alert rule individually. 
 
 Each alert rule can be configured to send notifications to one or more
 notification hooks.  But what do you do when you want to change where
