@@ -1,4 +1,4 @@
-title: Sematext Documentation FAQ
+title: Sematext FAQ
 description: FAQ about Sematext monitoring and logging products, integrations, alerts, api, billing, security, private vs SaaS options and more
 
 ## General
