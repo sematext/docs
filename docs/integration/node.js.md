@@ -1,4 +1,5 @@
 title: NodeJS Monitoring Integration
+description: Sematext node.js monitoring integration is available as npm package and added as any other node.js module. Request rate and event loop latency, memory, http server stats, garbage collection and other node.js reports and dashboards are available out of the box. Set up anomaly detection or threshold-based alerts on any combination of metrics and filters, and use heartbeat alerts to notify you when any of your nodes goes down
 
 ## Overview
 
