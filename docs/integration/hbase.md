@@ -1,4 +1,5 @@
 title: HBase Monitoring Integration
+description: Sematext infrastructure monitoring service captures all key HBase metrics with out of the box dashboards and charts. Monitor all key metrics and stats such as requests, locality, compactions, splits, flushes, read and write rates, and more. Heartbeat alerts, enabled by default, notify you when any of your nodes goes down and help you troubleshoot HBase database performance issues
 
 ## Integration
 
