@@ -1,5 +1,5 @@
 title: Hadoop Monitoring Integration
-description: Sematext's Hadoop server monitoring provides overview of the common Hadoop components within your cluster such as NameNode, DataNode, CPU, memory, JVM and more. It also includes MRv1 version specific reports sucha as JobTracker, JobTracker Queues, TaskTracker as well as YARN specific ResourceManager, ResourceManager Queues, and NodeManager report
+description: Sematext's Hadoop server monitoring provides overview of the common Hadoop components within your cluster such as NameNode, DataNode, CPU, memory, JVM and more. It also includes MRv1 version specific reports such as JobTracker, JobTracker Queues, TaskTracker as well as YARN specific ResourceManager, ResourceManager Queues, and NodeManager report
 
 ## Overview
 
