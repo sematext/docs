@@ -1,4 +1,5 @@
 title: HAProxy Monitoring Integration
+description: HAProxy proxy server offers a multitude of metrics that allow high visibility into its performance. Sematext monitoring SaaS helps you identify poor load balancer performance which can result in latency across your entire stack. Correlate various HAProxy metrics such as HTTP response codes, request rate, sessions, connection errors, retries, backup, downtime, and more
 
 ## Integration
 
