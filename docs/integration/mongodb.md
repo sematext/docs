@@ -1,4 +1,5 @@
 title: MongoDB Monitoring Integration
+description: Monitor all key MongoDB metrics and stats, namely server state, global lock ratio, current vs. available connections, opcounters, and more. View and analyze performance reports with our infractructure monitoring and logging management platform, and let your whole devops team monitor MongoDB database deployments with multi-user RBAC and application sharing support
 
 <div class="video_container">
 <iframe class="video" src="https://www.youtube.com/embed/BIERrXzbiNM" frameborder="0" allowfullscreen ></iframe>
@@ -6,9 +7,9 @@ title: MongoDB Monitoring Integration
 
 ## Overview
 
-The client for "SPM for MongoDB" is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb) that collects MongoDB metrics and sends them to SPM. It is available as[ npm](https://www.npmjs.com/package/spm-agent-mongodb)[ package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
+The client for "SPM for MongoDB" is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb) that collects MongoDB metrics and sends them to SPM. It is available as [npm](https://www.npmjs.com/package/spm-agent-mongodb)[ package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
 
-In addition to collecting MongoDB metrics, you can send [Custom Metrics](/monitoring/custom-metrics), such as the number of concurrent
+In addition to collecting MongoDB metrics, you can send [Custom Metrics](/monitoring/custom-metrics), such as the number of concurrent
 users, the number of items placed in a shopping cart, or any other kind
 of business transaction or KPI.
 
@@ -17,7 +18,7 @@ of business transaction or KPI.
 1.  Create an SPM App of type "MongoDB" in SPM 
 2.  Click the "**Install Monitor**" button and follow the customized
     instructions for the created SPM App (basically how to install
-    the [NPM package](https://www.npmjs.com/package/spm-agent-mongodb)
+    the [NPM package](https://www.npmjs.com/package/spm-agent-mongodb)
     and configure the SPM App Token)
 
 ** Troubleshooting and "How To **
@@ -44,7 +45,7 @@ variable HTTPS\_PROXY=[https://your-proxy](https://your-proxy/).
 The native modules are automatically compiled during "npm install"
 (using node-gyp). On Windows the required build tools like python or C++
 compilers are typically not installed by default.  
-In this case please check <https://github.com/TooTallNate/node-gyp> for
+In this case please check <https://github.com/TooTallNate/node-gyp> for
 details about the required compiler and build tools.
 
 ** Upgrading to a new node.js version **
