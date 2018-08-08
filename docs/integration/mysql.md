@@ -1,4 +1,5 @@
 title: MySQL Monitoring Integration
+description: Comprehensive view of your database’s health and performance with Sematext MySQL monitoring integration. Our infrastructure monitoring tools provide real-time visibility into the performance and availability of various MySQL databases metrics. Use built in reports and dashboards, and identify and investigate MySQL database server issues before they become incidents
 
 ## Integration
 
