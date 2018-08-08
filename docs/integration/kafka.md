@@ -1,4 +1,5 @@
 title: Kafka Monitoring Integration
+description: Monitor Kafka metrics for brokers, producers, and consumers, consumer lag and offset monitoring by consumer group, topic, or partition, and more. Our cloud and on-premises tools provide out of box Kafka graphs, reports and custom dashboards with built-in anomaly detection, threshold, and heartbeat alerts as well as easy chatops integrations
 
 ## Integration
 
