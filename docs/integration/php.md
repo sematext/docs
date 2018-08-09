@@ -1,4 +1,5 @@
 title: PHP FPM Monitoring Integration
+description: PHP FPM module is integrated with Nginx and Apache and its metrics are displayed as part of Nginx and Apache monitoring in Sematext. The integration automatically collects FPM metrics and lets you visualize and correlate them with the rest of your applications, and set up custom service checks and monitors to notify you in case there are problems with your FPM instances 
 
 ## Overview
 
