@@ -1,4 +1,5 @@
-Title: Installation on Heroku
+title: Installation on Heroku
+description: Forward logs to Sematext logging management and analytics SaaS using Heroku Log Drains. Deploy logagent-js and easily handle high logs volume, visualize and create dashboards and alerts, and use Sematext logging and monitoring tools with Heroklu cloud application platform 
 
 ## Run Logagent as Heroku Log Drain
 
