@@ -1,4 +1,5 @@
-Title: Install Logagent on Windows
+title: Install Logagent on Windows
+description: Logagent, Sematext log shipper and Logstash alternative, is available as node.js npm package for Linux, Mac, and Windows. It has automatic Systemd or Upstart service scripts installation and seamless logging system service integration with our logs management and analysis platform
 
 ## Installation on Windows
 
