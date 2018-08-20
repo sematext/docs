@@ -1,5 +1,5 @@
-Title: Filter raw input with regular expressions
-Description: log filter, grep, reduce log volume 
+title: Filter raw input with regular expressions
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. Input filters process raw input from input plugins before log events get parsed and grep and grok filters are currently available
 
 ## Input Filter: Grep 
 
