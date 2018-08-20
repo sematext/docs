@@ -1,4 +1,5 @@
-Title: Install Logagent 
+title: Install Logagent
+description: Logagent, Sematext log shipper and Logstash alternative, is available as node.js npm package for Linux, Mac and Windows. It has automatic Systemd or Upstart service scripts installation and seamless logging system service integration with our logs management and analysis platform
 
 ## Installation for Linux & Mac OS X
 
@@ -19,8 +20,11 @@ sudo npm i -g @sematext/logagent
 ### Install service (Linux, Mac OS X)
 
 1. Get a free account at [sematext.com](https://apps.sematext.com/ui/registration)
-2. [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/) 
+
+2. [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/), Sematext logs management and analysis system
+
 3. Install Logagent as system service
+
 Logagent detects the init system and installs Systemd or Upstart service scripts. 
 On Mac OSX it creates a Launchd service. Simply run:
 
