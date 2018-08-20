@@ -1,5 +1,5 @@
-Title: Logagent configuration file
-Description: log shipper, logagent, configuration
+title: Logagent Configuration File
+description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or to rtail for real-time log view 
 
 ## Config File 
 
