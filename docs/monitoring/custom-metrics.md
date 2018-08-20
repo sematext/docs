@@ -1,6 +1,5 @@
 title: Custom Metrics
-description: Sematext infrastructure and application monitoring service exposes APIs and provides libraries that let you
-send custom metrics and turn them into dashboards and real-time visualizations
+description: Sematext infrastructure and application monitoring service exposes APIs and provides libraries that let you send custom metrics and turn them into dashboards and real-time visualizations
 
 [SPM](http://sematext.com/spm/) lets you extend standard performance
 metrics reports. SPM exposes APIs and provides libraries that let you
