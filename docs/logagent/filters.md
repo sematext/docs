@@ -1,4 +1,5 @@
-Title: Logagent filter functions
+title: Logagent filter functions
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. Input and output filters are available, and they drop, transform or aggregate log events and hook into the processing chain. 
 
 ## Filters
 
