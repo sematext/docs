@@ -1,4 +1,5 @@
-Title: Use Grok patterns to filter raw logs 
+title: Use Grok patterns to filter raw logs 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. Input filters process raw input from input plugins before log events get parsed and grep and grok filters are currently available
 
 ## Input Filter: Grok
 
