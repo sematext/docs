@@ -1,6 +1,5 @@
 title: Sematext Monitoring Java Agent
-description: Sematext Java agent is used for IT infrastructure monitoring, collecting metrics
-from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling 
+description: Sematext Java agent is used for IT infrastructure monitoring, collecting metrics from JMX, REST APIs,and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling 
 
 Sematext Monitoring agent is also known as SPM Monitor or SPM Client.
 
