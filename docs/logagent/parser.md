@@ -1,5 +1,5 @@
-Title: Parse logs 
-Description: log parser, regular expressions, JSON, log formats, web server logs, database logs
+title: Parse logs 
+description: Logagent parser detects log formats based on a pattern library and converts it to a JSON object and the default patterns and regular expressions for web server and database logs, such as Elasticsearch, MySql, Nginx, Redis, Apache, Zookeeper, Cassandra, Kafka, Hbase, Solr and more
 
 ## How does the parser work?
 
