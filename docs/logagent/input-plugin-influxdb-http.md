@@ -1,3 +1,6 @@
+title: Logagent input plugin for InfluxDB 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin and behaves like InfluxDB HTTP API /write endpoint. InfluxDB input plugin receives metrics from InfluxDB compatible agents like telegraf, and converts them from influx-line-protocol to a JSON structure. You can index InfluxDB metrics with our fully managed Elastic Stack or forward them to any other output plugin
+
 ## Input Plugin: InfluxDB
 
 Receives metrics from InfluxDB compatible agents like telegraf. Logagent behaves like InfluxDB HTTP API /write endpoint. Metrics are converted from influx-line-protocol to a JSON structure. The JSON documents could be indexed in Elasticsearch or Sematext Cloud - or forwarded to any other output plugin.
