@@ -1,13 +1,13 @@
-Title: Receive data from ZeroMQ
+title: Logagent input plugin for ZeroMQ
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Plugin is available as node.js npm package and acts as messages consumer using ZeroMQ supporting three types of messaging patterns, namely Publish-subscribe, Request-response and fire-and-forget some times called pipeline
 
 ## Logagent Plugin: ZeroMQ
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as messages consumer using ZeroMQ.
 
-
 Input plugins support three types of messaging patterns
  
- * Publish-subscripe
+ * Publish-subscribe
  * Request-response
  * fire-and-forget some times called pipeline
 
