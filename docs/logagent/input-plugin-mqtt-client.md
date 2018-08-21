@@ -1,5 +1,5 @@
-Title: Receive messages via MQTT 
-Description: MQTT, IoT, log shipper
+title: Logagent input plugin for MQTT Client 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. MQTT Client input plugin subscribes to MQTT topics, receives messages via MQTT, and it is designed for the efficient exchange of real-time data between applications, sensors and mobile devices. Use it for device-generated analytics and monitoring, data indexing, search, and device metrics visualization
 
 ## Input Plugin: MQTT Client
 
