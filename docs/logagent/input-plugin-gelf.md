@@ -1,4 +1,5 @@
-Title: Receive data via GELF / Graylog protocol 
+title: Logagent input plugin for GELF / Graylog protocol
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. GELF input plugin receives logs data with GELF protocol v1.1 via UDP. GELF (Graylog Extended Log Format) is a log format that avoids the shortcomings of classic plain syslog, and the great choice for logging from within applications
 
 ## Input Plugin: GELF 
 
