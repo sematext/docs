@@ -1,3 +1,6 @@
+title: Logagent input plugin for Apache Kafka
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. Apache Kafka input plugin acts as message consumer and can be installed as a npm node.js package
+
 ## Input Plugin: Apache Kafka
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer for Apache Kafka.
