@@ -1,4 +1,5 @@
-Title: Read data from standard input 
+title: Read data from standard input 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. Standard input reads data from the standard input stream and is activated by default
 
 ## Input Plugin: Standard input (stdin)
 
