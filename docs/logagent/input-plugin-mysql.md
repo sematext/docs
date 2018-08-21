@@ -1,4 +1,5 @@
-Title: Query data from MySQL 
+title: Logagent input plugin for MySQL
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use MySQL queries as input and stream the output into Logagent. Query data from MySQL, choose time zone and format for query time, use multiple SQL query statements features, index SQL data to Elasticsearch and create alerts based on data from MySQL database
 
 ## Input Plugin: MySQL
 
