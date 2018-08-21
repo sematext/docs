@@ -1,4 +1,5 @@
-Title: Receive data via Elasticsearch index API 
+title: Logagent input plugin for Elasticsearch HTTP 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Elasticsearch HTTP input plugin is used to receive documents via Elasticsearch HTTP indexing API (bulk and post requests). Use powerful Logagent parser with lightweight shippers like Rsyslog or Filebeat or as 'Elasticsearch indexing proxy', and receive events via Elasticsearch bulk API and fan out processed data to multiple outputs 
 
 ## Input Plugin: Elasticsearch HTTP
 
