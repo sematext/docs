@@ -1,4 +1,5 @@
-Title: Query data from Microsoft SQL 
+title: Logagent input plugin for MSSQL - Microsoft SQL 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use MSSQL - Microsoft SQL queries as input and stream the output into Logagent. Run queries frequently, choose time zone and format for query time, use multiple SQL query statements features, index SQL data to Elasticsearch and create alerts based on data from MSSQL database
 
 ## Input Plugin: Microsoft SQL 
 
