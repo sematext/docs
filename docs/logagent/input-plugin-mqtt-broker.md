@@ -1,5 +1,7 @@
-Title: Receive messages via MQTT broker
+Title: 
 Description: MQTT, IoT, log shipper
+title: Logagent input plugin for MQTT Broker 
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. MQTT Broker input plugin starts a MQTT Broker and emits each received message (all topics) to Logagent processing pipeline. Receive messages via MQTT broker, and use it for IoT device-generated analytics and monitoring use cases with data indexing, search, and device metrics visualization in near real-time
 
 ## Input Plugin: MQTT Broker
 
