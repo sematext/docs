@@ -132,7 +132,7 @@ pages:
           - MSSQL query: logagent/input-plugin-mssql.md
           - MySql query: logagent/input-plugin-mysql.md
           - Cassandra query: logagent/input-plugin-cassandra.md
-          - Zeromq input: logagent/input-plugin-zeromq.md
+          - ZeroMQ input: logagent/input-plugin-zeromq.md
           - Postgresql query: logagent/input-plugin-postgresql.md
           - Apple device location: logagent/logagent-apple-location.md
           - Nova dust sensor: logagent/logagent-novasds.md
@@ -153,7 +153,7 @@ pages:
           - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
           - InfluxDB: logagent/output-plugin-influxdb.md
           - Apache Kafka: logagent/output-plugin-kafka.md
-          - Zeromq output: logagent/output-plugin-zeromq.md
+          - ZeroMQ output: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
           - Slack webhook: logagent/output-plugin-slack.md
       - How-To:
