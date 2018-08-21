@@ -1,4 +1,5 @@
-Title: Receive Apple iPhone positions 
+title: Logagent input plugin for Apple Location
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. logagent-apple-location is Logagent plugin used to track the GPS position of Apple devices and receive Apple iPhone positions using the find-my-iphone API. It is available as node.js npm package
 
 ## Input plugin: logagent-apple-location
 
