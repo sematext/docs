@@ -1,5 +1,5 @@
-Title: Export data from Cassandra 
-Description: Data export from Apache Cassandra, periodic Cassandra queries in CQL
+title: Logagent input plugin for Apache Cassandra
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use Cassandra queries as input and stream the output into Logagent. Export data from Cassandra , run queries frequently, choose time zone and format for query time, use multiple CQL query statements features, index CQL data to Elasticsearch and create analytics and monitoring graph event as well as alerts based on series in database
 
 ## Input Plugin: Apache Cassandra
 
