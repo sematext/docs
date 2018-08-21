@@ -1,4 +1,6 @@
 Title: Query data from PostgreSQL
+title: Logagent input plugin for PostgreSQL
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use PostgreSQL queries as input and stream the output into Logagent. Export and query data from PostgreSQL, choose time zone and format for query time, use multiple SQL query statements features, index SQL data to Elasticsearch and create alerts based on data in PostgreSQL database
 
 ## Input Plugin: PostgreSQL 
 
