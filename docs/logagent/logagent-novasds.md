@@ -1,4 +1,5 @@
-Title: Measure air pollution 
+title: Logagent input plugin for Nova SDS011 Sensor
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. The plugin collects PM10 and PM2.5 values from Nova SDS011 dust sensor from USB via serial port. The sensor data can be enriched with GPS location data and other plugins. Measure air pollution and send your IoT metrics and logs data to our managed elastic stack SaaS with integrated logging & monitoring analytics tools, alerts, and various devops integrations 
 
 ## Input plugin: Nova SDS011 sensor
 
