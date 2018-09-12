@@ -38,7 +38,6 @@ setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-2365268-3', 'auto');
-    ga('send', 'pageview');
 /* end GA code */
 
 
