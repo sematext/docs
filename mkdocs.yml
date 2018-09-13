@@ -103,6 +103,7 @@ pages:
     - Logagent:
       - Overview: logagent/index.md
       - Installation:
+        - Docker: logagent/installation-docker.md
         - Linux & Mac OS X: logagent/installation.md
         - Windows: logagent/installation-windows.md
         - Heroku: logagent/installation-heroku.md
