@@ -73,6 +73,7 @@ kubectl create -f logagent-daemonset.yml
 
 On Red Hat OpenShift use the "oc" command instead of kubectl.
 
+```
 oc apply -f logagent-daemonset.yml
 ```
 
