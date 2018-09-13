@@ -20,6 +20,7 @@ description: Command Line Parameters for Logagent, light-weight log shipper with
 | -s, --suppress | silent, print no logs to stdout; print only stats on exit |
 | --printStats | print processing stats in the given interval in seconds, e.g. ```--print_stats 30``` to stderr. Useful with -s to see Logagent activity on the console without printing the parsed logs to stdout.|
 | __Log input options__| |
+| --docker <docker-socket> | collect docker logs e.g. `--docker /var/run/docker.sock` |
 | -g glob-pattern | use a [glob](https://www.npmjs.com/package/glob) pattern to watch log files e.g. ```-g "{/var/log/*.log,/Users/stefan/myapp/*.log}"```. The complete glob expression must be quoted to avoid interpretation of special characters by the Linux shell. |
 +| --tailStartPosition bytes | -1 to tail from end of file, >=0 to start from the given position (in bytes).  This setting applies to new files without their read position saved (see --logsene-tmp-dir)|
 | --stdin | read from stdin, default if no other input like files or UDP are set|

@@ -119,6 +119,7 @@ pages:
         - Input Plugins:
           - Standard input: logagent/input-plugin-stdin.md
           - File input: logagent/input-plugin-files.md
+          - Docker logs input: logagent/input-plugin-dockerlogs.md
           - Syslog input: logagent/input-plugin-syslog.md
           - Apache Kafka input: logagent/input-plugin-kafka.md
           - InfluxDB input: logagent/input-plugin-influxdb-http.md
@@ -144,6 +145,7 @@ pages:
           - Hash fields: logagent/output-filter-hashfields.md
           - Remove fields: logagent/output-filter-removefields.md
           - IP truncate fields: logagent/output-filter-iptruncatefields.md
+          - Docker enrichment: logagent/output-filter-dockerenrichment.md
         - Output Plugins:
           - Standard output: logagent/output-plugin-stdout.md
           - GELF: logagent/output-plugin-gelf.md

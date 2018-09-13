@@ -7,6 +7,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
 | [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                                                |
 | [files](input-plugin-files)           | input   | Watching and tailing files                                                                               |
+| [docker-logs](input-plugin-dockerlogs)           | input   | Collection of Docker container logs                                                                               |
 | [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events) | input  | Collect Windows Events. Available as separate npm package |
 | [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
 | [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
@@ -33,6 +34,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [hash-fields](output-filter-hashfields) | Processor / output filter | Hashing of field values before any output happens |
 | [ip-truncate-fields](output-filter-iptruncatefields) | Processor / output filter | Replaces the last block of IPv4 and IPv6 address fields with "0" to anonymize IP addresses |
 | [remove-fields](output-filter-removefields) | Processor / output filter | Removes fields before any output happens |
+| [docker-enrichment](output-filter-dockerenrichment) | Processor / output filter | Metadata enrichment for docker logs, including log routing options |
 | [stdout (default)](output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
 | [elasticsearch](output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
 | [output-gelf](output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
