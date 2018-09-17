@@ -1,4 +1,5 @@
 title: ZooKeeper Monitoring Integration
+description: Monitor Zookeeper coordination service for distributed applications using Sematext infrastructure and monitoring SaaS and Enterprise on-premises solution. Capture, visualize, and correlate ZooKeeper metrics and track metrics including node count, packet count, latency, watch count, data size, open file descriptors, and more
 
 ## Integration
 
