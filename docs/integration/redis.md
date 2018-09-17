@@ -1,5 +1,5 @@
 title: Redis Monitoring Integration
-description: Sematext monitoring integration reports critical and key performance and metric data from your Redis server. Use out of box dashaboards and metric reports or create custom queries with charts and ability to store, visualize, and correlate your Redis metrics.
+description: Sematext monitoring integration reports critical and key performance and metric data from your Redis server. Use out of box dashboards and metric reports or create custom queries with charts and ability to store, visualize, and correlate your Redis metrics.
 
 ## Integration
 
