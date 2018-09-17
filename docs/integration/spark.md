@@ -1,4 +1,5 @@
 Title: Spark Monitoring Integration
+Monitor your Hadoop ecosystem with Sematext Infrastructure and Application Monitoring SaaS, namely HDFS, MapReduce, YARN, and Spark. Visualize Apache Spark Manager/Master, Worker, Executor, and Driver componenets, and other key metrics reports. Create dashboards and alerts, and send notifications to your devops team through various messaging integrations
 
 ## Integration
 
