@@ -1,4 +1,6 @@
 title: Tomcat Monitoring Integration
+description: Monitor your Tomcat Java Servlet Containers with Sematext Infrastructure and Application Monitoring tools. Collaborate  across server, web, and database devops teams, easily customize alerts, reports, and dashboards for your enterprise-wide needs,
+and get insightful visualizations and timely alerts for your Tomcat server metrics
 
 ## Integration
 
