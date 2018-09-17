@@ -1,4 +1,5 @@
 title: Storm Monitoring Integration
+description:  Get metrics from Storm service in real time and visualize and monitor Storm cluster and topology metrics using Sematext Infrastructure and Monitoring SaaS. Be notified about Apache Storm failovers and data processing events using our alerting solution for real-time analytics and continuous monitoring of devops operations
 
 ## Integration
 
