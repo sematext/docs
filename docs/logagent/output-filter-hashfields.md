@@ -1,5 +1,5 @@
-Title: Hash log content 
-Description: GDPR, log anonymizer, hash log data, sha1, sha256, sha512
+title: Hash log content 
+description: Hash-fields plugin for Logagent replaces field values with its hash code. Use hash-fields log anonymizer to ensure GDPR compliance for masking data fields with strong hash functions (sha256, sha512), and you can also use the same values for log analytics with our logging management tools
 
 ## Output filter: hash-fields
 
