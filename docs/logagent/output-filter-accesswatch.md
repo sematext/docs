@@ -1,5 +1,5 @@
 Title: Enrich web server logs 
-Description: malicious bots, threat detection, geoip
+Description:  Access Watch, Logagent's output filter, deploys and eaisly plugs into any existing data pipeline as the industry’s most precise robot intelligence used to detect malicious bots, threat detection, geoip, and the key for devops teams to stay in control of what is happening on their infrastructure and web assets
 
 ## Access Watch output filter
 
