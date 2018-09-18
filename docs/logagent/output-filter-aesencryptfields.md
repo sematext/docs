@@ -1,5 +1,5 @@
 Title: Encrypt fields with AES 
-Description: GDPR, log anonymizer, AES encryption, log shipper 
+Description: Aes-encrypt-fields plugin for Logagent used to encrypt data fields with AES. Use log anonymizer to ensure GDPR compliance for masking data fields, and encrypt your search term and search the encrypted term in Elasticsearch to find relevant log entries with our logging management SaaS
 
 ## Output filter: aes-encrypt-fields 
 
