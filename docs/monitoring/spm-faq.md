@@ -559,13 +559,13 @@ export http_proxy=http://username:password@yourproxyaddress:proxyport
 **Can SPM client send data out from servers that are behind a proxy?**
 
 Yes, just provide the proxy info in the
-`/opt/spm/properties/spm-sender.properties` file:
+`/opt/spm/properties/agent.properties` file:
 
 ``` properties
-spm_sender_proxy_host=
-spm_sender_proxy_port=
-spm_sender_proxy_user_name=
-spm_sender_proxy_password=
+proxy_host=
+proxy_port=
+proxy_user_name=
+proxy_password=
 ```
 
 **When installing SPM client, I see "The certificate of pub-repo.sematext.com is not trusted" or similar error.  How can I avoid it?**
@@ -652,7 +652,7 @@ spm-receiver.sematext.com 443 port
 In case you see some other result:
 
   - if your server requires proxy to access the internet, you can define
-    its settings in `/opt/spm/properties/spm-sender.properties`. After
+    its settings in `/opt/spm/properties/agent.properties`. After
     that restart SPM agent.
   - if firewall is used to protect your server, it may be blocking
     outbound traffic from it. SPM agent sends the data over port 443, so
@@ -780,12 +780,12 @@ Yes, although we recommend using HTTPS. Since version 1.22.0, SPM
 client by default uses HTTPS to send metrics data to Sematext. If you
 prefer to use HTTP instead (for example, if you are running Sematext
 Enterprise on premises or if you don't need metric data to be encrypted
-when being sent to Sematext over the internet), you can adjust that in
-`/opt/spm/properties/spm-sender.properties` by changing protocol to
+when being sent to Sematext over the Internet), you can adjust that in
+`/opt/spm/properties/agent.properties` by changing protocol to
 **http** in property:
 
 ``` properties
-spm_sender_receiver_url=https://spm-receiver.sematext.com/receiver/v1
+server_base_url=https://spm-receiver.sematext.com
 ```
 
 ### Security
@@ -797,7 +797,7 @@ metrics, such as hostnames (which can be obfuscated).  To see what
 exactly is being sent you can use tcpdump or a similar tool to sniff the
 traffic.  SPM agents ship data via HTTPS, but can also ship it via HTTP.
  Java-based agents let you change the protocol in appropriate files
-under `/opt/spm/spm-sender/conf/` directory, while Node.js-based agents
+under `/opt/spm/properties/` directory, while Node.js-based agents
 let you change it via the `SPM_RECEIVER_URL` environmental variable.
 
 **Can hostnames in Sematext Monitoring be obfuscated or customized?**
@@ -811,11 +811,11 @@ client version 1.17.7. This lets you:
     "ip-12-123-321-123")
 
 To achieve this, after SPM client is installed, open
-`/opt/spm/properties/spm-sender.properties` file and just add desired
-hostname to the value of property `spm_sender_hostname_alias`, e.g.
+`/opt/spm/properties/agent.properties` file and just add desired
+hostname to the value of property `hostname_alias`, e.g.
 
 ``` properties
-spm_sender_hostname_alias=web1.production.
+hostname_alias=web1.production.
 ```
 
 After that, restart SPM monitor with:
@@ -827,15 +827,12 @@ version of SPM monitor.
 
 Note:
 
-  - you can do this change at any point, even after SPM client was
-    running on your machine for the past few months or years - you just
-    have to upgrade SPM client to version 1.17.7 or greater
   - old data will still be seen in Sematext under the old hostname, while new
     data (after hostname change) will be displayed under the new
     hostname
   - if you are installing SPM client for the first time
     and you want to be 100% sure its original hostname never leaves your
-    network, define your hostname alias in `spm-sender.properties`
+    network, define your hostname alias in `agent.properties`
     file immediately after you complete "1. Package installation" step
     and before you begin with "2. Client configuration setup" step
     (installation instructions can be accessed from
