@@ -6,7 +6,7 @@ Sematext has threshold, anomaly and / or heartbeat Alerts integration with Big P
 
 ## **In BigPanda:**
 
-Log into your [Big Panda](https://a.bigpanda.io/login) and create API and token needed to create the integration between Big Panda and Sematext APM, Log Management, Tracing, and RUM platform.
+Log into your [Big Panda account](https://a.bigpanda.io/login) and create app API and token needed to create the integration between Big Panda and Sematext APM, Log Management, Tracing, and RUM platform.
 
 Visit Big Panda's documentation and [getting started guide](https://docs.bigpanda.io/docs/getting-started) for more information about their service integration with other SaaS monitoring and logging tools such as ours.
 
@@ -16,9 +16,9 @@ Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-cre
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
-Enter required parameters and copy incoming Big Panda Service API Key. Click Test button to confirm that Sematext app is sending data and save your PagerDuty alerts integration.
+Enter required parameters and copy incoming Big Panda Service API Key. Click Test button to confirm that Sematext app is sending data and save your Pig Panda alerts integration.
 
-![PagerDuty Alerts Integration](https://sematext.com/docs/images/integrations/big-panda-integration.png  "Create PagerDuty Integration")
+![PagerDuty Alerts Integration](https://sematext.com/docs/images/integrations/big-panda-integration.png  "Create Big Panda Integration")
 
 **Done.** Every alert from your SPM app will be forwarded to Big Panda,
 where you can manage escalation policies and configure notifications to
