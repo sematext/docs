@@ -14,11 +14,11 @@ Visit Big Panda's documentation and [getting started guide](https://docs.bigpand
 
 Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Big Panda card to create a new notification hook.
 
-![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
+![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
 Enter required parameters and copy incoming Big Panda Service API Key. Click Test button to confirm that Sematext app is sending data and save your Pig Panda alerts integration.
 
-![PagerDuty Alerts Integration](https://sematext.com/docs/images/integrations/big-panda-integration.png  "Create Big Panda Integration")
+![PagerDuty Alerts Integration](https://sematext.com/docs/images/integrations/big-panda-integration.png "Create Big Panda Integration")
 
 **Done.** Every alert from your SPM app will be forwarded to Big Panda,
 where you can manage escalation policies and configure notifications to
