@@ -71,7 +71,7 @@ The [Network Map](network-map) visualizes your network topology.  It show discov
 
 [Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BuMtZCLN_Mk?rel=0&amp;controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/BuMtZCLN_Mk?rel=0&amp;controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Getting Support
 
