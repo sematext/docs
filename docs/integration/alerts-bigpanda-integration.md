@@ -6,7 +6,7 @@ Sematext has threshold, anomaly and / or heartbeat Alerts integration with Big P
 
 ## **In BigPanda:**
 
-Log into your [Big Panda account at](https://a.bigpanda.io/login) and create API and token needed to create the integration between Big Panda and Sematext APM, Log Management, Tracing, and RUM platform.
+Log into your [Big Panda](https://a.bigpanda.io/login) and create API and token needed to create the integration between Big Panda and Sematext APM, Log Management, Tracing, and RUM platform.
 
 Visit Big Panda's documentation and [getting started guide](https://docs.bigpanda.io/docs/getting-started) for more information about their service integration with other SaaS monitoring and logging tools such as ours.
 
