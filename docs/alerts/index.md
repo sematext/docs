@@ -15,6 +15,8 @@ continously computed baseline.
 like your servers, containers, or your applications stop emitting data
 to Sematext.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/WE9xAUud28o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Alert Sources
 Alerts can be triggered on both Metrics and Logs:
 
