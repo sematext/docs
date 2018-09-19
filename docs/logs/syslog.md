@@ -9,8 +9,7 @@ destination host is **logsene-receiver-syslog.sematext.com** / **logsene-receive
 
   - for Syslog over UDP: **514**
   - for Syslog over TCP: **514**
-  - for Syslog over TLS: **10514** (get [root certificate](https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem) and [intermediate certificate](https://apps.sematext.com/cert/DigiCertCA.pem) to get
-    TLS working)
+  - for Syslog over TLS: **10514** (get [root certificate](https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem) and [intermediate certificate](https://apps.sematext.com/cert/DigiCertCA.pem) to get TLS working)
   - for RELP: **20514**
 
 ## Authorization
