@@ -1,4 +1,5 @@
-title: Big Panda Alerts Integration description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Big Panda's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
+title: Big Panda Alerts Integration
+description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Big Panda's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
 
 BigPanda is an algorithmic event management platform that automates how IT teams manage the explosion of alerts and incidents they face every day. By intelligently correlating massive volumes of alerts from fragmented clouds, applications, and infrastructure, BigPanda enables IT Operations teams to cut through the noise, remediate IT issues faster and with fewer resources, and achieve dramatically higher service levels.
 
