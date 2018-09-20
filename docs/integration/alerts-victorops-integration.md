@@ -3,7 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 VictorOps automates getting the right alert to the right person at the right time with its incident management software that aligns our log management and monitoring platform. Sematext has threshold, anomaly and / or heartbeat Alerts integration with VictorOps' alert/incident management and notification tools.
 
-## **In VictorOps:**
+## **In VictorOps**
 
 Log into your [VictorOps account](https://portal.victorops.com/) and create Routing Key and API Key needed to create the integration between VictorOps and Sematext APM, Log Management, Tracing, and RUM platform. Also check [VictorOps's API](https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/) for alerts API and REST Endpoint information. 
 
