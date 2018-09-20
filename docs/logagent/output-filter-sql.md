@@ -1,4 +1,5 @@
-Title: Aggregate and filter logs with SQL
+title: Aggregate and filter logs with SQL
+description: Filter and aggregate parsed logs with SQL with Logagent's SQL output filter, before they get shipped to Elasticsearch or Logsene, Sematext's logging management platform and SaaS ELK Stack. The result of the query is emitted as a new event, while the original events are omitted.
 
 ## SQL output filter
 Filter and aggregate parsed logs with SQL.
