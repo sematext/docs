@@ -1,4 +1,5 @@
-title: OpsGenie Alerts Integration description: Sematext threshold, anomaly and / or heartbeat Alerts integration with OpsGenie's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
+title: OpsGenie Alerts Integration
+description: Sematext threshold, anomaly and / or heartbeat Alerts integration with OpsGenie's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
 
 OpsGenie is a modern incident management platform for operating always-on services, empowering Dev and Ops teams to plan for service disruptions and stay in control during incidents. OpsGenie centralizes alerts, notifies the right people reliably, and enables them to collaborate and take rapid action. Throughout the entire incident lifecycle, OpsGenie tracks all activity and provides actionable insights to improve productivity and drive continuous operational efficiencies.
 
