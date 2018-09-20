@@ -5,7 +5,7 @@ Pushover is a service to receive instant push notifications on your phone or tab
 
 Sematext has threshold, anomaly and / or heartbeat Alerts integration with Pushover's's alert/incident management and notification tools.
 
-## **In Pushover:**
+## **In Pushover**
 
 Log into your [Pushover account](https://pushover.net/login) and create user key and app token needed to create the integration between Pushover and Sematext APM, Log Management, Tracing, and RUM platform. Also check [Pushover's API](https://pushover.net/api) for alert creation, deletion, and action requests are processed asynchronously to provide higher availability and scalability, therefore valid requests for those endpoints.
 
