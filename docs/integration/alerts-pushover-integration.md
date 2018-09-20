@@ -1,4 +1,5 @@
-title: Pushover Alerts Integration description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Pushover's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
+title: Pushover Alerts Integration
+description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Pushover's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
 
 Pushover is a service to receive instant push notifications on your phone or tablet from a variety of sources.  is a platform for sending and receiving push notifications. On the server side, we provide an HTTP API for queueing messages to deliver to devices addressable by User or Group Keys. On the device side, our iOS, Android, and Desktop clients receive those push notifications, show them to the user, and store them for offline viewing.
 
