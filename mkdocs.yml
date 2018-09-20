@@ -93,6 +93,7 @@ pages:
       - Pushover: integration/alerts-pushover-integration.md
       - Slack: integration/alerts-slack-integration.md
       - VictorOps: integration/alerts-victorops-integration.md
+      - Zapier: integration/alerts-zapier-integration.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
