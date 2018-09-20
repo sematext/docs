@@ -5,7 +5,7 @@ BigPanda is an algorithmic event management platform that automates how IT teams
 
 Sematext has threshold, anomaly and / or heartbeat Alerts integration with Big Panda's real-time messaging communication tool.
 
-## **In BigPanda:**
+## **In BigPanda**
 
 Log into your [Big Panda account](https://a.bigpanda.io/login) and create app API and token needed to create the integration between Big Panda and Sematext APM, Log Management, Tracing, and RUM platform.
 
