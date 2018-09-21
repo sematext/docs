@@ -1,5 +1,5 @@
 Title: GDPR and personal data in web server logs 
-Description: log anonymizer, GDPR, masking logs, masking data fields, logging
+Description: Log anonymizer, logs and data fields masking needed for GDPR data protection regulation with Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 
 Masking data in logs got really important due to meet the requirements of GDPR a European data protection regulation. In the GDPR role "data controller" for your logs, you should minimize the risk of exposing sensitive data to 3rd parties. In some cases, even IP-Addresses are considered as personal data, but your logs might more sensitive data like username, phone numbers etc. 
