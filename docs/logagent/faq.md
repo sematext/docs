@@ -1,5 +1,5 @@
 Title: Logagent FAQ
-
+description: FAQ about Logagent, log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 ### Is there a verbose / debug mode and how is it enabled?
 
