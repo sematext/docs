@@ -1,9 +1,9 @@
 title: Pushover Alerts Integration
 description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Pushover's real-time messaging communication tool. Use them together for seamless infrastructure and application monitoring integration with alert-messaging, and begin sending webhook notifications to your customized devops team channel
 
-Pushover is a service to receive instant push notifications on your phone or tablet from a variety of sources.  is a platform for sending and receiving push notifications. On the server side, we provide an HTTP API for queueing messages to deliver to devices addressable by User or Group Keys. On the device side, our iOS, Android, and Desktop clients receive those push notifications, show them to the user, and store them for offline viewing.
+Pushover is a service to receive instant push notifications on your phone or tablet from a variety of sources.  On the server side, Pushover provides an HTTP API for queueing messages to deliver to devices addressable by User or Group Keys. On the device side, Pushover's iOS, Android, and Desktop clients receive those push notifications, show them to the user, and store them for offline viewing.
 
-Sematext has threshold, anomaly and / or heartbeat Alerts integration with Pushover's's alert/incident management and notification tools.
+Sematext has threshold, anomaly and / or heartbeat Alerts integration with Pushover's alert/incident management and notification tools.
 
 ## **In Pushover**
 
@@ -17,10 +17,8 @@ Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-cre
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
-Enter required parameters and copy incoming Pushover Service API Key. Click Test button to confirm that Sematext app is sending data and save your Pig Panda alerts integration.
+Enter required parameters and copy incoming Pushover Service API Key. Click Test button to confirm that Sematext app is sending data and save your Pushover alerts integration.
 
 ![Pushover Alerts Integration](https://sematext.com/docs/images/integrations/pushover-integration.png "Pushover Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to Big Panda,
-where you can manage escalation policies and configure notifications to
-other services like HipChat, Slack, Zapier, Flowdock, and more.
+**Done.** Every alert from your SPM app will be forwarded to Pushover, where you can manage escalation policies and configure notifications to other services like HipChat, Slack, Zapier, Flowdock, and more.
