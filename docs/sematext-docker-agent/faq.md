@@ -1,4 +1,5 @@
 title: Sematext Docker Agent FAQ
+description: FAQ about Sematext Docker Agent, a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers.
 
 ## How can I add patterns to parse my container logs?
 
