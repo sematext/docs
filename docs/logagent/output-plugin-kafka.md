@@ -1,5 +1,5 @@
-Title: Ingest parsed logs in Apache Kafka 
-Description: logging pipeline, log shipper, Apache Kafka, durable logging pipeline
+title: Ingest parsed logs in Apache Kafka 
+description: Logging pipeline plugin to ingest parsed messages to Apache Kafka topics with Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 ## Output Plugin: Apache Kafka 
 
