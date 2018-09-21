@@ -109,12 +109,12 @@ step should be run once for each of the 3 Solr instances (installation
 instructions are accessible
 from <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
 Monitor for app you are installing). When running
-script `/opt/spm/bin/spm-client-setup-conf.sh` in step "2. Client
-configuration setup", you should add `jvmname` parameter (and value)
+script `/opt/spm/bin/setup-spm` in step "2. Client
+configuration setup", you should add `jvm-name` parameter (and value)
 at the end of parameter list, like this:
 
 ```
-sudo bash /opt/spm/bin/spm-client-setup-conf.sh 11111111-1111-1111-1111-111111111111 solr javaagent jvmname:solr1
+sudo bash /opt/spm/bin/setup-spm --app-token 11111111-1111-1111-1111-111111111111 --app-type solr --agent-type javaagent --jvm-name solr1
 ```
 
 In this example, we are setting up things for 3 separate Solr processes,
@@ -122,11 +122,11 @@ monitored under JVM names: solr1, solr2 and solr3 (you choose any
 names), so this is adjusted command for solr1 instance.
 
 In the remaining sub-steps of "2. Client configuration setup", replace
-word "**default**" with the jvmname value you just used.
+word "**default**" with the jvm-name value you just used.
 
 "2. Client configuration setup" step will have to be repeated N times,
 once for each monitored application (in our example 3 times with 3
-different jvmname values).
+different jvm-name values).
 
 **Note**: By using this kind of setup, you will be able to see JVM stats
 of all 3 processes separately (JVM name filter is used to do the
@@ -558,14 +558,18 @@ export http_proxy=http://username:password@yourproxyaddress:proxyport
 
 **Can SPM client send data out from servers that are behind a proxy?**
 
-Yes, just provide the proxy info in the
-`/opt/spm/properties/agent.properties` file:
+Yes. You can update the proxy settings using the following command:
 
-``` properties
-proxy_host=
-proxy_port=
-proxy_user_name=
-proxy_password=
+```bash
+sudo bash /opt/spm/bin/setup-env --proxy-host "HOST" --proxy-port "PORT" --proxy-user "USER" --proxy-password "PASSWORD"
+```
+
+**Can I change the region settings for the SPM agent installation?**
+
+Yes. By default the region is set to US. You can change it to EU using:
+
+```bash
+sudo bash /opt/spm/bin/setup-env --region eu
 ```
 
 **When installing SPM client, I see "The certificate of pub-repo.sematext.com is not trusted" or similar error.  How can I avoid it?**
