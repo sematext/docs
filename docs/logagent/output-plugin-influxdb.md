@@ -1,5 +1,5 @@
-Title: Ingest parsed logs and metrics in InfluxDB
-Description: metrics, log shipper, InfluxDB, telegraf alternative
+title: Ingest parsed logs and metrics in InfluxDB
+description: Convert any message object to influx-line protocol with InfluxDB plugin and for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 ## Output Plugin: InfluxDB
 
