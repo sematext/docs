@@ -21,6 +21,6 @@ Enter required parameters and click Test button to confirm that Sematext app is 
 
 ![Nagios Alerts Integration](https://sematext.com/docs/images/integrations/nagios-integration.png "Nagios Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to Big Panda,
+**Done.** Every alert from your SPM app will be forwarded to Nagios,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Nagios, Flowdock, and more.
