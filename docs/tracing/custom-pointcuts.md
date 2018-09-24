@@ -2,7 +2,7 @@ title: Custom Pointcuts
 description: Instrument custom method calls with the build-in extension mechanism not handled by the Sematext infrastructure  and monitoing tracing agent
 
 The built-in extension mechanism can be used to instrument custom method
-calls that are not handled by the SPM tracing agent out of the box. An
+calls that are not handled by the Sematext tracing agent out of the box. An
 extension is set of pointcuts described in XML files placed in
 /opt/spm/spm-monitor/ext/tracing/ directory. The tracing agent scans all
 .xml files in that directory when it starts.
@@ -31,20 +31,20 @@ A pointcut has two optional parameters:
 
   - **entry-point** - if set to true a new transaction will be created
     for each joinpoint.
-  - **transaction-name **- transaction name will inherit the joinpoint
+  - **transaction-name** - transaction name will inherit the joinpoint
     name unless this parameter is specified
 
 The following rules are supported:
 
-  - **class **- all non-static methods of this class. The 'name'
+  - **class** - all non-static methods of this class. The 'name'
     parameter should be a fully qualified java class name
     (see <http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html> )
-  - **constructor **- constructor for a given class which matches given
+  - **constructor** - constructor for a given class which matches given
     parameter types. The 'signature' should specify a fully qualified
     java class name followed by a list of comma-separated
     parameters inside parenthesis (e.g.  (int foo, java.lang.String
     bar))
-  - **method **- method for a given class and all its subclasses whose
+  - **method** - method for a given class and all its subclasses whose
     methods match the specified method name, return type, and
     parameters. 
 
@@ -117,4 +117,4 @@ so it doesn't have the .xml extension.  For example, you might rename
 foo.xml to foo.xml.disabled.  After that, restart your application.
 
 IMPORTANT: instrumenting methods that are invoked frequently and execute
-quickly can and will increase the agent overhead.
+quickly can and will increase the agent overhead.  Use with caution.
