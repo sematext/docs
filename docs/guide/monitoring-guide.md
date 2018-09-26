@@ -18,7 +18,7 @@ The App & Dash dropdown Selector lets you choose any logging or monitoring app a
 
 Right next to the Selector is App Actions dropdown menu that provides various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app.
 
-All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remians unchanged and allows for easy interaction between various system settings and reports view.
+All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remains unchanged and modal windows allow for easy interaction between various system settings while in reports view.
 
 Time picker is available whenever logging or monitoring app is selected as well as any generated dashboards is being used. One minute is the shortest time increment one can select. 30 min, 1 and 2 hr, and 1, 2, 7, and 30 days time span shortcuts are exposed for easy common observability, and custom time frame can be selected using the time picker dropdown. App will automatically refresh upon selection and update all the reports in view accordingly.
 
