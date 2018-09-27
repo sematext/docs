@@ -61,6 +61,8 @@ Use them together with out of box metrics reports and visualizations, generated 
 
 #### Component Settings
 
+![](https://sematext.com/docs/images/guide/monitoring/component-settings-dropdown.png)
+
 ### App State
 
 When your app is intially loaded, Save and Reset buttons will be hidden since that is apps default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state.
