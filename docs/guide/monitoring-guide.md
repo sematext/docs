@@ -18,7 +18,7 @@ Left sidebar can be collapsed for full reports view and is used to easily switch
 
 The App & Dash dropdown Selector lets you choose any logging or monitoring app as well as any dashboard reports that you generated from those apps. Moreover, infrastructure views such as AppMap, NetMap, Servers, and Containers are also available, and together provide seamless switching between logging, and app & IT infrastructure monitoring when rushing to fix IT production issues.
 
-Right next to the Selector is App Actions dropdown menu that provides various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team memebers, and transfer app ownership.
+Right next to the Selector is App Actions dropdown menu that provides various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app ownership.
 
 All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remians unchanged and allows for easy interaction between various system settings and reports view.
 
