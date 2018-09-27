@@ -61,13 +61,15 @@ Use them together with out of box metrics reports and visualizations, generated 
 
 #### Component Settings
 
+Each Component can be added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
+
 ![](https://sematext.com/docs/images/guide/monitoring/component-settings-dropdown.png)
 
 ### App State
 
-When your app is intially loaded, Save and Reset buttons will be hidden since that is apps default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state.
+When your app is intially loaded, Save and Reset buttons will be hidden since that is app's default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, app will preserve the initial state.
 
-Each Component can be also added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
+
 
 ### Correlations
 
