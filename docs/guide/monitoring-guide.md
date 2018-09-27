@@ -20,9 +20,9 @@ The App & Dash dropdown Selector lets you choose any logging or monitoring app a
 
 Right next to the Selector is App Actions dropdown menu that provides various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app ownership.
 
-All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remians unchanged and allows for easy interaction between various system settings and reports view.
+All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remains unchanged and allows for easy interaction between various system settings and reports view.
 
-Time picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment one can select. 30 min, 1 and 2 hr, and 1, 2, 7, and 30 days time span shortcuts are exposed for easy common observability, and custom time frame can be selected using the time picker dropdown. App will automatically refresh upon selection and update all the reports in view accordingly.
+Time Picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment one can select. 30 min, 1 and 2 hr, and 1, 2, 7, and 30 days time span shortcuts are exposed for easy common observability, and custom time frame can be selected using the time picker dropdown. App will automatically refresh upon selection and update all the reports in view accordingly.
 
 Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed and all the data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident within certain time segment. 
 
@@ -40,12 +40,13 @@ The next section describes the monitoring report menu located just below the top
 
 Monitoring Report Menu is where the true power of Sematext APM platform and the whole stack observability comes to life. Events and logs are integrated in a single monitoring reports pane, and used to correlate metrics with application and server logs, events, alerts, anomalies, and more. 
 
-Image below shows report menu in detail followed by explanation on how tu use these features to see any metric any logs in a single unified same view, add additional components to your metrics reports, share reports, and more.
+Image below shows report menu in detail followed by explanation on how to use these features. See any metric and any logs in a single unified view, add additional components to your metrics reports, share reports, and more.
 
 ![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
 
 
-Using custom components your whole devops team can add custom monitoring metrics time series, events count time series, events, markdown notes, and create custom reports with rich data visualization and analytics capabilities. 
+Using custom components your whole devops team can add monitoring metrics time series, events count time series, events, markdown notes, and create custom reports with rich data visualization and analytics capabilities. 
 
-Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order, as well as  additional logging components that can be added to your logs app are available. Use them together with out of box metrics visualizations that are generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds, get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
+Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order, as well as  additional logging components that can be added to your logs app are available. 
 
+Use them together with out of box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
