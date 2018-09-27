@@ -6,7 +6,7 @@ Get started in minutes with out-of-the-box dashboards, alerts and anomaly detect
 
 Sematext APM SaaS or on-premises IT monitoring service goes beyond just collecting metrics. Uncover slowest DB operation types, view full SQL statements, see end-to-end HTTP transaction context, get top 10 operations by throughput, latency, or time consumed, filter DB operations by type, and more...
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) in Sematext IT systems monitoring platform to get started and create your first monitoring app.
+[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your first monitoring app.
 
 # Monitoring Guide
 
@@ -22,13 +22,13 @@ Right next to the Selector is App Actions dropdown menu that provides various ap
 
 All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remians unchanged and allows for easy interaction between various system settings and reports view.
 
-Time picker is available whenever logging or monitoring app is selected as well as any generated dashboards is being used. One minute is the shortest time increment one can select. 30 min, 1 and 2 hr, and 1, 2, 7, and 30 days time span shortcuts are exposed for easy common observability, and custom time frame can be selected using the time picker dropdown. App will automatically refresh upon selection and update all the reports in view accordingly.
+Time picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment one can select. 30 min, 1 and 2 hr, and 1, 2, 7, and 30 days time span shortcuts are exposed for easy common observability, and custom time frame can be selected using the time picker dropdown. App will automatically refresh upon selection and update all the reports in view accordingly.
 
-Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed and data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident within certain time segment. 
+Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed and all the data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident within certain time segment. 
 
 Notifications, that is, Bell icon in the top right is used for system notifications messages. If your plan needs upgrading, new feature is announced, and other such messages will be shown in the notifications view that opens in the modal window and may or may not require user action.
 
-Last, but not the least User Settings is the last item in the top navigation menu. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
+Last, but not the least User Settings is the last right aligned item in the top navigation menu. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
 
 ![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
