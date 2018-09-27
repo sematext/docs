@@ -6,13 +6,14 @@ Get started in minutes with out-of-the-box dashboards, alerts and anomaly detect
 
 Sematext APM SaaS or on-premises IT monitoring service goes beyond just collecting metrics. Uncover slowest DB operation types, view full SQL statements, see end-to-end HTTP transaction context, get top 10 operations by throughput, latency, or time consumed, filter DB operations by type, and more...
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your first monitoring app.
+[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your monitoring app with over 40 monitoring integrations available.
 
 # Monitoring Guide
 
 This guide will help you get started with our APM service and discover reporting, monitoring, and other application features and functionalities. Image below shows the default monitoring view and marked are the main application and system UI elements.
 
 ![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide.png)
+
 
 Left sidebar can be collapsed for full reports view and is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team system features. All sidebar options are selectable at all times and the right aligned chevrons indicate that the top level section is collapsible and contains additional subitems.
 
@@ -40,16 +41,52 @@ The next section describes the monitoring report menu located just below the top
 
 Monitoring Report Menu is where the true power of Sematext APM platform and the whole stack observability comes to life. Events and logs are integrated in a single monitoring reports pane, and used to correlate metrics with application and server logs, events, alerts, anomalies, and more. 
 
-Image below shows report menu in detail followed by explanation on how to use these features. See any metric and any logs in a single unified view, add additional components to your metrics reports, share reports, and more.
+Image below shows the report menu in detail followed by explanation on how to use these features. See any metric and any logs in a single unified view, add additional components to your metrics reports, share reports, and more.
 
 ![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
 
+### Components
 
-Using custom components your whole devops team can add monitoring metrics time series, events count time series, events, markdown notes, and create custom reports with rich data visualization and analytics capabilities. 
+Using custom components your whole devops team can add monitoring metrics time series, events count time series, events, markdown notes, and create custom reports with rich data visualization and analytics capabilities.
+
+There are both APM & Logging common as well as logs or monitoring specific components, and they will be contextually available depending on whether it is monitoring or logs app. Each component can be also added to custom dashboards defined by the system administrator or other devops and data analytics professionals.  
+
+### Monitoring Components
 
 Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order, as well as  additional logging components that can be added to your logs app are available.
 
 ![](https://sematext.com/docs/images/guide/monitoring/add-metric-component.png) 
 
 Use them together with out of box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
+
+#### Component Settings
+
+### App State
+
+When your app is intially loaded, Save and Reset buttons will be hidden since that is apps default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state.
+
+Each Component can be also added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
+
+### Correlations
+
+#### Events
+
+#### Logs
+
+### Report Menu Actions 
+
+#### Email Report
+
+#### Enter Full Screen Mode
+
+#### Connected Applications
+
+#### Monitor Installation
+
+### Report Settings
+
+
+
+
+
 
