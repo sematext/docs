@@ -10,9 +10,8 @@ started on each host in the system. This can be done by setting `netmon.enabled`
 
 The following properties can be changed:
 
-  - **netmon.interfaces** (default value: "" - the
+  - **netmon.interfaces** (default value: **eth0,eth1**) - the
     list of network interfaces that will be used for packets capture.
-    By default packets capture will be enabled on all interfaces except loopback.
 
 SPM monitor should be restarted to apply any changes in YAML file:
 
