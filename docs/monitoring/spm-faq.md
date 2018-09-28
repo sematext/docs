@@ -212,19 +212,10 @@ single Linux helper box. Just do this:
 
 Yes. The following steps are needed:
 
-- In `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.rt`
-    look for a line similar to this (the file name might be a bit
-    different, depending on app type you have chosen):
+- In `/opt/spm/spm-monitor/conf/spm-monitor-config-YOUR_TOKEN-default.properties` add the following property.
 
 ``` properties
-SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar"
-```
-
-Replace this line with something like the following (e.g. in case of
-    WildFly adjust the path depending location of Wildfly client jar):
-
-``` properties
-SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-jvm.jar:/path/to/your/wildfly-client-all.jar"
+SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-generic.jar:/path/to/your/wildfly-client-all.jar"
 ```
 
 -  Change the value of `SPM_MONITOR_JMX_PARAMS` in
@@ -692,14 +683,13 @@ Restart SPM monitor after the above changes.
 
 **My server stopped sending metrics, so why do I still see it under Hosts Filter?**
 
-Filters have 1 day granularity, which means that a server will be
-listed under Hosts filter until 24 hours since it last sent data have
-passed.  For example, if a server stopped sending data at 1 PM and if at
-8 PM you are looking at the last 6 hours of data (for a period from 2 PM
+Filters have 2h day granularity, which means that a server will be
+listed under Hosts filter until 2h hours since it last sent data have
+passed. For example, if a server stopped sending data at 1 PM and if at
+2:30 PM you are looking at the last 1 hour of data (for a period from 2 PM
 until 8 PM) you will not see data from this server on the graph, but you
-will still see this server listed under the Hosts filter until 1 PM on
-the following day.  After 1 PM on the following day this server should
-disappear from the Hosts filter.
+will still see this server listed under the Hosts filter until 3 PM.
+After 3 PM this server should disappear from the Hosts filter.
 
 **I rebooted my server and now I don't see any data in my graphs. What should I check?**
 
