@@ -3,6 +3,8 @@ site_url: https://sematext.com/docs
 strict: true
 pages:
     - Getting Started: index.md
+    - User Guide
+      - Monitoring Guide: guide/monitoring-guide.md
     - Logs:
       - Overview: logs/index.md
       - Sending Log Events:
