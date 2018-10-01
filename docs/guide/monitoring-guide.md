@@ -7,7 +7,7 @@ Our APM SaaS / on-premises IT monitoring service goes beyond just collecting met
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your monitoring app with over 40 monitoring integrations available.
 
-# Monitoring Guide
+## Monitoring Guide
 
 This guide will help you get started with our APM service and discover reporting, monitoring, and other application features and functionalities. Image below shows the default monitoring view and marked are the main application and system UI elements.
 
