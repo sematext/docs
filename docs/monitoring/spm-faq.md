@@ -79,7 +79,7 @@ If you are running in process agents, restart your application/java process.
 **How much memory is standalone sematext-agent-java using and can it be adjusted?**
 
 By default, each standalone SPM monitor process is started with
-"-Xmx192m" setting. This means that its JVM heap will use 384 MB at
+"-Xmx192m" setting. This means that its JVM heap will use 192 MB at
 most. In many cases SPM monitor doesn't actually need or use that much
 memory. If you want to be absolutely sure about it, simply lower this
 number in `/opt/spm/spm-monitor/bin/spm-monitor-starter.sh`, with the

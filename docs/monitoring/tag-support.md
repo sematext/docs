@@ -1,5 +1,5 @@
 title: Tag Support
-description: Asssign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
+description: Assign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
 
 ## What's a Tag?
 
@@ -15,8 +15,8 @@ We recommend that you devise a set of tag keys that meet your needs for each hos
 
 SPM supports 2 types of tags:
 
-1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g hostname, jvm name etc.
-2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. Once can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags
+1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g hostname, jvm name, disk, elasticsearch index, tomcat webapp, port etc.
+2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags. You can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags.
 
 ## Cloud Tags
 
@@ -46,7 +46,7 @@ restart spm-monitor using `sudo service spm-monitor restart`.
 
 ## Custom Tags
 
-Sematext-agent-java supports configuration of custom physical tags. To add custom tags for each app edit the below
+Sematext-agent-java supports configuration of custom logical tags. To add custom tags for each app edit the below
 property in the monitor configuration file: /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
 ``` properties
