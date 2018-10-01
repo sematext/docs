@@ -7,11 +7,11 @@ Our APM SaaS / on-premises IT monitoring service goes beyond just collecting met
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your monitoring app with over 40 monitoring integrations available.
 
-# Monitoring Guide
+## Monitoring Guide
 
 This guide will help you get started with our APM service and discover reporting, monitoring, and other application features and functionalities. Image below shows the default monitoring view and marked are the main application and system UI elements.
 
-![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide.png)
+![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide.png)
 
 ## App Navigation 
 
@@ -65,7 +65,7 @@ Bell icon in the right section of the header is used to open system notification
 
 Last, but not the least User Settings is the last right aligned item in the app header UI. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
-![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
+![Sematext Cloud Monitoring Guide - Menus](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
 
 The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your monitoring app, do report specific actions, connect your apps, and more.
 
@@ -75,7 +75,7 @@ Monitoring Report Menu is where the true power of Sematext APM platform and the 
 
 Image below shows the report menu in detail followed by explanation on how to use these features. See any metric and any logs in a single unified view, add additional components to your metrics reports, share reports, and more.
 
-![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
+![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
 
 ### App State
 
@@ -93,7 +93,7 @@ Image below shows correlations and Events toogle selected for Apache Logs app in
 
 #### Events
 
- ![](https://sematext.com/docs/images/guide/monitoring/event-correlation-with-stream.png) 
+ ![Sematext Cloud Monitoring Guide - Events Correlation View](https://sematext.com/docs/images/guide/monitoring/event-correlation-with-stream.png) 
 
 When the Event correlation is selected in the report menu, the Event Search component is loaded with search input, App Selector used to select an app and app's data you want to load and correlate, and events histogram displaying bar chart across the time frame selected in the time picker above.
 
@@ -113,7 +113,7 @@ Every Log entry in the table has two left aligned icons, one that opens panel wi
 
 (These are both powerful features by themselves and deserve more attention in order to dicover their true potential.  For more information on Logs refer to Logging Guide) 
 
- ![](https://sematext.com/docs/images/guide/monitoring/log-correlation-with-log-table.png)  
+ ![Sematext Cloud Monitoring Guide - Logs Correlation View](https://sematext.com/docs/images/guide/monitoring/log-correlation-with-log-table.png)  
 
 ### Report Actions 
 
@@ -143,7 +143,7 @@ There are both APM & Logging common as well as logs or monitoring specific compo
 
 Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order, as well as  additional logging components that can be added to your logs app are available.
 
-![](https://sematext.com/docs/images/guide/monitoring/add-metric-component.png) 
+![Sematext Cloud Monitoring Guide - Add Metric Component](https://sematext.com/docs/images/guide/monitoring/add-metric-component.png) 
 
 Use them together with out of box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
@@ -151,4 +151,4 @@ Use them together with out of box metrics reports and visualizations, generated 
 
 Each Component can be added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
 
-![](https://sematext.com/docs/images/guide/monitoring/component-settings-dropdown.png)
+![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/monitoring/component-settings-dropdown.png)
