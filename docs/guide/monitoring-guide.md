@@ -48,7 +48,9 @@ All App Actions open in a modal dialogue window as temporary UI regions and let 
 
 ### Time Picker
 
-Time Picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment user can select. Thirty minutes, one and two hour, and one, two, seven, and thirty days time span shortcuts are exposed for easy common observability, and custom time frame can be selected using the time picker dropdown. App will automatically refresh upon selection and update all the reports in view accordingly.
+Time Picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment user can select. Thirty minutes, one and two hour, and one, two, seven, and thirty days time span shortcuts are exposed for easy common observability.
+
+Custom time range can be selected using the time picker dropdown menu. App will automatically refresh upon selection and update all the reports in view accordingly.
 
 ### Refresh and Live Tail
 
