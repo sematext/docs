@@ -1,5 +1,4 @@
-title: Sematext APM Guide 
-description: Sematext App is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
+title: Sematext APM Guide description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
 With over 40 integrations, Sematext application and IT infrastruscture monitoring platform lets you collect metrics and events across your whole stack. Get started in minutes with out-of-the-box dashboards, alerts and anomaly detection rules, and ability to analyze your metrics by a number of context-aware filters.
 
@@ -7,7 +6,7 @@ Our APM SaaS / on-premises IT monitoring service goes beyond just collecting met
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your monitoring app with over 40 monitoring integrations available.
 
-## Monitoring Guide
+# Monitoring Guide
 
 This guide will help you get started with our APM service and discover reporting, monitoring, and other application features and functionalities. Image below shows the default monitoring view and marked are the main application and system UI elements.
 
@@ -35,7 +34,7 @@ as infrastructure and app monitoring, log management, transaction tracing, and r
 - Team
 - Account 
 
-as user and team system features.
+as user and team Sematext Cloud system features.
 
 ### App & Dash Selector
 
@@ -87,7 +86,7 @@ Moreover, with the new RUM (Real User Monitoring) functionality we seek to creat
 
 This is really cool and a huge time saver. Empower your IT system adminis to go from metric spikes to your apps’ and servers’ logs in seconds, find similar metric patterns with built-in metric correlation, get to the root cause in minutes, and see any metric any logs in a single unified same view!
 
-Image below shows correlation and Events toogle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
+Image below shows correlations and Events toogle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
 
 #### Events
 
