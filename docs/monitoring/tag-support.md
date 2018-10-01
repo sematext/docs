@@ -15,10 +15,10 @@ We recommend that you devise a set of tag keys that meet your needs for each hos
 
 SPM supports 2 types of tags:
 
-1. Physical tags -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They can either automatically collected by agent or can be configured. e.g hostname, jvm name etc.
-2. Logical tags - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. Once can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags
+1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They can either automatically collected by agent or can be configured. e.g hostname, jvm name etc.
+2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. Once can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags
 
-## **Cloud Tags**
+## Cloud Tags
 
 SPM client has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are sent as logical tags. 
 SPM collects below metadata:
@@ -43,9 +43,9 @@ To collect user defined tags you need below IAM roles:
 Cloud tag collection is enabled by default.  To disable Cloud tags
 collection adjust set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/sta.yml`.
 
-### **Custom Tags**
+## Custom Tags
 
-Sematext-agent-java support configuration of custom physical tags. To add custom tags for each app edit the below
+Sematext-agent-java supports configuration of custom physical tags. To add custom tags for each app edit the below
 property in the monitor configuration file: /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
 ``` properties
@@ -58,16 +58,6 @@ To exclude tags and thus not send them to SPM just edit:
 ``` properties
 # uncomment and add tags which should be excluded
 # SPM_SUPPRESS_TAGS=project:baz, node:qux
-```
-
-## Adding Tags
-
-To add tags to sematext-agent-java edit the monitor configuration file -
-/opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
-
-``` properties
-# uncomment and specify tags you want to send to SPM
-# SPM_MONITOR_TAGS="env:local, project:projectName, role:slave"
 ```
 
 ## Adding Tags in SPM for Docker
