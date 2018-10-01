@@ -97,7 +97,7 @@ Moreover, with the new RUM (Real User Monitoring) functionality we seek to creat
 
 This is really cool and a huge time saver. Empower your IT system adminis to go from metric spikes to your apps’ and servers’ logs in seconds, find similar metric patterns with built-in metric correlation, get to the root cause in minutes, and see any metric any logs in a single unified same view!
 
-Image below shows correlations and Events toogle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
+Image below shows correlations and Events toggle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
 
 #### Events
 
