@@ -15,7 +15,7 @@ We recommend that you devise a set of tag keys that meet your needs for each hos
 
 SPM supports 2 types of tags:
 
-1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They can either automatically collected by agent or can be configured. e.g hostname, jvm name etc.
+1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g hostname, jvm name etc.
 2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. Once can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags
 
 ## Cloud Tags
@@ -23,13 +23,13 @@ SPM supports 2 types of tags:
 SPM client has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are sent as logical tags. 
 SPM collects below metadata:
 
-1. InstanceId
-2. InstanceName (Azure and GCE)
-3. InstanceType
+1. Instance Identifier
+2. Instance Name (Azure and GCE)
+3. Instance Type
 4. Region (AWS & Azure)
-5. AvailabilityZone (AWS & GCE)
-6. ProjectID (GCE)
-5. User defined tags
+5. Availability Zone (AWS & GCE)
+6. Project Identifier (GCE)
+7. User defined tags
 
 To collect user defined tags you need below IAM roles:
 
@@ -40,8 +40,9 @@ To collect user defined tags you need below IAM roles:
 3. GCE - In GCE User defined tags are called as Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
     See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
 
-Cloud tag collection is enabled by default.  To disable Cloud tags
-collection adjust set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/sta.yml`.
+Cloud tags collection is enabled by default.  To disable Cloud tags
+collection adjust set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/sta.yml` and
+restart spm-monitor using `sudo service spm-monitor restart`.
 
 ## Custom Tags
 
