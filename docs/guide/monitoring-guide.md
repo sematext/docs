@@ -14,19 +14,37 @@ This guide will help you get started with our APM service and discover reporting
 
 ## App Navigation 
 
-### Sidebars
+### Side Navigation
 
-Left sidebar can be collapsed for full reports view and is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team system features. All sidebar options are selectable at all times and the right aligned chevrons indicate that the top level section is collapsible and contains additional subitems.
+Side navigation is peristent UI region that can be collapsed / toggled on or off for full reports view, and is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team system features. All side navigation options are selectable at all times and the right aligned chevrons indicate that the top level section is collapsible and contains additional subitems.
+
+Side Navigation consists of the following top level sections:
+
+- Dashboards
+- Infrastructure
+- Monitoring
+- Logs
+- Correlations
+- Alerts and Events
+- Integrations
+
+as infrastructure and app monitoring, log management, transaction tracing, and real user monitoring system regions and
+
+- Invites
+- Team
+- Account 
+
+as user and team system features.
 
 ### App & Dash Selector
 
-The App & Dash dropdown Selector lets you choose any logging or monitoring app as well as any dashboard reports that you have generated from those apps. Moreover, infrastructure views such as AppMap, NetMap, Servers, and Containers are also available, and together provide seamless switching and navigation between logging, and app & IT infrastructure monitoring, essential when rushing to fix IT production issues.
+The App & Dash dropdown Selector lets you choose any logging or monitoring app as well as any dashboard report(s) that you have generated from those apps. Moreover, infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logging, and app & IT infrastructure monitoring, essential when rushing to fix IT production issues.
 
 ### App Actions
 
-Right next to the Selector is App Actions dropdown menu with various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app ownership.
+Right next to the App & Dash Selector is the App Actions dropdown menu, horizontal elipsis icon, opening various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app ownership.
 
-All App Actions open in a modal dialogue window and let you adjust and edit settings or create various alerts. App view remains unchanged and allows for easy interaction between various system settings and reports view.
+All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. App view remains unchanged and allows for easy interaction between various system settings and reports view.
 
 ### Time Picker
 
@@ -86,11 +104,11 @@ Next, let's take a look at the Logs correlations and how to utilize them togethe
 
 #### Logs
 
-Just like the Events correlation view, turning on Logs correlation in the Reports Menu will display Logs Search componenet with search input, App Selector, and the series of icons used to expand logs table, open logs component contextual menu, and other related settings and features as shown in the image below.
+Just like the Events correlation view, turning on Logs correlation in the Reports Menu will display Logs Search componenet with search input, App Selector, and the series of icons used to expand log table, open logs component contextual menu, and other related settings and features as shown in the image below.
 
-Clicking on the Logs icon will open Logs Table component view below the Logs Search component. Tabular list view of log entries will be displayed with ```@timestamp```, ```_source```, and ```Tags``` as default columns, but all available logs fields will be available in Logs Table component dropdown menu, easily selected or deselected. Column width can be also resized to better organize Logs table when multiple fields are selected at once.
+Clicking on the Logs icon will open logs data table component view below the Logs Search component. List view of log entries will be displayed with ```@timestamp```, ```_source```, and ```Tags``` as default columns, but all available logs fields will be available in Logs Table component dropdown menu, and easily selected or deselected and displayed in data table view. Column width can be also resized to better organize Log Table when multiple fields are selected at once.
 
-Every Log entry in the table has two left aligned icons, one that opens panel with all log details, and other that opens Log context. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events.
+Every Log entry in the table has two left aligned icons, one that opens panel with all log details, and the other that opens Log context. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events.
 
 (These are both powerful features by themselves and deserve more attention in order to dicover their true potential.  For more information on Logs refer to Logging Guide) 
 
@@ -133,9 +151,3 @@ Use them together with out of box metrics reports and visualizations, generated 
 Each Component can be added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
 
 ![](https://sematext.com/docs/images/guide/monitoring/component-settings-dropdown.png)
-
-
-
-
-
-
