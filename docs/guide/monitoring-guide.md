@@ -52,15 +52,15 @@ Time Picker is available whenever logging or monitoring app is selected as well 
 
 ### Refresh and Live Tail
 
-Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed and all the data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident within certain time segment. 
+Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed, and all the data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident or anomaly within a certain time segment. 
 
 ### Notifications
 
-Bell icon in the top right is used to open system notifications messaging. If your plan needs upgrading, new feature is announced, and other such messages will be shown in the notifications view that opens in the modal window and may or may not require user action.
+Bell icon in the right section of the header is used to open system notifications messaging modal window. If your plan needs upgrading, a new feature is announced, and other such system or service messages will be shown in the notifications view, and may or may not require user action.
 
 ### User Settings
 
-Last, but not the least User Settings is the last right aligned item in the top navigation menu. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
+Last, but not the least User Settings is the last right aligned item in the app header UI. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
 ![](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
 
@@ -86,7 +86,7 @@ Moreover, with the new RUM (Real User Monitoring) functionality we seek to creat
 
 This is really cool and a huge time saver. Empower your IT system adminis to go from metric spikes to your apps’ and servers’ logs in seconds, find similar metric patterns with built-in metric correlation, get to the root cause in minutes, and see any metric any logs in a single unified same view!
 
-Image below shows correlation and Events selected for Apache Logs in the same view together with Apache Monitoring used to analyze various server metrics reports. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
+Image below shows correlation and Events toogle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
 
 #### Events
 
@@ -99,8 +99,6 @@ Component's contextual menu items are located as a series of icons next to the A
 Combined with the metric reports below, and with the help of charting hairline, zoom and chart navigation tools, it is easy to see how using our APM and Logging tools in a single pane is a must have for any modern IT enterprise. 
 
 Next, let's take a look at the Logs correlations and how to utilize them together with metric reports as well as events.
-
-(For more information on Events refer to Events Guide)
 
 #### Logs
 
