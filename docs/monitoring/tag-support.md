@@ -5,7 +5,7 @@ description: Asssign metadata to host/server/container with custom tags and crea
 
 To help you manage your metrics, hosts, and containers, and to help you
 create more useful dashboards, you can assign metadata to each
-host/server/container in the form of *tags*.
+host/server/container in the form of *tags*.
 
 Tags let you to organize your SPM hosts/servers/containers in different
 ways – for example by role, owner, or environment. Each tag consists of
@@ -13,39 +13,56 @@ a key and a value, separated by the ':' character.
 
 We recommend that you devise a set of tag keys that meet your needs for each host and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of SPM and avoid chaos. Tags will help you create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
-## **AWS Tags Support**
+SPM supports 2 types of tags:
 
-SPM client has the ability to:
+1. Physical tags -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They can either automatically collected by agent or can be configured. e.g hostname, jvm name etc.
+2. Logical tags - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. Once can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags
 
-1.  Collect AWS/EC2 tags and send them to SPM. EC2 Instances should be
-    created with AWS IAM Role that has policy 'AmazonEC2ReadOnlyAccess'.
-     See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)
-2.  Send EC2 Instance Type and Availability Zone as tags.
+## **Cloud Tags**
 
-### **Excluding Specific Tags**
+SPM client has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are sent as logical tags. 
+SPM collects below metadata:
 
-To exclude tags and thus not send them to SPM just edit the monitor
-configuration file -
-/opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
+1. InstanceId
+2. InstanceName (Azure and GCE)
+3. InstanceType
+4. Region (AWS & Azure)
+5. AvailabilityZone (AWS & GCE)
+6. ProjectID (GCE)
+5. User defined tags
+
+To collect user defined tags you need below IAM roles:
+
+1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
+    See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
+2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager
+    See [Access Azure Resource Manager API](https://docs.microsoft.com/en-gb/azure/active-directory/managed-identities-azure-resources/tutorial-linux-vm-access-arm) for more info.
+3. GCE - In GCE User defined tags are called as Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
+    See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
+
+Cloud tag collection is enabled by default.  To disable Cloud tags
+collection adjust set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/sta.yml`.
+
+### **Custom Tags**
+
+Sematext-agent-java support configuration of custom physical tags. To add custom tags for each app edit the below
+property in the monitor configuration file: /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
+
+``` properties
+# add tags if you want to use them, example: SPM_MONITOR_TAGS="env:foo, role:bar"
+SPM_MONITOR_TAGS="appType:jvm"
+```
+
+To exclude tags and thus not send them to SPM just edit:
 
 ``` properties
 # uncomment and add tags which should be excluded
 # SPM_SUPPRESS_TAGS=project:baz, node:qux
 ```
 
-AWS tag collection is enabled by default.  To disable AWS tags
-collection adjust the following in the
-/opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties
-file:
-
-``` properties
-# use true|false if you want/don't want to send AWS tags to SPM
-COLLECT_AWS_TAGS=true
-```
-
 ## Adding Tags
 
-To add tags edit the monitor configuration file -
+To add tags to sematext-agent-java edit the monitor configuration file -
 /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
 ``` properties
