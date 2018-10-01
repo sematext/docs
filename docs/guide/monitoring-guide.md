@@ -65,6 +65,14 @@ Bell icon in the right section of the header is used to open system notification
 
 Last, but not the least User Settings is the last right aligned item in the app header UI. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
+Image below shows the main app navigation sections:
+
+- Side navigation 
+- App & Dash Selector dropdown menu
+- App Actions dropdown menu
+- User Settings dropdown menu
+- Time Picker component 
+
 ![Sematext Cloud Monitoring Guide - Menus](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
 
 The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your monitoring app, do report specific actions, connect your apps, and more.
