@@ -24,6 +24,7 @@ Upload your logs from all your servers to our centralized log management solutio
 
 Correlate views across multiple logs from different components and get a full stack observability. Share metrics reports and dashboards so that the entire team has access to the same data, while RBAC (Role Based Access Control) provides different access and user permissions to the team.
 
-Regulatory expectations to store all logs require centralized log management solution and Sematext logging management platform addresses these requirements. Provide visibility into the health of your whole application and infrastructure stack. Should security incident or outage take place, you need insight that allows you to quickly resolve the issue and avoid poor customer experience and your bottom line.
+Regulatory expectations to store all logs require centralized log management solution and Sematext logging management platform addresses these requirements. Provide visibility into the health of your whole application and infrastructure stack. Should security incident or outage take place, you need insight that allows you to quickly resolve the issue and avoid poor customer experience and affect your bottom line.
+
 
 ## Logs Guide
