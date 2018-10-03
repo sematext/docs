@@ -3,15 +3,15 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 Logs are everywhere, networks, servers, containers, cloud infrastructure, IoT, applications, load balancers, everywhere.
 
-In order to draw meaningful insights from the sea of logs your IT system administrators, developers, IT operators, and security professionals comb on daily basis, you need a scalable platform that centralizes all these logs. Our SaaS / on-premise service provides ability to search and help your devops team find common exceptions, detect patterns in behaviors, and solve SLA, performance issues, and availability problems.
+In order to draw meaningful insights from the sea of logs your IT system administrators, developers, IT operators, and security professionals comb on daily basis, you need a scalable platform that centralizes all these logs. Our SaaS / on-premise centralized logging management service provides ability to search and help your devops team find common exceptions, detect patterns in behaviors, and solve SLA, performance issues, and availability problems.
 
-[Sematext logging platform](https://sematext.com/logsene/) provides both ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as rich, yet simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
+[Our logging platform](https://sematext.com/logsene/) provides both ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as rich, yet simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
 
 Collect and send data from any part of your stack with different [log shippers available](https://sematext.com/docs/logs/sending-log-events/), and centralize and index logs from operating systems, containers, network devices, AWS infrastructure, application access logs, custom events, and more. 
 
-Search and analyze your IT enterprise logs using Sematext advanced analytics tools, and identify and compare patterns or spot outliers, monitor and alert your whole IT infrastructure with a single pane of glass. 
+Search and analyze your IT enterprise logs using Sematext advanced analytics tools, identify and compare patterns and anomalies, monitor applications and infrastructure, and alert your whole IT infrastructure with a single pane of glass. 
 
-Moreover, integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration software such as Hipchat, Slack and PagerDuty and continuously monitoring large volume of data and logs, and ensure that you are alerted in time.
+Moreover, integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), and check [integrations](https://sematext.com/docs/integration/) pages for more information. Use these sevices to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
 
 We also have a [command line tool](https://sematext.com/blog/logsene-cli/) used for viewing, searching, filtering, and analyzing of log entries across all your logs from all your apps. 
 
@@ -24,7 +24,6 @@ Upload your logs from all your servers to our centralized log management solutio
 
 Correlate views across multiple logs from different components and get a full stack observability. Share metrics reports and dashboards so that the entire team has access to the same data, while RBAC (Role Based Access Control) provides different access and user permissions to the team.
 
-Regulatory expectations to store all logs require centralized log management solution and Sematext logging management platform addresses these requirements. Provide visibility into the health of your whole application and infrastructure stack. Should security incident or outage take place, you need insight that allows you to quickly resolve the issue and avoid poor customer experience and affect your bottom line.
-
+Regulatory expectations to store all logs require centralized log management solution and Sematext logging management platform addresses these requirements. Provide visibility into the health of your whole application and infrastructure stack. Should security incident or outage take place, you need insight that allows you to quickly resolve the issue and avoid poor customer experience.
 
 ## Logs Guide
