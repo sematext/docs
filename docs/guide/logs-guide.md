@@ -39,7 +39,7 @@ We will keep these requirements in mind while trying to provide insight into Sem
 
 Image below shows the default logs view and marked are the main application and system UI elements. 
 
-![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/monitoring/sematext-logs-guide.png)
+![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/logs/sematext-logs-guide.png)
 
 ## App Navigation 
 
