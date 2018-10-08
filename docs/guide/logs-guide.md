@@ -165,5 +165,6 @@ Use them together with out of box metrics reports and visualizations, generated 
 
 Each Component can be added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
 
-![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/monitoring/component-settings-dropdown.png)
+Below is the image of Log Events Component dropdown menu with log specific export and field editor features and ability to add component to a custom dashboard
 
+![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/logs/logs-component-settings-dropdown.png)
