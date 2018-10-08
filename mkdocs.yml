@@ -4,6 +4,7 @@ strict: true
 pages:
     - Getting Started: index.md
     - User Guide:
+      - Logs Guide: guide/logs-guide.md
       - Monitoring Guide: guide/monitoring-guide.md
     - Logs:
       - Overview: logs/index.md
