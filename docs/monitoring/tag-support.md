@@ -15,8 +15,8 @@ We recommend that you devise a set of tag keys that meet your needs for each hos
 
 SPM supports 2 types of tags:
 
-1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g hostname, jvm name, disk, elasticsearch index, tomcat webapp, port etc.
-2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. e.g. cloud tags. You can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags.
+1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g., hostname, jvm name, disk, elasticsearch index, tomcat webapp, port, etc.
+2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. e.g., cloud tags. You can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags.
 
 ## Cloud Tags
 
@@ -31,22 +31,22 @@ SPM collects below metadata:
 6. Project Identifier (GCE)
 7. User defined tags
 
-To collect user defined tags you need below IAM roles:
+To collect user defined tags you need to define the IAM roles listed below:
 
 1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
     See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
 2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager
     See [Access Azure Resource Manager API](https://docs.microsoft.com/en-gb/azure/active-directory/managed-identities-azure-resources/tutorial-linux-vm-access-arm) for more info.
-3. GCE - In GCE User defined tags are called as Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
+3. GCE - In GCE User defined tags are called Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
     See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
 
 Cloud tags collection is enabled by default.  To disable Cloud tags
-collection adjust set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/sta.yml` and
+collection set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/st-agent.yml` and
 restart spm-monitor using `sudo service spm-monitor restart`.
 
 ## Custom Tags
 
-Sematext-agent-java supports configuration of custom logical tags. To add custom tags for each app edit the below
+The App Agent supports configuration of custom logical tags. To add custom tags for each app edit the below
 property in the monitor configuration file: /opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties:
 
 ``` properties
@@ -54,7 +54,7 @@ property in the monitor configuration file: /opt/spm/spm-monitor/conf/spm-monito
 SPM_MONITOR_TAGS="appType:jvm"
 ```
 
-To exclude tags and thus not send them to SPM just edit:
+To exclude tags and thus not send them to Sematext just edit:
 
 ``` properties
 # uncomment and add tags which should be excluded
