@@ -9,7 +9,8 @@ host/server/container in the form of *tags*.
 
 Tags let you to organize your SPM hosts/servers/containers in different
 ways – for example by role, owner, or environment. Each tag consists of
-a key and a value, separated by the ':' character. 
+a key and a value, separated by the ':' character. Both key & value are
+case-sensitive.
 
 We recommend that you devise a set of tag keys that meet your needs for each host and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of SPM and avoid chaos. Tags will help you create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
