@@ -72,6 +72,21 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 </div>
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/integration/clickhouse/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="/docs/images/integrations/clickhouse.png" alt="ClickHouse" title="ClickHouse Monitoring">
+						</div>
+						<div class="side back">
+							<h5>ClickHouse</h5>current metrics, profile events, asynchronous metrics, part stats, replication & replica metrics, ...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/docker/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
@@ -113,6 +128,8 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
+</div>
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/jvm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -127,8 +144,6 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
-</div>
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/kafka/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -171,6 +186,8 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
+</div>
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/nginx/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -187,8 +204,6 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
-</div>
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/nginxplus/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -231,6 +246,9 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
+</div>
+
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/redis/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -247,9 +265,6 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
-</div>
-
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/hadoop/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -294,6 +309,9 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
+</div>
+
+<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/spark/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -308,9 +326,6 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 			</div>
 		</a>
 	</div>
-</div>
-
-<div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="/docs/integration/storm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">

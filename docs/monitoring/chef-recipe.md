@@ -22,10 +22,10 @@ if node.spm[:token]  # Will only run if a SPM token is present.
     action :nothing
   end
  
-  bash "spm-client-setup-conf.sh" do
+  bash "setup-spm" do
     user "root"
     cwd "/tmp"
-    code "bash /opt/spm/bin/spm-client-setup-conf.sh #{node.spm[:token]} es standalone"
+    code "bash /opt/spm/bin/setup-spm --app-token #{node.spm[:token]} --app-type elasticsearch --agent-type standalone"
     creates "/opt/spm/spm-monitor/conf/spm-monitor-config-#{node.spm[:token]}-default.properties"
     notifies :restart, "service[spm-monitor]"
   end
@@ -36,9 +36,9 @@ end
 **Notes**:
 
   - line 10: assumes Debian-based distribution.  For other distributions
-    replace "apt-get" with distribution-specific equivallent (e.q. yum
+    replace "apt-get" with distribution-specific equivalent (e.q. yum
     on RedHat-based distros)
-  - line 22: change "es" to appropriate type based on the type seen for
+  - line 22: change "elasticsearch" to appropriate type based on the type seen for
     your SPM app on <https://apps.sematext.com/ui/our-integrations>
   - line 22: change "standalone" to "javaagent" if you want an
     [embedded/in-process agent](spm-monitor-javaagent)

@@ -1,22 +1,24 @@
-title: Sematext Monitoring Java Agent
-description: Sematext Java agent is used for IT infrastructure monitoring, collecting metrics from JMX, REST APIs,and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling 
+title: Sematext Infra & App Agent
+description: Sematext Infra & App Agent (spm-client) is used for IT infrastructure monitoring, 
+collecting OS & Network metrics, application metrics from JMX, REST APIs, 
+and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
 
-Sematext Monitoring agent is also known as SPM Monitor or SPM Client.
+Sematext Infra & App Agent is also known as SPM Monitor or SPM Client.
 
-The agent is open-source, written in Java (but not limited to
+The App Agent is open-source, written in Java (but not limited to
 monitoring Java!), with a number of built-in integrations available
 from the
 [sematext-agent-integrations](https://github.com/sematext/sematext-agent-integrations)
-repo.  You can add your own integrations for monitoring additional
+repo. You can add your own integrations for monitoring additional
 infrastructure and services.  Pull requests welcome!
 
 ## Capabilities
 
-This agent communicates with Sematext via HTTPS.  It buffers data on
+These agents communicates with Sematext via HTTPS.  It buffers data on
 disk in case it cannot immediately ship it, ensuring data is never
 lost.
 
-### Infrastructure monitoring
+### Application monitoring
 
 Lightweight and pluggable, this agent comes with a number of out of
 the box integrations. It has built-in support for collecting metrics
@@ -104,7 +106,7 @@ sudo zypper in spm-client
  </div>
 </div>
 
-## Run modes
+## App Agent Run modes
 
 ### Embedded
 

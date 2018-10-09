@@ -21,9 +21,11 @@ A number of App management operations, such as creation of new Apps, definition 
 To start monitoring your infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-  - [Java-based App Agent](spm-client) (aka SPM Client or SPM
-    Monitor), which you can run in [embedded](spm-monitor-javaagent)
-    (aka Javaagent-based, aka in-process) or
+  - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
+    Monitor). The Infra Agent collects OS & Network metrics.
+    The App Agent collects application metrics. The App Agent
+    can run in [embedded](spm-monitor-javaagent)
+    (aka Java agent-based, aka in-process) or
     [standalone](spm-monitor-standalone) mode.  This agent can also
     instrument JVM-based apps to collect transaction traces and
     perform [on demand profiling](on-demand-profiling).
