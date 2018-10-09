@@ -1,4 +1,4 @@
-title: Tag Support
+title: Monitoring Tags Support
 description: Assign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
 
 ## What's a Tag?
@@ -7,22 +7,21 @@ To help you manage your metrics, hosts, and containers, and to help you
 create more useful dashboards, you can assign metadata to each
 host/server/container in the form of *tags*.
 
-Tags let you to organize your SPM hosts/servers/containers in different
+Tags let you to organize your hosts/servers/containers in different
 ways – for example by role, owner, or environment. Each tag consists of
 a key and a value, separated by the ':' character. Both key & value are
 case-sensitive.
 
-We recommend that you devise a set of tag keys that meet your needs for each host and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of SPM and avoid chaos. Tags will help you create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
+We recommend that you devise a set of tag keys that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of Sematext and avoid chaos. Tags will help you create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
-SPM supports 2 types of tags:
+Sematext supports 2 types of tags:
 
-1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g., hostname, jvm name, disk, elasticsearch index, tomcat webapp, port, etc. The maximum allowed length for key is 200 characters. The key should match this regex: `[a-zA-Z0-9_\-.:(\\ |,=)]+`.
-2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. e.g., cloud tags. You can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters.
+1. **Physical tags** - Physical tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g., hostname, jvm name, disk, elasticsearch index, tomcat webapp, port, etc. The maximum allowed length for key is 200 characters. The key should match this regex: `[a-zA-Z0-9_\-.:(\\ |,=)]+`.
+2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. For example, cloud tags like `env:prod` (on all production servers) and `env:test` (on all test servers) that you can define in AWS EC2 Console.  You can filter data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters.
 
 ## Cloud Tags
 
-SPM client has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are sent as logical tags. 
-SPM collects below metadata:
+The Sematext Monitoring Agent has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are sent as logical tags. By default the agent collects the following metadata:
 
 1. Instance Identifier
 2. Instance Name (Azure and GCE)
@@ -62,16 +61,15 @@ To exclude tags and thus not send them to Sematext just edit:
 # SPM_SUPPRESS_TAGS=project:baz, node:qux
 ```
 
-## Adding Tags in SPM for Docker
+## Adding Tags in Sematext for Monitoring Docker
 
-Tags are provided by the environment variable SPM\_MONITOR\_TAGS for
-example:
+Tags are provided in the environment variable SPM\_MONITOR\_TAGS for example:
 
 ``` bash
 docker run -e SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend" ... sematext/sematext-agent-docker
 ```
 
-## Adding Tags in SPM for Node.js
+## Adding Tags in Sematext for Monitoring Node.js
 
 Tags could be configured in the config file "./.spmagentrc" or
 /etc/spmagentrc
@@ -80,9 +78,8 @@ Tags could be configured in the config file "./.spmagentrc" or
 SPM_MONITOR_TAGS = env:dev, project:projectName, role:webfrontend
 ```
 
-or by the environment variable SPM\_MONITOR\_TAGS, e.g. on Linux:
+or in the environment variable SPM\_MONITOR\_TAGS, e.g. on Linux:
 
 ``` properties
 export SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
-
