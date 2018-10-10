@@ -3,7 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 Zapier is an online automation tool that connects your favorite apps, such as Gmail, Slack, MailChimp, and over 1,000 more. You can connect two or more apps to automate repetitive tasks without coding or relying on developers to build the integration, and our log management and monitoring platform can be connected with Zapier for alerting and incident management needs as well. Sematext has threshold, anomaly and / or heartbeat Alerts integration with Zapier's workflow automation tools.
 
-## **In Zapier:**
+## **In Zapier**
 
 Log into your [Zapier account](https://zapier.com/app/login/) and create Token needed to create the integration between Zapier and Sematext APM, Log Management, Tracing, and RUM platform. Also check [Zapier's Webhooks](https://zapier.com/help/webhooks/) for webhooks integration information. 
 
