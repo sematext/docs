@@ -1,4 +1,4 @@
-title: Sematext APM Guide
+title: APM Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
 With over 40 integrations, Sematext application and IT infrastruscture monitoring platform lets you collect metrics and events across your whole stack. Get started in minutes with out-of-the-box dashboards, alerts and anomaly detection rules, and ability to analyze your metrics by a number of context-aware filters.
