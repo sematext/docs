@@ -3,6 +3,9 @@ site_url: https://sematext.com/docs
 strict: true
 pages:
     - Getting Started: index.md
+    - User Guide:
+      - Logs Guide: guide/logs-guide.md
+      - Monitoring Guide: guide/monitoring-guide.md
     - Logs:
       - Overview: logs/index.md
       - Sending Log Events:
@@ -86,10 +89,16 @@ pages:
       - Monitoring Storm: integration/storm.md
       - Monitoring Tomcat: integration/tomcat.md
       - Monitoring ZooKeeper: integration/zookeeper.md
+      - Big Panda: integration/alerts-bigpanda-integration.md
       - Email: integration/alerts-email-integration.md
       - HipChat: integration/alerts-hipchat-integration.md
+      - Nagios: integration/alerts-nagios-integration.md
+      - OpsGenie: integration/alerts-opsgenie-integration.md
       - PagerDuty: integration/alerts-pagerduty-integration.md
+      - Pushover: integration/alerts-pushover-integration.md
       - Slack: integration/alerts-slack-integration.md
+      - VictorOps: integration/alerts-victorops-integration.md
+      - Zapier: integration/alerts-zapier-integration.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md

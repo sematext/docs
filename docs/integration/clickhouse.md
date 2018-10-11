@@ -8,7 +8,7 @@ description: Comprehensive view of your database’s health and performance with
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Max relative replica queue delay<br>**clickhouse.repl.queue.delay.relative.max** <br>*(double gauge)* *(ms)*      |  Relative delay is the maximum difference of absolute delay from any other replica
 Max absolute replica queue delay<br>**clickhouse.repl.queue.delay.absolute.max** <br>*(double gauge)* *(ms)*      |  Maximum replica queue delay relative to current time
 Max active part count<br>**clickhouse.part.count.max** <br>*(double gauge)*                                       |  Maximum number of active parts in partitions
@@ -83,3 +83,7 @@ Replica parts to check<br>**clickhouse.replica.parts.tocheck** <br>*(long gauge)
 Replica queue size<br>**clickhouse.replica.queue.size** <br>*(long gauge)*                                        |  Size of the queue for operations waiting to be performed. Operations include inserting blocks of data, merges, and certain other actions.
 Replica queue inserts<br>**clickhouse.replica.queue.inserts** <br>*(long gauge)*                                  |  Number of inserts of blocks of data that need to be made. Insertions are usually replicated fairly quickly. If the number is high, something is wrong.
 Replica queue merges<br>**clickhouse.replica.queue.merges** <br>*(long gauge)*                                    |  The number of merges waiting to be made. Sometimes merges are lengthy, so this value may be greater than zero for a long time
+Replica log max index<br>**clickhouse.replica.log.max.index** <br>*(long gauge)*                                  |  Maximum entry number in the log of general activity.
+Replica log pointer<br>**clickhouse.replica.log.pointer** <br>*(long gauge)*                                      |  Maximum entry number in the log of general activity that the replica copied to its execution queue, plus one. If log pointer is much smaller than log max index, something is wrong.
+Total replicas<br>**clickhouse.replica.total.replicas** <br>*(long gauge)*                                        |  The total number of known replicas of this table.
+Active replicas<br>**clickhouse.replica.active.replicas** <br>*(long gauge)*                                      |  The number of replicas of this table that have a session in ZooKeeper (i.e., the number of functioning replicas).

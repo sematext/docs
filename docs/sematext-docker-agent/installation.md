@@ -1,4 +1,5 @@
-Title: Install Sematext Docker Agent
+title: Install Sematext Docker Agent
+description: Installation instructions for Sematext Docker Agent, a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers
 
 To run Sematext Docker Agent you will need a Monitoring App Token (aka
 SPM_TOKEN) and/or a Logs App Token (aka LOGSENE_TOKEN).  If you don't have Monitoring and/or Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations)

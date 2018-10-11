@@ -1,4 +1,5 @@
-Title: Ingest data in Elasticsearch
+title: Ingest data in Elasticsearch
+description: Forwards parsed logs with Elasticsearch output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 ## Elasticsearch Output Plugin
 

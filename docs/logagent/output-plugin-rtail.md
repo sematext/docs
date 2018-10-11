@@ -1,5 +1,5 @@
-Title: Send data to Rtail real-time log viewer
-Description: log shipper, rtail, real-time log view
+title: Send data to Rtail real-time log viewer
+description: Ship messages to rTail and launch rTail web server with rTail output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 ## Output Plugin: rTail  
 

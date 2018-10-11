@@ -1,4 +1,5 @@
-Title: Troubleshooting Sematext Docker Agent
+title: Troubleshooting Sematext Docker Agent
+description: Troubleshooting instructions for Sematext Docker Agent, a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers
 
 # Troubleshooting 
 

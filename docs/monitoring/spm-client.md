@@ -1,7 +1,5 @@
 title: Sematext Infra & App Agent
-description: Sematext Infra & App Agent (spm-client) is used for IT infrastructure monitoring, 
-collecting OS & Network metrics, application metrics from JMX, REST APIs, 
-and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
+description: Sematext Infra & App Agent (spm-client) is used for IT infrastructure monitoring, collecting OS & Network metrics, application metrics from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
 
 Sematext Infra & App Agent is also known as SPM Monitor or SPM Client.
 

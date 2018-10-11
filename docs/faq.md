@@ -1,5 +1,5 @@
 title: Sematext FAQ
-description: FAQ about Sematext monitoring and logging products, integrations, alerts, api, billing, security, private vs SaaS options and more
+description: FAQ about Sematext monitoring and logging products, integrations, alerts, api, billing, security, private vs SaaS options and more. APM, Log Management, Tracing, RUM are part of the Sematext solutions, available both on premises and in cloud SaaS
 
 ## General
 

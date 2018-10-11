@@ -1,4 +1,5 @@
-Title: Logagent Debugging
+title: Logagent Debugging
+description: Debug Logagent using Visual Source Code Logagent. Logagent is light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
 ### Logagent Debugging with Visual Source Code:
 

@@ -1,4 +1,5 @@
-Title: Configuring Sematext Docker Agent
+title: Configuring Sematext Docker Agent
+description: Configuration instructions for Sematext Docker Agent, a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers
 
 Please note [Monitoring & Logging for Docker
 Enterprise](https://sematext.com/docker-enterprise-monitoring-and-logging/configuring-sematext-docker-agent/)
