@@ -87,7 +87,7 @@ To add custom tags for each app edit the below property in the monitor configura
 
 ``` properties
 # add tags if you want to use them, example: SPM_MONITOR_TAGS="env:foo, role:bar"
-SPM_MONITOR_TAGS="appType:jvm"
+SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
 
 The key and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
