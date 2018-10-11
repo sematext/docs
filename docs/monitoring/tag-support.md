@@ -16,12 +16,12 @@ We recommend that you devise a set of tag keys that meet your needs for each hos
 
 SPM supports 2 types of tags:
 
-1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g., hostname, jvm name, disk, elasticsearch index, tomcat webapp, port, etc. The maximum allowed length for key is 200 characters. The key should match this regex: `[a-zA-Z0-9_\-.:(\\ |,=)]+`.
-2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. e.g., cloud tags. You can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters.
+1. **Physical tags** -  Physical Tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g., hostname, jvm name, disk, elasticsearch index, tomcat webapp, port, etc. The maximum allowed length for key is 200 characters. The key should match this regex: `[a-zA-Z0-9_\-.:(\\ |,=)]+`. Physical tags are extracted from metric data sources and can be configured in metric definitions YAML file. For example, check [Tomcat](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as physical tags from JMX ObjectName.
+2. **Logical tags** - Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. e.g., cloud tags. You can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters. Logical tags are either extract automatically like cloud tags or user can specify custom logical tags as described below.
 
 ## Cloud Tags
 
-SPM client has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are sent as logical tags. 
+SPM client has the ability to collect metadata as tags from AWS, Azure and GCE instances. Cloud tags are of type logical tags.
 SPM collects below metadata:
 
 1. Instance Identifier
@@ -61,6 +61,7 @@ To exclude tags and thus not send them to Sematext just edit:
 # uncomment and add tags which should be excluded
 # SPM_SUPPRESS_TAGS=project:baz, node:qux
 ```
+The key and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
 
 ## Adding Tags in SPM for Docker
 

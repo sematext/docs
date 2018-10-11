@@ -77,7 +77,7 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="/docs/images/integrations/clickhouse.png" alt="ClickHouse" title="ClickHouse Monitoring">
+							<img src="/docs/images/integrations/clickhouse.svg" alt="ClickHouse" title="ClickHouse Monitoring">
 						</div>
 						<div class="side back">
 							<h5>ClickHouse</h5>current metrics, profile events, asynchronous metrics, part stats, replication & replica metrics, ...</div>
