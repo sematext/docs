@@ -16,16 +16,16 @@ We recommend that you devise a set of tag keys that meet your needs for each pie
 
 `token` and `measurement` are reserved tag keys.
 
-Sematext Agents collects tags from multiple sources:
+Sematext Agents collects tags from following sources:
 
 ### Sematext App Agent Integration YAMLs
 
-These tags are extracted from metric data sources & values and can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't want to adjust these tags for built-in
+These tags are extracted from metric data sources & values. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
 
-The tags derived from metrics source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
+Some of the tags derived from a given metrics source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
 
 ### Environment
 
@@ -33,7 +33,7 @@ Sematext Monitoring agent automatically collects tags from the environment the a
 
 #### Cloud metadata
 
-The Sematext Monitoring Agent has the ability to collect cloud metadata as tags from AWS, Azure and GCE instances. The agent collects below metadata as tags:
+The cloud metadata from AWS, Azure and GCE instances is collected as tags. The agent collects below metadata as tags:
 
 | Name  | Tag Name  | Supported Cloud Providers  |
 |:--|:--|:--|
@@ -61,7 +61,7 @@ restart spm-monitor using `sudo service spm-monitor restart`.
 
 #### Machine
 
-Machine tags are collected from the host the agent is running.
+Following tags are collected from the host the agent is running.
 
 | Name  | Tag Name  | Description |
 |:--|:--|:--|
