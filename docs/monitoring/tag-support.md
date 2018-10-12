@@ -1,5 +1,5 @@
 title: Monitoring Tags Support
-description: Assign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
+description: Extract tags from metric sources, environment, assign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
 
 ## What's a Tag?
 
@@ -7,36 +7,33 @@ To help you manage your metrics, hosts, and containers, and to help you
 create more useful dashboards, you can assign metadata to each
 host/server/container in the form of *tags*.
 
-Tags let you to organize your hosts/servers/containers in different
+Tags let you organize your hosts/servers/containers in different
 ways – for example by role, owner, or environment. Each tag consists of
 a key and a value, separated by the ':' character. Both key & value are
 case-sensitive.
 
-We recommend that you devise a set of tag keys that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of Sematext and avoid chaos. Tags will help you create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
+We recommend that you devise a set of tag keys that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of Sematext and avoid chaos. Tags will help you to create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
-`token` and `measurement` are reserved tag keys. Do not use them in user-defined tags.
+`token` and `measurement` are reserved tag keys.
 
-Sematext supports Physical and Logical tags.
+Sematext Agents collects tags from multiple sources:
 
-## Physical Tags
+### Sematext App Agent Integration YAMLs
 
-Physical tag is an attribute of a data point one can use for filtering and grouping. They are sent with every data point. They are either automatically collected by agent or can be configured. e.g., hostname, jvm name, disk, elasticsearch index, tomcat webapp, port, etc. The maximum allowed length for key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Physical tags are extracted from metric data sources and can be configured in metric definitions YAML file. 
+These tags are extracted from metric data sources & values and can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't want to adjust these tags for built-in
+integrations.
 
-For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as physical tags from JMX ObjectName.
+For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
 
-Physical tags derived from metrics source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
+The tags derived from metrics source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
 
-## Logical Tags
+### Environment
 
-Logical tags are stored just once and updated periodically and are not sent as part of every data point. They are associated with a set of physical tags. One can filter/group data points using logical tags without sending them with every data point. Logical tags are either extracted automatically like cloud tags or user can specify Custom Tags. 
+Sematext Monitoring agent automatically collects tags from the environment the agent is running. Following tags are collected:
 
-For example, you can configure user-defined tags like `env:prod` (on all production servers) and `env:test` (on all test servers) in EC2 and filter the data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters.
+#### Cloud metadata
 
-Sematext Monitoring Agents supports following Logical tags:
-
-### Cloud Tags
-
-The Sematext Monitoring Agent has the ability to collect metadata as tags from AWS, Azure and GCE instances. By default, the agent collects below metadata:
+The Sematext Monitoring Agent has the ability to collect cloud metadata as tags from AWS, Azure and GCE instances. The agent collects below metadata as tags:
 
 | Name  | Tag Name  | Supported Cloud Providers  |
 |:--|:--|:--|
@@ -62,9 +59,9 @@ Cloud tags collection is enabled by default.  To disable Cloud tags
 collection set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/st-agent.yml` and
 restart spm-monitor using `sudo service spm-monitor restart`.
 
-### Machine Tags
+#### Machine
 
-The Sematext Monitoring Agent collects following logical tags from the host:
+Machine tags are collected from the host the agent is running.
 
 | Name  | Tag Name  | Description |
 |:--|:--|:--|
@@ -75,10 +72,11 @@ The Sematext Monitoring Agent collects following logical tags from the host:
 | JVM Version | jvm.version | Version of JVM, if available in `PATH` |
 | Virtualization | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
 
-### Custom Tags
+### Agent configuration
 
-The Sematext Agents supports configuration of custom logical tags. 
-Below are the steps configure custom tags in Sematext Agents.
+The Sematext Agents supports configuration of custom tags. They can be specified in the agent's configuration files. For example, you can configure tags like `env:prod` (on all production servers) and `env:dev` (on all dev servers) and filter the data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters. These tags are optional and can be changed anytime.
+
+Below are the steps to configure custom tags in Sematext Agents.
 
 #### Sematext App Agent
 
