@@ -19,6 +19,6 @@ Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-cre
 
 Enter required parameters and additional parameters and headers can be added as well. Click Test button to confirm that Sematext app is sending data and save your custom webhook integration.
 
-![Custom Webhooks Integration](https://sematext.com/docs/images/integrations/custom-webhooks.png "Create Custom Webhooks Integration")
+![Custom Webhooks Integration](https://sematext.com/docs/images/integrations/custom-webhook.png "Create Custom Webhooks Integration")
 
 **Done.** Use as many generic Webhooks-based integration as you wish, and there are numerous other third party integrations services like HipChat, Slack, Zapier, Flowdock, and more available as well. Check [Integrations](/integration/) pages for more details.
