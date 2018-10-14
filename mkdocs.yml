@@ -90,6 +90,7 @@ pages:
       - Monitoring Tomcat: integration/tomcat.md
       - Monitoring ZooKeeper: integration/zookeeper.md
       - Big Panda: integration/alerts-bigpanda-integration.md
+      - Custom Webhooks: integration/alerts-webhooks-integration.md
       - Email: integration/alerts-email-integration.md
       - HipChat: integration/alerts-hipchat-integration.md
       - Nagios: integration/alerts-nagios-integration.md
