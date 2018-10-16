@@ -15,7 +15,7 @@ We recommend that you devise a set of tag keys that meet your needs for each pie
 
 Below tag names are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag names for custom tags.
 
-These tag names are used for internal purposes:
+These tag names are used for internal purposes. These are are automatically added by agent:
 
 | Tag Name  | Description  |
 |:--|:--|
@@ -23,7 +23,7 @@ These tag names are used for internal purposes:
 | token | Sematext App Token |
 | container.hostname | Hostname of the container being monitored |
 | container.host.hostname | Hostname of the host where the container is running |
-| measurement | Used in Influx Line Protocol. Represents the top namespace to which the metrics from the Influx line belong |
+| measurement | Reserved as per Influx Line Protocol |
 
 `source`, `host`, `hostname`, `pod`, `service`, `span` are reserved for future use.
 
@@ -31,7 +31,7 @@ Sematext Agents collects tags from following sources:
 
 ### Sematext App Agent Integration YAMLs
 
-These tags are extracted from metric data sources & values. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
+These tags are extracted automatically from metric data sources & values based on YAML configuration. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
