@@ -13,9 +13,17 @@ We recommend that you devise a set of tag keys that meet your needs for each pie
 
 ### Reserved tags
 
-Below tag keys are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag keys for custom tags.
+Below tag names are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag keys for custom tags.
 
-`os.host`, `token`, `container.hostname`, `container.host.hostname` and `measurement` tag keys are used for Sematext internal purposes.
+These tag names are used for internal purposes:
+
+| Tag Name  | Description  |
+|:--|:--|
+| os.host | Hostname of host where the agent is running |
+| token | Sematext App Token |
+| container.hostname | Hostname of the container |
+| container.host.hostname | Hostname of the host where the container is running |
+| measurement | Represents the top namespace to which the metrics from the Influx line belong. |
 
 `source`, `host`, `hostname`, `pod`, `service`, `span` tag keys are reserved for future use.
 
