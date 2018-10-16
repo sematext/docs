@@ -23,7 +23,7 @@ These tag names are used for internal purposes:
 | token | Sematext App Token |
 | container.hostname | Hostname of the container being monitored |
 | container.host.hostname | Hostname of the host where the container is running |
-| measurement | Represents the top namespace to which the metrics from the Influx line belong. |
+| measurement | Used in Influx Line Protocol. Represents the top namespace to which the metrics from the Influx line belong |
 
 `source`, `host`, `hostname`, `pod`, `service`, `span` are reserved for future use.
 
