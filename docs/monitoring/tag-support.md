@@ -25,7 +25,7 @@ These tag names are used for internal purposes:
 | container.host.hostname | Hostname of the host where the container is running |
 | measurement | Represents the top namespace to which the metrics from the Influx line belong. |
 
-`source`, `host`, `hostname`, `pod`, `service`, `span` tag keys are reserved for future use.
+`source`, `host`, `hostname`, `pod`, `service`, `span` tag names are reserved for future use.
 
 Sematext Agents collects tags from following sources:
 
