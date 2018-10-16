@@ -3,18 +3,21 @@ description: Extract tags from metric sources, environment, assign metadata to h
 
 ## What's a Tag?
 
-To help you manage your metrics, hosts, and containers, and to help you
-create more useful dashboards, you can assign metadata to each
+To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each
 host/server/container in the form of *tags*.
 
-Tags let you organize your hosts/servers/containers in different
-ways – for example by role, owner, or environment. Each tag consists of
-a key and a value, separated by the ':' character. Both key & value are
-case-sensitive.
+Tags let you organize your hosts/servers/containers in different ways – for example by role, owner, or environment. Each tag consists of
+a key and a value, separated by the ':' character. Both key & value are case-sensitive.
 
 We recommend that you devise a set of tag keys that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of Sematext and avoid chaos. Tags will help you to create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
-`token` and `measurement` are reserved tag keys.
+### Reserved tags
+
+Below tag keys are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag keys for custom tags.
+
+`os.host`, `token`, `container.hostname`, `container.host.hostname` and `measurement` tag keys are used for Sematext internal purposes.
+
+`source`, `host`, `hostname`, `pod`, `service`, `span` tag keys are reserved for future use.
 
 Sematext Agents collects tags from following sources:
 
