@@ -19,9 +19,9 @@ These tag names are used for internal purposes:
 
 | Tag Name  | Description  |
 |:--|:--|
-| os.host | Hostname of host where the agent is running |
+| os.host | Hostname of the host where the agent is running |
 | token | Sematext App Token |
-| container.hostname | Hostname of the container |
+| container.hostname | Hostname of the container being monitored |
 | container.host.hostname | Hostname of the host where the container is running |
 | measurement | Represents the top namespace to which the metrics from the Influx line belong. |
 
