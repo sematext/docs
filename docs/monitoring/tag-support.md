@@ -13,7 +13,7 @@ We recommend that you devise a set of tag keys that meet your needs for each pie
 
 ### Reserved tags
 
-Below tag names are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag keys for custom tags.
+Below tag names are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag names for custom tags.
 
 These tag names are used for internal purposes:
 
