@@ -3,24 +3,35 @@ description: Extract tags from metric sources, environment, assign metadata to h
 
 ## What's a Tag?
 
-To help you manage your metrics, hosts, and containers, and to help you
-create more useful dashboards, you can assign metadata to each
+To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each
 host/server/container in the form of *tags*.
 
-Tags let you organize your hosts/servers/containers in different
-ways – for example by role, owner, or environment. Each tag consists of
-a key and a value, separated by the ':' character. Both key & value are
-case-sensitive.
+Tags let you organize your hosts/servers/containers in different ways – for example by role, owner, or environment. Each tag consists of
+a key and a value, separated by the ':' character. Both key & value are case-sensitive.
 
 We recommend that you devise a set of tag keys that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of Sematext and avoid chaos. Tags will help you to create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
-`token` and `measurement` are reserved tag keys.
+### Reserved tags
+
+Below tag names are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag names for custom tags.
+
+These tag names are used for internal purposes. These are are automatically added by agent:
+
+| Tag Name  | Description  |
+|:--|:--|
+| os.host | Hostname of the host where the agent is running |
+| token | Sematext App Token |
+| container.hostname | Hostname of the container being monitored |
+| container.host.hostname | Hostname of the host where the container is running |
+| measurement | Reserved as per Influx Line Protocol |
+
+`source`, `host`, `hostname`, `pod`, `service`, `span` are reserved for future use.
 
 Sematext Agents collects tags from following sources:
 
 ### Sematext App Agent Integration YAMLs
 
-These tags are extracted from metric data sources & values. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
+These tags are extracted automatically from metric data sources & values based on YAML configuration. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
