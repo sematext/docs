@@ -1,7 +1,7 @@
 title: Dashboards Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system. Dashboarding is system's powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events. 
 
-Sematext Cloud, our real-time analytics and data visualization IT enterprise platform for logs and application metrics, is designed to make the dashboarding powerful feature for cohesive data analysis as well as easy navigation and customization of dashboard reports by your DevOps or business team. 
+Sematext Cloud, our real-time analytics and data visualization IT enterprise platform for logs and application metrics, is designed to make the dashboarding powerful feature for cohesive data analysis, and easy navigation and customization of dashboard reports by your DevOps or business team. 
 
 Index data from virtually any source, format or location, search and analyze it, and monitor your applications and infrastructure stack with ability to generate dashboard(s) from all these pieces, usually disconnected parts of IT puzzle. Combine them together and use dashboards as powerful analytics and presentation tool.
 
@@ -15,7 +15,7 @@ Your devops team will be able to quickly respond to service failures and minimiz
 
 ## Dashboards Guide
 
-Image bellow shows already created Dashboards Report identifying section's top navigation elements and active app section in the left sidebar navigation. We are using it to monitor the health of our cloud based application performance monitroing platform. It is made up of several different technologies used in our stack, namely [Hbase](/integration/hbase/), [Kafka](/integration/kafka/), and [MySql](/integration/mysql/), and for each piece of tech in the stack a monitoring application has been created.  
+Image bellow shows already created Dashboards Report identifying section's top navigation elements and active app section in the left sidebar navigation. We are using it to monitor the health of our cloud based application performance monitoring platform. It is made up of several different technologies used in our stack, namely [Hbase](/integration/hbase/), [Kafka](/integration/kafka/), and [MySql](/integration/mysql/), and for each piece of tech in the stack a monitoring application has been created.  
 
 Check [Integrations](/integration/) pages for more details on available monitoring integrations. 
 
