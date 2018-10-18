@@ -21,7 +21,7 @@ For example, if you have a development and a production environment, it might ma
 
 After creating an App you will get a confirmation screen that tells you how to [send data to your new application](sending-log-events). Once you start sending data, you can start [searching and analyzing those events](searching-log-events) via the native Sematext UI or [explore your data with Kibana](kibana).
 
-<iframe width="1000" height="563" src="https://www.youtube.com/embed/TR_qXdR8DVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="801" height="478" src="https://www.youtube.com/embed/TR_qXdR8DVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Adding Data to Your App
 
