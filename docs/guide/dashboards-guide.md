@@ -1,13 +1,13 @@
 title: Dashboards Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system. Dashboarding is system's powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events. 
 
-Sematext Cloud, our real-time analytics and data visualization IT enterprise platform for logs and application metrics, is designed to make the dashboarding powerful feature for cohesive data analysis, and easy navigation and customization of dashboard reports by your DevOps or business team. 
+Sematext Cloud, our real-time analytics and data visualization IT enterprise platform for logs and application metrics, is designed to make the dashboarding powerful feature for cohesive data analysis, and for easy navigation and customization of dashboard reports by your DevOps or business team. 
 
-Index data from virtually any source, format or location, search and analyze it, and monitor your applications and infrastructure stack with ability to generate dashboard(s) from all these pieces, usually disconnected parts of IT puzzle. Combine them together and use dashboards as powerful analytics and presentation tool.
+Index data from virtually any source, format or location, search and analyze it, and monitor your applications and infrastructure stack with ability to generate dashboard(s) from all these pieces, usually disconnected parts of IT puzzle. Combine them together and use dashboarding as powerful analytics and presentation tool.
 
 Dashboards provide helpful views of KPIs (key performance indicators) and consist of multiple visualization components which can accumulate data from multiple data sources such as logs, metrics, and events into one centralized pane of observability glass. You can create goal specific reports with various metrics visualized, and share them in a meeting to show what that data says about your business. 
 
-On the other hand, logs data is hard to analize and can be extremely tedious to understand. Dashboards help you get visual view of operations happening in you environment, and often play key role in decision making. Moreover, dashboards provide means to bring together one or more reports and display them in single report view for easy correlation and investigation.
+On the other hand, logs data is hard to analize and can be extremely tedious to understand. Dashboards provide means to bring together one or more metrics reports together with logs reports, and display them in a unified report view for easy correlation and investigation. Dashboards help you get visual view of operations happening in you environment and often play key role in decision making.
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT enterprise systems monitoring platform to get started and create various dashboards reports from your [logs](/logs/) or [monitoring](/monitoring/) applications. Make it indispensable tool to search and investigate logs data while having relevant metrics and performance KPIs available in one place, in a single pane of glass. 
 
