@@ -19,6 +19,6 @@ Enter required parameters and copy incoming Zapier Token. Click Test button to c
 
 ![Zapier Alerts Integration](https://sematext.com/docs/images/integrations/zapier-integration.png "Zapier Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to Big Panda,
+**Done.** Every alert from your SPM app will be forwarded to Zapier,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.
