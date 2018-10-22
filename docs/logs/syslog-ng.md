@@ -61,7 +61,7 @@ There are two options to properly configure your destination:
 After you choose your authentication method, you'll configure your
 destination according to the protocol you prefer: UDP, TCP or TLS. For
 all cases, your endpoint will be
-**logsene-receiver-syslog.sematext.com** / **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe)
+**logsene-receiver-syslog.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
 
 ### Token Authentication
 

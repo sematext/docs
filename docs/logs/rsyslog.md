@@ -257,7 +257,7 @@ change **`serverport`** to `"443"` and add `usehttps="on"`.
 
 If you're using Logsene application token for authentication, specify
 the LogseneFormat template in your *action* line. The host you'll
-connect to is **logsene-receiver-syslog.sematext.com** or **logsene-receiver-syslog.eu.sematext.com** (if using Sematext Cloud Europe):
+connect to is **logsene-receiver-syslog.sematext.com** or **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe):
 
 ``` bash
 *.* @logsene-receiver-syslog.sematext.com;LogseneFormat
@@ -358,7 +358,7 @@ action(
 ### RELP
 
 To forward via RELP, load the [RELP output module](http://www.rsyslog.com/doc/omrelp.html) and then point it to
-**logsene-receiver-syslog.sematext.com** (or **logsene-receiver-syslog.eu.sematext.com** if using Sematext Cloud Europe) on **port 20514**.
+**logsene-receiver-syslog.sematext.com** (or **logsene-syslog-receiver.eu.sematext.com** if using Sematext Cloud Europe) on **port 20514**.
 
 As with TCP or UDP, specify the LogseneFormat template for authorizing
 with your Logsene application token:

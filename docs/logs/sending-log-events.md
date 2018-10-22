@@ -7,9 +7,9 @@ connect - using Elasticsearch API or using syslog.
   - HTTP / HTTPS (ports 80 / 443), by using the Elasticsearch API on
     **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com**
   - UDP / TCP / RELP / TLS, by using the syslog receiver on
-    **logsene-receiver-syslog.sematext.com** / **logsene-receiver-syslog.eu.sematext.com**
+    **logsene-receiver-syslog.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
   - UDP / TCP by using the socket receiver for JSON
-    on **logsene-receiver-syslog.sematext.com** / **logsene-receiver-syslog.eu.sematext.com**
+    on **logsene-receiver-syslog.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
 
 All options work with log shippers such as
 [Logstash](logstash),

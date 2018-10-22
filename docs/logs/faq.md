@@ -314,7 +314,7 @@ nc -zv -w 20 logsene-receiver.sematext.com 443
 ```
 
 or if you are using syslog, connect to
-logsene-receiver-syslog.sematext.com / logsene-receiver-syslog.eu.sematext.com (port 514 for TCP and UDP, port
+logsene-receiver-syslog.sematext.com / logsene-syslog-receiver.eu.sematext.com (port 514 for TCP and UDP, port
 20514 for RELP, port 10514 for TLS):
 
 ``` bash
@@ -362,7 +362,7 @@ Or, if you are using syslog, try:
 
 ``` bash
 nslookup logsene-receiver-syslog.sematext.com
-nslookup logsene-receiver-syslog.eu.sematext.com
+nslookup logsene-syslog-receiver.eu.sematext.com
 ```
 
 The output should be similar to:
