@@ -1,5 +1,5 @@
 title: NginxPlus Monitoring Integration
-description: The Sematext SPM agent can collect many metrics from NginxPlus instances, including requests, reading, writing, waiting, active and more. Utilize built-in anomaly detection, threshold, and heartbeat alerting and send notifications to email and various chatops messaging services. Correlate events & logs, filter metrics by server or time, and visualize your cluster's health with out of the box graphs and custom dashboards
+description: The Sematext monitoring agent can collect many metrics from NginxPlus instances, including requests, reading, writing, waiting, active and more. Utilize built-in anomaly detection, threshold, and heartbeat alerting and send notifications to email and various chatops messaging services. Correlate events & logs, filter metrics by server or time, and visualize your cluster's health with out of the box graphs and custom dashboards
 
 ## Integration
 
