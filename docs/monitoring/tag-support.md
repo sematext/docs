@@ -7,9 +7,9 @@ To help you manage your metrics, hosts, and containers, and to help you create m
 host/server/container in the form of *tags*.
 
 Tags let you organize your hosts/servers/containers in different ways – for example by role, owner, or environment. Each tag consists of
-a key and a value, separated by the ':' character. Both key & value are case-sensitive.
+a name and a value, separated by the ':' character. Both name & value are case-sensitive.
 
-We recommend that you devise a set of tag keys that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag keys makes it easier for you make the most of Sematext and avoid chaos. Tags will help you to create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
+We recommend that you devise a set of tag names that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag names makes it easier for you make the most of Sematext and avoid chaos. Tags will help you to create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
 
 ### Reserved tags
 
@@ -31,7 +31,7 @@ Sematext Agents collects tags from following sources:
 
 ### Sematext App Agent Integration YAMLs
 
-These tags are extracted automatically from metric data sources & values based on YAML configuration. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the key is 200 characters. The key should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
+These tags are extracted automatically from metric data sources & values based on YAML configuration. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
@@ -49,12 +49,12 @@ The cloud metadata from AWS, Azure and GCE instances is collected as tags. The a
 | Name  | Tag Name  | Supported Cloud Providers  |
 |:--|:--|:--|
 |  Provider Type |  cloud.type |  AWS, GCE, Azure |
-|  Instance Identifier |  instance.id |  AWS, GCE, Azure |
-|  Instance Name |  instance.name |  Azure, GCE |
-|  Instance Type |  instance.type |  AWS, GCE, Azure |
-|  Region |  region |  AWS, Azure |
-|  Availability Zone |  zone |  AWS, GCE |
-|  Project Identifier |  project |  GCE |
+|  Instance Identifier |  cloud.instance.id |  AWS, GCE, Azure |
+|  Instance Name |  cloud.instance.name |  Azure, GCE |
+|  Instance Type |  cloud.instance.type |  AWS, GCE, Azure |
+|  Region |  cloud.region |  AWS, Azure |
+|  Availability Zone |  cloud.zone |  AWS, GCE |
+|  Project Identifier |  cloud.project |  GCE |
 |  User defined tags |  - |  AWS, GCE, Azure |
 
 To collect user defined tags you need to define the IAM roles listed below:
@@ -85,7 +85,7 @@ Following tags are collected from the host the agent is running.
 
 ### Agent configuration
 
-The Sematext Agents supports configuration of custom tags. They can be specified in the agent's configuration files. For example, you can configure tags like `env:prod` (on all production servers) and `env:dev` (on all dev servers) and filter the data in UI based on these tags. The maximum allowed length for both key and value is 1024 characters. These tags are optional and can be changed anytime.
+The Sematext Agents supports configuration of custom tags. They can be specified in the agent's configuration files. For example, you can configure tags like `env:prod` (on all production servers) and `env:dev` (on all dev servers) and filter the data in UI based on these tags. The maximum allowed length for both name and value is 1024 characters. These tags are optional and can be changed anytime.
 
 Below are the steps to configure custom tags in Sematext Agents.
 
@@ -99,7 +99,7 @@ To add custom tags for each app edit the below property in the monitor configura
 SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
 
-The key and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
+The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
 
 #### Sematext Docker Agent
 
