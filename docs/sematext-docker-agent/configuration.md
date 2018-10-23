@@ -163,7 +163,7 @@ Sematext Docker Agent.
 </tr>
 <tr>
 <td>IGNORE_LOGS_PATTERNS</td>
-<td style="word-break: break-all;">Filter logs by a JS regular expression. E.g. IGNORE_LOGS_PATTERNS=\/healthcheck|\/ping</td>
+<td style="word-break: break-all;">Filter logs by a JS regular expression. E.g. <code>IGNORE_LOGS_PATTERNS=\/healthcheck|\/ping</code></td>
 </tr>
 </tbody>
 </table>
