@@ -5,19 +5,12 @@ Unlike the [Embedded](spm-monitor-javaagent) Java agent-based monitor, the Stand
 is started as a separate process on each machine running the
 application(s) you want to monitor. A separate monitor process should be
 started for each application monitored on a machine. The installer adds
-the /etc/init.d/spm-monitor startup script and adjusts your rc.local to
-start it automatically when your machine starts. Before starting the
-monitor one should first adjusting the following:  
-  
-
-  - Enable JMX for the application which will be monitored
-  - Depending on JMX configuration of monitored server, adjust SPM
-    monitor's JMX settings in **monitor properties** file (whose exact
-    location and name for your application are mentioned in step 3 on
-    [Monitoring](https://apps.sematext.com/ui/monitoring) page.
+the systemd service to manage the agent. Before starting the
+monitor one should ensure the application to be monitored exposes its metrics
+and allows access to them (e.g. via JMX, HTTP, JDBC...)
 
   
-After that, SPM monitor can be (re)started with:
+After that, the monitoring agent can be (re)started with:
 
 ``` bash
 sudo service spm-monitor restart
@@ -68,7 +61,7 @@ monitored service (say for your tomcat server
 user which runs the process (in case of **passwordServer.txt**, owner
 could be ubuntu, jetty, tomcat... whoever is running the monitored
 service; in case of **passwordMonitor.txt**, user always has to be
-**spmmon** which is created during SPM client installation). Access
+**spmmon** which is created during agent installation). Access
 rights on these files should be set to **600**.  
   
 These files should contain space-separated role-password pairs, for
@@ -91,8 +84,8 @@ while **passwordMonitor.txt** must contain only one line and this line
 has to exist in the **passwordServer.txt** file.  
 
 In this case, Java process of monitored service should be started with
-following arguments (again, port can be adjusted and it has to be
-reflected in SPM **monitor properties** below in **spm.remote.jmx.url**
+the following arguments (again, port can be adjusted and it has to be
+reflected in **monitor properties** below in **spm.remote.jmx.url**
 argument):
 
 ``` properties
@@ -103,8 +96,7 @@ argument):
 -Dcom.sun.management.jmxremote.password.file=/home/tomcat/passwordServer.txt
 ```
 
-  
-while **monitor properties** file should be adjusted like (leave other
+while the **monitor properties** file should be adjusted like (leave other
 properties in that file unchanged):
 
 ``` properties
@@ -141,9 +133,9 @@ where **spm.remote.jmx.url** argument, **trustStore** path and
 
 ## Specifics Related to Various Servers
 
-SPM monitor is always configured and started in the same way (by
+The monitoring agent is always configured and started in the same way (by
 adjusting **monitor properties** file, see description above). However,
-there are different ways in which you can start your server, so here are
+there are different ways you can start your server/application, so here are
 some examples:
 
 ### Starting with Java Command
@@ -186,7 +178,7 @@ In some other cases, you may want to make similar addition for
 
 ### Elasticsearch
 
-No need for any adjustments since SPM monitor uses JSON API calls to
+No need for any adjustments since the monitoring agent uses JSON API calls to
 collect Elasticsearch metrics.
 
 ### HBase
@@ -218,22 +210,6 @@ When installing spm client, both **monitor properties** files will be
 prepared for you (exact locations and names for your application are
 mentioned in step 3 on
 <https://apps.sematext.com/ui/monitoring>).
-
- 
-
-### Sensei
-
-Adjust your **start-sensei-node.sh** by changing **JAVA\_OPTS** like
-this:
-
-``` bash
-JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote 
--Dcom.sun.management.jmxremote.port=3000 
--Dcom.sun.management.jmxremote.ssl=true 
--Djavax.net.ssl.keyStorePassword=password123 
--Djavax.net.ssl.keyStore=/home/sensei/elasticsearch.ks 
--Dcom.sun.management.jmxremote.authenticate=false"
-```
 
  
 
@@ -403,9 +379,9 @@ argument:
  -Djava.rmi.server.hostname=localhost
 ```
 
-If you are having issues connecting SPM standalone monitor to your
-server, you may want to add the said option to your server/java process
-and restart it. After that, also restart SPM monitor:
+If you are having issues connecting the standalone agent to your
+server, you may want to add the said option to your application/server
+being monitored and restart it. After that, also restart the agent:
 
 ``` bash
 sudo service spm-monitor restart
