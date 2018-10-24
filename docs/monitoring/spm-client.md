@@ -1,8 +1,6 @@
 title: Sematext Infra & App Agent
 description: Sematext Infra & App Agent (spm-client) is used for IT infrastructure monitoring, collecting OS & Network metrics, application metrics from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
 
-Sematext Infra & App Agent is also known as SPM Monitor or SPM Client.
-
 The App Agent is open-source, written in Java (but not limited to
 monitoring Java!), with a number of built-in integrations available
 from the
@@ -12,7 +10,7 @@ infrastructure and services.  Pull requests welcome!
 
 ## Capabilities
 
-These agents communicates with Sematext via HTTPS.  It buffers data on
+The agent communicate with Sematext via HTTPS.  It buffers data on
 disk in case it cannot immediately ship it, ensuring data is never
 lost.
 
@@ -24,17 +22,17 @@ from JMX, REST APIs, and from databases that support JDBC.
 
 ### Tracing
 
-SPM Monitor agent can also instrument JVM-based apps using bytecode
+The Sematext agent can also instrument JVM-based apps using Java bytecode
 instrumentation to collect [transaction traces](../tracing).
 
 ### Profiling
 
-On demand [JVM profiling](on-demand-profiling) to help you find
-bottlenecks in your code.
+On demand [JVM profiling](on-demand-profiling) is built-in and help
+you find bottlenecks in your code.
 
 ## Installation
 
-The SPM Monitor is available as a package (DEB, RPM, etc.) called spm-client:
+The Sematext agent is available as a package (DEB, RPM, etc.) called spm-client:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
@@ -114,8 +112,8 @@ inside the Java process.  With the Embedded monitor, when setting it
 up for the first time or when upgrading the monitor, one needs to
 change the command-line and restart the process in which the monitor
 is running (i.e., the process of the application being monitored), but
-once that is done, the monitor runs seamlessly in-process. See [SPM
-Monitor - Javaagent](spm-monitor-javaagent) for more info.
+once that is done, the monitor runs seamlessly in-process. See [Embedded
+Mode](spm-monitor-javaagent) for more info.
 
 ### Standalone
 
@@ -126,7 +124,7 @@ application to monitor does not have JMX enabled, one will have to
 adjust application's command-line parameters to enable JMX and that
 will require application process restart.  However, once that is set
 up, subsequent agent updates will not require the application
-restart. See [SPM Monitor - Standalone](spm-monitor-standalone) for
+restart. See [Standalone Mode](spm-monitor-standalone) for
 more info.
 
 ## Requirements
