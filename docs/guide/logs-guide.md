@@ -3,7 +3,7 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 Logs are everywhere, networks, servers, containers, cloud infrastructure, IoT, applications, load balancers, everywhere.
 
-In order to draw meaningful insights from the sea of logs your IT system administrators, developers, IT operators, and security professionals comb on daily basis, you need a scalable platform that centralizes all these logs. Our SaaS / on-premise centralized logging management service provides ability to search and help your devops team find common exceptions, detect patterns in behaviors, and solve SLA, performance issues, and availability problems.
+In order to draw meaningful insights from the sea of logs your IT system administrators, developers, IT operators, and security professionals comb on daily basis, you need a scalable platform that centralizes all these logs. Our SaaS / on-premise centralized IT systems management service provides ability to search and help your devops team find common exceptions, detect patterns in behaviors, and solve SLA, performance issues, and availability problems.
 
 Collect and send data from any part of your stack with different [log shippers available](https://sematext.com/docs/logs/sending-log-events/), and centralize and index logs from operating systems, containers, network devices, AWS infrastructure, application access logs, custom events, and more. 
 
