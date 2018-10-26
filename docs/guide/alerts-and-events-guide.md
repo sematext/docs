@@ -26,6 +26,7 @@ Check [integrations](https://sematext.com/docs/integration/) pages for more info
 
 Understanding these fundamental alerting principles will help you get started with our SaaS or on-premises service and define conditions or identify what triggers an alert for the selected policy. You can easily configure alert policies and criteria required to create an incident record, manage notifications channels, and review alert indcidents and assign responsibilities for the details of a particular incident.
 
+
 ## Alerts Guide
 
 ### System Generated Alerts
@@ -66,17 +67,18 @@ In order to create a custom alert in any logging app logs search query needs to 
 
 ![Sematext Cloud Logging App Alerts](https://sematext.com/docs/images/guide/alerts-and-events/logs-app-create-alert.png "Sematext Cloud Logging App Alerts")
 
+
 #### Monitoring App
 
 Metrics monitoring has different alerting design than the logs query centered one. Although both have threshold and anomaly alerts available, monitoring apps use component based alerting userflow. Every metric time series becomes a component and custom alerts can be created for each, just as it can be added to a custom [dashboard](https://sematext.com/docs/guide/dashboards-guide/).
 
-![Sematext Cloud Logging App Alerts](https://sematext.com/docs/images/guide/alerts-and-events/logs-app-create-alert.png "Sematext Cloud Logging App Alerts")
+![Sematext Cloud Metric Component Alerts](https://sematext.com/docs/images/guide/alerts-and-events/metric-component-alert.png "Sematext Cloud Metric Component Alerts")
 
 Additionally, monitoring apps have Heartbeat alerts available as a part of app settings and available in the app settings dropdown menu. They are triggered when something you are monitoring, like your servers, containers, or your applications stop emitting data to Sematext Cloud.
 
 ![Sematext Cloud Metric Component Custom Alerts](https://sematext.com/docs/images/guide/alerts-and-events/create-heartbeat-alerts.png "Sematext Cloud Metric Component Custom Alerts")
 
-Beside Alerts there is another important concept and system feature that we want to address together with alerts, and it is events.
+There is another important concept and system feature that we want to address together with Alerts.
 
 ## Events Guide
 
@@ -89,7 +91,3 @@ Beyond events that you want to see as part of your operations intelligence think
 Besides being shown in the UI events are also exposed via a REST API that lets you post, retrieve, and search your events. This REST API matches the Elasticsearch API, so you can use any Elasticsearch tool or client to post, get, and search events.
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack. 
-
-
-
-
