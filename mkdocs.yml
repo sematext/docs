@@ -7,6 +7,7 @@ pages:
       - Logs Guide: guide/logs-guide.md
       - Monitoring Guide: guide/monitoring-guide.md
       - Dashboards Guide: guide/dashboards-guide.md
+      - Alerts and Events Guide: guide/alerts-and-events-guide.md
     - Logs:
       - Overview: logs/index.md
       - Sending Log Events:
