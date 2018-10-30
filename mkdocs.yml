@@ -169,9 +169,10 @@ pages:
           - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
           - InfluxDB: logagent/output-plugin-influxdb.md
           - Apache Kafka: logagent/output-plugin-kafka.md
-          - ZeroMQ output: logagent/output-plugin-zeromq.md
+          - ZeroMQ: logagent/output-plugin-zeromq.md
           - rTail: logagent/output-plugin-rtail.md
-          - Slack webhook: logagent/output-plugin-slack.md
+          - Slack Webhook: logagent/output-plugin-slack.md
+          - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
       - How-To:
           - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
