@@ -1,3 +1,6 @@
+title: Alerts and Events Guide
+description: Sematext Cloud alerting tools provide flexible centralized notification system that let you manage alert policies and alert conditions across your whole stack. Use events to correlate them with metrics and/or logs, and see what is happening with a server or whole cluster across your IT infrastructure 
+
 A software developer may need alert notifications for both front-end and back-end performance, where operations personnel may need them for poor back-end performance, such as server memory or CPU performance.
 
 Given there are different system administration and devops teams across your IT department, a good alerting practices require:
