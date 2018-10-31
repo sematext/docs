@@ -383,11 +383,11 @@ Elasticsearch API which lets you:
 - search for logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
 - optionally define custom mappings for your log types, so you can tweak the way your logs are indexed
 
-** Syslog Protocols **
+### Syslog Protocols 
 
 We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
 
-** Log Shippers **
+### Log Shippers 
 
 <ul>
  	<li><a  href="https://apps.sematext.com/ui/howto/Logsene/logagent">Logagent</a> - cross platform, Smart and lightweight Log Parser and Log Shipper written in Node.js</li>
@@ -400,7 +400,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/nxlog">NXLog</a> - cross platform but mostly used on Windows, easy to get started, available as both free and paid version</li>
 </ul>
 
-** Programming Languages **
+### Programming Languages
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/dotnet ">.Net</a></li>
@@ -414,7 +414,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/ruby">Ruby</a></li>
 </ul>
 
-** Operating Systems **
+### Operating Systems 
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/windows">Windows</a></li>
@@ -423,7 +423,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rancheros">RancherOS</a></li>
 </ul>
 
-** Containers **
+### Containers 
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/docker">Docker</a></li>
@@ -431,7 +431,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/mesosmarathon">Mesos Marathon</a></li>
 </ul>
 
-** Cloud IaaS / PaaS **
+### Cloud IaaS / PaaS
 
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awss3">AWS S3</a></li>
@@ -443,15 +443,15 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/gae">Google App Engine</a></li>
 </ul>
 
-** iOS **
+### iOS 
 
 <div>For iOS apps use <a href="https://github.com/sematext/sematext-logsene-ios" target="_blank" rel="noopener">Logsene for iOS</a> library.</div>
 
-** Android ** 
+### Android 
 
 <div>For Android apps use<a href="https://github.com/sematext/sematext-logsene-android" target="_blank" rel="noopener"> Logsene for Android</a> library.</div>
 
-** AWS EC2 **
+### AWS EC2 
 
 If you're an EC2 user, you can log Sematext  from your instances by
 setting up a <a class="" href="https://apps.sematext.com/ui/logs#">log
@@ -465,7 +465,7 @@ target="_blank" rel="noopener">via this AWS Lambda function</a>. This
 method also works for when you periodically upload logs to S3 buckets,
 like Amazon CloudTrail does.
 
-** AWS CloudWatch Logs **
+### AWS CloudWatch Logs 
 
 If you want to ship CloudWatch logs, you can use <a
 href="https://github.com/sematext/logsene-aws-lambda-cloudwatch"
@@ -473,7 +473,7 @@ target="_blank" rel="noopener">another AWS Lambda function</a>. If
 logs are VPC flowlogs, the Lambda function will also parse them and
 add geoIP information on the source IP addresses.
 
-### Alerting
+## Alerting
 
 Multiple types of [alert notifications](/alerts) can be triggered on
 metrics and on logs and sent to several 3rd party services. See
