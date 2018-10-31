@@ -47,16 +47,16 @@ After you install and activate an integration, you can:
 
 ### Logging
 
-- Syslog Protocols
-- Log Shippers
-- Programming Languages
-- Containers
-- Cloud IaaS / PaaS
-- iOS
-- Android
-- AWS EC2
-- AWS S3 (CloudTrail, Flow logs, ELB access logs, etc.)
-- AWS CloudWatch Logs
+- [Syslog Protocols](/integration/index.md#syslog-protocols)
+- [Log Shippers](/integration/index.md#log-shippers)
+- [Programming Languages](/docs/integration/index.md#programming-languages)
+- [Operating Systems](/integration/index.md#operating-systems)
+- [Containers](/integration/index.md#containers)
+- [Cloud IaaS / PaaS](/integration/index.md#cloud-iaas--paas)
+- [iOS](/integration/index.md#ios)
+- [Android](/integration/index.md#android)
+- [AWS EC2](/integration/index.md#aws-ec2)
+- [AWS CloudWatch Logs](/docs/integration/index.md#aws-cloudwatch-logs)
 
 
 ### Monitoring
