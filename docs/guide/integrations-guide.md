@@ -9,7 +9,7 @@ You can report data from various systems to the Sematext Cloud and set alerts on
  
 - Logs where stored data is received through the Elasticsearch API and also through a variety of Syslog protocols.
 
-- Events such as services starting or restarting, version updates, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be shown next to metrics or logs components, making them  that can be added to your custom dashboards.
+- Events such as services starting or restarting, version updates, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be shown next to metrics or logs components, and tohether added to your custom dashboards.
 
 Essentially, you can report data from any system on your server or hosts by creating your own custom reports.
 
