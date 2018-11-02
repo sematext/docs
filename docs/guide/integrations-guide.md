@@ -55,7 +55,7 @@ After you install and activate an integration, you can:
 - [iOS](/integration/index.md#ios)
 - [Android](/integration/index.md#android)
 - [AWS EC2](/integration/index.md#aws-ec2)
-- [AWS CloudWatch Logs](/docs/integration/index.md#aws-cloudwatch-logs)
+- [AWS CloudWatch Logs](/integration/index.md#aws-cloudwatch-logs)
 
 
 ### Monitoring
