@@ -48,7 +48,7 @@ After you install and activate an integration, you can:
 
 - [Syslog Protocols](/integration/index.md#syslog-protocols)
 - [Log Shippers](/integration/index.md#log-shippers)
-- [Programming Languages](/docs/integration/index.md#programming-languages)
+- [Programming Languages](/integration/index.md#programming-languages)
 - [Operating Systems](/integration/index.md#operating-systems)
 - [Containers](/integration/index.md#containers)
 - [Cloud IaaS / PaaS](/integration/index.md#cloud-iaas--paas)
