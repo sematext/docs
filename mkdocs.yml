@@ -4,6 +4,7 @@ strict: true
 pages:
     - Getting Started: index.md
     - User Guide:
+      - Integrations: guide/integrations-guide.md
       - Logs Guide: guide/logs-guide.md
       - Monitoring Guide: guide/monitoring-guide.md
       - Dashboards Guide: guide/dashboards-guide.md
