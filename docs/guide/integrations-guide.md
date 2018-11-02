@@ -109,13 +109,13 @@ Navigate to [Integrations Overview](https://apps.sematext.com/ui/integrations). 
 
 Hover over any integration card and click to create it. Initially, there will be no app status and count tag displayed in the left bottom corner of the card, but once related app(s) have been created tag will display the number of apps, and grey and green tag colour are used to show if apps are not or are receiving data respectively.
 
-Image below illustrates an integration card being hovered over and the app status and count tag displayed with one example app created
+Image below illustrates an integration card being hovered over and the app status with the count tag displayed with one example app created.  
 
 ![Sematext Cloud - Create New App](https://sematext.com/docs/images/guide/integrations/add-new-logging-app.png "Sematext Cloud - Create New App")
 
 Once one or more apps had been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
 
-- access and esit app settings
+- access and edit app settings
 - create alerts and define alert rules
 - connect two apps
 - invite other devops team members
