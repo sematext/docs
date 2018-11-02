@@ -168,3 +168,12 @@ Each Component can be added to a custom Dashboard, and you can organize devops o
 Below is the image of Log Events Component dropdown menu with log specific export and field editor features and ability to add component to a custom dashboard
 
 ![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/logs/logs-component-settings-dropdown.png)
+
+[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
+
+Recommendations for learning more about Sematext products and services:
+
+- [Logs documentation](/logs/)
+- Our [website](https://sematext.com/) and [Logging](https://sematext.com/logsene/) products 
+- For Sematext Logging Agent and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
+- or just use chat in the right bottom corner of the app or website page and one of our engineers will help you navigate Sematext waters.
