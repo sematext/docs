@@ -115,7 +115,7 @@ Image below illustrates an integration card being hovered over and the app statu
 
 Once one or more apps had been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
 
-- app settings
+- access and esit app settings
 - create alerts and define alert rules
 - connect two apps
 - invite other devops team members
