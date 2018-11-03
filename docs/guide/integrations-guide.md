@@ -115,7 +115,7 @@ Image below illustrates an integration card being hovered over and the app statu
 
 ### App Integration
 
-New integration creation userflow is the same for both monitoring as well as logging apps. While Apache monitoring app is being created you can also create complementary logs app as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example and that particular piece of a IT infrastructure puzzle.
+New integration creation userflow is the same for both monitoring as well as logging apps. While Apache monitoring app is being created you can also create complementary logs app as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example, and that particular piece of a IT infrastructure puzzle.
 
 In other words, as monitoring app is being created you can create a logging app as well and vice versa. You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
 
