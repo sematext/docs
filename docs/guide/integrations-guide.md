@@ -127,9 +127,10 @@ When an integration app is first created our IT system monitoring platform creat
 
 You will first need to create that third party service and obtain required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. Image below shows a third party notification webhook integration being created, Slack in this example.
 
-![Sematext Cloud - Create New Alert Notification Webhook](https://sematext.com/docs/images/guide/integrations/create-new-webhook-modal.png " Sematext Cloud - Create New Alert Notification Webhook") 
+![Sematext Cloud - Create New Alert Notification Webhook](https://sematext.com/docs/images/guide/integrations/create-new-webhook-integration.png " Sematext Cloud - Create New Alert Notification Webhook") 
 
-## App Table View
+
+### App Table View
 
 Once one or more apps had been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
 
