@@ -107,11 +107,29 @@ Navigate to [Integrations Overview](https://apps.sematext.com/ui/integrations). 
 - Infrastructure and Application Performance Monitoring app
 - Notification Hooks through various third party integrations, email, and system defined custom webhooks
 
-Hover over any integration card and click to create it. Initially, there will be no app status and count tag displayed in the left bottom corner of the card, but once related app(s) have been created tag will display the number of apps, and grey and green tag colour are used to show if apps are not or are receiving data respectively.
+Hover over any integration card and click to create respective app or a webhook. Initially, there will be no app status and count tag displayed in the left bottom corner of the card, but once related app(s) have been created tag will display the number of apps, and grey and green tag colour are used to show if apps are not or are receiving data respectively.
 
 Image below illustrates an integration card being hovered over and the app status with the count tag displayed with one example app created.  
 
 ![Sematext Cloud - Create New App](https://sematext.com/docs/images/guide/integrations/add-new-logging-app.png "Sematext Cloud - Create New App")
+
+### App Integration
+
+New integration creation userflow is the same for both monitoring as well as logging apps. While Apache monitoring app is being created you can also create complementary logs app as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example and that particular piece of a IT infrastructure puzzle.
+
+In other words, as monitoring app is being created you can create a logging app as well and vice versa. You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
+
+![Sematext Cloud - Create New Intergration App](https://sematext.com/docs/images/guide/integrations/create-new-app-integration.png " Sematext Cloud - Create New Intergration App")
+
+### Webhook Integration
+
+When an integration app is first created our IT system monitoring platform creates several app specific alerts. User account email is used as a default notification mechanism to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [webhook](/guide/integrations-guide/#webhooks) integration. 
+
+You will first need to create that third party service and obtain required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. Image below shows a third party notification webhook integration being created, Slack in this example.
+
+![Sematext Cloud - Create New Alert Notification Webhook](https://sematext.com/docs/images/guide/integrations/create-new-webhook-modal.png " Sematext Cloud - Create New Alert Notification Webhook") 
+
+## App Table View
 
 Once one or more apps had been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
 
@@ -136,6 +154,8 @@ You can also add new integrations and filter and search existing app using table
 
 ## Sematext Agent Installation
 
+In order for the Sematext Cloud to receive any 
+
 ### Logging
 
 ### Monitoring
@@ -147,4 +167,4 @@ Recommendations for learning more about Sematext products and services:
 - Infrastructure [integrations documentation](/integration/)
 - Our [website](https://sematext.com/)
 - For open-source integrations and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
-- or just use chat in the right bottom corner and one of our engineers will help you navigate Sematext waters.
+- or just talk to us using chat located in right bottom corner of any page, and one of our engineers will help you navigate Sematext waters.
