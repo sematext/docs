@@ -1,7 +1,7 @@
 title: Integrations
 descriptions: Sematext integrations with ready to use monitoring agents and log shippers for infrastructure and container monitoring, log management and analytics, alerting, chatops, and more. Our Cloud and on-premises platform exposes the Elasticsearch API and syslog receivers with built in anomaly detection, data analysis and visualization tools and services
 
-### Monitoring
+## Monitoring
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
@@ -372,7 +372,7 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 	</div>
 </div>
 
-### Logging
+## Logging
 
 Stored data is received through the Elasticsearch API and also through a variety of Syslog protocols.
 
@@ -473,8 +473,32 @@ target="_blank" rel="noopener">another AWS Lambda function</a>. If
 logs are VPC flowlogs, the Lambda function will also parse them and
 add geoIP information on the source IP addresses.
 
+
+## Notification Webhooks
+
+- [Email as default system webhhook](/integration/alerts-email-integration/)
+- [Custom user defined webhooks](/integration/alerts-webhooks-integration/)
+- [Big Panda](integration/alerts-bigpanda-integration/)
+- [Hipchat](/integration/alerts-hipchat-integration/)
+- [Nagios](/integration/alerts-nagios-integration/)
+- [OpsGenie](/integration/alerts-opsgenie-integration/)
+- [PagerDuty](/integration/alerts-pagerduty-integration/)
+- [Pushover](/integration/alerts-pushover-integration/)
+- [Slack](/integration/alerts-slack-integration/)
+- [VictorOps](/integration/alerts-victorops-integration/)
+- [Zapier](/integration/alerts-zapier-integration/)
+
 ## Alerting
 
 Multiple types of [alert notifications](/alerts) can be triggered on
 metrics and on logs and sent to several 3rd party services. See
 [Alerts](/alerts) for more info.
+
+[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
+
+Recommendations for learning more about Sematext products and services:
+
+- Sematext Cloud [integrations guide](/guide/integrations-guide/)
+- Our [website](https://sematext.com/)
+- For open-source integrations and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
+- or just use chat located in right bottom corner of any page and one of our engineers will help you navigate Sematext waters.
