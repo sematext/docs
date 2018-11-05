@@ -176,9 +176,10 @@ The basic settings for sending data using the Elasticsearch API are:
 #### Syslog Protocols
 
 We accept Syslog messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized. The basic settings for sending data using the Syslog protocols are:
-host: logsene-syslog-receiver.sematext.com
-port: 514 (TCP and UDP), 20514 (RELP) or 10514 (TLS)
-index: bb50181f-5fad-4639-b880-7c49e036ae02 (example tokene)
+
+- host: logsene-syslog-receiver.sematext.com
+- port: 514 (TCP and UDP), 20514 (RELP) or 10514 (TLS)
+- index: bb50181f-5fad-4639-b880-7c49e036ae02 (example tokene)
 
 #### Socket Protocols
 
