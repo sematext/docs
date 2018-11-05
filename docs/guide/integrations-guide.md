@@ -12,7 +12,7 @@ You can report data from various systems to the Sematext Cloud, analyze and visu
 
 Essentially, you can report data from any system on your server or hosts by creating your own custom reports.
 
-To start monitoring your infrastructure you need to set up the
+To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
 - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
@@ -155,11 +155,52 @@ You can also add new integrations and filter and search existing app using table
 
 ## Sematext Agent Installation
 
-In order for the Sematext Cloud to receive any 
-
 ### Logging
 
+Logsene stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install the agent on them. Logging apps require log shipper installation on your end, and information below explains the process.
+
+#### Elasticsearch API
+
+Logsene exposes the Elasticsearch API which lets you:
+- send log events directly from your application, using any Elasticsearch library
+- send log events using a "log shipper" application such as Logstash, rsyslog, Apache Flume, Fluentd, or - anything that can output to Elasticsearch
+search for logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
+- optionally define custom mappings for your log types, so you can tweak the way your logs are indexed
+
+The basic settings for sending data using the Elasticsearch API are:
+
+host: logsene-receiver.sematext.com
+port: 80 (HTTP) or 443 (HTTPS)
+index: bb50181f-5fad-4639-b880-7c49e036ae02 (this is example app token and the unique one will be created for every logging app you create)
+
+#### Syslog Protocols
+
+We accept Syslog messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized. The basic settings for sending data using the Syslog protocols are:
+host: logsene-syslog-receiver.sematext.com
+port: 514 (TCP and UDP), 20514 (RELP) or 10514 (TLS)
+index: bb50181f-5fad-4639-b880-7c49e036ae02 (example tokene)
+
+#### Socket Protocols
+
+We accept JSON messages using any log shipper and any logging library, as long as they contain a valid token. The basic settings for sending data using the Socket protocols are:
+
+host: logsene-syslog-receiver.sematext.com
+port: 12201 (TCP and UDP)
+index: bb50181f-5fad-4639-b880-7c49e036ae02 (example token)
+
 ### Monitoring
+
+When creating a monitoring app two steps are required, package installation and client configuration setup.
+
+#### Package Installation
+
+You need to add Sematext repository and install SPM client package. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Chose your distribution and install required packages. Once installed, move to the next step, that is, client configuration setup
+
+#### Client Configuration Setup
+
+Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later SPM Monitor upgrades don't require you to restart your application and SPM Monitor not having any effect on your app (since it runs in its own process).
+
+You'll start seeing your performance data in SPM in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
