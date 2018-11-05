@@ -169,9 +169,9 @@ search for logs from your own application, or by configuring/adapting existing E
 
 The basic settings for sending data using the Elasticsearch API are:
 
-host: logsene-receiver.sematext.com
-port: 80 (HTTP) or 443 (HTTPS)
-index: bb50181f-5fad-4639-b880-7c49e036ae02 (this is example app token and the unique one will be created for every logging app you create)
+- host: logsene-receiver.sematext.com
+- port: 80 (HTTP) or 443 (HTTPS)
+- index: bb50181f-5fad-4639-b880-7c49e036ae02 (this is example app token and the unique one will be created for every logging app you create)
 
 #### Syslog Protocols
 
@@ -184,9 +184,9 @@ index: bb50181f-5fad-4639-b880-7c49e036ae02 (example tokene)
 
 We accept JSON messages using any log shipper and any logging library, as long as they contain a valid token. The basic settings for sending data using the Socket protocols are:
 
-host: logsene-syslog-receiver.sematext.com
-port: 12201 (TCP and UDP)
-index: bb50181f-5fad-4639-b880-7c49e036ae02 (example token)
+- host: logsene-syslog-receiver.sematext.com
+- port: 12201 (TCP and UDP)
+- index: bb50181f-5fad-4639-b880-7c49e036ae02 (example token)
 
 ### Monitoring
 
