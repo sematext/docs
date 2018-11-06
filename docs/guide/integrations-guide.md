@@ -15,7 +15,7 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Infra & App Agent](spm-client) (aka SPM  Agent or SPM
+- [Sematext Infra & App Agent](spm-client) (aka Sematext  Agent or Sematext
 Monitor). The Infra Agent collects OS & Network metrics.
 The App Agent collects application metrics. The App Agent
 can run in [embedded](spm-monitor-javaagent)
@@ -195,13 +195,13 @@ When creating a monitoring app two steps are required, package installation and 
 
 #### Package Installation
 
-You need to add Sematext repository and install SPM monitoring agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the next step, that is, agent configuration setup
+You need to add Sematext repository and install Sematext monitoring agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the next step, that is, agent configuration setup
 
 #### Agent Configuration Setup
 
-Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later SPM Monitor upgrades don't require you to restart your application and SPM Monitor not having any effect on your app (since it runs in its own process).
+Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later Sematext Monitor upgrades don't require you to restart your application and Sematext Monitor not having any effect on your app (since it runs in its own process).
 
-You'll start seeing your performance data in SPM in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
+You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
