@@ -145,7 +145,7 @@ You can also add new integrations and filter and search existing app using table
 
 - Type illustrated using integration type logo link to provide visual clue should app naming convention not include any reference to the type
 - Application Name
-- Integration Token is a unique system generated string that you will need to use on your systems in order to install Sematext Integration Agent. It is required to authenticate and establish system connections so you can start sending data to the Sematext Cloud. Integration Agent installation will be covered in more depth in the following section.
+- Integration Token is a unique system generated string that you will need to use on your system in order to install Sematext Integration Agent. It is required to authenticate and establish system connections so you can start sending data to the Sematext Cloud. Integration Agent installation will be covered in more depth in the following section.
 - Next table column describes your Integration Plan and plans can be adjusted using app settings. For more information on [infrastructure pricing](https://sematext.com/spm/pricing/) or [logging pricing](https://sematext.com/logsene/pricing/) check our website
 - App Status indicator icons show your apps status and either green checkmark is used to indicate that app is sending data to our service, indexed and ready for IT systems monitoring
 - App owner is defined in the last second column
@@ -199,7 +199,12 @@ You need to add Sematext repository and install Sematext monitoring agent. It is
 
 #### Agent Configuration Setup
 
-Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later Sematext Monitor upgrades don't require you to restart your application and Sematext Monitor not having any effect on your app (since it runs in its own process).
+Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: 
+
+- [In-process as a javaagent](/monitoring/spm-monitor-javaagent/)
+- [Standalone as a separate process](/monitoring/spm-monitor-standalone/) 
+
+For more information check Java agent [overview page](/monitoring/spm-client/) 
 
 You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 
