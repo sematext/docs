@@ -15,7 +15,7 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
+- [Sematext Infra & App Agent](spm-client) (aka SPM  Agent or SPM
 Monitor). The Infra Agent collects OS & Network metrics.
 The App Agent collects application metrics. The App Agent
 can run in [embedded](spm-monitor-javaagent)
@@ -191,13 +191,13 @@ We accept JSON messages using any log shipper and any logging library, as long a
 
 ### Monitoring
 
-When creating a monitoring app two steps are required, package installation and client configuration setup.
+When creating a monitoring app two steps are required, package installation and agent configuration setup.
 
 #### Package Installation
 
-You need to add Sematext repository and install SPM client package. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Chose your distribution and install required packages. Once installed, move to the next step, that is, client configuration setup
+You need to add Sematext repository and install SPM monitoring agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the next step, that is, agent configuration setup
 
-#### Client Configuration Setup
+#### Agent Configuration Setup
 
 Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: In-process as a javaagent or Standalone as a separate process. The benefit of the In-process mode is a bit simpler initial setup and ability to see data on tracing related reports. The benefit of Standalone is that later SPM Monitor upgrades don't require you to restart your application and SPM Monitor not having any effect on your app (since it runs in its own process).
 
