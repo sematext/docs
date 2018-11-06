@@ -157,11 +157,11 @@ You can also add new integrations and filter and search existing app using table
 
 ### Logging
 
-Logsene stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install the agent on them. Logging apps require log shipper installation on your end, and information below explains the process.
+Sematext stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install the agent on them. Logging apps require log shipper installation on your end, and information below explains the process.
 
 #### Elasticsearch API
 
-Logsene exposes the Elasticsearch API which lets you:
+Sematext exposes the Elasticsearch API which lets you:
 - send log events directly from your application, using any Elasticsearch library
 - send log events using a "log shipper" application such as Logstash, rsyslog, Apache Flume, Fluentd, or - anything that can output to Elasticsearch
 search for logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
