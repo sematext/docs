@@ -87,7 +87,7 @@ There is another important concept and system feature that we want to address to
 
 So what are events, why and how?
 
-Our APM and logging tools you visualize not only performance and custom metrics or logs, but also events. Such events may represent what is happening with a server or cluster, with an application, etc. 
+Our APM and logging tools let you visualize not only performance and custom metrics or logs, but also events. Such events may represent what is happening with a server or cluster, with an application, etc. 
 
 Think application or server restarts, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be shown next to metrics or logs charts. 
 
