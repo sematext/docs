@@ -132,7 +132,7 @@ You will first need to create that third party service and obtain required API k
 
 ### App Table View
 
-Once one or more apps had been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
+Once one or more apps have been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
 
 - access and edit app settings
 - create alerts and define alert rules
