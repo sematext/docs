@@ -113,7 +113,7 @@ Events Histogram provides visual insight into events timeseries and can be easil
 
 #### Events Stream
 
-On the other hand, Event Stream table component provides list view of all events that happened across your IT infrastructure. Whether monitoring or logging alert in Apache or Cassandra app was triggered, event stream view centralizes all of them in a single table. It is unified way to filter and pinpoint issues across multiple IT system administration dimensions. 
+On the other hand, Event Stream table component provides a list view of all events that happened across your IT infrastructure. Whether monitoring or logging alert in Apache or Cassandra app was triggered, event stream view centralizes all of them in a single table. It is unified way to filter and pinpoint issues across multiple IT system administration dimensions. 
 
 ![Sematext Cloud Events Stream Component](https://sematext.com/docs/images/guide/alerts-and-events/event-stream-component.png "Sematext Cloud Events Stream Component")
 
