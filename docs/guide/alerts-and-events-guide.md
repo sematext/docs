@@ -23,24 +23,20 @@ Your devops team needs to be notified when your monitored IT key performance ind
 
 Threshold and anomaly alerts can be triggered for both metrics and logging apps, where heartbeat alerts are only available for metrics apps.
 
-Our alerting tools provide flexible centralized notification system that lets you manage alert policies and alert conditions across your whole stack. Focus on your key IT performance metrics and use various notification channels to get alerted when critical violations occur so you can take action and resolve an issue. Our alerting tools easily integrate with team communication software like PagerDuty, OpsGenie, HipChat, Slack, and more. 
+Our alerting tools provide flexible centralized notification system that lets you manage alert rules across your whole stack. Focus on your key IT performance metrics and use various notification channels to get alerted when critical violations occur so you can take action and resolve an issue. Our alerting tools easily integrate with team communication software like PagerDuty, OpsGenie, HipChat, Slack, and more. 
 
 Check [integrations](https://sematext.com/docs/integration/) pages for more information.
 
-Understanding these fundamental alerting principles will help you get started with our SaaS or on-premises service and define conditions or identify what triggers an alert for the selected policy. You can easily configure alert policies and criteria required to create an incident record, manage notifications channels, and review alert indcidents and assign responsibilities for the details of a particular incident.
+Understanding these fundamental alerting principles will help you get started with our SaaS or on-premises service and define conditions or identify what triggers an alert for the selected policy. You can easily configure alert policies and criteria required to create an incident record, manage notifications channels, and review alert incidents and assign responsibilities for the details of a particular incident.
 
 
 ## Alerts Guide
 
 ### System Generated Alerts
 
-Alerting gives you the ability to create monitors that trigger notifications when performance problems occur in your IT infrastructure. As soon as any app is created, either logging or monitoring, the system will generate several app specific alerts to get you started. 
+Alerting gives you the ability to create monitors that trigger notifications when performance problems occur in your IT infrastructure. As soon as any app is created, either logging or monitoring, the system will generate several app specific alerts rules to get you started. 
 
-Image below shows such system generated alerts for example logs app with 
-
-- saved query algolert anomaly alert
-
-and example elasticsearch monitoring app with 
+Image below shows system generated saved query algolert anomaly alert for logging app. Three different alert types are also generated for every monitoring app created, namely: 
 
 - metric alert
 
@@ -48,7 +44,7 @@ and example elasticsearch monitoring app with
 
 - metric algolert anomaly
 
-In the case of elasticsearch monitoring app, java usage threshold and elasticsearch nodes anomalies were integration specific system generated alerts. There is also a heartbeat alert created that is usually triggered when the agent you installed stops emitting data to Sematext Cloud.  
+In the case of an example Elasticsearch monitoring app, java usage threshold and elasticsearch nodes anomalies were integration specific system generated alerts. There is also a heartbeat alert created that is usually triggered when the agent you installed stops emitting data to Sematext Cloud.  
 
 ![Sematext Cloud System Generated Alerts](https://sematext.com/docs/images/guide/alerts-and-events/system-generated-alerts.png "Sematext Cloud System Generated Alerts")
 
