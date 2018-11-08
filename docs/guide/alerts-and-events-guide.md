@@ -23,7 +23,7 @@ Your devops team needs to be notified when your monitored IT key performance ind
 
 Threshold and anomaly alerts can be triggered for both metrics and logging apps, where heartbeat alerts are only available for metrics apps.
 
-Our alerting tools provide flexible centralized notification system that let you manage alert policies and alert conditions across your whole stack. Focus on your key IT performance metrics and use various notification channels to get alerted when critical violations occur so you can take action and resolve an issue. Our alerting tools easily integrate with team communication software like PagerDuty, OpsGenie, HipChat, Slack, and more. 
+Our alerting tools provide flexible centralized notification system that lets you manage alert policies and alert conditions across your whole stack. Focus on your key IT performance metrics and use various notification channels to get alerted when critical violations occur so you can take action and resolve an issue. Our alerting tools easily integrate with team communication software like PagerDuty, OpsGenie, HipChat, Slack, and more. 
 
 Check [integrations](https://sematext.com/docs/integration/) pages for more information.
 
