@@ -103,7 +103,7 @@ This makes it possible to easily correlate events with metrics and/or logs. In a
 
 There are two main components that make up events. Both can be added to dashboard(s) just as metrics and logs components. 
 
-Moreover, with ability to add new events and attach them to any particular monitoring or logs app as well as dashboards, it is perfect tool to document and leave notes alongside machine generated data. It supports markdown format and provides perfect way to provide human input later used for presentations and remainders. 
+Moreover, with ability to add new events and attach them to any particular monitoring or logs app as well as dashboards, it is a perfect tool to document and leave notes alongside machine generated data. It supports markdown format and provides a perfect way to provide human input later used for presentations and remainders. 
 
 #### Events Histogram
 
