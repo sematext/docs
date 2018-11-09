@@ -12,12 +12,6 @@ the basis for other monitoring agents such as
 - [Apache](../integration/apache)
 
 
-### Installation
-
-```
-npm install spm-agent-nodejs
-```
-
 ### Requirements
 
 Node 4.x and above.
