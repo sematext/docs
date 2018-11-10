@@ -8,8 +8,8 @@ Sematext's Logs Management App exposes the [Elasticsearch API](http://www.elasti
   - send log events through it directly from your application, using
     any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
   - send log events by using existing application such as
-    [Logstash](logstash), or [Apache Flume](http://flume.apache.org/), or [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
-  - [search for logs from your own application](search-through-the-elasticsearch-api), or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene)
+    [Logstash](logstash), Filebeat, [Logagent](/docs/logagent), or [Apache Flume](http://flume.apache.org/), or [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
+  - [search for logs from your own application](search-through-the-elasticsearch-api), or by using tools such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene) or Grafana
   - optionally define [custom mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
     your log types, so you can tweak the way your logs are indexed
 
@@ -18,8 +18,8 @@ When you use the API, here are the things you need to know:
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (only if using Sematext Cloud Europe)
   - port: **80** or **443** (depending on whether you want to use plain HTTP or HTTPS)**
     **
-  - index name: your [Logs Management app token](https://apps.sematext.com/ui/logs) -
-    note: **this token should be kept secret** (n.b. you can have N Logs Management apps, each with its own token)
+  - index name: your [Logs App token](https://apps.sematext.com/ui/logs) -
+    note: **this token should be kept secret** (n.b. you can have N Logs Apps, each with its own token)
 
 ## Indexing
 
@@ -28,16 +28,12 @@ application, or you can craft your own "log sender".
 
 **NOTE:**
 If you are sending logs from your application use the Elasticsearch HTTP
-API. If you are sending logs from a Java application use a library like
-[log4j2-elasticsearch-http](https://github.com/jprante/log4j2-elasticsearch-http) or [Jest](https://github.com/searchbox-io/Jest) [instead of Elasticsearch Transport Client.](https://github.com/jprante/log4j2-elasticsearch-http)
+API. If you are sending logs from a Java application use [Elasticsearch Java REST Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/index.html)
 
-Besides specifying your Logs Management app token as the index name, it's nice
+Besides specifying your Logs App token as the index name, it's nice
 to have a field named "@timestamp".  Its value should be a valid
-[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp.
-
-This will be used for searching and sorting when/if you use Kibana with Sematext platform.
-If you don't provide a timestamp, Logs Management app will add one when it receives
-your message.
+[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp.  If you don't provide a
+timestamp, Sematext will add one when it receives your logs.
 
 For example, you can send a log like this:
 
@@ -50,7 +46,7 @@ curl -XPOST https://logsene-receiver.sematext.com/$YOUR_TOKEN_HERE/mytype/ -d '
 }'
 ```
 
-This will index a simple "hello world" message to Logs Management app. That event
+This will index a simple "hello world" message to Logs App. That event
 would have the current timestamp and will go to your app
 (provided that the $YOUR\_TOKEN\_HERE variable contains your token),
 within a type named "mytype". The type is a logical division of events.
@@ -80,19 +76,17 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 ## Default Log Index Mapping
 
 A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/glossary.html#mapping)
-is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Logs Management app provides a default mapping that works well for most use-cases:
+is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. There is no "default" index mapping.  Sematext automatically creates the mapping in each Logs App when your first ship your logs.  Each App can have its own mapping and it can be changed at any time from within Sematext.  There are some [special fields](special-fields) though.
 
   - the **@timestamp** field is an
-    [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date
+    [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date.  See [Supported Date Formats](supported-date-formats).
   - the **geoip** field is an object that contains a **location** [geo point](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html)
-    field (this works well if you're using
-    [Logstash](logstash))
-  - the predefined fields **host**, **facility**, **severity**,
-    **syslog-tag**, **source** and **tags** **** are not analyzed, which
-    enables only exact matches (you can still use wildcards, for example
+    field (this works well if you're using [Logstash](logstash))
+  - **host**, **facility**, **severity**, **syslog-tag**, **source**, and **tags** are
+    [Special Fields] that are not analyzed, which enables only exact matches (you can still use wildcards, for example
     to search for **web-server\*** and get **web-server01**)
   - all string fields are analyzed by whitespace and lowercased by
-    default, enabling a search for **message:hello** to match an event
+    default, thus makign it possible to search for **message:hello** and match events
     with **Hello World** in the **message** field
 
 ## Custom Log Index Mapping
