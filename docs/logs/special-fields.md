@@ -39,7 +39,7 @@ tags.  Tags can contain multiple tokens separated by space.
 the original log line or some other free text)
 
 **@timestamp** is a date field, on which log retention is based. If it's
-not present, it will be added automatically when the log event is received by Sematext. See [Supporrted Date Formats](supported-date-formats).
+not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](supported-date-formats).
 
 All of these fields are optional, but their use is strongly encouraged.
  If found in logs with low-enough cardinality, all distinct values of
