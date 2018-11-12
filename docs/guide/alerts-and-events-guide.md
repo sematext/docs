@@ -44,7 +44,7 @@ Image below shows system generated saved query algolert anomaly alert for loggin
 
 - metric algolert anomaly
 
-In the case of an example Elasticsearch monitoring app, Java usage threshold and Elasticsearch nodes anomalies were integration specific system generated alerts. There is also a heartbeat alert created that is usually triggered when the agent you installed stops emitting data to Sematext Cloud.  
+In the case of an example Elasticsearch monitoring app, Java usage threshold and Elasticsearch nodes anomalies were integration specific system generated alerts. There is also a heartbeat alert created that is triggered when the agent you installed stops emitting data to Sematext Cloud.  
 
 ![Sematext Cloud System Generated Alerts](https://sematext.com/docs/images/guide/alerts-and-events/system-generated-alerts.png "Sematext Cloud System Generated Alerts")
 
