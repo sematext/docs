@@ -31,7 +31,7 @@ Image bellow shows a common monitoring app report component showing its function
 
 ![Metrics Dashboards Component](https://sematext.com/docs/images/guide/dashboards/metrics-dashboard-component.png "Metrics Dashboards Component")
 
-Just as monitoring app, logs app comes with pre build logging report components, namely Log Table component and Logs count histogram component. Use dropdown settings menu to add logs components to your dashboards, and combine them with metrics ones for full obeservability of your IT stack. Our tools will help your devops team find common exceptions, detect patterns in behaviours, and solve performance issues and availability problems. 
+Just like monitoring app, logs app comes with pre build logging report components, namely Log Table component and Logs count histogram component. Use dropdown settings menu to add logs components to your dashboards, and combine them with metrics ones for full observability of your IT stack. Our tools will help your devops team find common exceptions, detect patterns in behaviours, and solve performance issues and availability problems. 
 
 ![Logs Dashboards Component](https://sematext.com/docs/images/guide/dashboards/logs-dashboard-component.png "Logs Dashboards Component")
 
@@ -49,7 +49,7 @@ Image below shows a custom Kafka report panel that was created by our devops tea
 
 ![Add Metric Dashboards Component](https://sematext.com/docs/images/guide/dashboards/add-metric-report-to-dashboard.png "Add Metric Dashboards Component")
 
-The following visualizations are available as dashboard components in our on-premises and cloud SaaS infrastructure & application monitoring, and logging management tools:
+The visualizations are available as dashboard components in our on-premises and cloud SaaS infrastructure & application monitoring, and logging management tools:
 
 - Line, Area, Bar charts metrics component binned by metric creation date
 - Bar chart component binned by event creation date
