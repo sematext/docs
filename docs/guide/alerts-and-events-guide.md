@@ -1,11 +1,11 @@
 title: Alerts and Events Guide
-description: Sematext Cloud alerting tools provide flexible centralized notification system that lets you manage alert policies and alert conditions across your whole stack. Use events to correlate them with metrics and/or logs, and see what is happening with a server or whole cluster across your IT infrastructure 
+description: Sematext Cloud alerting tools provide flexible centralized notification system that lets you manage alert rules and alert conditions across your whole stack. Use events to correlate them with metrics and/or logs, and see what is happening with a server or whole cluster across your IT infrastructure 
 
 A software developer may need alert notifications for both front-end and back-end performance, where operations personnel may need them for poor back-end performance, such as server memory or CPU performance.
 
 Given there are different system administration and devops teams across your IT department, a good alerting practices require:
 
-- Policies to address alerting requirements and personnel that is responsible for them.
+- Rules to address alerting requirements and personnel that is responsible for them.
 
 - Criteria that triggers alerts for monitored resources and apps in your IT architecture.
 
@@ -27,7 +27,7 @@ Our alerting tools provide flexible centralized notification system that lets yo
 
 Check [integrations](https://sematext.com/docs/integration/) pages for more information.
 
-Understanding these fundamental alerting principles will help you get started with our SaaS or on-premises service and define conditions or identify what triggers an alert for the selected policy. You can easily configure alert policies and criteria required to create an incident record, manage notifications channels, and review alert incidents and assign responsibilities for the details of a particular incident.
+Understanding these fundamental alerting principles will help you get started with our SaaS or on-premises service and define conditions or identify what triggers an alert for the selected rule. You can easily configure alert rules and criteria required to create an incident record, manage notifications channels, and review alert incidents and assign responsibilities for the details of a particular incident.
 
 
 ## Alerts Guide
