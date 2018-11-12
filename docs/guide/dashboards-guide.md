@@ -23,7 +23,7 @@ Check [Integrations](/integration/) pages for more details on available monitori
 
 Each monitoring app comes with out of box metrics components that are carefully crafted to give you instant insight into the most important and relevant metrics for that particular technology. For example, an [Elasticsearch  monitoring app](/integration/elasticsearch/) will have cluster health, index stats, nodes, request rate, cache, jvm pool size, latency, connections, documents, and more metrics components displayed as report components, and available as soon as installed Sematext agent starts sending your app's metrics.
 
-Check out [infrastructure monitoring](/monitoring/) pages to learn how to create monitoring app and set up monitoring agent.
+Check out [infrastructure monitoring](/monitoring/) pages to learn how to create monitoring app and set up a monitoring agent.
 
 ### Dashboard Components
 
