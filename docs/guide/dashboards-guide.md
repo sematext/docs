@@ -45,11 +45,11 @@ Once you have a dashboard created, you can start adding components to it. At lea
 
 Moreover, with our custom reports features you can first create specific logging, events or metric component, and add it to your dashboard just as you can with out of box [integration](/integration/) specific components that come included when you first create an app.
 
-Image below shows a custom Kafka report panel that was created by our devops team, and illustrates what will be displayed in a modal window when you add component to a dashboard using components settings dropdown menu. Both custom and out of box components are available and they can be logging, metrics or events in nature.   
+Image below shows a custom Kafka report panel that was created by our devops team, and illustrates what will be displayed in a modal window when you add a component to a dashboard using components settings dropdown menu. Both custom and out of box components are available and they can be logging, metrics or events in nature.   
 
 ![Add Metric Dashboards Component](https://sematext.com/docs/images/guide/dashboards/add-metric-report-to-dashboard.png "Add Metric Dashboards Component")
 
-Following visualizations are available as dashboard components in our on-premises and cloud SaaS infrastructure & application monitoring, and logging management tools:
+The following visualizations are available as dashboard components in our on-premises and cloud SaaS infrastructure & application monitoring, and logging management tools:
 
 - Line, Area, Bar charts metrics component binned by metric creation date
 - Bar chart component binned by event creation date
