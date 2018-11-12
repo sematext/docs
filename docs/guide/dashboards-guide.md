@@ -15,7 +15,7 @@ Your devops team will be able to quickly respond to service failures and minimiz
 
 ## Dashboards Guide
 
-Image bellow shows already created Dashboards Report identifying section's top navigation elements and active app section in the left sidebar navigation. We are using it to monitor the health of our cloud based application performance monitoring platform. It is made up of several different technologies used in our stack, namely [Hbase](/integration/hbase/), [Kafka](/integration/kafka/), and [MySql](/integration/mysql/), and for each piece of tech in the stack a monitoring application has been created.  
+Image bellow shows already created Dashboards Report identifying section's top navigation elements and active app section in the left sidebar navigation. We are using it to monitor the health of our cloud based application performance monitoring platform. It is made up of several different technologies used in our stack, namely [HBase](/integration/hbase/), [Kafka](/integration/kafka/), and [MySql](/integration/mysql/), and for each piece of tech in the stack a monitoring application has been created.  
 
 Check [Integrations](/integration/) pages for more details on available monitoring integrations. 
 
