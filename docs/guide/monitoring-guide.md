@@ -153,7 +153,7 @@ Line, Area, Bar charts binned by metric creation date, bar chart binned by event
 
 ![Sematext Cloud Monitoring Guide - Add Metric Component](https://sematext.com/docs/images/guide/monitoring/add-metric-component.png) 
 
-Use them together with out of box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
+Use them together with out of the box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
 #### Component Settings
 
