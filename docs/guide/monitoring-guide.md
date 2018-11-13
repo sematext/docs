@@ -1,7 +1,7 @@
 title: APM Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
-With over 40 integrations, Sematext application and IT infrastruscture monitoring platform lets you collect metrics and events across your whole stack. Get started in minutes with out-of-the-box dashboards, alerts and anomaly detection rules, and ability to analyze your metrics by a number of context-aware filters.
+With over 40 integrations, Sematext application and IT infrastructure monitoring platform lets you collect metrics and events across your whole stack. Get started in minutes with out-of-the-box dashboards, alerts and anomaly detection rules, and ability to analyze your metrics by a number of context-aware filters.
 
 Our APM SaaS / on-premises IT monitoring service goes beyond just collecting metrics. Uncover slowest DB operation types, view full SQL statements, see end-to-end HTTP transaction context, get top 10 operations by throughput, latency, or time consumed, filter DB operations by type, and more...
 
@@ -87,15 +87,15 @@ Image below shows the report menu in detail followed by explanation on how to us
 
 ### App State
 
-When your app is intially loaded, Save and Reset buttons will be hidden since that is app's default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, app will preserve the initial state.
+When your app is initially loaded, Save and Reset buttons will be hidden since that is app's default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, app will preserve the initial state.
 
 ### Correlations
 
-Correlations feature is essential system part designed to provide a single pane of view that provides full IT systems observability. Sematext team pioneered unification of logging and monitoring devops tools into a single app view, and continue to do so with the integration of events into correlations. 
+Correlations feature is essential system part designed to provide a single pane of glass that provides full IT systems observability. Sematext team pioneered unification of logging and monitoring devops tools into a single app view, and continue to do so with the integration of events into correlations. 
 
 Moreover, with the new RUM (Real User Monitoring) functionality we seek to create a Suite of Enterprise IT Tools that provide instant ROI and help your devops team bring your servers, apps, metrics ,logs, events, and alerts together.
 
-This is really cool and a huge time saver. Empower your IT system administrators to go from metric spikes to your apps’ and servers’ logs in seconds, find similar metric patterns with built-in metric correlation, get to the root cause in minutes, and see any metric any logs in a single unified same view!
+This is really cool and a huge time saver. Empower your IT system administrators to go from metric spikes to your apps’ and servers’ logs in seconds, find similar metric patterns with built-in metric correlation, get to the root cause in minutes, and see any metric any logs in a single unified view!
 
 Image below shows correlations and Events toggle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
 
