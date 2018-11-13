@@ -119,7 +119,7 @@ Clicking on the Logs icon will open logs data table component view below the Log
 
 Every Log entry in the table has two left aligned icons, one that opens panel with all log details, and the other that opens Log context. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events.
 
-(These are both powerful features by themselves and deserve more attention in order to dicover their true potential.  For more information on Logs refer to Logging Guide) 
+(These are both powerful features by themselves and deserve more attention in order to discover their true potential.  For more information on Logs refer to Logging Guide) 
 
  ![Sematext Cloud Monitoring Guide - Logs Correlation View](https://sematext.com/docs/images/guide/monitoring/log-correlation-with-log-table.png)  
 
