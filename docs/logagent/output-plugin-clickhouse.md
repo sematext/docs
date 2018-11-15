@@ -67,7 +67,7 @@ output:
 ```
 
 
-Start Logagent and pipe log messages to Logagent
+Stream log messages to Logagent and ClickHouse
 
 ```
   cat test.log | logagent --config clickhouse.yaml
