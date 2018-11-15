@@ -42,6 +42,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [output-influxdb](output-plugin-influxdb)     | output                    | Stores parsed messages in InfluxDb |
 | [output-aws-elasticsearch](output-plugin-aws-elasticsearch)     | output                    | Stores parsed messages in Amazon Elasticsearch |
 | [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
+| [output-clickhouse](output-plugin-clickhouse)       | output                   | Sends parsed messages to Yandex ClickHouse DB |
 | [rtail](output-plugin-rtail)              | output                    | Sends parsed messages to rtail servers for real-time view of logs in a web browser                       |
 | [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
 | [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
