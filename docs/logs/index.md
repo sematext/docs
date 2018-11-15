@@ -7,6 +7,8 @@ It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one 
 
 Data can be indexed from virtually any source, format or location. Search real-time and historical data using the same interface and familiar search commands to define, limit or widen your search, and correlate events across multiple data sources to reveal new insights.
 
+<iframe width="800" height="450" src="https://youtu.be/glwZ8OCV0kc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 Turn searches into real-time alerts and automatically trigger notifications via email and various other 3rd party integrations. Alerts can be triggered based on a variety of thresholds, trend-based conditions and other complex searches, assisting with faster analysis and issue resolution.
 
 You can create custom dashboards that can integrate multiple charts and views of your real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.  Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
