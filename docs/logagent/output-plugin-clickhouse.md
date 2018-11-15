@@ -50,8 +50,7 @@ input:
   stdin: true
   
 
-output:
-  # print parsed logs in YAML format to stdout if supress is set false    
+output:   
   clickhouse: 
     module: output-clickhouse
     url: http://127.0.0.1 
