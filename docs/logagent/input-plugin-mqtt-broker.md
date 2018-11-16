@@ -18,6 +18,14 @@ input:
     # regular expression to ignore topics
     ignoreTopic: ^\$SYS
     debug: false
+    # enable authentication by setting username and password
+    # username: mqtt
+    # password: secret
+    # The authenticate function can implement custom authentication logic 
+    # authenticate: !!js/function > 
+    #   function (client, username, password, callback) { 
+    #     callback(null, username=='mqtt' && password === 'secret')
+    #   }
 
 output:
   stdout: yaml
