@@ -1,7 +1,7 @@
 title: Logs Guide - Logging Mananagement App
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that aggregates and structures your logs across various languages and platforms. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix production issues
 
-<iframe width="800" height="450" src="https://youtu.be/glwZ8OCV0kc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/glwZ8OCV0kc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Logs are everywhere, networks, servers, containers, cloud infrastructure, IoT, applications, load balancers, everywhere.
 
