@@ -1,7 +1,7 @@
 title: Ingest data in ClickHouse  
 description: Send data to a ClickHouse server using ClickHouse output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
-## Output Plugin: ClickHouse output plugin 
+## Output Plugin: ClickHouse DB
 
 This plugin sends data to Yandex ClickHouse DB. 
 
