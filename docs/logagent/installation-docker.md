@@ -5,7 +5,7 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 ## Installation for Docker
 
 
-To run Sematext Docker Agent you will need a Logs App Token.  If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations)
+To run Sematext Docker Agent you will need a Logs App Token.  If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations).
 
 See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub
 
@@ -54,10 +54,10 @@ docker-compose up -d
 Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy Sematext Docker Agent with following docker command with your Logs Tokens:
 
-```bash
+```
 docker service create -mode global -name logagent \
 -mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
--e LOGS_TOKEN=”REPLACE THIS WITH YOUR LOGS TOKEN” \
+-e LOGS_TOKEN="REPLACE THIS WITH YOUR LOGS TOKEN" \
 -e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
 sematext/logagent
 ```
@@ -118,5 +118,3 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
   ]
 }
 ```
-
-
