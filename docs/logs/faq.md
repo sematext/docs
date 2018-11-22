@@ -443,7 +443,7 @@ security and compliance certifications see:
 <http://aws.amazon.com/security> and <https://aws.amazon.com/compliance/>.
 
 Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
-your API calls using `apiKey`. You can read more about this [here](search-through-the-elasticsearch-api) and [here](/apiKey).
+your API calls using `apiKey`. You can read more about this [here](search-through-the-elasticsearch-api) and [here](/api).
 
 **Where is my data stored?**
 
