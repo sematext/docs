@@ -1,11 +1,11 @@
 title: Install Logagent
-description: Logagent, Sematext log shipper and Logstash alternative, is available as Docker image. It has automatic Docker installation and seamless logging system service integration with our logs management and analysis platform
+description: Logagent, Sematext log shipper and Logstash alternative, is available as Docker image. It has automatic Docker installation and seamless logging system service integration with our log management and analysis platform
 
 
 ## Installation for Docker
 
 
-To run Sematext Docker Agent you will need a Logs App Token (aka LOGSENE_TOKEN).  If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations)
+To run Sematext Docker Agent you will need a Logs App Token.  If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations)
 
 See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub
 
@@ -17,7 +17,8 @@ The most basic start method is using docker run command:
 ```
 docker pull sematext/logagent
 docker run -d --name logagent \
--e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
+-e LOGS_TOKEN=YOUR_LOGS_TOKEN \
+-e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
 -v /var/run/docker.sock:/var/run/docker.sock sematext/logagent
 ```
 
@@ -32,7 +33,8 @@ To use [Docker Compose](https://docs.docker.com/compose/) create docker-compose.
 logagent:
   image: 'sematext/logagent:latest'
   environment:
-    - LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN 
+    - LOGS_TOKEN=YOUR_LOGS_TOKEN 
+    - LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
   cap_add:
     - SYS_ADMIN
   restart: always
@@ -50,12 +52,13 @@ docker-compose up -d
 ## Docker Swarm and Docker Enterprise
 
 Connect your Docker client to Swarm or UCP remote API endpoint and
-deploy Sematext Docker Agent with following docker command with your SPM and Logsene tokens:
+deploy Sematext Docker Agent with following docker command with your Logs Tokens:
 
 ```bash
 docker service create -mode global -name logagent \
 -mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
--e LOGSENE_TOKEN=”REPLACE THIS WITH YOUR LOGSENE TOKEN” \
+-e LOGS_TOKEN=”REPLACE THIS WITH YOUR LOGS TOKEN” \
+-e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
 sematext/logagent
 ```
 
@@ -63,7 +66,7 @@ sematext/logagent
 
 Run Sematext Agent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
-First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml) - and set your Logsene token in the spec.env section.
+First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml) - and set your Logs Token in the spec.env section.
 
 Then run the DaemonSet:
 
@@ -79,7 +82,7 @@ oc apply -f logagent-daemonset.yml
 
 ## Mesos / Marathon
 
-The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances), SPM App Token and Logsene App Token. An example call to the Marathon API:
+The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances) and Logs Token. An example call to the Marathon API:
 
 ```
 curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080/v2/apps  -d '
@@ -99,7 +102,9 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
     "network": "BRIDGE"
   },
   "env": {
-        "LOGSENE_TOKEN": "YOUR_LOGSENE_TOKEN"
+        "LOGS_TOKEN": "YOUR_LOGS_TOKEN",
+        "LOGS_RECEIVER_URL": "https://logsene-receiver.sematext.com"
+
   },
   "id": "sematext-logagent",
   "instances": 1,
