@@ -111,7 +111,7 @@ pages:
     - Container Monitoring:
       - Overview: containers/index.md
       - Monitoring: containers/sematext-agent.md
-      - Logging: containers/logagent.md
+      - Logging: logagent/installation-docker.md
     - Sematext Docker Agent:
       - Overview: sematext-docker-agent/index.md
       - Installation: sematext-docker-agent/installation.md
