@@ -36,7 +36,7 @@ Example: To monitor a containerized application like Elasticsearch with Auto-Dis
 3) Create a monitoring app for Elasticsearch in Sematext UI. The MONITORING_TOKEN is displayed in the instructions and App Settings. 
 4) Add the Elasticsearch MONITORING_TOKEN as label or environment variable to your Elasticsearch container
 
-As soon Sematext Agent discovers the Elasticsearch container (having a MONITORING_TOKEN set) it will start to collect the ELasticsearch metrics. 
+As soon Sematext Agent discovers the Elasticsearch container (having a MONITORING_TOKEN set) it will start to collect the Elasticsearch metrics. 
 
 
 
