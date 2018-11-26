@@ -16,8 +16,10 @@ The [Logagent](https://sematext.com/logagent) docker container can be configured
 
 * **REGION**: Sematext Cloud region **US** or **EU** (default: US). The receiver URL will be set to EU/US default values. When using REGION, you don't need to set LOGS_RECEIVER_URL (see below).
 * **LOGS_RECEIVER_URL**: The URL of your Elasticsearch Endpoint _(defaults to Sematext Cloud US https://logsene-receiver.sematext.com)_. 
-  - For Sematext Europe use https://logsene-receiver.eu.sematext.com. 
-  - For Elasticsearch https://elasticserch-server-name:9200.
+  
+    * For Sematext Europe use https://logsene-receiver.eu.sematext.com. 
+    * For Elasticsearch https://elasticserch-server-name:9200.
+
 * **LOGS_TOKEN**: The index where the agent should log to _(for [Sematext Cloud](https://sematext.com/cloud) users the logs token)_
 * **LOG_GLOB**: Semicolon-separated list of file globs __(e.g. /mylogs/**/*.log;/var/log/**/*.log)__. Mount your server log files into the container using a Docker volume e.g. `-v /var/log:/mylogs`. 
 * **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) _(e.g. LOGAGENT_ARGS="-n httpd" to specify a log source name or LOGAGENT_ARGS="-u 514" to act as syslog server)_. Please refer to Logagent command line argumetns in the [Logagent Documentation](https://sematext.com/docs/logagent/cli-parameters/)
