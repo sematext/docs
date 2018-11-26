@@ -4,10 +4,11 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 
 ## Installation for Docker
 
+The Logagent Docker image is pre-configured to collect container logs including enrichment of logs with Kubernetes and Docker EE/Swarm metadata. 
 
 To run Sematext Docker Agent you will need a Logs App Token.  If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations).
 
-See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub
+See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub. 
 
 ## Basic configuration options
 
