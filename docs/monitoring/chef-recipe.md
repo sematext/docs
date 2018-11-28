@@ -22,10 +22,10 @@ if node.spm[:token]  # Will only run if a SPM token is present.
     action :nothing
   end
  
-  bash "setup-spm" do
+  bash "setup-sematext" do
     user "root"
     cwd "/tmp"
-    code "bash /opt/spm/bin/setup-spm --app-token #{node.spm[:token]} --app-type elasticsearch --agent-type standalone"
+    code "bash /opt/spm/bin/setup-sematext --monitoring-token #{node.spm[:token]} --app-type elasticsearch --agent-type standalone"
     creates "/opt/spm/spm-monitor/conf/spm-monitor-config-#{node.spm[:token]}-default.properties"
     notifies :restart, "service[spm-monitor]"
   end

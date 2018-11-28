@@ -130,12 +130,12 @@ step should be run once for each of the 3 Solr instances (installation
 instructions are accessible
 from <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
 Monitor for app you are installing). When running
-script `/opt/spm/bin/setup-spm` in step "2. Client
+script `/opt/spm/bin/setup-sematext` in step "2. Client
 configuration setup", you should add `jvm-name` parameter (and value)
 at the end of parameter list, like this:
 
 ```
-sudo bash /opt/spm/bin/setup-spm --app-token 11111111-1111-1111-1111-111111111111 --app-type solr --agent-type javaagent --jvm-name solr1
+sudo bash /opt/spm/bin/setup-sematext --monitoring-token 11111111-1111-1111-1111-111111111111 --app-type solr --agent-type javaagent --jvm-name solr1
 ```
 
 In this example, we are setting up things for 3 separate Solr processes,
