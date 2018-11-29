@@ -8,17 +8,15 @@ Starting a Sematext Agent instance involves creating a new container with the fo
 
 ```bash
 $ docker run -d --privileged -P --name st-agent \
-	          -v /usr/lib:/usr/lib:ro \
-	          -v /lib64:/lib64:ro \
 	          -v /sys/kernel/debug:/sys/kernel/debug \
 	          -v /var/run/docker.sock:/var/run/docker.sock \
 	          -v /var/run/st-agent:/var/run/st-agent \
 	          -v /proc:/host/proc:ro \
 	          -v /etc:/host/etc:ro \
 	          -v /sys:/host/sys:ro \
-	          -e TOKEN=<INFRA-TOKEN> \
+	          -e INFRA_TOKEN=<INFRA-TOKEN> \
 	          -e CONTAINER_TOKEN=<CONTAINER-TOKEN> \
-	          -e LOGSENE_TOKEN=<LOGSENE-TOKEN> \
+	          -e LOGS_TOKEN=<LOGS-TOKEN> \
 	          -e JOURNAL_DIR=/var/run/st-agent \
 	          -e LOGGING_WRITE_EVENTS=false \
 	          -e NODE_NAME=`hostname` \
@@ -30,7 +28,7 @@ Besides providing several bind mounts for Docker socket, procfs and journal dire
 
 In addition to metrics, Sematext Agent also collects events (Docker, Kubernetes, agent initialization/termination events, OOM notifications, kill signals) and sends them to Sematext's event and log receivers.
 
-By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by passing `SERVER_BASE_URL` for metrics receivers, `LOGS_SERVER` and `EVENT_SERVER` for log and event receivers respectively.
+By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL` and `EVENTS_RECEIVER_URL` for log and event receivers respectively.
 
 ### Configuration file
 
@@ -38,8 +36,6 @@ For fine-tunning Sematext Agent refer to `st-agent.yml` configuration file. You 
 
 ```bash
 $ docker run -d --privileged -P --name st-agent \
-	          -v /usr/lib:/usr/lib:ro \
-	          -v /lib64:/lib64:ro \
 	          -v /sys/kernel/debug:/sys/kernel/debug \
 	          -v /var/run/docker.sock:/var/run/docker.sock \
 	          -v /var/run/st-agent:/var/run/st-agent \
@@ -47,9 +43,9 @@ $ docker run -d --privileged -P --name st-agent \
 	          -v /etc:/host/etc:ro \
 	          -v /sys:/host/sys:ro \
 	          -v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml \
-	          -e TOKEN=<INFRA-TOKEN> \
+	          -e INFRA_TOKEN=<INFRA-TOKEN> \
 	          -e CONTAINER_TOKEN=<CONTAINER-TOKEN> \
-	          -e LOGSENE_TOKEN=<LOGSENE-TOKEN> \
+	          -e LOGS_TOKEN=<LOGS-TOKEN> \
 	          -e JOURNAL_DIR=/var/run/st-agent \
 	          -e NODE_NAME=`hostname` \
 	          -e LOGGING_WRITE_EVENTS=false \
