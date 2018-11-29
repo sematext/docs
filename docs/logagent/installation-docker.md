@@ -218,7 +218,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <tbody>
 <tr>
 <td>TAGGING_LABELS</td>
-<td>A list of docker label names or environment variable names to tag container logs. Supporting wildcards e.g. TAGGING_LABELS='com.docker.swarm,com.myapp.'</td>
+<td>A list of docker label names or environment variable names to tag container logs. Supporting wildcards. Default value: <pre>com.docker.*,io.kubernetes.*,annotation.io.*</pre></td>
 </tr>
 <tr>
 <td>IGNORE_LOGS_PATTERNS</td>
