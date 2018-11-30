@@ -33,7 +33,7 @@ The most basic start method is using docker run command:
 
 ```
 docker pull sematext/logagent
-docker run -d --name logagent \
+docker run -d --restart=always --name logagent \
 -e LOGS_TOKEN=YOUR_LOGS_TOKEN \
 -e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
 -v /var/run/docker.sock:/var/run/docker.sock sematext/logagent
@@ -72,7 +72,7 @@ Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy Logagent with following docker command with your Logs Tokens:
 
 ```
-docker service create -mode global -name logagent \
+docker service create --restart=always -mode global -name logagent \
 -mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
 -e LOGS_TOKEN="REPLACE THIS WITH YOUR LOGS TOKEN" \
 -e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
