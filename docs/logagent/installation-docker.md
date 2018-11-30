@@ -298,7 +298,7 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 <tr>
 <td>LOGAGENT_PATTERNS_BASE64</td>
 <td>Set to "true" if the LOGAGENT_PATTERNS patterns file you are passing in via env. variable is base64 encoded e.g 
-  <pre>LOGAGENT_PATTERNS="$(cat ./patterns.yml | base64)"</pre>. Useful if your patterns file is not getting set properly due to shell interpretation or otherwise.</td>
+  <pre>LOGAGENT_PATTERNS_BASE64="$(cat ./patterns.yml | base64)"</pre>. Useful if your patterns file is not getting set properly due to shell interpretation or otherwise.</td>
 </tr>
 <tr>
 <td>PATTERN_MATCHING_ENABLED</td>
