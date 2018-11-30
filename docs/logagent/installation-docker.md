@@ -226,7 +226,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tr>
 <tr>
 <td>LOGSENE_ENABLED_DEFAULT</td>
-<td>Enables log collection for containers having no explicit label/environment variable LOGSENE_ENABLED set. Defaul value: true. See section <a href="https://sematext.com/docs/logagent/installation-docker/#log-routing">Log Routing</a>.</td>
+<td>Enables log collection for containers having no explicit label/environment variable LOGSENE_ENABLED set. Defaul value: true. See section <a href="#log-routing">Log Routing</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -327,7 +327,7 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 </tr>
 <tr>
 <td>GEOIP_ENABLED</td>
-<td>trueenables GeoIP lookups in the log parser, default value: false</td>
+<td>Enables GeoIP lookups in the log parser, default value: "false"</td>
 </tr>
 <tr>
 <td>MAXMIND_DB_DIR</td>
