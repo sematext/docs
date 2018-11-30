@@ -226,7 +226,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tr>
 <tr>
 <td>LOGSENE_ENABLED_DEFAULT</td>
-<td>Enables log collection for containers having no explicit label/environment variable LOGSENE_ENABLED set. Defaul value: true. See section "Log Routing".</td>
+<td>Enables log collection for containers having no explicit label/environment variable LOGSENE_ENABLED set. Defaul value: true. See section <a href="https://sematext.com/docs/logagent/installation-docker/#log-routing">Log Routing</a>.</td>
 </tr>
 </tbody>
 </table>
