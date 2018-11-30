@@ -2,7 +2,14 @@
 
 Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes), containers (both Docker and rkt) and orchestrator platforms and ships that to [Sematext Cloud](https://sematext.com/cloud). To gain deep insight into the Linux kernel, Sematext Agent relies on eBPF to implant instrumentation points (attach eBPF programs to kprobes) on kernel functions. This allows for a very efficient and powerful system exploration approach. It has auto-discovery capabilities of services deployed on physical/virtual hosts and containers, as well as a mechanism for reporting inventory info. It also collects events from different sources such as OOM notifications, container or Kuberentes events.
 
-### How to use this image
+# Preparation 
+
+To run Sematext Docker Agent you will need a Monitoring App Token and a Logs App Token.  If you don't have Monitoring and/or Logs Apps yet, you can [create a Docker Monitoring and Logs Apps now](https://apps.sematext.com/ui/integrations). 
+
+Note: Sematext UI might not display the INFOR_TOKEN (we are working on the release). 
+In this case simply ignore the INFRA_TOKEN in the following instructions. 
+
+### Get started with Docker Engine
 
 Starting a Sematext Agent instance involves creating a new container with the following options:
 
@@ -34,6 +41,31 @@ By default, the US region receiver endpoints are used to ship data to Sematext C
 
 For fine-tunning Sematext Agent refer to `st-agent.yml` configuration file. You will have to attach a bind mount with file location and pass the `CONFIG_FILE` environment variable that contains the path to aforementioned configuration file.
 
+The configuration file accepts all options (listed below) in YAML format. 
+```
+# Sematext Agent configuration file
+infra-token: YourInfrastructureMonitoringToken
+container-token: YourDockerMonitoringToken
+# Logs token to store Docker and Kubernetes Events in Sematext Logs
+logs-token: YourLogsToken
+# Location to persit events, when backend is not reachable
+journal: 
+  dir: /var/run/st-agent
+
+pkg:
+ enabled: false
+ 
+logging:
+  format: json
+  write-events: false
+  request-tracking: false
+  level: warning
+```
+
+#### Run Sematext Agent with a Config File
+
+Mount the configuration file into the container and set the path to the configuration file ```-v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml \``` via CONFIG_FILE envirnment variable. 
+
 ```bash
 $ docker run -d --privileged -P --name st-agent \
 	          -v /sys/kernel/debug:/sys/kernel/debug \
@@ -43,15 +75,233 @@ $ docker run -d --privileged -P --name st-agent \
 	          -v /etc:/host/etc:ro \
 	          -v /sys:/host/sys:ro \
 	          -v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml \
-	          -e INFRA_TOKEN=<INFRA-TOKEN> \
-	          -e CONTAINER_TOKEN=<CONTAINER-TOKEN> \
-	          -e LOGS_TOKEN=<LOGS-TOKEN> \
-	          -e JOURNAL_DIR=/var/run/st-agent \
 	          -e NODE_NAME=`hostname` \
-	          -e LOGGING_WRITE_EVENTS=false \
 	          -e CONFIG_FILE=/opt/st-agent/st-agent.yml \
 	          sematext/agent:latest
 ```
+
+# Run Sematext Agent on Docker Enterprise / Swarm Service
+
+Create a Docker Monitoring App in Sematext and follow the instructions in the UI. 
+Sematext Agent can be deployed as global service on all Swarm nodes with a single command: 
+
+```
+docker service create --mode global --restart always --name st-agent \
+--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \ 
+--mount type=bind,src=/sys/kernel/debug,dst=/sys/kernel/debug  \
+--mount type=bind,src=/tmp,dst=/var/run/st-agent \
+--mount type=bind,src=/proc,dst=/host/proc,readonly \ 
+--mount type=bind,src=/etc,dst=/host/etc,readonly \
+--mount type=bind,src=/sys,dst=/host/sys,readonly \
+-e NODE_NAME={{.Node.Hostname}} \
+-e INFRA_TOKEN=<Infra App Token> \
+-e CONTAINER_TOKEN=<Docker App Token> \
+-e LOGS_TOKEN=<Logs App Token> \
+-e SERVER_BASE_URL=https://spm-receiver.sematext.com \
+-e EVENTS_RECEIVER_URL=https://event-receiver.sematext.com \
+-e LOGS_RECEIVER_URL=https://logsene-receiver.sematext.com \
+-e JOURNAL_DIR=/var/run/st-agent \
+-e LOGGING_REQUEST_TRACKING=false \
+-e LOGGING_WRITE_EVENTS=false \
+-e LOGGING_LEVEL=error \
+-e PKG_ENABLED=false \
+sematext/agent:latest
+```
+## Run Sematext Agent on Kubernetes
+
+Create a Docker Monitoring App in Sematext and follow the instructions in the UI. 
+
+### RBAC 
+If your cluster has RBAC enabled add ClusterRole and ClusterRoleBindings. For ClusterRoleBindings you should update REPLACE_WITH_NAMESPACE value to match with namespace where the Sematext agent will be installed:
+
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: sematext-agent
+  labels:
+    app: sematext-agent
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: sematext-agent
+subjects:
+- kind: ServiceAccount
+  name: sematext-agent
+  namespace: <REPLACE_WITH_NAMESPACE>
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sematext-agent
+  labels:
+    app: sematext-agent
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - events
+  - pods
+  - configmaps
+  - nodes
+  - secrets
+  verbs:
+  - list
+  - get
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - configmaps
+  verbs:
+  - create
+  - delete
+  - update 
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - watch
+  - list
+```
+### Create and deploy the DaemonSet
+
+Create a file for the deployment st-agent.yml (Replace Tokens and receiver URLs): 
+
+```
+# Sematext Agent DaemonSet
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sematext-agent
+  labels:
+    app: sematext-agent
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: sematext-agent
+  labels:
+    app: sematext-agent
+spec:
+  selector:
+    matchLabels:
+      app: sematext-agent
+  template:
+    metadata:
+      labels:
+        app: sematext-agent
+    spec:
+      serviceAccountName: sematext-agent
+      containers:
+        - name: agent
+          image: sematext/agent:latest
+          imagePullPolicy: Always
+          env:
+          - name: INFRA_TOKEN
+            value: <REPLACE_WITH_INFRA_TOKEN>
+          - name: CONTAINER_TOKEN
+            value: <REPLACE_WITH_CONTAINER_TOKEN>
+          - name: LOGS_TOKEN
+            value: <REPLACE_WITH_LOGS_TOKEN>
+          - name: SERVER_BASE_URL
+            value: https://spm-receiver.eu.sematext.com
+          - name: EVENTS_RECEIVER_URL
+            value: https://event-receiver.eu.sematext.com
+          - name: LOGS_RECEIVER_URL
+            value: https://logsene-receiver.eu.sematext.com
+          - name: API_SERVER_PORT
+            value: "80"
+          - name: JOURNAL_DIR
+            value: /opt/spm/st-agent
+          - name: PIPELINE_CONSOLE_OUTPUT
+            value: "false"
+          - name: PIPELINE_NULL_OUTPUT
+            value: "false"
+          - name: API_SERVER_HOST
+            value: "0.0.0.0"
+          - name: LOGGING_WRITE_EVENTS
+            value: "false"
+          - name: LOGGING_REQUEST_TRACKING
+            value: "false"
+          - name: KUBERNETES_CLUSTER_ID
+            value: <REPLACE_WITH_CLUSTER_NAME>
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 80
+          volumeMounts:
+            - name: procfs
+              mountPath: /host/proc
+              readOnly: true
+            - name: sysfs
+              mountPath: /host/sys
+              readOnly: true
+            - name: etc
+              mountPath: /host/etc
+              readOnly: true
+            - name: debugfs
+              mountPath: /sys/kernel/debug
+            - name: docker-sock
+              mountPath: /var/run/docker.sock
+            - name: journal
+              mountPath: /opt/spm/st-agent
+          securityContext:
+            privileged: true
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+        - name: logagent
+          image: sematext/logagent:latest
+          imagePullPolicy: Always
+          env:
+          - name: LOGS_TOKEN
+            value: <REPLACE_WITH_LOGS_TOKEN>
+          - name: LOGS_RECEIVER_URL
+            value: https://logsene-receiver.eu.sematext.com
+          volumeMounts:
+            - name: docker-sock
+              mountPath: /var/run/docker.sock
+      volumes:
+        - name: procfs
+          hostPath:
+            path: /proc
+        - name: sysfs
+          hostPath:
+            path: /sys
+        - name: etc
+          hostPath:
+            path: /etc
+        - name: debugfs
+          hostPath:
+            path: /sys/kernel/debug
+        - name: docker-sock
+          hostPath:
+            path: /var/run/docker.sock
+        - name: journal
+          hostPath:
+            path: /tmp
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+```
+
+Deploy the DaemonSet: 
+
+```
+kubectl create st-agent.ymml 
+``
 
 ### Environment Variables
 
