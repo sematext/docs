@@ -151,7 +151,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <tbody>
 <tr>
 <td>LOGS_TOKEN</td>
-<td>Logs Token enables logging to Sematext Cloud, see logging specific parameters for filter options and Log Routing section to route logs from different containers to separate Logs Apps (indices)</td>
+<td>Logs Token enables logging to Sematext Cloud, see logging specific parameters for filter options and <a href="#log-routing">Log Routing</a> section to route logs from different containers to separate Logs Apps (indices)</td>
 </tr>
 <tr>
 <td>-v /var/run/docker.sock</td>
