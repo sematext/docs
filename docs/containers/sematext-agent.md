@@ -301,7 +301,7 @@ Deploy the DaemonSet:
 
 ```
 kubectl create st-agent.ymml 
-``
+```
 
 ### Environment Variables
 
