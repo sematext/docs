@@ -6,7 +6,7 @@ Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, ne
 
 To run Sematext Docker Agent you will need a Monitoring App Token and a Logs App Token.  If you don't have Monitoring and/or Logs Apps yet, you can [create a Docker Monitoring and Logs Apps now](https://apps.sematext.com/ui/integrations). 
 
-Note: Sematext UI might not display the INFOR_TOKEN (we are working on the release). 
+Note: Sematext UI might not display the INFRA_TOKEN (we are working on the release). 
 In this case simply ignore the INFRA_TOKEN in the following instructions. 
 
 ### Get started with Docker Engine
