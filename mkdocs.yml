@@ -221,7 +221,8 @@ extra_javascript:
   - 'javascripts/extra.js'
 
 markdown_extensions:
-  - toc(permalink=true)
+  - toc:
+      permalink: true
   - codehilite
   - meta
   - admonition
