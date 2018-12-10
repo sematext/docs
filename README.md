@@ -36,6 +36,7 @@ pip install mkdocs-material===2.7.0
 
 Install Markdown Code Tabs Extension
 ```sh
+pip install Markdown==2.6
 pip install markdown-fenced-code-tabs
 ```
 In mkdocs.yml:
