@@ -3,7 +3,7 @@ Description: Logagent is light-weight log shipper, filebeat, fluentd or rsyslog 
 
 ## What is Logagent
 
-[Logagent](https://sematext.com/logagent) is a modern, open-source, light-weight log shipper. It is like Filebeat and Logstash in one, without the JVM memory footprint.  It comes with out of the box and extensible log parsing, on-disk buffering, secure transport, and bulk indexing to Elasticsearch, Logsene, and other destinations. 
+[Logagent](https://sematext.com/logagent) is a modern, open-source, light-weight log shipper. It is like Filebeat and Logstash in one, without the JVM memory footprint.  It comes with out of the box and extensible log parsing, on-disk buffering, secure transport, and bulk indexing to Elasticsearch, [Sematext Logs](https://sematext.com/logsene), and other destinations. 
 
 Low memory footprint and low CPU overhead make it suitable for deploying on edge nodes and devices, while its ability to parse and structure logs makes it a great Logstash alternative. 
 
@@ -44,8 +44,8 @@ Logagent can also be used as a command-line tool.
   ```cat access.log | logagent -n nginx -e http://localhost:9200 -i logs```
 - Watch multiple log files in the terminal
   ```logagent -yaml -g '/var/log/**/*.log'```
-- Store logs in Elasticsearch and watch them in real-time in the Web browser 
-  ```logagent -e http://localhost:9200 -i logs  --rtailWebPort 8080 --rtailPort 9999 /var/log/*.log ```
+- Store logs in Elasticsearch 
+  ```logagent -e http://localhost:9200 -i logs```
 
 #### Plugins 
 
@@ -68,6 +68,6 @@ Logagent doesn't lose data. It stores parsed logs to a disk buffer if the networ
 ### Related packages
 - [Sematext Agent for Docker](https://github.com/sematext/sematext-agent-docker) - collects metrics, events and logs from Docker API and CoreOS. Logagent-js is a component of sematext-agent-docker. More Information: [Innovative Docker Log Management](http://blog.sematext.com/2015/08/12/docker-log-management/)
 - [Logsene-CLI](https://github.com/sematext/logsene-cli) - Enables searching Logsene log entries from the command-line. 
-- [SPM Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node applications
-- [Custom Metrics](https://github.com/sematext/spm-metrics-js) - Custom Metrics for SPM 
+- [Sematext Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node applications
+- [Custom Metrics](https://github.com/sematext/spm-metrics-js) - Custom Metrics JavaScript library for Sematext 
 - [Winston-Logsene](https://github.com/sematext/winston-logsene) - Logging for Node.js - Winston transport layer for Logsene
