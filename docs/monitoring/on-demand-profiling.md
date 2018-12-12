@@ -32,4 +32,4 @@ Hadoop, Storm, Cassandra, HBase, etc.).
 
 **Resources**:
 
-  - <https://sematext.com/blog/2016/03/17/on-demand-java-profiling/>
+  - <https://sematext.com/blog/on-demand-java-profiling/>
