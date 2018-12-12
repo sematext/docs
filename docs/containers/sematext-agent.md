@@ -326,9 +326,9 @@ You can adjust the configuration of Sematext Agent with additional environment v
 | PROCESS_ENABLED | Specifies if process metrics collection is enabled. To disable process metrics collector set `PROCESS_ENABLED=false`. |
 | **Network Monitoring** | |
 | NETRACER_ENABLED | Controls whether network topology collector is turned on. Network tracer is disabled by default. To enable network tracer set `NETRACER_ENABLED=true`. In order to capture network traffic from the host, you should start the container with host networking by passing the `--network=host` argument to Docker engine. This is only required when pcap network tracer is used. | 
-| NETRACER_INPUT_FILTER, NETRACER_OUTPUT_FILTER | When specified, applies filtering expressions to all inbound/outbound packets (`NETRACER_INPUT_FILTER="dst port 8923 and tcp"`). | 
+| NETRACER_INPUT_FILTER, NETRACER_OUTPUT_FILTER | When specified, applies filtering expressions to all inbound/outbound packets (`NETRACER_INPUT_FILTER="dst port 8923 and tcp"`). |
 | NETRACER_INTERFACES | A comma-separated list of network interfaces to monitor. By default all interfaces are tracked. | 
-| NETRACER_LOOPBACK | Determines whether loopback interfaces should be captured for network traffic. By default network packets are not captured from loopback interfaces. | 	
+| NETRACER_LOOPBACK | Determines whether loopback interfaces should be captured for network traffic. By default network packets are not captured from loopback interfaces. |
 | NETRACER_EBPF_TRACK_TCP | Determines whether TCP connections are tracked by ebpf tracer. By default TCP traffic statistics are collected. | 
 | NETRACER_EBPF_TRACK_UDP | Determines whether UDP connections are tracked by ebpf tracer. By default UDP traffic statistics are collected. |  
 | **Troubleshooting Options** | |
