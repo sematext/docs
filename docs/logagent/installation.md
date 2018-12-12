@@ -21,7 +21,7 @@ sudo npm i -g @sematext/logagent
 
 1. Get a free account at [sematext.com](https://apps.sematext.com/ui/registration)
 
-2. [create a Logsene App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Logsene](http://www.sematext.com/logsene/), Sematext logs management and analysis system
+2. [create a Logs App](https://apps.sematext.com/ui/integrations) to obtain an App Token for [Sematext Cloud](http://www.sematext.com/logsene/), Sematext logs management and analysis system
 
 3. Install Logagent as system service
 
@@ -31,15 +31,15 @@ On Mac OSX it creates a Launchd service. Simply run:
 ``` bash
   # Install logagent package globally 
   sudo npm i -g @sematext/logagent
-  sudo logagent-setup -i LOGSENE_TOKEN
+  sudo logagent-setup -i LOGS_TOKEN
   # for EU region: 
-  # sudo logagent-setup -i LOGSENE_TOKEN -u logsene-receiver.eu.sematext.com
+  # sudo logagent-setup -i LOGS_TOKEN -u logsene-receiver.eu.sematext.com
   # for local Elasticsearch
   # sudo logagent-setup -i indexName -u http://localhost:9200
 ```
 
 The setup script generates the configuraton file in ```/etc/sematext/logagent.conf```.
-The default settings ship all logs from ```/var/log/**/*.log``` to Logsene. 
+The default settings ship all logs from ```/var/log/**/*.log``` to Sematext Cloud. 
 
 Location of service scripts:
 
