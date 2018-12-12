@@ -2,8 +2,8 @@ title: On Demand Profiling
 description: Run on demand profiling, detect app hotspots and profile JVM-based based applications such as Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.
 
 On-demand profiling is a feature of the [Java Agent](spm-client) that
-lets you profile your own JVM-based applications or even any 3rd party
-JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka,
+lets you profile your own [JVM-based applications](https://sematext.com/java-monitoring/) or even any 3rd party
+[JVM-based applications](https://sematext.com/java-monitoring/) (e.g. Spark, Elasticsearch, Solr, Kafka,
 Hadoop, Storm, Cassandra, HBase, etc.).
 
 **Notes**:
@@ -20,7 +20,7 @@ Hadoop, Storm, Cassandra, HBase, etc.).
     [embedded](spm-monitor-javaagent) and
     [standalone](spm-monitor-standalone) agent.
   - SPM client version 1.29.2 or greater is required.
-  - Anything that runs in the JVM can be profiled - Java, Scala,
+  - Anything that runs in the [JVM](https://sematext.com/java-monitoring/) can be profiled - Java, Scala,
     Clojure, Groovy, JRuby, JPython, etc.
 
 **Known issues**:
@@ -33,4 +33,3 @@ Hadoop, Storm, Cassandra, HBase, etc.).
 **Resources**:
 
   - <https://sematext.com/blog/2016/03/17/on-demand-java-profiling/>
-

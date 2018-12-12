@@ -3,6 +3,7 @@ description: Sematext Java application performance monitoring provides real time
 
 ## Integration
 
+- JVM Monitoring: [https://sematext.com/java-monitoring/](https://sematext.com/java-monitoring/)
 - Instructions: [https://apps.sematext.com/ui/howto/JVM/overview](https://apps.sematext.com/ui/howto/JVM/overview)
 
 ## Metrics
