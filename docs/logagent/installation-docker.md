@@ -23,8 +23,9 @@ The [Logagent](https://sematext.com/logagent) docker container can be configured
     * For Elasticsearch `https://elasticserch-server-name:9200`.
 
 * **LOGS_TOKEN**: The index where the agent should log to _(for [Sematext Cloud](https://sematext.com/cloud) users the logs token)_
-* **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre>. Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>. 
 * **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre>pre> to specify a log source name or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. Please refer to Logagent command line argumetns in the [Logagent Documentation](https://sematext.com/docs/logagent/cli-parameters/)
+* **-v /var/run/docker.sock:/var/run/docker.sock** - Mount Docker socket to collect container logs (mandatory)
+* **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre>. Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>. 
 
 
 ### Docker Run
@@ -35,7 +36,7 @@ The most basic start method is using docker run command:
 docker pull sematext/logagent
 docker run -d --restart=always --name logagent \
 -e LOGS_TOKEN=YOUR_LOGS_TOKEN \
--e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
+-e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com" \
 -v /var/run/docker.sock:/var/run/docker.sock sematext/logagent
 ```
 
@@ -75,7 +76,7 @@ deploy Logagent with following docker command with your Logs Tokens:
 docker service create --restart=always -mode global -name logagent \
 -mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
 -e LOGS_TOKEN="REPLACE THIS WITH YOUR LOGS TOKEN" \
--e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
+-e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com" \
 sematext/logagent
 ```
 
