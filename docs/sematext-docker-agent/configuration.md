@@ -162,8 +162,8 @@ Sematext Docker Agent.
 <td style="word-break: break-all;">Removes fields from parsed/enriched logs. E.g. LOGSENE_REMOVE_FIELDS=logSource,container_host_name,swarm_node,password,creditCardNo</td>
 </tr>
 <tr>
-<td>IGNORE_LOGS_PATTERNS</td>
-<td style="word-break: break-all;">Filter logs by a JS regular expression. E.g. <code>IGNORE_LOGS_PATTERNS=\/healthcheck|\/ping</code></td>
+<td>IGNORE_LOGS_PATTERN</td>
+<td style="word-break: break-all;">Filter logs by a JS regular expression. E.g. <code>IGNORE_LOGS_PATTERN=\/healthcheck|\/ping</code></td>
 </tr>
 </tbody>
 </table>
