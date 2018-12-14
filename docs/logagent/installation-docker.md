@@ -222,7 +222,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <td>A list of docker label names or environment variable names to tag container logs. Supporting wildcards. Default value: <pre>com.docker.*,io.kubernetes.*,annotation.io.*</pre></td>
 </tr>
 <tr>
-<td>IGNORE_LOGS_PATTERNS</td>
+<td>IGNORE_LOGS_PATTERN</td>
 <td style="word-break: break-all;">Filter logs by a JS regular expression. E.g. <pre>IGNORE_LOGS_PATTERNS=\/healthcheck|\/ping</pre></td>
 </tr>
 <tr>
