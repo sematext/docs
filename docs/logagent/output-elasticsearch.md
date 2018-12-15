@@ -3,7 +3,7 @@ description: Forwards parsed logs with Elasticsearch output plugin for Logagent,
 
 ## Elasticsearch Output Plugin
 
-The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://www.elastic.co/products/elasticsearch) or [Logsene](https://sematext.com/logsene). 
+The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://www.elastic.co/products/elasticsearch) or [Sematext Logs](https://sematext.com/logsene). 
 
 ### Features
 - log routing by log source to multiple Elasticsearch servers
@@ -36,7 +36,7 @@ In some situations, it is required to ship data from different sources to differ
 
 Each Elasticsearch output might have a list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
 
-The following example ships logs from wireless devices and authentication log to a local Elasticsearch server and other server logs to multiple Logsene applications. 
+The following example ships logs from wireless devices and authentication log to a local Elasticsearch server and other server logs to multiple Sematext Logs Apps. 
 
 ```yaml
 input:
