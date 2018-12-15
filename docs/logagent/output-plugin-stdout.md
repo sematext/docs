@@ -1,11 +1,11 @@
-Title: Send parsed logs to stdout
-Description: log shipper, stdout, unix pipe, parse logs
+title: Send parsed logs to stdout
+description: log shipper, stdout, unix pipe, parse logs
 
 ## Output Plugin: Standard output (stdout)
 
 This plugin writes the result of Logagent parser to the standard output stream (stdout) and is activated by default. 
 
-Following message formats are supported: 
+Following message formats are supported:
 - Line delimited JSON (default)
 - Pretty JSON (--pretty command line flag)
 - YAML (--yaml command-line flag)
@@ -13,7 +13,6 @@ Following message formats are supported:
 ### Configuration
 
 ```
-
 input:
   stdin: true
   files: 
@@ -24,7 +23,6 @@ output:
   # use 'pretty' for pretty json and 'ldjson' for line delimited json
   # stdout: pretty
   # stdout: ldjson
-
 ```
 
 Start logagent
