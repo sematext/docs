@@ -1,15 +1,15 @@
 title: Logagent input plugin for ZeroMQ
-description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Plugin is available as node.js npm package and acts as messages consumer using ZeroMQ supporting three types of messaging patterns, namely Publish-subscribe, Request-response and fire-and-forget some times called pipeline
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Plugin is available as node.js npm package and acts as messages consumer using ZeroMQ supporting three types of messaging patterns, namely Publish-subscribe, Request-response and fire-and-forget some times called pipeline.
 
 ## Logagent Plugin: ZeroMQ
 
 Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as messages consumer using ZeroMQ.
 
-Input plugins support three types of messaging patterns
+Input plugins support three types of messaging patterns:
  
- * Publish-subscribe
- * Request-response
- * fire-and-forget some times called pipeline
+1. Publish-subscribe
+2. Request-response
+3. fire-and-forget some times called pipeline
 
 
 At the moment plugin is not able to configure socket parameter, by default fire-and-forget patter has configured by default **linger** to 500 and **connect_timeout** to 2500 ms
@@ -25,7 +25,8 @@ npm i -g logagent-input-zeromq
  
 ### Configuration
 
-```
+```yaml
+
 # Global options
 options:
   includeOriginalLine: false
