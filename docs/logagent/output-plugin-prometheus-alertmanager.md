@@ -6,7 +6,8 @@ description: Send alerts to Prometheus Alertmanager and use its various notifica
 Plugin to send alerts to Prometheus Alertmanager.
 
 Applications: 
-* Alert Notifications
+
+- Alert Notifications
 
 
 ### Configuration
