@@ -3,7 +3,7 @@ description: Logagent features modular logging architecture framework where each
 
 ## Input Plugin: InfluxDB
 
-Receives metrics from InfluxDB compatible agents like telegraf. Logagent behaves like InfluxDB HTTP API /write endpoint. Metrics are converted from influx-line-protocol to a JSON structure. The JSON documents could be indexed in Elasticsearch or Sematext Cloud - or forwarded to any other output plugin.
+Receives metrics from InfluxDB compatible agents like Telegraf or [Sematext Monitoring Agent](https://github.com/sematext/sematext-agent-java). Logagent behaves like InfluxDB HTTP API /write endpoint. Metrics are converted from influx-line-protocol to a JSON structure. The JSON documents could be indexed in Elasticsearch or [Sematext Cloud](https://sematext.com/cloud) - or forwarded to any other output plugin.
 
 ### Example 
 
