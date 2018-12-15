@@ -9,7 +9,7 @@ Following message formats are supported:
 - Line delimited JSON (default)
 - Pretty JSON (--pretty command line flag)
 - YAML (--yaml command-line flag)
- 
+
 ### Configuration
 
 ```
