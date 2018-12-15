@@ -7,7 +7,7 @@ Input plugin for [@sematext/logagent](http://sematext.com/logagent/). This plugi
 
 ### Configuration
 
-```
+```yaml
 # mqtt-input.yaml
 input:
   mqtt-client:
