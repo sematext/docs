@@ -6,6 +6,7 @@ description: Forward messages or alerts via Slack "Incoming-Webhook" integration
 Plugin to forward messages via Slack "Incoming-Webhook" integration.
 
 Applications: 
+
 - Alert Notifications
 
 
