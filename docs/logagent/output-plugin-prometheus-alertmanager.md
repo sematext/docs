@@ -1,14 +1,12 @@
 title: Send alerts to Prometheus Alertmanager
 description: Send alerts to Prometheus Alertmanager and use its various notifications capabilities such as e-mail, slack, pagerduty, opsgenie and many more
 
-log alerting, log shipper, prometheus, slack, email, pagerduty, opsgenie, chatops
-
 ## Output Plugin: Prometheus Alertmanager
 
 Plugin to send alerts to Prometheus Alertmanager.
 
 Applications: 
-- Alert Notifications
+* Alert Notifications
 
 
 ### Configuration
