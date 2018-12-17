@@ -172,7 +172,6 @@ pages:
           - InfluxDB: logagent/output-plugin-influxdb.md
           - Apache Kafka: logagent/output-plugin-kafka.md
           - ZeroMQ: logagent/output-plugin-zeromq.md
-          - rTail: logagent/output-plugin-rtail.md
           - ClickHouse: logagent/output-plugin-clickhouse.md
           - Slack Webhook: logagent/output-plugin-slack.md
           - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
