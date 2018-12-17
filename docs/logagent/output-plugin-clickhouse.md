@@ -49,13 +49,18 @@ options:
 input:
   stdin: true
   
-
-output:   
+output:  
   clickhouse: 
     module: output-clickhouse
     url: http://127.0.0.1 
     port: 8123
-    debug: false
+    # Authentication Options
+    # user: 'default'
+    # password: ''
+    # useGzip: true
+    # Set Database Name
+    # database: default
+    debug: true
     table: default.logs
     # Fields must be in the same order as specified in CREATE TABLE
     fields: 
