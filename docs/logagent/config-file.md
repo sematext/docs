@@ -1,5 +1,5 @@
 title: Logagent Configuration File
-description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or to rtail for real-time log view 
+description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or Sematext Cloud for real-time log view. 
 
 ## Config File 
 
@@ -78,16 +78,16 @@ parser:
 
 ### Section: output
 
-Logs could be shipped to Elasticsearch or to rtail for real-time log view. 
+Logs could be shipped to [Elasticsearch, AWS Elasticsearch Service, Sematext Cloud, MQTT, GELF, Apache Kafka, ZeroMQ, InfluxDB, ClickHouse DB, ...](https://sematext.com/docs/logagent/plugins/)  
 The Elasticsearch output supports HTTPS and username/password in the URL. 
 In addition, it is possible to route logs from different files to different indices in Elasticsearch. All logs that don't match any rules in the indices section are routed to the default Elasticsearch index. 
 
 ```yaml
 output:
-  # index logs in Elasticsearch or Logsene
-  logsene: 
+  # index logs in Elasticsearch or Sematext Cloud
+  sematext-cloud: 
     module: elasticsearch
-    # URL to Elasticearch server, defaults to Logsene SaaS if not set
+    # URL to Elasticearch server, defaults to Sematext Cloud logs receiver if not set
     url: https://logsene-receiver.sematext.com
     
     # Proxy settings behind firewalls
@@ -95,7 +95,7 @@ output:
     # httpsProxy: https://localHttpsProxy:port
     
     # default index to use, for all logs that don't match later in indices section
-    # for Logsene use the Logsene App Token here
+    # for Sematext Cloud use the Logs App Token here
     index: 0a835c75-9847-4f74-xxxx
     
     # specific index to use per logSource field of parsed logs
@@ -114,15 +114,6 @@ output:
   # print parsed logs in YAML format to stdout (only if options.supress is set to false)    
   stdout: yaml # use 'pretty' for pretty json and 'ldjson' for line delimited json (default)
   
-  # forward logs to rtail realtime log viewer
-  #rtail:
-    # rtail host to send logs to
-    #host: localhost
-    # rtails port to send logs to 
-    #udpPort: 3434
-    # start rtail Server with given http port and bind to address of hostname
-    #webPort: 8080
-    #webHost: localhost
 ```
 
 A collection of example config files are [here](https://github.com/sematext/logagent-js/tree/master/config/examples)
