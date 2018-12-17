@@ -39,11 +39,7 @@ description: Command Line Parameters for Logagent, light-weight log shipper with
 | -t, --index <Logsene token/Elasticsearch index> | [Logsene](http://sematext.com/logsene) App Token to insert parsed records into Logsene or Elasticsearch index (see --elasticsearch-host) |
 | --httpProxy <url> | HTTP proxy url |
 | --httpsProxy <url> | HTTPS proxy url |
-| __rtail__ | Realtime log viewer|
-| --rtailPort  | forwards logs via UDP to [rtail](http://rtail.org/) server |
-| --rtailHost hostname | [rtail](http://rtail.org/) server (UI for realtime logs), default: localhost|
-| --rtailWebPort <port> | starts rtail UI webserver (if not installed install with: - npm i rtail -g) |
-| --rtailWebHost <host> | rtail UI webserver and bind hostname. E.g. ```logagent --rtailWebPort 9000 --rtailPort 8989  --rtailWebHost $(hostname) -g \'/var/log/**/*.log``` |
+
 
 The default output is line-delimited JSON for parsed log lines, as long as no format options like '-y' (YAML format), '-p' (pretty JSON), or '-s' (silent, no output to console) are specified. 
 
@@ -91,21 +87,4 @@ Watch selective log output on console by passing logs via stdin and format in YA
 tail -f /var/log/access.log | logagent -y -n httpd
 tail -f /var/log/system.log | logagent -f my_own_patterns.yml  -y 
 ```
-
-Ship logs to rtail and Logsene to view logs in real-time in rtail and store logs in Logsene
-
-```
-# rtail don't need to be installed, logagent uses the rtail protocol
-logagent -i $LOGSENE_TOKEN --rtailHost myrtailserver --rtailPort 9999 /var/log/*.log
-```
-
-Logagent can start the rtail web-server (in-process, saving memory), open browser with http://localhost:8080
-```
-# logagent has no dependency to rtail, to keep the package small
-sudo npm i rtail -g
-logagent -s -i $LOGSENE_TOKEN --rtailWebPort 8080 --rtailPort 9999 /var/log/*.log
-```
-
-And of course, you can combine rtail and Logagent in the traditional way, simply connect both via Unix pipes. An example with rtail and Logsene storage and charts:
-![](http://g.recordit.co/usjLitb3Dd.gif)
 
