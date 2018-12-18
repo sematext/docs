@@ -8,7 +8,7 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 Official Node.js [downloads and instructions](https://nodejs.org/en/download/).
 E.g. for Debian/Ubuntu:
 ``` bash
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
