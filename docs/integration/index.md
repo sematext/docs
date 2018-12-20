@@ -420,7 +420,7 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/windows">Windows</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/linux">Linux</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/osx">macOS</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rancheros">RancherOS</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rancheros">Rancher</a></li>
 </ul>
 
 ### Containers 
@@ -445,11 +445,11 @@ We accept <a href="http://sematext.com/docs/logs/syslog/" target="_blank" rel="n
 
 ### iOS 
 
-<div>For iOS apps use <a href="https://github.com/sematext/sematext-logsene-ios" target="_blank" rel="noopener">Logsene for iOS</a> library.</div>
+<div>For iOS apps use <a href="https://github.com/sematext/sematext-logsene-ios" target="_blank" rel="noopener">Sematext Logs for iOS</a> library.</div>
 
 ### Android 
 
-<div>For Android apps use<a href="https://github.com/sematext/sematext-logsene-android" target="_blank" rel="noopener"> Logsene for Android</a> library.</div>
+<div>For Android apps use<a href="https://github.com/sematext/sematext-logsene-android" target="_blank" rel="noopener"> Sematext Logs for Android</a> library.</div>
 
 ### AWS EC2 
 
@@ -459,7 +459,7 @@ shipper</a> like you would from any other physical or virtual machine.
 
 ** AWS S3 (CloudTrail, Flow logs, ELB access logs, etc.) **
 
-If you have logs stored in S3, you can ship them to Logsene <a
+If you have logs stored in S3, you can ship them to Sematext <a
 href="https://github.com/sematext/logsene-aws-lambda-s3"
 target="_blank" rel="noopener">via this AWS Lambda function</a>. This
 method also works for when you periodically upload logs to S3 buckets,
@@ -474,25 +474,23 @@ logs are VPC flowlogs, the Lambda function will also parse them and
 add geoIP information on the source IP addresses.
 
 
-## Notification Webhooks
+## Notification Hooks
 
-- [Email as default system webhhook](/integration/alerts-email-integration/)
-- [Custom user defined webhooks](/integration/alerts-webhooks-integration/)
-- [Big Panda](integration/alerts-bigpanda-integration/)
-- [Hipchat](/integration/alerts-hipchat-integration/)
-- [Nagios](/integration/alerts-nagios-integration/)
-- [OpsGenie](/integration/alerts-opsgenie-integration/)
+- [Email as default system notification hook](/integration/alerts-email-integration/)
+- [Custom user defined WebHook](/integration/alerts-webhooks-integration/)
 - [PagerDuty](/integration/alerts-pagerduty-integration/)
-- [Pushover](/integration/alerts-pushover-integration/)
 - [Slack](/integration/alerts-slack-integration/)
+- [OpsGenie](/integration/alerts-opsgenie-integration/)
+- [Big Panda](integration/alerts-bigpanda-integration/)
 - [VictorOps](/integration/alerts-victorops-integration/)
+- [Pushover](/integration/alerts-pushover-integration/)
 - [Zapier](/integration/alerts-zapier-integration/)
+- [Nagios](/integration/alerts-nagios-integration/)
+- [Hipchat](/integration/alerts-hipchat-integration/)
 
 ## Alerting
 
-Multiple types of [alert notifications](/alerts) can be triggered on
-metrics and on logs and sent to several 3rd party services. See
-[Alerts](/alerts) for more info.
+Multiple types of [alert notifications](/alerts) can be triggered on metrics and on logs and sent to several 3rd party services. See [Alerts](/alerts) for more info.
 
 [Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
