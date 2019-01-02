@@ -104,28 +104,30 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 
 ## Metrics
 
-Metric Name | Key | Agg | Type | Description
---- | --- | --- | --- | ---
-container count | docker.containers | Avg | Long | 
-write wait time | docker.io.write.wait.time | Sum | Double | 
-write time | docker.io.write.time | Sum | Double | 
-read | docker.io.read | Sum | Long | 
-read wait time | docker.io.read.wait.time | Sum | Double | 
-read time | docker.io.read.time | Sum | Double | 
-write | docker.io.write | Sum | Long | 
-mem fail counter | docker.memory.fail.count | Sum | Long | 
-pages in | docker.swap.pages.in | Sum | Long | 
-mem usage | docker.memory.usage | Avg | Long | 
-pages fault | docker.swap.pages.fault | Sum | Long | 
-pages out | docker.swap.pages.out | Sum | Long | 
-mem limit | docker.memory.limit | Avg | Long | 
-cpu throttled time | docker.cpu.throttled.time | Sum | Double | 
-cpu usage | docker.cpu.percent | Avg | Double | 
-tx dropped | docker.network.tx.dropped | Sum | Long | 
-received | docker.network.rx.bytes | Sum | Long | 
-transmitted | docker.network.tx.bytes | Sum | Long | 
-received | docker.network.rx.packets | Sum | Long | 
-rx errors | docker.network.rx.errors | Sum | Long | 
-transmitted | docker.network.tx.packets | Sum | Long | 
-rx dropped | docker.network.rx.dropped | Sum | Long | 
-tx errors | docker.network.tx.errors | Sum | Long | 
+|Name|Type|Unit|Numeric Type|Label|Description|
+|----|----|----|------------|-----|-----------|
+|memory.usage|gauge|bytes|long|memory|container memory usage in bytes|
+|memory.fail.count|counter||long|memory|the number of times that memory cgroup limit was exceeded|
+|memory.limit|gauge|bytes|long|memory|the max allowed memory limit for the container cgroup|
+|memory.rss|gauge|bytes|long|RSS memory|number of bytes of anonymous (file unmapped memory) and swap cache memory|
+|memory.pages.in|counter||long|memory pages in|memory pages in,description=the number of events each time the page is accounted to the cgroup|
+|memory.pages.out|counter||long|memory pages out|memory pages out,description=the number of events each time a page is unaccounted from the cgroup|
+|memory.pages.fault|counter||long|memory page faults|the number of page faults accounted the cgroup|
+|swap.size|counter|bytes|long|swap|the number of bytes of swap usage|
+|io.read|gauge||long|disk read|the number of bytes read from the disk|
+|io.read.time|gauge|ns|long|disk read time|the total amount of time (in nanoseconds) between request dispatch and request completion|
+|io.read.wait.time|counter|ns|long|disk read wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
+|io.write|counter|bytes|long|disk write|the number of bytes written to the disk|
+|io.write.time|counter|ns|long|disk write time|the total amount of time (in nanoseconds) between request dispatch and request completion|
+|io.write.wait.time|counter|ns|long|disk write wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
+|cpu.percent|gauge|%|double|CPU usage|container CPU usage|
+|cpu.throttled.time|counter|ns|long|CPU throttled time|the total amount of time that processes have been throttled in the container cgroup|
+|network.rx.bytes|counter|bytes|long|network received|received amount of bytes on the network interface|
+|network.rx.packets|counter||long|network packets received|received amount of packets on the network interface|
+|network.rx.errors|counter||long|network rx errors|received amount of errors on the network interface|
+|network.rx.dropped|counter||long|network packets rx dropped|amount of dropped inbound packets on the network interface|
+|network.tx|counter||long|network transmitted|transmitted amount of bytes on the network interface|
+|network.tx.bytes|counter|bytes|long|network received|transmitted amount of bytes on the network interface|
+|network.tx.packets|counter||long|network packets transmitted|transmitted amount of packets on the network interface|
+|network.tx.errors|counter||long|network tx errors|transmitted amount of errors on the network interface|
+|network.tx.dropped|counter||long|network packets tx dropped|amount of dropped outbound packets on the network interface
