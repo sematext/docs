@@ -1,5 +1,5 @@
 title: Docker Monitoring Integration
-description: Docker performance monitoring - metrics, event, log collection and parsing for Docker
+description: Container performance monitoring - metrics, event, log collection and parsing for Docker
 
 ## Overview
   
@@ -22,7 +22,7 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 </ul></td>
 </tr>
 <tr class="odd">
-<td><strong>Docker Container Metrics/Stats</strong></td>
+<td><strong>Container Metrics/Stats</strong></td>
 <td><ul>
 <li>CPU Usage / limits</li>
 <li>Memory Usage / Limits / Fail Counters</li>
