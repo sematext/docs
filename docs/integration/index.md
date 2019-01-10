@@ -481,7 +481,7 @@ add geoIP information on the source IP addresses.
 - [PagerDuty](/integration/alerts-pagerduty-integration/)
 - [Slack](/integration/alerts-slack-integration/)
 - [OpsGenie](/integration/alerts-opsgenie-integration/)
-- [Big Panda](integration/alerts-bigpanda-integration/)
+- [Big Panda](/integration/alerts-bigpanda-integration/)
 - [VictorOps](/integration/alerts-victorops-integration/)
 - [Pushover](/integration/alerts-pushover-integration/)
 - [Zapier](/integration/alerts-zapier-integration/)
