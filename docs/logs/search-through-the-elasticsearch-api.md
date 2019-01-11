@@ -37,7 +37,7 @@ Our centralized logging management solution supports a subset of Elasticsearch A
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logs management app token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
+For each of the operations you'll need your [Logs management app token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
 
 In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logs management app token, of course.
 
