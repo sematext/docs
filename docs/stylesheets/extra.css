@@ -560,3 +560,8 @@ pre {
 .md-clipboard:before {
     color: #fff;
 }
+
+.faq-questions strong {
+    text-decoration: none;
+    color: black;
+}
