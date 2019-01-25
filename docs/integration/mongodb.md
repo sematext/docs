@@ -7,25 +7,23 @@ description: Monitor all key MongoDB metrics and stats, namely server state, glo
 
 ## Overview
 
-The client for "SPM for MongoDB" is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb) that collects MongoDB metrics and sends them to SPM. It is available as [npm](https://www.npmjs.com/package/spm-agent-mongodb)[ package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
+Sematext MongoDB monitoring agent is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb).  It continuously collects MongoDB metrics and sends them to Sematext. It is available as an [NPM package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
 
-In addition to collecting MongoDB metrics, you can send [Custom Metrics](/monitoring/custom-metrics), such as the number of concurrent
-users, the number of items placed in a shopping cart, or any other kind
-of business transaction or KPI.
+In addition to collecting MongoDB metrics, you can send [Custom Metrics](/monitoring/custom-metrics), such as the number of concurrent users, the number of items placed in a shopping cart, or any other kind of business transaction or KPI.
 
 ** Installation and Configuration **
 
-1.  Create an SPM App of type "MongoDB" in SPM 
+1.  Create a Monitoring App of type "MongoDB" in Sematext 
 2.  Click the "**Install Monitor**" button and follow the customized
-    instructions for the created SPM App (basically how to install
+    instructions for the created Monitoring App (basically how to install
     the [NPM package](https://www.npmjs.com/package/spm-agent-mongodb)
-    and configure the SPM App Token)
+    and configure the App Token)
 
 ** Troubleshooting and "How To **
 
 ** Generate diagnostics file for Sematext Support **
 
-If you are not seeing some or all MongoDB metrics, you can create a
+If you are not seeing some or all MongoDB metrics, create a
 "diagnostics dump" and contact us via chat or email. To create the
 diagnostics dump just run the following in your application directory:
 
@@ -34,11 +32,11 @@ diagnostics dump just run the following in your application directory:
 The output of this script points to the ZIP file and shows the Sematext
 Support email address to which the ZIP file should be sent. 
 
-** Using SPM for MongoDB behind Firewalls / Proxy servers **
+** Using Sematext for monitoring MongoDB behind Firewalls / Proxy servers **
 
-By default data is transmitted to SPM via HTTPS. If no direct connection
+By default data is transmitted to Sematext via HTTPS. If no direct connection
 is possible, a proxy server can be used by setting the environment
-variable HTTPS\_PROXY=[https://your-proxy](https://your-proxy/).
+variable HTTPS_PROXY=[https://your-proxy](https://your-proxy/).
 
 ** Installation of native modules on Windows **
 
@@ -48,9 +46,9 @@ compilers are typically not installed by default.
 In this case please check <https://github.com/TooTallNate/node-gyp> for
 details about the required compiler and build tools.
 
-** Upgrading to a new node.js version **
+** Upgrading to a new Node.js version **
 
-If you switch the node.js version (e.g. from 0.12 to 4.x), the
+If you switch the Node.js version (e.g. from 9.x to 10.x), the
 spm-agent-mongodb package will need to be installed again (due to the
 fact that included native modules may change from version to version).
   After the version change please run a fresh installation "npm i
