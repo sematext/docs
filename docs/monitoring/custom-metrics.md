@@ -1,21 +1,21 @@
 title: Custom Metrics
 description: Sematext infrastructure and application monitoring service exposes APIs and provides libraries that let you send custom metrics and turn them into dashboards and real-time visualizations
 
-[SPM](http://sematext.com/spm/) lets you extend standard performance
-metrics reports. SPM exposes APIs and provides libraries that let you
+[Sematext Monitoring](http://sematext.com/spm) lets you extend standard performance
+metrics reports by exposing APIs and providing libraries that let you
 send custom metrics (any numerical data, not just performance metrics)
-into SPM and graph it along other reports.
+and graph them along other reports.
 
 **NOTE:**
 
   - To be able to use Custom Metrics, you need a Sematext account. If
     you don't already have it, you can create it
     [here](https://apps.sematext.com/ui/registration), it's free,
-    no credit card needed. After you have Sematext account, create an
-    SPM Monitoring App to which Custom Metrics will be sent.
-  - If you have already created some SPM Apps under your account in the
+    no credit card needed. After you have Sematext account, create a
+    Monitoring App to which Custom Metrics will be sent.
+  - If you have already created some Monitoring Apps under your account in the
     past, you can send Custom Metrics to any of them.
-  - If you just registered, you can create SPM Monitoring Apps by following the
+  - If you just registered, you can create a Monitoring Apps by following the
     steps after Sematext account registration, or by clicking directly
     [here](https://apps.sematext.com/ui/registration).
 
@@ -99,13 +99,12 @@ while selected values in different values are 'ANDed'. For example, to
 display the number of paying female users, in filter1 the value 'female'
 should be selected, and in filter2 value 'paid' should be selected.
 
-**We recommend to use 'parameter.name=value' format to define filter
-values.**
+**We recommend to use 'parameter.name=value' format to define filter values.**
 
 ## Counting Metrics
 
-Each SPM plan allows for a different number of metrics and a different
-number of datapoints per calendar month.  Please see [SPM Plans](https://sematext.com/spm/#plans-and-pricing) page.
+Each Monitoring plan allows for a different number of metrics and a different
+number of datapoints per calendar month.  Please see [monitoring plans](https://sematext.com/spm/pricing) page.
 
 To stay within your plan limits pay attention to the number of distinct
 metrics.  A metric is a (metric name, filter1, filter2) triple. For
@@ -125,8 +124,7 @@ The API allows up to 3,600,000,000 (3.6 billion) data points per hour.
 
 ## Custom Metrics API
 
-SPM provides REST API for sending data points for custom
-metrics:
+Sematext provides a REST API for sending data points for custom metrics:
 
 http://spm-receiver.sematext.com/receiver/custom/receive.\[format\]?token=\[spm app token\]
 
@@ -370,19 +368,17 @@ for a quick start.
 
 [Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter) is a [Coda Metrics](https://github.com/sematext/sematext-metrics-reporter) library.
 
-Reporter for sending metrics to SPM that uses [sematext-metrics](https://github.com/sematext/sematext-metrics) under
+Reporter for sending metrics to Sematext that uses [sematext-metrics](https://github.com/sematext/sematext-metrics) under
 the hood.
 
 ## Ruby API
 
-[Sematext-metrics](https://github.com/sematext/sematext-metrics-gem) is
-a gem for sending custom metrics from Ruby applications.
+[Sematext-metrics](https://github.com/sematext/sematext-metrics-gem) is a gem for sending custom metrics from Ruby applications.
 
 ## Node.js API
 
 [spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js) is an npm
-module for sending custom metrics from Node.js applications. (Github
-repo)[https://github.com/sematext/spm-metrics-js].
+module for sending custom metrics from Node.js applications. (Github repo)[https://github.com/sematext/spm-metrics-js].
 
 ## .Net API
 
