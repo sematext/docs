@@ -27,7 +27,7 @@ structured data.
 There are 3 steps for configuring your rsyslog for Logsene:
 
 1.  Configure one or more inputs. For example, configure rsyslog to
-    send [local logs](http://www.rsyslog.com/doc/imuxsock.html),
+    send [local logs](http://www.rsyslog.com/doc/imuxsock.html),
     [remote logs over TCP](http://www.rsyslog.com/doc/imtcp.html) and so
     on
 2.  Choose a protocol and an authentication method. For UDP, TCP, TLS
@@ -57,11 +57,11 @@ messages over [TCP](http://www.rsyslog.com/doc/imtcp.html),
 [UDP](http://www.rsyslog.com/doc/imudp.html),
 [RELP](http://www.rsyslog.com/doc/imrelp.html), [pick up messages from the journal](http://www.rsyslog.com/doc/imjournal.html) and more.
 
-To tail a file, load the [file input module](http://www.rsyslog.com/doc/imfile.html) and optionally decide
+To tail a file, load the [file input module](http://www.rsyslog.com/doc/imfile.html) and optionally decide
 how often to pool for changes. Then, for every file, specify its path
 and related parameters, like this:
 
-**Tailing Files by Polling; Old Config Format**  Expand source 
+**Tailing Files by Polling; Old Config Format** 
 
 ``` bash
 # add once
@@ -83,7 +83,7 @@ later and the problems should go away. The file input module gets
 a [new configuration format](http://www.rsyslog.com/doc/rainerscript.html) at your disposal,
 which is easier to maintain:
 
-**Tailing Files via Inotify; New Config Format**  Expand source 
+**Tailing Files via Inotify; New Config Format**
 
 ``` bash
 # add once
@@ -123,7 +123,7 @@ Before forwarding logs via the Elasticsearch API, define a
 **/etc/rsyslog.conf** that gives structure to your messages by
 formatting them as JSON:
 
-**Configuring Log Template**  Expand source 
+**Configuring Log Template** 
 
 ``` bash
 # define a template to specify which fields we send
@@ -200,7 +200,7 @@ If you are using rsyslog version 7 or later, you can use the [new configuration 
 define the template. It's more verbose, but easier to maintain (e.g. add
 new fields, reformat messages):
 
-**Configuring Log Template**  Expand source 
+**Configuring Log Template** 
 
 ``` bash
  template(
@@ -335,7 +335,7 @@ address(es):
 If you prefer the new configuration format, you can find the complete
 TLS configuration below:
 
-**Configure TLS; New Config Format**  Expand source 
+**Configure TLS; New Config Format** 
 
 ``` bash
  global (
