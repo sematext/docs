@@ -314,11 +314,11 @@ nc -zv -w 20 logsene-receiver.sematext.com 443
 ```
 
 or if you are using syslog, connect to
-logsene-receiver-syslog.sematext.com / logsene-syslog-receiver.eu.sematext.com (port 514 for TCP and UDP, port
+logsene-syslog-receiver.sematext.com / logsene-syslog-receiver.eu.sematext.com (port 514 for TCP and UDP, port
 20514 for RELP, port 10514 for TLS):
 
 ``` bash
-nc -zv -w 20 logsene-receiver-syslog.sematext.com 10514
+nc -zv -w 20 logsene-syslog-receiver.sematext.com 10514
 ```
 
 The output should show something like: Connection to
@@ -361,7 +361,7 @@ Address: 34.196.180.172
 Or, if you are using syslog, try:
 
 ``` bash
-nslookup logsene-receiver-syslog.sematext.com
+nslookup logsene-syslog-receiver.sematext.com
 nslookup logsene-syslog-receiver.eu.sematext.com
 ```
 
@@ -372,7 +372,7 @@ Server:        127.0.1.1
 Address:    127.0.1.1#53
 
 Non-authoritative answer:
-logsene-receiver-syslog.sematext.com    canonical name = ec2-52-44-248-43.compute-1.amazonaws.com.
+logsene-syslog-receiver.sematext.com    canonical name = ec2-52-44-248-43.compute-1.amazonaws.com.
 Name:    ec2-52-44-248-43.compute-1.amazonaws.com
 Address: 52.44.248.43
 ```
@@ -549,7 +549,7 @@ use the older format, you have two options to have a correct timestamp:
     with the original specification, but with the ISO timestamp, you'd
     add the following line to your config:
 
-    *.* @@logsene-receiver-syslog.sematext.com:514;RSYSLOG_ForwardFormat
+    *.* @@logsene-syslog-receiver.sematext.com:514;RSYSLOG_ForwardFormat
 
 **What are the supported timestamp formats?**
 

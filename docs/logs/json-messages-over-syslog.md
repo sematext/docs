@@ -256,17 +256,17 @@ change **`serverport`** to `"443"` and add `usehttps="on"`.
 
 If you're using Logs Management application token for authentication, specify
 the LogseneFormat template in your *action* line. The host you'll
-connect to is **logsene-receiver-syslog.sematext.com** or **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe):
+connect to is **logsene-syslog-receiver.sematext.com** or **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe):
 
 ``` bash
-*.* @logsene-receiver-syslog.sematext.com;LogseneFormat
+*.* @logsene-syslog-receiver.sematext.com;LogseneFormat
 ```
 
 If you've authorized your public IPs, the RFC-5424 predefined template
 will do:
 
 ``` bash
-*.* @logsene-receiver-syslog.sematext.com;RSYSLOG_SyslogProtocol23Format
+*.* @logsene-syslog-receiver.sematext.com;RSYSLOG_SyslogProtocol23Format
 ```
 
 ### TCP
@@ -277,14 +277,14 @@ With TCP, the *action* line looks similar to UDP, except you'll have two
 If you're authorizing using Logs Management application token:
 
 ``` bash
-*.* @@logsene-receiver-syslog.sematext.com;LogseneFormat
+*.* @@logsene-syslog-receiver.sematext.com;LogseneFormat
 ```
 
 If you use IP address for
 authorization:
 
 ``` bash
-*.* @@logsene-receiver-syslog.sematext.com;RSYSLOG_SyslogProtocol23Format
+*.* @@logsene-syslog-receiver.sematext.com;RSYSLOG_SyslogProtocol23Format
 ```
 
 ### TLS
@@ -321,14 +321,14 @@ Again, there are two options, for authorizing with the Logsene
 application token:
 
 ``` bash
-*.* @@logsene-receiver-syslog.sematext.com:10514;LogseneFormat
+*.* @@logsene-syslog-receiver.sematext.com:10514;LogseneFormat
 ```
 
 And for authorizing using the IP
 address(es):
 
 ``` bash
-*.* @@logsene-receiver-syslog.sematext.com:10514;RSYSLOG_SyslogProtocol23Format
+*.* @@logsene-syslog-receiver.sematext.com:10514;RSYSLOG_SyslogProtocol23Format
 ```
 
 If you prefer the new configuration format, you can find the complete
@@ -344,7 +344,7 @@ TLS configuration below:
 
 action(
   type="omfwd"
-  target="logsene-receiver-syslog.sematext.com"
+  target="logsene-syslog-receiver.sematext.com"
   port="10514"
   protocol="tcp"
   template="LogseneFormat"               # use "RSYSLOG_SyslogProtocol23Format" for IP authorization
@@ -357,21 +357,21 @@ action(
 ### RELP
 
 To forward via RELP, load the [RELP output module](http://www.rsyslog.com/doc/omrelp.html) and then point it to
-**logsene-receiver-syslog.sematext.com** (or **logsene-syslog-receiver.eu.sematext.com** if using Sematext Cloud Europe) on **port 20514**.
+**logsene-syslog-receiver.sematext.com** (or **logsene-syslog-receiver.eu.sematext.com** if using Sematext Cloud Europe) on **port 20514**.
 
 As with TCP or UDP, specify the LogseneFormat template for authorizing
 with your Logsene application token:
 
 ``` bash
 $ModLoad omrelp
-*.* :omrelp:logsene-receiver-syslog.sematext.com:20514;LogseneFormat
+*.* :omrelp:logsene-syslog-receiver.sematext.com:20514;LogseneFormat
 ```
 
 And the RFC-5424 template for IP-based authorization:
 
 ``` bash
 $ModLoad omrelp
-*.* :omrelp:logsene-receiver-syslog.sematext.com:20514;RSYSLOG_SyslogProtocol23Format
+*.* :omrelp:logsene-syslog-receiver.sematext.com:20514;RSYSLOG_SyslogProtocol23Format
 ```
 
 ## Logs Tagging
@@ -401,7 +401,7 @@ template:
 <tr class="odd">
 <td><pre class="container"><code>$template kernelErrors,&quot;&lt;%PRI%&gt;%TIMEREPORTED:::date-rfc3339% %HOSTNAME% %syslogtag%@cee: {\&quot;logsene-app-token\&quot;: \&quot;LOGSENE-APP-TOKEN-GOES-HERE\&quot;, \&quot;message\&quot;: \&quot;%msg:::json%\&quot;, \&quot;tags\&quot;:[\&quot;kernel errors\&quot;, \&quot;urgent issues\&quot;]}\n&quot;
 
-if $syslogfacility-text == &#39;kernel&#39; and $syslogseverity-text == &#39;error&#39; then @@(o)logsene-receiver-syslog.sematext.com;kernelErrors
+if $syslogfacility-text == &#39;kernel&#39; and $syslogseverity-text == &#39;error&#39; then @@(o)logsene-syslog-receiver.sematext.com;kernelErrors
 &amp;~</code></pre></td>
 </tr>
 </tbody>

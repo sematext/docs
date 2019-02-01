@@ -5,7 +5,7 @@ Sematext centralized monitoring and logging solution supports receiving syslog m
 they comply to either [RFC-3164](https://tools.ietf.org/html/rfc3164) or
 [RFC-5424](https://tools.ietf.org/html/rfc5424) (and
 [RFC-5425](https://tools.ietf.org/html/rfc5425) for TLS). The
-destination host is **logsene-receiver-syslog.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe) and ports we use are:
+destination host is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe) and ports we use are:
 
   - for Syslog over UDP: **514**
   - for Syslog over TCP: **514**
@@ -23,7 +23,7 @@ Alternatively, [authorize your public IPs](authorizing-ips-for-syslog) and then 
 A quick way to ship messages via TCP syslog is with netcat:
 
 ``` bash
-echo 'my-host my-process:@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world2!"}' | nc logsene-receiver-syslog.sematext.com 514
+echo 'my-host my-process:@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world2!"}' | nc logsene-syslog-receiver.sematext.com 514
 ```
 
 ## Ways to Ship Logs

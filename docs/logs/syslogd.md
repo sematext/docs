@@ -5,7 +5,7 @@ With plain syslogd, you can send logs to Sematext Logs Management App via UDP if
 line to your **/etc/syslog.conf**:
 
 ``` bash
-*.* @logsene-receiver-syslog.sematext.com
+*.* @logsene-syslog-receiver.sematext.com
 ```
 
 Before you restart syslogd, **[register your public IP](authorizing-ips-for-syslog).** If you're behind a NAT

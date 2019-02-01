@@ -61,7 +61,7 @@ There are two options to properly configure your destination:
 After you choose your authentication method, you'll configure your
 destination according to the protocol you prefer: UDP, TCP or TLS. For
 all cases, your endpoint will be
-**logsene-receiver-syslog.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
+**logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
 
 ### Token Authentication
 
@@ -93,7 +93,7 @@ template() statement should be removed:
 
 ``` bash
 destination logsene {
-    syslog("logsene-receiver-syslog.sematext.com"
+    syslog("logsene-syslog-receiver.sematext.com"
       transport("udp")
       port(514)
 # template() statement should be removed if you authorized your IP
@@ -110,7 +110,7 @@ there or remove the template() statement if you've authorized your IP:
 
 ``` bash
 destination logsene {
-    syslog("logsene-receiver-syslog.sematext.com"
+    syslog("logsene-syslog-receiver.sematext.com"
       transport("tcp")
       port(514)
 # template() statement should be removed if you authorized your IP
@@ -145,7 +145,7 @@ created certificates directory and **changing the port to 10514**:
 
 ``` bash
 destination logsene {
-    syslog("logsene-receiver-syslog.sematext.com"
+    syslog("logsene-syslog-receiver.sematext.com"
       transport("tls")
       port(10514)
 # template() statement should be removed if you authorized your IP
@@ -204,7 +204,7 @@ newly defined destination:
 filter user_tests { facility(kern) and level(err) };
 
 destination logsene_tests {
-    syslog("logsene-receiver-syslog.sematext.com"
+    syslog("logsene-syslog-receiver.sematext.com"
       transport("tcp")
       port(514)
       template("@cee: $(format-json --pair message=\"$MSG\" --pair tags=\"kernel errors\" --pair logsene-app-token=\"99c4e20d-3812-46e3-9801-e8331a01a5b1\")\n")
