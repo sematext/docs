@@ -6,7 +6,7 @@ description: Ship your logs to Sematext centralized monitoring and logging plafr
 
 syslog-ng is a modern syslog daemon that's focused on flexibility and
 portability. It also has an easy to use configuration format that helps
-you ship your logs to Logs Management App in 3 steps:
+you ship your logs to a Logs App in 3 steps:
 
 1.  **sources**. syslog-ng can listen to local [syslog traffic](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-source-system.html),
     can [tail files](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-file.html) and
@@ -220,4 +220,4 @@ log { source(all_syslog); filter(user_tests); destination(logsene_tests); flags(
 Notice the **final** flag to this log statement - this prevents
 syslog-ng from sending matched events twice (once with tags and once
 without). Make sure you place the log statement with tags before your
-main Logs Management App log statement.
+main log statement.
