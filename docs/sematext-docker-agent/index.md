@@ -1,6 +1,12 @@
 title: Sematext Docker Agent Overview
 description: Sematext Docker Agent is a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers. It is open source agent created by Sematext, APM, Log Management, Tracing, RUM Cloud and on-premises platform
 
+
+## January 2018: Please note Sematext Docker Agent is deprecated! 
+## Please refer to [Container Metrics & Logs](/containers/index.md) to setup Sematext Agent and Logagent
+
+<hr>
+
 # Overview
 
 Sematext Docker Agent is a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers. 
