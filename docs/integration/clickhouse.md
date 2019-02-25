@@ -5,6 +5,11 @@ description: Comprehensive view of your database’s health and performance with
 
 - Instructions: [https://apps.sematext.com/ui/howto/ClickHouse/overview](https://apps.sematext.com/ui/howto/ClickHouse/overview)
 
+## More about ClickHouse Monitoring
+* [Key Metrics for Monitoring ClickHouse](https://sematext.com/blog/clickhouse-monitoring-key-metrics/)
+* [ClickHouse Monitoring Tools](https://sematext.com/blog/clickhouse-monitoring-tools/)
+* [Monitoring ClickHouse with Sematext](https://sematext.com/blog/clickhouse-monitoring-sematext/)
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
