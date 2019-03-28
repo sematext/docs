@@ -5,6 +5,13 @@ description: Collect and monitor key Elasticsearch metrics such as request laten
 
 - Instructions: [https://apps.sematext.com/ui/howto/Elasticsearch/overview](https://apps.sematext.com/ui/howto/Elasticsearch/overview)
 
+## More about Elasticsearch Monitoring
+
+* [Elasticsearch Monitoring Guide](https://sematext.com/blog/elasticsearch-guide/)
+* [Top 10 Elasticsearch Metrics To Monitor](https://sematext.com/blog/top-10-elasticsearch-metrics-to-watch/)
+* [Elasticsearch Open Source Monitoring Tools](https://sematext.com/blog/elasticsearch-open-source-monitoring-tools/)
+* [Monitoring Elasticsearch With Sematext](https://sematext.com/blog/monitoring-elasticsearch-with-sematext/)
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                          |  Description
