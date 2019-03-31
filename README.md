@@ -11,6 +11,12 @@ pip install markdown-fenced-code-tabs && mkdocs serve
 open http://localhost:8000
 ```
 
+### Build site with Docker
+Run the `build.sh` script. It will create a `site` folder that you can deploy.
+```
+$ ./build.sh
+```
+
 ### Manual installation  
 Install `python` & `pip` - see [Manual Installation](http://www.mkdocs.org/#manual-installation)
 
