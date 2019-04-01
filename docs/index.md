@@ -1,7 +1,7 @@
 title: Sematext Documentation
 description: Private on-premises and cloud SaaS infrastructure & application performance monitoring, log management & hosted ELK stack, docker metrics and logs, events and more
 
-**How Sematext works**
+## How Sematext works
 
 Supported integrations let you collect metrics, logs and events across your whole stack. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications, etc.
 

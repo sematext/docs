@@ -372,7 +372,7 @@ pre {
     color: #1fa0ed;
 }
 .md-content__inner {
-    margin: 0 0 480px;
+    /* margin: 0 0 480px; */
 }
 .md-content__inner img {
     display: block;
@@ -405,10 +405,10 @@ pre {
     font-weight: bold;
 }
 .md-content__inner {
-    margin: 0 0 480px;
+    /* margin: 0 0 480px; */
 }
 .md-content__inner h1{
-  visibility: hidden;
+  /* visibility: hidden; */
   margin: 0 0 .5rem;
 }
 .mdl-card {
