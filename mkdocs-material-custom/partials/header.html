@@ -3,7 +3,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo">
-          <img src="https://sematext.com/docs/images/octi-sematext-logo.svg" style="margin-top: -12px;" alt="Sematext Documentation">
+          <img src="{{ config.site_url }}images/logo-full.svg" style="margin-top: -3px;" alt="Sematext Documentation">
          <!-- {% if config.theme.logo.icon %}
             <i class="md-icon">{{ config.theme.logo.icon }}</i>
           {% elif config.theme.logo.startswith("http") %}
@@ -19,11 +19,11 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           {% block site_name %}
-              {% if config.site_name == page.title %}
+              <!-- {% if config.site_name == page.title %}
                 {{ config.site_name }}
-              {% else %}
+              {% else %} -->
                 <span class="md-header-nav__topic">
-                  {{ config.site_name }}
+                  <!-- {{ config.site_name }} -->
                 </span>
                 <span class="md-header-nav__topic">
                   {% if page and page.meta and page.meta.title  %}
@@ -32,7 +32,7 @@
                      {{ page.title }}
                   {% endif %}
                 </span>
-              {% endif %}
+              <!-- {% endif %} -->
           {% endblock %}
         </div>
       </div>
@@ -45,8 +45,16 @@
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink md-button">
-        <div class="md-header-nav__login btn btn-primary btn-outline">
+        <!-- <div class="md-header-nav__login btn btn-primary btn-outline">
           <a title="Get Free Account" class="md-source" href="https://apps.sematext.com/ui/login">Login</a>
+        </div> -->
+
+        
+
+        <div class="md-header-nav__free_account btn btn-default">
+          <a title="Login" class="md-source" href="https://apps.sematext.com/ui/login"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background-color: rgba(0, 0, 0, 0)">
+            Login
+          </button></a>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">

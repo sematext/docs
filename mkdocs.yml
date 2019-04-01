@@ -1,5 +1,5 @@
 site_name: Sematext Documentation
-site_url: https://sematext.com/docs
+site_url: https://sematext.com/docs/
 strict: true
 pages:
     - Getting Started: index.md

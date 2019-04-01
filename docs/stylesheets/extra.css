@@ -368,8 +368,8 @@ pre {
     color: #00a1ed;
 }
 .md-header {
-    background-color: #fff;
-    color: #1fa0ed;
+    background-color: #011a27;
+    color: #fff;
 }
 .md-content__inner {
     /* margin: 0 0 480px; */
@@ -449,7 +449,7 @@ pre {
     min-height: 48px;
 }
 .md-footer-nav {
-    background-color: #002532;
+    background-color: #011a27;
 }
 .md-footer-meta {
     background-color: #00425D;
