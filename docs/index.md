@@ -12,8 +12,8 @@ Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management 
 
 Sematext is split into apps. App integrations are ways to monitor, and collect logs from numerous different types of software and tools.
 
-## What is an app?
-Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, and Apache [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every app is isolated and standalone. Pricing is defined per-app, with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
+## What is an App?
+Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, and Apache [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every App is isolated and standalone. Pricing is defined per-app, with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
 
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--4-col">
