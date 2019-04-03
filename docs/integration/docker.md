@@ -131,3 +131,10 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 |network.tx.packets|counter||long|network packets transmitted|transmitted amount of packets on the network interface|
 |network.tx.errors|counter||long|network tx errors|transmitted amount of errors on the network interface|
 |network.tx.dropped|counter||long|network packets tx dropped|amount of dropped outbound packets on the network interface
+
+## More about Docker Monitoring
+* [Docker Container Monitoring and Management Challenges](https://sematext.com/blog/docker-container-monitoring-management-challenges/)
+* [Docker Container Performance Metrics](https://sematext.com/blog/top-docker-metrics-to-watch/)
+* [Docker Container Monitoring Open Source Tools](https://sematext.com/blog/open-source-docker-monitoring-logging/)
+* [Docker Container Monitoring with Sematext](https://sematext.com/blog/docker-container-monitoring-with-sematext/)
+
