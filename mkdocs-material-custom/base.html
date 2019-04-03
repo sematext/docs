@@ -48,27 +48,28 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.78aab2dc.css">
+      <!-- <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.78aab2dc.css"> -->
+      {% include "partials/inline-style.html" %}
       {% if palette.primary or palette.accent %}
-        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-palette.6079476c.css">
+        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-palette.6079476c.css" media="none" onload="if(media!='all')media='all'">
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ base_url }}/assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/modernizr.1aa3b519.js" async></script>
     {% endblock %}
     {% block fonts %}
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin media="none" onload="if(media!='all')media='all'">
       {% if font != false %}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
               font.text | replace(' ', '+')  + ':300,400,400i,700|' +
               font.code | replace(' ', '+')
-            }}">
-        <style>body,input{font-family:"{{ font.text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}","Courier New",Courier,monospace}</style>
+            }}" media="none" onload="if(media!='all')media='all'">
+        <style media="none" onload="if(media!='all')media='all'">body,input{font-family:"{{ font.text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}","Courier New",Courier,monospace}</style>
       {% endif %}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='all')media='all'">
     {% endblock %}
     {% for path in extra_css %}
-      <link rel="stylesheet" href="{{ path }}">
+      <link rel="stylesheet" href="{{ path }}" media="none" onload="if(media!='all')media='all'">
     {% endfor %}
     {% block extrahead %}{% endblock %}
   </head>
@@ -178,25 +179,25 @@
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
           {% set path = base_url + "/assets/javascripts/lunr" %}
-          <script src="{{ path }}/lunr.stemmer.support.js"></script>
+          <script src="{{ path }}/lunr.stemmer.support.js" async></script>
           {% for language in languages | map("trim") %}
             {% if language != "en" %}
               {% if language == "jp" %}
-                <script src="{{ path }}/tinyseg.js"></script>
+                <script src="{{ path }}/tinyseg.js" async></script>
               {% endif %}
               {% if language in ("da", "de", "du", "es", "fi", "fr", "hu", "it", "jp", "no", "pt", "ro", "ru", "sv", "tr") %}
-                <script src="{{ path }}/lunr.{{ language }}.js"></script>
+                <script src="{{ path }}/lunr.{{ language }}.js" async></script>
               {% endif %}
             {% endif %}
           {% endfor %}
           {% if languages | length > 1 %}
-            <script src="{{ path }}/lunr.multi.js"></script>
+            <script src="{{ path }}/lunr.multi.js" async></script>
           {% endif %}
         {% endif %}
       {% endif %}
       <script>app.initialize({version:"{{ mkdocs_version }}",url:{base:"{{ base_url }}"}})</script>
       {% for path in extra_javascript %}
-        <script src="{{ path }}"></script>
+        <script src="{{ path }}" async></script>
       {% endfor %}
     {% endblock %}
     {% block analytics %}
