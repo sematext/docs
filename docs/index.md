@@ -10,10 +10,10 @@ We include a fully integrated Kibana and expose an Elasticsearch API. Sematext w
 
 Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management solution, our documentation is split into Monitoring and Logs sections. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
 
-Sematext is split into apps. App integrations are ways to monitor, and collect logs from numerous different types of software and tools.
+Data shipped to Sematext is grouped into Apps. App integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
 
 ## What is an App?
-Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, and Apache [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every App is isolated and standalone. Pricing is defined per-app, with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
+Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, Elasticsearch, [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every App is isolated and standalone. Pricing is defined per-App (read: you have more control over your costs!), with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
 
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--4-col">
@@ -137,7 +137,7 @@ Apps act as containers for your data. You can store performance metrics or logs 
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
 							<a href="/docs/integration/hbase/">
-								<img src="/docs/images/integrations/hbase.svg" alt="Hbase" title="Hbase">
+								<img src="/docs/images/integrations/hbase.svg" alt="HBase" title="Hbase">
 							</a>
 						</span>
 					</li>
