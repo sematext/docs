@@ -12,23 +12,53 @@ Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management 
 
 Data shipped to Sematext is grouped into Apps. App integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
 
-## What is an App?
-Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, Elasticsearch, [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every App is isolated and standalone. Pricing is defined per-App meaning you have more control over your costs, with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
-
-<div class="video_container">
-<iframe src="https://www.youtube.com/embed/TR_qXdR8DVk" 
-frameborder="0" allow="autoplay; encrypted-media" 
-allowfullscreen class="video"></iframe>
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/logs/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp logs-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Logs
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/monitoring/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Monitoring
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/alerts/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp alerts-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Alerts
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/events/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Events
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
-Because Apps are standalone, they can be configured to give access to certain roles. You can create custom access roles for different members of your team. This also allows you to transfer the ownership of an App to another member. All configurations and settings will be kept after the transfer. Having role-based access control for every single App in Sematext Cloud makes it easier for you to manage both Apps and team members.
-
-After learning what an App is, check you can out the guides for our main features.
-
-- [Logs](/docs/guide/logs-guide/)
-- [Monitoring](/docs/guide/monitoring-guide/)
-- [Dashboards](/docs/guide/dashboards-guide/)
-- [Alerts & Events](/docs/guide/alerts-and-events-guide/)
 
 ## Integrations
 Sematext provides over 40 built-in integrations used to monitor your systems, applications, and services.
@@ -153,17 +183,59 @@ Sematext provides over 40 built-in integrations used to monitor your systems, ap
 				</ul>
 		</div>
 		<h4>
-				<a href="/docs/integration/" style="padding-right:8%; float:right;">See all integrations...</a>
-			</h4>
+			<a href="/docs/integration/" style="padding-right:8%; float:right;">See all integrations...</a>
+		</h4>
 	</div>
 </div>
 
 We also provide you with easy to install Agents that collect data about your software and send it to Sematext.
 
-- [Logagent](/docs/logagent/) 
-- [Infra & App Agent](/docs/monitoring/spm-client/)
-- [Docker Agent](/docs/sematext-docker-agent/)
-- [Node.js Agent](/docs/monitoring/node-agent/)
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/logs/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Logagent
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/monitoring/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Docker Agent
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/monitoring/spm-client/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Infra & App Agent
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="/docs/api/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Node.js Agent
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
 
 But, also an open [API](/docs/api/) you can use.
 

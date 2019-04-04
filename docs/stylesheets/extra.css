@@ -428,6 +428,9 @@ pre {
 .monitoring-card{
     background: #09C177;
 }
+.alerts-card{
+  background: #ff404a;
+}
 .events-card{
     background: #FF9325;
 }
@@ -440,7 +443,7 @@ pre {
 .kubernetes-card{
     background: #00202F;
 }
-.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .events-card .mdl-card__title{
+.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .alerts-card .mdl-card__title, .events-card .mdl-card__title{
     color: #fff;
 }
 .integrations-card-list img{
