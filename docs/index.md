@@ -192,7 +192,7 @@ We also provide you with easy to install Agents that collect data about your sof
 
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/logs/">
+		<a href="/docs/logagent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
@@ -203,7 +203,7 @@ We also provide you with easy to install Agents that collect data about your sof
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/monitoring/">
+		<a href="/docs/sematext-docker-agent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
@@ -225,7 +225,7 @@ We also provide you with easy to install Agents that collect data about your sof
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/api/">
+		<a href="/docs/monitoring/node-agent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
