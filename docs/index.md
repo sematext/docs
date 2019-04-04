@@ -6,7 +6,7 @@ Welcome to Sematext, a full-stack observability tool where you can combine metri
 ## How Sematext works
 Sematext integrations let you collect metrics, logs and events across your whole stack. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications.
 
-We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to (such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, etc) and integrates in minutes.
+We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, and many others, and integrates in minutes.
 
 Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management solution, our documentation is split into Monitoring and Logs sections. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
 
@@ -237,7 +237,7 @@ We also provide you with easy to install Agents that collect data about your sof
 	</div>
 </div>
 
-But, also an open [API](/docs/api/) you can use.
+But, also an open [API](/api/) you can use.
 
 ---
 
