@@ -13,207 +13,161 @@ Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management 
 Data shipped to Sematext is grouped into Apps. App integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
 
 ## What is an App?
-Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, Elasticsearch, [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every App is isolated and standalone. Pricing is defined per-App (read: you have more control over your costs!), with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
+Apps act as containers for your data. You can store performance metrics or logs about servers, containers, software, programming languages and databases. Our Apps have dozens of monitoring integrations with software like Docker, AWS, Solr, Elasticsearch, [and many more](https://sematext.com/docs/integration/), while our log integration works with several different [log shippers](https://sematext.com/docs/integration/#log-shippers). Every App is isolated and standalone. Pricing is defined per-App meaning you have more control over your costs, with awesome free tiers for both [Monitoring](https://sematext.com/spm/pricing/) and [Logs](https://sematext.com/logsene/pricing/).
 
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="/docs/logs/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp logs-card">
-				<div class="mdl-card__title mdl-card--expand">
-					<h4>
-						Logs
-					</h4>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="/docs/monitoring/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
-				<div class="mdl-card__title mdl-card--expand">
-					<h4>
-						Monitoring
-					</h4>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="/docs/events/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
-				<div class="mdl-card__title mdl-card--expand">
-					<h4>
-						Events
-					</h4>
-				</div>
-			</div>
-		</a>
-	</div>
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/TR_qXdR8DVk" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
 </div>
+
+Because Apps are standalone, they can be configured to give access to certain roles. You can create custom access roles for different members of your team. This also allows you to transfer the ownership of an App to another member. All configurations and settings will be kept after the transfer. Having role-based access control for every single App in Sematext Cloud makes it easier for you to manage both Apps and team members.
+
+After learning what an App is, check you can out the guides for our main features.
+
+- [Logs](/docs/guide/logs-guide/)
+- [Monitoring](/docs/guide/monitoring-guide/)
+- [Dashboards](/docs/guide/dashboards-guide/)
+- [Alerts & Events](/docs/guide/alerts-and-events-guide/)
 
 ## Integrations
+Sematext provides over 40 built-in integrations used to monitor your systems, applications, and services.
 
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--12-col">
-		<div class="demo-card-event mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title mdl-card--expand">
-				<ul class="demo-list-icon mdl-list integrations-card-list">
+<div class="mdl-cell--12-col">
+	<div class="demo-card-event mdl-card mdl-shadow--2dp">
+		<div class="mdl-card__title mdl-card--expand">
+			<ul class="demo-list-icon mdl-list integrations-card-list">
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/solr/">
+							<img src="/docs/images/integrations/solr.svg" alt="Solr" title="Apache Solr">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/elasticsearch/">
+							<img src="/docs/images/integrations/elasticsearch.svg" style="width:36px; height:36px;" alt="Elasticsearch" title="Elasticsearch">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/docker/">
+							<img src="/docs/images/integrations/docker.svg" alt="Docker" title="Docker">
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="demo-list-icon mdl-list integrations-card-list">
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/akka/">
+							<img src="/docs/images/integrations/akka.svg" alt="Akka" title="Akka">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/aws/">
+							<img src="/docs/images/integrations/aws.svg" alt="AWS" style="min-width: 72px;" title="AWS - Amazon Web Services">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/nginx/">
+							<img src="/docs/images/integrations/nginx.svg" alt="Nginx" title="Nginx">
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="demo-list-icon mdl-list integrations-card-list">
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/cassandra/">
+							<img src="/docs/images/integrations/cassandra.svg" alt="Cassandra" title="Cassandra">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/apache/">
+							<img src="/docs/images/integrations/apache.svg" alt="Apache" title="Apache" style="height: 48px;">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/tomcat/">
+							<img src="/docs/images/integrations/tomcat.svg" alt="Tomcat" title="Tomcat">
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="demo-list-icon mdl-list integrations-card-list">
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/node.js/">
+							<img src="/docs/images/integrations/nodejs-icon.svg" alt="Node.js" title="Node.js">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/hbase/">
+							<img src="/docs/images/integrations/hbase.svg" alt="HBase" title="Hbase">
+						</a>
+					</span>
+				</li>
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">
+						<a href="/docs/integration/hadoop/">
+							<img src="/docs/images/integrations/hadoop.svg" alt="Hadoop" title="Hadoop">
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="demo-list-icon mdl-list integrations-card-list">
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/solr/">
-								<img src="/docs/images/integrations/solr.svg" alt="Solr" title="Apache Solr">
+							<a href="/docs/integration/kafka/">
+								<img src="/docs/images/integrations/kafka.svg" alt="Kafka" style="height: 48px;" title="Kafka">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/elasticsearch/">
-								<img src="/docs/images/integrations/elasticsearch.svg" style="width:36px; height:36px;" alt="Elasticsearch" title="Elasticsearch">
+							<a href="/docs/integration/php/">
+								<img src="/docs/images/integrations/php.svg" alt="PHP" title="PHP">
 							</a>
 						</span>
 					</li>
 					<li class="mdl-list__item">
 						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/docker/">
-								<img src="/docs/images/integrations/docker.svg" alt="Docker" title="Docker">
+							<a href="/docs/integration/jvm/">
+								<img src="/docs/images/integrations/java.svg" alt="Java JVM" title="Java JVM">
 							</a>
 						</span>
 					</li>
 				</ul>
-				<ul class="demo-list-icon mdl-list integrations-card-list">
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/akka/">
-								<img src="/docs/images/integrations/akka.svg" alt="Akka" title="Akka">
-							</a>
-						</span>
-					</li>
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/aws/">
-								<img src="/docs/images/integrations/aws.svg" alt="AWS" style="min-width: 72px;" title="AWS - Amazon Web Services">
-							</a>
-						</span>
-					</li>
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/nginx/">
-								<img src="/docs/images/integrations/nginx.svg" alt="Nginx" title="Nginx">
-							</a>
-						</span>
-					</li>
-				</ul>
-				<ul class="demo-list-icon mdl-list integrations-card-list">
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/cassandra/">
-								<img src="/docs/images/integrations/cassandra.svg" alt="Cassandra" title="Cassandra">
-							</a>
-						</span>
-					</li>
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/apache/">
-								<img src="/docs/images/integrations/apache.svg" alt="Apache" title="Apache" style="height: 48px;">
-							</a>
-						</span>
-					</li>
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/tomcat/">
-								<img src="/docs/images/integrations/tomcat.svg" alt="Tomcat" title="Tomcat">
-							</a>
-						</span>
-					</li>
-				</ul>
-				<ul class="demo-list-icon mdl-list integrations-card-list">
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/node.js/">
-								<img src="/docs/images/integrations/nodejs-icon.svg" alt="Node.js" title="Node.js">
-							</a>
-						</span>
-					</li>
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/hbase/">
-								<img src="/docs/images/integrations/hbase.svg" alt="HBase" title="Hbase">
-							</a>
-						</span>
-					</li>
-					<li class="mdl-list__item">
-						<span class="mdl-list__item-primary-content">
-							<a href="/docs/integration/hadoop/">
-								<img src="/docs/images/integrations/hadoop.svg" alt="Hadoop" title="Hadoop">
-							</a>
-						</span>
-					</li>
-				</ul>
-				<ul class="demo-list-icon mdl-list integrations-card-list">
-						<li class="mdl-list__item">
-							<span class="mdl-list__item-primary-content">
-								<a href="/docs/integration/kafka/">
-									<img src="/docs/images/integrations/kafka.svg" alt="Kafka" style="height: 48px;" title="Kafka">
-								</a>
-							</span>
-						</li>
-						<li class="mdl-list__item">
-							<span class="mdl-list__item-primary-content">
-								<a href="/docs/integration/php/">
-									<img src="/docs/images/integrations/php.svg" alt="PHP" title="PHP">
-								</a>
-							</span>
-						</li>
-						<li class="mdl-list__item">
-							<span class="mdl-list__item-primary-content">
-								<a href="/docs/integration/jvm/">
-									<img src="/docs/images/integrations/java.svg" alt="Java JVM" title="Java JVM">
-								</a>
-							</span>
-						</li>
-					</ul>
-			</div>
-			<h4>
-					<a href="/docs/integration/" style="padding-right:8%; float:right;">See all integrations...</a>
-				</h4>
 		</div>
+		<h4>
+				<a href="/docs/integration/" style="padding-right:8%; float:right;">See all integrations...</a>
+			</h4>
 	</div>
 </div>
-<div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="/docs/logagent/">
-        <div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
-          <div class="mdl-card__title mdl-card--expand">
-            <h4>
-              Logagent
-            </h4>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="/docs/sematext-docker-agent/">
-        <div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
-          <div class="mdl-card__title mdl-card--expand">
-            <h4>
-              Docker Agent
-            </h4>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="/docs/api/">
-        <div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
-          <div class="mdl-card__title mdl-card--expand">
-            <h4>
-              API
-            </h4>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
+
+We also provide you with easy to install Agents that collect data about your software and send it to Sematext.
+
+- [Logagent](/docs/logagent/) 
+- [Infra & App Agent](/docs/monitoring/spm-client/)
+- [Docker Agent](/docs/sematext-docker-agent/)
+- [Node.js Agent](/docs/monitoring/node-agent/)
+
+But, also an open [API](/docs/api/) you can use.
+
+---
 
 If you have questions, we’re here to help. Don’t hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
 
