@@ -5,6 +5,13 @@ description: Monitor Kafka metrics for brokers, producers, and consumers, consum
 
 - Instructions: [https://apps.sematext.com/ui/howto/Kafka/overview](https://apps.sematext.com/ui/howto/Kafka/overview)
 
+## More about Apache Kafka Monitoring
+
+* [Apache Kafka Metrics To Monitor](https://sematext.com/blog/kafka-metrics-to-monitor/)
+* [Apache Kafka Open Source Monitoring Tools](https://sematext.com/blog/kafka-open-source-monitoring-tools/)
+* [Monitoring Apache Kafka With Sematext](https://sematext.com/blog/monitoring-kafka-with-sematext/)
+
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                                    |  Description
