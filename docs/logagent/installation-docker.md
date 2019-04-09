@@ -80,11 +80,16 @@ docker service create --restart=always -mode global -name logagent \
 sematext/logagent
 ```
 
-### Kubernetes and OpenShift
+### Kubernetes and OpenShift 
 
 Run Logagent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
-First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml) - and set your Logs Token in the spec.env section.
+First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml) 
+
+```
+curl -o logagent-daemonset.yml https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/logagent-daemonset.yml
+```
+
 
 Then run the DaemonSet:
 
@@ -97,6 +102,34 @@ On Red Hat OpenShift use the "oc" command instead of kubectl.
 ```
 oc apply -f logagent-daemonset.yml
 ```
+
+### Kubernetes with containerd and IBM Cloud
+
+Kuberntes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. 
+Instead logs are collected from containerd log files and requires access to to the relevant directories. 
+The logagent input-filter for containerd supports:
+
+* Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs` 
+* Enrichment of logs with podName, namespace, containerName, containerId
+* Parsing containerd log headers (timestamp, stream, flags)
+* Parsing message content with logagent parser library 
+
+Run Logagent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
+
+First, create [ibm-cloud-logagent-ds.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/ibm-cloud-logagent-ds.yml) 
+
+```
+curl -o ibm-cloud-logagent-ds.yml  https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/ibm-cloud-logagent-ds.yml
+```
+
+Set your Logs Token in the spec.env section in the ib-cloud-logagent-ds.yml file.
+
+Then run the DaemonSet:
+
+```
+kubectl create -f ibm-cloud-logagent-ds.yml
+```
+
 
 ### Mesos / Marathon
 
