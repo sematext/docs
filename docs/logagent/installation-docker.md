@@ -106,7 +106,7 @@ oc apply -f logagent-daemonset.yml
 ### Kubernetes with containerd and IBM Cloud
 
 Kubernetes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. 
-Instead logs are collected from containerd log files and requires access to to the relevant directories. 
+Instead logs are collected from containerd log files and requires access to the relevant directories. 
 The logagent input-filter for containerd supports:
 
 * Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs` 
@@ -122,7 +122,7 @@ First, create [ibm-cloud-logagent-ds.yml](https://github.com/sematext/logagent-j
 curl -o ibm-cloud-logagent-ds.yml  https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/ibm-cloud-logagent-ds.yml
 ```
 
-Set your Logs Token in the spec.env section in the ib-cloud-logagent-ds.yml file.
+Set your Logs Token in the spec.env section in the `ibm-cloud-logagent-ds.yml` file.
 
 Then run the DaemonSet:
 
