@@ -1,15 +1,15 @@
 title: Logagent input plugin for systemd-journal-upload.service  
 description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Journald input plugin is used to receive documents via HTTP. 
 
-## Recieve data from systemd-journal-upload.service
+## Receive data from systemd-journal-upload.service
 
-Plugin to receive documents via HTTP from systemd-journal-upload.service. You can scale the HTTP service to multople processes by setting 'worker' property > 0. 
+Plugin to receive documents via HTTP from systemd-journal-upload.service. You can scale the HTTP service to multiple processes by setting 'worker' property > 0. 
 
 Use cases: 
 
-- Use the powerful Logagent features with lightweight systemd integration service systemd-journal-upload.service 
+- Use the powerful Logagent features with lightweight `systemd` integration service `systemd-journal-upload.service` 
 - Filter by SYSTEMD_UNIT, remove fields and add tags to each log
-- Receive journald events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka or MQTT. 
+- Receive `journald` events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka or MQTT. 
 
 ### Configuration
 
@@ -27,11 +27,15 @@ input:
     systemdUnitFilter: 
       include: !!js/regexp /.*/i
     #  exclude: !!js/regexp /docker|containerd/i
-    # add static fields to every log entry 
+    # add static tags to every log event 
     tags:
-      _index: MY_INDEX_FOR_ELASTICSEARCH_OUTPUT
-      node_role: kubernetes_worker
-    # journald might provide many fields, to reduce storage usage you can remove 
+     # _index is special tag for log routing with elasticsearch output-plugin
+     _index: MY_INDEX_FOR_ELASTICSEARCH_OUTPUT
+     # you can add any other static tag 
+     node_role: kubernetes_worker
+     log_shipper: logagent
+    # journald might provide many fields, 
+    # to reduce storage usage you can remove 
     # non-relevant fields
     removeFields:
       - __CURSOR
@@ -62,6 +66,7 @@ output:
   sematext-cloud:
     module: elasticsearch
     url: https://logsene-receiver.sematext.com
+    # url: https://logsene-receiver.eu.sematext.com
     index: YOUR_SEMATEXT_LOGS_TOKEN_HERE
 
 ```
@@ -72,7 +77,7 @@ _Start Logagent_
 logagent --config myconfig.yml
 ```
 
-_Test the processing by with curl, simulationg systemd-journal-upload.service_
+_Test the processing by with curl, simulating systemd-journal-upload.service_
 
 ```sh
 curl -vvv -X POST http://127.0.0.1:9090/upload -d '
