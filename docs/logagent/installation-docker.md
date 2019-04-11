@@ -105,7 +105,7 @@ oc apply -f logagent-daemonset.yml
 
 ### Kubernetes with containerd and IBM Cloud
 
-Kuberntes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. 
+Kubernetes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. 
 Instead logs are collected from containerd log files and requires access to to the relevant directories. 
 The logagent input-filter for containerd supports:
 
