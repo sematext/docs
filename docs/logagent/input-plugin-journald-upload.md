@@ -3,13 +3,13 @@ description: Logagent features modular logging architecture framework where each
 
 ## Receive data from systemd-journal-upload.service
 
-Plugin to receive documents via HTTP from systemd-journal-upload.service. You can scale the HTTP service to multiple processes by setting 'worker' property > 0. 
+Plugin to receive events via HTTP from systemd-journal-upload.service. You can scale the HTTP service to multiple processes by setting 'worker' property > 0. 
 
 Use cases: 
 
 - Use the powerful Logagent features with lightweight `systemd` integration service `systemd-journal-upload.service` 
-- Filter by SYSTEMD_UNIT, remove fields and add tags to each log
-- Receive `journald` events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka or MQTT. 
+- Filter by SYSTEMD_UNIT, remove fields, and add tags to each log
+- Receive `journald` events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka, or MQTT
 
 ### Configuration
 
@@ -77,7 +77,7 @@ _Start Logagent_
 logagent --config myconfig.yml
 ```
 
-_Test the processing by with curl, simulating systemd-journal-upload.service_
+_Test the processing with curl, simulating systemd-journal-upload.service_
 
 ```sh
 curl -vvv -X POST http://127.0.0.1:9090/upload -d '
@@ -121,7 +121,7 @@ _EXE=/usr/sbin/sshd
 
 _Setup systemd-journal-upload.service_
 
-Use following command to install systemd-journal-remote
+Use the following command to install systemd-journal-remote
 
 ```
 sudo apt-get install systemd-journal-remote
@@ -137,16 +137,16 @@ URL=http://127.0.0,1:9090
 # TrustedCertificateFile=/etc/ssl/ca/trusted.pem
 ```
 
-To make sure journal-upload auto start on boot. 
+To make sure journald-upload auto-starts on boot. 
 
-Note the upload service might stop once the HTTP connection is not possible. 
-The good news is the service stores the current cursor position in the journal. 
-Therefore you should set useful restart options in the service definition. 
+Note that upload service might stop if creating the HTTP connection doesn't work. 
+Should that happen the service stores the current cursor position in the journal. 
+Therefore, you should set useful restart options in the service definition. 
 Edit `/etc/systemd/system/multi-user.target.wants/systemd-journal-upload.service ` to change restart options. 
 
 ```
 [Unit]
-Description=Journal Remote Upload Service
+Description=Journald Remote Upload Service
 Documentation=man:systemd-journal-upload(8)
 After=network.target
 
@@ -176,6 +176,3 @@ Apply changes and restart journal-upload after configuration:
 systemctl daemon-reload
 sudo systemctl enable systemd-journal-upload.service
 ```
-
-
-
