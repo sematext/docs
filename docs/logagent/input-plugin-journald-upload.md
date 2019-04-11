@@ -137,7 +137,7 @@ URL=http://127.0.0,1:9090
 # TrustedCertificateFile=/etc/ssl/ca/trusted.pem
 ```
 
-To make sure journald-upload auto-starts on boot. 
+To make sure journal-upload auto-starts on boot. 
 
 Note that upload service might stop if creating the HTTP connection doesn't work. 
 Should that happen the service stores the current cursor position in the journal. 
@@ -146,7 +146,7 @@ Edit `/etc/systemd/system/multi-user.target.wants/systemd-journal-upload.service
 
 ```
 [Unit]
-Description=Journald Remote Upload Service
+Description=Journal Remote Upload Service
 Documentation=man:systemd-journal-upload(8)
 After=network.target
 
