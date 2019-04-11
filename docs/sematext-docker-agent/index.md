@@ -5,6 +5,12 @@ description: Sematext Docker Agent is a modern, Docker-native monitoring and log
 ## Please note Sematext Docker Agent is deprecated! 
 ## Please refer to [Container Metrics & Logs](/containers/index.md) to setup Sematext Agent and Logagent
 
+## More about Docker Monitoring with Sematext
+* [Docker Container Monitoring with Sematext](https://sematext.com/blog/docker-container-monitoring-with-sematext/)
+* [Docker Container Monitoring and Management Challenges](https://sematext.com/blog/docker-container-monitoring-management-challenges/)
+* [Docker Container Performance Metrics](https://sematext.com/blog/top-docker-metrics-to-watch/)
+
+
 <hr>
 
 # Overview
