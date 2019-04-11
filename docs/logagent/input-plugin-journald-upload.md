@@ -132,9 +132,9 @@ URL=http://127.0.0,1:9090
 # TrustedCertificateFile=/etc/ssl/ca/trusted.pem
 ```
 
-To make sure journal-upload auto start on boot
+To make sure journal-upload auto start on boot. 
 
-Note that the upload service might stop once the HTTP connection is not possible. 
+Note the upload service might stop once the HTTP connection is not possible. 
 The good news is the service stores the current cursor position in the journal. 
 Therefore you should set useful restart options in the service definition. 
 Edit `/etc/systemd/system/multi-user.target.wants/systemd-journal-upload.service ` to change restart options. 
@@ -165,7 +165,8 @@ LimitNOFILE=16384
 WantedBy=multi-user.target
 ```
 
-Apply changes and restart journal-upload after configuration.:
+Apply changes and restart journal-upload after configuration:
+
 ```
 systemctl daemon-reload
 sudo systemctl enable systemd-journal-upload.service
