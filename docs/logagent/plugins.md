@@ -5,12 +5,13 @@ Logagent features a modular architecture. Each input or output module is impleme
 
 | Plugin              | Type                      | Description                                                                                              |
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
-| [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                                                |
+| [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                          |
 | [files](input-plugin-files)           | input   | Watching and tailing files                                                                               |
-| [docker-logs](input-plugin-dockerlogs)           | input   | Collection of Docker container logs                                                                               |
+| [docker-logs](input-plugin-dockerlogs)           | input   | Collection of Docker container logs                                                           |
 | [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events) | input  | Collect Windows Events. Available as separate npm package |
 | [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
 | [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
+| [input-journald-upload](input-plugin-journald-upload)         | input | Receive data via HTTP from the systemd-journal-upload.service          |
 | [elasticsearch-query](input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
 | [input-elasticsearch-http](input-plugin-elasticsearch-http) | input | Receive documents via Elasticsearch HTTP indexing API (bulk and post) |
 | [input-tcp](input-plugin-tcp)         | input | Receive data via TCP                                                                                     |

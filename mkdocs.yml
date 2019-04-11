@@ -142,6 +142,7 @@ pages:
           - File input: logagent/input-plugin-files.md
           - Docker logs input: logagent/input-plugin-dockerlogs.md
           - Syslog input: logagent/input-plugin-syslog.md
+          - Journald input: logagent/input-plugin-journald-upload.md
           - Apache Kafka input: logagent/input-plugin-kafka.md
           - InfluxDB input: logagent/input-plugin-influxdb-http.md
           - TCP input: logagent/input-plugin-tcp.md
