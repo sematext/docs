@@ -230,6 +230,14 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <td>URL for bulk inserts into Sematext Cloud. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://logsene-receiver.eu.sematext.com</td>
 </tr>
 <tr>
+<td>JOURNALD_UPLOAD_PORT</td>
+<td>Port number for the collection of journald logs, forwarded by systemd-journal-upload.service. Equals to Logagent argument --journald PORT.</td>
+</tr>
+<tr>
+<td>SYSTEMD_UNIT_FILTER</td>
+<td>A regular expression to filter journald logs by systemd unit name, e.g. "ssh.service|docker.service". The default value is ".*". </td>
+</tr>
+<tr>
 <td>CONFIG_FILE</td>
 <td>Path to the configuration file, containing environment variables <code>key=value</code>. Default value: <code>/run/secrets/logagent</code>. Create a secret with  <code>docker secret create logagent ./logagent.cfg</code>. Start Logagent with `docker service create --mode global --secret logagent --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock sematext/logagent</td>
 </tr>
