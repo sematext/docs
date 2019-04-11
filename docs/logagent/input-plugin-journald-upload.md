@@ -8,7 +8,7 @@ Plugin to receive documents via HTTP from systemd-journal-upload.service. You ca
 Use cases: 
 
 - Use the powerful Logagent features with lightweight systemd integration service systemd-journal-upload.service 
-- Filter by SYSTEMD_UNIT, remove feilds and add tags to each log
+- Filter by SYSTEMD_UNIT, remove fields and add tags to each log
 - Receive journald events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka or MQTT. 
 
 ### Configuration
