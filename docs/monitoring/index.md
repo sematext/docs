@@ -3,11 +3,9 @@ description: Sematext Infrastructure Monitoring is server and app monitoring pla
 
 ### Creating Monitoring Apps
 
-The first step to monitoring with Sematext is to create a Monitoring <a href="../guide/app-guide/">App</a>. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring App.
+The first step to monitoring with Sematext is to create a Monitoring [App](../guide/app-guide/). Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring App.
 
-<img class="content-modal-image" alt="Sematext Monitoring UI screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring UI screen"></a>
-
-
+<img class="content-modal-image" alt="Sematext Monitoring screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring screen"></a>
 
 You can have any number of Monitoring Apps and each App can be shared
 with different people, giving them different access roles.  Very
@@ -43,9 +41,7 @@ The setup instructions for each of the agents are shown in the UI and you can al
 
 Once the agent is set up metrics will start coming to Sematext
 instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
-look at the <a
-href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a>
-page.</p>
+look at the <a href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a> page.</p>
 
 ### App Settings
 
