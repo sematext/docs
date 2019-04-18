@@ -54,6 +54,15 @@
         <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-palette.6079476c.css" media="none" onload="if(media!='all')media='all'">
       {% endif %}
     {% endblock %}
+    {% block gtm %}
+        <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-K47WKMR');</script>
+        <!-- End Google Tag Manager -->
+    {% endblock %}
     {% block libs %}
       <script src="{{ base_url }}/assets/javascripts/modernizr.1aa3b519.js" async></script>
     {% endblock %}
@@ -80,6 +89,12 @@
   {% else %}
     <body dir="{{ lang.t('direction') }}">
   {% endif %}
+  {% block gtmnoscript %}
+      <!-- Google Tag Manager (noscript) -->
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K47WKMR"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+  {% endblock %}
     <svg class="md-svg">
       <defs>
         {% set platform = config.extra.repo_icon or config.repo_url %}
