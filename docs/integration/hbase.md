@@ -1,11 +1,13 @@
 title: HBase Monitoring Integration
-description: Sematext infrastructure monitoring service captures all key HBase metrics with out of the box dashboards and charts. Monitor all key metrics and stats such as requests, locality, compactions, splits, flushes, read and write rates, and more. Heartbeat alerts, enabled by default, notify you when any of your nodes goes down and help you troubleshoot HBase database performance issues
+description: Sematext HBase monitoring captures all key HBase metrics with out of the box dashboards and charts. Monitor all key metrics and stats such as requests, locality, compactions, splits, flushes, read and write rates, and more. Heartbeat alerts, enabled by default, notify you when any of your nodes goes down and help you troubleshoot HBase database performance issues
 
 ## Integration
 
 - Instructions: [https://apps.sematext.com/ui/howto/HBase/overview](https://apps.sematext.com/ui/howto/HBase/overview)
 
 ## Metrics
+
+You can choose which of some 300 HBase metrics to collect by adjusting the [HBase integration YML files](https://github.com/sematext/sematext-agent-integrations/tree/master/hbase) once you [install the HBase monitoring agent](https://apps.sematext.com/ui/howto/HBase/overview).
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                                                  |  Description
 ---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------
@@ -311,16 +313,14 @@ applied replication hfiles<br>**hbase.rs.replication.hfiles.applied** <br>*(long
 ** How do I enable JMX in HBase **
 
 Please see [HBase Metrics](http://hbase.apache.org/metrics.html)
-page for
-instructions.
+page for instructions.
 
-** Do I need to add a separate SPM Application for each HBase server/node I want to monitor **
+** Do I need to add a separate Monitoring App for each HBase server/node I want to monitor **
 
-No, one Application is enough. Think of an SPM "Application" as a
-"HBase Cluster". Thus, to monitor N HBase servers that belong to the
-same cluster you would create just a single SPM Application and use its
-Token in SPM configuration file on all HBase servers that are a part of
-this cluster.
+No, one App is enough. To monitor N HBase servers that belong to the
+same cluster create just a single Monitoring App and use its
+Token in the agent configuration file on all HBase servers that are a part of
+the same cluster. See [App Guide](https://sematext.com/docs/guide/app-guide/) for more info.
 
 ** Why don't some HBase metrics graphs have any data **
 
@@ -332,8 +332,3 @@ There could be 2 possible reasons:
 2.  Different versions of HBase provide different metrics. Thus, if you
     have an older version of HBase, it may not be providing all metrics
     that SPM collects and graphs.
-
-** Which versions of HBase does SPM support **
-
-SPM has been tested with HBase 0.98, but will work for newer versions,
-including all CDH versions.
