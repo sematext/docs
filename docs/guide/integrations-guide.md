@@ -22,7 +22,7 @@ can run in [embedded](../monitoring/spm-monitor-javaagent)
 (aka Java agent-based, aka in-process) or
 [standalone](../monitoring/spm-monitor-standalone) mode. This agent can also
 instrument JVM-based apps to collect transaction traces and
-perform [on demand profiling](on-demand-profiling).
+perform [on demand profiling](../monitoring/on-demand-profiling).
 
 - [Node-based App Agent](../monitoring/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
