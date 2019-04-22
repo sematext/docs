@@ -7,7 +7,7 @@ the open-source [SPM Agent Framework](https://github.com/sematext/spm-agent) whi
 the basis for other monitoring agents such as
 
 - [MongoDB agent](../integration/mongodb)
-- [Sematext Docker Agent](../sematext-docker-agent)
+- [Sematext Docker Agent](../containers)
 - [Nginx](../integration/nginx)
 - [Apache](../integration/apache)
 
