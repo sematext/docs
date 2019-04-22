@@ -1,5 +1,5 @@
-title: Supported Date Formats 
-description: @timestamp value is used by Sematext logging management solution as the moment when the event was generated, and supports timezone specified by using *+/-* notation as well as ISO, default Log4j, and graylog time format
+title: Supported Log Event Timestamp Formats 
+description: @timestamp value is used by Sematext logging management solution as the moment when the event was generated, and supports timezone specified by using *+/-* notation as well as ISO, default Log4j, and Graylog time format
 
 One of the key things when working with time based data is the timestamp that represents the moment when the event was generated. Sematext Logs Management expects the time of the event to be provided in the `@timestamp` field. The following `@timestamp` value formats are currently supported by our logging management solution:
 
@@ -35,7 +35,6 @@ One of the key things when working with time based data is the timestamp that re
 
 **Please note:**
 
-  - if `@timestamp` field is not provided Sematext will set `@timestamp`
-    to the time when the event is received by Logsene.
+  - if `@timestamp` field is not provided Sematext will set `@timestamp` to the time when the event is received by Sematext.
   - if time specified in `@timestamp` does not include timezone
-    information, Logs Management App will assume UTC.
+    information, Logs App will assume UTC.
