@@ -32,7 +32,7 @@ appropriate Sematext monitoring agent. You can choose from:
     Apache](../integration/apache) and [Nginx](../integration/nginx)
     (including [Nginx Plus](../integration/nginxplus)).
 
-  - [Docker Agent](../sematext-docker-agent), which can collect not
+  - [Docker Agent](../containers), which can collect not
     only container and host metrics, but also container events and
     also logs, it can parse and structure out of the box.
 
