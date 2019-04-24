@@ -173,8 +173,10 @@ inputFilter:
   - module: grep
     config:
       matchSource: !!js/regexp /.*log/
+      # keep messages matching include filter
       include: !!js/regexp /A.*|B.*|C.*/i
-      # exclude: !!js/regexp /debug/i
+      # drop messages matching exclude filter
+      exclude: !!js/regexp /debug|ping|healthcheck/i
 
 output:
   elasticsearch:
