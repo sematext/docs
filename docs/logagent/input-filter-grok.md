@@ -3,7 +3,7 @@ description: Logagent features modular logging architecture framework where each
 
 ## Input Filter: Grok
 
-Input plugin for [@sematext/logagent](http://sematext.com/logagent/). Uses Grok patterns to filter data from input plugins before data are parsed.
+Input plugin for [@sematext/logagent](https://sematext.com/logagent/). Uses Grok patterns to filter data from input plugins before data are parsed.
 
 ### Installation 
 
