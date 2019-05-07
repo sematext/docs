@@ -123,13 +123,14 @@ pages:
     - Logagent:
       - Overview: logagent/index.md
       - Installation:
+        - Linux: logagent/installation.md
         - Docker: logagent/installation-docker.md
-        - Linux & Mac OS X: logagent/installation.md
+        - Mac: logagent/installation-mac.md
         - Windows: logagent/installation-windows.md
         - Heroku: logagent/installation-heroku.md
       - Usage:
-        - Command Line Parameters: logagent/cli-parameters.md
         - Configuration: logagent/config-file.md
+        - Command Line Parameters: logagent/cli-parameters.md
         - Log Parser Patterns: logagent/parser.md
       - Plugins:
         - Overview: logagent/plugins.md

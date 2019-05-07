@@ -1,17 +1,13 @@
-title: Installing Logagent on Linux
+title: Installing Logagent on Mac
 description: Logagent, Sematext log shipper and Logstash alternative, is available as node.js npm package for Linux, Mac, and Windows. It has automatic Systemd or Upstart service scripts installation and seamless logging system service integration with our logs management and analysis platform
 
+### Install Node.js 
 
-
-### Install Node.js on your server
-First, make sure you have [Node.js installed](https://nodejs.org/en/download/package-manager/). E.g. for Debian/Ubuntu:
-``` bash
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
+Here are the official Node.js [downloads and instructions](https://nodejs.org/en/download/).
 
 ### Install the Logagent npm package
-```bash
+
+``` bash
 sudo npm i -g @sematext/logagent 
 ```
 
@@ -23,7 +19,7 @@ sudo npm i -g @sematext/logagent
 
 #### 3. Run Logagent as System Service
 
-Logagent detects the init system and installs Systemd or Upstart service scripts.
+Logagent detects the init system and installs Launchd service scripts.
 
 - *Ship logs to default US region*
     <!-- language: bash -->
@@ -43,16 +39,13 @@ Logagent detects the init system and installs Systemd or Upstart service scripts
 Changing the Elasticsearch `index` and `endpoint` let's you ship logs to any Elasticsearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
 
 ##### Location of service scripts
-- Upstart: `/etc/init/logagent.conf`
-- Systemd: `/etc/systemd/system/logagent.service`
+- Launchd: ```launchctl start/stop com.sematext.logagent```
 
 ##### Check service status
-- Upstart: `service logagent status`
-- Systemd: `systemctl status logagent`
+- Launchd: ```launchctl start/stop com.sematext.logagent```
 
 ##### Start/stop service
-- Upstart: `service logagent stop/start`
-- Systemd: `systemctl stop/start logagent`
+- Launchd: ```launchctl start/stop com.sematext.logagent```
 
 #### 4. Configure Logagent settings
 The setup script generates the configuration file in `/etc/sematext/logagent.conf`. The default settings will ship all log files from the `/var/log` directory to Sematext Cloud. [Here's the configuration guide](./config-file).

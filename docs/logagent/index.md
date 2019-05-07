@@ -1,6 +1,8 @@
 Title: Sematext Logagent Log Shipper
 Description: Logagent is lightweight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform, and more
 
+![Logagent Logo](https://camo.githubusercontent.com/67b5c3e09a309fc8551d2b1752531c5adf0c510b/68747470733a2f2f73656d61746578742e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031362f30372f6c6f676167656e742e706e67)
+
 ## What is Logagent?
 [Logagent](https://sematext.com/logagent) is a modern, open-source, lightweight **log shipper** written entirely in Node.js with a low memory footprint and low CPU overhead!
 
@@ -9,6 +11,11 @@ It comes with out of the box and extensible **log parsing**, **on-disk buffering
 If you're eager to get started, here's how you start shipping logs.
 
 ```bash
+# Make sure you have Node.js installed
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install Logagent and run it as a system service
 sudo npm i -g @sematext/logagent
 sudo logagent-setup <LOGS_TOKEN or ES_INDEX>
 ```

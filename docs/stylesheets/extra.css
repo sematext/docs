@@ -370,6 +370,9 @@ pre {
 .md-typeset a:hover {
     color: #00425D;
 }
+.md-typeset h4 {
+  font-weight: 500;
+}
 .md-header {
     background-color: #011a27;
     color: #fff;
