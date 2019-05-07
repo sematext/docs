@@ -367,6 +367,9 @@ pre {
 .md-typeset a {
     color: #00a1ed;
 }
+.md-typeset a:hover {
+    color: #00425D;
+}
 .md-header {
     background-color: #011a27;
     color: #fff;
@@ -556,10 +559,11 @@ pre {
 /**
  * Code Blocks
 */
-.md-typeset .codehilite code, .md-typeset .codehilite pre, .md-typeset .highlight code, .md-typeset .highlight pre, .md-typeset pre {
+/* .md-typeset .codehilite code, .md-typeset .codehilite pre, .md-typeset .highlight code, .md-typeset .highlight pre, .md-typeset pre {
     background-color: #192f3b;;
     color: #D0D4D7;
 }
+
 .md-clipboard:before {
     color: #fff;
 }
@@ -567,4 +571,4 @@ pre {
 .faq-questions strong {
     text-decoration: none;
     color: black;
-}
+} */

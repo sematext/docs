@@ -1,10 +1,41 @@
-title: Logagent Command Line Parameters
+title: Logagent Command-line Parameters
 description: Command Line Parameters for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Low memory footprint and low CPU overhead make it suitable for deploying on edge nodes and devices, while its ability to parse and structure logs makes it a great Logstash alternative.
 
-## Command Line Parameters 
-### Synopsis
+```bash
+# Parse all logs and stream them to Sematext Logs 1-Click managed Elasticsearch 
+$ logagent -i LOGSENE_TOKEN /var/log/*.log 
 
-```logagent [options] [file list]```
+# stream logs to local Elasticsearch
+$ logagent -e http://localhost:9200 -i myindex /var/log/*.log 
+
+# Act as Syslog server on UDP and forward messages to Sematext Logs
+$ logagent -u 514 -i LOGSENE_TOKEN  
+
+# Act as Syslog server on UDP and write YAML formatted messages to console
+$ logagent -u 514 -y  
+```
+
+Use a [glob](https://www.npmjs.com/package/glob) pattern to build the file list 
+
+```bash
+$ logagent -i LOGSENE_TOKEN -g '/var/log/**/*.log'
+# pass multiple glob patterns
+$ logagent -i LOGSENE_TOKEN -g '{/var/log/*.log,/opt/myapp/*.log}'
+```
+
+Watch selective log output on console by passing logs via stdin and format in YAML
+
+```bash
+$ tail -f /var/log/access.log | logagent -y -n httpd
+$ tail -f /var/log/system.log | logagent -f my_own_patterns.yml  -y 
+```
+
+## Command Line Parameters 
+
+```bash
+$ logagent [options] [file list]
+```
+
 
 | Options | Description |
 |---------|-------------|
@@ -56,35 +87,3 @@ The default output is line-delimited JSON for parsed log lines, as long as no fo
 |LOGAGENT_CONFIG | Filename to read Logagent CLI parameters from a file, defaults to ```/etc/sematext/logagent.conf`` |
 |PATTERN_MATCHING_ENABLED | Default is 'true'. The value 'false' disables parsing of logs. |
 |SCAN_ALL_PATTERNS | Default is 'false'. For performance reasons, patterns are matched by source name. Setting the value to 'true' enables pattern search regardless of source name |
-
-
-## Examples 
-```
-# Be Evil: parse all logs 
-# stream logs to Logsene 1-Click ELK stack 
-logagent -i LOGSENE_TOKEN /var/log/*.log 
-# stream logs to local Elasticsearch  
-logagent -e http://localhost:9200 -i myindex /var/log/*.log 
-
-# Act as Syslog server on UDP and forward messages to Logsene
-logagent -u 514 -i LOGSENE_TOKEN  
-
-# Act as Syslog server on UDP and write YAML formatted messages to console
-logagent -u 514 -y  
-```
-
-Use a [glob](https://www.npmjs.com/package/glob) pattern to build the file list 
-
-```
-logagent -i LOGSENE_TOKEN -g '/var/log/**/*.log'
-# pass multiple glob patterns
-logagent -i LOGSENE_TOKEN -g '{/var/log/*.log,/opt/myapp/*.log}'
-```
-
-Watch selective log output on console by passing logs via stdin and format in YAML
-
-```
-tail -f /var/log/access.log | logagent -y -n httpd
-tail -f /var/log/system.log | logagent -f my_own_patterns.yml  -y 
-```
-
