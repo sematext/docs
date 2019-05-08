@@ -1,21 +1,63 @@
-title: Logagent Configuration File
+title: Logagent YAML Configuration File
 description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or Sematext Cloud for real-time log view. 
 
-## Config File 
 
-Logagent can be configured via config files in YAML format. 
-To use the config file run:
-```
-logagent --config configFileName.yml
-```
+Configuring the Logagent is modular. You can choose to run it as a [system service](./installation) and use the [default configuration file](#default-yaml-configuration-file-structure), or pass the CLI tool a `--config custom.yml` flag with a custom configuration.
 
-When Logagent is installed as [system service](installation/#installation-for-linux-mac-os-x) the default config file is located in 
-```
+## Default YAML Configuration File Location
+When Logagent is installed as a [system service](./installation), by running the `logagent-setup` command, the default config file is located in:
+
+```bash
 /etc/sematext/logagent.conf
 ```
 
+## Default YAML Configuration File Structure
+```yaml
+# /etc/sematext/logagent.conf
 
-### Section: options
+# Global options
+options:
+  # print stats every 60 seconds 
+  printStats: 60
+  # don't write parsed logs to stdout
+  suppress: true
+  # Enable/disable GeoIP lookups
+  # Startup of logagent might be slower, when downloading the GeoIP database
+  geoipEnabled: false
+  # Directory to store Logagent status and temporary files
+  # this is equals to LOGS_TMP_DIR env variable 
+  diskBufferDir: /tmp/sematext-logagent
+
+input:
+  # a list of glob patterns to watch files to tail
+  files:
+    - '/var/log/**/*.log'
+
+output:
+  # index logs in Elasticsearch or Sematext Logs
+  elasticsearch: 
+    module: elasticsearch
+    url: https://logsene-receiver.sematext.com
+    # default Elasticsearch index or Sematext Logs token to use:
+    index: <LOGS_TOKEN or ES_INDEX>
+```
+
+## Custom YAML Configuration with `--config` Flag
+
+Logagent can also be configured by using custom config files in YAML format, without running `logagent-setup`. Instead you run Logagent through the CLI tool. To use a custom config file run the CLI tool with the `--config` flag.
+
+```bash 
+logagent --config custom.yml
+```
+
+## YAML Configuration File Sections
+There are 4 sections of the configuration file:
+- Options
+- Input
+- Parser
+- Output
+
+### Options
 
 ```yaml
 # Global options
@@ -31,7 +73,7 @@ options:
   diskBufferDir: ./tmp
 ```
 
-### Section: input
+### Input
 
 ```yaml
 input:
@@ -50,7 +92,7 @@ input:
   #  port: 8888
 ```
 
-### Section: parser
+### Parser
 
 This section defines loading of custom pattern files or inline pattern definitions for the log parser.
 
@@ -76,7 +118,7 @@ parser:
           dateFormat: MMM DD HH:mm:ss
 ```
 
-### Section: output
+### Output
 
 Logs could be shipped to [Elasticsearch, AWS Elasticsearch Service, Sematext Cloud, MQTT, GELF, Apache Kafka, ZeroMQ, InfluxDB, ClickHouse DB, ...](https://sematext.com/docs/logagent/plugins/)  
 The Elasticsearch output supports HTTPS and username/password in the URL. 

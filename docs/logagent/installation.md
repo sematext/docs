@@ -1,7 +1,7 @@
 title: Installing Logagent on Linux
 description: Logagent, Sematext log shipper and Logstash alternative, is available as node.js npm package for Linux, Mac, and Windows. It has automatic Systemd or Upstart service scripts installation and seamless logging system service integration with our logs management and analysis platform
 
-
+[Logagent](./index.md) is a general purpose log shipper. It runs as a system service on Linux by using Systemd or Upstart.
 
 ### Install Node.js on your server
 First, make sure you have [Node.js installed](https://nodejs.org/en/download/package-manager/). E.g. for Debian/Ubuntu:
@@ -23,7 +23,7 @@ sudo npm i -g @sematext/logagent
 
 #### 3. Run Logagent as System Service
 
-Logagent detects the init system and installs Systemd or Upstart service scripts.
+By running the `logagent-setup` command, Logagent will detect the init system and install Systemd or Upstart service scripts.
 
 - *Ship logs to default US region*
     <!-- language: bash -->
@@ -35,7 +35,7 @@ Logagent detects the init system and installs Systemd or Upstart service scripts
         
         sudo logagent-setup -i LOGS_TOKEN -u logsene-receiver.eu.sematext.com
 
-- *Ship logs to local Elasticsearch*
+- *Ship logs to any Elasticsearch endpoint*
     <!-- language: bash -->
         
         sudo logagent-setup -i index -u http://localhost:9200
