@@ -563,15 +563,23 @@ pre {
  * Code Blocks
 */
 /* .md-typeset .codehilite code, .md-typeset .codehilite pre, .md-typeset .highlight code, .md-typeset .highlight pre, .md-typeset pre {
-    background-color: #192f3b;;
-    color: #D0D4D7;
+  background-color: #192f3b;;
+  color: #D0D4D7;
 }
 
 .md-clipboard:before {
-    color: #fff;
+  color: #999;
+}
+.codehilite:hover .md-clipboard:before {
+  color: #fff;
+}
+
+.codehilite .hll {
+  background-color: rgba(222, 228, 231, 0.15);
 }
 
 .faq-questions strong {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 } */
+

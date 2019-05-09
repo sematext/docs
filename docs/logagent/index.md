@@ -17,7 +17,7 @@ sudo apt-get install -y nodejs
 
 # Install Logagent and run it as a system service
 sudo npm i -g @sematext/logagent
-sudo logagent-setup <LOGS_TOKEN or ES_INDEX>
+sudo logagent-setup -i <LOGS_TOKEN or ES_INDEX>
 ```
 
 To read more jump to [Installation](./installation) right away!
@@ -54,7 +54,7 @@ Logagent doesn't lose data. It stores parsed logs to a disk buffer if the networ
 ## Logagent YAML Configuration File
 After installing Logagent you have a CLI tool and can run `logagent-setup` to create a system service and start shipping logs right away. It'll also create a simple [`YAML` configuration file](./config-file) for you in `/etc/sematext/logagent.conf`.
 
-```yaml
+```yaml hl_lines="18 19 24 25 27 29 30 35"
 # /etc/sematext/logagent.conf
 
 # Global options
@@ -77,11 +77,22 @@ input:
 
 output:
   # index logs in Elasticsearch or Sematext Logs
-  elasticsearch: 
+  sematext: # output a name, Eg. elasticsearch, sematext, etc.
     module: elasticsearch
     url: https://logsene-receiver.sematext.com
-    # default Elasticsearch index or Sematext Logs token to use:
+    # default Elasticsearch index or Sematext Logs token to use
     index: <LOGS_TOKEN or ES_INDEX>
+    # indices for shipping logs to multiple locations
+    indices: 
+      <LOGS_TOKEN_1 or ES_INDEX_1>: 
+      # list of log sources or filenames
+        - syslog\.log
+        - access\.log
+        - auth\.log
+      <LOGS_TOKEN_2 or ES_INDEX_2>: 
+      # list of RegEx matching a log source or filename
+        - .*wifi.*
+        - .*bluetooth.*
 ```
 
 ## Logagent Command-line Tool
