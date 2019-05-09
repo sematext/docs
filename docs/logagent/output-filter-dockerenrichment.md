@@ -3,15 +3,15 @@ description: Logagent features modular logging architecture framework where each
 
 ## Output Filter: Docker Enrichment
 
-Output filter plugin to add metadata like labels or Kubernetes pod information to docker logs or route logs to different destinations by setting container labels with the log index. 
+Output filter plugin to add metadata like labels or Kubernetes pod information to Docker logs or route logs to different destinations by setting container labels with the log index (or Logs App token, in case of Sematext Cloud). 
 
 Features:
 
 - detect severty (error, info, warning) of logs
-- attach labels to docker logs 
+- attach labels to Docker logs 
 - attach Kuberntes meta data (namespace, UUID, pod name, container name in pod)
 - set the log index for the elasticsearch output plugin
-- evaluates containers LOGENSE_TOKEN label or environment variable to set log index
+- evaluates containers LOGSENE_TOKEN label or environment variable to set the log index
 
 Applications:
 
@@ -36,7 +36,7 @@ outputFilter:
 output:
     elasticsearch:
       module: elasticsearch
-      url: http://logsene.reciver.sematext.com
+      url: https://logsene.reciver.sematext.com
       index: YOUR_LOGSENE_TOKEN
 
 ```

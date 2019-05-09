@@ -15,20 +15,20 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Infra & App Agent](spm-client) (aka Sematext  Agent or Sematext
+- [Sematext Infra & App Agent](../monitoring/spm-client) (aka Sematext  Agent or Sematext
 Monitor). The Infra Agent collects OS & Network metrics.
 The App Agent collects application metrics. The App Agent
-can run in [embedded](spm-monitor-javaagent)
+can run in [embedded](../monitoring/spm-monitor-javaagent)
 (aka Java agent-based, aka in-process) or
-[standalone](spm-monitor-standalone) mode. This agent can also
+[standalone](../monitoring/spm-monitor-standalone) mode. This agent can also
 instrument JVM-based apps to collect transaction traces and
-perform [on demand profiling](on-demand-profiling).
+perform [on demand profiling](../monitoring/on-demand-profiling).
 
-- [Node-based App Agent](node-agent), which can [monitor
+- [Node-based App Agent](../monitoring/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
 (including [Nginx Plus](../integration/nginxplus)).
 
-- [Docker Agent](../sematext-docker-agent), which can collect not
+- [Docker Agent](../containers), which can collect not
 only container and host metrics, but also container events and
 also logs, it can parse and structure out of the box.
 
@@ -119,7 +119,7 @@ New integration creation userflow is the same for both monitoring as well as log
 
 In other words, as monitoring app is being created you can create a logging app as well and vice versa. You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
 
-![Sematext Cloud - Create New Intergration App](https://sematext.com/docs/images/guide/integrations/create-new-app-integration.png " Sematext Cloud - Create New Intergration App")
+![Sematext Cloud - Create New Intergration App](https://sematext.com/docs/images/guide/integrations/create-new-app-integration.png " Sematext Cloud - Create New Integration App")
 
 ### Webhook Integration
 

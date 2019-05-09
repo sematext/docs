@@ -203,7 +203,7 @@ We also provide you with easy to install Agents that collect data about your sof
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="/docs/sematext-docker-agent/">
+		<a href="/docs/containers/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
