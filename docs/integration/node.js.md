@@ -93,7 +93,7 @@ API](/monitoring/custom-metrics) and a Node.js client for it:
 
 ## FAQ
 
-** Can I install spm-agent-nodejs on Windows? **
+### Can I install spm-agent-nodejs on Windows?
 
 Yes.  The native modules are automatically compiled during "npm
 install" (using node-gyp). On Windows the required build tools like
@@ -101,41 +101,98 @@ python or C++ compilers are typically not installed by default.  See
 <https://github.com/TooTallNate/node-gyp> for details about the
 required compiler and build tools.
 
-** How can I configure spm-agent-nodejs for my app using PM2 process manager? **
+### PM2: How can I configure spm-agent-nodejs for my app using PM2 process manager?
 
-Install spm-agent-nodejs as global module: 
+Install `spm-agent-nodejs` as a global module: 
 ```
 sudo npm i -g spm-agent-nodejs
+// or if you get node-gyp issues
+sudo npm i -g spm-agent-nodejs --unsafe-perm
 ```
 
-Check the location (full path) for spm-agent-nodejs using:
+Check the location (full path) for `spm-agent-nodejs` using:
 ```
 sudo npm root -g
 ```
 The result is typically `/usr/local/lib/node_modules` or `/usr/lib/node_modules`. 
-Remember the path to use it in the "interpreter_args" step below in the PM2 configuration file. 
+Remember the path to use it in the `interpreter_args` step below in the PM2 configuration file. You will need to append `/spm-agent-nodejs` to this path to access the globally installed directory of the `spm-agent-nodejs`.
 
-If you use PM2 to start your Node.js process, then use the following environment section in your [PM2 application config file](http://pm2.keymetrics.io/docs/usage/application-declaration/#application-declaration-file):
-
-```js
-{ 
-   "interpreter_args": "-r /usr/local/lib/node_modules/spm-agent-nodejs"
-   "env": { 
-      "SPM_TOKEN": "YOUR_SPM_TOKEN",
-      "spmagent_dbDir": "./spmdb",
-      "spmagent_logger__dir": "./spmlogs",
-      "spmagent_logger__silent" = false,
-      "spmagent_logger__level": "error"
-}
+First generate the PM2 config file:
+```
+pm2 ecosystem
 ```
 
-** How can I use spm-agent-nodejs behind Firewalls / Proxy servers? **
+This command will create a file called `ecosystem.config.js`.
+```javascript
+// ecosystem.config.js
+module.exports = {
+  apps : [{
+    name: 'API',
+    script: 'app.js',
+
+    // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
+    args: 'one two',
+    instances: 1,
+    autorestart: true,
+    watch: false,
+    max_memory_restart: '1G',
+    env: {
+      NODE_ENV: 'development'
+    },
+    env_production: {
+      NODE_ENV: 'production'
+    }
+  }]
+  // ...
+};
+```
+
+Edit this file so it has an `interpreter_args` section, and SPM agent `env` variables.
+
+```javascript
+// ecosystem.config.js
+module.exports = {
+  apps : [{
+    name: 'API',
+    script: 'app.js', // replace with your server file
+    instances: 1, // does not work with more than 1 because cluster mode is not supported
+    autorestart: true,
+    watch: false,
+    exec_mode: 'fork', // does not work in 'cluster'
+    interpreter_args: '-r /usr/lib/node_modules/spm-agent-nodejs', // ADD THIS
+    env: { // ADD ALL OF THIS TOO
+      NODE_ENV: 'development',
+      SPM_TOKEN: 'YOUR_SPM_TOKEN',
+      spmagent_dbDir: './spmdb',
+      spmagent_logger__dir: './spmlogs',
+      spmagent_logger__silent: false,
+      spmagent_logger__level: 'error'
+    },
+    env_production: {
+      NODE_ENV: 'production',
+      SPM_TOKEN: 'YOUR_SPM_TOKEN',
+      spmagent_dbDir: './spmdb',
+      spmagent_logger__dir: './spmlogs',
+      spmagent_logger__silent: false,
+      spmagent_logger__level: 'error'
+    }
+  }]
+  // ...
+};
+```
+
+Run PM2 with the config file:
+```
+pm2 start ecosystem.config.js
+```
+
+### How can I use spm-agent-nodejs behind Firewalls / Proxy servers?
 
 By default data is transmitted via HTTPS. If no direct connection is
 possible, a proxy server can be used by setting the environment
 variable HTTPS\_PROXY=<https://your-proxy>.
 
-** What should I do after upgrading to a new Node.js version? **
+### What should I do after upgrading to a new Node.js version?
 
 If you switch the Node.js version the spm-agent-nodejs package will
 need to be installed again (due to the fact that included native
@@ -144,7 +201,7 @@ change please run a fresh "npm install" if you added spm-agent-nodejs
 to the dependencies in your package.json or at the very least run
 "npm install spm-agent-nodejs".
 
-** How do I upgrade to the latest version of spm-agent-nodejs? **
+### How do I upgrade to the latest version of spm-agent-nodejs?
 
 To use the latest version of spm-agent-nodejs we recommend you
 install/upgrade using:
