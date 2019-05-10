@@ -224,7 +224,7 @@ API](/monitoring/custom-metrics) and a Node.js client for it:
 
 ## FAQ
 
-### Can I install spm-agent-nodejs on Windows?
+### Can I install Node.js agent on Windows?
 
 Yes.  The native modules are automatically compiled during "npm
 install" (using node-gyp). On Windows the required build tools like
@@ -232,7 +232,7 @@ python or C++ compilers are typically not installed by default.  See
 <https://github.com/TooTallNate/node-gyp> for details about the
 required compiler and build tools.
 
-### PM2: How can I configure spm-agent-nodejs for my app using PM2 process manager?
+### How can I configure Node.js agent for my app using PM2 process manager?
 
 Install `spm-agent-nodejs` as a global module.
 ```bash
@@ -315,7 +315,7 @@ Run PM2 with the config file:
 pm2 start ecosystem.config.js
 ```
 
-### How can I use spm-agent-nodejs behind Firewalls / Proxy servers?
+### How can I use Node.js agent behind Firewalls / Proxy servers?
 
 By default data is transmitted via HTTPS. If no direct connection is
 possible, a proxy server can be used by setting the environment
