@@ -1,6 +1,13 @@
 title: Install Logagent
 description: Logagent, Sematext log shipper and Logstash alternative, is available as Docker image. It has automatic Docker installation and seamless logging system service integration with our log management and analysis platform
 
+## Certified Logagent Images
+
+Please note the following instructions use the latest Logagent image from Docker Hub. 
+If you want to use certified images please pull the image from Red Hat and Docker registries. 
+
+- Red Hat Certified Image: `docker pull registry.connect.redhat.com/sematext/logagent`
+- Docker Certified Image: `docker pull store/sematext/logagent`
 
 ## Installation for Docker
 
