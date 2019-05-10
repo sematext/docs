@@ -22,7 +22,7 @@ SPM_TOKEN=<your-spm-token-goes-here>
 Require it in your source code at the top if your source file.
 ```javascript
 // app.js
-require('dotenv').config() // if you're using dotenv
+require('dotenv').config({ path: '/absolute/path/to/your/project/.env' }) // if you're using dotenv
 require('spm-agent-nodejs')
 ```
 
@@ -143,10 +143,9 @@ Documentation=https://yourwebsite.com
 After=network.target
 
 [Service]
-Environment=PORT=3000
 Type=simple
-User=ubuntu
-ExecStart=/usr/bin/node path/to/your/app.js
+User=root
+ExecStart=/usr/bin/node /absolute/path/to/your/project/app.js
 Restart=on-failure
 
 [Install]
@@ -166,7 +165,7 @@ sudo systemctl start app
 
 You've successfully launched your Node.js app using Systemd! If it doesn't work for some reason, make sure to check your paths in `ExecStart` are correct.
 ```bash
-ExecStart=/usr/bin/node path/to/your/app.js
+ExecStart=/usr/bin/node /absolute/path/to/your/project/app.js
 ```
 These need to point to the `node` binary and the absolute path to your `app.js` file.
 
