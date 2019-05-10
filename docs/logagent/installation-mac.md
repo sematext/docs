@@ -36,7 +36,7 @@ Logagent detects the init system and installs Launchd service scripts.
         
         sudo logagent-setup -i index -u http://localhost:9200
 
-Changing the Elasticsearch `index` and `endpoint` let's you ship logs to any Elasticsearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
+Changing the Elasticsearch `index` and `endpoint` lets you ship logs to any Elasticsearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
 
 ##### Location of service scripts
 - Launchd: ```launchctl start/stop com.sematext.logagent```

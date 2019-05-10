@@ -2,7 +2,7 @@ title: Logagent YAML Configuration File
 description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or Sematext Cloud for real-time log view. 
 
 
-Configuring the Logagent is modular. You can choose to run it as a [system service](./installation) and use the [default configuration file](#default-yaml-configuration-file-structure), or pass the CLI tool a `--config custom.yml` flag with a custom configuration.
+Logagent is flexible. You can choose to run it as a [system service](./installation) and use the [default configuration file](#default-yaml-configuration-file-structure), or pass the CLI tool a `--config custom.yml` flag with a custom configuration.
 
 ## Default YAML Configuration File Location
 When Logagent is installed as a [system service](./installation), by running the `logagent-setup` command, the default config file is located in:
