@@ -95,8 +95,80 @@ The Sematext Node.js monitoring agent collects the following metrics.
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-3.png)
 
 ## Use the `cluster` module to run Node.js
+To make use of the full power of your server, you should run an instance if your Node.js application on each CPU core. The `cluster` module makes this easier than ever. Create another file called `cluster.js`.
+
+```javascript
+// cluster.js
+
+const cluster = require('cluster')
+const numCPUs = require('os').cpus().length
+const app = require('./app')
+const port = process.env.PORT || 3000
+
+const masterProcess = () => Array.from(Array(numCPUs)).map(cluster.fork)
+const childProcess = () => app.listen(port)
+if (cluster.isMaster) masterProcess()
+else childProcess()
+cluster.on('exit', (worker) => cluster.fork())
+```
+
+Now you can run your app with:
+```bash
+node cluster.js
+```
+
+The cluster will spin up a master process with a dedicated process ID and run `numCPUs` amount of worker processes. They will be load balanced in a round-robin fashion from the master process. 
+
+This is not all, you should also make sure to run your Node.js application with Systemd to make is a system service and run automatically on startup and restart itself if it fails.
 
 ## Set up Node.js with Systemd
+The service files for the things that systemd controls all live under the directory path
+
+```bash
+/lib/systemd/system
+```
+
+Create a new file there:
+```bash
+sudo vim /lib/systemd/system/app.service
+```
+
+And add this piece of code:
+```bash
+# /lib/systemd/system/app.service
+
+[Unit]
+Description=app.js - running your Node.js app as a system service
+Documentation=https://yourwebsite.com
+After=network.target
+
+[Service]
+Environment=PORT=3000
+Type=simple
+User=ubuntu
+ExecStart=/usr/bin/node path/to/your/app.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To use Systemd to control the app you first need to reload the Daemon to register the new file.
+
+```bash
+sudo systemctl daemon-reload
+```
+
+Now launch your app with:
+```bash
+sudo systemctl start app
+```
+
+You've successfully launched your Node.js app using Systemd! If it doesn't work for some reason, make sure to check your paths in `ExecStart` are correct.
+```bash
+ExecStart=/usr/bin/node path/to/your/app.js
+```
+These need to point to the `node` binary and the absolute path to your `app.js` file.
 
 ## Troubleshooting
 
