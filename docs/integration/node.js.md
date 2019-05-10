@@ -1,43 +1,174 @@
 title: NodeJS Monitoring Integration
-description: Sematext node.js monitoring integration is available as npm package and added as any other node.js module. Request rate and event loop latency, memory, http server stats, garbage collection and other node.js reports and dashboards are available out of the box. Set up anomaly detection or threshold-based alerts on any combination of metrics and filters, and use heartbeat alerts to notify you when any of your nodes goes down
+description: Sematext Node.js monitoring integration is available as npm package and added as any other node.js module. Request rate and event loop latency, memory, http server stats, garbage collection and other node.js reports and dashboards are available out of the box. Set up anomaly detection or threshold-based alerts on any combination of metrics and filters, and use heartbeat alerts to notify you when any of your nodes goes down
 
-## Overview
+Sematext offers a simple Node.js monitoring agent, written entirely in Node.js without CPU and memory overhead. It's easy to install and require in your source code.
 
-A light-weight, open-source [Node.js monitoring
-agent](https://github.com/sematext/spm-agent-nodejs) collects Node.js
-processes' metrics and sends them to Sematext. It is available as [npm
-package](https://www.npmjs.com/package/spm-agent-nodejs) that can be
-added to the JavaScript source code like any other Node.js module.
+## Sematext Node.js Monitoring Agent
+This lightweight, open-source [Node.js monitoring agent](https://github.com/sematext/spm-agent-nodejs) collects Node.js process and performance metrics then sends them to Sematext. It is available as an [npm package](https://www.npmjs.com/package/spm-agent-nodejs) that can be added to JavaScript source code like any other Node.js module.
 
-The following metrics are collected:
+First you install the npm module.
+```bash
+# Terminal
+npm install spm-agent-nodejs
+```
 
-  - **Operating System**
-    
-      - CPU usage 
-      - Memory usage
+You need to add the `SPM_TOKEN` of your Sematext Monitoring App to your Node.js process environment with a module like [dotenv](https://github.com/motdotla/dotenv), or directly before running the application.
 
-  - **Process Memory Usage**
+```bash
+# .env
+SPM_TOKEN=<your-spm-token-goes-here>
+```
 
-  - **Number of Worker processes** (when using "cluster" package for
-    master/worker processes)
+Require it in your source code at the top if your source file.
+```javascript
+// app.js
+require('dotenv').config() // if you're using dotenv
+require('spm-agent-nodejs')
+```
 
-  - **Event Loop**
-    
-      - Latencies (fastest, slowest, average)
+Run your source file.
+```bash
+# Terminal
+node app.js
+```
+Or without dotenv.
+```bash
+# Terminal
+SPM_TOKEN=<your-spm-token-goes-here> node app.js
+```
 
-  - **Garbage Collection (GC)**
-    
-      - Counters for full GC
-      - Counters for incremental GC
-      - Time spend for GC
-      - Difference in heap used after each GC cycle
+The Sematext Node.js monitoring agent will start collecting dozens of key metrics right away, and start showing you the performance and health of your Node.js applications immediately.
 
-  - **HTTP Server stats**
-    
-      - Request count
-      - Request rate
-      - Content-Length
-      - Error rates (total, 3xx, 4xx, 5xx)
+## Collected Node.js Metrics 
+
+The Sematext Node.js monitoring agent collects the following metrics.
+
+### Operating System    
+
+- CPU usage 
+- CPU Load
+- Memory usage
+
+![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-4.png)
+
+### Process Memory Usage
+
+- Released memory between Garbage Collection Cycles
+- Process Heap Size
+- Process Heap Usage
+
+![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-5.png)
+
+### Worker processes (cluster module)
+
+- Worker count
+- Event loop latency per worker
+
+![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-1.png)
+
+### Event Loop
+
+- Maximum Event Loop Latency
+- Minimum Event Loop Latency
+- Average Event Loop Latency
+
+![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0.png)
+
+### Garbage Collection
+
+- Time consumed for garbage collection
+- Counters for full garbage collection cycles
+- Counters for incremental garbage collection cycles
+- Released memory after garbage collection
+
+![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-2.png)
+
+
+### HTTP Server Stats
+
+- Request count
+- Request rate
+- Response time
+- Request/Response Content-Length
+- Error rates (total, 3xx, 4xx, 5xx)
+
+![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-3.png)
+
+## Use the `cluster` module to run Node.js
+To make use of the full power of your server, you should run an instance if your Node.js application on each CPU core. The `cluster` module makes this easier than ever. Create another file called `cluster.js`.
+
+```javascript
+// cluster.js
+
+const cluster = require('cluster')
+const numCPUs = require('os').cpus().length
+const app = require('./app')
+const port = process.env.PORT || 3000
+
+const masterProcess = () => Array.from(Array(numCPUs)).map(cluster.fork)
+const childProcess = () => app.listen(port)
+if (cluster.isMaster) masterProcess()
+else childProcess()
+cluster.on('exit', (worker) => cluster.fork())
+```
+
+Now you can run your app with:
+```bash
+node cluster.js
+```
+
+The cluster will spin up a master process with a dedicated process ID and run `numCPUs` amount of worker processes. They will be load balanced in a round-robin fashion from the master process. 
+
+This is not all, you should also make sure to run your Node.js application with Systemd to make is a system service and run automatically on startup and restart itself if it fails.
+
+## Set up Node.js with Systemd
+The service files for the things that systemd controls all live under the directory path
+
+```bash
+/lib/systemd/system
+```
+
+Create a new file there:
+```bash
+sudo vim /lib/systemd/system/app.service
+```
+
+And add this piece of code:
+```bash
+# /lib/systemd/system/app.service
+
+[Unit]
+Description=app.js - running your Node.js app as a system service
+Documentation=https://yourwebsite.com
+After=network.target
+
+[Service]
+Environment=PORT=3000
+Type=simple
+User=ubuntu
+ExecStart=/usr/bin/node path/to/your/app.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To use Systemd to control the app you first need to reload the Daemon to register the new file.
+
+```bash
+sudo systemctl daemon-reload
+```
+
+Now launch your app with:
+```bash
+sudo systemctl start app
+```
+
+You've successfully launched your Node.js app using Systemd! If it doesn't work for some reason, make sure to check your paths in `ExecStart` are correct.
+```bash
+ExecStart=/usr/bin/node path/to/your/app.js
+```
+These need to point to the `node` binary and the absolute path to your `app.js` file.
 
 ## Troubleshooting
 
@@ -57,6 +188,7 @@ address to which the ZIP file should be sent.
 ## Integration
 
 - Agent: [https://github.com/sematext/spm-agent-nodejs](https://github.com/sematext/spm-agent-nodejs)
+- Tutorial: [https://sematext.com/blog/nodejs-monitoring-made-easy-with-sematext/](https://sematext.com/blog/nodejs-monitoring-made-easy-with-sematext/)
 - Instructions: [https://apps.sematext.com/ui/howto/Node.js/overview](https://apps.sematext.com/ui/howto/Node.js/overview)
 
 ## Metrics
@@ -103,10 +235,8 @@ required compiler and build tools.
 
 ### PM2: How can I configure spm-agent-nodejs for my app using PM2 process manager?
 
-Install `spm-agent-nodejs` as a global module: 
-```
-sudo npm i -g spm-agent-nodejs
-// or if you get node-gyp issues
+Install `spm-agent-nodejs` as a global module.
+```bash
 sudo npm i -g spm-agent-nodejs --unsafe-perm
 ```
 
