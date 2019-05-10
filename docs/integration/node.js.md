@@ -4,7 +4,7 @@ description: Sematext Node.js monitoring integration is available as npm package
 Sematext offers a simple Node.js monitoring agent, written entirely in Node.js without CPU and memory overhead. It's easy to install and require in your source code.
 
 ## Sematext Node.js Monitoring Agent
-This lightweight, open-source [Node.js monitoring agent](https://github.com/sematext/spm-agent-nodejs) collects Node.js process and performance metrics then sends them to Sematext. It is available as an [npm package](https://www.npmjs.com/package/spm-agent-nodejs) that can be added to JavaScript source code like any other Node.js module.
+This lightweight, open-source [Node.js monitoring agent](https://github.com/sematext/spm-agent-nodejs) collects Node.js process and performance metrics and sends them to Sematext. It is available as an [npm package](https://www.npmjs.com/package/spm-agent-nodejs) that can be added to JavaScript source code like any other Node.js module.
 
 First you install the npm module.
 ```bash
@@ -46,20 +46,20 @@ The Sematext Node.js monitoring agent collects the following metrics.
 ### Operating System    
 
 - CPU usage 
-- CPU Load
+- CPU load
 - Memory usage
 
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-4.png)
 
 ### Process Memory Usage
 
-- Released memory between Garbage Collection Cycles
-- Process Heap Size
-- Process Heap Usage
+- Released memory between garbage collection cycles
+- Process heap size
+- Process heap usage
 
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-5.png)
 
-### Worker processes (cluster module)
+### Worker Processes (cluster module)
 
 - Worker count
 - Event loop latency per worker
@@ -68,9 +68,9 @@ The Sematext Node.js monitoring agent collects the following metrics.
 
 ### Event Loop
 
-- Maximum Event Loop Latency
-- Minimum Event Loop Latency
-- Average Event Loop Latency
+- Maximum event loop latency
+- Minimum event loop latency
+- Average event loop latency
 
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0.png)
 
@@ -89,13 +89,13 @@ The Sematext Node.js monitoring agent collects the following metrics.
 - Request count
 - Request rate
 - Response time
-- Request/Response Content-Length
+- Request/Response content-length
 - Error rates (total, 3xx, 4xx, 5xx)
 
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-3.png)
 
 ## Use the `cluster` module to run Node.js
-To make use of the full power of your server, you should run an instance if your Node.js application on each CPU core. The `cluster` module makes this easier than ever. Create another file called `cluster.js`.
+To make use of the full power of your server, you should run an instance of your Node.js application on each CPU core. The `cluster` module makes this easier than ever. Create another file called `cluster.js`.
 
 ```javascript
 // cluster.js
@@ -117,9 +117,9 @@ Now you can run your app with:
 node cluster.js
 ```
 
-The cluster will spin up a master process with a dedicated process ID and run `numCPUs` amount of worker processes. They will be load balanced in a round-robin fashion from the master process. 
+The cluster will spin up a master process with a dedicated process ID and run `numCPUs` number of worker processes. They will be load balanced in a round-robin fashion from the master process. 
 
-This is not all, you should also make sure to run your Node.js application with Systemd to make is a system service and run automatically on startup and restart itself if it fails.
+This is not all, you should also make sure to run your Node.js application with Systemd to make it a system service and run automatically on startup and restart itself if it fails.
 
 ## Set up Node.js with Systemd
 The service files for the things that systemd controls all live under the directory path
