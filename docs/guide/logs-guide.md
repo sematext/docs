@@ -1,33 +1,91 @@
-title: Logs Guide - Logging Mananagement App
+title: Sematext Logs User Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that aggregates and structures your logs across various languages and platforms. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix production issues
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/glwZ8OCV0kc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Logs are everywhere, networks, servers, containers, cloud infrastructure, IoT, applications, load balancers, everywhere.
 
-In order to draw meaningful insights from the sea of logs your administrators, developers, IT operators, and security professionals comb on daily basis, you need a scalable platform that centralizes all these logs. Our SaaS / on-premise centralized IT systems management service provides ability to search and help your devops team find common exceptions, detect patterns in behaviors, and solve SLA, performance issues, and availability problems.
+Collect and send data from any part of your stack with different log shippers available, and centralize and index logs from operating systems, containers, network devices, AWS infrastructure, application access logs, custom events, and more.
 
-Collect and send data from any part of your stack with different [log shippers available](https://sematext.com/docs/logs/sending-log-events/), and centralize and index logs from operating systems, containers, network devices, AWS infrastructure, application access logs, custom events, and more. 
+Register for free or Login into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
-Our [logging management platform](https://sematext.com/logsene/) provides ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as rich, yet simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google. Search and analyze your IT enterprise logs using Sematext advanced analytics tools, identify and compare patterns and anomalies, and monitor your whole IT infrastructure through a single pane of glass. 
+If you prefer good old way to search and analyze your logs, try our command line tool for viewing, searching, filtering, and analyzing of log entries across all your logs from all your apps.
 
-You can also create and integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
+## What is Sematext Logs?
+Think of Sematext Logs as logging as a service or your own logging box in the cloud (or on your own infrastructure if you really can't ship logs out to the cloud).
 
-Check [integrations](https://sematext.com/docs/integration/) pages for more information. 
+It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is Elasticsearch API for indexing and searching.
 
-Logs are aggregated by time and shown in the logging management web application, where you have the ability to search for specific terms, narrow down time ranges, filter fields, setup alerts and more. The supported Search API's are URI based search, Request body based search, Real time GET operation, and Multiple GET and Multiple Search operations in a single request.
+Data can be indexed from virtually any source, format or location. Search real-time and historical data using the same interface and familiar search commands to define, limit or widen your search, and correlate events across multiple data sources to reveal new insights.
 
-Check related [Field Types](https://sematext.com/docs/logs/field-types/), [Supported Date Formats](https://sematext.com/docs/logs/supported-date-formats/), [Special Fields](https://sematext.com/docs/logs/special-fields/), and [FAQ](https://sematext.com/docs/logs/faq/) to learn more about Sematext logging management platform features.
+Turn searches into real-time alerts and automatically trigger notifications via email and various other 3rd party integrations. Alerts can be triggered based on a variety of thresholds, trend-based conditions and other complex searches, assisting with faster analysis and issue resolution.
 
-Regulatory expectations to store all logs require centralized log management solution, and Sematext logging management platform addresses these requirements. Monitor health of your whole application and infrastructure stack using our Cloud service and ensure that data is properly secured and stored. You can correlate views across multiple logs from different components and get a full stack observability. Share metrics reports and dashboards so that the entire team has access to the same data, while RBAC (Role Based Access Control) provides different access and user permissions to the team.
+You can create custom dashboards that can integrate multiple charts and views of your real-time data that helps you understand important trends, summarize top values and view the frequency of conditions. Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
 
-We can help you focus on your core competencies and provide your IT managers with tools necessary for complete logs management together with your stack metrics monitoring, a single pane of glass for full observability. Should security incident or outage take place, you need insight that allows you to quickly resolve the issue and avoid poor customer experience.
+## Creating a Logs App
+After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Logs App. An App is an independent namespace for your data.
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack. 
+For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
-If you prefer good old way to search and analyze your logs, try our [command line tool](https://sematext.com/blog/logsene-cli/) for viewing, searching, filtering, and analyzing of log entries across all your logs from all your apps. 
+You create an App by pressing the + button in the Logs tab, adding a name and pressing **continue**.
 
-## Logs Guide
+![add img - logs screen]()
+
+After creating an App you will get a confirmation screen that tells you how to [send data to your new application](sending-log-events). Once you start sending data, you can start [searching and analyzing those events](searching-log-events) via the native Sematext UI or [explore your data with Kibana](kibana).
+
+![add img - logs screen add integration]()
+
+### Adding Data to Your Logs App
+
+There are two ways to send data to your Logs App: 
+
+- [Elasticsearch API](index-events-via-elasticsearch-api)
+- [Syslog](syslog)
+
+
+### Elasticsearch API
+
+The easiest way to send logs is with [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use any tool that works with Elasticsearch's REST API, for both [indexing](index-events-via-elasticsearch-api) and [searching](search-through-the-elasticsearch-api). 
+
+If you're using a particular programming language, configuring your logging framework to send data to Sematext Logs is also an option.
+
+The only condition is to **use the App's token as the index name**, and **https://logsene-receiver.sematext.com:443**, or **https://logsene-receiver.eu.sematext.com:443** as the Elasticsearch endpoint.
+
+Don't forget, if you're using Docker, setting up [Sematext Docker Agent](../sematext-docker-agent) is incredibly simple.
+
+Here's how to send a message from the terminal.
+```bash
+curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/example/ -d '{
+  "message": "Hello from Sematext!"
+}'
+```
+
+This guide will show you everything you need to know once you create a Logs App.
+![add img - integrations overview page for ES]()
+
+For more details on using the Elasticsearch REST API with Sematext see [Index Events via Elasticsearch API](index-events-via-elasticsearch-api).
+
+### Syslog
+
+You can forward syslog via **UDP** (port 514), **TCP** (port 514), **RELP** (port 20514) and **TLS** (port 10514). The host name is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
+
+To get started with syslog shipping quickly, you can use our configuration script and add your App token as a parameter:
+
+``` bash
+curl -O https://apps.sematext.com/logsene/configure-syslog.py
+sudo python configure-syslog.py $YOUR-TOKEN-GOES-RIGHT-HERE
+```
+
+You can also use this snippet.
+
+```bash
+echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
+```
+
+![add img - integration overview page for Syslog]()
+
+For more details, take a look at the [Syslog](syslog) page, and the pages that are linked from it.
+
+## Troubleshooting With Sematext Logs
 
 Good tools for IT enterprise logs analysis have several main requirements, namely:
 
@@ -39,11 +97,31 @@ Good tools for IT enterprise logs analysis have several main requirements, namel
 
 We will keep these requirements in mind while trying to provide insight into Sematext logs section features within our IT enterprise monitoring and logging management suite. This guide will help you get started with our cloud service and discover logs, monitoring, and other application features. 
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/glwZ8OCV0kc"
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+## Logs App Layout
+
 Image below shows the default logs view and marked are the main application and system UI elements. 
 
 ![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/logs/sematext-logs-guide.png)
 
-## App Navigation 
+## Logs App Settings
+
+App's settings include, but are not limited to:
+
+  - inviting new users to your application
+  - [authorizing public IPs to send data to your app via syslog](authorizing-ips-for-syslog)
+  - adjusting data retention time, daily volume, and limits
+  - [changing your app's plan](faq/#plans-prices)
+  - checking how much data is, or has been shipped to your App
+
+  <img alt="Sematext Logging App Settings" src="../../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
+
+
 
 ### Side Navigation
 
@@ -109,7 +187,11 @@ The next section describes the monitoring report menu located just below the top
 
 ## Logs Search and Report Menu
 
-Logs Search and Report Menu is where the true power of Sematext APM platform and the whole stack observability comes to life. Events and logs are integrated in a single monitoring reports pane, and used to search server logs, events, alerts, anomalies, and more. 
+Logs Search and Report Menu is where the true power of Sematext APM platform and the whole stack observability comes to life. Events, Alerts, and Logs are integrated in a single monitoring reports pane, and used to search server logs, events, alerts, anomalies, and more. 
+
+Our [logging management platform](https://sematext.com/logsene/) provides ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as rich, yet simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google. Search and analyze your IT enterprise logs using Sematext advanced analytics tools, identify and compare patterns and anomalies, and monitor your whole IT infrastructure through a single pane of glass. 
+
+You can also create and integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
 
 Image below shows the report menu in detail followed by explanation on how to use these features. Search logs in a single unified view and add additional components to your metrics reports, share reports, and more.
 
