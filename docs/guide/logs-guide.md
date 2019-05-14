@@ -26,13 +26,21 @@ After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <htt
 
 For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
-You create an App by pressing the + button in the Logs tab, adding a name and pressing **continue**.
+You create an App by pressing the **+ Create Logs App** button in the Logs tab.
 
-![add img - logs screen]()
+![Create a new Logs App](../../images/guide/logs/sematext-logs-app-create.png)
 
-After creating an App you will get a confirmation screen that tells you how to [send data to your new application](sending-log-events). Once you start sending data, you can start [searching and analyzing those events](searching-log-events) via the native Sematext UI or [explore your data with Kibana](kibana).
+Add a name and press **Continue**.
 
-![add img - logs screen add integration]()
+![Create a new Logs App Modal](../../images/guide/logs/sematext-logs-app-create-modal.png)
+
+After creating a Logs App you will see an **integrations** screen that tells you how to [send data to your new Logs App](sending-log-events). 
+
+![Logs App Elasticsearch integration](../../images/guide/logs/sematext-app-logs-elasticsearch.png)
+
+Once you start sending data, you can start [searching and analyzing these logs](../logs/searching-log-events) in the Logs App or [explore your data with Kibana](../logs/kibana).
+
+![Searching Log Events](../../images/logs/logsene-ui.png)
 
 ### Adding Data to Your Logs App
 
@@ -44,13 +52,13 @@ There are two ways to send data to your Logs App:
 
 ### Elasticsearch API
 
-The easiest way to send logs is with [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use any tool that works with Elasticsearch's REST API, for both [indexing](index-events-via-elasticsearch-api) and [searching](search-through-the-elasticsearch-api). 
+The easiest way to **send logs is with** [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](index-events-via-elasticsearch-api) and [searching](search-through-the-elasticsearch-api). 
 
-If you're using a particular programming language, configuring your logging framework to send data to Sematext Logs is also an option.
+If you're using a particular **programming language**, configuring your **logging framework to send data to Sematext Logs** is also an option.
 
-The only condition is to **use the App's token as the index name**, and **https://logsene-receiver.sematext.com:443**, or **https://logsene-receiver.eu.sematext.com:443** as the Elasticsearch endpoint.
+The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
 
-Don't forget, if you're using Docker, setting up [Sematext Docker Agent](../sematext-docker-agent) is incredibly simple.
+Don't forget, if you're using **Docker**, setting up [Sematext Docker Agent](../sematext-docker-agent) is incredibly simple.
 
 Here's how to send a message from the terminal.
 ```bash
@@ -59,10 +67,9 @@ curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/exa
 }'
 ```
 
-This guide will show you everything you need to know once you create a Logs App.
-![add img - integrations overview page for ES]()
+[This guide](../logs/index-events-via-elasticsearch-api/) will show you more details on using the Elasticsearch REST API with Sematext.
 
-For more details on using the Elasticsearch REST API with Sematext see [Index Events via Elasticsearch API](index-events-via-elasticsearch-api).
+![Logs App Elasticsearch integration](../../images/guide/logs/sematext-app-logs-elasticsearch.png)
 
 ### Syslog
 
@@ -81,9 +88,9 @@ You can also use this snippet.
 echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
 ```
 
-![add img - integration overview page for Syslog]()
+![Logs App Syslog integration](../../images/guide/logs/sematext-app-logs-syslog.png)
 
-For more details, take a look at the [Syslog](syslog) page, and the pages that are linked from it.
+For more details, take a look at the [Syslog](../logs/syslog) page, and the pages that are linked from it.
 
 ## Troubleshooting With Sematext Logs
 
