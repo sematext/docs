@@ -2,17 +2,17 @@ title: Sematext Logs User Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that aggregates and structures your logs across various languages and platforms. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix production issues
 
 
-Sematext Logs is a **Log Management-as-a-service**. Think of it as your own **central location for logs** in the cloud. If you want to have the same but on your own infrastructure, check out our [Enterprise](../../sematext-enterprise) product.
+Sematext Logs is a **Log Management-as-a-service**. Think of it as your own **central location for logs** in the cloud. If you want to have the same but on your own infrastructure, check out our [Enterprise](../sematext-enterprise) product.
 
-You can collect logs from any part of your software stack. By using log shippers you centralize and index logs from all parts in one single place, [Sematext Logs](../../logs).
+You can collect logs from any part of your software stack. By using log shippers you centralize and index logs from all parts in one single place, [Sematext Logs](../logs).
 
-[Sematext Logs](../../logs) supports [sending logs](../../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, and much more, all through an Elasticsearch API or Syslog.
+[Sematext Logs](../logs) supports [sending logs](../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, and much more, all through an Elasticsearch API or Syslog.
 
 It's a cheaper alternative to Splunk or Logz.io. You can **use Sematext Logs as your own Hosted Elasticsearch** since it exposes an Elasticsearch API for indexing and searching. Data can be indexed from virtually any source, format or location.
 
 You can create [custom dashboards](../dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
-[Searching logs](../../logs/searching-log-events/) is easy with a Google-like query syntax. You can also turn all searches into real-time [alerts](../../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via E-mail, Slack, PagerDuty**, and various other 3rd party integrations. Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
+[Searching logs](../logs/searching-log-events/) is easy with a Google-like query syntax. You can also turn all searches into real-time [alerts](../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via E-mail, Slack, PagerDuty**, and various other 3rd party integrations. Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
 
 ## Creating a Logs App
 After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Logs App. An App is an independent namespace for your data.
@@ -21,19 +21,19 @@ For example, if you have a development and a production environment, it might ma
 
 You create an App by pressing the **+ Create Logs App** button in the Logs tab.
 
-![Create a new Logs App](../../images/guide/logs/sematext-logs-app-create.png)
+![Create a new Logs App](../images/guide/logs/sematext-logs-app-create.png)
 
 Add a name and press **Continue**.
 
-![Create a new Logs App Modal](../../images/guide/logs/sematext-logs-app-create-modal.png)
+![Create a new Logs App Modal](../images/guide/logs/sematext-logs-app-create-modal.png)
 
 After creating a Logs App you will see an **integrations** screen that tells you how to [send data to your new Logs App](sending-log-events). 
 
-![Logs App Elasticsearch integration](../../images/guide/logs/sematext-app-logs-elasticsearch.png)
+![Logs App Elasticsearch integration](../images/guide/logs/sematext-app-logs-elasticsearch.png)
 
 Once you start sending data, you can start [searching and analyzing these logs](../logs/searching-log-events) in the Logs App or [explore your data with Kibana](../logs/kibana).
 
-![Searching Log Events](../../images/logs/logsene-ui.png)
+![Searching Log Events](../images/logs/logsene-ui.png)
 
 ### Adding Data to Your Logs App
 
@@ -62,7 +62,7 @@ curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/exa
 
 [This guide](../logs/index-events-via-elasticsearch-api/) will show you more details on using the Elasticsearch REST API with Sematext.
 
-![Logs App Elasticsearch integration](../../images/guide/logs/sematext-app-logs-elasticsearch.png)
+![Logs App Elasticsearch integration](../images/guide/logs/sematext-app-logs-elasticsearch.png)
 
 ### Syslog
 
@@ -81,7 +81,7 @@ You can also use this snippet.
 echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
 ```
 
-![Logs App Syslog integration](../../images/guide/logs/sematext-app-logs-syslog.png)
+![Logs App Syslog integration](../images/guide/logs/sematext-app-logs-syslog.png)
 
 For more details, take a look at the [Syslog](../logs/syslog) page, and the pages that are linked from it.
 
@@ -121,7 +121,7 @@ The settings include:
   - [changing your app's plan](faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
-  <img alt="Sematext Logging App Settings" src="../../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
+  <img alt="Sematext Logging App Settings" src="../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
 
 
 
@@ -145,7 +145,7 @@ Side navigation sections for user and team features:
 - Team
 - Account 
 
-![](../../images/guide/logs/side-navigation.png)
+![](../images/guide/logs/side-navigation.png)
 
 ### App Selector
 
@@ -163,7 +163,7 @@ All App Actions open in a modal dialogue window as temporary UI regions and let 
 
 Once you create a Logs App, and start shipping data, you will get a **default Report created for you named Explore**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
 
-![](../../images/guide/logs/report-selector.png)
+![](../images/guide/logs/report-selector.png)
 
 
 ### Time Picker
@@ -253,11 +253,11 @@ The Logs and Logs Count Time Series components are added by default to your Logs
 
 These can be configured by whichever search query you want in any way you want. Making it easy to set up your Logs Report just the way you want.
 
-![Sematext Cloud Monitoring Guide - Add Metric Component](../../images/guide/logs/add-logs-component.png) 
+![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/logs/add-logs-component.png) 
 
 Use them together with out-of-the-box metrics, from a Monitoring App, and you will go from metric spikes to Logs in seconds, and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
-![Sematext Logs Custom Components](../../images/guide/logs/logs-custom-components.png)
+![Sematext Logs Custom Components](../images/guide/logs/logs-custom-components.png)
 
 ### Logs Component Settings
 
