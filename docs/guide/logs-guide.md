@@ -8,9 +8,9 @@ You can collect logs from any part of your software stack. By using log shippers
 
 [Sematext Logs](../logs) supports [sending logs](../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, and much more, all through an Elasticsearch API or Syslog.
 
-It's a cheaper alternative to Splunk or Logz.io. You can **use Sematext Logs as your own Hosted Elasticsearch** since it exposes an Elasticsearch API for indexing and searching. Data can be indexed from virtually any source, format or location.
+It's a cheaper [alternative to Splunk or Logz.io](https://sematext.com/resources/industry-comparisons/). You can **use Sematext Logs as your own Hosted Elasticsearch** since it exposes an Elasticsearch API for indexing and searching. Data can be indexed from virtually any source, format or location.
 
-You can create [custom dashboards](../dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
+You can create [custom dashboards](./dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
 [Searching logs](../logs/searching-log-events/) is easy with a Google-like query syntax. You can also turn all searches into real-time [alerts](../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via E-mail, Slack, PagerDuty**, and various other 3rd party integrations. Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
 
@@ -27,7 +27,7 @@ Add a name and press **Continue**.
 
 ![Create a new Logs App Modal](../images/guide/logs/sematext-logs-app-create-modal.png)
 
-After creating a Logs App you will see an **integrations** screen that tells you how to [send data to your new Logs App](sending-log-events). 
+After creating a Logs App you will see an **integrations** screen that tells you how to [send data to your new Logs App](../logs/sending-log-events). 
 
 ![Logs App Elasticsearch integration](../images/guide/logs/sematext-app-logs-elasticsearch.png)
 
@@ -39,13 +39,13 @@ Once you start sending data, you can start [searching and analyzing these logs](
 
 There are two ways to send data to your Logs App: 
 
-- [Elasticsearch API](index-events-via-elasticsearch-api)
-- [Syslog](syslog)
+- [Elasticsearch API](../logs/index-events-via-elasticsearch-api)
+- [Syslog](../logs/syslog)
 
 
 ### Elasticsearch API
 
-The easiest way to **send logs is with** [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](index-events-via-elasticsearch-api) and [searching](search-through-the-elasticsearch-api). 
+The easiest way to **send logs is with** [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](../logs/index-events-via-elasticsearch-api) and [searching](../logs/search-through-the-elasticsearch-api). 
 
 If you're using a particular **programming language**, configuring your **logging framework to send data to Sematext Logs** is also an option.
 
@@ -116,9 +116,9 @@ The image below shows the default logs view and marked are the main application 
 The settings include:
 
   - inviting new users to your application
-  - [authorizing public IPs to send data to your app via syslog](authorizing-ips-for-syslog)
+  - [authorizing public IPs to send data to your app via syslog](../logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
-  - [changing your app's plan](faq/#plans-prices)
+  - [changing your app's plan](../logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
   <img alt="Sematext Logging App Settings" src="../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
