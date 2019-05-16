@@ -121,7 +121,8 @@ The settings include:
   - [changing your app's plan](../logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
-  <img alt="Sematext Logging App Settings" src="../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
+  ![Sematext Logs App Settings](https://sematext.com/docs/images/logs/logsene-app-settings.png)
+
 
 
 
