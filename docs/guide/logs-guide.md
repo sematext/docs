@@ -198,8 +198,6 @@ The next section describes the monitoring report menu located just below the top
 
 ## Logs Search and Report Menu
 
-The Logs Search and Report Menu is where the true power of Sematext Logs lies. This is where observability comes to life. 
-
 Events, Alerts, and Logs are integrated into a single reports pane, and used to search logs, create alerts for anomalies, view events, and much more. 
 
 Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
@@ -251,29 +249,34 @@ Some components are common for both Logs and Monitoring, while other are specifi
 
 ### Logs Components
 
-The Logs and Logs Count Time Series components are added by default to your Logs App. Additional Logs components that can be added to your App are Metric Panels, Logs Count, Top Values and Numberic Field Time Series.
+The Logs and Logs Count Time Series components are added by default to your Logs App. Additional Logs components that can be added to your App are Metric Panels, Logs Count, Top Values and Numeric Field Time Series.
 
 These can be configured by whichever search query you want in any way you want. Making it easy to set up your Logs Report just the way you want.
 
 ![Sematext Cloud Monitoring Guide - Add Metric Component](../../images/guide/logs/add-logs-component.png) 
 
-Use them together with out of box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
+Use them together with out-of-the-box metrics, from a Monitoring App, and you will go from metric spikes to Logs in seconds, and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
 ![Sematext Logs Custom Components](../../images/guide/logs/logs-custom-components.png)
 
 ### Logs Component Settings
 
-Each Component can be added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
+Each Component can be added to a custom Dashboard, and you can organize reports from one or several applications, both Logs Apps as well as Monitoring Apps. Creating rich data and visualization reports based on various metrics and logs data has never been easier.
 
-Below is the image of Log Events Component dropdown menu with log specific export and field editor features and ability to add component to a custom dashboard
+Here's an image of the **Log Events Component** dropdown menu with log specific export and field editor features and the ability to add the component to a custom dashboard.
 
 ![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/logs/logs-component-settings-dropdown.png)
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
-Recommendations for learning more about Sematext products and services:
+## Next step
+
+[Sign up](https://apps.sematext.com/ui/registration) to Sematext Cloud for free to get started, and create your first Logs App. Upload logs from all your servers to our centralized log management solution through our Elasticsearch API, and experience a proper hosted Elasticsearch Stack.
+
+If you already have an account, [sign in](https://apps.sematext.com/ui/login/) and start shipping logs!
+
+Check this out to learn more about Sematext:
 
 - [Logs documentation](/logs/)
-- Our [website](https://sematext.com/) and [Logging](https://sematext.com/logsene/) products 
-- For Sematext Logging Agent and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
-- or just use chat in the right bottom corner of the app or website page and one of our engineers will help you navigate Sematext waters.
+- Our [website](https://sematext.com/) and [Logs](https://sematext.com/logsene/) products 
+- For Sematext Logagent and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
+- or just use chat in the right bottom corner of the app or website and one of our engineers will help you navigate Sematext waters.
