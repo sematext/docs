@@ -2,24 +2,17 @@ title: Sematext Logs User Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that aggregates and structures your logs across various languages and platforms. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix production issues
 
 
-Logs are everywhere, networks, servers, containers, cloud infrastructure, IoT, applications, load balancers, everywhere.
+Sematext Logs is a **Log Management-as-a-service**. Think of it as your own **central location for logs** in the cloud. If you want to have the same but on your own infrastructure, check out our [Enterprise](../../sematext-enterprise) product.
 
-Collect and send data from any part of your stack with different log shippers available, and centralize and index logs from operating systems, containers, network devices, AWS infrastructure, application access logs, custom events, and more.
+You can collect logs from any part of your software stack. By using log shippers you centralize and index logs from all parts in one single place, [Sematext Logs](../../logs).
 
-Register for free or Login into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
+[Sematext Logs](../../logs) supports [sending logs](../../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, and much more, all through an Elasticsearch API or Syslog.
 
-If you prefer good old way to search and analyze your logs, try our command line tool for viewing, searching, filtering, and analyzing of log entries across all your logs from all your apps.
+It's a cheaper alternative to Splunk or Logz.io. You can **use Sematext Logs as your own Hosted Elasticsearch** since it exposes an Elasticsearch API for indexing and searching. Data can be indexed from virtually any source, format or location.
 
-## What is Sematext Logs?
-Think of Sematext Logs as logging as a service or your own logging box in the cloud (or on your own infrastructure if you really can't ship logs out to the cloud).
+You can create [custom dashboards](../dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
-It is cheaper alternative to Splunk, or even as Hosted Elasticsearch, since one of the APIs Logsene exposes is Elasticsearch API for indexing and searching.
-
-Data can be indexed from virtually any source, format or location. Search real-time and historical data using the same interface and familiar search commands to define, limit or widen your search, and correlate events across multiple data sources to reveal new insights.
-
-Turn searches into real-time alerts and automatically trigger notifications via email and various other 3rd party integrations. Alerts can be triggered based on a variety of thresholds, trend-based conditions and other complex searches, assisting with faster analysis and issue resolution.
-
-You can create custom dashboards that can integrate multiple charts and views of your real-time data that helps you understand important trends, summarize top values and view the frequency of conditions. Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
+[Searching logs](../../logs/searching-log-events/) is easy with a Google-like query syntax. You can also turn all searches into real-time [alerts](../../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via E-mail, Slack, PagerDuty**, and various other 3rd party integrations. Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
 
 ## Creating a Logs App
 After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Logs App. An App is an independent namespace for your data.
@@ -92,17 +85,17 @@ echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | n
 
 For more details, take a look at the [Syslog](../logs/syslog) page, and the pages that are linked from it.
 
-## Troubleshooting With Sematext Logs
+## Troubleshooting With Logs
 
-Good tools for IT enterprise logs analysis have several main requirements, namely:
+Quality Log Management tools have several main requirements for analyzing logs:
 
-- way to ship, ingest, and reliably index machine data
-- tools to search, correlate and investigate logs data
-- drill-down analysis functionality to reveal trends, spikes, and anomalies
-- monitoring and alerting features with 3rd party webhooks integrations 
-- ability to build reports and dashboards from your data
+- A way to ship, ingest, and reliably index logs data
+- Tools to search, correlate and investigate logs data
+- Drill-down analysis functionality to reveal trends, spikes, and anomalies
+- Monitoring and alerting features with 3rd party webhooks and integrations 
+- Building custom reports and dashboards from your data
 
-We will keep these requirements in mind while trying to provide insight into Sematext logs section features within our IT enterprise monitoring and logging management suite. This guide will help you get started with our cloud service and discover logs, monitoring, and other application features. 
+These are key features Sematext Logs offers. The rest of this guide will help you get started with using it to its full potential. But first, check out this short video about troubleshooting with logs.
 
 <div class="video_container">
 <iframe src="https://www.youtube.com/embed/glwZ8OCV0kc"
@@ -110,15 +103,17 @@ frameborder="0" allow="autoplay; encrypted-media"
 allowfullscreen class="video"></iframe>
 </div>
 
+Moving on, let's see how to make the best out of a Logs App.
+
 ## Logs App Layout
 
-Image below shows the default logs view and marked are the main application and system UI elements. 
+The image below shows the default logs view and marked are the main application and system UI elements. 
 
 ![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/logs/sematext-logs-guide.png)
 
 ## Logs App Settings
 
-App's settings include, but are not limited to:
+The settings include:
 
   - inviting new users to your application
   - [authorizing public IPs to send data to your app via syslog](authorizing-ips-for-syslog)
@@ -132,9 +127,9 @@ App's settings include, but are not limited to:
 
 ### Side Navigation
 
-Side navigation is peristent UI region that can be collapsed / toggled on or off for full reports view, and is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team system features. All side navigation options are selectable at all times and the right aligned chevrons indicate that the top level section is collapsible and contains additional subitems.
+The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
 
-Side Navigation consists of the following top level sections:
+Side navigation top level sections for infrastructure and application performance monitoring, log management, transaction tracing, and real user monitoring:
 
 - Dashboards
 - Infrastructure
@@ -144,43 +139,52 @@ Side Navigation consists of the following top level sections:
 - Alerts and Events
 - Integrations
 
-as infrastructure and app monitoring, log management, transaction tracing, and real user monitoring system regions and
+Side navigation sections for user and team features:
 
 - Invites
 - Team
 - Account 
 
-as user and team Sematext Cloud system features.
+![](../../images/guide/logs/side-navigation.png)
 
-### App & Dash Selector
+### App Selector
 
-The App & Dash dropdown Selector lets you choose any logging or monitoring app as well as any dashboard report(s) that you have generated from those apps. Moreover, infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logging, and app & IT infrastructure monitoring, essential when rushing to fix IT production issues.
+The App dropdown selector lets you **choose any Logs or Monitoring App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
 
 ### App Actions
 
-Right next to the App & Dash Selector is the App Actions dropdown menu, horizontal elipsis icon, opening various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app ownership.
+Right next to the App Selector is the **App Actions dropdown menu** and **horizontal elipsis icon**. 
 
-All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. App view remains unchanged and allows for easy interaction between various system settings and reports view.
+The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal elipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
+
+All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. The Logs App view remains unchanged and allows for easy interaction between various system settings and reports views.
+
+### Report Selector
+
+Once you create a Logs App, and start shipping data, you will get a **default Report created for you named Explore**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
+
+![](../../images/guide/logs/report-selector.png)
+
 
 ### Time Picker
 
-Time Picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment user can select. Thirty minutes, one and two hour, and one, two, seven, and thirty days time span shortcuts are exposed for easy common observability.
+The Time Picker is available whenever a Logs or Monitoring App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed common observability defaults.
 
-Custom time range can be selected using the time picker dropdown menu. App will automatically refresh upon selection and update all the reports in view accordingly.
+A **custom time range can be selected using the time picker dropdown menu**. The Logs App will automatically refresh upon selection and update all the reports accordingly.
 
 ### Refresh and Live Tail
 
-Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed, and all the data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident or anomaly within a certain time segment. 
+Refresh data and Live Tail options are located next to the time picker. The **Live Tail feature provides real-time insights as soon as your data is consumed and indexed**. It can be also stopped so the auto-refresh does not update the data, in case you need to inspect specific incidents or anomalies within a certain time segment.
 
 ### Notifications
 
-Bell icon in the right section of the header is used to open system notifications messaging modal window. If your plan needs upgrading, a new feature is announced, and other such system or service messages will be shown in the notifications view, and may or may not require user action.
+The megaphone icon in the right section of the header is used to open the notifications. If your plan is in need of an upgrade, a new feature is announced, or similar system and service updates require your attention, they'll be shown in the notifications view.
 
 ### User Settings
 
-Last, but not the least User Settings is the last right aligned item in the app header UI. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
+The User Settings is the last right aligned item in the header. **Switching accounts, Inviting team members, Billing, Help, Subscriptions**, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
-Image below shows the main app navigation sections:
+Here you can see the main navigation sections:
 
 - Side navigation 
 - App & Dash Selector dropdown menu
@@ -194,28 +198,27 @@ The next section describes the monitoring report menu located just below the top
 
 ## Logs Search and Report Menu
 
-Logs Search and Report Menu is where the true power of Sematext APM platform and the whole stack observability comes to life. Events, Alerts, and Logs are integrated in a single monitoring reports pane, and used to search server logs, events, alerts, anomalies, and more. 
+The Logs Search and Report Menu is where the true power of Sematext Logs lies. This is where observability comes to life. 
 
-Our [logging management platform](https://sematext.com/logsene/) provides ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as rich, yet simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google. Search and analyze your IT enterprise logs using Sematext advanced analytics tools, identify and compare patterns and anomalies, and monitor your whole IT infrastructure through a single pane of glass. 
+Events, Alerts, and Logs are integrated into a single reports pane, and used to search logs, create alerts for anomalies, view events, and much more. 
+
+Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
 
 You can also create and integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
-
-Image below shows the report menu in detail followed by explanation on how to use these features. Search logs in a single unified view and add additional components to your metrics reports, share reports, and more.
 
 ![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/logs/sematext-logs-search-and-report-menu.png) 
 
 ### App State
 
-When your app is intially loaded, Save and Reset buttons will be hidden since that is app's default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, app will preserve the initial state.
-
+When your Logs App is loaded the **Save and Reset buttons will be hidden** since you see the App's default state. If a **new component is added** or any existing **component is edited, alert created, and report component removed**, the **Save and Reset buttons will appear** in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, the App will preserve its initial state.
 
 ### Report Actions 
 
-Right aligned set of icons in the logs search and report menu provide:
+The set of icons in the logs search and report menu let you:
 
-- Save Query - Every query can be saved for later use. Ability to save queries are part of essential tools to search, correlate and investigate logs data. Each saved query becomes the part of saved queries section in our logging platform.  
+- **Save Query / Add Alert** - Every query can be sa**ved for later use, and used to send alerts**. The ability to save queries and alerts is part of the essential tools for searching, correlating and investigating logs data. Each saved query becomes part of the saved queries section.
 
-- Saved Queries - Right next to the save query icon is the star icon that opens a modal dialogue window with all your saved queries displayed in [Sematable](https://github.com/sematext/sematable), a table component that displays
+- **Saved Queries / Alert Rules** - Right next to the save query / alert icon you can see the saved queries and alert rules, this will open a modal dialogue window with **all your saved queries and alert rules** displayed in a [Sematable](https://github.com/sematext/sematable), a table component that displays
 
 	- _Tag Color_ that can be assigned to any logs query while it is being saved by user using colour picker componenet 
 	- _Query Name_ to further identify and describe logs query
@@ -224,35 +227,41 @@ Right aligned set of icons in the logs search and report menu provide:
 	- _10m, 1h, 12h, and 1d_ shortcuts with histogram for fast observability of query patterns across common time intervals
 	- Saved _query actions_ dropdown menu used to add new, edit, clone, reset, and delete saved logs report
 
-- Email Report - There are Email and Subscription types available with time, frequency, and time range defined so your devops can get automatated reports for comparative and incremental app & infrastructure monitoring analysis.
+- **Email Report** - There are E-mail and Subscription types available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health.
 
-- Full Screen Mode - Entering full screen mode brings only that component into a view and removes all other app's UI elements. It is useful for group and team presentations as well as specific and detailed view of a single component, showing detailed metrics visualizations. All charts have zoom, hairline, and time navigation tools with tooltips available for effective chart interaction and data analysis.
+- **Full Screen Mode** - Entering full screen mode brings only the component you choose into view. It's useful for presentations and viewing detailed info of a single component. All charts have zoom, hairline, and time navigation tools with tooltips available for effective chart interaction and data analysis.
 
-- Connected Applications - Connecting a logs app to a monitoring app will pre-select that logs app when you decide to correlate metrics from the connected monitoring app, and thus save you time. When you receive an alert notification for an app, the alert notification will automatically include information (e.g. charts) from connected apps, and thus provide more information and context for you. You can connect any two apps you have access to, regardless of their type. A single app can be connected to any number of other apps.
+- **Connected Applications** - Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App**. When you receive an alert notification for an app, the **alert notification will automatically include information and charts from connected apps**, and thus provide more information and context for you. You can connect any two apps you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
 
-- Monitor Installation - You will need to install Sematext agent so metrics or logs data can be forwarded to our logs, app & infrastructure monitoring SaaS service. Please refer to [Integrations](https://sematext.com/docs/integration/) documentation pages for particular tech you wish to monitor, and learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS s3, and logging management service and log shippers available. There you will find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud.
+- **Integrations** - This section will guide you through installing Agents and Monitors. You will need to install **Sematext Agents so metrics or logs** data can be shipped to your Logs or Monitoring App. 
+		
+	Please refer to the [Integrations](https://sematext.com/docs/integration/) documentation pages for particular tech you wish to monitor. Learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS s3, and how to integrate log management with log shippers. You'll find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud there.
 
 ### Report Settings
 
-- Report Actions - Your customized logs report can be better described using meta name and description, and you can assign unique URL Alias to identify that report.
+- **Report Actions** - Your customized logs report can be better described using **meta name and description**, and you can assign a **unique URL Alias** to identify that report.
 
-- Legends Position and Extended Charts features - Except in app default overview mode, each report can have legends (each metric name) arranged below, to the left or can be hidden for better chart interaction. Extended charts are also displayed below and provide comparative view into longer time span relative to the time frame displayed in the main chart above. Just like report legends, extended view can be hidden and only the chart with x and y values displayed.
+- **Legends Position and Extended Charts features** - Except in the default overview mode, each **report can have legends** for each metric name, arranged below, to the left, or hidden entirely for better chart interaction. Extended charts are also displayed below and provide a comparative view into a longer time span relative to the time frame displayed in the main chart. Just like report legends, the extended view can be hidden and only the chart with X and Y values will be displayed.
 
 ## Components
 
-Using custom components your whole devops team can add monitoring metrics time series, events count time series, events, markdown notes, and create custom reports with rich data visualizations and chart tools to analyze your data.
+Using custom components you can **add metrics time series, events count time series, events, markdown notes, and create custom reports** with rich data visualizations and chart tools to analyze data.
 
-There are both APM & Logging common as well as logs or monitoring specific components, and they will be contextually available depending on whether it is monitoring or logs app. Each component can be also added to custom dashboards defined by the system administrator or other devops and data analytics professionals.  
+Some components are common for both Logs and Monitoring, while other are specific for either one. They will be contextually available depending on whether you're adding them to a Monitoring or Logs App. Each **component can be also added to custom dashboards** you create.
 
 ### Logs Components
 
-Logs Count and Logs Table Component, Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order, as well as  additional logging components that can be added to your logs app are available.
+The Logs and Logs Count Time Series components are added by default to your Logs App. Additional Logs components that can be added to your App are Metric Panels, Logs Count, Top Values and Numberic Field Time Series.
 
-![Sematext Cloud Monitoring Guide - Add Metric Component](https://sematext.com/docs/images/guide/logs/add-logs-component.png) 
+These can be configured by whichever search query you want in any way you want. Making it easy to set up your Logs Report just the way you want.
+
+![Sematext Cloud Monitoring Guide - Add Metric Component](../../images/guide/logs/add-logs-component.png) 
 
 Use them together with out of box metrics reports and visualizations, generated when your app is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
-#### Component Settings
+![Sematext Logs Custom Components](../../images/guide/logs/logs-custom-components.png)
+
+### Logs Component Settings
 
 Each Component can be added to a custom Dashboard, and you can organize devops or business reports from one or several applications, both logging as well as monitoring, and create rich data and visualization reports based on various metrics and logs data. 
 
