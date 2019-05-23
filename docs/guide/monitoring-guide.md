@@ -45,23 +45,51 @@ Once you have data flowing you can **analyze metrics** by a number of context-aw
 
 ![Monitoring Agent Shipping Data](../images/guide/monitoring/monitoring-agent-shipping.png)
 
+### Setting up Monitoring Agents
+
+Metrics are shipped to Sematext Monitoring using Agents. To monitor your infrastructure you need to set up a **Sematext Monitoring Agent**. You can choose from:
+
+  - [**Sematext Infra & App Agent (SPM)**](../monitoring/spm-client/)
+    
+    The Infra Agent collects OS & Network metrics. The App Agent collects application metrics.
+
+  - [**Sematext Node.js App Agent**](../monitoring/node-agent)
+    
+    Monitors Node.js applications but can also [monitor Apache](../integration/apache) and [Nginx](../integration/nginx), including [Nginx Plus](../integration/nginxplus).
+
+  - [**Docker Agent**](../containers)
+  
+    Collects container and host metrics, and container events.
+
+The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
+
+Once the agent is set up metrics will start coming to Sematext
+instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
+look at the <a href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a> page.</p>
+
+
 ## Monitoring App Layout
 
-This guide will help you get started with our APM service and discover reporting, monitoring, and other features and functionalities. Here's the default monitoring view and shown are the main application and system elements.
+This guide will help you get started with our Monitoring App and discover reporting, monitoring, and other features and functionalities. Here's the default monitoring view and shown are the main application and system elements.
 
 ![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide.png)
 
-## Monitoing App Settings
+## Monitoring App Settings
 
-The settings include:
+App settings and actions include, but are not limited to:
 
-  - inviting new users to your App
-  - adjusting data retention time, daily volume, and limits
-  - [changing your App's plan](https://sematext.com/spm/pricing/) and settings
-  - checking how much data is, or has been shipped to your App
-  - create heartbeat alerts
-  - monitor installation instructions
+  - inviting others to your App
+  - [alert rules](../alerts)
+  - changing your App's plan
+  - connecting Apps
+  - heartbeat alert cration
+  - App ownership transfer
+  - scheduled report emails (aka Subscriptions)
   
+<!-- <img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings Screen"> -->
+
+<!-- ![Install Agent](../images/monitoring/app-settings-menu.png) -->
+
 ![Sematext Monitoring App Settings](../images/guide/monitoring/monitoring-app-settings3.png)
 
 
