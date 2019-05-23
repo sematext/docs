@@ -1,19 +1,69 @@
-title: APM Guide
+title: Sematext Monitoring User Guide
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
-With over 40 integrations, Sematext application and IT infrastructure monitoring platform lets you collect metrics and events across your whole stack. Get started in minutes with out-of-the-box dashboards, alerts and anomaly detection rules, and ability to analyze your metrics by a number of context-aware filters.
 
-Our APM SaaS / on-premises IT monitoring service goes beyond just collecting metrics. Uncover slowest DB operation types, view full SQL statements, see end-to-end HTTP transaction context, get top 10 operations by throughput, latency, or time consumed, filter DB operations by type, and more...
+Sematext **Application** and **Infrastructure Monitoring** lets you **collect metrics** and **events** across your whole stack with over [40 integrations](https://sematext.com/integrations/). 
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your monitoring app with over 40 monitoring integrations available.
+Get started in minutes with **out-of-the-box dashboards**, [**alerts**](https://sematext.com/alerts/) and [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
 
-## Monitoring Guide
+The integrations cover several key features. You have [**Server Monitoring**](../monitoring/#setting-up-monitoring-agents) giving you complete insight about the utilization of your servers and cloud instances. **Monitor Containers** with [**Sematext Agent**](../containers/sematext-agent/), which is deployed seamlessly with Docker or Kubernetes.
 
-This guide will help you get started with our APM service and discover reporting, monitoring, and other application features and functionalities. Image below shows the default monitoring view and marked are the main application and system UI elements.
+Our SaaS/on-premises monitoring product goes beyond just collecting metrics. 
+
+Use [**Database Monitoring**](https://sematext.com/database-monitoring/) to get a complete overview of your database health whether you are running it on your own infrastructure or using AWS RDS. 
+
+[**Transaction Tracing**](https://sematext.com/tracing/) will show slow database operations, full SQL statements, end-to-end HTTP transaction context, top 10 operations by throughput, latency, or time consumed, filter database operations, and much more...
+
+**Inventory Monitoring** will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
+
+You can create [**custom dashboards**](./dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
+
+If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with over 40 integrations to choose from.
+
+## Creating a Monitoring App
+After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Monitoring App. An App is an independent namespace for your data.
+
+For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
+
+You create an App by pressing the **+ Create Monitoring App** button in the Monitoring tab.
+
+![Create a new Monitoring App](../images/guide/monitoring/sematext-monitoring-app-create.png)
+
+Choose one of the 40 integrations.
+
+![Choose Monitoring App Integration](../images/guide/monitoring/monitoring-app-integrations.png)
+
+Once clicking on your desired integration, add a name, and press **Continue**.
+
+![Name Monitoring App Integration](../images/guide/monitoring/name-monitoring-app.png)
+
+This will immediately open up the Agent installation instructions. Follow the steps and data will start flowing in!
+
+![Install Agent](../images/guide/monitoring/install-monitoring-agent.png)
+
+Once you have data flowing you can **analyze metrics** by a number of context-aware filters, add **alerts** and **anomaly detection**, and **correlate metrics** with events and logs.
+
+![Monitoring Agent Shipping Data](../images/guide/monitoring/monitoring-agent-shipping.png)
+
+## Monitoring App Layout
+
+This guide will help you get started with our APM service and discover reporting, monitoring, and other features and functionalities. Here's the default monitoring view and shown are the main application and system elements.
 
 ![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide.png)
 
-## App Navigation 
+## Monitoing App Settings
+
+The settings include:
+
+  - inviting new users to your App
+  - adjusting data retention time, daily volume, and limits
+  - [changing your App's plan](https://sematext.com/spm/pricing/) and settings
+  - checking how much data is, or has been shipped to your App
+  - create heartbeat alerts
+  - monitor installation instructions
+  
+![Sematext Monitoring App Settings](../images/guide/monitoring/monitoring-app-settings3.png)
+
 
 ### Side Navigation
 

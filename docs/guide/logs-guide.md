@@ -51,7 +51,7 @@ If you're using a particular **programming language**, configuring your **loggin
 
 The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
 
-Don't forget, if you're using **Docker**, setting up [Sematext Docker Agent](../sematext-docker-agent) is incredibly simple.
+Don't forget, if you're using **Docker**, setting up [Sematext Agent](../containers/sematext-agent/) is incredibly simple.
 
 Here's how to send a message from the terminal.
 ```bash
@@ -115,7 +115,7 @@ The image below shows the default logs view and marked are the main application 
 
 The settings include:
 
-  - inviting new users to your application
+  - inviting new users to your App
   - [authorizing public IPs to send data to your app via syslog](../logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
   - [changing your app's plan](../logs/faq/#plans-prices)
