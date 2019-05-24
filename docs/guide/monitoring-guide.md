@@ -140,23 +140,23 @@ Based on what type of Monitoring Integration you chose, more Reports get created
 
 ### Time Picker
 
-Time Picker is available whenever logging or monitoring app is selected as well as any generated dashboards are being used. One minute is the shortest time increment user can select. Thirty minutes, one and two hour, and one, two, seven, and thirty days time span shortcuts are exposed for easy common observability.
+The Time Picker is available whenever a Logs or Monitoring App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed common observability defaults.
 
-Custom time range can be selected using the time picker dropdown menu. App will automatically refresh upon selection and update all the reports in view accordingly.
+A **custom time range can be selected using the time picker dropdown menu**. The Logs App will automatically refresh upon selection and update all the reports accordingly.
 
 ### Refresh and Live Tail
 
-Refresh data and Live Tail / Stop auto-refresh data options are additional time specific features and located next to the time picker. Live Tail feature provides real-time insights as soon as your data is consumed and indexed, and all the data is automatically refreshed. It can be also stopped so no automatic refreshing takes place in case your devops team needs to inspect specific incident or anomaly within a certain time segment. 
+Refresh data and Live Tail options are located next to the time picker. The **Live Tail feature provides real-time insights as soon as your data is consumed and indexed**. It can be also stopped so the auto-refresh does not update the data, in case you need to inspect specific incidents or anomalies within a certain time segment.
 
 ### Notifications
 
-Bell icon in the right section of the header is used to open system notifications messaging modal window. If your plan needs upgrading, a new feature is announced, and other such system or service messages will be shown in the notifications view, and may or may not require user action.
+The megaphone icon in the right section of the header is used to open the notifications. If your plan is in need of an upgrade, a new feature is announced, or similar system and service updates require your attention, they'll be shown in the notifications view.
 
 ### User Settings
 
-Last, but not the least User Settings is the last right aligned item in the app header UI. Account switching features, Invitations to other devops team members, Billing, Help, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
+The User Settings is the last right aligned item in the header. **Switching accounts, Inviting team members, Billing, Help, Subscriptions**, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
-Image below shows the main app navigation sections:
+Here you can see the main navigation sections:
 
 - Side navigation 
 - App & Dash Selector dropdown menu
@@ -170,49 +170,46 @@ The next section describes the monitoring report menu located just below the top
 
 ## Monitoring Report Menu
 
-Monitoring Report Menu is where the true power of Sematext APM platform and the whole stack observability comes to life. Events and logs are integrated in a single monitoring reports pane, and used to correlate metrics with application and server logs, events, alerts, anomalies, and more. 
+The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. **Events and Logs** are **integrated** in a **single Monitoring Reports pane**, and used to **correlate metrics** with **application and server logs, events, alerts, anomalies**, and much more! 
 
-Image below shows the report menu in detail followed by explanation on how to use these features. See any metric and any logs in a single unified view, add additional components to your metrics reports, share reports, and more.
+Here's how you can **correlate Metrics with Events and Logs**, and view it all in a single view.
 
 ![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
 
 ### App State
 
-When your app is initially loaded, Save and Reset buttons will be hidden since that is app's default state and there is no need for changes to be saved or reset. If a new component is added or any existing component is edited, alert created, and report component removed, Save and Reset button will appear in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, app will preserve the initial state.
+When your Monitoring App is loaded the **Save and Reset buttons will be hidden** since you see the App's default state. If a **new component is added** or any existing **component is edited, alert created, and report component removed**, the **Save and Reset buttons will appear** in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, the App will preserve its initial state.
 
 ### Correlations
 
-Correlations feature is essential system part designed to provide a single pane of glass that provides full IT systems observability. Sematext team pioneered unification of logging and monitoring devops tools into a single app view, and continue to do so with the integration of events into correlations. 
+Correlations give you a single view for Metrics, Logs, and Events. This is a huge time saver to let you move from **Metrics spikes** to **drill down to Logs and Events** that caused them. 
 
-Moreover, with the new RUM (Real User Monitoring) functionality we seek to create a Suite of Enterprise IT Tools that provide instant ROI and help your devops team bring your servers, apps, metrics ,logs, events, and alerts together.
-
-This is really cool and a huge time saver. Empower your IT system administrators to go from metric spikes to your apps’ and servers’ logs in seconds, find similar metric patterns with built-in metric correlation, get to the root cause in minutes, and see any metric any logs in a single unified view!
-
-Image below shows correlations and Events toggle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents.
+With Alerts and the new Real User Monitoring feature we want to create a set of tools that provide instant feedback to help monitor and troubleshoot your infrastructure and software.
 
 #### Events
 
- ![Sematext Cloud Monitoring Guide - Events Correlation View](https://sematext.com/docs/images/guide/monitoring/event-correlation-with-stream.png) 
+Here you can see the Events toggle switched on, showing you an Events Histogram which follows the same timeline as the Metrics. 
 
-When the Event correlation is selected in the report menu, the Event Search component is loaded with search input, App Selector used to select an app and app's data you want to load and correlate, and events histogram displaying bar chart across the time frame selected in the time picker above.
+![Sematext Cloud Monitoring Guide - Events Correlation View](https://sematext.com/docs/images/guide/monitoring/event-correlation-with-stream.png) 
 
-Component's contextual menu items are located as a series of icons next to the App Selector. The first one opens Event Stream component below the Event Search component and provides the list view of every event, timestamp, details, event type tag(s), and event description.
+When the Events toggle is on in the report menu, the **Events Search component** is loaded. It has a **search box**, an **App Selector** to select what data you want to load and correlate, and an **Events Histogram** displaying bar chart across the time frame selected in the time picker.
 
-Combined with the metric reports below, and with the help of charting hairline, zoom and chart navigation tools, it is easy to see how using our APM and Logging tools in a single pane is a must have for any modern IT enterprise. 
+Contextual menu items are located as a series of icons next to the App Selector. The first one opens the **Event Stream component** below the **Event Search component** and provides the **list view of every event**. This includes timestamp, details, event type tag(s), and event description.
 
-Next, let's take a look at the Logs correlations and how to utilize them together with metric reports as well as events.
+Combined with the **Metric Reports** below, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! 
 
 #### Logs
 
-Just like the Events correlation view, turning on Logs correlation in the Reports Menu will display Logs Search componenet with search input, App Selector, and the series of icons used to expand log table, open logs component contextual menu, and other related settings and features as shown in the image below.
+<!-- Image below shows correlations and Events toggle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents. -->
 
-Clicking on the Logs icon will open logs data table component view below the Logs Search component. List view of log entries will be displayed with ```@timestamp```, ```_source```, and ```Tags``` as default columns, but all available logs fields will be available in Logs Table component dropdown menu, and easily selected or deselected and displayed in data table view. Column width can be also resized to better organize Log Table when multiple fields are selected at once.
+Just like with the Events toggle, turning on the **Logs toggle** in the Reports Menu will display a **Logs Search component** with a search box, an App Selector, and a series of icons used to expand the log table, open the Logs Search component contextual menu, and other related settings and features as shown in the image below.
 
-Every Log entry in the table has two left aligned icons, one that opens panel with all log details, and the other that opens Log context. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events.
+![Sematext Cloud Monitoring Guide - Logs Correlation View](https://sematext.com/docs/images/guide/monitoring/log-correlation-with-log-table.png)
 
-(These are both powerful features by themselves and deserve more attention in order to discover their true potential.  For more information on Logs refer to Logging Guide) 
+Clicking on the **Logs icon** will open **Logs Table component** below the Logs Search component. A list view of log entries will be displayed with `@timestamp`, `_source`, and `Tags` as default columns, but all available log fields will be available in the **Logs Table component dropdown menu**, and easily selected or deselected and displayed in data table view. Column width can be also resized to better organize Log Table when multiple fields are selected at once.
 
- ![Sematext Cloud Monitoring Guide - Logs Correlation View](https://sematext.com/docs/images/guide/monitoring/log-correlation-with-log-table.png)  
+Every Log entry in the table has two left aligned icons, one that opens **panel with all log details**, and the other that opens **Log context**. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events. Check out the [Logs Guide](./logs-guide) for more info. 
+
 
 ### Report Actions 
 
