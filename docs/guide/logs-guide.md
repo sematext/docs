@@ -51,7 +51,7 @@ If you're using a particular **programming language**, configuring your **loggin
 
 The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
 
-Don't forget, if you're using **Docker**, setting up [Sematext Docker Agent](../sematext-docker-agent) is incredibly simple.
+Don't forget, if you're using **Docker**, setting up [Sematext Agent](../containers/sematext-agent/) is incredibly simple.
 
 Here's how to send a message from the terminal.
 ```bash
@@ -115,7 +115,7 @@ The image below shows the default logs view and marked are the main application 
 
 The settings include:
 
-  - inviting new users to your application
+  - inviting new users to your App
   - [authorizing public IPs to send data to your app via syslog](../logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
   - [changing your app's plan](../logs/faq/#plans-prices)
@@ -154,7 +154,7 @@ The App dropdown selector lets you **choose any Logs or Monitoring App** as well
 
 ### App Actions
 
-Right next to the App Selector is the **App Actions dropdown menu** and **horizontal elipsis icon**. 
+Right next to the App Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
 
 The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal elipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
 
