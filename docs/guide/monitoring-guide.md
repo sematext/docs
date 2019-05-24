@@ -36,10 +36,13 @@ Choose one of the 40 integrations.
 Once clicking on your desired integration, add a name, and press **Continue**.
 
 ![Name Monitoring App Integration](../images/guide/monitoring/name-monitoring-app.png)
+<p align="center" style="font-style:italic;font-size:12px;">A sample of creating a Docker Monitoring App</p>
 
 This will immediately open up the Agent installation instructions. Follow the steps and data will start flowing in!
 
 ![Install Agent](../images/guide/monitoring/install-monitoring-agent.png)
+<p align="center" style="font-style:italic;font-size:12px;">Every type of Integration has a dedicated Agent Installation Guide</p>
+
 
 Once you have data flowing you can **analyze metrics** by a number of context-aware filters, add **alerts** and **anomaly detection**, and **correlate metrics** with events and logs.
 
@@ -95,9 +98,9 @@ App settings and actions include, but are not limited to:
 
 ### Side Navigation
 
-Side navigation is peristent UI region that can be collapsed / toggled on or off for full reports view, and is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team system features. All side navigation options are selectable at all times and the right aligned chevrons indicate that the top level section is collapsible and contains additional subitems.
+The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
 
-Side Navigation consists of the following top level sections:
+Side navigation top level sections for infrastructure and application performance monitoring, log management, transaction tracing, and real user monitoring:
 
 - Dashboards
 - Infrastructure
@@ -107,23 +110,33 @@ Side Navigation consists of the following top level sections:
 - Alerts and Events
 - Integrations
 
-as infrastructure and app monitoring, log management, transaction tracing, and real user monitoring system regions and
+Side navigation sections for user and team features:
 
 - Invites
 - Team
 - Account 
 
-as user and team Sematext Cloud system features.
+![Sematext Monitoring App Sidenav](../images/guide/monitoring/monitoring-sidenav.png)
 
-### App & Dash Selector
+### App Selector
 
-The App & Dash dropdown Selector lets you choose any logging or monitoring app as well as any dashboard report(s) that you have generated from those apps. Moreover, infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logging, and app & IT infrastructure monitoring, essential when rushing to fix IT production issues.
+The App dropdown selector lets you **choose any Logs or Monitoring App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
 
 ### App Actions
 
-Right next to the App & Dash Selector is the App Actions dropdown menu, horizontal elipsis icon, opening various app specific functions, namely instructions to install monitor and start sending your metrics, app settings, alert rules, heartbeat alert creation as well as ability to connect two different apps, invite team members, and transfer app ownership.
+Right next to the App Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
 
-All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. App view remains unchanged and allows for easy interaction between various system settings and reports view.
+The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal ellipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
+
+All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. The Monitoring App view remains unchanged and allows for easy interaction between various system settings and reports views.
+
+### Report Selector
+
+Once you create a Monitoring App, and start your Agent, you will get a **default Report created for you named Overview**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
+
+![](../images/guide/monitoring/report-selector.png)
+
+Based on what type of Monitoring Integration you chose, more Reports get created by default. In this Docker sample you can see three more Reports are created by default.
 
 ### Time Picker
 

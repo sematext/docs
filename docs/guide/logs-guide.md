@@ -154,7 +154,7 @@ The App dropdown selector lets you **choose any Logs or Monitoring App** as well
 
 ### App Actions
 
-Right next to the App Selector is the **App Actions dropdown menu** and **horizontal elipsis icon**. 
+Right next to the App Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
 
 The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal elipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
 
