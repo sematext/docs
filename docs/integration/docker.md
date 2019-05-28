@@ -19,6 +19,140 @@ We set it up for you, out-of-the-box!
 
 Sematext Agent collects various metrics about hosts and ships that to Sematext Cloud.
 
+### Docker
+You install the Agent simply by running one Docker command. This will start the Agent as a Docker container on your host.
+
+```bash
+docker run -d  --restart always --privileged -P --name st-agent \
+  -v /sys/kernel/debug:/sys/kernel/debug \
+  -v /var/run/:/var/run/ \
+  -v /proc:/host/proc:ro \
+  -v /etc:/host/etc:ro \
+  -v /sys:/host/sys:ro \
+  -v /usr/lib:/host/usr/lib:ro \
+  -e CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac \
+  -e INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de \
+  -e REGION=US \
+  -e JOURNAL_DIR=/var/run/st-agent \
+  -e LOGGING_WRITE_EVENTS=false \
+  -e LOGGING_REQUEST_TRACKING=false \
+  -e LOGGING_LEVEL=info \
+  -e NODE_NAME=`hostname` \
+  -e CONTAINER_SKIP_BY_IMAGE=sematext \
+  sematext/agent:latest
+```
+
+### Docker Compose
+If you prefer adding the Agent in a `docker-compose` configuration, here's how you do it.
+
+```yaml
+# docker-compose.yml 
+version: '3' 
+services: 
+  sematext-agent: 
+    image: 'sematext/agent:latest' 
+    environment: 
+      - affinity:container!=*sematext-agent* 
+      - CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac 
+      - INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de 
+      - REGION=US 
+      - JOURNAL_DIR=/var/run/st-agent 
+      - LOGGING_WRITE_EVENTS=false 
+      - LOGGING_REQUEST_TRACKING=false 
+      - LOGGING_LEVEL=info 
+      - NODE_NAME=$HOSTNAME 
+      - CONTAINER_SKIP_BY_IMAGE=sematext 
+    cap_add: 
+      - SYS_ADMIN 
+    restart: always 
+    volumes: 
+      - '/var/run/:/var/run/' 
+      - '/sys/kernel/debug:/sys/kernel/debug' 
+      - '/proc:/host/proc:ro' 
+      - '/etc:/host/etc:ro' 
+      - '/sys:/host/sys:ro' 
+      - '/usr/lib:/host/usr/lib:ro'
+```
+
+Then you can run one command to start the Agent.
+
+```bash
+docker-compose up -d
+```
+
+### Docker Swarm
+
+If you're running a Docker Swarm cluster, it's just as easy to run a Docker Swarm service.
+
+```bash
+docker service create --mode global --name st-agent \
+  --restart-condition any \
+  --mount type=bind,src=/var/run,dst=/var/run/ \
+  --mount type=bind,src=/usr/lib,dst=/host/usr/lib \
+  --mount type=bind,src=/sys/kernel/debug,dst=/sys/kernel/debug \
+  --mount type=bind,src=/proc,dst=/host/proc,readonly \
+  --mount type=bind,src=/etc,dst=/host/etc,readonly \
+  --mount type=bind,src=/sys,dst=/host/sys,readonly \
+  -e NODE_NAME={{.Node.Hostname}} \
+  -e CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac \
+  -e INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de \
+  -e REGION=US \
+  -e JOURNAL_DIR=/var/run/st-agent \
+  -e LOGGING_REQUEST_TRACKING=false \
+  -e LOGGING_WRITE_EVENTS=false \
+  -e LOGGING_LEVEL=info \
+  -e PKG_ENABLED=false \
+  sematext/agent:latest
+```
+
+If you like using `docker stack`, editing the `docker-compose.yml` from above slightly you'll have a working configuration.
+
+```yaml
+version: "3"
+services:
+  agent:
+    image: sematext/agent:latest
+    deploy:
+      mode: global
+      labels: [APP=AGENT]
+      restart_policy:
+        condition: any
+        delay: 1s
+    cap_add: 
+      - SYS_ADMIN 
+    restart: always 
+    environment:
+      - affinity:container!=*sematext-agent* 
+      - CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac
+      - INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de 
+      - JOURNAL_DIR=/var/run/st-agent 
+      - LOGGING_WRITE_EVENTS=false 
+      - LOGGING_REQUEST_TRACKING=false 
+      - LOGGING_LEVEL=info 
+      - NODE_NAME=$HOSTNAME 
+      - CONTAINER_SKIP_BY_IMAGE=sematext
+      - REGION=US
+      - PKG_ENABLED=false
+    volumes:
+      - "/var/run:/var/run/"
+      - "/usr/lib:/host/usr/lib"
+      - "/sys/kernel/debug:/sys/kernel/debug"
+      - "/proc:/host/proc:ro"
+      - "/etc:/host/etc:ro"
+      - "/sys:/host/sys:ro"
+```
+
+Then you run:
+
+```bash
+docker stack deploy -c docker-compose.yml <name>
+```
+
+The Sematext Agent will start collecting dozens of key metrics right away, and start showing you the performance and health of your Docker containers immediately.
+
+## Collected Docker Metrics
+The Sematext Agent will collect the following container and host metrics.
+
 ### Host Metrics
 
 - CPU
@@ -78,7 +212,81 @@ Sematext Agent can **auto-discover services** deployed on physical/virtual hosts
 
 That is a lot of information and **Sematext organizes this information in reports** for **infrastructure monitoring**, **container monitoring**, and **Kubernetes cluster monitoring**.
 
-## Overview
+## Docker Alerting
+To save you time Sematext automatically creates a set of default alert rules such as alerts for low disk space. You can [create additional alerts](../alerts) on any metric.
+
+There are 3 types of alerts in Sematext:
+
+- **Heartbeat alerts**, which notify you when a server is down
+- **Threshold-based alerts** that notify you when a metric value crosses a predefined threshold
+- **Alerts** based on statistical **anomaly detection** that notify you when metric values suddenly change and deviate from the baseline
+
+![](https://sematext.com/wp-content/uploads/2019/04/docker-container-alerts.gif)
+
+## Docker Events
+Events reflect changes in your infrastructure, from node restarts to container deployments, or changes in running containers. Events can track every Docker command. **Sematext Agent collects Events from the Docker Engine and Kubernetes API.** Whenever something goes wrong in your container stack, you can **correlate Logs or Metrics with the time of Docker events!**
+
+Here's the list of container events:
+
+- Docker containers trigger the following events:
+    - Lifecycle events:
+        - Create – when a container is created
+        - Start – when a container starts
+        - Restart – when a container gets restarted
+        - Stop – when a container stops
+        - Oom – when a container runs out of memory
+        - Pause – when a container gets paused
+        - Unpause – when a container continues to run after a pause
+        - Die – when the main process in a container dies
+        - Kill – when the container gets killed
+        - Destroy – when a container gets destroyed
+- Runtime events
+    - Commit – when changes to the container filesystem are committed. Modifying deployed containers in production is not a common practice, therefore the commit could - indicate a “hack” and should be watched carefully.
+    - Copy – when files are copied from/to a container. Could indicate a potential data leak.
+    - Attach – when a process connects to container console – somebody is reading your container logs …
+    - Detach – when a process disconnects from container console streams
+    - Exec – when a command is executed in container console, very helpful to investigate in potential hacker attacks
+    - Export – when a container gets exported
+    - Health_status – when health_status is checked
+    - Rename – when a container gets renamed
+    - Resize – when a container gets resized
+    - Top – when somebody list top processes in a container
+    - Update – when a container is updated e.g. with new labels
+- Docker images report the following events:
+    - Delete – when an image gets deleted
+    - Import – when an image gets imported
+    - Load – when an image is loaded
+    - Pull – when an image is pulled from a registry
+    - Push – when an image is pushed to a registry
+    - Save – when an image is saved
+    - Tag – when an image is tagged with labels
+    - Untag – when an image tag is removed
+- Docker plugins report the following events:
+    - Enable – when a plugin gets enabled
+    - Disable – when a plugin gets disabled
+    - Install – when a plugin gets installed
+    - Remove – when a plugin gets removed
+- Docker volumes report the following events:
+    - Create – when a volume is created
+    - Destroy – when a volume gets destroyed
+    - Mount – when a volume is mounted to a container
+    - Unmount – when a volume is removed from a container
+- Docker networks report the following events:
+    - Create – when a  network is created
+    - Connect – when a container connects to a network
+    - Remove – when the network is removed
+    - Destroy – when a network is destroyed
+    - Disconnect – when a container disconnects from a network
+- Docker daemons report the following events:
+    - Reload
+- Docker services, nodes, secrets, and configs report the following events:
+    - Create – on the creation of a resource
+    - Remove – on the removal of a resource
+    - Update – on the creation of a resource
+
+![](../images/integrations/docker/events.png)
+
+## Metrics Overview
   
 The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.
 
@@ -179,7 +387,7 @@ The following information is collected and transmitted to Sematext Cloud or Sema
       - Red Hat OpenShift
 
 
-## Metrics
+## Metrics Fields
 
 |Name|Type|Unit|Numeric Type|Label|Description|
 |----|----|----|------------|-----|-----------|
