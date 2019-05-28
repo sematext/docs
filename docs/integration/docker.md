@@ -1,9 +1,86 @@
 title: Docker Monitoring Integration
 description: Container performance monitoring - metrics, event, log collection and parsing for Docker
 
+The Sematext Integration for Docker uses [Sematext Agent](https://sematext.com/docs/containers/) and the open-source [Logagent](https://sematext.com/docs/logagent/installation-docker/) for the collection of container logs.
+
+We at Sematext aim to save you time and effort by giving you a strong starting point for monitoring Docker. You will **not** have to:
+
+- figure out which metrics to collect and which ones to ignore
+- give metrics meaningful labels
+- hunt for metric descriptions in the docs so that you know what each of them actually shows
+- build charts to group metrics that you really want on the same charts, not N separate charts
+- figure out, for each metric, which aggregation to use (min? max? avg? something else?)
+- build dashboards to combine charts with metrics you typically want to see together
+- set up basic alert rules
+
+We set it up for you, out-of-the-box!
+
+## Docker Monitoring with Sematext Agent
+
+Sematext Agent collects various metrics about hosts and ships that to Sematext Cloud.
+
+### Host Metrics
+
+- CPU
+- memory
+    
+![](../images/integrations/docker/hostcpu.png)
+
+- disk 
+
+![](../images/integrations/docker/hostdisk.png)
+
+- network
+- processes
+- containers
+
+![](../images/integrations/docker/containers.png)
+
+- orchestrator platforms
+
+### eBPF Support
+
+To gain deep **insight into the Linux kernel**, Sematext Agent relies on **eBPF** to implant **instrumentation points**, which means to **attach eBPF programs to kprobes** on kernel functions. This ensures a very efficient and powerful system exploration approach with better network tracing and negligible overhead.
+
+### Auto-Discovery
+
+Sematext Agent can **auto-discover services** deployed on physical/virtual hosts and containers. It also collects data about your infrastructure to provide you with infrastructure inventory reports. It collects events from different sources such as OOM notifications, container or Kubernetes events.
+
+### Container Metrics
+
+- Container runtime agnostic discovery and monitoring
+    - Containers are discovered from cgroupfs hierarchies
+    - Supports Docker and Rkt container engines
+- Container metrics fetched directly from cgroupfs
+    - CPU usage
+    - Disk space usage and IO stats
+        ![](../images/integrations/docker/container-cpu-io.png)
+    - Memory usage, memory limits, and memory fail counters
+    - Network IO stats
+        ![](../images/integrations/docker/container-memory-network.png)
+- Collection of host inventory information
+    - Host kernel version/system information
+    - Information about installed software packages
+- Collection of container metadata
+    - Container name
+    - Image name
+    - Container networks
+    - Container volumes
+    - Container environment
+    - Container labels including relevant information about orchestration
+    - Kubernetes metadata such as Pod name, UUID, Namespace
+    - Docker Swarm metadata such as Service name, Swarm Task etc.
+        ![](../images/integrations/docker/container-metadata.png)
+- Collection of container events
+- Docker events such as start/stop/die/volume mount, etc.
+- Kubernetes events such as Pod status changes deployed, destroyed etc.
+- Tracking deployment status and Pod restarts over time
+
+That is a lot of information and **Sematext organizes this information in reports** for **infrastructure monitoring**, **container monitoring**, and **Kubernetes cluster monitoring**.
+
 ## Overview
   
-The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.  Sematext Cloud integration for Docker uses [Sematext Agent](https://sematext.com/docs/containers/) and the open-source [Logagent](https://sematext.com/docs/logagent/installation-docker/) for the collection of container logs. 
+The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.
 
 <table>
 <tbody>
