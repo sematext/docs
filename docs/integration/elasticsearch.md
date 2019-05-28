@@ -1,9 +1,114 @@
 title: Elasticsearch Monitoring Integration
 description: Collect and monitor key Elasticsearch metrics such as request latency, indexing rate, and segment merges with built-in anomaly detection, threshold, and heartbeat alerts. Send notifications to email and various chatops messaging services, correlate events & logs, filter metrics by server, node, time or index, and visualize your cluster's health with out of the box graphs and custom dashboards
 
-## Integration
+## Agent Install
+Setting up the monitoring agent takes less than 5 minutes:
 
-- Instructions: [https://apps.sematext.com/ui/howto/Elasticsearch/overview](https://apps.sematext.com/ui/howto/Elasticsearch/overview)
+1.  Create an Elasticsearch App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data. The short  [What is an App in Sematext Cloud](https://www.youtube.com/watch?v=tr_qxdr8dvk&index=14&list=plt_fd32ofypflbfzz_hiafnqjdltth1ns) video has more details.
+2.  Name your Elasticsearch monitoring App and, if you want to collect Elasticsearch logs as well, create a Logs App along the way.
+3.  Install the Sematext Agent according to the  [setup instructions](https://apps.sematext.com/ui/howto/elasticsearch/overview) displayed in the UI.
+
+![App creation and setup instructions in Sematext Cloud](https://sematext.com/wp-content/uploads/2019/04/create-elasticsearch-app.gif)
+
+For example, on Ubuntu, add Sematext Linux packages with the following command:
+
+    echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
+    wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
+    sudo apt-get update
+    sudo apt-get install spm-client
+
+Then setup Elasticsearch monitoring by providing Elasticsearch server connection details:
+
+    sudo bash /opt/spm/bin/setup-sematext  \
+        --monitoring-token <your-token-goes-here>   \
+        --app-type elasticsearch  \
+        --agent-type standalone  \
+        --SPM_MONITOR_ES_NODE_HOSTPORT 'localhost:9200'
+
+## Important Metrics to Watch and Alert on
+### System and JVM Metrics
+The first place we would recommend looking for in a new system are the OS metrics: CPU, memory, IO and network. A healthy CPU graph looks like this:
+
+![CPU usage](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.18.14-1.png)
+
+Note how the relative percentage of *wait* and *system* is negligible compared to *user*. Meaning we don't have a bottleneck in IO. And total usage isn't close to 100% all the time, so there's headroom.
+
+If there's high CPU usage, have a look at JVM garbage collection (GC) times. Which are probably good candidates for alerts. If GC times are high, then Elasticsearch is in trouble with JVM memory, rather than doing useful work with the CPU. You can look deeper into JVM memory usage to check. A healthy pattern looks like a shard tooth:
+
+![JVM memory usage per pool](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-10.50.27-1.png)
+
+When it comes to system memory, don't be worried if you see very little free, like here:
+
+![System memory usage](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.24.02-1.png)
+
+The operating system will try to cache your index files as much as it can. The *cached* memory can be freed up, if the system needs more memory.
+### Elasticsearch-specific metrics
+You'll want to monitor query rates and times. In other words, how fast is Elasticsearch responding? Since this will likely impact your users, these are metrics worth alerting on as well.
+
+![Query and fetch rate](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.09.09-1.png)
+
+On the indexing side, check the indexing rate:
+![Indexing rate](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.13.19-1.png)
+
+And correlate it with the asynchronous refresh and merge times, as they can correlate with your CPU spikes:
+
+![Refresh, flush and merge stats](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.16.51-1.png)
+
+For example, if refresh time is too high, you might want to adjust the [refresh interval](https://sematext.com/blog/elasticsearch-refresh-interval-vs-indexing-performance/).
+
+Last, but certainly not least, you may want to get an alert if a node leaves the cluster, so you can replace it. Once you do, you can keep an eye on shard stats, to see how many are initializing or relocating:
+
+![Dropping nodes and relocation of shards](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-10.59.52-1.png)
+
+### Alert Setup
+There are 3 types of alerts in Sematext:
+
+ - **Heartbeat alerts**, which notify you when a Elasticsearch DB server is down
+ - Classic **threshold-based alerts** that notify you when a metric value crosses a predefined threshold
+ - Alerts based on statistical **anomaly detection** that notify you when metric values suddenly change and deviate from the baseline
+
+Let’s see how to actually create some alert rules for Elasticsearch metrics in the animation below. The request query count chart shows a spike. We normally have up to 100 requests, but we see it can jump to over 600 requests. To create an alert rule on a metric we’d go to the pulldown in the top right corner of a chart and choose “Create alert”. The alert rule applies the filters from the current view and you can choose various notification options such as email or configured [notification hooks](https://sematext.com/docs/alerts/#alert-integrations) (PagerDuty, Slack, VictorOps, BigPanda, OpsGenie, Pusher, generic webhooks etc.)
+
+![Alert creation for Elasticsearch request query count metric](https://sematext.com/wp-content/uploads/2019/03/elasticsearch-create-alert.gif)
+
+## Correlating Logs and Metrics
+Since having [logs and metrics in one platform](https://sematext.com/metrics-and-logs/) makes troubleshooting simpler and faster let’s ship Elasticsearch logs too. You can use [many log shippers](https://sematext.com/docs/integration/#logging), but we’ll use [Logagent](https://sematext.com/logagent/) because it’s lightweight, easy to set up, and because it can parse and structure logs out of the box.
+### **Shipping Elasticsearch Logs**
+ 1. Create a Logs App to obtain an App token
+ 2. Install Logagent npm package
+```
+sudo npm i -g @sematext/logagent
+```
+
+you don’t have Node.js, you can install it easily. E.g. On Debian/Ubuntu:
+
+```
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+ 3. Install the Logagent service by specifying the logs token and the path to Elasticsearch log files. You can use ``-g ‘var/log/**/elasticsearch*.log` `` to ship only logs from Elasticsearch server. If you run other services, on the same server consider shipping all logs using ``-g `/var/log/**/*.log` `` The default settings ship all logs from /var/log/**/*.log when the -g parameter is not specified. Logagent detects the init system and installs Systemd or Upstart service scripts. On Mac OS X it creates a launchd service. Simply run:
+
+```
+sudo logagent-setup -i YOUR_LOGS_TOKEN -g `var/log/**/elasticsearch*.log`
+#for EU region:
+#sudo logagent-setup -i LOGS_TOKEN
+#-u logsene-receiver.eu.sematext.com
+#-g `var/log/**/elasticsearch*.log`
+```
+
+The setup script generates the configuration file in /etc/sematext/logagent.conf and starts Logagent as system service.
+
+### **Log Search and Dashboards**
+
+Once you have logs in Sematext you can search through them when troubleshooting, save queries you run frequently or  [create your individual logs dashboard](https://sematext.com/product-updates/#/2018/custom-reports-for-monitoring-logs-apps).
+
+![Search for Elasticsearch Logs](https://sematext.com/wp-content/uploads/2019/03/clickhouse-logs-search.png)
+
+### **Elasticsearch Metrics and Log Correlation**
+
+A typical troubleshooting workflow starts from detecting a spike in the metrics, then digging into logs to find the root cause of the problem. Sematext makes this really simple and fast. Your metrics and logs live under the same roof. Logs are centralized, the search is fast, and the powerful  [log search syntax](https://sematext.com/docs/logs/search-syntax/) is simple to use. Correlation of metrics and logs is literally one click away.
+
+![Elasticsearch logs and metrics in a single view](https://sematext.com/wp-content/uploads/2019/03/pasted-image-0-1.png)
 
 ## More about Elasticsearch Monitoring
 
@@ -133,16 +238,16 @@ thread pool max<br>**es.thread.pool.max** <br>*(long gauge)*                    
 
 ** Why doesn't the number of documents I see in SPM match the number of documents in my Elasticsearch index **
 
-SPM collects index stats from primary shards only.  To see the
+SPM collects index stats from primary shards only.  To see the
 total number of documents in an index, select all shards in that index
-and choose "sum".  The list of shards and the "sum" function can be
+and choose "sum".  The list of shards and the "sum" function can be
 found in the "Shard filter" in the Index Stats
 report.
 
 ** Can SPM collect metrics even when Elasticsearch HTTP API is disabled **
 
 Each SPM agent collects Elasticsearch metrics only from the local
-node by accessing the Stats API via HTTP.  To allow only local access
+node by accessing the Stats API via HTTP.  To allow only local access
 add the following to elasticsearch.yml. Don't forget to restart each ES
 node to whose elasticsearch.yml you add this.
 
@@ -152,13 +257,13 @@ http.host: "127.0.0.1"
 
 ** Can I point SPM monitor to a non-localhost Elasticsearch node **
 
-Yes.  Adjust
+Yes.  Adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
-and change the SPM\_MONITOR\_ES\_NODE\_HOSTPORT property from the
-default localhost:9200 value to use an alternative hostname:port.  After
+and change the SPM\_MONITOR\_ES\_NODE\_HOSTPORT property from the
+default localhost:9200 value to use an alternative hostname:port.  After
 that restart SPM monitor (if you are running a standalone version) or
 Elasticsearch process(es) with embedded SPM
-monitor. 
+monitor. 
 
 ** My Elasticsearch is protected by basic HTTP authentication, can I use SPM  **
 
