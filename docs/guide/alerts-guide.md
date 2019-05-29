@@ -74,14 +74,22 @@ Press Save and you're done. Check out the [integrations](https://sematext.com/do
 
 ### Alerting on Metrics
 
-Metrics monitoring has different alerting design than the logs query centered one. Although both have threshold and anomaly alerts available, monitoring apps use component based alerting userflow. Every metric time series becomes a component and custom alerts can be created for each, just as it can be added to a custom [dashboard](https://sematext.com/docs/guide/dashboards-guide/).
+Metrics have both **Threshold** and **Anomaly** Alerts, but a Monitoring App has **component-based Alerting**. Every time-series metric is a _component_. Alerts can be created for each component, just as they can be added to custom [dashboards](./dashboards-guide/).
 
 ![Sematext Cloud Metric Component Alerts](https://sematext.com/docs/images/guide/alerts-and-events/metric-component-alert.png "Sematext Cloud Metric Component Alerts")
 
-Additionally, monitoring apps have Heartbeat alerts available as a part of app settings and available in the app settings dropdown menu. They are triggered when something you are monitoring, like your servers, containers, or your applications stop emitting data to Sematext Cloud.
+Monitoring Apps also have **Heartbeat** Alerts as part of their settings. You can find it in the App Settings dropdown menu. They are triggered when what you are monitoring, like your servers, containers, or your applications stop sending data to Sematext.
 
 ![Sematext Cloud Metric Component Custom Alerts](https://sematext.com/docs/images/guide/alerts-and-events/create-heartbeat-alerts.png "Sematext Cloud Metric Component Custom Alerts")
 
----
+## Next step
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack. 
+[Sign up](https://apps.sematext.com/ui/registration) to Sematext Cloud for free to get started, and create your first Logs App. Upload logs from all your servers to our centralized log management solution through our Elasticsearch API, and experience a proper hosted Elasticsearch Stack.
+
+If you already have an account, [sign in](https://apps.sematext.com/ui/login/) and start shipping logs!
+
+Check this out to learn more about Sematext:
+
+- [Alerts documentation](../alerts/)
+- Our [website](https://sematext.com/) and [Alerts](https://sematext.com/alerts/) features 
+- Feel free to use the chat in the right bottom corner of the app or website and one of our engineers will help you navigate Sematext waters.
