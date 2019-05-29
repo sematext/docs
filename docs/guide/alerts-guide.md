@@ -25,38 +25,52 @@ Sematext lets you manage Alert Rules across your whole stack. You can use variou
 
 ## Default Alerts
 
-Alerting gives you the ability to create monitors that trigger notifications when performance problems occur in your IT infrastructure. As soon as any app is created, either logging or monitoring, the system will generate several app specific alerts rules to get you started. 
+As soon as an [App](./app-guide) is created, either for [Logs](./logs-guide) or [Monitoring](./monitoring-guide), you will see several app-specific Alerts Rules created for you by default. 
 
-Image below shows system generated saved query algolert anomaly alert for logging app. Three different alert types are also generated for every monitoring app created, namely: 
+Default Alerts for a Logs App:
 
-- metric alert
+- **Anomaly Alerts** for **Error and Warning** search queries
 
-- heartbeat alert
+Default Alerts for a Monitoring App: 
 
-- metric algolert anomaly
+- **Metric Alert for Disk Usage**
+- **Heartbeat Alert** if the **Agent stops sending data to the Monitoring App**
+- **Metric Anomaly Alert** for misbehaving Nodes
 
-In the case of an example Elasticsearch monitoring app, Java usage threshold and Elasticsearch nodes anomalies were integration specific system generated alerts. There is also a heartbeat alert created that is triggered when the agent you installed stops emitting data to Sematext Cloud.  
+> In this example which is a Elasticsearch Monitoring App, the Java usage threshold and Elasticsearch Node Anomalies are integration-specific default Alerts.
 
 ![Sematext Cloud System Generated Alerts](https://sematext.com/docs/images/guide/alerts-and-events/system-generated-alerts.png "Sematext Cloud System Generated Alerts")
 
-Navigate to [Alert Rules](https://apps.sematext.com/ui/events/alerts/rules) where you will find all system generated as well user generated alerts listed for all apps that were created. Use actions dropdown menu to edit or delete an existing alerts and icons are used to visualize different alert types.
+The [Alert Rules](https://apps.sematext.com/ui/events/alerts/rules) page is where you will find all default, and created, Alerts for all Apps you'ce created. Here you can toggle, edit or delete any existing Alerts.
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Sematext Cloud Alerts Rules Window")
 
 ## Creating Alerts
 
-Sematext APM and logging management platform can accommodate IT systems requiring extensive alerting structure, but you may not need an extensive alerting structure at all. A simple alert policy with an email notification channel to cover basic alerting scenarios can be defined just as you can define complex ones.
+Sematext Alerts can cover both complicated alerting scenarios with multiple rules on both Logs and Monitoring, as well as Events. A basic Alert Policy with an email or Slack notification is enough to cover elementary alerting needs.
 
 ### Alerting on Logs
 
-In order to create a custom alert in any logging app logs search query needs to be saved. Save Query modal dialogue window will open with option to save an alert. When enable alert option is selected alert notifications panel will expand and alert specific information shown, namely 
+To **create an Alert** you need to enter a **search query** and press **Save Query/Alert Rule**. 
 
-- notification hooks details with default email notification hook used to send the message to your account and ability to add additional email address as well as other types of notification hooks. Check [integrations](https://sematext.com/docs/integration/) documentation pages for more information on available alerts notification hooks, and
+![Create Alert Search Query](../images/guide/alerts-and-events/create-alert-logs-search-query.png)
 
-- alert type, with threshold based alert and algolert or anomaly detection alert for any logging app. For more information on alerting capabilities check [alerts](https://sematext.com/docs/alerts/) documentation pages.
+A **Save Query** window will open with the option to **Enable Alert**. When it's toggled, the **Alert Type picker** and **Condition** will expand, and the **Notifications** and **Schedule** tabs will be enabled. You'll see:
 
-![Sematext Cloud Logging App Alerts](https://sematext.com/docs/images/guide/alerts-and-events/logs-app-create-alert.png "Sematext Cloud Logging App Alerts")
+- **Alert Type**, to choose either Threshold Alerts or Anomaly Alerts. For more information on alerting capabilities check [alerts](https://sematext.com/docs/alerts/) documentation pages.
+- **Condition**, to choose when the Alert will be triggered.
 
+![Enable Alert Notification](../images/guide/alerts-and-events/save-alert-1.png)
+
+- **Notification hook details** with a **default email** notification hook used to send the message to your account. You can also add additional email addresses as well as other types of notification hooks.
+
+![Set Alert Notification Hooks](../images/guide/alerts-and-events/save-alert-2.png)
+
+- **Schedule**, to choose when the Alerts will notify you based on a period, schedule or time.
+
+![Set Alert Schedule](../images/guide/alerts-and-events/save-alert-3.png)
+
+Press Save and you're done. Check out the [integrations](https://sematext.com/docs/integration/) documentation for more information about alert notification hooks.
 
 ### Alerting on Metrics
 
