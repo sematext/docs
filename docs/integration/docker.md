@@ -176,7 +176,7 @@ The Sematext Agent will collect the following container and host metrics.
 
 To gain deep **insight into the Linux kernel**, Sematext Agent relies on **eBPF** to implant **instrumentation points**, which means to **attach eBPF programs to kprobes** on kernel functions. This ensures a very efficient and powerful system exploration approach with better network tracing and negligible overhead.
 
-### Auto-Discovery
+### Service Auto-Discovery
 
 Sematext Agent can **auto-discover services** deployed on physical/virtual hosts and containers. It also collects data about your infrastructure to provide you with infrastructure inventory reports. It collects events from different sources such as OOM notifications, container or Kubernetes events.
 
@@ -288,7 +288,7 @@ Here's the list of container events:
 
 ## Metrics Overview
   
-The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise version.
+The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise.
 
 <table>
 <tbody>
