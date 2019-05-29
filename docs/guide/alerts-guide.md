@@ -1,33 +1,27 @@
-title: Alerts Guide
+title: Sematext Alerts User Guide
 description: Sematext Cloud Alerts give you a flexible centralized notification system that lets you manage Alert Rules and Alert Conditions across your whole stack. Use Events to correlate them with Metrics and/or Logs, and see what is happening with your infrastructure.  
 
-A software developer may need alert notifications for both front-end and back-end performance, where operations personnel may need them for poor back-end performance, such as server memory or CPU performance.
+Receiving Alerts when your software is misbehaving is crucial for every developer. Good alerting practices include:
 
-Given there are different system administration and devops teams across your IT department, a good alerting practices require:
+- **Alert Rules** that **detect Anomalies** and notify when key **performance indicators spike or drop**
+- **Criteria** that triggers **Alerts for monitored resources**
+- **Thresholds** defined for **Alerts** when selected **metrics reach certain severity levels**
+- **Notification channels** through which the responsible team will be notified about the incident
 
-- Rules to address alerting requirements and personnel that is responsible for them.
+[Sematext Alerts](../alerts) help you address underlying issues before they affect user experience. There are three types of Alerts. 
 
-- Criteria that triggers alerts for monitored resources and apps in your IT architecture.
+- **Threshold** - Alerts that are based on classic thresholds. They are **triggered** when something **crosses a pre-defined threshold**.
+- **Anomaly** - Alerts based on statistical anomaly detection. They are **triggered** when **values** suddenly **change and deviate from the baseline**. 
+- **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud. 
 
-- Thresholds you define for different alerting situations when your selected metrics reach certain severity levels. 
+> **Threshold** and **Anomaly** Alerts can be triggered for both Monitoring and Logs Apps, while **Heartbeat** Alerts are only available for Monitoring Apps.
 
-- Notification channels through which your team will be notified about the incident. 
+Sematext lets you manage Alert Rules across your whole stack. You can use various notification channels to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
 
-Your devops team needs to be notified when your monitored IT key performance indicators spike or drop. Sematext Cloud provides coordinated alerting tools that help you address the underlying issues before they affect user experience. There are three diferent types of alerts available, namely: 
-
-- Threshold alerts are the classic threshold based alerts. They are triggeed when something crosses a pre-defiend threshold.
- 
-- Anomaly alerts are based on statistical anomaly detection. They are triggeed when values suddenly change and deviate from the continously computed baseline. 
-
-- Heartbeat alerts are triggered when something you are monitoring, like your servers, containers, or your applications stop emitting data to Sematext. 
-
-Threshold and anomaly alerts can be triggered for both metrics and logging apps, where heartbeat alerts are only available for metrics apps.
-
-Our alerting tools provide flexible centralized notification system that lets you manage alert rules across your whole stack. Focus on your key IT performance metrics and use various notification channels to get alerted when critical violations occur so you can take action and resolve an issue. Our alerting tools easily integrate with team communication software like PagerDuty, OpsGenie, HipChat, Slack, and more. 
-
-Check [integrations](https://sematext.com/docs/integration/) pages for more information.
-
-Understanding these fundamental alerting principles will help you get started with our SaaS or on-premises service and define conditions or identify what triggers an alert for the selected rule. You can easily configure alert rules and criteria required to create an incident record, manage notifications channels, and review alert incidents and assign responsibilities for the details of a particular incident.
+- PagerDuty
+- OpsGenie
+- HipChat
+- Slack, and [many more](https://sematext.com/docs/integration/). 
 
 ## Default Alerts
 
