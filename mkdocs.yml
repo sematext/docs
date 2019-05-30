@@ -54,6 +54,9 @@ pages:
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
+    - Experience:
+      - Overview: experience/index.md
+      - Getting Started: experience/getting-started.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
