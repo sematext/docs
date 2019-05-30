@@ -41,7 +41,7 @@ To get the full view over some metrics - like the consumer lag, you also need to
 
 ### Monitoring Producers
 
-To have the full visibility into the whole Kafka pipeline it is crucial to monitor your Kafka producers as well. If your are using Java or Scala as the language of your choice for the producers implementation you need to install the Kafka Monitoring Agent on each host working as Kafka producer by running the following command (i.e. for CentOS):
+To have the full visibility into the entire Kafka pipeline it's crucial to monitor your Kafka producers as well. If you're using Java or Scala as the language of choice for the producers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka producer by running the following command (i.e. for CentOS):
 
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
@@ -49,7 +49,7 @@ sudo yum clean all
 sudo yum install spm-client
 ``` 
 
-After that, run following command to setup Kafka producer monitoring:
+After that, run the following command to setup Kafka producer monitoring:
 
 ```bash
 sudo bash /opt/spm/bin/setup-sematext  \
@@ -69,7 +69,7 @@ Once that is done you need to add the following options to the JVM start-up prop
 
 ### Monitoring Consumers
 
-Monitoring your consumers is crucial to have the visibility into the topic lag, which can help you quickly identify issues with your pipeline. If your are using Java or Scala as the language of your choice for the Kafka consumers implementation you need to install the Kafka Monitoring Agent on each host working as Kafka consumer by running the following command (i.e. for CentOS):
+Monitoring your consumers is crucial to have the visibility into the topic lag, which can help you quickly identify issues with your pipeline. If you're using Java or Scala as the language of choice for the consumers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka consumer by running the following command (i.e. for CentOS):
 
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
