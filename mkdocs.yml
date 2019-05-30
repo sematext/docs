@@ -115,9 +115,18 @@ pages:
         - Chef Recipe: agents/chef-recipe.md
       - Node Agent: agents/node-agent.md
       - Sematext Agent:
-        - Overview: sematext-agent/index.md
-        - OS Metrics: sematext-agent/os-metrics.md
-        - Container Metrics: sematext-agent/container-metrics.md
+        - Overview: agents/sematext-agent/index.md
+        - OS Metrics: agents/sematext-agent/os-metrics.md
+        - Container Metrics and Info: agents/sematext-agent/container-metrics.md
+        - Kubernetes Metrics: agents/sematext-agent/kubernetes-metrics.md
+        - Process Metrics and Info: agents/sematext-agent/process-metrics.md
+        - Service Auto-Discovery: agents/sematext-agent/autodisco.md
+        - Network tracer: agents/sematext-agent/network-tracer.md
+        - Inventory: agents/sematext-agent/inventory.md
+        - eBPF Observability: agents/sematext-agent/ebpf.md
+        - Events: agents/sematext-agent/events.md
+        - Cloud Info: agents/sematext-agent/cloud-info.md
+        - Server Info: agents/sematext-agent/server-info.md
       - Docker Agent:
         - Overview: sematext-docker-agent/index.md
         - Installation: sematext-docker-agent/installation.md
