@@ -1,5 +1,5 @@
-title: Infrastructure Monitoring
-description: Sematext Infrastructure Monitoring is server and app monitoring platform with alerts, available in SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire devops ecosystem
+title: Sematext Monitoring
+description: Sematext Monitoring covers server, database, container, and application monitoring with alerts and events. It's available as a SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire DevOps ecosystem
 
 ### Creating Monitoring Apps
 
@@ -35,6 +35,9 @@ appropriate Sematext monitoring agent. You can choose from:
   - [Docker Agent](../containers), which can collect not
     only container and host metrics, but also container events and
     also logs, it can parse and structure out of the box.
+  
+  - [Sematext Agent](), a lightweight, blazing fast Go-based Monitoring Agent with a tiny footprint.
+
 
 
 The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
