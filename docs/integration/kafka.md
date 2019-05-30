@@ -1,14 +1,15 @@
 title: Kafka Monitoring Integration
 description: Monitor Kafka metrics for brokers, producers, and consumers, consumer lag and offset monitoring by consumer group, topic, or partition, and more. Our cloud and on-premises tools provide out of box Kafka graphs, reports and custom dashboards with built-in anomaly detection, threshold, and heartbeat alerts as well as easy chatops integrations
 
-Sematext offers simple Kafka monitoring agent written in Java and Golang that provides full featured Kafka monitoring without CPU and memory overhead on your application. It's easy to install and require no changes in Kafka source code or source code of you application. 
+
+Sematext offers simple Kafka monitoring agent written in Java and Golang without CPU and memory overhead. It's easy to install and requires no changes in the Kafka source code or your application's source code.
 
 ## Sematext Kafka Monitoring Agent 
-This lightweight, open-source [Java Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. The second part of the Sematext Kafka Monitoring Agent is a Golang based agent responsible for Operating System level metrics like network, I/O and more. 
+This lightweight, open-source [Java Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packages with a Golang-based agent responsible for Operating System level metrics like network, I/O and more. The Kafka Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in containerized environment using ```sematext/spm-client```.
 
-The Sematext Kafka Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially setup, but will require restring your Kafka broker node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of *standalone* agent mode is that it is running as a separate process and doesn't require Kafka restart when it is upgraded.
+The Sematext Kafka Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Kafka broker/producer/consumer when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it's running as a separate process and doesn't require a Kafka broker/producer/consumer restart when it is upgraded.
 
-After creating a [Kafka App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host running your Kafka broker that you want to monitor. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Solr/overview) displayed in the UI.
+After creating a [Kafka App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host that is running your Kafka brokers, producers and consumer to have the full visibility over the metrics from each host. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Kafka/overview) displayed in the UI. 
 
 For example, on CentOS, you need to add Sematext Linux packages and install them with the following command:
 ```bash
@@ -34,7 +35,7 @@ Finally, the last thing that needs to be done is adjusting the ```$KAFKA_HOME/bi
 -Dcom.sun.management.jmxremote -javaagent:/opt/spm/spm-monitor/lib/spm-monitor-generic.jar=<your-monitoring-token-goes-here>:kafka-broker:default
 ```
 
-**You need to restart your Kafka broker after the above changes.**
+**You need to restart your Kafka broker after the changes above.**
 
 To get the full view over some metrics - like the consumer lag, you also need to install monitoring on each of your Kafka producers and consumers. Here is how you can do that.
 
@@ -64,7 +65,7 @@ Once that is done you need to add the following options to the JVM start-up prop
 -Dcom.sun.management.jmxremote -javaagent:/opt/spm/spm-monitor/lib/spm-monitor-generic.jar=<your-monitoring-token-goes-here>:kafka-producer:default
 ```
 
-**You need to restart your Kafka producer after the above changes.**
+**You need to restart your Kafka producer after the changes above.**
 
 ### Monitoring Consumers
 
@@ -92,7 +93,78 @@ Once that is done you need to add the following options to the JVM start-up prop
 -Dcom.sun.management.jmxremote -javaagent:/opt/spm/spm-monitor/lib/spm-monitor-generic.jar=<your-monitoring-token-goes-here>:kafka-consumer:default
 ```
 
-**You need to restart your Kafka consumer after the above changes.**
+**You need to restart your Kafka consumer after the changes above.**
+
+## Collected Metrics
+
+The Sematext Kafka monitoring agent collects the following metrics.
+
+### Operating System
+
+- CPU usage
+- CPU load
+- Memory usage 
+- Swap usage
+- Disk space used
+- I/O Reads and Writes
+- Network traffic
+
+### Java Virtual Machine
+
+- Grabage collectors time and count
+- JVM pool size and utilization
+- Threads and daemon threads
+- Files opened by the JVM
+
+### Kafka 
+
+- Partitions, leaders partitions, offline partitions, under replicated partitions
+- Static broker lag
+- Leader elections, unclean leader elections, leader elections time
+- Active controllers
+- ISR/Log flush 
+- Log cleaner buffer utilization, cleaner working time, cleaner recopy
+- Response and request queues
+- Replica maximum lag, replica minimum fetch, preferred replicas imbalances
+- Topic messages in, topic in/out, topic rejected, failed fetch and produce requests
+- Log segment, log size, log offset increasing 
+
+### Kafka Producer
+
+- Batch size, max batch size
+- Compression rate 
+- Buffer available bytes 
+- Buffer pool wait ratio
+- I/O time, I/O ratio, I/O wait time, I/O wait ratio
+- Connection count, connection create rate, connection close rate, network I/O rate
+- Record queue time, send rate, retry rate, error rate, records per request, record size, responses rate, requests size and maximum size
+- Nodes bytes IN rate, node bytes OUT rate, request latency and max latency, request rate, responses rate, requests size and maximum size
+- Topic compression rate, bytes rate, records send rate, records retries rate, records errors rate
+
+### Kafka Consumer
+
+- Consumer lag
+- TODO
+
+## Troubleshooting
+
+If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, you can create a diagnostics package on any affected machines where SolrCloud Monitoring Agent installed by running:
+
+```bash
+sudo bash /opt/spm/bin/spm-client-diagnostics.sh
+```
+
+The resulting package will contain all relevant info needed for our investigation. You can send it, along with a short description of your problem, to support@sematext.com or contact us through the chat in the bottom right.
+
+## Troubleshooting
+
+If you are having issues with Sematext Monitoring, i.e. not seeing Kafka metrics, you can create a diagnostics package on any affected machines where Kafka Monitoring Agent installed by running:
+
+```bash
+sudo bash /opt/spm/bin/spm-client-diagnostics.sh
+```
+
+The resulting package will contain all relevant info needed for our investigation. You can send it, along with a short description of your problem, to support@sematext.com or contact us through the chat in the bottom right.
 
 ## Integration
 
