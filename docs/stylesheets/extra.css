@@ -327,12 +327,20 @@ pre {
  }
 
 @media (min-width: 840px){
-.mdl-grid.integrations {
-    padding: 1px;
-}
+  .mdl-grid.integrations {
+      padding: 1px;
+  }
 }
 .md-nav--primary .md-nav__title {
-    display: none;
+  background-color: #011a27 !important;
+  color: white !important;
+}
+.md-nav__source {
+  display: none;
+}
+.md-nav--primary .md-nav__title:before {
+  background-color: #011a27 !important;
+  color: white !important;
 }
 .md-content {
     padding: 1.5rem;
