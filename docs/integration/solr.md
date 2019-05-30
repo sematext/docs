@@ -1,14 +1,14 @@
 title: Solr Monitoring Integration
 description:  Our monitoring and logging platform includes integration for Solr. Use predefined key metrics reports combined with rich data visualization tools to monitor critical Solr issues, and receive alerts on memory usage, uptime, load averages, index stats, document and filter caches, latency, rate, and more
 
-Sematext offers simple and versatile Solr monitoring agent written in Java and Golang without CPU and memory overhead on your application. It's easy to install and require no changes in Solr source code or your application source code. 
+Sematext offers simple and versatile Solr monitoring agent written in Java and Golang with minimal CPU and memory overhead. It's easy to install and require no changes in Solr source code or your application source code. 
 
 ## Sematext Solr Monitoring Agent 
-This lightweight, open-source [Java Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, I/O and more. The Solr Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/spm-client```.
+This lightweight, open-source [Java Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Solr performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Solr Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/spm-client```.
 
-The Sematext SolrCloud Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Solr node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it's running as a separate process and doesn't require a Solr restart when it is upgraded.
+The Sematext SolrCloud Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Solr node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it runs as a separate process and doesn't require a Solr restart when it is installed or upgraded.
 
-After creating a [Solr App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host that is running Solr that you want to monitor. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Solr/overview) displayed in the UI. 
+After creating a [Solr App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host running Solr that you want to monitor. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Solr/overview) displayed in the UI. 
 
 For example, on Ubuntu, you need to add Sematext Linux packages and install them with the following command:
 ```bash
@@ -19,7 +19,7 @@ sudo apt-get update
 sudo apt-get install spm-client
 ``` 
 
-After that you need to setup the Solr Monitoring Agent by running a command like this:
+After that, setup the Solr Monitoring Agent by running a command like this:
 ```bash
 sudo bash /opt/spm/bin/setup-sematext  \
     --monitoring-token <your-monitoring-token-goes-here>   \
@@ -73,7 +73,7 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ### Java Virtual Machine
 
-- Grabage collectors time and count
+- Garbage collectors time and count
 - JVM pool size and utilization
 - Threads and daemon threads
 - Files opened by the JVM
@@ -97,13 +97,15 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ## Troubleshooting
 
-If you are having issues with Sematext Monitoring, i.e. not seeing Solr metrics, you can create a diagnostics package on any affected machines where SolrCloud Monitoring Agent installed by running:
+If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, you can create a diagnostics package on any affected machines where SolrCloud Monitoring Agent installed by running:
 
 ```bash
 sudo bash /opt/spm/bin/spm-client-diagnostics.sh
 ```
 
 The resulting package will contain all relevant info needed for our investigation. You can send it, along with a short description of your problem, to support@sematext.com or contact us through the chat in the bottom right.
+
+For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
 
 ## Integration
 
