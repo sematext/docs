@@ -51,6 +51,7 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
+      - Tag Aliases: monitoring/tag-aliases-support.md
       - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
