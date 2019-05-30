@@ -30,7 +30,7 @@ You can also define different url groups and assign different time thresholds fo
 The first step in calculating the Apdex score is determining the Apdex level for each measured response time. Given that T is the above mentioned time threshold, each response time falls into one of the three levels:
 
  * Satisfied: The response time is less than or equal to T.
- * Tolerating: The response time is greated than T but still less than or equal to 4 * T.
+ * Tolerating: The response time is greater than T but still less than or equal to 4 * T.
  * Frustrated: The response time is greater than T.
 
 For example, if we have a time threshold of 2 seconds and a recorded page load was finished in 5.2 seconds, then it falls into the Tolerating level.
