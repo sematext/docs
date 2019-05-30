@@ -67,6 +67,9 @@ pages:
       - Account Default Hooks: alerts/account-default-hooks.md
     - Events:
       - Overview: events/index.md
+      - Adding Events: events/adding.md
+      - Fields: events/fields.md
+      - Timeline/Histogram: events/timeline.md
     - Integrations:
       - Overview: integration/index.md
       - Monitoring Akka: integration/akka.md
