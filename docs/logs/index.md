@@ -1,4 +1,4 @@
-title: Sematext Logs Documentation
+title: Sematext Logs
 description:  Cloud based SaaS / On-premises logging as a service platform. Index machine data, search, correlate and investigate. Build in reports and dashboards with monitoring and alerting capabilities.
 
 Think of Sematext Logs as logging as a service or your own logging box in the cloud (or [on your own infrastructure](../sematext-enterprise) if you really can't ship logs out to the cloud).
