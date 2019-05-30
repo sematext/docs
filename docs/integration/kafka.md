@@ -109,12 +109,16 @@ The Sematext Kafka monitoring agent collects the following metrics.
 - I/O Reads and Writes
 - Network traffic
 
+![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_cpu.png)
+
 ### Java Virtual Machine
 
 - Grabage collectors time and count
 - JVM pool size and utilization
 - Threads and daemon threads
 - Files opened by the JVM
+
+![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_gc.png)
 
 ### Kafka 
 
@@ -129,6 +133,8 @@ The Sematext Kafka monitoring agent collects the following metrics.
 - Topic messages in, topic in/out, topic rejected, failed fetch and produce requests
 - Log segment, log size, log offset increasing 
 
+![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_broker.png)
+
 ### Kafka Producer
 
 - Batch size, max batch size
@@ -141,10 +147,19 @@ The Sematext Kafka monitoring agent collects the following metrics.
 - Nodes bytes IN rate, node bytes OUT rate, request latency and max latency, request rate, responses rate, requests size and maximum size
 - Topic compression rate, bytes rate, records send rate, records retries rate, records errors rate
 
+![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_producer.png)
+
 ### Kafka Consumer
 
 - Consumer lag
-- TODO
+- Fetcher responses, bytes, responses bytes
+- I/O time, I/O ratio, I/O wait time, I/O wait ratio
+- Connection count, connection create rate, connection close rate, network I/O rate
+- Consumed rate, records per request, fetch latency, fetch rate, bytes consumed rate, average fetch size, throttle maximum time
+- Assigned partitions, heartbeat maximum response time, heartbeat rate, join time and maximum join time, sync time and maximum sync time, join rate, syncs rate
+- Nodes bytes IN rate, node bytes OUT rate, request latency and max latency, request rate, responses rate, requests size and maximum size
+
+![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_consumer_lag.png)
 
 ## Troubleshooting
 
