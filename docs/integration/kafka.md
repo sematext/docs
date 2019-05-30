@@ -1,8 +1,37 @@
 title: Kafka Monitoring Integration
 description: Monitor Kafka metrics for brokers, producers, and consumers, consumer lag and offset monitoring by consumer group, topic, or partition, and more. Our cloud and on-premises tools provide out of box Kafka graphs, reports and custom dashboards with built-in anomaly detection, threshold, and heartbeat alerts as well as easy chatops integrations
 
+Sematext offers simple Kafka monitoring agent written in Java and Golang that provides full featured Kafka monitoring without CPU and memory overhead on your application. It's easy to install and require no changes in Kafka source code or source code of you application. 
+
+## Sematext Kafka Monitoring Agent 
+This lightweight, open-source [Java Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. The second part of the Sematext Kafka Monitoring Agent is a Golang based agent responsible for Operating System level metrics like network, I/O and more. 
+
+The Sematext Kafka Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially setup, but will require restring your Kafka broker node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of *standalone* agent mode is that it is running as a separate process and doesn't require Kafka restart when it is upgraded.
+
+After creating a [Kafka App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host running your Kafka broker that you want to monitor. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Solr/overview) displayed in the UI.
+
+For example, on CentOS, you need to add Sematext Linux packages and install them with the following command:
+```bash
+sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
+sudo yum clean all
+sudo yum install spm-client
+``` 
+
+After that you need to setup the Kafka Monitoring Agent on your Kafka broker by running a command like this:
+```bash
+sudo bash /opt/spm/bin/setup-sematext  \
+    --monitoring-token <your-monitoring-token-goes-here>   \
+    --app-type kafka  \
+    --app-subtype kafka-broker  \
+    --agent-type javaagent  \
+    --infra-token <your-infra-token-goes-here>
+```
+
+Keep in mind that your need to provide the Monitoring token and Infra token. They are both provided in the [installation instructions](https://apps.sematext.com/ui/howto/Kafka/overview) for your Kafka App. 
+
 ## Integration
 
+- Agent: [https://github.com/sematext/sematext-agent-java](https://github.com/sematext/sematext-agent-java)
 - Instructions: [https://apps.sematext.com/ui/howto/Kafka/overview](https://apps.sematext.com/ui/howto/Kafka/overview)
 
 ## More about Apache Kafka Monitoring
@@ -10,7 +39,6 @@ description: Monitor Kafka metrics for brokers, producers, and consumers, consum
 * [Apache Kafka Metrics To Monitor](https://sematext.com/blog/kafka-metrics-to-monitor/)
 * [Apache Kafka Open Source Monitoring Tools](https://sematext.com/blog/kafka-open-source-monitoring-tools/)
 * [Monitoring Apache Kafka With Sematext](https://sematext.com/blog/monitoring-kafka-with-sematext/)
-
 
 ## Metrics
 
