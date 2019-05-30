@@ -58,12 +58,9 @@ Click the `App Actions` button and select `App Settings`. App Info page will ope
 
 **Can I send old logs?**
 
-Yes, you can send all logs.  However, keep in mind your logging app's
+Yes, you can send all logs. However, keep in mind your logging app's
 Data Retention settings.  For example, if your retention is set to 7
-days and you send logs that are 10 days old (i.e. they contain a
-timestamp from 10 days ago), they will get accepted, but will get
-removed shortly after. Thus, check your app's data retention before
-importing old data.
+days and you send logs that are 10 days old we will give you warning that you are outside of valid retention time range.
 
 **How can I send old logs?**
 
@@ -73,16 +70,13 @@ Use [Logagent](/logagent).  With Logagent you can then do: ```cat
 **What is data retention and how does it work?**
 
 Data retention mechanism is responsible for removing old log events.
-If a log is 15 days old and you have retention set to 7 days, that log
-will remain in our centralized logging management platform until the retention mechanism deletes it. For
+If you have retention set to 7 days, all log events that are received more than 7 days ago will be removed by retention mechanism. For
 paid plans we remove whole 24-hour periods once a day. For free plans we
 remove old data every 30 minutes.
 
-**Is data retention based on index/import/upload time or the actual log event @timestamp?**
+**Is data retention based on index/import/upload/receive time or the actual log event @timestamp?**
 
-Data retention is based on log event @timestamp. Logging app's
-retention removes data whose @timestamp is older than the retention
-setting.
+Data retention is based on log events' receive timestamp.
 
 **Are logs shipped to Logs App ever rejected?**
 
@@ -522,7 +516,7 @@ analyzed fields we also create .raw field which is not analyzed. If you
 want to use string field for drawing charts you should either use .raw
 field or change index templates to use not_analyzed type
 (<https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/>).
- Let's consider and example. We have a field called 'title'. Our logging management solution
+ Let's consider an example. We have a field called 'title'. Our logging management solution
 uses this field as analyzed one so it is not possible to use it in
 dashboards. It also creates automatically a field called
 'title.raw' and this one can be used for charts.
@@ -576,12 +570,11 @@ formats.
 
 **What happens if I try to send data with @timestamp older than my retention time?**
 
-You can send old logs.  However, keep in mind your logging app's
-retention settings.  For example, if your retention is set to 7 days and
+You can send old logs because our retention machanism works on received timestampl, not @timestamp.
+For example, if your retention is set to 7 days and
 you send logs that are 10 days old (i.e. they contain a timestamp from
-10 days ago), they will get accepted and processed, but will get removed
-within the next 24
-hours.
+10 days ago), they will get accepted and processed, but you when you set time range to select those logs,
+you might get warning that you selected time range that is outside of your retention.
 
 **What happens if I try to send data with @timestamp that is in the future?**
 
