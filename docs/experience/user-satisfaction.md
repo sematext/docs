@@ -6,7 +6,7 @@ On the Overview page of your Experience app you will notice several scores that 
 <img
   class="content-modal-image"
   alt="Sematext Experience Satisfaction Scores"
-  src="/images/experience/satisfaction.png"
+  src="../../images/experience/satisfaction.png"
   title="Satisfaction Scores"
   width=470
   height=130
@@ -47,7 +47,7 @@ The exact formula used is:
 <img
   class="content-modal-image"
   alt="Sematext Experience Satisfaction Scores"
-  src="/images/experience/apdex.gif"
+  src="../../images/experience/apdex.gif"
   title="Satisfaction Scores"
   width=551
   height=47
