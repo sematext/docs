@@ -53,7 +53,7 @@ SOLR_OPTS="$SOLR_OPTS -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxrem
 
 Make sure that tag ```<jmx />``` is enabled in your ```solrconfig.xml``` file.
 
-**You need to restart your SolrCloud node after the changes above.**
+**You need to restart your Solr node after the changes above.**
 
 ## Collected Metrics
 
