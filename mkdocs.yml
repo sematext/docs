@@ -39,7 +39,7 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - Infrastructure: 
+      - Infrastructure:
         - Overview: monitoring/infrastructure.md
         - Inventory: monitoring/inventory.md
         - Process: monitoring/process.md
@@ -114,6 +114,10 @@ pages:
         - Switching Modes: agents/spm-monitor-switching-modes.md
         - Chef Recipe: agents/chef-recipe.md
       - Node Agent: agents/node-agent.md
+      - Sematext Agent:
+        - Overview: sematext-agent/index.md
+        - OS Metrics: sematext-agent/os-metrics.md
+        - Container Metrics: sematext-agent/container-metrics.md
       - Docker Agent:
         - Overview: sematext-docker-agent/index.md
         - Installation: sematext-docker-agent/installation.md

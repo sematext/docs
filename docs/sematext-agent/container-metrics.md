@@ -21,4 +21,4 @@ Sematext Agent offers an unified and agnostic approach to container engine monit
 
 | Metric name           | Description |
 | ----------------------|-------------|
-| resident memory usage | Represents container resident memory usage in bytes |
+| read bytes            | Is the number of bytes read from the disk |
