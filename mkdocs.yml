@@ -41,9 +41,11 @@ pages:
       - Overview: monitoring/index.md
       - Infrastructure: 
         - Overview: monitoring/infrastructure.md
+        - Servers: monitoring/servers.md
+        - Containers: monitoring/containers.md
         - Inventory: monitoring/inventory.md
-        - Process: monitoring/process.md
-      - Network Map: monitoring/network-map.md
+        - Processes: monitoring/processes.md
+        - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
