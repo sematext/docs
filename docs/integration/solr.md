@@ -19,7 +19,7 @@ sudo apt-get update
 sudo apt-get install spm-client
 ``` 
 
-After that you need to setup the Solr Monitoring Agent by preparing running a command like this:
+After that you need to setup the Solr Monitoring Agent by running a command like this:
 ```bash
 sudo bash /opt/spm/bin/setup-sematext  \
     --monitoring-token <your-monitoring-token-goes-here>   \

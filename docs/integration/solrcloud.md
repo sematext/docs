@@ -17,7 +17,7 @@ sudo yum clean all
 sudo yum install spm-client
 ``` 
 
-After that you need to setup the SolrCloud Monitoring Agent by preparing running a command like this:
+After that you need to setup the SolrCloud Monitoring Agent by running a command like this:
 ```bash
 sudo bash /opt/spm/bin/setup-sematext  \
     --monitoring-token <your-monitoring-token-goes-here>   \
