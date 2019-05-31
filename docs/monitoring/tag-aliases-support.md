@@ -1,7 +1,7 @@
 title: Tag Aliases
 description: Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, user can create a tag alias `env:prod` which identifies a set of hosts. 
 
-# What's a Tag Alias?
+## What are Tag Aliases?
 
 Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, user can create a tag alias `env:prod` which identifies a set of hosts running in prod setup. So user can define this tag alias and map it set of `os.host` tag values. Tag aliases can be defined from UI, configured in agent or automatically sent by agents.
 

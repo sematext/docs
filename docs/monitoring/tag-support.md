@@ -41,6 +41,19 @@ Below are Kubernetes related tags that are sent as part of metrics in the Kubern
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
 | kubernetes.pod.name | Name of the kubernetes pod | pod
+| kubernetes.pod.node | Node name where the pod is running | 
+| kubernetes.cluster.name | Kubernetes cluster name | 
+| kubernetes.deployment.name | Kubernetes deployment name | 
+| kubernetes.namespace | Kubernetes namespace | 
+
+### Process Tags
+
+Below are Process related tags that are sent as part of metrics/logs process info.
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| process.name | process/program name |
+| process.pid  | process identifier | 
 
 ### Serverless Tags
 
@@ -60,6 +73,7 @@ Below are the tags that are reserved for future use.
 | source |  Represents the source of the event  | facility
 | service | Service that generated the event | service.id, service.name
 | span | Building block of trace in distributed tracing | 
+| error.code | Error code | error.id, error.message
 
 
 ## Defining Tags in Sematext App Agent Integration YAMLs
