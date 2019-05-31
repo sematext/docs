@@ -103,7 +103,6 @@ pages:
       - Zapier: integration/alerts-zapier-integration.md
     - Container Monitoring:
       - Overview: containers/index.md
-      - Monitoring: containers/sematext-agent.md
       - Logging: logagent/installation-docker.md
     - Agents:
       - Overview: agents/index.md
@@ -117,9 +116,18 @@ pages:
       - Sematext Agent:
         - Overview: agents/sematext-agent/index.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
-        - Container Metrics and Info: agents/sematext-agent/container-metrics.md
-        - Kubernetes Metrics: agents/sematext-agent/kubernetes-metrics.md
-        - Process Metrics and Info: agents/sematext-agent/process-metrics.md
+        - Containers:
+          - Installation: agents/sematext-agent/containers/installation.md
+          - Configuration: agents/sematext-agent/containers/configuration.md
+          - Metrics: agents/sematext-agent/containers/metrics.md
+          - Metadata: agents/sematext-agent/containers/metadata.md
+        - Kubernetes:
+          - Installation: agents/sematext-agent/kubernetes/installation.md
+          - Configuration: agents/sematext-agent/kubernetes/configuration.md
+          - Metrics: agents/sematext-agent/kubernetes/metrics.md
+        - Processes:
+          - Metrics: agents/sematext-agent/processes/metrics.md
+          - Metadata:   agents/sematext-agent/processes/metrics.md
         - Service Auto-Discovery: agents/sematext-agent/autodisco.md
         - Network tracer: agents/sematext-agent/network-tracer.md
         - Inventory: agents/sematext-agent/inventory.md
