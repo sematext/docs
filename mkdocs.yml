@@ -184,6 +184,8 @@ pages:
         - How-To:
             - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
             - IDE Integration and debugging: logagent/logagent-ide-conf.md
+        - Changelog: logagent/changelog.md
+        - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
