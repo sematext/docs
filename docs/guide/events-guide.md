@@ -31,7 +31,7 @@ In addition to showing Events as a time-series chart, you have a detailed **Even
 
 There are **two main components** that make up **Events**. Both can be added to dashboards just as Metrics and Logs components.
 
-You can create Events and attach them to any particular Monitoring or Logs App, or dashboard. It's great for leaving notes alongside auto-generated data. It supports markdown format and provides a perfect way to provide human input which can later be used for presentations and reminders. 
+You can create Events and attach them to any particular Monitoring, Logs, or Experience App, or dashboard. It's great for leaving notes alongside auto-generated data. It supports markdown format and provides a perfect way to provide human input which can later be used for presentations and reminders. 
 
 ### Events Histogram
 
@@ -46,15 +46,3 @@ The **Event Stream component** is a **list view of all Events** that occurred ac
 ![Sematext Cloud Events Stream Component](https://sematext.com/docs/images/guide/alerts-and-events/event-stream-component.png "Sematext Cloud Events Stream Component")
 
 Apart from what you see here, you can **send** your own **custom events** to the Sematext Events Stream. Our Events feature is **exposed via a REST API** that lets you post, retrieve, and search your events. This REST API matches the Elasticsearch API, so you can use any Elasticsearch tool or client to post, get, and search for events.
-
-## Next step
-
-[Sign up](https://apps.sematext.com/ui/registration) to Sematext Cloud for free to get started, and create your first Logs App. Upload logs from all your servers to our centralized log management solution through our Elasticsearch API, and experience a proper hosted Elasticsearch Stack.
-
-If you already have an account, [sign in](https://apps.sematext.com/ui/login/) and start shipping logs!
-
-Check this out to learn more about Sematext:
-
-- [Events documentation](../events/)
-- Our [website](https://sematext.com/) and [Events](https://sematext.com/events/) features 
-- Feel free to use the chat in the right bottom corner of the app or website and one of our engineers will help you navigate Sematext waters.
