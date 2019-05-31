@@ -2,7 +2,7 @@ title: Kafka Monitoring Integration
 description: Monitor Kafka metrics for brokers, producers, and consumers, consumer lag and offset monitoring by consumer group, topic, or partition, and more. Our cloud and on-premises tools provide out of box Kafka graphs, reports and custom dashboards with built-in anomaly detection, threshold, and heartbeat alerts as well as easy chatops integrations
 
 
-Sematext offers simple Kafka monitoring agent written in Java and Golang with minimal CPU and memory overhead. It's easy to install and require no changes in the Kafka source code or your application's source code.
+Sematext has a simple Kafka monitoring Agent written in Java and Go with minimal CPU and memory overhead. It's easy to install and doesn't require any changes to the Kafka source code or your application's source code.
 
 ## Sematext Kafka Monitoring Agent 
 This lightweight, open-source [Java Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Kafka Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/spm-client```.
@@ -30,18 +30,18 @@ sudo bash /opt/spm/bin/setup-sematext  \
 
 Keep in mind that your need to provide the Monitoring token and Infra token. They are both provided in the [installation instructions](https://apps.sematext.com/ui/howto/Kafka/overview) for your Kafka App. 
 
-Finally, the last thing that needs to be done is adjusting the ```$KAFKA_HOME/bin/kafka-server-start.sh``` file and add the following section to the ```KAFKA_JMX_OPTS```:
+The last thing that needs to be done is adjusting the ```$KAFKA_HOME/bin/kafka-server-start.sh``` file and add the following section to the ```KAFKA_JMX_OPTS```:
 ```bash
 -Dcom.sun.management.jmxremote -javaagent:/opt/spm/spm-monitor/lib/spm-monitor-generic.jar=<your-monitoring-token-goes-here>:kafka-broker:default
 ```
 
 **You need to restart your Kafka broker after the changes above.**
 
-To get the full view over some metrics - like the consumer lag, you also need to install monitoring on each of your Kafka producers and consumers. Here is how you can do that.
+To see the complete picture of Kafka performance install the monitoring agent on each of your Kafka producers and consumers. Here is how you can do that.
 
 ### Monitoring Producers
 
-To have the full visibility into the entire Kafka pipeline it's crucial to monitor your Kafka producers as well. If you're using Java or Scala as the language of choice for the producers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka producer by running the following command (i.e. for CentOS):
+To have the full visibility into the entire Kafka pipeline it's crucial to monitor your Kafka producers as well. If you're using Java or Scala as the language of choice for the producers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka producer by running the following command (e.g. for CentOS):
 
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
@@ -69,7 +69,7 @@ Once that is done you need to add the following options to the JVM start-up prop
 
 ### Monitoring Consumers
 
-Monitoring your consumers is crucial to have the visibility into the topic lag, which can help you quickly identify issues with your pipeline. If you're using Java or Scala as the language of choice for the consumers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka consumer by running the following command (i.e. for CentOS):
+Monitoring your consumers is crucial to have the visibility into the topic lag, which can help you quickly identify issues with your pipeline. If you're using Java or Scala as the language of choice for the consumers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka consumer by running the following command (e.g. for CentOS):
 
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
@@ -88,7 +88,7 @@ sudo bash /opt/spm/bin/setup-sematext  \
     --infra-token <your-infra-token-goes-here>
 ```
 
-Once that is done you need to add the following options to the JVM start-up properties:
+ Once that is done add the following options to the JVM start-up properties:
 ```bash
 -Dcom.sun.management.jmxremote -javaagent:/opt/spm/spm-monitor/lib/spm-monitor-generic.jar=<your-monitoring-token-goes-here>:kafka-consumer:default
 ```
