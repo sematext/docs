@@ -163,16 +163,6 @@ The Sematext Kafka monitoring agent collects the following metrics.
 
 ## Troubleshooting
 
-If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, you can create a diagnostics package on any affected machines where SolrCloud Monitoring Agent installed by running:
-
-```bash
-sudo bash /opt/spm/bin/spm-client-diagnostics.sh
-```
-
-The resulting package will contain all relevant info needed for our investigation. You can send it, along with a short description of your problem, to support@sematext.com or contact us through the chat in the bottom right.
-
-## Troubleshooting
-
 If you are having issues with Sematext Monitoring, i.e. not seeing Kafka metrics, you can create a diagnostics package on any affected machines where Kafka Monitoring Agent installed by running:
 
 ```bash
