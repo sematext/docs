@@ -41,13 +41,13 @@ In this example which is an Elasticsearch Monitoring App, the Java usage thresho
 
 ![Sematext Cloud System Generated Alerts](https://sematext.com/docs/images/guide/alerts-and-events/system-generated-alerts.png "Sematext Cloud System Generated Alerts")
 
-The [Alert Rules](https://apps.sematext.com/ui/events/alerts/rules) page is where you will find all default and created, Alerts for all Apps you've created. Here you can toggle, edit or delete any existing Alerts.
+You can view all the default and custom Alerts on the [Alert Rules](https://apps.sematext.com/ui/events/alerts/rules) page. This is where you can toggle, edit or delete any existing Alerts.
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Alerts Rules Window")
 
 ## Creating Alerts
 
-Sematext Alerts can cover both complicated alerting scenarios with multiple rules on both Logs and Monitoring, as well as Events. A basic Alert Rule with an email or Slack notification is enough to cover elementary alerting needs.
+Sematext Alerts can cover both complicated alerting scenarios with multiple rules for both Logs and Monitoring, as well as Events. A basic Alert Rule with an email or Slack notification is enough to cover elementary alerting needs.
 
 ### Alerting on Logs
 
@@ -77,7 +77,7 @@ Press Save and you're done. Check out the [integrations](https://sematext.com/do
 
 ### Alerting on Metrics
 
-Monitoring Apps have **metric-based Alerting**. Metrics have both **Threshold** and **Anomaly** Alerts which can be created for each metrics component, just as they can be added to custom [dashboards](./dashboards-guide/).
+Monitoring Apps have **metric-based Alerting**. Metrics have both **Threshold** and **Anomaly** Alerts which can be created on a per-metric basis.
 
 ![Sematext Cloud Metric Component Alerts](https://sematext.com/docs/images/guide/alerts-and-events/metric-component-alert.png "Sematext Cloud Metric Component Alerts")
 
