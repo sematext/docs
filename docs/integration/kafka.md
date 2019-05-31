@@ -5,7 +5,7 @@ description: Monitor Kafka metrics for brokers, producers, and consumers, consum
 Sematext has a simple Kafka monitoring Agent written in Java and Go with minimal CPU and memory overhead. It's easy to install and doesn't require any changes to the Kafka source code or your application's source code.
 
 ## Sematext Kafka Monitoring Agent 
-This lightweight, open-source [Kafka Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Kafka Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/spm-client```.
+This lightweight, open-source [Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Kafka Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/spm-client```.
 
 The Sematext Kafka Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Kafka broker/producer/consumer when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it runs as a separate process and doesn't require a Kafka broker/producer/consumer restart when it is installed or upgraded.
 
