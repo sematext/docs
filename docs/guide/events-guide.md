@@ -9,9 +9,9 @@ Think about when something happens in your infrastructure.
 
 - An **application starts/stops**
 - or **server restarts**, 
-- **builds** finish running, 
+- **CI/CD builds** finish running, 
 - **deployments** succeed, 
-- **alerts** send out **notifications**, etc... 
+- **alerts** send out **notifications**, etc
 
 These are all Events!
 
@@ -45,4 +45,4 @@ The **Event Stream component** is a **list view of all Events** that occurred ac
 
 ![Sematext Cloud Events Stream Component](https://sematext.com/docs/images/guide/alerts-and-events/event-stream-component.png "Sematext Cloud Events Stream Component")
 
-Apart from what you see here, you can **send** your own **custom events** to the Sematext Events Stream. Our Events feature is **exposed via a REST API** that lets you post, retrieve, and search your events. This REST API matches the Elasticsearch API, so you can use any Elasticsearch tool or client to post, get, and search for events.
+Apart from what you see here, you can **send** your own **custom events** to the Sematext Events Stream. Our Events feature is **exposed via a [REST API](../events/#adding-events)** that lets you post, retrieve, and search your events. This REST API matches the Elasticsearch API, so you can use any Elasticsearch tool or client to post, get, and search for events.
