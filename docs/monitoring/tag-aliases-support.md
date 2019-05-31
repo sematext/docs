@@ -1,13 +1,13 @@
 title: Tag Aliases
-description: Tag aliases are name value pairs used to identify group of tag values i.e. alias for group of tags. For example, user can create a tag alias `env:prod` which identifies set of hosts. 
+description: Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, user can create a tag alias `env:prod` which identifies a set of hosts. 
 
 # What's a Tag Alias?
 
-Tag aliases are name value pairs used to identify group of tag values i.e. alias for group of tags. For example, user can create a tag alias `env:prod` which identifies set of hosts running in prod setup. So user can define this tag alias and map it set of `os.host` tag values. Tag aliases can defined from UI, configured in agent or automatically sent by agents.
+Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, user can create a tag alias `env:prod` which identifies a set of hosts running in prod setup. So user can define this tag alias and map it set of `os.host` tag values. Tag aliases can be defined from UI, configured in agent or automatically sent by agents.
 
 ## Automatic Tags Aliases from agent
 
-The Infra Agent automatically collects following tag aliases:
+The Infra Agent automatically collects following tag aliases and sends them periodically to Sematext Cloud. These tag aliases are purged periodically. It is not recommended to use these names in configured/user-defined tag aliases.
 
 ### Cloud metadata
 
@@ -22,15 +22,15 @@ The cloud metadata from AWS, Azure and GCE instances is collected as tag aliases
 |  Region |  cloud.region |  AWS, Azure |
 |  Availability Zone |  cloud.zone |  AWS, GCE |
 |  Project Identifier |  cloud.project |  GCE |
-|  User defined tags |  - |  AWS, GCE, Azure |
+|  User-defined tags |  - |  AWS, GCE, Azure |
 
-To collect user defined tags you need to define the IAM roles listed below:
+To collect user-defined tags you need to define the IAM roles listed below:
 
 1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
     See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
 2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager
     See [Access Azure Resource Manager API](https://docs.microsoft.com/en-gb/azure/active-directory/managed-identities-azure-resources/tutorial-linux-vm-access-arm) for more info.
-3. GCE - In GCE User defined tags are called Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
+3. GCE - In GCE user-defined tags are called Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
     See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
 
 Cloud tags collection is enabled by default.  To disable Cloud tags
@@ -39,7 +39,7 @@ restart spm-monitor using `sudo service spm-monitor restart`.
 
 ### Machine
 
-Following tag aliases are collected from the host the agent is running and are mapped to `os.host` tag:
+Following tag aliases are collected from the host the agent is running. They are mapped to `os.host` tag:
 
 | Name  | Tag Name  | Description |
 |:--|:--|:--|
@@ -103,3 +103,5 @@ export SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
 
 ## User-defined Tag Aliases from UI
+
+User can define custom tags aliases for an App from UI. From UI, the user can define name-value pair for tag alias and map it to set of tags available for this App. Once created the user-defined tag aliases can be edited or deleted later. These are not purged periodically.

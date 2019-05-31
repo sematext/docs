@@ -1,14 +1,14 @@
 title: Monitoring Tags 
-description: Tag is an attribute of a datapoint (or metric) that could be used for grouping and filtering.
+description: Tag is an attribute of a data point (or metric) that could be used for grouping and filtering.
 
 Tags are sent by Sematext Agents as part of every data point and they are shown in UI as filters. 
-For example, as part of docker container metrics, the agent sends hostname on which the container is running, container identifier, container name, container image as tags which appear as filters in UI. User can then group or filter the container metrics using these tags.
+For example, as part of Docker container metrics, the agent sends hostname on which the container is running, container identifier, container name, container image as tags which appear as filters in UI. User can then group or filter the container metrics using these tags.
 
 The tags are automatically collected by agents while fetching metrics and sent as part of metrics to the receiver.
 
 ## Reserved Tags
 
-Following tags are reserved and cannot used in user defined tags, App agent YAMLs. There are used to correlate data across multiple apps and logs.
+Following tags are reserved and cannot be used in Tag aliases, App agent YAMLs and as custom fields in logs. There are used to correlate data across multiple apps and logs. Refer to [Special Logs Fields](/logs/special-fields/) for list of special fields in logs.
 
 ### Common Tags
 
@@ -23,7 +23,7 @@ The below tags are applicable to all metrics types
 
 ### Container Tags
 
-Below are container related tags that are sent as part of metrics in container environment.
+Below are container related tags that are sent as part of metrics in the container environment.
 
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
@@ -36,22 +36,30 @@ Below are container related tags that are sent as part of metrics in container e
 
 ### Kubernetes Tags
 
-Below are kubernetes related tags that are send as part of metrics in kubernetes environment.
+Below are Kubernetes related tags that are sent as part of metrics in the Kubernetes environment.
 
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
 | kubernetes.pod.name | Name of the kubernetes pod | pod
 
+### Serverless Tags
 
-### Other Reserved Tags
-
-Below are the tags that are reserved for future use
+Below are Serverless related tags that are sent as part of metrics/logs in the Serverless environment.
 
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
-| source | Name of the kubernetes pod | 
-| service | |
-| span | |
+| function.name |  | 
+
+
+### Other Reserved Tags
+
+Below are the tags that are reserved for future use.
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| source |  Represents the source of the event  | facility
+| service | Service that generated the event | service.id, service.name
+| span | Building block of trace in distributed tracing | 
 
 
 ## Defining Tags in Sematext App Agent Integration YAMLs
@@ -61,5 +69,4 @@ integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
 
-Some of the tags derived from a given metrics source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
-
+Some of the tags derived from a given metric source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
