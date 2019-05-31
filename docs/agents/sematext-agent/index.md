@@ -4,3 +4,12 @@ Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, ne
 
 
 ## Capabilities
+
+- Offers a full visibility over the basic operating system metrics on your hosts. For example,  you can easily spot CPU spikes and correlate them with
+other metric sources.
+- Agnostic and unified container monitoring to gain deep visibility into your containerized deployments.
+- Discovers your network topology with eBPF-driven ultra efficient observability hooks.
+- Collects a myriad of events such as Docker/Kubernetes life cycle events, package install/uninstall, OOMK and signal notifications among others.
+- Inventory tracking including packages, server details, container metadata and more.
+- Process monitoring that helps out to identify top CPU or memory consumers.
+- Service discovery and automated monitoring for vanilla Docker and Kubernetes workloads.
