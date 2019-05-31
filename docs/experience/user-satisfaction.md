@@ -1,7 +1,7 @@
 title: User Satisfaction
 description: How user satisfaction is measured in Sematext Experience
 
-On the Overview page of your Experience app you will notice several scores that show the overall user satisfaction for the related performance section of your website.
+On the Overview page of your Experience App you will notice several scores that show the overall user satisfaction for the related performance section of your website.
 
 <img
   class="content-modal-image"
@@ -23,7 +23,7 @@ Page loads, ajax requests, and on-page transactions have different performance c
 
 <!-- Todo: add link to a more detailed page about configuring requirements -->
 
-You can also define different url groups and assign different time thresholds for each group by opening your App and clicking on Url Groups in the left menu.
+You can also define different URL groups and assign different time thresholds for each group by opening your App and clicking on URL Groups in the left menu.
 
 #### Apdex Level
 
@@ -37,7 +37,7 @@ For example, if we have a time threshold of 2 seconds and a recorded page load w
 
 #### Apdex Score
 
-Given the above we can now calculate the Apdex score. This score is a ratio value of the number of satisfied and tolerating responses to the total number of responses made. Each satisfied response counts as one, while each tolerating response counts as half a satisfied response. The score range is from 0 to 1, where 0 is the worst possible score, and 1 is the best possible score.
+Given the above we can now calculate the Apdex score. This score is a ratio of the number of satisfied and tolerating responses to the total number of responses made. Each satisfied response counts as one, while each tolerating response counts as half a satisfied response. The score range is from 0 to 1, where 0 is the worst possible score, and 1 is the best possible score.
 
 The exact formula used is:
 
@@ -55,7 +55,7 @@ The exact formula used is:
 
 #### User Satisfaction Levels
 
-We show the satisfaction level most prominently in our user interface because it gives you a better idea of how your visitors perceive the website performance. The different levels are based on the Apdex score:
+We show the satisfaction level most prominently in our user interface because it gives you the best idea of how your visitors perceive the website performance. The different levels are based on the Apdex score:
 
 | Level        | Min  | Max  |
 |--------------|------|------|
