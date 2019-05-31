@@ -18,7 +18,7 @@ sudo yum clean all
 sudo yum install spm-client
 ``` 
 
-After that, setup the Kafka Monitoring Agent on your Kafka broker by running a command like this:
+After that, set up the Kafka Monitoring Agent on your Kafka broker by running a command like this:
 ```bash
 sudo bash /opt/spm/bin/setup-sematext  \
     --monitoring-token <your-monitoring-token-goes-here>   \
@@ -49,7 +49,7 @@ sudo yum clean all
 sudo yum install spm-client
 ``` 
 
-After that, run the following command to setup Kafka producer monitoring:
+After that, run the following command to set up Kafka producer monitoring:
 
 ```bash
 sudo bash /opt/spm/bin/setup-sematext  \
@@ -69,7 +69,7 @@ Once that is done you need to add the following options to the JVM start-up prop
 
 ### Monitoring Consumers
 
-Monitoring your consumers is crucial to have the visibility into the topic lag, which can help you quickly identify issues with your pipeline. If you're using Java or Scala as the language of choice for the consumers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka consumer by running the following command (e.g. for CentOS):
+Monitoring your consumers is crucial to have visibility into topic lag, which can help you quickly identify issues with your pipeline. If you're using Java or Scala as the language of choice for the consumers' implementation you need to install the Kafka Monitoring Agent on each host working as a Kafka consumer by running the following command (e.g. for CentOS):
 
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
