@@ -143,8 +143,8 @@ The Sematext Kafka monitoring agent collects the following metrics.
 - Buffer pool wait ratio
 - I/O time, I/O ratio, I/O wait time, I/O wait ratio
 - Connection count, connection create rate, connection close rate, network I/O rate
-- Record queue time, send rate, retry rate, error rate, records per request, record size, responses rate, requests size and maximum size
-- Nodes bytes IN rate, node bytes OUT rate, request latency and max latency, request rate, responses rate, requests size and maximum size
+- Record queue time, send rate, retry rate, error rate, records per request, record size, response rate, request size and maximum size
+- Nodes bytes in rate, node bytes out rate, request latency and max latency, request rate, response rate, request size and maximum size
 - Topic compression rate, bytes rate, records send rate, records retries rate, records errors rate
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_producer.png)
@@ -156,8 +156,8 @@ The Sematext Kafka monitoring agent collects the following metrics.
 - I/O time, I/O ratio, I/O wait time, I/O wait ratio
 - Connection count, connection create rate, connection close rate, network I/O rate
 - Consumed rate, records per request, fetch latency, fetch rate, bytes consumed rate, average fetch size, throttle maximum time
-- Assigned partitions, heartbeat maximum response time, heartbeat rate, join time and maximum join time, sync time and maximum sync time, join rate, syncs rate
-- Nodes bytes IN rate, node bytes OUT rate, request latency and max latency, request rate, responses rate, requests size and maximum size
+- Assigned partitions, heartbeat maximum response time, heartbeat rate, join time and maximum join time, sync time and maximum sync time, join rate, sync rate
+- Nodes bytes in rate, node bytes out rate, request latency and max latency, request rate, response rate, request size and maximum size
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_consumer_lag.png)
 
@@ -171,7 +171,7 @@ sudo bash /opt/spm/bin/spm-client-diagnostics.sh
 
 The resulting package will contain all relevant info needed for our investigation. You can send it, along with a short description of your problem, to support@sematext.com or contact us through the chat in the bottom right.
 
-For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
 
 ## Integration
 
