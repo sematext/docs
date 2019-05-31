@@ -4,18 +4,18 @@ description: Event stream captures all your key IT and operations such as server
 Events can be added interactively via the UI, but you can also add them via the API:
 
 ```
-https://event-receiver.sematext.com/APPLICATION_TOKEN/event
+https://event-receiver.sematext.com/APP_TOKEN/event
 ```
 
 Because an event is always associated with a Sematext App, the App token must
 be specified in the URL. Thus, to send multiple events associated with multiple
-Apps, separate call to the API will need to be made for each App.  
+Apps, separate API call will need to be made for each App.  
 
 ### Examples
 
 #### Example 1
 
-Consider an App which token is ```1111111-2222-3333-4444-555555555555``` (find your real App tokens [here](https://apps.sematext.com/ui/integrations/apps)).  To send a ```server-info``` event
+Consider an App with token ```1111111-2222-3333-4444-555555555555``` (find your real App tokens [here](https://apps.sematext.com/ui/integrations/apps)).  To send a ```server-info``` event
 call the Events API with the App token in the URL:
 
 ```https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event```
@@ -26,7 +26,7 @@ with POST content, including event type, in ```JSON``` format like this:
 curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
   "timestamp" : "2014-02-17T15:29:04+0100",
-  "message" : "Application MyApp on MyHost04 restarted",
+  "message" : "MyApp on MyHost04 restarted",
   "severity": "warn",
   "type" : "server-info"
 }'
@@ -54,10 +54,10 @@ curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-55555555
 ### Adding Events through UI
 
 Calling API methods is not the only way to place an event on the timeline. You can define an event
-in user interface. This is very useful for all kind of events that are important and which are not
+in the user interface. This is very useful for all kinds of events that are important and which are not
 created automatically. Imagine you have an emergency deployment or configuration change
-which doesn't go through CI/CD pipeline so there is no automatic event triggered. You still
-may need to leave a message on the timeline for future analysis how the deployment impacts
+which doesn't go through CI/CD pipeline so there is no automatic event triggered. You may still
+need to leave a message on the timeline for future analysis how the deployment impacts
 system or application metrics.
 
 [![Create a custom event](../images/events/custom-event.png "Create a custom event")](../images/events/custom-event.png)

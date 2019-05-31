@@ -8,7 +8,7 @@ performance and [custom metrics](/monitoring/custom-metrics) or
 [logs](/logs), but also events. Such events may represent what is
 happening with a server or cluster, with an application, etc.  Think
 application or server restarts, builds, deployments, alerts, etc.
-Events are graphed in timeline. Events timeline can be shown
+Events are graphed as a timeline. Events timeline can be shown
 next to metrics or logs charts. This makes it possible to easily
 correlate events with metrics and/or logs. In addition to showing
 events as timeseries charts, a detailed listing of events can be seen
@@ -17,10 +17,10 @@ filtered.
 
 Beyond events that you want to see as part of your operations
 intelligence think about events that matter to your team or your
-organization in general.  All kind of "business events" can be shipped
+organization in general.  All kinds of "business events" can be shipped
 to Sematext, too. [Read](/events/adding#adding-events-through-ui) more about
-adding custom events. You can create an event when your app encountered
-outage and when the problem which caused the outage has been fixed.
+adding custom events. You can create an event when your web application encounters
+an outage and when the problem which caused the outage has been fixed.
 
 Besides being shown in the UI events are also exposed via a [REST API](../api)
 that lets you post, retrieve, and search your events. This REST API
@@ -44,7 +44,7 @@ HTTP(S), using curl or any other Elasticsearch client.  The API endpoint
 is:
 
 ```
-https://event-receiver.sematext.com/APPLICATION_TOKEN
+https://event-receiver.sematext.com/APP_TOKEN
 ```
 
 Alternatively, you can also use the same endpoint which was used when
@@ -52,7 +52,7 @@ adding events, where event type is specified, in which case the matching
 events will be limited to the type specified in the URI:
 
 ```bash
-https://event-receiver.sematext.com/APPLICATION_TOKEN/event
+https://event-receiver.sematext.com/APP_TOKEN/event
 ```
 
 The simplest way to run a query is using [URI search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
