@@ -46,6 +46,9 @@ pages:
         - Inventory: monitoring/inventory.md
         - Processes: monitoring/processes.md
         - Network Map: monitoring/network-map.md
+      - Containers:
+        - Overview: containers/index.md
+        - Monitoring: containers/sematext-agent.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
@@ -102,10 +105,6 @@ pages:
       - Slack: integration/alerts-slack-integration.md
       - VictorOps: integration/alerts-victorops-integration.md
       - Zapier: integration/alerts-zapier-integration.md
-    - Container Monitoring:
-      - Overview: containers/index.md
-      - Monitoring: containers/sematext-agent.md
-      - Logging: logagent/installation-docker.md
     - Agents:
       - Overview: agents/index.md
       - Java Agent:
