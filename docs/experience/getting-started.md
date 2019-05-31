@@ -1,6 +1,13 @@
-title: Getting Started with Experience
-description: Getting started with Experience real user monitoring
+title: Getting Started with Sematext Experience
+description: Getting started with Sematext Experience real user monitoring
 
-### Create an App 
+To start monitoring your website, create an account in Sematext Cloud in either EU or US and then:
 
-Hello
+ * [Click here](https://apps.sematext.com/ui/rum?action=SHOW_CREATE_RUM) to create the App in US data center
+ * OR [click here](https://apps.eu.sematext.com/ui/rum?action=SHOW_CREATE_RUM) to create the App in EU data center
+ * Fill in the App Name, usually the domain of your website (www.sematext.com) will work great for this purpose
+ * Select "Website uses Single Page Architecture" if your website uses React, Angular, Ember, Vue.js, Backbone, or any other framework for building single page web applications
+ * Enter emails of your team members so they are invited to the App if they don't have access to your account
+ * Follow the displayed instructions to add Javascript snippet to your website
+
+The page with the instructions will automatically update when we receive the first metrics from your website and you will be able to open the App and view the collected metrics.
