@@ -17,6 +17,14 @@ You can adjust the configuration of Sematext Agent with additional environment v
 | KUBERNETES_ENABLED | Specifies if the Kubernetes monitoring functionality is active. Default value is `true`. To disable Kubernetes collector set `KUBERNETES_ENABLED=false`. |
 | KUBERNETES_EVENTS_NAMESPACE | Designates a namespace for Kubernetes event watcher. By default all namespaces are watched for Kubernetes events and forwarded to event/log receivers. |
 | KUBERNETES_NAMESPACES | Defines the comma separated list of namespaces that are queried for Kubernetes resources such as pods or deployments. By default all namespaces are fetched. You can adjust specific namespaces such as `KUBERNETES_NAMESPACES=default,kube-system`. |
+| KUBERNETES_INTERVAL | Defines the collection interval for Kubernetes resources (default 10s) |
+| KUBERNETES_CLUSTER_ID | Uniquely identifies the cluster where agent is deployed |
+| KUBERNETES_KUBELET_AUTH_TOKEN |  Specifies the path for account service token |
+| KUBERNETES_KUBELET_CA_PATH | Determines the file path for the certificate authority utilized during TLS verification |
+| KUBERNETES_KUBELET_CERT_PATH | Determines the file path for the certificate file utilized during TLS verification |
+| KUBERNETES_KUBELET_KEY_PATH | Determines the file path for the private key utilized during TLS verification |
+| KUBERNETES_KUBELET_INSECURE_SKIP_TLS_VERIFY |  Indicates whether to skip TLS verification |
+| KUBERNETES_KUBELET_METRICS_PORT |  Specifies the port where kubelet Prometheus metrics are exposed (default 10250) |
 | **Process Monitoring** | |
 | PROCESS_ENABLED | Specifies if process metrics collection is enabled. To disable process metrics collector set `PROCESS_ENABLED=false`. |
 | **Network Monitoring** | |

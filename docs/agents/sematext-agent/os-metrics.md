@@ -1,8 +1,6 @@
 title: OS metrics
 description: Operating system metrics collected by Sematext Agent.
 
-## OS metrics
-
 The agent collects basic system metrics including memory usage, CPU utilization, disk I/O statistics, and more. Most metrics are directly pulled from the _procsfs_ every 10 seconds, although it is possible to alter the collection interval by modifying the `st-agent.yml` configuration file and specifying the period along with the time unit:
 
 ```yaml
