@@ -17,8 +17,7 @@ This Changelog contains only important changes, new features, and critical bug f
     - Add health check command
     - Dockerfile for aarch64
     - Dockerfile for RedHat Enterprise
-- Creation of binary executables using nexe.
-  Binaries can run without installing nodejs runtime. 
+- Creation of binary executables using nexe. The executable can run without installing Node.js runtime. 
 - Automated changelog and release notes
 
 
