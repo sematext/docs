@@ -3,11 +3,11 @@ description: Tag aliases are name-value pairs used to identify a group of tag va
 
 ## What are Tag Aliases?
 
-Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, user can create a tag alias `env:prod` which identifies a set of hosts running in prod setup. So user can define this tag alias and map it set of `os.host` tag values. Tag aliases can be defined from UI, configured in agent or automatically sent by agents.
+Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, to identify the set of hosts running in a production environment, define `env:prod` tag alias and map it set of `os.host` tag values from production machines. Tag aliases can be defined from UI, configured in the agent and some are automatically sent by agents. All tag aliases except user-defined aliases are sent periodically by agent and are purged periodically in Sematext Cloud.
 
 ## Automatic Tags Aliases from agent
 
-The Infra Agent automatically collects following tag aliases and sends them periodically to Sematext Cloud. These tag aliases are purged periodically. It is not recommended to use these names in configured/user-defined tag aliases.
+The Infra Agent automatically collects following tag aliases and sends them periodically to Sematext Cloud. It is not recommended to use these names in configured/user-defined tag aliases.
 
 ### Cloud metadata
 
@@ -24,7 +24,7 @@ The cloud metadata from AWS, Azure and GCE instances is collected as tag aliases
 |  Project Identifier |  cloud.project |  GCE |
 |  User-defined tags |  - |  AWS, GCE, Azure |
 
-To collect user-defined tags you need to define the IAM roles listed below:
+To collect user-defined cloud tags from AWS, Azure or GCE environment, you need to define the IAM roles listed below:
 
 1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
     See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
