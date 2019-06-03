@@ -3,11 +3,11 @@ description: Tag aliases are name-value pairs used to identify a group of tag va
 
 ## What are Tag Aliases?
 
-Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, to identify the set of hosts running in a production environment, define `env:prod` tag alias and map it set of `os.host` tag values from production machines. Tag aliases can be defined from UI, configured in the agent and some are automatically sent by agents. All tag aliases except user-defined aliases are sent periodically by agent and are purged periodically in Sematext Cloud.
+Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, to identify the set of hosts running in a production environment, define `env:prod` tag alias and map it set of `os.host` tag values from production machines. Tag aliases can be configured in the agent and some are automatically sent by agents. All tag aliases are sent periodically by agent and are purged periodically in Sematext Cloud.
 
 ## Automatic Tags Aliases from agent
 
-The Infra Agent automatically collects following tag aliases and sends them periodically to Sematext Cloud. It is not recommended to use these names in configured/user-defined tag aliases.
+The Infra Agent automatically collects following tag aliases and sends them periodically to Sematext Cloud. It is not recommended to use these names in configured tag aliases.
 
 ### Cloud metadata
 
@@ -101,7 +101,3 @@ or in the environment variable SPM\_MONITOR\_TAGS, e.g. on Linux:
 ``` properties
 export SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
-
-## User-defined Tag Aliases from UI
-
-User can define custom tags aliases for an App from UI. From UI, the user can define name-value pair for tag alias and map it to set of tags available for this App. Once created the user-defined tag aliases can be edited or deleted later. These are not purged periodically.
