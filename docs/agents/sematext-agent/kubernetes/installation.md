@@ -89,9 +89,9 @@ spec:
         imagePullPolicy: Always
         env:
         - name: CONTAINER_TOKEN
-          value: <Docker App Token>
+          value: <YOUR_DOCKER_APP_TOKEN_HERE>
         - name: INFRA_TOKEN
-          value: <Infra App Token>
+          value: <YOUR_INFRA_APP_TOKEN_HERE>
         - name: API_SERVER_HOST
           value: "0.0.0.0"
         - name: API_SERVER_PORT
@@ -187,8 +187,8 @@ To install it run the following command:
 
 ```bash
 helm install --name sematext-agent \
-  --set containerToken=<Docker App Token> \
-  --set infraToken=<Infra App Token> \
+  --set containerToken=<YOUR_DOCKER_APP_TOKEN_HERE> \
+  --set infraToken=<YOUR_INFRA_APP_TOKEN_HERE> \
   --set region=US \
   stable/sematext-agent
 ```
@@ -199,8 +199,8 @@ helm install --name sematext-agent \
 If you have already installed Sematext Agent helm chart with a Logs App, just do the upgrade:
 
 helm upgrade sematext-agent \
-  --set containerToken=<Docker App Token> \
-  --set infraToken=<Infra App Token>f \
+  --set containerToken=<YOUR_DOCKER_APP_TOKEN_HERE> \
+  --set infraToken=<YOUR_INFRA_APP_TOKEN_HERE> \
   --reuse-values \
   stable/sematext-agent
 ```

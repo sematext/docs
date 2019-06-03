@@ -8,8 +8,8 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /etc:/host/etc:ro \
 -v /sys:/host/sys:ro \
 -v /usr/lib:/host/usr/lib:ro \
--e CONTAINER_TOKEN==<Docker App Token> \
--e INFRA_TOKEN=<Infra App Token> \
+-e CONTAINER_TOKEN==<YOUR_DOCKER_APP_TOKEN_HERE> \
+-e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=US \
 -e JOURNAL_DIR=/var/run/st-agent \
 -e LOGGING_WRITE_EVENTS=false \
@@ -22,11 +22,13 @@ sematext/agent:latest
 
 Besides providing several bind mounts for Docker socket, _procfs_ and journal directory, tokens are required to ship data to the right place. Sematext Agent will gather data about running processes on the system, basic operating system metrics, machine/instance related information, and ship it to the Infra App token. It will also detect active containers and start collecting different container metrics such as memory usage, network I/O statistics, disk throughput, etc.
 
-By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by either passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL` and `EVENTS_RECEIVER_URL` for log and event receivers respectively or specify an alternative region via `REGION` environment variable.
+By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by either passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL` and `EVENTS_RECEIVER_URL` for log and event receivers respectively or specify an alternative (`EU`) region via `REGION` environment variable.
+
+**Note that if any of the** `*_URL` **environment variables are set, region specific receiver endpoints are ignored.**
 
 #### Run Sematext Agent with a Config File
 
-Mount the configuration file into the container and set the path to the configuration file ```-v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml \``` via CONFIG_FILE environment variable.
+Mount the configuration file into the container and set the path to the configuration file ```-v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml ``` via `CONFIG_FILE` environment variable.
 
 ```bash
 $ docker run -d  --restart always --privileged -P --name st-agent \
@@ -36,8 +38,8 @@ $ docker run -d  --restart always --privileged -P --name st-agent \
 -v /etc:/host/etc:ro \
 -v /sys:/host/sys:ro \
 -v /usr/lib:/host/usr/lib:ro \
--e CONTAINER_TOKEN=<Docker App Token> \
--e INFRA_TOKEN=<Infra App Token> \
+-e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
+-e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=US \
 -e NODE_NAME=`hostname` \
 -e CONTAINER_SKIP_BY_IMAGE=sematext \
@@ -56,8 +58,8 @@ services:
     image: 'sematext/agent:latest'
     environment:
       - affinity:container!=*sematext-agent*
-      - CONTAINER_TOKEN=<container-token>
-      - INFRA_TOKEN=<infra-token>
+      - CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE>
+      - INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE>
       - REGION=US
       - JOURNAL_DIR=/var/run/st-agent
       - LOGGING_WRITE_EVENTS=false
@@ -92,8 +94,8 @@ docker service create --mode global --name st-agent \
 --mount type=bind,src=/etc,dst=/host/etc,readonly \
 --mount type=bind,src=/sys,dst=/host/sys,readonly \
 -e NODE_NAME={{.Node.Hostname}} \
--e INFRA_TOKEN=<Infra App Token> \
--e CONTAINER_TOKEN=<Docker App Token> \
+-e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
+-e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e JOURNAL_DIR=/var/run/st-agent \
 -e LOGGING_REQUEST_TRACKING=false \
 -e LOGGING_WRITE_EVENTS=false \

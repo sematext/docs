@@ -5,11 +5,11 @@ For fine-tunning Sematext Agent refer to `st-agent.yml` configuration file. You 
 The configuration file accepts all options (listed below) in YAML format.
 ```yaml
 # Sematext Agent configuration file
-infra-token: YourInfrastructureMonitoringToken
-container-token: YourDockerMonitoringToken
+infra-token: <YOUR_INFRA_APP_TOKEN_HERE>
+container-token: <YOUR_DOCKER_APP_TOKEN_HERE>
 # Logs token to store Docker and Kubernetes Events in Sematext Logs
-logs-token: YourLogsToken
-# Location to persit events, when backend is not reachable
+logs-token: <YOUR_LOGS_APP_TOKEN_HERE>
+# Location to persist events, when backend is not reachable
 journal:
   dir: /var/run/st-agent
 
