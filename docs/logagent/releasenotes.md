@@ -1,7 +1,7 @@
 title: Logagent Release Notes
 description: Features and improvements releases for Sematext Logagent
 
-Logagent is a dynamic project, and releases are typically in a high frequency. 
+Logagent is a dynamic project with frequent releases. 
 This Changelog contains only important changes, new features, and critical bug fixes. 
 
 ## Version 2.0.160 - 2.0.170
