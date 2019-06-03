@@ -27,24 +27,12 @@ $ pip --version
 pip 1.5.2
 ```
 
-Install Mkdocs
-Install the `mkdocs` package using `pip`:
+Install requirements:
 
 ```sh
-pip install mkdocs===0.17.3
+pip install -r requirements.txt
 ```
 
-Install Material theme
-
-```sh
-pip install mkdocs-material===2.7.0
-```
-
-Install Markdown Code Tabs Extension
-```sh
-pip install Markdown==2.6
-pip install markdown-fenced-code-tabs
-```
 In mkdocs.yml:
 - add extry under markdown_extensions shown on https://github.com/yacir/markdown-fenced-code-tabs for more info:
 - add ```- 'stylesheets/code-tabs.css'``` under extra_css

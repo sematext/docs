@@ -326,13 +326,27 @@ pre {
     padding: 1.05rem 1.2rem;
  }
 
-@media (min-width: 840px){
-.mdl-grid.integrations {
-    padding: 1px;
-}
-}
-.md-nav--primary .md-nav__title {
+@media (min-width: 1220px) {
+  .md-nav--primary .md-nav__title {
     display: none;
+  }
+}
+
+@media (max-width: 1221px){
+  .mdl-grid.integrations {
+      padding: 1px;
+  }
+  .md-nav--primary .md-nav__title {
+    background-color: #011a27 !important;
+    color: white !important;
+  }
+  .md-nav__source {
+    display: none;
+  }
+  .md-nav--primary .md-nav__title:before {
+    background-color: #011a27 !important;
+    color: white !important;
+  }
 }
 .md-content {
     padding: 1.5rem;

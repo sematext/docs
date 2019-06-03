@@ -1,6 +1,13 @@
 title: Custom Metrics
 description: Sematext infrastructure and application monitoring service exposes APIs and provides libraries that let you send custom metrics and turn them into dashboards and real-time visualizations
 
+
+## Deprecated!
+
+Needs revamp after we implement chart builder and new custom metrics.
+
+---
+
 [Sematext Monitoring](http://sematext.com/spm) lets you extend standard performance
 metrics reports by exposing APIs and providing libraries that let you
 send custom metrics (any numerical data, not just performance metrics)
