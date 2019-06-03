@@ -172,7 +172,7 @@ spec:
 Deploy the DaemonSet:
 
 ```
-kubectl create st-agent.ymml
+kubectl create st-agent-ds.yml
 ```
 
 ## Helm chart deployment
