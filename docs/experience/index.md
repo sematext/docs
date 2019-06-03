@@ -12,7 +12,7 @@ Our Monitoring and Logs solution does a great job of monitoring your infrastruct
   height=870
 />
 
-We believe that it's critical for websites and web apps to load fast in order to keep the visitors satisfied. Recent research<sup>1</sup> has shown that:
+It is critical for websites and web apps to load fast in order to keep the visitors satisfied. Recent research<sup>1</sup> has shown that:
 
  * 53% of visits are likely to be abandoned if pages take longer than 3 seconds to load
  * One out of two people expect a page to load in less than 2 seconds
