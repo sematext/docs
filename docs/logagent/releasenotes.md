@@ -4,8 +4,6 @@ description: Features and improvements releases for Sematext Logagent
 Logagent is a dynamic project with frequent releases. 
 This Changelog contains only important changes, new features, and critical bug fixes. 
 
-## Version 2.0.160 - 2.0.170
-
 ### New Features
 
 - RedHat container certification
@@ -47,9 +45,7 @@ In case a changed field was used in dashboards or alerts, the renaming could bre
 
 The change was required to correlate container metrics and logs by those fieds.
 
-
 # Version 2.0.142 - 2.0.160
-
 
 ## New Features
 
