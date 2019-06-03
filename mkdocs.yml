@@ -45,9 +45,8 @@ pages:
         - Process: monitoring/process.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
-      - Custom Metrics: monitoring/custom-metrics.md
+      # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
-      - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
     - Tracing:
@@ -63,6 +62,9 @@ pages:
       - Account Default Hooks: alerts/account-default-hooks.md
     - Events:
       - Overview: events/index.md
+      - Adding Events: events/adding.md
+      - Fields: events/fields.md
+      - Timeline/Histogram: events/timeline.md
     - Integrations:
       - Overview: integration/index.md
       - Monitoring Akka: integration/akka.md
@@ -196,6 +198,8 @@ pages:
         - How-To:
             - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
             - IDE Integration and debugging: logagent/logagent-ide-conf.md
+        - Changelog: logagent/changelog.md
+        - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
