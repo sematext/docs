@@ -49,6 +49,10 @@ pages:
       - Tags: monitoring/tag-support.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
+    - Experience:
+      - Overview: experience/index.md
+      - Getting Started: experience/getting-started.md
+      - User Satisfaction: experience/user-satisfaction.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
