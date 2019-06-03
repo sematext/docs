@@ -1,10 +1,8 @@
 title: Logagent Release Notes
 description: Features and improvements releases for Sematext Logagent
 
-Logagent is a dynamic project, and releases are typically in a high frequency. 
-We list here just important changes, new features, and critical bug fixes. 
-
-## May 2019 - 2.0.160 - 2.0.170
+Logagent is a dynamic project with frequent releases. 
+This Changelog contains only important changes, new features, and critical bug fixes. 
 
 ### New Features
 
@@ -17,15 +15,14 @@ We list here just important changes, new features, and critical bug fixes.
     - Add health check command
     - Dockerfile for aarch64
     - Dockerfile for RedHat Enterprise
-- Creation of binary executables using nexe.
-  Binaries can run without installing nodejs runtime. 
+- Creation of binary executables using nexe. The executable can run without installing Node.js runtime. 
 - Automated changelog and release notes
 
 
 ### Bugfixes
 
 - Log patterns: Bugfix for web server log patterns
-- Docker plugin: Bugfix for not collecting container logs after quick container restart (timing issue)
+- Docker plugin: Bugfix for not collecting container logs after quick container restarts. 
 
 ### Breaking changes > 2.0.162
 
@@ -48,9 +45,7 @@ In case a changed field was used in dashboards or alerts, the renaming could bre
 
 The change was required to correlate container metrics and logs by those fieds.
 
-
-# April 2019 - 2.0.142 - 2.0.160
-
+# Version 2.0.142 - 2.0.160
 
 ## New Features
 
