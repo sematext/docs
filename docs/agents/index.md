@@ -21,5 +21,4 @@ appropriate Sematext monitoring agent. You can choose from:
     only container and host metrics, but also container events and
     also logs, it can parse and structure out of the box.
 
-  - [Sematext Agent](), a lightweight, blazing fast Go-based Monitoring Agent with a tiny footprint.
-
+  - [Sematext Agent](./sematext-agent), a lightweight, blazing fast Go-based Monitoring Agent with a tiny footprint.

@@ -1,8 +1,8 @@
 ## Configuration file
 
-For fine-tunning Sematext Agent refer to `st-agent.yml` configuration file. You will have to attach a bind mount with file location and pass the `CONFIG_FILE` environment variable that contains the path to the aforementioned configuration file.
+For fine-tuning Sematext Agent refer to `st-agent.yml` configuration file. You will have to mount the file from the host into the container file system and set `CONFIG_FILE` environment variable to specify the path to the aforementioned configuration file.
 
-The configuration file accepts all options (listed below) in YAML format.
+The configuration file accepts all options listed below in YAML format.
 ```yaml
 # Sematext Agent configuration file
 infra-token: <YOUR_INFRA_APP_TOKEN_HERE>
@@ -14,7 +14,7 @@ journal:
   dir: /var/run/st-agent
 
 pkg:
- enabled: false
+ enabled: true
 
 logging:
   format: json

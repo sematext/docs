@@ -1,4 +1,4 @@
-To deploy Sematext Agent container run the following command on each host:
+To deploy the Sematext Agent as a container, run the following command on each host:
 
 ```bash
 docker run -d  --restart always --privileged -P --name st-agent \
