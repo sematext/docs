@@ -39,20 +39,15 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - Java Agent:
-        - Overview:  monitoring/spm-client.md
-        - Embedded Mode: monitoring/spm-monitor-javaagent.md
-        - Standalone Mode: monitoring/spm-monitor-standalone.md
-        - Switching Modes: monitoring/spm-monitor-switching-modes.md
-        - Chef Recipe: monitoring/chef-recipe.md
-      - Node Agent: monitoring/node-agent.md
-      - Docker Agent: sematext-docker-agent/index.md
+      - Infrastructure: 
+        - Overview: monitoring/infrastructure.md
+        - Inventory: monitoring/inventory.md
+        - Process: monitoring/process.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
-      - Custom Metrics: monitoring/custom-metrics.md
+      # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
       - Tag Aliases: monitoring/tag-aliases-support.md
-      - Coda Hale Metrics Reporter: monitoring/coda-hale-metrics-reporter.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
     - Tracing:
@@ -68,6 +63,9 @@ pages:
       - Account Default Hooks: alerts/account-default-hooks.md
     - Events:
       - Overview: events/index.md
+      - Adding Events: events/adding.md
+      - Fields: events/fields.md
+      - Timeline/Histogram: events/timeline.md
     - Integrations:
       - Overview: integration/index.md
       - Monitoring Akka: integration/akka.md
@@ -106,87 +104,98 @@ pages:
       - Slack: integration/alerts-slack-integration.md
       - VictorOps: integration/alerts-victorops-integration.md
       - Zapier: integration/alerts-zapier-integration.md
+    - Container Monitoring:
+      - Overview: containers/index.md
+      - Monitoring: containers/sematext-agent.md
+      - Logging: logagent/installation-docker.md
+    - Agents:
+      - Overview: agents/index.md
+      - Java Agent:
+        - Overview:  agents/spm-client.md
+        - Embedded Mode: agents/spm-monitor-javaagent.md
+        - Standalone Mode: agents/spm-monitor-standalone.md
+        - Switching Modes: agents/spm-monitor-switching-modes.md
+        - Chef Recipe: agents/chef-recipe.md
+      - Node Agent: agents/node-agent.md
+      - Docker Agent:
+        - Overview: sematext-docker-agent/index.md
+        - Installation: sematext-docker-agent/installation.md
+        - Configuration: sematext-docker-agent/configuration.md
+        - Troubleshooting: sematext-docker-agent/troubleshooting.md
+        - FAQ: sematext-docker-agent/faq.md
+      - Logagent:
+        - Overview: logagent/index.md
+        - Installation:
+          - Linux: logagent/installation.md
+          - Docker: logagent/installation-docker.md
+          - Mac: logagent/installation-mac.md
+          - Windows: logagent/installation-windows.md
+          - Heroku: logagent/installation-heroku.md
+        - Usage:
+          - Configuration: logagent/config-file.md
+          - Command Line Parameters: logagent/cli-parameters.md
+          - Log Parser Patterns: logagent/parser.md
+        - Plugins:
+          - Overview: logagent/plugins.md
+          - Input Filter:
+            - About filters: logagent/filters.md
+            - Grep input filter: logagent/input-filter-grep.md
+            - Grok input filter: logagent/input-filter-grok.md
+          - Input Plugins:
+            - Standard input: logagent/input-plugin-stdin.md
+            - File input: logagent/input-plugin-files.md
+            - Docker logs input: logagent/input-plugin-dockerlogs.md
+            - Syslog input: logagent/input-plugin-syslog.md
+            - Journald input: logagent/input-plugin-journald-upload.md
+            - Apache Kafka input: logagent/input-plugin-kafka.md
+            - InfluxDB input: logagent/input-plugin-influxdb-http.md
+            - TCP input: logagent/input-plugin-tcp.md
+            - MQTT client input: logagent/input-plugin-mqtt-client.md
+            - MQTT broker input: logagent/input-plugin-mqtt-broker.md
+            - GELF input: logagent/input-plugin-gelf.md
+            - Command input: logagent/input-plugin-command.md
+            - Elasticsearch HTTP: logagent/input-plugin-elasticsearch-http.md
+            - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
+            - MSSQL query: logagent/input-plugin-mssql.md
+            - MySql query: logagent/input-plugin-mysql.md
+            - Cassandra query: logagent/input-plugin-cassandra.md
+            - ZeroMQ input: logagent/input-plugin-zeromq.md
+            - Postgresql query: logagent/input-plugin-postgresql.md
+            - Apple device location: logagent/logagent-apple-location.md
+            - Nova dust sensor: logagent/logagent-novasds.md
+            - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
+          - Output Filter:
+            - Access Watch output filter: logagent/output-filter-accesswatch.md
+            - SQL output filter: logagent/output-filter-sql.md
+            - AES encrypt fields: logagent/output-filter-aesencryptfields.md
+            - Hash fields: logagent/output-filter-hashfields.md
+            - Remove fields: logagent/output-filter-removefields.md
+            - IP truncate fields: logagent/output-filter-iptruncatefields.md
+            - Docker enrichment: logagent/output-filter-dockerenrichment.md
+          - Output Plugins:
+            - Standard output: logagent/output-plugin-stdout.md
+            - GELF: logagent/output-plugin-gelf.md
+            - MQTT: logagent/output-plugin-mqtt.md
+            - Files: logagent/output-plugin-files.md
+            - Elasticsearch: logagent/output-elasticsearch.md
+            - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
+            - InfluxDB: logagent/output-plugin-influxdb.md
+            - Apache Kafka: logagent/output-plugin-kafka.md
+            - ZeroMQ: logagent/output-plugin-zeromq.md
+            - ClickHouse: logagent/output-plugin-clickhouse.md
+            - Slack Webhook: logagent/output-plugin-slack.md
+            - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
+        - How-To:
+            - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
+            - IDE Integration and debugging: logagent/logagent-ide-conf.md
+        - Changelog: logagent/changelog.md
+        - Release Notes: logagent/releasenotes.md
+        - FAQ: logagent/faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
       - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
       - FAQ: sematext-enterprise/faq.md
-    - Container Monitoring:
-      - Overview: containers/index.md
-      - Monitoring: containers/sematext-agent.md
-      - Logging: logagent/installation-docker.md
-    - Sematext Docker Agent:
-      - Overview: sematext-docker-agent/index.md
-      - Installation: sematext-docker-agent/installation.md
-      - Configuration: sematext-docker-agent/configuration.md
-      - Troubleshooting: sematext-docker-agent/troubleshooting.md
-      - FAQ: sematext-docker-agent/faq.md
-    - Logagent:
-      - Overview: logagent/index.md
-      - Installation:
-        - Linux: logagent/installation.md
-        - Docker: logagent/installation-docker.md
-        - Mac: logagent/installation-mac.md
-        - Windows: logagent/installation-windows.md
-        - Heroku: logagent/installation-heroku.md
-      - Usage:
-        - Configuration: logagent/config-file.md
-        - Command Line Parameters: logagent/cli-parameters.md
-        - Log Parser Patterns: logagent/parser.md
-      - Plugins:
-        - Overview: logagent/plugins.md
-        - Input Filter:
-          - About filters: logagent/filters.md
-          - Grep input filter: logagent/input-filter-grep.md
-          - Grok input filter: logagent/input-filter-grok.md
-        - Input Plugins:
-          - Standard input: logagent/input-plugin-stdin.md
-          - File input: logagent/input-plugin-files.md
-          - Docker logs input: logagent/input-plugin-dockerlogs.md
-          - Syslog input: logagent/input-plugin-syslog.md
-          - Journald input: logagent/input-plugin-journald-upload.md
-          - Apache Kafka input: logagent/input-plugin-kafka.md
-          - InfluxDB input: logagent/input-plugin-influxdb-http.md
-          - TCP input: logagent/input-plugin-tcp.md
-          - MQTT client input: logagent/input-plugin-mqtt-client.md
-          - MQTT broker input: logagent/input-plugin-mqtt-broker.md
-          - GELF input: logagent/input-plugin-gelf.md
-          - Command input: logagent/input-plugin-command.md
-          - Elasticsearch HTTP: logagent/input-plugin-elasticsearch-http.md
-          - Elasticsearch query: logagent/input-plugin-elasticsearch-query.md
-          - MSSQL query: logagent/input-plugin-mssql.md
-          - MySql query: logagent/input-plugin-mysql.md
-          - Cassandra query: logagent/input-plugin-cassandra.md
-          - ZeroMQ input: logagent/input-plugin-zeromq.md
-          - Postgresql query: logagent/input-plugin-postgresql.md
-          - Apple device location: logagent/logagent-apple-location.md
-          - Nova dust sensor: logagent/logagent-novasds.md
-          - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
-        - Output Filter:
-          - Access Watch output filter: logagent/output-filter-accesswatch.md
-          - SQL output filter: logagent/output-filter-sql.md
-          - AES encrypt fields: logagent/output-filter-aesencryptfields.md
-          - Hash fields: logagent/output-filter-hashfields.md
-          - Remove fields: logagent/output-filter-removefields.md
-          - IP truncate fields: logagent/output-filter-iptruncatefields.md
-          - Docker enrichment: logagent/output-filter-dockerenrichment.md
-        - Output Plugins:
-          - Standard output: logagent/output-plugin-stdout.md
-          - GELF: logagent/output-plugin-gelf.md
-          - MQTT: logagent/output-plugin-mqtt.md
-          - Files: logagent/output-plugin-files.md
-          - Elasticsearch: logagent/output-elasticsearch.md
-          - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
-          - InfluxDB: logagent/output-plugin-influxdb.md
-          - Apache Kafka: logagent/output-plugin-kafka.md
-          - ZeroMQ: logagent/output-plugin-zeromq.md
-          - ClickHouse: logagent/output-plugin-clickhouse.md
-          - Slack Webhook: logagent/output-plugin-slack.md
-          - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
-      - How-To:
-          - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
-          - IDE Integration and debugging: logagent/logagent-ide-conf.md
-      - FAQ: logagent/faq.md
     - API: api/index.md
     - FAQ: faq.md
 
