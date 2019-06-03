@@ -8,11 +8,11 @@ The tags are automatically collected by agents while fetching metrics and sent a
 
 ## Special Tags
 
-Following tags are treated specially in Sematext Cloud and cannot be used in Tag aliases, App agent YAMLs and as custom fields in logs. There are used to correlate data across multiple apps and logs. Refer to [Special Logs Fields](/logs/special-fields/) for list of special fields in logs.
+Following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. There are used to correlate data across multiple Apps. Refer to [Special Logs Fields](/logs/special-fields/) for list of special fields in logs.
 
 ### Common Tags
 
-The below tags are applicable to all metrics types
+The tags below are applicable to all metrics types:
 
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
@@ -70,7 +70,7 @@ Below are Process related tags sent as part of metrics/logs process info.
 
 ### Network Traffic Stats Tags
 
-Below tags are sent as part of Network Traffic Status metrics:
+Below are the tags sent as part of Network Traffic Status metrics:
 
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
@@ -105,7 +105,7 @@ Below are the tags that are reserved for future use.
 
 ## Defining Tags in Sematext App Agent Integration YAMLs
 
-In App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
+In the App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. Tags can be configured in the `tag` section of the App Agent integration YAMLs. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.

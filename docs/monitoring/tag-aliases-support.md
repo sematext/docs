@@ -3,11 +3,11 @@ description: Tag aliases are name-value pairs used to identify a group of tag va
 
 ## What are Tag Aliases?
 
-Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, to identify the set of hosts running in a production environment, define `env:prod` tag alias and map it set of `os.host` tag values from production machines. Tag aliases can be configured in the agent and some are automatically sent by agents. All tag aliases are sent periodically by agent and are purged periodically in Sematext Cloud.
+Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, to identify the set of hosts running in a production environment, define `env:prod` tag alias in the agents running on all production machines. The Agent maps the configured tag aliases to `os.host` tag. Then from UI, selecting `env:prod` filter, will filter data from all hosts in the production environment. Tag aliases can be configured in the Agent and some are automatically sent by agents. All tag aliases are sent periodically by Agent and are purged periodically in Sematext Cloud.
 
 ## Automatic Tags Aliases from agent
 
-The Infra Agent automatically collects following tag aliases and sends them periodically to Sematext Cloud. It is not recommended to use these names in configured tag aliases.
+The Infra Agent automatically collects the following tag aliases and sends them periodically to Sematext Cloud. It's not recommended to use these names in the configured tag aliases.
 
 ### Cloud metadata
 
@@ -39,7 +39,7 @@ restart spm-monitor using `sudo service spm-monitor restart`.
 
 ### Machine
 
-Following tag aliases are collected from the host the agent is running. They are mapped to `os.host` tag:
+Following tag aliases are collected from the host the agent is running on. They are mapped to the `os.host` tag:
 
 | Name  | Tag Name  | Description |
 |:--|:--|:--|
@@ -53,13 +53,13 @@ Following tag aliases are collected from the host the agent is running. They are
 
 ## Configured Tag Aliases in Agent
 
-The Sematext Agents supports configuration of custom tag aliases. They can be specified in the agent's configuration files. For example, you can configure tag aliases like `env:prod` (on all production servers) and `env:dev` (on all dev servers) and filter the data in UI based on these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag. These tag aliases are optional and can be changed anytime.
+The Sematext Agents supports configuring custom tag aliases. They can be specified in the Agent's configuration files. Tag aliases like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tag aliases are optional and can be changed at any time.
 
 Below are the steps to configure custom tags in Sematext Agents.
 
 ### Sematext Infra Agent
 
-To add tag aliases for Infra Agent edit the below property in Infra Agent configuration file:
+To add tag aliases in Infra Agent, edit the property below in the Infra Agent configuration file:
 `/opt/spm/properties/st-agent.yml` 
 
 ```yaml
@@ -69,7 +69,7 @@ tag-aliases: "env:dev, project:projectName, role:webfrontend"
 
 ### Sematext App Agent
 
-To configure tag alias for each app edit the below property in the monitor configuration file: 
+To configure tag aliases for an individual App, edit the property below in the monitor configuration file: 
 `/opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties`:
 
 ``` properties
