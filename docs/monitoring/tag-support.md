@@ -1,125 +1,113 @@
-title: Monitoring Tags Support
-description: Extract tags from metric sources, environment, assign metadata to host/server/container with custom tags and create more useful dashboards and alerts for your AWS, Docker, Node.js and other applications, hosts and containers
+title: Monitoring Tags 
+description: Tag is an attribute of a data point (or metric) that could be used for grouping and filtering.
 
-## What's a Tag?
+Tags are sent by Sematext Agents as part of every data point and they are shown in UI as filters. 
+For example, as part of Docker container metrics, the agent sends hostname on which the container is running, container identifier, container name, container image as tags which appear as filters in UI. User can then group or filter the container metrics using these tags.
 
-To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each
-host/server/container in the form of *tags*.
+The tags are automatically collected by agents while fetching metrics and sent as part of metrics to the receiver.
 
-Tags let you organize your hosts/servers/containers in different ways – for example by role, owner, or environment. Each tag consists of
-a name and a value, separated by the ':' character. Both name & value are case-sensitive.
+## Special Tags
 
-We recommend that you devise a set of tag names that meet your needs for each piece of your infrastructure and to keep the tag set small and clean. Using a consistent and not overly broad set of tag names makes it easier for you make the most of Sematext and avoid chaos. Tags will help you to create Alerts for hosts/servers/containers under certain tags or add dashboard widgets based on tags you have defined.
+The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](/logs/special-fields/) for list of special fields in logs.
 
-### Reserved tags
+### Common Tags
 
-Below tag names are reserved by Sematext to be used for internal purposes or for future use. It is not recommended to use these tag names for custom tags.
+The tags below are applicable to all metrics types:
 
-These tag names are used for internal purposes. These are are automatically added by agent:
-
-| Tag Name  | Description  |
-|:--|:--|
-| os.host | Hostname of the host where the agent is running |
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| os.host | Hostname of the host where the agent is running | host, hostname, host.id, host.ip, host.name |
 | token | Sematext App Token |
+| measurement | Reserved as per Influx Line Protocol |
+| tag.alias.type | Denotes the Tag Alias type |
+
+### Container Tags
+
+Below are container related tags sent as part of metrics in the container environment.
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| container.type | Type of container engine (e.g. docker, rkt, crio) |
+| container.name | Container name |
+| container.id | Container identifier |
+| container.image.name | Container image name |
 | container.hostname | Hostname of the container being monitored |
 | container.host.hostname | Hostname of the host where the container is running |
-| measurement | Reserved as per Influx Line Protocol |
 
-`source`, `host`, `hostname`, `pod`, `service`, `span` are reserved for future use.
+### Kubernetes Tags
 
-Sematext Agents collects tags from following sources:
+Below are Kubernetes related tags sent as part of metrics in the Kubernetes environment.
 
-### Sematext App Agent Integration YAMLs
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| kubernetes.pod.name | Name of the kubernetes pod | pod
+| kubernetes.pod.node | Node name where the pod is running | 
+| kubernetes.cluster.name | Kubernetes cluster name | 
+| kubernetes.deployment.name | Kubernetes deployment name | 
+| kubernetes.namespace | Kubernetes namespace | 
+| kubernetes.pvc.name | Kubernetes Persistent Volume Clain name | 
+| kubernetes.pod.controlledby | Controller of the pod (deployment|daemonset|statefulset) |
 
-These tags are extracted automatically from metric data sources & values based on YAML configuration. The tags can be configured in `tag` section App Agent integration YAMLs.  The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
+### Operating System Tags
+
+Below are the OS related tags sent as part of OS metrics
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| os.disk | Human readable name of the block device | 
+| os.disk.mountpoint | Mount point for the disk in the file system |
+| os.disk.fs.type | Type of the file system associated with the device |
+| os.network | Name of the network interface |
+
+### Process Tags
+
+Below are Process related tags sent as part of metrics/logs process info.
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| process.name | process/program name |
+| process.pid  | process identifier | 
+
+### Network Traffic Stats Tags
+
+Below are the tags sent as part of Network Traffic Status metrics:
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| network.topology.address | Local address of the network connection | network.connections.address 
+| network.topology.destination.address | Remote host address of the network connection | network.connections.dst.address
+| network.topology.destination.port | Remote port |
+| network.topology.protocol |  Protocol name (TCP or UDP) |
+| network.topology.outgoing | determines whether the connection is incoming (client connected to server) or outgoin(current machine connects to external server) |
+| network.topology.process.id | process's identifier that produces connection stats |
+| network.topology.process.name | name of the process's image that produces connection stats | 
+
+### Serverless Tags
+
+Below are Serverless related tags sent as part of metrics/logs in the Serverless environment.
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| function.name |  | 
+
+
+### Other Special Tags
+
+Below are the tags that are reserved for future use.
+
+| Tag Name  | Description  | Related reserved tags
+|:--|:--|:--
+| source |  Represents the source of the event  | facility
+| service | Service that generated the event | service.id, service.name
+| span | Building block of trace in distributed tracing | 
+| error.code | Error code | error.id, error.message
+
+
+## Defining Tags in Sematext App Agent Integration YAMLs
+
+In the App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. Tags can be configured in the `tag` section of the App Agent integration YAMLs. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
 
-Some of the tags derived from a given metrics source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
-
-### Environment
-
-Sematext Monitoring agent automatically collects tags from the environment the agent is running. Following tags are collected:
-
-#### Cloud metadata
-
-The cloud metadata from AWS, Azure and GCE instances is collected as tags. The agent collects below metadata as tags:
-
-| Name  | Tag Name  | Supported Cloud Providers  |
-|:--|:--|:--|
-|  Provider Type |  cloud.type |  AWS, GCE, Azure |
-|  Instance Identifier |  cloud.instance.id |  AWS, GCE, Azure |
-|  Instance Name |  cloud.instance.name |  Azure, GCE |
-|  Instance Type |  cloud.instance.type |  AWS, GCE, Azure |
-|  Region |  cloud.region |  AWS, Azure |
-|  Availability Zone |  cloud.zone |  AWS, GCE |
-|  Project Identifier |  cloud.project |  GCE |
-|  User defined tags |  - |  AWS, GCE, Azure |
-
-To collect user defined tags you need to define the IAM roles listed below:
-
-1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
-    See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
-2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager
-    See [Access Azure Resource Manager API](https://docs.microsoft.com/en-gb/azure/active-directory/managed-identities-azure-resources/tutorial-linux-vm-access-arm) for more info.
-3. GCE - In GCE User defined tags are called Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
-    See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
-
-Cloud tags collection is enabled by default.  To disable Cloud tags
-collection set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/st-agent.yml` and
-restart spm-monitor using `sudo service spm-monitor restart`.
-
-#### Machine
-
-Following tags are collected from the host the agent is running.
-
-| Name  | Tag Name  | Description |
-|:--|:--|:--|
-| SystemUUID | os.uuid | Unique ID based on SMBIOS specification |
-| OS Distribution Name | os.distro.name | Distribution name of the OS. e.g. `ubuntu` |
-| OS Distribution Version | os.distro.version | Version of the OS. e.g. `16.04` |
-| Kernel Version | os.kernel | Version of the Kernel. e.g. `4.4.0-130-generic` |
-| JVM Version | jvm.version | Version of JVM, if available in `PATH` |
-| Virtualization | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
-
-### Agent configuration
-
-The Sematext Agents supports configuration of custom tags. They can be specified in the agent's configuration files. For example, you can configure tags like `env:prod` (on all production servers) and `env:dev` (on all dev servers) and filter the data in UI based on these tags. The maximum allowed length for both name and value is 1024 characters. These tags are optional and can be changed anytime.
-
-Below are the steps to configure custom tags in Sematext Agents.
-
-#### Sematext App Agent
-
-To add custom tags for each app edit the below property in the monitor configuration file: 
-`/opt/spm/spm-monitor/conf/spm-monitor-config-${token}-${jvm}.properties`:
-
-``` properties
-# add tags if you want to use them, example: SPM_MONITOR_TAGS="env:foo, role:bar"
-SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
-```
-
-The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
-
-#### Sematext Docker Agent
-
-Tags are provided in the environment variable SPM\_MONITOR\_TAGS for example:
-
-``` bash
-docker run -e SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend" ... sematext/sematext-agent-docker
-```
-
-#### Sematext Node Agent
-
-Tags could be configured in the config file `./.spmagentrc` or
-`/etc/spmagentrc`
-
-``` properties
-SPM_MONITOR_TAGS = env:dev, project:projectName, role:webfrontend
-```
-
-or in the environment variable SPM\_MONITOR\_TAGS, e.g. on Linux:
-
-``` properties
-export SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
-```
+Some of the tags derived from a given metric source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
