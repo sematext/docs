@@ -8,7 +8,7 @@ The tags are automatically collected by agents while fetching metrics and sent a
 
 ## Special Tags
 
-Following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. There are used to correlate data across multiple Apps. Refer to [Special Logs Fields](/logs/special-fields/) for list of special fields in logs.
+The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](/logs/special-fields/) for list of special fields in logs.
 
 ### Common Tags
 
