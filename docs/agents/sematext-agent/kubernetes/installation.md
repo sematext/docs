@@ -92,6 +92,8 @@ spec:
           value: <YOUR_DOCKER_APP_TOKEN_HERE>
         - name: INFRA_TOKEN
           value: <YOUR_INFRA_APP_TOKEN_HERE>
+        - name: REGION:
+          value: <US or EU>
         - name: API_SERVER_HOST
           value: "0.0.0.0"
         - name: API_SERVER_PORT

@@ -15,7 +15,7 @@ A Golang-based [Sematext agent](../agents/sematext-agent) (included in the spm-c
 
 Infra App also includes data about your containerized environments. Installation instructions for Docker Monitoring also include an Infra App token. That way when installing Sematext Agent for Docker, an Infra App will be installed as well.
 
-Infra Apps are currently available for all users for free as a Beta feature.
+Infra Apps are currently available to all users for free as a Beta feature.
 
 
 ## Enabling Infra Monitoring

@@ -5,7 +5,7 @@ The agent collects basic system metrics including memory usage, CPU utilization,
 
 ```yaml
 # Metric collection interval for OS, network & container metrics
-interval: 20s
+interval: 10s
 ```
 
 The following is the detailed breakdown of every single metric tracked by Sematext Agent. Note that disk and network metrics are reported per device.
