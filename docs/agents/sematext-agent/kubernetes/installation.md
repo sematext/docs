@@ -57,7 +57,7 @@ rules:
 ```
 ### Create and deploy the DaemonSet
 
-Create a file for the deployment `st-agent-ds.yml` (Replace Tokens and receiver URLs):
+ Create a `st-agent-ds.yml` file for the deployment (Replace Tokens and receiver URLs):
 
 ```yaml
 apiVersion: v1
@@ -189,7 +189,6 @@ To install it run the following command:
 helm install --name sematext-agent \
   --set containerToken=<YOUR_DOCKER_APP_TOKEN_HERE> \
   --set infraToken=<YOUR_INFRA_APP_TOKEN_HERE> \
-  --set region=US \
   stable/sematext-agent
 ```
 

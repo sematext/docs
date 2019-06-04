@@ -10,7 +10,6 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /usr/lib:/host/usr/lib:ro \
 -e CONTAINER_TOKEN==<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
--e REGION=US \
 -e JOURNAL_DIR=/var/run/st-agent \
 -e LOGGING_WRITE_EVENTS=false \
 -e LOGGING_REQUEST_TRACKING=false \
@@ -20,7 +19,7 @@ docker run -d  --restart always --privileged -P --name st-agent \
 sematext/agent:latest
 ```
 
-Besides providing several bind mounts for Docker socket, _procfs_ and journal directory, tokens are required to ship data to the right place. Sematext Agent will gather data about running processes on the system, basic operating system metrics, machine/instance related information, and ship it to the Infra App token. It will also detect active containers and start collecting different container metrics such as memory usage, network I/O statistics, disk throughput, etc.
+Besides providing several bind mounts for Docker socket, _procfs_ and journal directory, App tokens are required to ship data to the appropriate Monitoring Apps. Sematext Agent will gather data about running processes on the system, basic operating system metrics, machine/instance related information, and ship it to the Infra App token. It will also detect active containers and start collecting different container metrics such as memory usage, network I/O statistics, disk throughput, etc.
 
 By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by either passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL` and `EVENTS_RECEIVER_URL` for log and event receivers respectively or specify an alternative (`EU`) region via `REGION` environment variable.
 
@@ -40,7 +39,6 @@ $ docker run -d  --restart always --privileged -P --name st-agent \
 -v /usr/lib:/host/usr/lib:ro \
 -e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
--e REGION=US \
 -e NODE_NAME=`hostname` \
 -e CONTAINER_SKIP_BY_IMAGE=sematext \
 -e CONFIG_FILE=/opt/st-agent/st-agent.yml \
@@ -60,7 +58,6 @@ services:
       - affinity:container!=*sematext-agent*
       - CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE>
       - INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE>
-      - REGION=US
       - JOURNAL_DIR=/var/run/st-agent
       - LOGGING_WRITE_EVENTS=false
       - LOGGING_REQUEST_TRACKING=false
