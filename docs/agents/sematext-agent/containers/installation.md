@@ -10,6 +10,7 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /usr/lib:/host/usr/lib:ro \
 -e CONTAINER_TOKEN==<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
+-e REGION=US \
 -e JOURNAL_DIR=/var/run/st-agent \
 -e LOGGING_WRITE_EVENTS=false \
 -e LOGGING_REQUEST_TRACKING=false \
@@ -39,6 +40,7 @@ $ docker run -d  --restart always --privileged -P --name st-agent \
 -v /usr/lib:/host/usr/lib:ro \
 -e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
+-e REGION=US \
 -e NODE_NAME=`hostname` \
 -e CONTAINER_SKIP_BY_IMAGE=sematext \
 -e CONFIG_FILE=/opt/st-agent/st-agent.yml \
@@ -58,6 +60,7 @@ services:
       - affinity:container!=*sematext-agent*
       - CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE>
       - INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE>
+      - REGION=US
       - JOURNAL_DIR=/var/run/st-agent
       - LOGGING_WRITE_EVENTS=false
       - LOGGING_REQUEST_TRACKING=false
@@ -93,6 +96,7 @@ docker service create --mode global --name st-agent \
 -e NODE_NAME={{.Node.Hostname}} \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
+-e REGION=US \
 -e JOURNAL_DIR=/var/run/st-agent \
 -e LOGGING_REQUEST_TRACKING=false \
 -e LOGGING_WRITE_EVENTS=false \

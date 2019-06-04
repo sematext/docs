@@ -189,6 +189,7 @@ To install it run the following command:
 helm install --name sematext-agent \
   --set containerToken=<YOUR_DOCKER_APP_TOKEN_HERE> \
   --set infraToken=<YOUR_INFRA_APP_TOKEN_HERE> \
+  --set region=US \
   stable/sematext-agent
 ```
 

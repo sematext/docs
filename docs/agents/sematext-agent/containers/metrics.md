@@ -1,7 +1,7 @@
 title: Container metrics
 description: Container metrics, docker, rkt, containerd, cgroupfs
 
-Sematext Agent offers an unified and agnostic approach to container engine monitoring and visibility. Containers are discovered from _cgroupfs_ hierarchies and all the metrics are directly fetched from accounting data that is exposed through _cgroup_ controllers. We have support for Docker, rkt and containerd container runtimes.
+Sematext Agent offers a unified and agnostic approach to container engine monitoring and visibility. Containers are discovered from _cgroupfs_ hierarchies and all the metrics are fetched directly from accounting data exposed through _cgroup_ controllers. We have support for Docker, rkt and containerd container runtimes.
 
 ## Metrics
 
