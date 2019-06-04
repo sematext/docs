@@ -46,7 +46,7 @@ Below are Kubernetes related tags sent as part of metrics in the Kubernetes envi
 | kubernetes.deployment.name | Kubernetes deployment name | 
 | kubernetes.namespace | Kubernetes namespace | 
 | kubernetes.pvc.name | Kubernetes Persistent Volume Clain name | 
-| kubernetes.pod.controlledby | Controller of the pod (deployment|daemonset|statefulset) |
+| kubernetes.pod.controlledby | Controller of the pod (deployment or daemonset or statefulset) |
 
 ### Operating System Tags
 
@@ -88,7 +88,9 @@ Below are Serverless related tags sent as part of metrics/logs in the Serverless
 
 | Tag Name  | Description  | Related reserved tags
 |:--|:--|:--
-| function.name |  | 
+| function.name | Name of the Lamba function | 
+| function.version | Version of the Lamda function | 
+| function.request.id | Identifier of the invocation request | 
 
 
 ### Other Special Tags
