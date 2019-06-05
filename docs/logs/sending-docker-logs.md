@@ -27,7 +27,7 @@ A few seconds later, we see the result in Sematext, beautiful, structured web se
 *One second! How does Logagent know  the container log format?*
 
 A log pattern for web server logs with the  `sourceName` *nginx* (e.g. the image or container name) is defined in the default patterns.yml file. 
-As long a web server container contains "nginx" or "httpd" in its name the parser for webserver logs is applied. If your image or containers don't contain the defined `sourceName` from the default patterns.yml file, you can provide your own patterns.yml file to sematext/logagent: 
+As long a web server container contains "nginx" or "httpd" in its name the parser for webserver logs is applied. If your image or containers don't contain the defined `sourceName` from the default patterns.yml file, you can provide your [own patterns.yml file](https://sematext.com/docs/logagent/parser/#example) to sematext/logagent: 
 
 ```
 docker run -d --restart=always -e LOGS_TOKEN=YourLogsToken \
@@ -36,14 +36,15 @@ docker run -d --restart=always -e LOGS_TOKEN=YourLogsToken \
 sematext/logagent
 ```
 
+
 ![Structured web server logs with container metadata](https://sematext.com/wp-content/uploads/2019/04/Screen-Shot-2019-03-12-at-14.35.26.png)
 
 _Structured web server logs with container metadata_
 
-With a few clicks, we can add widgets to create a web server logs dashboard, showing Top IP addresses and Top URLs or containers.
+With just a few clicks we can add widgets to create a web server logs dashboard, showing Top IP addresses and Top URLs or containers.
 
 ![Sematext UI with Top N widgets for various log fields](https://sematext.com/wp-content/uploads/2019/04/Screen-Shot-2019-03-12-at-14.43.56.png)
 
 _Sematext UI with Top N widgets for various log fields_
 
- That was a smooth start. To see all configuration options and instructions for Kubernetes, RedHat, IBM Cloud, please read the [Logagent Documentation](https://sematext.com/docs/logagent/installation-docker/#configuration-parameters). 
+ That was a smooth start. To see all configuration options and instructions for Kubernetes, Red Hat Enterprise, IBM Cloud, check the [Logagent configuration options](https://sematext.com/docs/logagent/installation-docker/#configuration-parameters). 
