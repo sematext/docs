@@ -26,8 +26,8 @@ A few seconds later, we see the result in Sematext, beautiful, structured web se
 
 *One second! How does Logagent know  the container log format?*
 
-A log pattern for web server logs with the  `sourceName` *nginx* (e.g. the image or container name) is defined in the default patterns.yml file. 
-As long a web server container contains "nginx" or "httpd" in its name the parser for webserver logs is applied. If your image or containers don't contain the defined `sourceName` from the default patterns.yml file, you can provide your [own patterns.yml file](https://sematext.com/docs/logagent/parser/#example) to sematext/logagent: 
+A log pattern for web server logs with *nginx* as the `sourceName` (e.g. the image or container name) is defined in the default patterns.yml file. 
+As long the web server container contains "nginx" or "httpd" in its name (or image) the parser for web server logs will be applied. If your image or containers don't contain the defined `sourceName` from the default patterns.yml file, you can provide your [own patterns.yml file](https://sematext.com/docs/logagent/parser/#example) to sematext/logagent: 
 
 ```
 docker run -d --restart=always -e LOGS_TOKEN=YourLogsToken \
