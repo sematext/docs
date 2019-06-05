@@ -20,18 +20,18 @@ Infra Apps are currently available to all users for free as a Beta feature.
 
 ## Enabling Infra Monitoring
 
-If you've set up Sematext Monitoring at some point in the past, you can easily enable Infra Monitoring by doing:
-- [upgrade](./spm-faq/#agent-updating) your spm-client to latest version
-- setup Infra App token on each of your machines by running <b>setup-infra</b> command (more on that command below) 
+If you've set up Sematext Monitoring at some point in the past, you can easily enable Infra Monitoring by:
+- [upgrading](./spm-faq/#agent-updating) your spm-client to latest version
+- setting up Infra App token on each of your machines by running <b>setup-infra</b> command (more on that command below)
 
-In the case of monitoring Docker, we suggest uninstalling the existing agent and going through the new setup steps for Docker Monitoring in Sematext Cloud.
+For Docker monitoring, we suggest uninstalling the existing agent and going through the new setup steps for Docker Monitoring in Sematext Cloud.
 
-When doing a clean installation, regardless of whether you're installing in containerized environemnt or not, follow monitor installation instructions displayed in Sematext Cloud. Those instructions will always include everything needed to setup an Infra App, either on its own or alongside some other App Agent.
+When doing a clean installation, regardless of whether you're installing in containerized environment or not, follow monitor installation instructions displayed in Sematext Cloud. Those instructions will always include everything needed to set up an Infra App, either on its own or alongside some other App Agent.
 
 
 ### setup-infra command
 
-Setting up or changing which Infra App should receive infrastructure data and metrics from a particular machine can be done with the <b>setup-infra</b> command. To see which Infra Apps exist under your account visit Sematext Cloud -> Integrations -> Apps. You can choose any of the existing Infra Apps or create a new one. Once you do that you'll have the token of that particular App. To setup the token run the following command on each machine that you wish to update:
+Setting up or changing which Infra App should receive infrastructure data and metrics from a particular machine can be done with the <b>setup-infra</b> command. To see which Infra Apps exist in your account visit Sematext Cloud -> Integrations -> Apps. You can choose any of the existing Infra Apps or create a new one. Once you do that you'll have the token of that particular App. To set up the token run the following command on each machine that you wish to update:
 
 <pre>sudo bash /opt/spm/bin/setup-infra --infra-token YOUR_INFRA_APP_TOKEN_HERE</pre>
 
@@ -43,4 +43,4 @@ Infra monitoring provides:
 - [Inventory](./inventory)
 - [Processes details and metrics](./process)
 
-... and many more in near future.
+...  with more added over time.

@@ -6,6 +6,7 @@ appropriate Sematext monitoring agent. You can choose from:
 
   - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
     Monitor). The Infra Agent collects OS & Network metrics.
+    It also collects information about processes and infrastructure inventory.
     The App Agent collects application metrics. The App Agent
     can run in [embedded](spm-monitor-javaagent)
     (aka Java agent-based, aka in-process) or
@@ -21,5 +22,4 @@ appropriate Sematext monitoring agent. You can choose from:
     only container and host metrics, but also container events and
     also logs, it can parse and structure out of the box.
 
-  - [Sematext Agent](), a lightweight, blazing fast Go-based Monitoring Agent with a tiny footprint.
-
+  - [Sematext Agent](./sematext-agent), a lightweight, blazing fast Go-based Monitoring Agent with a tiny footprint.

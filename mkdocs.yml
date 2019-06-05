@@ -39,7 +39,7 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - Infrastructure: 
+      - Infrastructure:
         - Overview: monitoring/infrastructure.md
         - Inventory: monitoring/inventory.md
         - Process: monitoring/process.md
@@ -110,7 +110,6 @@ pages:
       - Zapier: integration/alerts-zapier-integration.md
     - Container Monitoring:
       - Overview: containers/index.md
-      - Monitoring: containers/sematext-agent.md
       - Logging: logagent/installation-docker.md
     - Agents:
       - Overview: agents/index.md
@@ -121,6 +120,18 @@ pages:
         - Switching Modes: agents/spm-monitor-switching-modes.md
         - Chef Recipe: agents/chef-recipe.md
       - Node Agent: agents/node-agent.md
+      - Sematext Agent:
+        - Overview: agents/sematext-agent/index.md
+        - OS Metrics: agents/sematext-agent/os-metrics.md
+        - Containers:
+          - Installation: agents/sematext-agent/containers/installation.md
+          - Configuration: agents/sematext-agent/containers/configuration.md
+          - Metrics: agents/sematext-agent/containers/metrics.md
+          - Metadata: agents/sematext-agent/containers/metadata.md
+        - Kubernetes:
+          - Installation: agents/sematext-agent/kubernetes/installation.md
+          - Configuration: agents/sematext-agent/kubernetes/configuration.md
+          - Metrics: agents/sematext-agent/kubernetes/metrics.md
       - Docker Agent:
         - Overview: sematext-docker-agent/index.md
         - Installation: sematext-docker-agent/installation.md
