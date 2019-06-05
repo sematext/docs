@@ -39,7 +39,7 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - Infrastructure: 
+      - Infrastructure:
         - Overview: monitoring/infrastructure.md
         - Servers: monitoring/servers.md
         - Containers: monitoring/containers.md
@@ -52,8 +52,13 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
+      - Tag Aliases: monitoring/tag-aliases-support.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
+    - Experience:
+      - Overview: experience/index.md
+      - Getting Started: experience/getting-started.md
+      - User Satisfaction: experience/user-satisfaction.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
@@ -67,6 +72,9 @@ pages:
       - Account Default Hooks: alerts/account-default-hooks.md
     - Events:
       - Overview: events/index.md
+      - Adding Events: events/adding.md
+      - Fields: events/fields.md
+      - Timeline/Histogram: events/timeline.md
     - Integrations:
       - Overview: integration/index.md
       - Monitoring Akka: integration/akka.md
@@ -105,6 +113,9 @@ pages:
       - Slack: integration/alerts-slack-integration.md
       - VictorOps: integration/alerts-victorops-integration.md
       - Zapier: integration/alerts-zapier-integration.md
+    - Container Monitoring:
+      - Overview: containers/index.md
+      - Logging: logagent/installation-docker.md
     - Agents:
       - Overview: agents/index.md
       - Java Agent:
@@ -114,6 +125,18 @@ pages:
         - Switching Modes: agents/spm-monitor-switching-modes.md
         - Chef Recipe: agents/chef-recipe.md
       - Node Agent: agents/node-agent.md
+      - Sematext Agent:
+        - Overview: agents/sematext-agent/index.md
+        - OS Metrics: agents/sematext-agent/os-metrics.md
+        - Containers:
+          - Installation: agents/sematext-agent/containers/installation.md
+          - Configuration: agents/sematext-agent/containers/configuration.md
+          - Metrics: agents/sematext-agent/containers/metrics.md
+          - Metadata: agents/sematext-agent/containers/metadata.md
+        - Kubernetes:
+          - Installation: agents/sematext-agent/kubernetes/installation.md
+          - Configuration: agents/sematext-agent/kubernetes/configuration.md
+          - Metrics: agents/sematext-agent/kubernetes/metrics.md
       - Docker Agent:
         - Overview: sematext-docker-agent/index.md
         - Installation: sematext-docker-agent/installation.md
@@ -185,6 +208,8 @@ pages:
         - How-To:
             - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
             - IDE Integration and debugging: logagent/logagent-ide-conf.md
+        - Changelog: logagent/changelog.md
+        - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
