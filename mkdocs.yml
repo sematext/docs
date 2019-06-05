@@ -15,18 +15,17 @@ pages:
       - Sending Log Events:
         - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
-        - Sending Server Logs:
-          - Logagent: logs/logagent.md
-          - Logstash: logs/logstash.md
-          - Syslog:
-            - Overview: logs/syslog.md
-            - JSON Messages over Syslog: logs/json-messages-over-syslog.md
-            - rsyslog: logs/rsyslog.md
-            - syslogd: logs/syslogd.md
-            - syslog-ng: logs/syslog-ng.md
-            - Certificates: logs/certificates.md
-            - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
-            - JSON: logs/json.md
+        - Logagent: logs/logagent.md
+        - Logstash: logs/logstash.md
+        - Syslog:
+          - Overview: logs/syslog.md
+          - JSON Messages over Syslog: logs/json-messages-over-syslog.md
+          - rsyslog: logs/rsyslog.md
+          - syslogd: logs/syslogd.md
+          - syslog-ng: logs/syslog-ng.md
+          - Certificates: logs/certificates.md
+          - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
+          - JSON: logs/json.md
         - Sending Container Logs: 
           - Docker: logs/sending-docker-logs.md
       - Searching Log Events:
