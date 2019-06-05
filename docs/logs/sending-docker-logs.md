@@ -22,7 +22,7 @@ curl http://127.0.0.1:8081
 
 ```
 
-A few seconds later, we see the result in Sematext, beautiful, structured web server logs, including container metadata.
+A few seconds later, Nginx logs will be displayed in Sematext: beautiful, structured web server logs, including container metadata.
 
 *One second! How does Logagent know  the container log format?*
 
