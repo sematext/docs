@@ -39,16 +39,12 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
-      - Infrastructure:
-        - Overview: monitoring/infrastructure.md
-        - Servers: monitoring/servers.md
-        - Containers: monitoring/containers.md
-        - Inventory: monitoring/inventory.md
-        - Processes: monitoring/processes.md
-        - Network Map: monitoring/network-map.md
-      - Containers:
-        - Overview: containers/index.md
-        - Monitoring: containers/sematext-agent.md
+      - Infrastructure: monitoring/infrastructure.md
+      - Servers: monitoring/servers.md
+      - Containers: monitoring/containers.md
+      - Inventory: monitoring/inventory.md
+      - Processes: monitoring/processes.md
+      - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
       # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
@@ -113,18 +109,8 @@ pages:
       - Slack: integration/alerts-slack-integration.md
       - VictorOps: integration/alerts-victorops-integration.md
       - Zapier: integration/alerts-zapier-integration.md
-    - Container Monitoring:
-      - Overview: containers/index.md
-      - Logging: logagent/installation-docker.md
     - Agents:
       - Overview: agents/index.md
-      - Java Agent:
-        - Overview:  agents/spm-client.md
-        - Embedded Mode: agents/spm-monitor-javaagent.md
-        - Standalone Mode: agents/spm-monitor-standalone.md
-        - Switching Modes: agents/spm-monitor-switching-modes.md
-        - Chef Recipe: agents/chef-recipe.md
-      - Node Agent: agents/node-agent.md
       - Sematext Agent:
         - Overview: agents/sematext-agent/index.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
@@ -137,12 +123,13 @@ pages:
           - Installation: agents/sematext-agent/kubernetes/installation.md
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
-      - Docker Agent:
-        - Overview: sematext-docker-agent/index.md
-        - Installation: sematext-docker-agent/installation.md
-        - Configuration: sematext-docker-agent/configuration.md
-        - Troubleshooting: sematext-docker-agent/troubleshooting.md
-        - FAQ: sematext-docker-agent/faq.md
+      - Infra & App Agent:
+        - Overview:  agents/spm-client.md
+        - Embedded Mode: agents/spm-monitor-javaagent.md
+        - Standalone Mode: agents/spm-monitor-standalone.md
+        - Switching Modes: agents/spm-monitor-switching-modes.md
+        - Chef Recipe: agents/chef-recipe.md
+      - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
         - Installation:
@@ -211,6 +198,12 @@ pages:
         - Changelog: logagent/changelog.md
         - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
+      - Sematext Docker Agent (Deprecated):
+        - Overview: sematext-docker-agent/index.md
+        - Installation: sematext-docker-agent/installation.md
+        - Configuration: sematext-docker-agent/configuration.md
+        - Troubleshooting: sematext-docker-agent/troubleshooting.md
+        - FAQ: sematext-docker-agent/faq.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
