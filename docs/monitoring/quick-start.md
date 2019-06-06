@@ -62,7 +62,7 @@ The setup instructions for each of the agents are shown in the UI and you can al
 
 Once the agent is set up metrics will start coming to Sematext
 instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
-look at the <a href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a> page.</p>
+look at the [troubleshooting](./spm-faq) page.
 
 ## Monitoring App Layout
 

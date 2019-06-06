@@ -40,13 +40,13 @@ Side navigation sections for user and team features:
 
 ![Sematext Monitoring App Sidenav](../images/guide/monitoring/monitoring-sidenav.png)
 
-## App Selector
+## App & Dashboard Selector
 
-The App dropdown selector lets you **choose any Logs or Monitoring App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
+The App & Dashboard selector lets you **choose any Logs or Monitoring App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
 
 ## App Actions
 
-Right next to the App Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
+Right next to the App & Dashboard Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
 
 The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal ellipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
 
@@ -81,12 +81,12 @@ The User Settings is the last right aligned item in the header. **Switching acco
 Here you can see the main navigation sections:
 
 - Side navigation 
-- App & Dash Selector dropdown menu
+- App & Dashboard Selector dropdown menu
 - App Actions dropdown menu
 - User Settings dropdown menu
 - Time Picker component 
 
 ![Sematext Cloud Monitoring Guide - Menus](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
 
-The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your monitoring app, do report specific actions, connect your apps, and more.
+The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your Monitoring App, do report-specific actions, connect your Apps, and more.
 
