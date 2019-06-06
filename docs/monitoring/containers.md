@@ -4,7 +4,7 @@ description: Monitor Docker, rkt and containerd containers with Sematext by inst
 Monitor [Docker](https://www.docker.com/), rkt and containerd containers with Sematext by installing simple [Docker Certified Agents](https://hub.docker.com/_/sematext-agent-monitoring-and-logging) and using our interface that shows everything in one simple screen.
 
 ## Create a Sematext Monitoring App
-Creating a Sematext Monitoring App is as easy as choosing the Docker integrations and giving the App a name.
+Creating a Sematext Monitoring App is as easy as choosing the Docker integration and giving the App a name.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
   <source src="../../images/monitoring/create-docker-app.mp4" type="video/mp4" />

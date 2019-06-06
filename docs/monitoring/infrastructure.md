@@ -10,7 +10,7 @@ Sematext Monitoring provides complete insight into your infrastructure:
 - inventory
 - events, etc.
 
-The centerpiece is a newly introduced Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish. Each Infra App is typically used to gather data from one environment. For example, one Infra App for production environment, one for test environment and one for development environment.
+The centerpiece is an Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish. Each Infra App is typically used to gather data from one environment. For example, one Infra App for production environment, one for test environment and one for development environment.
 
 Sematext Cloud will automatically create one Infra App named "Default Infra App" the first time you might need it. You can also create Infra App on your own under Integrations -> Overview.
 
