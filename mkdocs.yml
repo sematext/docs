@@ -39,6 +39,9 @@ pages:
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
+      - Quick Start: monitoring/quick-start.md
+      - Settings: monitoring/settings.md
+      - Reports & Components: monitoring/reports-and-components.md
       - Infrastructure: monitoring/infrastructure.md
       - Servers: monitoring/servers.md
       - Containers: monitoring/containers.md
