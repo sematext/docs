@@ -1,9 +1,14 @@
 title: Sematext Core Infrastructure Monitoring
 description: Sematext Infrastructure Monitoring gives you insight into your whole infrastructure automatically based on the applications, containers, servers and general infrastructure you are monitoring.
 
-## Overview
+Sematext Monitoring provides complete insight into your infrastructure: 
 
-Sematext Monitoring provides complete insight into your infrastructure - applications, servers, containers, processes, inventory, events...
+- applications
+- servers
+- containers
+- processes
+- inventory
+- events, etc.
 
 The centerpiece is a newly introduced Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish. Each Infra App is typically used to gather data from one environment. For example, one Infra App for production environment, one for test environment and one for development environment.
 
