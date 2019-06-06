@@ -14,9 +14,9 @@ The following tags are treated as special in Sematext Cloud and cannot be used i
 
 The tags below are applicable to all metrics types:
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| os.host | Hostname of the host where the agent is running | host, hostname, host.id, host.ip, host.name |
+| os.host | Hostname of the host where the agent is running | host, hostname, host.id, host.name, server.name |
 | token | Sematext App Token |
 | measurement | Reserved as per Influx Line Protocol |
 | tag.alias.type | Denotes the Tag Alias type |
@@ -25,7 +25,7 @@ The tags below are applicable to all metrics types:
 
 Below are container related tags sent as part of metrics in the container environment.
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | container.type | Type of container engine (e.g. docker, rkt, crio) |
 | container.name | Container name |
@@ -38,7 +38,7 @@ Below are container related tags sent as part of metrics in the container enviro
 
 Below are Kubernetes related tags sent as part of metrics in the Kubernetes environment.
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | kubernetes.pod.name | Name of the kubernetes pod | pod
 | kubernetes.pod.node | Node name where the pod is running | 
@@ -52,7 +52,7 @@ Below are Kubernetes related tags sent as part of metrics in the Kubernetes envi
 
 Below are the OS related tags sent as part of OS metrics
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | os.disk | Human readable name of the block device | 
 | os.disk.mountpoint | Mount point for the disk in the file system |
@@ -63,7 +63,7 @@ Below are the OS related tags sent as part of OS metrics
 
 Below are Process related tags sent as part of metrics/logs process info.
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | process.name | process/program name |
 | process.pid  | process identifier | 
@@ -72,10 +72,10 @@ Below are Process related tags sent as part of metrics/logs process info.
 
 Below are the tags sent as part of Network Traffic Status metrics:
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| network.topology.address | Local address of the network connection | network.connections.address 
-| network.topology.destination.address | Remote host address of the network connection | network.connections.dst.address
+| network.topology.address | Local address of the network connection | 
+| network.topology.destination.address | Remote host address of the network connection | 
 | network.topology.destination.port | Remote port |
 | network.topology.protocol |  Protocol name (TCP or UDP) |
 | network.topology.outgoing | determines whether the connection is incoming (client connected to server) or outgoin(current machine connects to external server) |
@@ -86,7 +86,7 @@ Below are the tags sent as part of Network Traffic Status metrics:
 
 Below are Serverless related tags sent as part of metrics/logs in the Serverless environment.
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | function.name | Name of the Lamba function | 
 | function.version | Version of the Lamda function | 
@@ -97,12 +97,13 @@ Below are Serverless related tags sent as part of metrics/logs in the Serverless
 
 Below are the tags that are reserved for future use.
 
-| Tag Name  | Description  | Related special tags
+| Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| source |  Represents the source of the event  | facility
-| service | Service that generated the event | service.id, service.name
-| span | Building block of trace in distributed tracing | 
-| error.code | Error code | error.id, error.message
+| os.host.ip | IP Address of the host/server | server.ip, server.address, host.ip, host.address, source.ip, source.address
+| service.name | Name of the service where the metrics/logs is collected from |
+| service.id | Unique service identifier |
+| service.type | Service type e.g. `hadoop` |
+| span | Building block of trace in distributed tracing |
 
 
 ## Defining Tags in Sematext App Agent Integration YAMLs
