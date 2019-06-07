@@ -64,7 +64,19 @@ In addition, the Monitoring Agent periodically checks the state of the packages 
 
 ## Enabling Inventory Monitoring
 
-You don't need anything to enable inventory monitoring 
+To enable inventory monitoring you need to adjust your `st-agent.yml` file located in the `/opt/spm/properties` directory and set the following section:
+
+```
+pkg:
+  enabled: true
+  interval: 10m
+```
+
+After that the Monitoring Agent needs to be restarted by running the following command:
+
+```
+service spm-monitor-st-agent restart
+```
 
 ## Gathered Data
 
