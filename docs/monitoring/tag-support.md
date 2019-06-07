@@ -100,7 +100,7 @@ Below are the tags that are reserved for future use.
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | os.host.ip | IP Address of the host/server | server.ip, server.address, host.ip, host.address, source.ip, source.address
-| service.name | Name of the service where the metrics/logs is collected from |
+| service.name | Name of the service where the data is collected from |
 | service.id | Unique service identifier |
 | service.type | Service type e.g. `hadoop` |
 | span | Building block of trace in distributed tracing |
