@@ -1,10 +1,15 @@
-## Container Logging
+title: Sematext Container Observability
+description: Monitor Docker, rkt and Rancher container with Sematext by installing simple Agents and using our interface that shows everything in one simple screen.
 
-The [Logagent Docker image](https://hub.docker.com/r/sematext/logagent/) is tailored for the log collection on container platforms. It runs as a tiny container on every Docker host and collects logs for all cluster nodes and their containers. It is open-source agent created by Sematext.
+Some generic explanations...
 
-Logagent detects known log formats and structures your logs for supported applications automatically. You can configure the log parser for any application by providing your pattern definitions or by contributing to the open source pattern definitions in the [patterns.yml](https://github.com/sematext/logagent-js/blob/master/patterns.yml) file.
+## Monitoring
 
-Logagent enriches all container logs with metadata, such as container labels, Kubernetes metadata or Swarm metadata.
+## Logs
+
+## Events
+
+## Alerts
 
 ## More about Docker Monitoring
 * [Docker Container Monitoring with Sematext](https://sematext.com/blog/docker-container-monitoring-with-sematext/)

@@ -6,7 +6,7 @@ Sematext **Application** and **Infrastructure Monitoring** lets you **collect me
 
 Get started in minutes with **out-of-the-box dashboards**, [**alerts**](https://sematext.com/alerts/) and [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
 
-The integrations cover several key features. You have [**Server Monitoring**](../monitoring/#setting-up-monitoring-agents) giving you complete insight about the utilization of your servers and cloud instances. **Monitor Containers** with [**Sematext Agent**](../containers/sematext-agent/), which is deployed seamlessly with Docker or Kubernetes.
+The integrations cover several key features. You have [**Server Monitoring**](../monitoring/#setting-up-monitoring-agents) giving you complete insight about the utilization of your servers and cloud instances. [**Monitor Containers**](../monitoring/containers) with [**Sematext Agent**](../agents/sematext-agent/), which is deployed seamlessly with Docker or Kubernetes.
 
 Our SaaS/on-premises monitoring product goes beyond just collecting metrics. 
 
@@ -52,17 +52,26 @@ Once you have data flowing you can **analyze metrics** by a number of context-aw
 
 Metrics are shipped to Sematext Monitoring using Agents. To monitor your infrastructure you need to set up a **Sematext Monitoring Agent**. You can choose from:
 
-  - [**Sematext Infra & App Agent (SPM)**](../monitoring/spm-client/)
-    
-    The Infra Agent collects OS & Network metrics. The App Agent collects application metrics.
+  - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing 
+    fast Go-based Monitoring Agent with a tiny footprint for both 
+    infrastructure and containers.
 
-  - [**Sematext Node.js App Agent**](../monitoring/node-agent)
-    
-    Monitors Node.js applications but can also [monitor Apache](../integration/apache) and [Nginx](../integration/nginx), including [Nginx Plus](../integration/nginxplus).
+  - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
+    Monitor). The Infra Agent collects OS & Network metrics.
+    The App Agent collects application metrics. The App Agent
+    can run in [embedded](spm-monitor-javaagent)
+    (aka Java agent-based, aka in-process) or
+    [standalone](spm-monitor-standalone) mode.  This agent can also
+    instrument JVM-based apps to collect transaction traces and
+    perform [on demand profiling](on-demand-profiling).
 
-  - [**Docker Agent**](../containers)
-  
-    Collects container and host metrics, and container events.
+  - [Node.js-based App Agent](node-agent), which can [monitor
+    Apache](../integration/apache) and [Nginx](../integration/nginx)
+    (including [Nginx Plus](../integration/nginxplus)).
+
+  - Sematext Docker Agent (Deprecated), which can collect not
+    only container and host metrics, but also container events and
+    also logs, it can parse and structure out of the box.
 
 The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
 
