@@ -10,7 +10,7 @@ Sematext Logs App looks for the following fields in logs and gives them a specia
   - syslog-tag
   - tags
   - message
-  - @timestamp 
+  - @timestamp
 
 **host** is a single-valued field and should contain the ID (typically a
 hostname) of the device or server sending logs.
@@ -47,3 +47,5 @@ these fields will be loaded and shown in the UI as filters and thus
 allowing one to very quickly narrow down the search.
 
 <img alt="Logsene Special Fields" src="/docs/images/logs/logsene-special-fields.gif" title="Logsene Special Fields">
+
+**error.id, error.message, error.type** represents error related fields. These are reserved for future use.
