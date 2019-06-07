@@ -42,7 +42,7 @@ Just like with the Events toggle, turning on the **Logs toggle** in the Reports 
 
 Clicking on the **Logs icon** will open **Logs Table component** below the Logs Search component. A list view of log entries will be displayed with `@timestamp`, `_source`, and `Tags` as default columns, but all available log fields will be available in the **Logs Table component dropdown menu**, and easily selected or deselected and displayed in data table view. Column width can be also resized to better organize Log Table when multiple fields are selected at once.
 
-Every Log entry in the table has two left aligned icons, one that opens **panel with all log details**, and the other that opens **Log context**. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events. Check out the [Logs Guide](./logs-guide) for more info. 
+Every Log entry in the table has two left aligned icons, one that opens **panel with all log details**, and the other that opens **Log context**. Contextual logging is an approach that encourages not just adding additional useful data to log events, but also sharing that data across related events. Check out the [Logs Guide](../logs) for more info. 
 
 
 ### Report Actions 
