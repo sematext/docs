@@ -271,6 +271,7 @@ select 5 GB/day volume, because that will give you a lower $/GB rate
 than if you stay with 1 GB/day selection.
 
 **How much data can I ship to Sematext using the Basic plan?**
+
 Each day, a total of 500 MB/day can be shipped to all Sematext Logs Apps together.
 To ship more data use one of the bigger plans.
 
