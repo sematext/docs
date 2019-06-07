@@ -28,7 +28,9 @@ pages:
           - syslog-ng: logs/syslog-ng.md
           - Certificates: logs/certificates.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
-        - JSON: logs/json.md
+          - JSON: logs/json.md
+        - Sending Container Logs: 
+          - Docker: logs/sending-docker-logs.md
       - Searching Log Events:
         - Overview: logs/searching-log-events.md
         - Logsene CLI: logs/logsene-cli.md
