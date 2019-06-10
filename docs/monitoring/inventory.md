@@ -1,8 +1,6 @@
 title: Sematext Inventory Monitoring
 description: Sematext Inventory Monitoring gives you insight into your whole infrastructure automatically based on the applications, containers, servers and general infrastructure you are monitoring.
 
-##Overview
-
 Sematext Monitoring Agent provides simple to use and versatile way of gathering machine related information such as host, VM or container physical properties, kernel versions, installed packages and presents them on per host basis allowing you not only to view the data but also search and compare different hosts together. Everything in a single place shipped automatically without any effort from the operations point of view.
 
 The Inventory information is available in the Monitoring *Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
