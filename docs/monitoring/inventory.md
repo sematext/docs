@@ -20,7 +20,7 @@ The Inventory Info information provides a summarized view of your inventory info
 
 ### Inventory Overview
 
-Inventory overview provides per host view of each of the hosts, virtual machines and containers along with the operating system and its version, number of CPUs and their type, memory, number of hard disk drives and their total capacity. 
+The Inventory overview provides a per-host view of each host, virtual machine, and container along with the operating system and its version, number of CPUs, their type, memory, number of hard disk drives and total capacity.
 
 ![Inventory Overview](../images/monitoring/inventory_overview.png)
 
@@ -36,7 +36,7 @@ Expanding each row gives detailed information about the system including:
 - Total disk size, 
 - Hard disk drives information.
 
-In addition view of the packages is available giving a view over the packages installed on a given system including:
+In addition, an overview of all the installed packages on a given system is available. This includes:
 
 - Installation source, 
 - Package name, 
@@ -46,7 +46,7 @@ In addition view of the packages is available giving a view over the packages in
 
 ### Comparing Hosts
 
-The Inventory UI allows you to compare different systems to see the differences between them quickly and efficiently:
+The Inventory UI allows comparing different systems to quickly and efficiently see differences between them:
 
 ![Inventory Package Comparison](../images/monitoring/inventory_package_comparison.png)
 
