@@ -52,13 +52,13 @@ The Inventory UI allows comparing different systems to quickly and efficiently s
 
 ## How does it Work?
 
-Inventory Monitoring part of the Monitoring Agent keeps track of the changes done on the file system when installing, upgrading or removing packages on the host system, in the virtual machine or in the container when using coming from:
+Sematext Agent keeps track of all changes done on the file system and displaying them in the Inventory Monitoring UI when installing, upgrading or removing packages on the host system, in a virtual machine or container with:
 
 - Node.JS (when using NPM package manager)
 - Python (when using PIP package manager)
 - DEB (for example, when using APT package manager)
 
-In addition, the Monitoring Agent periodically checks the state of the packages and ships that information to Sematext Cloud to ensure that the state of packages is always up to date and visible in the UI.
+The Agent will periodically check the state of the packages and ship the information to Sematext Cloud ensuring the state of the packages is always up to date and visible.
 
 ## Enabling Inventory Monitoring
 
@@ -97,7 +97,7 @@ In addition, the following information about the packages is gathered for NodeJS
 
 ## Solving Problems With Inventory Monitoring
 
-The Inventory monitoring allows you to quickly solve the following issues:
+Inventory monitoring allows quickly solving the following issues:
 
 - Finding obsolete packages,  
 - Seeing differences in environments for troubleshooting behavior discrepancies, 
