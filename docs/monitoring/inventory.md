@@ -9,7 +9,7 @@ The Inventory information is available in the Monitoring *Infrastructure* sectio
 
 ### Inventory Info
 
-The Inventory Info information provides a summarized view of your inventory information allowing you to see:
+The consolidated infrastructure inventory provides insight into:
 
 - Number of different packages in your monitored environment
 - Number of different OS distributions
@@ -52,17 +52,17 @@ The Inventory UI allows comparing different systems to quickly and efficiently s
 
 ## How does it Work?
 
-The [Sematext Agent](../agents/sematext-agent) keeps track of all changes done on the file system and displaying them in the Inventory Monitoring UI when installing, upgrading or removing packages on the host system, in a virtual machine or container with:
+The [Sematext Agent](../agents/sematext-agent) track of all changes done on the file system. Such changes are displayed in the Inventory Monitoring UI. Package installs, upgrades and removals are also captured. They are displayed as Events. The following types of packages are supported
 
-- Node.JS (when using NPM package manager)
+- Node.js (when using NPM package manager)
 - Python (when using PIP package manager)
 - DEB (for example, when using APT package manager)
 
-The Agent will periodically check the state of the packages and ship the information to Sematext Cloud ensuring the state of the packages is always up to date and visible.
+The Agent checks the state of packages on machines and containers where it's running to ensure all package info is up to date.
 
 ## Enabling Inventory Monitoring
 
-To enable inventory monitoring you need to adjust your `st-agent.yml` file located in the `/opt/spm/properties` directory and set the following section:
+To enable Inventory Monitoring you need to adjust your `st-agent.yml` file located in the `/opt/spm/properties` directory and set the following section:
 
 ```
 pkg:
@@ -97,7 +97,7 @@ In addition, the following information about packages is gathered for Node.js, P
 
 ## Solving Problems With Inventory Monitoring
 
-Here are some of the common use cases and issues that Inventory monitoring helps solve:
+Here are some of the common use cases and issues that Inventory Monitoring helps solve:
 
 - Finding obsolete packages  
 - Seeing differences in environments for troubleshooting behavior discrepancies 
