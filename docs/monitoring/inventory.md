@@ -52,7 +52,7 @@ The Inventory UI allows comparing different systems to quickly and efficiently s
 
 ## How does it Work?
 
-The [Sematext Agent](../agents/sematext-agent) track of all changes done on the file system. Such changes are displayed in the Inventory Monitoring UI. Package installs, upgrades and removals are also captured. They are displayed as Events. The following types of packages are supported
+The [Sematext Agent](../agents/sematext-agent) tracks all changes done on the file system. Such changes are displayed in the Inventory Monitoring UI. Package installs, upgrades and removals are also captured. They are displayed as Events. The following types of packages are supported:
 
 - Node.js (when using NPM package manager)
 - Python (when using PIP package manager)
