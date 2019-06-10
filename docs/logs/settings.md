@@ -1,12 +1,12 @@
 title: Sematext Logs Settings
-description: Cloud based SaaS / On-premises logging as a service platform. Index machine data, search, correlate and investigate. Build in reports and dashboards with monitoring and alerting capabilities.
+description: Learn more about how Sematext Logs works, all settings and configuration options, but also how to use the interface efficiently.
 
 The settings include:
 
   - inviting new users to your App
   - [authorizing public IPs to send data to your app via syslog](../logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
-  - [changing your app's plan](../logs/faq/#plans-prices)
+  - [changing your App's plan](../logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
   ![Sematext Logs App Settings](https://sematext.com/docs/images/logs/logsene-app-settings.png)
@@ -22,6 +22,7 @@ Side navigation top level sections for infrastructure and application performanc
 - Infrastructure
 - Monitoring
 - Logs
+- Experience
 - Correlations
 - Alerts and Events
 - Integrations
@@ -36,15 +37,15 @@ Side navigation sections for user and team features:
 
 ## App & Dashboard Selector
 
-The App & Dashboard dropdown selector lets you **choose any Logs or Monitoring App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
+The App & Dashboard dropdown selector lets you **choose any Logs, Monitoring, or Experience App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
 
 ## App Actions
 
 Right next to the App & Dashboard Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
 
-The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal elipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
+The App Actions dropdown menu allows you to **quickly switch between your Dashboards and Apps**. While the horizontal elipsis icon shows your App options and lets you open various App-specific functions, like instructions to **install monitors and start sending metrics, App settings, alert rules, heartbeat alerts, as well as ability to connect two different Apps, invite team members, and transfer App ownership**.
 
-All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. The Logs App view remains unchanged and allows for easy interaction between various system settings and reports views.
+All App actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. The Logs App view remains unchanged and allows for easy interaction between various system settings and reports views.
 
 ## Report Selector
 
@@ -55,13 +56,13 @@ Once you create a Logs App, and start shipping data, you will get a **default Re
 
 ## Time Picker
 
-The Time Picker is available whenever a Logs or Monitoring App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed common observability defaults.
+The Time Picker is available whenever an App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed as well.
 
 A **custom time range can be selected using the time picker dropdown menu**. The Logs App will automatically refresh upon selection and update all the reports accordingly.
 
 ## Refresh and Live Tail
 
-Refresh data and Live Tail options are located next to the time picker. The **Live Tail feature provides real-time insights as soon as your data is consumed and indexed**. It can be also stopped so the auto-refresh does not update the data, in case you need to inspect specific incidents or anomalies within a certain time segment.
+Refresh data and Live Tail options are located next to the time picker. The **Live Tail feature provides real-time insights as soon as your data is consumed and indexed**. It can also be stopped so the auto-refresh does not update the data, in case you need to inspect specific incidents or anomalies within a certain time segment.
 
 ## Notifications
 
@@ -69,7 +70,7 @@ The megaphone icon in the right section of the header is used to open the notifi
 
 ## User Settings
 
-The User Settings is the last right aligned item in the header. **Switching accounts, Inviting team members, Billing, Help, Subscriptions**, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
+The User Settings is the last right-aligned item in the header. **Switching accounts, Inviting team members, Billing, Help, Subscriptions**, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
 
 Here you can see the main navigation sections:
 
@@ -81,4 +82,4 @@ Here you can see the main navigation sections:
 
 ![Sematext Cloud Monitoring Guide - Menus](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
 
-The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your monitoring app, do report specific actions, connect your apps, and more.
+The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your Monitoring App, do report specific actions, connect your Apps, and more.

@@ -3,7 +3,7 @@ description:  Cloud based SaaS / On-premises logging as a service platform. Inde
 
 Sematext Logs is a **Log Management-as-a-service**. Think of it as your own **central location for logs** in the cloud. If you want to have the same but on your own infrastructure, check out our [Enterprise](../sematext-enterprise) product.
 
-You can collect logs from any part of your software stack. By using log shippers you centralize and index logs from all parts in one single place, [Sematext Logs](../logs).
+You can collect logs from any part of your software stack, IoT devices, network hardware and much more. By using log shippers you centralize and index logs from all parts in one single place, [Sematext Logs](../logs).
 
 [Sematext Logs](../logs) supports [sending logs](../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, and much more, all through an Elasticsearch API or Syslog.
 
@@ -11,7 +11,7 @@ It's a cheaper [alternative to Splunk or Logz.io](https://sematext.com/resources
 
 You can create [custom dashboards](./dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
-[Searching logs](../logs/searching-log-events/) is easy with a Google-like query syntax. You can also turn all searches into real-time [alerts](../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via E-mail, Slack, PagerDuty**, and various other 3rd party integrations. Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
+[Searching logs](./searching-log-events/) is easy with a Google-like [query syntax](./search-syntax). You can also turn all searches into real-time [alerts](../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via E-mail, Slack, PagerDuty**, and various other 3rd party integrations. Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
 
 
 ## Creating a Logs App

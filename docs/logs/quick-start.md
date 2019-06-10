@@ -1,7 +1,7 @@
 title: Sematext Logs Quick Start
-description: Cloud based SaaS / On-premises logging as a service platform. Index machine data, search, correlate and investigate. Build in reports and dashboards with monitoring and alerting capabilities.
+description: Get up-and-running quickly with Sematext Logs. Here's how to start shipping and searching logs in no-time!
 
-After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Logs App. An App is an independent namespace for your data.
+After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Logs App. An [App](../guide/app-guide) is an independent namespace for your data.
 
 For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
@@ -25,7 +25,7 @@ Once you start sending data, you can start [searching and analyzing these logs](
 
 ### Adding Data to Your Logs App
 
-There are two ways to send data to your Logs App: 
+There are two ingestion endpoints to which you can send data to your Logs App:
 
 - [Elasticsearch API](../logs/index-events-via-elasticsearch-api)
 - [Syslog](../logs/syslog)
@@ -39,7 +39,7 @@ If you're using a particular **programming language**, configuring your **loggin
 
 The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
 
-Don't forget, if you're using **Docker**, setting up [Sematext Agent](../containers/sematext-agent/) is incredibly simple.
+Don't forget, if you're using **Docker**, setting up [Logagent](../logagent/installation-docker/) is incredibly simple.
 
 Here's how to send a message from the terminal.
 ```bash
@@ -63,7 +63,7 @@ curl -O https://apps.sematext.com/logsene/configure-syslog.py
 sudo python configure-syslog.py $YOUR-TOKEN-GOES-RIGHT-HERE
 ```
 
-You can also use this snippet.
+You can also use this snippet:
 
 ```bash
 echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
@@ -99,4 +99,4 @@ The image below shows the default logs view and marked are the main application 
 
 ![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/logs/sematext-logs-guide.png)
 
-You can create custom dashboards that can integrate multiple charts and views of your real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.  Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
+You can create custom dashboards that can integrate multiple charts and views of your real-time data that help you understand important trends, summarize top values and view the frequency of conditions.  Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
