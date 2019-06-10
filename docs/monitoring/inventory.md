@@ -1,7 +1,7 @@
 title: Sematext Inventory Monitoring
 description: Sematext Inventory Monitoring gives you insight into your whole infrastructure automatically based on the applications, containers, servers and general infrastructure you are monitoring.
 
-The [Sematext Agent](/agents/spm-client/) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically without any effort from an operations point of view.
+The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically without any effort from an operations point of view.
 
 The Inventory information is available in the Monitoring *Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
 
@@ -52,7 +52,7 @@ The Inventory UI allows comparing different systems to quickly and efficiently s
 
 ## How does it Work?
 
-Sematext Agent keeps track of all changes done on the file system and displaying them in the Inventory Monitoring UI when installing, upgrading or removing packages on the host system, in a virtual machine or container with:
+The [Sematext Agent](../agents/sematext-agent) keeps track of all changes done on the file system and displaying them in the Inventory Monitoring UI when installing, upgrading or removing packages on the host system, in a virtual machine or container with:
 
 - Node.JS (when using NPM package manager)
 - Python (when using PIP package manager)
@@ -70,7 +70,7 @@ pkg:
   interval: 10m
 ```
 
-After that the Monitoring Agent needs to be restarted by running the following command:
+After that the [Sematext Agent](../agents/sematext-agent) needs to be restarted by running the following command:
 
 ```
 service spm-monitor-st-agent restart
@@ -78,7 +78,7 @@ service spm-monitor-st-agent restart
 
 ## Gathered Data
 
-Sematext Monitoring Agent gathers the following data about the system:
+The [Sematext Agent](../agents/sematext-agent) gathers the following data about the system:
 
 - OS version,
 - Kernel version,
