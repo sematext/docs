@@ -1,7 +1,7 @@
 title: Sematext Inventory Monitoring
 description: Sematext Inventory Monitoring gives you insight into your whole infrastructure automatically based on the applications, containers, servers and general infrastructure you are monitoring.
 
-The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically without any effort from an operations point of view.
+The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically and effortlessly, without any operational overhead.
 
 The Inventory information is available in the Monitoring *Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
 
@@ -11,10 +11,10 @@ The Inventory information is available in the Monitoring *Infrastructure* sectio
 
 The Inventory Info information provides a summarized view of your inventory information allowing you to see:
 
-- Number of different packages in your monitored environment,
-- Number of different OS distributions,
-- Number of different OS versions,
-- A number of different kernel versions.
+- Number of different packages in your monitored environment
+- Number of different OS distributions
+- Number of different OS versions
+- A number of different kernel versions
 
 ![Inventory Info](../images/monitoring/inventory_inventory_info.png)
 
@@ -26,21 +26,21 @@ The Inventory overview provides a per-host view of each host, virtual machine, a
 
 Expanding each row gives detailed information about the system including:
 
-- Unique identifier of the system,
-- OS version,
-- Kernel version,
-- Java virtual machine version,
-- System type (bare metal, virtual machine, container),
-- Total memory size, 
-- Memory slot information,
-- Total disk size, 
-- Hard disk drives information.
+- Unique identifier of the system
+- OS version
+- Kernel version
+- Java virtual machine version
+- System type (bare metal, virtual machine, container)
+- Total memory size
+- Memory slot information
+- Total disk size
+- Disk drives information
 
 In addition, an overview of all the installed packages on a given system is available. This includes:
 
-- Installation source, 
-- Package name, 
-- Package version.
+- Installation source
+- Package name
+- Package version
 
 ![Inventory Overview](../images/monitoring/inventory_packages.png)
 
@@ -80,26 +80,26 @@ service spm-monitor-st-agent restart
 
 The [Sematext Agent](../agents/sematext-agent) gathers the following data about the system:
 
-- OS version,
-- Kernel version,
-- Java virtual machine version,
-- System type (bare metal, virtual machine, container),
-- Total memory size, 
-- Memory slot information,
-- Total disk size, 
-- Hard disk drives information.
+- OS version
+- Kernel version
+- Java virtual machine version
+- System type (bare metal, virtual machine, container)
+- Total memory size
+- Memory slot information
+- Total disk size
+- Disk drives information
 
-In addition, the following information about the packages is gathered for NodeJS, Python and DEB sources:
+In addition, the following information about packages is gathered for Node.js, Python and DEB sources:
 
-- Installation source, 
-- Package name, 
-- Package version.
+- Installation source
+- Package name
+- Package version
 
 ## Solving Problems With Inventory Monitoring
 
-Inventory monitoring allows quickly solving the following issues:
+Here are some of the common use cases and issues that Inventory monitoring helps solve:
 
-- Finding obsolete packages,  
-- Seeing differences in environments for troubleshooting behavior discrepancies, 
-- Finding packages mentioned in the [CVE](https://pl.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) reports,
-- And many, many more. 
+- Finding obsolete packages  
+- Seeing differences in environments for troubleshooting behavior discrepancies 
+- Finding packages mentioned in the [CVE](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) reports
+- And many, many more
