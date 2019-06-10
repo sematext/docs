@@ -48,6 +48,8 @@ curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/exa
 }'
 ```
 
+Here `example` represents the desired type. It can be anything from `log`, `event`, `host`, `node`, and anything in between, giving freedom to create custom types for logs. This value gets stored in the `logsene_type` field allowing for easy filtering on types when needed.
+
 [This guide](../logs/index-events-via-elasticsearch-api/) will show you more details on using the Elasticsearch REST API with Sematext.
 
 ![Logs App Elasticsearch integration](../images/guide/logs/sematext-app-logs-elasticsearch.png)
