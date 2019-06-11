@@ -21,7 +21,7 @@ After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <htt
 For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="../../images/logs/create-logs-app.mp4" type="video/mp4" />
+  <source src="https://sematext.com/wp-content/uploads/2019/06/sematext-create-logs-app.mp4" type="video/mp4" />
 </video>
 
 Check out the [Quick Start](./quick-start) for more info.

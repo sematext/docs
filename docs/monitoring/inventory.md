@@ -5,7 +5,11 @@ The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile w
 
 The Inventory information is available in the Monitoring *Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
 
-![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png)
+<!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
+
+<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+  <source src="https://sematext.com/wp-content/uploads/2019/06/sematext-infra-inventory.mp4" type="video/mp4" />
+</video>
 
 ### Inventory Info
 
