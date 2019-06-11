@@ -5,9 +5,7 @@ Process Monitoring gives you visibility into processes that use the most CPU or 
 
 The process information is available in the Monitoring *Infrastructure* section of your Sematext Cloud account - your central place for hosts, virtual machines, containers, and process information. 
 
-![Sematext Process Monitoring](../images/monitoring/process_monitoring.png)
-
-### Process Info
+### Process View
 
 The process view provides you similar information as the Linux `top` command, but for your entire infrastructure: 
 
@@ -15,11 +13,15 @@ The process view provides you similar information as the Linux `top` command, bu
 - Grouping metrics by hosts, process names, containers, etc. 
 - Filtering by tags
 
-### Process Overview
+<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+  <source src="../../images/monitoring/sematext-infra-processes.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
-The process overview provides a real-time view of the top N processes. A time series chart, heatmap, and a list with the process details help you to identify the processes with the highest resource usage. 
 
-Expanding each row in the process list gives detailed information about the processes including:
+The real-time view of the top N processes contains a time series chart, heatmap, and a list with the process details help you to identify the processes with the highest resource usage. 
+
+Expanding a row in the process list gives detailed information about the processes including:
 
 - PID
 - User
