@@ -1,13 +1,13 @@
 title: Sematext Process Monitoring
-description: Sematext Inventory Monitoring gives you insight into your whole infrastructure automatically based on the applications, containers, servers and general infrastructure you are monitoring.
+description: Process Monitoring gives you insights into process and container resource usage of your infrastructure
 
 Process Monitoring gives you visibility into processes that use the most CPU or memory, regardless of whether they are running inside containers, in the cloud, your own VMs or bare-metal servers.
 
-The process information is available in the Monitoring *Infrastructure* section of your Sematext Cloud account - your central place for hosts, virtual machines, containers, and process information. 
+Process Monitoring is available in the *Infrastructure Monitoring * section of your Sematext Cloud account - your central place for hosts, virtual machines, containers, and process information.
 
 ### Process View
 
-The process view provides you similar information as the Linux `top` command, but for your entire infrastructure: 
+The process view provides similar information as the Linux top command. It shows: 
 
 - Top N processes in your entire infrastructure
 - Grouping metrics by hosts, process names, containers, etc. 
@@ -19,9 +19,9 @@ Your browser does not support the video tag.
 </video>
 
 
-The real-time view of the top N processes contains a time series chart, heatmap, and a list with the process details help you to identify the processes with the highest resource usage. 
+The real-time view of the top N processes contains a time-series chart, a heatmap, and a list with the process details that help you identify processes with the highest resource usage.
 
-Expanding a row in the process list gives detailed information about the processes including:
+Expanding a row in the process list shows detailed information about the processes:
 
 - PID
 - User
