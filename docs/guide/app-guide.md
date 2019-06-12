@@ -43,8 +43,8 @@ with awesome free tiers for both
 After learning what an App is, you can check out the guides for our main features.
 
 - [Integrations](/guide/integrations-guide/)
-- [Logs](/guide/logs-guide/)
-- [Monitoring](/guide/monitoring-guide/)
+- [Logs](/logs/)
+- [Monitoring](/monitoring/)
 - [Dashboards](/guide/dashboards-guide/)
 - [Alerts](/guide/alerts-guide/)
 - [Events](/guide/events-guide/)

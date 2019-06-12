@@ -1,47 +1,34 @@
-title: Infrastructure Monitoring
-description: Sematext Infrastructure Monitoring is server and app monitoring platform with alerts, available in SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire devops ecosystem
+title: Sematext Monitoring
+description: Sematext Monitoring covers server, database, container, and application monitoring with alerts and events. It's available as a SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire DevOps ecosystem
+
+Sematext **Application** and **Infrastructure Monitoring** lets you **collect metrics** and **events** across your whole stack with over [40 integrations](https://sematext.com/integrations/). 
+
+Get started in minutes with **out-of-the-box dashboards**, [**alerts**](https://sematext.com/alerts/) and [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
+
+The integrations cover several key features. You have [**Server Monitoring**](../monitoring/#setting-up-monitoring-agents) giving you complete insight about the utilization of your servers and cloud instances. [**Monitor Containers**](../monitoring/containers) with [**Sematext Agent**](../agents/sematext-agent/), which is deployed seamlessly with Docker or Kubernetes.
+
+Our SaaS/on-premises monitoring product goes beyond just collecting metrics. 
+
+Use [**Database Monitoring**](https://sematext.com/database-monitoring/) to get a complete overview of your database health whether you are running it on your own infrastructure or using AWS RDS. 
+
+[**Transaction Tracing**](https://sematext.com/tracing/) will show slow database operations, full SQL statements, end-to-end HTTP transaction context, top 10 operations by throughput, latency, or time consumed, filter database operations, and much more...
+
+**Inventory Monitoring** will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
+
+You can create [**custom dashboards**](./dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
+
+If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with over 40 integrations to choose from.
+
 
 ### Creating Monitoring Apps
 
-The first step to monitoring with Sematext is to create a Monitoring [App](../guide/app-guide/). Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring App.
+The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring App.
 
-<img class="content-modal-image" alt="Sematext Monitoring screen" src="../images/monitoring/sematext-monitoring.png" title="Sematext Monitoring screen"></a>
+Follow along the [Quick Start](./quick-start) guide to learn how.
 
-You can have any number of Monitoring Apps and each App can be shared
-with different people, giving them different access roles.  Very
-importantly, each App has its own plan. Some Apps can use the free plan,
-while others can use paid plans, thus enabling a lot of flexibility around cost management.
-
-A number of App management operations, such as creation of new Apps, definition of alert rules, etc., are exposed via the [API](../api).
-
-### Setting up Monitoring Agents
-
-To start monitoring your infrastructure you need to set up the
-appropriate Sematext monitoring agent. You can choose from:
-
-  - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
-    Monitor). The Infra Agent collects OS & Network metrics.
-    The App Agent collects application metrics. The App Agent
-    can run in [embedded](spm-monitor-javaagent)
-    (aka Java agent-based, aka in-process) or
-    [standalone](spm-monitor-standalone) mode.  This agent can also
-    instrument JVM-based apps to collect transaction traces and
-    perform [on demand profiling](on-demand-profiling).
-
-  - [Node-based App Agent](node-agent), which can [monitor
-    Apache](../integration/apache) and [Nginx](../integration/nginx)
-    (including [Nginx Plus](../integration/nginxplus)).
-
-  - [Docker Agent](../containers), which can collect not
-    only container and host metrics, but also container events and
-    also logs, it can parse and structure out of the box.
-
-
-The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
-
-Once the agent is set up metrics will start coming to Sematext
-instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
-look at the <a href="http://sematext.com/docs/monitoring/spm-faq/">troubleshooting</a> page.</p>
+<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+  <source src="https://sematext.com/wp-content/uploads/2019/06/sematext-create-docker-app.mp4" type="video/mp4" />
+</video>
 
 ### App Settings
 
@@ -54,8 +41,18 @@ App settings and actions include, but are not limited to:
   - heartbeat alert cration
   - App ownership transfer
   - scheduled report emails (aka Subscriptions)
+
+Check out the [Settings](./settings) guide to learn more.
   
 <img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings Screen">
+
+### Reports And Components
+
+Every Monitoring App can have multiple Reports that act as buckets for your metrics and data. The distinct metrics in one report are separated into components.
+
+Read more in the [Reports and Components](./reports-and-components) guide.
+
+![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
 
 ### Additional Features
 
@@ -67,9 +64,16 @@ The [Network Map](network-map) visualizes your network topology.  It show discov
 
 [On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).  It works with both embedded and standalone agent and has negligible overhead.
 
-[Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports.
+<!-- UNCOMMENT WHEN THIS FEATURE IS ADDED -->
+<!-- [Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports. -->
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/BuMtZCLN_Mk?rel=0&amp;controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+You can create custom dashboards with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
+
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/BuMtZCLN_Mk?controls=1&autoplay=0&loop=0" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
 
 ### Getting Support
 
