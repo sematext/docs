@@ -3,7 +3,7 @@ description: Sematext Inventory Monitoring gives you insight into your whole inf
 
 The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically and effortlessly, without any operational overhead.
 
-The Inventory information is available in the Monitoring *Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
+The Inventory information is available in the *Monitoring Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
 
 <!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
 
