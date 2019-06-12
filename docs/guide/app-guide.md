@@ -46,4 +46,5 @@ After learning what an App is, you can check out the guides for our main feature
 - [Logs](/logs/)
 - [Monitoring](/monitoring/)
 - [Dashboards](/guide/dashboards-guide/)
-- [Alerts & Events](/guide/alerts-and-events-guide/)
+- [Alerts](/guide/alerts-guide/)
+- [Events](/guide/events-guide/)

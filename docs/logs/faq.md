@@ -243,8 +243,7 @@ Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handl
 
 **How much does your centralized logging management solution cost?**
 
-Check the [Logs App Plans &
-Prices](https://www.sematext.com/logsene/pricing).
+Check the [Logs App Plans & Prices](https://www.sematext.com/logsene/pricing).
 
 **What happens with my logs when I change from the free to a paid plan or vice versa?**
 
@@ -269,8 +268,12 @@ price.  For example, if you picked 1 GB/day and you typically don't go
 over it, or go over very little, then it pays to keep that 1 GB/day
 selection.  However, if you ship closer to 5 GB/day, then you should
 select 5 GB/day volume, because that will give you a lower $/GB rate
-than if you stay with 1 GB/day
-selection.
+than if you stay with 1 GB/day selection.
+
+**How much data can I ship to Sematext using the Basic plan?**
+
+Each day, a total of 500 MB/day can be shipped to all Sematext Logs Apps together.
+To ship more data use one of the bigger plans.
 
 ## Troubleshooting
 
