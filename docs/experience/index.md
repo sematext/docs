@@ -6,7 +6,7 @@ Our Monitoring and Logs solution does a great job of monitoring your infrastruct
 <img
   class="content-modal-image"
   alt="Create Experience App Instructions"
-  src="../../images/experience/screen0.png"
+  src="../images/experience/screen0.png"
   title="Create Experience App Instructions"
   width=770
   height=870
@@ -27,7 +27,7 @@ When you create an Experience App you will be given step-by-step instructions to
 <img
   class="content-modal-image"
   alt="Create Experience App Instructions"
-  src="../../images/experience/screen1.png"
+  src="../images/experience/screen1.png"
   title="Create Experience App Instructions"
   width=778
   height=699
