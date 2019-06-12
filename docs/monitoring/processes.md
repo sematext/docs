@@ -19,9 +19,9 @@ Your browser does not support the video tag.
 </video>
 
 
-The real-time view of the top N processes contains a time-series chart, a heatmap, and a list with the process details that help you identify processes with the highest resource usage.
+The real-time view of the top N processes contains a time-series chart, a tile map, and a list with the process details that help you identify processes with the highest resource usage.
 
-Expanding a row in the process list shows detailed information about the processes:
+Expanding a row in the process list shows detailed information about the process:
 
 - PID
 - User
