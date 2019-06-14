@@ -1,13 +1,11 @@
-title: Transactions
-description: Overview on how to use on page transactions
+title: On-Page Transactions
+description: Sematext Experience supports monitoring On-Page Transactions. Learn how to use and set up On-Page Transactions here.
 
-Sometimes it is useful to measure some user activity on your website. 
-It may give you better understanding about users feeling during interaction with your site.
-Measure how fast you reply on live-chat or how big a delay between user sees page and click on some button and other any kind of stuff you can imagine.
+Measuring user-activity can be crucial to understanding what your users are feeling while interacting with your website. This gives you a better understanding about your users needs. Measuring delays between when a user sees a page and clicks a button, versus how big of a delay users see when navigating between pages on your website, or how fast you reply to a live-chat question are all crucial when in understanding your users' needs.
 
-### Examples
+### Adding On-Page Transactions
 
-First of all add transaction to App, press green + button on top-right corner
+First of all, you need to add transactions to your App. Press the green plus button in the top right corner.
 
 <img
   class="content-modal-image"
@@ -18,7 +16,7 @@ First of all add transaction to App, press green + button on top-right corner
   height=604
 />
 
-Specify Transaction name (name is important, it has to match name we will use on scripts side, see later), target time and description (optional), press save.
+Specify a Transaction `name`. Have in mind the name is important, it has to match the name you will use in the Real User Monitoring script. Also, add `target time` and `description` then press save.
 
 <img
   class="content-modal-image"
@@ -29,7 +27,7 @@ Specify Transaction name (name is important, it has to match name we will use on
   height=485
 />
 
-Transaction was added,
+The Transaction was added, but there is no RUM data related to it, let's improve this.
 
 <img
   class="content-modal-image"
@@ -40,9 +38,7 @@ Transaction was added,
   height=607
 />
 
-but there is no RUM data related to our transaction, let's improve this.
-
-Add this call to start transaction (second parameter must match transaction name we previously created)
+Add this function call to start the transaction. The second parameter must match the transaction name you previously created.
 
  ```javascript
  strum('startTransaction', 'ExampleTransaction');
@@ -55,7 +51,7 @@ And by this call transaction will be ended
 
 ```
 
-Finally you will see this picture after calls we created above will send data to us about users activity.
+Finally, this is what you will see after the transactions start sending data to Sematext Experience about user activity.
 
 <img
   class="content-modal-image"
@@ -66,5 +62,5 @@ Finally you will see this picture after calls we created above will send data to
   height=607
 />
 
-Enjoy your Transactions.
+That's everything you need to configure. Enjoy your Transactions!
 
