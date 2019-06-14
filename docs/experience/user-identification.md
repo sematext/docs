@@ -1,7 +1,7 @@
 title: Identifying Users
 description: Overview on how to identify users
 
-By default, all users that interact with your application monitored by Sematext Experience will be anonymous. You will get an overview of the number of sessions for the given user, page load and AJAX events, User Satisfaction for those events, used browser and the country from which the user is interacting with your site. 
+By default, all users that interact with your application monitored by Sematext Experience will be anonymous. You will get an overview of the number of sessions for the given user, page loads and network requests, User Satisfaction for those events, used browser and the country from which the user is interacting with your site. 
 
 <img
   class="content-modal-image"
@@ -16,6 +16,6 @@ In order to properly identify the user you need to call the `identifyUser` funct
 
 ```javascript
 <script type="text/javascript">
-  identify({ accountName: 'mike', loginName: 'mike@doesnt.exist.com' })
+  strum('identify', { accountName: 'mike', loginName: 'mike@doesnt.exist.com' })
 </script>
 ```
