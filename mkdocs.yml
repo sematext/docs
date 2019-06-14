@@ -65,6 +65,7 @@ pages:
       - Getting Started: experience/getting-started.md
       - User Satisfaction: experience/user-satisfaction.md
       - User Satisfaction: experience/on-page-transaction.md
+      - User Identification: experience/user-identification.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
