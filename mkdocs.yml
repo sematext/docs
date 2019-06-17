@@ -63,6 +63,8 @@ pages:
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
+      - URL Groups: experience/url-groups.md
+      - Configure Requirements: experience/configure-requirements.md
       - User Satisfaction: experience/user-satisfaction.md
       - On-Page Transactions: experience/on-page-transaction.md
       - User Identification: experience/user-identification.md
