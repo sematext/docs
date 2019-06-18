@@ -30,7 +30,7 @@ pages:
           - Certificates: logs/certificates.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
-        - Sending Container Logs: 
+        - Sending Container Logs:
           - Docker: logs/sending-docker-logs.md
       - Searching Log Events:
         - Overview: logs/searching-log-events.md
@@ -134,6 +134,10 @@ pages:
           - Installation: agents/sematext-agent/kubernetes/installation.md
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
+        - Processes:
+          - Metrics: agents/sematext-agent/processes/metrics.md
+          - Metadata: agents/sematext-agent/processes/metadata.md
+          - Sensitive Data: agents/sematext-agent/processes/sensitive-data.md 
       - Infra & App Agent:
         - Overview:  agents/spm-client.md
         - Embedded Mode: agents/spm-monitor-javaagent.md
