@@ -25,7 +25,7 @@ Process collector is enabled by default. You can disable process metrics/metadat
  </div>
 </div>
 
-Similarly, to tweak the frequency of the process' data series delivery to Sematext Cloud adjust the following options:
+Similarly, to tweak the frequency of the process' data series collection and delivery to Sematext Cloud adjust the following options:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">

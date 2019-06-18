@@ -6,7 +6,7 @@ For example, launching a Python process with `--password` and `MYSQL_PASSWORD` a
 python daemon.py --password ******** MYSQL_PASSWORD ********
 ```
 
-Sematext Agent automatically scrubs sensitive data if any of the following patterns are detected in the process' command line arguments regardless of case sensitivity:
+Sematext Agent automatically scrubs sensitive data if any of the following patterns are detected in the process' command line arguments. Matching is case insensitive.
 
 - password(s)
 - passwd
