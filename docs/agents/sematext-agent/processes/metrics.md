@@ -1,9 +1,9 @@
-title: Process Monitoring
+title: Process Monitoring Metrics
 description: Process Monitoring memory CPU usage
 
-Sematext Agent gathers various metrics and metadata about running processes and brings them to [Sematext Cloud](https://sematext.com/cloud/) so you can painlessly explore the system resources allocated by processes whether they're executing on bare metal machines or scheduled to run on multi-cluster Kubernetes workloads.
+Sematext Agent gathers various metrics and metadata about running processes and brings them to [Sematext Cloud](https://sematext.com/cloud/) so you can painlessly explore the system resources allocated by processes whether they're executing on bare metal machines, VMs, plain containers or scheduled to run on multi-cluster Kubernetes workloads.
 
-Process collector is enabled by default. You can disable the collection of the process's metrics/metadata by setting the following properties:
+Process collector is enabled by default. You can disable process metrics/metadata collection by setting the following properties:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
@@ -25,7 +25,7 @@ Process collector is enabled by default. You can disable the collection of the p
  </div>
 </div>
 
-Similarly, to tweak the frequency of the process's data series delivery to Sematext Cloud adjust the following options:
+Similarly, to tweak the frequency of the process' data series delivery to Sematext Cloud adjust the following options:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
@@ -49,17 +49,17 @@ Similarly, to tweak the frequency of the process's data series delivery to Semat
 
 ### Metrics
 
-The agent collects top _N_ processes by CPU and memory utilization. Once process's is elected as a top resource consumer, it stays in the top N list for the time slice that has been allocated to it. It is relinquished from the top N list whether there is another process with higher resource usage that displaces the current process or it leaves the top N list voluntarily (e.g. no longer detected as a relevant resource consumer).
+The agent collects top _N_ processes by CPU and memory utilization. Once process is elected as a top resource consumer, it stays in the top N list for the time slice that has been allocated to it. It is relinquished from the top N list when there is another process with higher resource usage that displaces the current process or it leaves the top N list voluntarily (e.g. no longer detected as a relevant resource consumer).
 
 The table below includes all available metrics.
 
 | Metric name       | Description |
 | ------------------|-------------|
-| resident memory   | Represents the resident memory allocated by the process. It comprises the memory allocated for heap and stack areas |
-| CPU usage         | Designates the process's CPU utilization in percentage       |   
+| resident memory   | Represents the resident memory allocated by the process. It includes the memory allocated for heap and stack areas |
+| CPU usage         | Designates the process' percentage of CPU utilization       |   
 | fd count          | Is the number of file descriptors allocated by the process     |
-| thread count      | Represents the number of threads running in the process's address space  |
-| disk read bytes   | Is the amount of bytes that the process fetched from the storage layer     |
-| disk write bytes  | Is the amount of bytes which the process sent to the storage layer     |
+| thread count      | Represents the number of threads running in the process' address space  |
+| disk read bytes   | Is the number of bytes that the process fetched from the storage layer     |
+| disk write bytes  | Is the number of bytes which the process sent to the storage layer     |
 | read ops          | Is the number of read operations (syscalls, e.g. `read` or `pread`) issued by the process     |
 | write ops         | Is the number of write operations (syscalls, e.g. `write` or `pwrite`) issued by the process     |
