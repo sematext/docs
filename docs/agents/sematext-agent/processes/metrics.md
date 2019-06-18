@@ -1,19 +1,57 @@
 title: Process Monitoring
 description: Process Monitoring memory CPU usage
 
-Sematext Agent gathers various metrics and metadata about running processes and brings them to [Sematext Cloud](https://sematext.com/cloud/) so you can painlessly explore the system resources allocated by processes whether they're executing on bare metal machines or scheduled on multi-cluster Kubernetes workloads.
+Sematext Agent gathers various metrics and metadata about running processes and brings them to [Sematext Cloud](https://sematext.com/cloud/) so you can painlessly explore the system resources allocated by processes whether they're executing on bare metal machines or scheduled to run on multi-cluster Kubernetes workloads.
 
-To tweak the frequency of process's metrics delivery to Sematext Cloud, set the interval in the `st-agent.yml` configuration file:
+Process collector is enabled by default. You can disable the collection of the process's metrics/metadata by setting the following properties:
 
-```yaml
-# Metric collection interval for processes
-process:
-  interval: 10s
-```
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+ <div class="mdl-tabs__tab-bar">
+     <a href="#file-enabled" class="mdl-tabs__tab is-active">Config file</a>
+     <a href="#env-enabled" class="mdl-tabs__tab">Env variable</a>
+ </div>
+
+ <div class="mdl-tabs__panel is-active" id="file-enabled">
+   <pre>
+   # st-agent.yml
+   process:
+     enabled: false
+   </pre>
+ </div>
+ <div class="mdl-tabs__panel" id="env-enabled">
+   <pre>
+   PROCESS_ENABLED=false
+   </pre>
+ </div>
+</div>
+
+Similarly, to tweak the frequency of the process's data series delivery to Sematext Cloud adjust the following options:
+
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+ <div class="mdl-tabs__tab-bar">
+     <a href="#file-interval" class="mdl-tabs__tab is-active">Config file</a>
+     <a href="#env-interval" class="mdl-tabs__tab">Env variable</a>
+ </div>
+
+ <div class="mdl-tabs__panel is-active" id="file-interval">
+   <pre>
+   # st-agent.yml
+   process:
+     interval: 10s
+   </pre>
+ </div>
+ <div class="mdl-tabs__panel" id="env-interval">
+   <pre>
+   PROCESS_INTERVAL=10s
+   </pre>
+ </div>
+</div>
 
 ### Metrics
 
-The agent collects top _N_ processes by CPU and memory utilization. The table below includes all available metrics.
+The agent collects top _N_ processes by CPU and memory utilization. Once process's is elected as a top resource consumer, it stays in the top N list for the time slice that has been allocated to it. It is relinquished from the top N list whether there is another process with higher resource usage that displaces the current process or it leaves the top N list voluntarily (e.g. no longer detected as a relevant resource consumer).
+
+The table below includes all available metrics.
 
 | Metric name       | Description |
 | ------------------|-------------|

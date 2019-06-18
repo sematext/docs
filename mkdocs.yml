@@ -136,6 +136,8 @@ pages:
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
         - Processes:
           - Metrics: agents/sematext-agent/processes/metrics.md
+          - Metadata: agents/sematext-agent/processes/metadata.md
+          - Sensitive Data: agents/sematext-agent/processes/sensitive-data.md 
       - Infra & App Agent:
         - Overview:  agents/spm-client.md
         - Embedded Mode: agents/spm-monitor-javaagent.md
