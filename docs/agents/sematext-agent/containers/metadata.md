@@ -21,4 +21,4 @@ Aside from collecting a plethora of container operational metrics, Sematext Agen
 | started        | Represents container startup time |
 | networks       | All networks that container is attached to |
 | volumes        | A list of volumes bound to the container   |
-| labels         | Is the collection of container labels that are also shipped as [tag aliases]() |
+| labels         | Is the collection of container labels that are also shipped as [tag aliases](../../../monitoring/tag-aliases-support.md) |
