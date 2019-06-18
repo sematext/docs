@@ -1,3 +1,4 @@
+title: Process Metadata
 
 Process metrics are enriched with additional metadata serving as an invaluable resource for root cause analysis or debugging. The table below summarizes the metadata that are tracked for each process.
 
