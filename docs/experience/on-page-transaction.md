@@ -12,8 +12,6 @@ First of all, you need to add transactions to your App. Press the green plus but
   alt="Add Transaction"
   src="../../images/experience/onPageTransactions/screen0.png"
   title="Add Transaction"
-  width=1838
-  height=604
 />
 
 Specify a Transaction `name`. Have in mind the name is important, it has to match the name you will use in the Real User Monitoring script. Also, add `target time` and `description` then press save.
@@ -23,8 +21,6 @@ Specify a Transaction `name`. Have in mind the name is important, it has to matc
   alt="Specify Transaction"
   src="../../images/experience/onPageTransactions/screen1.png"
   title="Specify Transaction"
-  width=1053
-  height=485
 />
 
 The Transaction was added, but there is no RUM data related to it, let's improve this.
@@ -34,8 +30,6 @@ The Transaction was added, but there is no RUM data related to it, let's improve
   alt="Transaction was added"
   src="../../images/experience/onPageTransactions/screen2.png"
   title="Transaction was added"
-  width=1837
-  height=607
 />
 
 Add this function call to start the transaction. The second parameter must match the transaction name you previously created.
@@ -58,8 +52,6 @@ Finally, this is what you will see after the transactions start sending data to 
   alt="Transactions in action"
   src="../../images/experience/onPageTransactions/screen3.png"
   title="Transactions in action"
-  width=1837
-  height=607
 />
 
 That's everything you need to configure. Enjoy your Transactions!
