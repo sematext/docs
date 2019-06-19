@@ -34,15 +34,14 @@ The Transaction was added, but there is no RUM data related to it, let's improve
 
 Add this function call to start the transaction. The second parameter must match the transaction name you previously created.
 
- ```javascript
+```javascript
  strum('startTransaction', 'ExampleTransaction');
-
 ```
 
-And by this call transaction will be ended
- ```javascript
- strum('endTransaction', 'ExampleTransaction');
+And by this call transaction will be ended.
 
+```javascript
+ strum('endTransaction', 'ExampleTransaction');
 ```
 
 Finally, this is what you will see after the transactions start sending data to Sematext Experience about user activity.
