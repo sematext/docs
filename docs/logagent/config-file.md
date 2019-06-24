@@ -180,4 +180,4 @@ output:
   
 ```
 
-A collection of example config files are [here](https://github.com/sematext/logagent-js/tree/master/config/examples)
+A collection of example config files is [here](https://github.com/sematext/logagent-js/tree/master/config/examples).
