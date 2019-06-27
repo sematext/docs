@@ -23,7 +23,7 @@ can run in [embedded](../agents/spm-monitor-javaagent)
 instrument JVM-based apps to collect transaction traces and
 perform [on demand profiling](../monitoring/on-demand-profiling).
 
-- [Node-based App Agent](../monitoring/node-agent), which can [monitor
+- [Node-based App Agent](../agents/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
 (including [Nginx Plus](../integration/nginxplus)).
 
