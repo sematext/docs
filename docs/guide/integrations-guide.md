@@ -15,23 +15,17 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Infra & App Agent](../monitoring/spm-client) (aka Sematext  Agent or Sematext
-Monitor). The Infra Agent collects OS & Network metrics.
-The App Agent collects application metrics. The App Agent
-can run in [embedded](../monitoring/spm-monitor-javaagent)
+- [Sematext Infra Agent](../agents/sematext-agent/) & [App Agent](../agents/spm-client/) 
+The Infra Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more.  The App Agent collects metrics for various [integrations](/integration). The App Agent
+can run in [embedded](../agents/spm-monitor-javaagent)
 (aka Java agent-based, aka in-process) or
-[standalone](../monitoring/spm-monitor-standalone) mode. This agent can also
+[standalone](../agents/spm-monitor-standalone) mode. This agent can also
 instrument JVM-based apps to collect transaction traces and
 perform [on demand profiling](../monitoring/on-demand-profiling).
 
 - [Node-based App Agent](../monitoring/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
 (including [Nginx Plus](../integration/nginxplus)).
-
-- [Docker Agent](../containers), which can collect not
-only container and host metrics, but also container events and
-also logs, it can parse and structure out of the box.
-
 
 After you install and activate an integration, you can:
 
@@ -201,10 +195,10 @@ You need to add Sematext repository and install Sematext monitoring agent. It is
 
 Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: 
 
-- [In-process as a javaagent](/monitoring/spm-monitor-javaagent/)
-- [Standalone as a separate process](/monitoring/spm-monitor-standalone/) 
+- [In-process as a javaagent](/agents/spm-monitor-javaagent/)
+- [Standalone as a separate process](/agents/spm-monitor-standalone/) 
 
-For more information check Java agent [overview page](/monitoring/spm-client/) 
+For more information check Java agent [overview page](/agents/spm-client/) 
 
 You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 
