@@ -55,7 +55,7 @@ Creating a new Infra App is the same process as with any App in Sematext. In the
   <source src="https://sematext.com/wp-content/uploads/2019/07/create-infra-app-1.mp4" type="video/mp4" />
 </video>
 
-You can then choose which operating system your machine are running. There are two simple setup commands you need to run. After that you're ready to go.
+This screen shows installation instructions which you'll have to follow to start using the Infra App. Select the operating system running on your machines and run the simple setup commands.
 
 ## Infra App Metrics
 
