@@ -3,29 +3,7 @@ description: Process Monitoring memory CPU usage
 
 Sematext Agent gathers various metrics and metadata about running processes and brings them to [Sematext Cloud](https://sematext.com/cloud/) so you can painlessly explore the system resources allocated by processes whether they're executing on bare metal machines, VMs, plain containers or scheduled to run on multi-cluster Kubernetes workloads.
 
-Process collector is enabled by default. You can disable process metrics/metadata collection by setting the following properties:
-
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
- <div class="mdl-tabs__tab-bar">
-     <a href="#file-enabled" class="mdl-tabs__tab is-active">Config file</a>
-     <a href="#env-enabled" class="mdl-tabs__tab">Env variable</a>
- </div>
-
- <div class="mdl-tabs__panel is-active" id="file-enabled">
-   <pre>
-   # st-agent.yml
-   process:
-     enabled: false
-   </pre>
- </div>
- <div class="mdl-tabs__panel" id="env-enabled">
-   <pre>
-   PROCESS_ENABLED=false
-   </pre>
- </div>
-</div>
-
-Similarly, to tweak the frequency of the process' data series collection and delivery to Sematext Cloud adjust the following options:
+To tweak the frequency of the process' data series collection and delivery to Sematext Cloud adjust the following options:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
@@ -47,7 +25,7 @@ Similarly, to tweak the frequency of the process' data series collection and del
  </div>
 </div>
 
-### Metrics
+## Metrics
 
 The agent collects top _N_ processes by CPU and memory utilization. Once process is elected as a top resource consumer, it stays in the top N list for the time slice that has been allocated to it. It is relinquished from the top N list when there is another process with higher resource usage that displaces the current process or it leaves the top N list voluntarily (e.g. no longer detected as a relevant resource consumer).
 

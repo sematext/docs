@@ -137,6 +137,7 @@ pages:
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
         - Processes:
+          - Enable/Disable: agents/sematext-agent/processes/enable-process-monitoring.md
           - Metrics: agents/sematext-agent/processes/metrics.md
           - Metadata: agents/sematext-agent/processes/metadata.md
           - Sensitive Data: agents/sematext-agent/processes/sensitive-data.md 
