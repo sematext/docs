@@ -1,4 +1,4 @@
-title: Enabling/Disabling Process Monitoring
+title: Configuring Process Monitoring
 description: Process Monitoring is enabled by default in the [Sematext Agent configuration.
 
 Process Monitoring is enabled by default in the [Sematext Agent configuration](../agents/sematext-agent/containers/configuration/). You can *disable* process metrics/metadata collection by setting the following properties:

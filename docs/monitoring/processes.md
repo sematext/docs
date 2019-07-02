@@ -8,7 +8,7 @@ Process Monitoring is available in the *Infrastructure Monitoring* section of yo
 ## Enabling Process Monitoring
 
 Process Monitoring is enabled by default in the [Sematext Agent configuration](../agents/sematext-agent/containers/configuration/). 
-Check out enabling and disabling Process Monitoring [here](../agents/sematext-agent/processes/enable-process-monitoring/). 
+Check out enabling and disabling Process Monitoring [here](../agents/sematext-agent/processes/configuration/). 
 
 ## Processes View
 
@@ -74,4 +74,4 @@ Here are some of the common use cases and issues that Process Monitoring helps t
 - Identify processes, containers or service with high resource usage
 
 ## More Details
-To read about the inner workings of Process Monitoring check out the [Processes section in the Sematext Agent docs](../agents/sematext-agent/processes/enable-process-monitoring/)!
+To read about the inner workings of Process Monitoring check out the [Processes section in the Sematext Agent docs](../agents/sematext-agent/processes/configuration/)!
