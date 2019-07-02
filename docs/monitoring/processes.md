@@ -5,7 +5,12 @@ Process Monitoring gives you visibility into processes that use the most CPU or 
 
 Process Monitoring is available in the *Infrastructure Monitoring* section of your Sematext Cloud account - your central place for hosts, virtual machines, containers, and process information.
 
-### Processes View
+## Enabling Process Monitoring
+
+Process Monitoring is enabled by default in the [Sematext Agent configuration](../agents/sematext-agent/containers/configuration/). 
+Check out enabling and disabling Process Monitoring [here](../agents/sematext-agent/processes/configuration/). 
+
+## Processes View
 
 The processes view provides similar information as the Linux top command. It shows: 
 
@@ -41,28 +46,11 @@ Also, a real-time view of all process metrics is available in the metrics tab. T
 - IO read/write bytes 
 - IO read/write operations 
 
-## How does it Work?
+## How Does It Work?
 
 The [Sematext Agent](../agents/sematext-agent) tracks all processes and ships the metrics of the top N processes. The agent tags all metrics with process and container metadata and ships the metrics to your [Infra App](../infrastructure/).  
 
 Sematext UI provides visualizations, grouping and filter functionality. 
-
-
-## Enabling Process Monitoring
-
-Process Monitoring is enabled by default in the [Sematext Agent configuration](../agents/sematext-agent/containers/configuration/). 
-In case you want to *disable* Process Monitoring set the following option in the config file: 
-
-```
-process:
- enabled: false
-```
-
-After that the [Sematext Agent](../agents/sematext-agent) needs to be restarted by running the following command:
-
-```
-service spm-monitor-st-agent restart
-```
 
 ## Gathered Data
 
@@ -85,3 +73,5 @@ Here are some of the common use cases and issues that Process Monitoring helps t
 - Replace time-consuming operations to check system resources with `ssh` and `top` Linux commands
 - Identify processes, containers or service with high resource usage
 
+## More Details
+To read about the inner workings of Process Monitoring check out the [Processes section in the Sematext Agent docs](../agents/sematext-agent/processes/configuration/)!

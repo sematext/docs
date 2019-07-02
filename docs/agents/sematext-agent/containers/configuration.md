@@ -1,4 +1,5 @@
-## Configuration file
+title: Configuration file
+description: For fine-tuning Sematext Agent refer to `st-agent.yml` configuration file.
 
 For fine-tuning Sematext Agent refer to `st-agent.yml` configuration file. You will have to mount the file from the host into the container file system and set `CONFIG_FILE` environment variable to specify the path to the aforementioned configuration file.
 

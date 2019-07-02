@@ -1,3 +1,9 @@
+title: Installation
+description: To deploy the Sematext Agent as a container, run a simple command on each one of your hosts.
+
+Installing Sematext Agent can be done by using Docker, Docker Compose, and Docker Swarm / Enterprise.
+
+## Docker
 To deploy the Sematext Agent as a container, run the following command on each host:
 
 ```bash
@@ -26,7 +32,7 @@ By default, the US region receiver endpoints are used to ship data to Sematext C
 
 **Note that if any of the** `*_URL` **environment variables are set, region specific receiver endpoints are ignored.**
 
-#### Run Sematext Agent with a Config File
+### Run Sematext Agent with a Config File
 
 Mount the configuration file into the container and set the path to the configuration file ```-v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml ``` via `CONFIG_FILE` environment variable.
 
@@ -79,7 +85,7 @@ services:
       - '/usr/lib:/host/usr/lib:ro'
 ```
 
-## Docker Enterprise / Swarm
+## Docker Swarm / Enterprise
 
 Create a Docker Monitoring App in Sematext and follow the instructions in the UI.
 Sematext Agent can be deployed as global service on all Swarm nodes with a single command:
