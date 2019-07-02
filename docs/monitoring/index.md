@@ -1,7 +1,7 @@
 title: Sematext Monitoring
 description: Sematext Monitoring covers server, database, container, and application monitoring with alerts and events. It's available as a SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire DevOps ecosystem
 
-Sematext **Application** and **Infrastructure Monitoring** lets you **collect metrics** and **events** across your whole stack with over [40 integrations](https://sematext.com/integrations/). 
+Sematext **Application** and [**Infrastructure Monitoring**](../monitoring/infrastructure) lets you **collect metrics** and **events** across your whole stack with over [40 integrations](https://sematext.com/integrations/). 
 
 Get started in minutes with **out-of-the-box dashboards**, [**alerts**](https://sematext.com/alerts/) and [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
 
