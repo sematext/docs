@@ -4,7 +4,7 @@ Description: GDPR, log anonymizer, reduce log volume
 
 ## Output filter: remove-fields
 
-This plugin removes fields before the output happens. All occurrences of the original field value are replaced in the log "message" field with the string "!REMOVED!". 
+This plugin removes fields before the output happens. All occurrences of the original field values can be replaced in the log "message" field with the string `!REMOVED!`. To mask the field values in the message field set the flag `maskValuesInMessageField` to `true`. 
 
 In the context of data protection regulations like GDPR you might need to mask data fields, especially when you handover log data to 3rd parties. 
 
@@ -26,6 +26,7 @@ outputFilter:
     module: remove-fields
     # JS regeular expression to match log source name
     matchSource: !!js/regexp access_log
+    maskValuesInMessageField: true
     fields:
       - client_ip
       - user
