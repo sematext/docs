@@ -4,14 +4,14 @@ Description: GDPR, log anonymizer, reduce log volume
 
 ## Output filter: remove-fields
 
-This plugin removes fields before the output happens. All occurrences of the original field values can be replaced in the log "message" field with the string `!REMOVED!`. To mask the field values in the message field set the flag `maskValuesInMessageField` to `true`. 
+This plugin removes fields before sending them to the output destination. Alternatively, instead of completely removing fields and their values completely, this plugin can replace all occurrences of the original field values with string `!REMOVED!`. To mask field values instead of removing them set the `maskValuesInMessageField` flag to `true`. 
 
-In the context of data protection regulations like GDPR you might need to mask data fields, especially when you handover log data to 3rd parties. 
+In the context of data protection regulations like GDPR you might need to mask data fields, especially when you hand over log data to third parties. 
 
 
 ### Configuration 
 
-Add the following section 'outputFilter' to the Logagent configuration file. Please note you could use the plugin with multiple configurations for different event sources. 
+Add the following 'outputFilter' section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources. 
 
 ```yaml
 # tail web server logs
@@ -39,7 +39,7 @@ Run Logagent with your config:
 logagent --config logagent-example-config.yml -n httpd --yaml
 ```
 
-The output does not contain client_ip and user field: 
+The output does not contain client_ip and user fields: 
 
 ```
 logSource:    httpd
