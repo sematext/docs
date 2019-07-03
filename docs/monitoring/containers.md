@@ -13,9 +13,9 @@ Creating a Sematext Monitoring App is as easy as choosing the Docker integration
 ## Install the Sematext Agent
 Sematext can easily monitor your containers with the Sematext Agent. [Installing](../agents/sematext-agent/containers/installation) the Agent is as simple as running one command on each host.
 
-- [Docker](../../agents/sematext-agent/containers/installation/#docker)
-- [Docker Compose](../../agents/sematext-agent/containers/installation/docker-compose)
-- [Docker Swarm](../../agents/sematext-agent/containers/installation/#docker-swarm-enterprise)
+- [Docker](../agents/sematext-agent/containers/installation/#docker)
+- [Docker Compose](../agents/sematext-agent/containers/installation/docker-compose)
+- [Docker Swarm](../agents/sematext-agent/containers/installation/#docker-swarm-enterprise)
 
 ## See Container data in Sematext Monitoring
 Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes), containers (Docker, rkt, containerd) and orchestrator platforms and ships that to Sematext Cloud.
