@@ -9,7 +9,7 @@ helm install --name sematext-agent \
   --set containerToken=<YOUR_CONTAINER_TOKEN> \
   --set infraToken=<YOUR_INFRA_TOKEN> \
   --set logsToken=<YOUR_LOGS_TOKEN> \
-  --set region=US \
+  --set region=<"US" or "EU"> \
   stable/sematext-agent
 ```
 
@@ -34,7 +34,7 @@ kind: SematextAgent
 metadata:
   name: test-sematextagent
 spec:
-  region: "US"
+  region: <"US" or "EU">
   containerToken: YOUR_CONTAINER_TOKEN
   logsToken: YOUR_LOGS_TOKEN
   infraToken: YOUR_INFRA_TOKEN
@@ -119,7 +119,7 @@ rules:
 
 ### Create and Deploy the DaemonSet
 
-Create a `st-agent-ds.yml` file for the deployment (replace with your tokens):
+Create a `st-agent-ds.yml` file for the deployment (replace with your tokens and region):
 
 ```yaml
 apiVersion: v1
@@ -157,7 +157,7 @@ spec:
         - name: LOGS_TOKEN
           value: <YOUR_LOGS_TOKEN>
         - name: REGION
-          value: "US"
+          value: <"US" or "EU">
         - name: API_SERVER_HOST
           value: "0.0.0.0"
         - name: API_SERVER_PORT
@@ -218,7 +218,7 @@ spec:
         - name: LOGS_TOKEN
           value: <YOUR_LOGS_TOKEN>
         - name: REGION
-          value: "US"
+          value: <"US" or "EU">
         volumeMounts:
           - name: docker-sock
             mountPath: /var/run/docker.sock
