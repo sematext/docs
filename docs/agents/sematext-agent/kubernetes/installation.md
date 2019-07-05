@@ -1,6 +1,6 @@
 ## Helm Chart
 
-The preferred way to install Sematext Agent is via Helm chart. [Sematext Agent helm chart](https://github.com/helm/charts/tree/master/stable/sematext-agent) is available in official charts repo and it installs the Sematext Agent to all nodes in your cluster via `DaemonSet` resource.
+The preferred way to install Sematext Agent is via a Helm chart. [Sematext Agent helm chart](https://github.com/helm/charts/tree/master/stable/sematext-agent) is available in official charts repo and it installs the Sematext Agent to all nodes in your cluster via `DaemonSet` resource.
 
 To install it run the following command:
 
