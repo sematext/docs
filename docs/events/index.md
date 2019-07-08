@@ -4,10 +4,9 @@ description: Event stream captures all your key IT and operations such as server
 ### Events: What, Why, How?
 
 [Sematext Cloud](http://sematext.com/cloud/) can graph not only
-performance and [custom metrics](/monitoring/custom-metrics) or
-[logs](/logs), but also events. Such events may represent what is
-happening with a server or cluster, with an application, etc.  Think
-application or server restarts, builds, deployments, alerts, etc.
+performance [metrics](../monitoring) or [logs](../logs), but also events. Such events 
+may represent what is happening with a server or cluster, with an application, etc.
+Think application or server restarts, builds, deployments, alerts, etc.
 Events are graphed as a timeline. Events timeline can be shown
 next to metrics or logs charts. This makes it possible to easily
 correlate events with metrics and/or logs. In addition to showing

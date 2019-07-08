@@ -146,5 +146,4 @@ Logagent is an [npm package](https://www.npmjs.com/package/@sematext/logagent) a
 - [Sematext Agent for Docker](https://github.com/sematext/sematext-agent-docker) - collects metrics, events and logs from Docker API and CoreOS. Logagent-js is a component of sematext-agent-docker. More Information: [Innovative Docker Log Management](http://blog.sematext.com/2015/08/12/docker-log-management/)
 - [Logsene-CLI](https://github.com/sematext/logsene-cli) - Enables searching logs in Sematext Logs from the command-line 
 - [Sematext Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node applications
-- [Custom Metrics](https://github.com/sematext/spm-metrics-js) - Custom Metrics JavaScript library for Sematext 
 - [Winston-Logsene](https://github.com/sematext/winston-logsene) - Logging for Node.js - Winston transport layer for Logsene

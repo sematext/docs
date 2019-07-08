@@ -214,14 +214,6 @@ max response latency | nodejs.responses.latency.max | Max | Long |
 min latency | nodejs.eventloop.latency.min | Min | Long | 
 max latency | nodejs.eventloop.latency.max | Max | Long | 
 
-## Custom Metrics
-    
-To track custom metrics like the number of concurrent users, the
-number of items placed in a shopping cart, or any other kind of
-business transaction or KPI we provide a [Custom Metrics
-API](/monitoring/custom-metrics) and a Node.js client for it:
-[spm-metrics-js](https://www.npmjs.com/package/spm-metrics-js)
-
 ## FAQ
 
 ### Can I install Node.js agent on Windows?

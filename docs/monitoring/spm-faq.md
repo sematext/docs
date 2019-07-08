@@ -17,7 +17,7 @@ There are no limits on the number of servers, nodes, or
 
 <a name="what-types-of-applications-and-infrastructure-can-sematext-monitor" class="faq-questions"><strong>What types of applications and infrastructure can Sematext monitor?</strong></a>
 
-See [integrations](/integration). You can also send [custom metrics](custom-metrics).
+See [integrations](/integration).
 
 <a name="what-are-the-various-configuration-files-present-in-spm-client-package" href="#what-are-the-various-configuration-files-present-in-spm-client-package" class="faq-questions"><strong>What are the various configuration files present in spm-client package?</strong></a>
 

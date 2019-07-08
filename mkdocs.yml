@@ -55,7 +55,6 @@ pages:
       - Processes: monitoring/processes.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
-      # - Custom Metrics: monitoring/custom-metrics.md
       - Tags: monitoring/tag-support.md
       - Tag Aliases: monitoring/tag-aliases-support.md
       - Changelog: monitoring/changelog.md
