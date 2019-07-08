@@ -64,9 +64,6 @@ The [Network Map](network-map) visualizes your network topology.  It show discov
 
 [On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).  It works with both embedded and standalone agent and has negligible overhead.
 
-<!-- UNCOMMENT WHEN THIS FEATURE IS ADDED -->
-<!-- [Custom Metrics](custom-metrics) API and provided libraries let you send custom metrics (any numerical data, not just performance metrics) into Sematext and graph it along other reports. -->
-
 You can create custom dashboards with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
 <div class="video_container">

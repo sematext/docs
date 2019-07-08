@@ -9,8 +9,6 @@ description: Monitor all key MongoDB metrics and stats, namely server state, glo
 
 Sematext MongoDB monitoring agent is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb).  It continuously collects MongoDB metrics and sends them to Sematext. It is available as an [NPM package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
 
-In addition to collecting MongoDB metrics, you can send [Custom Metrics](/monitoring/custom-metrics), such as the number of concurrent users, the number of items placed in a shopping cart, or any other kind of business transaction or KPI.
-
 ** Installation and Configuration **
 
 1.  Create a Monitoring App of type "MongoDB" in Sematext 
