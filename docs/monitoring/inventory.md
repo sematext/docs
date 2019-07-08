@@ -3,7 +3,7 @@ description: Sematext Inventory Monitoring gives you insight into your whole inf
 
 The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically and effortlessly, without any operational overhead.
 
-The Inventory information is available in the *Monitoring Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information. 
+The Inventory information is available in the *Monitoring Infrastructure* section of the *Monitoring* tab of your Sematext Cloud account - your main place for hosts, virtual machines and containers information.
 
 <!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
 
@@ -66,19 +66,7 @@ The Agent checks the state of packages on machines and containers where it's run
 
 ## Enabling Inventory Monitoring
 
-To enable Inventory Monitoring you need to adjust your `st-agent.yml` file located in the `/opt/spm/properties` directory and set the following section:
-
-```
-pkg:
-  enabled: true
-  interval: 10m
-```
-
-After that the [Sematext Agent](../agents/sematext-agent) needs to be restarted by running the following command:
-
-```
-service spm-monitor-st-agent restart
-```
+Check out enabling and disabling Inventory Monitoring [here](../agents/sematext-agent/packages/configuration/).
 
 ## Gathered Data
 
@@ -104,6 +92,6 @@ In addition, the following information about packages is gathered for Node.js, P
 Here are some of the common use cases and issues that Inventory Monitoring helps solve:
 
 - Finding obsolete packages  
-- Seeing differences in environments for troubleshooting behavior discrepancies 
+- Seeing differences in environments for troubleshooting behavior discrepancies
 - Finding packages mentioned in the [CVE](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) reports
 - And many, many more
