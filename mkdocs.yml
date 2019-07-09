@@ -185,6 +185,7 @@ pages:
           - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
       - How-To:
           - GDPR personal data in web server logs: logagent/how-to-gdpr_web_logs.md
+          - Centralize Linux system journal: logagent/how-to-journald.md
           - IDE Integration and debugging: logagent/logagent-ide-conf.md
       - FAQ: logagent/faq.md
     - API: api/index.md
