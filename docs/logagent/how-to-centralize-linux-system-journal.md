@@ -1,7 +1,7 @@
-# How to centralize Linux system journal
+# How To Centralize Linux System Journal
 
 
-Did you know that most Linux systems have a complete log management solution onboard? Distributions based on systemd contain journald and journalctl.   
+Did you know that most Linux systems have a complete log management solution onboard? Distributions based on `systemd` contain `journald` and `journalctl`.   
 
 **systemd-journald** - All Linux system processes write logs to the system journal, which is managed by `journald`. The system journal is local log storage. 
 
@@ -30,7 +30,7 @@ Then you can [install Logagent](https://sematext.com/docs/logagent/installation/
 To receive logs from the `journal-upload` service, activate the plugin in `/etc/sematext/logagent.conf`. 
 
 
-```yaml
+```yml
 # Global options
 options:
   includeOriginalLine: true
@@ -48,12 +48,14 @@ input:
     tags:
      log_shipper: logagent
      # _index is special tag for log routing with elasticsearch output-plugin
-     # Set the index name here in case journald logs should be stored in a separate index
-     # _index: MY_INDEX_FOR_ELASTICSEARCH_OUTPUT or YOUR_SEMATEXT_LOGS_TOKEN_HERE
+     # Set the index name here in case journald logs should be 
+     # stored in a separate index
+     # _index: MY_INDEX_FOR_ELASTICSEARCH_OUTPUT or 
+     #         YOUR_SEMATEXT_LOGS_TOKEN_HERE
      # you can add any other static tag 
      # node_role: kubernetes_worker
      # journald might provide many fields, 
-     # to reduce storage usage you can remove some redundant fields
+     # to reduce storage usage you can remove redundant fields
     removeFields:
       - __CURSOR
       - __REALTIME_TIMESTAMP
