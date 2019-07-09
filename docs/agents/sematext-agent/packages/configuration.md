@@ -30,7 +30,7 @@ You can *disable* package collection by setting the following properties:
  </div>
 </div>
 
-Additionally, you can tweak the interval that determines how often packages are scanned. By default, the interval is every 10 minutes. The agent retrieves packages from the file system and any running containers, then compares the current state to decide which packages should be reported as installed or removed, and finally ships the events to Sematext Cloud.
+Additionally, you can tweak the interval that determines how often packages are scanned. By default, the interval is every 10 minutes. The agent retrieves packages from the file system and any running containers, then compares the current state to decide which packages should be reported as installed or removed, and finally ships the events to Sematext Cloud. Asides from that, the agent proactively reacts to the file system changes and bulks the packages in real time.
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
