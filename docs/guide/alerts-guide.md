@@ -59,6 +59,9 @@ A **Save Query** window will open with the option to **Enable Alert**. When it's
 
 - **Alert Type**, to choose either Threshold Alerts or Anomaly Alerts. For more information on alerting capabilities check [alerts](https://sematext.com/docs/alerts/) documentation pages.
 - **Condition**, to choose when the Alert will be triggered.
+- **Ignore regularly occuring spikes and dips**, where we look at historical data and try to decide if an alert fits the regular stream of spikes and dips in metrics. If it does, we won't interrupt you with notifications. 
+    
+    Based on the filter combination we find all previous spikes and dips from the past. Split them into group-by values (+-5% we assume as the same), find LCM (least common multiple) in the groups. This means we're trying to include the current value into our LCM groups to check if it fits any of them or not. If it fits, we assume this is a regular event and ignore it.
 
 ![Enable Alert Notification](../images/guide/alerts-and-events/save-alert-1.png)
 
@@ -68,8 +71,8 @@ A **Save Query** window will open with the option to **Enable Alert**. When it's
 
 - **Schedule**, to choose when the Alerts will notify you based on a period, schedule or time.
 
-<video style="display:block; width:100%; height:auto;" autoplay loop="loop">
-  <source src="../../images/guide/alerts-and-events/alert-scheduling.mp4" type="video/mp4" />
+<video style="display:block; width:100%; height:auto;" autoplay controls loop>
+  <source src="https://sematext.com/wp-content/uploads/2019/05/alert-scheduling.mp4" type="video/mp4" />
 </video>
 
 
