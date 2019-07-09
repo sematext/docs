@@ -161,8 +161,8 @@ pages:
           - Log Parser Patterns: logagent/parser.md
         - Plugins:
           - Overview: logagent/plugins.md
+          - About filters: logagent/filters.md
           - Input Filter:
-            - About filters: logagent/filters.md
             - Grep input filter: logagent/input-filter-grep.md
             - Grok input filter: logagent/input-filter-grok.md
           - Input Plugins:
