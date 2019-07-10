@@ -1,7 +1,7 @@
-title: Sematext Monitoring Changelog
-description: Features and improvements changelog for Sematext's Cloud based SaaS / On-premises monitoring as a service platform 
+title: Sematext Experience Changelog
+description: Features and improvements changelog for Sematext's Experience product. 
 
-To stay up-to-date about Sematext Monitoring features and updates, check out the links below:
+To stay up-to-date about Sematext Experience features and updates, check out the links below:
 
   - check out the [Product Updates](https://sematext.com/product-updates)
   - follow [@sematext](http://twitter.com/sematext) on Twitter
