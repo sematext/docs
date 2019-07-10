@@ -67,6 +67,7 @@ pages:
       - User Satisfaction: experience/user-satisfaction.md
       - On-Page Transactions: experience/on-page-transaction.md
       - User Identification: experience/user-identification.md
+      - Changelog: experience/changelog.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
