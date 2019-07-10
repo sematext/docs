@@ -43,7 +43,7 @@ input:
 outputFilter:
   iptruncate:
     module: ip-truncate-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access.log
     fields:
       - client_ip
@@ -77,7 +77,7 @@ input:
 outputFilter:
   hashfields: 
     module: hash-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access.log
     # algorithms supported by nodejs crypto module, e.g. sha1, sha256, sha512, md5, ...
     algorithm: sha256
@@ -117,7 +117,7 @@ input:
 outputFilter:
   aes:
     module: aes-encrypt-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access_log|nginx|httpd
     fields:
       - client_ip
@@ -165,7 +165,7 @@ input:
 outputFilter:
   ip-truncate-fields:
     module: remove-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access_log
     fields:
       - client_ip

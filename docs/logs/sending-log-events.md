@@ -20,4 +20,4 @@ All options work with log shippers such as
 application or script that works with
 [Elasticsearch](index-events-via-elasticsearch-api) or
 syslog or Apache Flume or really any other tool that can send data to
-[Logsene's Elasticsearch API](index-events-via-elasticsearch-api).
+[Sematext's Elasticsearch API](index-events-via-elasticsearch-api).
