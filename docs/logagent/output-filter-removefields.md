@@ -22,15 +22,21 @@ input:
 # log agent parses web server logs out of the box ...
 # output filter to encrypt client_ip and user field in web server logs
 outputFilter:
-  ip-truncate-fields:
+  remove-fields:
     module: remove-fields
-    # JS regeular expression to match log source name
-    matchSource: !!js/regexp access_log
-    maskValuesInMessageField: true
-    fields:
+    # JS regular expression to match log source name
+    matchSource: !!js/regexp .*
+    # List of fields, where the values from removed field should be
+    # replaced with maskValuesString 
+    maskValuesInFields:
+      - message
       - client_ip
+    # String to replace masked values from removed fields
+    maskValuesString: "ANONYMIZED-DATA"
+    fields:
       - user
-  
+      - client_ip
+      
 ```
 
 Run Logagent with your config: 
@@ -39,14 +45,15 @@ Run Logagent with your config:
 logagent --config logagent-example-config.yml -n httpd --yaml
 ```
 
-The output does not contain client_ip and user field: 
+The output does not contain client_ip and user field, adn optionally the user/client ip is replaced with "ANONYMIZED-DATA" in the message field: 
 
 ```
 logSource:    httpd
 _type:        access_common
 remote_id:    -
 method:       GET
-path:         /
+path:         /user/ANONYMIZED-DATA
+message:      GET /user/ANONYMIZED-DATA
 http_version: HTTP/1.1
 status_code:  304
 size:         0
