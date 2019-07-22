@@ -37,7 +37,7 @@ input:
 outputFilter:
   iptruncate:
     module: ip-truncate-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access_log
     fields:
       - client_ip
