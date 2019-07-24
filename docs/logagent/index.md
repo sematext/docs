@@ -143,7 +143,5 @@ A comprehensive collection of plugins for data input, processing, and output are
 Logagent is an [npm package](https://www.npmjs.com/package/@sematext/logagent) and can add log parsing to Node.js applications. The [Logagent module](https://github.com/sematext/logagent-js) is part of the [Sematext Docker Agent](https://github.com/sematext/sematext-agent-docker) as well, for parsing container logs.
 
 ## Related Packages
-- [Sematext Agent for Docker](https://github.com/sematext/sematext-agent-docker) - collects metrics, events and logs from Docker API and CoreOS. Logagent-js is a component of sematext-agent-docker. More Information: [Innovative Docker Log Management](http://blog.sematext.com/2015/08/12/docker-log-management/)
 - [Logsene-CLI](https://github.com/sematext/logsene-cli) - Enables searching logs in Sematext Logs from the command-line 
-- [Sematext Agent for Node.js](https://github.com/sematext/spm-agent-nodejs) - collects performance metrics for Node applications
 - [Winston-Logsene](https://github.com/sematext/winston-logsene) - Logging for Node.js - Winston transport layer for Logsene

@@ -23,11 +23,12 @@ input:
 # log agent parses web server logs out of the box ...
 # output filter to encrypt client_ip and user field in web server logs
 outputFilter:
-  hashfields: 
+  hashFields: 
     module: hash-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access_log
-    # algorithms supported by nodejs crypto module, e.g. sha1, sha256, sha512, md5, ...
+    # algorithms supported by nodejs crypto module, 
+    # e.g. sha1, sha256, sha512, md5, ...
     algorithm: sha256
     fields:
       - client_ip

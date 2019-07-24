@@ -29,7 +29,7 @@ input:
 outputFilter:
   aes:
     module: aes-encrypt-fields
-    # JS regeular expression to match log source name
+    # JS regular expression to match log source name
     matchSource: !!js/regexp access.log
     fields:
       - client_ip
