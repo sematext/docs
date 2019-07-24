@@ -18,7 +18,7 @@ To configure time thresholds for page loads and requests, click on Configure Req
 
 ### URL Groups
 
-To configure time thresholds for specific URL group, click on Configure Requirements in the App sidebar menu and adjust the time threshold input next to each URL group.
+To configure time thresholds for specific URL group, click on Configure Requirements in the App sidebar menu and adjust the time threshold input next to each URL group. You can also go to the URL Groups page and adjust the thresholds there.
 
 <img
   class="content-modal-image"

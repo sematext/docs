@@ -20,16 +20,17 @@ To create a new URL Group open your Experience App and do the following:
 1. Open URL Groups in the left sidebar menu
 2. Click on the Add button in the top left
 3. Enter the URL pattern, use curly braces for placeholders. Eg. `/user/{userId}`. would match any url of this form (`/user/123`, `/user/122`, etc.)
-4. You can also enter exact URLs without placeholders to match one specific part of your website (see URL Group Time Threshold below as to why this might be useful)
-4. You can use the text area below to test if the pattern matches the list of provided URLs
+4. Optionally enter the time threshold (see below for more information)
+5. You can also enter exact URLs without placeholders to match one specific part of your website (see URL Group Time Threshold below as to why this might be useful)
+6. You can use the text area below to test if the pattern matches the list of provided URLs
 
 <img
   class="content-modal-image"
   alt="Create Experience URL Group Form"
   src="../../images/experience/urlgroup-1.png"
   title="Create Experience URL Group Form"
-  width=934
-  height=573
+  width=850
+  height=594
 />
 
 ### URL Group Time Threshold
