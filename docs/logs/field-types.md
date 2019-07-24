@@ -109,6 +109,6 @@ Example of a `geo` field which has geo-point type:
 
 **Note:**
 
-If you want to use this field type you can send documents with a field name and
+If you want to use this field type you can send events with a field name and
 data in a format presented above. Alternatively, you can use Field
 Editor to manually create a field of geo-point type.
