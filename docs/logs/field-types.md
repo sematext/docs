@@ -97,9 +97,11 @@ can be useful on dashboards presenting maps, for example.
 Example of a `geo` field which has geo-point type:
 
     curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
-      "geo" : {
-        "lat": 52.40,
-        "lon": 16.93
+      "geoip": {
+        "location" : {
+          "lat": 52.40,
+          "lon": 16.93
+        }
       },
       "message": "Hello from Sematext!"
     }'
@@ -107,7 +109,6 @@ Example of a `geo` field which has geo-point type:
 
 **Note:**
 
-If you want to use this field type you can send documents with a field
-in a format presented above. Data in such a format will be
-automatically detected as geo-point. Alternatively, you can use Field
-Editor to manually create a field of geo-point type.
+If you want to use this field type you can send events with a field name and
+data in a format presented above. Alternatively, you can use Field
+Editor to manually create a field of the geo-point type.
