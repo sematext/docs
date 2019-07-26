@@ -599,6 +599,24 @@ charts will show them. If they don't, please send us an email to
 <support@sematext.com> or contact
 us in chat.
 
+<a name="i-am-trying-to-monitor-elasticsearch-http-metrics-are-empty" href="#i-am-trying-to-monitor-elasticsearch-http-metrics-are-empty" class="faq-questions"><strong>I am trying to monitor Elasticsearch. My HTTP Metrics charts are empty?</strong></a>
+
+If other ES charts are showing data, it is most likely
+that HTTP metrics aren't enabled in `elasticsearch.yaml`. 
+Setting `http.enabled: true` will fix this issue.
+If this doesn't fix it, please send us an email to
+<support@sematext.com> or contact
+us in chat.
+
+<a name="i-am-trying-to-monitor-elasticsearch-node-stats-are-not-tracking-over-time" href="#i-am-trying-to-monitor-elasticsearch-node-stats-are-not-tracking-over-time" class="faq-questions"><strong>I am trying to monitor Elasticsearch. Node stats are not tracked over time?</strong></a>
+
+Make sure to set the `node.name` value in in `elasticsearch.yaml`. 
+Elasticsearch will otherwise generate random a node name each time 
+an instance starts, making tracking node stats over time impossible.
+If this doesn't fix your issue, please send us an email to
+<support@sematext.com> or contact
+us in chat.
+
 <a name="i-am-not-seeing-any-data-in-monitoring-charts-how-do-i-check-if-network-connectivity-is-ok" href="#i-am-not-seeing-any-data-in-monitoring-charts-how-do-i-check-if-network-connectivity-is-ok" class="faq-questions"><strong>I am not seeing any data in Monitoring charts. How do I check if network connectivity is OK?</strong></a>
 
 SPM agents send the data to Sematext via HTTP(S) so it is important
