@@ -19,7 +19,7 @@ input:
     - '/var/log/*/access_log'
 
 # log agent parses web server logs out of the box ...
-# output filter to encrypt client_ip and user field in web server logs
+# output filter to remove client_ip and user field in web server logs
 outputFilter:
   remove-fields:
     module: remove-fields
