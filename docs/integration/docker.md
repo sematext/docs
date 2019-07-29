@@ -24,6 +24,7 @@ You install the Agent simply by running one Docker command. This will start the 
 
 ```bash
 docker run -d  --restart always --privileged -P --name st-agent \
+  -v /:/hostfs:ro \
   -v /sys/kernel/debug:/sys/kernel/debug \
   -v /var/run/:/var/run/ \
   -v /proc:/host/proc:ro \
@@ -66,6 +67,7 @@ services:
       - SYS_ADMIN 
     restart: always 
     volumes: 
+      - '/:/hostfs:ro' 
       - '/var/run/:/var/run/' 
       - '/sys/kernel/debug:/sys/kernel/debug' 
       - '/proc:/host/proc:ro' 
@@ -87,6 +89,7 @@ If you're running a Docker Swarm cluster, it's just as easy to run a Docker Swar
 ```bash
 docker service create --mode global --name st-agent \
   --restart-condition any \
+  --mount type=bind,src=/,dst=/hostfs,readonly \
   --mount type=bind,src=/var/run,dst=/var/run/ \
   --mount type=bind,src=/usr/lib,dst=/host/usr/lib \
   --mount type=bind,src=/sys/kernel/debug,dst=/sys/kernel/debug \
@@ -134,6 +137,7 @@ services:
       - REGION=US
       - PKG_ENABLED=false
     volumes:
+      - "/:/hostfs:ro"
       - "/var/run:/var/run/"
       - "/usr/lib:/host/usr/lib"
       - "/sys/kernel/debug:/sys/kernel/debug"
