@@ -8,6 +8,7 @@ To deploy the Sematext Agent as a container, run the following command on each h
 
 ```bash
 docker run -d  --restart always --privileged -P --name st-agent \
+-v /:/hostfs:ro \
 -v /sys/kernel/debug:/sys/kernel/debug \
 -v /var/run/:/var/run/ \
 -v /proc:/host/proc:ro \
@@ -38,6 +39,7 @@ Mount the configuration file into the container and set the path to the configur
 
 ```bash
 $ docker run -d  --restart always --privileged -P --name st-agent \
+-v /:/hostfs:ro \
 -v /sys/kernel/debug:/sys/kernel/debug \
 -v /var/run/:/var/run/ \
 -v /proc:/host/proc:ro \
@@ -77,6 +79,7 @@ services:
       - SYS_ADMIN
     restart: always
     volumes:
+      - '/:/hostfs:ro'
       - '/var/run/:/var/run/'
       - '/sys/kernel/debug:/sys/kernel/debug'
       - '/proc:/host/proc:ro'
@@ -93,6 +96,7 @@ Sematext Agent can be deployed as global service on all Swarm nodes with a singl
 ```
 docker service create --mode global --name st-agent \
 --restart-condition any \
+--mount type=bind,src=/,dst=/hostfs,readonly \
 --mount type=bind,src=/var/run,dst=/var/run/ \
 --mount type=bind,src=/usr/lib,dst=/host/usr/lib \
 --mount type=bind,src=/sys/kernel/debug,dst=/sys/kernel/debug \

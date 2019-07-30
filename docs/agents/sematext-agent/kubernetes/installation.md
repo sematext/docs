@@ -189,6 +189,9 @@ spec:
             path: /health
             port: 80
         volumeMounts:
+          - name: hostfs
+            mountPath: /hostfs
+            readOnly: true
           - name: procfs
             mountPath: /host/proc
             readOnly: true
@@ -224,6 +227,9 @@ spec:
             mountPath: /var/run/docker.sock
         resources:
       volumes:
+        - name: hostfs
+          hostPath:
+            path: /
         - name: procfs
           hostPath:
             path: /proc
