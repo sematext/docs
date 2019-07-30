@@ -37,33 +37,29 @@ Side navigation sections for user and team features:
 - Team
 - Account 
 
-![Sematext Monitoring App Sidenav](../images/guide/monitoring/monitoring-sidenav.png)
+![Sematext Monitoring App Sidenav](../images/dashboards/side-nav.png)
 
-## App & Dashboard Selector
+## Dashboard & App Selector
 
-The App & Dashboard selector lets you **choose any App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
+The Dashboard & App selector lets you **choose any App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
 
-## App Actions
+## Dashboard Actions
 
-Right next to the App & Dashboard Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
+Right next to the App & Dashboard Selector is the **Dashboard Actions dropdown menu** and **horizontal ellipsis icon**. 
 
-The App Actions dropdown menu allows you to **quickly switch between your Dashboards, Logs and Monitoring Apps**. While the horizontal ellipsis icon shows your App options and lets you open various app specific functions, like instructions to **install monitors and start sending metrics, app settings, alert rules, heartbeat alerts, as well as ability to connect two different apps, invite team members, and transfer app ownership**.
-
-All App Actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. The Monitoring App view remains unchanged and allows for easy interaction between various system settings and reports views.
+The dropdown menu allows you to **quickly switch between your Dashboards, and Apps**. While the horizontal ellipsis icon shows your options and lets you open various dashboard specific functions, like editing, cloning and deleting a Dashboard.
 
 ## Report Selector
 
-Once you create a Monitoring App, and start your Agent, you will get a **default Report created for you named Overview**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
+Once you create a Dashboard, you will get a **default Report created for you named Overview**. It will have no data or components configured. You can add components, and edit them. You can also edit this Report, clone it, or create new ones.
 
-![](../images/guide/monitoring/report-selector.png)
-
-Based on what type of Monitoring Integration you chose, more Reports get created by default. In this Docker sample you can see three more Reports are created by default.
+![](../images/dashboards/report-selector.png)
 
 ## Time Picker
 
-The Time Picker is available whenever a Logs or Monitoring App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed common observability defaults.
+The Time Picker is available whenever a Dashboard is selected. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed common observability defaults.
 
-A **custom time range can be selected using the time picker dropdown menu**. The Logs App will automatically refresh upon selection and update all the reports accordingly.
+A **custom time range can be selected using the time picker dropdown menu**. The Dashboard will automatically refresh upon selection and update all the reports accordingly.
 
 ## Refresh and Live Tail
 

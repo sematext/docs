@@ -64,7 +64,7 @@ Based on what type of Monitoring Integration you chose, more Reports get created
 
 The Time Picker is available whenever a Logs or Monitoring App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed common observability defaults.
 
-A **custom time range can be selected using the time picker dropdown menu**. The Logs App will automatically refresh upon selection and update all the reports accordingly.
+A **custom time range can be selected using the time picker dropdown menu**. The Monitoring App will automatically refresh upon selection and update all the reports accordingly.
 
 ## Refresh and Live Tail
 
