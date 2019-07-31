@@ -1,4 +1,4 @@
-## Sematext Documentation
+## [Sematext Documentation](https://sematext.com/docs)
 
 ### Quick Start - run mkdocs in a container
 
