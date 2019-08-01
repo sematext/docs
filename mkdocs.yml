@@ -10,7 +10,7 @@ pages:
       # - Monitoring Guide: guide/monitoring-guide.md
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
-      - Dashboards Guide: guide/dashboards-guide.md
+      # - Dashboards Guide: guide/dashboards-guide.md
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
@@ -59,6 +59,19 @@ pages:
       - Tag Aliases: monitoring/tag-aliases-support.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
+    - Alerts:
+      - Overview: alerts/index.md
+      - Account Default Hooks: alerts/account-default-hooks.md
+    - Events:
+      - Overview: events/index.md
+      - Adding Events: events/adding.md
+      - Fields: events/fields.md
+      - Timeline/Histogram: events/timeline.md
+    - Dashboards:
+      - Overview: dashboards/index.md
+      - Quick Start: dashboards/quick-start.md
+      - Settings: dashboards/settings.md
+      - Reports and Components: dashboards/reports-and-components.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
@@ -76,14 +89,6 @@ pages:
       - Custom Pointcuts: tracing/custom-pointcuts.md
       - Transaction Naming: tracing/transaction-naming.md
       - Tracing Scala: tracing/scala.md
-    - Alerts:
-      - Overview: alerts/index.md
-      - Account Default Hooks: alerts/account-default-hooks.md
-    - Events:
-      - Overview: events/index.md
-      - Adding Events: events/adding.md
-      - Fields: events/fields.md
-      - Timeline/Histogram: events/timeline.md
     - Integrations:
       - Overview: integration/index.md
       - Monitoring Akka: integration/akka.md
