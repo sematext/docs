@@ -3,12 +3,12 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 Dashboards are your central location where you put everything together. Logs, application performance metrics, infrastructure inventory and processes, cluster data with Docker and Kubernetes metrics, and events that give you insight into what is happening with your system in real-time. Everything in one place. 
 
-Dashboards consist of multiple components that accumulate data from multiple data sources such as logs, metrics, infrastructure, and events in one central location. You can create specific reports with various metrics, correlate them with logs and event timelines to get to the bottom of issues much easier.
+You can create specific reports with various metrics, correlate them with logs and event timelines to get to the bottom of issues much easier.
 
-Log data is hard to analize and can be extremely tedious to understand. Dashboards provide a means to display one or more metrics in parallel with logs, and display them in a unified report for easy correlation and investigation.
+Log data is hard to analyze and can be extremely tedious to understand. Dashboards provide the means to display one or more metrics in parallel with logs, and display them in a unified report for easy correlation and investigation.
 
 ## Creating Dashboards
-To create a Dashboard, start by going to the Dashboards screen and click the add new dashboard button. Give your Dashbord a name and click save.
+To create a Dashboard, start by going to the Dashboards screen and click the **+ Add New Dashboard** button. Give your Dashbord a name and click save.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
   <source src="https://sematext.com/wp-content/uploads/2019/07/create-dash.mp4" type="video/mp4" />

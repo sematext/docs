@@ -27,6 +27,7 @@ Side navigation top level sections for infrastructure and application performanc
 - Infrastructure
 - Monitoring
 - Logs
+- Experience
 - Correlations
 - Alerts and Events
 - Integrations
@@ -47,11 +48,11 @@ The Dashboard & App selector lets you **choose any App** as well as any **Dashbo
 
 Right next to the App & Dashboard Selector is the **Dashboard Actions dropdown menu** and **horizontal ellipsis icon**. 
 
-The dropdown menu allows you to **quickly switch between your Dashboards, and Apps**. While the horizontal ellipsis icon shows your options and lets you open various dashboard specific functions, like editing, cloning and deleting a Dashboard.
+The dropdown menu allows you to **quickly switch between your Dashboards, and Apps**, while the horizontal ellipsis icon shows your options and lets you open various dashboard specific functions, like editing, cloning and deleting a Dashboard.
 
 ## Report Selector
 
-Once you create a Dashboard, you will get a **default Report created for you named Overview**. It will have no data or components configured. You can add components, and edit them. You can also edit this Report, clone it, or create new ones.
+Once you create a Dashboard, you will get a **default Report created for you named Overview**. It will have no data or components configured. You can add components and edit them. You can also edit this Report, clone it, or create new ones.
 
 ![](../images/dashboards/report-selector.png)
 
@@ -69,5 +70,5 @@ Refresh data and Live Tail options are located next to the time picker. The **Li
 
 The megaphone icon in the right section of the header is used to open the notifications. If your plan is in need of an upgrade, a new feature is announced, or similar system and service updates require your attention, they'll be shown in the notifications view.
 
-The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your Monitoring App, do report-specific actions, connect your Apps, and more.
+The next page describes how to use Reports and Components. The report menu located just below the top navigation menu, and helps you discover how to add new components, correlate logs, events, and metrics between your Apps, do report-specific actions, connect Apps, and much more.
 

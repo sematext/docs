@@ -28,6 +28,7 @@ Side navigation top level sections for infrastructure and application performanc
 - Infrastructure
 - Monitoring
 - Logs
+- Experience
 - Correlations
 - Alerts and Events
 - Integrations

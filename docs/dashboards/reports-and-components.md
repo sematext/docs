@@ -1,5 +1,5 @@
 title: Sematext Dashboards Reports and Components
-description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
+description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes a plethora of different integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
 ## Dashboards Reports
 
@@ -15,7 +15,7 @@ The image below shows a common Monitoring App component showing its functionalit
 
 ![Metrics Dashboards Component](https://sematext.com/docs/images/guide/dashboards/metrics-dashboard-component.png "Metrics Dashboards Component")
 
-Just like a Monitoring App component, a Logs App components have interactive elements as well. Here you can choose from Log Tables, Logs counts, and much more. Use the Add Component button to add a Logs App component to your Dashboard, and combine them with Monitoring App components for full observability of your stack. 
+Just like a Monitoring App component, a Logs App components have interactive elements as well. Here you can choose from Log Tables, Logs counts, and much more. Use the **+ Add New Component** button to add a Logs App component to your Dashboard, and combine them with Monitoring App components for full observability of your stack. 
 
 ![Logs Dashboards Component](https://sematext.com/docs/images/guide/dashboards/logs-dashboard-component.png "Logs Dashboards Component")
 

@@ -2,13 +2,13 @@ title: Sematext Dashboards Quick Start
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system. Dashboarding is system's powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events. 
 
 
-After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Dashboard. A Dashboard is a collection for different types of data. This is where you keep logs, metrics, events, infrastructure data and experience statistics in a single screen for easy correlation and troubleshooting.
+After you log into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Dashboard. A Dashboard is a collection for different types of data. This is where you keep logs, metrics, events, infrastructure data and experience statistics in a single screen for easy correlation and troubleshooting.
 
 For example, if you have a development and a production environment, it might make sense to have one Dashboard for each. You can create as many Dashboards as you want.
 
 ## Creating a Dashboard
 
-You create a Dashboard by pressing the **+ Create Dashboard** button in the Monitoring tab.
+You create a Dashboard by pressing the **+ Add New Dashboard** button in the Dashboards tab.
 
 ![Create a new Dashboard](../images/dashboards/create-dash.png)
 
@@ -32,7 +32,7 @@ The image below shows a sample of a custom Kafka report panel that was created b
 
 ![Add Metric Dashboards Component](https://sematext.com/docs/images/guide/dashboards/add-metric-report-to-dashboard.png "Add Metric Dashboards Component")
 
-Available dashboard components in our on-premises and cloud SaaS tool:
+Available dashboard components:
 
 - Line, Area, Bar charts metrics component binned by metric creation date
 - Bar chart component binned by event creation date
@@ -42,4 +42,4 @@ Available dashboard components in our on-premises and cloud SaaS tool:
 - Numeric field time series component 
 - Events Count bar chart time series component
 - Top N Values of given log event field component
-- Markdown free form editor component ussed to create textual panels used to add custom event notes
+- Markdown free form editor component used to create textual panels used to add custom event notes
