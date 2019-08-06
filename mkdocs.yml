@@ -219,6 +219,7 @@ pages:
             - Slack Webhook: logagent/output-plugin-slack.md
             - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
         - How-To:
+            - Nginx Ingress Log Shipping: logagent/how-to-nginx-ingress-log-shipping.md
             - GDPR Personal Data In Web Server Logs: logagent/how-to-gdpr_web_logs.md
             - Centralize Linux System Journal: logagent/how-to-centralize-linux-system-journal.md
             - IDE Integration and Debugging: logagent/logagent-ide-conf.md
