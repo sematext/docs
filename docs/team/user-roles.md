@@ -2,12 +2,12 @@ title: Sematext User Roles
 description: Inviting team members to your account means they get access to all your Apps, dashboards, notification hooks, alert rules, and everything else!
 
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
-This account might be considered a _parent_ account for your whole organization.  
+This account might be considered a _parent_ account for your whole organization or team.  
 
 ### Owner
 Since the person who created the account would be its `OWNER`, this person
 is typically a team leader or manager, somebody with the responsibility to 
-oversee the DevOps pipeline of the whole organization. They might then choose 
+oversee the DevOps pipeline of the whole organization or team. They might then choose 
 to share the whole Account with every other person from the team/organization 
 to allow others to easily access all Apps created under that account.
 
