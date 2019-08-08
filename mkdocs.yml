@@ -127,6 +127,12 @@ pages:
       - Slack: integration/alerts-slack-integration.md
       - VictorOps: integration/alerts-victorops-integration.md
       - Zapier: integration/alerts-zapier-integration.md
+    - Team:
+      - Overview: team/index.md
+      - Account Access: team/account-access.md
+      - App Access: team/app-access.md
+      - App Transfer: team/app-transfer.md
+      - User Roles: team/user-roles.md
     - Agents:
       - Overview: agents/index.md
       - Sematext Agent:
