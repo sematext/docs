@@ -574,7 +574,7 @@ add geoIP information on the source IP addresses.
 	</div>
 </div>
 
-All of the integrations require adding and [configuring the Experience script](../experience/getting-started). However, single-page applications require one more configuration step to register route changes.
+All of the integrations require adding and [configuring the Experience script](../experience/getting-started). However, single-page applications require [one more configuration step](../experience/integrations) to register route changes.
 
 ## Notification Hooks
 
