@@ -37,24 +37,28 @@ $ logagent [options] [file list]
 ```
 
 
-| Options     | Description |
-|-------------|-------------|
+| Options          | Description |
+|------------------|-------------|
+| __Generate config files__ | |
+| `-w, --writeConfig <file>` | write [example config](https://github.com/sematext/logagent-js/blob/master/config/example.yml) to a file. The arguments `-i,-e,-g` are applied in the generated config. See also `-c` |
+| `--writePatterns <file>` | write example [patterns.yml](https://github.com/sematext/logagent-js/blob/master/patterns.yml) to a file. See also `-f`	|
 | __General options__ | |
 | `-h, --help` | output Logagent help |
 | `-V, --version` | output Logagent version |
-| `-v, --verbose` | output activity report every minute |
-| `--config <configFileName>` | path to Logagent config file (see below) |
+| `-v, --verbose` | verbose debug output for all plugins |
+| `-c, --config <configFile>` | path to Logagent config file (see below) |
 | `--geoipEnabled <value> `| true/false to enable/disable geoip lookups in patterns. |
 | `--diskBufferDir  path`| directory to store status and buffered logs (during network outage) |
 | `--includeOriginalLine` | includes the original message in parsed logs |
 | `-f, --file <patternFile>` | file with pattern definitions, use multiple -f options for multiple files| 
+| `--skipDefaultPatterns` | skips loading of default patterns.yml file |
 | `-s, --suppress` | silent, print no logs to stdout; print only stats on exit |
 | `--printStats` | print processing stats in the given interval in seconds, e.g. ```--print_stats 30``` to stderr. Useful with -s to see Logagent activity on the console without printing the parsed logs to stdout.|
 | __Log input options__| |
 | `--stdin` | read from stdin, default if no other input like files or UDP are set|
 | list of files | Every argument after the options list is interpreted as a file name. All files in the file list (e.g. /var/log/*.log) are watched by [tail-forever](https://www.npmjs.com/package/tail-forever) starting at end of file|
 | `-g glob-pattern` | use a [glob](https://www.npmjs.com/package/glob) pattern to watch log files e.g. ```-g "{/var/log/*.log,/Users/stefan/myapp/*.log}"```. The complete glob expression must be quoted to avoid interpretation of special characters by the Linux shell. |
-| `--tailStartPosition bytes` | -1 to tail from end of file, >=0 to start from the given position (in bytes).  This setting applies to new files without their read position saved (see --logsene-tmp-dir)|
+| `--tailStartPosition bytes` | -1 to tail from end of file, >=0 to start from the given position (in bytes).  This setting applies to new files without their read position saved (see --diskBufferDir)|
 | `-n name` | name for the log source only when stdin is used, important to make multi-line patterns working on stdin because the status is tracked by the log source name| 
 | `-u <port>` | starts a syslogd UDP listener on the given port to act as syslogd |
 | `--journald <port>` | starts http server to receive logs from systemd-journal-upload.service |
@@ -65,11 +69,11 @@ $ logagent [options] [file list]
 | `--heroku <port>` | listens for Heroku logs (http drain / framed syslog over http) |
 | `--cfhttp <port>` | listens for Cloud Foundry logs (syslog over http)|
 | __Output options__ | |
-| __standard output stream__ | combine Logagent with any Unix tool via pipes |
+| standard output stream (default) | combine Logagent with any Unix tool via pipes |
 | `-y, --yaml` | prints parsed messages in YAML format to stdout|
 | `-p, --pretty` | prints parsed messages in pretty JSON format to stdout|
 | `-j, --ldjson` | print parsed messages in line-delimited JSON format to stdout |
-| __Elasticsearch / Logsene__| Log storage |
+| __Elasticsearch or Sematext Cloud__| Log storage |
 | `-e, --elasticsearchUrl <url>` | Elasticsearch URL e.g. http://localhost:9200, default `htpps://logsene-receiver.sematext.com`|
 | `-t, --index <index>` | [Logs App token](http://sematext.com/logsene) to ship data to Sematext Cloud Apps or Elasticsearch index (see `--elasticsearchUrl`) |
 | `--httpProxy <url>` | HTTP proxy url |
