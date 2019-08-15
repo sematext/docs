@@ -1,5 +1,5 @@
 title: Sematext Experience Integrations
-descriptions: Sematext integrations with ready to use monitoring agents and log shippers for infrastructure and container monitoring, log management and analytics, alerting, chatops, and more. Our Cloud and on-premises platform exposes the Elasticsearch API and syslog receivers with built in anomaly detection, data analysis and visualization tools and services
+descriptions: The Sematext Experience integrations cover all types of websites and all major SPA frameworks. 
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--4-col">
@@ -103,10 +103,10 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
 
 ## Angular
-The Angular SPA integrations supports both Angular.js and Angular 2+. 
+The Angular SPA integration supports both Angular.js and Angular 2+. 
 
 ### Angular 2+
-If your website uses newer Angular.js you should add a call to routeChange whenever the route changes in your webapp. This can be done in your top-level component where Router is defined by adding the ngOnInit function and subscribing to the Router events as shown in the following example.
+If your webapp uses the newer Angular you should add a call to `routeChange` whenever the route changes in your webapp. This can be done in your top-level component where `Router` is defined by adding the `ngOnInit` function and subscribing to the `Router` events as shown in the following example.
 
 ```js
 import { Component, OnInit } from '@angular/core';
@@ -128,7 +128,7 @@ export class AppComponent implements OnInit {
 ```
 
 ### Angular.js
-If your website uses Angular.js 1.x you should add a call to routeChange whenever the route changes in your webapp. To do this you'll need to adjust your client side view inside Angular:
+If your webapp uses Angular.js 1.x you should add a call to `routeChange` whenever the route changes in your webapp. To do this you'll need to adjust your client side view inside Angular.js:
 
 ```js
 $scope.$on('$routeChangeStart', function () {
@@ -161,7 +161,7 @@ export default function App() {
 ```
 
 ## Vue.js 
-The Vue.js integration works by wathing for calls to the `routeChange` function where you have the `router-view` defined.
+The Vue.js integration works by watching for calls to the `routeChange` function where you have the `router-view` defined.
 
 ```js
 <template>
@@ -174,7 +174,6 @@ The Vue.js integration works by wathing for calls to the `routeChange` function 
     name: 'app',
     watch: {
       $route() {
-        // eslint-disable-next-line
         strum('routeChange', document.location.href);  
       }
     }
@@ -192,7 +191,6 @@ import { on } from '@ember/object/evented';
 
 EmberRouter.reopen({
   doInformAboutRouteChange: on('didTransition', function() {
-    // eslint-disable-next-line
     strum('routeChange', window.location.href);
   }),
 });
