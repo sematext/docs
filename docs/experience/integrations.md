@@ -8,7 +8,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/angular.png" alt="Angular" title="Angular" style="padding-top:30px;height:115px;">
+							<img src="../../images/integrations/angular.png" alt="Angular" title="Angular" style="padding-top:30px;height:115px;">
 						</div>
 						<div class="side back">
 							<h5>Angular</h5>Full support for single-page applications built with the Angular framework.
@@ -24,7 +24,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/react.png" alt="React" title="React" style="padding-top:40px;height:110px;">
+							<img src="../../images/integrations/react.png" alt="React" title="React" style="padding-top:40px;height:110px;">
 						</div>
 						<div class="side back">
 							<h5>React</h5>Full support for single-page applications built with the React library.
@@ -40,7 +40,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/vuejs.png" alt="Vue.js" title="Vue.js" style="padding-top:40px;height:110px;">
+							<img src="../../images/integrations/vuejs.png" alt="Vue.js" title="Vue.js" style="padding-top:40px;height:110px;">
 						</div>
 						<div class="side back">
 							<h5>Vue.js</h5>Full support for single-page applications built with Vue.js.
@@ -56,7 +56,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/ember.png" alt="Ember" title="Ember" style="padding-top:40px;height:110px;">
+							<img src="../../images/integrations/ember.png" alt="Ember" title="Ember" style="padding-top:40px;height:110px;">
 						</div>
 						<div class="side back">
 							<h5>Ember</h5>Full support for single-page applications built with the Ember framework.
@@ -72,7 +72,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/static.png" alt="Static Websites" title="Static Websites" style="padding-top:40px;height:110px;">
+							<img src="../../images/integrations/static.png" alt="Static Websites" title="Static Websites" style="padding-top:40px;height:110px;">
 						</div>
 						<div class="side back">
 							<h5>Static Websites</h5>Full support for all types of static websites.
@@ -88,7 +88,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/server.png" alt="Server-side rendered websites" title="Server-side rendered websites" style="padding-top:40px;height:110px;">
+							<img src="../../images/integrations/server.png" alt="Server-side rendered websites" title="Server-side rendered websites" style="padding-top:40px;height:110px;">
 						</div>
 						<div class="side back">
 							<h5>Server-side rendered websites</h5>Full support for all types of SSR websites and applications.
