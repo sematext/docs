@@ -40,7 +40,7 @@ $ logagent [options] [file list]
 | Options          | Description |
 |------------------|-------------|
 | __Generate config files__ | |
-| `-w, --writeConfig <file>` | write [example config](https://github.com/sematext/logagent-js/blob/master/config/example.yml) to a file. The arguments `-i,-e,-g` are applied in the generated config. See also `-c` |
+| `-w, --writeConfig <file>` | write [example config](https://github.com/sematext/logagent-js/blob/master/config/example.yml) to a file. The arguments `-i, -e, -g` are applied in the generated config. See also `-c` |
 | `--writePatterns <file>` | write example [patterns.yml](https://github.com/sematext/logagent-js/blob/master/patterns.yml) to a file. See also `-f`	|
 | __General options__ | |
 | `-h, --help` | output Logagent help |
