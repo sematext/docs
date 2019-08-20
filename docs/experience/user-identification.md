@@ -1,7 +1,7 @@
 title: Identifying Users
 description: Overview on how to identify users
 
-By default, all users that interact with your application that's monitored by Sematext Experience will be anonymous. You will get an overview of the number of sessions for each given user, page loads and network requests, as well as User Satisfaction for these events, which browser was used and the country from which the user is interacting with your site. 
+By default, all users that interact with your website will be given an anonymous identifier. You will get an overview of the number of sessions for each given user, page loads and network requests, as well as User Satisfaction for these events, which browser was used and the country from which the user is interacting with your website. 
 
 <img
   class="content-modal-image"
@@ -10,12 +10,13 @@ By default, all users that interact with your application that's monitored by Se
   title="Users Overview"
 />
 
-This behavior can be altered by including a call to the `identifyUser` function that allows you to inform the Sematext Experience beacon about the user's identity. Here's an example. If the user interacting with your application is already logged in, you can pass along their name and identifier so that our Real User Monitoring solution can correlate the data for this user and display it accordingly.
+This behavior can be altered by calling the `identify` function that allows you to inform the script about the user's identity. Here's an example. If the user interacting with your application is already logged in, you can pass along their name and identifier (email, email hash, or anything that is unique) so that later you can find data for this user in Experience.
 
-In order to properly identify the user you need to call the `identifyUser` function just before you configure the Real User Monitoring script by calling the `config` function described in the [Getting Started](getting-started.md) section, i.e.:
+In order to properly identify the user you need to call the `identify` function just before the `config` function described in the [Getting Started](getting-started.md) section, i.e.:
 
 ```javascript
 <script type="text/javascript">
-  strum('identify', { accountName: 'mike', loginName: 'mike@doesnt.exist.com' })
+  strum('identify', { name: 'mike', identifier: 'mike@company.com' })
+  strum('config', ...)
 </script>
 ```
