@@ -80,11 +80,12 @@ Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy Logagent with following docker command with your Logs Tokens:
 
 ```
-docker service create --restart=always -mode global -name logagent \
--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+docker service create --mode global --name st-logagent \
+--restart-condition any \
+--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
 -e LOGS_TOKEN="REPLACE THIS WITH YOUR LOGS TOKEN" \
--e LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com" \
-sematext/logagent
+-e REGION=US \
+sematext/logagent:latest
 ```
 
 ### Kubernetes and OpenShift 
