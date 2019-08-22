@@ -1,7 +1,7 @@
 title: Sematext Experience Overview
 description: Overview of real user monitoring for websites and single page apps
 
-Our Monitoring and Logs solution does a great job of monitoring your infrastructure (i.e. your backend) and the software running on it, but for websites and web apps that's only half the story. The other half is of course your frontend and the interaction between the two. Sematext Experience fills this gap by giving you an overview of your websites' performance and the user satisfaction score by measuring directly from your website visitors' browser.
+Our Monitoring and Logs solution does a great job of monitoring your infrastructure (i.e. your back end) and the software running on it, but for websites and web apps that's only half the story. The other half is of course your frontend and the interaction between the two. Sematext Experience fills this gap by giving you an overview of your websites' performance and the user satisfaction score by measuring directly from your website visitors' browser.
 
 <img
   class="content-modal-image"
@@ -12,7 +12,7 @@ Our Monitoring and Logs solution does a great job of monitoring your infrastruct
   height=870
 />
 
-It is critical for websites and web apps to load fast in order to keep the visitors satisfied. Recent research<sup>1</sup> has shown that:
+It is critical for websites and web apps to load fast in order to keep the visitors satisfied. <a href="https://www.thinkwithgoogle.com/intl/en-154/insights-inspiration/research-data/need-mobile-speed-how-mobile-latency-impacts-publisher-revenue/" target="_blank" rel="noopener">Recent research</a> has shown that:
 
  * 53% of visits are likely to be abandoned if pages take longer than 3 seconds to load
  * One out of two people expect a page to load in less than 2 seconds
@@ -32,10 +32,3 @@ When you create an Experience App you will be given step-by-step instructions to
   width=778
   height=699
 />
-
-
-<small>
-  <ul>
-    <li>1. https://www.thinkwithgoogle.com/intl/en-154/insights-inspiration/research-data/need-mobile-speed-how-mobile-latency-impacts-publisher-revenue/</li>
-  </ul>
-</small>
