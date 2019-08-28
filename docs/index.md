@@ -3,7 +3,7 @@ description: Private on-premises and cloud SaaS infrastructure & application per
 
 Welcome to Sematext, a full-stack observability tool where you can combine metrics and logs, with custom alerts, in any way you want! Have everything in one place.
 
-_If you’re new here, read below for a high-level view of Sematext._
+_If you’re new here, read below for a high-level overview of Sematext._
 
 <div class="mdl-grid" style="padding:0;margin:-8px;">
 	<div class="mdl-cell mdl-cell--4-col">
@@ -13,7 +13,7 @@ _If you’re new here, read below for a high-level view of Sematext._
 					<h4>
 						Logs
 					</h4>
-					<p>Hassle-Free Log Management & Analysis.</p>
+					<p>Hassle-Free Log Management & Analysis</p>
 				</div>
 			</div>
 		</a>
@@ -25,7 +25,7 @@ _If you’re new here, read below for a high-level view of Sematext._
 					<h4>
 						Monitoring
 					</h4>
-					<p>Map and monitor your whole infrastructure in real-time.</p>
+					<p>Map and monitor your whole infrastructure in real-time</p>
 				</div>
 			</div>
 		</a>
@@ -37,7 +37,7 @@ _If you’re new here, read below for a high-level view of Sematext._
 					<h4>
 						Experience
 					</h4>
-					<p>Detect website anomalies in real time.</p>
+					<p>Detect website anomalies in real time</p>
 				</div>
 			</div>
 		</a>
@@ -49,7 +49,7 @@ _If you’re new here, read below for a high-level view of Sematext._
 					<h4>
 						Alerts
 					</h4>
-					<p>Get notified on Metrics, Logs & Experience Alerts.</p>
+					<p>Get notified on Metrics, Logs & Experience Alerts</p>
 				</div>
 			</div>
 		</a>
@@ -61,7 +61,7 @@ _If you’re new here, read below for a high-level view of Sematext._
 					<h4>
 						Events
 					</h4>
-					<p>Capture your organization's key events.</p>
+					<p>Capture your organization's key events</p>
 				</div>
 			</div>
 		</a>
@@ -73,7 +73,7 @@ _If you’re new here, read below for a high-level view of Sematext._
 					<h4>
 						Tracing
 					</h4>
-					<p>End to end visibility into your distributed applications.</p>
+					<p>End to end visibility into your distributed applications</p>
 				</div>
 			</div>
 		</a>
