@@ -3,61 +3,94 @@ description: Private on-premises and cloud SaaS infrastructure & application per
 
 Welcome to Sematext, a full-stack observability tool where you can combine metrics and logs, with custom alerts, in any way you want! Have everything in one place.
 
-## How Sematext works
-Sematext integrations let you collect metrics, logs and events across your whole stack. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications.
+_If you’re new here, read below for a high-level overview of Sematext._
 
-We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, and many others, and integrates in minutes.
-
-Since Sematext Cloud is an all-in-one Performance Monitoring and Log Management solution, our documentation is split into Monitoring and Logs sections. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
-
-Data shipped to Sematext is grouped into Apps. App integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
-
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-grid" style="padding:0;margin:-8px;">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/logs/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp logs-card">
-				<div class="mdl-card__title mdl-card--expand">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
 						Logs
 					</h4>
+					<p>Hassle-Free Log Management & Analysis</p>
 				</div>
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/monitoring/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
-				<div class="mdl-card__title mdl-card--expand">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
 						Monitoring
 					</h4>
+					<p>Map and monitor your whole infrastructure in real-time</p>
 				</div>
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/experience/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp experience-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Experience
+					</h4>
+					<p>Detect website anomalies in real time</p>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/alerts/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp alerts-card">
-				<div class="mdl-card__title mdl-card--expand">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
 						Alerts
 					</h4>
+					<p>Get notified on Metrics, Logs & Experience Alerts</p>
 				</div>
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/events/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
-				<div class="mdl-card__title mdl-card--expand">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
 						Events
 					</h4>
+					<p>Capture your organization's key events</p>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/tracing/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp tracing-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Tracing
+					</h4>
+					<p>End to end visibility into your distributed applications</p>
 				</div>
 			</div>
 		</a>
 	</div>
 </div>
+
+
+## How Sematext works
+Sematext integrations let you collect metrics, logs and events across your whole stack. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications.
+
+We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, and many others, and integrates in minutes.
+
+With Experience you can detect anomalies in real time and receive alerts when end-user experience is affected by website performance. Sematext Experience provides invaluable insights that keep your business in control of how happy your customers are when interacting with your website or webapp. 
+
+Since Sematext Cloud is an all-in-one Performance Monitoring, Log Management, and Real-User Monitoring solution, our documentation is split several sections labeled Monitoring, Logs, Experience, Alerts, Events, and Tracing. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
+
+Data shipped to Sematext is grouped into Apps. App integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
 
 
 ## Integrations
