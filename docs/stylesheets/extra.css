@@ -385,7 +385,11 @@ pre {
     color: #00425D;
 }
 .md-typeset h4 {
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 .md-header {
     background-color: #011a27;
@@ -443,16 +447,25 @@ pre {
     text-align: left;
 }
 .logs-card{
-    background: #00A3EF;
+  /* background: #00A3EF; */
+  background: #1C2871;
 }
 .monitoring-card{
-    background: #09C177;
+    /* background: #09C177; */
+    background: #165088;
+}
+.experience-card{
+  background: #16716d;
 }
 .alerts-card{
   background: #ff404a;
 }
 .events-card{
-    background: #FF9325;
+  /* background: #FF9325; */
+  background: #63b567;
+}
+.tracing-card{
+  background: #bd5666;
 }
 .logagent-card{
     background: #7E72DA;
@@ -463,8 +476,18 @@ pre {
 .kubernetes-card{
     background: #00202F;
 }
-.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .alerts-card .mdl-card__title, .events-card .mdl-card__title{
+.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .tracing-card .mdl-card__title, .experience-card .mdl-card__title, .alerts-card .mdl-card__title, .events-card .mdl-card__title{
     color: #fff;
+}
+.custom-mdl-card {
+  flex-direction: column;
+}
+.custom-mdl-card h4 {
+  margin-bottom:0;
+}
+.custom-mdl-card p {
+  margin-top:5px;
+  text-align: center;
 }
 .integrations-card-list img{
     width: 64px;
