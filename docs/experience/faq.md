@@ -104,7 +104,3 @@ See [alerts FAQ](/faq/#alerts).
 <a name="what-is-anomaly-detection" href="#what-is-anomaly-detection" class="faq-questions"><strong>What is Anomaly Detection?</strong></a>
 
 See [alerts FAQ](/faq/#alerts).
-
-<a name="what-are-heartbeat-alerts" href="#what-are-heartbeat-alerts" class="faq-questions"><strong>What are Heartbeat Alerts?</strong></a>
-
-See [alerts FAQ](/faq/#alerts).
