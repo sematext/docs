@@ -45,7 +45,7 @@ small effect on website performance.
 <a name="multiple-domain" href="multiple-domain" class="faq-questions"><strong>Can I send data from a different domain?</strong></a>
 
 Depending on your plan, you may be able to send data from multiple domains at
-the same time. If your pricing plan supports more than one domain, just setup
+the same time. If your pricing plan supports more than one domain, just set up
 the script on additional domains and your data should appear shortly in
 Experience.
 
@@ -55,7 +55,7 @@ plan supports only one domain.
 
 <a name="configure-requirements" href="configure-requirements" class="faq-questions"><strong>What are the user satisfaction scores shown in Experience based on?</strong></a>
 
-The scores are based on the time threshold defined in [Configure
+The scores are based on the time threshold defined in the [Configure
 Requirements](/experience/configure-requirements) screen. By default these time
 thresholds are 2 seconds. You can adjust these time thresholds if you have a
 different performance target for your website or webapp. You can read
@@ -68,7 +68,7 @@ in general.
 
 <a name="stopped-sending-data" href="#stopped-sending-data"><strong>My App has stopped receiving data. What should I do?</strong></a>
 
-Check if you have reached your daily limit in App settings -> Usage screen. If
+Check if you have reached your daily limit in the App settings -> Usage screen. If
 you have reached your daily limit, you can increase the daily limit or disable
 <a href="#what-is-staggering">staggering</a> but note that this may cause <a
 href="#what-is-overage">overage</a> and additional costs at the end of the
