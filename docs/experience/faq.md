@@ -25,6 +25,10 @@ limit of 3,333 page loads.
 
 <a name="what-is-overage" href="what-is-staggering" class="faq-questions"><strong>What is overage?</strong></a>
 
+By default overage is not possible since <a
+href="#what-is-staggering">staggering</a> is enabled for all new Experience
+Apps.
+
 When <a href="#what-is-staggering">staggering</a> is disabled, your App may
 receive more data than defined in the monthly plan limit. This additional
 amount of data is called overage. Overage is charged in addition to your
@@ -32,7 +36,9 @@ monthly pricing plan cost at the end of the month.
 
 The amount you will be charged depends on the amount of overage on a monthly
 basis. If you have received 10% more data during the month than defined in your
-pricing plan, then you will be charged 10% more.
+pricing plan, then you will be charged 10% more. Again, note that overage is
+not possible when you have <a href="#what-is-staggering">staggering</a>
+enabled.
 
 <a name="script-performance" href="script-performance" class="faq-questions"><strong>Does the Experience script have any effect on my website performance?</strong></a>
 
