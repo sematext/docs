@@ -6,14 +6,13 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 1. Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and install it
 
 2. Install Logagent and Windows event plugin
-
-``` bash
-npm i -g @sematext/logagent
-npm i -g node-windows
-npm i -g logagent-input-windows-events
-# run logagent windows version 
-logagent-windows --help 
-```
+  ``` bash
+  npm i -g @sematext/logagent
+  npm i -g node-windows
+  npm i -g logagent-input-windows-events
+  # run logagent windows version 
+  logagent-windows --help 
+  ```
 
 3. Optional service installer
 
@@ -50,11 +49,11 @@ output:
     index: windows_events
 ```
 
-If you're using [Logsene](https://sematext.com/logsene/), the output would be:
+If you're using [Sematext Logs](https://sematext.com/logsene/), the output would be:
 
-```
+```yaml
 output:  
-  logsene:
+  sematext:
     module: elasticsearch
     url: https://logsene-receiver.sematext.com
     # for the EU datacenter, it's https://logsene-receiver.eu.sematext.com
