@@ -579,7 +579,7 @@ problem, to <support@sematext.com> or contact us in chat.
 
 At the moment there is no diagnostics script for container setups, so various resources have to be gathered manually.
 
-Two types of agents are running in container setups:
+Two types of agents are running in container setups and spawn from the following images:
   - <b>sematext/agent</b> (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
   - <b>sematext/app-agent</b> (known as application agent or AA) - collects application metrics (e.g. metrics of your Elasticsearch or Kafka).
     For each monitored service instance one such application agent container will exist. These containers are created automatically by STA.
