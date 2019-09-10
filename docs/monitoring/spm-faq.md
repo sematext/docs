@@ -145,7 +145,7 @@ names), so this is adjusted command for solr1 instance.
 In the remaining sub-steps of "Agent Setup", replace
 word "**default**" with the jvm-name value you just used.
 
-"Agent Setup" step will have to be repeated N times,
+"Agent Setup" step will have to be repeated several times,
 once for each monitored application (in our example 3 times with 3
 different jvm-name values).
 
@@ -860,8 +860,8 @@ Note:
   - if you are installing SPM client for the first time
     and you want to be 100% sure its original hostname never leaves your
     network, define your hostname alias in `agent.properties`
-    file immediately after you complete "Agent Installation" step
-    and before you begin with "Agent Setup" step
+    file immediately after you complete the "Agent Installation" step
+    and before you begin with the "Agent Setup" step
     (installation instructions can be accessed from
     <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
     Monitor on app you are installing)
