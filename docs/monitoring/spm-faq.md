@@ -582,7 +582,7 @@ At the moment there is no diagnostics script for container setups, so various re
 Two types of agents are running in container setups and spawn from the following images:
   - <b>sematext/agent</b> (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
   - <b>sematext/app-agent</b> (known as application agent or AA) - collects application metrics (e.g. metrics of your Elasticsearch or Kafka).
-    For each monitored service instance one such application agent container will exist. These containers are created automatically by STA.
+    For each monitored service instance one such application agent container will exist. These containers are automatically created and managed by STA.
 
 <b>sematext/agent</b>
 
@@ -603,12 +603,12 @@ Kubernetes:
 This will produce multiple tgz files in /tmp dir, one for each running sematext/agent instance:
 
 ```
-for pod in $(kubectl get --no-headers -o=custom-columns=NAME:.metadata.name pods --selector=app=sematext-agent);do kubectl logs $pod -c agent | gzip > /tmp/st-agent-$pod.gz;done
+for pod in $(kubectl get --no-headers -o=custom-columns=NAME:.metadata.name pods --selector=app=sematext-agent);do kubectl logs $pod -c agent | gzip -9 > /tmp/st-agent-$pod.gz;done
 ```
 
 <b>sematext/app-agent</b>
 
-App Agent is writing multiple logs to container file system. You can list all App Agent pods with:
+App Agent writes multiple logs to container file system. You can list all App Agent pods with:
   - Docker/Swarm: `sudo docker ps -f ancestor=sematext/app-agent`
   - Kubernetes: `kubectl get pods --selector=service=st-aa`
 
