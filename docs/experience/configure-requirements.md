@@ -1,32 +1,32 @@
-title: Configure Requirements
+title: Configure Apdex
 description: A guide on how to configure Sematext Experience with custom time thresholds for page loads and HTTP requests. Easily configure On-Page Transactions and URL Groups as well.
 
-Different websites will have different performance requirements. We recommend a time threshold of 2 seconds for page loads and HTTP requests. This is also the default we provide. You can change the settings on the Configure Requirements page. Time thresholds are defined in milliseconds.
+Experience gives you a high-level overview of [User Satisfaction](/experience/user-satisfaction) using Apdex scores. These scores are based on a time threshold that can be configured to reflect your performance requirements. For example, if you or your visitors expect your website to load in under 5 seconds then you can set that as the Page Load Time Threshold in the Configure Apdex screen. The default for page loads and HTTP requests is 2 seconds.
 
 ### Page Loads and HTTP requests
 
-To configure time thresholds for page loads and requests, click on Configure Requirements in the App sidebar menu and adjust the "Page Load Time Threshold". To configure time threshold for requests, adjust the "Request Time Threshold". Below you can see a screenshot of both Page Load time threshold and Request Time Threshold set to two seconds.
+To configure time thresholds for page loads and requests, click on Configure Apdex in the App sidebar menu and adjust the "Page Load Time Threshold". To configure time threshold for requests, adjust the "Request Time Threshold". Below you can see a screenshot of both Page Load time threshold and Request Time Threshold set to two seconds.
 
 <img
   class="content-modal-image"
-  alt="Create Experience Configure Form"
+  alt="Experience Configure Apdex Form"
   src="../../images/experience/configure-1.png"
-  title="Create Experience Configure Form"
-  width=645
-  height=393
+  title="Experience Configure Apdex Form"
+  width=657
+  height=612
 />
 
 ### URL Groups
 
-To configure time thresholds for specific URL group, click on Configure Requirements in the App sidebar menu and adjust the time threshold input next to each URL group. You can also go to the URL Groups page and adjust the thresholds there.
+To configure time thresholds for specific URL group, click on Configure Apdex in the App sidebar menu and adjust the time threshold input next to each URL group. You can also go to the URL Groups page and adjust the thresholds there.
 
 <img
   class="content-modal-image"
-  alt="Create Experience Configure Form"
+  alt="Experience Configure Apdex Form"
   src="../../images/experience/configure-2.png"
-  title="Create Experience Configure Form"
-  width=814
-  height=447
+  title="Experience Configure Apdex Form"
+  width=657
+  height=612
 />
 
 ### On-Page Transactions
