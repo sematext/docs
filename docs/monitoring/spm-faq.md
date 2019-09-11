@@ -580,6 +580,7 @@ problem, to <support@sematext.com> or contact us in chat.
 At the moment there is no diagnostics script for container setups, so various resources have to be gathered manually.
 
 Two types of agents are running in container setups and spawn from the following images:
+
   - <b>sematext/agent</b> (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
   - <b>sematext/app-agent</b> (known as application agent or AA) - collects application metrics (e.g. metrics of your Elasticsearch or Kafka).
     For each monitored service instance one such application agent container will exist. These containers are automatically created and managed by STA.
@@ -609,10 +610,12 @@ for pod in $(kubectl get --no-headers -o=custom-columns=NAME:.metadata.name pods
 <b>sematext/app-agent</b>
 
 App Agent writes multiple logs to container file system. You can list all App Agent pods with:
+
   - Docker/Swarm: `sudo docker ps -f ancestor=sematext/app-agent`
   - Kubernetes: `kubectl get pods --selector=service=st-aa`
 
 You will notice that each App Agent container/pod name matches the name of the monitored service (e.g. service `my_service-7db849967c-kdmgz` will have associated App Agent container/pod `my_service-7db849967c-kdmgz-aa-mqdt9`). When you find the problematic App Agent, you can copy (using e.g. `docker cp` or `kubectl cp` command):
+
   - its config file from /opt/spm/spm-monitor/conf dir
   - its spm-monitor and spm-monitor-stats logs from `/opt/spm/spm-monitor/logs/apps/YOUR_TOKEN/MONITORED_SERVICE_POD_NAME` dir
  
