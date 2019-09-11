@@ -693,17 +693,15 @@ Here are a few things to check and do:
 
 5.  Make sure user spmmon can have more than 1024 files open:  
 
-```
-sudo vim /etc/security/limits.conf
-spmmon     -    nofile    32000
-```
-and
-```    
-sudo vim /etc/pam.d/su
-session    required   pam_limits.so
-```
-    
-Restart SPM monitor after the above changes.
+        sudo vim /etc/security/limits.conf
+        spmmon     -    nofile    32000
+
+    and
+
+        sudo vim /etc/pam.d/su
+        session    required   pam_limits.so
+        
+    Restart SPM monitor after the above changes.
 
 6.  Check if hostname of your server is defined in `/etc/hosts`
 
