@@ -186,6 +186,7 @@ We accept JSON messages using any log shipper and any logging library, as long a
 ### Monitoring
 
 Two steps are required when creating a Monitoring App:
+
 - Agent Installation
 - Agent Setup
 
