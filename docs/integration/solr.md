@@ -97,13 +97,8 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ## Troubleshooting
 
-If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, you can create a diagnostics package on any affected machines where SolrCloud Monitoring Agent installed by running:
-
-```bash
-sudo bash /opt/spm/bin/spm-client-diagnostics.sh
-```
-
-The resulting package will contain all relevant info needed for our investigation. You can send it, along with a short description of your problem, to support@sematext.com or contact us through the chat in the bottom right.
+If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, see
+[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
 

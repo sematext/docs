@@ -185,15 +185,18 @@ We accept JSON messages using any log shipper and any logging library, as long a
 
 ### Monitoring
 
-When creating a monitoring app two steps are required, package installation and agent configuration setup.
+Two steps are required when creating a Monitoring App:
 
-#### Package Installation
+- Agent Installation
+- Agent Setup
 
-You need to add Sematext repository and install Sematext monitoring agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the next step, that is, agent configuration setup
+#### Agent Installation
 
-#### Agent Configuration Setup
+You need to add the Sematext repository and install Sematext Monitoring Agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the Agent Setup step.
 
-Sematext Monitor agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: 
+#### Agent Setup
+
+Sematext Monitoring Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: 
 
 - [In-process as a javaagent](/agents/spm-monitor-javaagent/)
 - [Standalone as a separate process](/agents/spm-monitor-standalone/) 

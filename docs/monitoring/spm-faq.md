@@ -124,8 +124,8 @@ Monitor for app you are installing) for each of them separately.
 
 2.  If you want them monitored under the same Monitoring App (e.g., you
 have 3 Solr instances running on a server), you must use different JVM
-name for each of them. To do this, "1. Package installation" step should
-be run only once on this machine, while "2. Client configuration setup"
+name for each of them. To do this, "Agent Installation" step should
+be run only once on this machine, while "Agent Setup"
 step should be run once for each of the 3 Solr instances (installation
 instructions are accessible
 from <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
@@ -142,10 +142,10 @@ In this example, we are setting up things for 3 separate Solr processes,
 monitored under JVM names: solr1, solr2 and solr3 (you choose any
 names), so this is adjusted command for solr1 instance.
 
-In the remaining sub-steps of "2. Client configuration setup", replace
+In the remaining sub-steps of "Agent Setup", replace
 word "**default**" with the jvm-name value you just used.
 
-"2. Client configuration setup" step will have to be repeated N times,
+"Agent Setup" step will have to be repeated several times,
 once for each monitored application (in our example 3 times with 3
 different jvm-name values).
 
@@ -448,7 +448,7 @@ sudo service spm-monitor restart
 
 **Note**: In case of **Memcached**, **Apache** and plain **Nginx** -
 after completing upgrade steps described above, you must also run
-commands described in Step 2 - Client Configuration Setup (which is
+commands described in "Agent Setup" (which is
 accessible from <https://apps.sematext.com/ui/monitoring>, click
 Actions \> Install Monitor for app you have installed)
 
@@ -559,6 +559,10 @@ with curl is failing, add `-k` flag.
 
 <a name="how-do-i-create-the-diagnostics-package" href="#how-do-i-create-the-diagnostics-package" class="faq-questions"><strong>How do I create the diagnostics package?</strong></a>
 
+Preparing diagnostics data differs depending on the setup you have.
+
+<b>Classic installation (rpm/deb packages)</b>
+
 If you are having issues with Sematext Monitoring, you can
 create diagnostics package on affected machines where SPM client was
 installed by running:
@@ -571,24 +575,68 @@ The resulting package will contain all relevant info needed for our
 investigation. You can send it, along with short description of your
 problem, to <support@sematext.com> or contact us in chat.
 
+<b>Container setups</b>
+
+At the moment there is no diagnostics script for container setups, so various resources have to be gathered manually.
+
+Two types of agents are running in container setups and spawn from the following images:
+
+  - <b>sematext/agent</b> (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
+  - <b>sematext/app-agent</b> (known as application agent or AA) - collects application metrics (e.g. metrics of your Elasticsearch or Kafka).
+    For each monitored service instance one such application agent container will exist. These containers are automatically created and managed by STA.
+
+<b>sematext/agent</b>
+
+Docker:
+
+```
+sudo docker logs st-agent > /tmp/st-agent.log 2>&1 && tar -cvzf /tmp/st-agent.tgz /tmp/st-agent.log
+```
+
+Swarm:
+
+```
+sudo docker service logs st-agent > /tmp/st-agent.log 2>&1 && tar -cvzf /tmp/st-agent.tgz /tmp/st-agent.log
+```
+
+Kubernetes:
+
+This will produce multiple tgz files in /tmp dir, one for each running sematext/agent instance:
+
+```
+for pod in $(kubectl get --no-headers -o=custom-columns=NAME:.metadata.name pods --selector=app=sematext-agent);do kubectl logs $pod -c agent | gzip -9 > /tmp/st-agent-$pod.gz;done
+```
+
+<b>sematext/app-agent</b>
+
+App Agent writes multiple logs to container file system. You can list all App Agent pods with:
+
+  - Docker/Swarm: `sudo docker ps -f ancestor=sematext/app-agent`
+  - Kubernetes: `kubectl get pods --selector=service=st-aa`
+
+You will notice that each App Agent container/pod name matches the name of the monitored service (e.g. service `my_service-7db849967c-kdmgz` will have associated App Agent container/pod `my_service-7db849967c-kdmgz-aa-mqdt9`). When you find the problematic App Agent, you can copy (using e.g. `docker cp` or `kubectl cp` command):
+
+  - its config file from /opt/spm/spm-monitor/conf dir
+  - its spm-monitor and spm-monitor-stats logs from `/opt/spm/spm-monitor/logs/apps/YOUR_TOKEN/MONITORED_SERVICE_POD_NAME` dir
+ 
+We will need all these files for investigation. You can send them, along with short description of your
+problem, to <support@sematext.com> or contact us in chat.
+
+
 <a name="i-see-only-my-system-metrics-e.g.-cpu-memory-network-disk-but-where-is-the-rest-of-my-data" href="#i-see-only-my-system-metrics-e.g.-cpu-memory-network-disk-but-where-is-the-rest-of-my-data" class="faq-questions"><strong>I see only my system metrics (e.g. CPU, Memory, Network, Disk...), but where is the rest of my data?</strong></a>
 
 Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/ui/monitoring).
-**Package installation** steps should be done first, followed by
-**Client configuration setup**. If you have done that and you still
-don't see application metrics, run ```sudo
-bash /opt/spm/bin/spm-client-diagnostics.sh``` to generate diagnostics
-package and send it to <support@sematext.com> with description of
-your problem.
+**Agent Installation** steps should be done first, followed by
+**Agent Setup**. If you have done that and you still
+don't see application metrics, see
+[How do I create the diagnostics package](spm-faq/#how-do-i-create-the-diagnostics-package).
 
 <a name="i-do-not-see-any-system-metrics-cpu-memory-network-disk-what-could-be-the-problem" href="#i-do-not-see-any-system-metrics-cpu-memory-network-disk-what-could-be-the-problem" class="faq-questions"><strong>I do not see any system metrics (e.g. CPU, Memory, Network, Disk), what could be the problem?</strong></a>
 
 Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/ui/monitoring). It
-is possible you missed **Client configuration setup** step. If you have
-done that and you still don't see application metrics, run ```sudo
-bash /opt/spm/bin/spm-client-diagnostics.sh``` to generate diagnostics
-package and send it to <support@sematext.com> with description of
-your problem.
+is possible you missed **Agent Setup** step. If you have
+done that and you still don't see application metrics, see
+[How do I create the diagnostics package](spm-faq/#how-do-i-create-the-diagnostics-package).
 
 <a name="i-am-using-trying-to-monitor-solr-elasticsearch-my-request-rate-and-latency-charts-are-empty" href="#i-am-using-trying-to-monitor-solr-elasticsearch-my-request-rate-and-latency-charts-are-empty" class="faq-questions"><strong>I am using trying to monitor Solr / Elasticsearch. My Request Rate and Latency charts are empty?</strong></a>
 
@@ -710,9 +758,7 @@ Here are a few things to check and do:
     version of monitor, make sure -D and -javaagent definitions occur
     before "-jar start.jar" part in your command
 
-8.  If none of the suggestions helped, run ```sudo bash
-    /opt/spm/bin/spm-client-diagnostics.sh``` to generate diagnostics
-    package and send it to <support@sematext.com>
+8.  If none of the suggestions helped, see [How do I create the diagnostics package](spm-faq/#how-do-i-create-the-diagnostics-package).
 
 <a name="my-server-stopped-sending-metrics-so-why-do-i-still-see-it-under-hosts-filter" href="#my-server-stopped-sending-metrics-so-why-do-i-still-see-it-under-hosts-filter" class="faq-questions"><strong>My server stopped sending metrics, so why do I still see it under Hosts Filter?</strong></a>
 
@@ -815,8 +861,8 @@ Note:
   - if you are installing SPM client for the first time
     and you want to be 100% sure its original hostname never leaves your
     network, define your hostname alias in `agent.properties`
-    file immediately after you complete "1. Package installation" step
-    and before you begin with "2. Client configuration setup" step
+    file immediately after you complete the "Agent Installation" step
+    and before you begin with the "Agent Setup" step
     (installation instructions can be accessed from
     <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
     Monitor on app you are installing)
