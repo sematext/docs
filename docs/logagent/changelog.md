@@ -10,7 +10,7 @@ Logagent v2.x handles Geo IP lookups in the parser module. Adjusting fields, con
 
 Logagent v3.x has a new [geoip plugin](output-filter-geoip.md) the list of fields for lookups are specified via environment variable or command line flag. 
 
-Note Logagent v3.x requires the setting for GEOIP_FIELDS (default value `client_ip`). It ignores the settings in patterns.yml. If you used custom field names make sure you set `GEOIP_FIELDS` environment variable or `--geoipFields command line flag. 
+Note Logagent v3.x requires the setting for GEOIP_FIELDS (default value `client_ip`). It ignores the settings in patterns.yml. If you used custom field names make sure you set `GEOIP_FIELDS` environment variable or `--geoipFields` command line flag. 
 
 *Backward compatible environment variables:*
 
