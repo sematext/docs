@@ -211,8 +211,11 @@ pages:
             - AES encrypt fields: logagent/output-filter-aesencryptfields.md
             - Hash fields: logagent/output-filter-hashfields.md
             - Remove fields: logagent/output-filter-removefields.md
+            - Drop events: logagent/output-filter-dropevents.md
             - IP truncate fields: logagent/output-filter-iptruncatefields.md
             - Docker enrichment: logagent/output-filter-dockerenrichment.md
+            - Kubernetes enrichment: logagent/output-filter-kubernetes.md
+            - Geo-IP enrichment: logagent/output-filter-geoip.md
           - Output Plugins:
             - Standard output: logagent/output-plugin-stdout.md
             - GELF: logagent/output-plugin-gelf.md
@@ -223,13 +226,14 @@ pages:
             - InfluxDB: logagent/output-plugin-influxdb.md
             - Apache Kafka: logagent/output-plugin-kafka.md
             - ZeroMQ: logagent/output-plugin-zeromq.md
-            - ClickHouse: logagent/output-plugin-clickhouse.md
+            - ClickHouse DB: logagent/output-plugin-clickhouse.md
             - Slack Webhook: logagent/output-plugin-slack.md
             - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
         - How-To:
             - Nginx Ingress Log Shipping: logagent/how-to-nginx-ingress-log-shipping.md
             - GDPR Personal Data In Web Server Logs: logagent/how-to-gdpr_web_logs.md
             - Centralize Linux System Journal: logagent/how-to-centralize-linux-system-journal.md
+            - Reduce Log Volume: logagent/how-to-reduce-log-volume.md
             - IDE Integration and Debugging: logagent/logagent-ide-conf.md
         - Changelog: logagent/changelog.md
         - Release Notes: logagent/releasenotes.md

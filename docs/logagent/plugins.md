@@ -35,7 +35,10 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [hash-fields](output-filter-hashfields) | Processor / output filter | Hashing of field values before any output happens |
 | [ip-truncate-fields](output-filter-iptruncatefields) | Processor / output filter | Replaces the last block of IPv4 and IPv6 address fields with "0" to anonymize IP addresses |
 | [remove-fields](output-filter-removefields) | Processor / output filter | Removes fields before any output happens |
+| [drop-events](output-filter-dropevents) | Processor / output filter | Drop events via value filters for fields |
 | [docker-enrichment](output-filter-dockerenrichment) | Processor / output filter | Metadata enrichment for docker logs, including log routing options |
+| [kubernetes-enrichment](output-filter-kubernetes) | Processor / output filter | Metadata enrichment for pod logs, including log routing options |
+| [geoip](output-filter-geoip) | Processor / output filter | Add Geo-IP information to logs |
 | [stdout (default)](output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
 | [elasticsearch](output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
 | [output-gelf](output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
