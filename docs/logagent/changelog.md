@@ -23,14 +23,13 @@ Note Logagent v3.x requires the setting for GEOIP_FIELDS (default value `client_
 
 *New environment variable:*
 
- - `GEOIP_FIELDS="client_ip,remote_address"` - list of fields
+  - `GEOIP_FIELDS="client_ip,remote_address"` - list of fields
 
 *New command line flag:*
 
   - `--geoipFields "client_ip,remote_address"` - list of fields
 
 
-`
 
 
 

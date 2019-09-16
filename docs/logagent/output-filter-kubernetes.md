@@ -1,5 +1,5 @@
 title: Logagent output filter for Kubernetes log enrichment
-description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use Kubernetes log enrichment to add metadata like labels or Kubernetes pod information to container logs or route logs to different destinations by setting Kubernetes annotations with the log index. 
+description: Logagent features a modular logging architecture framework where each input or output module is implemented as a plugin. Use Kubernetes log enrichment to add metadata like labels or Kubernetes pod information to container logs or route logs to different destinations by setting Kubernetes annotations with the log index. 
 
 ## Output Filter: kubernetes-enrichment
 

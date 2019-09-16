@@ -1,7 +1,7 @@
 title: Best Practices to Reduce Log Volume with Logagent
 description: Reduce log volume to save storage or money for volume based licenses. 
 
-Centralized Logs can often be very noisy. Developers love verbose log output for potential troubleshooting. Do you want to collect all logs, all the time and pay for processing and storage? Probably not! A good practice is to reduce the log volume and focus on relevant log messages until a problem arrives. Log shipper settings can be adjusted to fetch all logs for troubleshooting and debugging if needed. Let’s have a look at the available Logagent filters for adjusting the log volume for operational needs. 
+Centralized Logs can often be very noisy. Developers love verbose log output for potential troubleshooting. Do you want to collect all logs, all the time, and pay for processing and storage? Probably not! A good practice is to reduce the log volume and focus on relevant log messages until a problem arrives. Log shipper settings can be adjusted to fetch all logs for troubleshooting and debugging if needed. Let’s have a look at the available Logagent filters for adjusting the log volume for operational needs. 
 
 Here are a few examples that show how you can configure [Logagent plugins](https://sematext.com/docs/logagent/plugins/) to reduce log volume. 
 
@@ -13,9 +13,11 @@ Input filters are functions that process logs, line by line, before parsing them
 
 Output filters process log events after they are parsed and can be applied to single and multi-line log messages. Here you can place more advanced logic to skip logs or modify log events. Moreover, some output plugins have features to remove data before being transferred. An example is if you want to remove sensitive and private customer data. 
 
-The most efficient way to reduce log volume is to stop collecting logs from noisy data sources. Do you need **all logs from /var/log**, **all systemd units** and **all container logs**? Most of the time, you don’t. Configure Logagent Input Plugins to skip noisy sources. Most of the input plugins accept a list of input sources or offer settings to filter data sources. Here are the most common examples of file input and Docker container logs. 
+The most efficient way to reduce log volume is to stop collecting logs from noisy data sources. Do you need **all logs from `/var/log/**/*.log`**, **all systemd units** and **all container logs**? Most of the time, you don’t. Configure Logagent Input Plugins to skip noisy sources. Most of the input plugins accept a list of input sources or offer settings to filter data sources. Here are the most common examples of file input and Docker container logs. 
 
-## File Input Plugin. Limit the data sources to dedicated log files or directories, instead of using /var/log/**/*.log (default setting in Logagent) 
+## File Input Plugin. 
+
+Limit the data sources to dedicated log files or directories, instead of using /var/log/**/*.log (default setting in Logagent) 
 
 ```
 input: 

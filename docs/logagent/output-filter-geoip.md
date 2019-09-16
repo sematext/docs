@@ -1,16 +1,16 @@
-Title: Add Geo-IP information to logs 
-Description: Add Geo-IP information to logs. log enrichment 
+Title: Add GeoIP information to logs 
+Description: Add GeoIP information to server logs. Resolve IP addresses to geographical coordinates, longitude and latitude, country, city. The Maxmind GeoIP-lite database is updated automatically. 
 
 
 ## Output filter: geoip
 
-This plugin adds Geo IP information to logs. 
-An everyday use case is to enrich web server logs (or any logs with IP addresses) with geographical information derived from those IP addresses. 
+This plugin adds GeoIP information to logs. 
+An everyday use case is to enrich web server logs, or any logs with IP addresses, with geographical information derived from those IP addresses.
  
 Things you do not need to think about at all:
 
-- Maxmind Geo-IP lite database is downloaded automatically to /tmp/
-  To change the location of the DB set MAXMIND_DB_DIR=path
+- The Maxmind GeoIP lite database is downloaded automatically to `/tmp/`
+  To change the location of the DB set `MAXMIND_DB_DIR=path`
 - Integrated automatic updates for the GeoIP database. 
   The update check runs every hour. 
 - Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geoip` field out of the box. 
@@ -21,22 +21,22 @@ Things you do not need to think about at all:
 
 Here is how to enable Geo IP lookups for your logs:
 
-1) Via command line 
+1. Command line 
 
 ```
     logagent  --geoipEnabled true --geoipFields "client_ip,remote_address"
 ```
 
-2) Via environment variables 
+2. Environment variables 
 
 ```   
    GEOIP_ENABLED=true
    GEOIP_FIELDS="client_ip,remote_address"
 ```
 
-3) Via configuration file
+3. Configuration file
 
-Add the following 'outputFilter' section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources.
+Add the following `outputFilter` section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources.
 
 ```yaml
 # Logagent configuration file: logagent-geoip.yml 
@@ -46,7 +46,7 @@ input:
     - '/var/log/*/access_log'
 
 # Logagent parses web server logs out of the box ...
-# Output filter to perform geo IP lookups 
+# Output filter to perform GeoIP lookups 
 # for the field client_ip or remote_address
 outputFilter:
   geoip: 
