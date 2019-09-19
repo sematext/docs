@@ -87,16 +87,6 @@ te*t
 Note: You cannot use a \* or ? symbol as the first character of a
 search.
 
-### Regular Expression Searches
-
-Our in cloud or on premise logging management solution supports regular expression searches matching a pattern between
-forward slashes "/". For example, to find events containing "moat" or
-"boat":
-
-``` code
-/[mb]oat/
-```
-
 ### Fuzzy Searches
 
 It also supports fuzzy searches based on Damerau-Levenshtein Distance.
