@@ -1,4 +1,6 @@
 #!/bin/sh
+
+git pull origin master
 rm -r site/*
 mkdocs build --strict
 # cp site/assets/javascripts/application-*.js site/assets/javascripts/application.js
