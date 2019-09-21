@@ -2,15 +2,10 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo">
+        <a href="https://sematext.com?utm_source=sematext-documentation&utm_medium=homepage-click&utm_campaign=docs" 
+          title="{{ config.site_name }}" 
+          class="md-header-nav__button md-logo">
           <img src="{{ config.site_url }}images/logo-full.svg" style="margin-top: -3px;" alt="Sematext Documentation">
-         <!-- {% if config.theme.logo.icon %}
-            <i class="md-icon">{{ config.theme.logo.icon }}</i>
-          {% elif config.theme.logo.startswith("http") %}
-            <img src="{{ config.theme.logo }}" width="24" height="24">
-          {% else %}
-            <img src="{{ base_url }}/{{ config.theme.logo }}" width="24" height="24">
-          {% endif %} =-->
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -19,20 +14,13 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           {% block site_name %}
-              <!-- {% if config.site_name == page.title %}
-                {{ config.site_name }}
-              {% else %} -->
-                <span class="md-header-nav__topic">
-                  <!-- {{ config.site_name }} -->
-                </span>
-                <span class="md-header-nav__topic">
-                  {% if page and page.meta and page.meta.title  %}
-                      {{ page.meta.title }}
-                  {% else %}
-                     {{ page.title }}
-                  {% endif %}
-                </span>
-              <!-- {% endif %} -->
+            <span class="md-header-nav__topic">
+              {% if page and page.meta and page.meta.title  %}
+                  {{ page.meta.title }}
+              {% else %}
+                  {{ page.title }}
+              {% endif %}
+            </span>
           {% endblock %}
         </div>
       </div>
@@ -45,12 +33,6 @@
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink md-button">
-        <!-- <div class="md-header-nav__login btn btn-primary btn-outline">
-          <a title="Get Free Account" class="md-source" href="https://apps.sematext.com/ui/login">Login</a>
-        </div> -->
-
-        
-
         <div class="md-header-nav__free_account btn btn-default">
           <a title="Login" class="md-source" href="https://apps.sematext.com/ui/login"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background-color: rgba(0, 0, 0, 0)">
             Login
