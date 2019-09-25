@@ -26,7 +26,7 @@ input:
     - /var/log/kernel.log 
     - /var/log/audit.log
     - /var/log/nginx/access_log
-    -/var/log/myapp/*.log
+    - /var/log/myapp/*.log
 ```
 
 
@@ -91,7 +91,7 @@ The drop-events-filter allows you to specify `include` and `exclude` criteria as
 ```
 outputFilter:
   dropEventsFilter:
-         module: drop-events-filter
+    module: drop-events-filter
     debug: false
     filters:
       severity:
@@ -103,6 +103,7 @@ outputFilter:
 
 Another interesting plugin is the "remove-fields" plugin. It takes a list of fields for removal:
 
+```
 outputFilter:
   remove-fields:
     module: remove-fields
@@ -111,5 +112,6 @@ outputFilter:
       - logSource
       - labels
 
- 
+```
+
 We hope this little guide helps you tune Logagent exactly to your operational needs. Don't hesitate to contact us in the chat if you have any questions or suggestions.
