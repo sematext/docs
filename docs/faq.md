@@ -3,31 +3,31 @@ description: FAQ about Sematext monitoring and logging products, integrations, a
 
 ## General
 
-**What should I do if I can't find the answer to my question in the FAQ?**
+### What should I do if I can't find the answer to my question in the FAQ?
 
 Check out [monitoring FAQ](/monitoring/spm-faq) and [logging
 FAQ](/logs/faq). If you can't find the answer to your question please
 email <support@sematext.com> or use our live chat.
 
-**Is there an On Premises version of Sematext that I can run on my own servers?**
+### Is there an On Premises version of Sematext I can run on my own servers? 
 
 Yes there is.  Please see [Sematext Enterprise](/sematext-enterprise).
 
-**Does Sematext integrate with ChatOps like Slack and HipChat? How about PagerDuty or custom WebHooks?**
+### Does Sematext integrate with ChatOps like Slack and HipChat? How about PagerDuty or custom WebHooks?
 
 Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](/alerts).
 
-**Can I use Sematext for (business) transaction tracing?**
+### Can I use Sematext for (business) transaction tracing?
 
 Yes, see [Transaction Tracing](/tracing).
 
-**Is there an HTTP API?**
+### Is there an HTTP API?
 
 Yes, see [API Reference](/api).
 
 ## Sharing
 
-**How can I share my Sematext Apps with other users?**
+### How can I share my Sematext Apps with other users?
 
 There are two options: **Account Sharing** or **App Sharing**.  With
 Account Sharing, you invite others to your **whole account**, so they
@@ -60,7 +60,7 @@ To share Account with other users, go to
 To share App, go
 to <https://apps.sematext.com/ui/team/apps>
 
-**What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?**
+### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
 There are 3 common roles available when Sharing Account and
 Sharing App (**OWNER**, **ADMIN**, **USER**), and one role which is
@@ -93,7 +93,7 @@ This role has all rights as the standard ADMIN, but can also access/edit
 billing-related info. The only thing this role cannot do is change
 password of your account.
 
-**When would I want to add someone as BILLING_ADMIN?**
+### When would I want to add someone as BILLING_ADMIN?
 
 When you don't have a credit card that should be used for
 charging, but some other person has it, you should invite this person
@@ -102,7 +102,7 @@ account and defined a credit card, but now want somebody else to take
 care of all billing related activity (assigning plans and credit cards
 to various apps), you'd give them the BILLING_ADMIN role.
 
-**What might a typical use of roles for an organization with many employees look like?**
+### What might a typical use of roles for an organization with many employees look like?
 
 Typically you might have one person create an account
 via <https://apps.sematext.com/ui/registration>. This account might be
@@ -125,19 +125,19 @@ credit cards and choose plans to be used for apps under your account.
 
 ## Alerts
 
-**Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?**
+### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
 
 Sematext has integrations for Slack, HipChat, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
 [integrations](/integration) and [alerts docs](/alerts).
 
-**What are Threshold-based Alerts?**
+### What are Threshold-based Alerts?
 
 Threshold-based alerts are classic alerts where you choose a metric
 and a numeric value (a threshold) that, when reached or crossed,
 triggers an alert.
 
-**What is Anomaly Detection?**
+### What is Anomaly Detection?
 
 Anomaly Detection uses a number of statistical algorithms to determine
 if a metric has become anomalous, meaning that its recent values have
@@ -146,7 +146,7 @@ values of that metric.  An example of an anomaly is a sudden spike or
 a sudden dip in a metric value.  Sematext can trigger alerts when such
 anomalies are detected.
 
-**What are Heartbeat Alerts?**
+### What are Heartbeat Alerts?
 
 Heartbeat Alerts are extremely useful for keeping an eye on your
 applications.  You create a single Heartbeat Alert for each Monitoring
@@ -163,21 +163,21 @@ See [monitoring FAQ](/monitoring/spm-faq) and [logging FAQ](/logs/faq).
 
 ## Billing
 
-**How do you bill for infrastructure and server monitoring?**
+### How do you bill for infrastructure and server monitoring?
 
 See [monitoring billing FAQ](/monitoring/spm-faq#billing).
 
-**How do you bill for Docker container monitoring?**
+### How do you bill for Docker container monitoring?
 
 See [monitoring billing FAQ](/monitoring/spm-faq#billing).
 
-**Which credit cards are accepted?**
+### Which credit cards are accepted?
 
 We accept all major credit cards - Visa, MasterCard, American
 Express, JCB, Discover, and Diners Club.  We can also invoice you if you
 want to pay via ACH or bank wires.
 
-**Can I be invoiced instead of paying with a credit card?**
+### Can I be invoiced instead of paying with a credit card?
 
 Yes, we offer a pre-payment option through invoicing.  When you select
 this option simply email us and let us know how much you want to
@@ -191,24 +191,24 @@ usage, on a monthly basis.  We'll notify you before your balance gets
 too low, so that we can repeat the invoicing process before your
 credit runs out.
 
-**How often will I get billed?**
+### How often will I get billed?
 
 We bill on a monthly basis and send an email to notify you of the
 amount.
 
-**Can the billing email be sent to our Accounts Payable/Accounting instead of me?**
+### Can the billing email be sent to our Accounts Payable/Accounting instead of me?
 
 Yes, when you select your plan and payment method you will also
 be able to enter an alternative billing email address.  Also, search
 this FAQ for information about BILLING_ADMIN role.
 
-**Do I have to commit or can I stop using Sematext at any time?**
+### Do I have to commit or can I stop using Sematext at any time?
 
 There is no commitment and no contract. When/if you want to stop
 using Sematext you simply stop sending us your metrics and/or switch to the
 Free plan.
 
-**Can I get invoices?**
+### Can I get invoices?
 
 Yes, just log in and look under Account \> Billing \> Invoices.  If
 you don't see invoices there then you likely need to switch to a
