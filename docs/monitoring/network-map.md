@@ -6,7 +6,7 @@ can discover hosts and collect information about communication between
 them, such as the amount of received/transmitted data on each port. In
 order to build the Network Map the Sematext Monitoring Agent needs to be
 started on each host in the system. This can be done by setting `netmon.enabled` property to `true` in
-`/opt/spm/properties/st-agent.yml`. This property is disabled is disabled by default.
+`/opt/spm/properties/st-agent.yml`. This property is disabled by default.
 
 The following properties can be changed:
 
