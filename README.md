@@ -120,3 +120,11 @@ bin/to_md.sh inputDir outputDir
    - inputDir: the extracted html folder
    - outputDir: the markdown folder
 ```
+
+### Convert Google Doc to Markdown
+1. In your google doc go to `Tools > Script editor`
+1. Copy [this script](https://github.com/mangini/gdocs2md/blob/master/converttomarkdown.gapps) to the code section in the `Script editor`
+1. Save the script
+1. To trigger the conversion (from Script editor) go to `Run > Run function > ConvertToMarkdown` (it will run on the google doc from which you opened `Script editor`)
+1. You'll be prompted to give GDrive reading and mailing rights to the script
+1. You'll receive an email with markdown and image files attached
