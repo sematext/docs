@@ -23,8 +23,8 @@ logs.
 
 **What is @timestamp field?**
 
-@timestamp is a date field that is used to filter logs by selected time. If log event does not have such field defined, 
-we will add it and set it to time when we receieved log event.
+`@timestamp` is a date field that is used to filter logs by a selected time. If a log event does not have such a field defined,
+we will add it and set it to the time when we first receieved the log event.
 
 **How can I check how many GB/day I am shipping to your centralized logging management solution?**
 
