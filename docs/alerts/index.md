@@ -1,44 +1,99 @@
-title: Alerting on logs and metrics
-description: Threshold, anomaly, and heartbeat alerts for your logs and infrastructure metrics with email notifications and various 3rd party integrations and notification hooks such as PagerDuty, Slack and more
+title: Alerts
+description: Threshold, anomaly, and heartbeat alerts for your logs, infrastructure and user-experience metrics with email notifications and various 3rd party integrations and notification hooks such as PagerDuty, Slack and more
 
-### Alert Types
-[Sematext Cloud](http://sematext.com/cloud/) includes multiple types
-of alerts that integrate with PagerDuty, Slack, email, and [other 3rd
-party services](#alert-integrations).  
+Alerts are used to notify you when one or more predefined conditions in your *metrics*, *logs* or *experience* data are met.  
 
-1. **Threshold** alerts are the classic threshold based alerts.  They are
-triggeed when something crosses a pre-defiend threshold.
-2. **Anomaly** alerts are based on statistical anomaly detection.  They
-are triggeed when values suddenly change and deviate from the
-continously computed baseline.
-3. **Heartbeat** alerts are triggered when something you are monitoring,
-like your servers, containers, or your applications stop emitting data
-to Sematext.
+For example, you might want to be notified when available disk space reaches a certain threshold - *metrics alert*, or when the number of logs with `severity: warning` gets too high - *logs alert*, or when your users start experiencing high response time - *experience alert*.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/WE9xAUud28o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-### Alert Sources
-Alerts can be triggered on both Metrics and Logs:
 
-Alert type | Metrics | Logs
---- | --- | ---
-Threshold | yes | yes |
-Anomaly | yes | yes |
-Heartbeat | yes | no |
+# Alert Types
+[Sematext Cloud](http://sematext.com/cloud) includes multiple **types** of alerts that integrate with PagerDuty, Slack, email, and [other 3rd party services](#alert-integrations).  
 
-You can manage Alert rules interactively via the UI, or you can
-[manage alerts via the API](../api).
+1. **Threshold** alerts are the classic threshold based alerts. They are triggeed when a certain pre-defiend threshold is met.
+1. **Anomaly** alerts are based on statistical anomaly detection. They are triggeed when values suddenly change and deviate from the continously computed baseline.
+1. **Heartbeat** alerts are triggered when [Sematext Cloud](http://sematext.com/cloud) stops receiving data from your server, container, application, etc..
 
 
-### Alert Integrations
+# Alert Sources
+Alerts can operate on three different **sources** of data:  
 
-Alert rules that don't actually send notifications when alerts are
-triggered are nearly useless.  While alert notifications are also
-shown on the [Events view](../events), alert notifications are
-typically sent to other destinations via Notification Hooks.
+1. **Metric alerts**
+1. **Logs alerts**
+1. **Experience alerts**
 
-An email notification hook is created automatically during signup.  Additional notification hooks can be created to send notications to PagerDuty, Slack, and more.
-  
+Alert type | Metrics | Logs | Experience
+--- | --- | --- | ---
+Threshold | yes | yes | yes
+Anomaly | yes | yes | yes
+Heartbeat | yes | no | no
+
+You can manage Alert rules interactively via the UI, or you can [manage alerts via the API](../api).
+
+
+# Creating Alerts
+
+## Logs Alert Rules
+
+In a Logs app, *saved queries* are used to save search queries that you want to reuse.
+
+For example, let's say you used *include/exclude filters* to search for *Elasticsearch slowlogs warnings*.
+
+![Elasticsearch slowlogs warnings search](../images/alerts/image_0.png)
+
+Clicking on the bell icon creates a new *saved query*, where filters are transformed into `Query String`.
+
+![image alt text](../images/alerts/image_1.png)
+
+You can save this query as is and use it in future searches.
+
+![image alt text](../images/alerts/image_2.png)
+
+Clicking on the *alert view* icon <img role="presentation" width="26" height="26" src="../images/alerts/image_27.png" style="display:inline"> opens the view where you can edit *saved queries*.
+
+![image alt text](../images/alerts/image_3.png)
+
+The bell icon here means that *saved query* has *alert rule* attached to it.
+
+Let's attach *alert rule* to the *saved query* we've just created - click on `Edit`.  
+
+### Source tab
+
+By turning on `Enable alert` toggle *saved query* is expanded into *alert rule*.  
+
+![image alt text](../images/alerts/image_4.png)
+
+Let's say we want to get notified if the number of *slowlog warnings* reaches 10 in any 10 minutes. Notice that *Chart Preview* shows the threshold line to help you visualize the threshold value in context.  
+
+The field next to threshold value allows you to easily multiply the threshold and thus has a default value of 1, which is neutral for multiplication.  
+
+![image alt text](../images/alerts/image_5.png)
+
+Although less applicable in the case of our *slowlog-warnings*, `Ignore regularly occurring spikes and dips` tells the algorithm to ignore regular outliers that are not really anomalies, but are caused by regular spikes/dips.  
+
+If you wanted to avoid using a specific threshold value and instead get notified when the number of *slowlog warnings* deviates from a continuously computed baseline, you'd change `Alert type` to `Anomaly alert`.
+
+![image alt text](../images/alerts/image_6.png)
+
+Notice that the chart changed to help you get a sense of what would constitute an anomalous value in your case (dots outside the gray *confidence interval*). 
+
+The confidence interval is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
+
+### Meta tab
+
+Meta tab allows you to tag alert rule with a specific color and specify further details, like Runbook and Description.
+
+![image alt text](../images/alerts/image_7.png)
+
+ When you tag an alert with a color it looks like this:
+
+![image alt text](../images/alerts/image_8.png)
+
+### Notifications tab
+
+The primary purpose of alert rules is to send notifications when triggered. This is the job of Notification Hooks.
+
 <div class="mdl-grid integrations">
     <div class="mdl-cell mdl-cell--3-col">
         <a href="/docs/integration/alerts-bigpanda-integration/">
@@ -228,3 +283,106 @@ An email notification hook is created automatically during signup.  Additional n
         </a>
     </div>
 </div>
+
+An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view. A convenient way to navigate here is using the shortcut on top of the Alert Rules view.
+
+![image alt text](../images/alerts/image_10.png)
+
+It’s a shortcut for Integrations > Notification Hooks.
+
+![image alt text](../images/alerts/image_11.png)
+
+#### Account Default Hooks
+
+Each alert rule can be configured to send notifications to one or more notification hooks. But what do you do when you want to change where all alert notifications are sent? For example, what if you had them sent to VictorOps, but your team switched from VictorOps to OpsGenie?
+
+To make it easy to change where alert notifications are sent for the whole Sematext Cloud account, without needing to modify each and every alert rule individually, Sematext has the concept of "account default hook".
+
+Notification hooks can be marked as "account default hook" in the Notification Hooks view. 
+
+![image alt text](../images/alerts/image_12.png)
+
+While creating or modifying an alert rule one can choose whether to send notifications to whichever hook, or hooks, defined as default. This setting is turned on by default when a new alert rule is created. 
+
+![image alt text](../images/alerts/image_13.png)
+
+*Send to* section is read-only, because it merely shows the current state of *account-default* notification hooks. 
+
+Besides *account-default notification hooks*, you can specify additional hooks that pertain only to this particular alert rule. The following alert would send notifications to 4 different destinations when triggered.
+
+![image alt text](../images/alerts/image_14.png)
+
+Each alert gives you the option to opt-out from **"Using account-default hooks for that alert"**, by simply turning off that toggle.
+
+![image alt text](../images/alerts/image_15.png)
+
+If you turn off notifications for an *alert rule* the only consequence of that alert being triggered will be to generate events in the [Events view](../events).
+
+![image alt text](../images/alerts/image_16.png)
+
+When alerts are defined to use default notification hooks then where they send notifications can be changed by simply changing which notification hooks are marked as default!
+
+More than one notification hook can be marked as default. Which hooks are marked as default can be changed at any time. The change is instantaneous and applies to the whole account. Only alert rules that were defined to use the default notification hook(s) are affected. Any additional notification hooks specified for the alert rule will not be touched and will remain associated with the alert rule.
+
+This gives you the ability to configure notifications for all your alerts without editing all of them individually.
+
+### Schedule tab
+
+This tab is used to set a detailed weekly schedule when notifications will be active. Default is *always active*.
+
+![image alt text](../images/alerts/image_17.png)
+
+Let's say you want to restrict notification only to workdays between 9AM and 5PM. You would first +Add Interval 09:00 - 17:00 to Monday, copy Monday to all other days with Copy To > All action.
+
+![image alt text](../images/alerts/image_18.png)
+
+The last step would be to set Saturday and Sunday to Inactive all day.
+
+![image alt text](../images/alerts/image_19.png)
+
+Reset to default action is used to go back to default, *always active* schedule. Discard changes is used to revert all changes back to the initial state, as it was previously saved. 
+
+These two actions have the same effect when creating a new alert rule, since the starting schedule is the default - *always active*. Discard changes becomes useful when editing an existing schedule, where you perhaps made changes in other tabs and cancelling the whole alert rule would also lose those other changes. In that case you use Discard changes to revert just the Schedule tab back to the state it had when you started editing alert rule.
+
+## Metric Alert Rules
+
+Each metric chart has a bell icon which, when clicked, shows a dropdown menu of all metrics. Selecting one of the metrics opens a panel with a new alert rule.
+
+![image alt text](../images/alerts/image_20.png)
+
+Similarly, alert rule can be created using a chart's more (**...**) menu.
+
+![image alt text](../images/alerts/image_21.png)
+
+## Experience Alert Rules
+
+Experience App allows you to create alert rules based on [Apdex score](https://en.wikipedia.org/wiki/Apdex) of Page Loads, HTTP Requests and On-Page Transactions.
+
+![image alt text](../images/alerts/image_22.png)
+
+You can set condition based on standard Apdex user satisfaction measurement:
+
+* Excellent
+* Good
+* Fair
+* Poor
+
+Here's how to setup an *Experience* *alert rule* that will be triggered when the HTTP Requests *Apdex score* remains worse than Good for 10 minutes:
+
+![image alt text](../images/alerts/image_23.png)
+
+## Default Alert Rules
+
+When you create a new App one or more "default alert rules" gets created automatically. Here's a set of alert rules that gets created with a new Elasticsearch monitoring App:
+
+![image alt text](../images/alerts/image_24.png)
+
+## Alert Events
+
+By default, alert rules are sorted so that alert rules which were triggered most recently show up first.
+
+![image alt text](../images/alerts/image_25.png)
+
+Upon clicking on the last notification of a particular alert you're taken to Events view, filtered only to events that originated from that particular alert rule.
+
+![image alt text](../images/alerts/image_26.png)
