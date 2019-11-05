@@ -61,7 +61,9 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Alerts:
       - Overview: alerts/index.md
-      - Account Default Hooks: alerts/account-default-hooks.md
+      - Creating Alerts: alerts/creating-alerts.md
+      - Default Alerts: alerts/default-alerts.md
+      - Alert Events: alerts/alert-events.md
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md

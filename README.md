@@ -1,6 +1,6 @@
 ## [Sematext Documentation](https://sematext.com/docs)
 
-### Quick Start - run mkdocs in a container
+### Quick Start - run mkdocs in a container with python2
 
 ```
 git clone git@github.com:sematext/docs.git
@@ -8,6 +8,22 @@ cd docs
 docker run  -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs \
 pip install mkdocs-material===2.7.0 &&  \
 pip install markdown-fenced-code-tabs && mkdocs serve 
+open http://localhost:8000
+```
+
+### Quick Start - run mkdocs in a container with python3
+
+In `mkdocs.yml`:
+* change `strict` to `false` (line 1)
+* rename `pages` to `nav` (line 4)
+
+```
+git clone git@github.com:sematext/docs.git
+cd docs
+docker run -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs
+pip3 install mkdocs-material
+pip3 install markdown-fenced-code-tabs
+mkdocs serve
 open http://localhost:8000
 ```
 
