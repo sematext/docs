@@ -23,7 +23,7 @@ Clicking on the *alert view* icon <img role="presentation" width="26" height="26
 
 The bell icon here means that *saved query* has *alert rule* attached to it.
 
-Let's attach *alert rule* to the *saved query* we've just created - click on `Edit`.  
+Let's attach an *alert rule* to the *saved query* we've just created - click on `Edit`.  
 
 ### Source tab
 
