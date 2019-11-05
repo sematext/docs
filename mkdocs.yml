@@ -60,8 +60,20 @@ pages:
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
     - Alerts:
-      - Overview: alerts/index.md
-      - Account Default Hooks: alerts/account-default-hooks.md
+      - Overview: alerts/#alerts
+      - Alert types: alerts/#alert-types
+      - Alert sources: alerts/#alert-sources
+      - Creating alerts: alerts/#creating-alerts
+      - Logs alerts: alerts/#logs-alert-rules
+      - Source tab: alerts/#source-tab
+      - Meta tab: alerts/#meta-tab
+      - Notifications tab: alerts/#notifications-tab
+      - Account-default hooks: alerts/#account-default-hooks
+      - Schedule tab: alerts/#schedule-tab
+      - Metric alerts: alerts/#metric-alert-rules
+      - Experience alerts: alerts/#experience-alert-rules
+      - Default alerts: alerts/#default-alert-rules
+      - Alert events: alerts/#alert-events
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md
