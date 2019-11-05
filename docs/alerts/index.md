@@ -1,27 +1,29 @@
-title: Alerts
 description: Threshold, anomaly, and heartbeat alerts for your logs, infrastructure and user-experience metrics with email notifications and various 3rd party integrations and notification hooks such as PagerDuty, Slack and more
 
+# Alerts
 Alerts are used to notify you when one or more predefined conditions in your *metrics*, *logs* or *experience* data are met.  
 
 For example, you might want to be notified when available disk space reaches a certain threshold - *metrics alert*, or when the number of logs with `severity: warning` gets too high - *logs alert*, or when your users start experiencing high response time - *experience alert*.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/WE9xAUud28o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+<br/>
 
 # Alert Types
-[Sematext Cloud](http://sematext.com/cloud) includes multiple **types** of alerts that integrate with PagerDuty, Slack, email, and [other 3rd party services](#alert-integrations).  
+[Sematext Cloud](http://sematext.com/cloud) includes multiple **types** of alerts that integrate with PagerDuty, Slack, email, and [other 3rd party services](#notifications-tab).  
 
 1. **Threshold** alerts are the classic threshold based alerts. They are triggeed when a certain pre-defiend threshold is met.
 1. **Anomaly** alerts are based on statistical anomaly detection. They are triggeed when values suddenly change and deviate from the continously computed baseline.
-1. **Heartbeat** alerts are triggered when [Sematext Cloud](http://sematext.com/cloud) stops receiving data from your server, container, application, etc..
+1. **Heartbeat** alerts are triggered when [Sematext Cloud](http://sematext.com/cloud) stops receiving data from your server, container, application, etc.  
 
+<br/>
 
 # Alert Sources
 Alerts can operate on three different **sources** of data:  
 
-1. **Metric alerts**
-1. **Logs alerts**
-1. **Experience alerts**
+1. **Metrics** alerts work with infrastructure metrics
+1. **Logs** alerts are based on various types of logs
+1. **Experience** alerts are concerned with *real user monitoring* data - RUM
 
 Alert type | Metrics | Logs | Experience
 --- | --- | --- | ---
@@ -42,7 +44,7 @@ For example, let's say you used *include/exclude filters* to search for *Elastic
 
 ![Elasticsearch slowlogs warnings search](../images/alerts/image_0.png)
 
-Clicking on the bell icon creates a new *saved query*, where filters are transformed into `Query String`.
+Clicking on the bell icon creates a new *saved query*, where filters are transformed into `Query string`.
 
 ![image alt text](../images/alerts/image_1.png)
 
@@ -70,7 +72,7 @@ The field next to threshold value allows you to easily multiply the threshold an
 
 ![image alt text](../images/alerts/image_5.png)
 
-Although less applicable in the case of our *slowlog-warnings*, `Ignore regularly occurring spikes and dips` tells the algorithm to ignore regular outliers that are not really anomalies, but are caused by regular spikes/dips.  
+Although less applicable in the case of our *slowlog warnings*, `Ignore regularly occurring spikes and dips` tells the algorithm to ignore regular outliers that are not really anomalies, but are caused by regular spikes/dips.  
 
 If you wanted to avoid using a specific threshold value and instead get notified when the number of *slowlog warnings* deviates from a continuously computed baseline, you'd change `Alert type` to `Anomaly alert`.
 
@@ -78,7 +80,7 @@ If you wanted to avoid using a specific threshold value and instead get notified
 
 Notice that the chart changed to help you get a sense of what would constitute an anomalous value in your case (dots outside the gray *confidence interval*). 
 
-The confidence interval is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
+The *confidence interval* is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
 
 ### Meta tab
 
@@ -292,7 +294,7 @@ It’s a shortcut for Integrations > Notification Hooks.
 
 ![image alt text](../images/alerts/image_11.png)
 
-#### Account Default Hooks
+### Account-default hooks
 
 Each alert rule can be configured to send notifications to one or more notification hooks. But what do you do when you want to change where all alert notifications are sent? For example, what if you had them sent to VictorOps, but your team switched from VictorOps to OpsGenie?
 
@@ -367,13 +369,14 @@ You can set condition based on standard Apdex user satisfaction measurement:
 * Fair
 * Poor
 
-Here's how to setup an *Experience* *alert rule* that will be triggered when the HTTP Requests *Apdex score* remains worse than Good for 10 minutes:
+Here's how to setup an *Experience* *alert rule* that will be triggered when the `HTTP Requests` *Apdex score* remains worse than `Good` for 10 minutes:
 
 ![image alt text](../images/alerts/image_23.png)
 
 ## Default Alert Rules
 
-When you create a new App one or more "default alert rules" gets created automatically. Here's a set of alert rules that gets created with a new Elasticsearch monitoring App:
+When you create a new App one or more "default alert rules" gets created automatically.  
+For example, here's a set of alert rules that gets created with a new Elasticsearch monitoring App:
 
 ![image alt text](../images/alerts/image_24.png)
 
