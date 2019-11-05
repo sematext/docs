@@ -1,7 +1,6 @@
 title: Alerts Overview
 description: Threshold, anomaly, and heartbeat alerts for your logs, infrastructure and user-experience metrics with email notifications and various 3rd party integrations and notification hooks such as PagerDuty, Slack and more
 
-# Overview
 Alerts are used to notify you when one or more predefined conditions in your *metrics*, *logs* or *experience* data are met.  
 
 For example, you might want to be notified when available disk space reaches a certain threshold - *metrics alert*, or when the number of logs with `severity: warning` gets too high - *logs alert*, or when your users start experiencing high response time - *experience alert*.
@@ -10,7 +9,7 @@ For example, you might want to be notified when available disk space reaches a c
 
 <br/>
 
-# Alert Types
+## Alert Types
 [Sematext Cloud](http://sematext.com/cloud) includes multiple **types** of alerts that integrate with PagerDuty, Slack, email, and [other 3rd party services](#notifications-tab).  
 
 1. **Threshold** alerts are the classic threshold based alerts. They are triggeed when a certain pre-defiend threshold is met.
@@ -19,7 +18,7 @@ For example, you might want to be notified when available disk space reaches a c
 
 <br/>
 
-# Alert Sources
+## Alert Sources
 Alerts can operate on three different **sources** of data:  
 
 1. **Metrics** alerts work with infrastructure metrics

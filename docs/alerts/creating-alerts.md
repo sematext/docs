@@ -1,6 +1,8 @@
 title: Creating Alerts
 description: Step-by-step alert creation instructions
 
+You can create alerts for every type of App in Sematext Cloud. Check out the guides for creating alerts for each respective App.
+
 ## Creating Logs Alerts
 
 In a Logs app, *saved queries* are used to save search queries that you want to reuse.
@@ -311,13 +313,13 @@ Reset to default action is used to go back to default, *always active* schedule.
 
 These two actions have the same effect when creating a new alert rule, since the starting schedule is the default - *always active*. Discard changes becomes useful when editing an existing schedule, where you perhaps made changes in other tabs and cancelling the whole alert rule would also lose those other changes. In that case you use Discard changes to revert just the Schedule tab back to the state it had when you started editing alert rule.
 
-## Creating Metric Alerts
+## Creating Metrics Alerts
 
 Each metric chart has a bell icon which, when clicked, shows a dropdown menu of all metrics. Selecting one of the metrics opens a panel with a new alert rule.
 
 ![image alt text](../images/alerts/image_20.png)
 
-Similarly, alert rule can be created using a chart's more (**...**) menu.
+Similarly, alert rules can be created using a chart's more (**...**) menu.
 
 ![image alt text](../images/alerts/image_21.png)
 

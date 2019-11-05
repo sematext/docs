@@ -61,9 +61,9 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Alerts:
       - Overview: alerts/index.md
-      - Creating alerts: alerts/creating-alerts.md
-      - Default alerts: alerts/default-alerts.md
-      - Alert events: alerts/alert-events.md
+      - Creating Alerts: alerts/creating-alerts.md
+      - Default Alerts: alerts/default-alerts.md
+      - Alert Events: alerts/alert-events.md
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md
