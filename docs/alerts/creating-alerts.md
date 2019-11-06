@@ -19,7 +19,7 @@ You can save this query as is and use it in future searches.
 
 ![image alt text](../images/alerts/image_2.png)
 
-Clicking on the *alert view* icon <img role="presentation" width="26" height="26" src="/images/alerts/image_27.png" style="display:inline"> opens the view where you can edit *saved queries*.
+Clicking on the *alert view* icon <img role="presentation" width="26" height="26" src="/docs/images/alerts/image_27.png" style="display:inline"> opens the view where you can edit *saved queries*.
 
 ![image alt text](../images/alerts/image_3.png)
 
@@ -70,7 +70,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/bigpanda.svg" alt="BigPanda" title="BigPanda Alerts Integration" style="width: 56px;">
+                            <img src="/docs/images/alerts/notifications/bigpanda.svg" alt="BigPanda" title="BigPanda Alerts Integration" style="width: 56px;">
                         </div>
                         <div class="side back">
                             <h5>BigPanda</h5>
@@ -87,7 +87,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/mail.svg" alt="Email" title="Email Alerts Integration" style="height: 96px; padding-top: 44px;">
+                            <img src="/docs/images/alerts/notifications/mail.svg" alt="Email" title="Email Alerts Integration" style="height: 96px; padding-top: 44px;">
                         </div>
                         <div class="side back">
                             <h5>Email</h5>Want alerts via email? That’s the default, of course. Email notifications include embedded
@@ -104,7 +104,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/hipchat.svg" alt="Hipchat Alerts Integration" title="Hipchat Alerts Integration"
+                            <img src="/docs/images/alerts/notifications/hipchat.svg" alt="Hipchat Alerts Integration" title="Hipchat Alerts Integration"
                                 style="width: 128px;">
                         </div>
                         <div class="side back">
@@ -120,7 +120,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/nagios.jpg" alt="Cassandra" title="Cassandra Monitoring" style="width: 96px; height: 32px; margin-top: 60px;">
+                            <img src="/docs/images/alerts/notifications/nagios.jpg" alt="Cassandra" title="Cassandra Monitoring" style="width: 96px; height: 32px; margin-top: 60px;">
                         </div>
                         <div class="side back">
                             <h5>Nagios</h5>
@@ -139,7 +139,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/opsgenie.svg" alt="Opsgenie" title="Opsgenie Alerts Integration" style="width: 128px;">
+                            <img src="/docs/images/alerts/notifications/opsgenie.svg" alt="Opsgenie" title="Opsgenie Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Opsgenie</h5>Easy integration with OpsGenie incident response orchestration platform for DevOps
@@ -156,7 +156,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/pagerduty.svg" alt="Pagerduty" title="PagerDuty - PagerDuty" style="width: 128px;">
+                            <img src="/docs/images/alerts/notifications/pagerduty.svg" alt="Pagerduty" title="PagerDuty - PagerDuty" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>PagerDuty</h5>Send alerts to PagerDuty's SaaS incident response platform for IT departments.
@@ -173,7 +173,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/pushover.svg" alt="Pushover Alerts Integration" title="Pushover  Alerts Integration"
+                            <img src="/docs/images/alerts/notifications/pushover.svg" alt="Pushover Alerts Integration" title="Pushover  Alerts Integration"
                                 style="width: 64px;">
                         </div>
                         <div class="side back">
@@ -190,7 +190,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/slack.svg" alt="Slack" title="Slack Alerts Integration" style="width: 128px;">
+                            <img src="/docs/images/alerts/notifications/slack.svg" alt="Slack" title="Slack Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Slack</h5>Easy Sematext alerts integration with Slack's team collaboration tools and services.</div>
@@ -207,7 +207,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/victorops.svg" alt="Victorops" title="VictorOps Alerts Integration" style="width: 128px;">
+                            <img src="/docs/images/alerts/notifications/victorops.svg" alt="Victorops" title="VictorOps Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Victorops</h5>Fast alerts integration with Victorops' incident management software purpose-built
@@ -224,7 +224,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/webhooks.svg" alt="Webhooks" title="Webhooks Alerts Integration" style="width: 128px;">
+                            <img src="/docs/images/alerts/notifications/webhooks.svg" alt="Webhooks" title="Webhooks Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Webhooks</h5>Have a custom WebHook you’d like to call? No problem – define the endpoint, format
@@ -241,7 +241,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/images/alerts/notifications/zapier.svg" alt="Zapier Alerts Integration" title="Zapier  Alerts Integration"
+                            <img src="/docs/images/alerts/notifications/zapier.svg" alt="Zapier Alerts Integration" title="Zapier  Alerts Integration"
                                 style="width: 96px;">
                         </div>
                         <div class="side back">
