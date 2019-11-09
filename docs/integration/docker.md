@@ -230,21 +230,20 @@ There are 3 types of alerts in Sematext:
 ## Docker Events
 Events reflect changes in your infrastructure, from node restarts to container deployments, or changes in running containers. Events can track every Docker command. **Sematext Agent collects Events from the Docker Engine and Kubernetes API.** Whenever something goes wrong in your container stack, you can **correlate Logs or Metrics with the time of Docker events!**
 
-Here's the list of container events:
+Here's the list of Docker container events Sematext collects:
 
-- Docker containers trigger the following events:
-    - Lifecycle events:
-        - Create – when a container is created
-        - Start – when a container starts
-        - Restart – when a container gets restarted
-        - Stop – when a container stops
-        - Oom – when a container runs out of memory
-        - Pause – when a container gets paused
-        - Unpause – when a container continues to run after a pause
-        - Die – when the main process in a container dies
-        - Kill – when the container gets killed
-        - Destroy – when a container gets destroyed
-- Runtime events
+### container lifecycle events
+    - Create – when a container is created
+    - Start – when a container starts
+    - Restart – when a container gets restarted
+    - Stop – when a container stops
+    - Oom – when a container runs out of memory
+    - Pause – when a container gets paused
+    - Unpause – when a container continues to run after a pause
+    - Die – when the main process in a container dies
+    - Kill – when the container gets killed
+    - Destroy – when a container gets destroyed
+### Container runtime events
     - Commit – when changes to the container filesystem are committed. Modifying deployed containers in production is not a common practice, therefore the commit could - indicate a “hack” and should be watched carefully.
     - Copy – when files are copied from/to a container. Could indicate a potential data leak.
     - Attach – when a process connects to container console – somebody is reading your container logs …
@@ -256,7 +255,7 @@ Here's the list of container events:
     - Resize – when a container gets resized
     - Top – when somebody list top processes in a container
     - Update – when a container is updated e.g. with new labels
-- Docker images report the following events:
+### Container image events
     - Delete – when an image gets deleted
     - Import – when an image gets imported
     - Load – when an image is loaded
@@ -265,25 +264,25 @@ Here's the list of container events:
     - Save – when an image is saved
     - Tag – when an image is tagged with labels
     - Untag – when an image tag is removed
-- Docker plugins report the following events:
+### Container plugin events
     - Enable – when a plugin gets enabled
     - Disable – when a plugin gets disabled
     - Install – when a plugin gets installed
     - Remove – when a plugin gets removed
-- Docker volumes report the following events:
+### Container volume events
     - Create – when a volume is created
     - Destroy – when a volume gets destroyed
     - Mount – when a volume is mounted to a container
     - Unmount – when a volume is removed from a container
-- Docker networks report the following events:
+### Container network events
     - Create – when a  network is created
     - Connect – when a container connects to a network
     - Remove – when the network is removed
     - Destroy – when a network is destroyed
     - Disconnect – when a container disconnects from a network
-- Docker daemons report the following events:
+### Docker daemon events
     - Reload
-- Docker services, nodes, secrets, and configs report the following events:
+### Docker services, nodes, secrets, and config events
     - Create – on the creation of a resource
     - Remove – on the removal of a resource
     - Update – on the creation of a resource
