@@ -1,7 +1,7 @@
 title: Creating Logs Alerts
 description: Step-by-step alert creation instructions for Logs
 
-In a Logs app, *saved queries* are used to save search queries that you want to reuse.
+In a Logs App, *saved queries* are used to save search queries that you want to reuse.
 
 For example, let's say you used *include/exclude filters* to search for *Elasticsearch slowlogs warnings*.
 
