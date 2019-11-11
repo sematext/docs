@@ -26,7 +26,7 @@ Each metric chart has a bell icon which, when clicked, shows a dropdown menu of 
 
 While creating an alert you'll get a chart preview of the alert threshold or anomaly.
 
-Let's say you want to configure an alert to notify you when the CPU is over 10% during a 10 minute period. Here you configure the conditions, multipliers, and time frame for your alerts.
+Let's say you want to configure an alert to notify you when the CPU is over 20% during a 10 minute period. Here you configure the conditions, multipliers, and time frame for your alerts.
 
 ![image alt text](../images/alerts/metric-alert.png)
 

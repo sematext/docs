@@ -23,7 +23,7 @@ Each alert gives you the option to opt-out from **"Using account-default hooks f
 
 ![image alt text](../images/alerts/image_15.png)
 
-If you turn off notifications for an *alert rule* the only consequence of that alert being triggered will be to generate events in the [Events view](../events).
+If you turn off notifications for an *alert rule* the only consequence of that alert being triggered will be to generate events in the [Events view](./alert-events).
 
 ![image alt text](../images/alerts/image_16.png)
 

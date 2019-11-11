@@ -1,5 +1,5 @@
 title: Alerts Notifications
-description: Configuring notirications for Alerts
+description: Configuring notifications for Alerts
 
 The primary purpose of alert rules is to send notifications when triggered. This is the job of Notification Hooks.
 
