@@ -61,7 +61,13 @@ pages:
       - FAQ: monitoring/spm-faq.md
     - Alerts:
       - Overview: alerts/index.md
-      - Creating Alerts: alerts/creating-alerts.md
+      - Creating Logs Alerts: alerts/creating-logs-alerts.md
+      - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
+      - Creating Experience Alerts: alerts/creating-experience-alerts.md
+      - Alerts Meta and Tags: alerts/alerts-meta.md
+      - Alert Notifications: alerts/alert-notifications.md
+      - Account-default Hooks: alerts/account-default-hooks.md
+      - Alert Scheduling: alerts/alert-scheduling.md
       - Default Alerts: alerts/default-alerts.md
       - Alert Events: alerts/alert-events.md
     - Events:
