@@ -1,10 +1,9 @@
 title: Resource Timing
 description: How Sematext Experience collects external resource data such as downloaded images, CSS files, and JavaScript files
------
 
 Experience collects resource timing data such as downloaded images, CSS and JavaScript files. When someone visits your website the browser will begin downloading resources. These resources can have a big impact on your website's loading speed.
 
-The same process happens in single-page apps when user navigates to a different part of the web app.
+The same process happens in single-page apps when users navigate to a different part of the web app.
 
 There are two ways to see resource performance data in Experience.
 
@@ -13,7 +12,7 @@ There are two ways to see resource performance data in Experience.
 
 Open the details page for some page load to access the Resource Waterfall table.
 
-This table shows downloaded resources ordered by the time when resource got discovered. Each row shows the different stages of the download process.
+This table shows the downloaded resources ordered by the time they were discovered. Each row shows different stages of the download process.
 
 You can sort the waterfall by Size, Load Time, Time to Loaded, and Time Started (Waterfall).
 
