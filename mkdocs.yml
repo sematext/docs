@@ -257,7 +257,6 @@ pages:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
       - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
-      - FAQ: sematext-enterprise/faq.md
     - API: api/index.md
     - FAQ: faq.md
 
