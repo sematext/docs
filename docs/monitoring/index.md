@@ -27,7 +27,7 @@ The first step to monitoring with Sematext is to create a Monitoring App. Go to 
 Follow along the [Quick Start](./quick-start) guide to learn how.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/06/sematext-create-docker-app.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-create-docker-app.mp4" type="video/mp4" />
 </video>
 
 ### App Settings
@@ -64,13 +64,7 @@ The [Network Map](network-map) visualizes your network topology.  It show discov
 
 [On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).  It works with both embedded and standalone agent and has negligible overhead.
 
-You can create custom dashboards with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
-
-<div class="video_container">
-<iframe src="https://www.youtube.com/embed/BuMtZCLN_Mk?controls=1&autoplay=0&loop=0" 
-frameborder="0" allow="autoplay; encrypted-media" 
-allowfullscreen class="video"></iframe>
-</div>
+You can [create custom dashboards](../dashboards) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
 ### Getting Support
 
