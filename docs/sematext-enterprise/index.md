@@ -8,10 +8,6 @@ can be installed as such.  This will install everything, including components
 that have persistent storage.
 
 Given enough resources, such as RAM, disk, and CPU, it is possible to
-run all these services on a single system although that is not
-recommended for a production setup.
-
-Given enough resources, such as RAM, disk, and CPU, it is possible to
 run all these services on a single host, although this is not recommended for
 a production setup. The number of worker nodes will depend on the number
 of monitored servers and size of collected logs. For high availability
