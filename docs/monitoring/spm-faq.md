@@ -617,7 +617,7 @@ App Agent writes multiple logs to container file system. You can list all App Ag
 You will notice that each App Agent container/pod name matches the name of the monitored service (e.g. service `my_service-7db849967c-kdmgz` will have associated App Agent container/pod `my_service-7db849967c-kdmgz-aa-mqdt9`). When you find the problematic App Agent, you can copy (using e.g. `docker cp` or `kubectl cp` command):
 
   - its config file from /opt/spm/spm-monitor/conf dir
-  - its spm-monitor and spm-monitor-stats logs from `/opt/spm/spm-monitor/logs/apps/YOUR_TOKEN/MONITORED_SERVICE_POD_NAME` dir
+  - its spm-monitor and spm-monitor-stats logs from `/opt/spm/spm-monitor/logs/applications/YOUR_TOKEN/MONITORED_SERVICE_POD_NAME` dir
  
 We will need all these files for investigation. You can send them, along with short description of your
 problem, to <support@sematext.com> or contact us in chat.
