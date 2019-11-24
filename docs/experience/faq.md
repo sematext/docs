@@ -16,14 +16,14 @@ No, not by default. In order to prevent overage and additional costs, we enable
 Apps. You can enable or disable this setting in your App settings -> Usage
 screen.
 
-<a name="what-is-staggering" href="what-is-staggering" class="faq-questions"><strong>What is staggering?</strong></a>
+<a name="what-is-staggering" href="#what-is-staggering" class="faq-questions"><strong>What is staggering?</strong></a>
 
 When staggering is enabled, your App will have a maximum daily limit of page
 loads based on your monthly plan limit. So if you have a plan limit of 100,000
 page loads and the current month has 30 days, then your App will have a daily
 limit of 3,333 page loads.
 
-<a name="what-is-overage" href="what-is-staggering" class="faq-questions"><strong>What is overage?</strong></a>
+<a name="what-is-overage" href="#what-is-overage" class="faq-questions"><strong>What is overage?</strong></a>
 
 By default overage is not possible since <a
 href="#what-is-staggering">staggering</a> is enabled for all new Experience
@@ -40,7 +40,7 @@ pricing plan, then you will be charged 10% more. Again, note that overage is
 not possible when you have <a href="#what-is-staggering">staggering</a>
 enabled.
 
-<a name="script-performance" href="script-performance" class="faq-questions"><strong>Does the Experience script have any effect on my website performance?</strong></a>
+<a name="script-performance" href="#script-performance" class="faq-questions"><strong>Does the Experience script have any effect on my website performance?</strong></a>
 
 No, the Experience script will not negatively impact your website performance.
 We will do our best to ensure that the script is as minimal as possible and
@@ -48,7 +48,7 @@ that it never interferes with the normal operation of your website or webapp.
 The script is loaded asynchronously and in most cases should have no or very
 small effect on website performance.
 
-<a name="multiple-domain" href="multiple-domain" class="faq-questions"><strong>Can I send data from a different domain?</strong></a>
+<a name="multiple-domain" href="#multiple-domain" class="faq-questions"><strong>Can I send data from a different domain?</strong></a>
 
 Depending on your plan, you may be able to send data from multiple domains at
 the same time. If your pricing plan supports more than one domain, just set up
@@ -59,7 +59,7 @@ If you want to switch the domain from which you are sending data, note that it
 may take up to 5 minutes for the data to start being accepted if your pricing
 plan supports only one domain.
 
-<a name="configure-requirements" href="configure-requirements" class="faq-questions"><strong>What are the user satisfaction scores shown in Experience based on?</strong></a>
+<a name="configure-requirements" href="#configure-requirements" class="faq-questions"><strong>What are the user satisfaction scores shown in Experience based on?</strong></a>
 
 The scores are based on the time threshold defined in the [Configure
 Requirements](/experience/configure-requirements) screen. By default these time
