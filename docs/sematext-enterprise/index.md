@@ -21,6 +21,7 @@ a minimum of 3 worker nodes is required.
 ## Hardware Requirements
 
 Each worker node needs to have:
+
 - Minimum 32 GB of RAM
 - Minimum 8 vCPUs
 - Minimum 150 GB of SSD disk storage
