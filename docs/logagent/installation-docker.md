@@ -420,7 +420,7 @@ Using this “log metadata” you can whitelist or blacklist log outputs by imag
 Some log messages are useless or noisy, like access to health check URLs in Kubernetes. 
 You can filter such messages via regular expressions by setting the following environment variable: 
 <pre>  
-IGNORE_LOGS_PATTERNS=\/healthcheck|\/ping
+IGNORE_LOGS_PATTERN=\/healthcheck|\/ping
 </pre>
 
 ### Container Log Parsing
