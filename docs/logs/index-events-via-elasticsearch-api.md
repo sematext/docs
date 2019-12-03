@@ -38,7 +38,7 @@ timestamp, Sematext will add one when it receives your logs.
 For example, you can send a log like this:
 
 ``` bash
-NOW=`date "+%Y-%m-%dT%H:%M:%S"`
+NOW=`date "+%Y-%m-%dT%H:%M:%S%z"`
 curl -XPOST https://logsene-receiver.sematext.com/$YOUR_TOKEN_HERE/mytype/ -d '
 {
   "@timestamp": "'$NOW'",
@@ -61,7 +61,7 @@ because it allows you to send multiple events with a single request. For
 example, the following request sends three events:
 
 ``` bash
-NOW=`date "+%Y-%m-%dT%H:%M:%S"`
+NOW=`date "+%Y-%m-%dT%H:%M:%S%z"`
 
 echo '{ "index" : { "_index": "LOGSENE_APP_TOKEN_GOES_HERE", "_type" : "mytype" } }
 { "@timestamp": "'$NOW'", "severity_numeric" : 1 }
