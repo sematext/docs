@@ -7,8 +7,8 @@ The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://
 
 ### Features
 - log routing by log source to multiple Elasticsearch servers
-- log routing by log source to multiple Elasticearch indices (or Logsene Apps)
-- SSL/TLS by default, when using Logsene
+- log routing by log source to multiple Elasticearch indices (or Sematext Logs Apps)
+- SSL/TLS by default, when using Sematext
 - Two-way SSL Authentication, also known as Mutual Authentication as part of PKI, secure client authentication with SSL client certificates
 - bulk indexing with timeout (1000 docs or 10 second timeout by default)
 - disk buffer an re-transmit when connection to Elasticsearch fails
@@ -24,7 +24,7 @@ input:
   files:
       - '/var/log/**/*.log'
 output:
-  my-logsene-app: 
+  my-logs-app: 
     module: elasticsearch
     url: https://logsene-receiver.sematext.com 
     index: bb308f80-0453-485e-894c-f80c054a0f10 
@@ -44,7 +44,7 @@ input:
       - '/var/log/**/*.log'
 
 output:
-  # index logs in Elasticsearch or Logsene
+  # index logs in Elasticsearch or Sematext
   local-elasticsearch: 
     module: elasticsearch
     url: http://localhost:9200
@@ -56,7 +56,7 @@ output:
         - wifi|bluetooth
       security_logs: 
         - auth\.log
-   logsene-saas:
+   sematext:
         module: elasticsearch
         url: https://logsene-receiver.sematext.com
         indices:
