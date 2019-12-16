@@ -90,7 +90,7 @@ dbDir: ./spmdb
 tokens:
   spm: <your-monitoring-token-goes-here>
 
-logger
+logger:
   # log file directory default is ./spmlogs
   dir: ./spmlogs
   # silent = true means no creation of log files
