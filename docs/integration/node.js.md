@@ -51,27 +51,29 @@ We recommend to either use `dotenv` or an rc file in the current directory in YA
 
 You can either use dotenv or export the environment variables.
 
+Depending on which region of Sematext Cloud you are using you need to set the receiver URLs accordingly.
+The US region is used by default. In case you are using the EU region, set the receiver URLs like this:
+
+```bash
+# Changing API endpoints for Sematext Cloud EU
+export SPM_RECEIVER_URL=https://spm-receiver.eu.sematext.com/receiver/v1
+export EVENTS_RECEIVER_URL=https://event-receiver.eu.sematext.com
+```
+
+Here's a list of all available environment variables if you ever need to configure them:
 ```bash
 export SPM_TOKEN=<your-monitoring-token-goes-here>
 
 # default receiver URLs are the US region of Sematext Cloud
-# URLs need to be changed for EU, or Enterprise
-export SPM_RECEIVER_URL=https://local-spm-server:8084/_bulk
-export EVENTS_RECEIVER_URL=https://local-event-receiver/
+# URLs need to be changed for EU and Enterprise
+export SPM_RECEIVER_URL=<your-spm-receiver>
+export EVENTS_RECEIVER_URL=<your-event-receiver>
 
 export SPM_DB_DIR=/tmp
 export SPM_LOG_DIRECTORY=./logs
 export SPM_LOG_LEVEL=error
 export SPM_LOG_TO_CONSOLE=true
-export HTTPS_PROXY=http://my-local-proxy-server
-```
-
-Depending on which region of Sematext Cloud you are using you need to set the receiver URLs accordingly.
-The US region is used by default. In case you are using the EU region, set the receiver URLs like this:
-```bash
-# Changing API endpoints for Sematext Cloud EU
-export SPM_RECEIVER_URL=https://spm-receiver.eu.sematext.com/receiver/v1
-export EVENTS_RECEIVER_URL=https://event-receiver.eu.sematext.com
+export HTTPS_PROXY=<your-proxy-server>
 ```
 
 ### Configuration with .spmagentrc
@@ -100,6 +102,30 @@ logger:
 ```
 
 The only required setting is the Monitoring Token.
+
+If you want to use the EU region then you need to add two more values:
+
+```yaml
+# Directory for buffered metrics
+dbDir: ./spmdb
+ 
+# Monitoring App Token
+tokens:
+  spm: <your-monitoring-token-goes-here>
+
+# default receiver URLs are the US region of Sematext Cloud
+# URLs need to be changed for EU
+spmSenderBulkInsertUrl: https://metrics-receiver.apps.test.sematext.com/receiver/v1
+eventsReceiverUrl: https://event-receiver.apps.test.sematext.com
+
+logger:
+  # log file directory default is __dirname / spmlogs
+  dir: ./spmlogs
+  # silent = true means no creation of log files
+  silent: false 
+  # log level for output - debug, info, error, defaults to error to be quiet
+  level: error 
+```
 
 Both using environment variables or the `.spmagentrc` file is valid. Use whatever you prefer.
 
