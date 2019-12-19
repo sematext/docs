@@ -14,7 +14,7 @@ There are cases where automatic attaching may not be desirable:
 - if Sematext Agent attaching logic is failing for some reason (you would notice that by missing metrics and errors in agent logs)
 
 
-### How to disable auto attaching?
+### How to disable or configure custom jmx authentication settings?
 
 If you don't want the service monitored at all just remove `MONITORING_TOKEN` env variable from its container. If you want it to be monitored, but using your
 own JMX authentication definition (either existing one or the one you will define just for this), [define container jmx settings manually](../../monitoring/manually-setting-jmx-containers).
