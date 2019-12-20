@@ -6,11 +6,11 @@ monitored right away by checking if JMX ports are already exposed. If it can, Se
 will try to inject a special and secure agent into the monitored process, which has the sole purpose of opening a JMX port. A JMX port opened in such a way is
 protected by authentication based on a temporary username and password known only to Sematext Agent.
 
-If JMX port is already open, but is protected with some authentication mechanism, Sematext Agent will try to open another JMX port anyway (it can't connect to the service
-on exposed port since it doesn't have authentication credentials).
+If JMX port is already open, but is protected with some authentication mechanism, Sematext Agent will try to open another JMX port anyway (it can't connect to the service on exposed port since it doesn't have authentication credentials).
 
 There are cases where automatic attaching may not be desirable:
-- if you wish different kind of authentication (e.g. with truststore) to be used on exposed jmx port
+
+- if you wish to use a different kind of authentication, maybe with with truststore, on an exposed JMX port
 - if Sematext Agent attaching logic is failing for some reason (you would notice that by missing metrics and errors in agent logs)
 
 

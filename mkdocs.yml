@@ -57,6 +57,7 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Tags: monitoring/tag-support.md
       - Tag Aliases: monitoring/tag-aliases-support.md
+      # - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
     - Alerts:
@@ -166,6 +167,7 @@ pages:
         - Packages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
+        # - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
       - Infra & App Agent:
         - Overview:  agents/spm-client.md
         - Embedded Mode: agents/spm-monitor-javaagent.md
