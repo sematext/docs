@@ -51,14 +51,14 @@ When using truststore authentication add to monitored container:
 When using JMX password file authentication run:
 
 ```
-kubectl create secret generic YOUR_APP_TOKEN_HERE-secret \
+kubectl create secret generic YOUR_APP_TOKEN_HERE \
   --from-literal=SPM_MONITOR_JMX_PASSWORD_FILE=/path/to/your/jmx/password/file
 ```
 
 When using truststore authentication run:
 
 ```
-kubectl create secret generic YOUR_APP_TOKEN_HERE-secret \
+kubectl create secret generic YOUR_APP_TOKEN_HERE \
   --from-literal=SPM_MONITOR_JMX_TRUSTSTORE_FILE=/path/to/your/jmx/truststore/file \
   --from-literal=SPM_MONITOR_JMX_TRUSTSTORE_PASSWORD=your-truststore-password
 ```
