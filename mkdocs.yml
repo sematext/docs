@@ -110,6 +110,7 @@ pages:
       - Monitoring ClickHouse: integration/clickhouse.md
       - Monitoring Docker: integration/docker.md
       - Monitoring Elasticsearch: integration/elasticsearch.md
+      - Monitoring Express.js: integration/express.js.md
       - Monitoring Hadoop: integration/hadoop.md
       - Monitoring HAProxy: integration/haproxy.md
       - Monitoring HBase: integration/hbase.md
