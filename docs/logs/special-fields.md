@@ -1,7 +1,7 @@
 title: Special Logs Fields
 description: Sematext's logging management app looks for special fields in logs, namely host, source, facility, severity, syslog-tag, tags, message, and @timestamp
 
-Sematext Logs App looks for the following fields in logs and gives them a special treatment:
+Common [Special Tags](../../special-tags) apply to Sematext Logs. Additionally, there are Logs-specific fields which also get special treatment:
 
   - host
   - source
@@ -46,6 +46,6 @@ All of these fields are optional, but their use is strongly encouraged.
 these fields will be loaded and shown in the UI as filters and thus
 allowing one to very quickly narrow down the search.
 
-<img alt="Sematext Logs Special Fields" src="/docs/images/logs/logsene-special-fields.gif" title="Sematext Logs Special Fields">
+<img alt="Sematext Logs Special Fields" src="../../images/logs/logsene-special-fields.gif" title="Sematext Logs Special Fields">
 
 **error.id, error.message, error.type** represents error related fields. These are reserved for future use.
