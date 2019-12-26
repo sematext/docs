@@ -1,13 +1,13 @@
 title: Special Tags 
 description: The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
 
-Tags are sent by Sematext Agents as part of every data point and they are shown in UI as filters. 
+Tags are sent by Sematext Agents as part of every every data point or log line and they are shown in UI as filters. 
 
-The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](./logs/special-fields/) for list of special fields in logs.
+The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](./logs/special-fields/) for a list of additional special fields for Logs Apps. Monitoring Apps currently only use the common special tags described here.
 
 ## Common Tags
 
-The tags below are applicable to all metrics types:
+The tags below are applicable to all metrics/logs types:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -18,7 +18,7 @@ The tags below are applicable to all metrics types:
 
 ## Container Tags
 
-Below are container related tags sent as part of metrics in the container environment.
+Below are container related tags sent as part of metrics/logs in the container environment.
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -31,7 +31,7 @@ Below are container related tags sent as part of metrics in the container enviro
 
 ## Kubernetes Tags
 
-Below are Kubernetes related tags sent as part of metrics in the Kubernetes environment.
+Below are Kubernetes related tags sent as part of metrics/logs in the Kubernetes environment.
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -45,7 +45,7 @@ Below are Kubernetes related tags sent as part of metrics in the Kubernetes envi
 
 ## Operating System Tags
 
-Below are the OS related tags sent as part of OS metrics
+Below are the OS related tags sent as part of OS metrics/logs
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -65,7 +65,7 @@ Below are Process related tags sent as part of metrics/logs process info.
 
 ## Network Traffic Stats Tags
 
-Below are the tags sent as part of Network Traffic Status metrics:
+Below are the tags sent as part of Network Traffic Status metrics/logs:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--

@@ -5,9 +5,7 @@ Tags are sent by Sematext Agents as part of every data point and they are shown 
 
 For example, as part of Docker container metrics, the agent sends hostname on which the container is running, container identifier, container name, container image as tags which appear as filters in UI. User can then group or filter the container metrics using these tags.
 
-All [Special Tags](../../special-tags) apply as well.
-
-The tags are automatically collected by agents while fetching metrics and sent as part of metrics to the receiver.
+At the moment all Common [Special Tags](../../special-tags) apply to Monitoring Apps.
 
 ## Defining Tags in Sematext App Agent Integration YAMLs
 
