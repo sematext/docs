@@ -7,6 +7,8 @@ For example, as part of Docker container metrics, the agent sends hostname on wh
 
 At the moment all Common [Special Tags](../../special-tags) apply to Monitoring Apps.
 
+If you choose to use 3rd party Agents, then you need to ensure the tag names match those from our Common Special Tags.
+
 ## Defining Tags in Sematext App Agent Integration YAMLs
 
 In the App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. Tags can be configured in the `tag` section of the App Agent integration YAMLs. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
