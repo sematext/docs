@@ -1,7 +1,16 @@
 title: Sematext Experience Detailed Timing Breakdown
 description: Investigate page loads and HTTP Requests performance breakdown with Sematext Experience
 
-Load time performance depends on multiple factors. If your visitors are experiencing slow page load performance it can be caused by the network, DNS servers, redirects, application performance, etc. To better understand which part of the loading process is slow, we've added detailed timing breakdown on Page Loads and HTTP Requests screens.
+Load time performance depends on multiple factors. If your visitors are experiencing slow page load or HTTP requests performance it can be caused by the network, DNS servers, redirects, application performance, etc. To better understand which part of the loading process is slow, we've added detailed timing breakdown on Page Loads and HTTP Requests screens.
+
+<img
+  class="content-modal-image"
+  alt="Experience Timing Breakdown"
+  src="../../images/experience/breakdown.png"
+  title="Experience Timing Breakdown"
+  width=800
+  height=86
+/>
 
 The parts shown above are based on the Navigation Timing API and the timestamps returned by the browser for each page load and HTTP request:
 
