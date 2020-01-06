@@ -9,5 +9,5 @@ To share your Account with other users, go to the
 [Team page](https://apps.sematext.com/ui/team/accounts) on Sematext Cloud.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/08/account-access.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/account-access.mp4" type="video/mp4" />
 </video>

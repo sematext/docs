@@ -9,21 +9,14 @@ To deploy the Sematext Agent as a container, run the following command on each h
 ```bash
 docker run -d  --restart always --privileged -P --name st-agent \
 -v /:/hostfs:ro \
--v /sys/kernel/debug:/sys/kernel/debug \
+-v /sys/:/hostfs/sys:ro \
 -v /var/run/:/var/run/ \
--v /proc:/host/proc:ro \
--v /etc:/host/etc:ro \
--v /sys:/host/sys:ro \
--v /usr/lib:/host/usr/lib:ro \
+-v /sys/kernel/debug:/sys/kernel/debug \
+-v /etc/passwd:/etc/passwd:ro \
+-v /etc/group:/etc/group:ro \
 -e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
--e JOURNAL_DIR=/var/run/st-agent \
--e LOGGING_WRITE_EVENTS=false \
--e LOGGING_REQUEST_TRACKING=false \
--e LOGGING_LEVEL=info \
--e NODE_NAME=`hostname` \
--e CONTAINER_SKIP_BY_IMAGE=sematext \
 sematext/agent:latest
 ```
 
@@ -40,17 +33,14 @@ Mount the configuration file into the container and set the path to the configur
 ```bash
 $ docker run -d  --restart always --privileged -P --name st-agent \
 -v /:/hostfs:ro \
--v /sys/kernel/debug:/sys/kernel/debug \
+-v /sys/:/hostfs/sys:ro \
 -v /var/run/:/var/run/ \
--v /proc:/host/proc:ro \
--v /etc:/host/etc:ro \
--v /sys:/host/sys:ro \
--v /usr/lib:/host/usr/lib:ro \
+-v /sys/kernel/debug:/sys/kernel/debug \
+-v /etc/passwd:/etc/passwd:ro \
+-v /etc/group:/etc/group:ro \
 -e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
--e NODE_NAME=`hostname` \
--e CONTAINER_SKIP_BY_IMAGE=sematext \
 -e CONFIG_FILE=/opt/st-agent/st-agent.yml \
 sematext/agent:latest
 ```
@@ -69,23 +59,17 @@ services:
       - CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE>
       - INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE>
       - REGION=<US or EU>
-      - JOURNAL_DIR=/var/run/st-agent
-      - LOGGING_WRITE_EVENTS=false
-      - LOGGING_REQUEST_TRACKING=false
-      - LOGGING_LEVEL=info
-      - NODE_NAME=$HOSTNAME
-      - CONTAINER_SKIP_BY_IMAGE=sematext
     cap_add:
       - SYS_ADMIN
     restart: always
     volumes:
       - '/:/hostfs:ro'
+      - '/sys:/hostfs/sys:ro'
       - '/var/run/:/var/run/'
       - '/sys/kernel/debug:/sys/kernel/debug'
-      - '/proc:/host/proc:ro'
-      - '/etc:/host/etc:ro'
-      - '/sys:/host/sys:ro'
-      - '/usr/lib:/host/usr/lib:ro'
+      - '/etc/passwd:/etc/passwd:ro'
+      - '/etc/group:/etc/group:ro'
+
 ```
 
 ## Docker Swarm / Enterprise
@@ -97,19 +81,13 @@ Sematext Agent can be deployed as global service on all Swarm nodes with a singl
 docker service create --mode global --name st-agent \
 --restart-condition any \
 --mount type=bind,src=/,dst=/hostfs,readonly \
+--mount type=bind,src=/sys,dst=/hostfs/sys,readonly \
 --mount type=bind,src=/var/run,dst=/var/run/ \
---mount type=bind,src=/usr/lib,dst=/host/usr/lib \
 --mount type=bind,src=/sys/kernel/debug,dst=/sys/kernel/debug \
---mount type=bind,src=/proc,dst=/host/proc,readonly \
---mount type=bind,src=/etc,dst=/host/etc,readonly \
---mount type=bind,src=/sys,dst=/host/sys,readonly \
--e NODE_NAME={{.Node.Hostname}} \
+--mount type=bind,src=/etc/passwd,dst=/etc/passwd,readonly \
+--mount type=bind,src=/etc/group,dst=/etc/group,readonly \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
--e JOURNAL_DIR=/var/run/st-agent \
--e LOGGING_REQUEST_TRACKING=false \
--e LOGGING_WRITE_EVENTS=false \
--e LOGGING_LEVEL=info \
 sematext/agent:latest
 ```

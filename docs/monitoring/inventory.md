@@ -8,7 +8,7 @@ The Inventory information is available in the *Monitoring Infrastructure* sectio
 <!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/06/sematext-infra-inventory.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory.mp4" type="video/mp4" />
 </video>
 
 ### Inventory Info

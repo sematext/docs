@@ -72,7 +72,7 @@ A **Save Query** window will open with the option to **Enable Alert**. When it's
 - **Schedule**, to choose when the Alerts will notify you based on a period, schedule or time.
 
 <video style="display:block; width:100%; height:auto;" autoplay controls loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/05/alert-scheduling.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/alert-scheduling.mp4" type="video/mp4" />
 </video>
 
 

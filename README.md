@@ -1,6 +1,6 @@
 ## [Sematext Documentation](https://sematext.com/docs)
 
-### Quick Start - run mkdocs in a container
+### Quick Start - run mkdocs in a container with python2
 
 ```
 git clone git@github.com:sematext/docs.git
@@ -8,6 +8,22 @@ cd docs
 docker run  -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs \
 pip install mkdocs-material===2.7.0 &&  \
 pip install markdown-fenced-code-tabs && mkdocs serve 
+open http://localhost:8000
+```
+
+### Quick Start - run mkdocs in a container with python3
+
+In `mkdocs.yml`:
+* change `strict` to `false` (line 1)
+* rename `pages` to `nav` (line 4)
+
+```
+git clone git@github.com:sematext/docs.git
+cd docs
+docker run -d --name st-mkdocs -p 8000:8000 -v $(pwd):/workspace pengbai/docker-mkdocs
+pip3 install mkdocs-material
+pip3 install markdown-fenced-code-tabs
+mkdocs serve
 open http://localhost:8000
 ```
 
@@ -120,3 +136,11 @@ bin/to_md.sh inputDir outputDir
    - inputDir: the extracted html folder
    - outputDir: the markdown folder
 ```
+
+### Convert Google Doc to Markdown
+1. In your google doc go to `Tools > Script editor`
+1. Copy [this script](https://github.com/mangini/gdocs2md/blob/master/converttomarkdown.gapps) to the code section in the `Script editor`
+1. Save the script
+1. To trigger the conversion (from Script editor) go to `Run > Run function > ConvertToMarkdown` (it will run on the google doc from which you opened `Script editor`)
+1. You'll be prompted to give GDrive reading and mailing rights to the script
+1. You'll receive an email with markdown and image files attached

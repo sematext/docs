@@ -3,17 +3,17 @@ description: Forward logs to Sematext logging management and analytics SaaS usin
 
 ## Run Logagent as Heroku Log Drain
 
-You can forward your [Heroku](http://www.heroku.com) logs to Logsene using Heroku [Log Drain](https://devcenter.heroku.com/articles/log-drains) like this:
+You can forward your [Heroku](http://www.heroku.com) logs to Sematext using Heroku [Log Drain](https://devcenter.heroku.com/articles/log-drains) like this:
 ``` bash
 heroku drain:add --app HerokuAppName URL
 ```
 Here are the steps:
 
-To ship your Heroku logs to Logsene or Elasticsearch deploy Logagent on Heroku. It will act as an HTTPS log drain. 
+To ship your Heroku logs to Sematext or Elasticsearch deploy Logagent on Heroku. It will act as an HTTPS log drain. 
 
 1. Get a free account [apps.sematext.com](https://apps.sematext.com/ui/registration)
-2. Create a [Logsene](http://www.sematext.com/logsene/) App to obtain the Logsene Token
-3. Deploy logagent-js to Heroku using the Deploy to Heroku button
+2. Create a [Logs](http://www.sematext.com/logsene/) App to obtain the App Token
+3. Deploy Logagent to Heroku using the Deploy to Heroku button
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/sematext/logagent-js) 
 ... or use the following commands:
@@ -34,7 +34,7 @@ To ship your Heroku logs to Logsene or Elasticsearch deploy Logagent on Heroku. 
   heroku drains:add --app YOUR_HEROKU_MAIN_APPLICATION `heroku info -s | grep web-url | cut -d= -f2`$LOGSENE_TOKEN
 ```
 
-Now you can see your logs in Logsene, define Alert Queries or use Kibana for Dashboards. 
+When you see logs in Sematext you can define Alert Queries, build Dashboards, create Saved Queries, etc. 
 
 5. Scale Logagent service on Heroku
 
@@ -43,4 +43,4 @@ To handle high log volume, scale Logagent on demand using
 heroku scale web=3
 ```
 See also:
-- [How to Ship Heroku Logs to Logsene / Managed ELK Stack](https://sematext.com/blog/2016/02/18/how-to-ship-heroku-logs-to-logsene-managed-elk-stack/)
+- [How to Ship Heroku Logs to Sematext / Managed ELK Stack](https://sematext.com/blog/how-to-ship-heroku-logs-to-logsene-managed-elk-stack/)

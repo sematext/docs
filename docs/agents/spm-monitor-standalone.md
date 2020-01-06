@@ -16,7 +16,7 @@ After that, the monitoring agent can be (re)started with:
 sudo service spm-monitor restart
 ```
 
-## JMX Setups (i.e. How to Configure the Monitored App/Server)
+## JMX Setups - How to Configure the Monitored App/Server
 
 There are 3 basic JMX setups (all explained below):
 
@@ -372,8 +372,7 @@ supervisor.slots.ports:
 
 ## Additional Notes
   
-1\) In some cases, monitored server should also get the following
-argument:
+In some cases, monitored server should also get the following argument:
 
 ``` properties
  -Djava.rmi.server.hostname=localhost

@@ -9,5 +9,5 @@ To transfer one of your Apps to another user, go to the
 [App Transfer page](https://apps.test.sematext.com/ui/team/transfers) on Sematext Cloud.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/08/app-transfer.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/app-transfer.mp4" type="video/mp4" />
 </video>

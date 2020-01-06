@@ -1,7 +1,7 @@
 title: On-Page Transactions
 description: Sematext Experience supports monitoring On-Page Transactions. Learn how to use and set up On-Page Transactions here.
 
-Measuring user activity can be criical for understanding what your users are experiencing while interacting with your website. This gives you a better understanding of your users needs. Measuring delays between when a user sees a page and clicks a button, versus how big of a delay users see when navigating between pages on your website, or how fast you reply to a live-chat question are all crucial for understanding your users' needs.
+Measuring user activity can be critical for understanding what your users are experiencing while interacting with your website. This gives you a better understanding of your users needs. Measuring delays between when a user sees a page and clicks a button, versus how big of a delay users see when navigating between pages on your website, or how fast you reply to a live-chat question are all crucial for understanding your users' needs.
 
 ### Adding On-Page Transactions
 

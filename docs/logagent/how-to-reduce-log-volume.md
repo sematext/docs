@@ -15,7 +15,7 @@ Output filters process log events after they are parsed and can be applied to si
 
 The most efficient way to reduce log volume is to stop collecting logs from noisy data sources. Do you need **all logs from `/var/log/**/*.log`**, **all systemd units** and **all container logs**? Most of the time, you don’t. Configure Logagent Input Plugins to skip noisy sources. Most of the input plugins accept a list of input sources or offer settings to filter data sources. Here are the most common examples of file input and Docker container logs. 
 
-## File Input Plugin. 
+## File Input Plugin
 
 Limit the data sources to dedicated log files or directories, instead of using /var/log/**/*.log (default setting in Logagent) 
 
@@ -26,7 +26,7 @@ input:
     - /var/log/kernel.log 
     - /var/log/audit.log
     - /var/log/nginx/access_log
-    -/var/log/myapp/*.log
+    - /var/log/myapp/*.log
 ```
 
 
@@ -69,7 +69,7 @@ when you set up a Logagent container.
 Logagent supports the environment variable `REMOVE_FIELDS` for the Elasticsearch output plugin. You can specify a list of fields  for removal with 
 `REMOVE_FIELDS='logSource,labels"` when you set up Logagent in a container. For more information see the complete [Docker setup instructions](https://sematext.com/docs/logagent/installation-docker/)
  
-## Logagent Input Filters
+### Logagent Input Filters
 
 __Input Filters__ process logs line by line before parsing. At this stage of log processing you can’t drop multi-line log messages. However, for single-line logs, it’s the perfect place to drop events by using regular expressions similar to the `grep` UNIX command.  All messages removed in the input stage don’t create load in the other processing stages. 
 
@@ -84,14 +84,14 @@ inputFilter:
 
 ### Logagent Output Filters
 
-Output Filters apply after parsing logs. At this stage you can use any parsed field or custom logic of field combinations. Dropping events is possible before Logagent transmits data to any output destination.
+__Output Filters__ apply after parsing logs. At this stage you can use any parsed field or custom logic of field combinations. Dropping events is possible before Logagent transmits data to any output destination.
 
 The drop-events-filter allows you to specify `include` and `exclude` criteria as a regular expression for each field name. 
 
 ```
 outputFilter:
   dropEventsFilter:
-         module: drop-events-filter
+    module: drop-events-filter
     debug: false
     filters:
       severity:
@@ -103,6 +103,7 @@ outputFilter:
 
 Another interesting plugin is the "remove-fields" plugin. It takes a list of fields for removal:
 
+```
 outputFilter:
   remove-fields:
     module: remove-fields
@@ -111,5 +112,4 @@ outputFilter:
       - logSource
       - labels
 
- 
-We hope this little guide helps you tune Logagent exactly to your operational needs. Don't hesitate to contact us in the chat if you have any questions or suggestions.
+```

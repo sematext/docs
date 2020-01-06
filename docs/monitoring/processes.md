@@ -19,7 +19,7 @@ The processes view provides similar information as the Linux top command. It sho
 - Filtering by tags
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/06/sematext-infra-processes.mp4" type="video/mp4">
+  <source src="https://cdn.sematext.com/videos/sematext-infra-processes.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 

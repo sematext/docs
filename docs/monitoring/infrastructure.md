@@ -52,7 +52,7 @@ Once you do that you'll have the token of that particular App. To set up the tok
 Creating a new Infra App is the same process as with any App in Sematext. In the Integrations view you choose Infra App, give it a name and click continue.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/07/create-infra-app-1.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/create-infra-app-1.mp4" type="video/mp4" />
 </video>
 
 This screen shows installation instructions which you'll have to follow to start using the Infra App. Select the operating system running on your machines and run the simple setup commands.
@@ -62,7 +62,7 @@ This screen shows installation instructions which you'll have to follow to start
 Metrics will start shipping to your new Infra App in a few moments.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/07/create-infra-app-2.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/create-infra-app-2.mp4" type="video/mp4" />
 </video>
 
 ## Features

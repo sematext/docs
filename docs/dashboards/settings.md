@@ -14,7 +14,7 @@ Dashboard settings include:
   - Report settings
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/07/dash-settings.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/dash-settings.mp4" type="video/mp4" />
 </video>
 
 ## Side Navigation

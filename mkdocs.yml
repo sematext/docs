@@ -57,11 +57,20 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Tags: monitoring/tag-support.md
       - Tag Aliases: monitoring/tag-aliases-support.md
+      # - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
     - Alerts:
       - Overview: alerts/index.md
-      - Account Default Hooks: alerts/account-default-hooks.md
+      - Creating Logs Alerts: alerts/creating-logs-alerts.md
+      - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
+      - Creating Experience Alerts: alerts/creating-experience-alerts.md
+      - Alerts Meta and Tags: alerts/alerts-meta.md
+      - Alert Notifications: alerts/alert-notifications.md
+      - Account-default Hooks: alerts/account-default-hooks.md
+      - Alert Scheduling: alerts/alert-scheduling.md
+      - Default Alerts: alerts/default-alerts.md
+      - Alert Events: alerts/alert-events.md
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md
@@ -80,6 +89,7 @@ pages:
       - User Satisfaction: experience/user-satisfaction.md
       - On-Page Transactions: experience/on-page-transaction.md
       - User Identification: experience/user-identification.md
+      - Resource Timing: experience/resources.md
       - Integrations: experience/integrations.md
       - Changelog: experience/changelog.md
       - FAQ: experience/faq.md
@@ -100,6 +110,7 @@ pages:
       - Monitoring ClickHouse: integration/clickhouse.md
       - Monitoring Docker: integration/docker.md
       - Monitoring Elasticsearch: integration/elasticsearch.md
+      - Monitoring Express.js: integration/express.js.md
       - Monitoring Hadoop: integration/hadoop.md
       - Monitoring HAProxy: integration/haproxy.md
       - Monitoring HBase: integration/hbase.md
@@ -157,6 +168,7 @@ pages:
         - Packages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
+        # - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
       - Infra & App Agent:
         - Overview:  agents/spm-client.md
         - Embedded Mode: agents/spm-monitor-javaagent.md
@@ -249,6 +261,7 @@ pages:
       - Licensing: sematext-enterprise/licensing.md
       - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
       - FAQ: sematext-enterprise/faq.md
+    - Special Tags: special-tags.md
     - API: api/index.md
     - FAQ: faq.md
 

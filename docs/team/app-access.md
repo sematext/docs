@@ -17,5 +17,5 @@ To share one of your Apps with other users, go to the
 [App access page](https://apps.sematext.com/ui/team/accounts) on Sematext Cloud.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://sematext.com/wp-content/uploads/2019/08/app-access.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/app-access.mp4" type="video/mp4" />
 </video>

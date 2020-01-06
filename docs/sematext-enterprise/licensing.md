@@ -6,15 +6,7 @@ description: Licensing details for our on-premises infrastructure & application 
 
 The SematextApps VM has an initial trial license that will expire in 30
 days.  When the trial license or the real license expires, you will not
-be able log into the Web UI.  To get a new license, please <a href="https://sematext.com/contact/">contact Sematext</a>.
-
-## Where do I put a new license file
-
-The license file location is `/opt/sematext/license.jar` on any of your
-SUA servers.
-
-License files are automatically loaded as soon as you copy them to said
-location.
+be able log into the Web UI. To get a new license, please <a href="https://sematext.com/contact/">contact Sematext</a>.
 
 ## License expiry
 

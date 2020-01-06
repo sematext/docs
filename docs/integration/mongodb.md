@@ -17,11 +17,11 @@ Sematext MongoDB monitoring agent is an open-source [mongodb monitoring agent](h
     the [NPM package](https://www.npmjs.com/package/spm-agent-mongodb)
     and configure the App Token)
 
-** Troubleshooting and "How To **
+## Troubleshooting and How-to
 
 ** Generate diagnostics file for Sematext Support **
 
-If you are not seeing some or all MongoDB metrics, see
+If you are not seeing some or all MongoDB metrics, see
 [How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 ** Using Sematext for monitoring MongoDB behind Firewalls / Proxy servers **
@@ -34,17 +34,16 @@ variable HTTPS_PROXY=[https://your-proxy](https://your-proxy/).
 
 The native modules are automatically compiled during "npm install"
 (using node-gyp). On Windows the required build tools like python or C++
-compilers are typically not installed by default.  
-In this case please check <https://github.com/TooTallNate/node-gyp> for
-details about the required compiler and build tools.
+compilers are typically not installed by default. In this case please check
+<https://github.com/TooTallNate/node-gyp> for details about the required compiler and build tools.
 
 ** Upgrading to a new Node.js version **
 
-If you switch the Node.js version (e.g. from 9.x to 10.x), the
+If you switch the Node.js version (e.g. from 9.x to 10.x), the
 spm-agent-mongodb package will need to be installed again (due to the
 fact that included native modules may change from version to version).
   After the version change please run a fresh installation "npm i
-spm-agent-mongodb -g" 
+spm-agent-mongodb -g".
 
 ** Upgrading to the latest version of spm-agent-mongodb **
 
