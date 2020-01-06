@@ -3,15 +3,15 @@ description: Tag aliases are name-value pairs used to identify a group of tag va
 
 ## What are Tag Aliases?
 
-Tag aliases are name-value pairs used to identify a group of tag values i.e. alias for a group of tags. For example, to identify the set of hosts running in a production environment, define `env:prod` tag alias in the agents running on all production machines. The Agent maps the configured tag aliases to `os.host` tag. Then from UI, selecting `env:prod` filter, will filter data from all hosts in the production environment. Tag aliases can be configured in the Agent and some are automatically sent by agents. All tag aliases are sent periodically by Agent and are purged periodically in Sematext Cloud.
+Tag aliases are name-value pairs used to identify a group of tag values.  In other words, a tag alias is an alias for a group of tags. For example, to identify the set of hosts running in a production environment you might define `env:prod` tag alias in the agents running on all production machines. The Agent will map the configured tag aliase to `os.host` tag.  Selecting the `env:prod` filter in the UI will then filter data from all hosts in the production environment. Custom tag aliases can be configured in the Agent and some are automatically sent by agents. All tag aliases are sent periodically by Agent and are purged from Sematext Cloud when they stop being sent.
 
-## Automatic Tags Aliases from agent
+## Automatic Tag Aliases from Agent
 
-The Infra Agent automatically collects the following tag aliases and sends them periodically to Sematext Cloud. It's not recommended to use these names in the configured tag aliases.
+The Infra Agent automatically collects the following tag aliases and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, custom configured tag aliases.
 
-### Cloud metadata
+### Cloud Metadata
 
-The cloud metadata from AWS, Azure and GCE instances is collected as tag aliases. These tag aliases are mapped to `os.host` tag.
+The cloud metadata from AWS, Azure and GCE instances are collected as tag aliases. These tag aliases are mapped to `os.host` tag.
 
 | Name  | Tag Name  | Supported Cloud Providers  |
 |:--|:--|:--|
@@ -24,13 +24,13 @@ The cloud metadata from AWS, Azure and GCE instances is collected as tag aliases
 |  Project Identifier |  cloud.project |  GCE |
 |  User-defined tags |  - |  AWS, GCE, Azure |
 
-To collect user-defined cloud tags from AWS, Azure or GCE environment, you need to define the IAM roles listed below:
+To collect user-defined cloud tags from AWS, Azure or GCE environment you need to define the IAM roles listed below:
 
 1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
     See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
-2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager
+2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager.
     See [Access Azure Resource Manager API](https://docs.microsoft.com/en-gb/azure/active-directory/managed-identities-azure-resources/tutorial-linux-vm-access-arm) for more info.
-3. GCE - In GCE user-defined tags are called Labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
+3. GCE - In GCE user-defined tags are called labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
     See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
 
 Cloud tags collection is enabled by default.  To disable Cloud tags
@@ -53,7 +53,7 @@ Following tag aliases are collected from the host the agent is running on. They 
 
 ## Configured Tag Aliases in Agent
 
-The Sematext Agents supports configuring custom tag aliases. They can be specified in the Agent's configuration files. Tag aliases like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tag aliases are optional and can be changed at any time.
+The Sematext Agents support configuring custom tag aliases. They can be specified in the Agent's configuration files. For example, tag aliases like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tag aliases are optional and can be changed at any time.  The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
 
 Below are the steps to configure custom tags in Sematext Agents.
 
@@ -76,8 +76,6 @@ To configure tag aliases for an individual App, edit the property below in the m
 # add tag aliases if you want to use them, example: SPM_MONITOR_TAGS="env:foo, role:bar"
 SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 ```
-
-The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
 
 ### Sematext Docker Agent
 
