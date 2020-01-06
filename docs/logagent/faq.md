@@ -93,7 +93,7 @@ input:
 ```
 
 
-### How do I ship logs to multiple destinations / Sematext Logs apps?
+### How do I ship logs to multiple destinations / Sematext Logs Apps?
 
 Logagent supports multiple instances of output plugins (Kafka, Elasticsearch, Files, ...). 
 
@@ -186,7 +186,7 @@ output:
 
 ```
 
-### How do I ship logs that match different patterns to different destinations / Sematext Logs apps?
+### How do I ship logs that match different patterns to different destinations / Sematext Logs Apps?
 
 An output filter function could do the trick, by setting data.\_index field, depending on various conditions. The following example creates an output filter with a configurable field name, a regular expression to match the content of the given field,  and index name for the output. 
 

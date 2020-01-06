@@ -3,7 +3,7 @@ description:  Cloud based SaaS / On-premises logging as a service platform FAQ o
 
 ## General
 
-**How many logs can I store?**
+### How many logs can I store?
 
 There is no limit to how many logs you can store in your logging management app.
  That said, you should try to pick the ideal Daily Volume when picking
@@ -14,19 +14,19 @@ If you pick too small Daily Volume and often go over the
 selected volume your $/GB price will be higher than if you picked the
 next higher Daily Volume.
 
-**How many fields can my log events have?**
+### How many fields can my log events have?
 
 There is no limit, though you will want to pay attention to how you
 structure your logs in order to get the most value out of them, and
 that typically includes having a manageable number of fields in your
 logs.
 
-**What is @timestamp field?**
+### What is @timestamp field?
 
 `@timestamp` is a date field that is used to filter logs by a selected time. If a log event does not have such a field defined,
 we will add it and set it to the time when we first receieved the log event.
 
-**How can I check how many GB/day I am shipping to your centralized logging management solution?**
+### How can I check how many GB/day I am shipping to your centralized logging management solution?
 
 From the application, click the `App Actions` button and select
 `Usage`. There's also `Settings` button next to [any of your Logs apps](https://apps.sematext.com/ui/logs) in
@@ -38,7 +38,7 @@ On click, `App Settings > Usage` page will present both Total Volume in Gb and T
 
 <img alt="Logs App Log Count" src="/docs/images/logs/logging-app-usage-page.png" title="Logs App usage page">
 
-**How can I check the number of logs I currently have in a Logs App?**
+### How can I check the number of logs I currently have in a Logs App?
 
 Total Count of indexed logs is displayed in `App Settings > Usage` page.
 
@@ -50,7 +50,7 @@ You can also do that from Kibana
 by searching for all your logs without adding any time filters. The
 number of hits represents the number of all your logs.
 
-**How long are my logs stored?**
+### How long are my logs stored?
 
 How long your logs are stored depends on what Data Retention you
 selected when you picked your Logging Management App plan.  Each such app can have a
@@ -61,30 +61,30 @@ Click the `App Actions` button and select `App Settings`. App Info page will ope
 
 <img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="/docs/images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
 
-**Can I send old logs?**
+### Can I send old logs?
 
 Yes, you can send all logs. However, keep in mind your Logs App's
 Data Retention settings.  For example, if your retention is set to 7
 days and you send logs that are 10 days old, we will give you a warning 
 saying that you are outside of your valid retention time range.
 
-**How can I send old logs?**
+### How can I send old logs?
 
 Use [Logagent](/logagent).  With Logagent you can then do: ```cat
 /path/to/old/log | logagent -t YOUR_LOGSENE_APP_TOKEN```
 
-**What is data retention and how does it work?**
+### What is data retention and how does it work?
 
 Data retention mechanism is responsible for removing old log events.
 If you have retention set to 7 days, all log events that are received more than 7 days ago will be removed. 
 For paid plans we remove whole 24-hour periods once a day. For free plans we
 remove old data every 30 minutes.
 
-**Is data retention based on index/import/upload/receive time or the actual log event @timestamp?**
+### Is data retention based on index/import/upload/receive time or the actual log event @timestamp?
 
 Data retention is based on log events' receive timestamp.
 
-**Are logs shipped to Logs App ever rejected?**
+### Are logs shipped to Logs App ever rejected?
 
 When you pick a Daily Volume we automatically set another logging system
 property called *Max* Daily Volume.  By default we set it to 2x the
@@ -97,7 +97,7 @@ This Max Daily Volume limit prevents run-away logging
 from causing over-billing. Logs App will send email notifications before
 this limit is reached.
 
-**What is the maximum log size Logs App will accept?**
+### What is the maximum log size Logs App will accept?
 
 That depends on the plan you selected for your application. If your
 application is using the *Basic* plan, our logging management platform will accept logs up to 64
@@ -107,14 +107,14 @@ plan, it will accept logs up to 256 KB in size. If your logs are
 larger than the mentioned limits, please consider using the *Enterprise*
 plan.
 
-**My logs have special structure.  Can Logs App handle that?**
+### My logs have special structure.  Can Logs App handle that?
 
 Yes, if the default log index fields (also known as index mapping)
 don't fit your needs you can create completely custom index mapping.
 See [Custom Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
 
 
-**I have multiple log sources - should I send them all to the same Logs App?**
+### I have multiple log sources - should I send them all to the same Logs App?
 
 Sending logs from multiple log sources to the same Logs App is not
 a problem at all.  However, if you have multiple different log
@@ -123,7 +123,7 @@ entry.
 
 <a name="i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that"></a>
 
-**I have multiple different log structures, each with a different set of fields.  How should I handle that?**
+### I have multiple different log structures, each with a different set of fields.  How should I handle that?
 
 If you have N different log structures, the best way to handle that
 is by creating N Logs Apps, each with its own index mapping.  For
@@ -148,7 +148,7 @@ field "size", but can have non-numeric values, this will cause issues.
 Thus, either keep logs of different structures in separate logging
 app or make sure there are no conflicting fields.
 
-**My data structure changed, can I reindex my data automatically?**
+### My data structure changed, can I reindex my data automatically?
 
 Yes, when you change your index structure using Field Editor you will
 be given the opportunity to reindex your data.
@@ -160,7 +160,7 @@ data needs to be reindexed and that reindexing is treated like original
 ingestion, which means it counts towards your daily volume and could
 result in you hitting your Max Daily Volume Limit.
 
-**Is automatic reindex free?**
+### Is automatic reindex free?
 
 Using Sematext's Logs App reindex functionality is available for all plans and
 the normal plan charges apply. Because reindexing counts just like
@@ -175,22 +175,22 @@ will be applied.
 
 ## Log Shipping
 
-**Which log shippers, logging libraries, and platform integrations are supported?**
+### Which log shippers, logging libraries, and platform integrations are supported?
 
 You can use [numerous log shippers, logging libraries, and platform integrations](/integration/#logging).
 
-**How can I import logs from my existing Elasticsearch / ELK / Elastic stack?**
+### How can I import logs from my existing Elasticsearch / ELK / Elastic stack?
 
 You can use Logstash to copy logs from your own ELK / Elastic Stack to our Logs App as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
 
-**How can I ship logs from Android and iOS apps?**
+### How can I ship logs from Android and iOS apps?
 
 For shipping logs from Android apps use
 <https://github.com/sematext/sematext-logsene-android> and for
 shipping logs from iOS apps use
 <https://github.com/sematext/sematext-logsene-ios>.
 
-**How can I ship AWS CloudTrail logs, AWS VPC logs, and other logs from S3?**
+### How can I ship AWS CloudTrail logs, AWS VPC logs, and other logs from S3?
 
 Use the
 <https://github.com/sematext/logsene-aws-lambda-cloudwatch> AWS Lambda
@@ -199,7 +199,7 @@ and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/sending-a
 for detailed description of how to do
 this.
 
-**Why is it that I can forward logs with rsyslog via TCP or UDP, but not via RELP?**
+### Why is it that I can forward logs with rsyslog via TCP or UDP, but not via RELP?
 
 You probably need to install the [omrelp module](http://www.rsyslog.com/doc/omrelp.html) first. If you have
 rsyslog installed in your system, there's probably a package that you
@@ -235,17 +235,17 @@ You will get an error if the module is not found or you have any other
 problem. For debug mode, add `-d` as
 well.
 
-**How do I ship exception stack traces and other multi-line logs with Logstash without breaking them into multiple log events?**
+### How do I ship exception stack traces and other multi-line logs with Logstash without breaking them into multiple log events?
 
 Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handling-stack-traces-with-logstash/).
 
 ## Plans & Prices
 
-**How much does your centralized logging management solution cost?**
+### How much does your centralized logging management solution cost?
 
 Check the [Logs App Plans & Prices](https://www.sematext.com/logsene/pricing).
 
-**What happens with my logs when I change from the free to a paid plan or vice versa?**
+### What happens with my logs when I change from the free to a paid plan or vice versa?
 
 You don't have to worry about your data when you switch from the free
 plan to a paid one. Your logs will remain safe and you can still be able
@@ -254,7 +254,7 @@ retention settings.  However, when you move from a paid plan to a free
 plan, free plan restrictions will be applied to your data, which
 including data retention, too.
 
-**What happens if I go over the selected daily log volume and how much does that cost?**
+### What happens if I go over the selected daily log volume and how much does that cost?
 
 The GB/day volume is **not** a limit. That number controls only *cost
 per GB*. When you go over the GB/day number you had selected we do not
@@ -270,14 +270,14 @@ selection.  However, if you ship closer to 5 GB/day, then you should
 select 5 GB/day volume, because that will give you a lower $/GB rate
 than if you stay with 1 GB/day selection.
 
-**How much data can I ship to Sematext using the Basic plan?**
+### How much data can I ship to Sematext using the Basic plan?
 
 Each day, a total of 500 MB/day can be shipped to all Sematext Logs Apps together.
 To ship more data use one of the bigger plans.
 
 ## Troubleshooting
 
-**Why am I not seeing my logs?**
+### Why am I not seeing my logs?
 
 The most common reason is that logs' timestamps are in the future,
 and this most often happens when timestamps don't specify the timezone.
@@ -305,7 +305,7 @@ field will fail.  Note that you *can* change the underlying field
 If none of the above turns out to be a problem in your case, please let
 us know via <support@sematext.com> or via our live chat!
 
-**How to check if there are any network connectivity issues?**
+### How to check if there are any network connectivity issues?
 
 Things to check to ensure network connectivity is OK:
 
@@ -382,7 +382,7 @@ Address: 52.44.248.43
 
 <a name="how-to-avoid-failed-events"></a>
 
-**How to avoid 'failed events'?**
+### How to avoid 'failed events'?
 
 Sematext Cloud is a schema-less storage and uses Elasticsearch as log storage. 
 When your App receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
@@ -429,14 +429,14 @@ In case you created only one time logs with a wrong structure, you could use the
 
 ## Security
 
-**Can I ship data to your centralized logging management solution using a secure and encrypted transport like TLS/SSL or HTTPS?**
+### Can I ship data to your centralized logging management solution using a secure and encrypted transport like TLS/SSL or HTTPS?
 
 Yes, all data can be shipped both over encrypted channels like
 TLS/SSL and HTTPS, or via their unencrypted counter-parts.
  See <https://apps.sematext.com/ui/logs> for more
 information about how to configure log shipping.
 
-**How secure is my data?**
+### How secure is my data?
 
 Our Logging Management Platform runs on Amazon AWS, whose infrastructure follows IT security
 best practices and adheres to a number of compliance standards such
@@ -448,22 +448,22 @@ security and compliance certifications see:
 Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
 your API calls using `apiKey`. You can read more about this [here](search-through-the-elasticsearch-api) and [here](/api).
 
-**Where is my data stored?**
+### Where is my data stored?
 
 Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
 
-**How long is my data stored?**
+### How long is my data stored?
 
 This depends on the data retention you selected for each of your logging
 apps.  Backups are stored in S3 and kept for 90 days.
 
 ## Kibana
 
-**Can I use my own Kibana?**
+### Can I use my own Kibana?
 
 Yes.
 
-**How can I get a nice map of the world in Kibana?**
+### How can I get a nice map of the world in Kibana?
 
 Ensure you have a country field in your logs.  If you only have IP you
 can use Logstash [geoip filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html). For example, a
@@ -494,7 +494,7 @@ object called **geoip**, which contains lots of information, including
 country codes. You can then use `geoip.country_code2` as your field in
 Kibana.
 
-**Why are new fields not visible in Kibana and how do I fix it?**
+### Why are new fields not visible in Kibana and how do I fix it?
 
 Kibana doesn't update field lists automatically. This problem is not
 specific to our Logs App, but is a general Kibana issue. If you add new
@@ -502,7 +502,7 @@ fields to an index you must refresh the fields in Kibana. New fields
 will appear and will be ready to use in your visualizations and
 searches.
 
-**How do I create a dashboard in Kibana?**
+### How do I create a dashboard in Kibana?
 
 Kibana requires the following high level steps to create a dashboard:
 
@@ -518,7 +518,7 @@ Kibana requires the following high level steps to create a dashboard:
     also: <https://www.elastic.co/guide/en/kibana/current/dashboard.html>
 4.  Save the Dashboard
 
-**Why can't I draw charts (dashboards) using a given field?**
+### Why can't I draw charts (dashboards) using a given field?
 
 By default all string values sent to Logs App are analyzed. For each
 analyzed fields we also create .raw field which is not analyzed. If you
@@ -532,7 +532,7 @@ dashboards. It also creates automatically a field called
 
 ## Timestamps
 
-**Why does my syslog timestamp have a different time zone?**
+### Why does my syslog timestamp have a different time zone?
 
 The [original syslog specification](https://tools.ietf.org/html/rfc3164) (RFC 3164) has a date
 field that doesn't contain any time zone information. Fortunately,
@@ -554,7 +554,7 @@ use the older format, you have two options to have a correct timestamp:
 
     *.* @@logsene-syslog-receiver.sematext.com:514;RSYSLOG_ForwardFormat
 
-**What are the supported timestamp formats?**
+### What are the supported timestamp formats?
 
 If you send your logs via the [Elasticsearch API](index-events-via-elasticsearch-api), you can use:
 
@@ -577,14 +577,14 @@ See [Supported Date Formats](supported-date-formats) for
 more examples of supported date and time
 formats.
 
-**What happens if I try to send data with @timestamp older than my retention time?**
+### What happens if I try to send data with @timestamp older than my retention time?
 
 You can send old logs because our data retention works by checking the received timestamp, not @timestamp.
 For example, if your retention is set to 7 days and you send logs that are 10 days old (i.e. they contain a timestamp from
 10 days ago), they will get accepted and processed, but when you set a time range to select those logs,
 you might get warning that you selected time range that is outside of your retention.
 
-**What happens if I try to send data with @timestamp that is in the future?**
+### What happens if I try to send data with @timestamp that is in the future?
 
 You can send logs with timestamps in the future, but they will not be
 shown in Logs App until their timestamps stops being in the future.  For
@@ -594,7 +594,7 @@ later.
 
 ## Alerts
 
-**What are Logs App Alerts?**
+### What are Logs App Alerts?
 
 Logs App alerts are based on saved searches that trigger alert
 notifications when these saved searches meet a certain threshold
@@ -603,13 +603,13 @@ than M matches in 3 minutes, etc., or when such saved searches detect
 *sudden changes* in the number/volume of matching logs - i.e.,
 anomalies.
 
-**How to create Alerts in Logs App?**
+### How to create Alerts in Logs App?
 
 Alerts are added by clicking Save Query icon located next to the Logs App input field. Enter query info and select option to enable alerts. Alerts panel will expand and allow you to customize alert specific to that particular search query.
 
 <img alt="Save Alert in Logs App" src="/docs/images/logs/save-alert-in-logging-app.gif" title="Save Alert in Logs App">
 
-**How to view Alerts?**
+### How to view Alerts?
 
 Click on Saved Queries Icon located next to the app's search input field.
 
@@ -619,7 +619,7 @@ Saved Queries page will open and your queries and related alerts will be display
 
 <img alt="Saved Alerts" src="/docs/images/logs/saved-alerts-tab.png" title="Saved Alerts">
 
-**What is the difference between threshold-based Alerts and Anomaly Detection (aka Algolerts)?**
+### What is the difference between threshold-based Alerts and Anomaly Detection (aka Algolerts)?
 
 If you have a clear idea about how many logs should be matching a
 given Alert Query, then simply use threshold-based Alerts. In other
@@ -645,14 +645,14 @@ timeouts, or some such), or why logging volume suddenly dropped (e.g.
 maybe some of your server(s) or app(s) stopped working and sending
 logs).
 
-**Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?**
+### Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?
 
 Yes. Our centralized logging management solution lets one configure arbitrary WebHooks to call with Alert
 event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
 
 ## Log Archiving
 
-**How to obtain credentials from AWS?**
+### How to obtain credentials from AWS?
 
 For our Logs App AWS S3 Settings, besides S3 bucket name, you'll need
 `Access Key ID` and `Secret Access Key`.
@@ -669,7 +669,7 @@ Click on `Create Access Key`:
 Note down `Access Key ID` and `Secret Access Key` (you can `Download
 Credentials` to a safe place if you like, but it's not necessary).
 
-**How do I setup S3 archiving for my Logs App?**
+### How do I setup S3 archiving for my Logs App?
 
 In Sematext web app, go to `Integrations > Apps` view
 and choose `Configure S3` using row context menu (*three-dots* icon)
@@ -691,7 +691,7 @@ After the check is done you'll see a feedback message confirming
 information validity or an error
 message.
 
-**Which credentials are required when using AWS S3 Bucket Access Policy?**
+### Which credentials are required when using AWS S3 Bucket Access Policy?
 
 In order to verify access to your S3 bucket, Logs App will first use
 the credentials to log in and, if successful, it will proceed to create
@@ -709,7 +709,7 @@ when saving AWS S3 settings:
 After the verification is done you can
 remove `s3:DeleteObject` permission from the bucket policy.
 
-**How are logs compressed in S3?**
+### How are logs compressed in S3?
 
 You have the option of choosing between two modern, lossless
 compression codecs from the [`LZ77` family](https://en.wikipedia.org/wiki/LZ77_and_LZ78), with excellent
@@ -718,26 +718,26 @@ speed/compression ratio, **`LZ4`** and **`LZF`**.
 If you choose `No compression` option, logs will be stored in raw,
 uncompressed format, as JSON files.
 
-**How can I decompress logs archived in S3?**
+### How can I decompress logs archived in S3?
 
 You can decompress by installing these command line programs (then
 use` man lz4 `or` man lzf` for further instructions):
 
-**Ubuntu/Debian:**
+#### Ubuntu/Debian:
 
 ``` bash
 sudo apt-get install liblz4-tool
 sudo apt-get install libcompress-lzf-java (landed in Ubuntu 15.04)
 ```
 
-**OSX:**
+#### OSX:
 
 ``` bash
 brew install lz4
 brew install liblzf
 ```
 
-**Which folder structure your centralized logging management solution uses when uploading logs to S3?**
+### Which folder structure your centralized logging management solution uses when uploading logs to S3?
 
 Inside a bucket that you specify in settings, the following folder
 hierarchy is created:
