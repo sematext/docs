@@ -3,7 +3,7 @@ description: Tag aliases are name-value pairs used to identify a group of tag va
 
 ## What are Tag Aliases?
 
-Tag aliases are name-value pairs used to identify a group of tag values.  In other words, a tag alias is an alias for a group of tags. For example, to identify the set of hosts running in a production environment you might define `env:prod` tag alias in the agents running on all production machines. The Agent will map the configured tag aliase to `os.host` tag.  Selecting the `env:prod` filter in the UI will then filter data from all hosts in the production environment. Custom tag aliases can be configured in the Agent and some are automatically sent by agents. All tag aliases are sent periodically by Agent and are purged from Sematext Cloud when they stop being sent.
+Tag aliases are name-value pairs used to identify a group of tag values.  In other words, a tag alias is an alias for a group of tags. For example, to identify the set of hosts running in a production environment you might define `env:prod` tag alias in the agents running on all production machines. The Agent will map the configured tag alias to `os.host` tag.  Selecting the `env:prod` filter in the UI will then filter data from all hosts in the production environment. Custom tag aliases can be configured in the Agent and some are automatically sent by agents. All tag aliases are sent periodically by Agent and are purged from Sematext Cloud when they stop being sent.
 
 ## Automatic Tag Aliases from Agent
 
