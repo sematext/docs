@@ -12,5 +12,5 @@ other metric sources.
 - Discovers your [network topology](https://sematext.com/docs/monitoring/network-map) with the eBPF-driven ultra efficient observability tracers.
 - Collects a myriad of events such as Docker/Kubernetes life cycle events, package install/uninstall, OOMK or signal notifications among others.
 - [Inventory tracking](https://sematext.com/docs/monitoring/inventory) of your whole infrastructure including packages, server details, container metadata and more.
-- [Process monitoring](https://sematext.com/docs/monitoring/process) that helps out identifying top CPU or memory consumers.
+- [Process monitoring](https://sematext.com/docs/monitoring/processes) that helps out identifying top CPU or memory consumers.
 - Service discovery and automated monitoring for vanilla Docker and Kubernetes workloads.
