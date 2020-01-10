@@ -139,3 +139,29 @@ autocommits<br>**solr.indexing.commits.auto** <br>*(long counter)*              
 soft autocommits<br>**solr.indexing.commits.soft** <br>*(long counter)*                   |  count of soft auto commits
 index docs pending<br>**solr.indexing.docs.pending** <br>*(long gauge)* *(docs)*          |  count of pending docs
 autocommit max time<br>**solr.indexing.commits.auto.time.max** <br>*(long gauge)* *(ms)*  |  autocommit max time
+
+
+## FAQ
+
+** How do I enable JMX in Solr? **
+
+Add or uncomment the **<jmx/\>** directive in ```solrconfig.xml``` and
+restart Solr.  See <https://wiki.apache.org/solr/SolrJmx> for more
+info.
+
+** I don't see any data on Solr and JVM reports, what is the problem? **
+
+You should probably enable JMX in your Solr. Add or uncomment
+the **<jmx /\>** directive in ```solrconfig.xml``` and restart Solr.
+ See <https://wiki.apache.org/solr/SolrJmx> for more info.
+
+** I don't see any data only in Solr Components or Errors reports, what should I do? **
+
+Most likely you are using the standalone variant of Solr monitor. In
+that case, Sematext agent can't collect metrics which are available only
+when running in-process. If so, switch to in-process (javaagent) version
+of Sematext Solr agent.
+
+** Why don't I see Solr index file size metric? **
+
+Sematext Solr agent runs as 'spmmon' user.  Make sure this user has appropriate access permissions on Solr's index directories.  If you cannot give 'spmmon' user the read permissions you can switch to the in-process (javaagent) version of the Sematext Solr agent.
