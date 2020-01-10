@@ -163,4 +163,8 @@ the **<jmx /\>** directive in ```solrconfig.xml``` and restart Solr.
 Most likely you are using the standalone variant of Solr monitor. In
 that case, Sematext agent can't collect metrics which are available only
 when running in-process. If so, switch to in-process (javaagent) version
-of Sematext monitor.
+of Sematext Solr agent.
+
+** Why don't I see Solr index file size metric? **
+
+Sematext Solr agent runs as 'spmmon' user.  Make sure this user has appropriate access permissions on Solr's index directories.  If you cannot give 'spmmon' user the read permissions you can switch to the in-process (javaagent) version of the Sematext Solr agent.
