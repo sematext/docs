@@ -374,7 +374,7 @@ monitor's `javaagent` parameter.
 
 See [sharing FAQ](/faq/#sharing).
 
-<a name="what-is-the-difference-between-owner-admin-billing_admin-and-user-roles" href="#what-is-the-difference-between-owner-admin-billing_admin-and-user-roles" class="faq-questions">What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
+### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
 See info about user roles in [sharing FAQ](/faq/#sharing).
 
