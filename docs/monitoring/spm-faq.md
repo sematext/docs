@@ -374,7 +374,7 @@ monitor's `javaagent` parameter.
 
 See [sharing FAQ](/faq/#sharing).
 
-<a name="what-is-the-difference-between-owner-admin-billing_admin-and-user-roles" href="#what-is-the-difference-between-owner-admin-billing_admin-and-user-roles" class="faq-questions"><strong>What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
+<a name="what-is-the-difference-between-owner-admin-billing_admin-and-user-roles" href="#what-is-the-difference-between-owner-admin-billing_admin-and-user-roles" class="faq-questions">What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
 See info about user roles in [sharing FAQ](/faq/#sharing).
 
@@ -561,7 +561,7 @@ with curl is failing, add `-k` flag.
 
 Preparing diagnostics data differs depending on the setup you have.
 
-<b>Classic installation (rpm/deb packages)</b>
+**Classic installation (rpm/deb packages)**
 
 If you are having issues with Sematext Monitoring, you can
 create diagnostics package on affected machines where SPM client was
@@ -575,17 +575,17 @@ The resulting package will contain all relevant info needed for our
 investigation. You can send it, along with short description of your
 problem, to <support@sematext.com> or contact us in chat.
 
-<b>Container setups</b>
+**Container setups**
 
 At the moment there is no diagnostics script for container setups, so various resources have to be gathered manually.
 
 Two types of agents are running in container setups and spawn from the following images:
 
-  - <b>sematext/agent</b> (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
-  - <b>sematext/app-agent</b> (known as application agent or AA) - collects application metrics (e.g. metrics of your Elasticsearch or Kafka).
+  - **sematext/agent** (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
+  - **sematext/app-agent** (known as application agent or AA) - collects application metrics (e.g. metrics of your Elasticsearch or Kafka).
     For each monitored service instance one such application agent container will exist. These containers are automatically created and managed by STA.
 
-<b>sematext/agent</b>
+**sematext/agent**
 
 Docker:
 
@@ -607,7 +607,7 @@ This will produce multiple tgz files in /tmp dir, one for each running sematext/
 for pod in $(kubectl get --no-headers -o=custom-columns=NAME:.metadata.name pods --selector=app=sematext-agent);do kubectl logs $pod -c agent | gzip -9 > /tmp/st-agent-$pod.gz;done
 ```
 
-<b>sematext/app-agent</b>
+**sematext/app-agent**
 
 App Agent writes multiple logs to container file system. You can list all App Agent pods with:
 
