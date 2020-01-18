@@ -251,6 +251,8 @@ pages:
         - Changelog: logagent/changelog.md
         - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
+      - Mobile:
+        - Overview: mobile/index.md      
       - Sematext Docker Agent (Deprecated):
         - Overview: sematext-docker-agent/index.md
         - Installation: sematext-docker-agent/installation.md
