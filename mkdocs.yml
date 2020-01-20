@@ -81,6 +81,7 @@ pages:
       - Quick Start: dashboards/quick-start.md
       - Settings: dashboards/settings.md
       - Reports and Components: dashboards/reports-and-components.md
+      - Chart builder: dashboards/chart-builder.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
