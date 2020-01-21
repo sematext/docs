@@ -1,9 +1,9 @@
 title: Special Tags 
-description: The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
+description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tag, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
 
 Tags are sent by Sematext Agents as part of every every data point or log line and they are shown in UI as filters. 
 
-The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](./logs/special-fields/) for a list of additional special fields for Logs Apps. Monitoring Apps currently only use the common special tags described here.
+The following tags are treated as special in Sematext Cloud and cannot be used as custom tags, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](../logs/special-fields/) for a list of additional special fields for Logs Apps. Monitoring Apps currently only use the common special tags described here.
 
 ## Common Tags
 

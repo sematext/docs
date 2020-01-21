@@ -55,8 +55,8 @@ pages:
       - Processes: monitoring/processes.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
-      - Tags: monitoring/tag-support.md
-      - Tag Aliases: monitoring/tag-aliases-support.md
+      # - Tags: monitoring/tag-support.md
+      # - Tag Aliases: monitoring/tag-aliases-support.md
       # - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
@@ -258,12 +258,15 @@ pages:
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
         - FAQ: sematext-docker-agent/faq.md
+    - Tags:
+      - Overview: tags/index.md
+      - Custom Tags: tags/custom-tags.md
+      - Special Tags: tags/special-tags.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
       - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
       - FAQ: sematext-enterprise/faq.md
-    - Special Tags: special-tags.md
     - API: api/index.md
     - FAQ: faq.md
 
