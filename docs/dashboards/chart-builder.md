@@ -10,7 +10,14 @@ builder give you insight into spikes and trends, helping you to understand how y
 application behaves in real-time, and how it behaved in the past.
 
 You can put many series on a single chart. Each of them can be configured to have its own color and
-style (bar, line, area, points). Each series should be configured in a series
+style:
+
+* bar
+* line
+* area
+* points
+ 
+Each series should be configured in a series
 configuration panel. The panel where you change the settings of each series is split into a
 couple of sections.
 
@@ -158,7 +165,7 @@ have a dashboard with a couple charts which show aggregated metrics about disk u
 You want to troubleshoot a problem you've spotted on one of the charts that looks like a small jump in disk usage.
 To identify the root cause you can try to find the problem by grouping metrics by the `os.host`
 tag. A group variable can let you do that from the dashboard level without changing the
-definition of series on any charts. Now imagine that you grouped data by `os.host` but still don't
+definition of the series in any of the charts. Now imagine that you grouped data by  `os.host` but still don't
 see any obvious problem, because the disk usage jumped on all hosts. Then you may decide
 to also group by `os.disk` and by doing that you may realize that the problem was only
 `/dev/nvme0n2` disks.
