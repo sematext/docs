@@ -1,7 +1,7 @@
 title: Chart Builder
 description: Sematext Cloud exposes APIs and provides libraries that let you send custom metrics and turn them into custom charts and real-time visualizations
 
-Chart Builder enables you to create visualizations of the data sent to Sematext. It lets
+The Chart Builder enables you to create visualizations of the data sent to Sematext. It lets
 you build charts for metrics and logs. Charts created through the builder
 are added to your reports or dashboards. Configuring a chart requires specifying a list of
 series with metrics, optional filters, and groupings. Each series is translated to a query and sent to
