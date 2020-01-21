@@ -76,7 +76,9 @@ In addition to math operations, there are functions you can use. The list of fun
 
   __Example__:
 
-  ```ifNull(`os.disk.usage`, 0)```
+```
+ifNull(`os.disk.usage`, 0)
+```
 
 
 ##### coalesce
@@ -87,7 +89,9 @@ In addition to math operations, there are functions you can use. The list of fun
 
   __Usage__:
 
-  ```coalesce(x, y, ...)```
+```
+coalesce(x, y, ...)
+```
 
   __Example__:
   
@@ -101,17 +105,17 @@ In addition to math operations, there are functions you can use. The list of fun
 
 ## Filter by
 
-Filter section is used to specify a criteria that is used to find only matching datapoints.
+The Filter section is used to specify criteria that are used to find matching data points.
 Suppose you collect data from multiple hosts but you'd like to see a chart containing only
 2 of them (`host1` and `host2`). You have to pick the right filter
-in the [Filter by](#filterby) section. You chose tag name `os.host` and 2 tag values `host1` and `host2`.
+in the [Filter by](#filter-by) section. You chose tag name `os.host` and 2 tag values `host1` and `host2`.
 
 You can use [variables](#variables) as tag values so they can be configured dynamically
 from the report level.
 
 ## Group by
 
-In the [Group by](#gruopby) section you choose what data series to group on the graph. For example, if you
+In the [Group by](#gruop-by) section you choose what data series to group on the graph. For example, if you
 choose the `os.host` tag and aggregation in `Aggregation` field you choose `all separately`
 the chart will show a data series for each host separately. Each data series is made up of
 the selected metric on a particular host.
@@ -153,15 +157,15 @@ change.
 
 Consider a case where you're troubleshooting a system and you realized that one of the
 hosts has problems. You have a dashboard which contains aggregate information for all hosts. You can
-of course reconfigure all the components from the dashboard so they show only interesting host data.
+of course reconfigure all the components on the dashboard so they only show the host data you're interested in.
 As you might expect this is not a very efficient way of troubleshooting. Here is where Variables
-become a very useful feature. You can just create a tag variable which points to field `os.host`.
-Later this variable should be added to the charts which should listen for variable changes.
-A variable is automatically added on top of the dashboard. When you change the tag values in the
-variable charts will automatically reload the content to match the filter.
+become a very useful feature. You can create a tag variable that points to the `os.host` field.
+This variable should later be added to the charts that listen for variable changes.
+A variable is automatically added on top of the dashboard. A variable becomes a drop-down component
+from which you can select tag values and charts automatically react on the change.
 
-Variables can be used not only in `Filter by` section but also in group by section. Suppose you
-have a dashboard with a couple charts which show aggregated metrics about disk usage on many hosts.
+Variables can be used both in the [Filter by](#filter-by) section and in the [Group by](#group-by) section. Suppose you
+have a dashboard with charts that show aggregated metrics about disk usage on several hosts.
 You want to troubleshoot a problem you've spotted on one of the charts that looks like a small jump in disk usage.
 To identify the root cause you can try to find the problem by grouping metrics by the `os.host`
 tag. A group variable can let you do that from the dashboard level without changing the
