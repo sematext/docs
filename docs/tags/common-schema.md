@@ -3,7 +3,28 @@ description: The following tags are treated as special in Sematext Cloud and can
 
 Tags are sent by the Sematext Agent as part of every every data point or log line and they are shown in UI as filters. 
 
-The following tags are treated as special in Sematext Cloud and cannot be used as custom tags, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](../logs/special-fields/) for a list of additional special fields for Logs Apps. Monitoring Apps currently only use the common special tags described here.
+The following tags are treated as special in Sematext Cloud and cannot be used as custom tags, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
+
+## Logs Tags
+
+Refer to this list of default fields for Logs Apps. The tags below are applicable to all logs types:
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| host | A single-valued field and should contain the ID, typically a hostname, of the device or server sending logs. |
+| source | A single-valued field and should contain the ID or descriptor of where the data is coming from. For example, this could be a file name or even a full path to a filename, or the name of the application or process |
+| facility | A single-valued field used by syslog to indicate the [facility level](https://en.wikipedia.org/wiki/Syslog#Facility_levels). Sematext stores the keyword values of these levels (such as *user* or *auth*). |
+| severity | A single-valued field and should contain the log level, such as *error* or *info*. |
+| syslog-tag | A single-valued field used by syslog to indicate the name and the PID of the application generating the event (for example, **httpd\[215\]:**). |
+| tags | A multi-valued array field that can contain zero or more tags. Tags can contain multiple tokens separated by space. |
+| message | A string field that can contain any sort of text (usually the original log line or some other free text). |
+| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](supported-date-formats). |
+| error.id | A reserved field for errors |
+| error.message | A reserved field for errors |
+| error.type | A reserved field for errors |
+
+All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
+
 
 ## Common Tags
 
