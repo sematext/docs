@@ -171,6 +171,8 @@ pages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
         # - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
+        - Autodisco:
+          - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md 
       - Infra & App Agent:
         - Overview:  agents/spm-client.md
         - Embedded Mode: agents/spm-monitor-javaagent.md
