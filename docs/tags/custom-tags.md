@@ -1,13 +1,13 @@
 title: Custom Tags 
 description: A Tag is an attribute of a data point (or metric) that could be used for grouping and filtering. The Sematext Agents support configuring custom tags. They can be specified in the Agent's configuration files. For example, tags like `env:prod` can be configured on all production servers.
 
-The Sematext Agents support configuring custom tags. They can be specified in the Agent's configuration files. For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tags are optional and can be changed at any time. The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
+The Sematext Agent support configuring custom tags. They can be specified in the Agent's configuration files. For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tags are optional and can be changed at any time. The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
 
 Below are the steps to configure custom tags in Sematext Agents.
 
 ## Sematext Agent
 
-To add tags in the Sematext Agent, edit the property below in the Infra Agent configuration file:
+To add tags to the Sematext Agent, edit the property below in the Sematext Agent configuration file:
 `/opt/spm/properties/st-agent.yml` 
 
 ```yaml
@@ -27,7 +27,7 @@ SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 
 ### Defining Tags in Integration YAMLs
 
-In the App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. Tags can be configured in the `tag` section of the App Agent integration YAMLs. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
+In the Sematext App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. Tags can be configured in the `tag` section of the App Agent integration YAMLs. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
 integrations.
 
 For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.

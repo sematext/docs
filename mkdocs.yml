@@ -55,8 +55,7 @@ pages:
       - Processes: monitoring/processes.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
-      # - Tags: monitoring/tag-support.md
-      # - Tag Aliases: monitoring/tag-aliases-support.md
+      - Tags: monitoring/tags.md
       # - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
@@ -261,7 +260,7 @@ pages:
     - Tags:
       - Overview: tags/index.md
       - Custom Tags: tags/custom-tags.md
-      - Special Tags: tags/special-tags.md
+      - Common Schema: tags/common-schema.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md

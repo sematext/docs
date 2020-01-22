@@ -1,17 +1,7 @@
 title: Tags 
 description: A Tag is an attribute of a data point (or metric) that could be used for grouping and filtering.
 
-Tags are sent by Sematext Agents as part of every data point and they are shown in UI as filters. 
-
-For example, as part of Docker container metrics, the agent sends hostname on which the container is running, container identifier, container name, container image as tags which appear as filters in UI. User can then group or filter the container metrics using these tags.
-
-At the moment all Common [Special Tags](../special-tags) apply to Monitoring Apps.
-
-If you choose to use 3rd party Agents, then you need to ensure the tag names match those from our Common Special Tags.
-
-## Automatic Tags collected from Agents
-
-The Sematext Agent automatically collects the following tags and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, custom configured tags.
+The [Sematext Agent](../agents/sematext-agent) automatically collects the following tags and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, custom configured tags.
 
 ### Cloud Metadata
 
@@ -43,7 +33,7 @@ restart spm-monitor using `sudo service spm-monitor restart`.
 
 ### Machine Metadata
 
-Following tags are collected from the host the agent is running on. They're mapped to the `os.host` tag.
+Following tags are collected from the host the [Sematext Agent](../agents/sematext-agent) is running on. They're mapped to the `os.host` tag.
 
 | Name  | Tag Name  | Description |
 |:--|:--|:--|
