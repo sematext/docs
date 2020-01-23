@@ -106,8 +106,20 @@ Below are Serverless related tags sent as part of metrics/logs in the Serverless
 |:--|:--|:--
 | function.name | Name of the Lamba function | 
 | function.version | Version of the Lamda function | 
-| function.request.id | Identifier of the invocation request | 
+| function.request.id | Identifier of the invocation request |
 
+## Synthetic Monitoring Tags
+
+Below are tags sent as part of metrics in Sematext Synthetic Monitoring.
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| synthetics.monitor.id | Identifier of the Monitor | 
+| synthetics.run.id | Identifier of the Monitor run | 
+| synthetics.location.id | Identifier of the Monitor location |
+| synthetics.content.type | Type of the resource content |
+| synthetics.domain | The resource URL of the domain  |
+| synthetics.response.code | The resource HTTP response status code  |
 
 ## Other Special Tags
 
