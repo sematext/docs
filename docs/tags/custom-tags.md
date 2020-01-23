@@ -27,12 +27,11 @@ SPM_MONITOR_TAGS="env:dev, project:projectName, role:webfrontend"
 
 ### Defining Tags in Integration YAMLs
 
-In the Sematext App Agent, tags are extracted automatically from metric data sources & values based on YAML configuration. Tags can be configured in the `tag` section of the App Agent integration YAMLs. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in
-integrations.
+In the Sematext App Agent, tags are extracted automatically from metric data sources & values defined in the `tags` section of App Agent's YAML configuration. The maximum allowed length for the tag name is 200 characters. The tag name should match this regex: <nobr>`[a-zA-Z0-9_\-.:(\\ |,=)]+`</nobr>. Examples of these tags are hostname, port, webapp name, jvm name, disk, elasticsearch index, etc. You don't need to adjust these tags for built-in integrations.
 
-For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are extracted as tags from JMX ObjectName.
+For example, refer to [Tomcat web module YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/tomcat/jmx-web-module.yml) where the hostname and webapp name are automatically extracted as tags from JMX ObjectName.
 
-Some of the tags derived from a given metric source can be omitted. In such cases, the data point will be aggregated on the omitted tag. By default, the aggregate function is used based on metric type (AVG for gauges and SUM for counters). This could be overridden using `agentAggregation` property of metric. Refer to [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) where `shard` tag is omitted.
+Some of the tags derived from a given metric source can be omitted. In such cases, the data point will be aggregated on the omitted tag. For example, in [Elasticsearch index YAML definition](https://github.com/sematext/sematext-agent-integrations/blob/master/elasticsearch/json-index-0.yml) the `shard` tag is omitted.  By default, the aggregate function used is based on the metric type (`avg` for gauges and `sum` for counters). This could be overridden using `agentAggregation` property of metric. 
 
 ## Sematext Node.js Agent
 
