@@ -1,7 +1,7 @@
 title: Tags 
 description: A Tag is an attribute of a data point (or metric) that could be used for grouping and filtering.
 
-The [Sematext Agent](../agents/sematext-agent) automatically collects the following tags and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, custom configured tags.
+The [Sematext Agent](../agents/sematext-agent) automatically collects the following tags and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, [custom tags](custom-tags).
 
 ### Cloud Metadata
 
