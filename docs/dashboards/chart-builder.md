@@ -132,11 +132,11 @@ aggregated into a single data series. You can pick one of `avg`, `sum`, `min`, `
 Data points sent to Sematext Cloud have a time label. If a metric is updated every 10 seconds, and you are
 looking at a 24-hour time range, you need 14,400 points to display all data points.
 Displaying so many data points on the chart would make it unreadable and would negatively impact
-yyour web browser's performance. If we build time buckets each containing 600 data points
+your web browser's performance. If we build time buckets each containing 600 data points
 we will have 24 data points to display on the chart, one data point for each hour. The Rollup function
-conrols how time buckets are built, meaning what aggregation is performed.
+controls how time buckets are built, meaning what aggregation is performed.
 
-Each of the predefined metrics has its own default rollup default function defined depending on the type of
+Each of the predefined metrics has its own default rollup function defined depending on the type of
 the metric. All gauge metrics use the `avg` rollup function and all counter metrics
 use `sum` rollup function. In some cases it makes sense to customize the setting.
 
