@@ -1,5 +1,7 @@
 title: Removing stale resources
 
+description:  Removing AA containers/networks after uninstalling the agent
+
 In Kubernetes deployments, Sematext Agent will make sure to remove any lingering AA containers once the DaemonSet supervising Sematext Agent pods is deleted. Nevertheless, in vanilla Docker or Swarm setups you have to do the cleanup manually after uninstalling the agent.
 
 ### Removing AA containers
