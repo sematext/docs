@@ -1,9 +1,30 @@
-title: Special Tags 
-description: The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
+title: Common Schema 
+description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tag, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
 
-Tags are sent by Sematext Agents as part of every every data point or log line and they are shown in UI as filters. 
+Tags are sent by the Sematext Agent as part of every every data point or log line and they are shown in UI as filters. 
 
-The following tags are treated as special in Sematext Cloud and cannot be used in tag aliases, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps. Refer to [Special Logs Fields](./logs/special-fields/) for a list of additional special fields for Logs Apps. Monitoring Apps currently only use the common special tags described here.
+The following tags are treated as special in Sematext Cloud and cannot be used as custom tags, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
+
+## Logs Tags
+
+Refer to this list of default fields for Logs Apps. The tags below are applicable to all logs types:
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| host | A single-valued field and should contain the ID, typically a hostname, of the device or server sending logs. |
+| source | A single-valued field and should contain the ID or descriptor of where the data is coming from. For example, this could be a file name or even a full path to a filename, or the name of the application or process |
+| facility | A single-valued field used by syslog to indicate the [facility level](https://en.wikipedia.org/wiki/Syslog#Facility_levels). Sematext stores the keyword values of these levels (such as *user* or *auth*). |
+| severity | A single-valued field and should contain the log level, such as *error* or *info*. |
+| syslog-tag | A single-valued field used by syslog to indicate the name and the PID of the application generating the event (for example, **httpd\[215\]:**). |
+| tags | A multi-valued array field that can contain zero or more tags. Tags can contain multiple tokens separated by space. |
+| message | A string field that can contain any sort of text (usually the original log line or some other free text). |
+| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](supported-date-formats). |
+| error.id | A reserved field for errors |
+| error.message | A reserved field for errors |
+| error.type | A reserved field for errors |
+
+All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
+
 
 ## Common Tags
 
@@ -85,8 +106,20 @@ Below are Serverless related tags sent as part of metrics/logs in the Serverless
 |:--|:--|:--
 | function.name | Name of the Lamba function | 
 | function.version | Version of the Lamda function | 
-| function.request.id | Identifier of the invocation request | 
+| function.request.id | Identifier of the invocation request |
 
+## Synthetic Monitoring Tags
+
+Below are tags sent as part of metrics in Sematext Synthetic Monitoring.
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| synthetics.monitor.id | Identifier of the Monitor | 
+| synthetics.run.id | Identifier of the Monitor run | 
+| synthetics.location.id | Identifier of the Monitor location |
+| synthetics.content.type | Type of the resource content |
+| synthetics.domain | The resource URL of the domain  |
+| synthetics.response.code | The resource HTTP response status code  |
 
 ## Other Special Tags
 
