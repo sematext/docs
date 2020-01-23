@@ -38,9 +38,9 @@ pages:
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
         - Kibana: logs/kibana.md
+      - Fields: logs/fields.md
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
-      - Special Fields: logs/special-fields.md
       - Changelog: logs/changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
@@ -55,9 +55,8 @@ pages:
       - Processes: monitoring/processes.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
-      - Tags: monitoring/tag-support.md
-      - Tag Aliases: monitoring/tag-aliases-support.md
-      # - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
+      - Tags: monitoring/tags.md
+      - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
     - Alerts:
@@ -170,9 +169,9 @@ pages:
         - Packages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
-        # - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
         - Auto Discovery:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md 
+          - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
       - Infra & App Agent:
         - Overview:  agents/spm-client.md
         - Embedded Mode: agents/spm-monitor-javaagent.md
@@ -261,12 +260,15 @@ pages:
         - Configuration: sematext-docker-agent/configuration.md
         - Troubleshooting: sematext-docker-agent/troubleshooting.md
         - FAQ: sematext-docker-agent/faq.md
+    - Tags:
+      - Overview: tags/index.md
+      - Custom Tags: tags/custom-tags.md
+      - Common Schema: tags/common-schema.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
       - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
       - FAQ: sematext-enterprise/faq.md
-    - Special Tags: special-tags.md
     - API: api/index.md
     - FAQ: faq.md
 
