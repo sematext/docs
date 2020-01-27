@@ -1,5 +1,5 @@
 title: Sematext Infra & App Agent
-description: Sematext Infra & App Agent (spm-client) is used for IT infrastructure monitoring, collecting OS & Network metrics, application metrics from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
+description: Sematext Infra & App Agent (sematext-agent) is used for IT infrastructure monitoring, collecting OS & Network metrics, application metrics from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
 
 The App Agent is open-source, written in Java (but not limited to
 monitoring Java!), with a number of built-in integrations available
@@ -32,7 +32,7 @@ you find bottlenecks in your code.
 
 ## Installation
 
-The Sematext agent is available as a package (DEB, RPM, etc.) called spm-client:
+The Sematext agent is available as a package (DEB, RPM, etc.) called sematext-agent:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
@@ -49,14 +49,14 @@ The Sematext agent is available as a package (DEB, RPM, etc.) called spm-client:
    <pre>
 sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
+sudo yum install sematext-agent
    </pre>
  </div>
  <div class="mdl-tabs__panel" id="centos">
    <pre>
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
+sudo yum install sematext-agent
    </pre>
  </div>
  <div class="mdl-tabs__panel" id="debian">
@@ -64,7 +64,7 @@ sudo yum install spm-client
 echo "deb http://pub-repo.sematext.com/debian sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
 wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install spm-client
+sudo apt-get install sematext-agent
    </pre>
  </div>
 
@@ -73,7 +73,7 @@ sudo apt-get install spm-client
 echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
 wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install spm-client
+sudo apt-get install sematext-agent
    </pre>
  </div>
 
@@ -81,7 +81,7 @@ sudo apt-get install spm-client
    <pre>
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
+sudo yum install sematext-agent
    </pre>
  </div>
 
@@ -89,7 +89,7 @@ sudo yum install spm-client
    <pre>
 sudo wget https://pub-repo.sematext.com/fedora/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
+sudo yum install sematext-agent
    </pre>
  </div>
 
@@ -97,7 +97,7 @@ sudo yum install spm-client
    <pre>
 sudo zypper ar -r https://pub-repo.sematext.com/suse/11/sematext.repo
 sudo zypper up
-sudo zypper in spm-client
+sudo zypper in sematext-agent
    </pre>
  </div>
 </div>

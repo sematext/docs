@@ -20,9 +20,9 @@ There are no limits on the number of servers, nodes, or
 
 See [integrations](/integration).
 
-### What are the various configuration files present in spm-client package?
+### What are the various configuration files present in sematext-agent package?
 
-The spm-client package contains Infra and App Agent. The configuration files of these agents are:
+The sematext-agent package contains Infra and App Agent. The configuration files of these agents are:
 
 1. `/opt/spm/properties/st-agent.yml` - Contains Infra Agent related configurations.
 2. `/opt/spm/spm-monitor/conf/spm-monitor-config-<YOUR_TOKEN>-<JVM_NAME>.properties` - One file for each of the App Agent setup on this host.
@@ -160,9 +160,9 @@ machine).
 
 ### Can I use Sematext to monitor my service which runs on Windows or Mac?
 
-SPM client installers currently exist only for Linux, however
+Sematext Agent installers currently exist only for Linux, however
 there is still a way to monitor your service. If you are OK with
-installing SPM client on separate linux box, and pointing it (more about
+installing Sematext Agent on separate linux box, and pointing it (more about
 that further below) to your service (which should be monitored) running
 on Windows or Mac, you can use Sematext to monitor all non-OS related
 metrics. You can stop and disable OS metric collector using:
@@ -187,7 +187,7 @@ services, you will have an option to choose between using
 workaround described here requires the use of standalone monitor
 variant. Here's what you'd need to do to see your metrics in SPM:
 
-1.  Install spm-client on any Linux box (you can use this box for
+1.  Install spm- on any Linux box (you can use this box for
     anything else, it is needed here just to run a process which
     collects metrics and sends them to Sematext). Installation
     instructions are accessible
@@ -259,7 +259,7 @@ SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:remote+http://localhost
 
 At this point the metrics will start appearing in charts. If they don't,
 run the diagnostics script to get fresh output of errors:
-    ```sudo bash /opt/spm/bin/spm-client-diagnostics.sh``` 
+    ```sudo bash /opt/spm/bin/spm-client-diagnostics.sh```
 
 If you see errors similar to:
 
@@ -310,7 +310,7 @@ this is not needed, but one needs to add the SPM agent to the Java
 command-line and restart the process of the monitored application. When
 running Standalone monitor one can update the SPM monitor without
 restarting the Java process being monitored, while a restart is needed
-when the Embedded SPM monitor is being used. To be able to [trace transactions](/tracing) 
+when the Embedded SPM monitor is being used. To be able to [trace transactions](/tracing)
 or [database operations](/tracing/database-operations) you need to use the
 Embedded SPM monitor.
 
@@ -318,16 +318,16 @@ Embedded SPM monitor.
 
 Yes, see [Transaction Tracing](/tracing).
 
-### Can I move SPM client to a different directory?
+### Can I move Sematext Agent to a different directory?
 
 Yes. Soft move script moves all SPM files/directories to a new
 location, but symlinks `/opt/spm` to the new location. Use this script if
 you are OK with having `/opt/spm` symlinked. This script is recommended
-for most situations since it keeps your SPM client installation
-completely in line with standard setup (all standard SPM client commands
+for most situations since it keeps your Sematext Agent installation
+completely in line with standard setup (all standard Sematext Agent commands
 and arguments are still valid).
 
-It accepts 1 parameter: new directory where SPM client should be moved
+It accepts 1 parameter: new directory where Sematext Agent should be moved
 to (if such directory doesn't exist, it will be created)
 
 ``` bash
@@ -349,7 +349,7 @@ one parameter, the token of the Monitoring App you want to uninstall):
 sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-111111111111
 ```
 
-### Can I disable SPM agent without uninstalling the SPM client?
+### Can I disable SPM agent without uninstalling the Sematext Agent?
 
 Yes, just find its .properties file in
 `/opt/spm/spm-monitor/conf` and add to it:
@@ -380,7 +380,7 @@ See info about user roles in [sharing FAQ](/faq/#sharing).
 
 ## Agent Automation
 
-### Is there an Ansible Playbook for the SPM client?
+### Is there an Ansible Playbook for the Sematext Agent?
 
 Yes, see the
 [Install](https://galaxy.ansible.com/sematext/spm-monitor-install/)
@@ -388,21 +388,21 @@ and
 [Configure](https://galaxy.ansible.com/sematext/spm-monitor-config/)
 playbooks, with examples.
 
-### Is there a Puppet Module for the SPM client?
+### Is there a Puppet Module for the Sematext Agent?
 
 Yes, see the Install and
 Configure [module](https://forge.puppet.com/sematext/spm_monitor),
 with examples.
 
-### Is there a Chef Recipe for the SPM client?
+### Is there a Chef Recipe for the Sematext Agent?
 
-Yes, see [SPM client Chef Recipe](chef-recipe) example.
+Yes, see [Sematext Agent Chef Recipe](chef-recipe) example.
 
 ## Agent Updating
 
-### How do I upgrade the SPM client?
+### How do I upgrade the Sematext Agent?
 
-If you have previously installed the SPM client package (RPM,
+If you have previously installed the Sematext Agent package (RPM,
 Deb, etc.), simply upgrade via apt-get (Debian, Ubuntu, etc.), or yum
 (RedHat, CentOS, etc.), or zypper (SuSE).
 
@@ -411,8 +411,8 @@ Debian/Ubuntu:
 ``` bash
 # NOTE: this will update the sematext gpg key
 wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
-# NOTE: this does not update the whole server, just spm-client
-sudo apt-get update && sudo apt-get install spm-client
+# NOTE: this does not update the whole server, just sematext-agent
+sudo apt-get update && sudo apt-get install sematext-agent
 ```
 
 RedHat/CentOS/...
@@ -420,14 +420,14 @@ RedHat/CentOS/...
 ``` bash
 # NOTE: this will update sematext repo file
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
-# NOTE: this does not update the whole server, just spm-client
-sudo yum clean all && sudo yum update spm-client
+# NOTE: this does not update the whole server, just sematext-agent
+sudo yum clean all && sudo yum update sematext-agent
 ```
 
 SuSE:
 
 ``` bash
-sudo zypper up spm-client
+sudo zypper up sematext-agent
 ```
 
 After that is done, also do:
@@ -440,7 +440,7 @@ After that is done, also do:
 
 **OR**
 
-  - if you are using standalone SPM monitor, restart it with:  
+  - if you are using standalone SPM monitor, restart it with:
 
 ``` bash
 sudo service spm-monitor restart
@@ -454,13 +454,13 @@ Actions \> Install Monitor for app you have installed)
 
 ## Agent Uninstalling
 
-### How do I uninstall the SPM client?
+### How do I uninstall the Sematext Agent?
 
 On servers where you want to uninstall the client do the
 following:
 
-1.  remove spm-client, for instance: `sudo apt-get purge spm-client`  
-    OR   `sudo yum remove spm-client`
+1.  remove sematext-agent, for instance: `sudo apt-get purge sematext-agent`
+    OR   `sudo yum remove sematext-agent`
 2.  after that, ensure there are no old logs, configs, etc. by running
     the following command: `sudo rm -R /opt/spm`
 3.  if you used Embedded version of monitor, remove
@@ -503,7 +503,7 @@ Available levels are: FATAL, ERROR, WARN, INFO, DEBUG, TRACE
 For Infra Agent, edit `logging.level` property in `/opt/spm/properties/st-agent.yml` file.
 Available levels are: panic, fatal, error, warn, info, debug
 
-### Can I install SPM client on servers that are behind a proxy?
+### Can I install Sematext Agent on servers that are behind a proxy?
 
 Yes. If you are installing the RPM, add this to `/etc/yum.conf`:
 
@@ -519,7 +519,7 @@ If you are using apt-get, set the http_proxy environmental variable:
 export http_proxy=http://username:password@yourproxyaddress:proxyport
 ```
 
-### Can SPM client send data out from servers that are behind a proxy?
+### Can Sematext Agent send data out from servers that are behind a proxy?
 
 Yes. You can update the proxy settings using the following command:
 
@@ -535,14 +535,14 @@ Yes. By default the region is set to US. You can change it to EU using:
 sudo bash /opt/spm/bin/setup-env --region eu
 ```
 
-### When installing SPM client, I see "The certificate of pub-repo.sematext.com is not trusted" or a similar error. How can I avoid it?
+### When installing Sematext Agent, I see "The certificate of pub-repo.sematext.com is not trusted" or a similar error. How can I avoid it?
 
 There can be multiple reasons for this, most likely:
 
   - system time on your machine is not correct and adjusting it should
     fix the problem
-  - you are installing SPM client as root user - in some cases that can
-    cause this error and installing SPM client as a different user may
+  - you are installing Sematext Agent as root user - in some cases that can
+    cause this error and installing Sematext Agent as a different user may
     help
   - you are missing the ca-certificates package.  Use one of the
     following commands to install it:
@@ -564,7 +564,7 @@ Preparing diagnostics data differs depending on the setup you have.
 **Classic installation (rpm/deb packages)**
 
 If you are having issues with Sematext Monitoring, you can
-create diagnostics package on affected machines where SPM client was
+create diagnostics package on affected machines where Sematext Agent was
 installed by running:
 
 ``` bash
@@ -618,7 +618,7 @@ You will notice that each App Agent container/pod name matches the name of the m
 
   - its config file from /opt/spm/spm-monitor/conf dir
   - its spm-monitor and spm-monitor-stats logs from `/opt/spm/spm-monitor/logs/applications/YOUR_TOKEN/MONITORED_SERVICE_POD_NAME` dir
- 
+
 We will need all these files for investigation. You can send them, along with short description of your
 problem, to <support@sematext.com> or contact us in chat.
 
@@ -650,7 +650,7 @@ us in chat.
 ### I am trying to monitor Elasticsearch. My HTTP Metrics charts are empty?
 
 If other ES charts are showing data, it is most likely
-that HTTP metrics aren't enabled in `elasticsearch.yaml`. 
+that HTTP metrics aren't enabled in `elasticsearch.yaml`.
 Setting `http.enabled: true` will fix this issue.
 If this doesn't fix it, please send us an email to
 <support@sematext.com> or contact
@@ -658,8 +658,8 @@ us in chat.
 
 ### I am trying to monitor Elasticsearch. Node stats are not tracked over time?
 
-Make sure to set the `node.name` value in in `elasticsearch.yaml`. 
-Elasticsearch will otherwise generate random a node name each time 
+Make sure to set the `node.name` value in in `elasticsearch.yaml`.
+Elasticsearch will otherwise generate random a node name each time
 an instance starts, making tracking node stats over time impossible.
 If this doesn't fix your issue, please send us an email to
 <support@sematext.com> or contact
@@ -728,10 +728,10 @@ Here are a few things to check and do:
     monitor processes (there should be more than one of them)
 
 2.  Check if system time is correct. If not, you should adjust the time,
-    restart the SPM monitor with:  
-    
+    restart the SPM monitor with:
+
         sudo service spm-monitor restart
-    
+
     and restart any other Embedded App Agent based SPM monitors by
     restarting your server which is being monitored.
 
@@ -739,7 +739,7 @@ Here are a few things to check and do:
 
 4.  Make sure disks are not full
 
-5.  Make sure user spmmon can have more than 1024 files open:  
+5.  Make sure user spmmon can have more than 1024 files open:
 
         sudo vim /etc/security/limits.conf
         spmmon     -    nofile    32000
@@ -748,7 +748,7 @@ Here are a few things to check and do:
 
         sudo vim /etc/pam.d/su
         session    required   pam_limits.so
-        
+
     Restart SPM monitor after the above changes.
 
 6.  Check if hostname of your server is defined in `/etc/hosts`
@@ -772,7 +772,7 @@ After 3 PM this server should disappear from the Hosts filter.
 
 ### I rebooted my server and now I don't see any data in my graphs. What should I check?
 
-Here are a few things to check and do:  
+Here are a few things to check and do:
 
 1.  Make sure SPM monitor is running: sudo service spm-monitor restart
 2.  Make sure disk is not full: `df -h`
@@ -802,11 +802,11 @@ Yes, you can edit the `/opt/spm/properties/java.properties` file
 where you can specify the location of Java you want the SPM monitor to
 use.
 
-### Can SPM client use HTTP instead of HTTPS to send metrics from my servers?
+### Can Sematext Agent use HTTP instead of HTTPS to send metrics from my servers?
 
 Yes, although we recommend using HTTPS.
 
-Sematext agents by default uses HTTPS to send metrics data to Sematext. If you
+Sematext Agent by default uses HTTPS to send metrics data to Sematext. If you
 prefer to use HTTP instead (for example, if you are running Sematext
 Enterprise on premises or if you don't need metric data to be encrypted
 when being sent to Sematext over the Internet), you can adjust that in
@@ -838,7 +838,7 @@ Yes, you can obfuscate or alias hostnames. This lets you:
     cryptic (e.g. have Sematext show "my-solr-host1" instead of
     "ip-12-123-321-123")
 
-To achieve this, after SPM client is installed, open
+To achieve this, after Sematext Agent is installed, open
 `/opt/spm/properties/agent.properties` file and just add desired
 hostname to the value of property `hostname_alias`, e.g.
 
@@ -858,7 +858,7 @@ Note:
   - old data will still be seen in Sematext under the old hostname, while new
     data (after hostname change) will be displayed under the new
     hostname
-  - if you are installing SPM client for the first time
+  - if you are installing Sematext Agent for the first time
     and you want to be 100% sure its original hostname never leaves your
     network, define your hostname alias in `agent.properties`
     file immediately after you complete the "Agent Installation" step

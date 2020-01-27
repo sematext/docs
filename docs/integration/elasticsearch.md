@@ -16,7 +16,7 @@ For example, on Ubuntu, add Sematext Linux packages with the following command:
     echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
     wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
     sudo apt-get update
-    sudo apt-get install spm-client
+    sudo apt-get install sematext-agent
 
 Then setup Elasticsearch monitoring by providing Elasticsearch server connection details:
 
@@ -269,7 +269,7 @@ and change the SPM\_MONITOR\_ES\_NODE\_HOSTPORT property from the
 default localhost:9200 value to use an alternative hostname:port.  After
 that restart SPM monitor (if you are running a standalone version) or
 Elasticsearch process(es) with embedded SPM
-monitor. 
+monitor.
 
 ** My Elasticsearch is protected by basic HTTP authentication, can I use SPM  **
 

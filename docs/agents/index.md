@@ -3,12 +3,12 @@ description: Sematext has several different Agents available for you to monitor 
 
 To start monitoring your infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
-  
-  - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing 
-    fast Go-based Monitoring Agent with a tiny footprint for both 
+
+  - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing
+    fast Go-based Monitoring Agent with a tiny footprint for both
     infrastructure and containers.
 
-  - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
+  - [Sematext Infra & App Agent](sematext-agent) (aka SPM Client or SPM
     Monitor). The Infra Agent collects OS & Network metrics.
     The App Agent collects application metrics. The App Agent
     can run in [embedded](spm-monitor-javaagent)

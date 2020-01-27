@@ -15,7 +15,7 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Infra Agent](../agents/sematext-agent/) & [App Agent](../agents/spm-client/) 
+- [Sematext Infra Agent](../agents/sematext-agent/) & [App Agent](../agents/spm-client/)
 The Infra Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more.  The App Agent collects metrics for various [integrations](/integration). The App Agent
 can run in [embedded](../agents/spm-monitor-javaagent)
 (aka Java agent-based, aka in-process) or
@@ -103,7 +103,7 @@ Navigate to [Integrations Overview](https://apps.sematext.com/ui/integrations). 
 
 Hover over any integration card and click to create respective app or a webhook. Initially, there will be no app status and count tag displayed in the left bottom corner of the card, but once related app(s) have been created tag will display the number of apps, and grey and green tag colour are used to show if apps are not or are receiving data respectively.
 
-Image below illustrates an integration card being hovered over and the app status with the count tag displayed with one example app created.  
+Image below illustrates an integration card being hovered over and the app status with the count tag displayed with one example app created.
 
 ![Sematext Cloud - Create New App](https://sematext.com/docs/images/guide/integrations/add-new-logging-app.png "Sematext Cloud - Create New App")
 
@@ -117,11 +117,11 @@ In other words, as monitoring app is being created you can create a logging app 
 
 ### Webhook Integration
 
-When an integration app is first created our IT system monitoring platform creates several app specific alerts. User account email is used as a default notification mechanism to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [webhook](/guide/integrations-guide/#webhooks) integration. 
+When an integration app is first created our IT system monitoring platform creates several app specific alerts. User account email is used as a default notification mechanism to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [webhook](/guide/integrations-guide/#webhooks) integration.
 
 You will first need to create that third party service and obtain required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. Image below shows a third party notification webhook integration being created, Slack in this example.
 
-![Sematext Cloud - Create New Alert Notification Webhook](https://sematext.com/docs/images/guide/integrations/create-new-webhook-integration.png " Sematext Cloud - Create New Alert Notification Webhook") 
+![Sematext Cloud - Create New Alert Notification Webhook](https://sematext.com/docs/images/guide/integrations/create-new-webhook-integration.png " Sematext Cloud - Create New Alert Notification Webhook")
 
 
 ### App Table View
@@ -196,12 +196,12 @@ You need to add the Sematext repository and install Sematext Monitoring Agent. I
 
 #### Agent Setup
 
-Sematext Monitoring Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes: 
+Sematext Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes:
 
 - [In-process as a javaagent](/agents/spm-monitor-javaagent/)
-- [Standalone as a separate process](/agents/spm-monitor-standalone/) 
+- [Standalone as a separate process](/agents/spm-monitor-standalone/)
 
-For more information check Java agent [overview page](/agents/spm-client/) 
+For more information check Java agent [overview page](/agents/spm-client/)
 
 You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 
