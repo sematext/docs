@@ -8,6 +8,7 @@ Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, ne
 
 - Provides full visibility over the basic operating system metrics on your hosts. For example,  you can easily spot CPU spikes and correlate them with
 other metric sources.
+- [Application monitoring](https://sematext.com/docs/agents/sematext-agent/app-agent) by collecting application metrics from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling using Java based App Agents.
 - Agnostic and unified container monitoring to gain deep visibility into your containerized deployments and orchestration platforms.
 - Discovers your [network topology](https://sematext.com/docs/monitoring/network-map) with the eBPF-driven ultra efficient observability tracers.
 - Collects a myriad of events such as Docker/Kubernetes life cycle events, package install/uninstall, OOMK or signal notifications among others.
