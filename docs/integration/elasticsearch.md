@@ -261,13 +261,13 @@ node to whose elasticsearch.yml you add this.
 http.host: "127.0.0.1"
 ```
 
-** Can I point SPM monitor to a non-localhost Elasticsearch node **
+** Can I point Sematext Agent to a non-localhost Elasticsearch node **
 
 Yes.  Adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
 and change the SPM\_MONITOR\_ES\_NODE\_HOSTPORT property from the
 default localhost:9200 value to use an alternative hostname:port.  After
-that restart SPM monitor (if you are running a standalone version) or
+that restart Sematext Agent (if you are running a standalone version) or
 Elasticsearch process(es) with embedded SPM
 monitor.
 
@@ -283,16 +283,16 @@ SPM_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
 SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```
 
-Restart your SPM monitor after this change (either with **sudo service
+Restart your Sematext Agent after this change (either with **sudo service
 spm-monitor restart** in case of standalone monitor or by restarting
 Elasticsearch node if you are using in-process
 javaagent).
 
-** I am using SPM for Elasticsearch monitor and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
+** I am using Sematext Agent and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
 
-SPM for Elasticsearch monitor collects Index stats only from
-primary shards, so it is possible that you installed SPM monitor on some
+Sematext Agent collects Index stats only from
+primary shards, so it is possible that you installed Sematext Agent on some
 Elasticsearch node which hosts only replicas. The same is also true for
-Refresh/Flush and Merge stats. Also note that SPM Elasticsearch monitor
+Refresh/Flush and Merge stats. Also note that Sematext Agent
 should be installed on all your Elasticsearch nodes to get the complete
 picture of your cluster in SPM Reports UI.

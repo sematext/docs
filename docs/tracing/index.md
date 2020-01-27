@@ -29,10 +29,10 @@ running applications and troubleshoot performance issues.
 
 ## Notes
 
-  - Transaction Tracing requires SPM monitor running in [embedded mode](/monitoring/spm-monitor-javaagent).
-  - Enabling/disabling the tracing agent requires SPM monitor restart,
+  - Transaction Tracing requires App Agent running in [embedded mode](/monitoring/spm-monitor-javaagent).
+  - Enabling/disabling the tracing agent requires Sematext Agent restart,
     which means it requires the restart of the application running the
-    embedded SPM monitor.
+    embedded App Agent.
   - Enabling transaction traces adds only about 1% CPU overhead.
   - Transaction Tracing is different from [On Demand Profiling](/monitoring/on-demand-profiling).
 

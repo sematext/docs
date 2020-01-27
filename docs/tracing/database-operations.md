@@ -19,7 +19,7 @@ Important:
 
   - To start capturing this information [enable Transaction Tracing](enable) in your SPM agents
 
-  - Requires SPM monitor running in [embedded mode](/monitoring/spm-monitor-javaagent) 
+  - Requires App Agent running in [embedded mode](/monitoring/spm-monitor-javaagent)
   <div class="video_container">
     <iframe class="video" src="https://www.youtube.com/embed/eoZJmAJKuaQ" frameborder="0" allowfullscreen ></iframe>
   </div>
@@ -40,7 +40,7 @@ Insights these reports provide:
 
   - Sparklines that show last 5 minute values and trends
 
-  - Top 10 slowest individual operations and drill-in details 
+  - Top 10 slowest individual operations and drill-in details
 
   - Integration with [Transaction Tracing](http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
     correlation of a specific slow operation with the actual

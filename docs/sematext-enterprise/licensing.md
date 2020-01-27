@@ -21,7 +21,7 @@ applications only for a few more days, so <a href="https://sematext.com/contact/
 
 SPM licenses have additional limit on concurrent number of
 "server-apps". This "server-apps" is a combination of SPM App token and
-server where SPM monitor client is installed. For example, if you have 4
+server where Sematext Agent is installed. For example, if you have 4
 servers, and on each of them you've installed 3 SPM App tokens, that is
 counted as 12 server-apps (regardless of whether those servers use same
 or different SPM App tokens).
