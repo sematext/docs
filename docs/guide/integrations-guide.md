@@ -1,5 +1,5 @@
 title: Sematext Integrations Guide
-description: Sematext APM and logging management service provides over 40 built-in integrations used to monitor across all your systems, apps, and services.
+description: Sematext Cloud provides over 40 built-in integrations used to monitor across all your systems, apps, and services.
 
 Sematext Cloud and on-premises IT monitoring system provides over 40 built-in infrastructure integrations used to monitor across all your systems, apps, and services.
 
@@ -15,13 +15,9 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Infra Agent](../agents/sematext-agent/) & [App Agent](../agents/spm-client/)
-The Infra Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more.  The App Agent collects metrics for various [integrations](/integration). The App Agent
-can run in [embedded](../agents/spm-monitor-javaagent)
-(aka Java agent-based, aka in-process) or
-[standalone](../agents/spm-monitor-standalone) mode. This agent can also
-instrument JVM-based apps to collect transaction traces and
-perform [on demand profiling](../monitoring/on-demand-profiling).
+- [Sematext Agent](../agents/sematext-agent/) Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also collects metrics for various [integrations](/integration) using App Agents. The App Agent can run in [embedded](../agents/spm-monitor-javaagent)
+(aka Java agent-based, aka in-process) or [standalone](../agents/spm-monitor-standalone) mode. This agent can also
+instrument JVM-based apps to collect transaction traces and perform [on demand profiling](../monitoring/on-demand-profiling).
 
 - [Node-based App Agent](../agents/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
@@ -192,16 +188,16 @@ Two steps are required when creating a Monitoring App:
 
 #### Agent Installation
 
-You need to add the Sematext repository and install Sematext Monitoring Agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the Agent Setup step.
+You need to add the Sematext repository and install Sematext Agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the App Agent Setup step.
 
-#### Agent Setup
+#### App Agent Setup
 
-Sematext Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes:
+App Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes:
 
 - [In-process as a javaagent](/agents/spm-monitor-javaagent/)
 - [Standalone as a separate process](/agents/spm-monitor-standalone/)
 
-For more information check Java agent [overview page](/agents/spm-client/)
+For more information check App Agent [overview page](/agents/sematext-agent/app-agent)
 
 You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 

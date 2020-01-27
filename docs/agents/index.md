@@ -6,7 +6,7 @@ appropriate Sematext monitoring agent. You can choose from:
 
   - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing
     fast Go-based Monitoring Agent with a tiny footprint for both
-    infrastructure and containers.
+    infrastructure and containers. Also includes Java based App Agent that collects application metrics.
 
   - [Node.js-based App Agent](node-agent), which can [monitor
     Apache](../integration/apache) and [Nginx](../integration/nginx)

@@ -186,7 +186,7 @@ services, you will have an option to choose between using
 [Embedded](../agents/spm-monitor-javaagent/) App Agent or
 [Standalone](../agents/spm-monitor-standalone) App Agent. The
 workaround described here requires the use of standalone App Agent
-variant. Here's what you'd need to do to see your metrics in SPM:
+variant. Here's what you'd need to do to see your metrics in Sematext Cloud:
 
 1.  Install sematext-agent on any Linux box (you can use this box for
     anything else, it is needed here just to run a process which
@@ -494,15 +494,16 @@ See [alerts FAQ](/faq/#alerts).
 
 ## Troubleshooting
 
-### Can I enable debugging in the SPM agent?
+### Can I enable debugging in the Sematext Agent?
 
-Yes. For App Agent, simply add or edit the `SPM_MONITOR_LOGGING_LEVEL` property in
+Yes. For Sematext Agent, edit `logging.level` property in `/opt/spm/properties/st-agent.yml` file.
+Available levels are: panic, fatal, error, warn, info, debug
+
+For App Agents, simply add or edit the `SPM_MONITOR_LOGGING_LEVEL` property in
 any of the `/opt/spm/spm-monitor/conf/spm-monitor/*.properties`
 files and restart the agent (or the process the agent is attached to).
 Available levels are: FATAL, ERROR, WARN, INFO, DEBUG, TRACE
 
-For Infra Agent, edit `logging.level` property in `/opt/spm/properties/st-agent.yml` file.
-Available levels are: panic, fatal, error, warn, info, debug
 
 ### Can I install Sematext Agent on servers that are behind a proxy?
 

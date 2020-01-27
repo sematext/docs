@@ -251,7 +251,7 @@ We also provide you with easy to install Agents that collect data about your sof
 			<div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
-						Infra & App Agent
+						Sematext Agent
 					</h4>
 				</div>
 			</div>
