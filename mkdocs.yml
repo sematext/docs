@@ -91,6 +91,7 @@ pages:
       - User Identification: experience/user-identification.md
       - Tags: experience/tags.md
       - Resource Timing: experience/resources.md
+      - Timing Breakdown: experience/breakdown.md
       - Integrations: experience/integrations.md
       - Changelog: experience/changelog.md
       - FAQ: experience/faq.md
