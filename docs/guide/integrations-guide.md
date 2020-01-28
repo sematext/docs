@@ -15,9 +15,7 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Agent](../agents/sematext-agent/) Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also collects metrics for various [integrations](/integration) using App Agents. The App Agent can run in [embedded](../agents/spm-monitor-javaagent)
-(aka Java agent-based, aka in-process) or [standalone](../agents/spm-monitor-standalone) mode. This agent can also
-instrument JVM-based apps to collect transaction traces and perform [on demand profiling](../monitoring/on-demand-profiling).
+- [Sematext Agent](../agents/sematext-agent/) Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also collects metrics for various [integrations](/integration) using App Agents. App Agents can also instrument JVM-based apps to collect transaction traces and perform [on demand profiling](../monitoring/on-demand-profiling).
 
 - [Node-based App Agent](../agents/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
