@@ -35,7 +35,7 @@ Example: To monitor a containerized application like Elasticsearch with Sematext
 
 ## Customize autoDiscovery.yml
 
-There are typically a few cases you might need to adjust settings in [autoDiscovery.yml](https://github.com/sematext/docker-sematext-agent/blob/auto-discovery/autoDiscovery.yml):
+There are typically a few cases you might need to adjust settings in [autoDiscovery.yml](https://github.com/sematext/docker-spm-client/blob/auto-discovery/autoDiscovery.yml):
 
 1) Using custom image names. Sematext Agent uses the images names of official application images like `nginx`, `mongo`,`elasticsearch`. In case you use custom images with different names or you want to use JVM monitor for your own Java application the settings for application image names must be adjusted.  A shortcut is to overwrite values in autoDiscovery.yml by environment variables
 `spm_templates__jvm__matchImageName=myJavaAppImage|jetty|spring`
