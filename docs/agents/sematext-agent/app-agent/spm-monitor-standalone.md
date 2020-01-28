@@ -1,16 +1,16 @@
 title: Standalone Agent Mode
-description: Sematext standalone monitoring Java agent is started as a separate process on each machine running the application, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
+description: Sematext standalone monitoring App Agent is started as a separate process on each machine running the application, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
 
-Unlike the [Embedded](spm-monitor-javaagent) Java agent-based monitor, the Standalone monitor
+Unlike the [Embedded](spm-monitor-javaagent) App Agent, the Standalone App Agent
 is started as a separate process on each machine running the
-application(s) you want to monitor. A separate monitor process should be
+application(s) you want to monitor. A separate App Agent process should be
 started for each application monitored on a machine. The installer adds
 the systemd service to manage the agent. Before starting the
-monitor one should ensure the application to be monitored exposes its metrics
+App Agent one should ensure the application to be monitored exposes its metrics
 and allows access to them (e.g. via JMX, HTTP, JDBC...)
 
 
-After that, the monitoring agent can be (re)started with:
+After that, the App Agent can be (re)started with:
 
 ``` bash
 sudo service spm-monitor restart
@@ -42,7 +42,7 @@ This setup requires adding the following arguments to your Java process
 
 
 The only thing you can customize here is the port. This port has to be
-reflected in monitor config, in **spm.remote.jmx.url** argument, as
+reflected in App Agent config, in **spm.remote.jmx.url** argument, as
 shown below.
 In this example, **SPM\_MONITOR\_JMX\_PARAMS** property in **monitor
 properties** file should be adjusted as follows (leave other properties
@@ -56,7 +56,7 @@ SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000"  # MUST match the p
 
 You should define the role and its password in separate files for
 monitored service (say for your tomcat server
-**/home/tomcat/passwordServer.tx**t) and for monitor itself (say
+**/home/tomcat/passwordServer.tx**t) and for App Agent itself (say
 **/home/spm/passwordMonitor.txt**). Each file should be owned by the
 user which runs the process (in case of **passwordServer.txt**, owner
 could be ubuntu, jetty, tomcat... whoever is running the monitored
