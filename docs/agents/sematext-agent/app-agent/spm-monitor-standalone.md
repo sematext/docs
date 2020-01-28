@@ -299,7 +299,7 @@ exist yet.
 Below is the image of CDH UI:
 
 
-![](attachments/7766020/8978434.png)
+![](../../../monitoring/attachments/7766020/8978434.png)
 
 ### ZooKeeper
 

@@ -152,6 +152,12 @@ pages:
       - Sematext Agent:
         - Overview: agents/sematext-agent/index.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
+        - App Agent:
+          - Overview:  agents/sematext-agent/app-agent/index.md
+          - Embedded Mode: agents/sematext-agent/app-agent/spm-monitor-javaagent.md
+          - Standalone Mode: agents/sematext-agent/app-agent/spm-monitor-standalone.md
+          - Switching Modes: agents/sematext-agent/app-agent/spm-monitor-switching-modes.md
+          - Chef Recipe: agents/sematext-agent/app-agent/chef-recipe.md
         - Containers:
           - Installation: agents/sematext-agent/containers/installation.md
           - Configuration: agents/sematext-agent/containers/configuration.md
@@ -170,14 +176,8 @@ pages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
         - Auto Discovery:
-          - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md 
+          - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
-      - Infra & App Agent:
-        - Overview:  agents/spm-client.md
-        - Embedded Mode: agents/spm-monitor-javaagent.md
-        - Standalone Mode: agents/spm-monitor-standalone.md
-        - Switching Modes: agents/spm-monitor-switching-modes.md
-        - Chef Recipe: agents/chef-recipe.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
