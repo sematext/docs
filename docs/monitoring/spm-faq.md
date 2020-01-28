@@ -350,7 +350,7 @@ one parameter, the token of the Monitoring App you want to uninstall):
 sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-111111111111
 ```
 
-### Can I disable SPM agent without uninstalling the Sematext Agent?
+### Can I disable Sematext Agent without uninstalling it?
 
 Yes, just find its .properties file in
 `/opt/spm/spm-monitor/conf` and add to it:
@@ -366,8 +366,8 @@ standalone agent, run:
 sudo service spm-monitor restart
 ```
 
-And in case of the Embedded agent, just restart the service that has this
-monitor's `javaagent` parameter.
+And in case of the Embedded App Agent, just restart the service that has this
+App Agent's `javaagent` parameter.
 
 ## Sharing
 
@@ -529,7 +529,7 @@ Yes. You can update the proxy settings using the following command:
 sudo bash /opt/spm/bin/setup-env --proxy-host "HOST" --proxy-port "PORT" --proxy-user "USER" --proxy-password "PASSWORD"
 ```
 
-### Can I change the region settings for the SPM agent installation?
+### Can I change the region settings for the Sematext Agent installation?
 
 Yes. By default the region is set to US. You can change it to EU using:
 
@@ -669,8 +669,8 @@ us in chat.
 
 ### I am not seeing any data in Monitoring charts. How do I check if network connectivity is OK?
 
-SPM agents send the data to Sematext via HTTP(S) so it is important
-that servers where you install SPM agent can access the
+Sematext Agent send the data to Sematext via HTTP(S) so it is important
+that servers where you install Sematext Agent can access the
 internet. Things to check to ensure network connectivity is ok:
 
 1\. Try connecting to spm-receiver.sematext.com / spm-receiver.eu.sematext.com (if using Sematext Cloud Europe) with the following
@@ -688,9 +688,9 @@ In case you see some other result:
 
   - if your server requires proxy to access the internet, you can define
     its settings using `/opt/spm/bin/setup-env` command. After
-    that restart SPM agent.
+    that restart Sematext Agent.
   - if firewall is used to protect your server, it may be blocking
-    outbound traffic from it. SPM agent sends the data over port 443, so
+    outbound traffic from it. Sematext Agent sends the data over port 443, so
     please ensure with your network admins that port 443 is open for
     outbound traffic
   - check your DNS (see below)
@@ -726,8 +726,8 @@ able to reach spm-receiver.sematext.com / spm-receiver.eu.sematext.com.
 
 Here are a few things to check and do:
 
-1.  Log into your monitored servers and make sure there are running SPM
-    monitor processes (there should be more than one of them)
+1.  Log into your monitored servers and make sure there are running Sematext
+    Agent processes (there should be more than one of them)
 
 2.  Check if system time is correct. If not, you should adjust the time,
     restart the Sematext Agent with:

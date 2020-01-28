@@ -250,9 +250,9 @@ and choose "sum".  The list of shards and the "sum" function can be
 found in the "Shard filter" in the Index Stats
 report.
 
-** Can SPM collect metrics even when Elasticsearch HTTP API is disabled **
+** Can Sematext Agent collect metrics even when Elasticsearch HTTP API is disabled **
 
-Each SPM agent collects Elasticsearch metrics only from the local
+Each Sematext Agent collects Elasticsearch metrics only from the local
 node by accessing the Stats API via HTTP.  To allow only local access
 add the following to elasticsearch.yml. Don't forget to restart each ES
 node to whose elasticsearch.yml you add this.
@@ -267,11 +267,10 @@ Yes.  Adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
 and change the SPM\_MONITOR\_ES\_NODE\_HOSTPORT property from the
 default localhost:9200 value to use an alternative hostname:port.  After
-that restart Sematext Agent (if you are running a standalone version) or
-Elasticsearch process(es) with embedded SPM
-monitor.
+that restart Sematext Agent (if you are running a standalone App Agent version) or
+Elasticsearch process(es) with embedded App Agent.
 
-** My Elasticsearch is protected by basic HTTP authentication, can I use SPM  **
+** My Elasticsearch is protected by basic HTTP authentication, can I use Sematext Agent  **
 
 Yes. You just need to adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
@@ -284,9 +283,9 @@ SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```
 
 Restart your Sematext Agent after this change (either with **sudo service
-spm-monitor restart** in case of standalone monitor or by restarting
+spm-monitor restart** in case of standalone App Agent or by restarting
 Elasticsearch node if you are using in-process
-javaagent).
+App Agent).
 
 ** I am using Sematext Agent and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
 

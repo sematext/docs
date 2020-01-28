@@ -8,16 +8,16 @@ other types of data stores.
 
 Important:
 
-  - To get this information **add SPM agent to the *application that is
+  - To get this information **add App Agent to the *application that is
     talking to a data store* **(e.g. Solr or Elasticsearch or any
     backend with which your application communicates using SQL - MySQL,
     Apache Cassandra (CQL), Apache Phoenix, Drill, Impala, and any other
-    backend apps talk to via JDBC). This is because the *SPM agent
+    backend apps talk to via JDBC). This is because the *App Agent
     captures operations at that client layer, not in the server itself*.
 
   - This works only for Java applications
 
-  - To start capturing this information [enable Transaction Tracing](enable) in your SPM agents
+  - To start capturing this information [enable Transaction Tracing](enable) in your App Agent
 
   - Requires App Agent running in [embedded mode](/monitoring/spm-monitor-javaagent)
   <div class="video_container">
