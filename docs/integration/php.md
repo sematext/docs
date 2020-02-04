@@ -1,5 +1,5 @@
 title: PHP FPM Monitoring Integration
-description: PHP FPM module is integrated with Nginx and Apache and its metrics are displayed as part of Nginx and Apache monitoring in Sematext. The integration automatically collects FPM metrics and lets you visualize and correlate them with the rest of your applications, and set up custom service checks and monitors to notify you in case there are problems with your FPM instances 
+description: PHP FPM module is integrated with Nginx and Apache and its metrics are displayed as part of Nginx and Apache monitoring in Sematext. The integration automatically collects FPM metrics and lets you visualize and correlate them with the rest of your applications, and set up custom service checks and monitors to notify you in case there are problems with your FPM instances
 
 ## Overview
 
@@ -27,12 +27,12 @@ Or edit the file ` /etc/php-fpm.d/www.conf` manually and ensure it contains this
 
 ```
 pm.status_path = /status
-``` 
+```
 
 Restart php-fpm:
 ```sh
 # for upstart
-sudo service php-fpm restart 
+sudo service php-fpm restart
 
 # for systemd
 sudo systemctl restart php-fpm.service
@@ -54,12 +54,12 @@ sudo npm i sematext-agent-httpd -g
 ** Setup monitoring with PHP-FPM status page via UNIX socket (recommended) **
 
 Run the service setup for the PHP-FPM monitoring agent. Pass your
-Sematext Monitoring App token (aka SPM_TOKEN), Apache status URL, and
+Sematext Monitoring App token (aka MONITORING_TOKEN), Apache status URL, and
 the PHP-FPM status URL to the setup command:
 
 ```sh
-# sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u HTTPD_STATUS_URL -p PHP_FPM_STATUS_URL
-sudo sematext-httpd-setup -t YOUR_SPM_TOKEN_HERE -u http://localhost/server-status -p http://unix:/var/run/php-fpm.sock:/status
+# sematext-httpd-setup -t YOUR_MONITORING_TOKEN_HERE -u HTTPD_STATUS_URL -p PHP_FPM_STATUS_URL
+sudo sematext-httpd-setup -t YOUR_MONITORING_TOKEN_HERE -u http://localhost/server-status -p http://unix:/var/run/php-fpm.sock:/status
 ```
 
 ** Setup monitoring with PHP-FPM status page via HTTP **
@@ -72,14 +72,14 @@ the PHP-FPM status page via Apache httpd change the configuration
 
 ```
 LoadModule fastcgi_module modules/mod_fastcgi.so
- 
+
 <IfModule mod_fastcgi.c>
           DirectoryIndex index.php index.html index.shtml index.cgi
           AddHandler php5-fcgi .php
           Action php5-fcgi /php5-fcgi
           Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
           FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /var/run/php-fpm.sock -pass-header Authorization
- 
+
    # For monitoring status with e.g. SPM for Apache httpd
    <LocationMatch "/(ping|status)">
                   SetHandler php5-fcgi-virt
@@ -91,8 +91,8 @@ LoadModule fastcgi_module modules/mod_fastcgi.so
 Run the setup command using HTTP URLs for status pages:
 
 ```sh
-  # sematext-httpd-setup YOUR_SPM_TOKEN_HERE HTTPD_STATUS_URL PHP_FPM_STATUS_URL
-  sudo sematext-httpd-setup YOUR_SPM_TOKEN_HERE -u http://localhost/server-status http://localhost/status
+  # sematext-httpd-setup YOUR_MONITORING_TOKEN_HERE HTTPD_STATUS_URL PHP_FPM_STATUS_URL
+  sudo sematext-httpd-setup YOUR_MONITORING_TOKEN_HERE -u http://localhost/server-status http://localhost/status
 ```
 
 ## Integration with Nginx
@@ -108,7 +108,7 @@ Run the service setup for the PHP-FPM monitoring agent. Pass the
 Sematext Monitoring App token (aka SPM token), Nginx status URL, and
 the PHP-FPM status URL to the setup command:
 ```sh
-sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://unix:/var/run/php-fpm.sock:/status
+sematext-nginx-setup -t YOUR_MONITORING_TOKEN_HERE -n http://localhost/nginx_status -p http://unix:/var/run/php-fpm.sock:/status
 ```
 
 ** Setup with PHP-FPM status page via HTTP **
@@ -134,8 +134,8 @@ location ~ ^/(status|ping)$ {
 
 Then run the setup command using HTTP URLs for status pages:
 ```sh
-# sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n NGINX_STATUS_URL -p PHP_FPM_STATUS_URL
-sematext-nginx-setup -t YOUR_SPM_TOKEN_HERE -n http://localhost/nginx_status -p http://localhost/status
+# sematext-nginx-setup -t YOUR_MONITORING_TOKEN_HERE -n NGINX_STATUS_URL -p PHP_FPM_STATUS_URL
+sematext-nginx-setup -t YOUR_MONITORING_TOKEN_HERE -n http://localhost/nginx_status -p http://localhost/status
 ```
 
 ## Metrics

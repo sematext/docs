@@ -22,7 +22,7 @@ Sematext Docker Agent.
 <td></td>
 </tr>
 <tr>
-<td>SPM_TOKEN</td>
+<td>MONITORING_TOKEN</td>
 <td>SPM Application Token enables metric and event collection</td>
 </tr>
 <tr>
@@ -172,7 +172,7 @@ Sematext Docker Agent.
 
 
 
-## Access to the Docker Socket  / Docker API  
+## Access to the Docker Socket  / Docker API
 
 *Note that Docker Daemon can be configured to use Unix sockets
 (default), TCP sockets (default port 2375) and TLS sockets
@@ -197,7 +197,7 @@ If you prefer to create a docker group to access docker without super
 user permissions,
 see <https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/>
 
-**How to activate the Unix socket in parallel to a TCP socket?**  
+**How to activate the Unix socket in parallel to a TCP socket?**
 Check the configuration of the Docker Daemon in /etc/defaults/docker -
 it is possible to activate TCP and the Unix socket in parallel - simply
 add  "-H unix:///var/run/docker.sock" and restart dockerd.
@@ -207,13 +207,13 @@ add  "-H unix:///var/run/docker.sock" and restart dockerd.
 DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
 ```
 
-  
+
 Run Sematext Agent with access to the Unix socket:
 
 ``` bash
 docker run --name sematext-agent --restart=always \
--v /var/run/docker.sock:/var/run/docker.sock \ 
--e SPM_TOKEN=YOUR_SPM_TOKEN -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \ 
+-v /var/run/docker.sock:/var/run/docker.sock \
+-e MONITORING_TOKEN=YOUR_MONITORING_TOKEN -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
 sematext/sematextagent-docker
 ```
 
@@ -229,7 +229,7 @@ Run Sematext Agent with Access to Docker TCP
 socket:
 
 ``` bash
-docker run --name sematext-agent -e DOCKER_PORT=2375 -e SPM_TOKEN=YOUR_SPM_TOKEN -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN sematext/sematextagent-docker
+docker run --name sematext-agent -e DOCKER_PORT=2375 -e MONITORING_TOKEN=YOUR_MONITORING_TOKEN -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN sematext/sematextagent-docker
 ```
 
 Relevant Parameters:
@@ -263,8 +263,8 @@ docker-machine env --swarm swarm-master
 # export DOCKER_MACHINE_NAME="swarm-master"
 eval "$(docker-machine env swarm-master)"
 docker run -d --name sematext-agent --restart=always
- -e SPM_TOKEN=YOUR_SPM_TOKEN  -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
- -e DOCKER_TLS_VERIFY -e DOCKER_CERT_PATH -e DOCKER_HOST -v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH \ 
+ -e MONITORING_TOKEN=YOUR_MONITORING_TOKEN  -e LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN \
+ -e DOCKER_TLS_VERIFY -e DOCKER_CERT_PATH -e DOCKER_HOST -v $DOCKER_CERT_PATH:$DOCKER_CERT_PATH \
 sematext/sematext-agent-docker
 ```
 
@@ -278,7 +278,7 @@ Not all logs might be of interest, so sooner or later you will have the need to 
 - Image Name
 - Docker Compose Project Name
 - Docker Compose Service Name
-- Docker Compose Container Number 
+- Docker Compose Container Number
 
 Using this “log metadata” you can whitelist or blacklist log outputs by image or container names. The relevant environment variables are:
 
@@ -324,7 +324,7 @@ The file format for the patterns.yml file is based on JS-YAML, in short:
 
 The file has the following properties:
 
-- patterns: list of patterns, each pattern starts with “-“ 
+- patterns: list of patterns, each pattern starts with “-“
 	- match: a list of pattern definition for a specific log source (image/container)
 		- sourceName: a regular expression matching the name of the log source. The source name is a combination of image name and container name.
 	  - regex: JS regular expression
@@ -348,11 +348,11 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 
 ## Log Routing
 
-Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
-Sematext Agent inspects the containers for this label and ships the logs to the specified Logsene App. 
+Routing logs from different containers to separate Logsene Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```.
+Sematext Agent inspects the containers for this label and ships the logs to the specified Logsene App.
 
-__Example:__ 
-The following command will start Nginx webserver and logs for this container will be shipped to the related Logsene App. 
+__Example:__
+The following command will start Nginx webserver and logs for this container will be shipped to the related Logsene App.
 
 ```
 docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGSENE_TOKEN -p 80:80 nginx
