@@ -5,7 +5,7 @@ description: Trace code execution from beginning to end, see insights into opera
 
 Transaction tracing lets one trace code execution from beginning to end.
 It also enables [Database Operations](database-operations) reporting. In case of
-SPM, transaction tracing can also cross applications, networks, and
+Sematext Monitoring, transaction tracing can also cross applications, networks, and
 servers.
 
 For example, you can trace code execution from a beginning of

@@ -695,7 +695,7 @@ In case you see some other result:
     outbound traffic
   - check your DNS (see below)
 
-2\. Check if your DNS has correct entries for SPM Receiver:
+2\. Check if your DNS has correct entries for Sematext Monitoring Receiver:
 
 ``` bash
 nslookup spm-receiver.sematext.com
@@ -779,7 +779,7 @@ Here are a few things to check and do:
 1.  Make sure Sematext Agent is running: sudo service spm-monitor restart
 2.  Make sure disk is not full: `df -h`
 3.  Make sure maximal open files limit was not reached: see **"I
-    registered for SPM more than 5 minutes ago and I don't see any of my
+    registered for Sematext Monitoring more than 5 minutes ago and I don't see any of my
     data, what should I check?"**
 
 ### How come Disk Space Usage report shows more free disk space than df command?

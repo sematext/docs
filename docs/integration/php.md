@@ -80,7 +80,7 @@ LoadModule fastcgi_module modules/mod_fastcgi.so
           Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
           FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /var/run/php-fpm.sock -pass-header Authorization
 
-   # For monitoring status with e.g. SPM for Apache httpd
+   # For monitoring status with e.g. Sematext Monitoring for Apache httpd
    <LocationMatch "/(ping|status)">
                   SetHandler php5-fcgi-virt
                   Action php5-fcgi-virt /php5-fcgi virtual

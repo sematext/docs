@@ -23,11 +23,11 @@ Sematext Docker Agent.
 </tr>
 <tr>
 <td>MONITORING_TOKEN</td>
-<td>SPM Application Token enables metric and event collection</td>
+<td>Monitoring App Token enables metric and event collection</td>
 </tr>
 <tr>
 <td>LOGSENE_TOKEN</td>
-<td>Logsene Application Token enables logging to Logsene, see logging specific parameters for filter options and Log Routing section to route logs from different containers to separate Logsene applications</td>
+<td>Logsene App Token enables logging to Logsene, see logging specific parameters for filter options and Log Routing section to route logs from different containers to separate Logsene applications</td>
 </tr>
 <tr>
 <td><code>-v /var/run/docker.sock</code></td>
@@ -83,11 +83,11 @@ Sematext Docker Agent.
 </tr>
 <tr>
 <td>SPM_RECEIVER_URL</td>
-<td>URL for bulk inserts into SPM. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://spm-receiver.eu.sematext.com/receiver/v1.</td>
+<td>URL for bulk inserts into Sematext Monitoring. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://spm-receiver.eu.sematext.com/receiver/v1.</td>
 </tr>
 <tr>
 <td>EVENTS_RECEIVER_URL</td>
-<td>URL for SPM events receiver. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://event-receiver.eu.sematext.com</td>
+<td>URL for Monitoring events receiver. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://event-receiver.eu.sematext.com</td>
 </tr>
 <tr>
 <td><strong>Docker Logs Parameters</strong></td>

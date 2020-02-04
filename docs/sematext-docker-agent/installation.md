@@ -48,7 +48,7 @@ docker-compose up -d
 ## Docker Swarm and Docker Enterprise
 
 Connect your Docker client to Swarm or UCP remote API endpoint and
-deploy Sematext Docker Agent with following docker command with your SPM and Logsene tokens:
+deploy Sematext Docker Agent with following docker command with your Monitoring and Logsene tokens:
 
 ```bash
 docker service create -mode global -name sematext-agent-docker \
@@ -64,7 +64,7 @@ Please refer to [Monitoring and Logging for Docker Enterprise Edition](https://s
 
 Run Sematext Agent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
-First, create [sematext-agent.yml](https://github.com/sematext/sematext-agent-docker/blob/master/kubernetes/sematext-agent.yml) - and set your SPM and Logsene tokens in the spec.env section.
+First, create [sematext-agent.yml](https://github.com/sematext/sematext-agent-docker/blob/master/kubernetes/sematext-agent.yml) - and set your Monitoring and Logsene tokens in the spec.env section.
 
 Then run the DaemonSet:
 
@@ -90,7 +90,7 @@ See an example of the [job description](https://github.com/sematext/sematext-age
 
 ## Mesos / Marathon
 
-The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances), SPM App Token and Logsene App Token. An example call to the Marathon API:
+The following configuration will activate Sematext Docker Agent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances), Monitoring App Token and Logsene App Token. An example call to the Marathon API:
 
 ```
 curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080/v2/apps  -d '

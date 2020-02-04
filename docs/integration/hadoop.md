@@ -3,9 +3,9 @@ description: Sematext's Hadoop server monitoring provides overview of the common
 
 ## Overview
 
-SPM supports monitoring of both **MRv1** (0.22 and earlier, 1.0, 1.1)
+Sematext Monitoring supports monitoring of both **MRv1** (0.22 and earlier, 1.0, 1.1)
 and **YARN** (0.23, 2.\*) based Hadoop versions. Since the architecture
-is different, SPM uses different application types for them and
+is different, Sematext Monitoring uses different application types for them and
 different reports are available.
 
 Common reports for all Hadoop types:

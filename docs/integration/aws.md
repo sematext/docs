@@ -1,4 +1,4 @@
-title: AWS Monitoring Integration 
+title: AWS Monitoring Integration
 description: Sematext monitoring integration for AWS - Amazon Web Services EC2, EBS and/or ELB metrics reporting. Monitor, search, analyze and explore AWS resources with comprehensive, real-time view of your host's performance and status
 
 ** Which IAM permissions are needed to fetch Amazon EC2, EBS and ELB metrics **
@@ -25,24 +25,24 @@ When you create an AWS app, you need to provide the access key and secret for a 
     ]
 }
 ```
-The Describe* permissions are needed to identify the resources which need to be monitored (Instances and Addresses for EC2, Volumes for EBS and LoadBalancers for ELB), while GetMetricStatistics will allow SPM to fetch the actual metrics from CloudWatch.
+The Describe* permissions are needed to identify the resources which need to be monitored (Instances and Addresses for EC2, Volumes for EBS and LoadBalancers for ELB), while GetMetricStatistics will allow Sematext Monitoring to fetch the actual metrics from CloudWatch.
 
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
-'reads' | aws.ec2.disk.read.bytes | Sum | Double | 
-'writes' | aws.ec2.disk.write.bytes | Sum | Double | 
-'rejected requests' | aws.elb.requests.rejected | Sum | Double | 
-'pending requests count' | aws.elb.requests.pending | Max | Long | 
-'network out' | aws.ec2.network.tx.bytes | Sum | Double | 
-'network in' | aws.ec2.network.rx.bytes | Sum | Double | 
-'5xx' | aws.elb.reponse.code.5xx | Sum | Double | 
-'4xx' | aws.elb.reponse.code.4xx | Sum | Double | 
-'consumed read/write ops' | aws.ebs.provisioned.ops.total | Sum | Double | 
-'requests count' | aws.elb.requests | Sum | Double | 
-'2xx' | aws.elb.backend.response.code.2xx | Sum | Double | 
-'4xx' | aws.elb.backend.response.code.4xx | Sum | Double | 
-'3xx' | aws.elb.backend.response.code.3xx | Sum | Double | 
-'5xx' | aws.elb.backend.response.code.5xx | Sum | Double | 
-'connection errors' | aws.elb.backend.connection.errors | Sum | Double | 
+'reads' | aws.ec2.disk.read.bytes | Sum | Double |
+'writes' | aws.ec2.disk.write.bytes | Sum | Double |
+'rejected requests' | aws.elb.requests.rejected | Sum | Double |
+'pending requests count' | aws.elb.requests.pending | Max | Long |
+'network out' | aws.ec2.network.tx.bytes | Sum | Double |
+'network in' | aws.ec2.network.rx.bytes | Sum | Double |
+'5xx' | aws.elb.reponse.code.5xx | Sum | Double |
+'4xx' | aws.elb.reponse.code.4xx | Sum | Double |
+'consumed read/write ops' | aws.ebs.provisioned.ops.total | Sum | Double |
+'requests count' | aws.elb.requests | Sum | Double |
+'2xx' | aws.elb.backend.response.code.2xx | Sum | Double |
+'4xx' | aws.elb.backend.response.code.4xx | Sum | Double |
+'3xx' | aws.elb.backend.response.code.3xx | Sum | Double |
+'5xx' | aws.elb.backend.response.code.5xx | Sum | Double |
+'connection errors' | aws.elb.backend.connection.errors | Sum | Double |

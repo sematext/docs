@@ -5,7 +5,7 @@ Zapier is an online automation tool that connects your favorite apps, such as Gm
 
 ## **In Zapier**
 
-Log into your [Zapier account](https://zapier.com/app/login/) and create Token needed to create the integration between Zapier and Sematext APM, Log Management, Tracing, and RUM platform. Also check [Zapier's Webhooks](https://zapier.com/help/webhooks/) for webhooks integration information. 
+Log into your [Zapier account](https://zapier.com/app/login/) and create Token needed to create the integration between Zapier and Sematext APM, Log Management, Tracing, and RUM platform. Also check [Zapier's Webhooks](https://zapier.com/help/webhooks/) for webhooks integration information.
 
 Visit Zapier's [App Documentation](https://zapier.com/help/service-documentation/) for general information about their service as well as integration with other SaaS monitoring and logging tools such as ours.
 
@@ -19,6 +19,6 @@ Enter required parameters and copy incoming Zapier Token. Click Test button to c
 
 ![Zapier Alerts Integration](https://sematext.com/docs/images/integrations/zapier-integration.png "Zapier Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to Zapier,
+**Done.** Every alert from your Sematext Monitoring app will be forwarded to Zapier,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.
