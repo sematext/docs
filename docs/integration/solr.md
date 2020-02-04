@@ -160,11 +160,11 @@ the **<jmx /\>** directive in ```solrconfig.xml``` and restart Solr.
 
 ** I don't see any data only in Solr Components or Errors reports, what should I do? **
 
-Most likely you are using the standalone variant of Solr monitor. In
-that case, Sematext Agent can't collect metrics which are available only
+Most likely you are using the standalone variant of App Agent. In
+that case, App Agent can't collect metrics which are available only
 when running in-process. If so, switch to in-process (javaagent) version
-of Sematext Solr agent.
+of App Agent.
 
 ** Why don't I see Solr index file size metric? **
 
-Sematext Solr agent runs as 'spmmon' user.  Make sure this user has appropriate access permissions on Solr's index directories.  If you cannot give 'spmmon' user the read permissions you can switch to the in-process (javaagent) version of the Sematext Solr agent.
+App Agent runs as 'spmmon' user.  Make sure this user has appropriate access permissions on Solr's index directories.  If you cannot give 'spmmon' user the read permissions you can switch to the in-process (javaagent) version of the App Agent.
