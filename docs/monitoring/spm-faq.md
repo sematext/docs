@@ -661,7 +661,7 @@ us in chat.
 ### I am trying to monitor Elasticsearch. Node stats are not tracked over time?
 
 Make sure to set the `node.name` value in in `elasticsearch.yaml`.
-Elasticsearch will otherwise generate random a node name each time
+Elasticsearch will otherwise generate a random node name each time
 an instance starts, making tracking node stats over time impossible.
 If this doesn't fix your issue, please send us an email to
 <support@sematext.com> or contact
