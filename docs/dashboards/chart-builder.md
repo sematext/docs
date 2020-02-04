@@ -8,6 +8,8 @@ series with metrics, optional filters, and groupings. Charts built through the
 builder give you insight into spikes and trends, helping you to understand how your
 infrastructure or applications behave now or how they behaved in the past.
 
+![Chart builder](../images/dashboards/chart-builder-1.png)
+
 You can display many series on a single chart. Each of them can be configured to have its own color and
 style:
 
@@ -26,6 +28,8 @@ the relationship between the metrics. If you don't write your own
 transformation expression then all metrics are added to each other producing
 a single series.
 
+![Chart builder metrics](../images/dashboards/chart-builder-metrics.png)
+
 ## Transformation
 
 Transformations are used to modify metrics with a formula. Why is this useful? Imagine you collect
@@ -33,8 +37,10 @@ all individual types of CPU usage separately, like `os.cpu.user`, `os.cpu.system
 If you want to chart all of them as a single series you can added them up using an expression like this:
 
 ```
-`os.cpu.user` + `os.cpu.system` + `os.cpu.wait`
+os.cpu.user + os.cpu.system + os.cpu.wait
 ```
+
+![Chart builder transformations](../images/dashboards/chart-builder-transformations.png)
 
 Another example is ratio. Imagine that you are interested in the ratio of the network input
 traffic and output traffic so you can easily spot suspicious behavior in the system,
@@ -42,10 +48,8 @@ like a sudden jump of output traffic which does not correlate with the input tra
 case you would divide one metric by another to get the required series:
 
 ```
-`os.network.out` / `os.network.in`
+os.network.out / os.network.in
 ```
-
-_NOTE: All the metrics that have dot in the name have to be surrounded by_ ``` `` ``` .
 
 ### Math operators
 
@@ -55,7 +59,7 @@ We support math operators `+`, `-`, `*`, `/`, `%`. Parts of the expressions can 
 with parentheses `()`. Here's an example:
 
 ```
-`os.cpu.user` / (`os.cpu.user` + `os.cpu.system` + `os.cpu.wait`) 
+os.cpu.user / (os.cpu.user + os.cpu.system + os.cpu.wait) 
 ```
 
 ### Functions
@@ -109,6 +113,8 @@ in the [Filter by](#filter-by) section. You would choose tag name `os.host` and 
 You can use [variables](#variables) as tag values so they can be configured dynamically
 from the report level.
 
+![Chart builder filters](../images/dashboards/chart-builder-filters.png)
+
 ## Group by
 
 In the [Group by](#group-by) section you choose what data series to group on the graph. For example, if you
@@ -118,6 +124,8 @@ the selected metric on a particular host.
 
 You can use [variables](#variables) as tag values so they can be configured dynamically
 from the report level.
+
+![Chart builder group by](../images/dashboards/chart-builder-group.png)
 
 ### Aggregation functions
 
@@ -143,6 +151,8 @@ the metric. All gauge metrics use the `avg` rollup function and all counter metr
 use `sum` rollup function. In some cases it makes sense to customize the setting.
 
 _NOTE: Recommended for expert users._
+
+![Chart builder rollup by](../images/dashboards/chart-builder-rollup.png)
 
 
 ## Variables
@@ -176,3 +186,18 @@ Variables can be created in Report options "Manage variables".
 
 ![Manage Variables](../images/dashboards/variables.png)
 
+
+## Style
+
+In the style tab, you configure what the chart looks like. You can select bar, line, area and point 
+charts. In addition to chart type, you can choose a color from the palette and group color scheme. The main
+goal of a group color scheme is to determine the colors of the series from the same group. When you group metric by
+`os.host` as a result you get a couple of series. Each series can get a different color.
+
+![Chart builder styles](../images/dashboards/chart-builder-styles.png)
+
+A very important feature in the styles tab is "Stacked" option. When you select the checkbox data
+of a given series is stacked. This is very useful for area and bar charts. Below you can see
+a comparison of stacked and non-stacked bar charts.
+
+![Chart builder styles](../images/dashboards/chart-builder-stacked.png)
