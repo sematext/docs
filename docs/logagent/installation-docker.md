@@ -1,10 +1,10 @@
-title: Install Logagent
+title: Installing Logagent on Docker
 description: Logagent, Sematext log shipper and Logstash alternative, is available as Docker image. It has automatic Docker installation and seamless logging system service integration with our log management and analysis platform
 
 ## Certified Logagent Images
 
-Please note the following instructions use the latest Logagent image from Docker Hub. 
-If you want to use certified images please pull the image from Red Hat and Docker registries. 
+Please note the following instructions use the latest Logagent image from Docker Hub.
+If you want to use certified images please pull the image from Red Hat and Docker registries.
 
 - Red Hat Certified Image: `docker pull registry.connect.redhat.com/sematext/logagent`
 - Docker Certified Image: `docker pull store/sematext/logagent`
@@ -12,26 +12,26 @@ If you want to use certified images please pull the image from Red Hat and Docke
 ## Installation for Docker
 
 Logagent is a general purpose log shipper. The Logagent Docker image is pre-configured for the log collection on container platforms. It runs as a tiny container on every Docker host and collects logs for all cluster nodes and their containers.
-All container logs are enriched with Kubernetes and Docker EE/Swarm metadata. 
+All container logs are enriched with Kubernetes and Docker EE/Swarm metadata.
 
-See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub. 
+See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub.
 
 ## Getting started
 
-To run Logagent you will need a Logs App Token.  
+To run Logagent you will need a Logs App Token.
 If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/integrations).
 
 The [Logagent](https://sematext.com/logagent) docker container can be configured through the following environment variables:
 
 * **REGION**: Sematext Cloud region **US** or **EU** (default: US). The receiver URL will be set to EU/US default values. When using REGION, you don't need to set `LOGS_RECEIVER_URL` (see below).
-* **LOGS_RECEIVER_URL**: The URL of your Elasticsearch Endpoint _(defaults to Sematext Cloud US `https://logsene-receiver.sematext.com`)_. 
-  
-    * For Sematext Europe use `https://logsene-receiver.eu.sematext.com`. 
+* **LOGS_RECEIVER_URL**: The URL of your Elasticsearch Endpoint _(defaults to Sematext Cloud US `https://logsene-receiver.sematext.com`)_.
+
+    * For Sematext Europe use `https://logsene-receiver.eu.sematext.com`.
     * For Elasticsearch `https://elasticserch-server-name:9200`.
 
 * **LOGS_TOKEN**: The index where the agent should log to _(for [Sematext Cloud](https://sematext.com/cloud) users the logs token)_
 * **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre> to specify a log source name or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. Please refer to Logagent command line arguments in the [Logagent Documentation](https://sematext.com/docs/logagent/cli-parameters/)
-* **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre> Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>. 
+* **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre> Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>.
 * **-v /var/run/docker.sock:/var/run/docker.sock** - Collect container logs by mounting the docker socket (mandatory)
 
 
@@ -58,7 +58,7 @@ To use [Docker Compose](https://docs.docker.com/compose/) create docker-compose.
 logagent:
   image: 'sematext/logagent:latest'
   environment:
-    - LOGS_TOKEN=YOUR_LOGS_TOKEN 
+    - LOGS_TOKEN=YOUR_LOGS_TOKEN
     - LOGS_RECEIVER_URL="https://logsene-receiver.sematext.com"
   cap_add:
     - SYS_ADMIN
@@ -68,7 +68,7 @@ logagent:
 
 ```
 
-Then start Logagent with the docker-compose file: 
+Then start Logagent with the docker-compose file:
 
 ```
 docker-compose up -d
@@ -88,11 +88,11 @@ docker service create --mode global --name st-logagent \
 sematext/logagent:latest
 ```
 
-### Kubernetes and OpenShift 
+### Kubernetes and OpenShift
 
 Run Logagent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
-First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml) 
+First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml)
 
 ```
 curl -o logagent-daemonset.yml https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/logagent-daemonset.yml
@@ -113,18 +113,18 @@ oc apply -f logagent-daemonset.yml
 
 ### Kubernetes with containerd and IBM Cloud
 
-Kubernetes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. 
-Instead logs are collected from containerd log files and requires access to the relevant directories. 
+Kubernetes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata.
+Instead logs are collected from containerd log files and requires access to the relevant directories.
 The logagent input-filter for containerd supports:
 
-* Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs` 
+* Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs`
 * Enrichment of logs with podName, namespace, containerName, containerId
 * Parsing containerd log headers (timestamp, stream, flags)
-* Parsing message content with logagent parser library 
+* Parsing message content with logagent parser library
 
 Run Logagent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
-First, create [ibm-cloud-logagent-ds.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/ibm-cloud-logagent-ds.yml) 
+First, create [ibm-cloud-logagent-ds.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/ibm-cloud-logagent-ds.yml)
 
 ```
 curl -o ibm-cloud-logagent-ds.yml  https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/ibm-cloud-logagent-ds.yml
@@ -179,9 +179,9 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 ```
 
 
-## Configuration Parameters 
+## Configuration Parameters
 
-### Mandatory Parameters  
+### Mandatory Parameters
 
 <table>
 <thead>
@@ -256,7 +256,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tbody>
 </table>
 
-#### Docker Logs Parameters 
+#### Docker Logs Parameters
 
 <table>
 <thead>
@@ -281,7 +281,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tbody>
 </table>
 
-#### Whitelist Containers for Logging 
+#### Whitelist Containers for Logging
 
 <table>
 <thead>
@@ -302,7 +302,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tbody>
 </table>
 
-#### Blacklist Containers 
+#### Blacklist Containers
 
 <table>
 <thead>
@@ -323,10 +323,10 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tbody>
 </table>
 
-#### Set Log Patterns 
+#### Set Log Patterns
 
-Logagent supports various log formats defined in [patterns.yml](https://github.com/sematext/logagent-js/blob/master/patterns.yml) file. 
-The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be customized by proving your YAML file.  
+Logagent supports various log formats defined in [patterns.yml](https://github.com/sematext/logagent-js/blob/master/patterns.yml) file.
+The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be customized by proving your YAML file.
 
 <table>
 <thead>
@@ -347,7 +347,7 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 </tr>
 <tr>
 <td>LOGAGENT_PATTERNS_BASE64</td>
-<td>Set to "true" if the LOGAGENT_PATTERNS patterns file you are passing in via env. variable is base64 encoded e.g 
+<td>Set to "true" if the LOGAGENT_PATTERNS patterns file you are passing in via env. variable is base64 encoded e.g
   <pre>LOGAGENT_PATTERNS_BASE64="$(cat ./patterns.yml | base64)"</pre>. Useful if your patterns file is not getting set properly due to shell interpretation or otherwise.</td>
 </tr>
 <tr>
@@ -361,7 +361,7 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 </tbody>
 </table>
 
-#### Other Options 
+#### Other Options
 
 <table>
 <thead>
@@ -407,7 +407,7 @@ Not all logs might be of interest, so sooner or later you will have the need to 
 - Image Name
 - Docker Compose Project Name
 - Docker Compose Service Name
-- Docker Compose Container Number 
+- Docker Compose Container Number
 
 Using this “log metadata” you can whitelist or blacklist log outputs by image or container names. The relevant environment variables are:
 
@@ -417,9 +417,9 @@ Using this “log metadata” you can whitelist or blacklist log outputs by imag
 - SKIP_BY_IMAGE — a regular expression to blacklist image names
 
 
-Some log messages are useless or noisy, like access to health check URLs in Kubernetes. 
-You can filter such messages via regular expressions by setting the following environment variable: 
-<pre>  
+Some log messages are useless or noisy, like access to health check URLs in Kubernetes.
+You can filter such messages via regular expressions by setting the following environment variable:
+<pre>
 IGNORE_LOGS_PATTERN=\/healthcheck|\/ping
 </pre>
 
@@ -460,7 +460,7 @@ The file format for the patterns.yml file is based on JS-YAML, in short:
 
 The file has the following properties:
 
-- patterns: list of patterns, each pattern starts with “-“ 
+- patterns: list of patterns, each pattern starts with “-“
   - match: a list of pattern definition for a specific log source (image/container)
     - sourceName: a regular expression matching the name of the log source. The source name is a combination of image name and container name.
     - regex: JS regular expression
@@ -484,11 +484,11 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 
 ### Log Routing
 
-Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
-Logagent inspects the containers for this label and ships the logs to the specified Logs App. 
+Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```.
+Logagent inspects the containers for this label and ships the logs to the specified Logs App.
 
-__Example:__ 
-The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App. 
+__Example:__
+The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App.
 
 ```
 docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGS_TOKEN -p 80:80 nginx
@@ -517,5 +517,5 @@ check, run the "docker logs" command. If "docker logs CID" shows
 container logs then Logagent should be able to collect the
 logs as well.
 
-Please check the parsed timestamps! 
-Logs with timestamps in the future (or several months or years in the past) might not be displayed in Sematext Cloud.  
+Please check the parsed timestamps!
+Logs with timestamps in the future (or several months or years in the past) might not be displayed in Sematext Cloud.
