@@ -3,25 +3,27 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 
 [Logagent](./index.md) is a general purpose log shipper. It runs as a system service on Linux by using Systemd or Upstart.
 
-### Install Node.js on your server
+## Install Node.js on your server
 First, make sure you have [Node.js installed](https://nodejs.org/en/download/package-manager/). E.g. for Debian/Ubuntu:
 ``` bash
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-### Install the Logagent npm package
+## Install the Logagent npm package
 ```bash
 sudo npm i -g @sematext/logagent 
 ```
 
-### Run Logagent and ship logs
+## Run Logagent and ship logs
 
-#### 1. Register for a free account at [Sematext.com](https://apps.sematext.com/ui/registration)
+### 1. Register for a free account at [Sematext.com](https://apps.sematext.com/ui/registration)
+![](../images/app/sc-register.png)
 
-#### 2. [Create a Logs App](https://apps.sematext.com/ui/integrations) to get a Logs Token for [Sematext Logs](http://www.sematext.com/logsene/)
+### 2. [Create a Logs App](https://apps.sematext.com/ui/integrations) to get a Logs Token for [Sematext Logs](http://www.sematext.com/logsene/)
+![](../images/logs/add-new-logging-app.png)
 
-#### 3. Run Logagent as System Service
+### 3. Run Logagent as System Service
 
 By running the `logagent-setup` command, Logagent will detect the init system and install Systemd or Upstart service scripts.
 
@@ -54,6 +56,6 @@ Changing the Elasticsearch `index` and `endpoint` let's you ship logs to any Ela
 - Upstart: `service logagent stop/start`
 - Systemd: `systemctl stop/start logagent`
 
-#### 4. Configure Logagent settings
+### 4. Configure Logagent settings
 The setup script generates the configuration file in `/etc/sematext/logagent.conf`. The default settings will ship all log files from the `/var/log` directory to Sematext Cloud. [Here's the configuration guide](./config-file).
 
