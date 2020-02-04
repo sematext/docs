@@ -669,7 +669,7 @@ us in chat.
 
 ### I am not seeing any data in Monitoring charts. How do I check if network connectivity is OK?
 
-Sematext Agent send the data to Sematext via HTTP(S) so it is important
+Sematext Agent sends data to Sematext via HTTP(S) so it is important
 that servers where you install Sematext Agent can access the
 internet. Things to check to ensure network connectivity is ok:
 
