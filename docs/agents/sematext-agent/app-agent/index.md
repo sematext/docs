@@ -35,7 +35,7 @@ you find bottlenecks in your code.
 ### Embedded
 
 The [Embedded](spm-monitor-javaagent) mode can be used only for
-monitoring Java-based applications since it runs as a Java Agent
+monitoring JVM-based applications since it runs as a Java Agent
 inside the Java process.  With the Embedded monitor, when setting it
 up for the first time or when upgrading the monitor, one needs to
 change the command-line and restart the process in which the monitor
@@ -47,7 +47,7 @@ Mode](spm-monitor-javaagent) for more info.
 
 In the [Standalone](spm-monitor-standalone) mode the agent runs in a
 separate process and can thus be used for monitoring both Java and
-non-Java-based applications. If access to JMX is required and the
+non-JVM-based applications. If access to JMX is required and the
 application to monitor does not have JMX enabled, one will have to
 adjust application's command-line parameters to enable JMX and that
 will require application process restart.  However, once that is set

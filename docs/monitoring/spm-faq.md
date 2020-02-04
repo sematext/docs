@@ -181,7 +181,7 @@ as another example, in case of MySQL you will see all metrics related to
 connections, users, queries, handlers, commands, MyISAM, InnoDB, MySQL
 traffic, etc) .
 
-When monitoring Solr, Elasticsearch, HBase, Hadoop and other Java-based
+When monitoring Solr, Elasticsearch, HBase, Hadoop and other JVM-based
 services, you will have an option to choose between using
 [Embedded](../agents/spm-monitor-javaagent/) App Agent or
 [Standalone](../agents/spm-monitor-standalone) App Agent. The
@@ -821,13 +821,13 @@ server_base_url=https://spm-receiver.sematext.com
 
 ## Security
 
-### What information are SPM agents sending?
+### What information are App Agents sending?
 
-SPM agents are sending metrics and data used for filtering those
+App Agents agents are sending metrics and data used for filtering those
 metrics, such as hostnames (which can be obfuscated).  To see what
 exactly is being sent you can use tcpdump or a similar tool to sniff the
-traffic.  SPM agents ship data via HTTPS, but can also ship it via HTTP.
- Java-based agents let you change the protocol in appropriate files
+traffic. App Agents ship data via HTTPS, but can also ship it via HTTP.
+ JVM-based agents let you change the protocol in appropriate files
 under `/opt/spm/properties/` directory, while Node.js-based agents
 let you change it via the `SPM_RECEIVER_URL` environmental variable.
 
