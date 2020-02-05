@@ -489,7 +489,7 @@ Logagent inspects the containers for this label and ships the logs to the specif
 
 The following container environment variables and labels are supported:
 - `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
-- `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting LOGS_ENABLED_DEFAULT.  
+- `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting LOGSENE_ENABLED_DEFAULT.  
 - `LOGS_RECEIVER_URL=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/your_logs_token`
 
 The Kubernetes pod annotations `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`, `sematext.com/logs-enabled=<true|false>`, and`sematext.com/logs-receiver-urls=<url,url,url>` are equivalent.  
