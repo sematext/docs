@@ -11,6 +11,7 @@ Features:
 - Evaluates pod annotations for Sematext Cloud: 
   -  `sematext/logs-token=YOUR_LOGS_TOKEN` to set the log index
   -  `sematext/logs-enabled=<true|false>` to switch logging per pod on or off
+  -  `sematext/logs-receiver-url=https://logsene-receiver.sematext.com/token` set Elasticsearch API endpoint for log ingestion 
    - `sematext/logs-remove-fields=<field list>` to remove specific log fields from pod logs 
 
 Applications:

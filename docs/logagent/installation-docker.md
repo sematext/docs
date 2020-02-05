@@ -487,6 +487,14 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
 Logagent inspects the containers for this label and ships the logs to the specified Logs App. 
 
+The following container environment variables and labels are supported:
+- `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
+- `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting LOGS_ENABLED_DEFAULT.  
+- `LOGS_RECEIVER_URL=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/your_logs_token`
+
+The Kubernetes pod annotations `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`, `sematext.com/logs-enabled=<true|false>`, and`sematext.com/logs-receiver-urls=<url,url,url>` are equivalent.  
+
+
 __Example:__ 
 The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App. 
 
