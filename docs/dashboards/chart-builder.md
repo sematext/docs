@@ -194,13 +194,13 @@ Variables can be created in Report options "Manage variables".
 ## Style
 
 In the style tab, you configure what the chart looks like. You can select bar, line, area and point 
-charts. In addition to chart type, you can choose a color from the palette and group color scheme. The main
-goal of a group color scheme is to determine the colors of the series from the same group. When you group metric by
+charts. In addition to the chart type, you can choose a color from the palette and group color scheme. The main
+goal of a group color scheme is to determine the colors of the series from the same group. When you group metrics by
 `os.host` as a result you get a couple of series. Each series can get a different color.
 
 ![Chart builder styles](../images/dashboards/chart-builder-styles.png)
 
-A very important feature in the styles tab is "Stacked" option. When you select the checkbox data
+A very important feature in the styles tab is the "Stacked" option. When you select the checkbox data
 of a given series is stacked. This is very useful for area and bar charts. Below you can see
 a comparison of stacked and non-stacked bar charts.
 
