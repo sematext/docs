@@ -10,7 +10,7 @@ infrastructure and services.  Pull requests welcome!
 
 ## Capabilities
 
-The agent communicate with Sematext via HTTPS.  It buffers data on
+The agent communicates with Sematext via HTTPS.  It buffers data on
 disk in case it cannot immediately ship it, ensuring data is never
 lost.
 
