@@ -22,7 +22,7 @@ from JMX, REST APIs, and from databases that support JDBC.
 
 ### Tracing
 
-The Sematext agent can also instrument JVM-based apps using Java bytecode
+The Sematext Agent can also instrument JVM-based apps using Java bytecode
 instrumentation to collect [transaction traces](../tracing).
 
 ### Profiling

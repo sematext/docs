@@ -1,6 +1,6 @@
 title: Installing Sematext Agent on Linux
 
-The Sematext agent is available as a package (DEB, RPM, etc.) called sematext-agent:
+The Sematext Agent is available as a package (DEB, RPM, etc.) called sematext-agent:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
