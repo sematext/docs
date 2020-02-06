@@ -1,8 +1,8 @@
 title: Transaction Naming
-description: Java tracing agent uses method signature of entry point as the transaction name when naming web transactions inside Sematext infrastructure and app monitoring tools  
+description: Java tracing agent uses method signature of entry point as the transaction name when naming web transactions inside Sematext infrastructure and app monitoring tools
 
 To name web transactions (i.e., transactions triggered by an HTTP
-request) the SPM Java tracing agent uses method signature of entry point
+request) the App Agent uses method signature of entry point
 as the transaction name. Entry point methods can be last filter/servlet
 executed in a chain, or a Spring handler method name (i.e., a method
 name with the \`@RequestHandler\` annotation). Alternatively,

@@ -4,19 +4,19 @@ description: Monitor Kafka metrics for brokers, producers, and consumers, consum
 
 Sematext has a simple Kafka monitoring Agent written in Java and Go with minimal CPU and memory overhead. It's easy to install and doesn't require any changes to the Kafka source code or your application's source code.
 
-## Sematext Kafka Monitoring Agent 
-This lightweight, open-source [Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Kafka Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/spm-client```.
+## Sematext Kafka Monitoring Agent
+This lightweight, open-source [Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Kafka performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Kafka Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/sematext-agent```.
 
 The Sematext Kafka Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Kafka broker/producer/consumer when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it runs as a separate process and doesn't require a Kafka broker/producer/consumer restart when it is installed or upgraded.
 
-After creating a [Kafka App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host running your Kafka brokers, producers and consumer to have the full visibility over the metrics from each host. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Kafka/overview) displayed in the UI. 
+After creating a [Kafka App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host running your Kafka brokers, producers and consumer to have the full visibility over the metrics from each host. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Kafka/overview) displayed in the UI.
 
 For example, on CentOS, you need to add Sematext Linux packages and install them with the following command:
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
-``` 
+sudo yum install sematext-agent
+```
 
 After that, set up the Kafka Monitoring Agent on your Kafka broker by running a command like this:
 ```bash
@@ -28,7 +28,7 @@ sudo bash /opt/spm/bin/setup-sematext  \
     --infra-token <your-infra-token-goes-here>
 ```
 
-Keep in mind that your need to provide the Monitoring token and Infra token. They are both provided in the [installation instructions](https://apps.sematext.com/ui/howto/Kafka/overview) for your Kafka App. 
+Keep in mind that your need to provide the Monitoring token and Infra token. They are both provided in the [installation instructions](https://apps.sematext.com/ui/howto/Kafka/overview) for your Kafka App.
 
 The last thing that needs to be done is adjusting the ```$KAFKA_HOME/bin/kafka-server-start.sh``` file and add the following section to the ```KAFKA_JMX_OPTS```:
 ```bash
@@ -46,8 +46,8 @@ To have the full visibility into the entire Kafka pipeline it's crucial to monit
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
-``` 
+sudo yum install sematext-agent
+```
 
 After that, run the following command to set up Kafka producer monitoring:
 
@@ -74,8 +74,8 @@ Monitoring your consumers is crucial to have visibility into consumer lag, which
 ```bash
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
-sudo yum install spm-client
-``` 
+sudo yum install sematext-agent
+```
 
 After that, run the following command to setup Kafka consumer monitoring:
 
@@ -103,7 +103,7 @@ The Sematext Kafka monitoring agent collects the following metrics.
 
 - CPU usage
 - CPU load
-- Memory usage 
+- Memory usage
 - Swap usage
 - Disk space used
 - I/O Reads and Writes
@@ -120,26 +120,26 @@ The Sematext Kafka monitoring agent collects the following metrics.
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_gc.png)
 
-### Kafka 
+### Kafka
 
 - Partitions, leaders partitions, offline partitions, under replicated partitions
 - Static broker lag
 - Leader elections, unclean leader elections, leader elections time
 - Active controllers
-- ISR/Log flush 
+- ISR/Log flush
 - Log cleaner buffer utilization, cleaner working time, cleaner recopy
 - Response and request queues
 - Replica maximum lag, replica minimum fetch, preferred replicas imbalances
 - Topic messages in, topic in/out, topic rejected, failed fetch and produce requests
-- Log segment, log size, log offset increasing 
+- Log segment, log size, log offset increasing
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_broker.png)
 
 ### Kafka Producer
 
 - Batch size, max batch size
-- Compression rate 
-- Buffer available bytes 
+- Compression rate
+- Buffer available bytes
 - Buffer pool wait ratio
 - I/O time, I/O ratio, I/O wait time, I/O wait ratio
 - Connection count, connection create rate, connection close rate, network I/O rate

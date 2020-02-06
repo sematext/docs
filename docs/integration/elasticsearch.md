@@ -16,7 +16,7 @@ For example, on Ubuntu, add Sematext Linux packages with the following command:
     echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
     wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
     sudo apt-get update
-    sudo apt-get install spm-client
+    sudo apt-get install sematext-agent
 
 Then setup Elasticsearch monitoring by providing Elasticsearch server connection details:
 
@@ -26,7 +26,7 @@ Then setup Elasticsearch monitoring by providing Elasticsearch server connection
         --agent-type standalone  \
         --SPM_MONITOR_ES_NODE_HOSTPORT 'localhost:9200'
 
-Make sure that HTTP metrics are enabled by setting `http.enabled: true` in `elasticsearch.yaml`. Also set the `node.name` value in the same file. Elasticsearch will otherwise generate random a node name each time an instance starts, making tracking node stats over time impossible.
+Make sure that HTTP metrics are enabled by setting `http.enabled: true` in `elasticsearch.yaml`. Also set the `node.name` value in the same file. Elasticsearch will otherwise generate a random node name each time an instance starts, making tracking node stats over time impossible.
 
 The `elasticsearch.yml` file can be found in `/etc/elasticsearch/elasticsearch.yml` or `$ES_HOME/config/elasticsearch.yml`.
 
@@ -250,9 +250,9 @@ and choose "sum".  The list of shards and the "sum" function can be
 found in the "Shard filter" in the Index Stats
 report.
 
-** Can SPM collect metrics even when Elasticsearch HTTP API is disabled **
+** Can Sematext Agent collect metrics even when Elasticsearch HTTP API is disabled **
 
-Each SPM agent collects Elasticsearch metrics only from the local
+Each Sematext Agent collects Elasticsearch metrics only from the local
 node by accessing the Stats API via HTTP.  To allow only local access
 add the following to elasticsearch.yml. Don't forget to restart each ES
 node to whose elasticsearch.yml you add this.
@@ -261,17 +261,16 @@ node to whose elasticsearch.yml you add this.
 http.host: "127.0.0.1"
 ```
 
-** Can I point SPM monitor to a non-localhost Elasticsearch node **
+** Can I point Sematext Agent to a non-localhost Elasticsearch node **
 
 Yes.  Adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
 and change the SPM\_MONITOR\_ES\_NODE\_HOSTPORT property from the
 default localhost:9200 value to use an alternative hostname:port.  After
-that restart SPM monitor (if you are running a standalone version) or
-Elasticsearch process(es) with embedded SPM
-monitor. 
+that restart Sematext Agent (if you are running a standalone App Agent version) or
+Elasticsearch process(es) with embedded App Agent.
 
-** My Elasticsearch is protected by basic HTTP authentication, can I use SPM  **
+** My Elasticsearch is protected by basic HTTP authentication, can I use Sematext Agent  **
 
 Yes. You just need to adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
@@ -283,16 +282,16 @@ SPM_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
 SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```
 
-Restart your SPM monitor after this change (either with **sudo service
-spm-monitor restart** in case of standalone monitor or by restarting
+Restart your Sematext Agent after this change (either with **sudo service
+spm-monitor restart** in case of standalone App Agent or by restarting
 Elasticsearch node if you are using in-process
-javaagent).
+App Agent).
 
-** I am using SPM for Elasticsearch monitor and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
+** I am using Sematext Agent and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
 
-SPM for Elasticsearch monitor collects Index stats only from
-primary shards, so it is possible that you installed SPM monitor on some
+Sematext Agent collects Index stats only from
+primary shards, so it is possible that you installed Sematext Agent on some
 Elasticsearch node which hosts only replicas. The same is also true for
-Refresh/Flush and Merge stats. Also note that SPM Elasticsearch monitor
+Refresh/Flush and Merge stats. Also note that Sematext Agent
 should be installed on all your Elasticsearch nodes to get the complete
 picture of your cluster in SPM Reports UI.
