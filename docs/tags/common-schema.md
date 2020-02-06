@@ -18,7 +18,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | syslog-tag | A single-valued field used by syslog to indicate the name and the PID of the application generating the event (for example, **httpd\[215\]:**). |
 | tags | A multi-valued array field that can contain zero or more tags. Tags can contain multiple tokens separated by space. |
 | message | A string field that can contain any sort of text (usually the original log line or some other free text). |
-| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](supported-date-formats). |
+| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](../logs/supported-date-formats). |
 | error.id | A reserved field for errors |
 | error.message | A reserved field for errors |
 | error.type | A reserved field for errors |

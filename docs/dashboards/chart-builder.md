@@ -134,7 +134,9 @@ looking at a 24-hour time range, you need 14,400 points to display all data poin
 Displaying so many data points on the chart would make it unreadable and would negatively impact
 your web browser's performance. If we build time buckets each containing 600 data points
 we will have 24 data points to display on the chart, one data point for each hour. The Rollup function
-controls how time buckets are built, meaning what aggregation is performed.
+controls how time buckets are built, meaning what aggregation is performed. You can pick
+one of `avg`, `sum`, `min`, `max` as a rollup aggregation function.
+ 
 
 Each of the predefined metrics has its own default rollup function defined depending on the type of
 the metric. All gauge metrics use the `avg` rollup function and all counter metrics

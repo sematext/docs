@@ -14,8 +14,3 @@ appropriate Sematext monitoring agent. You can choose from:
   - [Node.js-based App Agent](./node-agent), which can [monitor
     Apache](../integration/apache) and [Nginx](../integration/nginx)
     (including [Nginx Plus](../integration/nginxplus)).
-
-  - Sematext Docker Agent (Deprecated), which can collect not
-    only container and host metrics, but also container events and
-    also logs, it can parse and structure out of the box.
-

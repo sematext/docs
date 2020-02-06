@@ -91,6 +91,7 @@ pages:
       - User Identification: experience/user-identification.md
       - Tags: experience/tags.md
       - Resource Timing: experience/resources.md
+      - Timing Breakdown: experience/breakdown.md
       - Integrations: experience/integrations.md
       - Changelog: experience/changelog.md
       - FAQ: experience/faq.md
@@ -180,6 +181,7 @@ pages:
         - Auto Discovery:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
+          - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
@@ -256,12 +258,6 @@ pages:
         - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
       - Mobile Logs: agents/mobile.md
-      - Sematext Docker Agent (Deprecated):
-        - Overview: sematext-docker-agent/index.md
-        - Installation: sematext-docker-agent/installation.md
-        - Configuration: sematext-docker-agent/configuration.md
-        - Troubleshooting: sematext-docker-agent/troubleshooting.md
-        - FAQ: sematext-docker-agent/faq.md
     - Tags:
       - Overview: tags/index.md
       - Custom Tags: tags/custom-tags.md
