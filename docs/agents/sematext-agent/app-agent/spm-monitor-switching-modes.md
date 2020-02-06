@@ -1,5 +1,5 @@
 title: Switching Agent Modes
-description: Switching modes feature allows Sematext Java monitoring agent to be switched from In-Process to Standalone mode, and from Standalone to In-Process mode on each machine running the application
+description: Switching modes feature allows App Agent to be switched from In-Process to Standalone mode, and from Standalone to In-Process mode on each machine running the application
 
 ## From In-Process to Standalone
 
@@ -15,7 +15,7 @@ which you want to change the mode). Set:
     - **SPM\_MONITOR\_JMX\_PARAMS** should be adjusted according to
       instructions in [Java App Agent Standalone](spm-monitor-standalone)
 
-3.  Restart SPM Monitor:
+3.  Restart Sematext Agent:
 
     ``` bash
     sudo /etc/init.d/spm-monitor restart
@@ -38,7 +38,7 @@ want to change the mode). Set:
     - **SPM\_MONITOR\_IN\_PROCESS**="true"
     - **SPM\_MONITOR\_JMX\_PARAMS**=""
 
-3. Restart SPM monitor:
+3. Restart Sematext Agent:
 
     ``` bash
     sudo /etc/init.d/spm-monitor restart

@@ -22,7 +22,7 @@ If you are using the US region of Sematext Cloud:
 
 ```bash
 export REGION=US
-export SPM_TOKEN=<YOUR_MONITORING_TOKEN>
+export MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 export LOGS_TOKEN=<YOUR_LOGS_TOKEN>
 ```
 _**Note:** The US region is set by default, so you do not need to add an environment variable at all._
@@ -31,7 +31,7 @@ If you are using the EU region of Sematext Cloud:
 
 ```bash
 export REGION=EU
-export SPM_TOKEN=<YOUR_MONITORING_TOKEN>
+export MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 export LOGS_TOKEN=<YOUR_LOGS_TOKEN>
 ```
 
@@ -47,7 +47,7 @@ Add this code if you are using the US region of Sematext Cloud:
 
 ```
 REGION=US
-SPM_TOKEN=<YOUR_MONITORING_TOKEN>
+MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 LOGS_TOKEN=<YOUR_LOGS_TOKEN>
 ```
 _**Note:** The US region is set by default, so you do not need to add an environment variable at all._
@@ -56,7 +56,7 @@ Add this code if you are using the EU region of Sematext Cloud:
 
 ```
 REGION=EU
-SPM_TOKEN=<YOUR_MONITORING_TOKEN>
+MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 LOGS_TOKEN=<YOUR_LOGS_TOKEN>
 ```
 
@@ -107,11 +107,11 @@ You can use all parts of the Agent of use them separately. It's all up to you.
 
 The Sematext Express.js Agent will start collecting dozens of key metrics and logs right away, and start showing you the performance and health of your Express.js applications immediately.
 
-## Collected Express.js Metrics 
+## Collected Express.js Metrics
 
 The Sematext Express.js Agent collects the following metrics.
 
-### Operating System    
+### Operating System
 
 - CPU usage 
 - CPU load
@@ -162,7 +162,7 @@ The Sematext Express.js Agent collects the following metrics.
 
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-3.png)
 
-## Collected Express.js Logs 
+## Collected Express.js Logs
 
 The Sematext Express.js Agent collects the following logs for every HTTP request.
 
@@ -219,7 +219,7 @@ Now you can run your app with:
 node cluster.js
 ```
 
-The cluster will spin up a master process with a dedicated process ID and run `numCPUs` number of worker processes. They will be load balanced in a round-robin fashion from the master process. 
+The cluster will spin up a master process with a dedicated process ID and run `numCPUs` number of worker processes. They will be load balanced in a round-robin fashion from the master process.
 
 This is not all, you should also make sure to run your Node.js application with Systemd to make it a system service and run automatically on startup and restart itself if it fails.
 
@@ -281,25 +281,25 @@ These need to point to the `node` binary and the absolute path to your `app.js` 
 
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
-heap total | nodejs.heap.size | Avg | Long | 
-heap used | nodejs.heap.used | Avg | Long | 
-total released | nodejs.gc.heap.diff | Sum | Double | 
-total duration | nodejs.gc.time | Sum | Double | 
-full gc | nodejs.gc.full | Sum | Long | 
-inc gc | nodejs.gc.inc | Sum | Long | 
-memory rss | nodejs.memory.rss | Avg | Long | 
-workers count | nodejs.workers | Avg | Long | 
-request count | nodejs.requests | Sum | Long | 
-error count | nodejs.errors | Sum | Long | 
-5xx count | nodejs.errors.5xx | Sum | Long | 
-4xx count | nodejs.errors.4xx | Sum | Long | 
-3xx count | nodejs.errors.3xx | Sum | Long | 
-total req. size | nodejs.requests.size.total | Sum | Long | 
-total res. size | nodejs.response.size.total | Sum | Long | 
-min response latency | nodejs.responses.latency.min | Min | Long | 
-max response latency | nodejs.responses.latency.max | Max | Long | 
-min latency | nodejs.eventloop.latency.min | Min | Long | 
-max latency | nodejs.eventloop.latency.max | Max | Long | 
+heap total | nodejs.heap.size | Avg | Long |
+heap used | nodejs.heap.used | Avg | Long |
+total released | nodejs.gc.heap.diff | Sum | Double |
+total duration | nodejs.gc.time | Sum | Double |
+full gc | nodejs.gc.full | Sum | Long |
+inc gc | nodejs.gc.inc | Sum | Long |
+memory rss | nodejs.memory.rss | Avg | Long |
+workers count | nodejs.workers | Avg | Long |
+request count | nodejs.requests | Sum | Long |
+error count | nodejs.errors | Sum | Long |
+5xx count | nodejs.errors.5xx | Sum | Long |
+4xx count | nodejs.errors.4xx | Sum | Long |
+3xx count | nodejs.errors.3xx | Sum | Long |
+total req. size | nodejs.requests.size.total | Sum | Long |
+total res. size | nodejs.response.size.total | Sum | Long |
+min response latency | nodejs.responses.latency.min | Min | Long |
+max response latency | nodejs.responses.latency.max | Max | Long |
+min latency | nodejs.eventloop.latency.min | Min | Long |
+max latency | nodejs.eventloop.latency.max | Max | Long |
 
 ## FAQ
 

@@ -21,6 +21,6 @@ Enter required parameters and copy incoming Big Panda Service API Key. Click Tes
 
 ![PagerDuty Alerts Integration](https://sematext.com/docs/images/integrations/big-panda-integration.png "Create Big Panda Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to Big Panda,
+**Done.** Every alert from your Sematext Monitoring app will be forwarded to Big Panda,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.
