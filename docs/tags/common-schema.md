@@ -22,9 +22,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | error.id | A reserved field for errors |
 | error.message | A reserved field for errors |
 | error.type | A reserved field for errors |
-| span | Building block of a trace in distributed tracing |
 | span.id | Building block of a trace in distributed tracing |
-| trace | Building block of a trace in distributed tracing |
 | trace.id | Building block of a trace in distributed tracing |
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
@@ -135,8 +133,5 @@ Below are the tags that are reserved for future use.
 | service.name | Name of the service where the data is collected from |
 | service.id | Unique service identifier |
 | service.type | Service type e.g. `hadoop` |
-| span | Building block of a trace in distributed tracing |
 | span.id | Building block of a trace in distributed tracing |
-| trace | Building block of a trace in distributed tracing |
 | trace.id | Building block of a trace in distributed tracing |
-
