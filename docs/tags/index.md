@@ -3,7 +3,7 @@ description: A Tag is an attribute of a data point (or metric) that could be use
 
 The [Sematext Agent](../agents/sematext-agent) automatically collects the following tags and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, [custom tags](custom-tags).
 
-### Cloud Metadata
+### Cloud Tags
 
 The cloud metadata from AWS, Azure and GCE instances are collected as tags. They're mapped to the `os.host` tag.
 
@@ -31,7 +31,7 @@ Cloud tags collection is enabled by default.  To disable Cloud tags
 collection set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/st-agent.yml` and
 restart spm-monitor using `sudo service spm-monitor restart`.
 
-### Machine Metadata
+### Machine Tags
 
 Following tags are collected from the host the [Sematext Agent](../agents/sematext-agent) is running on. They're mapped to the `os.host` tag.
 
