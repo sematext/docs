@@ -1,7 +1,7 @@
-title: Sematext Java Agent Chef Recipe
+title: Sematext Agent Chef Recipe
 description: Automated configuration management Chef recipe for Sematext infrastructure and services monitoring java agent
 
-The following is an **example** Chef Recipe for installing [Sematext Agent](sematext-agent).
+The following is an **example** Chef Recipe for installing [Sematext Agent](./index.md).
 
 ``` bash
 # Author: Charles Sullivan (charles@fullcontact.com)

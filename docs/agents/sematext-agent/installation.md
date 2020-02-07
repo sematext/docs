@@ -8,7 +8,7 @@ The Sematext Agent is available as a package (DEB, RPM, etc.) called sematext-ag
      <a href="#centos" class="mdl-tabs__tab">CentOS</a>
      <a href="#debian" class="mdl-tabs__tab">Debian</a>
      <a href="#ubuntu" class="mdl-tabs__tab">Ubuntu</a>
-     <a href="#amazonlinux" class="mdl-tabs__tab">Amazon Linux</a>
+     <a href="#amazonlinux" class="mdl-tabs__tab">Amazon</a>
      <a href="#fedora" class="mdl-tabs__tab">Fedora</a>
      <a href="#suse" class="mdl-tabs__tab">SuSE</a>
  </div>

@@ -23,11 +23,11 @@ from JMX, REST APIs, and from databases that support JDBC.
 ### Tracing
 
 The Sematext Agent can also instrument JVM-based apps using Java bytecode
-instrumentation to collect [transaction traces](../tracing).
+instrumentation to collect [transaction traces](../../../../tracing).
 
 ### Profiling
 
-On demand [JVM profiling](on-demand-profiling) is built-in and help
+On demand [JVM profiling](../../../monitoring/on-demand-profiling) is built-in and help
 you find bottlenecks in your code.
 
 ## App Agent Run modes

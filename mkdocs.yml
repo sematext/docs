@@ -156,13 +156,13 @@ pages:
           - Linux: agents/sematext-agent/installation.md
           - Docker: agents/sematext-agent/containers/installation.md
           - Kubernetes: agents/sematext-agent/kubernetes/installation.md
+          - Chef Recipe: agents/sematext-agent/chef-recipe.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
         - App Agent:
           - Overview:  agents/sematext-agent/app-agent/index.md
           - Embedded Mode: agents/sematext-agent/app-agent/spm-monitor-javaagent.md
           - Standalone Mode: agents/sematext-agent/app-agent/spm-monitor-standalone.md
           - Switching Modes: agents/sematext-agent/app-agent/spm-monitor-switching-modes.md
-          - Chef Recipe: agents/sematext-agent/app-agent/chef-recipe.md
         - Containers:
           - Configuration: agents/sematext-agent/containers/configuration.md
           - Metrics: agents/sematext-agent/containers/metrics.md
