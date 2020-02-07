@@ -22,6 +22,8 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | error.id | A reserved field for errors |
 | error.message | A reserved field for errors |
 | error.type | A reserved field for errors |
+| span.id | Building block of a trace in distributed tracing |
+| trace.id | Building block of a trace in distributed tracing |
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
 
@@ -61,7 +63,7 @@ Below are Kubernetes related tags sent as part of metrics/logs in the Kubernetes
 | kubernetes.cluster.name | Kubernetes cluster name | 
 | kubernetes.deployment.name | Kubernetes deployment name | 
 | kubernetes.namespace | Kubernetes namespace | 
-| kubernetes.pvc.name | Kubernetes Persistent Volume Clain name | 
+| kubernetes.pvc.name | Kubernetes Persistent Volume Claim name | 
 | kubernetes.pod.controlledby | Controller of the pod (deployment or daemonset or statefulset) |
 
 ## Operating System Tags
@@ -93,7 +95,7 @@ Below are the tags sent as part of Network Traffic Status metrics/logs:
 | network.topology.address | Local address of the network connection | 
 | network.topology.destination.address | Remote host address of the network connection | 
 | network.topology.destination.port | Remote port |
-| network.topology.protocol |  Protocol name (TCP or UDP) |
+| network.topology.protocol | Protocol name (TCP or UDP) |
 | network.topology.outgoing | determines whether the connection is incoming (client connected to server) or outgoin(current machine connects to external server) |
 | network.topology.process.id | process's identifier that produces connection stats |
 | network.topology.process.name | name of the process's image that produces connection stats | 
@@ -131,5 +133,5 @@ Below are the tags that are reserved for future use.
 | service.name | Name of the service where the data is collected from |
 | service.id | Unique service identifier |
 | service.type | Service type e.g. `hadoop` |
-| span | Building block of trace in distributed tracing |
-
+| span.id | Building block of a trace in distributed tracing |
+| trace.id | Building block of a trace in distributed tracing |
