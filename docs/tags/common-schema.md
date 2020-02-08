@@ -106,8 +106,8 @@ Below are Serverless related tags sent as part of metrics/logs in the Serverless
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| function.name | Name of the Lamba function | 
-| function.version | Version of the Lamda function | 
+| function.name | Name of the Lambda function | 
+| function.version | Version of the Lambda function | 
 | function.request.id | Identifier of the invocation request |
 
 ## Synthetic Monitoring Tags
