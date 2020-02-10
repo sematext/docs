@@ -58,6 +58,8 @@ Below are Process related tags sent as part of metrics/logs process info:
 |:--|:--|:--
 | process.name | Process/program name |
 | process.pid  | Process identifier | 
+| process.ppid  | Parent process identifier | 
+| process.type  | Process type, an example of a process type can be `master` or `child` for Node.js processes. | 
 
 ## Network Traffic Stats Tags
 
