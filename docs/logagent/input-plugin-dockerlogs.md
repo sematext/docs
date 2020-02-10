@@ -10,7 +10,7 @@ Features:
 - collect all container logs
 - discovers new containers
 - all logs are tagged with container id/name and image name
-- disable container logs by setting LOGSENE_ENBALED=false label/env variable
+- disable log collection for a container by setting LOGS_ENBALED=false label/env variable
 - enrich logs with with labels for later use in docker-enrichment plugin 
 
 Applications:

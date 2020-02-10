@@ -1,4 +1,4 @@
-title: Logagent plugins 
+!title: Logagent plugins 
 description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. It is used with elasticsearch, syslog, gelf, cassandra, mysql, postgres, mqtt, log anonymization, apache kafka, and more
 
 Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
@@ -8,6 +8,8 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                          |
 | [files](input-plugin-files)           | input   | Watching and tailing files                                                                               |
 | [docker-logs](input-plugin-dockerlogs)           | input   | Collection of Docker container logs                                                           |
+| [input-kubernetes-events](input-kubernetes-events)           | input   | Collection of Kubernetes events                                                         |
+| [input-kubernetes-audit](input-kubernetes-audit)           | input   | Receive Kubernetes audit logs via http / webhook                                    |
 | [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events) | input  | Collect Windows Events. Available as separate npm package |
 | [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
 | [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
@@ -29,8 +31,8 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [logagent-apple-location](logagent-apple-location)         | input          | Tracking of GPS positions from Apple devices via "find-my-iphone" API |
 | [logagent-novasds](logagent-novasds)         | input          | Read PM10 and PM2.5 values from Nova SDS011 dust sensor (USB to serial interface) |
 | [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
+| [input-filter-k8s-containerd](input-filter-containerd.md) | Processor / input filter  | Parsing cri-o log format and add Kubernetes context to container logs  |
 | [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
-| [access-watch](output-filter-accesswatch) | Processor / output filter | Enriches web server logs with robot detection and traffic intelligence                                   |
 | [aes-encrypt-fields](output-filter-aesencryptfields) | Processor / output filter | Encrypt field values with AES before any output happens |
 | [hash-fields](output-filter-hashfields) | Processor / output filter | Hashing of field values before any output happens |
 | [ip-truncate-fields](output-filter-iptruncatefields) | Processor / output filter | Replaces the last block of IPv4 and IPv6 address fields with "0" to anonymize IP addresses |
@@ -48,9 +50,14 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
 | [output-clickhouse](output-plugin-clickhouse)       | output                   | Sends parsed messages to Yandex ClickHouse DB |
 | [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
+| [output-http](output-plugin-clickhouse)       | output                   | Sends parsed messages via HTTP or HTTPS |
 | [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
+## Find plugins on NPM 
+
+Developers of 3rd party plugins publish logagent plugins in the NPM registry. 
+Simply search for [logagent](https://www.npmjs.com/search?q=logagent) to discover more plugins. 
 
 ## For Developers: How Logagent plugins work 
 

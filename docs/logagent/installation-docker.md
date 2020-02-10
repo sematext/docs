@@ -484,21 +484,29 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 
 ### Log Routing
 
-Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```. 
+Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGS_TOKEN=YOUR_LOGS_TOKEN```. 
 Logagent inspects the containers for this label and ships the logs to the specified Logs App. 
+
+The following container environment variables and labels are supported:
+- `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
+- `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting LOGSENE_ENABLED_DEFAULT.  
+- `LOGS_RECEIVER_URL=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/your_logs_token`
+
+The Kubernetes pod annotations `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`, `sematext.com/logs-enabled=<true|false>`, and`sematext.com/logs-receiver-urls=<url,url,url>` are equivalent.  
+
 
 __Example:__ 
 The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App. 
 
 ```
-docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGS_TOKEN -p 80:80 nginx
+docker run --label LOGS_TOKEN=REPLACE_WITH_YOUR_LOGS_TOKEN -p 80:80 nginx
 # or use environment variable on Kubernetes (no support for Docker labels)
-# docker run -e LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOG_TOKEN -p 80:80 nginx
+# docker run -e LOGS_TOKEN=REPLACE_WITH_YOUR_LOG_TOKEN -p 80:80 nginx
 ```
 
-All other container logs will be shipped to the Logs App specified in the docker run command for ```sematext/logagent``` with the environment variable ```LOGSENE_TOKEN```.
+All other container logs will be shipped to the Logs App specified in the docker run command for ```sematext/logagent``` with the environment variable ```LOGS_TOKEN```.
 
-By default, all logs from all containers are collected and sent to Sematext Cloud/Elasticsearch. You can change this default by setting the ```LOGSENE_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGSENE_ENABLED``` label.
+By default, all logs from all containers are collected and sent to Sematext Cloud/Elasticsearch. You can change this default by setting the ```LOGS_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGS_ENABLED``` label.
 
 Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2017/05/15/docker-log-management-enrichment/) for further details.
 
