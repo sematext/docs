@@ -195,6 +195,7 @@ pages:
           - Configuration: logagent/config-file.md
           - Command Line Parameters: logagent/cli-parameters.md
           - Log Parser Patterns: logagent/parser.md
+          - Monitoring: logagent/monitoring.md
         - Plugins:
           - Overview: logagent/plugins.md
           - About filters: logagent/filters.md
