@@ -5,7 +5,7 @@ VictorOps automates getting the right alert to the right person at the right tim
 
 ## **In VictorOps**
 
-Log into your [VictorOps account](https://portal.victorops.com/) and create Routing Key and API Key needed to create the integration between VictorOps and Sematext APM, Log Management, Tracing, and RUM platform. Also check [VictorOps's API](https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/) for alerts API and REST Endpoint information. 
+Log into your [VictorOps account](https://portal.victorops.com/) and create Routing Key and API Key needed to create the integration between VictorOps and Sematext APM, Log Management, Tracing, and RUM platform. Also check [VictorOps's API](https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/) for alerts API and REST Endpoint information.
 
 Visit VictorOps's [Getting Started Guide](https://help.victorops.com/article-categories/getting-started/) for more information about their service integration with other SaaS monitoring and logging tools such as ours.
 
@@ -19,6 +19,6 @@ Enter required parameters and copy incoming VictorOps Routing and API Key. Click
 
 ![VictorOps Alerts Integration](https://sematext.com/docs/images/integrations/victorops-integration.png "VictorOps Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to VictorOps,
+**Done.** Every alert from your Sematext Monitoring app will be forwarded to VictorOps,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.

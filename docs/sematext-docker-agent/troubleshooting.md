@@ -1,13 +1,13 @@
 title: Troubleshooting Sematext Docker Agent
 description: Troubleshooting instructions for Sematext Docker Agent, a modern, Docker-native monitoring and log collection agent. It runs as a tiny container on every Docker host and collects logs, metrics, and events for all cluster nodes and their containers
 
-# Troubleshooting 
+# Troubleshooting
 
 The following command enables **debug** information to stdout - to be
 displayed with `docker logs container_id_of_sematext-agent-docker`:
 
 ```sh
-docker run -d --name sematext-agent -e SPM_TOKEN=YOUR-SPM_TOKEN \
+docker run -d --name sematext-agent -e MONITORING_TOKEN=YOUR-MONITORING_TOKEN \
 -e SPM_LOG_TO_CONSOLE=true \
 -e SPM_LOG_LEVEL=debug \
 -v /var/run/docker.sock:/var/run/docker.sock \

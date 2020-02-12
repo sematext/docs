@@ -1,7 +1,7 @@
-title: Sematext Java Agent Chef Recipe
+title: Sematext Agent Chef Recipe
 description: Automated configuration management Chef recipe for Sematext infrastructure and services monitoring java agent
 
-The following is an **example** Chef Recipe for installing [SPM client](spm-client).
+The following is an **example** Chef Recipe for installing [Sematext Agent](./index.md).
 
 ``` bash
 # Author: Charles Sullivan (charles@fullcontact.com)
@@ -15,13 +15,13 @@ if node.spm[:token]  # Will only run if a SPM token is present.
     key "http://pub-repo.sematext.com/ubuntu/sematext.gpg.key"
     notifies :run, "execute[apt-get update]", :immediately
   end
- 
-  package "spm-client"
- 
+
+  package "sematext-agent"
+
   service "spm-monitor" do
     action :nothing
   end
- 
+
   bash "setup-sematext" do
     user "root"
     cwd "/tmp"
@@ -29,7 +29,7 @@ if node.spm[:token]  # Will only run if a SPM token is present.
     creates "/opt/spm/spm-monitor/conf/spm-monitor-config-#{node.spm[:token]}-default.properties"
     notifies :restart, "service[spm-monitor]"
   end
-  
+
 end
 ```
 
@@ -39,8 +39,8 @@ end
     replace "apt-get" with distribution-specific equivalent (e.q. yum
     on RedHat-based distros)
   - line 22: change "elasticsearch" to appropriate type based on the type seen for
-    your SPM app on <https://apps.sematext.com/ui/our-integrations>
+    your Sematext Monitoring app on <https://apps.sematext.com/ui/our-integrations>
   - line 22: change "standalone" to "javaagent" if you want an
     [embedded/in-process agent](spm-monitor-javaagent)
     and not a [standalone process agent](spm-monitor-standalone)
-  - line 24: this is relevant only for "standalone" agent  
+  - line 24: this is relevant only for "standalone" agent

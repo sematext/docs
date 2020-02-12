@@ -23,7 +23,7 @@ as described above. 
 token: **
 
 - Under room as described above. If you use this you will see
-messages from SPM with the nickname you define in the Token Label
+messages from Sematext Monitoring with the nickname you define in the Token Label
 input.
 
 - Under user via Hipchat Account API.

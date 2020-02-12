@@ -21,4 +21,4 @@ Enter required parameters and copy incoming Pushover Service API Key. Click Test
 
 ![Pushover Alerts Integration](https://sematext.com/docs/images/integrations/pushover-integration.png "Pushover Integration")
 
-**Done.** Every alert from your SPM app will be forwarded to Pushover, where you can manage escalation policies and configure notifications to other services like HipChat, Slack, Zapier, Flowdock, and more.
+**Done.** Every alert from your Sematext Monitoring app will be forwarded to Pushover, where you can manage escalation policies and configure notifications to other services like HipChat, Slack, Zapier, Flowdock, and more.

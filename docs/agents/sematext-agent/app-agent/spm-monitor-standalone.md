@@ -1,16 +1,16 @@
 title: Standalone Agent Mode
-description: Sematext standalone monitoring Java agent is started as a separate process on each machine running the application, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
+description: Sematext standalone monitoring App Agent is started as a separate process on each machine running the application, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
 
-Unlike the [Embedded](spm-monitor-javaagent) Java agent-based monitor, the Standalone monitor
+Unlike the [Embedded](spm-monitor-javaagent) App Agent, the Standalone App Agent
 is started as a separate process on each machine running the
-application(s) you want to monitor. A separate monitor process should be
+application(s) you want to monitor. A separate App Agent process should be
 started for each application monitored on a machine. The installer adds
 the systemd service to manage the agent. Before starting the
-monitor one should ensure the application to be monitored exposes its metrics
+App Agent one should ensure the application to be monitored exposes its metrics
 and allows access to them (e.g. via JMX, HTTP, JDBC...)
 
-  
-After that, the monitoring agent can be (re)started with:
+
+After that, the App Agent can be (re)started with:
 
 ``` bash
 sudo service spm-monitor restart
@@ -27,9 +27,9 @@ There are 3 basic JMX setups (all explained below):
 
 ### No Security Setup
 
-  
+
 Simple setup useful for testing, but you may want to consider using one
-of the other types of setup for your production servers.  
+of the other types of setup for your production servers.
 This setup requires adding the following arguments to your Java process
 (your Elasticsearch, Solr, HBase...):
 
@@ -40,10 +40,10 @@ This setup requires adding the following arguments to your Java process
 -Dcom.sun.management.jmxremote.authenticate=false
 ```
 
-  
+
 The only thing you can customize here is the port. This port has to be
-reflected in monitor config, in **spm.remote.jmx.url** argument, as
-shown below.  
+reflected in App Agent config, in **spm.remote.jmx.url** argument, as
+shown below.
 In this example, **SPM\_MONITOR\_JMX\_PARAMS** property in **monitor
 properties** file should be adjusted as follows (leave other properties
 unchanged):
@@ -55,15 +55,15 @@ SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000"  # MUST match the p
 ### Security with Password File
 
 You should define the role and its password in separate files for
-monitored service (say for your tomcat server 
-**/home/tomcat/passwordServer.tx**t) and for monitor itself (say
+monitored service (say for your tomcat server
+**/home/tomcat/passwordServer.tx**t) and for App Agent itself (say
 **/home/spm/passwordMonitor.txt**). Each file should be owned by the
 user which runs the process (in case of **passwordServer.txt**, owner
 could be ubuntu, jetty, tomcat... whoever is running the monitored
 service; in case of **passwordMonitor.txt**, user always has to be
 **spmmon** which is created during agent installation). Access
-rights on these files should be set to **600**.  
-  
+rights on these files should be set to **600**.
+
 These files should contain space-separated role-password pairs, for
 example:
 
@@ -78,10 +78,10 @@ default, role named **monitorRole** is defined and can be used
 out-of-the-box. If you want to use some other role name, you should
 first define it in jmxremote.access file.
 
-  
+
 The **passwordServer.txt** file can have multiple such lines,
 while **passwordMonitor.txt** must contain only one line and this line
-has to exist in the **passwordServer.txt** file.  
+has to exist in the **passwordServer.txt** file.
 
 In this case, Java process of monitored service should be started with
 the following arguments (again, port can be adjusted and it has to be
@@ -116,15 +116,15 @@ In this case, monitored service should get the following java arguments:
 -Dcom.sun.management.jmxremote.authenticate=false
 ```
 
-Port, password and keystore path should match your local setup.  
-  
+Port, password and keystore path should match your local setup.
+
 **Monitor properties** file should be adjusted like this (change just
 **SPM\_MONITOR\_JMX\_PARAMS** property):
 
 ``` properties
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=localhost:3000
--Djavax.net.ssl.trustStore=/home/spm/monitor.ts 
--Djavax.net.ssl.trustStorePassword=password456 
+-Djavax.net.ssl.trustStore=/home/spm/monitor.ts
+-Djavax.net.ssl.trustStorePassword=password456
 -Dcom.sun.management.jmxremote.ssl.need.client.auth=true"
 ```
 
@@ -145,12 +145,12 @@ here; the Jetty started here could have run Solr or some other
 application):
 
 ``` bash
-java -Dcom.sun.management.jmxremote 
--Dcom.sun.management.jmxremote.port=3000 
--Dcom.sun.management.jmxremote.ssl=true 
--Djavax.net.ssl.keyStorePassword=password123 
--Djavax.net.ssl.keyStore=/home/jetty/server.ks 
--Dcom.sun.management.jmxremote.authenticate=false 
+java -Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=3000
+-Dcom.sun.management.jmxremote.ssl=true
+-Djavax.net.ssl.keyStorePassword=password123
+-Djavax.net.ssl.keyStore=/home/jetty/server.ks
+-Dcom.sun.management.jmxremote.authenticate=false
 -jar start.jar
 ```
 
@@ -166,10 +166,10 @@ package or installed it with apt-get install). One way is editing
 **/etc/default/tomcat6** (if it exists) by adding:
 
 ``` bash
-CATALINA_OPTS="${CATALINA_OPTS} -Dcom.sun.management.jmxremote 
--Dcom.sun.management.jmxremote.port=3000 
--Dcom.sun.management.jmxremote.ssl=false 
--Dcom.sun.management.jmxremote.authenticate=true 
+CATALINA_OPTS="${CATALINA_OPTS} -Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=3000
+-Dcom.sun.management.jmxremote.ssl=false
+-Dcom.sun.management.jmxremote.authenticate=true
 -Dcom.sun.management.jmxremote.password.file=/home/tomcat/passwordTomcat.txt"
 ```
 
@@ -192,7 +192,7 @@ export HBASE_JMX_BASE="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.manage
 export HBASE_MASTER_OPTS="$HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=3000"
 ```
 
-  
+
 while **region server** could
 get:
 
@@ -201,17 +201,17 @@ export HBASE_JMX_BASE="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.manage
 export HBASE_REGIONSERVER_OPTS="$HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=3000"
 ```
 
-  
+
 In case you are running **hbase master** and **region server** on the
 same machine, ensure they use different JMX ports (and adjust the config
 of their **monitor properties** files).
 
-When installing spm client, both **monitor properties** files will be
+When installing Sematext Agent, both **monitor properties** files will be
 prepared for you (exact locations and names for your application are
 mentioned in step 3 on
 <https://apps.sematext.com/ui/monitoring>).
 
- 
+
 
 ### Hadoop
 
@@ -279,7 +279,7 @@ export YARN_PROXYSERVER_OPTS="$YARN_PROXYSERVER_OPTS -Dcom.sun.management.jmxrem
 -Dcom.sun.management.jmxremote.authenticate=false"
 ```
 
- 
+
 
 If you are using **CDH GUI** to administer your Hadoop setup, you can
 adjust "**Java Configuration Options**" for each Hadoop node through the
@@ -294,12 +294,12 @@ above.
 **Alternatively**, even when using **CDH** **GUI** to administer Hadoop,
 you can still choose to manually add definitions to **hadoop-env.sh**
 file, you may just have to create it in **conf/** subdir if it doesn't
-exist yet. 
+exist yet.
 
 Below is the image of CDH UI:
 
 
-![](attachments/7766020/8978434.png)
+![](../../../monitoring/attachments/7766020/8978434.png)
 
 ### ZooKeeper
 
@@ -353,14 +353,14 @@ supervisor.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxre
 
 For Workers (use this approach to have Storm dynamically assign a JMX
 port to each Worker choosing from the port range specified in the
-storm.yaml): 
+storm.yaml):
 
 ``` bash
 worker.childopts: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=%ID%"
 ```
 
 For the above to work make sure the JMX port range is defined in
-storm.yml as follows: 
+storm.yml as follows:
 
 ``` bash
 supervisor.slots.ports:
@@ -371,7 +371,7 @@ supervisor.slots.ports:
 ```
 
 ## Additional Notes
-  
+
 In some cases, monitored server should also get the following argument:
 
 ``` properties

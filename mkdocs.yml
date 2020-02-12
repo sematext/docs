@@ -152,14 +152,22 @@ pages:
       - Overview: agents/index.md
       - Sematext Agent:
         - Overview: agents/sematext-agent/index.md
+        - Installation:
+          - Linux: agents/sematext-agent/installation.md
+          - Docker: agents/sematext-agent/containers/installation.md
+          - Kubernetes: agents/sematext-agent/kubernetes/installation.md
+          - Chef Recipe: agents/sematext-agent/chef-recipe.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
+        - App Agent:
+          - Overview:  agents/sematext-agent/app-agent/index.md
+          - Embedded Mode: agents/sematext-agent/app-agent/spm-monitor-javaagent.md
+          - Standalone Mode: agents/sematext-agent/app-agent/spm-monitor-standalone.md
+          - Switching Modes: agents/sematext-agent/app-agent/spm-monitor-switching-modes.md
         - Containers:
-          - Installation: agents/sematext-agent/containers/installation.md
           - Configuration: agents/sematext-agent/containers/configuration.md
           - Metrics: agents/sematext-agent/containers/metrics.md
           - Metadata: agents/sematext-agent/containers/metadata.md
         - Kubernetes:
-          - Installation: agents/sematext-agent/kubernetes/installation.md
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
         - Processes:
@@ -174,12 +182,6 @@ pages:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
-      - Infra & App Agent:
-        - Overview:  agents/spm-client.md
-        - Embedded Mode: agents/spm-monitor-javaagent.md
-        - Standalone Mode: agents/spm-monitor-standalone.md
-        - Switching Modes: agents/spm-monitor-switching-modes.md
-        - Chef Recipe: agents/chef-recipe.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md

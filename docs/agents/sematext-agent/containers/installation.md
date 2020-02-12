@@ -1,4 +1,4 @@
-title: Installation
+title: Installing Sematext Agent on Docker
 description: To deploy the Sematext Agent as a container, run a simple command on each one of your hosts.
 
 Installing Sematext Agent can be done by using Docker, Docker Compose, and Docker Swarm / Enterprise.
