@@ -5,7 +5,7 @@ description: How to monitor Logagent runtime performance metrics
 
 ### Containerized environment
 If you are running Logagent in containers you should be running [sematext/logagent](../installation-docker/).
-Set the MONITORING_TOKEN environmental variable to ship Logagent's Node.js runtime metrics to Sematext.  Just make sure the token is for the Node.js Monitoring App.
+Set the MONITORING_TOKEN environmental variable to ship Logagent's Node.js runtime metrics to Sematext.  Just make sure the token is for the [Node.js Monitoring](../../integration/node.js/) App.
 
 Example:
 ```
