@@ -331,4 +331,4 @@ There could be 2 possible reasons:
     contain Slave-specific metrics will be blank and vice-versa.
 2.  Different versions of HBase provide different metrics. Thus, if you
     have an older version of HBase, it may not be providing all metrics
-    that SPM collects and graphs.
+    that Sematext Monitoring collects and graphs.

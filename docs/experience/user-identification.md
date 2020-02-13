@@ -20,6 +20,7 @@ In order to properly identify the user you need to call the `identify` function 
   strum('config', ...);
 </script>
 ```
+Note that both 'name' and 'identifier' are required.
 
 Deploy the changes to your website, and wait for new data to arrive.
 

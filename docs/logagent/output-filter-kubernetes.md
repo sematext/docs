@@ -17,7 +17,7 @@ Features:
 Applications:
 
 - Log routing based on Kubernetes annotations
-- Use Kuberntes API to get correct Kubernetes metadata 
+- Use Kubernetes API to get correct Kubernetes metadata 
 
 
 ### Configuration

@@ -30,25 +30,16 @@ Once you have data flowing you can **analyze metrics** by a number of context-aw
 ![Monitoring Agent Shipping Data](../images/guide/monitoring/monitoring-agent-shipping.png)
 
 You can have any number of Monitoring Apps and each App can be shared
-with different people, giving them different access roles. Each App has its own plan. 
+with different people, giving them different access roles. Each App has its own plan.
 Some Apps can use the free plan, while others can use paid plans, thus enabling a lot of flexibility around cost management.
 
 ## Setting up Monitoring Agents
 
 Metrics are shipped to Sematext Monitoring using Agents. To monitor your infrastructure you need to set up a **Sematext Monitoring Agent**. You can choose from:
 
-  - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing 
-    fast Go-based Monitoring Agent with a tiny footprint for both 
-    infrastructure and containers.
-
-  - [Sematext Infra & App Agent](spm-client) (aka SPM Client or SPM
-    Monitor). The Infra Agent collects OS & Network metrics.
-    The App Agent collects application metrics. The App Agent
-    can run in [embedded](spm-monitor-javaagent)
-    (aka Java agent-based, aka in-process) or
-    [standalone](spm-monitor-standalone) mode.  This agent can also
-    instrument JVM-based apps to collect transaction traces and
-    perform [on demand profiling](on-demand-profiling).
+  - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing
+    fast Go-based Monitoring Agent with a tiny footprint for both
+    infrastructure and containers. Also includes Java based App Agent that collects application metrics.
 
   - [Node.js-based App Agent](node-agent), which can [monitor
     Apache](../integration/apache) and [Nginx](../integration/nginx)

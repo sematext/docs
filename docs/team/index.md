@@ -29,7 +29,7 @@ these two access types at the same time. You could share your account with
 some users, and share specific Apps with other users.
 
 ## Account Access
-By inviting a user to your account, you invite them to your **whole account**, 
+By [inviting a user to your account](./account-access), you invite them to your **whole account**, 
 so they get access to **all** your Apps, Dashboards, notification
 hooks, alert rules, and integrations.
 
@@ -45,7 +45,7 @@ access depends on the role you assigned to each person.
 
 
 ## App Access
-App Access is **restricted only to a particular App**. Nothing besides the 
+[App Access](./app-access) is **restricted only to a particular App**. Nothing besides the 
 shared App is accessible to the invited user. 
 
 *__Note__: Dashboards are at the account level and can thus be shared only through account Access.*
@@ -59,15 +59,15 @@ by your team, they **can't use your team's notification hooks**, meaning they're
 
 ## App Transfer
 No level of Access can change the Owner status of an App. To transfer the 
-ownership of an App, use the App Transfer feature. Select an App, enter the user
+ownership of an App, use the [App Transfer](./app-transfer) feature. Select an App, enter the user
 you wish to transfer the App to, and hit **Transfer**.
 
 ## Typical use of Roles in an Organization or Team
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
-This account might be considered a _parent_ account for your whole organization or team.  
+This account might be considered [a _parent_ account](./user-roles) for your whole organization or team.  
 
-- **Owner** - the person who created the account would be its `OWNER`
-- **Admin** - invited users can be given the `ADMIN` role, which gives them read, write, and invite rights 
-- **User** - the `USER` role grants read rights and limited write rights
-- **Billing Admin** - the `BILLING_ADMIN` is able to define, edit, and delete credit cards and choose plans to be used for Apps in the 
+- [**Owner**](./user-roles/#owner) - the person who created the account would be its `OWNER`
+- [**Admin**](./user-roles/#admin) - invited users can be given the `ADMIN` role, which gives them read, write, and invite rights 
+- [**User**](./user-roles/#user) - the `USER` role grants read rights and limited write rights
+- [**Billing Admin**](./user-roles/#billing-admin) - the `BILLING_ADMIN` is able to define, edit, and delete credit cards and choose plans to be used for Apps in the 
 account.

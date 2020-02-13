@@ -1,4 +1,4 @@
-title: Common Schema 
+title: Sematext Common Schema 
 description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tag, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
 
 Tags are sent by the Sematext Agent as part of every every data point or log line and they are shown in UI as filters. 
@@ -22,6 +22,8 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | error.id | A reserved field for errors |
 | error.message | A reserved field for errors |
 | error.type | A reserved field for errors |
+| span.id | Building block of a trace in distributed tracing |
+| trace.id | Building block of a trace in distributed tracing |
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
 
@@ -37,9 +39,45 @@ The tags below are applicable to all metrics/logs types:
 | measurement | Reserved as per Influx Line Protocol |
 | tag.alias.type | Denotes the Tag Alias type |
 
+## Operating System Tags
+
+Below are the OS related tags sent as part of OS metrics/logs
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| os.disk | Human readable name of the block device | 
+| os.disk.mountpoint | Mount point for the disk in the file system |
+| os.disk.fs.type | Type of the file system associated with the device |
+| os.network | Name of the network interface |
+
+## Process Tags
+
+Below are Process related tags sent as part of metrics/logs process info:
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| process.name | Process/program name |
+| process.pid  | Process identifier | 
+| process.ppid  | Parent process identifier | 
+| process.type  | Process type, an example of a process type can be `master` or `child` for Node.js processes. | 
+
+## Network Traffic Stats Tags
+
+Below are the tags sent as part of Network Traffic Status metrics/logs:
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| network.topology.address | Local address of the network connection | 
+| network.topology.destination.address | Remote host address of the network connection | 
+| network.topology.destination.port | Remote port |
+| network.topology.protocol | Protocol name (TCP or UDP) |
+| network.topology.outgoing | Determines whether the connection is incoming (client connected to server) or outgoin(current machine connects to external server) |
+| network.topology.process.id | Process identifier that produces connection stats |
+| network.topology.process.name | Name of the process's image that produces connection stats | 
+
 ## Container Tags
 
-Below are container related tags sent as part of metrics/logs in the container environment.
+Below are container related tags sent as part of metrics/logs in the container environment:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -61,56 +99,22 @@ Below are Kubernetes related tags sent as part of metrics/logs in the Kubernetes
 | kubernetes.cluster.name | Kubernetes cluster name | 
 | kubernetes.deployment.name | Kubernetes deployment name | 
 | kubernetes.namespace | Kubernetes namespace | 
-| kubernetes.pvc.name | Kubernetes Persistent Volume Clain name | 
-| kubernetes.pod.controlledby | Controller of the pod (deployment or daemonset or statefulset) |
-
-## Operating System Tags
-
-Below are the OS related tags sent as part of OS metrics/logs
-
-| Tag Name  | Description  | Synonymous Tags
-|:--|:--|:--
-| os.disk | Human readable name of the block device | 
-| os.disk.mountpoint | Mount point for the disk in the file system |
-| os.disk.fs.type | Type of the file system associated with the device |
-| os.network | Name of the network interface |
-
-## Process Tags
-
-Below are Process related tags sent as part of metrics/logs process info.
-
-| Tag Name  | Description  | Synonymous Tags
-|:--|:--|:--
-| process.name | process/program name |
-| process.pid  | process identifier | 
-
-## Network Traffic Stats Tags
-
-Below are the tags sent as part of Network Traffic Status metrics/logs:
-
-| Tag Name  | Description  | Synonymous Tags
-|:--|:--|:--
-| network.topology.address | Local address of the network connection | 
-| network.topology.destination.address | Remote host address of the network connection | 
-| network.topology.destination.port | Remote port |
-| network.topology.protocol |  Protocol name (TCP or UDP) |
-| network.topology.outgoing | determines whether the connection is incoming (client connected to server) or outgoin(current machine connects to external server) |
-| network.topology.process.id | process's identifier that produces connection stats |
-| network.topology.process.name | name of the process's image that produces connection stats | 
+| kubernetes.pvc.name | Kubernetes Persistent Volume Claim name | 
+| kubernetes.pod.controlledby | Controller of the pod (deployment or DaemonSet or StatefulSet) |
 
 ## Serverless Tags
 
-Below are Serverless related tags sent as part of metrics/logs in the Serverless environment.
+Below are Serverless related tags sent as part of metrics/logs in the Serverless environment:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| function.name | Name of the Lamba function | 
-| function.version | Version of the Lamda function | 
+| function.name | Name of the Lambda function | 
+| function.version | Version of the Lambda function | 
 | function.request.id | Identifier of the invocation request |
 
 ## Synthetic Monitoring Tags
 
-Below are tags sent as part of metrics in Sematext Synthetic Monitoring.
+Below are tags sent as part of metrics in Sematext Synthetic Monitoring:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -123,7 +127,7 @@ Below are tags sent as part of metrics in Sematext Synthetic Monitoring.
 
 ## Other Special Tags
 
-Below are the tags that are reserved for future use.
+Below are tags that are reserved for future use:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -131,5 +135,5 @@ Below are the tags that are reserved for future use.
 | service.name | Name of the service where the data is collected from |
 | service.id | Unique service identifier |
 | service.type | Service type e.g. `hadoop` |
-| span | Building block of trace in distributed tracing |
-
+| span.id | Building block of a trace in distributed tracing |
+| trace.id | Building block of a trace in distributed tracing |
