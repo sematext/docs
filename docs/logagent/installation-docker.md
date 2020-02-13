@@ -497,8 +497,6 @@ The Kubernetes pod annotations `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`, `sem
 
 __Example:__ 
 The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App. 
-Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```.
-Logagent inspects the containers for this label and ships the logs to the specified Logs App.
 
 ```
 docker run --label LOGS_TOKEN=REPLACE_WITH_YOUR_LOGS_TOKEN -p 80:80 nginx
