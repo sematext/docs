@@ -201,6 +201,7 @@ pages:
           - Input Filter:
             - Grep input filter: logagent/input-filter-grep.md
             - Grok input filter: logagent/input-filter-grok.md
+            - Kubernetes cri-o logs: logagent/input-filter-containerd.md
           - Input Plugins:
             - Standard input: logagent/input-plugin-stdin.md
             - File input: logagent/input-plugin-files.md
@@ -224,8 +225,9 @@ pages:
             - Apple device location: logagent/logagent-apple-location.md
             - Nova dust sensor: logagent/logagent-novasds.md
             - Cloud Foundry input: logagent/input-plugin-cloudfoundry.md
+            - Kubernetes Events: logagent/input-kubernetes-events.md
+            - Kubernetes Audit Logs: logagent/input-kubernetes-audit.md
           - Output Filter:
-            - Access Watch output filter: logagent/output-filter-accesswatch.md
             - SQL output filter: logagent/output-filter-sql.md
             - AES encrypt fields: logagent/output-filter-aesencryptfields.md
             - Hash fields: logagent/output-filter-hashfields.md
@@ -248,6 +250,7 @@ pages:
             - ClickHouse DB: logagent/output-plugin-clickhouse.md
             - Slack Webhook: logagent/output-plugin-slack.md
             - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
+            - HTTP post: logagent/output-plugin-http.md
         - How-To:
             - Nginx Ingress Log Shipping: logagent/how-to-nginx-ingress-log-shipping.md
             - GDPR Personal Data In Web Server Logs: logagent/how-to-gdpr_web_logs.md
