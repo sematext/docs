@@ -1,12 +1,12 @@
-title: Ship logs via http or https
-description: Sends log messages as http or https post request
+title: Ship logs via HTTP or HTTPS
+description: Sends log messages as HTTP or HTTPS post request
 
 ## Output Plugin: HTTP
 
-Post logs to web services via `http` or `https`. 
+Post logs to web services via `HTTP` or `HTTPS`. 
 
 Supported formats: 
-- ldjson - line delimited json 
+- ldjson - line delimited json
 
 ### Configuration
 
@@ -15,17 +15,12 @@ Supported formats:
     module: output-http
     url: http://localhost:8080/events
     format: ldjson
-    # maximum number of events to buffer
+    # maximum number of events per request
     # 1 - each event creates a separate http request
     # >1 - multiple events in each http request
     maxBufferSize: 1
     # flush interval in seconds
-    flushInterval: 1
-    # add tags before logs are shipped
-    tags:
-      token: SPM_TOKEN
-      role: backend
-      host: myServerName
+    flushInterval: 5
     filter:
       field: logSource
       match: sensor.*

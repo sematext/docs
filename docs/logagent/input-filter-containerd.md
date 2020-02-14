@@ -7,7 +7,7 @@ Parsing cri-o containerd log format. Use the file input plugin to read log files
 
 ## Configuration 
 
-Note: the plugin can be enabled via command line option `--k8sContainerd`.
+Note: The plugin can be enabled via command line option `--k8sContainerd`.
 
 Add the following section to the Logagent configuration file:  
 
@@ -17,7 +17,7 @@ inputFilter:
   - module: input-filter-k8s-containerd
 ```
 
-The following example collects container log files, parses cri-o format format, parses container logs with default log patterns, and adds Kubernetes meta-data via Kubernetes API before it ships logs to Sematext Cloud: 
+The following example collects container log files, parses cri-o format, parses container logs with default log patterns, and adds Kubernetes meta-data via Kubernetes API before it ships logs to Sematext Cloud: 
 
 ```yaml
 input: 

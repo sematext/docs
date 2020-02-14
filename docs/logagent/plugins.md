@@ -1,4 +1,4 @@
-!title: Logagent plugins 
+title: Logagent plugins 
 description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin, and loaded on demand as declared in the configuration file. It is used with elasticsearch, syslog, gelf, cassandra, mysql, postgres, mqtt, log anonymization, apache kafka, and more
 
 Logagent features a modular architecture. Each input or output module is implemented as a plugin for the Logagent framework. Plugins are loaded on demand as declared in the configuration file. 
@@ -54,21 +54,25 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
-## Find plugins on NPM 
+## Find plugins on npm 
 
-Developers of 3rd party plugins publish logagent plugins in the NPM registry. 
+Developers of 3rd party plugins publish logagent plugins in the [npm registry](https://npmjs.org). 
 Simply search for [logagent](https://www.npmjs.com/search?q=logagent) to discover more plugins. 
 
 ## For Developers: How Logagent plugins work 
 
-- Logagent checks the configuration file for properties with a "module" key for the nodejs module name. External plugins need to be installed via npm. 
+- Logagent checks the configuration file for properties with a "module" key for the nodejs module name. 
+  External plugins need to be installed via npm. 
 - Plugins are initialized with the Logagent configuration (from command line arguments + configuration file) and the event emitter for Logagent. Plugins should provide a start and stop method.
 - Input plugins read data from a data source and emit events to the Logagent event emitter.
-  These events have the identifier "data.raw" and 2 parameters: 
-  - data - data read from a data source 
+  These events have the identifier `data.raw` and 2 parameters: 
+  - data - a string containing a text line, read from a data source 
   - context - an object with meta data e.g. {sourceName: '/var/log/httpd/access.log'}
     The "context" helps other plugins to process the data correctly, e.g. to handle multiple open files. 
-- Output plugins listen to "data.parsed" events and store or forward the data to the target. 
+  In some cases, input plugins create strcutured data, and it makes no sense to process the data with text bases input-filters and Logagent parser. Input plugins can emit a `data.object` event, and only output-filters and output plugins will process such events with the following parameters: 
+  - data - a JavaScript object e.g. `{message: 'hello', severity: 'info'}`
+  - context - an object with meta data e.g. {sourceName: '/var/log/httpd/access.log'}
+- Output plugins listen to `data.parsed` events and store or forward the data to the target. 
 
 ### Examples 
 
@@ -182,6 +186,7 @@ __Example Output Plugin (stdout)__
 'use strict'
 var prettyjson = require('prettyjson')
 var safeStringify = require('fast-safe-stringify')
+
 function OutputStdout (config, eventEmitter) {
   this.config = config
   this.eventEmitter = eventEmitter
