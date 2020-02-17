@@ -513,7 +513,7 @@ docker run -e LOGS_TOKEN=REPLACE_WITH_YOUR_LOG_TOKEN -p 80:80 nginx
 
 All other container logs will be shipped to the Logs App specified in the docker run command for ```sematext/logagent``` with the environment variable ```LOGS_TOKEN```.
 
-By default, all logs from all containers are collected and sent to Sematext Cloud. You can change this default by setting the ```LOGS_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGS_ENABLED``` label.
+By default, all logs from all containers are collected and sent to Sematext Cloud. You can change this default by setting the ```LOGSENE_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGS_ENABLED``` label.
 
 Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2017/05/15/docker-log-management-enrichment/) for further details.
 
