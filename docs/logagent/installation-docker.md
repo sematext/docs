@@ -384,6 +384,10 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 <td>A list of fields to perform geo IP lookups e.g. <pre>GEOIP_FIELDS="client_ip,remote_address</pre></td>
 </tr>
 <tr>
+<td>MAXMIND_LICENSE_KEY</td>
+<td>Your MaxMind license key</td>
+</tr>
+<tr>
 <td>MAXMIND_DB_DIR</td>
 <td>Directory for the Geo-IP lite database, must end with /. Storing the DB in a volume could save downloads for updates after restarts. Using /tmp/ (ramdisk) could speed up Geo-IP lookups (requires add. ~30 MB main memory).</td>
 </tr>
@@ -484,24 +488,42 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 
 ### Log Routing
 
-Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via docker labels (or environment variables e.g. on Kubernetes). Simply tag a container with the label (or environment variable) ```LOGSENE_TOKEN=YOUR_LOGSENE_TOKEN```.
-Logagent inspects the containers for this label and ships the logs to the specified Logs App.
+Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via Docker labels, or environment variables, e.g. on Kubernetes. 
 
-__Example:__
-The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App.
+Tag a container with the label, or environment variable ```LOGS_TOKEN=YOUR_LOGS_TOKEN```. 
+Logagent inspects the containers for this label and ships the logs to the specified Logs App. 
+
+The following container environment variables and labels are supported:
+
+- `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
+- `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting `LOGSENE_ENABLED_DEFAULT`.  
+- `LOGS_RECEIVER_URL=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/<YOUR_LOGS_TOKEN>`
+
+The following Kubernetes Pod annotations are equivalent:
+
+- `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`
+- `sematext.com/logs-enabled=<true|false>`
+- `sematext.com/logs-receiver-url=<URL, URL, URL>` 
+
+
+__Example:__ 
+The following command will start Nginx webserver and logs for this container will be shipped to the related Logs App. 
 
 ```
-docker run --label LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOGS_TOKEN -p 80:80 nginx
-# or use environment variable on Kubernetes (no support for Docker labels)
-# docker run -e LOGSENE_TOKEN=REPLACE_WITH_YOUR_LOG_TOKEN -p 80:80 nginx
+docker run --label LOGS_TOKEN=REPLACE_WITH_YOUR_LOGS_TOKEN -p 80:80 nginx
 ```
 
-All other container logs will be shipped to the Logs App specified in the docker run command for ```sematext/logagent``` with the environment variable ```LOGSENE_TOKEN```.
+Or use environment variables for Kubernetes:
 
-By default, all logs from all containers are collected and sent to Sematext Cloud/Elasticsearch. You can change this default by setting the ```LOGSENE_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGSENE_ENABLED``` label.
+```
+docker run -e LOGS_TOKEN=REPLACE_WITH_YOUR_LOG_TOKEN -p 80:80 nginx
+```
+
+All other container logs will be shipped to the Logs App specified in the docker run command for ```sematext/logagent``` with the environment variable ```LOGS_TOKEN```.
+
+By default, all logs from all containers are collected and sent to Sematext Cloud. You can change this default by setting the ```LOGSENE_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGS_ENABLED``` label.
 
 Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2017/05/15/docker-log-management-enrichment/) for further details.
-
 
 ## Known Issues
 
@@ -510,8 +532,9 @@ with a valid Logs Token, but Sematext Cloud does not show container logs. **
 
 Please note that Logagent collects logs via Docker Remote
 API. If you use a Docker logging-driver other than the default json-file
-driver, logs will not be available via the Docker Remote API. Please
-make sure that your container or docker daemon uses json-file logging
+driver, logs will not be available via the Docker Remote API. 
+
+Please make sure that your container or docker daemon uses json-file logging
 driver. This ensures that logs are exposed via Docker Remote API. To
 check, run the "docker logs" command. If "docker logs CID" shows
 container logs then Logagent should be able to collect the

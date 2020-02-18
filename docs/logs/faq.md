@@ -16,10 +16,18 @@ next higher Daily Volume.
 
 ### How many fields can my log events have?
 
-There is no limit, though you will want to pay attention to how you
+A single Logs App allows up to 1000 fields.  Most of the time you will want to pay attention to how you
 structure your logs in order to get the most value out of them, and
 that typically includes having a manageable number of fields in your
 logs.
+
+### We are getting "Too many fields present in the index". What does that mean and how can we fix it?
+
+This means you have more than the allowed number of distinct fields in your Logs App.  To manually remove some fields use the Field Editor, but if you continue shipping logs with fields you've removed via Field Editor those fields will be recreated.
+
+Some reasons why this may happen and how to address it:
+* You have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.  You can [ship logs from different sources to different Logs Apps](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-to-multiple-destinations-sematext-logs-apps), [ship logs to different Logs Apps based on the matching patterns](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-that-match-different-patterns-to-different-destinations-sematext-logs-apps)), or use [grep plugin](/logagent/input-filter-grep/) to [drop logs that match a certain pattern](https://sematext.com/docs/logagent/faq/#how-do-i-drop-logs-that-match-a-certain-pattern).
+* You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields.  If you are using [Logagent](/logagent) you can use REMOVE_FIELDs or [remove-fields output filter](/logagent/output-filter-removefields/) to remove fields.
 
 ### What is @timestamp field?
 
