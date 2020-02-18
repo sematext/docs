@@ -35,6 +35,10 @@ outputFilter:
     fields:
       - user
       - client_ip
+      # json-path expressions are supported for nested fields
+      # See: https://jsonpath.com/ online evaluator
+      # - /request/header
+      # - ../body
       
 ```
 
