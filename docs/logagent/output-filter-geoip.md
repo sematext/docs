@@ -30,7 +30,7 @@ Here is how to enable Geo IP lookups for your logs:
 2. Environment variables 
 
 ```
-   MAXMIND_LICENSE_KEY="<your MaxMind license key"
+   MAXMIND_LICENSE_KEY="<your MaxMind license key>"
    GEOIP_ENABLED=true
    GEOIP_FIELDS="client_ip,remote_address"
 ```

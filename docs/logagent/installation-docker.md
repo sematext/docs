@@ -384,6 +384,10 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 <td>A list of fields to perform geo IP lookups e.g. <pre>GEOIP_FIELDS="client_ip,remote_address</pre></td>
 </tr>
 <tr>
+<td>MAXMIND_LICENSE_KEY</td>
+<td>Your MaxMind license key</td>
+</tr>
+<tr>
 <td>MAXMIND_DB_DIR</td>
 <td>Directory for the Geo-IP lite database, must end with /. Storing the DB in a volume could save downloads for updates after restarts. Using /tmp/ (ramdisk) could speed up Geo-IP lookups (requires add. ~30 MB main memory).</td>
 </tr>
