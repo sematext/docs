@@ -3,7 +3,7 @@ description: Logagent collects events from Azure Event Hub. Store and process ev
 
 ## Input Plugin: Azure Event Hub
 
-Plugin subscribes to [Microsoft Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) and receives events in real-time. 
+Plugin subscribes to [Microsoft Azure Event Hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) and receives events in real-time. 
 
 Use cases: 
 
