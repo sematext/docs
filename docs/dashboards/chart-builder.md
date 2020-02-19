@@ -164,32 +164,32 @@ _NOTE: Recommended for expert users._
 Variables are used to dynamically filter and group components by tags.
 
 Filters from the `Filter by` section don't have to be configured statically when a chart
-is created. Sometimes you need charts on the dashboard to react on a global filter
+is created. Sometimes you need charts on the dashboard to react to a global filter
 change.
 
-Consider a case where you're troubleshooting a system and you realized that one of the
-hosts has problems. You have a dashboard which contains aggregate information for all hosts. You can,
-of course, reconfigure all components on the dashboard so they only show the data for the host you're interested in.
+Consider a case where you're troubleshooting a system and you realize that one of the
+hosts has problems. You have a dashboard that displays aggregate information for all hosts. You can,
+of course, reconfigure all dashboard charts (aka components) so they show data only for the host you're interested in.
 As you might expect this is not a very efficient way to troubleshoot. This is where Variables
-come into play. You can create a tag variable that points to the `os.host` field.
-This variable should later be added to the charts that listen for variable changes.
-A variable is automatically added on top of the dashboard. A variable becomes a drop-down component
-from which you can select tag values and charts automatically react on the change.
+come into play. 
 
-Variables can be used both in the [Filter by](#filter-by) section and in the [Group by](#group-by) section. Suppose you
-have a dashboard with charts that show aggregated metrics about disk usage on several hosts.
-You want to troubleshoot a problem you've spotted on one of the charts that looks like a small jump in disk usage.
-To identify the root cause you can try to find the problem by grouping metrics by the `os.host`
-tag. A group variable can let you do that from the dashboard level without changing the
-definition of the series in any of the charts. Now imagine that you grouped data by `os.host` but still don't
-see any obvious problem because the disk usage jumped on all hosts. Then you may decide
-to also group by `os.disk` and by doing so you may realize that the problem was only
-`/dev/nvme0n2` disks.
-
-Variables can be created in Report options "Manage variables".
+Variables can be created by selecting the "Manage variables" option in [Report](./reports-and-components/) settings.
+You can create a tag variable that points to the `os.host` field.
 
 ![Manage Variables](../images/dashboards/variables.png)
 
+A variable is automatically added on top of the dashboard. A variable becomes a drop-down component
+from which you can select tag values and charts automatically react on the change.
+
+Once the variable is defined it should be added to charts that should react to variable changes.  Variables can be used both in the [Filter by](#filter-by) section and in the [Group by](#group-by) section in Chart Builder. 
+
+Suppose you have a dashboard with charts that show aggregated metrics about disk usage on several hosts.
+You want to troubleshoot a problem you've spotted on one of the charts that looks like a small jump in disk usage.
+To identify the root cause you can try to find the problem by grouping metrics by the `os.host`
+tag. A group variable can let you do that from the dashboard level without changing the
+definition of the series in any of the charts. Now imagine that you've grouped data by `os.host` but still don't
+see any obvious problems because the disk usage jumped on all hosts. You may then decide
+to also group by `os.disk` and by doing so you may realize that the problem was only with `/dev/nvme0n2` disks.
 
 ## Style
 
