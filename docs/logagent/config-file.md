@@ -50,6 +50,16 @@ Logagent can also be configured by using custom config files in YAML format, wit
 logagent --config custom.yml
 ```
 
+## Generate a Complete YAML Configuration File with `--writeConfig` Flag
+
+You can generate a complete config file with this command:
+
+```bash
+logagent --writeConfig <filename>
+```
+
+[Here's](https://github.com/sematext/logagent-js/blob/master/config/example.yml) what the generated config file looks like.
+
 ## YAML Configuration File Sections
 There are 4 sections of the configuration file:
 
