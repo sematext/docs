@@ -318,7 +318,7 @@ You can also run your application with PM2 just like you would normally. Using t
 // app.js
 
 // Load env vars
-require('dotenv').config()
+require('dotenv').config({ path: '/absolute/path/to/your/project/.env' })
 
 // require all agents
 const {
