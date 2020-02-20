@@ -177,17 +177,22 @@ We accept all major credit cards - Visa, MasterCard, American
 Express, JCB, Discover, and Diners Club.  We can also invoice you if you
 want to pay via ACH or bank wires.
 
-### Can I be invoiced instead of paying with a credit card?
+### Can I receive monthly invoices instead of paying with a credit card?
+
+Yes, simply let us know and we'll switch you to monthly invoices.  Invoices can be emailed to you
+and/or to an alternative email address (e.g. your Accounts Payable department).
+
+### Can I make a one-time payment and avoid monthly invoices or credit card?
 
 Yes, we offer a pre-payment option through invoicing.  When you select
 this option simply email us and let us know how much you want to
 pre-pay.  If you want that credit to cover some period of time you'll
 want to consider how many apps/servers/containers you need to monitor,
-whether they are running 24/7, or your faily log volume and retention,
+whether they are running 24/7, or your daily log volume and retention,
 and which plan(s) you'd like.  We'll invoice you and, once we receive
 your payment, we'll add this amount as credit towards your Sematext
-account balance.  This amount will then be burned down, based on your
-usage, on a monthly basis.  We'll notify you before your balance gets
+account balance.  Every month, we will subtract from this balance according to your
+previous month's usage.  We'll notify you before your balance gets
 too low, so that we can repeat the invoicing process before your
 credit runs out.
 
@@ -208,7 +213,7 @@ There is no commitment and no contract. When/if you want to stop
 using Sematext you simply stop sending us your metrics and/or switch to the
 Free plan.
 
-### Can I get invoices?
+### Can I download our invoices?
 
 Yes, just log in and look under Account \> Billing \> Invoices.  If
 you don't see invoices there then you likely need to switch to a
