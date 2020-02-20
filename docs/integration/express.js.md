@@ -24,6 +24,7 @@ If you are using the US region of Sematext Cloud:
 export REGION=US
 export MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 export LOGS_TOKEN=<YOUR_LOGS_TOKEN>
+export INFRA_TOKEN=<YOUR_INFRA_TOKEN>
 ```
 _**Note:** The US region is set by default, so you do not need to add an environment variable at all._
 
@@ -33,6 +34,7 @@ If you are using the EU region of Sematext Cloud:
 export REGION=EU
 export MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 export LOGS_TOKEN=<YOUR_LOGS_TOKEN>
+export INFRA_TOKEN=<YOUR_INFRA_TOKEN>
 ```
 
 #### Use dotenv
@@ -49,6 +51,7 @@ Add this code if you are using the US region of Sematext Cloud:
 REGION=US
 MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 LOGS_TOKEN=<YOUR_LOGS_TOKEN>
+INFRA_TOKEN=<YOUR_INFRA_TOKEN>
 ```
 _**Note:** The US region is set by default, so you do not need to add an environment variable at all._
 
@@ -58,6 +61,7 @@ Add this code if you are using the EU region of Sematext Cloud:
 REGION=EU
 MONITORING_TOKEN=<YOUR_MONITORING_TOKEN>
 LOGS_TOKEN=<YOUR_LOGS_TOKEN>
+INFRA_TOKEN=<YOUR_INFRA_TOKEN>
 ```
 
 ### Configure Agent
@@ -124,6 +128,42 @@ The Sematext Express.js Agent collects the following metrics.
 - Released memory between garbage collection cycles
 - Process heap size
 - Process heap usage
+
+### Process Count
+
+- Number of master processes
+- Number of child processes
+
+![](https://sematext.com/wp-content/uploads/2020/02/nodejs-process-count.png)
+
+### Process CPU Usage
+
+- CPU usage per process
+- CPU usage per PID
+
+![](https://sematext.com/wp-content/uploads/2020/02/nodejs-process-cpu-usage.png)
+![](https://sematext.com/wp-content/uploads/2020/02/nodejs-process-cpu-by-pid.png)
+
+### Process RSS Usage
+
+- RSS usage per process
+- RSS usage per PID
+
+![](https://sematext.com/wp-content/uploads/2020/02/nodejs-process-rss.png)
+
+### Process Uptime
+
+- Process Uptime per process
+- Process Uptime per PID
+
+![](https://sematext.com/wp-content/uploads/2020/02/nodejs-process-uptime.png)
+
+### Process Thread Count
+
+- Number of threads per process
+- Number of threads per PID
+
+![](https://sematext.com/wp-content/uploads/2020/02/nodejs-process-thread.png)
 
 ![](https://sematext.com/wp-content/uploads/2019/05/pasted-image-0-5.png)
 
@@ -271,6 +311,44 @@ ExecStart=/usr/bin/node /absolute/path/to/your/project/app.js
 ```
 These need to point to the `node` binary and the absolute path to your `app.js` file.
 
+## Use `PM2` to run Node.js
+You can also run your application with PM2 just like you would normally. Using the same setup as with a default Express.js server. Load the env vars and agent at the top of your source file.
+
+```javascript
+// app.js
+
+// Load env vars
+require('dotenv').config({ path: '/absolute/path/to/your/project/.env' })
+
+// require all agents
+const {
+  stMonitor,
+  stLogger,
+  stHttpLoggerMiddleware
+} = require('sematext-agent-express')
+
+// Start monitoring metrics
+stMonitor.start()
+
+
+// ...
+
+// At the top of your routes add the stHttpLoggerMiddleware to send HTTP logs to Sematext
+const express = require('express')
+const app = express()
+app.use(stHttpLoggerMiddleware)
+
+// ...
+```
+
+Run the `pm2` command to start your server.
+
+```bash
+pm2 start app.js -i max
+```
+
+The agent will detect you are running PM2 and start collecting metrics automatically.
+
 ## Integration
 
 - Agent: [https://github.com/sematext/sematext-express-agent](https://github.com/sematext/sematext-express-agent)
@@ -288,6 +366,11 @@ total duration | nodejs.gc.time | Sum | Double |
 full gc | nodejs.gc.full | Sum | Long |
 inc gc | nodejs.gc.inc | Sum | Long |
 memory rss | nodejs.memory.rss | Avg | Long |
+process count | process.count | All | Long |
+process cpu usage | process.cpu.usage | All | Double |
+process rss usage | process.rss | All | Double |
+process thread count | process.thread.count | All | Long |
+process uptime | process.uptime | All | Long |
 workers count | nodejs.workers | Avg | Long |
 request count | nodejs.requests | Sum | Long |
 error count | nodejs.errors | Sum | Long |
@@ -338,43 +421,3 @@ To add the dependency to your package.json simply use:
 ```
 npm install sematext-express-agent@latest --save
 ```
-
-
-<!-- ### How can I configure Node.js agent for my app using PM2 process manager?
-
-(todo)
-
-First generate the PM2 config file:
-```
-pm2 ecosystem
-```
-
-This command will create a file called `ecosystem.config.js`.
-```javascript
-// ecosystem.config.js
-module.exports = {
-  apps : [{
-    name: 'API',
-    script: 'app.js',
-
-    // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-    args: 'one two',
-    instances: 1,
-    autorestart: true,
-    watch: false,
-    max_memory_restart: '1G',
-    env: {
-      NODE_ENV: 'development'
-    },
-    env_production: {
-      NODE_ENV: 'production'
-    }
-  }]
-  // ...
-};
-```
-
-Run PM2 with the config file:
-```
-pm2 start ecosystem.config.js
-``` -->
