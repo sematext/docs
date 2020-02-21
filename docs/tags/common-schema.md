@@ -57,12 +57,12 @@ Below are the OS related tags sent as part of OS metrics/logs. They are collecte
 | Virtualization | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
 | Container Labels | - | All user-defined container labels. These tag are mapped to `os.host` and `container.id` |
 
-### Cloud Tags
+## Cloud Tags
 
 The cloud metadata from AWS, Azure and GCE instances are collected as tags. They're mapped to the `os.host` tag.
 
-| Name  | Tag Name  | Supported Cloud Providers  |
-|:--|:--|:--|
+| Name  | Tag Name  | Supported Cloud Providers
+|:--|:--|:--
 |  Provider Type |  cloud.type |  AWS, GCE, Azure |
 |  Instance Identifier |  cloud.instance.id |  AWS, GCE, Azure |
 |  Instance Name |  cloud.instance.name |  Azure, GCE |
@@ -70,7 +70,7 @@ The cloud metadata from AWS, Azure and GCE instances are collected as tags. They
 |  Region |  cloud.region |  AWS, Azure |
 |  Availability Zone |  cloud.zone |  AWS, GCE |
 |  Project Identifier |  cloud.project |  GCE |
-|  User-defined tags |  - |  AWS, GCE, Azure |
+|  User-defined tags |  -                                                       |  AWS, GCE, Azure |
 
 To collect user-defined cloud tags from AWS, Azure or GCE environment you need to define the IAM roles listed below:
 
