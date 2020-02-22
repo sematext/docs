@@ -4,8 +4,8 @@ description: How to monitor Logagent runtime performance metrics
 ## Node.js runtime performance
 
 ### Containerized environment
-If you are running Logagent in containers you should be running [sematext/logagent](../installation-docker/).
-Set the MONITORING_TOKEN environmental variable to ship Logagent's Node.js runtime metrics to Sematext.  Just make sure the token is for the [Node.js Monitoring](../../integration/node.js/) App.
+If you are running Logagent in containers you should be running [sematext/logagent](./installation-docker/).
+Set the MONITORING_TOKEN environmental variable to ship Logagent's Node.js runtime metrics to Sematext.  Just make sure the token is for the [Node.js Monitoring](../integration/node.js/) App.
 
 Example:
 ```
@@ -32,7 +32,7 @@ helm install st-agent \
 
 ### Non-containerized environment
 
-If non-containerized environments install the [logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) plugin.
+In non-containerized environments install the [logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) plugin.
 
 #### Installation
 ```npm i -g @sematext/logagent-nodejs-monitor```
@@ -44,33 +44,31 @@ Add the following to the Logagent config file:
 input:
   logagent-monitor:
     module: @sematext/logagent-nodejs-monitor
-    INFRA_TOKEN: <infra app token here>
     MONITORING_TOKEN: <nodejs app token here>
+    INFRA_TOKEN: <infra app token here>
     SPM_LOG_TO_CONSOLE: true
     SPM_LOG_LEVEL: error
 ```
   
 ## Logagent internal metrics
 
-Logagent keeps track of several internal metrics. It writes them to the Nodejs monitoring app every 60 seconds.  
-To enable/disable change the `printStats` setting. 
+Logagent keeps track of several internal metrics. Every 60 seconds they are logged to the console by default.  These metrics are also shipped to the Node.js monitoring App if it is specified by the MONITORING_TOKEN.  To enable or disable this use the `printStats` setting. 
 
 ```yaml
 # Global options in logagent.conf
 options:
   # Logagent internal metrics are printed to console
   # if a MONITORING_TOKEN is set, the metrics are also shipped  
-  # to the Nodejs App
+  # to the Node.js App
   # print stats every 60 seconds 
   printStats: 60
 ```
 
-You can create charts for Logagent metrics. Add a "Custom Chart" and add the data series, with the prefix `logagent` prefix. The following metrics are available: 
+Using the [Chart Builder](../../dashboards/chart-builder/) you can create a set of charts for Logagent monitoring.  Logagent metrics have the `logagent` prefix. The following metrics are available: 
 
 - `logagent.tokens.used` - number of logs tokens used
 - `logagent.logs.shipped` - number of shipped logs (multi-line)
 - `logagent.http.failed` - number of failed http requests for log shipping  
 - `ogagent.http.retranstmit` - number of retransmits from disk-buffer for log shipping  
 - `ogagent.parser.throughput.lps` - parser throughput in lines per second
-- `logagent.parser.lines.parsed` - total numbeer of lines parsed in measurement interval
-
+- `logagent.parser.lines.parsed` - total number of lines parsed in measurement interval
