@@ -25,8 +25,8 @@ helm install st-agent \
 --set infraToken=<infra app token here> \
 --set region=US \
 --set logagent.config.MONITORING_TOKEN=<nodejs app token here> \
---set logagent.config.INFRA_TOKEN=<infra app token here>
- --namespace sematext stable/sematext-agent 
+--set logagent.config.INFRA_TOKEN=<infra app token here> \
+--namespace sematext stable/sematext-agent 
 ```
 
 
@@ -70,7 +70,7 @@ You can create charts for Logagent metrics. Add a "Custom Chart" and add the dat
 - `logagent.tokens.used` - number of logs tokens used
 - `logagent.logs.shipped` - number of shipped logs (multi-line)
 - `logagent.http.failed` - number of failed http requests for log shipping  
-- `ogagent.http.retranstmit` - number of retransmits from disk-buffer for log shipping  
-- `ogagent.parser.throughput.lps` - parser throughput in lines per second
+- `logagent.http.retranstmit` - number of retransmits from disk-buffer for log shipping  
+- `logagent.parser.throughput.lps` - parser throughput in lines per second
 - `logagent.parser.lines.parsed` - total numbeer of lines parsed in measurement interval
 
