@@ -5,7 +5,7 @@ The [Sematext Agent](../agents/sematext-agent) automatically collects the follow
 
 It is not recommended to use the names from our [Common Schema](./common-schema) for your own, [Custom Tags](./custom-tags).
 
-Tags you define can be grouped and filtered in dashboards and reports, including tags that are automatically configured in our [Agents](../agents). Take a look at the [Common Schema](./common-schema) to see all the tags we gather automatically.
+Tags you define, and tags that are automatically configured in our [Agents](../agents), can be used to group and filter data in dashboards and reports. Take a look at the [Common Schema](./common-schema) to see all the tags we gather automatically.
 
 The point of having tags is to simplify using Sematext Cloud. By using our full-text search, filtering and grouping features, you can quickly view the data you are looking for.
 
