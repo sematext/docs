@@ -1,46 +1,37 @@
-title: Tags 
+title: Getting Started with Tags 
 description: A Tag is an attribute of a data point (or metric) that could be used for grouping and filtering.
 
-The [Sematext Agent](../agents/sematext-agent) automatically collects the following tags and sends them periodically to Sematext Cloud. It is not recommended to use these names for your own, [custom tags](custom-tags).
+Tags are a way of adding dimensions to metrics, so they can be filtered, aggregated, grouped, and compared in Sematext Cloud. Using tags enables you to observe and aggregate performance across a number of hosts and narrow the set further based on specific elements. 
 
-### Cloud Tags
+Tagging binds different data types in Sematext Cloud, allowing for correlation, data pivoting, and creating actionable metrics and logs. This is accomplished with reserved tags that you can find in our [Common Schema](./common-schema). Here are some examples:
 
-The cloud metadata from AWS, Azure and GCE instances are collected as tags. They're mapped to the `os.host` tag.
+| Solution | Tag Name  | Allows for...
+|:--|:--|:--
+| Logs
+| | host | Correlation and filtering by hostname across all logs
+| | source | Correlation and filtering by source across all logs, this could be a file name or even a full path to a filename, or the name of the application or process
+| | severity | Correlation and filtering by the log level, such as *error* or *info*, across all logs
+| Monitoring
+| | os.host | Segregation, aggregation and filtering of metrics, processes, and inventories across hosts
+| | service.* | Segregation, aggregation and filtering of metrics, processes, and inventories based on the services and where the data is coming from
+| | process.*  | Segregation, aggregation and filtering of processes
+| | container.*  | Segregation, aggregation and filtering of container metrics
+| | kubernetes.*  | Segregation, aggregation and filtering of kubernetes metrics
 
-| Name  | Tag Name  | Supported Cloud Providers  |
-|:--|:--|:--|
-|  Provider Type |  cloud.type |  AWS, GCE, Azure |
-|  Instance Identifier |  cloud.instance.id |  AWS, GCE, Azure |
-|  Instance Name |  cloud.instance.name |  Azure, GCE |
-|  Instance Type |  cloud.instance.type |  AWS, GCE, Azure |
-|  Region |  cloud.region |  AWS, Azure |
-|  Availability Zone |  cloud.zone |  AWS, GCE |
-|  Project Identifier |  cloud.project |  GCE |
-|  User-defined tags |  - |  AWS, GCE, Azure |
+### Why Tags matter?
+An example is when you look at containers, cloud infrastructure, or Kubernetes clusters. It is more useful to look at the CPU usage across a collection of hosts that belong to a service or cluster, rather than looking at the CPU usage for the hosts separately.
 
-To collect user-defined cloud tags from AWS, Azure or GCE environment you need to define the IAM roles listed below:
+For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers.
 
-1. AWS - EC2 Instances should be created with AWS IAM Role that has policy `AmazonEC2ReadOnlyAccess`.
-    See [AWS/EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more info.
-2. Azure - To fetch resource tags for Virtual Machines, you need to grant `Reader` role to its Resource Group in Azure Resource Manager.
-    See [Access Azure Resource Manager API](https://docs.microsoft.com/en-gb/azure/active-directory/managed-identities-azure-resources/tutorial-linux-vm-access-arm) for more info.
-3. GCE - In GCE user-defined tags are called labels. To read labels, the instance needs `roles/compute.viewer` IAM role.
-    See [Granting Roles to Service Accounts](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource) for more info.
+Containers, Kubernetes clusters and cloud environments regularly start and terminate hosts, so it is critical to tag them to allow for aggregation of the metrics you’re getting. Alongside our full-text search, tagging is a powerful tool to make your life easier.
 
-Cloud tags collection is enabled by default.  To disable Cloud tags
-collection set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/st-agent.yml` and
-restart spm-monitor using `sudo service spm-monitor restart`.
+<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+  <source src="https://cdn.sematext.com/videos/groupbytags2.mp4" type="video/mp4" />
+</video>
 
-### Machine Tags
+### Defining you own tags
+It is not recommended to use the names from our [Common Schema](./common-schema) for your own [Custom Tags](./custom-tags). Read more about defining tags on the [Custom Tags](./custom-tags) page.
 
-Following tags are collected from the host the [Sematext Agent](../agents/sematext-agent) is running on. They're mapped to the `os.host` tag.
+The Sematext Agent supports configuring custom tags. They can be specified in the Agent's configuration files.
 
-| Name  | Tag Name  | Description |
-|:--|:--|:--|
-| SystemUUID | os.uuid | Unique ID based on SMBIOS specification |
-| OS Distribution Name | os.distro.name | Distribution name of the OS. e.g. `ubuntu` |
-| OS Distribution Version | os.distro.version | Version of the OS. e.g. `16.04` |
-| Kernel Version | os.kernel | Version of the Kernel. e.g. `4.4.0-130-generic` |
-| JVM Version | jvm.version | Version of JVM, if available in `PATH` |
-| Virtualization | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
-| Container Labels | - | All user-defined container labels. These tag are mapped to `os.host` and `container.id` |
+Tags you define, and tags that are automatically configured in our [Agents](../agents), can be used to group and filter data in dashboards and reports. Take a look at the [Common Schema](./common-schema) to see all the tags we gather automatically.

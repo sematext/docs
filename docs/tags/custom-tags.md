@@ -1,7 +1,7 @@
-title: Custom Tags 
+title: Defining Custom Tags 
 description: A Tag is an attribute of a data point (or metric) that could be used for grouping and filtering. The Sematext Agents support configuring custom tags. They can be specified in the Agent's configuration files. For example, tags like `env:prod` can be configured on all production servers.
 
-The Sematext Agent support configuring custom tags. They can be specified in the Agent's configuration files. For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tags are optional and can be changed at any time. The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
+The Sematext Agent supports configuring custom tags. They can be specified in the Agent's configuration files. For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers. The data can then be filtered in the UI using these tags. The maximum allowed length for both name and value is 1024 characters. They are mapped to `os.host` tag by the Agent. Configured tags are optional and can be changed at any time. The name and value of custom tags should match this regex: `[a-zA-Z0-9_\-=\+\.]*`.
 
 Below are the steps to configure custom tags in Sematext Agents.
 
