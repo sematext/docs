@@ -1,4 +1,4 @@
-title: Sematext Common Schema 
+title: Tags Common Schema 
 description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tag, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
 
 Tags are sent by the Sematext Agent as part of every every data point or log line and they are shown in UI as filters. 
