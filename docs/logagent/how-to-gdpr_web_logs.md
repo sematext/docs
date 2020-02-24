@@ -197,7 +197,4 @@ size:         0
 
 ### Summary 
 
-The examples above shows that Loagagent provides all required methods to truncate IP addresses, hash, encrypt or remove sensitive data fields. Don't hesitate to contact us for any further question. 
-
-
-
+The examples above show that Logagent provides all required methods to truncate IP addresses, hash, encrypt or remove sensitive data fields. Don't hesitate to contact us for any further question. 
