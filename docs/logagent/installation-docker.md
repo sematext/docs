@@ -31,7 +31,7 @@ The [Logagent](https://sematext.com/logagent) docker container can be configured
 
 * **LOGS_TOKEN**: The index where the agent should log to _(for [Sematext Cloud](https://sematext.com/cloud) users the logs token)_
 * **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre> to specify a log source name or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. Please refer to Logagent command line arguments in the [Logagent Documentation](https://sematext.com/docs/logagent/cli-parameters/)
-* **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre> Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>.
+* **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre> Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>
 * **-v /var/run/docker.sock:/var/run/docker.sock** - Collect container logs by mounting the docker socket (mandatory)
 
 
@@ -79,7 +79,7 @@ docker-compose up -d
 Connect your Docker client to Swarm or UCP remote API endpoint and
 deploy Logagent with following docker command with your Logs Tokens:
 
-```
+```bash
 docker service create --mode global --name st-logagent \
 --restart-condition any \
 --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
@@ -94,7 +94,7 @@ Run Logagent as [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workl
 
 First, create [logagent-daemonset.yml](https://github.com/sematext/logagent-js/blob/master/kubernetes/logagent-daemonset.yml)
 
-```
+```bash
 curl -o logagent-daemonset.yml https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/logagent-daemonset.yml
 ```
 
