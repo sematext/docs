@@ -49,7 +49,9 @@ For more details refer to [operator docs](https://github.com/sematext/sematext-o
 
 ### Configure RBAC
 
-If your cluster has RBAC enabled add `ClusterRole` and `ClusterRoleBindings` resources. For `ClusterRoleBindings` you should update `REPLACE_WITH_NAMESPACE` value to match with namespace where the Sematext Agent will be installed:
+If your cluster has RBAC enabled add `ClusterRole` and `ClusterRoleBindings` resources.
+
+Create a `st-agent-crb.yml` file for the `ClusterRole` and the `ClusterRoleBinding`. For `ClusterRoleBindings` you should also update `REPLACE_WITH_NAMESPACE` value to match with namespace where the Sematext Agent will be installed:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -117,6 +119,12 @@ rules:
   - get
   - watch
   - list
+```
+
+Deploy the ClusterRoleBinding and ClusterRole:
+
+```sh
+kubectl apply -f st-agent-crb.yml
 ```
 
 ### Create and Deploy the DaemonSet
