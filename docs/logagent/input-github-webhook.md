@@ -40,6 +40,9 @@ output:
   st-events:
     module: output-sematext-events
     receiver: https://event-receiver.apps.sematext.com
+    
+    # if you use our EU region
+    # receiver: https://event-receiver.apps.eu.sematext.com
 
 ```
 
@@ -57,7 +60,7 @@ The Logagent server will listen for API calls on port 9200 (default) to the `/gi
 
 The final full URL you need to configure the GitHub API will be `https://<YOUR_DOMAIN>/github/<MONITORING_APP_TOKEN>`.
 
-You need to run the command below to tell the GitHub API to send Webhooks events to this Logagent GitHub input plugin.
+You need to run the command below to tell the GitHub API to send Webhooks events to this Logagent GitHub input plugin. Don't forget to generate an API token. Check [this](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) out to learn how.
 
 ```bash
 curl -X POST \
