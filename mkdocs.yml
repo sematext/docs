@@ -229,6 +229,7 @@ pages:
             - Azure Event Hub: logagent/input-plugin-azure-eventhub.md
             - Kubernetes Events: logagent/input-kubernetes-events.md
             - Kubernetes Audit Logs: logagent/input-kubernetes-audit.md
+            - GitHub Webhook Events: logagent/input-github-webhook.md
           - Output Filter:
             - SQL output filter: logagent/output-filter-sql.md
             - AES encrypt fields: logagent/output-filter-aesencryptfields.md
