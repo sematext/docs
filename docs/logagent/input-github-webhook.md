@@ -12,14 +12,14 @@ Features:
 Applications:
 
 - centralize GitHub Webhook Events
-- act as webhook to receive GitHub Webhook Events
+- act as Webhook to receive GitHub Webhook Events
 - index GitHub Webhook Events in Elasticsearch or Sematext Cloud
 - create alerts on GitHub Webhook Events in Sematext Cloud
 
 
 Requirements: 
 
-- configure the GitHub API to send Events via webhook 
+- configure the GitHub API to send Events via Webhook 
 
 ### Configuration
 
