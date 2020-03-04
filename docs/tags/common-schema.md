@@ -1,9 +1,9 @@
-title: Tags Common Schema 
-description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tag, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
+title: Sematext Common Schema 
+description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tags or in App agent YAMLs. They are used to correlate data across multiple Apps.
 
-Tags are sent by the Sematext Agent as part of every every data point or log line and they are shown in UI as filters. 
+Tags are sent by the Sematext Agent as part of every every data point or log event and they are shown in UI as filters. 
 
-The following tags are treated as special in Sematext Cloud and cannot be used as custom tags, App agent YAMLs and as custom fields in logs. They are used to correlate data across multiple Apps.
+The following tags should not be used as [custom tags](./custom-tags) or in in [App agent](../agents/sematext-agent/app-agent/) YAMLs.
 
 ## Logs Tags
 
@@ -70,7 +70,7 @@ The cloud metadata from AWS, Azure and GCE instances are collected as tags. They
 |  Region |  cloud.region |  AWS, Azure |
 |  Availability Zone |  cloud.zone |  AWS, GCE |
 |  Project Identifier |  cloud.project |  GCE |
-|  User-defined tags |  -                                                       |  AWS, GCE, Azure |
+|  User-defined tags |  -  |  AWS, GCE, Azure |
 
 To collect user-defined cloud tags from AWS, Azure or GCE environment you need to define the IAM roles listed below:
 
@@ -87,7 +87,7 @@ restart spm-monitor using `sudo service spm-monitor restart`.
 
 ## Process Tags
 
-Below are Process related tags sent as part of metrics/logs process info:
+Below are Process related tags sent as part of process info:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
@@ -98,7 +98,7 @@ Below are Process related tags sent as part of metrics/logs process info:
 
 ## Network Traffic Stats Tags
 
-Below are the tags sent as part of Network Traffic Status metrics/logs:
+Below are the tags sent as part of Network Traffic Status info:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
