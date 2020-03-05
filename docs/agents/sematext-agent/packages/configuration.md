@@ -1,7 +1,7 @@
 title: Configuring Package Collection
 description: Package Collection is enabled by default in the Sematext Agent configuration.
 
-Package Collection is enabled by default in the [Sematext Agent configuration](../agents/sematext-agent/containers/configuration/). It collects packages from two different sources:
+Package Collection is enabled by default in the [Sematext Agent configuration](../containers/configuration/). It collects packages from two different sources:
 
 - packages installed on virtual/bare-metal hosts
 - packages residing inside containers
