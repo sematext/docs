@@ -45,10 +45,10 @@ Edit the `/etc/systemd/journal-upload.conf` file and change the URL property.
 
 ```bash
 [Upload]
-URL=http://logsene-journald-receiver.sematext.com:80/<YOUR_LOGS_TOKEN>
+URL=http://logsene-journald-receiver.sematext.com:80/YOUR_LOGS_TOKEN
 
 # For EU Region
-# URL=http://logsene-journald-receiver.eu.sematext.com:80/<YOUR_LOGS_TOKEN>
+# URL=http://logsene-journald-receiver.eu.sematext.com:80/YOUR_LOGS_TOKEN
 ```
 
 If you don't feel like editing files manually, you can run a sed command instead that will edit the file.
@@ -60,10 +60,10 @@ If you don't feel like editing files manually, you can run a sed command instead
  </div>
 
  <div class="mdl-tabs__panel is-active" id="us">
-   <pre>sed -i 's/\# URL=/URL=http:\/\/logsene-journald-receiver.sematext.com:80\/<YOUR_LOGS_TOKEN>/g' /etc/systemd/journal-upload.conf</pre>
+   <pre>sed -i 's/\# URL=/URL=http:\/\/logsene-journald-receiver.sematext.com:80\/YOUR_LOGS_TOKEN/g' /etc/systemd/journal-upload.conf</pre>
  </div>
  <div class="mdl-tabs__panel" id="eu">
-   <pre>sed -i 's/\# URL=/URL=http:\/\/logsene-journald-receiver.eu.sematext.com:80\/<YOUR_LOGS_TOKEN>/g' /etc/systemd/journal-upload.conf</pre>
+   <pre>sed -i 's/\# URL=/URL=http:\/\/logsene-journald-receiver.eu.sematext.com:80\/YOUR_LOGS_TOKEN/g' /etc/systemd/journal-upload.conf</pre>
  </div>
 </div>
 
