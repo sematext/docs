@@ -389,7 +389,11 @@ Elasticsearch API which lets you:
 
 ### Syslog Protocols 
 
-We accept <a href="http://sematext.com../logs/syslog/" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
+We accept <a href="../logs/syslog/" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
+
+### Journald 
+
+We accept <a href="./journald-integration" target="_blank" rel="noopener">Journald</a> logs using the `systemd-journal-remote` package. Everything you need to do is point the `systemd-journal-remote` to send Journald logs to Sematext Logs.
 
 ### Log Shippers 
 
