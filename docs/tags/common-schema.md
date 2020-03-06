@@ -43,34 +43,34 @@ The tags below are applicable to all metrics/logs types:
 
 Below are the OS related tags sent as part of OS metrics/logs. They are collected from the host the [Sematext Agent](../agents/sematext-agent) is running on. They're mapped to the `os.host` tag.
 
-| Tag Name  | Description  | Synonymous Tags
-|:--|:--|:--
-| System Disk | os.disk | Human readable name of the block device | 
-| System Disk Mountpoint| os.disk.mountpoint | Mount point for the disk in the file system |
-| Filesystem Type | os.disk.fs.type | Type of the file system associated with the device |
-| System Network Interface | os.network | Name of the network interface |
-| System UUID | os.uuid | Unique ID based on SMBIOS specification |
-| OS Distribution Name | os.distro.name | Distribution name of the OS. e.g. `ubuntu` |
-| OS Distribution Version | os.distro.version | Version of the OS. e.g. `16.04` |
-| Kernel Version | os.kernel | Version of the Kernel. e.g. `4.4.0-130-generic` |
-| JVM Version | jvm.version | Version of JVM, if available in `PATH` |
-| Virtualization | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
-| Container Labels | - | All user-defined container labels. These tag are mapped to `os.host` and `container.id` |
+| Tag Name  | Description
+|:--|:--
+| os.disk | Human readable name of the block device | 
+| os.disk.mountpoint | Mount point for the disk in the file system |
+| os.disk.fs.type | Type of the file system associated with the device |
+| os.network | Name of the network interface |
+| os.uuid | Unique ID based on SMBIOS specification |
+| os.distro.name | Distribution name of the OS. e.g. `ubuntu` |
+| os.distro.version | Version of the OS. e.g. `16.04` |
+| os.kernel | Version of the Kernel. e.g. `4.4.0-130-generic` |
+| jvm.version | Version of JVM, if available in `PATH` |
+| virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
+| - | All user-defined container labels. These tag are mapped to `os.host` and `container.id` |
 
 ## Cloud Tags
 
 The cloud metadata from AWS, Azure and GCE instances are collected as tags. They're mapped to the `os.host` tag.
 
-| Name  | Tag Name  | Supported Cloud Providers
+| Tag Name  | Description | Supported Cloud Providers
 |:--|:--|:--
-|  Provider Type |  cloud.type |  AWS, GCE, Azure |
-|  Instance Identifier |  cloud.instance.id |  AWS, GCE, Azure |
-|  Instance Name |  cloud.instance.name |  Azure, GCE |
-|  Instance Type |  cloud.instance.type |  AWS, GCE, Azure |
-|  Region |  cloud.region |  AWS, Azure |
-|  Availability Zone |  cloud.zone |  AWS, GCE |
-|  Project Identifier |  cloud.project |  GCE |
-|  User-defined tags |  -  |  AWS, GCE, Azure |
+|  cloud.type |  Provider Type |  AWS, GCE, Azure |
+|  cloud.instance.id | Instance Identifier |  AWS, GCE, Azure |
+|  cloud.instance.name | Instance Name |  Azure, GCE |
+|  cloud.instance.type | Instance Type |  AWS, GCE, Azure |
+|  cloud.region |  Region |  AWS, Azure |
+|  cloud.zone | Availability Zone |  AWS, GCE |
+|  cloud.project | Project Identifier |  GCE |
+|  -  | User-defined tags |  AWS, GCE, Azure |
 
 To collect user-defined cloud tags from AWS, Azure or GCE environment you need to define the IAM roles listed below:
 
