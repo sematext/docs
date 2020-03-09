@@ -60,10 +60,10 @@ If you don't feel like editing files manually, you can run a sed command instead
  </div>
 
  <div class="mdl-tabs__panel is-active" id="us">
-   <pre>sed -i 's/\# URL=/URL=http:\/\/logsene-journald-receiver.sematext.com:80\/YOUR_LOGS_TOKEN/g' /etc/systemd/journal-upload.conf</pre>
+   <pre>sudo sed -i -E 's/(\#\s)?URL=.*/URL=http:\/\/logs-journald-receiver.sematext.com:80\/YOUR_LOGS_TOKEN/g' /etc/systemd/journal-upload.conf</pre>
  </div>
  <div class="mdl-tabs__panel" id="eu">
-   <pre>sed -i 's/\# URL=/URL=http:\/\/logsene-journald-receiver.eu.sematext.com:80\/YOUR_LOGS_TOKEN/g' /etc/systemd/journal-upload.conf</pre>
+   <pre>sudo sed -i -E 's/(\#\s)?URL=.*/URL=http:\/\/logs-journald-receiver.eu.sematext.com:80\/YOUR_LOGS_TOKEN/g' /etc/systemd/journal-upload.conf</pre>
  </div>
 </div>
 
