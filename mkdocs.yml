@@ -27,7 +27,6 @@ pages:
           - rsyslog: logs/rsyslog.md
           - syslogd: logs/syslogd.md
           - syslog-ng: logs/syslog-ng.md
-          - Certificates: logs/certificates.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
         - Sending Container Logs:
