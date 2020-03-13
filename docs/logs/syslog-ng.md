@@ -23,7 +23,7 @@ Sources enable syslog-ng collect the logs you want to send to Logs Management Ap
 You can use system() to collect all the local syslog messages from that
 system. You can put this at the beginning of your
 **/etc/syslog-ng/syslog-ng.conf**, along with your configuration
-version. We recommend running version 3.4 or later:
+version. We recommend running version 3.19 or later:
 
 ``` bash
 @version:3.19
