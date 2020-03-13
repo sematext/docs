@@ -26,8 +26,9 @@ system. You can put this at the beginning of your
 version. We recommend running version 3.4 or later:
 
 ``` bash
-@version:3.4
+@version:3.19
 source local_logs {
+    internal();
     system();
 };
 ```
