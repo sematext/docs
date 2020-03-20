@@ -1,4 +1,4 @@
-title: Kubernetes Audit Logging
+title: Kubernetes Audit Logs Integration
 description: Sematext Kubernetes Audit Logs integration is configured by pointing the Kubernetes API Server to send audit logs from your infrastructure to Sematext Logs.
 
 Sematext offers a Kubernetes Audit logs receiver endpoint. Everything you need to do is to configure the Kubernetes API Server to send logs to it.
