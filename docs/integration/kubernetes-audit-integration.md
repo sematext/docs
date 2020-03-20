@@ -51,7 +51,7 @@ kubectl apply -f auditsink.yaml
 That’s it. You’re now shipping Kubernetes Audit logs to Sematext Logs for safekeeping.
 
 #### Kubeadm / Minikube
-With Kubeadm or Minikube the Kubernetes API Server configuration will be in the `/etc/kubernetes/manifests/kube-apiserver.yaml` file, on the master node.
+With Kubeadm or Minikube the Kubernetes API Server configuration will be in the `/etc/kubernetes/manifests/kube-apiserver.yaml` file, on the master node. Edit the file and add these three new configuration values.
 
 ```yaml
 ...
