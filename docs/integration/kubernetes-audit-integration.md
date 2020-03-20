@@ -27,7 +27,7 @@ Next, you have to add an auditsink resource. Create a file named `auditsink.yaml
 apiVersion: auditregistration.k8s.io/v1alpha1
 kind: AuditSink
 metadata:
-  name: k8sauditsink2
+  name: k8sauditsink
   policy:
     level: Metadata
     stages:
