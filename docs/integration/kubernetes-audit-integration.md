@@ -5,10 +5,14 @@ Sematext offers a Kubernetes Audit logs receiver endpoint. Everything you need t
 
 ## Sematext Kubernetes Audit Logs Quick Start
 
-Kubernetes audit logs are detailed descriptions of each call made to the Kubernetes API Server. They provide a chronological sequence of activities that lead to the state of the system at a specific moment. They are extremely useful for security and compliance purposes, telling you exactly who did what, when, and how.
+Kubernetes audit logs are detailed descriptions of each call made to the Kubernetes API Server. They provide a chronological sequence of activities that lead to the state of the system at a specific moment. They are extremely useful for security and compliance purposes, telling you exactly who did what, when, and how. You can configure Kubernetes Audit Logs by using any of the two options below. 
+
+We recommend you use the [Dynamic Backend](#kubernetes-audit-dynamic-backend) because it does not require you to install any agents. You only need to configure the Kubernetes API Server to send audit logs to the URL we provide you with. 
+
+The [Log Backend](#kubernetes-audit-log-backend) is a viable option if you already have Logagent running in your Kubernetes cluster.
 
 ### Kubernetes Audit Dynamic Backend
-Configuring the dynamic backend is even simpler than a log backend. You need to editing the configuration of your Kubernetes API Server and add three new configuration parameters.
+Configuring the Dynamic Backend simpler than a Log Backend. You need to editing the configuration of your Kubernetes API Server and add three new configuration parameters.
 
 #### Kops
 If you use Kops for cluster management you run `kops edit cluster <cluster>` to open the configuration. You only need to set one field to enable the dynamic audit configuration:
@@ -97,6 +101,8 @@ kubectl apply -f auditsink.yaml
 That’s it. You’re now shipping Kubernetes Audit logs to Sematext Logs for safekeeping.
 
 ![](https://sematext.com/wp-content/uploads/2020/03/apps.sematext.com_ui_k8saudit.png)
+
+If you are not using the Dynamic Backend, then you can set up the Log Backend.
 
 ### Kubernetes Audit Log Backend
 You need to enable audit logs only on the master nodes. First of all you need to create a policy to specify what will be recorded. A good example of the `audit-policy.yaml` file is the audit profile below from the official Kubernetes docs.
@@ -259,3 +265,5 @@ helm install --name st-agent \
 ```
 
 This will start both a log agent, and optionally a monitoring agent if you so wish. The agent will collect logs all logs from stdout, including the audit logs and send them to Sematext Logs.
+
+If you prefer, you can set up Logagent with `kubectl` as well if [you go here](../agents/logagent/installation-docker/#kubernetes-and-openshift).
