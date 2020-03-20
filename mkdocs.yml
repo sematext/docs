@@ -132,6 +132,7 @@ pages:
       - Monitoring Tomcat: integration/tomcat.md
       - Monitoring ZooKeeper: integration/zookeeper.md
       - Journald: integration/journald-integration.md
+      - Kubernetes Audit: integration/kubernetes-audit-integration.md
       - Big Panda: integration/alerts-bigpanda-integration.md
       - Custom Webhooks: integration/alerts-webhooks-integration.md
       - Email: integration/alerts-email-integration.md
