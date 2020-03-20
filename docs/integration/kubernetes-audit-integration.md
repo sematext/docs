@@ -38,6 +38,8 @@ metadata:
       burst: 15
     clientConfig:
       url: "https://logsene-k8s-audit-receiver.sematext.com/<LOGS_TOKEN>/"
+      # For EU Region
+      # url: "https://logsene-k8s-audit-receiver.eu.sematext.com/<LOGS_TOKEN>/"
 ```
 
 Now apply the auditsink.yaml to the Kubernetes cluster.
