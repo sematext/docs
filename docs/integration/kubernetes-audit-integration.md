@@ -199,6 +199,19 @@ spec:
     auditLogMaxSize: 100 # the max size in MB to retain
 ```
 
+Once you’ve configured logging the Audit logs to stdout you can use cluster-level logging to store these logs in a central location.
+
+Install the [Sematext Agent Helm chart](../agents/sematext-agent/kubernetes/installation/#helm-chart):
+
+```bash
+helm install --name st-agent \
+  --set infraToken=xxxx-xxxx \
+  --set containerToken=xxxx-xxxx \
+  --set logsToken=xxxx-xxxx \
+  --set region=US \
+  stable/sematext-agent
+```
+
 #### Kubeadm / Minikube
 Otherwise, if you’re using Kubeadm or Minikube the Kubernetes API Server configuration will be in the `/etc/kubernetes/manifests/kube-apiserver.yaml` file, on the master node.
 
