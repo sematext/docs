@@ -19,3 +19,8 @@ There are cases where automatic attaching may not be desirable:
 If you don't want the service monitored at all just remove `MONITORING_TOKEN` env variable from its container. If you want it to be monitored, but using your
 own JMX authentication definition (either existing one or the one you will define just for this), [define container jmx settings manually](../../monitoring/manually-setting-jmx-containers).
 
+### Security manager permissions
+
+When running your JVM applications under the supervision of the security manager, you'll have to register the permission to allow Sematext Agent bootstrap the JMX connector in the target process. For this purpose, add the following permission directive in your policy file:
+
+`permission java.lang.RuntimePermission "accessClassInPackage.com.sun.jndi.url.rmi";`
