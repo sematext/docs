@@ -181,7 +181,7 @@ pages:
           - Data: agents/sematext-agent/packages/data.md
         - Auto Discovery:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
-          - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
+          - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
