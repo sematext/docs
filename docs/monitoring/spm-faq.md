@@ -369,6 +369,15 @@ sudo service spm-monitor restart
 And in case of the Embedded App Agent, just restart the service that has this
 App Agent's `javaagent` parameter.
 
+### JMX attaching is not working out of the box
+
+If your JVM applications are guarded by the Security Manager you are likely to see the following exception when Sematext Agent tries to
+bootstrap the JMX connector:
+
+`javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial`
+
+See [enabling Security Manager permissions](/agents/sematext-agent/jmx-attaching/#security-manager-permissions) to allow automatic JMX connector exposure.
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?

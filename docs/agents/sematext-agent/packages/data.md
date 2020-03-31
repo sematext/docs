@@ -1,7 +1,7 @@
 title: Package Data
 description: Package Data collected by Sematext Agent
 
-Package payloads are comprised of various fields as summarized in the table. Sematext Agent currently supports Python, Node.js and Debian-based packages.
+Package payloads are comprised of various fields as summarized in the table. Sematext Agent currently supports Python, Node.js, RPM and Deb packages.
 
 | Name          | Description |
 | --------------|-------------|

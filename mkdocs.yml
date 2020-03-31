@@ -27,7 +27,6 @@ pages:
           - rsyslog: logs/rsyslog.md
           - syslogd: logs/syslogd.md
           - syslog-ng: logs/syslog-ng.md
-          - Certificates: logs/certificates.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
         - Sending Container Logs:
@@ -132,6 +131,7 @@ pages:
       - Monitoring Tomcat: integration/tomcat.md
       - Monitoring ZooKeeper: integration/zookeeper.md
       - Journald: integration/journald-integration.md
+      - Kubernetes Audit: integration/kubernetes-audit-integration.md
       - Big Panda: integration/alerts-bigpanda-integration.md
       - Custom Webhooks: integration/alerts-webhooks-integration.md
       - Email: integration/alerts-email-integration.md
@@ -181,7 +181,7 @@ pages:
           - Data: agents/sematext-agent/packages/data.md
         - Auto Discovery:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
-          - JMX in Container Environments: agents/sematext-agent/jmx-attaching-containers.md
+          - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:

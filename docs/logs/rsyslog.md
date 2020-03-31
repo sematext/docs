@@ -290,25 +290,13 @@ authorization:
 
 ### TLS
 
-To set up syslog over TLS, you first need to configure the certificates:
-
-**Set up Certificates**
-
-``` bash
-mkdir /opt/rsyslog  # if it does not already exist
-cd /opt/rsyslog
-wget https://apps.sematext.com/cert/DigiCertCA.pem               # md5sum is fb30c5636d0108b2688d7e1ed59749ac
-wget https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem  # md5sum is 3816293340b05c52bcbc99a4f00b1b04
-cat {DigiCert_Global_Root_CA.pem,DigiCertCA.pem} > ca_bundle.pem
-```
-
-Then, configure the TLS driver like this:
+To set up syslog over TLS, you need to configure the TLS driver like this:
 
 **Configure TLS; Old Config Format** 
 
 ``` bash
 $DefaultNetstreamDriver gtls
-$DefaultNetstreamDriverCAFile /opt/rsyslog/ca_bundle.pem
+$DefaultNetstreamDriverCAFile /etc/ssl/certs/ca-certificates.crt
  
 $ActionSendStreamDriverAuthMode x509/name
 $ActionSendStreamDriverPermittedPeer *.sematext.com
@@ -340,7 +328,7 @@ TLS configuration below:
 ``` bash
  global (
  defaultNetstreamDriver="gtls"
- defaultNetstreamDriverCAFile="/opt/rsyslog/ca_bundle.pem"
+ defaultNetstreamDriverCAFile="/etc/ssl/certs/ca-certificates.crt"
 )
  
 action(

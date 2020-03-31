@@ -23,11 +23,12 @@ Sources enable syslog-ng collect the logs you want to send to Logs Management Ap
 You can use system() to collect all the local syslog messages from that
 system. You can put this at the beginning of your
 **/etc/syslog-ng/syslog-ng.conf**, along with your configuration
-version. We recommend running version 3.4 or later:
+version. We recommend running version 3.19 or later:
 
 ``` bash
-@version:3.4
+@version:3.19
 source local_logs {
+    internal();
     system();
 };
 ```
@@ -92,12 +93,15 @@ Logs Management application token. If you've authorized your public IP, the
 template() statement should be removed:
 
 ``` bash
-destination logsene {
-    syslog("logsene-syslog-receiver.sematext.com"
-      transport("udp")
-      port(514)
+template sematext { 
+    template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} - - $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n");
+};
+
+destination sematext {
+    udp("logsene-syslog-receiver.sematext.com"
+        port(514)
 # template() statement should be removed if you authorized your IP
-      template("@cee: $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n")
+        template(sematext)
     );
 };
 ```
@@ -109,52 +113,41 @@ change is in the protocol() statement. Make sure your real token is
 there or remove the template() statement if you've authorized your IP:
 
 ``` bash
-destination logsene {
-    syslog("logsene-syslog-receiver.sematext.com"
-      transport("tcp")
-      port(514)
+template sematext { 
+    template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} - - $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n");
+};
+
+destination sematext {
+    tcp("logsene-syslog-receiver.sematext.com"
+        port(514)
 # template() statement should be removed if you authorized your IP
-      template("@cee: $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n")
+        template(sematext)
     );
 };
 ```
 
 ### TLS
 
-For configuring [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425), there are two steps.
-First, you need to set up the certificates:
+For configuring [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425),
+you'll configure the destination in a similar fashion to plain TCP,
+except for adding tls() statement and pointing it to your certificates
+directory and **changing the port to 10514**:
 
 ``` bash
-mkdir /opt/syslog-ng
-cd /opt/syslog-ng
-wget https://apps.sematext.com/cert/DigiCertCA.pem                # md5sum is fb30c5636d0108b2688d7e1ed59749ac
-wget https://apps.sematext.com/cert/DigiCert_Global_Root_CA.pem   # md5sum is 3816293340b05c52bcbc99a4f00b1b04
+template sematext { 
+    template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} - - $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n");
+};
 
-# openssl x509 -subject_hash -noout -in DigiCert_Global_Root_CA.pem
-# 3513523f
-ln -s DigiCert_Global_Root_CA.pem 3513523f.0
-
-# openssl x509 -subject_hash -noout -in DigiCertCA.pem
-# 85cf5865
-ln -s DigiCertCA.pem 85cf5865.0
-```
-
-Then, you'll configure the destination in a similar fashion to plain
-TCP, except for adding tls() statement and pointing it to your newly
-created certificates directory and **changing the port to 10514**:
-
-``` bash
-destination logsene {
-    syslog("logsene-syslog-receiver.sematext.com"
-      transport("tls")
-      port(10514)
+destination sematext {
+    tcp("logsene-syslog-receiver.sematext.com"
+        port(10514)
+        tls(
+            ca_dir("/etc/ssl/certs")
+            peer_verify("required_trusted")
+        )
 # template() statement should be removed if you authorized your IP
-      template("@cee: $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n")
-      tls(
-        ca_dir("/opt/syslog-ng")
-        peer_verify("required_trusted")
-      )
- );
+        template(sematext)
+    );
 };
 ```
 
@@ -165,7 +158,7 @@ the two:
 
 ``` bash
 log {
-    source(local_logs); destination(logsene);
+    source(local_logs); destination(sematext);
 };
 ```
 
@@ -175,7 +168,7 @@ shipped to your Logs Management application as well. For example:
 
 ``` bash
 log {
-    source(jetty_log); destination(logsene);
+    source(jetty_log); destination(sematext);
 };
 ```
 
@@ -203,15 +196,18 @@ newly defined destination:
 ``` bash
 filter user_tests { facility(kern) and level(err) };
 
-destination logsene_tests {
-    syslog("logsene-syslog-receiver.sematext.com"
-      transport("tcp")
+template sematext { 
+    template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} - - $(format-json --pair message=\"$MSG\" --pair logsene-app-token=\"LOGSENE_APP_TOKEN_GOES_HERE\")\n");
+};
+
+destination sematext {
+    tcp("logsene-syslog-receiver.sematext.com"
       port(514)
-      template("@cee: $(format-json --pair message=\"$MSG\" --pair tags=\"kernel errors\" --pair logsene-app-token=\"99c4e20d-3812-46e3-9801-e8331a01a5b1\")\n")
+      template(sematext)
     );
 };
 
-log { source(all_syslog); filter(user_tests); destination(logsene_tests); flags(final); };
+log { source(all_syslog); filter(user_tests); destination(sematext); flags(final); };
 # main Logsene "log" statement will be defined below
 ```
 
