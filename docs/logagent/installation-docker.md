@@ -226,10 +226,6 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <td>Additional command line arguments for Logagent (e.g. LOGAGENT_ARGS="-n httpd" to specify a log source name or LOGAGENT_ARGS="-u 514" to act as syslog server)</td>
 </tr>
 <tr>
-<td>--privileged</td>
-<td>The parameter might be helpful when Logagent could not start because of limited permission to connect and write to the Docker socket /var/run/docker.sock. The privileged mode is a potential security risk, we recommend to enable the appropriate security. Please read about Docker security: https://docs.docker.com/engine/security/security/</td>
-</tr>
-<tr>
 <td>HTTPS_PROXY</td>
 <td>URL for a proxy server (behind firewalls)</td>
 </tr>
@@ -248,6 +244,13 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <tr>
 <td>CONFIG_FILE</td>
 <td>Path to the configuration file, containing environment variables <code>key=value</code>. Default value: <code>/run/secrets/logagent</code>. Create a secret with  <code>docker secret create logagent ./logagent.cfg</code>. Start Logagent with `docker service create --mode global --secret logagent --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock sematext/logagent</td>
+</tr>
+<td>LA_CONFIG</td>
+<td>Point to the location of a logagent config file. E.g. <pre>LA_CONFIG=/etc/sematext/logagent.conf</pre></td>
+</tr>
+<tr>
+<td>LA_CONFIG_OVERRIDE</td>
+<td>Ignores env vars for LOGS_TOKEN, REGION, and LOGS_RECEIVER_URL. E.g. <pre>LA_CONFIG_OVERRIDE=true</pre></td>
 </tr>
 <tr>
 <td>--privileged</td>
@@ -395,6 +398,8 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 <td>REMOVE_FIELDS</td>
 <td>Removes fields from parsed/enriched logs. E.g. <pre>REMOVE_FIELDS=password,creditCardNo</pre></td>
 </tr>
+<tr>
+
 
 </tbody>
 </table>
@@ -490,6 +495,7 @@ The component for detecting and parsing log messages — [logagent-js](http://se
 
 Routing logs from different containers to separate Sematext Cloud Logs Apps can be configured via Docker labels, or environment variables, e.g. on Kubernetes. 
 
+#### Log Routing with Env Vars
 Tag a container with the label, or environment variable ```LOGS_TOKEN=YOUR_LOGS_TOKEN```. 
 Logagent inspects the containers for this label and ships the logs to the specified Logs App. 
 
@@ -524,6 +530,91 @@ All other container logs will be shipped to the Logs App specified in the docker
 By default, all logs from all containers are collected and sent to Sematext Cloud. You can change this default by setting the ```LOGSENE_ENABLED_DEFAULT=false``` label for the Logagent container. This default can be overridden, on each container, through the ```LOGS_ENABLED``` label.
 
 Please refer to [Docker Log Management & Enrichment](https://sematext.com/blog/2017/05/15/docker-log-management-enrichment/) for further details.
+
+
+#### Log Routing with Logagent Config File
+Add the ```LA_CONFIG_OVERRIDE=true``` env var to your Logagent instance, alongside the ```LA_CONFIG=/etc/sematext/logagent.conf```. Next, add a `logagent.conf` file as a config resource in the `configs` section of your Docker Compose/Stack file.
+
+```yaml
+version: "3.7"
+services:
+  st-logagent: 
+    image: 'sematext/logagent:latest' 
+    environment: 
+      - LA_CONFIG=/etc/sematext/logagent.conf
+      - LA_CONFIG_OVERRIDE=true
+    
+    # if you're using Docker Stack use configs,
+    # otherwise use volumes or secrets
+    configs:
+      - source: logagent_config
+        target: /etc/sematext/logagent.conf
+    deploy:
+      mode: global
+      restart_policy:
+        condition: on-failure
+    volumes: 
+      - '/var/run/docker.sock:/var/run/docker.sock' 
+
+configs:
+  logagent_config:
+    file: ./logagent.yml 
+```
+
+The `logagent.yml` looks like this:
+
+```yaml
+options:
+  printStats: 60
+  suppress: true
+  geoipEnabled: true
+  diskBufferDir: /tmp/sematext-logagent
+
+input: 
+  docker:
+    module: docker-logs
+    socket: /var/run/docker.sock
+    labelFilter: com.docker.*,io.kubernetes.*,annotation.*
+    
+parser:
+  patternFiles:
+    - /etc/logagent/patterns.yml
+
+outputFilter:
+  dockerEnrichment:
+    module: docker-enrichment 
+    autodetectSeverity: true
+   
+  backward_compatible_field_name: 
+    module: !!js/function >
+      function (context, config, eventEmitter, data, callback)  {
+        // debug: dump data to error stream
+        // console.error(data.labels)
+        if (data.labels && data.labels['com_docker_swarm_service_name']) { 
+          data.swarm_service_name = data.labels ['com_docker_swarm_service_name']
+          // data.swarm_service_id = data.labels ['com_docker_swarm_service_id']
+          // data.swarm_task_name = data.labels ['com_docker_swarm_task_name']
+        }
+        callback(null, data)  
+      }
+
+output:
+  sematext-logs1:
+    module: elasticsearch
+    url: https://logsene-receiver.sematext.com
+    index: LOGS_TOKEN_1
+  sematext-logs2:
+    module: elasticsearch
+    url: https://logsene-receiver.sematext.com
+    index: LOGS_TOKEN_2
+  elasticsearch:
+    module: elasticsearch
+    url: http://local-es:9200
+    index: app
+```
+
+In the `output` section you can configure as many outputs as you want.
+
 
 ## Known Issues
 
