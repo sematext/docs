@@ -75,7 +75,7 @@ $ logagent [options] [file list]
 | `-j, --ldjson` | print parsed messages in line-delimited JSON format to stdout |
 | __Elasticsearch or Sematext Cloud__| Log storage |
 | `-e, --elasticsearchUrl <url>` | Elasticsearch URL e.g. http://localhost:9200, default `htpps://logsene-receiver.sematext.com`|
-| `-t, --index <index>` | [Logs App token](http://sematext.com/logsene) to ship data to Sematext Cloud Apps or Elasticsearch index (see `--elasticsearchUrl`) |
+| `--index <index>` | [Logs App token](http://sematext.com/logsene) to ship data to Sematext Cloud Apps or Elasticsearch index (see `--elasticsearchUrl`) |
 | `--httpProxy <url>` | HTTP proxy url |
 | `--httpsProxy <url>` | HTTPS proxy url |
 
