@@ -24,7 +24,7 @@ Luckily, Logagent has got a [plugin](https://sematext.com/docs/logagent/input-pl
 
 ## Setup Logagent as a local logging hub
 
-To run Logagent you will need a Logs App Token first. If you don't have Sematext Logs Apps yet, you can [create Logs Apps now](https://apps.sematext.com/ui/integrations).
+To run Logagent you will need a Logs App Token first. If you don't have Sematext Logs Apps yet, you can [create Logs Apps now](https://apps.sematext.com/ui/logs?action=SHOW_CREATE_LOGS).
 Then you can [install Logagent](https://sematext.com/docs/logagent/installation/). The default setup ships log files from /var/log to Sematext Cloud. To run Logagent you will need a Logs App Token. 
 
 To receive logs from the `journal-upload` service, activate the plugin in `/etc/sematext/logagent.conf`. 

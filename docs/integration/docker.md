@@ -19,6 +19,8 @@ We set it up for you, out-of-the-box!
 
 Sematext Agent collects various metrics about hosts and ships that to Sematext Cloud.
 
+First create a [Docker Monitoring App in Sematext Cloud](https://apps.sematext.com/ui/monitoring-create). 
+
 ### Docker
 You install the Agent simply by running one Docker command. This will start the Agent as a Docker container on your host.
 
