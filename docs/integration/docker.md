@@ -19,7 +19,7 @@ We set it up for you, out-of-the-box!
 
 Sematext Agent collects various metrics about hosts and ships that to Sematext Cloud.
 
-First create a [Docker Monitoring App in Sematext Cloud](https://apps.sematext.com/ui/monitoring-create). 
+First create a [Docker Monitoring App in Sematext Cloud](https://apps.sematext.com/ui/monitoring-create).
 
 ### Docker
 You install the Agent simply by running one Docker command. This will start the Agent as a Docker container on your host.
@@ -49,32 +49,32 @@ docker run -d  --restart always --privileged -P --name st-agent \
 If you prefer adding the Agent in a `docker-compose` configuration, here's how you do it.
 
 ```yaml
-# docker-compose.yml 
-version: '3' 
-services: 
-  sematext-agent: 
-    image: 'sematext/agent:latest' 
-    environment: 
-      - affinity:container!=*sematext-agent* 
-      - CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac 
-      - INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de 
-      - REGION=US 
-      - JOURNAL_DIR=/var/run/st-agent 
-      - LOGGING_WRITE_EVENTS=false 
-      - LOGGING_REQUEST_TRACKING=false 
-      - LOGGING_LEVEL=info 
-      - NODE_NAME=$HOSTNAME 
-      - CONTAINER_SKIP_BY_IMAGE=sematext 
-    cap_add: 
-      - SYS_ADMIN 
-    restart: always 
-    volumes: 
-      - '/:/hostfs:ro' 
-      - '/var/run/:/var/run/' 
-      - '/sys/kernel/debug:/sys/kernel/debug' 
-      - '/proc:/host/proc:ro' 
-      - '/etc:/host/etc:ro' 
-      - '/sys:/host/sys:ro' 
+# docker-compose.yml
+version: '3'
+services:
+  sematext-agent:
+    image: 'sematext/agent:latest'
+    environment:
+      - affinity:container!=*sematext-agent*
+      - CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac
+      - INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de
+      - REGION=US
+      - JOURNAL_DIR=/var/run/st-agent
+      - LOGGING_WRITE_EVENTS=false
+      - LOGGING_REQUEST_TRACKING=false
+      - LOGGING_LEVEL=info
+      - NODE_NAME=$HOSTNAME
+      - CONTAINER_SKIP_BY_IMAGE=sematext
+    cap_add:
+      - SYS_ADMIN
+    restart: always
+    volumes:
+      - '/:/hostfs:ro'
+      - '/var/run/:/var/run/'
+      - '/sys/kernel/debug:/sys/kernel/debug'
+      - '/proc:/host/proc:ro'
+      - '/etc:/host/etc:ro'
+      - '/sys:/host/sys:ro'
       - '/usr/lib:/host/usr/lib:ro'
 ```
 
@@ -123,18 +123,18 @@ services:
       restart_policy:
         condition: any
         delay: 1s
-    cap_add: 
-      - SYS_ADMIN 
-    restart: always 
+    cap_add:
+      - SYS_ADMIN
+    restart: always
     environment:
-      - affinity:container!=*sematext-agent* 
+      - affinity:container!=*sematext-agent*
       - CONTAINER_TOKEN=84fbc37e-a0fb-418c-9bcb-ea7c763dd9ac
-      - INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de 
-      - JOURNAL_DIR=/var/run/st-agent 
-      - LOGGING_WRITE_EVENTS=false 
-      - LOGGING_REQUEST_TRACKING=false 
-      - LOGGING_LEVEL=info 
-      - NODE_NAME=$HOSTNAME 
+      - INFRA_TOKEN=6377be8e-8441-46de-85dc-11ee3646c3de
+      - JOURNAL_DIR=/var/run/st-agent
+      - LOGGING_WRITE_EVENTS=false
+      - LOGGING_REQUEST_TRACKING=false
+      - LOGGING_LEVEL=info
+      - NODE_NAME=$HOSTNAME
       - CONTAINER_SKIP_BY_IMAGE=sematext
       - REGION=US
       - PKG_ENABLED=false
@@ -163,10 +163,10 @@ The Sematext Agent will collect the following container and host metrics.
 
 - CPU
 - memory
-    
+
 ![](../images/integrations/docker/hostcpu.png)
 
-- disk 
+- disk
 
 ![](../images/integrations/docker/hostdisk.png)
 
@@ -307,7 +307,7 @@ Here's the list of Docker container events Sematext collects:
 ![](../images/integrations/docker/events.png)
 
 ## Metrics Overview
-  
+
 The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise.
 
 <table>
@@ -411,35 +411,35 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 
 |Name|Type|Unit|Numeric Type|Label|Description|
 |----|----|----|------------|-----|-----------|
-|memory.usage|gauge|bytes|long|memory|container memory usage in bytes|
-|memory.fail.count|counter||long|memory|the number of times that memory cgroup limit was exceeded|
-|memory.limit|gauge|bytes|long|memory|the max allowed memory limit for the container cgroup|
-|memory.rss|gauge|bytes|long|RSS memory|number of bytes of anonymous (file unmapped memory) and swap cache memory|
-|memory.pages.in|counter||long|memory pages in|memory pages in,description=the number of events each time the page is accounted to the cgroup|
-|memory.pages.out|counter||long|memory pages out|memory pages out,description=the number of events each time a page is unaccounted from the cgroup|
-|memory.pages.fault|counter||long|memory page faults|the number of page faults accounted the cgroup|
-|swap.size|counter|bytes|long|swap|the number of bytes of swap usage|
-|io.read|gauge||long|disk read|the number of bytes read from the disk|
-|io.read.time|gauge|ns|long|disk read time|the total amount of time (in nanoseconds) between request dispatch and request completion|
-|io.read.wait.time|counter|ns|long|disk read wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
-|io.write|counter|bytes|long|disk write|the number of bytes written to the disk|
-|io.write.time|counter|ns|long|disk write time|the total amount of time (in nanoseconds) between request dispatch and request completion|
-|io.write.wait.time|counter|ns|long|disk write wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
-|cpu.percent|gauge|%|double|CPU usage|container CPU usage|
-|cpu.throttled.time|counter|ns|long|CPU throttled time|the total amount of time that processes have been throttled in the container cgroup|
-|network.rx.bytes|counter|bytes|long|network received|received amount of bytes on the network interface|
-|network.rx.packets|counter||long|network packets received|received amount of packets on the network interface|
-|network.rx.errors|counter||long|network rx errors|received amount of errors on the network interface|
-|network.rx.dropped|counter||long|network packets rx dropped|amount of dropped inbound packets on the network interface|
-|network.tx|counter||long|network transmitted|transmitted amount of bytes on the network interface|
-|network.tx.bytes|counter|bytes|long|network received|transmitted amount of bytes on the network interface|
-|network.tx.packets|counter||long|network packets transmitted|transmitted amount of packets on the network interface|
-|network.tx.errors|counter||long|network tx errors|transmitted amount of errors on the network interface|
-|network.tx.dropped|counter||long|network packets tx dropped|amount of dropped outbound packets on the network interface
+|container.memory.usage|gauge|bytes|long|memory|container memory usage in bytes|
+|container.memory.fail.count|counter||long|memory|the number of times that memory cgroup limit was exceeded|
+|container.memory.limit|gauge|bytes|long|memory|the max allowed memory limit for the container cgroup|
+|container.memory.rss|gauge|bytes|long|RSS memory|number of bytes of anonymous (file unmapped memory) and swap cache memory|
+|container.cache.usage|gauge|bytes|long|RSS memory|number of bytes of page cache memory|
+|container.memory.pages.in|counter||long|memory pages in|memory pages in,description=the number of events each time the page is accounted to the cgroup|
+|container.memory.pages.out|counter||long|memory pages out|memory pages out,description=the number of events each time a page is unaccounted from the cgroup|
+|container.memory.pages.fault|counter||long|memory page faults|the number of page faults accounted the cgroup|
+|container.swap.size|counter|bytes|long|swap|the number of bytes of swap usage|
+|container.io.read|gauge||long|disk read|the number of bytes read from the disk|
+|container.io.read.time|gauge|ns|long|disk read time|the total amount of time (in nanoseconds) between request dispatch and request completion|
+|container.io.read.wait.time|counter|ns|long|disk read wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
+|container.io.write|counter|bytes|long|disk write|the number of bytes written to the disk|
+|container.io.write.time|counter|ns|long|disk write time|the total amount of time (in nanoseconds) between request dispatch and request completion|
+|container.io.write.wait.time|counter|ns|long|disk write wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
+|container.cpu.percent|gauge|%|double|CPU usage|container CPU usage|
+|container.cpu.throttled.time|counter|ns|long|CPU throttled time|the total amount of time that processes have been throttled in the container cgroup|
+|container.network.rx.bytes|counter|bytes|long|network received|received amount of bytes on the network interface|
+|container.network.rx.packets|counter||long|network packets received|received amount of packets on the network interface|
+|container.network.rx.errors|counter||long|network rx errors|received amount of errors on the network interface|
+|container.network.rx.dropped|counter||long|network packets rx dropped|amount of dropped inbound packets on the network interface|
+|container.network.tx|counter||long|network transmitted|transmitted amount of bytes on the network interface|
+|container.network.tx.bytes|counter|bytes|long|network received|transmitted amount of bytes on the network interface|
+|container.network.tx.packets|counter||long|network packets transmitted|transmitted amount of packets on the network interface|
+|container.network.tx.errors|counter||long|network tx errors|transmitted amount of errors on the network interface|
+|container.network.tx.dropped|counter||long|network packets tx dropped|amount of dropped outbound packets on the network interface|
 
 ## More about Docker Monitoring
 * [Docker Container Monitoring and Management Challenges](https://sematext.com/blog/docker-container-monitoring-management-challenges/)
 * [Docker Container Performance Metrics](https://sematext.com/blog/top-docker-metrics-to-watch/)
 * [Docker Container Monitoring Open Source Tools](https://sematext.com/blog/open-source-docker-monitoring-logging/)
 * [Docker Container Monitoring with Sematext](https://sematext.com/blog/docker-container-monitoring-with-sematext/)
-
