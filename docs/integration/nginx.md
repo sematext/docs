@@ -26,7 +26,7 @@ This lightweight, open-source [Nginx monitoring agent](https://github.com/semate
 The setup script stores the configuration in `/etc/sematext/sematext-agent-nginx.config`
 
 ### Change settings
-In case you want to change settings later edit `/etc/sematext/sematext-agent-nginx.config`. A typical use case is to add a receiver URL for an On-Premises installation of Sematext Monitoring in the config file:
+In case you want to change settings later edit `/etc/sematext/sematext-agent-nginx.config`. A typical use case is to add a receiver URL for an [On-Premises installation](https://sematext.com/enterprise/) of Sematext Monitoring in the config file:
 
 Default value for Sematext Cloud: `https://spm-receiver.sematext.com:443/receiver/v1/_bulk`
 ```bash
