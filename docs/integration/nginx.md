@@ -1,10 +1,10 @@
 title: Nginx Monitoring Integration
 description: The Sematext monitoring agent can collect many metrics from NGINX instances, including requests, reading, writing, waiting, active and more. Utilize built-in anomaly detection, threshold, and heartbeat alerting and send notifications to email and various chatops messaging services. Correlate events & logs, filter metrics by server or time, and visualize your cluster's health with out of the box graphs and custom dashboards
 
-Sematext offers a simple Nginx monitoring agent, written entirely in Node.js without CPU and memory overhead. It's easy to install and require in your source code.
+Sematext offers a simple, easy to install, Nginx monitoring agent with minimal CPU and memory overhead.
 
-## Sematext Nginx Monitoring Agent Quick Start
-This lightweight, open-source [Nginx monitoring agent](https://github.com/sematext/sematext-agent-nginx) collects Nginx performance metrics and sends them to Sematext. It is available as an [npm package](https://www.npmjs.com/package/spm-agent-nodejs) that runs as as a system service on your host. First [create an Nginx Monitoring App](https://apps.sematext.com/ui/monitoring-create) in Sematext, then follow these instructions:
+## Install Nginx Monitoring Agent
+This lightweight, open-source [Nginx monitoring agent](https://github.com/sematext/sematext-agent-nginx) collects Nginx performance metrics and sends them to Sematext. It is available as an [npm package](https://www.npmjs.com/package/spm-agent-nodejs) that runs as a system service on your host. First [create an Nginx Monitoring App](https://apps.sematext.com/ui/monitoring-create) in Sematext, then follow these instructions:
 
 1. Make sure Node.js is installed. Version 10.* and newer are fully supported. Older versions may work too (but ensure npm is installed first).
 2. Install Sematext Nginx Agent using npm:
@@ -22,11 +22,11 @@ This lightweight, open-source [Nginx monitoring agent](https://github.com/semate
 
         sudo sematext-nginx-setup -t <your-token-goes-here> -n http://localhost/nginx_status
 
-## Sematext Nginx Monitoring Agent Configuration
+## Configure Nginx Monitoring Agent
 The setup script stores the configuration in `/etc/sematext/sematext-agent-nginx.config`
 
 ### Change settings
-In case you want to change settings later edit `/etc/sematext/sematext-agent-nginx.config`. A typical usecase is to add a receiver URL for an On-Premises installation of Sematext Monitoring in the config file:
+In case you want to change settings later edit `/etc/sematext/sematext-agent-nginx.config`. A typical use case is to add a receiver URL for an On-Premises installation of Sematext Monitoring in the config file:
 
 Default value for Sematext Cloud: `https://spm-receiver.sematext.com:443/receiver/v1/_bulk`
 ```bash
