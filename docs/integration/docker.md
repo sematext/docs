@@ -415,7 +415,7 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 |container.memory.fail.count|counter||long|memory|the number of times that memory cgroup limit was exceeded|
 |container.memory.limit|gauge|bytes|long|memory|the max allowed memory limit for the container cgroup|
 |container.memory.rss|gauge|bytes|long|RSS memory|number of bytes of anonymous (file unmapped memory) and swap cache memory|
-|container.cache.usage|gauge|bytes|long|RSS memory|number of bytes of page cache memory|
+|container.cache.usage|gauge|bytes|long|cache memory|number of bytes of page cache memory|
 |container.memory.pages.in|counter||long|memory pages in|memory pages in,description=the number of events each time the page is accounted to the cgroup|
 |container.memory.pages.out|counter||long|memory pages out|memory pages out,description=the number of events each time a page is unaccounted from the cgroup|
 |container.memory.pages.fault|counter||long|memory page faults|the number of page faults accounted the cgroup|
