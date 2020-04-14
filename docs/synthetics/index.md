@@ -9,5 +9,6 @@ Sematext Synthetics provides ability to actively monitor API, Web URLs, websites
 
 You start by creating a Synthetics App. Under the App, you can create a HTTP or Browser monitor. HTTP monitor can be used to monitor any HTTP end points like API endpoints or Web URL. HTTP monitor sends a HTTP request to the specified URL with configured request settings and records the timings and response details. Browser monitor can be used to monitor websites and user journey by writing a script. Browser monitor script will be executed in a browser and the performance is recorded.  While creating the monitor you can specify a list of conditions which will decide the result of the run.
 
-The monitors will be periodically scheduled to run from specified locations in an isolated environment. No agent installation is required. The result will be evaluated against the set of conditions specified during the creation. When a condition fails, the run is considered failed. On run failre, you will be alerted based on configure notification hooks.
+The monitors will be periodically scheduled to run from specified locations in an isolated environment. No agent installation is required. A monitor scheduled to run every minute from 2 locations will run 120 times in a hour. The result will be evaluated against the set of conditions specified during the creation. When a condition fails, the run is considered failed. On run failre, you will be alerted based on configure notification hooks.
 
+Current supported locations are N. Virginia, USA and Ireland, Europe.
