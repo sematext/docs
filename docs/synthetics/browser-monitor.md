@@ -5,9 +5,9 @@ description: Browser monitor can monitor website performance and user journey.
 
 #### General
 
-* `Name` - Name of the monitor. Max Length is 255 characters
-* `Frequency` - Frequency to execute the monitor
-* `Locations` - List of locations to run the monitor
+* **Name** - Name of the monitor. Max Length is 255 characters
+* **Frequency** - Frequency to execute the monitor
+* **Locations** - List of locations to run the monitor
 
 #### Script
 
@@ -17,8 +17,8 @@ The browser monitor scripts are Node.js scripts that control a headless Chrome b
 
 Condition types supported in the browser monitor are:
 
-* `Error` - During each run, if there are any errors like navigation timeout, assertion failed, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body. 
-* `Metric` - Used to make sure the metrics are within the expected range. 
+* **Error** - During each run, if there are any errors like navigation timeout, assertion failed, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body. 
+* **Metric** - Used to make sure the metrics are within the expected range. 
 
 By default, the following conditions are added while creating a browser monitor. These can be changed during the creation:
 
@@ -66,9 +66,9 @@ The browser monitor script allows the collection of the screenshot of the page a
 
 Each browser monitor run is executed in an isolated environment using the Google Chrome browser under Node.js environment. Each run is allocated 1024MB of memory. Versions of various dependencies are:
 
-* `Node.js` - 10.x
-* `Google Chrome` - 77.0.3844
-* `Puppeteer` - 1.19.0
+* **Node.js** - 10.x
+* **Google Chrome** - 77.0.3844
+* **Puppeteer** - 1.19.0
 
 Default runtime configuration values are:
 
