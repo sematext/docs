@@ -8,7 +8,7 @@ The Inventory information is available in the *Inventory* section of the *Infras
 <!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-group-by.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-group-by-v1.mp4" type="video/mp4" />
 </video>
 
 ### Servers
@@ -48,7 +48,7 @@ In addition, an overview of all the installed packages on a given system is avai
 The Inventory UI allows comparing different systems to quickly and efficiently see differences between them. Use filtering to see differences in specific packages.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-hosts-compare.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-hosts-compare-v1.mp4" type="video/mp4" />
 </video>
 
 #### Grouping Hosts By Installed Packages
@@ -65,7 +65,7 @@ Provides quick insight into how unified your packages are by showing:
 - Number of package installations
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-packages.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-packages-v1.mp4" type="video/mp4" />
 </video>
 
 #### Overview
@@ -82,7 +82,7 @@ Provides quick insight into how unified your container images are by showing:
 - Total number of container images
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-container-images.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-container-images-v1.mp4" type="video/mp4" />
 </video>
 
 #### Overview
