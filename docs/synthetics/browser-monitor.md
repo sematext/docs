@@ -1,6 +1,8 @@
 title: Browser Monitor
 description: Browser monitor can monitor website performance and user journey.
 
+The browser monitor executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using `assert` API during the execution. It can optionally collect screenshots.
+
 ### Configuration
 
 #### General
@@ -11,7 +13,7 @@ description: Browser monitor can monitor website performance and user journey.
 
 #### Script
 
-The browser monitor scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the `testScript()` method will be invoked with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. For more information on specific use cases, you can refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page are matching the requirements. If any assertion fails, the run is declared as a failure and the details of failure can be found in the logs.
+The browser monitor scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, you can refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page are matching the requirements. If any assertion fails, the system declares the run as a failure. The logs will contain the details of the failure.
 
 ### Conditions
 
@@ -20,14 +22,14 @@ Condition types supported in the browser monitor are:
 * **Error** - During each run, if there are any errors like navigation timeout, assertion failed, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body. 
 * **Metric** - Used to make sure the metrics are within the expected range. 
 
-By default, the following conditions are added while creating a browser monitor. These can be changed during the creation:
+By default, the UI adds the below conditions while creating a browser monitor. You can change them during the creation:
 
 * Error equals empty
 * Response Time metric Less Than 20000 ms
 
 ### Metrics
 
-For every browser run the below run-level metrics collected:
+For every browser run, the monitor collects the below run-level metrics:
 
 | Name  | Label  | Description  | Unit  |
 |---|---|---|---|

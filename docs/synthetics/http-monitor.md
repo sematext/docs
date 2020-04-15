@@ -22,11 +22,11 @@ The HTTP monitor sends a single HTTP request to the specified URL with configure
 
 Optionally, the header, query param, and cookie values can be marked a hidden, which means it will be hidden for the users. Currently, we do not encrypt the hidden values while storing it in the DB.
 
-Max length of the header, query param, and cookie name and value is 512 and 1024 characters respectively. A maximum of 100 rows for each of the headers, query params, and cookies is allowed.
+Max length of the header, query param, and cookie name and value are 512 and 1024 characters respectively. A maximum of 100 rows for each of the headers, query params, and cookies is allowed.
 
 ### Conditions
 
-Conditions can be configured on the response fields and metrics. The condition are evaluated for every run result. All the conditions should pass for a run to be declared a passed. If any condition fails, the run will fail and the monitor will be marked as failing. Condition types supported are:
+Conditions can be configured on the response fields and metrics. The conditions are evaluated for every run result. All the conditions should pass for a run to be declared a passed. If any condition fails, the run will fail and the monitor will be marked as failing. Condition types supported are:
 
 * **Error** - During each run, if there are any errors like connection, timeout, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body. 
 * **Response Code** - HTTP Status Code. Used to make sure the response code should be of specific value or range.
@@ -37,7 +37,7 @@ Conditions can be configured on the response fields and metrics. The condition a
 
 Various operators like Equals, Less Than, Greater Than, Contains are supported based on condition type. 
 
-By default, the following conditions are added while creating a HTTP monitor. These can be changed during the creation:
+By default, the UI adds the below conditions while creating an HTTP monitor. You can change them during the creation:
 
 * Error equals empty
 * Response Code equals `200`
