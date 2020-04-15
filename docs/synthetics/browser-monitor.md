@@ -29,6 +29,8 @@ By default, the UI adds the below conditions while creating a browser monitor. Y
 
 ### Metrics
 
+#### Run Metrics
+
 For every browser run, the monitor collects the below run-level metrics:
 
 | Name  | Label  | Description  | Unit  |
@@ -36,6 +38,8 @@ For every browser run, the monitor collects the below run-level metrics:
 | synthetics.time.response  | Response time  | Total time taken for the script to finish | ms  |
 | synthetics.browser.request.count | Request count | Total number of HTTP requests sent during the execution of the script | |
 | synthetics.browser.transfer.size | Transfer size | Total number of network bytes downloaded during the execution of the script | bytes |
+
+#### Page Load Metrics
 
 The browser monitor collects the below page load (navigation) metrics for every run. If there are multiple page loads during the execution of the script, the last page load metrics are collected.
 
@@ -53,6 +57,8 @@ The browser monitor collects the below page load (navigation) metrics for every 
 | synthetics.browser.time.paint.first | First paint time | The time from navigation to the time when the first paint happens on the screen | ms |
 | synthetics.browser.time.paint.firstcontentful | First contentful paint time |  The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
 
+#### Resource Metrics
+
 Browser monitor collects the below metrics for every resource loaded during the execution of the script:
 
 | Name  | Label  | Description  | Unit  |
@@ -63,6 +69,24 @@ Browser monitor collects the below metrics for every resource loaded during the 
 ### Screenshots
 
 The browser monitor script allows the collection of the screenshot of the page at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1.
+
+### Waterfall chart
+
+For every run, the browser monitor collects all the resources fetched during the run. These resources are shown in a graphical waterfall chart in the individual run details page. The metric shown for each resource are:
+
+* **Total Time** - Total time to fetch the resource in ms
+* **Started At** - Relative time when the fetch started in ms
+* **Blocked** - Time the request spent waiting before it could be sent in ms
+* **DNS** - Time taken for DNS resolution in ms
+* **Connect** - Socket connection time in ms
+* **SSL** - SSL handshake time in ms
+* **Send** - Time taken to send the request in ms
+* **Wait** - Time taken to receive the first byte of response from server in ms
+* **Receive** - Time taken to download the resource in ms
+* **Transfer Size** - Network size of the resource in bytes
+* **Content Size** - Actual uncompressed size of the resource
+
+<<image of waterfall chart>>
 
 ### Run environment
 
