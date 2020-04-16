@@ -11,8 +11,7 @@ The Inventory information is available in the *Inventory* section of the *Infras
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-group-by-v1.mp4" type="video/mp4" />
 </video>
 
-### Servers
-#### Info
+## Servers
 
 Provides quick insight into how unified your servers are by showing:
 
@@ -21,11 +20,11 @@ Provides quick insight into how unified your servers are by showing:
 - Number of different OS versions
 - A number of different kernel versions
 
-#### Overview
+### Overview
 
-The Servers overview provides a per-host view of each server or virtual machine, along with the operating system and its version, number of CPUs, their type, memory, number of hard disk drives and total capacity.
+The Servers overview provides a per-host view of each server or virtual machine, along with the operating system and its version, number of CPUs, their type, memory, number of disk drives and their total capacity.
 
-Click on each row gives detailed information about the system including:
+Clicking on each row shows detailed information about the whole system, including:
 
 - Unique identifier of the system
 - OS version
@@ -43,20 +42,19 @@ In addition, an overview of all the installed packages on a given system is avai
 - Package name
 - Package version
 
-#### Comparing Hosts
+### Comparing Hosts
 
-The Inventory UI allows comparing different systems to quickly and efficiently see differences between them. Use filtering to see differences in specific packages.
+The Inventory UI let's you compare different systems to quickly see the differences between them and use filtering to see differences between specific packages.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-hosts-compare-v1.mp4" type="video/mp4" />
 </video>
 
-#### Grouping Hosts By Installed Packages
+### Grouping Hosts By Installed Packages
 
-Hosts can be filtered and grouped by tags. One of the available tags for grouping is installed.packagas tag, which will put servers with exactly the same packages installed in the same group. This can be useful to quickly check if all servers that should have the same packages installed are indeed the same.
+Hosts can be filtered and grouped by tags. One of the available tags for grouping is the installed.packages tag, which will put servers with exactly the same packages installed in the same group. This can be useful to quickly check if all servers that should have the same packages installed are indeed the same.
 
-### Packages
-#### Info
+## Packages
 
 Provides quick insight into how unified your packages are by showing:
 
@@ -68,12 +66,11 @@ Provides quick insight into how unified your packages are by showing:
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-packages-v1.mp4" type="video/mp4" />
 </video>
 
-#### Overview
+### Overview
 
 The Packages overview provides a per-package view of all package installations across hosts. Find out how many installations of each package there are, where they are installed and in which version.
 
-### Container Images
-#### Info
+## Container Images
 
 Provides quick insight into how unified your container images are by showing:
 
@@ -85,9 +82,10 @@ Provides quick insight into how unified your container images are by showing:
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-container-images-v1.mp4" type="video/mp4" />
 </video>
 
-#### Overview
+### Overview
 
-The Container Images overview provides a per-container-image view of all container images across hosts. Find out how many copies of each container image there are, where they are installed and in which verison.
+The Container Images overview provides a view of all container images across hosts. Find out how many copies of each container image there are, where they are installed and which version they are tagged with.
+
 
 
 ## How does it Work?
@@ -118,7 +116,7 @@ The [Sematext Agent](../agents/sematext-agent) gathers the following data about 
 - Total disk size
 - Disk drives information
 
-Following information about packages is gathered for Node.js, Python, DEB and RPM sources:
+The following information about packages is gathered for Node.js, Python, DEB and RPM sources:
 
 - Installation source
 - Package name
