@@ -5,7 +5,7 @@ Sematext Synthetics provides the ability to actively monitor APIs, Web URLs, web
 
 << screenshots of monitors overview screen >>
 
-### How it works
+## How it works
 
 You start by creating a Synthetics [App](/guide/app-guide/). Under the App, you can create an HTTP or Browser monitor. HTTP monitor can be used to monitor any HTTP endpoints like HTTP APIs or Web URLs. HTTP monitor sends an HTTP request to the specified URL with configured request settings and records the timings and response details. Browser monitor can be used to monitor websites and user journey by writing a script that simulates user actions. Browser monitor script executes in a browser and the performance is recorded.  While creating the monitor you can specify a list of conditions that decides the result of the run.
 

@@ -3,9 +3,9 @@ description: HTTP monitor can monitor any HTTP endpoint like API, Web URL, etc.
 
 The HTTP monitor sends a single HTTP request to the specified URL with configured request settings. It records the response data like headers, body, error if any and the various timings.
 
-### Configuration
+## Configuration
 
-#### General
+### General
 
 * **Name** - Name of the monitor. Max length is 255 characters.
 * **HTTP Method** - HTTP Method.
@@ -13,18 +13,18 @@ The HTTP monitor sends a single HTTP request to the specified URL with configure
 * **Frequency** - Monitor execution frequency.
 * **Locations** - List of locations to run the monitor.
 
-#### Request Settings
+### Request Settings
 
 * **Headers** - List of HTTP headers to be sent.
 * **Query Params** - List of request query parameters to be appended to the URL.
 * **Cookies** - List of Cookies to be sent.
 * **Body** - Request body data. Max length is 4096 characters.
 
-Optionally, the header, query param, and cookie values can be marked a hidden, which means it will be hidden for the users. Currently, we do not encrypt the hidden values while storing it in the DB.
+Optionally, the header, query param, and cookie values can be marked as hidden, which means it will be hidden for the users. Currently, we do not encrypt the hidden values while storing it in the DB.
 
 Max length of the header, query param, and cookie name and value are 512 and 1024 characters respectively. A maximum of 100 rows for each of the headers, query params, and cookies is allowed.
 
-### Conditions
+## Conditions
 
 Conditions can be configured on the response fields and metrics. The conditions are evaluated for every run result. All the conditions should pass for a run to be declared a passed. If any condition fails, the run will fail and the monitor will be marked as failing. Condition types supported are:
 
@@ -43,7 +43,7 @@ By default, the UI adds the below conditions while creating an HTTP monitor. You
 * Response Code equals `200`.
 * Response Time metric Less Than 10000 ms.
 
-### Metrics
+## Metrics
 
 Apart from error, response header, cookies, and body, the following metrics are collected from every HTTP run:
 
@@ -57,7 +57,7 @@ Apart from error, response header, cookies, and body, the following metrics are 
 | synthetics.http.time.download  |  Download Time | Time taken to download the response body  | ms  |
 | synthetics.http.response.size  |  Response Body Size | Size of the response body  | bytes  |
 
-### Run environment
+## Run environment
 
 Each HTTP monitor run is executed in an isolated environment. [Go HTTP Client](https://golang.org/pkg/net/http/) library is used to execute the HTTP requests. Each run is allocated 128MB memory.
 
