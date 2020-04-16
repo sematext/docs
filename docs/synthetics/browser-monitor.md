@@ -7,13 +7,13 @@ The browser monitor executes the configured script in a Chrome browser. It recor
 
 #### General
 
-* **Name** - Name of the monitor. Max Length is 255 characters
-* **Frequency** - Frequency to execute the monitor
-* **Locations** - List of locations to run the monitor
+* **Name** - Name of the monitor. Max length is 255 characters.
+* **Frequency** - Monitor execution frequency.
+* **Locations** - List of locations to run the monitor.
 
 #### Script
 
-The browser monitor scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, you can refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page are matching the requirements. If any assertion fails, the system declares the run as a failure. The logs will contain the details of the failure.
+The browser monitor scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page match your requirements. If any assertion fails, the system declares the run as a failure. Monitor run logs, shown in Sematext Run details page, contain failure details.
 
 ### Conditions
 
@@ -68,23 +68,23 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Screenshots
 
-The browser monitor script allows the collection of the screenshot of the page at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1.
+The browser monitor script allows the collection page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1.
 
 ### Waterfall chart
 
-For every run, the browser monitor collects all the resources fetched during the run. These resources are shown in a graphical waterfall chart in the individual run details page. The metric shown for each resource are:
+For every run, the browser monitor collects all the resources fetched during the run. These resources are shown in a graphical waterfall chart in the individual run details page. The metrics shown for each resource are:
 
-* **Total Time** - Total time to fetch the resource in ms
-* **Started At** - Relative time when the fetch started in ms
-* **Blocked** - Time the request spent waiting before it could be sent in ms
-* **DNS** - Time taken for DNS resolution in ms
-* **Connect** - Socket connection time in ms
-* **SSL** - SSL handshake time in ms
-* **Send** - Time taken to send the request in ms
-* **Wait** - Time taken to receive the first byte of response from server in ms
-* **Receive** - Time taken to download the resource in ms
-* **Transfer Size** - Network size of the resource in bytes
-* **Content Size** - Actual uncompressed size of the resource
+* **Total Time** - Total time to fetch the resource in ms.
+* **Started At** - Relative time when the fetch started in ms.
+* **Blocked** - Time the request spent waiting before it could be sent in ms.
+* **DNS** - Time taken for DNS resolution in ms.
+* **Connect** - Socket connection time in ms.
+* **SSL** - SSL handshake time in ms.
+* **Send** - Time taken to send the request in ms.
+* **Wait** - Time taken to receive the first byte of response from server in ms.
+* **Receive** - Time taken to download the resource in ms.
+* **Transfer Size** - Network size of the resource in bytes.
+* **Content Size** - Actual uncompressed size of the resource.
 
 <<image of waterfall chart>>
 
