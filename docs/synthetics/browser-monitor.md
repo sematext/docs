@@ -74,7 +74,7 @@ The browser monitor script allows the collection page screenshots at any point d
 
 For every run, the browser monitor collects all the resources fetched during the run. These resources are shown in a graphical waterfall chart in the individual run details page. The metrics shown for each resource are:
 
-* **Total Time** - Total time to fetch the resource in ms.
+* **Total Time** - Total elapsed time of the request to fetch the resource in ms.
 * **Started At** - Relative time when the fetch started in ms.
 * **Blocked** - Time the request spent waiting before it could be sent in ms.
 * **DNS** - Time taken for DNS resolution in ms.
