@@ -13,7 +13,7 @@ This Changelog contains only important changes, new features, and critical bug f
 
 - Docker images: 
     - Add health check command
-    - Dockerfile for arch64
+    - Dockerfile for aarch64
     - Dockerfile for RedHat Enterprise
 - Creation of binary executables using nexe. The executable can run without installing Node.js runtime. 
 - Automated changelog and release notes
