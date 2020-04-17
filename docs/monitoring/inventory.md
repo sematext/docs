@@ -135,6 +135,6 @@ And for container images:
 Here are some of the common use cases and issues that Inventory Monitoring helps solve:
 
 - Finding obsolete packages
-- Seeing differences in environments for troubleshooting  behavior discrepancies
+- Seeing differences in environments for troubleshooting behavior discrepancies
 - Finding packages mentioned in the [CVE](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) reports
 - And many, many more
