@@ -132,10 +132,3 @@ outputFilter:
               }
             }
 ```
-
-### List of available filters
-
-- [Grep input filter](./input-filter-grep) - module alias "grep"
-- [Grok input filter](./input-filter-grok) - module alias "grok"
-- [SQL output filter](./output-filter-sql) - module alias "sql"
-- [Access Watch output filter](./output-filter-accesswatch) - module alias "access-watch"
