@@ -68,7 +68,7 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ## Screenshots
 
-The browser monitor script allows the collection page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1.
+The browser monitor script allows the collection page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
 
 ## Waterfall chart
 
@@ -86,7 +86,7 @@ For every run, the browser monitor collects all the resources fetched during the
 * **Transfer Size** - Network size of the resource in bytes.
 * **Content Size** - Actual uncompressed size of the resource.
 
-<<image of waterfall chart>>
+<image of waterfall chart>
 
 ## Run environment
 
