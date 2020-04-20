@@ -52,7 +52,7 @@ The Inventory UI let's you compare different systems to quickly see the differen
 
 ### Grouping Hosts By Installed Packages
 
-Hosts can be filtered and grouped by tags. One of the available tags for grouping is the installed.packages tag, which will put servers with exactly the same packages installed in the same group. This can be useful to quickly check if all servers that should have the same packages installed are indeed the same.
+Hosts can be filtered and grouped by tags. One of the available tags for grouping is the `installed.packages` tag, which will put servers with exactly the same packages installed in the same group. This can be useful to quickly check if all servers that should have the same packages installed are indeed the same.
 
 ## Packages
 
