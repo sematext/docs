@@ -347,7 +347,7 @@ Yes, you can use the following command for that (it accepts only
 one parameter, the token of the Monitoring App you want to uninstall):
 
 ```
-sudo bash /opt/spm/bin/spm-remove-application.sh 11111111-1111-1111-1111-111111111111
+sudo bash /opt/spm/bin/remove-sematext 11111111-1111-1111-1111-111111111111
 ```
 
 ### Can I disable Sematext Agent without uninstalling it?
