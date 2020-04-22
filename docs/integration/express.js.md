@@ -386,6 +386,16 @@ max latency | nodejs.eventloop.latency.max | Max | Long |
 
 ## FAQ
 
+### How to Monitor OS and Infra metrics with the Node.js Integration?
+We have deprecated the built-in Operating System monitor in the
+[Node.js-based Agent](https://github.com/sematext/spm-agent-nodejs) and
+moved to using our [Go-based Sematext Agent](../agents/sematext-agent) for
+Operating System and Infrastructure metrics. If you are using the
+[`spm-agent-nodejs >=4.0.0`](https://github.com/sematext/spm-agent-nodejs) or
+the [`sematext-agent-express >=2.0.0`](https://github.com/sematext/sematext-agent-express)
+you are required to [install or upgrade the Sematext Agent](../monitoring/spm-faq/#how-do-i-upgrade-the-sematext-agent)
+to gather Operating System and Infrastructure metrics.
+
 ### Can I install Express.js agent on Windows?
 
 Yes. The native modules are automatically compiled during "npm
