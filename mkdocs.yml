@@ -104,45 +104,50 @@ pages:
       - Tracing Scala: tracing/scala.md
     - Integrations:
       - Overview: integration/index.md
-      - Monitoring Akka: integration/akka.md
-      - Monitoring Apache: integration/apache.md
-      - Monitoring AWS: integration/aws.md
-      - Monitoring Cassandra: integration/cassandra.md
-      - Monitoring ClickHouse: integration/clickhouse.md
-      - Monitoring Docker: integration/docker.md
-      - Monitoring Elasticsearch: integration/elasticsearch.md
-      - Monitoring Express.js: integration/express.js.md
-      - Monitoring Hadoop: integration/hadoop.md
-      - Monitoring HAProxy: integration/haproxy.md
-      - Monitoring HBase: integration/hbase.md
-      - Monitoring JVM: integration/jvm.md
-      - Monitoring Kafka: integration/kafka.md
-      - Monitoring MySQL: integration/mysql.md
-      - Monitoring MongoDB: integration/mongodb.md
-      - Monitoring Nginx: integration/nginx.md
-      - Monitoring Nginx Plus: integration/nginxplus.md
-      - Monitoring Node.js: integration/node.js.md
-      - Monitoring PHP: integration/php.md
-      - Monitoring Redis: integration/redis.md
-      - Monitoring Solr: integration/solr.md
-      - Monitoring SolrCloud: integration/solrcloud.md
-      - Monitoring Spark: integration/spark.md
-      - Monitoring Storm: integration/storm.md
-      - Monitoring Tomcat: integration/tomcat.md
-      - Monitoring ZooKeeper: integration/zookeeper.md
-      - Journald: integration/journald-integration.md
-      - Kubernetes Audit: integration/kubernetes-audit-integration.md
-      - Big Panda: integration/alerts-bigpanda-integration.md
-      - Custom Webhooks: integration/alerts-webhooks-integration.md
-      - Email: integration/alerts-email-integration.md
-      - HipChat: integration/alerts-hipchat-integration.md
-      - Nagios: integration/alerts-nagios-integration.md
-      - OpsGenie: integration/alerts-opsgenie-integration.md
-      - PagerDuty: integration/alerts-pagerduty-integration.md
-      - Pushover: integration/alerts-pushover-integration.md
-      - Slack: integration/alerts-slack-integration.md
-      - VictorOps: integration/alerts-victorops-integration.md
-      - Zapier: integration/alerts-zapier-integration.md
+      - Monitoring:
+        - Akka: integration/akka.md
+        - Apache: integration/apache.md
+        - AWS: integration/aws.md
+        - Cassandra: integration/cassandra.md
+        - ClickHouse: integration/clickhouse.md
+        - Docker: integration/docker.md
+        - Elasticsearch: integration/elasticsearch.md
+        - Express.js: integration/express.js.md
+        - Hadoop: integration/hadoop.md
+        - HAProxy: integration/haproxy.md
+        - HBase: integration/hbase.md
+        - JVM: integration/jvm.md
+        - Kafka: integration/kafka.md
+        - MySQL: integration/mysql.md
+        - MongoDB: integration/mongodb.md
+        - Nginx: integration/nginx.md
+        - Nginx Plus: integration/nginxplus.md
+        - Node.js: integration/node.js.md
+        - PHP: integration/php.md
+        - Redis: integration/redis.md
+        - Solr: integration/solr.md
+        - SolrCloud: integration/solrcloud.md
+        - Spark: integration/spark.md
+        - Storm: integration/storm.md
+        - Tomcat: integration/tomcat.md
+        - ZooKeeper: integration/zookeeper.md
+      - Logs:
+        - Generic Logs: integration/generic-logs-integration.md
+        - Kubernetes Audit: integration/kubernetes-audit-integration.md
+        - GitHub Webhook Events: integration/github-webhook-events-integration.md
+        - Journald: integration/journald-integration.md
+      - Notification Hooks:
+        - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
+        - Big Panda: integration/alerts-bigpanda-integration.md
+        - Email: integration/alerts-email-integration.md
+        - HipChat: integration/alerts-hipchat-integration.md
+        - Nagios: integration/alerts-nagios-integration.md
+        - OpsGenie: integration/alerts-opsgenie-integration.md
+        - PagerDuty: integration/alerts-pagerduty-integration.md
+        - Pushover: integration/alerts-pushover-integration.md
+        - Slack: integration/alerts-slack-integration.md
+        - VictorOps: integration/alerts-victorops-integration.md
+        - Zapier: integration/alerts-zapier-integration.md
     - Team:
       - Overview: team/index.md
       - Account Access: team/account-access.md
