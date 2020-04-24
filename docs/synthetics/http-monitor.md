@@ -10,7 +10,7 @@ The HTTP monitor sends a single HTTP request to the specified URL with configure
 * **Name** - Name of the monitor. Max length is 255 characters.
 * **HTTP Method** - HTTP Method.
 * **URL** - URL of the HTTP monitor of format `<http(s)>://hostname:port/path`.
-* **Frequency** - Monitor execution frequency.
+* **Interval** - Monitor execution interval.
 * **Locations** - List of locations to run the monitor.
 
 ### Request Settings

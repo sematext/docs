@@ -3,7 +3,14 @@ description: Overview of Synthetics for API, Web URL, website and user journey m
 
 Sematext Synthetics provides the ability to actively monitor APIs, Web URLs, websites and user journeys from multiple locations around the globe. Synthetic monitoring helps you ensure the availability and performance of your APIs and websites. While [Experience](/experience) helps you track real user performance of your websites, Synthetics will help you identify downtime and performance by simulating the user requests and interactions with your web page. 
 
-<< screenshots of monitors overview screen >>
+<img
+  class="content-modal-image"
+  alt="Monitors Overview"
+  src="../images/synthetics/monitors-overview.png"
+  title="Monitors Overview"
+  width=770
+  height=870
+/>
 
 ## How it works
 

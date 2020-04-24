@@ -8,7 +8,7 @@ The browser monitor executes the configured script in a Chrome browser. It recor
 ### General
 
 * **Name** - Name of the monitor. Max length is 255 characters.
-* **Frequency** - Monitor execution frequency.
+* **Interval** - Monitor execution interval.
 * **Locations** - List of locations to run the monitor.
 
 ### Script
@@ -86,7 +86,14 @@ For every run, the browser monitor collects all the resources fetched during the
 * **Transfer Size** - Network size of the resource in bytes.
 * **Content Size** - Actual uncompressed size of the resource.
 
-<image of waterfall chart>
+<img
+  class="content-modal-image"
+  alt="Browser Monitor Run - Resources Waterfall"
+  src="../images/synthetics/waterfall.png"
+  title="Browser Run - Resources Waterfall Chart"
+  width=770
+  height=870
+/>
 
 ## Run environment
 
