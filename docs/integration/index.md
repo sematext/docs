@@ -389,9 +389,7 @@ The Elasticsearch API lets you:
 - search for logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
 - optionally define custom mappings for your log types, so you can tweak the way your logs are indexed
 
-### LogPacks
-
-We currently have LogPacks with prebuilt reports and charts apart from a Generic Logs App that supports dozens of different integrations.
+We currently have Logs Integrations with prebuilt reports and charts apart from a Generic Logs App that supports dozens of different integrations.
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--4-col">
