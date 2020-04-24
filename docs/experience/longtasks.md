@@ -54,9 +54,6 @@ To learn more about various terms discussed here, please head to:
 * [ancestor browsing context](https://html.spec.whatwg.org/multipage/browsers.html#ancestor-browsing-context)
 * [descendant browsing context](https://html.spec.whatwg.org/multipage/browsers.html#list-of-the-descendant-browsing-contexts)
 
-## Privacy
-Because of the privacy reasons, the data exposed by the Long Tasks API and gathered by Sematext Experience contain information about the timing itself. That means that we don't gather any kind of sensitive data that could lead to security breaches or information exposure. The only information that is gathered is the long task source, timestamp of the event, its start, and the duration. 
-
 ## Browser Support
 The following browsers support the Long Tasks API allowing Sematext Experience to gather the data about long tasks:
 
