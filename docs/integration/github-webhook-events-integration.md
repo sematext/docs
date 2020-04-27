@@ -1,15 +1,15 @@
 title: GitHub Webhook Events Integration
 description: GitHub Webhooks allow you to build or set up integrations, such as GitHub Apps or OAuth Apps, which subscribe to certain events on GitHub.com.
 
-By configuring the Webhook to point to Sematext, you can store all data about the triggered events in one place. Gain insight into your entire GitHub workflow in your Organization.
+By configuring the Webhook to point to Sematext, you can store all data about the triggered events in one place. Gain insight into the entire GitHub workflow in your Organization.
 
 ## GitHub Webhook Events Quick Start
 
-When an events is triggered, GitHub sends an HTTP POST payload to the Webhook's configured URL. Webhooks can be used to update an external issue tracker, trigger CI builds, update a backup mirror, or even deploy to your production server. You're only limited by your imagination. 
+When an event is triggered, GitHub sends an HTTP POST payload to the Webhook's configured URL. Webhooks can be used to update an external issue tracker, trigger CI builds, update a backup mirror, or even deploy to your production server. You're only limited by your imagination. 
 
-Gain insights into your Organization's team pulse, patterns, metrics, development velocity, progress, trends, to spot opportunities for improvement in the daily workflow. Keep your team happy and help enable them to be happier and more productive.
+Gain insights into your Organization's team pulse, patterns, metrics, development velocity, progress, trends, to spot opportunities for improvement in the daily workflow. Keep your team happy and enable them to be more productive and fulfilled.
 
-The Sematext GitHub Logs Integrations supports these events:
+The Sematext GitHub Webhook Events Integration supports these events:
 
 - Commit comments
 - Branch or tag creation
