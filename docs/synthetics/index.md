@@ -8,8 +8,6 @@ Sematext Synthetics provides the ability to actively monitor APIs, Web URLs, web
   alt="Monitors Overview"
   src="../images/synthetics/monitors-overview.png"
   title="Monitors Overview"
-  width=770
-  height=870
 />
 
 ## How it works
