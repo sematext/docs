@@ -1,19 +1,19 @@
-title: Long Tasks
+title: Browser Long Tasks
 description: Gathering information about long tasks during hard and soft page loads
 
-Experience collects information about long tasks that happen during page loads. According to the RAIL Model, tasks that are running for longer than **50ms** and blocking the main thread are considered long and are recorded by Sematext Cloud. 
+Experience collects information about long tasks that happen during page loads. According to the [RAIL](https://developers.google.com/web/fundamentals/performance/rail) Model, tasks that are running for longer than **50ms** and blocking the main thread are considered long and are recorded by Sematext Cloud. 
 
 Long tasks can cause issues such as:
 
-* Clunky animations and scrolling affecting user experience.
-* High input latency.
-* Long delay in events handling.
-* Delayed time when your application becomes interactive.
+* Clunky animations and scrolling affecting user experience
+* High input latency
+* Long delay in events handling
+* Delayed time when your application becomes interactive
 
-Because of that, it is crucial to see the long tasks that are running when your application handles your user requests.
+Thus, it is critical to monitor long tasks executed as part of your application's handling of user requests.
 
 ## Page Load Overview
-The aggregated data about long tasks are visible is the page loads overview of your Experience App. You can check the number of long tasks and their average duration:
+The aggregated data about long tasks are visible on the page loads overview of your Experience App. You can check the number of long tasks and their average duration:
 
 <img
   class="content-modal-image"
@@ -25,14 +25,14 @@ The aggregated data about long tasks are visible is the page loads overview of y
 
 
 ## Page Load Details
-In addition to the page loads overview where the long tasks overview is visible each of your page loads contains information about long tasks that happened during both the hard and soft page loads. Each long task is described by its **name**, **timestamp**, and **duration**.
+In addition to long tasks charts on the page loads overview, each individual page load details screen also contains information about long tasks detected during both hard and soft page loads. Each long task is described by its **name**, **timestamp**, and **duration**.
 
-The **name** of the long task can point to an even of the page load that was executed for a longer period of time. The value of the can be set to one of the following values:
+The browser doesn't point us to a particular code in your application, but the **name** of the long task can point to an event of the page load that was executed for a longer period of time. The **name** value can take one of the following values:
 
 * **unknown** - the event was performed outside of the event loop, 
-* **self** - the event originated from an event loop task within the browsing context,
-* **same-origin-ancestor** - the long task originated from an event loop task within same-origin ancestor browsing context,
-* **same-origin-descendant** - the long task originated from an event loop task within same-origin descendant ancestor browsing context,
+* **self** - the event originated from an event loop task within the **browsing context**. A **browsing context** is an environment in which **Document** objects are presented to the user.
+* **same-origin-ancestor** - the long task originated from an event loop task within same-origin ancestor browsing context. A browsing context **A** is said to be an **ancestor** of another browsing context **B**, if the browsing context **B** is a child of the browsing context **A** or if there is a browsing context **C** that is a child of **A** and an ancestor of **B**. 
+* **same-origin-descendant** - the long task originated from an event loop task within same-origin descendant browsing context. A **descendant** browsing contexts of a **Document** is an ordered list of the nested browsing contexts.
 * **same-origin** - the long task originated from an event loop task within same-origin browsing context that is not ancestor or descendant,
 * **cross-origin-ancestor** - the same as **same-origin-ancestor** but happened within **cross-origin**, not same-origin,
 * **cross-origin-descendant** - the same as **same-origin-descendant** but happened within **cross-origin**, not same-origin,
@@ -61,5 +61,3 @@ The following browsers support the Long Tasks API allowing Sematext Experience t
 * Microsoft Edge starting from version 79,
 * Opera,
 * Samsung Internet starting from version 7.0.
-
-Sematext Experience will be able to display information about long tasks for users using the mentioned browsers.
