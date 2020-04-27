@@ -1,5 +1,5 @@
 title: Browser Monitor
-description: Browser monitor can monitor website performance and user journey.
+description: Browser monitor can monitor website performance and user journeys.
 
 The browser monitor executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using `assert` API during the execution. It can optionally collect screenshots.
 
