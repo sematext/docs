@@ -24,7 +24,7 @@ Then setup Elasticsearch monitoring by providing Elasticsearch server connection
         --monitoring-token <your-token-goes-here>   \
         --app-type elasticsearch  \
         --agent-type standalone  \
-        --SPM_MONITOR_ES_NODE_HOSTPORT 'localhost:9200'
+        --ST_MONITOR_ES_NODE_HOSTPORT 'localhost:9200'
 
 Make sure that HTTP metrics are enabled by setting `http.enabled: true` in `elasticsearch.yaml`. Also set the `node.name` value in the same file. Elasticsearch will otherwise generate a random node name each time an instance starts, making tracking node stats over time impossible.
 
@@ -278,8 +278,8 @@ file by adding the following two properties (replace values with your
 real username and password):
 
 ``` properties
-SPM_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
-SPM_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
+ST_MONITOR_ES_NODE_BASICAUTH_USERNAME=yourUsername
+ST_MONITOR_ES_NODE_BASICAUTH_PASSWORD=yourPassword
 ```
 
 Restart your Sematext Agent after this change (either with **sudo service
