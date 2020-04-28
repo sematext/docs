@@ -89,7 +89,7 @@ For every run, the browser monitor collects all the resources fetched during the
 <img
   class="content-modal-image"
   alt="Browser Monitor Run - Resources Waterfall chart"
-  src="/images/synthetics/waterfall.png"
+  src="../../images/synthetics/waterfall.png"
   title="Browser Run - Resources Waterfall Chart"
 />
 
