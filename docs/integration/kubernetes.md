@@ -1,6 +1,5 @@
 Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. To start monitoring Kubernetes with Sematext, you only need to install a tiny agent that adds basically no CPU or memory overhead.
 
-
 ## Monitoring Kubernetes with Sematext
 
 Sematext Monitoring will give you detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics. Speaking of metrics, check out [this ](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/)page for a summarized list of the key metrics you can follow with Sematext as well as a short explanation for each one of them.
@@ -14,7 +13,7 @@ Sematext Monitoring will give you detailed insights into your cluster’s health
 
 ### Helm Chart
 
-To get started with monitoring Kubernetes with Sematext you’ll have to install the Sematext Agent and the easiest way to do it is with a Helm chart. It’s available in the official charts repo and it will install to all the nodes in your cluster. To install it you’ll need to run the following command:
+To start monitoring Kubernetes with Sematext install the Sematext Agent. The easiest way to do that is with a Helm chart. It’s available in the official charts repo and it will install to all nodes in your cluster. To install it run the following command:
 
 
 
@@ -30,12 +29,12 @@ helm install --name sematext-agent \
 
 
 
-Check out [github ](https://github.com/helm/charts/blob/master/stable/sematext-agent/README.md)for more details.
+Check out [github](https://github.com/helm/charts/blob/master/stable/sematext-agent/README.md)for more details.
 
 
 ### Sematext Operator
 
-You can also install Sematext using an Operator using this command:
+You can also install Sematext Operator using this command:
 
 
 
@@ -66,14 +65,13 @@ spec:
 
 
 
-For those looking for a more hands-on approach, there’s a manual installation procedure with `kubectl` detailed [here](https://sematext.com/docs/agents/sematext-agent/kubernetes/installation/#manual-installation).
+For those looking for a more hands-on approach, there’s a [manual installation procedure](https://sematext.com/docs/agents/sematext-agent/kubernetes/installation/#manual-installation) with `kubectl`.
 
 
 ## Shipping Kubernetes logs to Sematext
 
-As you are well aware, logs in Kubernetes are a bit different than your run of the mill servers and virtual machines.
 
-When your application crashes on a traditional machine, it leaves behind a number of breadcrumbs, or logs as we call them. This is not the case with Kubernetes as every time a pod dies, gets evicted or deleted it will lose all the logs making it very difficult to figure out what caused the anomaly that led to the crash in the first place. This is where Sematext comes into play. It will help you understand what’s happening in your cluster as well as help you debug your issues in less time, without spending hours looking for the culprit.
+Due to it's nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
 
 
 
@@ -87,7 +85,7 @@ To configure Kubernetes log shipping we’re going to use Helm.
 
 ### Helm
 
-To install the Logagent with Helm you’ll need to run the following command:
+To install Logagent with Helm you’ll need to run the following command:
 
 ```
 
@@ -101,7 +99,7 @@ helm install st-logagent \
 
 ```
 
-Deleting the logagent can be done with:
+Deleting Logagent can be done with:
 
 ```
 
@@ -122,10 +120,14 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 
-*   Pod count
-*   Pod restarts
-*   Containers count
-
+*   Pod count - Represents the total nodes in the cluster
+*   Pod restarts - The total number of pods scheduled across nodes
+*   Containers count - Represents the total number ofcontainers
+*   Succeeded pods - Represents the number of pods that are successfully scheduled
+*   Failed pods - Represents the number of failed pods
+*   Unknown pods - Represents the number of pods that are in unknown state
+*   Pending pods - Is the number of pods in pending state
+*   Running pods - Reflects the current number of running pods
 
 
 
@@ -137,9 +139,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 
-*   Current replicas
-*   Available replicas
-*   Desired replicas
+*   Current replicas - Represents the number of active deployment replicas
+*   Available replicas - The number of pod instances targeted by the deployment
+*   Desired replicas - Is the of number of non-terminated pods targeted by the deployment that have the desired template specification
 
 
 
@@ -151,23 +153,49 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 
+*   Read bytes - Is the number of bytes read from the disk
+*   Read time - Represents the total amount of time (in nanoseconds) between read request dispatch and request completion
+*   Read wait time - Represents total amount of time the read I/O operations for the container spent waiting in the scheduler queues
+*   Write bytes - Is the number of bytes written to the disk
+*   Write time - Represents the total amount of time (in nanoseconds) between write request dispatch and request completion
+*   Write wait - time	Represents total amount of time the write I/O operations for the container spent waiting in the scheduler queues
+
+
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image1.png "Sematext Kubernetes Metrics")
 
 
 
-### Custom metrics
+### Network
 
 
+*   Received bytes - Received amount of bytes on the network interface
+*   Received packets - Received amount of packets on the network interface
+*   Received errors - Received amount of errors on the network interface
+*   Dropped ingresspackets - The amount of dropped inbound packets on the network interface
+*   Transmitted bytes - Transmitted amount of bytes on the network interface
+*   Transmitted packets - Transmitted amount of packets on the network interface
+*   Transmitted errors - Transmitted amount of errors on the network interface
+*   Dropped egress packets - The amount of dropped outbound packets on the network interface
 
-*   CPU details
-*   IO read/write
-*   Disk space
-*   Memory 
-*   Network Traffic
-*   Load
+![alt_text](https://sematext.com/wp-content/uploads/2020/04/network.png "Sematext Kubernetes Metrics")
+
+### Memory
 
 
-![alt_text](https://sematext.com/wp-content/uploads/2020/04/image3.png "Sematext Kubernetes Metrics")
+*   Memory fail counter - Is the number of times that memory cgroup limit was exceeded
+*   Memory limit - Designates the max allowed memory limit for the container cgroup
+*   Memory pages in - The number of events each time the page is accounted to the container cgroup
+*   Memory pages out - Is the number of events each time a page is unaccounted from the container cgroup
+*   Memory pages fault - Represents the number of page faults accounted the cgroup
+*   Swap size	Is - the number of bytes of swap usage
+
+### CPU
+
+
+*   Cpu usage - Represents the container CPU usage in %
+*   Throttled time - Is the total amount of time that processes have been throttled in the container cgroup
+
+![alt_text](https://sematext.com/wp-content/uploads/2020/04/CPU.png "Sematext Kubernetes Metrics")
 
 
 
