@@ -25,7 +25,7 @@ The aggregated data about long tasks are visible on the page loads overview of y
 
 
 ## Page-Load Details
-In addition to long tasks charts on the page loads overview, each individual page load details screen also contains information about long tasks detected during both hard and soft page loads. Each long task is described by its **name**, **timestamp**, and **duration**.
+In addition to the charts showing long tasks on the page-loads overview, each individual page-load details screen also contains information about long tasks detected during both hard and soft page loads. Each long task is described by its **name**, **timestamp**, and **duration**.
 
 The browser doesn't point us to a particular code in your application, but the **name** of the long task can point to an event of the page load that was executed for a longer period of time. The **name** value can take one of the following values:
 
