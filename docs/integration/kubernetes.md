@@ -29,7 +29,7 @@ helm install --name sematext-agent \
 
 
 
-Check out [github](https://github.com/helm/charts/blob/master/stable/sematext-agent/README.md)for more details.
+Check out [github](https://github.com/helm/charts/blob/master/stable/sematext-agent/README.md) for more details.
 
 
 ### Sematext Operator
