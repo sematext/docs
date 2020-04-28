@@ -414,27 +414,20 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 |container.memory.usage|gauge|bytes|long|memory|container memory usage in bytes|
 |container.memory.fail.count|counter||long|memory|the number of times that memory cgroup limit was exceeded|
 |container.memory.limit|gauge|bytes|long|memory|the max allowed memory limit for the container cgroup|
-|container.memory.limit.soft|gauge|bytes|long|soft memory limit|soft memory limit represents the initial memory reservation for the container|
 |container.memory.rss|gauge|bytes|long|RSS memory|number of bytes of anonymous (file unmapped memory) and swap cache memory|
 |container.cache.usage|gauge|bytes|long|cache memory|number of bytes of page cache memory|
 |container.memory.pages.in|counter||long|memory pages in|memory pages in,description=the number of events each time the page is accounted to the cgroup|
 |container.memory.pages.out|counter||long|memory pages out|memory pages out,description=the number of events each time a page is unaccounted from the cgroup|
-|container.memory.pages.fault|counter||long|minor memory page faults|the number of minor page faults accounted to the cgroup|
-|container.memory.pages.fault.major|counter||long|major memory page faults|the number of major page faults accounted to the cgroup|
+|container.memory.pages.fault|counter||long|memory page faults|the number of page faults accounted the cgroup|
 |container.swap.size|counter|bytes|long|swap|the number of bytes of swap usage|
-|container.swap.limit|gauge|bytes|long|swap limit|the swap memory usage limit|
 |container.io.read|gauge||long|disk read|the number of bytes read from the disk|
 |container.io.read.time|gauge|ns|long|disk read time|the total amount of time (in nanoseconds) between request dispatch and request completion|
 |container.io.read.wait.time|counter|ns|long|disk read wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
 |container.io.write|counter|bytes|long|disk write|the number of bytes written to the disk|
 |container.io.write.time|counter|ns|long|disk write time|the total amount of time (in nanoseconds) between request dispatch and request completion|
 |container.io.write.wait.time|counter|ns|long|disk write wait time|total amount of time the IO operations for this cgroup spent waiting in the scheduler queues|
-|container.io.weight|gauge|ns|long|disk io weight|specifies the relative proportion of block I/O access ranging from 100 to 1000|
 |container.cpu.percent|gauge|%|double|CPU usage|container CPU usage|
-|container.cpu.throttled.time|counter|microseconds|long|CPU throttled time|the total amount of time that processes have been throttled in the container cgroup|
-|container.cpu.shares|gauge|ns|long|CPU shares|represents the weight of the cgroup that translates into the amount of CPU it is expected to get. Upon cgroup creation each group gets assigned a default of 1024|
-|container.cpu.quota|gauge|microseconds|long|CPU quota|enforces a hard limit to the CPU time allocated to processes|
-|container.cpu.period|gauge|microseconds|long|CPU period|is the time window expressed in microseconds that represents the period for which processes are allowed to run under specific quota|
+|container.cpu.throttled.time|counter|ns|long|CPU throttled time|the total amount of time that processes have been throttled in the container cgroup|
 |container.network.rx.bytes|counter|bytes|long|network received|received amount of bytes on the network interface|
 |container.network.rx.packets|counter||long|network packets received|received amount of packets on the network interface|
 |container.network.rx.errors|counter||long|network rx errors|received amount of errors on the network interface|
