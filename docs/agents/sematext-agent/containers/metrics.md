@@ -15,10 +15,13 @@ The following table recaps all the metrics shipped by the agent.
 | cache memory          | Is the amount of memory allocated for page cache. The total amount of memory consumed by a container is the sum of RSS + cache memory |   
 | memory fail counter   | Is the number of times that memory cgroup limit was exceeded |
 | memory limit          | Designates the max allowed memory limit for the container cgroup  |
+| memory soft limit     | Represents the initial memory reservation for the container |
 | memory pages in       | The number of events each time the page is accounted to the container cgroup|
 | memory pages out      | Is the number of events each time a page is unaccounted from the container cgroup |
-| memory pages fault    | Represents the number of page faults accounted the cgroup |
+| memory pages fault minor   | Represents the number of minor page faults accounted the cgroup |
+| memory pages fault major   | Represents the number of major page faults accounted the cgroup |
 | swap size             | Is the number of bytes of swap usage |
+| swap limit             | Represents the swap memory usage limit |
 
 
 ### Disk
@@ -31,6 +34,7 @@ The following table recaps all the metrics shipped by the agent.
 | write bytes           | Is the number of bytes written to the disk |
 | write time            | Represents the total amount of time (in nanoseconds) between write request dispatch and request completion |
 | write wait time       | Represents total amount of time the write I/O operations for the container spent waiting in the scheduler queues |
+| io weight             | Specifies the relative proportion of block I/O access ranging from 100 to 1000 |
 
 ### CPU
 
@@ -38,6 +42,9 @@ The following table recaps all the metrics shipped by the agent.
 | ----------------------|-------------|
 | cpu usage             | Represents the container CPU usage in % |
 | throttled time        | Is the total amount of time that processes have been throttled in the container cgroup |
+| cpu shares            | Represents the weight of the cgroup that translates into the amount of CPU it is expected to get. Upon cgroup creation each group gets assigned a default of 1024 |
+| cpu quota             | Enforces a hard limit to the CPU time allocated to processes |
+| cpu period            | Is the time window expressed in microseconds that represents the period for which processes are allowed to run under specific quota |
 
 ### Network
 
