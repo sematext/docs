@@ -1,4 +1,4 @@
-title: Browser Long Tasks
+title: Monitoring Browser Long Tasks
 description: Gathering information about long tasks during hard and soft page loads
 
 Experience collects information about long tasks that happen during page loads. According to the [RAIL](https://developers.google.com/web/fundamentals/performance/rail) Model, tasks that are running for longer than **50ms** and blocking the main thread are considered long and are recorded by Sematext Cloud. 
