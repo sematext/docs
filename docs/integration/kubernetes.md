@@ -71,7 +71,7 @@ For those looking for a more hands-on approach, there’s a [manual installation
 ## Shipping Kubernetes logs to Sematext
 
 
-Due to it's nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
+Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
 
 
 
@@ -120,13 +120,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 
-*   Pod count - Represents the total nodes in the cluster
+*   Pod count - The total nodes in the cluster
 *   Pod restarts - The total number of pods scheduled across nodes
-*   Containers count - Represents the total number ofcontainers
-*   Succeeded pods - Represents the number of pods that are successfully scheduled
-*   Failed pods - Represents the number of failed pods
-*   Unknown pods - Represents the number of pods that are in unknown state
-*   Pending pods - Is the number of pods in pending state
+*   Containers count - The total number ofcontainers
+*   Succeeded pods - The number of pods that are successfully scheduled
+*   Failed pods - The number of failed pods
+*   Unknown pods - The number of pods that are in unknown state
+*   Pending pods - The number of pods in pending state
 *   Running pods - Reflects the current number of running pods
 
 
@@ -139,9 +139,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 
-*   Current replicas - Represents the number of active deployment replicas
+*   Current replicas - The number of active deployment replicas
 *   Available replicas - The number of pod instances targeted by the deployment
-*   Desired replicas - Is the of number of non-terminated pods targeted by the deployment that have the desired template specification
+*   Desired replicas - The number of non-terminated pods targeted by the deployment that have the desired template specification
 
 
 
@@ -153,12 +153,12 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 
-*   Read bytes - Is the number of bytes read from the disk
-*   Read time - Represents the total amount of time (in nanoseconds) between read request dispatch and request completion
-*   Read wait time - Represents total amount of time the read I/O operations for the container spent waiting in the scheduler queues
-*   Write bytes - Is the number of bytes written to the disk
-*   Write time - Represents the total amount of time (in nanoseconds) between write request dispatch and request completion
-*   Write wait - time	Represents total amount of time the write I/O operations for the container spent waiting in the scheduler queues
+*   Read bytes - The number of bytes read from the disk
+*   Read time - The total amount of time (in nanoseconds) between read request dispatch and request completion
+*   Read wait time - The total amount of time the read I/O operations for the container spent waiting in the scheduler queues
+*   Write bytes - The number of bytes written to disk
+*   Write time - The total amount of time (in nanoseconds) between write request dispatch and request completion
+*   Write wait time - Total amount of time the write I/O operations for the container spent waiting in the scheduler queues
 
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image1.png "Sematext Kubernetes Metrics")
@@ -171,7 +171,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 *   Received bytes - Received amount of bytes on the network interface
 *   Received packets - Received amount of packets on the network interface
 *   Received errors - Received amount of errors on the network interface
-*   Dropped ingresspackets - The amount of dropped inbound packets on the network interface
+*   Dropped ingress packets - The amount of dropped inbound packets on the network interface
 *   Transmitted bytes - Transmitted amount of bytes on the network interface
 *   Transmitted packets - Transmitted amount of packets on the network interface
 *   Transmitted errors - Transmitted amount of errors on the network interface
@@ -182,20 +182,21 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 ### Memory
 
 
-*   Memory fail counter - Is the number of times that memory cgroup limit was exceeded
+*   Memory fail counter - The number of times that memory cgroup limit was exceeded
 *   Memory limit - Designates the max allowed memory limit for the container cgroup
 *   Memory pages in - The number of events each time the page is accounted to the container cgroup
-*   Memory pages out - Is the number of events each time a page is unaccounted from the container cgroup
+*   Memory pages out - The number of events each time a page is unaccounted from the container cgroup
 *   Memory pages fault - Represents the number of page faults accounted the cgroup
-*   Swap size	Is - the number of bytes of swap usage
+*   Swap size - The number of bytes of swap usage
+
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/ram.png "Sematext Kubernetes Metrics")
 
 
 ### CPU
 
 
-*   Cpu usage - Represents the container CPU usage in %
-*   Throttled time - Is the total amount of time that processes have been throttled in the container cgroup
+*   Cpu usage - The container CPU usage in %
+*   Throttled time - The total amount of time that processes have been throttled in the container cgroup
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/CPU.png "Sematext Kubernetes Metrics")
 
