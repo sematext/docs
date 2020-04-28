@@ -188,6 +188,8 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 *   Memory pages out - Is the number of events each time a page is unaccounted from the container cgroup
 *   Memory pages fault - Represents the number of page faults accounted the cgroup
 *   Swap size	Is - the number of bytes of swap usage
+![alt_text](https://sematext.com/wp-content/uploads/2020/04/ram.png "Sematext Kubernetes Metrics")
+
 
 ### CPU
 
