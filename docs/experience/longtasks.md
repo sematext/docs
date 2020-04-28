@@ -27,7 +27,7 @@ The aggregated data about long tasks are visible on the page loads overview of y
 ## Page-Load Details
 In addition to the charts showing long tasks on the page-loads overview, each individual page-load details screen also contains information about long tasks detected during both hard and soft page loads. Each long task is described by its **name**, **timestamp**, and **duration**.
 
-The browser doesn't point us to a particular code in your application, but the **name** of the long task can point to an event of the page load that was executed for a longer period of time. The **name** value can take one of the following values:
+The browser doesn't point us to a particular piece of code in your application, but the **name** of the long task can point to an event of the page load that was executed for a longer period of time. The **name** value can take one of the following values:
 
 * **unknown** - the event was performed outside of the event loop, 
 * **self** - the event originated from an event loop task within the **browsing context**. A **browsing context** is an environment in which **Document** objects are presented to the user.
