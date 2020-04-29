@@ -122,6 +122,7 @@ pages:
         - HBase: integration/hbase.md
         - JVM: integration/jvm.md
         - Kafka: integration/kafka.md
+        - Kubernetes: integration/kubernetes.md
         - MySQL: integration/mysql.md
         - MongoDB: integration/mongodb.md
         - Nginx: integration/nginx.md
