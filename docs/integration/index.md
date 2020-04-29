@@ -157,6 +157,20 @@ Sematext Monitoring supports dozens of different integrations.
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/kubernetes/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/kubernetes.svg" alt="Kubernetes" title="Kubernetes Monitoring" style="width: 48px;">
+						</div>
+						<div class="side back"><h5>Kubernetes</h5> Get detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/mysql/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
