@@ -93,13 +93,9 @@ To install Logagent with Helm you’ll need to run the following command:
 ```
 
 helm install st-logagent \
-
-  --set logsToken=860d2539-3e00-4b4a-969d-13b4a4f4b8e7 \
-
+  --set logsToken=<YOUR_LOGS_TOKEN> \
   --set region=EU \
-
   stable/sematext-agent
-
 ```
 
 Deleting Logagent can be done with:
@@ -114,7 +110,7 @@ helm delete st-logagent
 If you are looking to use a different type of integration you can check out this [page](https://sematext.com/docs/logagent/installation-docker/#kubernetes-and-openshift).
 
 
-## Kubernetes Metrics 
+## Kubernetes Metrics
 
 Container and Kubernetes metrics are collected along with labels and tags, which are exposed in the UI to allow slicing and dicing and building of custom dashboards.
 
@@ -203,11 +199,33 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/CPU.png "Sematext Kubernetes Metrics")
 
+## Metrics Fields
+
+|Name|Type|Unit|Numeric Type|Label|Description|
+|----|----|----|------------|-----|-----------|
+|kubernetes.pod.restarts|counter|ns|long|pod restarts|number of pod restarts|
+|kubernetes.pod.container.count|gauge|ns|long|container count|number of containers inside pod|
+|kubernetes.pod.count|gauge|ns|long|pod count|pod count which is always equal to one|
+|kubernetes.pod.count.succeeded|gauge|ns|long|succeeded pod count|equal to one if all containers inside pod have terminated in success|
+|kubernetes.pod.count.failed|gauge|ns|long|failed pod count|equal to one if all containers inside pod have terminated and at least one container has terminated in failure|
+|kubernetes.pod.count.unknown|gauge|ns|long|unknown pod count|equal to one if pod state can't be obtained|
+|kubernetes.pod.count.pending|gauge|ns|long|pending pod count|equal to one if the pod has been accepted by the scheduler and his containers are waiting to be created|
+|kubernetes.pod.count.running|gauge|ns|long|running pod count|equal to one if the pod has been scheduled on a node and at least one of his containers is running|
+|kubernetes.deployment.count|gauge|ns|long|deployment count|deployment count which is always equal to one|
+|kubernetes.deployment.replicas|gauge|ns|long|replica count|number of active replicas|
+|kubernetes.deployment.replicas.avail|gauge|ns|long|available replica count|number of available replicas. Replicas are marked as available if they are passing the health check|
+|kubernetes.deployment.replicas.desired|gauge|ns|long|desired replica count|number of desired replicas as defined in the deployment|
+|kubernetes.pvc.available|gauge|bytes|long|available bytes|number of available bytes in the volume|
+|kubernetes.pvc.used|gauge|bytes|long|used bytes|number of used bytes in the volume|
+|kubernetes.pvc.capacity|gauge|bytes|long|volume capacity|the capacity in bytes of the volume|
+|kubernetes.cluster.pod.count|gauge|ns|long|total pod count|number of pods in the cluster|
+|kubernetes.cluster.deployment.count|gauge|ns|long|total deployment count|number of deployments in the cluster|
+|kubernetes.cluster.node.count|gauge|ns|long|total node count|number of node comprising the cluster|
 
 
 ## Sematext Agent
 
-The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. 
+The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize.
 
 
 <table>
