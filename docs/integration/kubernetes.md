@@ -96,7 +96,7 @@ helm install st-logagent \
 
   --set logsToken=<YOUR_LOGS_TOKEN> \
 
-  --set region=EU \
+  --set region=<US or EU> \
 
   stable/sematext-agent
 
