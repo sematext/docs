@@ -94,7 +94,7 @@ To install Logagent with Helm you’ll need to run the following command:
 
 helm install st-logagent \
 
-  --set logsToken=860d2539-3e00-4b4a-969d-13b4a4f4b8e7 \
+  --set logsToken=<YOUR_LOGS_TOKEN> \
 
   --set region=EU \
 
