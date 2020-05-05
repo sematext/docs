@@ -1,7 +1,7 @@
 title: Creating Experience Alerts
 description: Step-by-step alert creation instructions for Experience
 
-Each Experience App metric that you can create alert rules on has a bell icon, when clicked, shows a dropdown menu listing the metrics that you can choose. 
+Each Experience App metric that you can create alert rules on has a bell icon that, when clicked, shows a dropdown menu listing the metrics that you can choose. 
 
 ![Bell Icon for Page Load](../images/alerts/experience_alert_bell.png)
 
