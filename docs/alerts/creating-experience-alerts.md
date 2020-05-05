@@ -25,11 +25,11 @@ The supported Experience metrics are:
 - User sessions count
 - Users count
 
-The above metrics can also be chosen from in the alert rule creation dialog:
+The above metrics can also be chosen from the alert rule creation dialog:
 
 ![Experience Alert Metric](../images/alerts/experience_alert_metrics.png)
 
-While creating an alert you'll get a chart preview of the alert threshold or anomaly. For example, to set up a new alert rule for that would be triggered for page load time higher than 4500 milliseconds on average this is how the preview screen would look like:
+While creating an alert you'll get a chart preview of the alert threshold or anomaly. For example, the preview screen when setting up a new alert rule for the page load time higher than 4500 milliseconds on average would look like the following one:
 
 ![Page Load Alert Preview](../images/alerts/experience_alert_preview.png)
 
