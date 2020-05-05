@@ -58,28 +58,6 @@ pages:
       - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
       - FAQ: monitoring/spm-faq.md
-    - Alerts:
-      - Overview: alerts/index.md
-      - Creating Logs Alerts: alerts/creating-logs-alerts.md
-      - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
-      - Creating Experience Alerts: alerts/creating-experience-alerts.md
-      - Alerts Meta and Tags: alerts/alerts-meta.md
-      - Alert Notifications: alerts/alert-notifications.md
-      - Account-default Hooks: alerts/account-default-hooks.md
-      - Alert Scheduling: alerts/alert-scheduling.md
-      - Default Alerts: alerts/default-alerts.md
-      - Alert Events: alerts/alert-events.md
-    - Events:
-      - Overview: events/index.md
-      - Adding Events: events/adding.md
-      - Fields: events/fields.md
-      - Timeline/Histogram: events/timeline.md
-    - Dashboards:
-      - Overview: dashboards/index.md
-      - Quick Start: dashboards/quick-start.md
-      - Settings: dashboards/settings.md
-      - Reports and Components: dashboards/reports-and-components.md
-      - Chart Builder: dashboards/chart-builder.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
@@ -154,6 +132,32 @@ pages:
         - Slack: integration/alerts-slack-integration.md
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
+    - Alerts:
+      - Overview: alerts/index.md
+      - Creating Logs Alerts: alerts/creating-logs-alerts.md
+      - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
+      - Creating Experience Alerts: alerts/creating-experience-alerts.md
+      - Alerts Meta and Tags: alerts/alerts-meta.md
+      - Alert Notifications: alerts/alert-notifications.md
+      - Account-default Hooks: alerts/account-default-hooks.md
+      - Alert Scheduling: alerts/alert-scheduling.md
+      - Default Alerts: alerts/default-alerts.md
+      - Alert Events: alerts/alert-events.md
+    - Events:
+      - Overview: events/index.md
+      - Adding Events: events/adding.md
+      - Fields: events/fields.md
+      - Timeline/Histogram: events/timeline.md
+    - Dashboards:
+      - Overview: dashboards/index.md
+      - Quick Start: dashboards/quick-start.md
+      - Settings: dashboards/settings.md
+      - Reports and Components: dashboards/reports-and-components.md
+      - Chart Builder: dashboards/chart-builder.md
+    - Tags:
+      - Overview: tags/index.md
+      - Custom Tags: tags/custom-tags.md
+      - Common Schema: tags/common-schema.md
     - Team:
       - Overview: team/index.md
       - Account Access: team/account-access.md
@@ -276,10 +280,6 @@ pages:
         - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
       - Mobile Logs: agents/mobile.md
-    - Tags:
-      - Overview: tags/index.md
-      - Custom Tags: tags/custom-tags.md
-      - Common Schema: tags/common-schema.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
