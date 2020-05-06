@@ -18,7 +18,7 @@ The following table recaps all the metrics shipped by the agent.
 | memory soft limit     | Represents the initial memory reservation for the container |
 | memory pages in       | The number of events each time the page is accounted to the container cgroup|
 | memory pages out      | Is the number of events each time a page is unaccounted from the container cgroup |
-| memory pages fault minor   | Represents the number of minor page faults accounted the cgroup |
+| memory page faults    | Represents the number of page faults accounted the cgroup |
 | memory pages fault major   | Represents the number of major page faults accounted the cgroup |
 | swap size             | Is the number of bytes of swap usage |
 | swap limit             | Represents the swap memory usage limit |

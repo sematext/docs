@@ -419,7 +419,7 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 |container.cache.usage|gauge|bytes|long|cache memory|number of bytes of page cache memory|
 |container.memory.pages.in|counter||long|memory pages in|memory pages in,description=the number of events each time the page is accounted to the cgroup|
 |container.memory.pages.out|counter||long|memory pages out|memory pages out,description=the number of events each time a page is unaccounted from the cgroup|
-|container.memory.pages.fault|counter||long|minor memory page faults|the number of minor page faults accounted to the cgroup|
+|container.memory.pages.fault|counter||long|memory page faults|the number of page faults accounted to the cgroup|
 |container.memory.pages.fault.major|counter||long|major memory page faults|the number of major page faults accounted to the cgroup|
 |container.swap.size|counter|bytes|long|swap|the number of bytes of swap usage|
 |container.swap.limit|gauge|bytes|long|swap limit|the swap memory usage limit|
