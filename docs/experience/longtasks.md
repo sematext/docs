@@ -12,7 +12,7 @@ Long tasks can cause issues such as:
 
 Thus, it is critical to monitor long tasks executed as part of your application's handling of user requests.
 
-## Page Load Overview
+## Page-Load Overview
 The aggregated data about long tasks are visible on the page loads overview of your Experience App. You can check the number of long tasks and their average duration:
 
 <img
@@ -34,13 +34,6 @@ In addition to the charts showing long tasks on the page-loads overview, each in
   title="Page Load Details"
   width=778
 />
-
-To learn more about various terms discussed here, please head to:
-
-* [browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context)
-* [same-origin](https://html.spec.whatwg.org/multipage/origin.html#same-origin)
-* [ancestor browsing context](https://html.spec.whatwg.org/multipage/browsers.html#ancestor-browsing-context)
-* [descendant browsing context](https://html.spec.whatwg.org/multipage/browsers.html#list-of-the-descendant-browsing-contexts)
 
 ## Browser Support
 The following browsers support the Long Tasks API allowing Sematext Experience to gather the data about long tasks:
