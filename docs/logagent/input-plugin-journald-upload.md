@@ -133,7 +133,7 @@ Edit `/etc/systemd/journal-upload.conf`.
 
 ```
 [Upload]
-URL=http://127.0.0,1:9090
+URL=http://127.0.0.1:9090
 # ServerKeyFile=/etc/ssl/private/journal-upload.pem
 # ServerCertificateFile=/etc/ssl/certs/journal-upload.pem
 # TrustedCertificateFile=/etc/ssl/ca/trusted.pem
