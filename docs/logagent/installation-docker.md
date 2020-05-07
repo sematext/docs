@@ -234,6 +234,10 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <td>URL for bulk inserts into Sematext Cloud. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://logsene-receiver.eu.sematext.com</td>
 </tr>
 <tr>
+<td>LOGS_RECEIVER_URLS</td>
+<td>Specify multiple receiver URLs for bulk inserts into Sematext Cloud. Required for Sematext Enterprise (local IP:PORT) or Sematext Cloud Europe: https://logsene-receiver.eu.sematext.com</td>
+</tr>
+<tr>
 <td>JOURNALD_UPLOAD_PORT</td>
 <td>Port number for the collection of journald logs, forwarded by systemd-journal-upload.service. Equals to Logagent argument --journald PORT.</td>
 </tr>
@@ -501,15 +505,17 @@ Logagent inspects the containers for this label and ships the logs to the specif
 
 The following container environment variables and labels are supported:
 
-- `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
 - `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting `LOGSENE_ENABLED_DEFAULT`.  
-- `LOGS_RECEIVER_URL=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/<YOUR_LOGS_TOKEN>`
+- `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
+- `LOGS_RECEIVER_URL=<URL>` - set a single log destination. The URL should not include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com`
+- `LOGS_RECEIVER_URLS=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/<YOUR_LOGS_TOKEN>`. **Does not require setting the `LOGS_TOKEN` env var**.
 
 The following Kubernetes Pod annotations are equivalent:
 
-- `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`
 - `sematext.com/logs-enabled=<true|false>`
-- `sematext.com/logs-receiver-url=<URL, URL, URL>` 
+- `sematext.com/logs-token=<YOUR_LOGS_TOKEN>`
+- `sematext.com/logs-receiver-url=<URL>` 
+- `sematext.com/logs-receiver-urls=<URL, URL, URL>` 
 
 
 __Example:__ 
