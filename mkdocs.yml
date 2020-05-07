@@ -198,6 +198,7 @@ pages:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
+          - Credential sets:  agents/sematext-agent/autodisco/credential-sets.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
