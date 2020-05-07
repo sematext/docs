@@ -507,7 +507,7 @@ The following container environment variables and labels are supported:
 
 - `LOGS_ENABLED=<true|false>` - switch log collection for the container on or off. Note, the default value is configurable in Logagent configuration via the setting `LOGSENE_ENABLED_DEFAULT`.  
 - `LOGS_TOKEN=<YOUR_LOGS_TOKEN>` - logs token for the container
-- `LOGS_RECEIVER_URL=<URL>` - set a single log destination. The URL should not include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com`
+- `LOGS_RECEIVER_URL=<URL>` - set a single log destination. The URL should not include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com`. **Requires you to set the `LOGS_TOKEN` env var**.
 - `LOGS_RECEIVER_URLS=<URL, URL, URL>` - set multiple log destinations. The URL should include the token or index of an Elasticsearch API endpoint. E.g. `https://logsene-receiver.sematext.com/<YOUR_LOGS_TOKEN>`. **Does not require setting the `LOGS_TOKEN` env var**.
 
 The following Kubernetes Pod annotations are equivalent:
