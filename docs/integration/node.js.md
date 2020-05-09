@@ -338,16 +338,13 @@ The agent will detect you are running PM2 and start collecting metrics automatic
 
 ** Generate diagnostics file for Sematext Support **
 
-If you are not seeing some or any Node.js metrics, you can create a
-"diagnostics dump" and contact us via chat or email. To create the
-diagnostics dump just run the following in your application directory:
+If you are not seeing some or any Node.js metrics, you can create a "diagnostics dump" and contact us via chat or email. To create the diagnostics dump just run the following in your application directory:
+
 ```
-node ./node_modules/spm-agent-nodejs/bin/spm-client-diagnostics.js 
+sudo spm-nodejs-diagnostics
 ```
 
-This will create a ZIP file and show the Sematext Support email
-address to which the ZIP file should be sent.
-
+This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
 
 ## Integration
 
