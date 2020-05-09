@@ -81,5 +81,6 @@ active | nginx.requests.connections.active | Avg | Double | <b>active</b>: numbe
 If you are not seeing some or any Nginx metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
 ```
 sudo spm-nginx-diagnostics
+```
 
 This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
