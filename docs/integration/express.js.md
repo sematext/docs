@@ -437,7 +437,7 @@ npm install sematext-express-agent@latest --save
 If you are not seeing some or any Express.js metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following command in the root directory of your project.
 
 ```
-npm install sematext-agent-express@latest --save
+sudo node ./node_modules/spm-agent-nodejs/bin/spm-nodejs-diagnostics.js
 ```
 
 This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
