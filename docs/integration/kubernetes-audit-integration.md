@@ -100,7 +100,7 @@ kubectl apply -f auditsink.yaml
 
 That’s it. You’re now shipping Kubernetes Audit logs to Sematext Logs for safekeeping.
 
-![](https://sematext.com/wp-content/uploads/2020/03/apps.sematext.com_ui_k8saudit.png)
+![](https://sematext.com/wp-content/uploads/2020/05/kubernetes-audit-logs-auth-report.png)
 
 If you are not using the Dynamic Backend, then you can set up the Log Backend.
 
