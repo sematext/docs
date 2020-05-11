@@ -75,3 +75,12 @@ reading | nginx.requests.connections.reading | Avg | Double | <b>reading</b>: Ng
 writing | nginx.requests.connections.writing | Avg | Double | <b>writing</b>: Nginx reads request body, processes request, or writes response to a client
 waiting | nginx.requests.connections.waiting | Avg | Double | <b>waiting</b>: keep-alive connections
 active | nginx.requests.connections.active | Avg | Double | <b>active</b>: number of all open connections
+
+## Troubleshooting
+
+If you are not seeing some or any Nginx metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
+```
+sudo spm-nginx-diagnostics
+```
+
+This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.

@@ -28,3 +28,13 @@ starting | apache.workers.starting | Avg | Double | <b>starting</b>: Number of w
 logging | apache.workers.logging | Avg | Double | <b>logging</b>: Number of workers currently busy updating log files
 waiting | apache.workers.waiting | Avg | Double | <b>waiting</b>: Number of workers currently waiting for a connection
 dns lookup | apache.workers.dns | Avg | Double | <b>dnslookup</b>: Number of workers currently requesting DNS lookup
+
+## Troubleshooting
+
+If you are not seeing some or any Apache metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
+
+```
+sudo spm-httpd-diagnostics
+```
+
+This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
