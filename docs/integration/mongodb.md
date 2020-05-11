@@ -24,7 +24,7 @@ Sematext MongoDB monitoring agent is an open-source [mongodb monitoring agent](h
 If you are not seeing some or any MongoDB metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
 
 ```
-sudo spm-client-diagnostics
+sudo spm-mongodb-diagnostics
 ```
 
 This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
