@@ -434,7 +434,7 @@ npm install sematext-express-agent@latest --save
 
 ## Troubleshooting
 
-If you are not seeing some or any Express.js metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
+If you are not seeing some or any Express.js metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following command in the root directory of your project.
 
 ```
 npm install sematext-agent-express@latest --save
