@@ -11,17 +11,17 @@ If you want to use certified images please pull the image from Red Hat and Docke
 
 ## Installation for Docker
 
-Logagent is a general purpose log shipper. The Logagent Docker image is pre-configured for the log collection on container platforms. It runs as a tiny container on every Docker host and collects logs for all cluster nodes and their containers.
+The Logagent Docker image is pre-configured for the log collection on container platforms. It runs as a tiny container on every Docker host and collects logs for all cluster nodes and their containers.
 All container logs are enriched with Kubernetes and Docker EE/Swarm metadata.
 
 See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker Hub.
 
 ## Getting started
 
-To run Logagent you will need a Logs App Token.
+To ship logs to Sematext you will need a Logs App Token.
 If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/logs?action=SHOW_CREATE_LOGS).
 
-The [Logagent](https://sematext.com/logagent) docker container can be configured through the following environment variables:
+The Logagent container can be configured through the following environment variables:
 
 * **REGION**: Sematext Cloud region **US** or **EU** (default: US). The receiver URL will be set to EU/US default values. When using REGION, you don't need to set `LOGS_RECEIVER_URL` (see below).
 * **LOGS_RECEIVER_URL**: The URL of your Elasticsearch Endpoint _(defaults to Sematext Cloud US `https://logsene-receiver.sematext.com`)_.
@@ -29,15 +29,15 @@ The [Logagent](https://sematext.com/logagent) docker container can be configured
     * For Sematext Europe use `https://logsene-receiver.eu.sematext.com`.
     * For Elasticsearch `https://elasticserch-server-name:9200`.
 
-* **LOGS_TOKEN**: The index where the agent should log to _(for [Sematext Cloud](https://sematext.com/cloud) users the logs token)_
-* **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre> to specify a log source name or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. Please refer to Logagent command line arguments in the [Logagent Documentation](https://sematext.com/docs/logagent/cli-parameters/)
+* **LOGS_TOKEN**: The index to ship logs to. For [Sematext](https://sematext.com/) use the Logs App Token.
+* **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre> to specify a log source name, which is defined in the configuration, or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. 
 * **LOG_GLOB**: Semicolon-separated list of file globs <pre>/mylogs/**/*.log;/var/log/**/*.log</pre> Mount your server log files into the container using a Docker volume e.g. <pre>-v /var/log:/mylogs</pre>
 * **-v /var/run/docker.sock:/var/run/docker.sock** - Collect container logs by mounting the docker socket (mandatory)
 
 
 ### Docker Run
 
-The most basic start method is using docker run command:
+The most basic way to start is via docker run command:
 
 ```
 docker pull sematext/logagent
@@ -53,7 +53,6 @@ docker run -d --restart=always --name logagent \
 To use [Docker Compose](https://docs.docker.com/compose/) create docker-compose.yml as follows and insert real tokens:
 
 ```
-
 # docker-compose.yml
 logagent:
   image: 'sematext/logagent:latest'
@@ -65,7 +64,6 @@ logagent:
   restart: always
   volumes:
     - '/var/run/docker.sock:/var/run/docker.sock'
-
 ```
 
 Then start Logagent with the docker-compose file:
@@ -77,7 +75,7 @@ docker-compose up -d
 ### Docker Swarm and Docker Enterprise
 
 Connect your Docker client to Swarm or UCP remote API endpoint and
-deploy Logagent with following docker command with your Logs Tokens:
+deploy Logagent with following docker command with your Logs App Token:
 
 ```bash
 docker service create --mode global --name st-logagent \
@@ -113,9 +111,8 @@ oc apply -f logagent-daemonset.yml
 
 ### Kubernetes with containerd and IBM Cloud
 
-Kubernetes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata.
-Instead logs are collected from containerd log files and requires access to the relevant directories.
-The logagent input-filter for containerd supports:
+Kubernetes can use cointainerd as container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata.  Instead, logs are collected from containerd log files, which requires access to the relevant directories.
+The Logagent input-filter for containerd supports:
 
 * Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs`
 * Enrichment of logs with podName, namespace, containerName, containerId
@@ -130,7 +127,7 @@ First, create [ibm-cloud-logagent-ds.yml](https://github.com/sematext/logagent-j
 curl -o ibm-cloud-logagent-ds.yml  https://raw.githubusercontent.com/sematext/logagent-js/master/kubernetes/ibm-cloud-logagent-ds.yml
 ```
 
-Set your Logs Token in the spec.env section in the `ibm-cloud-logagent-ds.yml` file.
+Set your Logs App Token in the spec.env section in the `ibm-cloud-logagent-ds.yml` file.
 
 Then run the DaemonSet:
 
@@ -141,7 +138,7 @@ kubectl create -f ibm-cloud-logagent-ds.yml
 
 ### Mesos / Marathon
 
-The following configuration will activate Logagent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances) and Logs Token. An example call to the Marathon API:
+The following configuration will activate Logagent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances) and Logs App Token. An example call to the Marathon API:
 
 ```
 curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080/v2/apps  -d '
