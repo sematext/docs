@@ -6,7 +6,7 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 ## Install Node.js on your server
 First, make sure you have [Node.js installed](https://nodejs.org/en/download/package-manager/). E.g. for Debian/Ubuntu:
 ``` bash
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
@@ -42,20 +42,19 @@ By running the `logagent-setup` command, Logagent will detect the init system an
         
         sudo logagent-setup -i index -u http://localhost:9200
 
-Changing the Elasticsearch `index` and `endpoint` let's you ship logs to any Elasticsearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
+Changing the Elasticsearch `index` and `endpoint` lets you ship logs to any Elasticsearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
 
 ##### Location of service scripts
-- Upstart: `/etc/init/logagent.conf`
 - Systemd: `/etc/systemd/system/logagent.service`
+- Upstart: `/etc/init/logagent.conf`
 
 ##### Check service status
-- Upstart: `service logagent status`
 - Systemd: `systemctl status logagent`
+- Upstart: `service logagent status`
 
 ##### Start/stop service
-- Upstart: `service logagent stop/start`
 - Systemd: `systemctl stop/start logagent`
+- Upstart: `service logagent stop/start`
 
 ### 4. Configure Logagent settings
 The setup script generates the configuration file in `/etc/sematext/logagent.conf`. The default settings will ship all log files from the `/var/log` directory to Sematext Cloud. [Here's the configuration guide](./config-file).
-
