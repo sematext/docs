@@ -3,7 +3,7 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 
 ## Installation on Windows
 
-1. Download nodejs from [nodejs.org](https://nodejs.org/en/download/) and install it
+1. Download Node.js from [nodejs.org](https://nodejs.org/en/download/) and install it
 
 2. Install Logagent and Windows event plugin
   ``` bash

@@ -1,17 +1,17 @@
-title: Logagent YAML Configuration File
+title: Logagent  Configuration File
 description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or Sematext Cloud for real-time log view. 
 
 
 Logagent is flexible. You can choose to run it as a [system service](./installation) and use the [default configuration file](#default-yaml-configuration-file-structure), or pass the CLI tool a `--config custom.yml` flag with a custom configuration.
 
-## Default YAML Configuration File Location
+## Default Configuration File Location
 When Logagent is installed as a [system service](./installation), by running the `logagent-setup` command, the default config file is located in:
 
 ```bash
 /etc/sematext/logagent.conf
 ```
 
-## Default YAML Configuration File Structure
+## Default Configuration File Structure
 ```yaml
 # /etc/sematext/logagent.conf
 
@@ -42,15 +42,15 @@ output:
     index: <LOGS_TOKEN or ES_INDEX>
 ```
 
-## Custom YAML Configuration with `--config` Flag
+## Custom Configuration with `--config` Flag
 
-Logagent can also be configured by using custom config files in YAML format, without running `logagent-setup`. Instead you run Logagent through the CLI tool. To use a custom config file run the CLI tool with the `--config` flag.
+Logagent can also run with a custom config file without running `logagent-setup`. Instead, you run Logagent as a command line tool. To use a custom config file run Logagent with the `--config` flag.
 
 ```bash 
 logagent --config custom.yml
 ```
 
-## Generate a Complete YAML Configuration File with `--writeConfig` Flag
+## Generate a Complete Configuration File with `--writeConfig` Flag
 
 You can generate a complete config file with this command:
 
@@ -60,7 +60,7 @@ logagent --writeConfig <filename>
 
 [Here's](https://github.com/sematext/logagent-js/blob/master/config/example.yml) what the generated config file looks like.
 
-## YAML Configuration File Sections
+## Configuration File Sections
 There are 4 sections of the configuration file:
 
 - Options
@@ -69,7 +69,7 @@ There are 4 sections of the configuration file:
 - Output
 
 ### Options
-This section defines the global configuraiton of Logagent.
+This section defines the global configuration of Logagent.
 ```yaml
 # Global options
 options:
@@ -134,7 +134,7 @@ parser:
 
 ### Output
 
-Logs can be shipped to [various plugins](https://sematext.com/docs/logagent/plugins/) including:
+Logs can be shipped to [various destinations](https://sematext.com/docs/logagent/plugins/) including:
 
 - Elasticsearch
 - AWS Elasticsearch Service
@@ -145,9 +145,9 @@ Logs can be shipped to [various plugins](https://sematext.com/docs/logagent/plug
 - ZeroMQ
 - InfluxDB
 - ClickHouse DB
-- etc...
+- ...
 
-The Elasticsearch output supports HTTPS and username/password in the URL. It is possible use [**multiple indices** to route logs from **different files** to **different indices**](./output-elasticsearch/#log-routing-to-multiple-targets) in Elasticsearch. All logs that don't match any rules in the indices section are **routed to the default** Elasticsearch **index**. 
+The Elasticsearch output supports HTTPS and username/password in the URL. It is possible to use [**multiple indices** to route logs from **different files** to **different indices**](./output-elasticsearch/#log-routing-to-multiple-targets) in Elasticsearch. All logs that don't match any rules in the indices section are **routed to the default** Elasticsearch **index**. 
 
 ```yaml hl_lines="4 7 16 22 23 28"
 output:
