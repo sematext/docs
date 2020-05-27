@@ -279,7 +279,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tr>
 <tr>
 <td>IGNORE_LOGS_PATTERN</td>
-<td style="word-break: break-all;">Filter logs with a regular expression. E.g. <pre>IGNORE_LOGS_PATTERN=healthcheck|ping</pre> This will match log lines that contain "healthcheck" or "ping" in the message, and drop them. Only add the <b>regular expression without forward slashes</b>.</td>
+<td style="word-break: break-all;">Filter logs with a regular expression. <pre>IGNORE_LOGS_PATTERN=healthcheck|ping</pre> This will match log lines that contain "healthcheck" or "ping" in the message, and drop them. Only add the <b>regular expression without forward slashes</b>.</td>
 </tr>
 <tr>
 <td>LOGSENE_ENABLED_DEFAULT</td>
@@ -300,11 +300,11 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <tbody>
 <tr>
 <td>MATCH_BY_NAME</td>
-<td>Regular expression to white list container names. E.g. <pre>MATCH_BY_NAME=.*nginx.*</pre> will match any container name that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
+<td>Regular expression to whitelist container names. <pre>MATCH_BY_NAME=.*nginx.*</pre> This will match any container name that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
 </tr>
 <tr>
 <td>MATCH_BY_IMAGE</td>
-<td>Regular expression to white list image names. E.g. <pre>MATCH_BY_IMAGE=.*nginx.*</pre> will match any image that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
+<td>Regular expression to whitelist image names. <pre>MATCH_BY_IMAGE=.*nginx.*</pre> This will match any image that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
 </tr>
 </tbody>
 </table>
@@ -321,11 +321,11 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 <tbody>
 <tr>
 <td>SKIP_BY_NAME</td>
-<td>Regular expression to black list container names for logging. E.g. <pre>SKIP_BY_NAME=.*nginx.*</pre> will match any container name that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
+<td>Regular expression to blacklist container names for logging. <pre>SKIP_BY_NAME=.*nginx.*</pre> This will match any container name that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
 </tr>
 <tr>
 <td>SKIP_BY_IMAGE</td>
-<td>Regular expression to black list image names for logging. E.g. <pre>SKIP_BY_IMAGE=.*nginx.*</pre> will match any image that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
+<td>Regular expression to blacklist image names for logging. <pre>SKIP_BY_IMAGE=.*nginx.*</pre> This will match any image that contains "nginx". Only add the <b>regular expression without forward slashes</b>.</td>
 </tr>
 </tbody>
 </table>
