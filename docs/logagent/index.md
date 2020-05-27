@@ -76,7 +76,7 @@ input:
 
 output:
   # index logs in Elasticsearch or Sematext Logs
-  sematext: # output a name, e.g.m elasticsearch, sematext, etc.
+  sematext: # output a name, e.g., elasticsearch, sematext, etc.
     module: elasticsearch
     url: https://logsene-receiver.sematext.com
     # default Elasticsearch index or Sematext Logs token to use
