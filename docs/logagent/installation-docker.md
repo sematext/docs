@@ -279,7 +279,7 @@ curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080
 </tr>
 <tr>
 <td>IGNORE_LOGS_PATTERN</td>
-<td style="word-break: break-all;">Filter logs by a JS regular expression. E.g. <pre>IGNORE_LOGS_PATTERN=\/healthcheck|\/ping</pre></td>
+<td style="word-break: break-all;">Filter logs with a regular expression. E.g. <pre>IGNORE_LOGS_PATTERN=healthcheck|ping</pre> This will match log lines that contain "healthcheck" or "ping" in the message, and drop them. Only add the <b>regular expression without forward slashes</b>.</td>
 </tr>
 <tr>
 <td>LOGSENE_ENABLED_DEFAULT</td>
