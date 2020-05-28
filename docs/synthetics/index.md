@@ -18,7 +18,7 @@ The monitors will be periodically scheduled to run from specified locations in a
 
 ## Locations
 
-Synthetics monitors can be scheduled to run from below locations:
+Synthetics monitors can be scheduled to run from the following locations:
 
 | AMERICAS  | EUROPE  | ASIA PACIFIC  |
 |---|---|---|
