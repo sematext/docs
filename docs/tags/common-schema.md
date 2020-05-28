@@ -1,7 +1,7 @@
-title: Sematext Common Schema 
+title: Sematext Common Schema
 description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tags or in App agent YAMLs. They are used to correlate data across multiple Apps.
 
-Tags are sent by the Sematext Agent as part of every every data point or log event and they are shown in UI as filters. 
+Tags are sent by the Sematext Agent as part of every every data point or log event and they are shown in UI as filters.
 
 The following tags should not be used as [custom tags](./custom-tags) or in in [App agent](../agents/sematext-agent/app-agent/) YAMLs.
 
@@ -45,7 +45,7 @@ Below are the OS related tags sent as part of OS metrics/logs. They are collecte
 
 | Tag Name  | Description
 |:--|:--
-| os.disk | Human readable name of the block device | 
+| os.disk | Human readable name of the block device |
 | os.disk.mountpoint | Mount point for the disk in the file system |
 | os.disk.fs.type | Type of the file system associated with the device |
 | os.network | Name of the network interface |
@@ -92,9 +92,9 @@ Below are Process related tags sent as part of process info:
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | process.name | Process/program name |
-| process.pid  | Process identifier | 
-| process.ppid  | Parent process identifier | 
-| process.type  | Process type, an example of a process type can be `master` or `child` for Node.js processes. | 
+| process.pid  | Process identifier |
+| process.ppid  | Parent process identifier |
+| process.type  | Process type, an example of a process type can be `master` or `child` for Node.js processes. |
 
 ## Network Traffic Stats Tags
 
@@ -102,13 +102,11 @@ Below are the tags sent as part of Network Traffic Status info:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| network.topology.address | Local address of the network connection | 
-| network.topology.destination.address | Remote host address of the network connection | 
-| network.topology.destination.port | Remote port |
-| network.topology.protocol | Protocol name (TCP or UDP) |
-| network.topology.outgoing | Determines whether the connection is incoming (client connected to server) or outgoin(current machine connects to external server) |
-| network.topology.process.id | Process identifier that produces connection stats |
-| network.topology.process.name | Name of the process's image that produces connection stats | 
+| network.address | Local address of the network connection |
+| network.destination.address | Remote host address of the network connection |
+| network.destination.port | Remote port |
+| network.protocol | Protocol name (TCP or UDP) |
+| network.outgoing | Determines whether the connection is incoming (client connected to server) or outgoing (current machine connects to external server) |
 
 ## Container Tags
 
@@ -130,11 +128,11 @@ Below are Kubernetes related tags sent as part of metrics/logs in the Kubernetes
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | kubernetes.pod.name | Name of the kubernetes pod | pod
-| kubernetes.pod.node | Node name where the pod is running | 
-| kubernetes.cluster.name | Kubernetes cluster name | 
-| kubernetes.deployment.name | Kubernetes deployment name | 
-| kubernetes.namespace | Kubernetes namespace | 
-| kubernetes.pvc.name | Kubernetes Persistent Volume Claim name | 
+| kubernetes.pod.node | Node name where the pod is running |
+| kubernetes.cluster.name | Kubernetes cluster name |
+| kubernetes.deployment.name | Kubernetes deployment name |
+| kubernetes.namespace | Kubernetes namespace |
+| kubernetes.pvc.name | Kubernetes Persistent Volume Claim name |
 | kubernetes.pod.controlledby | Controller of the pod (deployment or DaemonSet or StatefulSet) |
 
 ## Serverless Tags
@@ -143,8 +141,8 @@ Below are Serverless related tags sent as part of metrics/logs in the Serverless
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| function.name | Name of the Lambda function | 
-| function.version | Version of the Lambda function | 
+| function.name | Name of the Lambda function |
+| function.version | Version of the Lambda function |
 | function.request.id | Identifier of the invocation request |
 
 ## Synthetic Monitoring Tags
@@ -153,8 +151,8 @@ Below are tags sent as part of metrics in Sematext Synthetic Monitoring:
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| synthetics.monitor.id | Identifier of the Monitor | 
-| synthetics.run.id | Identifier of the Monitor run | 
+| synthetics.monitor.id | Identifier of the Monitor |
+| synthetics.run.id | Identifier of the Monitor run |
 | synthetics.location.id | Identifier of the Monitor location |
 | synthetics.content.type | Type of the resource content |
 | synthetics.domain | The resource URL of the domain  |
