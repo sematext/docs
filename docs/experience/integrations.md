@@ -108,6 +108,14 @@ The Angular SPA integration supports both Angular.js and Angular 2+.
 ### Angular 2+
 If your webapp uses the newer Angular you should add a call to `routeChange` whenever the route changes in your webapp. This can be done in your top-level component where `Router` is defined by adding the `ngOnInit` function and subscribing to the `Router` events as shown in the following example.
 
+If you use TypeScript, you need to declare the global function:
+
+```js
+declare global {
+  interface Window { strum: Function; }
+}
+```
+
 ```js
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
@@ -120,7 +128,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        strum('routeChange', event.url);
+        window['strum']('routeChange', event.url);
       }
     });
   }
@@ -132,12 +140,20 @@ If your webapp uses Angular.js 1.x you should add a call to `routeChange` whenev
 
 ```js
 $scope.$on('$routeChangeStart', function () {
-  strum('routeChange', window.location.href);
+  window['strum']('routeChange', window.location.href);
 });
 ```
 
 ## React 
 The React integration ties into React Router and tracks calls to `routeChange`. You should add a call to `routeChange` whenever the route changes in your webapp. This can be done in your top-level component where `Router` is defined.
+
+If you use TypeScript, you need to declare the global function:
+
+```js
+declare global {
+  interface Window { strum: Function; }
+}
+```
 
 ```js
 import React from 'react';
@@ -147,7 +163,7 @@ const history = createHistory();
 
 history.listen((location, action) => {
   if (action !== 'REPLACE') {
-    strum('routeChange', window.location.href);
+    window['strum']('routeChange', window.location.href);
   }
 })
 
@@ -162,6 +178,14 @@ export default function App() {
 
 ## Vue.js 
 The Vue.js integration works by watching for calls to the `routeChange` function where you have the `router-view` defined.
+
+If you use TypeScript, you need to declare the global function:
+
+```js
+declare global {
+  interface Window { strum: Function; }
+}
+```
 
 ```js
 <template>
@@ -184,14 +208,22 @@ The Vue.js integration works by watching for calls to the `routeChange` function
 ## Ember
 The Ember integrations uses the `reopen` function to configure a function to trigger every time your application changes routes. This event is called `didTransition`.
 
-```js
+If you use TypeScript, you need to declare the global function:
 
+```js
+declare global {
+  interface Window { strum: Function; }
+}
+```
+
+```js
 import EmberRouter from '@ember/routing/router';
 import { on } from '@ember/object/evented';
 
 EmberRouter.reopen({
   doInformAboutRouteChange: on('didTransition', function() {
-    strum('routeChange', window.location.href);
+    // eslint-disable-next-line
+    window['strum']('routeChange', window.location.href);
   }),
 });
 
