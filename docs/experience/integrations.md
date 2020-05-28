@@ -116,6 +116,8 @@ declare global {
 }
 ```
 
+Add this to your code.
+
 ```js
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
@@ -155,6 +157,8 @@ declare global {
 }
 ```
 
+Add this to your code.
+
 ```js
 import React from 'react';
 import { createBrowserHistory as createHistory } from 'history';
@@ -187,6 +191,8 @@ declare global {
 }
 ```
 
+Add this to your code.
+
 ```js
 <template>
   <div id="app">
@@ -215,6 +221,8 @@ declare global {
   interface Window { strum: Function; }
 }
 ```
+
+Add this to your code.
 
 ```js
 import EmberRouter from '@ember/routing/router';
