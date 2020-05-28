@@ -272,6 +272,7 @@ pages:
             - Prometheus Alertmanager: logagent/output-plugin-prometheus-alertmanager.md
             - HTTP post: logagent/output-plugin-http.md
         - How-To:
+            - Exclude Log Sources with Glob Patterns: logagent/how-to-use-glob-patterns-to-exclude-logs.md
             - Nginx Ingress Log Shipping: logagent/how-to-nginx-ingress-log-shipping.md
             - GDPR Personal Data In Web Server Logs: logagent/how-to-gdpr_web_logs.md
             - Centralize Linux System Journal: logagent/how-to-centralize-linux-system-journal.md
