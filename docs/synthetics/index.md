@@ -24,4 +24,4 @@ Synthetics monitors can be scheduled to run from below locations:
 |---|---|---|
 | N. Virginia, USA  |  Ireland, Europe | Mumbai, India  |
 | N. California, USA  |  Frankfurt, Germany | Singapore  |
-| Sao Paulo, Brazil  |   | Sydney, Australia  |
+| São Paulo, Brazil  |   | Sydney, Australia  |
