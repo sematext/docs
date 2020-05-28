@@ -1,7 +1,7 @@
 title: Sematext Common Schema
 description: The following tags are treated as special in Sematext Cloud and cannot be used as custom tags or in App agent YAMLs. They are used to correlate data across multiple Apps.
 
-Tags are sent by the Sematext Agent as part of every every data point or log event and they are shown in UI as filters.
+Tags are sent by the Sematext Agent as part of every data point or log event and they are shown in UI as filters.
 
 The following tags should not be used as [custom tags](./custom-tags) or in in [App agent](../agents/sematext-agent/app-agent/) YAMLs.
 
@@ -94,7 +94,7 @@ Below are Process related tags sent as part of process info:
 | process.name | Process/program name |
 | process.pid  | Process identifier |
 | process.ppid  | Parent process identifier |
-| process.type  | Process type, an example of a process type can be `master` or `child` for Node.js processes. |
+| process.type  | Process type. An example of a process type can be `master` or `child` for Node.js processes. |
 
 ## Network Traffic Stats Tags
 
@@ -106,7 +106,7 @@ Below are the tags sent as part of Network Traffic Status info:
 | network.destination.address | Remote host address of the network connection |
 | network.destination.port | Remote port |
 | network.protocol | Protocol name (TCP or UDP) |
-| network.outgoing | Determines whether the connection is incoming (client connected to server) or outgoing (current machine connects to external server) |
+| network.outgoing | Determines whether the connection is incoming (local process serves the connection) or outgoing (local process connects to remote server) |
 
 ## Container Tags
 
