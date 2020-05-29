@@ -23,7 +23,7 @@ Using these tags you can do things like:
 - Grouping by `container.id` to get alerted when that particular container dies. Yes, this could lead to a lot of alert noise, so use this sparingly and wisely.
 - Grouping by `os.host` and `container.image.name` to get alerted when a host stops running all containers with some image name. The container may have been moved to another host.
 
-The following example shows how to include two specific container images we are interested in.  We group them by `os.host` and `container.image.name` to get alerted when any one host stops running all containers with a particular image name.
+The following example shows how to include two specific container images we are interested in.  We group them by `os.host` and `container.image.name`.  This will trigger an alert when any one host stops running all containers with either of the two container images we included in our filter.
 
 Open the Heartbeat Alert creation dialog. You’ll see that we group by the `os.host` tag by default. On the preview chart you may see a number of bars. These bars represent your hosts.
 
