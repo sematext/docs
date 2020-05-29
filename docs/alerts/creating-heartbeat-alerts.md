@@ -11,15 +11,16 @@ You can specify tags to filter and group by, then create Heartbeat Alerts for se
 
 To make this possible Sematext Agent sends tags from the Sematext Common Schema that tag-based alerts use: 
 
-- os.host
-- container.id
-- container.image.name
-- container.image.tag
-- container.name
+- `os.host`
+- `container.id`
+- `container.image.name`
+- `container.image.tag`
+- `container.name`
 
 Using these tags you can do things like:
-- Filtering and grouping by container.image.name to get alerted when all containers with the specified image name are gone.  
-- Grouping by container.id to get alerted when that particular container dies. Yes, this could lead to a lot of alert noise, so use this sparingly and wisely.
+
+- Filtering and grouping by `container.image.name` to get alerted when all containers with the specified image name are gone.  
+- Grouping by `container.id` to get alerted when that particular container dies. Yes, this could lead to a lot of alert noise, so use this sparingly and wisely.
 - Grouping by `os.host` and `container.image.name` to get alerted when a host stops running all containers with some image name. The container may have been moved to another host.
 
 This example will show how to include two specific images we’re interested in and grouping them by `os.host` and `container.image.name` to get alerted when a host stops running all containers with a particular image name.
@@ -28,7 +29,7 @@ Open the Heartbeat Alert creation dialog. You’ll see that we group by the `os.
 
 ![image alt text](../images/alerts/heartbeat_image_02.png)
 
-In the filter section, you see the ability to include and exclude tags. Let’s include two values for the container.image.name tag. Alerts will now only observe containers which were built from these 2 images.
+In the filter section, you see the ability to include and exclude tags. Let’s include two values for the `container.image.name` tag. Alerts will now only observe containers which were built from these 2 images.
 
 ![image alt text](../images/alerts/heartbeat_image_03.png)
 
