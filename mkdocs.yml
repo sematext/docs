@@ -136,6 +136,7 @@ pages:
       - Overview: alerts/index.md
       - Creating Logs Alerts: alerts/creating-logs-alerts.md
       - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
+      - Creating Heartbeat Alerts: alerts/creating-heartbeat-alerts.md
       - Creating Experience Alerts: alerts/creating-experience-alerts.md
       - Alerts Meta and Tags: alerts/alerts-meta.md
       - Alert Notifications: alerts/alert-notifications.md
