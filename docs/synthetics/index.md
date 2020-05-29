@@ -16,4 +16,12 @@ You start by creating a Synthetics [App](/guide/app-guide/). Under the App, you 
 
 The monitors will be periodically scheduled to run from specified locations in an isolated environment. No agent installation is required. For example, a monitor scheduled to run every minute from 2 locations will run 120 times in an hour. The result of each run will be evaluated against the set of conditions specified during the creation. When a condition fails, the run is considered failed. On run failure, you will be alerted based on configured [notification hooks](/integration/#notification-hooks).
 
-Current supported locations are N. Virginia, USA, and Ireland, Europe.
+## Locations
+
+Synthetics monitors can be scheduled to run from the following locations:
+
+| AMERICAS  | EUROPE  | ASIA PACIFIC  |
+|---|---|---|
+| N. Virginia, USA  |  Ireland, Europe | Mumbai, India  |
+| N. California, USA  |  Frankfurt, Germany | Singapore  |
+| São Paulo, Brazil  |   | Sydney, Australia  |
