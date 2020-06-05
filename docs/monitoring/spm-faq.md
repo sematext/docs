@@ -676,6 +676,15 @@ If this doesn't fix your issue, please send us an email to
 <support@sematext.com> or contact
 us in chat.
 
+### I am trying to monitor MySQL. I see an error in Agent logs - java.sql.SQLException: The server timezone value 'XXX' is unrecognized or represents more than one timezone.
+
+Try adding `serverTimezone=UTC` to `ST_MONITOR_MYSQL_DB_ADDITIONAL_PARAMS` attribute
+in your Sematext MySQL Agent config. When using `setup-sematext` script to create
+agent config, you can adjust that parameter into:
+```
+--ST_MONITOR_MYSQL_DB_ADDITIONAL_PARAMS 'autoReconnect=true&serverTimezone=UTC' 
+```
+
 ### I am not seeing any data in Monitoring charts. How do I check if network connectivity is OK?
 
 Sematext Agent sends data to Sematext via HTTP(S) so it is important

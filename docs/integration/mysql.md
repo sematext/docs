@@ -196,3 +196,10 @@ threads created<br>**mysql.threads.created** <br>*(long counter)*               
 threads running<br>**mysql.threads.running** <br>*(long gauge)*                                           |  Threads_running: The number of threads that are not sleeping
 thread cache size<br>**mysql.threads.cached.allowed** <br>*(long gauge)*                                  |  thread_cache_size: How many threads the server should cache for reuse
 thread stack<br>**mysql.threads.stack.size** <br>*(long gauge)* *(bytes)*                                 |  thread_stack: The stack size for each thread
+
+## Troubleshooting
+
+If you are having issues with Sematext Monitoring, i.e. not seeing MySQL metrics, see
+[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+
+For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
