@@ -28,7 +28,7 @@ In bare-metal/vritualMachine environments, Sematext Agent will automatically cre
 
 ### How does Sematext Autodiscovery Monitoring work in container environments? 
 
-The Sematext Agent container gets distributed to every Kubernetes, Docker Swarm or Docker Enterprise node. Sematext Agent installs hook points on various kernel functions via eBPF and gets notified when a process creates a socket or sends data through it. It also uses eBPF to to watch for process termination so it can shut down monitoring agent containers/pods when your service is gone. In Swarm setups specifically, Sematext Agent joins containers to its own network so it can establish communication with them.
+The Sematext Agent container gets distributed to every Kubernetes, Docker Swarm or Docker Enterprise node. That way it can find out about existing containers, as well as about newly created and terminated containers. For each monitorable service running in container, Sematext Agent will create a dedicated monitoring agent container. And once such service is gone, Sematext Agent will ensure its monitoring agent container is also removed. 
 
 In container environments, Sematext Agent will create a monitoring agent if it finds `MONITORING_TOKEN` in environment variables or labels of your service or if you enabled automatic monitoring for specific service type in the UI. In Kubernetes setups `MONITORING_TOKEN` can be placed in pod annotations.
 
