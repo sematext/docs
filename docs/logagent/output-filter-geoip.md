@@ -16,26 +16,33 @@ Things you do not need to think about at all:
 - Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geoip` field out of the box. 
 
 
+### Prerequisites
+
+You first need to sign up to Maxmind to get a license key.
+Then, export the license key as an environment variable.
+
+```bash
+MAXMIND_LICENSE_KEY="<your MaxMind license key>" 
+```
 
 ### Configuration 
 
 Here is how to enable Geo IP lookups for your logs:
 
-1. Command line 
+#### 1. Command line 
 
 ```
-    logagent  --geoipEnabled true --geoipFields "client_ip,remote_address"
+logagent  --geoipEnabled true --geoipFields "client_ip,remote_address"
 ```
 
-2. Environment variables 
+#### 2. Environment variables 
 
 ```
-   MAXMIND_LICENSE_KEY="<your MaxMind license key>"
-   GEOIP_ENABLED=true
-   GEOIP_FIELDS="client_ip,remote_address"
+GEOIP_ENABLED=true
+GEOIP_FIELDS="client_ip,remote_address"
 ```
 
-3. Configuration file
+#### 3. Configuration file
 
 Add the following `outputFilter` section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources.
 
@@ -52,9 +59,9 @@ input:
 outputFilter:
   geoip: 
     module: geoip
-    fields: 
-      - client_ip
-      - remote_address
+      fields: 
+        - client_ip
+        - remote_address
       
 ```
 
