@@ -57,7 +57,7 @@ Read more in the [Reports and Components](./reports-and-components) guide.
 
 ### Quickly start to monitor with Autodiscovery
 
-The only thing you'll have to install is Sematext Agent. After that you can enable/disable monitoring of each discovered service type from the user interface. To learn more visit [Autodiscovery Monitoring](./autodiscovery). Of course, if you wish to have full control over what is monitored and avoid configuring things in the user interface, you can still do that - application will show you manual monitoring installation instructions too.
+The only thing you'll have to install is Sematext Agent. After that, you can enable/disable monitoring of each discovered service type from the user interface. To learn more visit [Service Autodiscovery](./autodiscovery). Of course, if you wish to have full control over what is monitored and avoid configuring things in the user interface, you can still do that - Sematext Cloud UI will show you manual monitoring installation instructions, too.
  
 
 ### Additional Features

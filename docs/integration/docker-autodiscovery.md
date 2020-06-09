@@ -21,7 +21,7 @@ Sematext Agent Auto-Discovery solves the issues above by the automatic discovery
 - Sematext Agent connects to container networks and Kubernetes pods for monitoring
 - Application containers can be tagged with the MONITORING_TOKEN, and Sematext Agent uses the MONITORING_TOKEN label or environment variable to ship metrics to the right Monitoring App in Sematext Cloud (or Sematext Enterprise).
 
-## How does Sematext Agent Autodiscovery monitoring work?
+## How does Sematext Autodiscovery work?
 
 See [automatic autodiscovery monitoring](../monitoring/autodiscovery) for details.
 
