@@ -45,6 +45,7 @@ pages:
     - Monitoring:
       - Overview: monitoring/index.md
       - Quick Start: monitoring/quick-start.md
+      - Autodiscovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md
       - Reports & Components: monitoring/reports-and-components.md
       - Infrastructure: monitoring/infrastructure.md
@@ -195,7 +196,7 @@ pages:
         - Packages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
-        - Auto Discovery:
+        - Autodiscovery:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
