@@ -24,6 +24,13 @@ Optionally, the header, query param, and cookie values can be marked as hidden, 
 
 Max length of the header, query param, and cookie name and value are 512 and 1024 characters respectively. A maximum of 100 rows for each of the headers, query params, and cookies is allowed.
 
+By default, the HTTP monitor adds the headers below for all requests sent from the agent:
+
+| Name | Value | Description |
+|---|---|---|
+| `x-sematext-origin`  | `synthetics` | Origin of the request. Can be used to identify Synthetics requests in the back end or filter the requests in a firewall.  |
+| `x-sematext-synthetics-id`  | `<run-id>` | Uniquely identifies this request. Can be used for tracing and correlation in the back end. |
+
 ## Conditions
 
 Conditions can be configured on the response fields and metrics. The conditions are evaluated for every run result. All the conditions should pass for a run to be declared a passed. If any condition fails, the run will fail and the monitor will be marked as failing. Condition types supported are:
