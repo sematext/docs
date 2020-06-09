@@ -24,12 +24,12 @@ Optionally, the header, query param, and cookie values can be marked as hidden, 
 
 Max length of the header, query param, and cookie name and value are 512 and 1024 characters respectively. A maximum of 100 rows for each of the headers, query params, and cookies is allowed.
 
-Be default HTTP monitor adds below headers for all the requests sent from the agent:
+By default HTTP monitor adds below headers for all the requests sent from the agent:
 
 | Name | Value | Description |
 |---|---|---|
-| x-sematext-origin  | synthetics | Origin of the request. Can be used to identify Synthetics requests in the backend or filter the requests in firewall.  |
-| x-sematext-synthetics-id  | \<run-id\>  | Uniquely identifies this request. Can be used for tracing and correlation in the backend. |
+| `x-sematext-origin`  | `synthetics` | Origin of the request. Can be used to identify Synthetics requests in the backend or filter the requests in firewall.  |
+| `x-sematext-synthetics-id`  | `<run-id>` | Uniquely identifies this request. Can be used for tracing and correlation in the backend. |
 
 ## Conditions
 
