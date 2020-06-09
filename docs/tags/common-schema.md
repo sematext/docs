@@ -24,11 +24,10 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | error.type | A reserved field for errors |
 | span.id | Building block of a trace in distributed tracing |
 | trace.id | Building block of a trace in distributed tracing |
-| geoip | An object reserved for location related data |
 | geoip.location | A latitude and longitude defining the location associated with the log line |
+| geoip.info.city | The city associated with the log line |
 | geoip.info.country | The country associated with the log line |
 | geoip.info.continent | The continent associated with the log line |
-| geoip.info.city | The city associated with the log line |
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
 
