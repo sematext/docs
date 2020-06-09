@@ -39,7 +39,7 @@ Additionally, Sematext Agent will also discover the following services, but at t
 - PostgreSQL
 - RabbitMQ
 
-### How do I start using the Autodiscovery?
+### How do I start using Autodiscovery?
 
 Simply go to Discovery. You will be presented with instructions to install Sematext Agent. On each machine, Kubernetes, Swarm or Docker Enterprise cluster where Sematext Agent
 is installed, it will instantly start discovering services that can be monitored. Discovered services will be displayed in Discovery. Clicking on each service lets you enable automatic monitoring for that type of service. In most cases Sematext Agent knows how to set up the monitor without requiring any additional actions from you, which means service metrics will start appearing few seconds after you enable automatic monitoring. In other cases you may have to provide credentials so monitoring agents can connect to the service you wish to monitor. In either case, Autodiscovery UI will guide you and provide the exact instructions.
