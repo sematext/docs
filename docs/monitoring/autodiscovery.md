@@ -14,10 +14,30 @@ Autodiscovered services can be monitored in two ways:
 
 <img class="content-modal-image" alt="Enabling Automatic Autodiscovery Monitoring" src="../images/monitoring/automatic-autodiscovery-monitoring.png" title="Enabling Automatic Autodiscovery Monitoring">
 
-
 ### Which are supported Autodiscovery integrations?
 
-TODO
+Sematext Agent can automatically discover and set up the monitoring agent for the following service types: 
+- Cassandra
+- Clickhouse
+- Elasticsearch
+- HAProxy
+- Kafka
+- MySQL
+- Nginx+
+- Redis
+- Solr
+- Spark
+- Storm
+- JVM
+- Tomcat
+- Zookeeper
+
+Additionally, Sematext Agent will also discover the following services, but at the moment it can't set up the monitoring agent for them:
+- Couchbase
+- Flink
+- NATS
+- PostgreSQL
+- RabbitMQ
 
 ### How do I start using the Autodiscovery?
 
@@ -57,10 +77,6 @@ Yes. In case of bare-metal/virtual machine environments, just follow the classic
 In container envs just add the `MONITORING_TOKEN` environment variable (or label) to container of the service you wish to monitor manually. Automatic monitoring can again be enabled in UI and Sematext Agent will again "know" which service instances have manually set up agent and which should get automatic monitoring rule applied.  
 
 In all environments this makes it possible to use different monitoring tokens, and thus different Sematext Apps for the same service type running on the same machine or in the same Kubernetes/Swarm cluster.
-
-### Does Autodiscovery work with <insert a few top managed k8s services, like AWS EKS>?
-
-TODO
 
 ### Additional info
 
