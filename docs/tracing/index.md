@@ -29,7 +29,7 @@ running applications and troubleshoot performance issues.
 
 ## Notes
 
-  - Transaction Tracing requires App Agent running in [embedded mode](/monitoring/spm-monitor-javaagent).
+  - Transaction Tracing requires App Agent running in [embedded mode](/agents/sematext-agent/app-agent/spm-monitor-javaagent/).
   - Enabling/disabling the tracing agent requires Sematext Agent restart,
     which means it requires the restart of the application running the
     embedded App Agent.
