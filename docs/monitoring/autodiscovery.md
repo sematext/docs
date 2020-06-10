@@ -34,11 +34,14 @@ Sematext Agent can automatically discover and set up monitoring agent for the fo
 - Zookeeper
 
 Additionally, Sematext Agent will also discover the following services, but at the moment it can't set up the monitoring agent for them:
+- Node.js *
 - Couchbase
 - Flink
 - NATS
 - PostgreSQL
 - RabbitMQ
+
+* For Node.js services it is possible to install Sematext supported monitoring agent manually by following the instructions in the UI 
 
 ### How do I start using Autodiscovery?
 
