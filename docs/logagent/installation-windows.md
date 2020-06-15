@@ -6,13 +6,20 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 1. Download Node.js from [nodejs.org](https://nodejs.org/en/download/) and install it
 
 2. Install Logagent and Windows event plugin
-  ``` bash
-  npm i -g @sematext/logagent
-  npm i -g node-windows
-  npm i -g logagent-input-windows-events
-  # run logagent windows version
-  logagent-windows --help
-  ```
+```
+md %ProgramData%\npm-cache
+md %ProgramData%\npm
+md %ProgramData%\npm\node_modules
+call npm config --global set prefix "%ProgramData%\npm"
+call npm config --global set cache "%ProgramData%\npm-cache"
+setx PATH "%PATH%;%ProgramData%\npm" /M
+call npm i -g @sematext/logagent
+call npm i -g logagent-input-elasticsearch-stats
+call npm i -g logagent-input-windows-events
+call npm i -g node-windows
+# run logagent windows version
+logagent-windows --help
+```
 
 3. Optional service installer
 
@@ -64,11 +71,11 @@ Run service installer:
 
 
 ```
-logagent-windows -install
+node %ProgramData%\npm\node_modules\@sematext\logagent\bin\logagent-windows.js -install
 ```
 
 To uninstall the service run
 
 ```
-logagent-windows -uninstall
+node %ProgramData%\npm\node_modules\@sematext\logagent\bin\logagent-windows.js -uninstall
 ```
