@@ -16,7 +16,7 @@ We accept <a href="../logs/syslog/" target="_blank" rel="noopener">Syslog</a> me
 
 ### Journald 
 
-We accept <a href="./journald-integration" target="_blank" rel="noopener">Journald</a> logs using the `systemd-journal-remote` package. Everything you need to do is point the `systemd-journal-remote` to send Journald logs to Sematext Logs.
+We accept <a href="../journald-integration" target="_blank" rel="noopener">Journald</a> logs using the `systemd-journal-remote` package. Everything you need to do is point the `systemd-journal-remote` to send Journald logs to Sematext Logs.
 
 ### Log Shippers 
 
@@ -60,7 +60,7 @@ We accept <a href="./journald-integration" target="_blank" rel="noopener">Journa
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/docker">Docker</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/kubernetes">Kubernetes</a></li>
- 	<li><a href="./kubernetes-audit-integration">Kubernetes Audit</a></li>
+ 	<li><a href="../kubernetes-audit-integration">Kubernetes Audit</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/mesosmarathon">Mesos Marathon</a></li>
 </ul>
 
@@ -74,7 +74,7 @@ We accept <a href="./journald-integration" target="_blank" rel="noopener">Journa
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/heroku">Heroku</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/cloudfoundry">Cloud Foundry</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/gae">Google App Engine</a></li>
- 	<li><a href="./github-webhook-events-integration">GitHub Webhook Events</a></li>
+ 	<li><a href="../github-webhook-events-integration">GitHub Webhook Events</a></li>
 </ul>
 
 ### iOS 
