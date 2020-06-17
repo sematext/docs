@@ -37,7 +37,7 @@ When accessing the Element Timing from the left menu of your Experience App you 
 * Total number of annotated element loads.
 * 90th percentile of annotated elements render time in milliseconds.
 * 95th percentile of annotated elements load time in milliseconds.
-* A histogram of average load and render time of annotated elements.
+* A histogram of load and render time of annotated elements.
 * A histogram of the number of elements loads.
 * A table with the top elements loads that include name of the elements, average render and load time, 90th percentile of render and load time and the number of loads for each element.
 
