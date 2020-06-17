@@ -3,19 +3,13 @@ description: Gathering information about annotated elements on the web page
 
 Experience uses the Element Timing API to annotate the critical elements of your site. While knowing the rendering time of the key elements of a page is not enough to fully capture user satisfaction, it is crucial to know how long it takes for them to be displayed on the screen. 
 
-## Supported Page Elements
+## Getting Started
 
-The Element Timing API is currently supported only by Google Chrome and works on the following page elements:
+To include timing data for your web page elements you must annotate them with the `elementtiming` property and give them a name. 
 
-* `<img>` elements
-* `<image>` elements inside an `<svg>` tag
-* The poster images of the `<video>` elements
-* Elements with `background-image` property
-* Text nodes
+The provided name will be associated with the element timing when viewed in Experience. You can have as many `elementtiming` attributes as you want, but keep in mind that this should be added to the crucial elements on your site, the ones which reflect the key elements your users should see, so that you can see how fast they actually get them rendered. 
 
-## Annotating Page Elements
-
-To include timing data for your web page elements you must annotate them with the `elementtiming` property and give them a name. The provided name will be associated with the element timing when viewed in Experience. You can have as many `elementtiming` attributes as you want, but keep in mind that this should be added to the crucial elements on your site, the ones which reflect the key elements your users should see, so that you can see how fast they actually get them rendered. For example, if you would like to know how long it takes for the featured image on a web page to get displayed you could have your `<img>` tag annotated as follows:
+For example, if you would like to know how long it takes for the featured image on a web page to get displayed you could have your `<img>` tag annotated as follows:
 
 ```
 <img src="/images/featured.png" elementtiming="post-featured-image" />
@@ -29,6 +23,16 @@ It would result in the name taking the value of the `elementtiming` attribute:
   src="../../images/experience/elementtiming/element_timing_name.png"
   title="Element Timing Element Name"
 />
+
+## Supported Page Elements
+
+The Element Timing API is currently supported only by Google Chrome and works on the following page elements:
+
+* `<img>` elements
+* `<image>` elements inside an `<svg>` tag
+* The poster images of the `<video>` elements
+* Elements with `background-image` property
+* Text nodes
 
 ## Element Timing Overview
 
