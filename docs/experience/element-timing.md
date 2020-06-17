@@ -15,7 +15,7 @@ The Element Timing API is currently supported only by Google Chrome and works on
 
 ## Annotating Page Elements
 
-To include timing data for your web page elements you must annotate them with the `elementtiming` property and give the element a name. The provided name will be associated with the element timing when viewed in Experience dashboards. You can have as many `elementtiming` attributes as you want, but keep in mind that this should be added to the crucial elements on your site, the one which reflects the key elements your users should see, so that you can see how fast they actually get them rendered. For example, if you would like to know the timing information associated with the featured image of your web page you could have your `<img>` tag annotated as follows:
+To include timing data for your web page elements you must annotate them with the `elementtiming` property and give them a name. The provided name will be associated with the element timing when viewed in Experience. You can have as many `elementtiming` attributes as you want, but keep in mind that this should be added to the crucial elements on your site, the ones which reflect the key elements your users should see, so that you can see how fast they actually get them rendered. For example, if you would like to know how long it takes for the featured image on a web page to get displayed you could have your `<img>` tag annotated as follows:
 
 ```
 <img src="/images/featured.png" elementtiming="post-featured-image" />
