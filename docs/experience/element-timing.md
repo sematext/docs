@@ -5,7 +5,7 @@ Experience uses the Element Timing API to annotate the critical elements of your
 
 ## Supported Page Elements
 
-The Element Timing API is only supported by Google Chrome and works on the following page elements:
+The Element Timing API is currently supported only by Google Chrome and works on the following page elements:
 
 * `<img>` elements
 * `<image>` elements inside an `<svg>` tag
