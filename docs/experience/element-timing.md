@@ -1,7 +1,7 @@
 title: Monitoring Browser Element Timing
 description: Gathering information about annotated elements on the web page
 
-Experience allows using the Element Timing API to annotate the critical elements of your site. While knowing the rendering time of the key elements of the page is not enough for measuring satisfaction of the page load, it is crucial to know when they are displayed on the screen. 
+Experience uses the Element Timing API to annotate the critical elements of your site. While knowing the rendering time of the key elements of a page is not enough to fully capture user satisfaction, it is crucial to know how long it takes for them to be displayed on the screen. 
 
 ## Supported Page Elements
 
