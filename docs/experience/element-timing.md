@@ -50,14 +50,14 @@ When accessing the Element Timing from the left menu of your Experience App you 
 
 ## Element Timing Details
 
-Accessing the details of an annotated web page element is as simple as chosing the interesting name from the Top Element Timings table in the Element Timing Overview.
+Accessing the details of an annotated web page element is as simple as choosing the element of interest from the Top Element Timings table in the Element Timing Overview.
 
-The Element Timing Overview inlcudes timing information for each type of annotated web page element which include:
+The Element Timing Overview includes timing information for each type of annotated web page element:
  
 * Number of loads for a single annotated element.
 * 90th percentile of annotated element render time in milliseconds.
 * 95th percentile of annotated element render time in milliseconds.
-* A histogram of average load and render time of annotated element.
+* A histogram of load and render time of annotated element.
 * A histogram of the number of element loads.
 * A table with the top element loads that include the information when the element load occured, the render time, the load time and the country from which the load was requested. The load occurance information is clickable and takes you to the page load associated with the given element load.
 
