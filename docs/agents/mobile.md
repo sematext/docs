@@ -41,7 +41,7 @@ Explore the common errors associated with your mobile applications and see an ag
 
 Get insights from dedicated Android and iOS reports that include:
 
- - mobile operating system logs histogram and their count
+ - mobile operating system logs count histogram and their count
  - top severities, version, version codes, and version names
  - mobile operating system log events
 
