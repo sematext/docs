@@ -12,7 +12,7 @@ Both libraries have the following in common:
 - metadata with application name and version, OS name and version, and application UUID
 - ability to catch and ship uncaught exceptions
 
-Use Sematext Cloud **Mobile Application Logs** Logs App type to get out of the box reports giving you the most important information regarding your mobile applications.
+Use Sematext Cloud **Mobile Application Logs** App to get out of the box reports with the most important information about your mobile applications.
 
 Get an overview of your mobile apps with information like:
  
