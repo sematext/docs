@@ -42,8 +42,8 @@ Explore the common errors associated with your mobile applications and see an ag
 Get insights from dedicated Android and iOS reports that include:
 
  - mobile operating system logs count histogram and their count
- - top severities, version, version codes, and version names
- - mobile operating system log events
+ - top severities, versions, version codes, and version names
+ - mobile applications log events
 
 <img
   class="content-modal-image"
@@ -56,4 +56,3 @@ Both libraries for shipping mobile application logs are open-source and availabl
 
 - [Sematext for Android Applications](https://github.com/sematext/sematext-logsene-android)
 - [Sematext for iOS Applications](https://github.com/sematext/sematext-logsene-ios)
--
