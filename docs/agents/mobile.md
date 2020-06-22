@@ -39,7 +39,7 @@ Explore the common errors associated with your mobile applications and see an ag
   title="Mobile Logs Errors"
 /> 
 
-Get an insight by looking into the dedicated Android and iOS reports that include:
+Get insights from dedicated Android and iOS reports that include:
 
  - mobile operating system logs histogram and their count
  - top severities, version, version codes, and version names
