@@ -2,7 +2,7 @@ title: Removing stale resources
 
 description:  Removing App Agent containers and networks after uninstalling the Sematext Agent.
 
-In Kubernetes deployments, Sematext Agent will make sure to remove any lingering App Agent containers once the DaemonSet supervising Sematext Agent pods is deleted. Nevertheless, in vanilla Docker or Swarm setups you have to do the cleanup manually after uninstalling the agent.
+In Kubernetes deployments, Sematext Agent will make sure to remove any lingering App Agent containers once the DaemonSet supervising Sematext Agent pod is deleted. Nevertheless, in vanilla Docker or Swarm setups you have to do the cleanup manually after uninstalling the agent.
 
 ### Removing App Agent containers
 
@@ -27,6 +27,3 @@ Now you can successfully delete the network by running:
 ```bash
 sudo docker network rm st-agent-net
 ```
-
-
-
