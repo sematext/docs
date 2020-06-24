@@ -1,15 +1,14 @@
 title: Sematext Autodiscovery for Monitoring
 description: Sematext Autodiscovery Monitoring automatically scans for services that can be monitored using Sematext Agent and, depending on your configuration, automatically sets up monitoring agents. 
 
-## Autodiscovery Monitoring
-
 The centerpiece of our Autodiscovery feature is [Sematext Agent](../agents/sematext-agent). It scans for services that can be monitored by Sematext
 [supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It works in both bare-metal/virtual machine and in container environments. Data about discovered services is displayed under Discovery.
 
 <img class="content-modal-image" alt="Sematext Autodiscovery UI" src="../../images/monitoring/autodiscovery-ui.png" title="Sematext Autodiscovery UI">
 
-
+## Autodiscovery Monitoring
 Autodiscovered services can be monitored in two ways:
+
 - **Manually** - in the case of bare-metal/virtual machine setups, you can use the classic Agent installation instructions. In container environments you can just add `MONITORING_TOKEN` as an environment variable to your container. Sematext Agent will automatically match it to the type of the discovered service and set up a monitoring agent container specifically for that service. If a service requires authentication for monitoring, you will also need to provide credentials, e.g., as environment variables with username or password for monitoring MySQL or as a Kubernetes Secret. Again, just follow the classic monitoring installation instructions in UI to set this up.
 - **Automatically** - In many cases Sematext Agent will be able to start and stop monitoring discovered services without requiring any changes from you and without restarting of services you wish to monitor. As services start, Sematext Agent automatically ensures they are monitored according to the rules you specified. For each discovered service type you can enable or disable automatic monitoring at any point. For example, if Sematext Agent discovered your Elasticsearch cluster and you see it in Discovery UI, you can easily start its monitoring with a single click. No actions are required from you on Elasticsearch nodes. Similarly, if you decide to stop monitoring the cluster, single click will do the trick again. 
 
@@ -17,7 +16,8 @@ Autodiscovered services can be monitored in two ways:
 
 ### Which integrations allow Autodiscovery?
 
-Sematext Agent can automatically discover and set up monitoring agents for the following service types: 
+Sematext Agent can automatically discover and set up monitoring agents for the following service types:
+
 - Cassandra
 - Clickhouse
 - Elasticsearch
@@ -34,6 +34,7 @@ Sematext Agent can automatically discover and set up monitoring agents for the f
 - Zookeeper
 
 Additionally, Sematext Agent will also discover the following services, but at the moment it can't set up the monitoring agent for them:
+
 - Node.js *
 - Couchbase
 - Flink
@@ -41,7 +42,7 @@ Additionally, Sematext Agent will also discover the following services, but at t
 - PostgreSQL
 - RabbitMQ
 
-* For Node.js services it is possible to install a Sematext-supported monitoring agent manually by following the instructions in the UI 
+\* For Node.js services it is possible to install a Sematext-supported monitoring agent manually by following the instructions in the UI 
 
 ### How do I start using Autodiscovery?
 
@@ -62,12 +63,14 @@ The Sematext Agent container gets distributed to every Kubernetes, Docker Swarm,
 In container environments, Sematext Agent will create a monitoring agent if it finds `MONITORING_TOKEN` environment variable or label in your service. Additionally, this is true if you enabled automatic monitoring for specific service types in the UI. In Kubernetes setups `MONITORING_TOKEN` can be placed in the pod annotations.
 
 Example: Steps required to monitor a containerized application, like Elasticsearch, manually: 
+
 1. Visit the Sematext Cloud UI, create a new Elasticsearch App, and open the container env instructions.
 2. Following the instructions in the UI, deploy a Sematext Agent container, either as a standalone container, as Kubernetes DaemonSet, or as global Swarm Service.
 3. Add the Elasticsearch `MONITORING_TOKEN` as a label or environment variable to your Elasticsearch container.
 4. Restart your Elasticsearch container to apply the label/environment variable.
 
-Example: Steps required to monitor a containerized application, like Elasticsearch, automatically: 
+Example: Steps required to monitor a containerized application, like Elasticsearch, automatically:
+
 1. Visit the Discovery UI. Open instructions to install Sematext Agent in a container env.
 2. Following the instructions in the UI, deploy a Sematext Agent container as a standalone container, Kubernetes DaemonSet, or as global Swarm Service.
 3. From the Discovery UI, click on any discovered service and enable automatic monitoring option.
