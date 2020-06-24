@@ -51,7 +51,7 @@ is installed, it will instantly start discovering services that can be monitored
 
 ### How does Sematext Autodiscovery work in bare-metal/virtual machine environments?
 
-It is enough to install sematext-agent rpm/deb package and set up one of your Infra App tokens by following the instructions. This will start Sematext Agent which will
+It is enough to install sematext-agent RPM/DEB package and set up one of your Infra App tokens by following the instructions. This will start Sematext Agent which will
 automatically start scanning for known service types. Separately, it will connect to the Sematext backend to fetch info about any automatic monitoring rules you may have defined.
 
 In bare-metal/virtual machine environments, Sematext Agent will automatically start monitoring discovered services only if configured to do so via the Discovery screen.
@@ -91,6 +91,7 @@ In all environments this makes it possible to use different monitoring tokens, a
 
 ### Additional info
 
-- Defining monitoring agent [credential sets](../agents/sematext-agent/autodisco/credential-sets) in Kubernetes.
-- Providing [MySQL JDBC driver](../agents/sematext-agent/autodisco/mysql-driver) in container environments.
-- [Removing stale](../agents/sematext-agent/autodisco/removing-stale-resources) Sematext Agent resources after deinstallation.
+- Defining monitoring agent [credential sets](../agents/sematext-agent/autodisco/credential-sets) in Kubernetes
+- Providing [MySQL JDBC driver](../agents/sematext-agent/autodisco/mysql-driver) in container environments
+- [JMX Attaching](../agents/sematext-agent/jmx-attaching/)
+- [Removing stale](../agents/sematext-agent/autodisco/removing-stale-resources) Sematext Agent resources after deinstallation
