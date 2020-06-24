@@ -21,17 +21,9 @@ Sematext Agent Auto-Discovery solves the issues above by the automatic discovery
 - Sematext Agent connects to container networks and Kubernetes pods for monitoring
 - Application containers can be tagged with the MONITORING_TOKEN, and Sematext Agent uses the MONITORING_TOKEN label or environment variable to ship metrics to the right Monitoring App in Sematext Cloud (or Sematext Enterprise).
 
-## How does Sematext Agent Autodiscovery work?
+## How does Sematext Autodiscovery work?
 
-The Sematext Agent container gets distributed to every Kubernetes, Docker Swarm or Docker Enterprise node. Then it starts watching container events and compares the image name of started containers with a list of application images defined in a configuration template called `autoDiscovery.yml`. Then Sematext Agent joins the container network and configures Sematext Agent for the right IP-address and port and other settings according to the configuration template.
-
-Monitoring with Sematext Cloud requires the MONITORING_TOKEN for each application type. The MONITORING_TOKEN is read from the application container environment or container labels.
-
-Example: To monitor a containerized application like Elasticsearch with Sematext Agent Autodiscovery we need only 3 steps:
-
-1) Create a monitoring app for Elasticsearch in Sematext UI.
-2) Deploy Sematext Agent container as Kubernetes DaemonSet or global Swarm Service. Instructions are displayed in Sematext UI.
-3) Add the displayed MONITORING_TOKEN to the environment of your Elasticsearch container.
+See [automatic autodiscovery monitoring](../monitoring/autodiscovery) for details.
 
 ## Customize autoDiscovery.yml
 

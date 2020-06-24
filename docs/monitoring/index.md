@@ -54,6 +54,12 @@ Read more in the [Reports and Components](./reports-and-components) guide.
 
 ![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
 
+
+### Quickly start monitoring with Autodiscovery
+
+The only thing you'll have to install is [Sematext Agent](../agents/sematext-agent). Then you can enable/disable monitoring of each discovered service type from the user interface. To learn more visit [Service Autodiscovery](./autodiscovery). Of course, if you wish to have full control over what is monitored and avoid configuring things in the user interface, you can still do that. The Sematext Cloud UI will show you manual monitoring installation instructions as well.
+ 
+
 ### Additional Features
 
 To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each host/server/container in the form of tags.
