@@ -6,14 +6,14 @@ description: Sematext Autodiscovery Monitoring automatically scans for services 
 The centerpiece of our Autodiscovery feature is [Sematext Agent](../agents/sematext-agent). It scans for services that can be monitored by Sematext
 [supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It works in both bare-metal/virtual machine and in container environments. Data about discovered services is displayed under Discovery.
 
-<img class="content-modal-image" alt="Sematext Autodiscovery UI" src="../images/monitoring/autodiscovery-ui.png" title="Sematext Autodiscovery UI">
+<img class="content-modal-image" alt="Sematext Autodiscovery UI" src="../../images/monitoring/autodiscovery-ui.png" title="Sematext Autodiscovery UI">
 
 
 Autodiscovered services can be monitored in two ways:
 - **Manually** - in the case of bare-metal/virtual machine setups, you can use the classic Agent installation instructions. In container environments you can just add `MONITORING_TOKEN` as an environment variable to your container. Sematext Agent will automatically match it to the type of the discovered service and set up a monitoring agent container specifically for that service. If a service requires authentication for monitoring, you will also need to provide credentials, e.g., as environment variables with username or password for monitoring MySQL or as a Kubernetes Secret. Again, just follow the classic monitoring installation instructions in UI to set this up.
 - **Automatically** - In many cases Sematext Agent will be able to start and stop monitoring discovered services without requiring any changes from you and without restarting of services you wish to monitor. As services start, Sematext Agent automatically ensures they are monitored according to the rules you specified. For each discovered service type you can enable or disable automatic monitoring at any point. For example, if Sematext Agent discovered your Elasticsearch cluster and you see it in Discovery UI, you can easily start its monitoring with a single click. No actions are required from you on Elasticsearch nodes. Similarly, if you decide to stop monitoring the cluster, single click will do the trick again. 
 
-<img class="content-modal-image" alt="Enabling Automatic Autodiscovery Monitoring" src="../images/monitoring/automatic-autodiscovery-monitoring.png" title="Enabling Automatic Autodiscovery Monitoring">
+<img class="content-modal-image" alt="Enabling Automatic Autodiscovery Monitoring" src="../../images/monitoring/automatic-autodiscovery-monitoring.png" title="Enabling Automatic Autodiscovery Monitoring">
 
 ### Which integrations allow Autodiscovery?
 
