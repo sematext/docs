@@ -74,6 +74,10 @@ Example: Steps required to monitor a containerized application, like Elasticsear
 
 As soon as Sematext Agent discovers the Elasticsearch container having a `MONITORING_TOKEN` set, or the automatic monitoring option enabled, it will set up the monitoring agent container which will start to collect the Elasticsearch metrics. 
 
+### Which Sematext Agent version do I need?
+
+For rpm/deb packages you need 3.2.0 or newer. For container version you need 1.0.0 or newer. 
+
 ### Can I have a mix of manually and automatically monitored services?
 
 Yes. In case of bare-metal/virtual machine environments, follow the classic installation instructions to set up a "manually" monitored service agent. Sematext Agent will recognize it as being manually set up and won't apply any of the automatic monitoring rules. Automatic monitoring can be specified on the service type level in the Discovery UI. It will be applied for any instance of that service except those that already have a manually configured agent.
