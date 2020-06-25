@@ -5,7 +5,7 @@ When you assign a `MONITORING_TOKEN` to a service running in the JVM via an envi
 monitored right away by checking if JMX ports are already exposed. If it can, Sematext Agent will start monitoring it. However, if it can't, Sematext Agent
 will try to add a special and secure agent for the monitored process, whose sole purpose is exposing JMX. Exposed JMX is protected by authentication based on a temporary username and password known only to Sematext Agent.
 
-If JMX is already exposed, but is protected with some authentication mechanism whose credentials are not know to Sematext Agent, the agent will try to expose another JMX.
+If JMX is already exposed, but is protected with some authentication mechanism whose credentials are not know to Sematext Agent, the agent will try to expose another JMX connector.
 
 There are cases where automatic attaching may not be desirable:
 
