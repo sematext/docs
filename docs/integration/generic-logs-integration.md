@@ -12,7 +12,7 @@ The Elasticsearch API lets you:
 
 ### Syslog Protocols 
 
-We accept <a href="../logs/syslog/" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
+We accept <a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=syslogprotocols" target="_blank" rel="noopener">Syslog</a> messages using any log shipper and any Syslog library, as long as they either contain a valid token or the source IP is authorized.
 
 ### Journald 
 
@@ -35,46 +35,48 @@ We accept <a href="../journald-integration" target="_blank" rel="noopener">Journ
 ### Programming Languages
 
 <ul>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/dotnet ">.Net</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/golang">GoLang</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/java">Java</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/nodejs">Node.js</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/javascript">Javascript</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/perl">Perl</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/php">PHP</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/python">Python</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/ruby">Ruby</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=dotnet">.Net</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=golang">GoLang</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=java">Java</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=nodejs">Node.js</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=javascript">Javascript</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=perl">Perl</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=php">PHP</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=python">Python</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=ruby">Ruby</a></li>
 </ul>
 
 ### Operating Systems 
 
 <ul>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/windows">Windows</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/linux">Linux</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/osx">macOS</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/rancheros">Rancher</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=windows">Windows</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=linux">Linux</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=osx">Mac OS</a></li>
 </ul>
 
 ### Containers 
 
 <ul>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/docker">Docker</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/kubernetes">Kubernetes</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=docker">Docker</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=kubernetes">Kubernetes</a></li>
  	<li><a href="../kubernetes-audit-integration">Kubernetes Audit</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/mesosmarathon">Mesos Marathon</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=kubernetes-containerd">Kubernetes Containerd</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=kubernetes-crio">Kubernetes CRI-O</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=mesosmarathon">Mesos Marathon</a></li>
 </ul>
 
 ### Cloud IaaS / PaaS
 
 <ul>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awss3">AWS S3</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awscloudtrail">AWS CloudTrail</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awscloudwatch">AWS CloudWatch</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/awsvpsflow">AWS VPC Flow Logs</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/heroku">Heroku</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/cloudfoundry">Cloud Foundry</a></li>
- 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/gae">Google App Engine</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=awss3">AWS S3</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=awscloudtrail">AWS CloudTrail</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=awscloudwatch">AWS CloudWatch</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=awsvpsflow">AWS VPC Flow Logs</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=heroku">Heroku</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=cloudfoundry">Cloud Foundry</a></li>
+ 	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=gae">Google App Engine</a></li>
  	<li><a href="../github-webhook-events-integration">GitHub Webhook Events</a></li>
+ 	<li><a href="../vercel-logs-integration">Vercel</a></li>
 </ul>
 
 ### iOS 
@@ -106,3 +108,14 @@ href="https://github.com/sematext/logsene-aws-lambda-cloudwatch"
 target="_blank" rel="noopener">another AWS Lambda function</a>. If
 logs are VPC flowlogs, the Lambda function will also parse them and
 add geoIP information on the source IP addresses.
+
+### Centralized Logging for AWS Lambda
+
+If you want to automatically subscribe to AWS Lambda log streams you can use
+this <a href="https://github.com/sematext/cloudwatch-sematext-aws-lambda-log-shipper" target="_blank" rel="noopener">CloudFormation stack</a>.
+
+It'll let you run a single command and set up log group subscriptions,
+funnel all CloudWatch logs to Kinesis, and use a dedicated Lambda function
+to ship these logs to Sematext.
+
+Read the [full tutorial on our blog](https://sematext.com/blog/centralized-aws-lambda-logs-kinesis-serverless/)!
