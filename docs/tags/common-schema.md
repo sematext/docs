@@ -26,6 +26,8 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | trace.id | Building block of a trace in distributed tracing |
 | geo.location | A latitude and longitude defining the location associated with the log line |
 | geo.city_name | The city associated with the log line |
+| geo.region | The region associated with the log line |
+| geo.region_iso_code | The region ISO code assiciated with the region in the log line |
 | geo.country_name | The country associated with the log line |
 | geo.country_iso_code | The ISO code associated with the country in the log line |
 | geo.continent_name | The continent associated with the log line |
