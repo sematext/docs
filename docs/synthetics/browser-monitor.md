@@ -97,13 +97,13 @@ For every run, the browser monitor collects all the resources fetched during the
 
 Each browser monitor run is executed in an isolated environment using the Google Chrome browser in a Node.js environment. Each run is allocated 1024MB of memory. Versions of various dependencies are:
 
-* **Node.js** - 10.x
-* **Google Chrome** - 77.0.3844
-* **Puppeteer** - 1.19.0
+* **Node.js** - 12.x
+* **Google Chrome** - 83.0.4103.0
+* **Puppeteer** - 3.1.0
 
 Default runtime configuration values are:
 
 * Chrome browser environment - Desktop
 * Resolution - `1920x1080`
-* Navigation timeout - 20 seconds
+* Default Navigation timeout - 20 seconds
 * Timeout for script execution - 1 minute

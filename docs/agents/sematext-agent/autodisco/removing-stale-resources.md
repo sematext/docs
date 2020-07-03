@@ -27,6 +27,3 @@ Now you can successfully delete the network by running:
 ```bash
 sudo docker network rm st-agent-net
 ```
-
-
-

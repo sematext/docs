@@ -45,6 +45,7 @@ pages:
     - Monitoring:
       - Overview: monitoring/index.md
       - Quick Start: monitoring/quick-start.md
+      - Autodiscovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md
       - Reports & Components: monitoring/reports-and-components.md
       - Infrastructure: monitoring/infrastructure.md
@@ -121,6 +122,7 @@ pages:
         - Kubernetes Audit: integration/kubernetes-audit-integration.md
         - GitHub Webhook Events: integration/github-webhook-events-integration.md
         - Journald: integration/journald-integration.md
+        - Vercel: integration/vercel-logs-integration.md
         - Mobile Apps Logs: integration/mobile-apps-logs.md
       - Notification Hooks:
         - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
@@ -197,7 +199,7 @@ pages:
         - Packages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
-        - Auto Discovery:
+        - Autodiscovery:
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
