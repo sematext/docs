@@ -1,4 +1,5 @@
 title: Integrations
+
 descriptions: Sematext integrations with ready to use monitoring agents and log shippers for infrastructure and container monitoring, log management and analytics, alerting, chatops, and more. Our Cloud and on-premises platform exposes the Elasticsearch API and syslog receivers with built in anomaly detection, data analysis and visualization tools and services
 
 Sematext Cloud and on-premises IT monitoring system provides over 40 built-in infrastructure integrations used to monitor across all your systems, apps, and services.
