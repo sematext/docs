@@ -122,7 +122,8 @@ You don't need to change anything as all the config is in `logagent.conf`, just 
 kubectl create -f ibm-cloud-logagent-with-config-ds.yml
 ```
 
-When you want to edit the config, change the `logagent.conf`, recreate the ConfigMap, restart the Logagent pod to grab the new ConfigMap and you're done!
+**When you want to edit the config, change the `logagent.conf`, recreate the ConfigMap, restart the Logagent pod to grab the new ConfigMap and you're done!**
+
 Continue reading below to see how to configure more advanced settings.
 
 ### Drop Noisy Container Logs 
@@ -247,3 +248,6 @@ This config will route all audit logs to your Kubernetes Audit Logs App and the 
 _Note: Here's how you find the token after you create a Kubernetes Audit Logs App._
 ![](https://sematext.com/wp-content/uploads/2020/07/apps.sematext.com_ui_integrations_apps_33306_integrations_overview_activeSectionkubernetes-audit-dynamic.png)
 
+## Need more help?
+
+This was a brief overview of how to configure logging for IBM Cloud Kubernetes Service. If you have any more questions, feel free to reach out through the live chat or [Twitter @sematext](https://twitter.com/sematext)!
