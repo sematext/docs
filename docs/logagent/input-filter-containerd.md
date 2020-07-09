@@ -3,7 +3,7 @@ description: Logagent features modular logging architecture framework where each
 
 ## Input Filter: Kubernetes cri-o / containerd  
 
-Parsing cri-o containerd log format. Use the file input plugin to read log files. 
+Parsing cri-o containerd log format. Use the file input plugin to read log files. See the [IBM Cloud Kuberentes Logs integration](../integration/ibm-cloud-kubernetes-logs/) for a more detailed explanation.
 
 ## Configuration 
 
