@@ -3,13 +3,13 @@ description: Sematext IBM Cloud Kubernetes Logs integration is configured by run
 
 With this integration you can:
 
-- Forward all container logs
+- Forward all Containerd container logs
 - Use log globs to choose which containers to log
 - Drop noisy logs with `dropEvents`
 - Forward logs to different Apps
 - Enable Kubernetes audit logs 
 
-IBM Cloud Kubernetes uses cointainerd as the container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. Instead, logs are collected from containerd log files, which requires access to the relevant directories.
+IBM Cloud Kubernetes uses Cointainerd as the container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. Instead, logs are collected from containerd log files, which requires access to the relevant directories.
 
 The Logagent [input-filter for Containerd](../logagent/input-filter-containerd/) supports:
 
@@ -59,7 +59,7 @@ Or, only include logs from the `default` namespace:
 ```yaml
 env:
   - name: LOG_GLOB
-    value: "/var/log/containers/*default*.log);/var/log/*.log"
+    value: "/var/log/containers/*default*.log;/var/log/*.log"
 ```
 
 This is a quick way of including/excluding logs from containers.
@@ -125,12 +125,12 @@ kubectl create -f ibm-cloud-logagent-with-config-ds.yml
 When you want to edit the config, change the `logagent.conf`, recreate the ConfigMap, restart the Logagent pod to grab the new ConfigMap and you're done!
 Continue reading below to see how to configure more advanced settings.
 
-### Drop noisy Container Logs 
+### Drop Noisy Container Logs 
 
 Edit the `logagent.conf` to add the [drop-events](../logagent/output-filter-dropevents/) outputFilter.
 
-```yaml
-# Global options
+```yaml hl_lines="13 14 15 16 17 18 19"
+# logagent.conf
 options:
   debug: false
 
@@ -167,8 +167,8 @@ The sample above will include all log lines that match `critical|auth|error|fail
 To enable log routing you edit the output plugin to use multiple indices.
 Under the token value you need to add a regex for the log file you want to match.
 
-```yaml
-# Global options
+```yaml hl_lines="24 25 26 27 28"
+# logagent.conf
 options:
   debug: true
 
@@ -201,6 +201,49 @@ output:
 
 ### Enable Kubernetes Audit Logs
 
-hu ha...
+Create a Kubernetes Audit Logs App and a Generic Logs App.
 
+![](https://sematext.com/wp-content/uploads/2020/07/apps.sematext.com_ui_logs-create-2.png)
+
+Forwarding Kubernetes audit logs is similar to log routing. The prerequisite is to [follow steps 1-9 in the official IBM docs here](https://cloud.ibm.com/docs/containers?topic=containers-health#webhook_logdna).
+
+This will provision an audit webhook that will forward logs to a log file. With Logagent you can tail this file and forward logs to a Kubernetes Audit Logs App in Sematext.
+
+in your `logagent.conf`, under the `indices` section, where you specify the token value for your Kubernetes Audit Logs App, you need to add a regex for the name of the audit webhook you created in the steps above. The name of this Pod is `ibm-kube-audit`.
+
+```yaml hl_lines="26 28"
+# logagent.conf
+options:
+  debug: true
+
+input: 
+  files: 
+    - /var/log/*.log
+    - /var/log/containers/!(st-logagent*.log) # exclude Logagent's own logs
+
+inputFilter:
+  - module: input-filter-k8s-containerd
+
+outputFilter:
+  dropEventsFilter:
+    module: drop-events
+    filters:
+      message:
+        exclude: !!js/regexp /status/i
+
+output:
+  elasticsearch:
+    module: elasticsearch
+    url: https://logsene-receiver.sematext.com
+    indices: 
+      b0e9f481-xxxx-xxxx-xxxx-3ff20227d3d3: # generic logs app
+        - ^(?!.*(ibm-kube-audit).*).*\.log
+      9365eb2f-xxxx-xxxx-xxxx-5a833072353f: # kubernetes audit logs app
+        - .*ibm-kube-audit.*\.log
+```
+
+This config will route all audit logs to your Kubernetes Audit Logs App and the other logs to your other Generic Logs App.
+
+_Note: Here's how you find the token after you create a Kubernetes Audit Logs App._
+![](https://sematext.com/wp-content/uploads/2020/07/apps.sematext.com_ui_integrations_apps_33306_integrations_overview_activeSectionkubernetes-audit-dynamic.png)
 
