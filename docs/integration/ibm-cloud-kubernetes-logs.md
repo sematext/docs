@@ -158,7 +158,9 @@ output:
 
 ```
 
-In the `filters.message.ex
+In the `filters` section you can pick a field to apply regex mathing to.
+If there's a match you can either include or exclude that particular log line.
+The sample above will include all log lines that match `critical|auth|error|failed` but exclude all that match `status`.
 
 ### Forward Container Logs to Multiple Apps with Log Routing
 
