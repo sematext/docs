@@ -164,7 +164,40 @@ The sample above will include all log lines that match `critical|auth|error|fail
 
 ### Forward Container Logs to Multiple Apps with Log Routing
 
-ha hu...
+To enable log routing you edit the output plugin to use multiple indices.
+Under the token value you need to add a regex for the log file you want to match.
+
+```yaml
+# Global options
+options:
+  debug: true
+
+input: 
+  files: 
+    - /var/log/*.log
+    - /var/log/containers/*.log
+
+inputFilter:
+  - module: input-filter-k8s-containerd
+
+outputFilter:
+  dropEventsFilter:
+    module: drop-events
+    filters:
+      message:
+        exclude: !!js/regexp /status/i
+
+output:
+  elasticsearch:
+    module: elasticsearch
+    url: https://logsene-receiver.sematext.com
+    indices: 
+      b0e9f481-xxxx-xxxx-xxxx-3ff20227d3d3: # All logs except kube-system
+        - ^(?!.*(kube-system).*).*\.log
+      9365eb2f-xxxx-xxxx-xxxx-5a833072353f: # Only kube-system logs
+        - .*kube-system.*\.log
+
+```
 
 ### Enable Kubernetes Audit Logs
 
