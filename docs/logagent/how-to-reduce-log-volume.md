@@ -86,12 +86,12 @@ inputFilter:
 
 __Output Filters__ apply after parsing logs. At this stage you can use any parsed field or custom logic of field combinations. Dropping events is possible before Logagent transmits data to any output destination.
 
-The drop-events-filter allows you to specify `include` and `exclude` criteria as a regular expression for each field name. 
+The drop-events allows you to specify `include` and `exclude` criteria as a regular expression for each field name. 
 
 ```
 outputFilter:
   dropEventsFilter:
-    module: drop-events-filter
+    module: drop-events
     debug: false
     filters:
       severity:
