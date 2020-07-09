@@ -37,7 +37,7 @@ outputFilter:
       message: 
         # don't drop logs with 
         # messages containing the words critical,error,auth or failed 
-        include: !js/regexp /critical|auth|error|failed/
+        include: !!js/regexp /critical|auth|error|failed/
 
 ```
 
