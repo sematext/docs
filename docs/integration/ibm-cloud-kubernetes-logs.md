@@ -1,22 +1,22 @@
 title: IBM Cloud Kubernetes Logs Integration
-description: Sematext IBM Cloud Kubernetes Logs integration is configured by running Logagent as a Daemonset in your cluster.
+description: Sematext IBM Cloud Kubernetes Logs integration is configured by running Logagent as a DaemonSet in your cluster.
 
 With this integration you can:
 
 - Forward all Containerd container logs
-- Use log globs to choose which containers to log
+- Use log globs to choose which container log files to tail
 - Drop noisy logs with `dropEvents`
 - Forward logs to different Apps
 - Enable Kubernetes audit logs 
 
-IBM Cloud Kubernetes uses Cointainerd as the container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. Instead, logs are collected from containerd log files, which requires access to the relevant directories.
+IBM Cloud Kubernetes uses Cointainerd as the container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. Instead, logs are collected from Containerd log files, which requires access to the relevant directories.
 
 The Logagent [input-filter for Containerd](../logagent/input-filter-containerd/) supports:
 
 * Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs`
 * Enrichment of logs with podName, namespace, containerName, containerId
-* Joining long log lines over 4KB into one log line
-* Parsing containerd log headers (timestamp, stream, flags)
+* Joining long log events over 4KB into one log event
+* Parsing Containerd log headers (timestamp, stream, flags)
 * Parsing message content with Logagent's parser library
 
 
@@ -45,7 +45,7 @@ kubectl create -f ibm-cloud-logagent-ds.yml
 ### Use `LOG_GLOB` to Filter Which Container Logs to Forward
 
 Log globs make it easy to use wildcards to filter in/out which log files to tail.
-In the `spec.env.LOG_GLOB` env var you can set values to not include logs from certain containers.
+In the `spec.env.LOG_GLOB` env var you can set values not to include logs from certain containers.
 To read more about log globs, [check this out](https://www.npmjs.com/package/glob).
 
 Here's how you can exclude all logs from the `kube-system` namespace:
@@ -76,7 +76,7 @@ With this config file you have more control over the settings, including:
 
 ### 1. Create a `logagent.conf` file
 
-The logagent.conf is the main config file for Logagent.
+The `logagent.conf` is the main config file for Logagent.
 
 ```yaml
 # logagent.conf
@@ -94,15 +94,17 @@ inputFilter:
 output:
   elasticsearch:
     module: elasticsearch
-    url: https://logsene-receiver.sematext.com
+    url: https://logsene-receiver.sematext.com # for US
+    # url: https://logsene-receiver.eu.sematext.com # for EU
     index: YOUR_SEMATEXT_LOGS_TOKEN
 ```
 
 This particular config above will work the same as using the default setup with env vars.
+You may need to adjust the `url` to the Sematext region you are using.
 
 ### 2. Add the `logagent.conf` as a `ConfigMap`
 
-Create the ConfigMap from the `logagent.conf` file. Run this command from the dir where you have the `logagent.conf`:
+Create the `ConfigMap` from the `logagent.conf` file. Run this command from the dir where you have the `logagent.conf`:
 
 ```bash
 kubectl create configmap logagent-config --from-file=./logagent.conf
@@ -122,7 +124,7 @@ You don't need to change anything as all the config is in `logagent.conf`, just 
 kubectl create -f ibm-cloud-logagent-with-config-ds.yml
 ```
 
-**When you want to edit the config, change the `logagent.conf`, recreate the ConfigMap, restart the Logagent pod to grab the new ConfigMap and you're done!**
+**When you want to edit the config, change the `logagent.conf`, recreate the `ConfigMap`, restart the Logagent `Pod` to grab the new `ConfigMap` and you're done!**
 
 Continue reading below to see how to configure more advanced settings.
 
@@ -159,9 +161,9 @@ output:
 
 ```
 
-In the `filters` section you can pick a field to apply regex mathing to.
+In the `filters` section you can pick a field to apply regex matching to.
 If there's a match you can either include or exclude that particular log line.
-The sample above will include all log lines that match `critical|auth|error|failed` but exclude all that match `status`.
+The example above will include all log lines that match `critical|auth|error|failed` but exclude all that match `status`.
 
 ### Forward Container Logs to Multiple Apps with Log Routing
 
@@ -200,6 +202,8 @@ output:
 
 ```
 
+In place of `b0e9f481-xxxx-xxxx-xxxx-3ff20227d3d3` and `9365eb2f-xxxx-xxxx-xxxx-5a833072353f` in the example above you would use your own Sematext Apps logs tokens.
+
 ### Enable Kubernetes Audit Logs
 
 Create a Kubernetes Audit Logs App and a Generic Logs App.
@@ -210,7 +214,7 @@ Forwarding Kubernetes audit logs is similar to log routing. The prerequisite is 
 
 This will provision an audit webhook that will forward logs to a log file. With Logagent you can tail this file and forward logs to a Kubernetes Audit Logs App in Sematext.
 
-in your `logagent.conf`, under the `indices` section, where you specify the token value for your Kubernetes Audit Logs App, you need to add a regex for the name of the audit webhook you created in the steps above. The name of this Pod is `ibm-kube-audit`.
+In your `logagent.conf`, under the `indices` section, where you specify the token value for your Kubernetes Audit Logs App, you need to add a regex for the name of the audit webhook you created in the steps above. The name of this `Pod` is `ibm-kube-audit`.
 
 ```yaml hl_lines="26 28"
 # logagent.conf
