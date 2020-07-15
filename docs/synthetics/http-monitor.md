@@ -56,10 +56,10 @@ Apart from error, response header, cookies, and body, the following metrics are 
 
 | Name  | Label  | Description  | Unit  |
 |---|---|---|---|
-| synthetics.time.response  | Response Time  | Total time taken | ms  |
-| synthetics.http.time.dns  | DNS Time  | DNS resolution time | ms |
-| synthetics.http.time.connect  |  Connect Time | Socket connection time  | ms |
-| synthetics.http.time.tls  | TLS Time  |  TLS handshake time  | ms |
+| synthetics.time.response  | Response time  | Total time taken for the complete request & response | ms  |
+| synthetics.http.time.dns  | DNS lookup time  | DNS resolution time | ms |
+| synthetics.http.time.connect  |  Socket connect time | Socket connection time  | ms |
+| synthetics.http.time.tls  | TLS handshake time  |  TLS handshake time  | ms |
 | synthetics.http.time.firstbyte  | Time to first byte (TTFB)  | Time taken to receive the first response byte from the server. Also called server or wait time | ms  |
 | synthetics.http.time.download  |  Download Time | Time taken to download the response body  | ms  |
 | synthetics.http.response.size  |  Response Body Size | Size of the response body  | bytes  |

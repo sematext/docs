@@ -15,6 +15,8 @@ The browser monitor executes the configured script in a Chrome browser. It recor
 
 The browser monitor scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page match your requirements. If any assertion fails, the system declares the run as a failure. Monitor run logs, shown in Sematext Run details page, contain failure details.
 
+Checkout [awesome-puppeteer](https://github.com/transitive-bullshit/awesome-puppeteer) GitHub repository for more examples and tips for writing puppeteer scripts.
+
 ## Conditions
 
 Condition types supported in the browser monitor are:
@@ -49,13 +51,16 @@ The browser monitor collects the below page load (navigation) metrics for every 
 | synthetics.browser.time.backend | Backend time |  Time taken for the network and the server to generate and start sending the HTML | | ms |
 | synthetics.browser.time.pageload | Page load time | Time taken for the page to load, from initiation of the page load (e.g., click on a page link) to load completion in the browser | ms |
 | synthetics.browser.time.dns | DNS time | DNS resolution time for the URL of the page | ms |
-| synthetics.browser.time.connection | Connection time | Time taken to connect to server | ms |
-| synthetics.browser.time.response | Server response time | Time taken for the server to send the response | ms |
-| synthetics.browser.time.download | Page download time | Time taken to download the page contents | ms |
+| synthetics.browser.time.connection | Socket connect time | Time taken to connect to server | ms |
+| synthetics.browser.time.response | Time to first byte | Time taken for the server to send the response | ms |
+| synthetics.browser.time.download | Download time | Time taken to download the page contents | ms |
 | synthetics.browser.time.dom.interactive | DOM interactive time | Time taken by the browser to parse the document, including the network time from the user's location to your server | ms |
 | synthetics.browser.time.dom.contentload | DOM content load time | Time taken by the browser to parse the document and execute deferred and parser-inserted scripts including the network time from the user's location to your server | ms |
-| synthetics.browser.time.paint.first | First paint time | The time from navigation to the time when the first paint happens on the screen | ms |
-| synthetics.browser.time.paint.firstcontentful | First contentful paint time |  The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
+| synthetics.browser.time.paint.first | First Paint (FP) | The time from navigation to the time when the first paint happens on the screen | ms |
+| synthetics.browser.time.paint.firstcontentful | First Contentful Paint (FCP) |  The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
+| synthetics.browser.time.paint.largestcontentful | Largest Contentful Paint (LCP) |  The time for largest content element to be 
+visible in the viewport. | ms |
+| synthetics.browser.cumulativelayoutshift | Cumulative Layout Shift (CLS) |  The sum total of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page ||
 
 ### Resource Metrics
 
@@ -95,7 +100,7 @@ For every run, the browser monitor collects all the resources fetched during the
 
 ## Run environment
 
-Each browser monitor run is executed in an isolated environment using the Google Chrome browser in a Node.js environment. Each run is allocated 1024MB of memory. Versions of various dependencies are:
+Each browser monitor run is executed in an isolated environment using the Google Chrome browser in a Node.js environment. Every run is executed a fresh instance of the browser without any cache or cookies. Versions of various dependencies are:
 
 * **Node.js** - 12.x
 * **Google Chrome** - 83.0.4103.0
@@ -107,3 +112,6 @@ Default runtime configuration values are:
 * Resolution - `1920x1080`
 * Default Navigation timeout - 20 seconds
 * Timeout for script execution - 1 minute
+* Memory - 2048 MB
+* CPU - 1 vCPU
+* Network - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
