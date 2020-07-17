@@ -100,7 +100,7 @@ For every run, the browser monitor collects all the resources fetched during the
 
 ## Run environment
 
-Each browser monitor run is executed in an isolated environment using the Google Chrome browser in a Node.js environment. Every run is executed a fresh instance of the browser without any cache or cookies. Versions of various dependencies are:
+Each browser monitor run is executed in an isolated environment using a fresh instance of headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
 
 * **Node.js** - 12.x
 * **Google Chrome** - 83.0.4103.0
