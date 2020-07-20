@@ -1,5 +1,5 @@
 title: Sematext Dashboards
-description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system. Dashboards are a powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events.
+description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system. Dashboards are a powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events.
 
 Dashboards are your central location where you put everything together. Logs, application performance metrics, infrastructure inventory and processes, cluster data with Docker and Kubernetes metrics, and events that give you insight into what is happening with your system in real-time. Everything in one place. 
 
