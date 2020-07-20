@@ -18,13 +18,10 @@ You could control when the alert should be triggered based on the consecutive ru
 
 ## Metric Alerts
 
-Apart of the auto-created Synthetics alerts, you could create custom alert on any of the Synthetics metrics and get notified when they are triggered. This could be used to set performance budgets for any of the metrics like page size, resource count, etc. You could create a threshold or anomaly alerts. These alert could be created directly from Synthetics charts in the monitor overview page or from custom charts for Synthetics metrics in [dashboard](/dashboards). You can select the metric to create the alert on by clicking the bell icon when you hover over the chart.
+Apart of the auto-created Synthetics alerts, you could create custom alert on any of the Synthetics metrics and get notified when they are triggered. This could be used to set performance budgets for any of the metrics like page size, resource count, etc. You could create a threshold or anomaly alerts. These alert could be created directly from Synthetics charts in the monitor overview page or from custom charts for Synthetics metrics in [dashboard](/dashboards). You can select the metric to create the alert rule on by clicking the bell icon when you hover over the chart.
 
-### Create Metric Alert from Synthetics charts
+![Create Metric Alert from Synthetics charts](../images/synthetics/create-synthetics-metric-alert.png)
 
-![Create Metric Alert from Synthetics charts](../images/synthetics/create-synthetics-metric-alert-1.png)
+This opens Create Alert Rule dialog, where you can set up a threshold or anomaly alert for the selected metric.
 
-### Create Metric Alert from dashboard custom charts
-
-![Create Metric Alert from Custom charts](../images/synthetics/create-synthetics-metric-alert-2.png)
-
+![Create Metric Alert Rule](../images/synthetics/create-metric-alert-rule.png)
