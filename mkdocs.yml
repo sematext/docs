@@ -78,7 +78,12 @@ pages:
     - Synthetics:
       - Overview: synthetics/index.md
       - HTTP Monitor: synthetics/http-monitor.md
+        - Run Details: synthetics/http-run-details.md
       - Browser Monitor: synthetics/browser-monitor.md
+        - Web Vitals: synthetics/web-vitals.md
+        - Resources: synthetics/web-vitals.md
+        - Run Details: synthetics/browser-run-details.md
+      - Alerts: synthetics/alerts.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
