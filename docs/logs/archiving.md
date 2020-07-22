@@ -1,6 +1,27 @@
 title: Log Archiving
 description: Archiving logs to an S3-compatible object store
 
+<div style="padding-top:40px;display:grid;grid-template-columns:150px 150px 150px 150px;grid-template-rows:100px 100px;">
+  <a href="https://aws.amazon.com/s3" target="_blank" title="Amazon AWS S3">
+    <img src="../../images/logs/archiving/aws-logo.png" style="height:80px;width:134px;margin-top:auto;">
+  </a>
+  <a href="https://www.digitalocean.com/products/spaces" target="_blank">
+    <img src="../../images/logs/archiving/digital-ocean-logo.png" style="height:80px;width:80px;margin-top:auto;">
+  </a>
+  <a href="https://www.ibm.com/cloud/object-storage" target="_blank">
+    <img src="../../images/logs/archiving/ibm-logo.png" style="height:80px;width:90px;margin-top:auto;">
+  </a>
+  <a href="https://azure.microsoft.com/services/storage" target="_blank">
+    <img src="../../images/logs/archiving/azure-logo.png" style="height:80px;width:104px;margin-top:auto;">
+  </a>
+  <a href="https://cloud.google.com/storage" target="_blank" style="grid-column-start:2">
+    <img src="../../images/logs/archiving/google-logo.png" style="height:80px;width:99px;margin-top:auto;">
+  </a>
+  <a href="https://min.io" target="_blank" style="align-self:center;">
+    <img src="../../images/logs/archiving/minio-logo.png" style="height:30px;width:150px;margin-top:auto;">
+  </a>
+</div>
+
 You can configure a Logs App to forward all the logs it receives
 to an S3-compatible object store.
 
