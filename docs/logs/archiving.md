@@ -27,9 +27,9 @@ to an S3-compatible object store.
 
 ### How do I configure archiving for my Logs App?
 
-In Sematext web app, go to `Integrations > Apps` view
-and choose `Configure S3` using row context menu (*three-dots* icon)
-of the app whose logs you want to ship to S3:
+In Sematext Cloud, go to `Integrations > Apps` view
+and choose `Configure S3` using the row context menu (*three-dots* icon)
+of the App whose logs you want to ship to S3:
 
 For Amazon S3, all you have to provide are
 [credentials](#how-to-obtain-credentials-from-aws) and a bucket name:
@@ -44,19 +44,18 @@ this would be your Minio public URL.
 
 <img src="../../images/logs/archiving/non-aws-s3.png" style="width:490px;height:477px;">
 
-Paste `Access key ID` and `Secret access key` to the corresponding
+Paste `Access key ID` and `Secret access key` in the corresponding
 fields.
 
 Enter `Bucket name` (just the simple name, not fully qualified ARN) and
 choose `Compression` (read on for more details about compression) and
 confirm with `Verify and save`.
 
-At this point, Logs App is going to check whether the information is
+At this point, your Logs App is going to check whether the information is
 valid using the AWS S3 API.
 
 After the check is done you'll see a feedback message confirming
-information validity or an error
-message.
+information validity or an error message.
 
 ### How to obtain credentials from AWS?
 
@@ -78,7 +77,7 @@ Credentials` to a safe place if you like, but it's not necessary).
 ### Which credentials are required when using AWS S3 Bucket Access Policy?
 
 In order to verify access to your S3 bucket, Logs App will first use
-the credentials to log in and, if successful, it will proceed to create
+the credentials to log in and, if successful, proceed to create
 a dummy object inside the bucket.
 
 If object creation was successful it will delete the object.
@@ -90,8 +89,8 @@ when saving AWS S3 settings:
   - `s3:PutObject`
   - `s3:DeleteObject`
 
-After the verification is done you can
-remove `s3:DeleteObject` permission from the bucket policy.
+After the verification is done you can remove the `s3:DeleteObject`
+permission from the bucket policy.
 
 ### How are logs compressed in S3?
 
@@ -104,7 +103,7 @@ uncompressed format, as JSON files.
 
 ### How can I decompress logs archived in S3?
 
-You can decompress by installing these command line programs (then
+You can decompress logs by installing these command line programs (then
 use` man lz4 `or` man lzf` for further instructions):
 
 #### Ubuntu/Debian:
@@ -128,10 +127,10 @@ hierarchy is created:
 
 `sematext_[app-token-start]/[year]/[month]/[day]/[hour]`
 
-Where `[app-token-start]` is the first sequence of app's token.
+Where `[app-token-start]` is the first sequence of your Logs App's token.
 
-E.g. for an App whose token begins with `f333a7d7`, folder will have the following path
-on `May 01, 2017 at 11:20PM UTC`:
+For example, an App whose token begins with `f333a7d7` will have a folder with the
+following path on `May 01, 2017 at 11:20PM UTC`:
 
 `sematext_f333a7d7/2017/05/01/23/`
 
