@@ -13,12 +13,15 @@ of the app whose logs you want to ship to S3:
 For Amazon S3, all you have to provide are
 [credentials](#how-to-obtain-credentials-from-AWS) and a bucket name:
 
-![](attachments/6520901/aws-s3.png?effects=drop-shadow)
+<img src="../../images/logs/archiving/aws-s3.png" style="height:400px;width:490px">
 
 For any other S3-compatible object store you'll also have to provide
-a service endpoint, which is usually specified in bucket configuration:
+a service endpoint. Cloud object store providers, like *DigitalOcean
+Spaces* or *IBM Cloud Object Storage* usually referred to it as a 
+`Public Service Endpoint` in bucket configuration. For Minio users
+this would be Minio public URL.
 
-![](attachments/6520901/non-aws-s3.png?effects=drop-shadow)
+<img src="../../images/logs/archiving/non-aws-s3.png" style="width:490px;height:477px;">
 
 Paste `Access key ID` and `Secret access key` to the corresponding
 fields.
@@ -106,8 +109,8 @@ hierarchy is created:
 
 Where `[app-token-start]` is the first sequence of app's token.
 
-E.g. for app with token `f333a7d7-``ab55-4ce9-94a5-``cdb44a704740`,
-folder will have the following path on `May 01, 2017 at 11:20PM UTC`:` `
+E.g. for an App whose token begins with `f333a7d7`, folder will have the following path
+on `May 01, 2017 at 11:20PM UTC`:
 
 `sematext_f333a7d7/2017/05/01/23/`
 

@@ -40,7 +40,7 @@ pages:
       - Fields: logs/fields.md
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
-      - Log Archiving: logs/archiving.md
+      - Archiving: logs/archiving.md
       - Changelog: logs/changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
