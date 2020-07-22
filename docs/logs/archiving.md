@@ -27,9 +27,8 @@ to an S3-compatible object store.
 
 ### How do I configure archiving for my Logs App?
 
-In Sematext Cloud, go to `Integrations > Apps` view
-and choose `Configure S3` using the row context menu (*three-dots* icon)
-of the App whose logs you want to ship to S3:
+In Sematext, go to `Logs` view and choose `Archive Logs` in the App context
+menu (*three-dots* icon) of the App whose logs you want to ship to S3:
 
 For Amazon S3, all you have to provide are
 [credentials](#how-to-obtain-credentials-from-aws) and a bucket name:
@@ -42,7 +41,7 @@ Spaces* or *IBM Cloud Object Storage* usually refer to it as a
 `Public Service Endpoint` in bucket configuration. For Minio users
 this would be your Minio public URL.
 
-<img src="../../images/logs/archiving/non-aws-s3.png" style="width:490px;height:477px;">
+<img src="../../images/logs/archiving/non-aws-s3.png" style="height:477px;width:490px;">
 
 Paste `Access key ID` and `Secret access key` in the corresponding
 fields.
@@ -76,11 +75,11 @@ Credentials` to a safe place if you like, but it's not necessary).
 
 ### Which credentials are required when using AWS S3 Bucket Access Policy?
 
-In order to verify access to your S3 bucket, Logs App will first use
+In order to verify access to your S3 bucket, the Logs App will first use
 the credentials to log in and, if successful, proceed to create
-a dummy object inside the bucket.
+a dummy file inside the bucket.
 
-If object creation was successful it will delete the object.
+If the file creation was successful Logs App will attempt to delete it.
 
 For those reasons, the following credentials must be given to the bucket
 when saving AWS S3 settings:
@@ -91,6 +90,9 @@ when saving AWS S3 settings:
 
 After the verification is done you can remove the `s3:DeleteObject`
 permission from the bucket policy.
+
+**NOTE:** if deletion of the dummy object fails the Logs App will
+ignore it and conclude that it can start shipping logs.
 
 ### How are logs compressed in S3?
 
