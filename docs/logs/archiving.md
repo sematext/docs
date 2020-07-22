@@ -5,19 +5,19 @@ description: Archiving logs to an S3-compatible object store
   <a href="https://aws.amazon.com/s3" target="_blank" title="Amazon AWS S3">
     <img src="../../images/logs/archiving/aws-logo.png" style="height:80px;width:134px;margin-top:auto;">
   </a>
-  <a href="https://www.digitalocean.com/products/spaces" target="_blank">
+  <a href="https://www.digitalocean.com/products/spaces" target="_blank" title="Digital Ocean Spaces">
     <img src="../../images/logs/archiving/digital-ocean-logo.png" style="height:80px;width:80px;margin-top:auto;">
   </a>
-  <a href="https://www.ibm.com/cloud/object-storage" target="_blank">
+  <a href="https://www.ibm.com/cloud/object-storage" target="_blank" title="IBM Cloud Object Storage">
     <img src="../../images/logs/archiving/ibm-logo.png" style="height:80px;width:90px;margin-top:auto;">
   </a>
-  <a href="https://azure.microsoft.com/services/storage" target="_blank">
+  <a href="https://azure.microsoft.com/services/storage" target="_blank" title="Azure Cloud Storage">
     <img src="../../images/logs/archiving/azure-logo.png" style="height:80px;width:104px;margin-top:auto;">
   </a>
-  <a href="https://cloud.google.com/storage" target="_blank" style="grid-column-start:2">
+  <a href="https://cloud.google.com/storage" target="_blank" title="Google Cloud Storage" style="grid-column-start:2">
     <img src="../../images/logs/archiving/google-logo.png" style="height:80px;width:99px;margin-top:auto;">
   </a>
-  <a href="https://min.io" target="_blank" style="align-self:center;">
+  <a href="https://min.io" target="_blank" title="MinIO Object Storage" style="align-self:center;">
     <img src="../../images/logs/archiving/minio-logo.png" style="height:30px;width:150px;margin-top:auto;">
   </a>
 </div>
