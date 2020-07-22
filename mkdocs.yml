@@ -77,11 +77,13 @@ pages:
       - FAQ: experience/faq.md
     - Synthetics:
       - Overview: synthetics/index.md
-      - HTTP Monitor: synthetics/http-monitor.md
+      - HTTP Monitor:
+        - Overview: synthetics/http-monitor.md
         - Run Details: synthetics/http-run-details.md
-      - Browser Monitor: synthetics/browser-monitor.md
+      - Browser Monitor:
+        - Overview: synthetics/browser-monitor.md
         - Web Vitals: synthetics/web-vitals.md
-        - Resources: synthetics/web-vitals.md
+        - Resources: synthetics/resources.md
         - Run Details: synthetics/browser-run-details.md
       - Alerts: synthetics/alerts.md
     - Tracing:
