@@ -32,7 +32,7 @@ and choose `Configure S3` using row context menu (*three-dots* icon)
 of the app whose logs you want to ship to S3:
 
 For Amazon S3, all you have to provide are
-[credentials](#how-to-obtain-credentials-from-AWS) and a bucket name:
+[credentials](#how-to-obtain-credentials-from-aws) and a bucket name:
 
 <img src="../../images/logs/archiving/aws-s3.png" style="height:400px;width:490px">
 
