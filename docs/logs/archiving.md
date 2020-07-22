@@ -38,9 +38,9 @@ For Amazon S3, all you have to provide are
 
 For any other S3-compatible object store you'll also have to provide
 a service endpoint. Cloud object store providers, like *DigitalOcean
-Spaces* or *IBM Cloud Object Storage* usually referred to it as a 
+Spaces* or *IBM Cloud Object Storage* usually refer to it as a 
 `Public Service Endpoint` in bucket configuration. For Minio users
-this would be Minio public URL.
+this would be your Minio public URL.
 
 <img src="../../images/logs/archiving/non-aws-s3.png" style="width:490px;height:477px;">
 
