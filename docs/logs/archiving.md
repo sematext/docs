@@ -28,12 +28,13 @@ to an S3-compatible object store.
 ### How do I configure archiving for my Logs App?
 
 In Sematext, go to `Logs` view and choose `Archive Logs` in the App context
-menu (*three-dots* icon) of the App whose logs you want to ship to S3:
+menu (*three-dots* icon) of the App whose logs you want to ship to an
+S3-compatible object store:
 
 For Amazon S3, all you have to provide are
 [credentials](#how-to-obtain-credentials-from-aws) and a bucket name:
 
-<img src="../../images/logs/archiving/aws-s3.png" style="height:400px;width:490px">
+<img src="../../images/logs/archiving/aws-s3.png" style="height:400px;width:482px">
 
 For any other S3-compatible object store you'll also have to provide
 a service endpoint. Cloud object store providers, like *DigitalOcean
