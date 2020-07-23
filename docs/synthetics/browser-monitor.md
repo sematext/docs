@@ -29,53 +29,30 @@ By default, the UI adds the below conditions while creating a browser monitor. Y
 * Error equals empty
 * Response Time metric Less Than 20000 ms
 
-## Metrics
-
-### Run Metrics
-
-For every browser run, the monitor collects the below run-level metrics:
-
-| Name  | Label  | Description  | Unit  |
-|---|---|---|---|
-| synthetics.time.response  | Response time  | Total time taken for the script to finish | ms  |
-| synthetics.browser.request.count | Request count | Total number of HTTP requests sent during the execution of the script | |
-| synthetics.browser.transfer.size | Transfer size | Total number of network bytes downloaded during the execution of the script | bytes |
-
-### Page Load Metrics
-
-The browser monitor collects the below page load (navigation) metrics for every run. If there are multiple page loads during the execution of the script, the last page-load metrics are collected.
-
-| Name  | Label  | Description  | Unit  |
-|---|---|---|---|
-| synthetics.browser.time.frontend | Frontend time | Time taken for the browser to parse and create the page | ms |
-| synthetics.browser.time.backend | Backend time |  Time taken for the network and the server to generate and start sending the HTML | | ms |
-| synthetics.browser.time.pageload | Page load time | Time taken for the page to load, from initiation of the page load (e.g., click on a page link) to load completion in the browser | ms |
-| synthetics.browser.time.dns | DNS time | DNS resolution time for the URL of the page | ms |
-| synthetics.browser.time.connection | Socket connect time | Time taken to connect to server | ms |
-| synthetics.browser.time.response | Time to first byte | Time taken for the server to send the response | ms |
-| synthetics.browser.time.download | Download time | Time taken to download the page contents | ms |
-| synthetics.browser.time.dom.interactive | DOM interactive time | Time taken by the browser to parse the document, including the network time from the user's location to your server | ms |
-| synthetics.browser.time.dom.contentload | DOM content load time | Time taken by the browser to parse the document and execute deferred and parser-inserted scripts including the network time from the user's location to your server | ms |
-| synthetics.browser.time.paint.first | First Paint (FP) | The time from navigation to the time when the first paint happens on the screen | ms |
-| synthetics.browser.time.paint.firstcontentful | First Contentful Paint (FCP) |  The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
-| synthetics.browser.time.paint.largestcontentful | Largest Contentful Paint (LCP) |  The time for largest content element to be 
-visible in the viewport. | ms |
-| synthetics.browser.cumulativelayoutshift | Cumulative Layout Shift (CLS) |  The sum total of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page ||
-
-### Resource Metrics
-
-Browser monitor collects the below metrics for every resource loaded during the execution of the script:
-
-| Name  | Label  | Description  | Unit  |
-|---|---|---|---|
-| synthetics.browser.resource.transfer.size | Transfer size | Network size of the resource content | bytes |
-| synthetics.browser.resource.time | Resource time | Total time taken to fetch the resource | ms |
-
 ## Screenshots
 
 The browser monitor script allows the collection page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
 
-## Waterfall chart
+## Web Vitals
+
+[Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web. These are a set of performance metrics that they consider are essential for improving user experience. The Core Web Vitals are:
+
+* [Largest Contentful Paint (LCP)](https://web.dev/lcp/)
+* [Total Blocking Time (TBT)](https://web.dev/tbt/) - Synthetic equivalent for [First Input Delay (FID)](https://web.dev/fid/)
+* [Cumulative Layout Shift (CLS)](https://web.dev/cls/)
+
+The other Web Vital metrics are:
+
+* [First Contentful Paint (FCP)](https://web.dev/fcp/)
+* [Time To First Byte (TTFB)](https://web.dev/time-to-first-byte/)
+
+Synthetics Browser monitor collects all the above metrics except Total Blocking Time (TBT). The Web Vitals report under the Browser monitor displays these metrics. For each metrics, the recommended thresholds are also displayed for guidance. Since the Browser monitor tests the website in a desktop environment, these thresholds are for desktop devices.
+
+You can filter the metrics based on locations and aggregate the results by average (default), percentile (99th, 95th, and 75th), min, and max.
+
+![Synthetics Web Vitals](../images/synthetics/web-vitals.png)
+
+### Waterfall chart
 
 For every run, the browser monitor collects all the resources fetched during the run. These resources are shown in a graphical waterfall chart in the individual run details page. The metrics shown for each resource are:
 

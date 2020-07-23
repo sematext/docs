@@ -50,20 +50,6 @@ By default, the UI adds the below conditions while creating an HTTP monitor. You
 * Response Code equals `200`.
 * Response Time metric Less Than 10000 ms.
 
-## Metrics
-
-Apart from error, response header, cookies, and body, the following metrics are collected from every HTTP run:
-
-| Name  | Label  | Description  | Unit  |
-|---|---|---|---|
-| synthetics.time.response  | Response time  | Total time taken for the complete request & response | ms  |
-| synthetics.http.time.dns  | DNS lookup time  | DNS resolution time | ms |
-| synthetics.http.time.connect  |  Socket connect time | Socket connection time  | ms |
-| synthetics.http.time.tls  | TLS handshake time  |  TLS handshake time  | ms |
-| synthetics.http.time.firstbyte  | Time to first byte (TTFB)  | Time taken to receive the first response byte from the server. Also called server or wait time | ms  |
-| synthetics.http.time.download  |  Download Time | Time taken to download the response body  | ms  |
-| synthetics.http.response.size  |  Response Body Size | Size of the response body  | bytes  |
-
 ## Run environment
 
 Each HTTP monitor run is executed in an isolated environment. [Go HTTP Client](https://golang.org/pkg/net/http/) library is used to execute the HTTP requests. Each run is allocated 128MB memory.
