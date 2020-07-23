@@ -31,7 +31,7 @@ By default, the UI adds the below conditions while creating a browser monitor. Y
 
 ## Screenshots
 
-The browser monitor script allows the collection page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to 1. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
+The browser monitor script allows the collection of page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to one. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
 
 ## Web Vitals
 
