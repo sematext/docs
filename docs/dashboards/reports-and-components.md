@@ -1,9 +1,9 @@
 title: Sematext Dashboards Reports and Components
-description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes a plethora of different integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
+description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system that includes a plethora of different integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
 ## Dashboards Reports
 
-The **Report Menu** is where the true power of Sematext's Dashboards lies. This is where Observability comes to life. **Events, Logs, Metrics, Experience, and Infrastructure data** are **integrated** in a **single Reports pane**, and used to **correlate metrics** with **application and server logs, events, alerts, anomalies**, and much more! 
+The **Report Menu** is where the true power of Sematext's Dashboards lies. This is where Observability comes to life. **Events, Logs, Metrics, Experience, Synthetics, and Infrastructure data** are **integrated** in a **single Reports pane**, and used to **correlate metrics** with **application and server logs, events, alerts, anomalies**, and much more! 
 
 Here's how you can **correlate Metrics with Events and Logs**, and view it all in a single view.
 

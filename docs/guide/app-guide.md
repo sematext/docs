@@ -45,6 +45,8 @@ After learning what an App is, you can check out the guides for our main feature
 - [Integrations](/guide/integrations-guide/)
 - [Logs](/logs/)
 - [Monitoring](/monitoring/)
+- [Experience](/experience/)
+- [Synthetics](/synthetics/)
 - [Dashboards](/guide/dashboards-guide/)
 - [Alerts](/guide/alerts-guide/)
 - [Events](/guide/events-guide/)

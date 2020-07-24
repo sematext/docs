@@ -1,5 +1,5 @@
 title: Sematext Dashboards Settings
-description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system. Dashboarding is system's powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events. 
+description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system. Dashboarding is system's powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events. 
 
 
 
@@ -19,15 +19,16 @@ Dashboard settings include:
 
 ## Side Navigation
 
-The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
+The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, synthetic monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
 
-Side navigation top level sections for infrastructure and application performance monitoring, log management, transaction tracing, and real user monitoring:
+Side navigation top level sections for infrastructure and application performance monitoring, log management, transaction tracing, real user monitoring and synthetic monitoring:
 
 - Dashboards
 - Infrastructure
 - Monitoring
 - Logs
 - Experience
+- Synthetics
 - Correlations
 - Alerts and Events
 - Integrations

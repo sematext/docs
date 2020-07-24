@@ -80,6 +80,8 @@ pages:
       - Overview: synthetics/index.md
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
+      - Alerts: synthetics/alerts.md
+      - Metrics: synthetics/metrics.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
