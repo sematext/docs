@@ -1,7 +1,7 @@
 title: Web Vitals
 description: Gathering information about web vitals - essential site health metrics
 
-Supported by Chrome, the [Web Vitals](https://web.dev/vitals/) is a Google initiative to provide unified guidance for metrics that are crucial for delivering the best user experience for the web-based applications. 
+Supported by Chrome, the [Web Vitals](https://web.dev/vitals/) is a Google initiative to provide unified guidance for metrics that are crucial for delivering the best user experience for websites and webapps. 
 
 <img
   class="content-modal-image"
