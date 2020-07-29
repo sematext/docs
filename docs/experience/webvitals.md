@@ -15,7 +15,7 @@ Supported by Chrome, the [Web Vitals](https://web.dev/vitals/) is a Google initi
 Both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals) support the Core Web Vitals out of the box and include the following metrics:
 
  * **Largest Contentful Paint (LCP)** - measures *page loading* performance. Google suggests that **LCP** should be **below 2500 milliseconds**, which means that to provide good user experience, the largest contentful paint should occur within 2.5 seconds of when the page first starts loading.
- * **First Input Delay (FID)** - measures *interactivity* of the web application. Google suggests that to provide good user experience, pages should have a first input delay of **less than 100 milliseconds**.
+ * **First Input Delay (FID)** - measures *interactivity* of the web application. Google suggests that to provide good user experience, pages should have a first input delay of **less than 100 milliseconds**. Please note that FID is not measured in [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals).
  * **Cumulative Layout Shift (CLS)** - measures *visual* stability of the web page. To provide a good user experience Google suggests that the pages should maintain a cumulative layout shift of **less than 0.1**.
 
 ### Other Web Vitals Metrics
