@@ -22,7 +22,7 @@ description: Archiving logs to an S3-compatible object store
   </a>
 </div>
 
-You can configure a Logs App to forward all the logs it receives
+You can configure each Logs App to compress and store all logs it receives
 to an S3-compatible object store.
 
 ### How do I configure archiving for my Logs App?
@@ -40,7 +40,8 @@ For any other S3-compatible object store you'll also have to provide
 a service endpoint. Cloud object store providers, like *DigitalOcean
 Spaces* or *IBM Cloud Object Storage* usually refer to it as a 
 `Public Service Endpoint` in bucket configuration. For Minio users
-this would be your Minio public URL.
+this would be your Minio public URL.  
+Note that this is available in [Sematext Enterprise](https://sematext.com/enterprise), too.
 
 <img src="../../images/logs/archiving/non-aws-s3.png" style="height:477px;width:490px;">
 
@@ -82,7 +83,7 @@ a dummy file inside the bucket.
 
 If the file creation was successful Logs App will attempt to delete it.
 
-For those reasons, the following credentials must be given to the bucket
+For these reasons, the following credentials must be given to the bucket
 when saving AWS S3 settings:
 
   - `s3:GetObject`
@@ -109,21 +110,21 @@ uncompressed format, as JSON files.
 You can decompress logs by installing these command line programs (then
 use` man lz4 `or` man lzf` for further instructions):
 
-#### Ubuntu/Debian:
+#### Ubuntu/Debian
 
 ``` bash
 sudo apt-get install liblz4-tool
 sudo apt-get install libcompress-lzf-java (landed in Ubuntu 15.04)
 ```
 
-#### OSX:
+#### OSX
 
 ``` bash
 brew install lz4
 brew install liblzf
 ```
 
-### Which folder structure your centralized logging management solution uses when uploading logs to S3?
+### Which folder structure is used when uploading logs to S3?
 
 Inside a bucket that you specify in settings, the following folder
 hierarchy is created:
@@ -133,9 +134,9 @@ hierarchy is created:
 Where `[app-token-start]` is the first sequence of your Logs App's token.
 
 For example, an App whose token begins with `f333a7d7` will have a folder with the
-following path on `May 01, 2017 at 11:20PM UTC`:
+following path on `May 01, 2021 at 11:20PM UTC`:
 
-`sematext_f333a7d7/2017/05/01/23/`
+`sematext_f333a7d7/2021/05/01/23/`
 
 
 
