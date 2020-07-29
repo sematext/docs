@@ -51,7 +51,7 @@ The main Web Vitals panel shows the 75th percentile for both the Core and Other 
   title="Core Web Vitals Panel"
 />
 
-In addition to the panel presenting the 75th percentile, the information is presented in an easy to read graphs that visualize the data for the selected time period:
+In addition to the panel showing the 75th percentile, the information is presented in an easy to read graphs that visualize the data for the selected time period:
 
 <img
   class="content-modal-image"
