@@ -29,7 +29,7 @@ In addition to the Core Web Vitals, both [Sematext Experience](/experience/) and
 
 The information about Web Vitals in Experience is present as a set of numeric components and charts. 
 
-The main panel of the Web Vitals presents information about the 75th percentile of both the Core and Other Web Vitals:  
+The main Web Vitals panel shows the 75th percentile for both the Core and Other Web Vitals:  
 
 <img
   class="content-modal-image"
@@ -38,7 +38,7 @@ The main panel of the Web Vitals presents information about the 75th percentile 
   title="Core Web Vitals Panel"
 />
 
-In addition to metrics panel, the information is presented in an easy to read graphs that visualize the data for the selected time period:
+In addition to the panel presenting the 75th percentile, the information is presented in an easy to read graphs that visualize the data for the selected time period:
 
 <img
   class="content-modal-image"
