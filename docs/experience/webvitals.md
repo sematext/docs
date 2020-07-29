@@ -27,7 +27,7 @@ In addition to the Core Web Vitals, both [Sematext Experience](/experience/) and
 
 ### Web Vitals in Experience
 
-The information about Web Vitals in Experience is present as a set of numbers and graphs. 
+The information about Web Vitals in Experience is present as a set of numeric components and charts. 
 
 The main panel of the Web Vitals presents information about the 75th percentile of both the Core and Other Web Vitals:  
 
