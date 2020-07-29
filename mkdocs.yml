@@ -73,6 +73,7 @@ pages:
       - Timing Breakdown: experience/breakdown.md
       - Long Tasks: experience/longtasks.md
       - Element Timing: experience/element-timing.md
+      - Web Vitals: experience/webvitals.md
       - Integrations: experience/integrations.md
       - Changelog: experience/changelog.md
       - FAQ: experience/faq.md
