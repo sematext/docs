@@ -22,7 +22,7 @@ Both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/b
 
 In addition to the Core Web Vitals, both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals) support the supplemental Web Vitals metrics often used to help with diagnostics of specific issues on the web page. Those metrics are:
 
- * **Time to First Byte (TTFB)** - measures the time at which the server sends a response for the request. It is suggested that to provide a great user experience the time to the first byte should be **below 600 milliseconds**. Higher values may discourage users from interacting with the site and are usually cause application performance issues such as long page loads.
+ * **Time to First Byte (TTFB)** - measures the time it takes the server to send a response for the request. It is suggested that to provide a great user experience the time to the first byte should be **below 600 milliseconds**. Higher values may discourage users from interacting with the site and are usually cause application performance issues such as long page loads.
  * **First Contentful Paint (FCP)** - measures the time from when the page starts loading to when any part of the page's content is rendered on the screen. Unlike the largest contentful paint, the first contentful paint tells the site owner when the initial page element is rendered on the user screen. It is said that the first contentful paint should be kept **below 1000 milliseconds** to achieve a good user experience.
 
 ### Web Vitals in Experience
