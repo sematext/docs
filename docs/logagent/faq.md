@@ -205,6 +205,32 @@ outputFilter:
        }
 ```
 
+### How do I rename log fields?
+
+You can use the [rename-fields](./output-filter-renamefields/) output filter.
+
+Add the following 'outputFilter' section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources.
+
+```yaml
+# tail web server logs
+input: 
+  files:
+    - '/var/log/*/access_log'
+
+# log agent parses web server logs out of the box ...
+# output filter to rename the user field into user_object
+outputFilter:
+  rename-fields:
+    module: rename-fields
+    # JS regular expression to match log source name, 
+    # in this case it matches all
+    matchSource: !!js/regexp .*
+    fields:
+      - fieldName: user
+        renameTo: user_object  
+```
+
+
 ### Logagent uses a lot of memory.  What should I do?
 By default Logagent uses only one socket to ship logs.  Letting Logagent use multiple sockets helps reduce the memory footprint in deployments with a really high volume of logs.  Try setting the MAX_CLIENT_SOCKETS environmental variable to a higher value (e.g. 3, 5, or 10).
 
