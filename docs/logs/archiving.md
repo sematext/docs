@@ -25,12 +25,12 @@ description: Archiving logs to an S3-compatible object store
 You can configure each Logs App to compress and store all logs it receives
 to an S3-compatible object store.   This includes:
 
-- AWS S3
-- Microsoft Azure Storage
-- Google Cloud Storage
-- IBM Cloud Object Storage
-- DigitalOcean Spaces
-- Minio
+- [AWS S3](https://aws.amazon.com/s3/)
+- [Microsoft Azure Storage](https://azure.microsoft.com/services/storage/)
+- [Google Cloud Storage](https://cloud.google.com/storage)
+- [IBM Cloud Object Storage](https://www.ibm.com/cloud/storage)
+- [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/)
+- [Minio](http://minio.io/)
 - …
 
 ### How do I configure archiving for my Logs App?
