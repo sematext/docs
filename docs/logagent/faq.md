@@ -205,6 +205,11 @@ outputFilter:
        }
 ```
 
+### How do I rename log fields?
+
+You can use the [rename-fields](./output-filter-renamefields/) output filter.
+
+
 ### Logagent uses a lot of memory.  What should I do?
 By default Logagent uses only one socket to ship logs.  Letting Logagent use multiple sockets helps reduce the memory footprint in deployments with a really high volume of logs.  Try setting the MAX_CLIENT_SOCKETS environmental variable to a higher value (e.g. 3, 5, or 10).
 

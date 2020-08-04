@@ -262,6 +262,7 @@ pages:
             - AES encrypt fields: logagent/output-filter-aesencryptfields.md
             - Hash fields: logagent/output-filter-hashfields.md
             - Remove fields: logagent/output-filter-removefields.md
+            - Rename fields: logagent/output-filter-renamefields.md
             - Drop events: logagent/output-filter-dropevents.md
             - IP truncate fields: logagent/output-filter-iptruncatefields.md
             - Docker enrichment: logagent/output-filter-dockerenrichment.md
