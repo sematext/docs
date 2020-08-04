@@ -23,7 +23,15 @@ description: Archiving logs to an S3-compatible object store
 </div>
 
 You can configure each Logs App to compress and store all logs it receives
-to an S3-compatible object store.
+to an S3-compatible object store.   This includes:
+
+- AWS S3
+- Microsoft Azure Storage
+- Google Cloud Storage
+- IBM Cloud Object Storage
+- DigitalOcean Spaces
+- Minio
+- …
 
 ### How do I configure archiving for my Logs App?
 
