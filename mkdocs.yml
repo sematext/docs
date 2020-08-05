@@ -324,8 +324,6 @@ extra:
       link: 'https://www.linkedin.com/company/sematext-international-llc'
     - type: 'facebook'
       link: 'https://www.facebook.com/Sematext'
-    - type: 'google-plus'
-      link: 'https://plus.google.com/+SematextGroup'
     - type: 'slideshare'
       link: 'https://www.slideshare.net/sematext'
     - type: 'feed'
