@@ -11,8 +11,9 @@
 {% set li_path = 'https://www.linkedin.com/shareArticle?url=' + page.canonical_url %}
 <a href="{{ li_path }}" title="Linkedin Share" class="md-icon md-content__icon" style="display: none">share</a>
 
-{% set pdf_path = page.canonical_url | reverse | replace('/','fdp.', 1) | replace('/', '/fdp/', 1) | reverse %}
-<a href="{{ pdf_path }}" title="PDF" class="md-icon md-content__icon">library_books</a>
+<!-- {% set pdf_path = page.canonical_url | reverse | replace('/','fdp.', 1) | replace('/', '/fdp/', 1) | reverse %}
+<a href="{{ pdf_path }}" title="PDF" class="md-icon md-content__icon">library_books</a> -->
+
 {% endif %}
 
 {% if page.edit_url %}
