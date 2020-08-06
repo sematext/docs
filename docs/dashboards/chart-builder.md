@@ -24,15 +24,36 @@ style:
  
 Each series should be configured in a series configuration panel. The panel where you change the settings of each series is split into a couple of sections.
 
-## Metrics
+## Data source
 
-In this section you pick one or more metrics which are used to build a data series. If you pick more
-than one metric you have to apply transformations to let Chart Builder know what's
+With Chart Builder you can create charts and other visual component for all App types
+availalbe in Sematext. We support
+[Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/),
+[Experience](https://sematext.com/docs/experience/) and
+[Synthetics](https://sematext.com/docs/synthetics/). This gives you a huge flexibility
+when building your own [dashboards](https://sematext.com/docs/dashboards/). It is possible
+to build a single chart which contains data series
+from Apps of different type, making it possible to visualize for example a correlation
+of CPU usage on a host with Error [logs](https://sematext.com/docs/logs/) or
+[user satisfaction](https://sematext.com/docs/experience/user-satisfaction/#apdex-level). You
+can place such a chart on a [dashboard](https://sematext.com/docs/dashboards/).
+
+![Chart builder data source](../images/dashboards/chart-builder-sources.png)
+
+
+## Metric names
+
+In Metrics section you pick one or more metrics which are used to build a data series. If you
+pick more than one metric you have to apply transformations to let Chart Builder know what's
 the relationship between the metrics. If you don't write your own
 transformation expression then all metrics are added to each other producing
 a single series.
 
 ![Chart builder metrics](../images/dashboards/chart-builder-metrics.png)
+
+On the list of metrics you can find a special metric `count()`. This
+metric is available for [Logs](https://sematext.com/docs/logs/) and represents the number
+of matching logs.
 
 ## Transformation
 
