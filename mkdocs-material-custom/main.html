@@ -14,6 +14,7 @@
 {% set pdf_path = page.canonical_url | reverse | replace('/','fdp.', 1) | replace('/', '/fdp/', 1) | reverse %}
 <a href="{{ pdf_path }}" title="PDF" class="md-icon md-content__icon">library_books</a>
 {% endif %}
+
 {% if page.edit_url %}
 <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">&#xE3C9;</a>
 {% endif %}

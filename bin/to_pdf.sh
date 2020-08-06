@@ -1,12 +1,14 @@
 #!/bin/bash
 
-FILES=*.md
-mkdir pdf
+FILES=docs/**/*.md
 for f in $FILES
 do
   echo "Processing $f file..."
   filename=$(basename "$f")
+  dirname=$(dirname "$f")
   extension="${filename##*.}"
   filename="${filename%.*}"
-  pandoc "$f" --latex-engine=xelatex -o "pdf/$filename.pdf"
+
+  mkdir -p "$dirname/pdf"
+  pandoc "$f" --pdf-engine=xelatex -o "$dirname/pdf/$filename.pdf"
 done
