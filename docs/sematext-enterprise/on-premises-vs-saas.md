@@ -60,7 +60,7 @@ description: Deployment model differences for Sematext infrastructure & applicat
       </td>
       <td>Per agent for monitoring and based on daily log volume for log management
       </td>
-      <td>See <a href="https://sematext.com/spm/pricing">Monitoring pricing</a> and <a href="https://sematext.com/logsene/pricing">Logs pricing</a> for log management pricing
+      <td>See <a href="https://sematext.com/pricing/">Sematext Cloud pricing</a>
       </td>
     </tr>
   </tbody>
