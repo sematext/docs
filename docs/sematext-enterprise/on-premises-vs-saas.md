@@ -44,7 +44,7 @@ description: Deployment model differences for Sematext infrastructure & applicat
       </td>
       <td>New features available as new releases become available. Upgrades performed by your team.
       </td>
-      <td>New features continuously added without service interruption or downtime
+      <td>New <a href="https://sematext.com/product-updates/">features continuously added</a> without service interruption or downtime
       </td>
     </tr>
     <tr>
