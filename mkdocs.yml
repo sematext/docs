@@ -126,6 +126,7 @@ pages:
         - Kubernetes Audit: integration/kubernetes-audit-integration.md
         - GitHub Webhook Events: integration/github-webhook-events-integration.md
         - Journald: integration/journald-integration.md
+        - Linux: integration/linux-integration.md
         - Vercel: integration/vercel-logs-integration.md
         - Mobile Apps Logs: integration/mobile-apps-logs.md
         - IBM Cloud Kubernetes Logs: integration/ibm-cloud-kubernetes-logs.md
