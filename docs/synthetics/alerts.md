@@ -8,7 +8,7 @@ Synthetics App support 2 types of alerts:
 
 ## Synthetics Alerts
 
-Synthetics alerts are the alerts that notify about the failure of a monitor. They are auto-created while creating the monitor. As of the monitor creation, you could specify the list of conditions that have to be met for the monitor to pass. If any of these conditions fail, then the run will be declared failed and a Synthetics alert will be raised. The conditions are different for [HTTP](/synthetics/http-monitor/#conditions) and [Browser](synthetics/browser-monitor/#conditions) monitors.
+Synthetics alerts are the alerts that notify about the failure of a monitor. They are auto-created while creating the monitor. As of the monitor creation, you could specify the list of conditions that have to be met for the monitor to pass. If any of these conditions fail, then the run will be declared failed and a Synthetics alert will be raised. The conditions are different for [HTTP](/synthetics/http-monitor/#conditions) and [Browser](/synthetics/browser-monitor/#conditions) monitors.
 
 You can customize the notification settings & schedule while creating the monitor. You can disable notifications temporarily by turning off `Enable Notifications`. When you turn off the notifications, the monitor will continue to run, but no notifications will be sent on failure. 
 
