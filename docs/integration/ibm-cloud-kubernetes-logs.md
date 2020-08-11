@@ -91,6 +91,10 @@ input:
 inputFilter:
   - module: input-filter-k8s-containerd
 
+outputFilter:
+  kubernetesEnrichment:
+    module: kubernetes-enrichment
+
 output:
   elasticsearch:
     module: elasticsearch
@@ -132,7 +136,7 @@ Continue reading below to see how to configure more advanced settings.
 
 Edit the `logagent.conf` to add the [drop-events](../logagent/output-filter-dropevents/) outputFilter.
 
-```yaml hl_lines="13 14 15 16 17 18 19"
+```yaml hl_lines="14 15 16 17 18 19"
 # logagent.conf
 options:
   debug: false
@@ -152,6 +156,8 @@ outputFilter:
       message:
         include: !!js/regexp /critical|auth|error|failed/
         exclude: !!js/regexp /status/i
+  kubernetesEnrichment:
+    module: kubernetes-enrichment
 
 output:
   elasticsearch:
@@ -170,7 +176,7 @@ The example above will include all log lines that match `critical|auth|error|fai
 To enable log routing you edit the output plugin to use multiple indices.
 Under the token value you need to add a regex for the log file you want to match.
 
-```yaml hl_lines="24 25 26 27 28"
+```yaml hl_lines="26 27 28 29 30"
 # logagent.conf
 options:
   debug: true
@@ -189,6 +195,8 @@ outputFilter:
     filters:
       message:
         exclude: !!js/regexp /status/i
+  kubernetesEnrichment:
+    module: kubernetes-enrichment
 
 output:
   elasticsearch:
@@ -216,7 +224,7 @@ This will provision an audit webhook that will forward logs to a log file. With 
 
 In your `logagent.conf`, under the `indices` section, where you specify the token value for your Kubernetes Audit Logs App, you need to add a regex for the name of the audit webhook you created in the steps above. The name of this `Pod` is `ibm-kube-audit`.
 
-```yaml hl_lines="26 28"
+```yaml hl_lines="28 30"
 # logagent.conf
 options:
   debug: true
@@ -235,6 +243,8 @@ outputFilter:
     filters:
       message:
         exclude: !!js/regexp /status/i
+  kubernetesEnrichment:
+    module: kubernetes-enrichment
 
 output:
   elasticsearch:
