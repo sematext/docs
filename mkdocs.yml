@@ -193,9 +193,11 @@ pages:
           - Configuration: agents/sematext-agent/containers/configuration.md
           - Metrics: agents/sematext-agent/containers/metrics.md
           - Metadata: agents/sematext-agent/containers/metadata.md
+          - Events: agents/sematext-agent/containers/events.md
         - Kubernetes:
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
+          - Events: agents/sematext-agent/kubernetes/events.md
         - Processes:
           - Configuration: agents/sematext-agent/processes/configuration.md
           - Metrics: agents/sematext-agent/processes/metrics.md
