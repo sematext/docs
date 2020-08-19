@@ -7,4 +7,4 @@ For example, here's a set of alert rules that gets created with a new Elasticsea
 
 ![image alt text](../images/alerts/image_24.png)
 
-Default alert rules are created for [Monitoring](/docs/monitoring), [Logs](/docs/logs), [Experience](/docs/experience) Apps, and for [Synthetics](/docs/synthetics) Monitors.
+Default alert rules are created for [Monitoring](../monitoring), [Logs](../logs), [Experience](../experience) Apps, and for [Synthetics](../synthetics) Monitors.
