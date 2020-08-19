@@ -1,7 +1,7 @@
 title: Browser Monitor
 description: Browser monitor can monitor website performance and user journeys.
 
-The browser monitor executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using `assert` API during the execution. It can optionally collect screenshots.
+The browser monitor can be used to monitor a single webpage or a user journey across multiple pages. The browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using `assert` API during the execution. It can optionally collect screenshots.
 
 ## Configuration
 
@@ -11,9 +11,13 @@ The browser monitor executes the configured script in a Chrome browser. It recor
 * **Interval** - Monitor execution interval.
 * **Locations** - List of locations to run the monitor.
 
-### Script
+### URL/Script
 
-The browser monitor scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page match your requirements. If any assertion fails, the system declares the run as a failure. Monitor run logs, shown in Sematext Run details page, contain failure details.
+To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your webpage, you configure a script to simulate the user actions.
+
+When you configure the URL of the website, the browser monitor will load the URL in the Google Chrome browser and takes a screenshot of the website once the page load is complete.
+
+The user journey scripts are Node.js scripts that control a headless Chrome browser and use [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, refer to the `Browser Examples` section while creating a browser monitor. Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page match your requirements. If any assertion fails, the system declares the run as a failure. Monitor run logs, shown in the run details page, contain failure details.
 
 Checkout [awesome-puppeteer](https://github.com/transitive-bullshit/awesome-puppeteer) GitHub repository for more examples and tips for writing puppeteer scripts.
 
@@ -63,7 +67,7 @@ For every run, the browser monitor collects all the resources fetched during the
 * **Connect** - Socket connection time in ms.
 * **SSL** - SSL handshake time in ms.
 * **Send** - Time taken to send the request in ms.
-* **Wait** - Time taken to receive the first byte of response from server in ms.
+* **Wait** - Time taken to receive the first byte of the response from the server in ms.
 * **Receive** - Time taken to download the resource in ms.
 * **Transfer Size** - Network size of the resource in bytes.
 * **Content Size** - Actual uncompressed size of the resource.
@@ -77,7 +81,7 @@ For every run, the browser monitor collects all the resources fetched during the
 
 ## Run environment
 
-Each browser monitor run is executed in an isolated environment using a fresh instance of headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
+Each browser monitor run is executed in an isolated environment using a fresh instance of a headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
 
 * **Node.js** - 12.x
 * **Google Chrome** - 83.0.4103.0
@@ -87,8 +91,7 @@ Default runtime configuration values are:
 
 * Chrome browser environment - Desktop
 * Resolution - `1920x1080`
-* Default Navigation timeout - 20 seconds
-* Timeout for script execution - 1 minute
+* Default Navigation timeout - 30 seconds
 * Memory - 2048 MB
 * CPU - 1 vCPU
 * Network - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
