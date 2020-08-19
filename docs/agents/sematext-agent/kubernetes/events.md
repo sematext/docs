@@ -6,7 +6,7 @@ Kubernetes events represent a valuable source of signals that might help during 
 For example, if you would like to ignore persistent volume and service events, configure the following environment variable:
 
 ```
--e KUBERNETES_EXCLUDED_EVENTS=PersistentVolume,Service
+-e KUBERNETES_EVENTS_EXCLUDED=PersistentVolume,Service
 ```
 
 The full list of resource types that you can exclude from event sources are:
