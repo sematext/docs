@@ -6,3 +6,5 @@ When you create a new App one or more "default alert rules" gets created automat
 For example, here's a set of alert rules that gets created with a new Elasticsearch monitoring App:
 
 ![image alt text](../images/alerts/image_24.png)
+
+Default alert rules are created for [Monitoring](../monitoring), [Logs](../logs), [Experience](../experience) Apps, and for [Synthetics](../synthetics) Monitors.
