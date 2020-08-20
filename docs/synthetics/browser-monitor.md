@@ -1,7 +1,7 @@
 title: Browser Monitor
 description: Browser monitor can monitor website performance and user journeys.
 
-The browser monitor can be used to monitor a single webpage or a user journey across multiple pages. The browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using `assert` API during the execution. It can optionally collect screenshots.
+The browser monitor can be used to monitor a single web page or a user journey across multiple pages. The browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using `assert` API during the execution. It can optionally collect screenshots.
 
 ## Configuration
 
@@ -13,7 +13,7 @@ The browser monitor can be used to monitor a single webpage or a user journey ac
 
 ### URL/Script
 
-To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your webpage, you configure a script to simulate the user actions.
+To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a script to simulate the user actions.
 
 When you configure the URL of the website, the browser monitor will load the URL in the Google Chrome browser and takes a screenshot of the website once the page load is complete.
 
