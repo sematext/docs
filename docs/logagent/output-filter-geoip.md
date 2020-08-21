@@ -87,7 +87,7 @@ The output in Sematext Logs contains new fields under `geo` with the location of
 ```
 logSource:    httpd
 _type:       access_log_combined
-client_ip:   78.88.0.125
+client_ip:   136.245.144.12
 remote_id:   -
 user:        -
 method:      GET
@@ -99,7 +99,7 @@ user_agent:  Mozilla/5.0 (iPhone; CPU iPhone OS 8_1_1 like Mac OS X) AppleWebKit
 @timestamp:  Sun Apr 03 2016 08:25:38 GMT+0200 (Central European Summer Time)
 message:     GET /about/ HTTP/1.1
 geo: 
-  ip: 78.88.0.125
+  ip: 136.245.144.12
   continent_name: Europe
   country_iso_code: PL
 ```

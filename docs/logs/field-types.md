@@ -100,7 +100,17 @@ Example of a `geo` field:
 
     curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
       "geo": {
-        "ip": "78.88.0.125"
+        "ip": "136.245.144.12"
+      },
+      "message": "Hello from Sematext!"
+    }'
+
+    curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
+      "geo": {
+        "location" : {
+          "lat": 38.76,
+          "lon": -121.28
+        }
       },
       "message": "Hello from Sematext!"
     }'
@@ -108,9 +118,18 @@ Example of a `geo` field:
 In Sematext Logs it will be enriched and look like this:
 
     "geo": {
-      "ip": "78.88.0.125",
-      "country_iso_code": "PL",
-      "continent_name": "Europe"
+      "ip": "136.245.144.12",
+      "country_iso_code": "US",
+      "continent_name": "North America"
+    }
+
+    "geo": {
+      "location" : {
+        "lat": 38.76,
+        "lon": -121.28
+      },
+      "country_iso_code": "US",
+      "continent_name": "North America"
     }
 
 
