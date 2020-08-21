@@ -100,6 +100,6 @@ user_agent:  Mozilla/5.0 (iPhone; CPU iPhone OS 8_1_1 like Mac OS X) AppleWebKit
 message:     GET /about/ HTTP/1.1
 geo: 
   ip: 136.245.144.12
-  continent_name: Europe
-  country_iso_code: PL
+  continent_name: North America
+  country_iso_code: USA
 ```
