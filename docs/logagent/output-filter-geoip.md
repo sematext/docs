@@ -9,33 +9,49 @@ An everyday use case is to enrich web server logs, or any logs with IP addresses
  
 Things you do not need to think about at all:
 
-- The Maxmind GeoIP lite database is downloaded automatically to `/tmp/`
-  To change the location of the DB set `MAXMIND_DB_DIR=path`
-- Integrated automatic updates for the GeoIP database. 
-  The update check runs every hour. 
-- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geoip` field out of the box. 
-
-
+- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geoip` field out of the box.
 
 ### Configuration 
 
 Here is how to enable Geo IP lookups for your logs:
 
-1. Command line 
+#### 1. Command line 
 
 ```
-    logagent  --geoipEnabled true --geoipFields "client_ip,remote_address"
+    logagent  --geoipEnabled true --geoipField "client_ip"
 ```
 
-2. Environment variables 
+#### 2. Environment variables 
 
 ```
-   MAXMIND_LICENSE_KEY="<your MaxMind license key>"
    GEOIP_ENABLED=true
-   GEOIP_FIELDS="client_ip,remote_address"
+   GEOIP_FIELD="client_ip"
 ```
 
-3. Configuration file
+#### 3. Configuration file - Option 1
+
+Add the following `options` section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources.
+
+```yaml
+options:
+  geoipEnabled: true
+  geoipField: client_ip
+
+# Logagent configuration file: logagent-geoip.yml 
+# tail web server logs
+input: 
+  files:
+    - '/var/log/*/access_log'
+...      
+```
+
+Test Logagent with your config: 
+
+```
+logagent --config logagent-geoip.yml -n httpd --yaml
+```
+
+#### 4. Configuration file - Option 2
 
 Add the following `outputFilter` section to the Logagent configuration file. Note that you can use the plugin with multiple configurations for different event sources.
 
@@ -48,14 +64,13 @@ input:
 
 # Logagent parses web server logs out of the box ...
 # Output filter to perform GeoIP lookups 
-# for the field client_ip or remote_address
+# for the field client_ip
 outputFilter:
-  geoip: 
+  geoip:
     module: geoip
-    fields: 
-      - client_ip
-      - remote_address
-      
+    field: client_ip
+
+...
 ```
 
 Test Logagent with your config: 
@@ -63,6 +78,8 @@ Test Logagent with your config:
 ```
 logagent --config logagent-geoip.yml -n httpd --yaml
 ```
+
+#### Sample Output
 
 The output contains new fields under `geoip` with the location of the IP address. 
 
