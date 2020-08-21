@@ -87,24 +87,31 @@ Example of a document containing string field:
 Use this type for all date and time fields. One such field is @timestamp, which
 contains log event creation time. See [examples](supported-date-formats).
 
-## Geo-Point
+## Geo
 
-Geo-point data type accepts latitude-longitude pairs, which can be used to store
-information about the geographical location of a point. This can be used to
-search log events geographically or by distance from a central point. This
-can be useful on dashboards presenting maps, for example.
+Geo data type accepts an IP address, which can be used to store
+information about the geographical location. Sematext Logs will enrich
+this data by fetching the country and continent of this IP address.
 
-Example of a `geo` field which has geo-point type:
+This can be used to search log events geographically or by distance. It's
+useful on dashboards presenting maps, for example.
+
+Example of a `geo` field:
 
     curl -XPOST https://logsene-receiver.sematext.com/<token>/example/ -d '{
-      "geoip": {
-        "location" : {
-          "lat": 52.40,
-          "lon": 16.93
-        }
+      "geo": {
+        "ip": "78.88.0.125"
       },
       "message": "Hello from Sematext!"
     }'
+
+In Sematext Logs it will be enriched and look like this:
+
+    "geo": {
+      "ip": "78.88.0.125",
+      "country_iso_code": "PL",
+      "continent_name": "Europe"
+    }
 
 
 **Note:**

@@ -394,8 +394,8 @@ The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be cus
 <td>Enables GeoIP lookups in the log parser, default value: "false"</td>
 </tr>
 <tr>
-<td>GEOIP_FIELDS</td>
-<td>A list of fields to perform geo IP lookups e.g. <pre>GEOIP_FIELDS="client_ip,remote_address</pre></td>
+<td>GEOIP_FIELD</td>
+<td>The field to perform geo IP lookup e.g. <pre>GEOIP_FIELD="client_ip"</pre></td>
 </tr>
 <tr>
 <td>MAXMIND_LICENSE_KEY</td>

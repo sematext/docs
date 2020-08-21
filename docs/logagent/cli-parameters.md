@@ -48,6 +48,7 @@ $ logagent [options] [file list]
 | `-v, --verbose` | verbose debug output for all plugins |
 | `-c, --config <configFile>` | path to Logagent config file (see below) |
 | `--geoipEnabled <value> `| true/false to enable/disable geoip lookups in patterns. |
+| `--geoipField <value> `| string name of the field to do IP lookup. |
 | `--diskBufferDir  path`| directory to store status and buffered logs (during network outage) |
 | `--includeOriginalLine` | includes the original message in parsed logs |
 | `-f, --file <patternFile>` | file with pattern definitions, use multiple -f options for multiple files| 

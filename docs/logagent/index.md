@@ -63,7 +63,6 @@ options:
   # don't write parsed logs to stdout
   suppress: true
   # Enable/disable GeoIP lookups
-  # Startup of logagent might be slower when downloading the GeoIP database
   geoipEnabled: false
   # Directory to store Logagent status and temporary files
   # this is equals to LOGS_TMP_DIR env variable 
@@ -133,7 +132,7 @@ You can configure [custom data patterns for parsing logs](./parser).
 - Hot reload of changed pattern definitions without service restart
 - Auto-detection of date and numeric fields
 - Masking of sensitive data with configurable hashing algorithms (SHA-1, SHA-256, SHA-512, …)
-- GeoIP lookup with automatic GeoIP DB updates (Maxmind GeoIP-Lite files)
+- GeoIP lookup
 
 ## Plugins 
 A comprehensive collection of plugins for data input, processing, and output are available. See the complete list of [Logagent Plugins](./plugins).   

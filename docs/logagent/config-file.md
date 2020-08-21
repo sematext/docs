@@ -22,7 +22,6 @@ options:
   # don't write parsed logs to stdout
   suppress: true
   # Enable/disable GeoIP lookups
-  # Startup of logagent might be slower, when downloading the GeoIP database
   geoipEnabled: false
   # Directory to store Logagent status and temporary files
   # this is equals to LOGS_TMP_DIR env variable 
@@ -78,7 +77,6 @@ options:
   # don't write parsed logs to stdout
   suppress: true
   # Enable/disable GeoIP lookups
-  # Startup of logagent might be slower, when downloading the GeoIP database
   geoipEnabled: false
   # Directory to store Logagent status and temporary files
   diskBufferDir: ./tmp
