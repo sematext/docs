@@ -4,13 +4,13 @@ Description: Add GeoIP information to server logs. Resolve IP addresses to geogr
 
 ## Output filter: geoip
 
-This plugin adds GeoIP information to logs. By default if you do not specify a `geoipField` Logagent will fetch the public IP from the server it is running on and use it for geological data. If you specify a `geoipField` Logagent will use it instead.
+This plugin adds GeoIP information to logs. By default if you do not specify a `geoipField` Logagent will fetch the public IP from the server it is running on and use it for geographical data. If you specify a `geoipField` Logagent will use it instead.
 
 An everyday use case is to enrich web server logs, or any logs with IP addresses, with geographical information derived from those IP addresses.
  
 Things you do not need to think about at all:
 
-- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geo.ip` field out of the box.
+- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geo.ip` field out of the box. Check out the [common schema](../tags/common-schema) for more info.
 
 ### Configuration 
 
