@@ -10,7 +10,7 @@ An everyday use case is to enrich web server logs, or any logs with IP addresses
  
 Things you do not need to think about at all:
 
-- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geoip` field out of the box.
+- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geo.ip` field out of the box.
 
 ### Configuration 
 
@@ -82,12 +82,12 @@ logagent --config logagent-geoip.yml -n httpd --yaml
 
 #### Sample Output
 
-The output contains new fields under `geoip` with the location of the IP address. 
+The output in Sematext Logs contains new fields under `geo` with the location of the IP address. 
 
 ```
 logSource:    httpd
 _type:       access_log_combined
-client_ip:   190.160.248.117
+client_ip:   78.88.0.125
 remote_id:   -
 user:        -
 method:      GET
@@ -98,12 +98,8 @@ referer:     https://sematext.com/consulting/elasticsearch/
 user_agent:  Mozilla/5.0 (iPhone; CPU iPhone OS 8_1_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12B436 Twitter for iPhone
 @timestamp:  Sun Apr 03 2016 08:25:38 GMT+0200 (Central European Summer Time)
 message:     GET /about/ HTTP/1.1
-geoip: 
-  location: 
-    - -70.6653
-    - -33.4513
-  info: 
-    country:   CL
-    continent: SA
-    city:      Santiago
+geo: 
+  ip: 78.88.0.125
+  continent_name: Europe
+  country_iso_code: PL
 ```
