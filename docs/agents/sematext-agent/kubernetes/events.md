@@ -40,7 +40,7 @@ The full list of resource types that you can exclude from event sources are:
 
 ### Namespace filter
 
-Sematext Agent collects events from all existing namespaces. If you want to collect events from the specific namespace, set the `KUBERNETES_EVENTS_NAMESPACE` environment variable to desired Kubernetes namespace.
+Sematext Agent collects events from all existing namespaces. If you want to collect events from a specific namespace, set the `KUBERNETES_EVENTS_NAMESPACE` environment variable to the desired Kubernetes namespace.
 
 ### Disabling events
 
