@@ -498,9 +498,11 @@ output {
 ```
 
 If you then start Logstash and type in an IP, you'll see in Kibana an
-object called **geoip**, which contains lots of information, including
-country codes. You can then use `geoip.country_code2` as your field in
+object called **geo**, which contains lots of information, including
+country codes. You can then use `geo.country_iso_code` as your field in
 Kibana.
+
+You can use this field both in Kibana and in the Sematext GeoMap component.
 
 ### Why are new fields not visible in Kibana and how do I fix it?
 
