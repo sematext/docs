@@ -240,6 +240,8 @@ spec:
         key: node-role.kubernetes.io/master
 ```
 
+_[Read](../permission-requirements.md#container-setups) more about why Sematext Agent needs access to host' files and directories._
+
 Deploy the DaemonSet:
 
 ```sh

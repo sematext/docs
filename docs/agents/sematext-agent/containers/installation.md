@@ -20,6 +20,8 @@ docker run -d  --restart always --privileged -P --name st-agent \
 sematext/agent:latest
 ```
 
+_[Read](../permission-requirements.md#container-setups) more about why Sematext Agent needs access to host' files and directories._
+
 Besides providing several bind mounts for Docker socket, _procfs_ and journal directory, App tokens are required to ship data to the appropriate Monitoring Apps. Sematext Agent will gather data about running processes on the system, basic operating system metrics, machine/instance related information, and ship it to the Infra App token. It will also detect active containers and start collecting different container metrics such as memory usage, network I/O statistics, disk throughput, etc.
 
 By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by either passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL` and `EVENTS_RECEIVER_URL` for log and event receivers respectively or specify an alternative (`EU`) region via `REGION` environment variable.
@@ -91,3 +93,5 @@ docker service create --mode global --name st-agent \
 -e REGION=<US or EU> \
 sematext/agent:latest
 ```
+
+_[Read](../permission-requirements.md#container-setups) more about why Sematext Agent needs access to host' files and directories._
