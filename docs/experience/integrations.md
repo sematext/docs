@@ -98,6 +98,22 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="#vercel">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../../images/integrations/vercel.png" alt="Vercel" title="Vercel" style="padding-top:12px;height:145px;width:300px;">
+						</div>
+						<div class="side back">
+							<h5>Vercel</h5>Full support for all types of websites hosted on Vercel.
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
@@ -243,3 +259,7 @@ Static websites don't require any additional configuration, just add the Experie
 
 ## Server-side rendered websites 
 Server-side rendered websites don't require any additional configuration either. Add the Experience script to the `<head>` of your site and you're ready to go!
+
+## Vercel
+
+Head over to the Vercel marketplace and add the [Sematext Experience integration](https://vercel.com/integrations/sematext-experience) to get started. Next, add the Experience Script to your front-end app or website and you're good to go!
