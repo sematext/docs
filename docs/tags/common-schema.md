@@ -24,6 +24,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | error.type | A reserved field for errors |
 | span.id | Building block of a trace in distributed tracing |
 | trace.id | Building block of a trace in distributed tracing |
+| geo.ip | IP address defining the location associated with the log line |
 | geo.location | A latitude and longitude defining the location associated with the log line |
 | geo.city_name | The city associated with the log line |
 | geo.region | The region associated with the log line |
