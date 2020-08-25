@@ -107,7 +107,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 							<img src="../../images/integrations/vercel.png" alt="Vercel" title="Vercel" style="padding-top:12px;height:145px;width:300px;">
 						</div>
 						<div class="side back">
-							<h5>Vercel</h5>Full support for all types of websites hosted on Vercel.
+							<h5>Vercel</h5>Full support for real user monitoring metrics for all types of websites hosted on Vercel.
 						</div>
 					</div>
 				</div>
