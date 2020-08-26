@@ -9,9 +9,9 @@ TODO:
 
 **1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Telegram card to create a new Telegram notification hook.
 
-![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
+![Sematext Notification Hooks](../../images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
-**2.** Add your Telegram bot token and Chat identifier. 
+**2.** Add your Telegram **bot token** and **chat identifier**. 
 
 <img class="content-modal-image" alt="Create Telegram Integration" src="../../images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
 
