@@ -15,7 +15,9 @@ TODO:
 
 <img class="content-modal-image" alt="Create Telegram Integration" src="../../images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
 
-Next, click the "Send Test Notification" button. Telegram returns status code 200 indicating everything is configured correctly. Check your Telegram channel for the test message from Sematext. Once the test message is sent correctly click the "Save Notification Hook" button to save your configuration. 
+Next, click the **Send Test Notification** button. Telegram returns status code **200** indicating everything is configured correctly. Check your Telegram channel for the test message from Sematext. 
+
+Once the test message is visible click the **Save Notification Hook** button to save your configuration. 
 
 That's it. Notifications sent to Telegram can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
 
