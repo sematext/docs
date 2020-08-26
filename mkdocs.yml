@@ -139,6 +139,7 @@ pages:
         - PagerDuty: integration/alerts-pagerduty-integration.md
         - Pushover: integration/alerts-pushover-integration.md
         - Slack: integration/alerts-slack-integration.md
+        - Telegram: integration/alerts-telegram-integration.md
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
     - Alerts:
