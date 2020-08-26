@@ -3,17 +3,17 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Telegram
 
-TODO
+TODO:
 
 ## In Sematext
 
- **1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Telegram card to create a new Telegram notification hook.
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Telegram card to create a new Telegram notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
 **2.** Add your Telegram bot token and Chat identifier. 
 
-<img class="content-modal-image" alt="Create Telegram Integration" src="https://sematext.com/docs/images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
+<img class="content-modal-image" alt="Create Telegram Integration" src="../../images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
 
 Next, click the "Send Test Notification" button. Telegram returns status code 200 indicating everything is configured correctly. Check your Telegram channel for the test message from Sematext. Once the test message is sent correctly click the "Save Notification Hook" button to save your configuration. 
 
