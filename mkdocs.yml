@@ -114,7 +114,7 @@ pages:
         - Nginx Plus: integration/nginxplus.md
         - Node.js: integration/node.js.md
         - PHP: integration/php.md
-        - Postgresql: integration/postgresql.md
+        - PostgreSQL: integration/postgresql.md
         - Redis: integration/redis.md
         - Solr: integration/solr.md
         - SolrCloud: integration/solrcloud.md

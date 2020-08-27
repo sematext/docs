@@ -1,5 +1,5 @@
 title: PostgreSQL Monitoring Integration
-description: Comprehensive view of your database’s health and performance with Sematext PostgreSQL monitoring integration. Our infrastructure monitoring tools provide real-time visibility into the performance and availability of various PostgreSQL databases metrics. Use built in reports and dashboards, and identify and investigate PostgreSQL database server issues before they become incidents
+description: Comprehensive view of your database’s health and performance with Sematext PostgreSQL monitoring integration. Our infrastructure monitoring tools provide real-time visibility into the performance and availability of various PostgreSQL databases metrics. Use built-in reports and dashboards, and identify and investigate PostgreSQL database server issues before they become incidents
 
 ## Integration
 
@@ -69,4 +69,4 @@ hit TOAST buffer<br>**statio.tidx.blocks.hit** <br>*(counter)*                  
 If you are having issues with Sematext Monitoring, i.e. not seeing PostgreSQL metrics, see
 [How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information please look at the [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
