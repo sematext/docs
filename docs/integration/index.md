@@ -388,6 +388,22 @@ Sematext Monitoring supports dozens of different integrations.
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/postgresql/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
+						</div>
+						<div class="side back">
+							<h5>Zookeeper</h5>quorum size, outstanding requests, watch count, count, ephemerals, node count, sent, approximate data size, sent, count, ...
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
 ## Logging
