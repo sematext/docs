@@ -1,5 +1,5 @@
 title: Index Events via Elasticsearch API
-description: Sending, custom & default mapping, and indexing log events using Elasticsearch API. Use other applications such as Logstash, Apache Flume, Fluentd Plugin to send log events and search for logs using UI.
+description: Sending, custom & default mapping, and indexing log events using Elasticsearch API. Use other applications such as Logstash, Beats, Vector, Fluentd, Logagent, etc. to send log events and search for logs using UI.
 
 ## The Essentials
 
@@ -39,7 +39,7 @@ For example, you can send a log like this:
 
 ``` bash
 NOW=`date "+%Y-%m-%dT%H:%M:%S%z"`
-curl -XPOST https://logsene-receiver.sematext.com/$YOUR_TOKEN_HERE/mytype/ -d '
+curl -XPOST https://logsene-receiver.sematext.com/$YOUR_TOKEN_HERE/_doc/ -d '
 {
   "@timestamp": "'$NOW'",
   "message": "Hello World!"
@@ -47,14 +47,10 @@ curl -XPOST https://logsene-receiver.sematext.com/$YOUR_TOKEN_HERE/mytype/ -d '
 ```
 
 This will index a simple "hello world" message to Logs App. That event
-would have the current timestamp and will go to your app
-(provided that the $YOUR\_TOKEN\_HERE variable contains your token),
-within a type named "mytype". The type is a logical division of events.
+would have the current timestamp and will be indexed in the App whose token is specified.
 
 Typically, you'd put events with different structures in different
-types. For example, syslog messages in a type called "syslog", apache
-logs in a type called "apache". Essentially, the type can be anything
-and it is the token of your application that has to match.
+Apps. For example, syslog messages in one App, Apache logs in another App, etc. See [this FAQ entry](https://sematext.com/docs/logs/faq/#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that).
 
 For performance reasons we highly recommend using the [Bulk API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
 because it allows you to send multiple events with a single request. For
@@ -63,11 +59,11 @@ example, the following request sends three events:
 ``` bash
 NOW=`date "+%Y-%m-%dT%H:%M:%S%z"`
 
-echo '{ "index" : { "_index": "LOGSENE_APP_TOKEN_GOES_HERE", "_type" : "mytype" } }
+echo '{ "index" : { "_index": "LOGS_APP_TOKEN_GOES_HERE" } }
 { "@timestamp": "'$NOW'", "severity_numeric" : 1 }
-{ "index" : { "_index": "LOGSENE_APP_TOKEN_GOES_HERE", "_type" : "mytype" } }
+{ "index" : { "_index": "LOGS_APP_TOKEN_GOES_HERE" } }
 { "@timestamp": "'$NOW'", "message" : "hello again" }
-{ "index" : { "_index": "LOGSENE_APP_TOKEN_GOES_HERE", "_type" : "mytype" } }
+{ "index" : { "_index": "LOGS_APP_TOKEN_GOES_HERE" } }
 { "@timestamp": "'$NOW'", "alternate_message": "fields can be added and removed at will" }' > req
 
 curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
@@ -92,10 +88,10 @@ is a way to define how your logs are indexed - which fields are in each log even
 ## Custom Log Index Mapping
 
 If the default log index fields (also known as index mapping) don't fit
-your needs you can create completely custom index mapping. See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/).
+your needs you can create completely custom index mapping. See [Custom Logsene Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
 
 Note that if you have N different log structures, the best way to
-handle that is by creating N Logs Management Apps, each with its own index
+handle that is by creating N Logs Apps, each with its own index
 mapping. For example, you may have web server logs, your system logs in
 /var/log/messages, and your custom application logs. Each of these 3
 types of logs has a different structure.
@@ -105,4 +101,4 @@ structure, and your own application's logs can be in any format your
 application happens to use.
 
 To handle all 3 log formats elegantly simply create 3 separate Logs Management apps and use a different format for
-each of them. See [Custom Logsene Mapping Template How-To](http://blog.sematext.com/2015/01/20/custom-elasticsearch-index-templates-in-logsene/) for details.
+each of them. See [Custom Logsene Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/) for details.
