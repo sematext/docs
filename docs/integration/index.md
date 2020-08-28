@@ -572,6 +572,8 @@ All of the integrations require adding and [configuring the Experience script](.
 - [Zapier](/integration/alerts-zapier-integration/)
 - [Nagios](/integration/alerts-nagios-integration/)
 - [Hipchat](/integration/alerts-hipchat-integration/)
+- [Telegram](/integration/alerts-telegram-integration/)
+- [Microsoft Teams](/integration/alerts-teams-integration/)
 
 ## Alerting
 
