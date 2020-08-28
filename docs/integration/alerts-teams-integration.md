@@ -39,4 +39,20 @@ Having the **Incoming Webhook** configured and having the webhook URL we can add
 
 ## In Sematext
 
-TODO
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Microsoft Teams card to create a new Microsoft Teams notification hook.
+
+![Sematext Notification Hooks](../../images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
+
+**2.** Add your Microsoft Teams **webhook URL**. 
+
+<img class="content-modal-image" alt="Create Microsoft Teams Integration" src="../../images/integrations/create-teams-integration.png" title="Create Microsoft Teams Integration">
+
+Next, click the **Send Test Notification** button. Microsoft Teams returns **1** indicating everything is configured correctly. Check your Microsoft Teams channel for the test message from Sematext. 
+
+Once the test message is visible click the **Save Notification Hook** button to save your configuration. 
+
+That's it. Notifications sent to Microsoft Teams can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
+
+We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
+
+You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext).
