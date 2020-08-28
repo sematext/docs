@@ -25,3 +25,12 @@ Apart from the auto-created Synthetics alerts, you could create a custom alert o
 This opens the Create Alert Rule dialog, where you can set up a threshold or anomaly alert for the selected metric.
 
 ![Create Metric Alert Rule](../images/synthetics/create-metric-alert-rule.png)
+
+### SSL Certificate Alerts
+
+SSL certificate alerts are generated on the following conditions for both HTTP and Browser monitors:
+
+* 30, 14, 7 and 3 days before the expiry of leaf, intermediate and root certificate in the chain
+* SSL certificate change is detected
+
+For more information, refer to [SSL Certificate Monitoring](./ssl-certs.md) section.
