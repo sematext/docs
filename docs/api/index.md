@@ -37,3 +37,16 @@ Try out the REST APIs using the API Key of your Sematext account at:
 * <a href="https://apps.sematext.com/api-explorer" target="_blank">Sematext Cloud US Region</a>
 
 * <a href="https://apps.eu.sematext.com/api-explorer" target="_blank">Sematext Cloud EU Region</a>
+
+#### API Client SDKs
+
+API clients are available for the following languages:
+
+* [Go](https://github.com/sematext/sematext-api-client-go)
+* [Java](https://github.com/sematext/sematext-api-client-java)
+* [Javascript / Node JS](https://github.com/sematext/sematext-api-client-javascript)
+* [PHP](https://github.com/sematext/sematext-api-client-php)
+* [Python](https://github.com/sematext/sematext-api-client-python)
+* [Ruby](https://github.com/sematext/sematext-api-client-ruby)
+* [Rust](https://github.com/sematext/sematext-api-client-rust)
+
