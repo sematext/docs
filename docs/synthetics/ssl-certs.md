@@ -1,15 +1,15 @@
 title: SSL Certificate Monitoring
 description: Monitor & get notified on SSL certificate expiry and change. 
 
-Issues with SSL certificates not only cause downtime of APIs and websites but also hurts their reputation. Sematext Synthetics performs the following SSL certificate checks on the monitors. The monitor performs these checks on all the certificates in the chain - the leaf, intermediate, and root certificates. Sematext Synthetics alerts you on the failure of these checks via the configured monitor alert channels like Email, Slack, Webhooks, etc.
+Issues with SSL certificates not only cause downtime of APIs and websites but also hurts their reputation. Sematext Synthetics performs the following SSL certificate checks on all the certificates in the chain - the leaf, intermediate, and root certificates.
 
 * Validate the SSL certificates of the API/websites in every run
 * Check for the expiration of the certificates every day and alert you 30, 14, 7 and 3 days before the expiry
 * Check for certificate change every 10 mins and alert you on detecting any changes, with a detailed change report
 
-Apart from these checks, Synthetics also provides an SSL certificate report, with details of all the certificates in the chain.
+Sematext Synthetics alerts you on the failure of these checks via the configured monitor alert channels like Email, Slack, Webhooks, etc. Apart from these checks, Synthetics also provides an SSL certificate report, with details of all the certificates in the chain.
 
-Both the HTTP and Browser monitors perform the above checks except for Browser monitors with user journey script configured.
+Both the HTTP and Browser monitors perform these checks except for Browser monitors with user journey script configured.
 
 ## Certificate Validation
 
@@ -42,8 +42,10 @@ Sematext Synthetics checks the certificate expiry every day and alerts you via t
 
 In the modern dynamic application environments, the SSL certificates are managed by a certificate manager, which can update the certificates automatically. This could sometimes cause issues like missing hostname in certificates or if the client time is not correct, certificate validation will fail. Sematext Synthetics checks for the certificate change, every 10 mins and notifies you via the configured monitor alert channels about the change. The monitor detects the change based on the fingerprint of the certificate. The change alert contains a detailed change report.
 
+**Certificate Change Alert**
 ![Certificate change alert](../images/synthetics/cert-change-alert.png)
 
+**Certificate Change Report**
 ![Certificate change report](../images/synthetics/cert-change-report.png)
 
 ## SSL Certificate Report
