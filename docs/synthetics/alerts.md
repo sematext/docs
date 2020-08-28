@@ -30,7 +30,7 @@ This opens the Create Alert Rule dialog, where you can set up a threshold or ano
 
 SSL certificate alerts are generated on the following conditions for both HTTP and Browser monitors:
 
-* 30, 14, 7 and 3 days before the expiry of leaf, intermediate and root certificate in the chain
+* 30, 14, 7 and 3 days before the expiry of leaf, intermediate, and root certificates in the chain
 * SSL certificate change is detected
 
-For more information, refer to [SSL Certificate Monitoring](./ssl-certs.md) section.
+For more information, refer to the [SSL Certificate Monitoring](./ssl-certs.md) section.

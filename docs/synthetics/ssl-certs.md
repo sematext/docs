@@ -24,23 +24,27 @@ The HTTP monitor performs the following checks:
 * Verify if there are too many intermediate certificates (more than 3 intermediates)
 * Hostname validation, check if the hostname of the website/API is present in the list of allowed DNS names of the certificate
 
-The browser monitor loads the website in a real Google Chrome browser so validates all the checks done by Google Chrome browser. We update the Chrome browser periodically, so the list of checks stays up-to-date with recent implementation. Along with all the above checks done by the HTTP monitor, the browser monitor performs the following extra checks:
+The Browser monitor loads the website in a real Google Chrome browser and all the checks done by the Google Chrome browser. We update the Chrome browser periodically, so the list of checks stays up-to-date with recent implementations. Alongside all the checks above done by the HTTP monitor, the browser monitor performs the following extra checks:
 
 * Certificate is revoked.
 * Certificate uses a weak signature algorithm (e.g. SHA-1)
 * Certificate authority is not trusted
 * Certificate validity is too long
-* Certificate uses a weak key ( e.g. a too small RSA key)
+* Certificate uses a weak key ( e.g. too small RSA key)
 
 ## Certificate Expiry
 
-Sematext Synthetics checks the certificate expiry every day and alerts you via the configured monitor alert channels multiple times before the expiry so that you remained about the expiry. The monitor performs the expiry check for all the certificates in the chains - leaf, intermediates, and root certificate. The Monitor Overview page displays the expiry time of the recently expiring certificate.
+Sematext Synthetics checks the certificate expiry every day and alerts you via the configured monitor alert channels multiple times before it expires. We make sure you're reminded about the expiry multiple times.
+
+The monitor performs the expiry check for all the certificates in the chains - leaf, intermediate, and root certificates. The Monitor Overview page displays the expiry time of the recently expiring certificate.
 
 ![Certificate expiry](../images/synthetics/cert-expiry.png)
 
 ## Certificate Change
 
-In the modern dynamic application environments, the SSL certificates are managed by a certificate manager, which can update the certificates automatically. This could sometimes cause issues like missing hostname in certificates or if the client time is not correct, certificate validation will fail. Sematext Synthetics checks for the certificate change, every 10 mins and notifies you via the configured monitor alert channels about the change. The monitor detects the change based on the fingerprint of the certificate. The change alert contains a detailed change report.
+In modern, dynamic application environments, the SSL certificates are managed by a certificate manager, which can update the certificates automatically. This could sometimes cause issues like missing `hostname` in certificates or if the client time is not correct, certificate validation will fail. 
+
+Sematext Synthetics checks for the certificate change, every 10 mins and notifies you via the configured monitor alert channels about the change. The monitor detects the change based on the fingerprint of the certificate. The change alert contains a detailed change report.
 
 **Certificate Change Alert**
 ![Certificate change alert](../images/synthetics/cert-change-alert.png)
@@ -50,7 +54,7 @@ In the modern dynamic application environments, the SSL certificates are managed
 
 ## SSL Certificate Report
 
-SSL certificate report provides an overview of the certificate along with the details of the intermediate and root certificates. It contains the following details:
+The SSL certificate report provides an overview of the certificate along with the details of the intermediate and root certificates. It contains the following details:
 
 * Common name of the subject and issuer
 * Validity period
