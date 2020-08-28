@@ -82,7 +82,7 @@ pages:
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
       - Alerts: synthetics/alerts.md
-      - SSL Certificate Monitoring: synthetics/ssl-certs.md
+      - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - Metrics: synthetics/metrics.md
     - Tracing:
       - Overview: tracing/index.md
