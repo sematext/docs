@@ -574,6 +574,7 @@ All of the integrations require adding and [configuring the Experience script](.
 - [Hipchat](/integration/alerts-hipchat-integration/)
 - [Telegram](/integration/alerts-telegram-integration/)
 - [Microsoft Teams](/integration/alerts-teams-integration/)
+- [Spike.sh](/integration/alerts-spikesh-integration/)
 
 ## Alerting
 
