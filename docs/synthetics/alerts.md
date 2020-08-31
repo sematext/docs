@@ -33,4 +33,4 @@ SSL certificate alerts are generated on the following conditions for both HTTP a
 * 30, 14, 7 and 3 days before the expiry of leaf, intermediate, or root certificate in the chain
 * SSL certificate change is detected
 
-For more information, refer to the [SSL Certificate Monitoring](./ssl-certs.md) section.
+For more information, refer to the [SSL Certificate Monitoring](./ssl-certificate-monitoring.md) section.
