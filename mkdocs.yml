@@ -173,7 +173,7 @@ pages:
       - Overview: team/index.md
       - Account Members: team/account-members.md
       - App Guests: team/app-guests.md
-      - App Transfer: team/app-transfer.md
+      - Transfer Apps: team/transfer-apps.md
       - User Roles: team/user-roles.md
     - Agents:
       - Overview: agents/index.md
