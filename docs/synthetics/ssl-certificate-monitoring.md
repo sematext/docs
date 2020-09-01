@@ -31,6 +31,7 @@ The Browser monitor loads the website in a real Google Chrome browser and all th
 * Certificate authority is not trusted
 * Certificate validity is too long
 * Certificate uses a weak key ( e.g. too small RSA key)
+* Certificate has Certificate Transparency data
 
 ## Certificate Expiry
 
