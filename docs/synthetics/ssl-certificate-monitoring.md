@@ -1,7 +1,7 @@
-title: SSL Certificate Monitoring
-description: Monitor & get notified on SSL certificate expiry and change. 
+title: SSL/TLS Certificate Monitoring
+description: Monitor & get notified on SSL/TLS certificate expiry and change. 
 
-Issues with SSL certificates not only cause downtime of APIs and websites but also hurt their reputation. Sematext Synthetics performs the following SSL certificate checks on all the certificates in the chain - the leaf, intermediate, and root certificates.
+Issues with SSL/TLS certificates not only cause downtime of APIs and websites but also hurt their reputation. Sematext Synthetics performs the following SSL certificate checks on all the certificates in the chain - the leaf, intermediate, and root certificates.
 
 * **Certificate Validation** - Validate the SSL certificates of the API/websites in every run
 * **Certificate Expiry** - Check for the expiration of the certificates every day and alert you 30, 14, 7 and 3 days before the expiry
