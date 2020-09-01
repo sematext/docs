@@ -1,5 +1,5 @@
 title: Sematext Team and Access Sharing
-description: There are two levels of access rights. Account and App Access. Inviting team members to your account means they get access to all your Apps, Dashboards, notification hooks, alert rules, and everything else! You can invite team members to individual Apps and access Apps you’ve been invited to. 
+description: There are two levels of access rights. Account Members and App Guests. Inviting team members to your account means they get access to all your Apps, Dashboards, notification hooks, alert rules, and everything else! You can invite team members to individual Apps and access Apps you’ve been invited to. 
 
 
 There are two levels of access rights: 

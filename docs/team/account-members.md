@@ -21,10 +21,10 @@ To see the list of all the accounts you can access click on the **Accounts** sec
 If you have a pending invite red circle is displayed next to the **Team** menu item in the main navigation 
 as well as next to the **Accounts** section. 
 
-Pending invites are in the **pending** state and by clicking on the **three dots(...)** you will open 
+Pending invites are in the **Pending** state and by clicking on the **three dots(...)** you will open 
 the action menu that will give you options to **Accept** the invite, **Accept and switch to that account** or **Decline** the invite.
 
-Accounts that you have access to are in the **active** state and by clicking on the **three dots(...)** you 
+Accounts that you have access to are in the **Active** state and by clicking on the **three dots(...)** you 
 will open the action menu that will give you an option to **Leave** that account.
 
 
