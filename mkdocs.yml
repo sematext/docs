@@ -171,7 +171,7 @@ pages:
       - Common Schema: tags/common-schema.md
     - Team:
       - Overview: team/index.md
-      - Account Access: team/account-access.md
+      - Account Members: team/account-members.md
       - App Access: team/app-access.md
       - App Transfer: team/app-transfer.md
       - User Roles: team/user-roles.md
