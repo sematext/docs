@@ -378,6 +378,16 @@ bootstrap the JMX connector:
 
 See [enabling Security Manager permissions](/agents/sematext-agent/jmx-attaching/#security-manager-permissions) to allow automatic JMX connector exposure.
 
+### Can I reconfigure the agent to send metrics to a different Monitoring App?
+Yes, this is how:
+- If you are using automonitoring via [autodiscovery](https://sematext.com/docs/monitoring/autodiscovery/) just change the App in the UI
+Otherwise:
+- In /opt/spm/spm-monitor/conf directory look for a .properties file whose name contains the token of the Monitoring App where the metrics are being sent
+- Rename this file, replacing the App token part with the token of the Monitoring App where you want the agent to send metrics
+- If in-process agent is used also change the token in the javaagent definition in the startup script of the monitored service
+- Run `sudo service sematext-agent restart`
+
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
