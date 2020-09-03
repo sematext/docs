@@ -18,7 +18,7 @@ To transfer one of your Apps to another user, go to the
 ## My Transfers
 
 To show the list of Apps that are in the process of being transfered to some user, and that user hasn’t accepted the transfer yet, click on the **My Transfers** section. 
-By clicking on the **three dots(...)** you will open the action menu that will give you an option to **Cancel the Transfer**.
+By clicking on the **three dots(...)** you will open the action menu that will give you an option to **Cancel Transfer**.
 
 ![My Transfers](../images/team/my_transfers.png)
 
