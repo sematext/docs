@@ -18,7 +18,7 @@ To see the list of all the accounts you can access click on the **Accounts** sec
 
 ![Accounts You Can Access](../images/team/accounts_you_can_access.png)
 
-If you have a pending invite red circle is displayed next to the **Team** menu item in the main navigation 
+If you have a pending invite, a red circle is displayed next to the **Team** menu item in the main navigation 
 as well as next to the **Accounts** section. 
 
 Pending invites are in the **Pending** state and by clicking on the **three dots(...)** you will open 

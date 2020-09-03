@@ -1,7 +1,7 @@
 title: Sematext App Guests
-description: App Sharing is restricted only to a particular App. Nothing besides the shared App is accessible to the invited user for example, dashboards are at the account level can can thus be shared only through Account Sharing.
+description: App Sharing is restricted only to a particular App. Nothing besides the shared App is accessible to the invited user. For example, Dashboards are at the account level can can thus be shared only through Account Sharing.
 
-App guests is **restricted only to a particular App**. Nothing besides the 
+App guests are **restricted only to a particular App**. Nothing besides the 
 shared App is accessible to the invited user. 
 
 *__Note__: Dashboards are at the account level and can thus be shared only through Account Members.*
@@ -9,12 +9,12 @@ shared App is accessible to the invited user.
 This option is useful if you want to be restrictive about which Apps can be 
 seen by others or what kind of effect they have on your team. 
 
-By only configuring App guests, guests **can't see or edit alert rules** created 
+By only configuring App Guests, guests **can't see or edit alert rules** created 
 by your team, they **can't use your team's notification hooks**, meaning they're 
 **limited only to the App they have access to**.
 
 To share one of your Apps with other users, go to the 
-[App guests screen](https://apps.sematext.com/ui/team/app-guests) in Sematext Cloud.
+[App Guests screen](https://apps.sematext.com/ui/team/app-guests) in Sematext Cloud.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay loop>
   <source src="https://cdn.sematext.com/videos/app-guests.mp4" type="video/mp4" />
@@ -26,7 +26,7 @@ To see the list of all the Apps you can access click on the **Apps** section.
 
 ![Apps You Can Access](../images/team/apps_you_can_access.png)
 
-If you have a pending invite a red circle is displayed next to the **Team** menu item in the main navigation 
+If you have a pending invite, a red circle is displayed next to the **Team** menu item in the main navigation 
 as well as next to the **Apps** section. 
 
 
@@ -34,9 +34,9 @@ Pending invites are in the **Pending** state and by clicking on the **three dots
 
 Apps that you have access to are in the **Accepted** state and by clicking on the **three dots(...)** you will open the action menu that will give you an option to **Leave** that app.
 
-## Your apps that other users can access
+## Your Apps that other users can access
 
-To show the list of your apps that other users can access click on the **App Guests** section. For the detailed information about a specific user click on the member email and that will open a side modal with the list of all the apps the specific user has access to.
+To see the list of your Apps that other users can access click on the **App Guests** section. For detailed information about a specific user click on the member email. That will open a flyout with the list of all Apps that user can access.
 
 ![Apps Other Users Can Access](../images/team/apps_other_can_access.png)
 

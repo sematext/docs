@@ -1,7 +1,7 @@
 title: Sematext Transfer Apps
 description: Inviting team members to your account means they get access to all your Apps, dashboards, notification hooks, alert rules, and everything else!
 
-No level of Access can change the Owner status of an App. To transfer the 
+Only App Owner can change an App ownership by transferring that App to another user. To transfer the 
 ownership of an App, use the Transfer Apps feature. Click the **Start Ownership Transfer** 
 button to open the flyout, select an App, click **Transfer to...** to proceed, enter the email of the
 user you want to transfer the App to, and hit **Transfer Ownership**.
@@ -24,7 +24,7 @@ By clicking on the **three dots(...)** you will open the action menu that will g
 
 ## Accept Transfers
 
-If you have a pending transfer a red circle is displayed next to the **Team** menu item in the main navigation 
+If you have a pending transfer, a red circle is displayed next to the **Team** menu item in the main navigation 
 as well as next to the **Transfer Apps** section. 
 
 The screenshot below shows the list of Apps that are being transferred to you by some user. By clicking on the **three dots(...)** you will open the action menu that will give you options to **Accept** or **Decline** transfer.
