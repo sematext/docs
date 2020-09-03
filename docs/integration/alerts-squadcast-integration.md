@@ -31,10 +31,6 @@ To be able to receive incoming notifications we need to add and configure a new 
 
 <img class="content-modal-image" alt="Create Squadcast Integration - API Webhook URL" src="../../images/integrations/create-squadcast-integration-alert-source-details.png" title="Create Squadcast Integration - API Webhook URL">
 
-**7.** 
-
-<img class="content-modal-image" alt="Create Squadcast Integration - " src="../../images/integrations/create-squadcast-integration-api-access-token.png" title="Create Squadcast Integration - ">
-
 Having the **Alert Source** configured and having the **API Webhook URL** we can add the notification to Sematext. 
 
 ## In Sematext
