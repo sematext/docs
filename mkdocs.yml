@@ -143,6 +143,7 @@ pages:
         - Squadcast: integration/alerts-squadcast-integration.md
         - Teams: integration/alerts-teams-integration.md
         - Telegram: integration/alerts-telegram-integration.md
+        - Twilio: integration/alerts-twilio-integration.md
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
     - Alerts:

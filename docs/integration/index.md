@@ -576,6 +576,7 @@ All of the integrations require adding and [configuring the Experience script](.
 - [Microsoft Teams](/integration/alerts-teams-integration/)
 - [Spike.sh](/integration/alerts-spikesh-integration/)
 - [Squadcast](/integration/alerts-squadcast-integration/)
+- [Twilio](/integration/alerts-twilio-integration/)
 
 ## Alerting
 
