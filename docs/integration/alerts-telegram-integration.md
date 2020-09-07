@@ -13,13 +13,13 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 And in the next line type your bot name, e.g., **SematextNotificationBot**. 
 
-Finally, type the bot username, it has to end with the **_bot** suffix, i.e. **SematextNotificationBot_bot**.
+Finally, type the bot username, it has to end with the **_bot** suffix, e.g., **SematextNotificationBot_bot**.
 
 If everything went successfully you should get a message with the **Bot Token API key**:
 
 <img class="content-modal-image" alt="Create Telegram Bot Token API Key" src="../../images/integrations/create-telegram-integration_bot_key.png" title="Create Telegram Bot Token API Key">
 
-Note the **Bot Token API key** down, you will need to provide it in Sematext UI.
+Copy the **Bot Token API key** somewhere, you will need it to configure the notification hook in Sematext.
 
 **3.** Invite the bot to the channel to which it should send notifications. You can do that by including the bot in the administrators of the channel in your Telegram client. Let's follow the steps. 
 
