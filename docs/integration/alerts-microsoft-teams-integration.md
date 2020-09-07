@@ -41,7 +41,7 @@ With the **Incoming Webhook** configured we can now use the **Webhook URL** to c
 
 **1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Microsoft Teams card to create a new Microsoft Teams notification hook.
 
-![Sematext Notification Hooks](../../images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
+![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
 **2.** Add your Microsoft Teams **webhook URL**. 
 
