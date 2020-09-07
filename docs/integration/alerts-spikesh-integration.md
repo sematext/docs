@@ -15,7 +15,7 @@ To be able to receive incoming notifications we need to add and configure a new 
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Sematext" src="../../images/integrations/create-spikesh-integration-sematext.png" title="Create Spike.sh Integration - Sematext">
 
-**4.** Provide the name, description of the integration. Choose the service that it should be added to, the escalation policy and the acknowledge time:
+**4.** Provide the name, description of the integration. Choose the service that it should be added to, the escalation policy and the acknowledgment time:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Integration Description" src="../../images/integrations/create-spikesh-integration-add-integration.png" title="Create Spike.sh Integration - Integration Description">
 
