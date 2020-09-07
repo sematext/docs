@@ -21,7 +21,7 @@ If everything went successfully you should get a message with the **Bot Token AP
 
 Note the **Bot Token API key** down, you will need to provide it in Sematext UI.
 
-**3.** Invite the bot to the channel it should send the notifications to. You can do that by including the bot in the administrators of the channel in your Telegram client. Let's follow the steps. 
+**3.** Invite the bot to the channel to which it should send notifications. You can do that by including the bot in the administrators of the channel in your Telegram client. Let's follow the steps. 
 
 First, message the bot using the Telegram client of your choice:
 
@@ -43,11 +43,11 @@ Find the created bot and click on it:
 
 <img class="content-modal-image" alt="Create Telegram Integration - Add the Bot" src="../../images/integrations/create-telegram-integration_add_bot.png" title="Create Telegram Integration - Add the Bot">
 
-Finally review the permissions and click done:
+Finally, review the permissions and click done:
 
 <img class="content-modal-image" alt="Create Telegram Integration - Review Permissions" src="../../images/integrations/create-telegram-integration_add_bot_finish.png" title="Create Telegram Integration - Review Permissions">
 
-**4.** Retrieve the channel identifier that the bot will send the notifications to. This can be done by running the following request:
+**4.** Retrieve the channel identifier for the channel where the bot will send notifications. This can be done by running the following request:
 
 ``` bash
 curl -s -k https://api.telegram.org/bot<BOT_TOKEN_API_KEY>/getUpdates
