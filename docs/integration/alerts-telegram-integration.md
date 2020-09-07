@@ -11,7 +11,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 /newbot
 ```
 
-And in the next line type your bot name, i.e. **SematextNotificationBot**. 
+And in the next line type your bot name, e.g., **SematextNotificationBot**. 
 
 Finally, type the bot username, it has to end with the **_bot** suffix, i.e. **SematextNotificationBot_bot**.
 
@@ -74,12 +74,6 @@ We are now ready to add our Telegram notification hook to Sematext.
 
 <img class="content-modal-image" alt="Create Telegram Integration" src="../../images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
 
-Next, click the **Send Test Notification** button. Telegram returns status code **200** indicating everything is configured correctly. Check your Telegram channel for the test message from Sematext. 
+Next, click the **Send Test Notification** button. Telegram should return status code **200** indicating everything is configured correctly. Check your Telegram channel for the test message from Sematext. 
 
-Once the test message is visible click the **Save Notification Hook** button to save your configuration. 
-
-That's it. Notifications sent to Telegram can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
-
-We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
-
-You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext).
+Once the test message, is visible click the **Save Notification Hook** button to save your configuration. 
