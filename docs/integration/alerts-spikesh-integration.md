@@ -5,7 +5,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 **1.** Create an account at [Spike.sh](https://spike.sh) if you don't have one already.
 
-To be able to receive incoming notifications we need to add and configure a new integration. To do that:
+To receive incoming notifications from Sematext add and configure a new integration in Spike.sh:
 
 **2.** Go to the **Integrations** page and click **New integration**:
 
@@ -19,19 +19,19 @@ To be able to receive incoming notifications we need to add and configure a new 
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Integration Description" src="../../images/integrations/create-spikesh-integration-add-integration.png" title="Create Spike.sh Integration - Integration Description">
 
-**5.** Once created click the **Copy Webhook** link:
+**5.** Once the account is created click the **Copy Webhook** link:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Copy Webhook" src="../../images/integrations/create-spikesh-integration-copy.png" title="Create Spike.sh Integration - Copy ">
 
-**6.** Finally click **Copy** button in the displayed modal window and note down the URL that was copied into the clipboard:
+**6.** Finally, click **Copy** button in the displayed modal window:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - URL copy" src="../../images/integrations/create-spikesh-integration-copy-webhook.png" title="Create Spike.sh Integration - URL copy">
 
-Having the **Integration** configured and having the ** Webhook URL** we can add the notification to Sematext. 
+With the **Integration** configured we can now use the **Webhook URL** to configure the Spike.sh notification hook in Sematext.
 
 ## In Sematext
 
-**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Spike.sh card to create a new Spike.sh notification hook.
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) (in [EU](https://apps.eu.sematext.com/ui/webhook-create)) and select Spike.sh card to create a new Spike.sh notification hook.
 
 ![Sematext Notification Hooks](../../images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
@@ -39,12 +39,6 @@ Having the **Integration** configured and having the ** Webhook URL** we can add
 
 <img class="content-modal-image" alt="Create Spike.sh Integration" src="../../images/integrations/create-spikesh-integration.png" title="Create Spike.sh Integration">
 
-Next, click the **Send Test Notification** button. Spike.sh returns **OK** indicating everything is configured correctly. Check your Spike.sh integration for the test message from Sematext. 
+Next, click the **Send Test Notification** button. Spike.sh should return **OK** indicating everything is configured correctly. Check your Spike.sh integration for the test message from Sematext. 
 
-Once the test message is visible click the **Save Notification Hook** button to save your configuration. 
-
-That's it. Notifications sent to Spike.sh can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
-
-We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
-
-You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext).
+Once the test message is visible, click the **Save Notification Hook** button to save your configuration. 
