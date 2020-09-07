@@ -35,7 +35,7 @@ hooks, alert rules, and integrations.
 
 They can also create new Apps under your account and invite other users. 
 Depending on the role you assign to invitees, they may be able to administer 
-your Apps, Dashboards, users and even billing info (change app plan, assign 
+your Apps, Dashboards, users and even billing info (change App plan, assign 
 credit card, etc). 
 
 Account Sharing is very convenient because as soon as a new
@@ -60,7 +60,7 @@ by your team, they **can't use your team's notification hooks**, meaning they're
 ## Transfer Apps
 No level of Access can change the Owner status of an App. To transfer the 
 ownership of an App, use the [Transfer Apps](./transfer-apps) feature. Click the **Start Ownership Transfer** 
-button to open the side modal, select an app, click **Transfer to...** to proceed, enter the email of the
+button to open the side modal, select an App, click **Transfer to...** to proceed, enter the email of the
 user you want to transfer the App to, and hit **Transfer Ownership**.
 
 ## Typical use of Roles in an Organization or Team

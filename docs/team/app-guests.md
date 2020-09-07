@@ -1,7 +1,7 @@
 title: Sematext App Guests
 description: App Sharing is restricted only to a particular App. Nothing besides the shared App is accessible to the invited user. For example, Dashboards are at the account level can can thus be shared only through Account Sharing.
 
-App guests are **restricted only to a particular App**. Nothing besides the 
+App Guests are **restricted only to a particular App**. Nothing besides the 
 shared App is accessible to the invited user. 
 
 *__Note__: Dashboards are at the account level and can thus be shared only through Account Members.*
@@ -32,7 +32,7 @@ as well as next to the **Apps** section.
 
 Pending invites are in the **Pending** state and by clicking on the **three dots(...)** you will open the action menu that will give you options to **Accept** or **Decline** the invite.
 
-Apps that you have access to are in the **Accepted** state and by clicking on the **three dots(...)** you will open the action menu that will give you an option to **Leave** that app.
+Apps that you have access to are in the **Accepted** state and by clicking on the **three dots(...)** you will open the action menu that will give you an option to **Leave** that App.
 
 ## Your Apps that other users can access
 
