@@ -1,7 +1,7 @@
 title: Twilio Alerts Integration
 description: Sematext threshold, anomaly and / or heartbeat Alerts integration with Twilio. Use them together to get the information about each notification quickly and on any device.
 
-## In Telegram
+## In Twilio
 
 **1.** Create a Twilio account at [twilio.com](https://twilio.com).
 

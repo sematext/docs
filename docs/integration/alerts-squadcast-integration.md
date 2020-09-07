@@ -5,13 +5,13 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 **1.** Create an account at [Squadcast](https://www.squadcast.com) if you don't have one already.
 
-To be able to receive incoming notifications we need to add and configure a new integration. To do that:
+To receive incoming notifications from Sematext add and configure a new integration in Squadcast:
 
 **2.** Click on profile icon in the top-right and chose **Profile** to open the profile details:
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Profile" src="../../images/integrations/create-squadcast-integration-profile.png" title="Create Squadcast Integration - Profile">
 
-**3.** If you don't have an API token, click the **Generate new API token** to generate a token used to communicate with Squadcast and copy the it so you can use it in Sematext:
+**3.** If you don't have an API token, click the **Generate new API token** to generate a token used to communicate with Squadcast and copy it so you can use it in Sematext:
 
 <img class="content-modal-image" alt="Create Squadcast Integration - New API Token" src="../../images/integrations/create-squadcast-integration-profile-details.png" title="Create Squadcast Integration - New API Token">
 
@@ -23,7 +23,7 @@ To be able to receive incoming notifications we need to add and configure a new 
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Service Details" src="../../images/integrations/create-squadcast-integration-service-details.png" title="Create Squadcast Integration - Service Details">
 
-**6.** In **Services** click the **Alert Sources** under the service you would like to integrate Sematext notifications with. If you wish to receive notification from Sematext to different services you will need to create multiple notification hooks:  
+**6.** In **Services** click the **Alert Sources** under the service you would like to integrate Sematext notifications with. If you wish to receive notifications from Sematext to different services you will need to create multiple notification hooks:  
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Alert Sources" src="../../images/integrations/create-squadcast-integration-alert-sources.png" title="Create Squadcast Integration - Alert Sources">
 
@@ -31,7 +31,7 @@ To be able to receive incoming notifications we need to add and configure a new 
 
 <img class="content-modal-image" alt="Create Squadcast Integration - API Webhook URL" src="../../images/integrations/create-squadcast-integration-alert-source-details.png" title="Create Squadcast Integration - API Webhook URL">
 
-Having the **Alert Source** configured and having the **API Webhook URL** we can add the notification to Sematext. 
+Having the **Alert Source** configured and having the **API Webhook URL** we can add the notification hook to Sematext. 
 
 ## In Sematext
 
@@ -43,12 +43,6 @@ Having the **Alert Source** configured and having the **API Webhook URL** we can
 
 <img class="content-modal-image" alt="Create Squadcast Integration" src="../../images/integrations/create-squadcast-integration.png" title="Create Squadcast Integration">
 
-Next, click the **Send Test Notification** button. Squadcast returns information similar to **{"data":{"message":"Pipeline processing done"},"meta":{"request_id":"8a8c2d9b-aea6-479b-9f1f-373ac6785d37"}}** indicating everything is configured correctly. Check your Squadcast integration for the test message from Sematext. 
+Next, click the **Send Test Notification** button. Squadcast should return information similar to **{"data":{"message":"Pipeline processing done"},"meta":{"request_id":"8a8c2d9b-aea6-479b-9f1f-373ac6785d37"}}** indicating everything is configured correctly. Check your Squadcast integration for the test message from Sematext. 
 
-Once the test message is visible click the **Save Notification Hook** button to save your configuration. 
-
-That's it. Notifications sent to Squadcast can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
-
-We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
-
-You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext).
+Once the test message is visible, click the **Save Notification Hook** button to save your configuration. 
