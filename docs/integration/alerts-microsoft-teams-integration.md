@@ -3,7 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Microsoft Teams
 
-**1.** Create a [Microsoft Teams account](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software) if you don't have one already and create a new team and channel that will be used to receive the notifications from Sematext.
+**1.** Create a [Microsoft Teams account](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software) if you don't have one already and create a new team and channel that will be used to receive notifications from Sematext.
 
 To receive incoming notifications from Sematext add and configure a new integration in Microsoft Teams:
 
@@ -31,11 +31,11 @@ To receive incoming notifications from Sematext add and configure a new integrat
 
 <img class="content-modal-image" alt="Create Microsoft Teams Integration - Create Incoming Webhook" src="../../images/integrations/create-teams-integration-create-incoming-webhook.png" title="Create Microsoft Teams Integration - Create Incoming Webhook">
 
-**8.** Finally the webhook URL will be displayed. You need to copy it and store it - it will be used when configuring the Microsoft Teams notification hook in Sematext. Once you have it stored, click **Create** finishing the webhook creation.
+**8.** Finally, copy the displayed **Webhook URL** and click **Create** to finish webhook creation.
 
 <img class="content-modal-image" alt="Create Microsoft Teams Integration - Webhook URL" src="../../images/integrations/create-teams-integration-webhook-url.png" title="Create Microsoft Teams Integration - Webhook URL">
 
-Having the **Incoming Webhook** configured and having the webhook URL we can add the notification to Sematext. 
+With the **Incoming Webhook** configured we can now use the **Webhook URL** to configure the Microsoft Teams notification hook in Sematext.
 
 ## In Sematext
 
@@ -47,12 +47,6 @@ Having the **Incoming Webhook** configured and having the webhook URL we can add
 
 <img class="content-modal-image" alt="Create Microsoft Teams Integration" src="../../images/integrations/create-teams-integration.png" title="Create Microsoft Teams Integration">
 
-Next, click the **Send Test Notification** button. Microsoft Teams returns **1** indicating everything is configured correctly. Check your Microsoft Teams channel for the test message from Sematext. 
+Next, click the **Send Test Notification** button. Microsoft Teams should return **1** indicating everything is configured correctly. Check your Microsoft Teams channel for the test message from Sematext. 
 
-Once the test message is visible click the **Save Notification Hook** button to save your configuration. 
-
-That's it. Notifications sent to Microsoft Teams can also be sent via other channels such as e-mail, Pagerduty, Nagios, etc. Check [alerts](/integration) to learn more about other channels and types of alerts available.
-
-We hope you enjoy using Sematext App and infrastructure monitoring and log management tools. If you need further support or have any feedback regarding our products, please don't hesitate to [contact us](mailto:support@sematext.com)!
-
-You can also contact / talk to us using chat widget at the bottom right corner of the page or give us a shout [@Sematext](http://twitter.com/sematext).
+Once the test message is visible, click the **Save Notification Hook** button to save your configuration. 
