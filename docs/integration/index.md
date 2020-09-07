@@ -588,6 +588,11 @@ All of the integrations require adding and [configuring the Experience script](.
 - [Zapier](/integration/alerts-zapier-integration/)
 - [Nagios](/integration/alerts-nagios-integration/)
 - [Hipchat](/integration/alerts-hipchat-integration/)
+- [Telegram](/integration/alerts-telegram-integration/)
+- [Microsoft Teams](/integration/alerts-microsoft-teams-integration/)
+- [Spike.sh](/integration/alerts-spikesh-integration/)
+- [Squadcast](/integration/alerts-squadcast-integration/)
+- [Twilio](/integration/alerts-twilio-integration/)
 
 ## Alerting
 
