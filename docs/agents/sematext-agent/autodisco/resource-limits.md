@@ -2,7 +2,7 @@ title: App Agent Resource Limits
 
 description:  Setting resource limits for App Agent pods.
 
-Sematext Agent spins up a new pod for every App Agent responsible for monitoring a particular service. The App Agent pod is configured to run with the following [request/limit](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-requests-and-limits-of-pod-and-container) specifications:
+Sematext Agent spins up a new Pod for every App Agent responsible for monitoring a particular service. The App Agent Pod is configured to run with the following [request/limit](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-requests-and-limits-of-pod-and-container) specifications:
 
 - CPU request: 90m
 - CPU limit: 2000m
