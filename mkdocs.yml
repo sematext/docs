@@ -219,6 +219,7 @@ pages:
           - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
           - Credential sets:  agents/sematext-agent/autodisco/credential-sets.md
+          - Resource limits: agents/sematext-agent/autodisco/resource-limits.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
