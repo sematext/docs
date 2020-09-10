@@ -51,17 +51,17 @@ After you install and activate an integration, you can:
 - [Akka](/integration/akka/)
 - [Apache](/integration/apache/)
 - [AWS (Amazon Web Services)](/integration/aws/)
-- [Cassandra](/integrartion/cassandra/)
-- [Clickhouse](/integration/clickhouse/)
+- [Cassandra](/integration/cassandra/)
+- [ClickHouse](/integration/clickhouse/)
 - [Docker](/integration/docker/)
 - [Elasticsearch](/integration/elasticsearch)
-- [Hbase](/integration/hbase)
+- [HBase](/integration/hbase)
 - [Java](/integration/java/)
 - [Kafka](/integration/kafka/)
-- [Mysql](/integration/mysql/)
+- [MySQL](/integration/mysql/)
 - [MongoDB](/integration/mongodb/)
-- [NginX](/integration/nginx/)
-- [Nginx+](/integration/ngingxplus/)
+- [Nginx](/integration/nginx/)
+- [Nginx+](/integration/nginxplus/)
 - [Node.js](/integration/node.js)
 - [PHP](/integration/php/)
 - [Redis](/integration/redis/)
@@ -71,7 +71,7 @@ After you install and activate an integration, you can:
 - [Apache Spark](/integration/spark/)
 - [Apache Storm](/integration/storm/)
 - [Tomcat](/integration/tomcat/)
-- [Zookeeper](/integration/zookeeper/)
+- [ZooKeeper](/integration/zookeeper/)
 
 ### Webhooks
 
@@ -79,13 +79,19 @@ After you install and activate an integration, you can:
 - [Custom user defined webhooks](/integration/alerts-webhooks-integration/)
 - [Big Panda](integration/alerts-bigpanda-integration/)
 - [Hipchat](/integration/alerts-hipchat-integration/)
+- [Microsoft Teams](/integration/alerts-microsoft-teams-integration/)
 - [Nagios](/integration/alerts-nagios-integration/)
 - [OpsGenie](/integration/alerts-opsgenie-integration/)
 - [PagerDuty](/integration/alerts-pagerduty-integration/)
 - [Pushover](/integration/alerts-pushover-integration/)
 - [Slack](/integration/alerts-slack-integration/)
+- [Spike.sh](/integration/alerts-spikesh-integration/)
+- [Squadcast](/integration/alerts-squadcast-integration/)
+- [Telegram](/integration/alerts-telegram-integration/)
+- [Twilio](/integration/alerts-twilio-integration/)
 - [VictorOps](/integration/alerts-victorops-integration/)
 - [Zapier](/integration/alerts-zapier-integration/)
+
 
 ## Creating New Integration
 
@@ -201,8 +207,8 @@ You need to add the Sematext repository and install Sematext Agent. It is availa
 
 App Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes:
 
-- [In-process as a javaagent](/agents/spm-monitor-javaagent/)
-- [Standalone as a separate process](/agents/spm-monitor-standalone/)
+- [In-process as a javaagent](/agents/sematext-agent/app-agent/spm-monitor-javaagent/)
+- [Standalone as a separate process](/agents/sematext-agent/app-agent/spm-monitor-standalone/)
 
 For more information check App Agent [overview page](/agents/sematext-agent/app-agent)
 
