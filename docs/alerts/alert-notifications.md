@@ -275,8 +275,8 @@ The primary purpose of alert rules is to send notifications when triggered. This
 
 An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view. A convenient way to navigate here is using the shortcut on top of the Alert Rules view.
 
-![image alt text](../docs/images/alerts/image_10.png)
+![Sematext Alerts](https://sematext.com/docs/images/alerts/image_10.png "Sematext Alerts")
 
 It’s a shortcut for Integrations > Notification Hooks.
 
-![image alt text](../docs/images/alerts/image_11.png)
+![Sematext Alerts](https://sematext.com/docs/images/alerts/image_11.png "Sematext Alerts")
