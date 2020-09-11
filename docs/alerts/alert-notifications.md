@@ -216,7 +216,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                             <img src="/docs/images/alerts/notifications/squadcast.svg" alt="Squadcast" title="Squadcast Alerts Integration" style="width: 80px;">
                         </div>
                         <div class="side back">
-                            <h5>Squadcast</h5>Sent all the alerts to Squadcast modern incident response and on-call management platform.
+                            <h5>Squadcast</h5>Send all alerts to Squadcast modern incident response and on-call management platform.
                         </div>
                     </div>
                 </div>
