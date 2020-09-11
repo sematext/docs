@@ -191,12 +191,92 @@ The primary purpose of alert rules is to send notifications when triggered. This
             </div>
         </a>
     </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/integration/alerts-spikesh-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="/docs/images/alerts/notifications/spike.svg" alt="Spike.sh" title="Spike.sh Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>Spike.sh</h5>Easy Sematext alerts integration with Spike.sh on-call management and escalations platform.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/integration/alerts-squadcast-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="/docs/images/alerts/notifications/squadcast.svg" alt="Squadcast" title="Squadcast Alerts Integration" style="width: 80px;">
+                        </div>
+                        <div class="side back">
+                            <h5>Squadcast</h5>Send all alerts to Squadcast modern incident response and on-call management platform.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/integration/alerts-microsoft-teams-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="/docs/images/alerts/notifications/teams.svg" alt="Microsoft Teams" title="Microsoft Teams Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>Microsoft Teams</h5>Easy Sematext alerts integration with Microsoft Teams collaboration tools and services.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/integration/alerts-telegram-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="/docs/images/alerts/notifications/telegram.svg" alt="Telegram" title="Telegram Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>Telegram</h5>Have all the important alert notifications from Sematext sent to your favorite messaging app.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/integration/alerts-twilio-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="/docs/images/alerts/notifications/twilio.svg" alt="Twilio" title="Twilio Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>Twilio SMS</h5>Get notified about alerts via SMS using the Twilio SMS service.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view. A convenient way to navigate here is using the shortcut on top of the Alert Rules view.
 
-![image alt text](../images/alerts/image_10.png)
+![image alt text](../docs/images/alerts/image_10.png)
 
 It’s a shortcut for Integrations > Notification Hooks.
 
-![image alt text](../images/alerts/image_11.png)
+![image alt text](../docs/images/alerts/image_11.png)
