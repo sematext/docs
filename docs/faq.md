@@ -56,9 +56,9 @@ some users, and use App Sharing to share specific apps with other
 users.
   
 To share Account with other users, go to
-<https://apps.sematext.com/ui/team/accounts>  
+<https://apps.sematext.com/ui/team/account-members>  
 To share App, go
-to <https://apps.sematext.com/ui/team/apps>
+to <https://apps.sematext.com/ui/team/app-guests>
 
 ### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
