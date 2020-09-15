@@ -140,7 +140,7 @@ You can also add new integrations and filter and search existing app using table
 - Type illustrated using integration type logo link to provide visual clue should app naming convention not include any reference to the type
 - Application Name
 - Integration Token is a unique system generated string that you will need to use on your system in order to install Sematext Integration Agent. It is required to authenticate and establish system connections so you can start sending data to the Sematext Cloud. Integration Agent installation will be covered in more depth in the following section.
-- Next table column describes your Integration Plan and plans can be adjusted using app settings. For more information on [infrastructure pricing](https://sematext.com/spm/pricing/) or [logging pricing](https://sematext.com/logsene/pricing/) check our website
+- Next table column describes your Integration Plan and plans can be adjusted using app settings. For more information on [infrastructure pricing](https://sematext.com/pricing#spm) or [logging pricing](https://sematext.com/pricing#logsene) check our website
 - App Status indicator icons show your apps status and either green checkmark is used to indicate that app is sending data to our service, indexed and ready for IT systems monitoring
 - App owner is defined in the last second column
 - Last, but not the least, App Settings dropdown menu is the last item in the [apps table](https://github.com/sematext/sematable).
