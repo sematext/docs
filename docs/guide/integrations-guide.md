@@ -1,7 +1,7 @@
 title: Sematext Integrations Guide
-description: Sematext Cloud provides over 40 built-in integrations used to monitor across all your systems, apps, and services.
+description: Sematext Cloud provides over 40 built-in integrations used to monitor across all your systems, Apps, and services.
 
-Sematext Cloud and on-premises IT monitoring system provides over 40 built-in infrastructure integrations used to monitor across all your systems, apps, and services.
+Sematext Cloud and on-premises IT monitoring system provides over 40 built-in infrastructure integrations used to monitor across all your systems, Apps, and services.
 
 You can report data from various systems to the Sematext Cloud, analyze and visualize it using APM and logging tools, and set alerts on the behaviour of these systems. Once infrastructure agent is installed, integrations provide monitoring capabilities for the following type of data:
 
@@ -15,7 +15,7 @@ Essentially, you can report data from any system on your server or hosts by crea
 To start monitoring your IT infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Agent](../agents/sematext-agent/) Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also collects metrics for various [integrations](/integration) using App Agents. App Agents can also instrument JVM-based apps to collect transaction traces and perform [on demand profiling](../monitoring/on-demand-profiling).
+- [Sematext Agent](../agents/sematext-agent/) Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also collects metrics for various [integrations](/integration) using App Agents. App Agents can also instrument JVM-based App to collect transaction traces and perform [on demand profiling](../monitoring/on-demand-profiling).
 
 - [Node-based App Agent](../agents/node-agent), which can [monitor
 Apache](../integration/apache) and [Nginx](../integration/nginx)
@@ -97,27 +97,27 @@ After you install and activate an integration, you can:
 
 Navigate to [Integrations Overview](https://apps.sematext.com/ui/integrations). Three different integrations are available:
 
-- Log Shipping and Management app
-- Infrastructure and Application Performance Monitoring app
+- Log Shipping and Management App
+- Infrastructure and Application Performance Monitoring App
 - Notification Hooks through various third party integrations, email, and system defined custom webhooks
 
-Hover over any integration card and click to create respective app or a webhook. Initially, there will be no app status and count tag displayed in the left bottom corner of the card, but once related app(s) have been created tag will display the number of apps, and grey and green tag colour are used to show if apps are not or are receiving data respectively.
+Hover over any integration card and click to create respective App or a webhook. Initially, there will be no App status and count tag displayed in the left bottom corner of the card, but once related App(s) have been created tag will display the number of App, and grey and green tag colour are used to show if App are not or are receiving data respectively.
 
-Image below illustrates an integration card being hovered over and the app status with the count tag displayed with one example app created.
+Image below illustrates an integration card being hovered over and the App status with the count tag displayed with one example App created.
 
 ![Sematext Cloud - Create New App](https://sematext.com/docs/images/guide/integrations/add-new-logging-app.png "Sematext Cloud - Create New App")
 
 ### App Integration
 
-New integration creation userflow is the same for both monitoring as well as logging apps. While Apache monitoring app is being created you can also create complementary logs app as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example, and that particular piece of a IT infrastructure puzzle.
+New integration creation userflow is the same for both monitoring as well as logging App. While Apache monitoring App is being created you can also create complementary logs App as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example, and that particular piece of a IT infrastructure puzzle.
 
-In other words, as monitoring app is being created you can create a logging app as well and vice versa. You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
+In other words, as monitoring App is being created you can create a logging App as well and vice versa. You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
 
 ![Sematext Cloud - Create New Intergration App](https://sematext.com/docs/images/guide/integrations/create-new-app-integration.png " Sematext Cloud - Create New Integration App")
 
 ### Webhook Integration
 
-When an integration app is first created our IT system monitoring platform creates several app specific alerts. User account email is used as a default notification mechanism to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [webhook](/guide/integrations-guide/#webhooks) integration.
+When an integration App is first created our IT system monitoring platform creates several App specific alerts. User account email is used as a default notification mechanism to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [webhook](/guide/integrations-guide/#webhooks) integration.
 
 You will first need to create that third party service and obtain required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. Image below shows a third party notification webhook integration being created, Slack in this example.
 
@@ -126,22 +126,22 @@ You will first need to create that third party service and obtain required API k
 
 ### App Table View
 
-Once one or more apps have been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created apps and provide overview as well as app menu from where you can:
+Once one or more Apps have been created, [Apps Table](https://apps.sematext.com/ui/integrations/apps) will display all the created Apps and provide overview as well as App menu from where you can:
 
-- access and edit app settings
+- access and edit App settings
 - create alerts and define alert rules
-- connect two apps
+- connect two Apps
 - invite other devops team members
-- transfer or disable app
+- transfer or disable App
 - get to monitoring installation instructions
 
-You can also add new integrations and filter and search existing app using table search functionality.App table contains following information:
+You can also add new integrations and filter and search existing App using table search functionality.App table contains following information:
 
-- Type illustrated using integration type logo link to provide visual clue should app naming convention not include any reference to the type
+- Type illustrated using integration type logo link to provide visual clue should App naming convention not include any reference to the type
 - Application Name
 - Integration Token is a unique system generated string that you will need to use on your system in order to install Sematext Integration Agent. It is required to authenticate and establish system connections so you can start sending data to the Sematext Cloud. Integration Agent installation will be covered in more depth in the following section.
-- Next table column describes your Integration Plan and plans can be adjusted using app settings. For more information on [infrastructure pricing](https://sematext.com/pricing#spm) or [logging pricing](https://sematext.com/pricing#logsene) check our website
-- App Status indicator icons show your apps status and either green checkmark is used to indicate that app is sending data to our service, indexed and ready for IT systems monitoring
+- Next table column describes your Integration Plan and plans can be adjusted using App settings. For more information on [infrastructure monitoring pricing](https://sematext.com/pricing#spm) or [logging pricing](https://sematext.com/pricing#logsene) check our website
+- App Status indicator icons show your apps status and either green checkmark is used to indicate that App is sending data to our service, indexed and ready for IT systems monitoring
 - App owner is defined in the last second column
 - Last, but not the least, App Settings dropdown menu is the last item in the [apps table](https://github.com/sematext/sematable).
 
@@ -152,7 +152,7 @@ You can also add new integrations and filter and search existing app using table
 Connecting a Monitoring App to a Logs App will pre-select that Logs App when you decide to correlate metrics. When you
 receive an alert notification for an App, the alert notification will automatically charts from
 connected Apps, and thus provide more information and context for you. You can connect any two Apps you have access to,
-regardless of their type. A single app can be connected to any number of other Apps. 
+regardless of their type. A single App can be connected to any number of other Apps. 
 
 To connect Apps go to App Table View and choose Connect App from Integration Menu.
 
@@ -160,7 +160,7 @@ To connect Apps go to App Table View and choose Connect App from Integration Men
 
 ### Logging
 
-Sematext stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install the agent on them. Logging apps require log shipper installation on your end, and information below explains the process.
+Sematext stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install the agent on them. Logging Apps require log shipper installation on your end, and information below explains the process.
 
 #### Elasticsearch API
 
@@ -214,7 +214,7 @@ For more information check App Agent [overview page](/agents/sematext-agent/app-
 
 You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
 
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
+[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs App. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
 Recommendations for learning more about Sematext products and services:
 
