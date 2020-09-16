@@ -4,7 +4,7 @@ description: Monitor & get notified on SSL/TLS certificate expiry and change.
 Issues with SSL/TLS certificates not only cause downtime of APIs and websites but also hurt their reputation. Sematext Synthetics performs the following SSL certificate checks on all the certificates in the chain - the leaf, intermediate, and root certificates.
 
 * **Certificate Validation** - Validate the SSL certificates of the API/websites in every run
-* **Certificate Expiry** - Check for the expiration of the certificates every day and alert you 30, 14, 7 and 3 days before the expiry
+* **Certificate Expiry** - Check for the expiration of the certificates every day and alert you 28, 14, 7 and 3 days before the expiry
 * **Certificate Change** - Check for certificate change every 10 mins and alert you on detecting any changes, with a detailed change report
 
 Sematext Synthetics alerts you on the failure of these checks via the configured monitor [alert notification hooks](../alerts/alert-notifications.md). Apart from these checks, Synthetics also provides an SSL certificate report, with details of all the certificates in the chain.
