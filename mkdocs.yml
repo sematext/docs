@@ -304,6 +304,7 @@ pages:
         - Release Notes: logagent/releasenotes.md
         - FAQ: logagent/faq.md
       - Mobile App SDKs: agents/mobile.md
+      - Browser SDK: agents/browser.md
     - Sematext Enterprise:
       - Overview: sematext-enterprise/index.md
       - Licensing: sematext-enterprise/licensing.md
