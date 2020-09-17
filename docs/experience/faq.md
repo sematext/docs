@@ -48,6 +48,11 @@ that it never interferes with the normal operation of your website or webapp.
 The script is loaded asynchronously and in most cases should have no or very
 small effect on website performance.
 
+### Is the Experience script open-source?
+
+Yes, the Experience script is open-source. Look at the [Browser SDK](/agents/browser/)
+section to learn more. 
+
 ### Can I send data from a different domain?
 
 Depending on your plan, you may be able to send data from multiple domains at
