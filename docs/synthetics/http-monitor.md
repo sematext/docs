@@ -56,6 +56,6 @@ Each HTTP monitor run is executed in an isolated environment. [Go HTTP Client](h
 
 The default values for various timeouts are:
 
-* **Socket Connection Timeout** - 3 seconds.
-* **TLS Handshake Timeout** - 5 seconds.
-* **Total Timeout** - Timeout for complete request-response operation - 20 seconds.
+* **Socket Connection Timeout** - 10 seconds.
+* **TLS Handshake Timeout** - 10 seconds.
+* **Total Timeout** - Timeout for complete request-response operation - 25 seconds.
