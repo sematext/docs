@@ -115,6 +115,7 @@ pages:
         - Node.js: integration/node.js.md
         - PHP: integration/php.md
         - PostgreSQL: integration/postgresql.md
+        - RabbitMQ: integration/rabbitmq.md
         - Redis: integration/redis.md
         - Solr: integration/solr.md
         - SolrCloud: integration/solrcloud.md
