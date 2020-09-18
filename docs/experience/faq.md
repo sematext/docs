@@ -51,7 +51,7 @@ small effect on website performance.
 ### Is the Experience script open-source?
 
 Yes, the Experience script is open-source. Look at the [Browser SDK](/agents/browser/)
-section to learn more. 
+to learn more. 
 
 ### Can I send data from a different domain?
 
