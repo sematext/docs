@@ -14,3 +14,7 @@ appropriate Sematext monitoring agent. You can choose from:
   - [Node.js-based App Agent](./node-agent), which can [monitor
     Apache](../integration/apache), [Nginx](../integration/nginx)
     (including [Nginx Plus](../integration/nginxplus)), [Express.js](../integration/express.js), and [Node.js](../integration/node.js) of course.
+
+  - [Browser SDK Agent](./browser), an open source agent that is 
+  	able to ship web application related metrics related to user
+  	interaction. 
