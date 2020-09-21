@@ -11,6 +11,7 @@ pages:
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
       # - Dashboards Guide: guide/dashboards-guide.md
+      - Terraform Guide: guide/terraform-guide.md
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
