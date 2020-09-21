@@ -79,7 +79,7 @@ terraform {
 }
 
 provider "sematext" {
-    # provider configuration
+    sematext_region = "US"
 }
 
 resource "sematext_monitor_mongodb" "monitor_mongodb" {
