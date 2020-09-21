@@ -17,40 +17,12 @@ Sematext [Browser SDK](https://github.com/sematext/browser-sdk) is an open-sourc
 
 ## Development
 
-The RUM script is developed using [ECMAScript 2015](https://en.wikipedia.org/wiki/ECMAScript). For builds and development it uses:
- 
- - `npm` - [Node package manager](https://npm.org)
- - `yarn` - [Package dependency manager](https://yarnpkg.com)
- - `flow` - [Static type checker](https://flow.org)
- - `Cypress.io` - [Integration tests framework](https://www.cypress.io)
+You can find the information about the development and script architecture in the [Browser SDK](https://github.com/sematext/browser-sdk/) Github project:
 
-### The RUM Script Architecture
-
-There are two parts of the RUM script: 
-
- - The loader script
- - The metrics gathering script
-
-The loader script is responsible for loading the metrics gathering script. It adds the actual `<script>` tags with the content of the main metric script. The loader script keeps track and buffers commands that will be sent once the metrics gathering script loads and is configured.
-
-### Working on the Loader Script
-
-The main entry point of the loader script is in `src/snippet.js`. This is the unminified [ES2015]((https://en.wikipedia.org/wiki/ECMAScript)) version of the loader script which is responsible for loading the metrics gathering script. 
-
-To generate the minified snippet of the loader script use `yarn run generate-snippet`.
-
-### Working on the Main RUM Script
-
-The main entry point of the RUM script is in `src/index.js`. Use `eslint` to catch any style issues and
-`flow` to catch any type errors.
-
-You can use the following commands:
-
- - `yarn run start` to start the development server
- - `yarn run lint` to run `lint` on the code
- - `yarn run flow` to run `flow` type checks
- - `yarn run build` to build the production bundle
- - `yarn run dev` to build the development (not minified) bundle
+ - [Development](https://github.com/sematext/browser-sdk/#development)
+ - [RUM Script Architecture](https://github.com/sematext/browser-sdk/#the-rum-script-architecture)
+ - [Working on the Loader Script](https://github.com/sematext/browser-sdk/#working-on-the-loader-script)
+ - [Working on the Main RUM Script](https://github.com/sematext/browser-sdk/#working-on-the-main-rum-script)
 
 ### Supported Commands
 
