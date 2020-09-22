@@ -1,9 +1,9 @@
 title: Sematext Terraform Guide
-description: Sematext Cloud supplies a Terraform Provider and Resources used to devop monitoring across all your systems, Apps, and services.
+description: Sematext Cloud supplies a Terraform Provider and Resources used to automate monitoring across all your systems, Apps, and services.
 
 You can now include Sematext Cloud as your go-to choice for fast deploy of visualization, APM, metrics and logging aspects within your cloud-as-code solutions using proven managed sub-components.
 
-Sematext is now a Terraform Verified Partner! You can access the Sematext Cloud Provider in the
+You can access the Sematext Cloud Provider in the
 <a href="https://registry.terraform.io/providers/sematext/sematext/latest">Terraform Registry</a> 
 
 <br>
@@ -50,9 +50,9 @@ Sematext is now a Terraform Verified Partner! You can access the Sematext Cloud 
 You'll need the following : 
 
 - [Terraform v0.13+](https://www.terraform.io/downloads.html) 
-- [Sematext Cloud Account](https://apps.sematext.com/ui/account/api)
-- Sematext Cloud API Access Token (from you cloud account).
-- Your choice of suitable [Sematext Cloud Plan ID](https://github.com/sematext/terraform-provider-sematext/blob/master/docs/guides/plans.md)
+- [Sematext Cloud Account](https://apps.sematext.com/ui/account)
+- [Sematext Cloud API Access Token](https://apps.sematext.com/ui/account)
+- [Choice of Sematext Cloud Plan ID](https://github.com/sematext/terraform-provider-sematext/blob/master/docs/guides/plans.md)
 
 ### Environment
 
@@ -90,41 +90,44 @@ resource "sematext_monitor_mongodb" "monitor_mongodb" {
 
 Save this to a file e.g. main.tf
 
-We will use this to create a monitoring app on Sematext Cloud, ready to receive, in this case MongoDB Metrics.
+We will use this to create a monitoring App in Sematext Cloud, ready to receive, in this case MongoDB Metrics.
 Note this will just demonstrate a starting point. Usually you would combine other Providers and deploy suitable agent-collectors.
 
 <br>
 
 ### Step 1 : Initialize a Deployment 
 
+*Initialize Terraform state and download the Terraform Provider ready for use.*
+
 ```bash
 $ terraform init
 ```
 
-This will download down the Terraform Provider ready for use.
+<br>
 
 ### Step 2 : Create a Deployment Plan
+
+*This will tell you the plan is to deploy a new sematext_monitor_mongodb on Sematext Cloud.*
 
 ```bash
 $ terraform plan
 ```
 
-This will tell you the plan is to deploy a new sematext_monitor_mongodb.
-
+<br>
 
 ### Step 3 : Execute the Deployment
+
+*Perform the deployment. Once done you now have a new monitoring App on Sematext Cloud, ready to receive, in this case MongoDB Metrics.*
 
 ```bash
 $ terraform apply
 ```
 
-You now have a new monitoring app on Sematext Cloud, ready to receive, in this case MongoDB Metrics.
+<br>
 
 ### Step 4 : Modify the Plan
 
-We also want to be able to use 
-
-Append the following snippet to the bottom of your main.tf
+*We want add an additional monitoring App on for Elasticsearch. Append the following snippet to the bottom of your main.tf* 
 
 ```hcl
 resource "sematext_monitor_elasticsearch" "monitor_elasticsearch" {
@@ -133,32 +136,39 @@ resource "sematext_monitor_elasticsearch" "monitor_elasticsearch" {
 }
 ```
 
+<br>
+
 ### Step 5 : Re-Plan Deployment
+
+*This will tell you the plan is to deploy an additional new sematext_monitor_elasticsearch.*
 
 ```bash
 $ terraform plan
 ```
 
-This will tell you the plan is to deploy an additional new sematext_monitor_elasticsearch.
-
+<br>
 
 ### Step 6 : Execute Your Deployment
+
+*Perform the deployment. You will now have an additional Sematext Cloud Elasticsearch App ready to receive metrics.*
 
 ```bash
 $ terraform execute
 ```
- You will now have an additional Sematext Cloud Elasticsearch App ready to receive metrics.
+
 
 
 ### Step 7 : Clean up
 
-Once you are finished taking a look and you want to retire the apps just 
+*Once you are finished taking a look retire the two Apps you created.* 
  
 ```bash
 $ terraform destroy
 ```
 
-Note this sets the apps to a retire status. They will be removed after 30 days.
+<br>
+
+__Note this sets the apps to a retire status rather than deletion. They will be automatically removed after 30 days__
 
 Refer to our [examples repo](https://github.com/sematext/terraform-examples) for more realistic examples.
 
