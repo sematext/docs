@@ -177,7 +177,7 @@ Refer to our [examples repo](https://github.com/sematext/terraform-examples) for
 
 - [Terraform Registry Sematext Provider](https://registry.terraform.io/providers/sematext/sematext/latest)
 - [Sematext Provider Github](https://github.com/sematext/terraform-provider-sematext)
-- [Sematext Manual Integrations Guide](https://sematext.com/docs/guide/integrations-guide/)
+- [Sematext Manual Integration Guide](https://sematext.com/docs/integration/)
 - [Terraform Website](https://www.terraform.io)
 - [Terraform Mailing List [Google Groups] ](http://groups.google.com/group/terraform-tool)
 - [![Gitter chat](https://badges.gitter.im/hashicorp-terraform/Lobby.svg)](https://gitter.im/hashicorp-terraform/Lobby)

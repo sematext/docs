@@ -11,7 +11,6 @@ pages:
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
       # - Dashboards Guide: guide/dashboards-guide.md
-      - Terraform Guide: guide/terraform-guide.md
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
@@ -150,6 +149,8 @@ pages:
         - Twilio: integration/alerts-twilio-integration.md
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
+    - Orchestration:
+        - Terraform: orchestration/terraform.md
     - Alerts:
       - Overview: alerts/index.md
       - Creating Logs Alerts: alerts/creating-logs-alerts.md
