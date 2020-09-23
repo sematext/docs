@@ -648,10 +648,10 @@ Kubernetes:
 
 `kubectl exec -it <target-aa-pod> -- /opt/spm/bin/spm-container-diag`
 
-Once the script execution has completed, you'll get provided with the `docker/kubectl` command that copies the diagnostics package
+Once the script execution has completed, you'll get the `docker/kubectl` command that copies the diagnostics package
 from the container file system to your machine.
 
-You can send the diagnostics package, along with short description of your problem, to <support@sematext.com> or contact us in chat.
+You can send the diagnostics package, along with a short description of your problem, to <support@sematext.com> or contact us in chat.
 
 ### I see only my system metrics (e.g. CPU, Memory, Network, Disk...), but where is the rest of my data?
 
