@@ -598,8 +598,6 @@ problem, to <support@sematext.com> or contact us in chat.
 
 **Container setups**
 
-At the moment there is no diagnostics script for container setups, so various resources have to be gathered manually.
-
 Two types of agents are running in container setups and spawn from the following images:
 
   - **sematext/agent** (also known as STA) - collects infrastructure data (OS and container info, metrics and events)
@@ -640,9 +638,20 @@ You will notice that each App Agent container/pod name matches the name of the m
   - its config file from /opt/spm/spm-monitor/conf dir
   - its spm-monitor and spm-monitor-stats logs from `/opt/spm/spm-monitor/logs/applications/YOUR_TOKEN/MONITORED_SERVICE_POD_NAME` dir
 
-We will need all these files for investigation. You can send them, along with short description of your
-problem, to <support@sematext.com> or contact us in chat.
+To run the diagnostics script you'll have to execute the following command depending on your deployment type.
 
+Docker/Swarm:
+
+`docker exec -it <target-aa-container> /opt/spm/bin/spm-container-diag`
+
+Kubernetes:
+
+`kubectl exec -it <target-aa-pod> -- /opt/spm/bin/spm-container-diag`
+
+Once the script execution has completed, you'll get the `docker/kubectl` command that copies the diagnostics package
+from the container file system to your machine.
+
+You can send the diagnostics package, along with a short description of your problem, to <support@sematext.com> or contact us in chat.
 
 ### I see only my system metrics (e.g. CPU, Memory, Network, Disk...), but where is the rest of my data?
 
@@ -692,7 +701,7 @@ Try adding `serverTimezone=UTC` to `ST_MONITOR_MYSQL_DB_ADDITIONAL_PARAMS` attri
 in your Sematext MySQL Agent config. When using `setup-sematext` script to create
 agent config, you can adjust that parameter into:
 ```
---ST_MONITOR_MYSQL_DB_ADDITIONAL_PARAMS 'autoReconnect=true&serverTimezone=UTC' 
+--ST_MONITOR_MYSQL_DB_ADDITIONAL_PARAMS 'autoReconnect=true&serverTimezone=UTC'
 ```
 
 ### I am not seeing any data in Monitoring charts. How do I check if network connectivity is OK?

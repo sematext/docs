@@ -168,7 +168,7 @@ $ terraform destroy
 
 <br>
 
-__Note this sets the apps to a retire status rather than deletion. They will be automatically removed after 30 days__
+__Note this sets the Apps to a retire status rather than deletion. They will be automatically removed after 30 days.__
 
 Refer to our [examples repo](https://github.com/sematext/terraform-examples) for more realistic examples.
 
@@ -181,7 +181,6 @@ Refer to our [examples repo](https://github.com/sematext/terraform-examples) for
 - [Terraform Website](https://www.terraform.io)
 - [Terraform Mailing List [Google Groups] ](http://groups.google.com/group/terraform-tool)
 - [![Gitter chat](https://badges.gitter.im/hashicorp-terraform/Lobby.svg)](https://gitter.im/hashicorp-terraform/Lobby)
-
 
 ## Recommendations for learning more about Sematext products and services:
 
