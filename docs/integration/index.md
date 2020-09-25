@@ -397,7 +397,7 @@ Sematext Monitoring supports dozens of different integrations.
 							<img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
 						</div>
 						<div class="side back">
-							<h5>Zookeeper</h5>quorum size, outstanding requests, watch count, count, ephemerals, node count, sent, approximate data size, sent, count, ...
+							<h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
 						</div>
 					</div>
 				</div>
