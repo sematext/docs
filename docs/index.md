@@ -235,8 +235,8 @@ Sematext provides over 40 built-in integrations used to monitor your systems, ap
 
 We also provide you with easy to install Agents that collect data about your software and send it to Sematext.
 
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-grid" style="padding:0;margin:0 -8px;">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./logagent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
 				<div class="mdl-card__title mdl-card--expand">
@@ -247,7 +247,7 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/sematext-agent/containers/installation/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
 				<div class="mdl-card__title mdl-card--expand">
@@ -258,7 +258,7 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/sematext-agent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
 				<div class="mdl-card__title mdl-card--expand">
@@ -269,7 +269,7 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/node-agent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
 				<div class="mdl-card__title mdl-card--expand">
@@ -280,9 +280,9 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/browser/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp browser-sdk-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
 						Browser SDK
@@ -291,9 +291,9 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/mobile/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp mobile-sdk-card">
 				<div class="mdl-card__title mdl-card--expand">
 					<h4>
 						Mobile SDK
