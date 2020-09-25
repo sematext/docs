@@ -72,6 +72,7 @@ After you install and activate an integration, you can:
 - [Apache Storm](/integration/storm/)
 - [Tomcat](/integration/tomcat/)
 - [ZooKeeper](/integration/zookeeper/)
+- [Jenkins](/integration/jenkins/)
 
 ### Webhooks
 

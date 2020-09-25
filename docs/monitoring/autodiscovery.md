@@ -32,6 +32,7 @@ Sematext Agent can automatically discover and start monitoring the following ser
 - JVM
 - Tomcat
 - ZooKeeper
+- Jenkins
 
 Additionally, Sematext Agent will also discover the following services, but at the moment it can't automatically start monitoring them:
 

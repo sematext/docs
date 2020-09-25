@@ -124,6 +124,7 @@ pages:
         - Storm: integration/storm.md
         - Tomcat: integration/tomcat.md
         - ZooKeeper: integration/zookeeper.md
+        - Jenkins: integration/jenkins.md
       - Logs:
         - Generic Logs: integration/generic-logs-integration.md
         - Kubernetes Audit: integration/kubernetes-audit-integration.md

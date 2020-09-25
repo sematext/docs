@@ -404,6 +404,22 @@ Sematext Monitoring supports dozens of different integrations.
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+    		<a href="../integration/jenkins/">
+    			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+    				<div class="flip-card-container">
+    					<div class="flip-card">
+    						<div class="side">
+    							<img src="../images/integrations/jenkins.png" alt="Jenkins" title="Jenkins Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
+    						</div>
+    						<div class="side back">
+    							<h5>Jenkins</h5>health and executors state; builds, nodes, jobs, runs activity; http requests and responses...
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</a>
+    </div>
 </div>
 
 ## Logging
