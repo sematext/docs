@@ -280,6 +280,28 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="./agents/browser/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Browser SDK
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="./agents/mobile/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp monitoring-card">
+				<div class="mdl-card__title mdl-card--expand">
+					<h4>
+						Mobile SDK
+					</h4>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
 But, also an open [API](/api/) you can use.
