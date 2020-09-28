@@ -10,23 +10,23 @@ description: Comprehensive view of your Jenkins health and performance with Sema
 Metric Key *(Type)* *(Unit)*                                                                             |  Description
 ------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **jenkins.health.checks** <br>*(long counter)*      |  The counnt of health checks associated with the HealthCheckRegistry defined within the Metrics Plugin
-**jenkins.health.checks.time** <br>*(long counter)*      |  The duration of all health check runs
+**jenkins.health.checks.time** <br>*(long counter)* *(ms)*      |  The duration of all health check runs
 **jenkins.health.check.score** <br>*(long gauge)*      |  The ratio of health checks reporting success to the total number of health checks. Larger values indicate increasing health as measured by the health checks. (This is a value between 0 and 1 inclusive)
-**jenkins.http.requests.active** <br>*(long gauge)*      |  The counnt of currently active requests against the Jenkins master Web UI   
-**jenkins.http.requests** <br>*(long gauge)*      |  The time Jenkins master spends to process Web UI requests and generating the corresponding responses   
-**jenkins.http.requests.time** <br>*(long gauge)* *(ms)*    |  The count of Jenkins master Web UI requests   
-**jenkins.http.response.code.bad_request** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/400 status code  
-**jenkins.http.response.code.created** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/201 status code  
-**jenkins.http.response.code.forbidden** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/403 status code  
-**jenkins.http.response.code.no_content** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/204 status code  
-**jenkins.http.response.code.not_found** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/404 status code  
-**jenkins.http.response.code.not_modified** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/304 status code  
-**jenkins.http.response.code.ok** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/200 status code 
-**jenkins.http.response.code.server_error** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/500 status code 
-**jenkins.http.response.code.server_unavailable** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/503 status code 
-**jenkins.http.response.code.other** <br>*(long gauge)*    |  The count at which the Jenkins master Web UI is responding to requests with a non-informational status code that is not in the list - HTTP/200, HTTP/201, HTTP/204, HTTP/304, HTTP/400, HTTP/403, HTTP/404, HTTP/500, or HTTP/503 
-**jenkins.nodes.builds** <br>*(long gauge)*      |  The counnt of build nodes available to Jenkins
-**jenkins.nodes.builds.time** <br>*(long gauge)*      |  The time nodes spend for building
+**jenkins.http.requests.active** <br>*(long counter)*      |  The counnt of currently active requests against the Jenkins master Web UI   
+**jenkins.http.requests** <br>*(long counter)*      |  The time Jenkins master spends to process Web UI requests and generating the corresponding responses   
+**jenkins.http.requests.time** <br>*(long counter)* *(ms)*    |  The count of Jenkins master Web UI requests   
+**jenkins.http.response.code.bad_request** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/400 status code  
+**jenkins.http.response.code.created** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/201 status code  
+**jenkins.http.response.code.forbidden** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/403 status code  
+**jenkins.http.response.code.no_content** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/204 status code  
+**jenkins.http.response.code.not_found** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/404 status code  
+**jenkins.http.response.code.not_modified** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/304 status code  
+**jenkins.http.response.code.ok** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/200 status code 
+**jenkins.http.response.code.server_error** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/500 status code 
+**jenkins.http.response.code.server_unavailable** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a HTTP/503 status code 
+**jenkins.http.response.code.other** <br>*(long counter)*    |  The count at which the Jenkins master Web UI is responding to requests with a non-informational status code that is not in the list - HTTP/200, HTTP/201, HTTP/204, HTTP/304, HTTP/400, HTTP/403, HTTP/404, HTTP/500, or HTTP/503 
+**jenkins.nodes.builds** <br>*(long counter)*      |  The counnt of build nodes available to Jenkins
+**jenkins.nodes.builds.time** <br>*(long counter)* *(ms)*      |  The time nodes spend for building
 **jenkins.nodes.offline** <br>*(long gauge)*      |  The counnt of build nodes available to Jenkins but currently off-line
 **jenkins.nodes.online** <br>*(long gauge)*      |  The counnt of build nodes available to Jenkins and currently on-line
 **jenkins.queue.blocked** <br>*(long gauge)*      |  The counnt of jobs that are in the Jenkins build queue and currently in the blocked state
@@ -50,9 +50,9 @@ Metric Key *(Type)* *(Unit)*                                                    
 **jenkins.jobs.queuing** <br>*(long counter)*      |  The count of queued jobs
 **jenkins.jobs.blocked** <br>*(long counter)*      |  The count at which jobs in the build queue enter the blocked state
 **jenkins.jobs.buildable** <br>*(long counter)*      |  The count at which jobs in the build queue enter the buildable state
-**jenkins.jobs.execution.time** <br>*(long counter)*      |  The amount of time jobs spend in execution state
-**jenkins.jobs.queuing.time** <br>*(long counter)*      |  The total time jobs spend in the build queue
-**jenkins.jobs.blocked.time** <br>*(long counter)*      |  The amount of time jobs in the build queue enter spend in blocked state
-**jenkins.jobs.buildable.time** <br>*(long counter)*      |  The amount of time jobs in the build queue enter spend in buildable state
-**jenkins.jobs.waiting.time** <br>*(long counter)*      |  The total amount of time that jobs spend in their quiet period
-**jenkins.jobs.total.time** <br>*(long counter)*      |  The time jobs spend from entering the build queue to completing building
+**jenkins.jobs.execution.time** <br>*(long counter)* *(ms)*      |  The amount of time jobs spend in execution state
+**jenkins.jobs.queuing.time** <br>*(long counter)* *(ms)*      |  The total time jobs spend in the build queue
+**jenkins.jobs.blocked.time** <br>*(long counter)* *(ms)*      |  The amount of time jobs in the build queue enter spend in blocked state
+**jenkins.jobs.buildable.time** <br>*(long counter)* *(ms)*      |  The amount of time jobs in the build queue enter spend in buildable state
+**jenkins.jobs.waiting.time** <br>*(long counter)* *(ms)*      |  The total amount of time that jobs spend in their quiet period
+**jenkins.jobs.total.time** <br>*(long counter)* *(ms)*      |  The time jobs spend from entering the build queue to completing building
