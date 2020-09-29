@@ -30,10 +30,10 @@ Metric Key *(Type)* *(Unit)*                                                    
 **jenkins.nodes.offline** <br>*(long gauge)*      |  The count of build nodes available to Jenkins but currently off-line
 **jenkins.nodes.online** <br>*(long gauge)*      |  The count of build nodes available to Jenkins and currently on-line
 **jenkins.queue.blocked** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the blocked state
-**jenkins.queue.buildable** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the blocked state
-**jenkins.queue.pending** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the blocked state
+**jenkins.queue.buildable** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the buildable state
+**jenkins.queue.pending** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the pending state
 **jenkins.queue.size** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue
-**jenkins.queue.stuck** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the blocked state
+**jenkins.queue.stuck** <br>*(long gauge)*      |  The count of jobs that are in the Jenkins build queue and currently in the stuck state
 **jenkins.plugins.active** <br>*(long gauge)*      |  The count of plugins in the Jenkins instance that started successfully
 **jenkins.plugins.with_update** <br>*(long gauge)*      |  The count of plugins in the Jenkins instance that have an newer version reported as available in the current Jenkins update center metadata held by Jenkins. This value is not indicative of an issue with Jenkins but high values can be used as a trigger to review the plugins with updates with a view to seeing whether those updates potentially contain fixes for issues that could be affecting your Jenkins instance
 **jenkins.plugins.inactive** <br>*(long gauge)*      |  The count of plugins in the Jenkins instance that are not currently enabled
