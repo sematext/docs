@@ -31,7 +31,7 @@ The following commands are currently supported by the RUM script:
  - `config` - Configures the script. It requires the `token` and `receiverUrl` configuration parameters. You can also provide the `ignoreBotData` Boolean parameter to ignore metrics coming from bots.
  - `identify` - Identifies the user. Requires the `name` and the `identifier` keys to be present, which are used to identify a user.  
  - `routeChange` - Informs the metrics gathering script about a route change. It accepts a single parameter that should take the value of the new route. 
- - `startTransaction` - Informs the metrics gathering script about transaction start. It accepts a single parameter that should take the value of the transaction name.
+ - `startTransaction` - Informs the metrics gathering script about transaction start. It accepts two parameters. The first is the transaction name. The second parameter is optional custom tags.
  - `endTransaction` - Informs the metrics gathering script about transaction end. It accepts a single parameter that should take the value of the name of the transaction that we want to end.
  - `pageLoad` - Provides metrics related to page load.
  - `ajax` - Provides metrics related to HTTP requests.

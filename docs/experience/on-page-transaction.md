@@ -38,7 +38,7 @@ Add this function call to start the transaction. The second parameter must match
  strum('startTransaction', 'ExampleTransaction');
 ```
 
-And by this call transaction will be ended.
+When whatever you are measuring is finished, call `endTransaction` to finish the transaction.
 
 ```javascript
  strum('endTransaction', 'ExampleTransaction');
@@ -53,4 +53,17 @@ Finally, this is what you will see after the transactions start sending data to 
   title="Transactions in action"
 />
 
-That's everything you need to configure. Enjoy your Transactions!
+## Custom Tags
+
+You can attach custom tags to transactions by providing them as another argument when calling `startTransaction`:
+
+```javascript
+ strum('startTransaction', 'ExampleTransaction', { someTag: 'value' });
+```
+
+This tag will be applied to this single event only. If you wish to apply custom tags to all events, then please check out [Tags](/experience/tags).
+
+
+That's everything you need to use On-Page Transaction. Enjoy!
+
+
