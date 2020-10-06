@@ -94,16 +94,16 @@ Data retention is based on log events' receive timestamp.
 
 ### Are logs shipped to Logs App ever rejected?
 
-When you pick a Daily Volume we automatically set another logging system
-property called *Max* Daily Volume.  By default we set it to 2x the
-selected Daily Volume.  When this limit is hit, our centralized logging management solution will stop
-accepting new logs for that Logs App until the next day (00:00 UTC).
- This Max Daily Volume is adjustable, so you can set it to whichever
-value you'd like.
+When you pick a Selected Daily Volume we automatically set another Logs App
+setting called Daily Volume Limit.  By default we set it to 2x the
+Selected Daily Volume.  When this Daily Volume Limit is reached, your Logs App
+will stop accepting new logs until the next day (00:00 UTC).
+In other words, you can go over Selected Daily Volume, but the Daily Volume Limit is a hard limit.
+You can change the Daily Volume Limit at any time and can set it to any value greater or equal to Selected Daily Volume.
 
-This Max Daily Volume limit prevents run-away logging
+This Daily Volume Limit prevents run-away logging
 from causing over-billing. Logs App will send email notifications before
-this limit is reached.
+this limit is reached, so if you need to temporarily increase it, you can do that without losing any logs.
 
 ### What is the maximum log size Logs App will accept?
 
