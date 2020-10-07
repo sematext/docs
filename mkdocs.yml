@@ -143,6 +143,7 @@ pages:
         - OpsGenie: integration/alerts-opsgenie-integration.md
         - PagerDuty: integration/alerts-pagerduty-integration.md
         - Pushover: integration/alerts-pushover-integration.md
+        - Signl4: integration/alerts-signl4-integration.md
         - Slack: integration/alerts-slack-integration.md
         - Spike.sh: integration/alerts-spikesh-integration.md
         - Squadcast: integration/alerts-squadcast-integration.md

@@ -3,9 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Telegram
 
-**1.** Create a Telegram account at [telegram.org](https://telegram.org).
-
-**2.** Setup your Telegram client and start chatting with a user named **BotFather**. This is a place where you can create your bot. Just type in:
+**1.** Setup your Telegram client and start chatting with a user named **BotFather**. This is a place where you can create your bot. Just type in:
 
 ```
 /newbot
@@ -21,7 +19,7 @@ If everything went successfully you should get a message with the **Bot Token AP
 
 Copy the **Bot Token API key** somewhere, you will need it to configure the notification hook in Sematext.
 
-**3.** Invite the bot to the channel to which it should send notifications. You can do that by including the bot in the administrators of the channel in your Telegram client. Let's follow the steps. 
+**2.** Invite the bot to the channel to which it should send notifications. You can do that by including the bot in the administrators of the channel in your Telegram client. Let's follow the steps. 
 
 First, message the bot using the Telegram client of your choice:
 
@@ -47,7 +45,7 @@ Finally, review the permissions and click done:
 
 <img class="content-modal-image" alt="Create Telegram Integration - Review Permissions" src="../../images/integrations/create-telegram-integration_add_bot_finish.png" title="Create Telegram Integration - Review Permissions">
 
-**4.** Retrieve the channel identifier for the channel where the bot will send notifications. This can be done by running the following request:
+**3.** Retrieve the channel identifier for the channel where the bot will send notifications. This can be done by running the following request:
 
 ``` bash
 curl -s -k https://api.telegram.org/bot<BOT_TOKEN_API_KEY>/getUpdates
