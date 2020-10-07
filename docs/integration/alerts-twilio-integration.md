@@ -3,9 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Twilio
 
-**1.** Create a Twilio account at [twilio.com](https://twilio.com).
-
-**2.** Go to the Twilio project where you want to send notifications. Set up a new Twilio **Phone number**. This number will be used as the sender of the SMS messages. If you are testing Twilio you can click the **Get a Trial Number** button to generate a temporary phone number for tests. In addition to the phone number you will also need the **Account SID** and the **Auth Token** to be able to set up the notification in Sematext. Note those down:
+**1.** Go to the Twilio project where you want to send notifications. Set up a new Twilio **Phone number**. This number will be used as the sender of the SMS messages. If you are testing Twilio you can click the **Get a Trial Number** button to generate a temporary phone number for tests. In addition to the phone number you will also need the **Account SID** and the **Auth Token** to be able to set up the notification in Sematext. Note those down:
 
 <img class="content-modal-image" alt="Create Twilio Integration - Credentials" src="../../images/integrations/create-twilio-integration-create-phone-number.png" title="Create Twilio Integration - Credentials">
 
@@ -13,11 +11,11 @@ If you wish to test Sematext notifications in Twilio test environment head to **
 
 <img class="content-modal-image" alt="Create Twilio Integration - Test Credentials" src="../../images/integrations/create-twilio-integration-settings.png" title="Create Twilio Integration - Test Credentials">
 
-**3.** If you didn't have a Twilio phone number earlier clicking the **Get a Trial Number** button will display your phone number. Click the **Choose this Number** to accept it:
+**2.** If you didn't have a Twilio phone number earlier clicking the **Get a Trial Number** button will display your phone number. Click the **Choose this Number** to accept it:
 
 <img class="content-modal-image" alt="Create Twilio Integration - New Phone Number" src="../../images/integrations/create-twilio-integration-confirm-phone-number.png" title="Create Twilio Integration - New Phone Number">
 
-**4.** Once accepted note down the phone number:
+**3.** Once accepted note down the phone number:
 
 <img class="content-modal-image" alt="Create Twilio Integration - Phone Number" src="../../images/integrations/create-twilio-integration-display-phone-number.png" title="Create Twilio Integration - Phone Number">
 

@@ -3,27 +3,25 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Squadcast
 
-**1.** Create an account at [Squadcast](https://www.squadcast.com) if you don't have one already.
-
 To receive incoming notifications from Sematext add and configure a new integration in Squadcast:
 
-**2.** Click on profile icon in the top-right and chose **Profile** to open the profile details:
+**1.** Click on profile icon in the top-right and chose **Profile** to open the profile details:
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Profile" src="../../images/integrations/create-squadcast-integration-profile.png" title="Create Squadcast Integration - Profile">
 
-**3.** If you don't have an API token, click the **Generate new API token** to generate a token used to communicate with Squadcast and copy it so you can use it in Sematext:
+**2.** If you don't have an API token, click the **Generate new API token** to generate a token used to communicate with Squadcast and copy it so you can use it in Sematext:
 
 <img class="content-modal-image" alt="Create Squadcast Integration - New API Token" src="../../images/integrations/create-squadcast-integration-profile-details.png" title="Create Squadcast Integration - New API Token">
 
-**4.** If you don't have a service, create it using the **Add Service** button in the **Services** section. If you already have a service defined and you would like to add **alert source** jump to point **6**:
+**3.** If you don't have a service, create it using the **Add Service** button in the **Services** section. If you already have a service defined and you would like to add **alert source** jump to point **6**:
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Add Service" src="../../images/integrations/create-squadcast-integration-add-service.png" title="Create Squadcast Integration - Add Service">
 
-**5.** A modal window will open allowing you to define the service
+**4.** A modal window will open allowing you to define the service
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Service Details" src="../../images/integrations/create-squadcast-integration-service-details.png" title="Create Squadcast Integration - Service Details">
 
-**6.** In **Services** click the **Alert Sources** under the service you would like to integrate Sematext notifications with. If you wish to receive notifications from Sematext to different services you will need to create multiple notification hooks:  
+**5.** In **Services** click the **Alert Sources** under the service you would like to integrate Sematext notifications with. If you wish to receive notifications from Sematext to different services you will need to create multiple notification hooks:  
 
 <img class="content-modal-image" alt="Create Squadcast Integration - Alert Sources" src="../../images/integrations/create-squadcast-integration-alert-sources.png" title="Create Squadcast Integration - Alert Sources">
 

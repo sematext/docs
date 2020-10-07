@@ -3,7 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Microsoft Teams
 
-**1.** Create a [Microsoft Teams account](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software) if you don't have one already and create a new team and channel that will be used to receive notifications from Sematext.
+**1.** Create a new team and channel that will be used to receive notifications from Sematext.
 
 To receive incoming notifications from Sematext add and configure a new integration in Microsoft Teams:
 

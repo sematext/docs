@@ -3,27 +3,25 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Spike.sh
 
-**1.** Create an account at [Spike.sh](https://spike.sh) if you don't have one already.
-
 To receive incoming notifications from Sematext add and configure a new integration in Spike.sh:
 
-**2.** Go to the **Integrations** page and click **New integration**:
+**1.** Go to the **Integrations** page and click **New integration**:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - New Integration" src="../../images/integrations/create-spikesh-integration-integrations.png" title="Create Spike.sh Integration - New Integration">
 
-**3.** Choose the **Sematext** integration from the integrations list: 
+**2.** Choose the **Sematext** integration from the integrations list: 
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Sematext" src="../../images/integrations/create-spikesh-integration-sematext.png" title="Create Spike.sh Integration - Sematext">
 
-**4.** Provide the name, description of the integration. Choose the service that it should be added to, the escalation policy and the acknowledgment time:
+**3.** Provide the name, description of the integration. Choose the service that it should be added to, the escalation policy and the acknowledgment time:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Integration Description" src="../../images/integrations/create-spikesh-integration-add-integration.png" title="Create Spike.sh Integration - Integration Description">
 
-**5.** Once the account is created click the **Copy Webhook** link:
+**4.** Once the account is created click the **Copy Webhook** link:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - Copy Webhook" src="../../images/integrations/create-spikesh-integration-copy.png" title="Create Spike.sh Integration - Copy ">
 
-**6.** Finally, click **Copy** button in the displayed modal window:
+**5.** Finally, click **Copy** button in the displayed modal window:
 
 <img class="content-modal-image" alt="Create Spike.sh Integration - URL copy" src="../../images/integrations/create-spikesh-integration-copy-webhook.png" title="Create Spike.sh Integration - URL copy">
 

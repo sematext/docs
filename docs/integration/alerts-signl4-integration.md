@@ -3,9 +3,7 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 ## In Signl4
 
-**1.** Create a Signl4 account at [signl4.com](https://www.signl4.com).
-
-**2.** Go to the **Apps** in the left menu and chose the **Inbound Webhook** to get the webhook URL:
+**1.** Go to the **Apps** in the left menu and chose the **Inbound Webhook** to get the webhook URL:
 
 <img class="content-modal-image" alt="Create Signl4 Integration - Inbound Webhook" src="../../images/integrations/create-signl4-integration-inbound-webhook.png" title="Create Signl4 Integration - Inbound Webhook">
 
