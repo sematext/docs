@@ -42,7 +42,7 @@ A quick rundown of most notable features of Logsene:
   - Be up and running within minutes -- there is nothing to install or
     maintain
   - Log Alerts & Anomaly Detection
-  - Saved Searches
+  - Saved Views
   - Scheduled Reporting
   - CoreOS Log Collection
   - Docker container monitoring
