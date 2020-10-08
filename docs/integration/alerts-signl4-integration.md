@@ -23,6 +23,6 @@ Once we have the **SIGNL4 team's webhook URL** we can create the SIGNL4 notifica
 
 <img class="content-modal-image" alt="Create Signl4 Integration" src="../../images/integrations/create-signl4-integration.png" title="Create Signl4 Integration">
 
-Next, click the **Send Test Notification** button. Signl4 should return status code **201** and the **eventId** indicating everything is configured correctly. Check your SIGNL4 account to see if the notification was created. 
+Next, click the **Send Test Notification** button. SIGNL4 should return status code **201** and the **eventId** indicating everything is configured correctly. Check your SIGNL4 account to see if the notification was created. 
 
 Once the notification is visible, click the **Save Notification Hook** button to save your configuration. 
