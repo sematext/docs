@@ -606,28 +606,23 @@ later.
 
 ### What are Logs App Alerts?
 
-Logs App alerts are based on saved searches that trigger alert
-notifications when these saved searches meet a certain threshold
+Logs App alerts are based on full text search queries and filters. They trigger alert
+notifications when these query and filters meet a certain threshold
 condition in your logs - e.g. less than N matches in 5 minutes, more
-than M matches in 3 minutes, etc., or when such saved searches detect
+than M matches in 3 minutes, etc., or when search query detect
 *sudden changes* in the number/volume of matching logs - i.e.,
 anomalies.
 
 ### How to create Alerts in Logs App?
 
-Alerts are added by clicking Save Query icon located next to the Logs App input field. Enter query info and select option to enable alerts. Alerts panel will expand and allow you to customize alert specific to that particular search query.
+Alerts are added by clicking bell icon located next to the Logs App input field. Enter query info. Alerts panel
+will expand and allow you to customize alert specific to that particular search query. [Read more](../alerts/creating-logs-alerts.md)
 
-<img alt="Save Alert in Logs App" src="/docs/images/logs/save-alert-in-logging-app.gif" title="Save Alert in Logs App">
+### How to view Alert Rules?
 
-### How to view Alerts?
+Click on Alert Icon located on the left navigation bar and then select Alert Rules.
 
-Click on Saved Queries Icon located next to the app's search input field.
-
-<img alt="Saved Queries" src="/docs/images/logs/saved-queries.png" title="Saved Queries">
-
-Saved Queries page will open and your queries and related alerts will be displayed here
-
-<img alt="Saved Alerts" src="/docs/images/logs/saved-alerts-tab.png" title="Saved Alerts">
+<img alt="Alert Rules" src="/docs/images/logs/alert-rules.png" title="Alert Rules">
 
 ### What is the difference between threshold-based Alerts and Anomaly Detection (aka Algolerts)?
 

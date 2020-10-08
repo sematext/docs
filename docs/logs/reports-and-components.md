@@ -21,16 +21,8 @@ When your Logs App is loaded the **Save and Reset buttons will be hidden** since
 
 The set of icons in the logs search and report menu let you:
 
-- **Save Query / Add Alert** - Every query can be **saved for later use, and used to send alerts**. The ability to save queries and alerts is part of the essential tools for searching, correlating and investigating logs data. Each saved query becomes part of the saved queries section.
-
-- **Saved Queries / Alert Rules** - Right next to the save query / alert icon you can see the saved queries and alert rules, this will open a modal dialogue window with **all your saved queries and alert rules** displayed in a table component that displays:
-
-	- _Tag Color_ that can be assigned to any logs query while it is being saved by user using colour picker componenet 
-	- _Query Name_ to further identify and describe logs query
-	- _Query String_ will be string you use in logs search input field
-	- _Owner_	
-	- _10m, 1h, 12h, and 1d_ shortcuts with histogram for fast observability of query patterns across common time intervals
-	- Saved _query actions_ dropdown menu used to add new, edit, clone, reset, and delete saved logs report
+- **Add Alert** - Every query can be use as **alert query**. The ability to save alerts is part of the essential tools for searching, correlating and investigating logs data.
+Each alert query is visible in Alert Rules list.
 
 - **Email Report** - There are E-mail and Subscription types available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health.
 

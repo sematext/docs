@@ -34,7 +34,7 @@ To ship your Heroku logs to Sematext or Elasticsearch deploy Logagent on Heroku.
   heroku drains:add --app YOUR_HEROKU_MAIN_APPLICATION `heroku info -s | grep web-url | cut -d= -f2`$LOGSENE_TOKEN
 ```
 
-When you see logs in Sematext you can define Alert Queries, build Dashboards, create Saved Queries, etc.
+When you see logs in Sematext you can define Alert Queries, build Dashboards, etc.
 
 5. Scale Logagent service on Heroku
 
