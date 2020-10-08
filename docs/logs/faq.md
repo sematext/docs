@@ -607,20 +607,20 @@ later.
 ### What are Logs App Alerts?
 
 Logs App alerts are based on full text search queries and filters. They trigger alert
-notifications when these query and filters meet a certain threshold
+notifications when the query and filters meet a certain threshold
 condition in your logs - e.g. less than N matches in 5 minutes, more
-than M matches in 3 minutes, etc., or when search query detect
+than M matches in 3 minutes, etc., or when search query detects
 *sudden changes* in the number/volume of matching logs - i.e.,
 anomalies.
 
 ### How to create Alerts in Logs App?
 
-Alerts are added by clicking bell icon located next to the Logs App input field. Enter query info. Alerts panel
+Alerts are added by clicking the bell icon located next to the Logs App input field. Here you enter query info. The alerts panel
 will expand and allow you to customize alert specific to that particular search query. [Read more](../alerts/creating-logs-alerts.md)
 
 ### How to view Alert Rules?
 
-Click on Alert Icon located on the left navigation bar and then select Alert Rules.
+Click on the Alert Icon located in the left navigation and then select Alert Rules.
 
 <img alt="Alert Rules" src="/docs/images/logs/alert-rules.png" title="Alert Rules">
 

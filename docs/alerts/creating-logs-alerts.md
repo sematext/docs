@@ -7,16 +7,16 @@ For example, let's say you used *include/exclude filters* to search for *Elastic
 
 ![Elasticsearch slowlogs warnings search](../images/alerts/image_0.png)
 
-Clicking on the bell icon creates a new Alert Rule with query and all filters applied.
+Clicking on the bell icon creates a new Alert Rule with the applied query and filters.
 
 ![image alt text](../images/alerts/image_1.png)
 
 Let's say we want to get notified if the number of *slowlog warnings* reaches 10 in any 10 minutes. Notice that *Chart Preview* shows the threshold line to help
-you visualize the threshold value in context.
+you visualize the threshold value in this context.
 
 ![image alt text](../images/alerts/image_3.png)
 
-Besides simple log count you can choose any numeric field in *Metrics* section.
+Apart from a simple log count you can choose any numeric field in the *Metrics* section.
 
 ![image alt text](../images/alerts/image_4.png)
 

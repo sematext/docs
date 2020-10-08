@@ -21,8 +21,8 @@ When your Logs App is loaded the **Save and Reset buttons will be hidden** since
 
 The set of icons in the logs search and report menu let you:
 
-- **Add Alert** - Every query can be use as **alert query**. The ability to save alerts is part of the essential tools for searching, correlating and investigating logs data.
-Each alert query is visible in Alert Rules list.
+- **Add Alert** - Every query can be use as an **alert query**. The ability to save alerts is part of the essential tools for searching, correlating and investigating logs data..
+Each alert query is visible in the Alert Rules list.
 
 - **Email Report** - There are E-mail and Subscription types available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health.
 
