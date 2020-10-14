@@ -91,6 +91,15 @@ according to the installation instructions.
 If the script is configured correctly, and your daily limits are not reached
 please contact us via live chat or <support@sematext.com>.
 
+### Some page loads are not shown in Experience
+
+There are multiple factors that affect if a page load will be recorded in Experience or not:
+
+ * Some page loads will not be recorded if data sampling is turned on
+ * We skip data collection when metrics are not reliable such as when the browser tab is refreshed
+ * We pause most data collection when the browser tab is in the background
+ * Certain ad blockers might prevent the Browser SDK script from loading or block network requests for data collection
+
 
 ## Sharing
 
