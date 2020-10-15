@@ -7,7 +7,7 @@ Sematext has threshold, anomaly and / or heartbeat Alerts integration with OpsGe
 
 ## **In OpsGenie**
 
-Log into your [OpsGenie account](https://app.opsgenie.com/auth/login) and create app API needed to create the integration between OpsGenie and Sematext APM, Log Management, Tracing, and RUM platform. Also check [Opsgenie's Alert API](https://docs.opsgenie.com/docs/alert-api) for alert creation, deletion, and action requests are processed asynchronously to provide higher availability and scalability, therefore valid requests for those endpoints.
+Log into your [OpsGenie account](https://app.opsgenie.com/auth/login) and create app API needed to create the integration between OpsGenie and Sematext APM, Log Management, Tracing, Experience, and Synthetics platform. Also check [Opsgenie's Alert API](https://docs.opsgenie.com/docs/alert-api) for alert creation, deletion, and action requests are processed asynchronously to provide higher availability and scalability, therefore valid requests for those endpoints.
 
 Visit OpsGenie's documentation and [new user guide](https://docs.opsgenie.com/docs/new-user-guide) for more information about their service integration with other SaaS monitoring and logging tools such as ours.
 

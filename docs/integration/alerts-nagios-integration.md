@@ -7,7 +7,7 @@ Sematext has threshold, anomaly and / or heartbeat Alerts integration with Nagio
 
 ## **In Nagios**
 
-You will need various parameters, namely values for service name, port, host, unknown notification host, password, and catch all notifcation host to create the integration between Nagios and Sematext APM, Log Management, Tracing, and RUM platform.
+You will need various parameters, namely values for service name, port, host, unknown notification host, password, and catch all notifcation host to create the integration between Nagios and Sematext APM, Log Management, Tracing, Experience, and Synthetics platform.
 
 Visit Nagios's [App Documentation](https://www.nagios.org/documentation/) for more information about their service integration with other SaaS monitoring and logging tools such as ours.
 
