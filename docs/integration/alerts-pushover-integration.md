@@ -7,7 +7,7 @@ Sematext has threshold, anomaly and / or heartbeat Alerts integration with Pusho
 
 ## **In Pushover**
 
-Log into your [Pushover account](https://pushover.net/login) and create user key and app token needed to create the integration between Pushover and Sematext APM, Log Management, Tracing, and RUM platform. Also check [Pushover's API](https://pushover.net/api) for alert creation, deletion, and action requests are processed asynchronously to provide higher availability and scalability, therefore valid requests for those endpoints.
+Log into your [Pushover account](https://pushover.net/login) and create user key and app token needed to create the integration between Pushover and Sematext APM, Log Management, Tracing, Experience, and Synthetics platform. Also check [Pushover's API](https://pushover.net/api) for alert creation, deletion, and action requests are processed asynchronously to provide higher availability and scalability, therefore valid requests for those endpoints.
 
 Visit Pushover's [FAQ](https://pushover.net/faq) for more information about their service integration with other SaaS monitoring and logging tools such as ours.
 
