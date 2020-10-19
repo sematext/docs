@@ -3,11 +3,14 @@ description: With our new Vercel Logs Integration you get insight into your whol
 
 By configuring a Sematext Log Drain Integration to point to Sematext Logs you can get insight into your whole Vercel account in one place!
 
+![](../images/integrations/vercel-logs-integration-review.png)
+
 ## Vercel Logs Quick Start
 
 The Sematext Vercel Logs Integration collects logs from the following:
 
 - All Builds
+- All Errors
 - Static Websites
 - Jamstack Websites
 - Serverless Functions that succeed
