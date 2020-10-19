@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+
+if [[ $EUID -eq 0 ]]; then
+   echo "This script must NOT be run as root"
+   exit 1
+fi
 
 git pull origin master
 rm -r site/*

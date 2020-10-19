@@ -192,7 +192,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
         </a>
     </div>
     <div class="mdl-cell mdl-cell--3-col">
-        <a href="/docs/integration/integration/alerts-spikesh-integration/">
+        <a href="/docs/integration/alerts-spikesh-integration/">
             <div class="demo-card-event mdl-card mdl-shadow--2dp">
                 <div class="flip-card-container">
                     <div class="flip-card">
@@ -208,7 +208,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
         </a>
     </div>
     <div class="mdl-cell mdl-cell--3-col">
-        <a href="/docs/integration/integration/alerts-squadcast-integration/">
+        <a href="/docs/integration/alerts-squadcast-integration/">
             <div class="demo-card-event mdl-card mdl-shadow--2dp">
                 <div class="flip-card-container">
                     <div class="flip-card">
@@ -224,7 +224,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
         </a>
     </div>
     <div class="mdl-cell mdl-cell--3-col">
-        <a href="/docs/integration/integration/alerts-microsoft-teams-integration/">
+        <a href="/docs/integration/alerts-microsoft-teams-integration/">
             <div class="demo-card-event mdl-card mdl-shadow--2dp">
                 <div class="flip-card-container">
                     <div class="flip-card">
@@ -240,7 +240,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
         </a>
     </div>
     <div class="mdl-cell mdl-cell--3-col">
-        <a href="/docs/integration/integration/alerts-telegram-integration/">
+        <a href="/docs/integration/alerts-telegram-integration/">
             <div class="demo-card-event mdl-card mdl-shadow--2dp">
                 <div class="flip-card-container">
                     <div class="flip-card">
@@ -256,7 +256,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
         </a>
     </div>
     <div class="mdl-cell mdl-cell--3-col">
-        <a href="/docs/integration/integration/alerts-twilio-integration/">
+        <a href="/docs/integration/alerts-twilio-integration/">
             <div class="demo-card-event mdl-card mdl-shadow--2dp">
                 <div class="flip-card-container">
                     <div class="flip-card">
