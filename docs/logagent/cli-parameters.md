@@ -97,3 +97,4 @@ The default output is line-delimited JSON for parsed log lines, as long as no fo
 |LOGAGENT_CONFIG | Filename to read Logagent CLI parameters from a file, defaults to ```/etc/sematext/logagent.conf`` |
 |PATTERN_MATCHING_ENABLED | Default is 'true'. The value 'false' disables parsing of logs. |
 |SCAN_ALL_PATTERNS | Default is 'false'. For performance reasons, patterns are matched by source name. Setting the value to 'true' enables pattern search regardless of source name |
+|MAX_CLIENT_SOCKETS | Default is 1. By default Logagent uses only one socket to ship logs. Letting Logagent use multiple sockets helps reduce the memory footprint in deployments with a really high volume of logs. Try setting the MAX_CLIENT_SOCKETS environmental variable to a higher value (e.g. 3, 5, or 10). |
