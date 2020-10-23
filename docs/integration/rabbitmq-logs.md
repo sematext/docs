@@ -47,7 +47,7 @@ Finally, use `logagent-setup` to copy the config to `/etc/sematext/logagent.conf
 sudo logagent-setup -c /path/to/logagent.conf
 ```
 
-If you already have Logagent installed, you an simply append to the `files` input the RabbitMQ log file, then the two lines (token+pattern) in the `elasticsearch` output. In the end, restart Logagent.
+If you already have Logagent installed, you can simply append to the `files` input the RabbitMQ log file, then the two lines (token+pattern) in the `elasticsearch` output. In the end, restart Logagent.
 
 ## Exploring logs
 
@@ -63,7 +63,7 @@ Once data is in, you can explore it using the built-in reports or create your ow
 Other built-in reports include:
 
 - **Connections**: Logs specifically about accepted and closed connections. You can see here when you have spikes in connection creation. You can also identify noisy sources, users, as well as popular destinations.
-- **Start & Stop**: Logs about RabbitMQ startup and shutdown. Besides unexpected restarts, you can find info about which write-ahead logs (WALs) were recovered
+- **Start & Stop**: Logs about RabbitMQ startup and shutdown. Besides unexpected restarts, you can find info about which write-ahead logs (WALs) were recovered.
 
 ## Troubleshooting
 
