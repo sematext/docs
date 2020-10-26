@@ -12,6 +12,8 @@ Once data is in, you can explore it via the built-in reports:
   title="RabbitMQ Logs Overview"
 />
 
+Be sure to check out the [RabbitMQ Monitoring integration](./rabbitmq.md) as well, to get a complete view on RabbitMQ. For example, if you see an increase in authentication errors, monitoring can tell what's the impact on RabbitMQ's memory usage, garbage collection and CPU.
+
 ## Setting up Logagent
 
 With [Node.js installed](https://nodejs.org/en/download/package-manager/), you'd first need to install Logagent:

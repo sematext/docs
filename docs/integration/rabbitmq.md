@@ -1,9 +1,54 @@
 title: RabbitMQ Monitoring Integration
 description: Comprehensive view of your RabbitMQ health and performance with Sematext RabbitMQ monitoring integration. Our infrastructure monitoring tools provide real-time visibility into the performance and availability of various RabbitMQ metrics. Use built-in reports and dashboards, and identify and investigate RabbitMQ issues before they become incidents
 
-## Integration
+Use the Sematext RabbitMQ Monitoring integration to check on your RabbitMQ metrics. From simply checking message counts to tuning RabbitMQ's performance, all the relevant metrics are collected and displayed in built-in dashboards:
 
-- Instructions: [https://apps.sematext.com/ui/howto/rabbitmq/overview](https://apps.sematext.com/ui/howto/rabbitmq/overview)
+<img
+  class="content-modal-image"
+  alt="RabbitMQ Monitoring Overview"
+  src="../../images/agents/rabbitmq_monitoring_overview.png"
+  title="RabbitMQ Monitoring Overview"
+/>
+
+Be sure to check out the [RabbitMQ Logs integration](./rabbitmq-logs.md) as well, to get a complete view on RabbitMQ. For example, if you see a spike in connection metrics, you can check logs to see what are the sources of these connections.
+
+## Agent Install
+
+You can find the [complete instructions](https://apps.sematext.com/ui/howto/rabbitmq/overview) in the Integrations screen of your Monitoring App, but the basic steps are:
+
+- install the Sematext Agent
+- install the [RabbitMQ management plugin](https://www.rabbitmq.com/management.html), if it's not already installed
+- create a user with `administrator` tags, to be able to get all metrics
+- configure Sematext Agent to connect to the RabbitMQ host and port (`localhost:15672` by default), using your App token and the newly created user's credentials
+
+## Important RabbitMQ Metrics to Watch
+
+The usual entry point is the Messages report: do you have many messages published in a specific timeframe? Out of those, how many are unacknowledged or redelivered? These could be red flags.
+
+<img
+  class="content-modal-image"
+  alt="RabbitMQ Messages Report"
+  src="../../images/agents/rabbitmq_monitoring_messages.png"
+  title="RabbitMQ Messages Report"
+/>
+
+If there are any signs of trouble, it's time to dig deeper. Is the RabbitMQ server itself at fault? Check the Nodes metrics, such as Garbage Collection or Run Queue size:
+
+<img
+  class="content-modal-image"
+  alt="RabbitMQ Nodes Report"
+  src="../../images/agents/rabbitmq_monitoring_nodes.png"
+  title="RabbitMQ Nodes Report"
+/>
+
+Finally, OS-level metrics can also point out bottlenecks, such as network or CPU:
+
+<img
+  class="content-modal-image"
+  alt="RabbitMQ CPU Chart"
+  src="../../images/agents/rabbitmq_monitoring_cpu.png"
+  title="RabbitMQ CPU Chart"
+/>
 
 ## Metrics
 
