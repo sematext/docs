@@ -10,6 +10,8 @@ Use the Sematext RabbitMQ Monitoring integration to check on your RabbitMQ metri
   title="RabbitMQ Monitoring Overview"
 />
 
+Be sure to check out the [RabbitMQ Logs integration](./rabbitmq-logs.md) as well, to get a complete view on RabbitMQ. For example, if you see a spike in connection metrics, you can check logs to see what are the sources of these connections.
+
 ## Agent Install
 
 You can find the [complete instructions](https://apps.sematext.com/ui/howto/rabbitmq/overview) in the Integrations screen of your Monitoring App, but the basic steps are:
