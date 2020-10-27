@@ -13,7 +13,7 @@ Browsers manage the memory used by web pages automatically without user interact
 ## Use Cases
 There are many use cases where having insight into the browser's memory usage can be crucial to identify and fix problems as soon as possible. Those include:
 
- * Identifying places in your application resulting in high memory usage
+ * Identifying application workflows resulting in high memory usage including unbound growth over time
  * A/B testing of memory usage between different application versions
  * Measuring memory impact of new features or optimizations done to the application code
  * Statistical analysis of memory usage across the web application
