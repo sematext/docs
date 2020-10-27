@@ -37,4 +37,4 @@ Sematext Experience [Browser SDK](https://sematext.com/docs/agents/browser/) use
 />
 
 ## Supported Browsers
-At the moment, the only web browser that supports memory usage measurements is Chrome starting from version **88**. Until that version, you can register your website for [Origin Trials](https://developers.chrome.com/origintrials/#/view_trial/1281274093986906113) or turn on the **#experimental-web-platform-features** flag in Chrome. 
+At the moment, the only web browser that supports memory usage measurements is Chrome starting from version **88**. To collect memory usage from pre-88 Chrome versions you can register your website for [Origin Trials](https://developers.chrome.com/origintrials/#/view_trial/1281274093986906113) or turn on the **#experimental-web-platform-features** flag in Chrome. 
