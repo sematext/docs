@@ -30,14 +30,12 @@ Apps and team members.
 
 Unlike virtually all other monitoring solutions, in Sematext Cloud you
 do not have to pick a single plan for your whole account.  Instead,
-pricing is defined per-App.  Thus, means you can pick a different plan
-you can choose a different plan for different sets of metrics, logs,
-traces, etc.  With that you can also pick different data retention.
+pricing is defined per-App.  Thus, you can choose a different plan 
+for different sets of metrics, logs, traces, etc.  With that you can
+also pick different data retention.
 
 This gives you, the user, more fine grained control over your costs,
-with awesome free tiers for both
-[Monitoring](https://sematext.com/spm/pricing/) and
-[Logs](https://sematext.com/logsene/pricing/).
+as you can see on [the pricing page](https://sematext.com/pricing/).
 
 
 After learning what an App is, you can check out the guides for our main features.
