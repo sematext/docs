@@ -15,7 +15,7 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 
 **EU Region Endpoint** - `https://apps.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
 
-**HTTP Metohd** - `POST`
+**HTTP Method** - `POST`
 
 **Request Headers** - `Authorization: apiKey <apiKey>`
 
@@ -110,7 +110,7 @@ For Browser monitors with a script, you can pass custom parameters as variables,
 
 ### Customize Output Format
 
-By default the API output will be in JSON format. While invoking the API in build pipelines, it would be useful to display the output in a table format, so that the output could be easily interpreted. To get the output in table format, set the `Accept` header to `text/plain`. Below is an example request along with the ouput:
+By default the API output will be in JSON format. While invoking the API in build pipelines, it would be useful to display the output in a table format, so that the output could be easily interpreted. To get the output in table format, set the `Accept` header to `text/plain`. Below is an example request along with the output:
 
 ```sh
 url -s --request POST \\n            --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \\n              --header 'authorization: apiKey 1d7e2d6b-xxxx-xxxx-xxxx-10f83c5a8da7' \\n          --header 'accept: text/plain'        --header 'content-type: application/json' \\n                    --data '[{"monitorId": 276}]' 
@@ -135,7 +135,7 @@ Create a secret credential for Sematext API Token to be used in the run monitor 
 <img
   class="content-modal-image"
   alt="CI/CD Jenkins Credentials"
-  src="../images/synthetics/ci-cd-jenkins-secret.png"
+  src="../../images/synthetics/ci-cd-jenkins-secret.png"
   title="Add Secret Credential in Jenkins"
 />
 
@@ -171,13 +171,13 @@ Create a secret from the Repository Settings, for Sematext API Token.
 <img
   class="content-modal-image"
   alt="CI/CD GitHub Secret"
-  src="../images/synthetics/ci-cd-github-secret.png"
+  src="../../images/synthetics/ci-cd-github-secret.png"
   title="Add Secret in Github"
 />
 
 **Add Run Monitor Job to GitHub Action Workflow YAML**
 
-Create `.github/workflows/run-monitor.yml` GitHub Actions YAML to run your monitors on various CI/CD events. For example, to run the monitor after a deployment event, create a GitHub Action Job that gets executed on `deployement_status` event. The below action uses the `deployment_status.target_url` to pass the custom URL to the run monitor API.
+Create `.github/workflows/run-monitor.yml` GitHub Actions YAML to run your monitors on various CI/CD events. For example, to run the monitor after a deployment event, create a GitHub Action Job that gets executed on `deployment_status` event. The below action uses the `deployment_status.target_url` to pass the custom URL to the run monitor API.
 
 ```yaml
 name: CI
@@ -218,7 +218,7 @@ On every deployment event, the action will be invoked and the action logs will c
 <img
   class="content-modal-image"
   alt="CI/CD GitHub Secret"
-  src="../images/synthetics/ci-cd-github-actions-log.png"
+  src="../../images/synthetics/ci-cd-github-actions-log.png"
   title="Add Secret in Github"
 />
 
@@ -232,7 +232,7 @@ Create a secret from the Repository Settings -> Repository Variables, for Semate
 <img
   class="content-modal-image"
   alt="CI/CD BitBucket Secret"
-  src="../images/synthetics/ci-cd-bitbucket-secret.png"
+  src="../../images/synthetics/ci-cd-bitbucket-secret.png"
   title="Add Secret in BitBucket"
 />
 
@@ -263,7 +263,7 @@ Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext AP
 <img
   class="content-modal-image"
   alt="CI/CD GitLab Secret"
-  src="../images/synthetics/ci-cd-gitlab-secret.png"
+  src="../../images/synthetics/ci-cd-gitlab-secret.png"
   title="Add Secret in GitLab"
 />
 
