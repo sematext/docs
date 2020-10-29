@@ -31,7 +31,7 @@ In the ECS Task Definition, check a checkbox called Enable FireLens integration.
 
 An additional container called `log_router` will show up.
 
-#### 2. Configure Fluent Bit `log_router`
+#### 2. Configure the Firelens Log Driver
 Next, in the same Task Definition but for your own container (not the `log_router`), you configure the `logConfiguration` like this:
 
 ```json
@@ -86,8 +86,8 @@ When using EC2 container instances you can configure Logagent to forward contain
 ### 1. Set env vars
 In the ECS Task Definition you need to make sure you have these two environment variables configured:
 
-- LOGS_TOKEN - set to your token
-- REGION - either US or EU based on the region you are using
+- `LOGS_TOKEN` - set to your token
+- `REGION` - either US or EU based on the region you are using
 
 In JSON it looks like this:
 
@@ -121,8 +121,6 @@ In JSON it looks like this:
 
 ### 2. Set volumes
 To enable log collection you must bind the Docker Socket volume from the EC2 container instance to the Logagent container.
-
-- `/var/run/docker.sock:/var/run/docker.sock` - bind the Docker socket from the host to the Logagent container
 
 The `/var/run/docker.sock` path on the host must be bound to the `/var/run/docker.sock` path in the container.
 
@@ -171,5 +169,11 @@ In JSON it looks like this:
 }
 ```
 
-### 3. Run the Logagent Task Definition as a Daemon Service
+### 3. Run the Logagent Task Definition as a Daemon Service type
 When creating the Logagent service make sure to set the `Launch type` as **EC2** and `Service type` as **DAEMON**.
+
+## Next Steps
+
+- [Set up custom alerts](../../alerts/creating-logs-alerts/)
+- [Set up custom reports and components](../../logs/reports-and-components/)
+- [Tagging best practices](../../tags/)
