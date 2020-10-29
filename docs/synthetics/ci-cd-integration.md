@@ -160,8 +160,6 @@ stage('Run Sematext monitors') {
     }
 ```
 
-### Circle CI
-### Travis CI
 ### Github Actions
 
 **Create API Token Secret**
@@ -295,8 +293,8 @@ run-sematext-monitor:
 
 ### Vercel
 
-Configure GitHub Action to run the monitor on deployment event. If the Vercel project repository is GitHub, the action will be automatically triggered on PR or production deployment.
+Configure [GitHub Action](#gitlab-cicd) to run the monitor on deployment event. If the Vercel project repository is GitHub, the action will be automatically triggered on PR or production deployment.
 
 ### Netlify
 
-Configure GitHub Action to run the monitor on deployment event. If the Netlify project repository is GitHub, the action will be automatically triggered on production deployment.
+Configure [GitHub Action](#gitlab-cicd) to run the monitor on deployment event. If the Netlify project repository is GitHub, the action will be automatically triggered on production deployment.
