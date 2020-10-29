@@ -90,6 +90,30 @@ In container environments you add the `MONITORING_TOKEN` environment variable, o
 
 In all environments this makes it possible to use different monitoring tokens, and thus different Sematext Apps for the same service type running on the same machine or in the same Kubernetes/Swarm cluster.
 
+### Switching from manual to automatic monitoring
+
+The switch from manual to automatic monitoring is done by first removing manually set up agent and then enabling automatic monitoring in the user interface.
+
+In bare-metal/virtual machine setups there are two types of agents - in-process (with javaagent) and standalone.
+
+If you are using in-process variant, do the following:
+- remove `-javaagent` definition from the startup script of your service and restart the service
+- from the directory `/opt/spm/spm-monitor/conf`, remove the config file whose name contains an App token used by this specific service
+
+If you are using standalone variant:
+- from the directory `/opt/spm/spm-monitor/conf`, remove the config file whose name contains an App token used by this specific service
+- restart the agent with `sudo service sematext-agent restart
+
+In container environments it is much simpler - just remove environment variable named MONITORING_TOKEN from your containers:
+- if using `docker run` command to start your service, remove MONITORING_TOKEN from the command line
+- if using `docker-compose.yml` to start your service, remove MONITORING_TOKEN from that file
+- if using kubernetes, remove MONITORING_TOKEN from service deployment manifest
+- if using helm remove `sematext.com/monitoring-token` from values.yml
+
+After this is done make sure to redeploy your service to apply the change.
+
+Sematext Agent will notice the change in few minutes and, if you enabled automatic monitoring in the UI, it will start automatically creating and managing monitoring agents for services you adjusted in this way.
+
 ### Additional info
 
 - Defining monitoring agent [credential sets](../agents/sematext-agent/autodisco/credential-sets) in Kubernetes
