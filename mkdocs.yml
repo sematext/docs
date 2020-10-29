@@ -135,7 +135,7 @@ pages:
         - Mobile Apps Logs: integration/mobile-apps-logs.md
         - IBM Cloud Kubernetes Logs: integration/ibm-cloud-kubernetes-logs.md
         - RabbitMQ: integration/rabbitmq-logs.md
-        - ECS: integration/ecs-logs.md
+        - AWS ECS: integration/ecs-logs.md
       - Notification Hooks:
         - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
         - Big Panda: integration/alerts-bigpanda-integration.md

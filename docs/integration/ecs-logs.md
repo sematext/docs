@@ -1,11 +1,11 @@
 title: Elastic Container Service (ECS) Logs Integration
 description: Whether you're using EC2 or Fargate, forward all container logs to Sematext Cloud. Get insight into your whole ECS Cluster.
 
-By configuring either Logagent for EC2 or AWS Firelens for Fargate, you can forward all your container logs to Sematext Logs and get insight into your whole Elastic Container Service (ECS) cluster in one place!
+By configuring either Logagent for EC2 or AWS Firelens for Fargate, you can forward all your container logs to Sematext and get insight into your whole Elastic Container Service (ECS) cluster in one place!
 
 ## ECS Logs Quick Start
 
-The ECS Logs Integration collects logs from ECS Tasks and Services running in:
+The ECS Logs integration collects logs from ECS Tasks and Services running in:
 
 - EC2 Container Instances
 - Fargate 
@@ -29,7 +29,7 @@ In the ECS Task Definition, check a checkbox called Enable FireLens integration.
 
 ![aws-ecs-firelens-1](../images/integrations/aws-ecs-firelens-1.png)
 
-An additional container called `log_router` will show up.
+AWS will add an additional container called `log_router` to the list of containers in your Task Definition.
 
 #### 2. Configure the Firelens Log Driver
 Next, in the same Task Definition but for your own container (not the `log_router`), you configure the `logConfiguration` like this:
@@ -71,7 +71,7 @@ Your ECS task configuration JSON will contain this snippet:
 ```
 
 #### 2. Set up a Lambda function pipeline to collect and forward CloudWatch logs to Sematext
-Once configured, you need to set up a Lambda function to collect these logs from CloudWatch and send them to Sematext. You do this by [following this guide](https://sematext.com/blog/centralized-aws-lambda-logs-kinesis-serverless/). Or, if you already know how to, [here is the code for the Lambda pipeline so you can deploy](https://github.com/sematext/cloudwatch-sematext-aws-lambda-log-shipper) right away. 
+Once forwarding to CloudWatch is configured, you need to set up a Lambda function to collect these logs from CloudWatch and send them to Sematext. You do this by [following this guide](https://sematext.com/blog/centralized-aws-lambda-logs-kinesis-serverless/). Or, if you already know how to, [here is the code for the Lambda pipeline so you can deploy](https://github.com/sematext/cloudwatch-sematext-aws-lambda-log-shipper) right away. 
 
 All you need to do is edit the secrets to add your Sematext LOGS_TOKEN and LOGS_RECEIVER_URL. Also, don't forget to [edit the PREFIX](https://github.com/sematext/cloudwatch-sematext-aws-lambda-log-shipper/blob/39c781df576e0decb9c4bfa4e615d76805d7b69f/sample.secrets.json#L9) to match your ECS containers. E.g:
 
