@@ -81,7 +81,7 @@ All you need to do is edit the secrets to add your Sematext LOGS_TOKEN and LOGS_
 
 
 ## Forwarding ECS EC2 logs to Sematext
-When using EC2 container instances you can configure Logagent to forward container logs.
+When using EC2 container instances you can configure [Logagent](https://hub.docker.com/_/logagent) to forward container logs.
 
 ### 1. Set env vars
 In the ECS Task Definition you need to make sure you have these two environment variables configured:
