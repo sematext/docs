@@ -113,7 +113,7 @@ For Browser monitors with a script, you can pass custom parameters as variables,
 By default the API output will be in JSON format. While invoking the API in build pipelines, it might be useful to display the output in a table format, so that the output could be easily interpreted. To get the output in table format, set the `Accept` header to `text/plain`. The API response contains the summary of the request and lists the individual run results with the link to the run result page. Below is an example request along with the output:
 
 ```sh
-url -s --request POST \\n            --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \\n              --header 'authorization: apiKey 1d7e2d6b-xxxx-xxxx-xxxx-10f83c5a8da7' \\n          --header 'accept: text/plain'        --header 'content-type: application/json' \\n                    --data '[{"monitorId": 276}]' 
+curl -s --request POST --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs --header 'authorization: apiKey 1d7e2d6b-xxxx-xxxx-xxxx-10f83c5a8da7' --header 'accept: text/plain'        --header 'content-type: application/json' --data '[{"monitorId": 276}]' 
 
 All monitors passed successfully.
 Name            ID  Region      Status  Conditions  URL
