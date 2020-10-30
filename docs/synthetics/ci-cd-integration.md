@@ -13,7 +13,7 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 
 **US Region Endpoint** - `https://apps.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
 
-**EU Region Endpoint** - `https://apps.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
+**EU Region Endpoint** - `https://apps.eu.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
 
 **HTTP Method** - `POST`
 
@@ -34,7 +34,7 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 ]
 ```
 
-* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page in UI. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
+* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
 * `<apiKey>` of your account can be copied from Settings -> API page.
 * `<locationId>` - List of locations to run the monitor from. If not specified, the monitor will be run from all locations specified in the monitor configuration. The supported locations are:
 
@@ -46,13 +46,13 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 | ap-southeast-1 | Singapore          |
 | ap-southeast-2 | Sydney, Australia  |
 | eu-central-1   | Frankfurt, Germany |
-| sa-east-1      | Sao Paulo, Brazil  |
+| sa-east-1      | São Paulo, Brazil  |
 | us-west-1      | N. California, USA |
 
 
 **Example Request**
 
-The below API triggers runs for monitors with id `276` and `335` belonging to App with id `12345` from locations `N.Virginia, USA`, `Mumbai, India` and `N.Virginia, USA`, `Ireland, Europe` respectively.
+The below API triggers runs for monitors with ID `276` and `335` belonging to App with ID `12345` from locations `N.Virginia, USA`, `Mumbai, India` and `N.Virginia, USA`, `Ireland, Europe` respectively.
 
 ```sh
 curl --request POST \
@@ -73,9 +73,9 @@ curl --request POST \
 
 ### Customize Request Configuration
 
-There are cases where you might want to customize request parameters depending on the environment. For example, the deployment URL for running the monitor in PR env or a different HTTP header for the staging environment. You can pass these custom configurations as part of run monitor API data. When the custom values are passed the configured values for scheduled runs will be overridden with the custom values.
+There are cases where you might want to customize request parameters depending on the environment. For example, the deployment URL for running the monitor in a PR env or a different HTTP header for the staging environment. You can pass these custom configurations as part of run monitor API data. When the custom values are passed the configured values for scheduled runs will be overridden with the custom values.
 
-For HTTP monitors, the following fields can be customized:
+For [HTTP monitors](./http-monitor.md), the following fields can be customized:
 
 * URL
 * Request Headers
@@ -104,13 +104,13 @@ curl --request POST \
 ]'
 ```
 
-For Browser monitors, the URL of the website can be customized.
+For [Browser monitors](./browser-monitor.md), the URL of the website can be customized.
 
 For Browser monitors with a script, you can pass custom parameters as variables, that could be referenced in the script.
 
 ### Customize Output Format
 
-By default the API output will be in JSON format. While invoking the API in build pipelines, it would be useful to display the output in a table format, so that the output could be easily interpreted. To get the output in table format, set the `Accept` header to `text/plain`. Below is an example request along with the output:
+By default the API output will be in JSON format. While invoking the API in build pipelines, it might be useful to display the output in a table format, so that the output could be easily interpreted. To get the output in table format, set the `Accept` header to `text/plain`. Below is an example request along with the output:
 
 ```sh
 url -s --request POST \\n            --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \\n              --header 'authorization: apiKey 1d7e2d6b-xxxx-xxxx-xxxx-10f83c5a8da7' \\n          --header 'accept: text/plain'        --header 'content-type: application/json' \\n                    --data '[{"monitorId": 276}]' 
@@ -124,13 +124,13 @@ AllLocations    276 ap-south-1  passed  3/3 Passed  https://apps.sematext.com/ui
 
 ## Integrations
 
-Using the run monitor API, you can integrate Sematext Synthetics to your CI/CD pipeline. Below are the steps to trigger monitor runs from various CI/CD tools.
+Using the run monitor API, you can integrate [Sematext Synthetics](./index.md) to your CI/CD pipeline. Below are the steps to trigger monitor runs from various CI/CD tools.
 
 ### Jenkins
 
-**Create API Token Secret**
+**Create API Key Secret**
 
-Create a secret credential for Sematext API Token to be used in the run monitor API request.
+Create a secret credential for Sematext API Key to be used in the run monitor API request.
 
 <img
   class="content-modal-image"
@@ -145,11 +145,11 @@ Add a stage in the Jenkinsfile to invoke the run monitor API, check the results,
 
 ```groovy
 stage('Run Sematext monitors') {
-      withCredentials([string(credentialsId: 'SEMATEXT_API_TOKEN', variable: 'SEMATEXT_API_TOKEN')]) {
+      withCredentials([string(credentialsId: 'SEMATEXT_API_KEY', variable: 'SEMATEXT_API_KEY')]) {
         sh """
             curl -s --request POST \
               --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \
-                --header 'authorization: apiKey ${SEMATEXT_API_TOKEN}' \
+                --header 'authorization: apiKey ${SEMATEXT_API_KEY}' \
                   --header 'accept: text/plain' \
                     --header 'content-type: application/json' \
                       --data '[{"monitorId": 276}]' > results.txt
@@ -162,9 +162,9 @@ stage('Run Sematext monitors') {
 
 ### Github Actions
 
-**Create API Token Secret**
+**Create API Key Secret**
 
-Create a secret from the Repository Settings, for Sematext API Token.
+Create a secret from the Repository Settings, for Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -195,7 +195,7 @@ jobs:
 
       - name: Run Sematext Monitor
         env:
-          API_TOKEN: ${{ secrets.SEMATEXT_API_TOKEN }}
+          API_TOKEN: ${{ secrets.SEMATEXT_API_KEY }}
         id: run
         run: |
           target_url=`cat "$GITHUB_EVENT_PATH" | jq .deployment_status.target_url`
@@ -223,13 +223,13 @@ On every deployment event, the action will be invoked and the action logs will c
 
 ### Bitbucket Pipelines
 
-**Create API Token Secret**
+**Create API Key Secret**
 
-Create a secret from the Repository Settings -> Repository Variables, for Sematext API Token.
+Create a secret from the Repository Settings -> Repository Variables, for Sematext API Key.
 
 <img
   class="content-modal-image"
-  alt="CI/CD BitBucket Secret"
+  alt="CI/CD Bitbucket Secret"
   src="../../images/synthetics/ci-cd-bitbucket-secret.png"
   title="Add Secret in BitBucket"
 />
@@ -246,7 +246,7 @@ pipelines:
     sematext:
       - step:
           script:
-            - curl -H "authorization:apiKey $SEMATEXT_API_TOKEN" -H "accept:text/plain" -H "content-type:application/json" -s -X POST -d "[{\"monitorId\":276}]" https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs > results.txt
+            - curl -H "authorization:apiKey $SEMATEXT_API_KEY" -H "accept:text/plain" -H "content-type:application/json" -s -X POST -d "[{\"monitorId\":276}]" https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs > results.txt
             - cat results.txt
             - if [ $(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; fi
 
@@ -254,9 +254,9 @@ pipelines:
 
 ### GitLab CI/CD
 
-**Create API Token Variable**
+**Create API Key Variable**
 
-Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext API Token.
+Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -283,7 +283,7 @@ run-sematext-monitor:
     before_script:
     - apk add --update curl && rm -rf /var/cache/apk/*
     script:
-        - curl -H "authorization:apiKey $SEMATEXT_API_TOKEN" -H "accept:text/plain" -H "content-type:application/json" -s -X POST -d "[{\"monitorId\":276}]" https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs > results.txt
+        - curl -H "authorization:apiKey $SEMATEXT_API_KEY" -H "accept:text/plain" -H "content-type:application/json" -s -X POST -d "[{\"monitorId\":276}]" https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs > results.txt
         - cat results.txt
         - if [ $(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; fi
     artifacts:
@@ -293,8 +293,8 @@ run-sematext-monitor:
 
 ### Vercel
 
-Configure [GitHub Action](#gitlab-cicd) to run the monitor on deployment event. If the Vercel project repository is GitHub, the action will be automatically triggered on PR or production deployment.
+Configure [GitHub Action](#github-actions) to run the monitor on deployment event. If the Vercel project repository is GitHub, the action will be automatically triggered on PR or production deployment.
 
 ### Netlify
 
-Configure [GitHub Action](#gitlab-cicd) to run the monitor on deployment event. If the Netlify project repository is GitHub, the action will be automatically triggered on production deployment.
+Configure [GitHub Action](#github-actions) to run the monitor on deployment event. If the Netlify project repository is GitHub, the action will be automatically triggered on production deployment.
