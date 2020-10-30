@@ -195,13 +195,13 @@ jobs:
 
       - name: Run Sematext Monitor
         env:
-          API_TOKEN: ${{ secrets.SEMATEXT_API_KEY }}
+          API_KEY: ${{ secrets.SEMATEXT_API_KEY }}
         id: run
         run: |
           target_url=`cat "$GITHUB_EVENT_PATH" | jq .deployment_status.target_url`
           curl -s --request POST \
             --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \
-              --header 'authorization: apiKey '$API_TOKEN \
+              --header 'authorization: apiKey '$API_KEY \
                 --header 'accept: text/plain' \
                   --header 'content-type: application/json' \
                     --data '[{"monitorId": 276, "url":'$target_url'}]' > results.txt
