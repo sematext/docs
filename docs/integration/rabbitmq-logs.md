@@ -37,6 +37,7 @@ input:
 output:
   elasticsearch:
     module: elasticsearch
+    # use logsene-receiver.eu.sematext.com for the EU region
     url: https://logsene-receiver.sematext.com
     indices:
       # send RabbitMQ logs to this Logs App
