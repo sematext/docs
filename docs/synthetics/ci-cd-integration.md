@@ -1,7 +1,7 @@
 title: CI/CD Integration
 description: Guide to how to run HTTP/Browser monitors from your CI/CD pipeline.
 
-In addition to the scheduled monitor runs, you can also trigger monitor runs using API. You can use this API to trigger monitors runs as part of your CI/CD pipeline and block the deployment if the runs fail. On failure of the run, you will be alerted on the configured alert [notification hooks](../alerts/alert-notifications.md). The run monitor API can be used to:
+In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your CI/CD pipeline and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](../alerts/alert-notifications.md). The run monitor API can be used to:
 
 * Test the APIs, websites, and the user journeys in your PR and staging environments and annotate the pull requests with the results. 
 * Test the APIs, websites, and the user journeys in production immediately after deployment and alert when it fails.
