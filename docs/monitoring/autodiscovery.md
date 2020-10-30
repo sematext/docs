@@ -92,19 +92,19 @@ In all environments this makes it possible to use different monitoring tokens, a
 
 ### Switching from manual to automatic monitoring
 
-The switch from manual to automatic monitoring is done by first removing manually set up agent and then enabling automatic monitoring in the user interface.
+The switch from manual to automatic monitoring is done by first removing the agent you set up manually, then enabling automatic monitoring in the user interface.
 
 In bare-metal/virtual machine setups there are two types of agents - in-process (with javaagent) and standalone.
 
-If you are using in-process variant, do the following:
+If you are using the in-process variant, do the following:
 - remove `-javaagent` definition from the startup script of your service and restart the service
 - from the directory `/opt/spm/spm-monitor/conf`, remove the config file whose name contains an App token used by this specific service
 
-If you are using standalone variant:
+If you are using the standalone variant:
 - from the directory `/opt/spm/spm-monitor/conf`, remove the config file whose name contains an App token used by this specific service
 - restart the agent with `sudo service sematext-agent restart
 
-In container environments it is much simpler - just remove environment variable named MONITORING_TOKEN from your containers:
+In container environments it's much simpler - remove the environment variable named `MONITORING_TOKEN` from your containers:
 - if using `docker run` command to start your service, remove MONITORING_TOKEN from the command line
 - if using `docker-compose.yml` to start your service, remove MONITORING_TOKEN from that file
 - if using kubernetes, remove MONITORING_TOKEN from service deployment manifest
