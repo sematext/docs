@@ -1,5 +1,5 @@
 title: Solr Logs Integration
-description: Solr RabbitMQ Logs integration allows you to check query distribution, analyze errors, Zookeeper and Overseer logs and much more.
+description: Sematext Solr Logs integration allows you to check query distribution, analyze errors, Zookeeper and Overseer logs and much more.
 
 To make use of the Sematext Solr Logs integration, you'll need to send parsed Solr logs to your Sematext Logs App. The easiest way is via [Logagent](../logagent/index.md), which can parse Solr logs out of the box.
 
