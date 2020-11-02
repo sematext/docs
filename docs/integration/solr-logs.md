@@ -66,7 +66,7 @@ Once data is in, you can explore it using the built-in reports or create your ow
 Other built-in reports include:
 
 - **Errors**: breakdown of what's wrong: which nodes/classes/collections/etc generate errors
-- **Zookeeper**: logs produced by Solr's [Zookeeper](http://zookeeper.apache.org) client and other Zookeeper-related classes and threads. Look here for insights on SolrCloud's stability. For the Zookeeper ensemble itself, check out our [Zookeeper monitoring integration](./zookeeper.md)
+- **Zookeeper**: logs produced by Solr's [Zookeeper](https://zookeeper.apache.org) client and other Zookeeper-related classes and threads. Look here for insights on SolrCloud's stability. For the Zookeeper ensemble itself, check out our [Zookeeper monitoring integration](./zookeeper.md)
 - **Overseer**: logs produced by SolrCloud's [Overseer](https://lucene.apache.org/solr/8_6_0/solr-core/org/apache/solr/cloud/Overseer.html) thread and other Overseer activities (e.g. shard leader election)
 - **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
 
