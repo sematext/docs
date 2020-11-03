@@ -160,6 +160,75 @@ stage('Run Sematext monitors') {
     }
 ```
 
+### Travis CI
+
+Update `.travis.yaml` to include `after_deploy` phase to trigger a monitor run after the deployment. Define `SEMATEXT_API_KEY` as an environment variable in [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings).
+
+```yaml
+# This example deploys a nodejs project in heroku and triggers a monitor run after the deployment. 
+language: node_js
+node_js:
+  - 10
+cache:
+  directories:
+    - node_modules
+script:
+  - npm run test:unit
+  - npm run build
+before_deploy: "echo 'Deploying.'"
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: my-heroku-website
+
+after_deploy: 
+  - echo 'Deployment finished. Running Sematext Synthetics monitors..'
+  - curl -H "authorization:apiKey $SEMATEXT_API_KEY" -H "accept:text/plain" -H "content-type:application/json" -s -X POST -d "[{\"monitorId\":276}]" https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs > results.txt
+  - cat results.txt
+  - if [ $(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; fi
+```
+
+### Circle CI
+
+Update `.circleci/config.yml` to trigger a monitor run after the deployment. Define `SEMATEXT_API_KEY` as an environment variable under [Project Settings](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project).
+
+```yaml
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:15.0.1
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            echo "Setup starting..."
+            npm install
+      - run:
+          name: Build
+          command: |
+            echo "Building..."
+            npm run build
+      - run:
+          name: Test
+          command: |
+            echo "Running tests..."
+            npm run test:unit
+      - run:
+          name: Deploy
+          command: 
+            echo "Deploying the App..."
+            # Deploy your App
+      - run:
+          name: Trigger Sematext run monitor
+          command: |
+            echo 'Deployment finished. Running Sematext Synthetics monitors..'
+            curl -H "authorization:apiKey $SEMATEXT_API_KEY" -H "accept:text/plain" -H "content-type:application/json" -s -X POST -d "[{\"monitorId\":276}]" https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs > results.txt
+            cat results.txt
+            if [ $(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; fi
+```
+
 ### Github Actions
 
 **Create API Key Secret**
