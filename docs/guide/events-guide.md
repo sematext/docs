@@ -19,13 +19,11 @@ These are all Events!
 
 ## Events Correlations
 
-Here's an **Events correlation panel** expanded in an Apache Monitoring App with server metrics. You can **correlate Events with Metrics** and see how certain events affected metric spikes. 
+You can **correlate Events** with metrics, logs, experience or synthetics data using **[split screen](./split-screen/)**. It enables you to see how certain events affected metrics or to see if there were some event when some spike happened.  
 
 You can also **correlate Events with Logs** for full observability. This means you can have **Events, Logs, and Metrics on the same timeline**, saving you huge amounts of time when debugging.
 
-![Sematext Cloud Events and Metrics and Logs Correlation](https://sematext.com/docs/images/guide/alerts-and-events//events-corellation-monitoring-app.png "Sematext Cloud Events and Metrics and Logs Correlation")
-
-In addition to showing Events as a time-series chart, you have a detailed **Events Stream** where you can **search and filter** them. Events have tags, making it that much easier.
+![Sematext Cloud Events and Metrics and Logs Correlation](../images/guide/split-screen/monitoring-events.png "Sematext Cloud Events and Metrics Correlation")
 
 ## Events Components
 

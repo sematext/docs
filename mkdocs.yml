@@ -10,6 +10,7 @@ pages:
       # - Monitoring Guide: guide/monitoring-guide.md
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
+      - Split Screen: guide/split-screen.md
       # - Dashboards Guide: guide/dashboards-guide.md
     - Logs:
       - Overview: logs/index.md
