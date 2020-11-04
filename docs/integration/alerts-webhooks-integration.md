@@ -25,4 +25,4 @@ Enter required parameters and additional parameters and headers can be added as 
 
 ## Custom Parameters
 
-Sematext Notification Hooks support a set of variables that you can use to build your requests. Learn more about them at [Custom Notification Hooks Parameters](/integration/alerts-webhooks-custom-params/) section.
+Sematext Notification Hooks support a set of variables exposed as [Custom Notification Hooks Parameters](/integration/alerts-webhooks-custom-params/) that you can use to customize which data is included in the request sent to your webhook.
