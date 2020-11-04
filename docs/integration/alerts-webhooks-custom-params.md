@@ -8,7 +8,7 @@ The following variables are supported:
  * **$webHookName** - the name of the webhook
  * **$applicationId** - App identifier
  * **$applicationToken** - App token **IMPORTANT**: Anyone with access to your App token can access data in your App. Use $applicationToken only if you are sure there is no risk of the token getting compromised.
- * **$ruleType** - the type of the Alert Rule
+ * **$ruleType** - the type of the Alert Rule. Can take one of the following values: ***HEARTBEAT***, ***AF_VALUE***, ***AF_ANOMALY_VALUE***, ***LOGSENE_VALUE***, ***LOGSENE_ANOMALY_VALUE***, ***RUM_VALUE***, ***RUM_ANOMALY_VALUE***, ***SYNTHETICS_RESULT_VALUE***.  
  * **$createTimestamp** - alert creation timestamp in UTC
  * **$backToNormal** - **true** when the notification is for the incident going back to non-alerting state; **false** otherwise
  * **$title** - alert title, currently equal to ***Sematext***
