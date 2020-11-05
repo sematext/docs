@@ -20,13 +20,13 @@ Sematext [Browser SDK](https://github.com/sematext/browser-sdk) is an open-sourc
 You can find the information about the development and script architecture in the [Browser SDK](https://github.com/sematext/browser-sdk/) Github project:
 
  - [Development](https://github.com/sematext/browser-sdk/#development)
- - [RUM Script Architecture](https://github.com/sematext/browser-sdk/#the-rum-script-architecture)
+ - [Experience Script Architecture](https://github.com/sematext/browser-sdk/#the-experience-script-architecture)
  - [Working on the Loader Script](https://github.com/sematext/browser-sdk/#working-on-the-loader-script)
- - [Working on the Main RUM Script](https://github.com/sematext/browser-sdk/#working-on-the-main-rum-script)
+ - [Working on the Main Experience Script](https://github.com/sematext/browser-sdk/#working-on-the-main-experience-script)
 
 ### Supported Commands
 
-The following commands are currently supported by the RUM script:
+The following commands are currently supported by the Experience script:
 
  - `config` - Configures the script. It requires the `token` and `receiverUrl` configuration parameters. You can also provide the `ignoreBotData` Boolean parameter to ignore metrics coming from bots.
  - `identify` - Identifies the user. Requires the `name` and the `identifier` keys to be present, which are used to identify a user.  
@@ -41,7 +41,7 @@ The following commands are currently supported by the RUM script:
 
 ### Global Constants
 
-The RUM script uses global constants defined in the `constants.js` file. The file contains the following constants:
+The Experience script uses global constants defined in the `constants.js` file. The file contains the following constants:
 
  - `GLOBAL_KEY` - The global key under which the script is available.
  - `DEBUG_PARAM_KEY` - When set to `true` turns on the debug level logging. 
@@ -54,11 +54,11 @@ The RUM script uses global constants defined in the `constants.js` file. The fil
 
 ## Installation
 
-Installation of the RUM script contains the following steps:
+Installation of the Experience script contains the following steps:
 
 ### Adding the Loader Script
 
-To add the loader script responsible for loading the main RUM script you need to add the RUM loader snippet generated via the `yarn generate-snippet` command to the header of the page before the closing `</head>` tag:
+To add the loader script responsible for loading the main Experience script you need to add the RUM loader snippet generated via the `yarn generate-snippet` command to the header of the page before the closing `</head>` tag:
 
 ```
 <script type="text/javascript">
@@ -69,9 +69,9 @@ To add the loader script responsible for loading the main RUM script you need to
 </script>
 ```
 
-The `/experience.js` should be pointing to the location of the built RUM script and the `strum` is the key under which the script will be available.
+The `/experience.js` should be pointing to the location of the built Experience script and the `strum` is the key under which the script will be available.
 
-### Configuring the RUM Script
+### Configuring the Experience Script
 
 To configure the script the `config` command needs to be sent providing the URL of the receiver which accepts the data and the token, which identifies the [Sematext Experience](https://sematext.com/experience) App. For example:
 
@@ -79,7 +79,7 @@ To configure the script the `config` command needs to be sent providing the URL 
 strum('config', { token: '8763d12d-1j3t-932v-b498-544290z98k43', receiverUrl: 'https://rum-receiver.sematext.com' });
 ```
 
-### Integrating the RUM Script
+### Integrating the Experience Script
 
 For some web technologies, especially those used in single-page applications additional integration may be needed. Have a look at the [Sematext Experience Integrations](/experience/integrations/) to learn more.
 
