@@ -65,11 +65,11 @@ To add the loader script responsible for loading the main RUM script you need to
   ...
   INSERT SCRIPT SNIPPET HERE
   ...
-  (window,document,"script","/rum.js","strum");
+  (window,document,"script","/experience.js","strum");
 </script>
 ```
 
-The `/rum.js` should be pointing to the location of the built RUM script and the `strum` is the key under which the script will be available.
+The `/experience.js` should be pointing to the location of the built RUM script and the `strum` is the key under which the script will be available.
 
 ### Configuring the RUM Script
 
