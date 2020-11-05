@@ -22,3 +22,7 @@ Enter required parameters and additional parameters and headers can be added as 
 ![Custom Webhooks Integration](https://sematext.com/docs/images/integrations/custom-webhook.png "Create Custom Webhooks Integration")
 
 **Done.** Use as many generic Webhooks-based integration as you wish, and there are numerous other third party integrations services like HipChat, Slack, Zapier, Flowdock, and more available as well. Check [Integrations](/integration/) pages for more details.
+
+## Custom Parameters
+
+Sematext Notification Hooks support a set of variables exposed as [Custom Notification Hooks Parameters](/integration/alerts-webhooks-custom-params/) that you can use to customize which data is included in the request sent to your webhook.
