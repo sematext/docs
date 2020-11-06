@@ -4,46 +4,25 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 ## Monitoring Report Menu
 
-The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. **Events and Logs** are **integrated** in a **single Monitoring Reports pane**, and used to **correlate metrics** with **application and server logs, events, alerts, anomalies**, and much more! 
+The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. It lets you add additional components to a report, create alerts, connect apps and quickly filter or group data. You can also correlate monitoring data with your logs, events or experience data using **[split screen](./split-screen/)**.
 
-Here's how you can **correlate Metrics with Events and Logs**, and view it all in a single view.
-
-![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
+![Sematext Cloud Monitoring Guide - Monitoring Report Menu](../images/guide/monitoring/monitoring-header.png) 
 
 ### App State
 
-When your Monitoring App is loaded the **Save and Reset buttons will be hidden** since you see the App's default state. If a **new component is added** or any existing **component is edited, alert created, and report component removed**, the **Save and Reset buttons will appear** in the report menu and allow for changes to be saved or reset to the initial state. If your browser is suddenly closed, and no changes were saved or reset, the App will preserve its initial state.
+If a **new component is added** or any existing **component is edited or removed**, the **Save and Reset buttons will appear** in the report menu and allow for changes to be saved or reset to the initial state.
 
-### Correlations
+![Sematext Cloud Monitoring Guide - Monitoring Report Menu](../images/guide/monitoring/report-save-reset.png) 
 
-Correlations give you a single view for Metrics, Logs, and Events. This is a huge time saver to let you move from **Metrics spikes** to **drill down to Logs and Events** that caused them. 
+If your browser is suddenly closed, and no changes were saved or reset, the App will preserve its initial state.
 
-With Alerts and the new Real User Monitoring feature we want to create a set of tools that provide instant feedback to help monitor and troubleshoot your infrastructure and software.
+### Split Screen
 
-#### Events
+Split screen gives you a single view for Metrics, Logs, and Events. This is a huge time saver to let you move from **Metrics spikes** to **drill down to Logs and Events** that caused them.
 
-Here you can see the Events toggle switched on, showing you an Events Histogram which follows the same timeline as the Metrics. 
+![Sematext Cloud Monitoring Guide - Monitoring Split Screen](../images/guide/monitoring/monitoring-split-screen.png) 
 
-![Sematext Cloud Monitoring Guide - Events Correlation View](https://sematext.com/docs/images/guide/monitoring/event-correlation-with-stream.png) 
-
-When the Events toggle is on in the report menu, the **Events Search component** is loaded. It has a **search box**, an **App Selector** to select what data you want to load and correlate, and an **Events Histogram** displaying bar chart across the time frame selected in the time picker.
-
-Contextual menu items are located as a series of icons next to the App Selector. The first one opens the **Event Stream component** below the **Event Search component** and provides the **list view of every event**. This includes timestamp, details, event type tag(s), and event description.
-
-Combined with the **Metric Reports** below, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! 
-
-#### Logs
-
-<!-- Image below shows correlations and Events toggle selected for Apache Logs app in the same view together with Apache Monitoring app used to analyze various server metrics data using build in reports and data visualizations tools. Two apps were initially created, one for Apache sever logs and the other as Apache Monitoring Integration, and combined provide a full insight into server anomalies or incidents. -->
-
-Just like with the Events toggle, turning on the **Logs toggle** in the Reports Menu will display a **Logs Search component** with a search box, an App Selector, and a series of icons used to expand the log table, open the Logs Search component contextual menu, and other related settings and features as shown in the image below.
-
-![Sematext Cloud Monitoring Guide - Logs Correlation View](https://sematext.com/docs/images/guide/monitoring/log-correlation-with-log-table.png)
-
-Clicking on the **Logs icon** will open **Logs Table component** below the Logs Search component. A list view of log entries will be displayed with `@timestamp`, `_source`, and `Tags` as default columns, but all available log fields will be available in the **Logs Table component dropdown menu**, and easily selected or deselected and displayed in data table view. Column width can be also resized to better organize Log Table when multiple fields are selected at once.
-
-Every Log event in the table has two left-aligned icons, one that opens **panel with all log details**, and the other that opens the **Log context**. It's a display of several log events before and after a given log event, typically used to help with troubleshooting. The Log Context functionality _ignores_ filters and shows surrounding log events even if they don't match the currently used filters and/or query. Check out the [Logs Guide](../logs) for more info. 
-
+Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[split screen](./split-screen/)**.
 
 ### Report Actions 
 
