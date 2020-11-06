@@ -4,7 +4,7 @@ description: Logagent, Sematext log shipper and Logstash alternative, is availab
 [Logagent](./index.md) is a general purpose log shipper. It runs as a system service on Linux by using Systemd or Upstart.
 
 ## Install Node.js on your server
-First, make sure you have [Node.js installed](https://nodejs.org/en/download/package-manager/). E.g. for Debian/Ubuntu:
+First, make sure you have [Node.js 8.11 or later installed](https://nodejs.org/en/download/package-manager/). E.g. for Debian/Ubuntu:
 ``` bash
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
