@@ -139,6 +139,7 @@ pages:
         - RabbitMQ: integration/rabbitmq-logs.md
         - AWS ECS: integration/ecs-logs.md
         - Solr: integration/solr-logs.md
+        - PostgreSQL: integration/postgresql-logs.md
       - Notification Hooks:
         - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
         - Webhook Parameters: integration/alerts-webhooks-custom-params.md
