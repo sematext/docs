@@ -54,7 +54,7 @@ If you already have Logagent installed, you can simply append to the `files` inp
 
 ## Exploring logs
 
-Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Authentication report to check on granded and denied connections:
+Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Authentication report to check on granted and denied connections:
 
 <img
   class="content-modal-image"
