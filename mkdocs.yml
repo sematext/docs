@@ -75,6 +75,7 @@ pages:
       - Long Tasks: experience/longtasks.md
       - Element Timing: experience/element-timing.md
       - Web Vitals: experience/webvitals.md
+      - Browser Memory: experience/browser-memory.md
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Changelog: experience/changelog.md

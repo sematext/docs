@@ -75,6 +75,20 @@ adjust the time thresholds or [User
 Satisfaction](/experience/user-satisfaction) to learn more about Apdex scores
 in general.
 
+### How are memory measurements performed?
+
+Memory measurements requested by the [Browser SDK](/agents/browser/) are requested 
+with every page load. In addition to that, the measurements are taken periodically 
+so that you can see the memory usage over time. 
+
+### Why I'm not seeing page loads with, but I'm seeing memory usage measurements? 
+
+After the initial page load, the memory measurements will be taken periodically in 
+scheduled intervals. If your users leave the application open in the browser for a 
+longer time period the measurements will be taken and sent to Sematext Cloud 
+constantly. Your selected time range may include memory measurements, but the page 
+load may be outside of it. 
+
 ## Troubleshooting
 
 ### My App has stopped receiving data. What should I do?
