@@ -75,6 +75,7 @@ pages:
       - Long Tasks: experience/longtasks.md
       - Element Timing: experience/element-timing.md
       - Web Vitals: experience/webvitals.md
+      - Browser Memory: experience/browser-memory.md
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Changelog: experience/changelog.md
@@ -139,6 +140,7 @@ pages:
         - RabbitMQ: integration/rabbitmq-logs.md
         - AWS ECS: integration/ecs-logs.md
         - Solr: integration/solr-logs.md
+        - PostgreSQL: integration/postgresql-logs.md
       - Notification Hooks:
         - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
         - Webhook Parameters: integration/alerts-webhooks-custom-params.md
