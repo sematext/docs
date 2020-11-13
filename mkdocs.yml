@@ -110,6 +110,7 @@ pages:
         - Hadoop: integration/hadoop.md
         - HAProxy: integration/haproxy.md
         - HBase: integration/hbase.md
+        - Jenkins: integration/jenkins.md
         - JVM: integration/jvm.md
         - Kafka: integration/kafka.md
         - Kubernetes: integration/kubernetes.md
@@ -128,19 +129,18 @@ pages:
         - Storm: integration/storm.md
         - Tomcat: integration/tomcat.md
         - ZooKeeper: integration/zookeeper.md
-        - Jenkins: integration/jenkins.md
       - Logs:
         - Generic Logs: integration/generic-logs-integration.md
-        - Kubernetes Audit: integration/kubernetes-audit-integration.md
-        - GitHub Webhook Events: integration/github-webhook-events-integration.md
-        - Linux Journald: integration/journald-integration.md
-        - Vercel: integration/vercel-logs-integration.md
-        - Mobile Apps Logs: integration/mobile-apps-logs.md
-        - IBM Cloud Kubernetes Logs: integration/ibm-cloud-kubernetes-logs.md
-        - RabbitMQ: integration/rabbitmq-logs.md
         - AWS ECS: integration/ecs-logs.md
-        - Solr: integration/solr-logs.md
+        - GitHub Webhook Events: integration/github-webhook-events-integration.md
+        - IBM Cloud Kubernetes Logs: integration/ibm-cloud-kubernetes-logs.md
+        - Kubernetes Audit: integration/kubernetes-audit-integration.md
+        - Linux Journald: integration/journald-integration.md
+        - Mobile Apps Logs: integration/mobile-apps-logs.md
         - PostgreSQL: integration/postgresql-logs.md
+        - RabbitMQ: integration/rabbitmq-logs.md
+        - Solr: integration/solr-logs.md
+        - Vercel: integration/vercel-logs-integration.md
       - Notification Hooks:
         - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
         - Webhook Parameters: integration/alerts-webhooks-custom-params.md
@@ -353,7 +353,7 @@ extra:
     - type: 'slideshare'
       link: 'https://www.slideshare.net/sematext'
     - type: 'feed'
-      link: 'http://feeds.feedburner.com/SematextBlog'
+      link: 'https://feeds.feedburner.com/SematextBlog'
 
 extra_css:
   - 'stylesheets/extra.css'
