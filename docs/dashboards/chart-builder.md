@@ -234,21 +234,22 @@ You can style any series as a heatbar, but it's especially suitable for events a
 
 Here you can see a time-series chart which shows the total number of logs and, above it, a heatbar which tracks only errors among them.
 
-![Heatbars example](../images/dashboards/heatbar-example-usage-logs-with-errors.png)
+![Heatbars example](../images/dashboards/heatbar-1-example-usage-logs-with-errors.png)
 
-Let's build this chart together. 
-Since total number of logs is not particularly interesting, we'll monitor a certain subset of logs, for example logs which contain the word `Usage`.
-We'll have a time-series chart tracking all *Usage* logs and additionally, we'll track only *Usage* errors in a heatbar, like we've seen in the previous image.  
+Let's build this chart together.  
 
-In your dashboard, click on the `Add component` button, which looks liks this:
+Since the total number of logs is not particularly interesting, we'll monitor a certain subset of logs, for example logs which contain the word `Usage`.  
+We'll have our time-series chart tracking all *Usage* logs and additionally, we'll use a heatbar to track only errors, like we've seen in the previous image.  
 
-![Add component](../images/dashboards/add-component.png)
+In your dashboard, click on the `Add component` button, which looks like this:
+
+![Add component](../images/dashboards/heatbar-2-add-component.png)
 
 In the first dialog choose `Time Series Chart` and in the next choose `Logs` data series.  
 
 If you're creating your first chart, the initial result may look intimidating at the first glance:
 
-![New chart](../images/dashboards/heatbar-creating-0-empty-ts-chart.png)
+![New chart](../images/dashboards/heatbar-3-empty-ts-chart.png)
 
 It's just a matter of choosing what we want our chart to show. So far we've chosen a type of chart, but haven't told it which **App** to use and which **metric** from that App to show.  
 
@@ -257,40 +258,40 @@ We'll name this data series `Usage logs`, so type that into the `Label` field.
 
 Great, errors are gone and we already see data in our chart preview:
 
-![Chart shows data](../images/dashboards/heatbar-creating-0.1-count-in-ts-chart.png)
+![Chart shows data](../images/dashboards/heatbar-4-count-in-ts-chart.png)
 
 Let's keep things organized, rename the `Custom chart` in the upper left corner to `Usage`.
 
 Next, in the `Filter by` section, we are going to filter our data series by typing `Usage` into the `Query` field. If you click on enter while the cursor is in the `Query` field the chart will refresh, now containing only those logs which satisfy the query.
 
-![Creating chart with a heatbar](../images/dashboards/heatbar-creating-1.png)
+![Enter query](../images/dashboards/heatbar-5-enter-query.png)
 
 So far so good, we can see our `Usage logs` in the chart preview.
 
 Now let's add a heatbar.  
 Duplicate `Usage logs` series using the series action menu (`...`), like this:
 
-![Duplicate Usage logs DS](../images/dashboards/heatbar-creating-1.1-clone.png)
+![Duplicate Usage logs DS](../images/dashboards/heatbar-6-clone.png)
 
 Change the label of the new series to `Usage errors`.  
 Navigate to the `Filter by` section, below the `Label`, notice that our `query: Usage` is still here, duplicated correctly from the first series. We'll additionally filter logs to only those with `severity: error`:
 
-![Severity error as a heatbar](../images/dashboards/heatbar-creating-3-severity-error.png)
+![Severity error as a heatbar](../images/dashboards/heatbar-7-severity-error.png)
 
 Finally, switch to the `Style` section of our second data series in the upper right corner and change its type to `heatbar` and color to red.
 
-![Changing data series type](../images/dashboards/heatbar-creating-4-ds-style-type.png)
+![Changing data series type](../images/dashboards/heatbar-8-ds-style-type.png)
 
 And just like that, we have our *Usage chart* with a heatbar of *Usage errors*.
 
-![Final result](../images/dashboards/heatbar-creating-6-chart-final.png)
+![Final result](../images/dashboards/heatbar-9-chart-final.png)
 
 Clicking on a heatbar square opens a panel with a list of *Usage errors* from the corresponding time range.
 
-![Click on a bucket](../images/dashboards/heatbar-click-on-a-bucket.png)
+![Click on a bucket](../images/dashboards/heatbar-10-click-on-a-bucket.png)
 
 A chart can have multiple series configured as heatbars or it can have just heatbars.  
 For example, the following chart shows `CPU User` grouped by `OS Host`:
 
-![Just heatbars](../images/dashboards/heatbar-only-cpu-user-by-host.png)
+![Just heatbars](../images/dashboards/heatbar-11-only-cpu-user-by-host.png)
 
