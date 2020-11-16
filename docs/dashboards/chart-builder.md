@@ -229,7 +229,7 @@ a comparison of stacked and non-stacked bar charts.
 
 ## Heatbar
 
-Heatbar allows you to show a heatmap above a time-series chart. You can style any series as a heatbar, but it is especially suitable for events and logs. For example, a heatbar of alerts above the rate of network transactions.
+Heatbar allows you to show a heatmap above a time-series chart. You can style any series as a heatbar, but it's especially suitable for events and logs. Here you can see a heatbar of alerts above the rate of network transactions.
 
 ![Heatbars example](../images/dashboards/heatbar-example-alerts.png)
 
@@ -242,7 +242,7 @@ So far so good, we have our `Usage logs`.
 
 ![Usage logs](../images/dashboards/heatbar-creating-2.png)
 
-Next, you would add another Logs data series with the same `"Usage"` query, but you would additionally filter logs to only those whose `severity` is `error`.
+Next, you would add another Logs data series with the same `"Usage"` query, but you would additionally filter logs to only those with `severity: error`.
 
 ![Severity error as a heatbar](../images/dashboards/heatbar-creating-3-severity-error.png)
 
