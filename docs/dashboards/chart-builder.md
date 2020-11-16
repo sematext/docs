@@ -226,3 +226,40 @@ of a given series is stacked. This is very useful for area and bar charts. Below
 a comparison of stacked and non-stacked bar charts.
 
 ![Chart builder styles](../images/dashboards/chart-builder-stacked.png)
+
+## Heatbar
+
+Heatbar allows you to show a heatmap above a time-series chart. You can style any series as a heatbar, but it is especially suitable for events and logs. For example, a heatbar of alerts above the rate of network transactions.
+
+![Heatbars example](../images/dashboards/heatbar-example-alerts.png)
+
+Let's say you wanted to track a certain subset of your logs, for example logs which contain the keyword `"Usage"` and additionally, you wanted to show *Usage* errors in a heatbar.
+First, you would add a `Logs` data series, which you would filter by query `"Usage"`.
+
+![Creating chart with a heatbar](../images/dashboards/heatbar-creating-1.png)
+
+So far so good, we have our `Usage logs`.
+
+![Usage logs](../images/dashboards/heatbar-creating-2.png)
+
+Next, you would add another Logs data series with the same `"Usage"` query, but you would additionally filter logs to only those whose `severity` is `error`.
+
+![Severity error as a heatbar](../images/dashboards/heatbar-creating-3-severity-error.png)
+
+Finally, in the `Style` section of our second data series, you would change its type to `heatbar`.
+
+![Changing data series type](../images/dashboards/heatbar-creating-4-ds-style-type.png)
+
+And just like that, we have our *Usage chart* with a heatbar of *Usage errors*.
+
+![Final result](../images/dashboards/heatbar-creating-5-final-result.png)
+
+Clicking on a heatbar square opens a *flyout* with a list of *Usage errors* from the corresponding time range.
+
+![Final result](../images/dashboards/heatbar-click-on-a-bucket.png)
+
+A chart can have multiple series configured as heatbars or it can have just heatbars.  
+For example, the following chart shows `CPU User` grouped by `OS Host`:
+
+![Just heatbars](../images/dashboards/heatbar-only-cpu-user-by-host.png)
+
