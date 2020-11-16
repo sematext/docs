@@ -229,7 +229,7 @@ a comparison of stacked and non-stacked bar charts.
 
 ## Heatbar
 
-Heatbar allows you to show a heatmap above the time-series chart. You can style any series as a heatbar, but it is especially suitable for events and logs. For example, a heatbar of alerts above the rate of network transactions.
+Heatbar allows you to show a heatmap above a time-series chart. You can style any series as a heatbar, but it is especially suitable for events and logs. For example, a heatbar of alerts above the rate of network transactions.
 
 ![Heatbars example](../images/dashboards/heatbar-example-alerts.png)
 
@@ -250,7 +250,7 @@ Finally, in the `Style` section of our second data series, you would change its 
 
 ![Changing data series type](../images/dashboards/heatbar-creating-4-ds-style-type.png)
 
-And just like that, we have our *Usage chart* with *Usage errors* heatbar.
+And just like that, we have our *Usage chart* with a heatbar of *Usage errors*.
 
 ![Final result](../images/dashboards/heatbar-creating-5-final-result.png)
 
@@ -258,7 +258,7 @@ Clicking on a heatbar square opens a *flyout* with a list of *Usage errors* from
 
 ![Final result](../images/dashboards/heatbar-click-on-a-bucket.png)
 
-Chart can have multiple series configured as heatbars or it can have just heatbars.  
+A chart can have multiple series configured as heatbars or it can have just heatbars.  
 For example, the following chart shows `CPU User` grouped by `OS Host`:
 
 ![Just heatbars](../images/dashboards/heatbar-only-cpu-user-by-host.png)
