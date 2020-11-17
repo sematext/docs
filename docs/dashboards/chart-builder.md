@@ -240,7 +240,7 @@ A chart can have multiple series configured as heatbars, like in the following e
 
 ![More than one Heatbar](../images/dashboards/heatbar-1.1-more-than-one-hb-series.png)
 
-A chart can contain only heatbar series, in which case the main time-series chart is not even shown.  
+If all of the series are heatbars the main time-series chart is not even shown.  
 For example, the following chart is configured to show a single heatbar series, `CPU User` [grouped by](#group-by) `OS Host`:
 
 ![Just heatbars](../images/dashboards/heatbar-1.2-only-cpu-user-by-host.png)
@@ -249,7 +249,7 @@ The chart shows six heatbars because the `CPU User` metric was reported by six d
 
 ### Creating Heatbars
 
-Let's build the "Usage logs with errors" component together.  
+Let's build the [Usage logs with errors](#heatbar) component together.  
 
 Since the total number of logs is not particularly interesting, we'll monitor a certain subset of logs, for example logs which contain the word `Usage`.  
 We'll have our time-series chart tracking all *Usage* logs and additionally, we'll use a heatbar to track only errors, like we've seen in the first Heatbar example above.  
