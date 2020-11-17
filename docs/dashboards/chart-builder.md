@@ -266,7 +266,7 @@ Then choose `Logs` data series:
 
 ![Logs data series](../images/dashboards/heatbar-2.2-logs-data-series.png)
 
-If you're creating your first chart, the initial result may look intimidating at the first glance:
+If you're creating your first chart, the initial result may look intimidating at first glance:
 
 ![New chart](../images/dashboards/heatbar-3-empty-ts-chart.png)
 
