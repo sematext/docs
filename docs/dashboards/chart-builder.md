@@ -10,7 +10,7 @@ series with metrics, optional filters, and groupings. Charts built through the
 builder give you insight into spikes and trends, helping you to understand how your
 infrastructure or applications behave now or how they behaved in the past.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/chart-builder-20200207-3.mp4" type="video/mp4" />
 </video>
 

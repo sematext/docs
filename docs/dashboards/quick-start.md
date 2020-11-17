@@ -22,7 +22,7 @@ Any type of component can be easily added to one or more Dashboards.
 
 Once you have a dashboard created, you can start adding components to it. However, at least one or more Apps need to be created. As soon as your data is consumed and indexed by Sematext Cloud, logs, metrics, experience, events, and infrastructure components will become available to add to Dashboards. 
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/add-components-to-dash-long.mp4" type="video/mp4" />
 </video>
 

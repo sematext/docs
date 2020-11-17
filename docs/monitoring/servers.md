@@ -6,7 +6,7 @@ Monitor over 40 different software [integrations](../integrations) with Sematext
 ## Create a Sematext Monitoring App
 Creating a Sematext Monitoring App is as easy as choosing one of our integrations and giving the App a name.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/sematext-create-nginx-app.mp4" type="video/mp4" />
 </video>
 
@@ -18,7 +18,7 @@ Follow the Installation instructions when you create an App in Sematext to start
 ## See Application data in Sematext Monitoring
 Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes) and applications (Elasticsearch, JVM, Node.js, Redis, Nginx, and many more).
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/sematext-shipping-nginx-metrics.mp4" type="video/mp4" />
 </video>
 

@@ -25,7 +25,7 @@ For example, tags like `env:prod` can be configured on all production servers an
 
 Containers, Kubernetes clusters and cloud environments regularly start and terminate hosts, so it is critical to tag them to allow for aggregation of the metrics you’re getting. Alongside our full-text search, tagging is a powerful tool to make your life easier.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/groupbytags2.mp4" type="video/mp4" />
 </video>
 

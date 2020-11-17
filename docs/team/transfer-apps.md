@@ -11,7 +11,7 @@ user you want to transfer the App to, and hit **Transfer Ownership**.
 To transfer one of your Apps to another user, go to the 
 [Transfer Apps page](https://apps.sematext.com/ui/team/transfer-apps) in Sematext Cloud (or [Transfer Apps in Sematext Cloud EU](https://apps.eu.sematext.com/ui/team/transfer-apps)).
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/transfer-apps.mp4" type="video/mp4" />
 </video>
 
