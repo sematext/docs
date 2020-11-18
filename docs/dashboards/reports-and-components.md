@@ -20,3 +20,7 @@ Just like a Monitoring App component, a Logs App components have interactive ele
 ![Logs Dashboards Component](https://sematext.com/docs/images/guide/dashboards/logs-dashboard-component.png "Logs Dashboards Component")
 
 Our tools will help your DevOps team find common exceptions, detect patterns in behaviours, and solve performance issues and availability problems.
+
+### Saved Views
+
+With [Saved Views](/guide/saved-views) you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
