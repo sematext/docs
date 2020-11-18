@@ -12,6 +12,7 @@ pages:
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
       # - Dashboards Guide: guide/dashboards-guide.md
+      - Saved Views: guide/saved-views.md
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
