@@ -16,7 +16,7 @@ by your team, they **can't use your team's notification hooks**, meaning they're
 To share one of your Apps with other users, go to the 
 [App Guests screen](https://apps.sematext.com/ui/team/app-guests) in Sematext Cloud.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/app-guests.mp4" type="video/mp4" />
 </video>
 

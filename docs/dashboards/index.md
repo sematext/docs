@@ -10,7 +10,7 @@ Log data is hard to analyze and can be extremely tedious to understand. Dashboar
 ## Creating Dashboards
 To create a Dashboard, start by going to the Dashboards screen and click the **+ Add New Dashboard** button. Give your Dashbord a name and click save.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/create-dash.mp4" type="video/mp4" />
 </video>
 
@@ -19,7 +19,7 @@ Follow along the [Quick Start](./quick-start) guide for more detailed instructio
 ## Dashboard Settings
 Dashboard settings include naming, editing, and cloning dashboards, and handling reports and components. You can choose to add any type of component to a dashboard, add, edit and clone reports and manage filters.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/dash-settings.mp4" type="video/mp4" />
 </video>
 
@@ -28,7 +28,7 @@ Check out the [Settings](./settings) guide for more info.
 ## Reports and Components
 Every Dashboard can have multiple Reports that act as buckets for your metrics, logs, infrastructure, events, and experience data. The data in one report are separated into components, which all live under the same roof in a Dashboard for easy correlation and troubleshooting.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/component-types.mp4" type="video/mp4" />
 </video>
 

@@ -9,7 +9,7 @@ so they get access to **all** your [Apps](https://apps.sematext.com/ui/integrati
 To share your Account with other users, go to the 
 [Team page](https://apps.sematext.com/ui/team/account-members) on Sematext Cloud.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/account-members.mp4" type="video/mp4" />
 </video>
 

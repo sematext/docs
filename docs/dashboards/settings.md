@@ -13,7 +13,7 @@ Dashboard settings include:
   - Time picker
   - Report settings
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/dash-settings.mp4" type="video/mp4" />
 </video>
 

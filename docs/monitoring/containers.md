@@ -6,7 +6,7 @@ Monitor [Docker](https://www.docker.com/), rkt and containerd containers with Se
 ## Create a Sematext Monitoring App
 Creating a Sematext Monitoring App is as easy as choosing the Docker integration and giving the App a name.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/sematext-create-docker-app.mp4" type="video/mp4" />
 </video>
 
@@ -20,7 +20,7 @@ Sematext can easily monitor your containers with the Sematext Agent. [Installing
 ## See Container data in Sematext Monitoring
 Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes), containers (Docker, rkt, containerd) and orchestrator platforms and ships that to Sematext Cloud.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay loop>
+<video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/sematext-shipping-docker-metrics.mp4" type="video/mp4" />
 </video>
 
