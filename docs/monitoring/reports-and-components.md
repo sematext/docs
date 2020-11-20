@@ -24,6 +24,10 @@ Split screen gives you a single view for Metrics, Logs, and Events. This is a hu
 
 Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[split screen](./split-screen/)**.
 
+### Saved Views
+
+With [Saved Views](/guide/saved-views) you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
+
 ### Report Actions 
 
 The icons to the right in the report menu provide:
