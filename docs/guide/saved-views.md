@@ -13,9 +13,9 @@ To save a view for later, follow the steps below:
 
 ![Creating the saved view](../images/guide/savedviews/SavedViewCreate.gif)
 
-Sometimes later, when you come back to this screen:
+Later, when you come back to this screen:
 
-1. Click on Saved Views button
+1. Click the Saved Views button
 2. Select the previously saved view
 
 ![Selecting the saved view](../images/guide/savedviews/SavedViewSelect.gif)
