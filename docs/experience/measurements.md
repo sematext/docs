@@ -19,7 +19,7 @@ performance.mark('custom-metric-end');
 performance.measure('custom-metric', 'custom-metric-start', 'custom-metric-end');
 ```
 
-This would record a measurement with name `custom-metric` and the duration would be equal to the time it took for `doSomePotentiallyLongWork()` function to return.
+This will record a measurement with name `custom-metric` and the duration will be equal to the time it took for `doSomePotentiallyLongWork()` function to return.
 
 This measurement will be reported back to Experience every time this code runs, where you will be able to see the average duration for all users, compute the user satisfaction score, filter the data and more.
 
