@@ -1,9 +1,9 @@
 title: Shipping Log Files
 description: Shipping Log File Sources
 
-Enabling automatic logs shipping is accomplished by triggering the "Set up" button that opens the flyout for configuring log file shipping.
+Enabling automatic logs shipping is accomplished by triggering the "Set Up" button that opens the flyout for configuring log file shipping.
 
-![Setup Button](images/setup.png)
+![Setup Log Files](images/setup-log-files.png)
 
 In the flyout panel, you have to repeat the following steps to start shipping logs for the log file source:
 
@@ -23,7 +23,7 @@ To narrow down which log files should be tailed, you can define include/exclude 
 - `?` matches any single non-separator character
 - `[0-9]` matches character ranges
 
-When defining glob patterns, you can either specify include or exclude glob expressions. Exclude glob patterns take precedence over include patterns. This means that a log file that matches an include pattern will not be shipped if it also matches an exclude pattern.
+ When defining glob patterns, you can either specify include and/or exclude glob expressions. Exclude glob patterns take precedence over include patterns. This means that a log file that matches an include pattern will not be shipped if it also matches an exclude pattern.
 
 ![Include and Exclude Glob Patterns](images/include-exclude-globs.png)
 
@@ -31,7 +31,7 @@ As you're inputting the glob pattern, you'll be automatically getting feedback o
 
 ![Matched Hints](images/matched-globs.png)
 
-Going back to the main table, you'll notice two kinds of visual indicators that signal whether a particular log file source is included or excluded by the glob expression. By hovering over the `✓` or `✕` icons, you'll be able to figure out which exact glob pattern(s) are applied on the log file. If the log file is excluded from tailing, it is grayed out in the table row.
+Going back to the main table, you'll notice two kinds of visual indicators that signal whether a particular log file source is included or excluded by the glob expression. By hovering over the `✓` or `✕` icons, you'll be able to figure out exact glob pattern(s) matching the log file. If the log file is excluded from tailing, it is grayed out in the table row.
 
 The orange/yellow circles reflect log file tailing state. If you hover over them, the count of log files that are actually being shipped is shown. The red state indicates that some log file instances might not be tailed by the log shipper.
 

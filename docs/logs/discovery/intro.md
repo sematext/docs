@@ -17,7 +17,7 @@ Setting up log shipping is straightforward and it boils down to selecting your l
 
 ### Log parsing
 
-A predefined set of regular expression patterns are automatically applied to a log file making it convenient to get started without additional hassle. Log parsing structures the raw log events into events with meaningful fields out of the box making them suitable for dashboarding and the creation of precise alert rules.
+A predefined set of regular expression patterns are automatically applied to a log file making it convenient to get started without additional hassle. Log parsing structures the raw log events into events with meaningful fields out of the box making them suitable for dashboarding and the creation of precise alert rules. Sematext Logs supports a wide array of [integrations](https://sematext.com/docs/integration/#logging) with prebuilt reports and alert rules.
 
 ### Glob patterns
 

@@ -1,7 +1,11 @@
 title: Shipping Container Logs
 description: Shipping Container Log Sources
 
-To enable automatic container logs shipping, start by clicking on the `Set Up` button. This will open the following flyout panel where you can configure container log shipping:
+To enable automatic container logs shipping, start by clicking on the `Set Up` button.
+
+![Setup Log Files](images/setup-container-logs.png)
+
+This will open the following flyout panel where you can configure container log shipping:
 
 ![Enable Container Logs](images/enable-container-logs.png)
 
