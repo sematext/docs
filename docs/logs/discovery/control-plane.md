@@ -3,11 +3,11 @@ description: Logs Discovery Control Plane
 
 Logs Discovery Control Plane is the central location for managing the shipping of discovered log sources. It consists of various tabs, each of them designated to one particular log source.
 
-The rows are comprised of the following columns:
+The rows have the following columns:
 
 - `Name` represents the human-friendly identifier for the log source, such as log file name or container name.
-- `Infra App` is linked to the App token that was used to deploy the Sematext Agent. The Infra App stores infrastructure data and metrics including discovered log sources.
-- `Destination App` specifies the Logs App where logs are shipped. You can selects a distinct Logs App for each group.
+- `Infra App` is linked to the App token that was used to deploy the Sematext Agent. If you have only one Infra App, then this column is not shown. The Infra App stores infrastructure data and metrics including discovered log sources.
+- `Destination App` specifies the Logs App where logs are shipped. You can select a distinct Logs App for each group.
 - `Automatic Shipping` determines whether the logs are automatically shipped for some group. Initially, if no log shipping was set up, this column shows the `Set Up` button. Conversely, if log shipping was configured, this column displays a toggle that permits enabling/disabling the automatic log shipping.
 - `Actions` column that contains various log shipping-related actions.
 
@@ -19,11 +19,11 @@ The rows are comprised of the following columns:
 
 ![Kafka Log Files](images/kafka-log-files.png)
 
-As depicted in the image above, the Kafka group is composed of three log file sources that pertain to the Kafka service. Each of the log file sources can have multiple instances of the same log file discovered on different machines. Once you click on particular log file source, it will bring in a table with all log file instances per host, like shown in the image below.
+As shown above, the Kafka group has three log file sources that pertain to the Kafka service. Each log file source can have multiple instances of the same log file discovered on different hosts. Clicking a particular log file source shows all log file instances grouped by host, as shown below.
 
 ![Log File Instances](images/log-file-instances.png)
 
-- `Containers` reveal all discovered Docker containers grouped by image name or the image digest. This log source pinpoints Docker containers that are not managed by the orchestrator such as Kubernetes.
+- `Containers` reveal all discovered Docker containers grouped by image name or the image digest. This log source contains plain Docker containers, meaning they are not controlled by the orchestrators such as Kubernetes.
 
 ![Container Log Sources](images/log-sources-containers.png)
 
