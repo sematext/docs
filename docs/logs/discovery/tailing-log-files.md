@@ -11,7 +11,7 @@ In the flyout panel, you have to repeat the following steps to start shipping lo
 2. Select the destination Logs App. If the Logs App doesn't exist, you'll be able to create one from the same screen
 3. Click the `Save Changes` button
 
-The log shipper will automatically start tailing any log file that pertains to the service type for which the log shipping was set up.
+The log shipper will automatically start tailing any log file that pertains to the service type or process name for which the log shipping was set up.
 
 ![Enable Log Shipping](images/logfile-flyout.png)
 
