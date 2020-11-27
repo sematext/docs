@@ -68,7 +68,7 @@ pages:
       - URL Groups: experience/url-groups.md
       - Configure Apdex: experience/configure-requirements.md
       - User Satisfaction: experience/user-satisfaction.md
-      - Measurements: experience/measurements.md
+      - Performance Measurements: experience/measurements.md
       - User Identification: experience/user-identification.md
       - Tags: experience/tags.md
       - Resource Timing: experience/resources.md

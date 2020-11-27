@@ -1,9 +1,16 @@
-title: Measurements
+title: Performance Measurements
 description: Sematext Experience supports monitoring measurements made with performance.measure() API. Learn how to use and set it up here.
 
 Measuring interaction times is critical for understanding what your users are experiencing while interacting with your website. Developers can use the native [`performance.measure()` API](https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure) to measure any custom metrics.
 
 Experience collects these measurements automatically and also allows you to set time thresholds for each measurement. When time thresholds are set, you will get a user satisfaction score for each measurement.
+
+<img
+  class="content-modal-image"
+  alt="Measurements Page"
+  src="../../images/experience/measurements/measurements.png"
+  title="Measurements Page"
+/>
 
 ### Getting Started
 
@@ -21,9 +28,9 @@ performance.measure('custom-metric', 'custom-metric-start', 'custom-metric-end')
 
 This will record a measurement with name `custom-metric` and the duration will be equal to the time it took for `doSomePotentiallyLongWork()` function to return.
 
-This measurement will be reported back to Experience every time this code runs, where you will be able to see the average duration for all users, compute the user satisfaction score, filter the data and more.
+This measurement will be reported back to Experience every time this code runs, where you will be able to see the average duration for all users, compute the [user satisfaction](/experience/user-satisfaction) score, filter the data and more.
 
-### Setting The Time Threshold
+### Setting a Time Threshold
 
 You can set a time threshold for a measurement and Experience will compute the user satisfaction score that will be easier to interpret than looking at each measurement individually or the average duration times.
 
@@ -46,25 +53,41 @@ The user satisfaction score (Apdex) shown on the this page includes all the meas
 
 Click on a measurement in the table to see data related to that measurement only.
 
+<img
+  class="content-modal-image"
+  alt="Measurements Table"
+  src="../../images/experience/measurements/measurements-table.png"
+  title="Measurements Table"
+/>
+
+<img
+  class="content-modal-image"
+  alt="Measurements Events Table"
+  src="../../images/experience/measurements/measurements-events.png"
+  title="Measurement Events Table"
+/>
+
 
 ## Custom Tags
 
-If you wish to apply custom tags to all measurements, then please check out [Tags](/experience/tags).
+By default Experience allows you to filter by browser, country, operating system and other attributes that we automatically capture for each measurement. If you would like to be able to filter by some additional attributes you can use [Custom Tags](/experience/tags).
 
-If you want to add a specific custom tag to a single measurement, then you will have to use our custom commands for recording measurements instead of using the `performance.measure()` API.
+### Overriding Tag Values
 
-You can attach custom tags to measurements by providing them as another argument when calling `startTransaction`:
+Custom Tags are set once and then applied to all events that are sent to Experience. But if you want to send a tag that applies only to a single measurement, or if you want to override a globally set tag for a single measurement then you will have to use the `startTransaction` and `endTransaction` commands from our Browser SDK.
+
+You can attach custom tags to measurements by providing them as the second argument when calling `startTransaction`:
 
 To start measuring call `startTransaction` with name and custom tags as arguments:
 
 ```javascript
- strum('startTransaction', 'ExampleTransaction', { someTag: 'value' });
+ strum('startTransaction', 'custom-metric', { someTag: 'value' });
 ```
-
-This tag will be applied to this single event only.
 
 Stop measuring this interaction with `stopTransactions`:
 
 ```javascript
-strum('stopTransaction', 'ExampleTransaction', { someTag: 'value' });
+strum('stopTransaction', 'custom-metric', { someTag: 'value' });
 ```
+
+This tag will be applied to this single event only.

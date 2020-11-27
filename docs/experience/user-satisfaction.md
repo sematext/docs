@@ -19,7 +19,7 @@ You can hover over each of these scores to get additional information such as th
 
 Different websites have different performance goals which is why the first step in getting good results in measuring your website's performance is to define the different time thresholds based on your requirements. These time thresholds are the key component in measuring users' satisfaction as the Apdex score is based on a set of response time measurements against the time threshold.
 
-Page loads, ajax requests, and on-page transactions have different performance characteristics so we separate these into different user satisfaction scores and allow website owners to set different time thresholds for each. You can configure each of these time thresholds by opening your App and clicking on [Configure Apdex](/experience/configure-requirements) in the left menu.
+Page loads, ajax requests, and measurements have different performance characteristics so we separate these into different user satisfaction scores and allow website owners to set different time thresholds for each. You can configure each of these time thresholds by opening your App and clicking on [Configure Apdex](/experience/configure-requirements) in the left menu.
 
 <!-- Todo: add link to a more detailed page about configuring requirements -->
 
