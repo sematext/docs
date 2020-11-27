@@ -15,8 +15,10 @@ This will open the following flyout panel where you can configure container log 
 
 Log shipping is configured on a per container image basis. This implies that any freshly created containers that match this image name will automatically have their logs shipped to Sematext Cloud.
 
-## Routing logs by container labels
+## Filtering container logs by labels
 
-If you want to restrict the scope of log collection, it is possible to route the container logs by labels. You can either select a label from the list of already defined labels in this container or write a custom label. Labels can contain a key/value pair, or just a key.
+If you want to restrict the scope of log collection, it is possible to filter the container logs by labels. You can either select a label from the list of already defined labels in this container or write a custom label. Labels can contain a key/value pair, or just a key.
 
-![Route Container Logs](images/route-by-container-labels.png)
+![Route Container Logs](images/filter-container-logs-by-labels.png)
+
+Observability should not be an afterthought. You can prepare container-based log filtering and routing rules even if you are not using those labels with your containers yet.  For example, if you label different jobs with different labels, you can ensure their logs will go to the appropriate destination from the very beginning without being lost or getting mixed up with other logs.
