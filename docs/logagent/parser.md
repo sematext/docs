@@ -36,7 +36,7 @@ The default pattern definition file comes with patterns for:
 The file format for pattern definitions is based on [JS-YAML](https://nodeca.github.io/js-yaml/), in short:
 ```
 - - indicates an  array
-- !js/regexp - indicates a JS regular expression
+- !!js/regexp - indicates a JS regular expression
 - !!js/function > - indicates a JS function 
 ```
 
