@@ -188,7 +188,7 @@ output:
 
 ### How do I ship logs that match different patterns to different destinations / Sematext Logs Apps?
 
-An output filter function could do the trick, by setting data.\_index field, depending on various conditions. The following example creates an output filter with a configurable field name, a regular expression to match the content of the given field,  and index name for the output. 
+An output filter function could do the trick, by setting data.\_index field, depending on various conditions. The following example creates an output filter with a configurable field name, a regular expression to match the content of the given field, and index name for the output. 
 
 ```
 outputFilter:
@@ -203,6 +203,16 @@ outputFilter:
         }
         cb(null, data)
        }
+```
+
+### How do I parse JSON logs automatically?
+
+Ensure the Logagent config includes the following directive at the top level (i.e., not under `input`, `output`, or anything else):
+
+```
+parser:
+  json: 
+    enabled: true
 ```
 
 ### How do I rename log fields?
