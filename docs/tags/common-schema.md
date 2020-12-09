@@ -16,7 +16,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | facility | A single-valued field used by syslog to indicate the [facility level](https://en.wikipedia.org/wiki/Syslog#Facility_levels). Sematext stores the keyword values of these levels (such as *user* or *auth*). |
 | severity | A single-valued field and should contain the log level, such as *error* or *info*. |
 | syslog-tag | A single-valued field used by syslog to indicate the name and the PID of the application generating the event (for example, **httpd\[215\]:**). |
-| tags | A multi-valued array field that can contain zero or more tags. Tags can contain multiple tokens separated by space. |
+| tags | A multi-valued array field that can contain zero or more tags (for example, `"tags": ["solr", "search"]`). When searching for logs with these tags you can filter by using `tags:solr AND tags:search`. Tags can also contain multiple tokens separated by space, but they are still treated as a single value (for example. `"tags": ["solr search"]`). |
 | message | A string field that can contain any sort of text (usually the original log line or some other free text). |
 | @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](../logs/supported-date-formats). |
 | error.id | A reserved field for errors |
