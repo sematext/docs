@@ -5,6 +5,18 @@ Tags are sent by the Sematext Agent as part of every data point or log event and
 
 The following tags should not be used as [custom tags](./custom-tags) or in in [App agent](../agents/sematext-agent/app-agent/) YAMLs.
 
+
+## Common Tags
+
+The tags below are applicable to all metrics/logs types:
+
+| Tag Name  | Description  | Synonymous Tags
+|:--|:--|:--
+| os.host | Hostname of the host where the agent is running | host, hostname, host.id, host.name, server.name |
+| token | Sematext App Token |
+| measurement | Reserved as per Influx Line Protocol |
+| tag.alias.type | Denotes the Tag Alias type |
+
 ## Logs Tags
 
 Refer to this list of default fields for Logs Apps. The tags below are applicable to all logs types:
@@ -35,17 +47,6 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
 
-
-## Common Tags
-
-The tags below are applicable to all metrics/logs types:
-
-| Tag Name  | Description  | Synonymous Tags
-|:--|:--|:--
-| os.host | Hostname of the host where the agent is running | host, hostname, host.id, host.name, server.name |
-| token | Sematext App Token |
-| measurement | Reserved as per Influx Line Protocol |
-| tag.alias.type | Denotes the Tag Alias type |
 
 ## Operating System Tags
 
