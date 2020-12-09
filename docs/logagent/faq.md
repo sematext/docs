@@ -223,4 +223,7 @@ You can use the [rename-fields](./output-filter-renamefields/) output filter.
 ### Logagent uses a lot of memory.  What should I do?
 By default Logagent uses only one socket to ship logs.  Letting Logagent use multiple sockets helps reduce the memory footprint in deployments with a really high volume of logs.  Try setting the MAX_CLIENT_SOCKETS environmental variable to a higher value (e.g. 3, 5, or 10).
 
-
+### Logagent is not sending logs on Windows?
+When tailing log files on Windows they may have DOS line endings. Logagent will not be able to tail and parse such files.
+To enable log shipping on Windows make sure to have Unix line endings in your log files.
+You can change this as explained [here](https://stackoverflow.com/questions/20368781/anything-like-dos2unix-for-windows).
