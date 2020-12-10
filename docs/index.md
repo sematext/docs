@@ -13,7 +13,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 					<h4>
 						Logs
 					</h4>
-					<p>Hassle-Free Log Management & Analysis</p>
+					<p>Hassle-free log monitoring & analysis</p>
 				</div>
 			</div>
 		</a>
@@ -37,7 +37,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 					<h4>
 						Experience
 					</h4>
-					<p>Detect website anomalies in real time</p>
+					<p>Frontend performance and user experience monitoring</p>
 				</div>
 			</div>
 		</a>
@@ -61,7 +61,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 					<h4>
 						Alerts
 					</h4>
-					<p>Get notified on Metrics, Logs & Experience Alerts</p>
+					<p>Get notified via Slack, PagerDuty, WebHooks, email, etc.</p>
 				</div>
 			</div>
 		</a>
@@ -73,7 +73,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 					<h4>
 						Events
 					</h4>
-					<p>Capture your organization's key events</p>
+					<p>Capture builds, deployments, restarts, failures and other key events</p>
 				</div>
 			</div>
 		</a>
@@ -191,7 +191,7 @@ Sematext provides over 40 built-in integrations used to monitor your systems, ap
 				<li class="mdl-list__item">
 					<span class="mdl-list__item-primary-content">
 						<a href="/docs/integration/hbase/">
-							<img src="/docs/images/integrations/hbase.svg" alt="HBase" title="Hbase">
+							<img src="/docs/images/integrations/hbase.svg" alt="HBase" title="HBase">
 						</a>
 					</span>
 				</li>
