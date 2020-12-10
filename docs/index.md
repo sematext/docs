@@ -98,15 +98,17 @@ Sematext integrations let you collect metrics, logs and events across your whole
 
 We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, and many others, and integrates in minutes.
 
-With Experience you can detect anomalies in real time and receive alerts when end-user experience is affected by website performance. Sematext Experience provides invaluable insights that keep your business in control of how happy your customers are when interacting with your website or webapp.
+With Experience you can monitor your frontend of website performance and receive alerts when end-user experience is affected by performance. Sematext Experience provides invaluable insights that keep your business in control of how happy your customers are when interacting with your website or webapp.
 
-Since Sematext Cloud is an all-in-one Performance Monitoring, Log Management, and Real-User Monitoring solution, our documentation is split several sections labeled Monitoring, Logs, Experience, Alerts, Events, and Tracing. There is a separate section dedicated to Sematext Enterprise which is Sematext Cloud for deployment on your own infrastructure.
+With Synthetics you can monitor your website uptime, API performance and availability, user journeys in your webapp, and more from a number of different locations in the world.
 
-Data shipped to Sematext is grouped into Apps. App integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
+Sematext Cloud is a SaaS available in multiple locations, so you can choose where your data is stored.  Sematext Enterprise is a non-SaaS version you can deploy on your own infrastructure.
+
+Data shipped to Sematext is grouped into Apps.  Integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
 
 
 ## Integrations
-Sematext provides over 40 built-in integrations used to monitor your systems, applications, and services.
+Sematext provides over 100+ built-in integrations used to collect metrics from servers, VMs, containers, logs, services, frontend, send alert notifications, etc.
 
 <div class="mdl-cell--12-col">
 	<div class="demo-card-event mdl-card mdl-shadow--2dp">
