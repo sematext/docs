@@ -5,7 +5,11 @@ Using Sematext Synthetics you can create public status pages to share the status
 
 ## Create Status Page
 
-You can create multiple status pages under your account. Navigate to `Synthetics -> Status Pages` screen to create status pages. The following fields are required to create a status page:
+You can create multiple status pages under your account. Navigate to `Synthetics -> Status Pages` screen to create status page. 
+
+![Create Status Page](../images/synthetics/status-page-create.png)
+
+The following fields are required to create a status page:
 
 * **Monitors** - List of monitors to be included in the status page. All the active monitors from Apps for which the account has OWNER or ADMIN role can be included the status page. A monitor can be included in multiple status pages.
 * **Name** - Unique name for the status page.
@@ -31,12 +35,14 @@ You can host the status page in your own sub-domain. The steps to host the statu
 
 ## Status Page UI
 
+![Status Page UI](../images/synthetics/status-page-ui.png)
+
 1. **Header Logo**
 2. **Header Name**
 3. **Current Status**
 4. **Monitor Name**
 5. **Availability for Last 30 days**
 6. **Response Time for Last 24h**
-7. **Last Refreshed Time**
+7. **Last Refresh Time**
 
 The status page is auto-refreshed every 1 minute.
