@@ -1,7 +1,7 @@
 title: Status Pages
 description: Communicate the status of your services to your customers using status pages
 
-Using Sematext Synthetics you can create public status pages to share the status and response time of your services to your customers. 
+Using Sematext Synthetics you can create public status pages to share the status and response time of your services to your customers.
 
 ## Create Status Page
 
@@ -21,17 +21,6 @@ The following fields are required to create a status page:
 Every status page will have a unique public URL of the format - `https://apps.sematext.com/ui/statuspages/<unique-token>`. You can use this URL to preview the status page before opening to the public.
 
 Disabling the status page will block the public access for the status page.
-
-## Custom domain
-
-You can host the status page in your own sub-domain. The steps to host the status page in your own sub-domain are:
-
-1. Update the `Custom domain` field in the status page settings with name of your sub-domain.
-2. Point the DNS record for the sub-domain name you chose to host status pages to Sematext Status Page DNS endpoint: `statuspages.apps.sematext.com`. For EU Region, the DNS endpoint is `statuspages.apps.eu.sematext.com`.
-
-```
-
-```
 
 ## Status Page UI
 
