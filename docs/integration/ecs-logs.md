@@ -1,7 +1,7 @@
 title: Elastic Container Service (ECS) Logs Integration
 description: Whether you're using EC2 or Fargate, forward all container logs to Sematext Cloud. Get insight into your whole ECS Cluster.
 
-By configuring either Logagent for EC2 or AWS Firelens for Fargate, you can forward all your container logs to Sematext and get insight into your whole Elastic Container Service (ECS) cluster in one place!
+By configuring AWS Firelens for AWS ECS on AWS Fargate/EC2, you can forward all your container logs to Sematext and get insight into your whole AWS Elastic Container Service (ECS) cluster in one place!
 
 ## ECS Logs Quick Start
 
@@ -11,6 +11,10 @@ The ECS Logs integration collects logs from ECS Tasks and Services running in:
 - Fargate 
 
 To collect logs from EKS, see the [Kubernetes integration](./kubernetes/#shipping-kubernetes-logs-to-sematext).
+
+First of all create an AWS ECS Logs App.
+
+![](../images/integrations/aws-ecs-logs-integration-create-1.png)
 
 ### AWS ECS on AWS Fargate/EC2 With FireLens 
 
