@@ -69,3 +69,19 @@ sudo zypper in sematext-agent
    </pre>
  </div>
 </div>
+
+After the install completes, set your Infra App token by running the command below:
+
+```
+sudo bash /opt/spm/bin/setup-infra --infra-token <YOUR_INFRA_APP_TOKEN_HERE>
+```
+
+If you're setting up the agent in the EU region, you'll have to provide the `region` option:
+
+```
+sudo bash /opt/spm/bin/setup-infra --infra-token <YOUR_INFRA_APP_TOKEN_HERE> --region eu
+```
+
+To obtain the Infra App token, navigate to `Discovery > Agent Installation` and pick your target distribution.
+
+![Infra App Instructions](images/infra-app-instructions.png)

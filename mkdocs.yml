@@ -43,6 +43,12 @@ pages:
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Archiving: logs/archiving.md
+      - Discovery:
+        - Overview: logs/discovery/intro.md
+        - Setup: logs/discovery/setup.md
+        - Control Plane: logs/discovery/control-plane.md
+        - Shipping Log Files: logs/discovery/tailing-log-files.md
+        - Shipping Containers Logs: logs/discovery/tailing-containers.md
       - Changelog: logs/changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
