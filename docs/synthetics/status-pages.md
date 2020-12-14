@@ -5,7 +5,7 @@ Using Sematext Synthetics you can create public status pages to share the status
 
 ## Create Status Page
 
-You can create multiple status pages under your account. Navigate to `Synthetics -> Status Pages` screen to create status page. 
+You can create multiple status pages under your account. Navigate to the `Synthetics -> Status Pages` screen to create a status page. 
 
 ![Create Status Page](../images/synthetics/status-page-create.png)
 
