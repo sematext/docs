@@ -11,7 +11,7 @@ You can create multiple status pages under your account. Navigate to the `Synthe
 
 The following fields are required to create a status page:
 
-* **Monitors** - List of monitors to be included in the status page. All the active monitors from Apps for which the account has OWNER or ADMIN role can be included the status page. A monitor can be included in multiple status pages.
+* **Monitors** - List of monitors to be included in the status page. All the active monitors from Apps for which the account has OWNER or ADMIN role can be included in the status page. A monitor can be included in multiple status pages.
 * **Name** - Unique name for the status page.
 * **Header Name** - Company name to be displayed in the status page header.
 * **Header Logo** - URL of the company logo to be displayed in the status page header. An image with a height of 40px and white background is recommended.
