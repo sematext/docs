@@ -62,7 +62,24 @@ Next, in the same Task Definition but **for your own container (not the `log_rou
 
 > Note: If you are using the EU region of Sematext you should set the Host like this: `"Host": "logs-ecs-receiver.eu.sematext.com"`
 
-Optionally, you can manually set the `sourceName` of your logs. Instead of `"Header_tag": "sourceName"` you can set `"Header": "sourceName <SOURCE>"` if you want to parse certain types of logs. For example, `"Header": "sourceName nginx"` would parse Nginx logs.
+Optionally, you can manually set the `sourceName` of your logs. Instead of `"Header_tag": "sourceName"` you can set `"Header": "sourceName <SOURCE>"` if you want to parse certain types of logs. For example, `"Header": "sourceName nginx"` would parse Nginx logs. Here's an example:
+
+```json
+"logConfiguration": {
+  "logDriver": "awsfirelens",
+  "options": {
+    "Format": "json",
+    "Header": "sourceName nginx",
+    "compress": "gzip",
+    "Port": "443",
+    "Host": "logs-ecs-receiver.sematext.com",
+    "TLS": "on",
+    "URI": "/9c63d337-xxxx-xxxx-xxxx-abcc87342d47",
+    "Match": "*",
+    "Name": "http"
+  }
+}
+```
 
 ## Next Steps
 

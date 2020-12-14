@@ -95,23 +95,25 @@ shipper</a> like you would from any other physical or virtual machine.
 
 ### AWS ECS on AWS Fargate With FireLens 
 
+We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more detailed out-of-the-box reports.
+
 There are two main ways you can forward logs from containers running in Fargate to Sematext. They rely on two different log drivers.
 
-- [AWS Firelens](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) - `awsfirelens`
+- [AWS FireLens](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) - `awsfirelens`
 - [AWS Logs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) - `awslogs`
 
 We suggest you use AWS Firelens to avoid additional CloudWatch costs.
 
 With Firelens you can route logs to another AWS service, like Firehose, or use Fluentd or Fluent Bit. AWS provides the image for Fluentd / Fluent Bit. You need to configure the output module.
 
-#### 1. Enable Firelens
+#### 1. Enable FireLens
 In the ECS Task Definition, check a checkbox called Enable FireLens integration. Choose Fluent Bit and AWS will populate the image name for you.
 
 ![aws-ecs-firelens-1](../images/integrations/aws-ecs-firelens-1.png)
 
 AWS will add an additional container called `log_router` to the list of containers in your Task Definition.
 
-#### 2. Configure the Firelens Log Driver
+#### 2. Configure the FireLens Log Driver
 Next, in the same Task Definition but for your own container (not the `log_router`), you configure the `logConfiguration` like this:
 
 ```json
@@ -161,6 +163,9 @@ All you need to do is edit the secrets to add your Sematext LOGS_TOKEN and LOGS_
 
 
 ### AWS ECS on AWS EC2
+
+We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more detailed out-of-the-box reports.
+
 When using EC2 container instances you can configure [Logagent](https://hub.docker.com/_/logagent) to forward container logs.
 
 #### 1. Set env vars
