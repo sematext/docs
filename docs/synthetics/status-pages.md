@@ -1,26 +1,26 @@
 title: Status Pages
-description: Communicate the status of your services to your customers using status pages
+description: Communicate the status of your services to your customers using status pages.
 
-Using Sematext Synthetics you can create public status pages to share the status and response time of your services to your customers.
+Using Sematext Synthetics you can create status pages to share the status and response time of your services to your customers and internal teams.
 
 ## Create Status Page
 
-You can create multiple status pages under your account. Navigate to `Synthetics -> Status Pages` screen to create status page. 
+You can create multiple status pages under your account. Navigate to `Synthetics -> Status Pages` screen to create a status page. 
 
 ![Create Status Page](../images/synthetics/status-page-create.png)
 
 The following fields are required to create a status page:
 
-* **Monitors** - List of monitors to be included in the status page. All the active monitors from Apps for which the account has OWNER or ADMIN role can be included the status page. A monitor can be included in multiple status pages.
+* **Monitors** - List of monitors to be included in the status page. All the active monitors from Apps for which you have OWNER or ADMIN role can be included in the status page. A monitor can be part of multiple status pages.
 * **Name** - Unique name for the status page.
 * **Header Name** - Company name to be displayed in the status page header.
-* **Header Logo** - URL of the company logo to be displayed in the status page header. An image with a height of 40px and white background is recommended.
+* **Header Logo** - URL of the company logo to be displayed in the status page header. An image with a height of 40px and transparent background is recommended.
 * **Response Time Aggregation** - Aggregation to apply for Response Time chart. The response time is aggregated in 1 hour buckets.
-* **Custom domain** - Optionally you can host the status page in your own custom domain.
+* **Custom domain** - Optionally you can host the status page with your own custom domain.
 
-Every status page will have a unique public URL of the format - `https://apps.sematext.com/ui/statuspages/<unique-token>`. You can use this URL to preview the status page before opening to the public.
+Every status page has a unique public URL of the format - `https://apps.sematext.com/ui/statuspages/<unique-token>`. You can use this URL to preview the status page before opening it to the public. The unique token is secret unless it's shared. The token provides security through obscurity. You can use this URL to share the status of your services across teams for internal purposes. If the URL is inadvertently exposed the token cannot be changed, but a page can be disabled and recreated. 
 
-Disabling the status page will block the public access for the status page.
+Disabling the status page will block access to the status page.
 
 ## Status Page UI
 
