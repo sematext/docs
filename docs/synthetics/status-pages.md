@@ -15,7 +15,7 @@ The following fields are required to create a status page:
 * **Name** - Unique name for the status page.
 * **Header Name** - Company name to be displayed in the status page header.
 * **Header Logo** - URL of the company logo to be displayed in the status page header. An image with a height of 40px and transparent background is recommended.
-* **Response Time Aggregation** - Aggregation to apply for Response Time chart. The response time is aggregated in 1 hour buckets.
+* **Response Time Aggregation** - Aggregation to apply for Response Time chart. The response time is aggregated in 1-hour buckets.
 * **Custom domain** - Optionally you can host the status page with your own custom domain.
 
 Every status page has a unique public URL of the format - `https://apps.sematext.com/ui/statuspages/<unique-token>`. You can use this URL to preview the status page before opening it to the public. The unique token is secret unless it's shared. The token provides security through obscurity. You can use this URL to share the status of your services across teams for internal purposes. If the URL is inadvertently exposed the token cannot be changed, but a page can be disabled and recreated. 
