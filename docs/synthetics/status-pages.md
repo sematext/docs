@@ -1,7 +1,11 @@
 title: Status Pages
 description: Communicate the status of your services to your customers using status pages
 
-Using Sematext Synthetics you can create public status pages to share the status and response time of your services to your customers.
+Using Sematext Synthetics you can create public status pages to share the status and response time of your services. Use the status pages to:
+
+* Communicate the status of your services to your customers
+* Share status updates to your customers during planned maintenance or outages
+* Create a dashboard of service status to share across internal teams
 
 ## Create Status Page
 
