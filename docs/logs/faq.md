@@ -181,6 +181,14 @@ If the amount of data ingested for the day, plus data to be reindexed
 is smaller than your Max Daily Log Volume Limit then no additional charges
 will be applied.
 
+### Audit-proof logging
+
+Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) or using the UI:
+
+<img alt="Logs JSON View" src="../../images/logs/logs_source.png" title="Logs JSON View">
+
+It is also possible to store the log events in external, S3 compatible storage via the [logs archiving](https://sematext.com/docs/logs/archiving/) functionality.
+
 ## Log Shipping
 
 ### Which log shippers, logging libraries, and platform integrations are supported?
