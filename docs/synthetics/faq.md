@@ -49,7 +49,7 @@ Currently, it is not possible to change the default settings, except for the def
 
 
 ### Where can I find user journey scripts that I can customize for my own needs?
-You can find Browser monitor scripts for common use cases by selecting the Browse Examples link in the Create Monitor page. You can directly import a script from the example and change it suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
+You can find Browser monitor scripts for common use cases by selecting the Browse Examples link in the Create Monitor page. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
 
 ![Browse Examples](../images/synthetics/browser-examples-faq.png)
 
