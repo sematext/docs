@@ -13,7 +13,7 @@ Your devops team will be able to:
 
 ## **In Sematext**
 
-Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Custom Webhooks card to create a new notification hook.
+Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/hooks/create) ([EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Custom Webhooks card to create a new notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
