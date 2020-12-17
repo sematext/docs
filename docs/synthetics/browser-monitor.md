@@ -41,7 +41,7 @@ The browser monitor script allows the collection of page screenshots at any poin
 
 ## Console Errors
 
-The browser logs any errors while loading the web pages such as javascript errors, network errors, etc in the browser console. The browser monitor collects these errors. These errors can be used to debug run failures. These errors are shown in the `Logs` section of run details.
+The browser logs any errors while loading the web pages such as javascript errors, network errors, etc. in the browser console. The browser monitor collects such errors. These errors can be used to debug run failures and they are shown in the `Logs` section of run details.
 
 ![Browser monitor console logs](../images/synthetics/browser-monitor-logs.png)
 
