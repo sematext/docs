@@ -1,5 +1,5 @@
 title: Private Locations
-description: Private locations functionality allows you to monitor the APIs and webpages that are not accessible from the Internet such as your internal websites, private APIs, etc.
+description: The private locations feature allows you to monitor APIs and webpages that are not accessible from the Internet such as your internal websites, private APIs, etc.
 
 Private locations functionality allows you to run the synthetic tests from your private network. Some of the use cases for using private locations are:
 
