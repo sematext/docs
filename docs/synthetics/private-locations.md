@@ -21,7 +21,7 @@ Each private location is assigned a unique token. You can disable or delete a lo
 
 ## Install Private Agents
 
-After creating the private location from UI, you need to install the agents on a machine in your private network. Private agents are deployed as Docker containers. There are two Docker images, one for HTTP monitor and another for Browser monitor.
+After creating the private location from the UI, you need to install the agents on a machine in your private network. Private agents are deployed as Docker containers. There are two Docker images, one for HTTP monitors and another for Browser monitors.
 You can deploy either the HTTP or Browser monitor or both. Follow the instructions in the UI to install private agents in your network.
 
 ![Agent Installation Instructions]()
