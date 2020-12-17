@@ -32,6 +32,6 @@ If you have multiple private locations, you need to install agents individually 
 
 Once you create a private location from UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private location behaves exactly like public locations. 
 
-![Create Monitor with Private Location]()
+![Create Monitor with Private Location](../images/synthetics/private-locations-monitor.png)
 
 ![Monitor Overview with Private Location]()
