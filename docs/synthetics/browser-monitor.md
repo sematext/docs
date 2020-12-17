@@ -39,6 +39,12 @@ By default, the UI adds the below conditions while creating a browser monitor. Y
 
 The browser monitor script allows the collection of page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to one. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
 
+## Console Errors
+
+The browser logs any errors while loading the web pages such as javascript errors, network errors, etc in the browser console. The browser monitor collects these errors. These errors can be used to debug run failures. These errors are shown in the `Logs` section of run details.
+
+![Browser monitor console logs](../images/synthetics/browser-monitor-logs.png)
+
 ## Web Vitals
 
 [Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web. These are a set of performance metrics that they consider are essential for improving user experience. The Core Web Vitals are:
