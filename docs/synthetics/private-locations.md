@@ -1,7 +1,7 @@
 title: Private Locations
 description: The private locations feature allows you to monitor APIs and webpages that are not accessible from the Internet such as your internal websites, private APIs, etc.
 
-Private locations functionality allows you to run the synthetic tests from your private network. Some of the use cases for using private locations are:
+The private locations feature allows you to run synthetic tests from your private network. Some of the use cases for using private locations are:
 
 * Monitor internal APIs or web applications that are not accessible from the Internet
 * Compare the performance of your applications between the Internet & your private network
