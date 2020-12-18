@@ -20,10 +20,12 @@ The result of each run will be evaluated against the set of conditions specified
 
 ## Locations
 
-Synthetics monitors can be scheduled to run from the following locations:
+Synthetics monitors can be scheduled to run from the following public locations:
 
 | AMERICAS  | EUROPE  | ASIA PACIFIC  |
 |---|---|---|
 | N. Virginia, USA  |  Ireland, Europe | Mumbai, India  |
 | N. California, USA  |  Frankfurt, Germany | Singapore  |
 | São Paulo, Brazil  |   | Sydney, Australia  |
+
+You can also install and run the [agents](./private-locations.md) in your private network to monitor your internal applications that are not accessible from Internet.
