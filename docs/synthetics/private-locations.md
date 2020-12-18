@@ -24,6 +24,8 @@ Each private location is assigned a unique token. You can disable or delete a lo
 After creating the private location from the UI, you need to install the agents on a machine in your private network. Private agents are deployed as Docker containers. There are two Docker images, one for HTTP monitors and another for Browser monitors.
 You can deploy either the HTTP or Browser monitor or both. Follow the instructions in the UI to install private agents in your network.
 
+![Installation Instructions](../images/synthetics/private-location-installation.png)
+
 If you have multiple private locations, you need to install agents individually in each location. Private agents use the HTTPS protocol to periodically fetch the monitors to run and send the result to Sematext Cloud. If you have a firewall configured in your network, you need to open bidirectional HTTPS traffic for the `synthetics-scheduler.sematext.com` and `synthetics-receiver.sematext.com` hosts. For the EU region, the hosts are `synthetics-scheduler.eu.sematext.com` and `synthetics-receiver.eu.sematext.com`.
 
 ## Using Private Locations
