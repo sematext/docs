@@ -94,8 +94,10 @@ pages:
       - Alerts: synthetics/alerts.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration: synthetics/ci-cd-integration.md
+      - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
+      - FAQ: synthetics/faq.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
