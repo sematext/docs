@@ -14,7 +14,6 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /sys/kernel/debug:/sys/kernel/debug \
 -v /etc/passwd:/etc/passwd:ro \
 -v /etc/group:/etc/group:ro \
--e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
 sematext/agent:latest
@@ -40,7 +39,6 @@ $ docker run -d  --restart always --privileged -P --name st-agent \
 -v /sys/kernel/debug:/sys/kernel/debug \
 -v /etc/passwd:/etc/passwd:ro \
 -v /etc/group:/etc/group:ro \
--e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
 -e CONFIG_FILE=/opt/st-agent/st-agent.yml \
@@ -58,7 +56,6 @@ services:
     image: 'sematext/agent:latest'
     environment:
       - affinity:container!=*sematext-agent*
-      - CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE>
       - INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE>
       - REGION=<US or EU>
     cap_add:
@@ -76,7 +73,7 @@ services:
 
 ## Docker Swarm / Enterprise
 
-Create a Docker Monitoring App in Sematext and follow the instructions in the UI.
+Create an Infra Monitoring App in Sematext and follow the instructions in the UI.
 Sematext Agent can be deployed as global service on all Swarm nodes with a single command:
 
 ```
@@ -89,7 +86,6 @@ docker service create --mode global --name st-agent \
 --mount type=bind,src=/etc/passwd,dst=/etc/passwd,readonly \
 --mount type=bind,src=/etc/group,dst=/etc/group,readonly \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
--e CONTAINER_TOKEN=<YOUR_DOCKER_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
 sematext/agent:latest
 ```

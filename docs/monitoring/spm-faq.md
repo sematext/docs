@@ -924,21 +924,24 @@ If you are not sending metrics from a server A for a Monitoring App Foo between
 A single agent monitoring 24/7 will end up being ~ $25/month.  If you
 run another agent on another server it will be 2 x ~ $25/mo.
 
-### How do you bill for Docker container monitoring?
+### How do you bill for container monitoring?
 
-Docker monitoring is based on the base price and per-container
-price.  The base price includes monitoring of a Docker host and free
+Container monitoring is based on the base price and per-container
+price.  The base price includes monitoring of a container host and free
 monitoring of up to N containers. Per-container price is applied only if
 you run more than N containers per host.  The number of containers per
 host is averaged for the whole account.  The base price and the number
 of containers included in it depends on the plan.  Note that monitoring
-of Docker host and containers is independent of monitoring of
+of container host and containers is independent of monitoring of
 applications you run in those containers.  Containerized applications
 monitored by Sematext are metered as separate hosts. In other words, whether
 the monitored application is running in a container or in a VM or
 directly on a server or in a public cloud instance is the same as far as
 metering and billing is concerned. For plans and price details
 see <https://sematext.com/spm/pricing>.
+
+Containers are monitored and charged through Infra Apps which can also monitor
+your bare-metal servers and virtual machines.
 
 ### Which credit cards are accepted?
 

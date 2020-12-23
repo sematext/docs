@@ -22,6 +22,6 @@ Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, ne
   <source src="https://cdn.sematext.com/videos/sematext-shipping-nginx-metrics.mp4" type="video/mp4" />
 </video>
 
-You can see host and container metrics inside the newly created Docker App or have a high-level overview of all your containers in the Sematext Containers screen.
+You can see host and container metrics or have a high-level overview of all your containers in Infrastructure reports.
 
 Check out the [Sematext Agent installation](../agents/sematext-agent) guide for more info.
