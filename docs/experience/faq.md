@@ -98,6 +98,16 @@ load may be outside of it.
 
 ## Troubleshooting
 
+### I am not seeing data in my Experience App. What should I do?
+
+The Sematext Experience Script sends data via HTTP(S) requests directly from the 
+visitors browsers to Sematext's servers for processing and storage.
+If you've configured a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 
+in your application, make sure that the Domain `rum-receiver.sematext.com` (or 
+`rum-receiver.eu.receiver.com` if you are using Sematext EU) is allowed for outgoing
+requests (as described in this section, the client-side bundle will report Analytics 
+via network requests).
+
 ### My App has stopped receiving data. What should I do?
 
 Check if you have reached your daily limit in the App settings -> Usage screen. If
