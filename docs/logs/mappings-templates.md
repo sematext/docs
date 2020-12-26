@@ -1,12 +1,12 @@
 title: Mappings and Templates
-description: Field mappings and indices templates supported by Sematext Cloud based SaaS / On-premises logging as a service platform
+description: Field mappings and index template supported by Sematext Cloud
 
-Every log event that you ship to Sematext Logs has its structure - it is divided into fields. Each field can have a [type](/logs/field-types/), for example [String](/logs/field-types/#string), [Date](/logs/field-types/#date), or [Integer](/logs/field-types/#floatdouble). It can even be an object holding structured data. We do everything we can to ensure that the fields of your logs have the correct types. However, there are situations where you know better what kind of fields you need and which types of data you want to use. 
+Every log event that you ship to Sematext Logs has its structure - it is divided into fields. Each field can have a [type](/logs/field-types/), for example [String](/logs/field-types/#string), [Date](/logs/field-types/#date), or [Integer](/logs/field-types/#floatdouble). It can even be an object holding structured data. We do everything we can to ensure that your log event field types are inferred correctly. However, you may also want to set field types explicitly. 
 
-In such cases, Sematext Logs provide mechanism for handling the data structure - the templates and the mappings. The mentioned functionality comes from Elasticsearch and its compatible with its API, however, because of the nature of the Sematext platform it works differently.
+To do that you can create templates and configure mapping via Sematext's [Elasticsearch-compatible API](/logs/index-events-via-elasticsearch-api/) as shown below.
 
 ## The Templates
-The templates mechanism works by providing guidance for Elasticsearch on the structure of the data. Every time an index is created all the defined templates are used to pre-create the fields with their types in such index. It is no different in Sematext Logs. By defining a template you provide information on what fields and types you expect in your data. 
+Logs are stored in an index in Sematext. Each Logs App has its own index and its own, independent log event structure. A template provides information about the structure - fields and their types - of log events in a given App and its underlying index. Every time an index is created all the defined templates are used to pre-create the fields with their types in such index. It is no different in Sematext Logs. By defining a template you provide information on what fields and types you expect in your data. 
 
 You can easily create a new template by running the following request:
 
@@ -23,7 +23,7 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_tem
 }'
 ```
 
-You need to provide your [write token](/logs/settings/) in the URI of the request and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes. 
+You need to provide your [write token](/logs/settings/) in the URI of the request and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in 
 
 Once you successfully create a new template your index will be rolled over. That means that an internal mechanism will create a new index and will apply the new template for you. 
 
