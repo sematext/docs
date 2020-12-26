@@ -32,7 +32,7 @@ Once you successfully create a new template your index will be rolled over. That
 ## The Mappings
 The mappings mechanism in Elasticsearch works by providing the data structure during index creation or by updating the data structure for an already created index. It wouldn't work well in the case of the Sematext Logs platform, because we try to provide you with the best indexing and searching experience possible, and thus we continuously create new indices in the background. 
 
-Because of that, the mappings functionality in Sematext Logs works differently. When you send the mappings request it is translated into a template creation request. 
+Because of that, the mappings functionality in Sematext Logs works differently. When you send the mappings request it is translated into a template creation request. Note that the mappings API support is provided by Sematext Logs for compatibility purposes and when changing the structure of your data you should use the [templates](/logs/mappings-templates/#the-templates) functionality.
 
 For example this command results in a mappings request made to Sematext Cloud:
 
