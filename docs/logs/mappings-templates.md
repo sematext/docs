@@ -48,6 +48,6 @@ curl -H 'Authorization: apiKey YOUR_API_KEY' -XPUT 'https://logsene-receiver.sem
 }'
 ```
 
-You can find your [API key](/api) in the Settings section of Sematext platform and your Logs write token can be found in the token section of your Logs App. 
+You can find your [API key](/api) in your [Account settings](https://apps.sematext.com/ui/account/api) ([EU](https://apps.eu.sematext.com/ui/account/api)) and your Logs write token in each Logs App's Settings.
 
-In the background, the mappings definition will be changed into a new template. Sematext Logs does that to ensure that your mapping will be moved when we create a new, internal index for your Logs App. 
+In the background, the mappings definition will be changed into a new template to ensure that the changes are persisted in your Sematext Logs App.
