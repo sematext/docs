@@ -23,6 +23,8 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_tem
 }'
 ```
 
+**Note** For EU location use **logsene-receiver.eu.sematext.com** instead of **logsene-receiver.sematext.com**.
+
 You need to provide your [write token](/logs/settings/) in the URI of the request and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in error when being used.
 
 Once you successfully create a new template your index will be rolled over. That means that an internal mechanism will create a new index and will apply the new template for you. 

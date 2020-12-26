@@ -15,3 +15,8 @@ Tags from the [Common Schema](../tags/common-schema) apply to Sematext Logs as w
 To read more, check out our [Common Schema for Logs Tags](../tags/common-schema/#logs-tags).
 
 <img alt="Sematext Logs Special Fields" src="../../images/logs/logsene-special-fields.gif" title="Sematext Logs Special Fields">
+
+**Note:**
+
+If you want to adjust the structure of your data you can use the Field Editor 
+functionality in your Logs App settings or use the [Templates and Mappings](/logs/mappings-templates) functionality.
