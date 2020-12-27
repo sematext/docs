@@ -1,7 +1,7 @@
 title: Mappings and Templates
 description: Field mappings and index template supported by Sematext Cloud
 
-Every log event that you ship to Sematext Logs has its structure - it is divided into fields. Each field can have a [type](/logs/field-types/), for example [String](/logs/field-types/#string), [Date](/logs/field-types/#date), or [Integer](/logs/field-types/#floatdouble). It can even be an object holding structured data. We do everything we can to ensure that your log event field types are inferred correctly. However, you may also want to set field types explicitly. 
+Every log event that you ship to Sematext Logs has its structure - it is divided into fields. Each field can have a [type](/logs/field-types/), for example [string](/logs/field-types/#string), [date](/logs/field-types/#date), or [integer](/logs/field-types/#integerlong). It can even be an object holding structured data. We do everything we can to ensure that your log event field types are inferred correctly. However, you may also want to set field types explicitly. 
 
 To do that you can create templates and configure mapping via Sematext's [Elasticsearch-compatible API](/logs/index-events-via-elasticsearch-api/) as shown below.
 
@@ -28,7 +28,45 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_tem
 For EU location use **logsene-receiver.eu.sematext.com** instead of **logsene-receiver.sematext.com**.
 ---
 
-You need to provide your [write token](/logs/settings/) in the URI of the request and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in error when being used.
+You need to provide your [write token](/logs/settings/) in the URI of the request, the **order**, and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in error when being used.
+
+### Template Structure
+The main section of each template definition is the **mappings** section which contains information about the fields and their types. Your templates may include one or more fields fields that are not considered special (more information in the [fields](/logs/fields)). For example:
+
+``` code
+curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_mytemplate' -d '{
+ "order": 40,
+ "mappings": {
+   "properties": {
+     "user_name": {
+       "type": "keyword"
+     },
+     "user_score": {
+       "type": "integer"
+     },
+     "user_active": {
+       "type": "boolean"
+     },
+     "user_description": {
+       "type": "text"
+     }
+   }
+ }
+}'
+```
+
+The above template contains the **mappings** object. Inside it we fine the **properties** object which is responsible for defining the fields and their types. Each field is a JSON object that contains a name, like **user_name** in the above example and the type defined by using the **type** keyword. 
+
+The field types that can be used in Sematext Logs App are as follows ([learn more about the field types](/logs/field-types)):
+
+ * keyword (non-analyzed string)
+ * text (analyzed string)
+ * boolean
+ * integer
+ * long
+ * double
+ * float
+ * object
 
 Once you successfully create a new template your index will be rolled over. That means that an internal mechanism will create a new index and will apply the new template for you. 
 
