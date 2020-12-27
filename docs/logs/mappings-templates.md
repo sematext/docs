@@ -23,16 +23,22 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_tem
 }'
 ```
 
-**Note** For EU location use **logsene-receiver.eu.sematext.com** instead of **logsene-receiver.sematext.com**.
+---
+**Note:**
+For EU location use **logsene-receiver.eu.sematext.com** instead of **logsene-receiver.sematext.com**.
+---
 
 You need to provide your [write token](/logs/settings/) in the URI of the request and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in error when being used.
 
 Once you successfully create a new template your index will be rolled over. That means that an internal mechanism will create a new index and will apply the new template for you. 
 
 ## The Mappings
-The mappings mechanism in Elasticsearch works by providing the data structure during index creation or by updating the data structure for an already created index. It wouldn't work well in the case of the Sematext Logs platform, because we try to provide you with the best indexing and searching experience possible, and thus we continuously create new indices in the background. 
+In addition to the templates mechanism Sematext Logs supports mappings, mostly for compatibility purposes. The mappings mechanism in Elasticsearch works by providing the data structure during index creation or by updating the data structure for an already created index. That wouldn't work in case of Sematext Logs App. When you send the mappings request it is translated into a template creation request. 
 
-Because of that, the mappings functionality in Sematext Logs works differently. When you send the mappings request it is translated into a template creation request. Note that the mappings API support is provided by Sematext Logs for compatibility purposes and when changing the structure of your data you should use the [templates](/logs/mappings-templates/#the-templates) functionality.
+---
+**NOTE:**
+The mappings API support is provided by Sematext Logs for compatibility purposes and when changing the structure of your data you should use the [templates](/logs/mappings-templates/#the-templates) functionality.
+---
 
 For example this command results in a mappings request made to Sematext Cloud:
 
