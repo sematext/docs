@@ -68,6 +68,11 @@ The field types that can be used in Sematext Logs App are as follows ([learn mor
  * float
  * object
 
+---
+**NOTE:**
+Before adding new fields to your templates ensure that they are not present in the [special fields](/logs/fields) or in the [common schema](/tags/common-schema/).
+---
+
 Once you successfully create a new template your index will be rolled over. That means that an internal mechanism will create a new index and will apply the new template for you. 
 
 ## The Mappings
