@@ -11,7 +11,7 @@ Logs are stored in an index in Sematext. Each Logs App has its own index and its
 You can easily create a new template by running the following request:
 
 ``` code
-curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_template_name' -d '{
+curl -XPUT 'https://logsene-receiver.sematext.com/_template/LOGS_TOKEN_template_name' -d '{
  "order": 31,
  "mappings": {
    "properties": {
@@ -28,13 +28,13 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_tem
 For EU location use **logsene-receiver.eu.sematext.com** instead of **logsene-receiver.sematext.com**.
 ---
 
-You need to provide your [write token](/logs/settings/) in the URI of the request, the **order**, and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in error when being used.
+You need to provide your [`LOGS_TOKEN`](/logs/settings/) in the URI of the request, the **order**, and the mappings definition. The **order** property needs to be higher than **20**. The ones below that value are reserved for internal Sematext platform purposes and result in error when being used.
 
 ### Template Structure
-The main section of each template definition is the **mappings** section which contains information about the fields and their types. Your templates may include one or more fields fields that are not considered special (more information in the [fields](/logs/fields)). For example:
+The main section of each template definition is the **mappings** section which contains information about the fields and their types. Your templates may include one or more fields that are not considered special. More information about this in the [fields section](/logs/fields)). For example:
 
 ``` code
-curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_mytemplate' -d '{
+curl -XPUT 'https://logsene-receiver.sematext.com/_template/LOGS_TOKEN_mytemplate' -d '{
  "order": 40,
  "mappings": {
    "properties": {
@@ -55,7 +55,7 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/YOUR_WRITE_TOKEN_myt
 }'
 ```
 
-The above template contains the **mappings** object. Inside it we fine the **properties** object which is responsible for defining the fields and their types. Each field is a JSON object that contains a name, like **user_name** in the above example and the type defined by using the **type** keyword. 
+The template above contains the **mappings** object. Inside it we find the **properties** object which is responsible for defining the fields and their types. Each field is a JSON object that contains a name, like **user_name**. The example above we see the type defined by using the **type** keyword.
 
 The field types that can be used in Sematext Logs App are as follows ([learn more about the field types](/logs/field-types)):
 
@@ -86,7 +86,7 @@ The mappings API support is provided by Sematext Logs for compatibility purposes
 For example this command results in a mappings request made to Sematext Cloud:
 
 ``` code
-curl -H 'Authorization: apiKey YOUR_API_KEY' -XPUT 'https://logsene-receiver.sematext.com/YOUR_WRITE_TOKEN/_mapping' -d '{
+curl -H 'Authorization: apiKey YOUR_API_KEY' -XPUT 'https://logsene-receiver.sematext.com/LOGS_TOKEN/_mapping' -d '{
   "mappings": {
     "_doc": {
       "properties": {
@@ -99,6 +99,6 @@ curl -H 'Authorization: apiKey YOUR_API_KEY' -XPUT 'https://logsene-receiver.sem
 }'
 ```
 
-You can find your [API key](/api) in your [Account settings](https://apps.sematext.com/ui/account/api) ([EU](https://apps.eu.sematext.com/ui/account/api)) and your Logs write token in each Logs App's Settings.
+You can find your [API key](/api) in your [Account settings](https://apps.sematext.com/ui/account/api) ([EU](https://apps.eu.sematext.com/ui/account/api)) and your `LOGS_TOKEN` in each Logs App's Settings.
 
 In the background, the mappings definition will be changed into a new template to ensure that the changes are persisted in your Sematext Logs App.
