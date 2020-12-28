@@ -33,6 +33,10 @@ It is capable of running in two kinds of environments:
 
 In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Monitoring](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any of supported [Sematext integrations](./index) or to ship logs produced by any process or container.
 
+### eBPF Support
+
+To gain deep **insight into the Linux kernel**, Sematext Agent relies on **eBPF** to implant **instrumentation points**, which means to **attach eBPF programs to kprobes** on kernel functions. This ensures a very efficient and powerful system exploration approach with better network tracing and negligible overhead.
+
 
 ## Enabling Infra Monitoring
 
@@ -223,14 +227,6 @@ These metrics are collected for all environments where the agent is installed (b
 
 See [Process Monitoring](../monitoring/processes) and [Process Metrics](../agents/sematext-agent/processes/metrics) for more info.
 
-### eBPF Support
-
-To gain deep **insight into the Linux kernel**, Sematext Agent relies on **eBPF** to implant **instrumentation points**, which means to **attach eBPF programs to kprobes** on kernel functions. This ensures a very efficient and powerful system exploration approach with better network tracing and negligible overhead.
-
-### Service Auto-Discovery
-
-Sematext Agent can **auto-discover services** deployed on physical/virtual hosts and containers. It also collects data about your infrastructure to provide you with infrastructure inventory reports. It collects events from different sources such as OOM notifications, container or Kubernetes events.
-
 ### Container Metrics
 
 - Container runtime agnostic discovery and monitoring
@@ -264,3 +260,17 @@ Sematext Agent can **auto-discover services** deployed on physical/virtual hosts
 That is a lot of information and **Sematext organizes this information in reports** for **infrastructure monitoring**, **container monitoring**, and **Kubernetes cluster monitoring**.
 
 See [container monitoring](../monitoring/containers/) for more info.
+
+## Service Auto-Discovery
+
+Sematext Agent can **auto-discover services** deployed on physical/virtual hosts and containers. 
+
+Take a look at [Monitoring](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) to learn more about discovery.
+
+## Inventory
+
+One of the features provided by the Infra App is [Inventory](../monitoring/inventory). Inventory contains the data about all your servers, container images and packages installed on your servers.
+
+## Events
+
+Sematext Agent collects events from different sources such as OOM notifications, [container](../agents/sematext-agent/container/events) or [Kubernetes](../agents/sematext-agent/kubernetes/events) events and stores them into your Infra Apps. For info about using events see [events guide](../guide/events-guide).
