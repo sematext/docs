@@ -15,7 +15,7 @@ curl -XPUT 'https://logsene-receiver.sematext.com/_template/LOGS_TOKEN_template_
  "order": 31,
  "mappings": {
    "properties": {
-     "host_name": {
+     "user_name": {
        "type": "keyword"
      }
    }
