@@ -31,7 +31,7 @@ Check out the [Sematext Agent installation for containers](../agents/sematext-ag
 ## Container Alerting
 To save you time Sematext automatically creates a set of default alert rules such as alerts for low disk space. You can [create additional alerts](../alerts) on any metric.
 
-There are 3 types of alerts in Sematext:
+There are 3 types of [alerts](../alerts) in Sematext:
 
 - **Heartbeat alerts**, which notify you when a server is down
 - **Threshold-based alerts** that notify you when a metric value crosses a predefined threshold
@@ -118,7 +118,7 @@ Here's the list of Docker container events Sematext collects:
 
 ## Container Metrics Overview
 
-The following information is collected and transmitted to Sematext Cloud or Sematext Enterprise.
+The following information is collected and transmitted to Sematext.
 
 <table>
 <tbody>
@@ -207,14 +207,17 @@ The following information is collected and transmitted to Sematext Cloud or Sema
 
   - Docker Engine \>= 17.0.0
   - Platforms using Docker:  
-      - Docker Cloud
       - Docker Data Center
       - Kubernetes
-      - Mesos
-      - CoreOS
-      - Rancher
-      - Amazon ECS
+      - AWS ECS, AWS EKS
+      - AKS
+      - GKE
       - Red Hat OpenShift
+      - Nomad
+      - Swarm
+      - Mesos
+      - Rancher
+      
 
 
 ## Container Metrics Fields

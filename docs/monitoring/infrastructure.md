@@ -20,7 +20,7 @@ Sematext Cloud will automatically create one Infra App named "Default Infra App"
 
 A Golang-based [Sematext Agent](../agents/sematext-agent) will be installed on your machine. This Agent sends all infrastructure data to an Infra App whose token is configured during the Agent's installation.
 
-The Infra App also includes data about your containerized environments. Installation instructions for container Monitoring also include an Infra App token. That way when installing Sematext Agent for Docker, an Infra App will be installed as well.
+The Infra App also includes data about your containerized environments. Installation instructions for container Monitoring include an Infra App token. That way when installing Sematext Agent, an Infra App will be installed as well.
 
 ## Enabling Infra Monitoring
 

@@ -930,7 +930,7 @@ Container monitoring is based on the base price and per-container
 price.  The base price includes monitoring of a container host and free
 monitoring of up to N containers. Per-container price is applied only if
 you run more than N containers per host.  The number of containers per
-host is averaged for the whole account.  The base price and the number
+host is averaged for the whole App.  The base price and the number
 of containers included in it depends on the plan.  Note that monitoring
 of container host and containers is independent of monitoring of
 applications you run in those containers.  Containerized applications

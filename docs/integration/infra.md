@@ -1,19 +1,19 @@
 title: Infrastructure Monitoring Integration
-description: Infrastructure performance monitoring - metrics, events, processes, packages, log collection and parsing for bare-metal servers, virtual machines and containers with support for Docker, containerd, k8s, swarm, nomad, ecs, eks, aks, gke.
+description: Infrastructure performance monitoring - metrics, events, processes, packages, log collection and parsing for bare-metal servers, virtual machines and containers with support for Docker, containerd, Kubernetes, Swarm, Nomad, AWS ECS, AWS EKS, AKS, GKE.
 
-The Sematext Infra Integration uses [Sematext Agent](../agents/sematext-agent) to collect metrics, events, processes, packages for bare-metal servers, virtual machines and containers. Container monitoring is supported for Docker, containerd, k8s, Swarm, Nomad, ECS, EKS, AKS, GKE and more.
+The Sematext Infra Integration uses [Sematext Agent](../agents/sematext-agent) to collect metrics, events, processes, and package info for bare-metal servers, virtual machines and containers. Container monitoring is supported for Docker, containerd, k8s, Swarm, Nomad, AWS ECS, AWS EKS, AKS, GKE and more.
 
-We at Sematext aim to save you time and effort by giving you a strong starting point for monitoring your infrastrcture. You will **not** have to:
+Sematext saves you time and effort by giving you a strong starting point for monitoring your infrastrcture. You will **not** have to:
 
 - figure out which metrics to collect and which ones to ignore
 - give metrics meaningful labels
 - hunt for metric descriptions in the docs so that you know what each of them actually shows
 - build charts to group metrics that you really want on the same charts, not N separate charts
-- figure out, for each metric, which aggregation to use (min? max? avg? something else?)
+- figure out the most useful aggregation to use for each metric (min? max? avg? something else?)
 - build dashboards to combine charts with metrics you typically want to see together
 - set up basic alert rules
 
-We set it up for you, out-of-the-box!
+Sematext provides all that and more out of the box.
 
 
 ## Monitoring with Sematext Agent
@@ -25,13 +25,13 @@ First create an [Infra Monitoring App in Sematext Cloud](https://apps.sematext.c
 
 ## How it works
 
-A Golang-based [Sematext Agent](../agents/sematext-agent) will be installed on your machine. This Agent sends all infrastructure data to an Infra App whose token is configured during the Agent's installation.
+A Golang-based [Sematext Agent](../agents/sematext-agent) will be installed on the host you want to monitor. This agent sends all infrastructure data to an Infra App whose token is configured during the Agent's installation.
 
 It is capable of running in two kinds of environments:
 - bare-metal, virtual machine - we provide rpm/deb packages for most popular linux distributions
 - containers - a special sematext/agent container image provides support for monitoring in container environments
 
-In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Monitoring](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any of supported [Sematext integrations](./index) or to ship logs produced by any process or container.
+In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Service Autodiscovery](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any of supported [Sematext integrations](./index) or to ship logs produced by any process or container.
 
 ### eBPF Support
 
@@ -43,7 +43,7 @@ To gain deep **insight into the Linux kernel**, Sematext Agent relies on **eBPF*
 If you've set up Sematext Monitoring at some point in the past, you can easily enable Infra Monitoring by:
 
 - [Upgrading](./spm-faq/#agent-updating) your `sematext-agent` to the latest version
-- Setting up Infra App token on each of your machines by running the `setup-infra` command (in bare-metal/virtual machine environments)
+- Setting up Infra App token on each host with Sematext Agent by running the `setup-infra` command (in bare-metal/virtual machine environments)
 
 > **Note**: For container monitoring, we suggest uninstalling the existing deprecated Agent and going through the new setup steps for Docker Monitoring in Sematext Cloud.
 
@@ -54,13 +54,13 @@ When doing a clean installation, regardless of whether you're installing in cont
 
 This command is applicable only in bare-metal/virtual machine environments.
 
-Setting up or changing which Infra App should receive infrastructure data and metrics from a particular machine can be done with the <b>setup-infra</b> command.
+The `setup-infra` command is used to set the Infra App to which Sematext Agent should send data it collects.
 
-To see which Infra Apps exist in your account visit Sematext Cloud -> Integrations -> Apps. You can choose any of the existing Infra Apps or create a new one.
+To see which Infra Apps exist in your account visit Sematext Cloud -> Apps. You can choose any of the existing Infra Apps and go to App Settings > Tokens or you can create a new Infra App.
 
-Once you do that you'll have the token of that particular App. To set up the token run the following command on each machine that you wish to update:
+Once you do that you'll have the token of that particular App. To configure the Sematext Agent to start sending data to a particular Infra App run `setup-infra` on each host you wish to update:
 
-<pre>sudo bash /opt/spm/bin/setup-infra --infra-token YOUR_INFRA_APP_TOKEN_HERE</pre>
+`sudo bash /opt/spm/bin/setup-infra --infra-token YOUR_INFRA_APP_TOKEN_HERE`
 
 
 ### Enabling Infra Monitoring in Docker environment
@@ -207,13 +207,13 @@ These metrics are collected for all environments where the agent is installed (b
 
 ![](../images/integrations/docker/hostcpu.png)
 
-- disk
+- disk space and I/O
 
 ![](../images/integrations/docker/hostdisk.png)
 
-- network
-- processes
-- containers
+- network traffic
+- processes metrics
+- containers metrics
 
 ![](../images/integrations/docker/containers.png)
 
@@ -231,7 +231,7 @@ See [Process Monitoring](../monitoring/processes) and [Process Metrics](../agent
 
 - Container runtime agnostic discovery and monitoring
     - Containers are discovered from cgroupfs hierarchies
-    - Supports Docker and Rkt container engines
+    - Supports Docker, containerd, cri-o container engines
 - Container metrics fetched directly from cgroupfs
     - CPU usage
     - Disk space usage and IO stats
@@ -254,7 +254,7 @@ See [Process Monitoring](../monitoring/processes) and [Process Metrics](../agent
         ![](../images/integrations/docker/container-metadata.png)
 - Collection of container events
 - Docker events such as start/stop/die/volume mount, etc.
-- Kubernetes events such as Pod status changes deployed, destroyed etc.
+- Kubernetes events such as Pod status changes deployed, destroyed, etc.
 - Tracking deployment status and Pod restarts over time
 
 That is a lot of information and **Sematext organizes this information in reports** for **infrastructure monitoring**, **container monitoring**, and **Kubernetes cluster monitoring**.
