@@ -86,7 +86,7 @@ The mappings API support is provided by Sematext Logs for compatibility purposes
 For example this command results in a mappings request made to Sematext Cloud:
 
 ``` code
-curl -H 'Authorization: apiKey YOUR_API_KEY' -XPUT 'https://logsene-receiver.sematext.com/LOGS_TOKEN/_mapping' -d '{
+curl -XPUT 'https://logsene-receiver.sematext.com/LOGS_TOKEN/_mapping' -d '{
   "mappings": {
     "_doc": {
       "properties": {
@@ -98,7 +98,5 @@ curl -H 'Authorization: apiKey YOUR_API_KEY' -XPUT 'https://logsene-receiver.sem
   } 
 }'
 ```
-
-You can find your [API key](/api) in your [Account settings](https://apps.sematext.com/ui/account/api) ([EU](https://apps.eu.sematext.com/ui/account/api)) and your `LOGS_TOKEN` in each Logs App's Settings.
 
 In the background, the mappings definition will be changed into a new template to ensure that the changes are persisted in your Sematext Logs App.
