@@ -1,14 +1,14 @@
 title: Using Sematext Elasticsearch API
 description: Analyze your logs, URI and request body searches, get operations, index events or change the mapping using Elasticsearch API and Sematext logging management and analytics app
 
-With Logs Management App, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
+With Logs App, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
 You can also use this API to [index events or change the mapping](index-events-via-elasticsearch-api).
 
 When you use the API, here are the things you need to know:
 
   - host name: **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
   - port: **80** (**443** for HTTPS)
-  - index name: your [Logsene app token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
+  - index name: your [Logs App token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
   - apiKey provided in one of the following ways:
     * basic auth credentials
       ```
@@ -29,7 +29,7 @@ When you use the API, here are the things you need to know:
 
 ## Searching
 
-Our centralized logging management solution supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search API's are:
+Sematext supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search APIs include, but are not limited to:
 
   - URI based search
   - Request body based search
@@ -37,19 +37,19 @@ Our centralized logging management solution supports a subset of Elasticsearch A
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logs management app token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
+For each of the operations you'll need your [Logs App token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
 
 In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logs management app token, of course.
 
 ### URI based search
 
-The simplest search method to get your data out of our logging management platform is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html).
+The simplest search method to get your logs from Sematext is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html).
 
 You need to provide the query using the *q* parameter. For example, to search for the *internal* and *connection* terms you would run the following:
 
     curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
 
-**Note:** Please check [Apache Lucene query syntax](https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html) for reference.
+**Note:** Please check [logs search syntax](/logs/search-syntax/) for reference.
 
 ### Request body based search
 
@@ -58,7 +58,7 @@ The request body based search lets us leverage full [Elasticsearch query DSL lan
 With full featured Elasticsearch query API we can search and find any
 data we are really looking for.
 
-For example, to find documents that match the *internal* and
+For example, to find log events that match the *internal* and
 *connection* terms run the following:
 
 ``` bash
@@ -113,7 +113,7 @@ curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sem
 
 #### Response format
 
-Our Logs Management App, just like Elasticsearch, talks to you using JSON. Here's an
+Our Logs App, just like Elasticsearch, talks to you using JSON. Here's an
 example response:
 
 ``` JSON
@@ -145,7 +145,7 @@ As you can see the response is a JSON object with three main sections:
     out,
 2.  the *hits* object that includes information about returned results
     (total count and maximum score) and of course the *hits* array,
-    which includes the returned documents (10 by default),
+    which includes the returned log events (10 by default),
 3.  the *aggregations* object that includes aggregations results if
     we've used aggregations in our query
 
@@ -241,26 +241,26 @@ The real example of the results returned look as follows:
 ### Real time GET operation
 
 The real time GET operation is very simple and lets us get a single
-document out of a particular Logsene index. To retrieve a document we
-need to provide Logs Management App with the following information:
+log event out of a particular Logs App. To retrieve a log event we
+need to provide Logs App with the following information:
 
-  - **index name** - it will be *<token\>\_free* if your Logsene app
+  - **index name** - it will be *<token\>\_free* if your Logs App
     trial has expired and you don't have a paid plan, or
     *<token\>\_<date\>* (where *date* is *YYYY-MM-DD*) when you have a
-    paid plan for the Logsene service,
-  - **type name** - the type of the document you want to retrieve,
-  - **document identifier** - the identifier of the document
+    paid plan for the Logs service,
+  - **type name** - the type of the event you want to retrieve,
+  - **document identifier** - the identifier of the event
 
-For example, to retrieve a document with identifier  *AU29tJz0UV2O9bWZ\_KkU* and type *apache* from our example application identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token (application is free, which means that we need to append the token with *\_free* postfix to get the index name) we would run the following command:
+For example, to retrieve a log event with identifier  *AU29tJz0UV2O9bWZ\_KkU* and type *apache* from our example App identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token (App is free, which means that we need to append the token with *\_free* postfix to get the index name) we would run the following command:
 
     curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/apache/AU29tJz0UV2O9bWZ_KkU'
 
 ### Multiple GET operations in a single request
 
-In addition to supporting the real time GET functionality, Logsene lets one leverage [Elasticsearch MGet API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-multi-get.html), which allows us to retrieve multiple document using the real time GET API in a single request. 
+In addition to supporting the real time GET functionality, Logsene lets one leverage [Elasticsearch MGet API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-multi-get.html), which allows us to retrieve multiple log events using the real time GET API in a single request. 
 
-For example, to retrieve documents with identifier *AU29tJz0UV2O9bWZ\_KkU* and *AU29rlOPUV2O9bWZ-Daw* 
-which areof type *apache* from our example application identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following request:
+For example, to retrieve a log event with identifier *AU29tJz0UV2O9bWZ\_KkU* and *AU29rlOPUV2O9bWZ-Daw* 
+which are of type *apache* from our example App identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following request:
 
 ``` bash
 curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/_mget?pretty' -d '{
@@ -270,7 +270,7 @@ curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sem
  ]
 }'
 ```
-As you can see, we are sending a *HTTP GET* request to the *\_mget* REST end-point of Logs Management App receiver and get back a JSON object that contains the *docs* array. Each entry of the *docs* array is identifying a single document by providing the index name (the *\_index* property), the type name (the *\_type* property) and the document identifier (the *\_id* property).
+As you can see, we are sending a *HTTP GET* request to the *\_mget* REST end-point of Logs App receiver and get back a JSON object that contains the *docs* array. Each entry of the *docs* array is identifying a single log event by providing the index name (the *\_index* property), the type name (the *\_type* property) and the log event identifier (the *\_id* property).
 
 The response to the above command would look as follows:
 
@@ -296,7 +296,7 @@ The response to the above command would look as follows:
 
 ### Multiple Search operations in a single request
 
-Similar to MGet, our centralized logging management platform lets you run multiple search requests in a single HTTP request using [Elasticsearch Multi Search API](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html).
+Similar to MGet, Sematext lets you run multiple search requests in a single HTTP request using [Elasticsearch Multi Search API](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html).
 
 The request needs to be run against \_msearch REST end-point and each query needs to include two lines - meta line defining the index name and a line defining the query using [Elasticsearch query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html).
 
