@@ -94,17 +94,17 @@ _If you’re new here, read below for a high-level overview of Sematext._
 
 
 ## How Sematext works
-Sematext integrations let you collect metrics, logs and events across your whole stack. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications.
+Sematext integrations let you collect metrics, logs and events across your whole stack from frontend to backend. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications, etc.
 
-We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Flume, nxlog, Filebeat, and many others, and integrates in minutes.
+We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Filebeat, Vector, NXLog, log4j and many others, and integrates in minutes.
 
-With Experience you can monitor your frontend of website performance and receive alerts when end-user experience is affected by performance. Sematext Experience provides invaluable insights that keep your business in control of how happy your customers are when interacting with your website or webapp.
+With Experience you can monitor your frontend or website performance and receive alerts when end-user experience is affected by performance. Sematext Experience provides invaluable insights that keep your business in control of how happy your customers are when interacting with your website or webapp.
 
 With Synthetics you can monitor your website uptime, API performance and availability, user journeys in your webapp, and more from a number of different locations in the world.
 
 Sematext Cloud is a SaaS available in multiple locations, so you can choose where your data is stored.  Sematext Enterprise is a non-SaaS version you can deploy on your own infrastructure.
 
-Data shipped to Sematext is grouped into Apps.  Integrations are ways to monitor, collect logs, and other data from numerous different types of software and tools.
+Data shipped to Sematext is grouped into [Apps](/guide/app-guide/).  [Integrations](/integration/) are ways to monitor, collect logs, and other data from numerous different types of software and tools, as well as deliver data to external systems, such as alert notifications.
 
 
 ## Integrations
