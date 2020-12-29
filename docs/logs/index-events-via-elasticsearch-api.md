@@ -72,7 +72,7 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 ## Default Log Index Mapping
 
 A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/glossary.html#mapping)
-is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. There is no "default" index mapping.  Sematext automatically creates the mapping in each Logs App when your first ship your logs.  Each App can have its own mapping and it can be changed at any time from within Sematext.  There are some [special fields](special-fields) though.
+is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the fields editor or by using the [mappings and templates](/logs/mappings-templates) functionality. There are some [special fields](special-fields) though.
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date.  See [Supported Date Formats](supported-date-formats).
@@ -88,7 +88,7 @@ is a way to define how your logs are indexed - which fields are in each log even
 ## Custom Log Index Mapping
 
 If the default log index fields (also known as index mapping) don't fit
-your needs you can create completely custom index mapping. See [Custom Logsene Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
+your needs you can create completely custom index mapping. See [Mappings and Templates](/logs/mappings-templates) section.
 
 Note that if you have N different log structures, the best way to
 handle that is by creating N Logs Apps, each with its own index

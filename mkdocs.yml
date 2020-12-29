@@ -42,6 +42,7 @@ pages:
       - Fields: logs/fields.md
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
+      - Mappings and Templates: logs/mappings-templates.md
       - Archiving: logs/archiving.md
       - Discovery:
         - Overview: logs/discovery/intro.md
