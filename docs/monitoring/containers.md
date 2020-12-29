@@ -208,6 +208,7 @@ The following information is collected and transmitted to Sematext.
   - Docker Engine \>= 17.0.0
   - Platforms using Docker:  
       - Docker Data Center
+      - Docker Enterprise
       - Kubernetes
       - AWS ECS, AWS EKS
       - AKS
