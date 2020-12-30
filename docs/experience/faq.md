@@ -42,10 +42,11 @@ enabled.
 
 ### When should I use sampling?
 
-Sampling can be useful when you receive more page views than your selection in Sematext allows
+Sampling can be useful when you receive more page views than your selection in Sematext allows.
 Enabling sampling means not every single page view will be recorded, but if sampling is not too
-aggressive you frontend's general perforance measurements should remain visible and accurate 
-enough for you to be able to see performance trends, slow loading pages and resources, etc.
+aggressive you frontend's general performance measurements should remain visible and accurate 
+enough for you to be able to get insight in general performance trends, slow loading pages and
+resources, etc.
 
 ### Does the Experience script have any effect on my website performance?
 
