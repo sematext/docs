@@ -3,7 +3,7 @@ description: Infrastructure performance monitoring - metrics, events, processes,
 
 The Sematext Infra Integration uses [Sematext Agent](../agents/sematext-agent) to collect metrics, events, processes, and package info for bare-metal servers, virtual machines and containers. Container monitoring is supported for Docker, containerd, k8s, Swarm, Nomad, AWS ECS, AWS EKS, AKS, GKE and more.
 
-Sematext saves you time and effort by giving you a strong starting point for monitoring your infrastrcture. You will **not** have to:
+Sematext saves you time and effort by giving you a strong starting point for monitoring your infrastructure. You will **not** have to:
 
 - figure out which metrics to collect and which ones to ignore
 - give metrics meaningful labels
@@ -31,7 +31,7 @@ It is capable of running in two kinds of environments:
 - bare-metal, virtual machine - we provide rpm/deb packages for most popular linux distributions
 - containers - a special sematext/agent container image provides support for monitoring in container environments
 
-In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Service Autodiscovery](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any supported [Sematext integrations](./index) or to ship logs produced by any process or container.
+In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Service Autodiscovery](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any supported [Sematext integrations](./integration) or to ship logs produced by any process or container.
 
 ### eBPF Support
 
@@ -47,7 +47,7 @@ If you've set up Sematext Monitoring at some point in the past, you can easily e
 
 > **Note**: For container monitoring, we suggest uninstalling the existing deprecated Agent and going through the new setup steps for Docker Monitoring in Sematext Cloud.
 
-When doing a clean installation, regardless of whether you're installing in containerized environment or not, follow monitor installation instructions displayed in Sematext Cloud. Those instructions will always include everything needed to set up an Infra App, either on its own or alongside some other App Agent.
+When doing a clean installation, regardless of whether you're installing in containerized environment or not, follow agent installation instructions displayed in Sematext Cloud. Those instructions will always include everything needed to set up an Infra App, either on its own or alongside some other App Agent.
 
 
 ### The `setup-infra` command
@@ -65,7 +65,7 @@ Once you do that you'll have the token of that particular App. To configure the 
 
 ## Installation
 
-Exact installation instructions with correct tokens are displayed under your Sematext account when creating an Infra App or clicking on existing Infra App's installation instructions.
+Exact installation instructions with correct tokens are displayed under your Sematext account when creating an Infra App or viewing an existing Infra App's installation instructions.
 
 Setting up in bare-metal/virtual machine environments consists of installing `sematext-agent` rpm/deb package and executing `setup-infra` command with correct Infra token.
 

@@ -215,7 +215,7 @@ The following information is collected and transmitted to Sematext.
       - GKE
       - Red Hat OpenShift
       - Nomad
-      - Swarm
+      - Docker Swarm
       - Mesos
       - Rancher
       
