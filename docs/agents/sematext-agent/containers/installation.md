@@ -97,8 +97,7 @@ docker service create --mode global --network st-agent-net \
 --mount type=bind,src=/sys,dst=/host/sys,readonly \
 --mount type=bind,src=/dev,dst=/hostfs/dev,readonly \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
--e CONTAINER_TOKEN=<US or EU> \
--e REGION=US \
+-e REGION=<US or EU> \
 sematext/agent:latest
 ```
 
