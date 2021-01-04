@@ -4,7 +4,7 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 ## Monitoring Report Menu
 
-The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. It lets you add additional components to a report, create alerts, connect apps and quickly filter or group data. You can also correlate monitoring data with your logs, events or experience data using **[split screen](./split-screen/)**.
+The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. It lets you add additional components to a report, create alerts, connect apps and quickly filter or group data. You can also correlate monitoring data with your logs, events or experience data using **[split screen](#split-screen)**.
 
 ![Sematext Cloud Monitoring Guide - Monitoring Report Menu](../images/guide/monitoring/monitoring-header.png) 
 
@@ -22,7 +22,7 @@ Split screen gives you a single view for Metrics, Logs, and Events. This is a hu
 
 ![Sematext Cloud Monitoring Guide - Monitoring Split Screen](../images/guide/monitoring/monitoring-split-screen.png) 
 
-Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[split screen](./split-screen/)**.
+Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[split screen](/guide/split-screen)**.
 
 ### Saved Views
 
