@@ -54,7 +54,7 @@ be either true or false, and never anything else.
       "debug": true
     }'
 
-## String
+## Text
 
 ### Not analyzed string
 
