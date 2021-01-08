@@ -50,7 +50,7 @@ The Field Editor functionality allows adding, editing, and removing fields prese
 
 ### Adding Fields
 
-Field Editor allows adding new field by providing its name and [type](/logs/field-types/).   
+Field Editor lets you add a new field by providing its name and [type](/logs/field-types/).   
 
 ### Editing Fields
 
@@ -58,7 +58,7 @@ Field Editor allows modifying a field type by changing its type.
 
 <img src="../../images/logs/logs_field_editor_edit.png " alt="Logs Field Editor - Editing Fields">
 
-The changes done to the field are only applied to the data shipped after the change was done. Once the changes are applied the Field Editor will give you an option to re-index your old data - [learn more](/logs/fields/#re-indexing-data).
+The changes done to a field are only applied to the logs shipped after the change was done. Once the changes are applied, the Field Editor will give you an option to re-index your old logs - [learn more](/logs/fields/#re-indexing-data).
 
 ### Removing Fields
 
