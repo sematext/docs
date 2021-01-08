@@ -87,6 +87,7 @@ pages:
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Changelog: experience/changelog.md
+      - Sampling: experience/sampling.md
       - FAQ: experience/faq.md
     - Synthetics:
       - Overview: synthetics/index.md
