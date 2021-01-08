@@ -349,6 +349,272 @@ pm2 start app.js -i max
 
 The agent will detect you are running PM2 and start collecting metrics automatically.
 
+
+## Use Containers to run Node.js
+You can also run your application in any container environment, like Docker, Docker Compose, Docker Swarm, or Kubernetes. You'll use the same setup as with a default Node.js server. But, instead of using `dotenv`, you'll add the environment variables when starting the container.
+
+First of all, require the agent at the top of your init file:
+
+
+```javascript
+// app.js
+
+// require all agents
+const {
+  stMonitor,
+  stLogger,
+  stHttpLoggerMiddleware
+} = require('sematext-agent-express')
+
+// Start monitoring metrics
+stMonitor.start()
+
+
+// ...
+
+// At the top of your routes add the stHttpLoggerMiddleware to send HTTP logs to Sematext
+const express = require('express')
+const app = express()
+app.use(stHttpLoggerMiddleware)
+
+// ...
+```
+
+Then, use this `Dockerfile` to make sure garbage collection metrics are enabled:
+
+```dockerfile
+FROM alpine AS build
+WORKDIR /usr/src/app
+RUN apk add --no-cache --update \
+  python3 \
+  make \
+  gcc \
+  g++ \
+  nodejs \
+  nodejs-npm
+ 
+COPY package.json package-lock.json ./
+RUN npm install --production
+ 
+#############
+ 
+FROM alpine
+WORKDIR /usr/src/app
+RUN apk add --no-cache --update nodejs
+COPY --from=build /usr/src/app/node_modules ./node_modules
+COPY . .
+EXPOSE <PORT>
+CMD ["node", "app.js"]
+```
+
+Change the `<PORT>` you're exposing and if needed, change `app.js` to the entrypoint of your application.
+
+Now build a Docker image from the `Dockerfile` above. Run this command in the same directory where you have the `Dockerfile`:
+
+```bash
+docker build -t <YOUR_IMAGE:TAG> .
+```
+
+### Docker
+
+Next, run the Docker image. Add your `MONITORING_TOKEN`. Change the `<PORT>` to the one you're exposing and `<YOUR_IMAGE:TAG>` to the name of the image you just built. Optionally, add additional flags if you need to.
+
+```bash
+docker run -d -p <PORT>:<PORT> \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -e MONITORING_TOKEN=<MONITORING_TOKEN> \
+  -e LOGS_TOKEN=<LOGS_TOKEN> \
+  <YOUR_IMAGE:TAG>
+```
+
+### Docker Compose
+
+Alternatively, you can use Docker Compose. Use this `docker-compose.yml` file alongside the `Dockerfile` above to build and run your application. First add your `<MONITORING_TOKEN>`, then change the `<PORT>` to the one you're exposing and `<YOUR_IMAGE:TAG>` to the name of the image you just built.
+
+```yaml
+version: '3'
+services:
+  your-nodejs-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: '<YOUR_IMAGE:TAG>'
+    environment:
+      - MONITORING_TOKEN=<MONITORING_TOKEN>
+      - LOGS_TOKEN=<LOGS_TOKEN>
+    restart: always
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    ports:
+      - '<PORT>:<PORT>'
+```
+
+### Docker Swarm
+
+The same approach works for Docker Swarm. First add your `<MONITORING_TOKEN>`, then change the `<PORT>` to the one you're exposing and `<YOUR_IMAGE:TAG>` to the name of the image you just built.
+
+```bash
+docker service create --name your-nodejs-app \
+  -p <PORT>:<PORT> \
+  --restart-condition any \
+  --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+  -e MONITORING_TOKEN=<MONITORING_TOKEN> \
+  -e LOGS_TOKEN=<LOGS_TOKEN> \
+  <YOUR_IMAGE:TAG>
+```
+
+Alternatively, if you want to use a Docker Compose file with the `docker stack` command, add this to your `docker-compose.yml` file. First add your `<MONITORING_TOKEN>`, then change the `<PORT>` to the one you're exposing and `<YOUR_IMAGE:TAG>` to the name of the image you just built.
+
+```yaml
+services:
+  your-nodejs-app:
+    image: '<YOUR_IMAGE:TAG>'
+    environment:
+      - MONITORING_TOKEN=<MONITORING_TOKEN>
+      - LOGS_TOKEN=<LOGS_TOKEN>
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    deploy:
+      mode: replicated
+      replicas: 1
+      labels: [APP=APP]
+      update_config:
+        parallelism: 1
+        delay: 5s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+    ports:
+      - "<PORT>:<PORT>"
+```
+
+
+### Kubernetes
+
+To enable the agent in Kubernetes envs you first need to create a Cluster Role, Cluster Role Binding, and Service Account for the Agent to get permissions to access the Kubernetes API.
+
+```yaml
+# Cluster Role bindings for Agent
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: spm-agent-nodejs
+  labels:
+    app: spm-agent-nodejs
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: spm-agent-nodejs
+subjects:
+- kind: ServiceAccount
+  name: spm-agent-nodejs
+  namespace: default
+---
+# Cluster Role for Agent
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: spm-agent-nodejs
+  labels:
+    app: spm-agent-nodejs
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - list
+  - get
+  - watch
+---
+# Service Account for Agent
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: spm-agent-nodejs
+  labels:
+    app: spm-agent-nodejs
+```
+
+Apply the cluster role.
+
+```bash
+kubectl create -f nodejs-cluster-role.yml
+```
+
+Next, run the Docker image in your Kubernetes Cluster as a Deployment. Add your `<MONITORING_TOKEN>` Change the `<PORT>` to the one you're exposing, and `<YOUR_IMAGE:TAG>` to the name of the image you just built. You can edit the replicas as you see fit. Make sure to add `serviceAccountName: spm-agent-nodejs` to enable the required permissions.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: your-nodejs-app-deployment
+  labels:
+    app: nodejs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      serviceAccountName: spm-agent-nodejs
+      containers:
+      - name: nodejs
+        image: <YOUR_IMAGE:TAG>
+        ports:
+        - containerPort: <PORT>
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: MONITORING_TOKEN
+          value: "<MONITORING_TOKEN>"
+        - name: LOGS_TOKEN
+          value: "<LOGS_TOKEN>"
+```
+
+Create the deployment.
+
+```bash
+kubectl create -f nodejs-deployment.yml
+```
+
+Next, expose your Deployment with a Service. Change the `<PORT>` to the one you're exposing, and set the `clusterIP` if needed.
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-nodejs-app-service
+spec:
+  selector:
+    app: nodejs
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: <PORT>
+  type: LoadBalancer
+  # if you are using a cloud provider (AWS, GCP, etc...)
+  # a LoadBalancer will be provisioned automatically.
+  # Otherwise set the clusterIP below.
+  # clusterIP: <YOUR_CLUSTER_IP>
+```
+
+Create the service.
+
+```bash
+kubectl create -f nodejs-service.yml
+```
+
 ## Integration
 
 - Agent: [https://github.com/sematext/sematext-express-agent](https://github.com/sematext/sematext-express-agent)
