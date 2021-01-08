@@ -62,7 +62,7 @@ The changes done to a field are only applied to the logs shipped after the chang
 
 ### Removing Fields
 
-Field editor allows removing fields that are no longer used or needed. You can mark multiple fields for deletion and apply the changes once everything is ready. 
+Field Editor allows removing fields that are no longer present in your logs. You can mark multiple fields for deletion and apply the changes once everything is ready. 
 
 <img src="../../images/logs/logs_field_editor_delete.png" alt="Logs Field Editor - Removing Fields">
 
