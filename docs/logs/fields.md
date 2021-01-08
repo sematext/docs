@@ -66,7 +66,7 @@ Field Editor allows removing fields that are no longer present in your logs. You
 
 <img src="../../images/logs/logs_field_editor_delete.png" alt="Logs Field Editor - Removing Fields">
 
-Deleting a field removes it from the data structure definition and the data already shipped to your Logs App will not be affected. If you will keep shipping data with such a field it will appear again. To fully delete the field from your Logs App make sure you will no longer ship the data with the field present.
+Deleting a field removes it from the logs [mappings](/logs/mappings-templates) and the logs already shipped to your Logs App will not be affected. If you continue to ship logs with such a field it will appear again. To fully delete the field from your Logs App first make sure the deleted field is no longer present in logs you ship to Sematext and then delete it with Field Editor.
 
 ### Re-indexing data
 
