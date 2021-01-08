@@ -18,12 +18,12 @@ The second one is the [Field Editor](/logs/fields/#field-editor):
 
 ---
 **Note:**
-The structure shown by the fields and filters section and the field editor may differ. The data structure shown by the fields and filters always covers the **whole data** - old and new. The data structure shown by the Field Editor is always the **current** one, the one that will be applied to all your current and future events.
+Fields shown in the fields and filters panel and fields shown in the Field Editor may differ. The Field Editor shows only fields that are included in your current [Log App Mapping](/logs/mappings-templates). On the other hand, fields and filters panel shows all fields that are still present in your Logs App. For example, if you used to ship logs with a `foo` field and then you deleted it, the Field Editor will not show it, while fields and filters panel will show it as long as there are log events that still contain it.
 --- 
 
 ### Field Types
 
-Each field has a field type associated with it and will include:
+Each field has a field type. The following field types are supported:
 
  * [Integer/Long](/logs/field-types/#integerlong) - numerical data without floating points
  * [Float/Double](/logs/field-types/#floatdouble) - numerical, floating point data
@@ -36,7 +36,11 @@ Each field has a field type associated with it and will include:
 
 ### Modifying Fields
 
-You can [add](/logs/fields/#adding-fields), [remove](/logs/fields/#removing-fields) or [edit](/logs/fields/#editing-fields) existing fields by using the [field editor] accessible via a Logs App settings or by using the [Templates and Mappings](/logs/mappings-templates) APIs directly. Keep in mind that the modification is applied only to the data that is shipped after the adjustments, so you may need to re-index the data in case you want the old data to be adjusted. 
+You can [add](/logs/fields/#adding-fields), [remove](/logs/fields/#removing-fields) or [edit](/logs/fields/#editing-fields) existing fields by using the Field Editor accessible via a Logs App settings, by using the [Templates and Mappings](/logs/mappings-templates) APIs or via "Edit Fields" in fields and filters:
+
+<img src="../../images/logs/logs_field_and_fielters_edit_field.png " alt="Fields and Filters - Edit Fields">
+
+Keep in mind that the modification is applied only to the data that is shipped after the adjustments, so you may need to re-index the data if you want the old data to be adjusted. 
 
 ## Field Editor
 
