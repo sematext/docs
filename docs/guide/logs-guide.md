@@ -3,6 +3,6 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 ## Logs Component Settings
 
-Fields editor gives full control over the logs events in your Logs App. You can easily remove field, edit them, or add new fields with the option to control their types. 
+Field Editor gives you the full control over the log events in your Logs App. You can easily remove fields, edit them, or add new fields with the option to set their types. 
 
 ![Fields Editor](../images/guide/logs/logs-fields-editor.png)
