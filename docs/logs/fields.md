@@ -18,7 +18,7 @@ The second one is the [Field Editor](/logs/fields/#field-editor):
 
 ---
 **Note:**
-Fields shown in the fields and filters panel and fields shown in the Field Editor may differ. The Field Editor shows only fields that are included in your current [Log App Mapping](/logs/mappings-templates). On the other hand, fields and filters panel shows all fields that are still present in your Logs App. For example, if you used to ship logs with a `foo` field and then you deleted it, the Field Editor will not show it, while fields and filters panel will show it as long as there are log events that still contain it.
+Fields shown in the fields and filters panel and fields shown in the Field Editor may differ. The Field Editor shows only fields that are included in your current [Logs App Mapping](/logs/mappings-templates). On the other hand, fields and filters panel shows all fields that are still present in your Logs App. For example, if you used to ship logs with a `foo` field and then you deleted it, the Field Editor will not show it, while fields and filters panel will show it as long as there are log events that still contain it.
 --- 
 
 ### Field Types
@@ -62,7 +62,7 @@ The changes done to a field are only applied to the logs shipped after the chang
 
 ### Removing Fields
 
-Field Editor allows removing fields that are no longer present in your logs. You can mark multiple fields for deletion and apply the changes once everything is ready. 
+Field Editor lets you remove fields that are no longer present in your logs. You can mark multiple fields for deletion and apply the changes once everything is ready. 
 
 <img src="../../images/logs/logs_field_editor_delete.png" alt="Logs Field Editor - Removing Fields">
 
