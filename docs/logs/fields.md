@@ -8,9 +8,11 @@ Fields in log events are also referred to as Tags in Sematext. They are used for
 
 ## Fields Structure
 
-The structure of your data is dictated by the data shipped to Sematext Logs as log events. There are two places where you can easily see your data structure - the fields and filters section of your Logs table and the [Field Editor](/logs/fields/#field-editor):
+The structure of your logs - their fields and types - is automatically created when you ship your logs to a Logs App in Sematext. There are two places where you can easily see your fields. The first one is the fields and filters section:
 
 <img src="../../images/logs/logs_structure_fields_and_filters.png" alt="Logs Fields and Filters">
+
+The second one is the [Field Editor](/logs/fields/#field-editor):
 
 <img src="../../images/logs/logs_structure_field_editor.png " alt="Logs Field Editor">
 
