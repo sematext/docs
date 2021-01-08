@@ -44,7 +44,7 @@ Keep in mind that the modification is applied only to the data that is shipped a
 
 ## Field Editor
 
-The Field Editor functionality allows adding, editing, and removing fields present in your data structure definition.
+The Field Editor functionality allows adding, editing, and removing fields present in your logs [mappings](/logs/mappings-templates).
 
 <img src="../../images/logs/logs_field_editor_add.png " alt="Logs Field Editor - Adding Fields">
 
