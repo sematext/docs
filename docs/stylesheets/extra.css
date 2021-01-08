@@ -179,6 +179,11 @@ svg {
     overflow: hidden;
     width: 100%;
   }
+  .flip-card .side.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .flip-card .back {
     color: #000;
     background: #fff;
