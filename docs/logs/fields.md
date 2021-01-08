@@ -70,8 +70,8 @@ Deleting a field removes it from the logs [mappings](/logs/mappings-templates) a
 
 ### Re-indexing data
 
-If you wish for your old data to be re-indexed to take into account the changes done by editing the fields, the field editor will display an option allowing you to do that. If you start the indexing process your data will be re-indexed in the background and the progress will be displayed on the fields editor page. 
+If you want your changes to apply to old data you can do that by re-indexing it. As you change fields, Field Editor will prompt you with the option to do that. If you start the indexing process all your old logs will be re-indexed in the background and the progress will be displayed on the Field Editor screen. 
 
-The data that is indexed again in the process of re-indexing counts towards your Logs App daily volume. Consider double-checking your usage data to ensure that you have enough space for your data after re-indexing.
+Note that re-indexing counts towards your Logs App daily volume. Consider double-checking your usage data and temporarily increasing the [Daily Volume Limit](/logs/faq/#are-logs-shipped-to-logs-app-ever-rejected) to avoiding hitting that limit during re-indexing.
 
 <img src="../../images/logs/logs-field-editor-reindex.gif" alt="Logs Field Editor - Re-idexing">
