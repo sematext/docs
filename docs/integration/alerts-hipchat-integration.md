@@ -35,7 +35,7 @@ own nickname. 
 
 ## In Sematext
 
- **1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Hipchat card to create a new Hipchat notification hook.
+ **1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Hipchat card to create a new Hipchat notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 

@@ -33,7 +33,7 @@ Having the **Alert Source** configured and having the **Sematext Webhook URL** w
 
 ## In Sematext
 
-**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Squadcast card to create a new Squadcast notification hook.
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Squadcast card to create a new Squadcast notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 

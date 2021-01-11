@@ -13,7 +13,7 @@ Visit Nagios's [App Documentation](https://www.nagios.org/documentation/) for mo
 
 ## **In Sematext**
 
-Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Nagios card to create a new notification hook.
+Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Nagios card to create a new notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 

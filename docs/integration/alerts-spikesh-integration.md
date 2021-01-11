@@ -29,7 +29,7 @@ With the **Integration** configured we can now use the **Webhook URL** to config
 
 ## In Sematext
 
-**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) (in [EU](https://apps.eu.sematext.com/ui/webhook-create)) and select Spike.sh card to create a new Spike.sh notification hook.
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Spike.sh card to create a new Spike.sh notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 

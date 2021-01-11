@@ -13,7 +13,7 @@ There are two ways to create a new notification hook. On [Notification Hooks pag
 
 <img alt="Add new Notification Hook" src="/docs/images/integrations/add-new-hook.png" title="Add new Notification Hook">
 
-Alternatively, navigate to [Create new Notification Hook](https://apps.sematext.com/ui/webhook-create) page. Enter required hook name and email address. You can test the email before you save it and noreply email will be generated and sent to that address. 
+Alternatively, navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) page. Enter required hook name and email address. You can test the email before you save it and noreply email will be generated and sent to that address. 
 
 Confirm that you have received the test email, save new email notification hook and it is ready to be used for you apps alerts. It can be used with single or multiple apps as your notification hook.
 

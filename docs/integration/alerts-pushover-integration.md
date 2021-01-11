@@ -13,7 +13,7 @@ Visit Pushover's [FAQ](https://pushover.net/faq) for more information about thei
 
 ## **In Sematext**
 
-Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Pushover card to create a new notification hook.
+Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Pushover card to create a new notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 

@@ -23,7 +23,7 @@ Once we have the **Accound SID**, the **Auth token** and the **Twilio phone numb
 
 ## In Sematext
 
-**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select Twilio card to create a new Twilio notification hook.
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Twilio card to create a new Twilio notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 

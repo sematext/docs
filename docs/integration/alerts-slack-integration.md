@@ -25,7 +25,7 @@ Choose “Incoming Webhook”. Create Webhook and copy provided Webhook URL.
 
 ### In Sematext
 
-Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select Slack card to create a new Slack notification hook.
+Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Slack card to create a new Slack notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 

@@ -15,7 +15,7 @@ Once you have the **SIGNL4 team's webhook URL** you can create the SIGNL4 notifi
 
 ## In Sematext
 
-**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/webhook-create) and select SIGNL4 card to create a new SIGNL4 notification hook.
+**1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select SIGNL4 card to create a new SIGNL4 notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 

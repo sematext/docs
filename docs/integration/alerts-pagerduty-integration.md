@@ -31,7 +31,7 @@ Please refer to [PagerDuty's guide](https://www.pagerduty.com/docs/guides/semate
 
 ## **In Sematext**
 
-Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/webhook-create) and select PagerDuty card to create a new notification hook.
+Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select PagerDuty card to create a new notification hook.
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
