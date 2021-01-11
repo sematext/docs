@@ -407,7 +407,7 @@ EXPOSE <PORT>
 CMD ["node", "app.js"]
 ```
 
-Change the `<PORT>` you're exposing and if needed, change `app.js` to the entrypoint of your application.
+Change the `<PORT>` you're exposing and if needed, change `app.js` to the entry point of your application.
 
 Now build a Docker image from the `Dockerfile` above. Run this command in the same directory where you have the `Dockerfile`:
 
@@ -463,7 +463,7 @@ docker service create --name your-nodejs-app \
   <YOUR_IMAGE:TAG>
 ```
 
-Alternatively, if you want to use a Docker Compose file with the `docker stack` command, add this to your `docker-compose.yml` file. First add your `<MONITORING_TOKEN>`, then change the `<PORT>` to the one you're exposing and `<YOUR_IMAGE:TAG>` to the name of the image you just built.
+Alternatively, if you want to use a Docker Compose file with the `docker stack` command, add the snippet below to your `docker-compose.yml` file. First add your `<MONITORING_TOKEN>`, then change the `<PORT>` to the one you're exposing and `<YOUR_IMAGE:TAG>` to the name of the image you just built.
 
 ```yaml
 services:
