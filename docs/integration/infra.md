@@ -31,7 +31,7 @@ It is capable of running in two kinds of environments:
 - bare-metal, virtual machine - we provide rpm/deb packages for most popular linux distributions
 - containers - a special sematext/agent container image provides support for monitoring in container environments
 
-In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Service Autodiscovery](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any supported [Sematext integrations](./integration) or to ship logs produced by any process or container.
+In both cases, installing the agent will start gathering all infrastructure data right away. Additionally, it will enable [Service Autodiscovery](../monitoring/autodiscovery) and [Logs Autodiscovery](../logs/discovery/intro/) features which make it possible to automatically start monitoring any supported [Sematext integrations](../integration) or to ship logs produced by any process or container.
 
 ### eBPF Support
 
