@@ -42,7 +42,7 @@ To gain deep **insight into the Linux kernel**, Sematext Agent relies on **eBPF*
 
 If you've set up Sematext Monitoring at some point in the past, you can easily enable Infra Monitoring by:
 
-- [Upgrading](./spm-faq/#agent-updating) your `sematext-agent` to the latest version
+- [Upgrading](/monitoring/spm-faq/#agent-updating) your `sematext-agent` to the latest version
 - Setting up Infra App token on each host with Sematext Agent by running the `setup-infra` command (in bare-metal/virtual machine environments)
 
 > **Note**: For container monitoring, we suggest uninstalling the existing deprecated Agent and going through the new setup steps for Docker Monitoring in Sematext Cloud.
