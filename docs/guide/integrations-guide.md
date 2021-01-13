@@ -56,6 +56,7 @@ After you install and activate an integration, you can:
 - [Docker](/integration/docker/)
 - [Elasticsearch](/integration/elasticsearch)
 - [HBase](/integration/hbase)
+- [Infra](/integration/infra/)
 - [Java](/integration/java/)
 - [Kafka](/integration/kafka/)
 - [MySQL](/integration/mysql/)

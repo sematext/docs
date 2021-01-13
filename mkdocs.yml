@@ -122,6 +122,7 @@ pages:
         - Hadoop: integration/hadoop.md
         - HAProxy: integration/haproxy.md
         - HBase: integration/hbase.md
+        - Infra: integration/infra.md
         - Jenkins: integration/jenkins.md
         - JVM: integration/jvm.md
         - Kafka: integration/kafka.md

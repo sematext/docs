@@ -92,9 +92,9 @@ Sematext Monitoring supports dozens of different integrations.
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../images/integrations/docker.svg" alt="Docker" title="Docker Monitoring" style="width: 72px;">
+							<img src="../images/integrations/docker.svg" alt="Containers" title="Container Monitoring" style="width: 72px;">
 						</div>
-						<div class="side back"><h5>Docker</h5>container cpu, memory, count, swap, memory I/O Throughput, network traffic and errors, memory failed counter, ...</div>
+						<div class="side back"><h5>Containers</h5>container CPU, memory, count, swap, memory I/O throughput, network traffic and errors, memory failed counter, ...</div>
 					</div>
 				</div>
 			</div>
@@ -128,6 +128,20 @@ Sematext Monitoring supports dozens of different integrations.
 			</div>
 		</a>
 	</div>
+  <div class="mdl-cell mdl-cell--3-col">
+    <a href="../integration/infra/">
+      <div class="demo-card-event mdl-card mdl-shadow--2dp">
+        <div class="flip-card-container">
+          <div class="flip-card">
+            <div class="side">
+              <img src="../images/integrations/infra.gif" alt="Infra" title="Infra Monitoring" style="width: 72px">
+            </div>
+            <div class="side back"><h5>Infra</h5>Monitor servers, VMs, containers (Docker, Kubernetes, Swarm, Nomad, EKS, ECS, AKS, GKE...), clusters, processes, packages, events, ...</div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/jvm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">

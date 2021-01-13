@@ -7,7 +7,6 @@ The configuration file accepts all options listed below in YAML format.
 ```yaml
 # Sematext Agent configuration file
 infra-token: <YOUR_INFRA_APP_TOKEN_HERE>
-container-token: <YOUR_DOCKER_APP_TOKEN_HERE>
 # Logs token to store Docker and Kubernetes Events in Sematext Logs
 logs-token: <YOUR_LOGS_APP_TOKEN_HERE>
 # Location to persist events, when backend is not reachable
