@@ -138,7 +138,7 @@ That is a lot of information and **Sematext organizes this information in report
 
 See [container monitoring](../monitoring/containers/) for more info.
 
-## Service Auto-Discovery
+## Service & Logs Auto-Discovery
 
 Sematext Agent can **auto-discover services** deployed on physical/virtual hosts and containers. 
 
