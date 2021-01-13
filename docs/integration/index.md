@@ -134,7 +134,7 @@ Sematext Monitoring supports dozens of different integrations.
         <div class="flip-card-container">
           <div class="flip-card">
             <div class="side">
-              <img src="../images/integrations/infra.gif" alt="Infra" title="Infra Monitoring" style="width: 72px">
+              <img src="../images/integrations/infra.gif" alt="Infra" title="Infra Monitoring" style="width: 140px">
             </div>
             <div class="side back"><h5>Infra</h5>Monitor servers, VMs, containers (Docker, Kubernetes, Swarm, Nomad, EKS, ECS, AKS, GKE...), clusters, processes, packages, events, ...</div>
           </div>
