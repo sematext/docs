@@ -3,7 +3,7 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 
 ## Monitoring
 
-Sematext Monitoring supports dozens of different integrations.
+Sematext Monitoring supports dozens of different integrations.  Each integration comes with a number of useful dashboards and reports out of the box, as well as out of the box alert rules.  A number of integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without installing any additional agents, modifying, or restarting any services.
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
@@ -437,19 +437,24 @@ Sematext Monitoring supports dozens of different integrations.
 </div>
 
 ## Logging
+### Ingestion
+Logs can be shipped to Sematext using a number of different [log shippers, logging libraries, protocols, APIs](./generic-logs-integration), etc.
 
-Sematext Logs supports [dozens of different integrations](./generic-logs-integration).
+Two main ingestion APIs are supported:
+- HTTP / REST API which is compatible with Elasticsearch bulk indexing API
+- Syslog via various protocols
 
-Stored data is received through the Elasticsearch API and also through a variety of Syslog protocols.
+The Elasticsearch-compatible API lets you:
 
-The Elasticsearch API lets you:
+- send log events directly from your application, using any logging library that has an Elasticsearch Adapter
+- send log events using a log shipper as Filebeat, Logstash, rsyslog,Fluentd, Logagent, Vector, or anything that can output to Elasticsearch
 
-- send log events directly from your application, using any Elasticsearch library
-- send log events using a "log shipper" application such as Logstash, rsyslog, Apache Flume, Fluentd, or anything that can output to Elasticsearch
-- search for logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
+The Elasticsearch-compatible API is not limited to log ingestion.  It can also be used for querying logs, retrieving them programmatically, or to change the log even structure or mapping in Elasticsearch parlance. Using this API you can:
+- search for logs from your own application, from the command line using tools like `curl`, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
 - optionally define custom mappings for your log types, so you can tweak the way your logs are indexed
 
-We currently have Logs Integrations with prebuilt reports and charts apart from a Generic Logs App that supports dozens of different integrations.
+### Dashboards
+Each logs integration comes with a number of useful dashboards and reports out of the box, as well as out of the box alert rules and copy-paste instructions for setting up log collection and shipping.  Log shipping can also be enabled through [Logs Autodiscovery](/logs/discovery/intro/) without installing any additional log shippers and without the need to connect to servers, VMs, containers, etc.
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--4-col">
@@ -685,7 +690,9 @@ We currently have Logs Integrations with prebuilt reports and charts apart from 
 
 All of the integrations require adding and [configuring the Experience script](../experience/getting-started). However, unlike static websites and SSR websites, single-page applications require [one more configuration step](../experience/integrations) to register route changes.
 
-## Notification Hooks
+## Alerts & Notifications
+
+Multiple types of [alerts](/alerts) can be triggered on metrics and on logs and sent to a number of Notification Hooks - 3rd party services, email, or Webhooks: 
 
 - [Email as default system notification hook](/integration/alerts-email-integration/)
 - [Custom user defined WebHook](/integration/alerts-webhooks-integration/)
@@ -695,25 +702,12 @@ All of the integrations require adding and [configuring the Experience script](.
 - [Big Panda](/integration/alerts-bigpanda-integration/)
 - [VictorOps](/integration/alerts-victorops-integration/)
 - [Pushover](/integration/alerts-pushover-integration/)
-- [Zapier](/integration/alerts-zapier-integration/)
-- [Nagios](/integration/alerts-nagios-integration/)
-- [Hipchat](/integration/alerts-hipchat-integration/)
 - [Telegram](/integration/alerts-telegram-integration/)
 - [Microsoft Teams](/integration/alerts-microsoft-teams-integration/)
 - [Spike.sh](/integration/alerts-spikesh-integration/)
 - [Squadcast](/integration/alerts-squadcast-integration/)
 - [Twilio](/integration/alerts-twilio-integration/)
 - [Signl4](/integration/alerts-signl4-integration/)
-
-## Alerting
-
-Multiple types of [alert notifications](/alerts) can be triggered on metrics and on logs and sent to several 3rd party services. See [Alerts](/alerts) for more info.
-
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs app. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
-
-Recommendations for learning more about Sematext products and services:
-
-- Sematext Cloud [integrations guide](/guide/integrations-guide/)
-- Our [website](https://sematext.com/)
-- For open-source integrations and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
-- or just talk to us using chat located in right bottom corner of any page, and one of our engineers will help you navigate Sematext waters.
+- [Nagios](/integration/alerts-nagios-integration/)
+- [Hipchat](/integration/alerts-hipchat-integration/)
+- [Zapier](/integration/alerts-zapier-integration/)
