@@ -1,7 +1,7 @@
-title: Custom Webhooks Parameters
+title: Custom Webhooks 
 description: Sematext threshold, anomaly and / or heartbeat Alerts integration with generic webhooks.
 
-Sematext Notification Hooks support a set of variables you can use to customize the information sent from Sematext to the destination of your choice. 
+Sematext supports sending notificatons to a custom Webhook.  When configuring the Webhook a number of variables can be used to customize the information sent from Sematext to the destination of your choice. 
 
 The following variables are supported:
 
@@ -16,6 +16,6 @@ The following variables are supported:
  * **$url** - webhook URL. **IMPORTANT**: to ensure data is sent to the destination securely you must use HTTPS, not HTTP.
  * **$troubleshootUrl** - the URL that leads to Alert Details screen in Sematext
 
-You can use any of the above variables in the parameters when you create your Custom Webhook:
+You can use any of the above variables in the parameters when you create your custom Webhook:
 
 <img class="content-modal-image" alt="Custom Webhook With Parameters" src="../../images/integrations/custom-webhook-with-parameters.png" title="Create Custom Webhook With Parameters">
