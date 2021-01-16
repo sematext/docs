@@ -1,4 +1,4 @@
-title: Custom Webhooks 
+title: Custom Webhooks Parameters
 description: Sematext threshold, anomaly and / or heartbeat Alerts integration with generic webhooks.
 
 Sematext supports sending notificatons to a custom Webhook.  When configuring the Webhook a number of variables can be used to customize the information sent from Sematext to the destination of your choice. 
