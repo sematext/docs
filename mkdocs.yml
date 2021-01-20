@@ -155,8 +155,7 @@ pages:
         - Solr: integration/solr-logs.md
         - Vercel: integration/vercel-logs-integration.md
       - Notification Hooks:
-        - Custom Alert Webhooks: integration/alerts-webhooks-integration.md
-        - Webhook Parameters: integration/alerts-webhooks-custom-params.md
+        - Custom Webhooks: integration/alerts-webhooks-integration.md
         - Big Panda: integration/alerts-bigpanda-integration.md
         - Email: integration/alerts-email-integration.md
         - HipChat: integration/alerts-hipchat-integration.md
