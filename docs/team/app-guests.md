@@ -17,7 +17,7 @@ To share one of your Apps with other users, go to the
 [App Guests screen](https://apps.sematext.com/ui/team/app-guests) in Sematext Cloud.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/app-guests.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/app-guests-new.mp4" type="video/mp4" />
 </video>
 
 ## Apps you can access
