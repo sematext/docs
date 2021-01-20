@@ -11,9 +11,13 @@ Receives Syslog messages via UDP.
 
 input:  
   syslog: 
+    module: input-syslog
     address: 0.0.0.0
     port: 1514
-    
+    sourceName: syslog
+    tags:
+      key: value
+
 output:
   bindAddress: 0.0.0.0
   elasticsearch:
