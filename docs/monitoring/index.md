@@ -64,7 +64,7 @@ The only thing you'll have to install is [Sematext Agent](../agents/sematext-age
 
 To help you manage your metrics, hosts, and containers, and to help you create more useful dashboards, you can assign metadata to each host/server/container in the form of tags.
 
-Check [Tag Support](tag-support) page for different ways to use tags.
+Check [Tag Support](https://sematext.com/docs/monitoring/tags/) page for different ways to use tags.
 
 The [Network Map](network-map) visualizes your network topology.  It show discovered hosts and the communication between them, including  details such as the amount of received or transmitted data on each port.
 
