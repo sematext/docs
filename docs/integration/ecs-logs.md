@@ -89,4 +89,4 @@ Optionally, you can manually set the `sourceName` of your logs. Instead of `"Hea
 
 - [Set up custom alerts](../../alerts/creating-logs-alerts/)
 - [Set up custom reports and components](../../logs/reports-and-components/)
-- [Tagging best practices](../../tags/)
+- [Tagging best practices](https://sematext.com/docs/tags/)
