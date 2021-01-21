@@ -17,7 +17,7 @@ Hadoop, Storm, Cassandra, HBase, etc.).
     having Transaction Tracing is not exclusive - one can use both.
   - The profiler does not require you to enable it in the monitoring
     agent.  It requires no restarts.  It works with both
-    [embedded](spm-monitor-javaagent) and
+    [embedded](https://sematext.com/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/) and
     [standalone](spm-monitor-standalone) agent.
   - Sematext Agent (aka SPM client) version 1.29.2 or greater is required.
   - Anything that runs in the [JVM](https://sematext.com/java-monitoring/) can be profiled - Java, Scala,
