@@ -17,7 +17,7 @@ To share one of your Apps with other users, go to the
 [App Guests screen](https://apps.sematext.com/ui/team/app-guests) in Sematext Cloud.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/app-guests.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/app-guests-new.mp4" type="video/mp4" />
 </video>
 
 ## Apps you can access
@@ -36,8 +36,13 @@ Apps that you have access to are in the **Accepted** state and by clicking on th
 
 ## Your Apps that other users can access
 
-To see the list of your Apps that other users can access click on the **App Guests** section. For detailed information about a specific user click on the member email. That will open a flyout with the list of all Apps that user can access.
+To see the list of your Apps that other users can access navigate to **App Guests** and then click on the **Guests** section. For detailed information about a specific user click on the member email. That will open a flyout with the list of all Apps that user can access.
 
 ![Apps Other Users Can Access](../images/team/apps_other_can_access.png)
+
+To see the list of your Apps with a count of users with access, on the **App Guests** page click on the **Accessible Apps** section.
+For detailed information about a specific App click on the App name. That will open a flyout with a list of all the users that can access it.
+
+![Apps Other Users Can Access](../images/team/accessible_apps.png)
 
 
