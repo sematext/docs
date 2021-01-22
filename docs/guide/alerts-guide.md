@@ -25,7 +25,7 @@ Sematext lets you manage Alert Rules across your whole stack. You can use variou
 
 ## Default Alerts
 
-As soon as an [App](./app-guide) is created, either for [Logs](./logs-guide) or [Monitoring](./monitoring-guide), you will see several app-specific Alerts Rules created for you by default. 
+As soon as an [App](./app-guide) is created, either for [Logs](../logs) or [Monitoring](../monitoring), you will see several app-specific Alerts Rules created for you by default. 
 
 Default Alerts for a Logs App:
 

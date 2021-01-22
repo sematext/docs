@@ -17,16 +17,16 @@ Hadoop, Storm, Cassandra, HBase, etc.).
     having Transaction Tracing is not exclusive - one can use both.
   - The profiler does not require you to enable it in the monitoring
     agent.  It requires no restarts.  It works with both
-    [embedded](spm-monitor-javaagent) and
-    [standalone](spm-monitor-standalone) agent.
-  - Sematext Agent (aka SPM client) version 1.29.2 or greater is required.
+    [embedded](../agents/sematext-agent/app-agent/spm-monitor-javaagent) and
+    [standalone](../agents/sematext-agent/app-agent/spm-monitor-standalone) agent.
+  - [Sematext Agent](../agents/sematext-agent) (aka SPM client) version 1.29.2 or greater is required.
   - Anything that runs in the [JVM](https://sematext.com/java-monitoring/) can be profiled - Java, Scala,
     Clojure, Groovy, JRuby, JPython, etc.
 
 **Known issues**:
 
   - In order to profile Elasticsearch server you must enable remote JMX
-    connection (as described [standalone monitor setup instructions page](spm-monitor-standalone)) and
+    connection (as described [standalone monitor setup instructions page](../agents/sematext-agent/app-agent/spm-monitor-standalone)) and
     set SPM\_MONITOR\_JMX\_PARAMS property in a .properties file under
     the /opt/spm/spm-monitor/conf/ directory.
 

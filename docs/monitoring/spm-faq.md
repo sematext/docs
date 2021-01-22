@@ -183,8 +183,8 @@ traffic, etc) .
 
 When monitoring Solr, Elasticsearch, HBase, Hadoop and other JVM-based
 services, you will have an option to choose between using
-[Embedded](../agents/spm-monitor-javaagent/) App Agent or
-[Standalone](../agents/spm-monitor-standalone) App Agent. The
+[Embedded](../agents/sematext-agent/app-agent/spm-monitor-javaagent/) App Agent or
+[Standalone](../agents/sematext-agent/app-agent/spm-monitor-standalone) App Agent. The
 workaround described here requires the use of standalone App Agent
 variant. Here's what you'd need to do to see your metrics in Sematext Cloud:
 
@@ -201,8 +201,8 @@ variant. Here's what you'd need to do to see your metrics in Sematext Cloud:
     instructions from some other tab, keep in mind OS metrics displayed
     in Sematext UI will not be OS metrics of your Windows/Mac machine.
 2.  In step 2, if you are given a choice between
-    [Embedded](../agents/spm-monitor-javaagent/) and
-    [Standalone](../agents/spm-monitor-standalone) App Agent,
+    [Embedded](../agents/sematext-agent/app-agent/spm-monitor-javaagent/) and
+    [Standalone](../agents/sematext-agent/app-agent/spm-monitor-standalone) App Agent,
     **choose Standalone monitor**. It will use remote JMX to collect
     metrics from your Windows/Mac machine. Just follow instructions
     given on Standalone tab.  The only difference you will want to make
@@ -416,7 +416,7 @@ with examples.
 
 ### Is there a Chef Recipe for the Sematext Agent?
 
-Yes, see [Sematext Agent Chef Recipe](chef-recipe) example.
+Yes, see [Sematext Agent Chef Recipe](../agents/sematext-agent/chef-recipe) example.
 
 ## Agent Updating
 

@@ -48,7 +48,7 @@ Also, a real-time view of all process metrics is available in the metrics tab. T
 
 ## How Does It Work?
 
-The [Sematext Agent](../agents/sematext-agent) tracks all processes and ships the metrics of the top N processes. The agent tags all metrics with process and container metadata and ships the metrics to your [Infra App](../infrastructure/).  
+The [Sematext Agent](../agents/sematext-agent) tracks all processes and ships the metrics of the top N processes. The agent tags all metrics with process and container metadata and ships the metrics to your [Infra App](./infrastructure/).  
 
 Sematext UI provides visualizations, grouping and filter functionality. 
 
@@ -74,4 +74,5 @@ Here are some of the common use cases and issues that Process Monitoring helps t
 - Identify processes, containers or service with high resource usage
 
 ## More Details
+
 To read about the inner workings of Process Monitoring check out the [Processes section in the Sematext Agent docs](../agents/sematext-agent/processes/configuration/)!
