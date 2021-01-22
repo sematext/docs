@@ -45,7 +45,7 @@ unpack it, save the above configuration into a file (e.g.,
     bin/logstash -f /tmp/logstash.conf
 
 After it starts, logs from that file will flow to Logs Management app and you should
-be able to start [searching them](searching-your-events).
+be able to start [searching them](https://sematext.com/docs/logs/searching-log-events/).
 
 ### Parsing Unstructured Data
 
