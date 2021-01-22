@@ -7,7 +7,7 @@ Kibana is fully intergrated with Sematext's cloud and on-premises service used t
 
 Click on the **Kibana** button in the App Settings dropdown from the [Logs section](https://apps.sematext.com/ui/logs) in our infrastructure & application monitoring and log management platform.
 
-<img alt="Kibana Integration" src="../images/logs/kibana-integration.gif" title="Sematext Logging UI - Kibana Integration">
+<img alt="Kibana Integration" src="../../images/logs/kibana-integration.gif" title="Sematext Logging UI - Kibana Integration">
 
 Once you're there, you can customize your dashboard to do all kinds of searches and visualizations to your data.
 
