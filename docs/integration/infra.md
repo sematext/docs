@@ -150,4 +150,4 @@ One of the features provided by the Infra App is [Inventory](../monitoring/inven
 
 ## Events
 
-Sematext Agent collects events from different sources such as OOM notifications, [container](../agents/sematext-agent/container/events) or [Kubernetes](../agents/sematext-agent/kubernetes/events) events and stores them into your Infra Apps. For info about using events see [events guide](../guide/events-guide).
+Sematext Agent collects events from different sources such as OOM notifications, [container](https://sematext.com/docs/agents/sematext-agent/containers/events/) or [Kubernetes](../agents/sematext-agent/kubernetes/events) events and stores them into your Infra Apps. For info about using events see [events guide](../guide/events-guide).
