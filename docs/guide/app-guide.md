@@ -40,11 +40,11 @@ as you can see on [the pricing page](https://sematext.com/pricing/).
 
 After learning what an App is, you can check out the guides for our main features.
 
-- [Integrations](/guide/integrations-guide/)
-- [Logs](/logs/)
-- [Monitoring](/monitoring/)
-- [Experience](/experience/)
-- [Synthetics](/synthetics/)
-- [Dashboards](/guide/dashboards-guide/)
-- [Alerts](/guide/alerts-guide/)
-- [Events](/guide/events-guide/)
+- [Integrations](./integrations-guide/)
+- [Logs](../logs)
+- [Monitoring](../monitoring)
+- [Experience](../experience)
+- [Synthetics](../synthetics)
+- [Dashboards](../dashboards)
+- [Alerts](./alerts-guide)
+- [Events](./events-guide)

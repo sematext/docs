@@ -87,6 +87,6 @@ Optionally, you can manually set the `sourceName` of your logs. Instead of `"Hea
 
 ## Next Steps
 
-- [Set up custom alerts](../../alerts/creating-logs-alerts/)
-- [Set up custom reports and components](../../logs/reports-and-components/)
-- [Tagging best practices](../../tags/)
+- [Set up custom alerts](../alerts/creating-logs-alerts/)
+- [Set up custom reports and components](../logs/reports-and-components/)
+- [Tagging best practices](../tags/)

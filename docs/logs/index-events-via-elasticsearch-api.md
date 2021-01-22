@@ -8,7 +8,7 @@ Sematext's Logs Management App exposes the [Elasticsearch API](http://www.elasti
   - send log events through it directly from your application, using
     any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
   - send log events by using existing application such as
-    [Logstash](logstash), Filebeat, [Logagent](/docs/logagent), or [Apache Flume](http://flume.apache.org/), or [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
+    [Logstash](logstash), Filebeat, [Logagent](../logagent), or [Apache Flume](http://flume.apache.org/), or [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
   - [search for logs from your own application](search-through-the-elasticsearch-api), or by using tools such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene) or Grafana
   - optionally define [custom mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
     your log types, so you can tweak the way your logs are indexed

@@ -266,4 +266,4 @@ helm install --name st-agent \
 
 This will start both a log agent, and optionally a monitoring agent if you so wish. The agent will collect logs all logs from stdout, including the audit logs and send them to Sematext Logs.
 
-If you prefer, you can set up Logagent with `kubectl` as well if [you go here](../agents/logagent/installation-docker/#kubernetes-and-openshift).
+If you prefer, you can set up Logagent with `kubectl` as well if [you go here](../logagent/installation-docker/#kubernetes-and-openshift).

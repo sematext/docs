@@ -41,7 +41,7 @@ Metrics are shipped to Sematext Monitoring using Agents. To monitor your infrast
     fast Go-based Monitoring Agent with a tiny footprint for both
     infrastructure and containers. Also includes Java based App Agent that collects application metrics.
 
-  - [Node.js-based App Agent](node-agent), which can [monitor
+  - [Node.js-based App Agent](../agents/node-agent), which can [monitor
     Apache](../integration/apache) and [Nginx](../integration/nginx)
     (including [Nginx Plus](../integration/nginxplus)).
 

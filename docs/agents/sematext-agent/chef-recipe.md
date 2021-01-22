@@ -39,8 +39,8 @@ end
     replace "apt-get" with distribution-specific equivalent (e.q. yum
     on RedHat-based distros)
   - line 22: change "elasticsearch" to appropriate type based on the type seen for
-    your Sematext Monitoring app on <https://apps.sematext.com/ui/our-integrations>
+    your Sematext Monitoring app on:  <https://apps.sematext.com/ui/our-integrations>
   - line 22: change "standalone" to "javaagent" if you want an
-    [embedded/in-process agent](spm-monitor-javaagent)
-    and not a [standalone process agent](spm-monitor-standalone)
+    [embedded/in-process agent](./app-agent/spm-monitor-javaagent)
+    and not a [standalone process agent](./app-agent/spm-monitor-standalone)
   - line 24: this is relevant only for "standalone" agent

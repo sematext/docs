@@ -64,7 +64,7 @@ options:
   printStats: 60
 ```
 
-Using the [Chart Builder](../../dashboards/chart-builder/) you can create a set of charts for Logagent monitoring.  Logagent metrics have the `logagent` prefix. The following metrics are available: 
+Using the [Chart Builder](../dashboards/chart-builder/) you can create a set of charts for Logagent monitoring.  Logagent metrics have the `logagent` prefix. The following metrics are available: 
 
 - `logagent.tokens.used` - number of logs tokens used
 - `logagent.logs.shipped` - number of shipped logs (multi-line)
