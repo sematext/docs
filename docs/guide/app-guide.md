@@ -45,6 +45,6 @@ After learning what an App is, you can check out the guides for our main feature
 - [Monitoring](/monitoring/)
 - [Experience](/experience/)
 - [Synthetics](/synthetics/)
-- [Dashboards](/guide/dashboards-guide/)
+- [Dashboards](https://sematext.com/docs/dashboards/)
 - [Alerts](/guide/alerts-guide/)
 - [Events](/guide/events-guide/)
