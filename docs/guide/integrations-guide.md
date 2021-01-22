@@ -79,7 +79,7 @@ After you install and activate an integration, you can:
 
 - [Email as default system webhhook](/integration/alerts-email-integration/)
 - [Custom user defined webhooks](/integration/alerts-webhooks-integration/)
-- [Big Panda](integration/alerts-bigpanda-integration/)
+- [Big Panda](/integration/alerts-bigpanda-integration/)
 - [Hipchat](/integration/alerts-hipchat-integration/)
 - [Microsoft Teams](/integration/alerts-microsoft-teams-integration/)
 - [Nagios](/integration/alerts-nagios-integration/)
