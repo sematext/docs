@@ -63,4 +63,4 @@ Once added, you'll see an overview of all the Log Drains you have configured.
 
 - [Set up custom alerts](../../alerts/creating-logs-alerts/)
 - [Set up custom reports and components](../../logs/reports-and-components/)
-- [Tagging best practices](../../tags/)
+- [Tagging best practices](https://sematext.com/docs/tags/)
