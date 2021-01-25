@@ -37,7 +37,7 @@ There are 3 types of [alerts](../alerts) in Sematext:
 - **Threshold-based alerts** that notify you when a metric value crosses a predefined threshold
 - **Alerts** based on statistical **anomaly detection** that notify you when metric values suddenly change and deviate from the baseline
 
-![](https://sematext.com/wp-content/uploads/2019/04/docker-container-alerts.gif)
+![](https://sematext.com/wp-content/uploads/2021/01/docker-container-alerts-min.gif)
 
 ## Container Events
 Events reflect changes in your infrastructure, from node restarts to container deployments, or changes in running containers. Events can track every Docker command. **Sematext Agent collects Events from the Docker Engine and Kubernetes API.** Whenever something goes wrong in your container stack, you can **correlate Logs or Metrics with the time of Docker events!**

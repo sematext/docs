@@ -39,7 +39,7 @@ To define the time threshold go to the Measurements page and click the "New Meas
 <img
   class="content-modal-image"
   alt="New Measurement button pointer"
-  src="../../images/experience/measurements/new.png"
+  src="../../images/experience/measurements/new-min.png"
   title="New Measurement button pointer"
 />
 
@@ -56,7 +56,7 @@ Click on a measurement in the table to see data related to that measurement only
 <img
   class="content-modal-image"
   alt="Measurements Table"
-  src="../../images/experience/measurements/measurements-table.png"
+  src="../../images/experience/measurements/measurements-table-min.jpg"
   title="Measurements Table"
 />
 

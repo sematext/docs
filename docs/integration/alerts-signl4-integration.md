@@ -5,11 +5,11 @@ description: Sematext threshold, anomaly and / or heartbeat Alerts integration w
 
 **1.** In [SIGNL4](https://www.signl4.com/) go to the **Apps** in the left menu and chose the **Inbound Webhook** to get the webhook URL:
 
-<img class="content-modal-image" alt="Create Signl4 Integration - Inbound Webhook" src="../../images/integrations/create-signl4-integration-inbound-webhook.png" title="Create Signl4 Integration - Inbound Webhook">
+<img class="content-modal-image" alt="Create Signl4 Integration - Inbound Webhook" src="../../images/integrations/create-signl4-integration-inbound-webhook-min.png" title="Create Signl4 Integration - Inbound Webhook">
 
 **2.** Copy the **SIGNL4 team's webhook URL**:
 
-<img class="content-modal-image" alt="Create Signl4 Integration - Webhook URL" src="../../images/integrations/create-signl4-integration-webhook-url.png" title="Create Signl4 Integration - Webhook URL">
+<img class="content-modal-image" alt="Create Signl4 Integration - Webhook URL" src="../../images/integrations/create-signl4-integration-webhook-url-min.png" title="Create Signl4 Integration - Webhook URL">
 
 Once you have the **SIGNL4 team's webhook URL** you can create the SIGNL4 notification hook in Sematext.
 

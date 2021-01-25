@@ -15,7 +15,7 @@ Use [**Database Monitoring**](https://sematext.com/database-monitoring/) to get 
 
 **Inventory Monitoring** will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
 
-You can create [**custom dashboards**](./dashboards-guide) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
+You can create [**custom dashboards**](../dashboards/) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
 If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with over 40 integrations to choose from.
 
