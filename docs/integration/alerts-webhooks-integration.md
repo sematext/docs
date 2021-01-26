@@ -15,14 +15,14 @@ Your devops team will be able to:
 
 Navigate to [Sematext Navigation Hooks](https://apps.sematext.com/ui/hooks/create) ([EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Custom Webhooks card to create a new notification hook.
 
-![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
+![Sematext Notification Hooks](../images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
 Enter required parameters and additional parameters and headers can be added as well. Click Test button to confirm that Sematext app is sending data and save your custom webhook integration.
 
-![Custom Webhooks Integration](https://sematext.com/docs/images/integrations/custom-webhook.png "Create Custom Webhooks Integration")
+![Custom Webhooks Integration](../images/integrations/custom-webhook.png "Create Custom Webhooks Integration")
 
-**Done.** Use as many generic Webhooks-based integration as you wish.  Besides custom Webhooks there are also numerous other third party integrations services like PagerDuty, Slack, MS Teams, OpsGenie, Telegram, etc. Check [Integrations](/integration/) for more details.
+**Done.** Use as many generic Webhooks-based integration as you wish.  Besides custom Webhooks there are also numerous other third party integrations services like PagerDuty, Slack, MS Teams, OpsGenie, Telegram, etc. Check [Integrations](../integration/) for more details.
 
 ## Custom Parameters
 
-Sematext Notification Hooks support a set of variables exposed as [Custom Notification Hooks Parameters](https://sematext.com/docs/integration/alerts-webhooks-integration/) that you can use to customize which data is included in the request sent to your webhook.
+Sematext Notification Hooks support a set of variables exposed as [Custom Notification Hooks Parameters](../integration/alerts-webhooks-integration/) that you can use to customize which data is included in the request sent to your webhook.
