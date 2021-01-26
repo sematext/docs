@@ -9,7 +9,7 @@ Setting up the monitoring agent takes less than 5 minutes:
 3.  Install the Sematext Agent according to the  [setup instructions](https://apps.sematext.com/ui/howto/elasticsearch/overview) displayed in the UI.
 4.  Enable HTTP metrics by setting `http.enabled: true` and set the `node.name` value in `elasticsearch.yaml`.
 
-![App creation and setup instructions in Sematext Cloud](https://sematext.com/wp-content/uploads/2019/04/create-elasticsearch-app.gif)
+![App creation and setup instructions in Sematext Cloud](https://sematext.com/wp-content/uploads/2021/01/create-elasticsearch-app-min.gif)
 
 For example, on Ubuntu, add Sematext Linux packages with the following command:
 

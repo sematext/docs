@@ -301,12 +301,12 @@ This approach is not encouraged because of the obvious security
 ### When should I run Standalone and when Embedded App Agent?
 
 [Standalone App Agent](spm-monitor-standalone)
-runs as a separate process, while the [Embedded monitor](spm-monitor-javaagent) runs embedded in the
+runs as a separate process, while the [Embedded monitor](https://sematext.com/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/) runs embedded in the
 Java/JVM process. Thus, if you are monitoring a non-Java application,
 Standalone monitor is the only option. Standalone monitor is a bit more
 complex to set up when one uses it to monitor Java applications because
 it typically requires one to enable out-of-process JMX access, as
-described on [Standalone App Agent page](spm-monitor-standalone). With Embedded monitor
+described on [Standalone App Agent page](https://sematext.com/docs/agents/sematext-agent/app-agent/spm-monitor-standalone/). With Embedded monitor
 this is not needed, but one needs to add the Sematext Agent to the Java
 command-line and restart the process of the monitored application. When
 running Standalone monitor one can update the App Agent without

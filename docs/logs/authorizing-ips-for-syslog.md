@@ -26,7 +26,7 @@ the Logs Management application you need to work with:
 
 Click on **Whitelist IP** item and add your IPs to the list:
 
-<img src="/docs/images/logs/syslog-ip-authorize-method-1.gif" alt="whitelist syslog IP">
+<img src="/docs/images/logs/syslog-ip-authorize-method-1-min.gif" alt="whitelist syslog IP">
 
 ## Method 2: From the Logs Management Application
 
@@ -37,4 +37,4 @@ upper-right side.
 Select **Source IPs** tab. From the **IPs authorized for...** screen,
 you can start adding IPs:
 
-<img src="/docs/images/logs/syslog-ip-authorize-method-2.gif" alt="syslog IP Authorize">
+<img src="/docs/images/logs/syslog-ip-authorize-method-2-min.gif" alt="syslog IP Authorize">
