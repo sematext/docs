@@ -5,7 +5,7 @@ description: FAQ about Sematext server, application, and container monitoring pl
 
 ### What should I do if I can't find the answer to my question in this FAQ?
 
-Check the [general FAQ](/faq) for questions that are not strictly
+Check the [general FAQ](../faq) for questions that are not strictly
 about Sematext Monitoring.  If you can't find the answer to your
 question please email <support@sematext.com> or use our live chat.
 
@@ -18,7 +18,7 @@ There are no limits on the number of servers, nodes, or
 
 ### What types of applications and infrastructure can Sematext monitor?
 
-See [integrations](/integration).
+See [integrations](../integration).
 
 ### What are the various configuration files present in sematext-agent package?
 
@@ -300,24 +300,24 @@ This approach is not encouraged because of the obvious security
 
 ### When should I run Standalone and when Embedded App Agent?
 
-[Standalone App Agent](spm-monitor-standalone)
-runs as a separate process, while the [Embedded monitor](https://sematext.com/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/) runs embedded in the
+[Standalone App Agent](../agents/sematext-agent/app-agent/spm-monitor-standalone/)
+runs as a separate process, while the [Embedded monitor](../agents/sematext-agent/app-agent/spm-monitor-javaagent/) runs embedded in the
 Java/JVM process. Thus, if you are monitoring a non-Java application,
 Standalone monitor is the only option. Standalone monitor is a bit more
 complex to set up when one uses it to monitor Java applications because
 it typically requires one to enable out-of-process JMX access, as
-described on [Standalone App Agent page](https://sematext.com/docs/agents/sematext-agent/app-agent/spm-monitor-standalone/). With Embedded monitor
+described on [Standalone App Agent page](../agents/sematext-agent/app-agent/spm-monitor-standalone/). With Embedded monitor
 this is not needed, but one needs to add the Sematext Agent to the Java
 command-line and restart the process of the monitored application. When
 running Standalone monitor one can update the App Agent without
 restarting the Java process being monitored, while a restart is needed
-when the Embedded App Agent is being used. To be able to [trace transactions](/tracing)
-or [database operations](/tracing/database-operations) you need to use the
+when the Embedded App Agent is being used. To be able to [trace transactions](../tracing)
+or [database operations](../tracing/database-operations) you need to use the
 Embedded App Agent.
 
 ### Can I use Sematext for (business) transaction tracing?
 
-Yes, see [Transaction Tracing](/tracing).
+Yes, see [Transaction Tracing](../tracing).
 
 ### Can I move Sematext Agent to a different directory?
 
@@ -339,7 +339,7 @@ And that is it.
 
 ### Is there an HTTP API?
 
-Yes, see [API Reference](/api).
+Yes, see [API Reference](../api).
 
 ### I have multiple Monitoring Apps installed on my machine, can I uninstall just one of them?
 
@@ -376,11 +376,11 @@ bootstrap the JMX connector:
 
 `javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial`
 
-See [enabling Security Manager permissions](/agents/sematext-agent/jmx-attaching/#security-manager-permissions) to allow automatic JMX connector exposure.
+See [enabling Security Manager permissions](../agents/sematext-agent/jmx-attaching/#security-manager-permissions) to allow automatic JMX connector exposure.
 
 ### Can I reconfigure the agent to send metrics to a different Monitoring App?
 Yes, this is how:
-- If you are using automonitoring via [autodiscovery](https://sematext.com/docs/monitoring/autodiscovery/) just change the App in the UI
+- If you are using automonitoring via [autodiscovery](../monitoring/autodiscovery/) just change the App in the UI
 Otherwise:
 - In /opt/spm/spm-monitor/conf directory look for a .properties file whose name contains the token of the Monitoring App where the metrics are being sent
 - Rename this file, replacing the App token part with the token of the Monitoring App where you want the agent to send metrics
@@ -392,11 +392,11 @@ Otherwise:
 
 ### How can I share my Sematext Apps with other users?
 
-See [sharing FAQ](/faq/#sharing).
+See [sharing FAQ](../faq/#sharing).
 
 ### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
-See info about user roles in [sharing FAQ](/faq/#sharing).
+See info about user roles in [sharing FAQ](../faq/#sharing).
 
 ## Agent Automation
 
@@ -497,19 +497,19 @@ proceed with steps 2 and 3 described above.
 
 ### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](../faq/#alerts).
 
 ### What are Threshold-based Alerts?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](../faq/#alerts).
 
 ### What is Anomaly Detection?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](../faq/#alerts).
 
 ### What are Heartbeat Alerts?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](../faq/#alerts).
 
 ## Troubleshooting
 
@@ -945,24 +945,24 @@ your bare-metal servers and virtual machines.
 
 ### Which credit cards are accepted?
 
-See [billing FAQ](/faq/#billing).
+See [billing FAQ](../faq/#billing).
 
 ### Can I be invoiced instead of paying with a credit card?
 
-See [billing FAQ](/faq/#billing).
+See [billing FAQ](../faq/#billing).
 
 ### How often will I get billed?
 
-See [billing FAQ](/faq/#billing).
+See [billing FAQ](../faq/#billing).
 
 ### Can the billing email be sent to our Accounts Payable/Accounting instead of me?
 
-See [billing FAQ](/faq/#billing).
+See [billing FAQ](../faq/#billing).
 
 ### Do I have to commit or can I stop using Sematext at any time?
 
-See [billing FAQ](/faq/#billing).
+See [billing FAQ](../faq/#billing).
 
 ### Can I get invoices?
 
-See [billing FAQ](/faq/#billing).
+See [billing FAQ](../faq/#billing).
