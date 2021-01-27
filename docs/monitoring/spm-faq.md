@@ -493,6 +493,35 @@ Monitor for app your are installing), instead of commands from step 1
 run: `sudo bash /opt/spm/bin/spm-client-uninstall.sh` . After that
 proceed with steps 2 and 3 described above.
 
+## Agent Overhead
+
+### What's the memory usage overhead for Sematext Agent running in a container?
+
+The general memory overhead for Sematext Agent is influenced by the number of monitored containers. It also depends on which features are enabled for collecting data. For a vast majority of workloads, the memory consumption is between 50MB and 90MB.
+
+### What's `--restart always`?
+
+The `--restart always` policy instructs the Docker daemon to restart the container automatically in case of failures. 
+
+If you're still concerned about memory usage, you can always enforce the limits with cgroup controllers. Example:
+
+```
+docker run -d  --restart always --memory 168m --memory-swap=236m --privileged -P --name st-agent \
+  -v /:/hostfs:ro \
+  -v /sys/:/hostfs/sys:ro \
+  -v /var/run/:/var/run/ \
+  -v /sys/kernel/debug:/sys/kernel/debug \
+  -v /etc/passwd:/etc/passwd:ro \
+  -v /etc/group:/etc/group:ro \
+  -e INFRA_TOKEN=<your-infra-token> \
+  -e CONTAINER_TOKEN=<your-container-token> \
+  -e REGION=US \
+  sematext/agent:latest
+```
+
+### What's the CPU usage overhead for Sematext Agent running in a container?
+Generally under 1%.
+
 ## Alerts
 
 ### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
