@@ -514,7 +514,6 @@ docker run -d  --restart always --memory 168m --memory-swap=236m --privileged -P
   -v /etc/passwd:/etc/passwd:ro \
   -v /etc/group:/etc/group:ro \
   -e INFRA_TOKEN=<your-infra-token> \
-  -e CONTAINER_TOKEN=<your-container-token> \
   -e REGION=US \
   sematext/agent:latest
 ```

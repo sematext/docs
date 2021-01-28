@@ -8,7 +8,6 @@ To install it run the following command:
 
 ```sh
 helm install --name sematext-agent \
-  --set containerToken=<YOUR_CONTAINER_TOKEN> \
   --set infraToken=<YOUR_INFRA_TOKEN> \
   --set logsToken=<YOUR_LOGS_TOKEN> \
   --set region=<"US" or "EU"> \
@@ -37,7 +36,6 @@ metadata:
   name: test-sematextagent
 spec:
   region: <"US" or "EU">
-  containerToken: YOUR_CONTAINER_TOKEN
   logsToken: YOUR_LOGS_TOKEN
   infraToken: YOUR_INFRA_TOKEN
 ```
@@ -160,8 +158,6 @@ spec:
         image: sematext/agent:latest
         imagePullPolicy: Always
         env:
-        - name: CONTAINER_TOKEN
-          value: <YOUR_CONTAINER_TOKEN>
         - name: INFRA_TOKEN
           value: <YOUR_INFRA_TOKEN>
         - name: LOGS_TOKEN

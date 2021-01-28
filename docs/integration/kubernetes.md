@@ -23,7 +23,6 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. The eas
 
 ```
 helm install --name sematext-agent \
-  --set containerToken=<YOUR_CONTAINER_TOKEN> \
   --set infraToken=<YOUR_INFRA_TOKEN> \
   --set logsToken=<YOUR_LOGS_TOKEN> \
   --set region=<"US" or "EU"> \
@@ -61,7 +60,6 @@ metadata:
   name: sematext-agent
 spec:
   region: <"US" or "EU">
-  containerToken: YOUR_CONTAINER_TOKEN
   logsToken: YOUR_LOGS_TOKEN
   infraToken: YOUR_INFRA_TOKEN
 ```
