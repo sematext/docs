@@ -547,7 +547,7 @@ docker network rm st-agent-net
 - Kubernetes
 
 ```bash
-kubectl delete ds sematext-agent --ignore-not-found=true
+kubectl delete ds sematext-agent
 ```
 
 - Helm
