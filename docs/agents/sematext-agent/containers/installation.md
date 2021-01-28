@@ -80,8 +80,12 @@ services:
 
 Create an Infra Monitoring App in Sematext and follow the instructions in the UI.
 
-First, the network has to be created:
-`docker network create -d overlay --attachable --scope=swarm st-agent-net`
+The Swarm network has to be created **only** if you're deploying the agent with docker service command. On the contrary, if you're using the `docker stack deploy` command and using the `docker-compose.yml` descriptor, it is not necessary to create the
+agent network.
+
+```bash
+docker network create -d overlay --attachable --scope=swarm st-agent-net
+```
 
 After that, Sematext Agent can be deployed as a global service on all Swarm nodes with a single command:
 

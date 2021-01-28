@@ -426,7 +426,7 @@ If you have previously installed the Sematext Agent package (RPM,
 Deb, etc.), simply upgrade via apt-get (Debian, Ubuntu, etc.), or yum
 (RedHat, CentOS, etc.), or zypper (SuSE).
 
-Debian/Ubuntu:
+* #### Debian/Ubuntu
 
 ``` bash
 # NOTE: this will update the sematext gpg key
@@ -435,7 +435,7 @@ wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key a
 sudo apt-get update && sudo apt-get install sematext-agent
 ```
 
-RedHat/CentOS/...
+* #### RedHat/CentOS
 
 ``` bash
 # NOTE: this will update sematext repo file
@@ -444,7 +444,7 @@ sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d
 sudo yum clean all && sudo yum update sematext-agent
 ```
 
-SuSE:
+* #### SuSE
 
 ``` bash
 sudo zypper up sematext-agent
@@ -457,9 +457,6 @@ After that is done, also do:
     HBase node... **Exceptions**: In case of Memcached, Apache and plain
     Nginx - no need to restart anything; in case of Redis only
     standalone App Agent exists so check below how to restart it)
-
-**OR**
-
   - if you are using standalone App Agent, restart it with:
 
 ``` bash
@@ -471,6 +468,45 @@ after completing upgrade steps described above, you must also run
 commands described in "Agent Setup" (which is
 accessible from <https://apps.sematext.com/ui/monitoring>, click
 Actions \> Install Monitor for app you have installed)
+
+* #### Docker
+
+Remove previous Sematext Agent container instances and pull the latest image:
+
+```bash
+docker ps -a --format '{{.Names}}' | grep -E "sematext-agent|st-agent" | xargs -r docker rm -f
+docker pull sematext/agent:latest
+```
+
+Once ready, head to the [Docker](../agents/sematext-agent/containers/installation/#docker) installation instructions.
+
+* #### Swarm
+
+Remove previous Sematext Agent service and pull the latest image:
+
+```bash
+docker service rm sematext-agent-docker sematext-agent st-agent
+docker pull sematext/agent:latest
+```
+
+Once ready, head to the [Swarm](../agents/sematext-agent/containers/installation/#docker-swarm-enterprise) installation instructions.
+
+* #### Kubernetes
+
+Remove previous Sematext Agent DaemonSet resource:
+
+```bash
+kubectl delete ds sematext-agent --ignore-not-found=true
+```
+
+Once ready, head to the [Kubernetes](../agents/sematext-agent/kubernetes/installation/) installation instructions.
+
+* Helm
+
+```bash
+helm repo update 
+helm upgrade st-agent --set infraToken=<YOUR-INFRA-TOKEN> sematext/sematext-agent
+```
 
 ## Agent Uninstalling
 
@@ -492,6 +528,33 @@ following:
 Monitor for app your are installing), instead of commands from step 1
 run: `sudo bash /opt/spm/bin/spm-client-uninstall.sh` . After that
 proceed with steps 2 and 3 described above.
+
+For container setups:
+
+- Docker
+
+```bash
+docker ps -a --format '{{.Names}}' | grep -E "sematext-agent|st-agent" | xargs -r docker rm -f
+```
+
+- Swarm
+
+```bash
+docker service rm sematext-agent-docker sematext-agent st-agent
+docker network rm st-agent-net
+```
+
+- Kubernetes
+
+```bash
+kubectl delete ds sematext-agent --ignore-not-found=true
+```
+
+- Helm
+
+```bash
+helm delete st-agent
+```
 
 ## Alerts
 
