@@ -19,7 +19,7 @@ Important:
 
   - To start capturing this information [enable Transaction Tracing](enable) in your App Agent
 
-  - Requires App Agent running in [embedded mode](/monitoring/spm-monitor-javaagent)
+  - Requires App Agent running in [embedded mode](https://sematext.com/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/)
   <div class="video_container">
     <iframe class="video" src="https://www.youtube.com/embed/eoZJmAJKuaQ" frameborder="0" allowfullscreen ></iframe>
   </div>
