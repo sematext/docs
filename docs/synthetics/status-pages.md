@@ -26,6 +26,20 @@ Every status page will have a unique public URL of the format - `https://apps.se
 
 Disabling the status page will block the public access for the status page.
 
+# Custom Domain Setup
+
+To use a custom domain for your status page e.g., status.company.com, you will need to:
+
+ * enter the domain in the Custom domain field
+ * configure your DNS provider
+
+To configure your DNS provider, add a CNAME record for `status.company.com`. The record should point to:
+
+ * `statuspage.us.sematext.com` if your App is created in the Sematext Cloud US region
+ * `statuspage.eu.sematext.com` if your App is created in the Sematext Cloud EU region
+
+The status page should now be available at https://status.company.com.
+
 ## Status Page UI
 
 ![Status Page UI](../images/synthetics/status-page-ui.png)
