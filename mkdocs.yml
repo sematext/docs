@@ -91,6 +91,7 @@ pages:
       - FAQ: experience/faq.md
     - Synthetics:
       - Overview: synthetics/index.md
+      - Getting Started: synthetics/getting-started.md
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
       - Alerts: synthetics/alerts.md
