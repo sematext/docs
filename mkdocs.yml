@@ -50,6 +50,7 @@ pages:
         - Control Plane: logs/discovery/control-plane.md
         - Shipping Log Files: logs/discovery/tailing-log-files.md
         - Shipping Containers Logs: logs/discovery/tailing-containers.md
+      - Correlation: logs/correlation.md
       - Changelog: logs/changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
@@ -65,6 +66,7 @@ pages:
       - Processes: monitoring/processes.md
       - Network Map: monitoring/network-map.md
       - On Demand Profiling: monitoring/on-demand-profiling.md
+      - Correlation: monitoring/correlation.md
       - Tags: monitoring/tags.md
       - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: monitoring/changelog.md
@@ -88,6 +90,7 @@ pages:
       - Browser SDK: agents/browser.md
       - Changelog: experience/changelog.md
       - Sampling: experience/sampling.md
+      - Correlation: experience/correlation.md
       - FAQ: experience/faq.md
     - Synthetics:
       - Overview: synthetics/index.md
@@ -99,6 +102,7 @@ pages:
       - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
+      - Correlation: synthetics/correlation.md
       - FAQ: synthetics/faq.md
     - Tracing:
       - Overview: tracing/index.md
@@ -191,6 +195,7 @@ pages:
       - Adding Events: events/adding.md
       - Fields: events/fields.md
       - Timeline/Histogram: events/timeline.md
+      - Correlation: events/correlation.md
     - Dashboards:
       - Overview: dashboards/index.md
       - Quick Start: dashboards/quick-start.md
