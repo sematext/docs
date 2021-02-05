@@ -11,7 +11,7 @@ You should see the form below:
 <img
   class="content-modal-image"
   alt="Create Synthetics App Form"
-  src="../../images/Synthetics/create-app.png"
+  src="../../images/synthetics/create-app.png"
   title="Create Synthetics App Form"
 />
 
@@ -24,6 +24,6 @@ After clicking Continue you will be take to the next screen where you can create
 <img
   class="content-modal-image"
   alt="Create First Monitor"
-  src="../../images/Synthetics/create-first-monitor.png"
+  src="../../images/synthetics/create-first-monitor.png"
   title="Create First Monitor"
 />
