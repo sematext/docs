@@ -10,8 +10,8 @@ Supported formats:
 
 ### Configuration
 
-```
- output:
+```yaml
+  output:
     module: output-http
     url: http://localhost:8080/events
     format: ldjson
@@ -24,7 +24,7 @@ Supported formats:
     filter:
       field: logSource
       match: sensor.*
- ```
+```
 
 Start Logagent
 
