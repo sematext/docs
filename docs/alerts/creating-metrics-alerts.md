@@ -37,3 +37,15 @@ If you don't want to use a specific threshold value and instead get notified whe
 Notice that the chart changed to help you get a sense of what would constitute an anomalous value. In this case, the dots outside the gray confidence interval.
 
 The confidence interval shown in the preview is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
+
+# Transformation
+
+Transformations are used to modify metrics using mathematical expressions and functions. For example, imagine you want to get alerted when both `os.cpu.user` and `os.cpu.system` together exceed some threshold or become anomalous.  You would then transform them into a single dataseries by using an expression like this:
+
+```
+os.cpu.user + os.cpu.system
+```
+
+And then you would create an alert on this new data series.
+
+Read about [Transformations](../dashboards/chart-builder/#transformation) to learn more about transformations, functions, and expressions used to perform transformations.

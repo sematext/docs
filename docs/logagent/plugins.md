@@ -51,7 +51,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
 | [output-clickhouse](output-plugin-clickhouse)       | output                   | Sends parsed messages to Yandex ClickHouse DB |
 | [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
-| [output-http](output-plugin-clickhouse)       | output                   | Sends parsed messages via HTTP or HTTPS |
+| [output-http](output-plugin-http)       | output                   | Sends parsed messages via HTTP or HTTPS |
 | [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
