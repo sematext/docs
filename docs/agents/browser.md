@@ -11,7 +11,7 @@ Sematext [Browser SDK](https://github.com/sematext/browser-sdk) is an open-sourc
  - [Element timing](/experience/element-timing/)
  - [Long tasks](/experience/longtasks/)
  - [User sessions](/experience/user-identification/)
- - [On-page transactions](/experience/on-page-transaction/)
+ - [On-page transactions](/experience/measurements/)
 
 ![Sematext Experience Overview](../images/experience/overview.png)
 
