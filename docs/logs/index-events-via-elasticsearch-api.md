@@ -52,7 +52,7 @@ would have the current timestamp and will be indexed in the App whose token is s
 Typically, you'd put events with different structures in different
 Apps. For example, syslog messages in one App, Apache logs in another App, etc. See [this FAQ entry](https://sematext.com/docs/logs/faq/#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that).
 
-For performance reasons we highly recommend using the [Bulk API](http://www.elasticsearch.org/guide/reference/api/bulk.html),
+For performance reasons we highly recommend using the [Bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html),
 because it allows you to send multiple events with a single request. For
 example, the following request sends three events:
 
