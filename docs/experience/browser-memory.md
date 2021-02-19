@@ -36,4 +36,4 @@ Sematext Experience [Browser SDK](https://sematext.com/docs/agents/browser/) use
 />
 
 ## Supported Browsers
-At the moment, the only web browser that supports memory usage measurements is Chrome. The memory usage measurement feature was under Chrome Origin Trials until [13th January 2021](https://web.dev/origin-trials/) and will be available to all users starting with [Chrome 89](https://www.chromestatus.com/feature/5685965186138112). 
+At the moment, the only web browser that supports memory usage measurements is Chrome. The memory usage measurement feature was under Chrome Origin Trials until [13th January 2021](https://web.dev/origin-trials/) and is available to all users starting with [Chrome 89](https://www.chromestatus.com/feature/5685965186138112). 
