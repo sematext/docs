@@ -215,6 +215,10 @@ and [Sending AWS Cloudwatch Logs to Logsene](https://sematext.com/blog/sending-a
 for detailed description of how to do
 this.
 
+### Can I ship logs from my frontend?
+
+Yes, you can use [logsene-js](https://github.com/sematext/logsene-js) for that, but use a write-only token for your Logs App.  Using a write-only token ensures that even though your token will be visible in the page source, one won't be able to use it to retrieve/search/get your logs.  Tokens can be created and revoked in Logs App settings.
+
 ### Why is it that I can forward logs with rsyslog via TCP or UDP, but not via RELP?
 
 You probably need to install the [omrelp module](http://www.rsyslog.com/doc/omrelp.html) first. If you have
