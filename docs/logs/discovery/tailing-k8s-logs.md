@@ -9,7 +9,7 @@ To start shipping the logs that are produced by the specific service group or pr
 
 ![Kubernetes Log Shipping](images/k8s-setup-log-shipping.png)
 
-This will bring in the following flyout panel where you can configure Kubernetes log shipping:
+This will display a panel where you can configure Kubernetes log shipping:
 
 ![Enable Container Logs](images/kubernetes-logs-discovery-setup.png)
 
@@ -19,6 +19,6 @@ This will bring in the following flyout panel where you can configure Kubernetes
 
 ## Filtering logs by pod labels
 
-For every container that belongs to the service or process group, you can narrow down logs collection by pod labels. Both, label's keys and values are obtained for each pod that contains one or multiple containers identified by the service type or process name.
+For every container that belongs to the service or process group, you can narrow down logs collection by pod labels. Both the label's keys and values are obtained for each pod that contains one or multiple containers identified by the service type or process name.
 
 ![Filter By Pod Labels](images/kubernetes-logs-discovery-labels.png)
