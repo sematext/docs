@@ -70,6 +70,10 @@ sudo zypper in sematext-agent
  </div>
 </div>
 
+
+Note: if you have SELinux enabled, see [How can I get the Agent running when SELinux is enabled](/monitoring/spm-faq/#how-do-i-get-the-agent-running-when-selinux-is-enabled).
+
+
 After the install completes, set your Infra App token by running the command below:
 
 ```

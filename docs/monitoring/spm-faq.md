@@ -584,6 +584,37 @@ docker run -d  --restart always --memory 168m --memory-swap=236m --privileged -P
 ### What's the CPU usage overhead for Sematext Agent running in a container?
 Generally under 1%.
 
+## Agent installation
+
+### How can I get the Agent running when SELinux is enabled?
+With SELinux enabled, starting the agent with `sudo service sematext-agent restart` may result in an error message like:
+
+`Job for sematext-agent.service failed because the control process exited with error code.`
+
+Some of the Agent processes may not be started as a consequence. Exact error can depend on your SELinux settings and it can
+be found in `/var/log/audit/audit.log`. Using `audit2allow` utility, it is possible to generate policy package file that can
+be activated to remove restrictions that caused the error. For example:
+
+`sudo grep -a AVC /var/log/audit/audit.log | grep spm-monitor | audit2allow -M sematext-systemd-selinux`
+
+You can review the policy stored in type enforcement file (in this case named `sematext-systemd-selinux.te`) to see whether it suits your security guidelines. To activate this policy,
+run:
+
+`semodule -i sematext-systemd-selinux.pp`
+
+If you decide to make adjustments in the type enforcement file, it should first be compiled into policy module:
+
+`checkmodule -M -m -o sematext-systemd-selinux.mod sematext-systemd-selinux.te`
+
+and then compile into policy package:
+
+`semodule_package -o sematext-systemd-selinux.pp -m sematext-systemd-selinux.mod`
+
+which can be activated using previously mentioned `semodule -i` command.
+
+Note: if SELinux is deliberately enabled on your machines, make sure that policy package being imported is in line with your security guidelines.
+
+
 ## Alerts
 
 ### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
