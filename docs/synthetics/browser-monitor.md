@@ -64,7 +64,7 @@ You can filter the metrics based on locations and aggregate the results by avera
 
 ![Synthetics Web Vitals](../images/synthetics/web-vitals.png)
 
-### Waterfall chart
+## Waterfall chart
 
 For every run, the browser monitor collects all the resources fetched during the run. These resources are shown in a graphical waterfall chart in the individual run details page. The metrics shown for each resource are:
 
