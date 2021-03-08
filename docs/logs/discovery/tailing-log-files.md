@@ -20,8 +20,10 @@ The log shipper will automatically start tailing any log file that pertains to t
 To narrow down which log files should be tailed, you can define include/exclude [glob](https://en.wikipedia.org/wiki/Glob_(programming)) patterns. The following glob wildcards are supported:
 
 - `*` matches any sequence of non-separator characters
+- `**` matches any sequence of characters, including directory separator character
 - `?` matches any single non-separator character
 - `[0-9]` matches character ranges
+- `{log,txt}` - matches any of comma separated patterns
 
  When defining glob patterns, you can either specify include and/or exclude glob expressions. Exclude glob patterns take precedence over include patterns. This means that a log file that matches an include pattern will not be shipped if it also matches an exclude pattern.
 
