@@ -1,6 +1,10 @@
 title: Shipping Container Logs
 description: Shipping Container Log Sources
 
+Container Logs Discovery groups the containers by the type of service running inside the container. When the service type isn't recognized, the process name is shown instead. 
+
+![Container Logs Discovery](images/container-logs-discovery.png)
+
 To enable automatic container logs shipping, start by clicking on the `Set Up` button.
 
 ![Setup Log Files](images/setup-container-logs.png)
@@ -13,7 +17,7 @@ This will open the following flyout panel where you can configure container log 
 2. Select the destination Logs App. If the Logs App doesn't exist, you'll be able to create one from the same screen
 3. Click the `Save Changes` button
 
-Log shipping is configured on a per container image basis. This implies that any freshly created containers that match this image name will automatically have their logs shipped to Sematext Cloud.
+Log shipping is configured on a service/process basis. This implies that any freshly created containers that match the service type or process name will automatically have their logs shipped to Sematext Cloud.
 
 ## Filtering container logs by labels
 
