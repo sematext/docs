@@ -33,9 +33,9 @@ As you're inputting the glob pattern, you'll be automatically getting feedback o
 
 ![Matched Hints](images/matched-globs.png)
 
-Going back to the main table, you'll notice two kinds of visual indicators that signal whether a particular log file source is included or excluded by the glob expression. By hovering over the `✓` or `✕` icons, you'll be able to figure out exact glob pattern(s) matching the log file. If the log file is excluded from tailing, it is grayed out in the table row.
+Going back to the main table, you'll notice two kinds of visual indicators that signal whether a particular log file source is included or excluded by the glob expression. By hovering over the `✓` or `✕` icons, you'll be able to figure out exact glob pattern(s) matching the log file. If the log file is excluded from shipping, it is grayed out in the table row.
 
-The orange/yellow circles reflect log file tailing state. If you hover over them, the count of log files that are actually being shipped is shown. The red state indicates that some log file instances might not be tailed by the log shipper.
+The orange/yellow circles reflect log file shipping state. If you hover over them, the count of log files that are configured for shipping is shown.
 
 ![Globs Main Table](images/globs-main-table.png)
 
