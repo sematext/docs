@@ -51,6 +51,7 @@ pages:
         - Shipping Log Files: logs/discovery/tailing-log-files.md
         - Shipping Containers Logs: logs/discovery/tailing-containers.md
         - Shipping Kubernetes Logs: logs/discovery/tailing-k8s-logs.md
+        - Shipping Journald Logs: logs/discovery/tailing-journald-logs.md
       - Correlation: logs/correlation.md
       - Changelog: logs/changelog.md
       - FAQ: logs/faq.md
