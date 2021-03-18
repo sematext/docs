@@ -5,7 +5,7 @@ Container Logs Discovery groups the containers by the type of service running in
 
 ![Container Logs Discovery](images/container-logs-discovery.png)
 
-To enable automatic container logs shipping, start by clicking on the `Set Up` button.
+To enable automatic container logs shipping head to the [Logs Discovery UI](https://apps.sematext.com/ui/discovery/) (or [EU Discovery](https://apps.eu.sematext.com/ui/discovery/) if you use Sematext EU), and start by clicking on the `Set Up` button for the service whose container logs you would like to ship.
 
 ![Setup Log Files](images/setup-container-logs.png)
 
