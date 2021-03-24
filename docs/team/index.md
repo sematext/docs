@@ -26,7 +26,10 @@ And a fourth option:
 ## Account Members vs. App Guests
 Account members and App guests are not exclusive. You can use both of
 these two access types at the same time. You could share your account with
-some users, and share specific Apps with other users.
+some users, and share specific Apps with other users.  However, if you invite
+another user to your account with an ADMIN role there is no point in also 
+inviting them to any of your Apps - they will already have access to them just
+by switching into your account.
 
 ## Account Members
 By [inviting a user to your account](./account-members), you invite them to your **whole account**, 
@@ -42,7 +45,6 @@ Account Sharing is very convenient because as soon as a new
 Sematext App is added to your account or new Dashboard is created, all
 users added to your account get access to it. Of course, the level of
 access depends on the role you assigned to each person.
-
 
 ## App Guests
 [App Guests](./app-guests) is **restricted only to a particular App**. Nothing besides the 
@@ -63,12 +65,14 @@ ownership of an App, use the [Transfer Apps](./transfer-apps) feature. Click the
 button to open the side modal, select an App, click **Transfer to...** to proceed, enter the email of the
 user you want to transfer the App to, and hit **Transfer Ownership**.
 
+## Team Account
+If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email.  Instead, if you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone else who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that account.  This way all assets created in Sematext remain in this team account and when individuals leave the company their access to this account can easily be removed with just a few clicks. 
+
 ## Typical use of Roles in an Organization or Team
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
 This account might be considered [a _parent_ account](./user-roles) for your whole organization or team.  
 
-- [**Owner**](./user-roles/#owner) - the person who created the account would be its `OWNER`
+- [**Owner**](./user-roles/#owner) - that is the account itself and its role is called `OWNER`
 - [**Admin**](./user-roles/#admin) - invited users can be given the `ADMIN` role, which gives them read, write, and invite rights 
 - [**User**](./user-roles/#user) - the `USER` role grants read rights and limited write rights
-- [**Billing Admin**](./user-roles/#billing-admin) - the `BILLING_ADMIN` is able to define, edit, and delete credit cards and choose plans to be used for Apps in the 
-account.
+- [**Billing Admin**](./user-roles/#billing-admin) - the `BILLING_ADMIN` is able to define, edit, and delete credit cards and choose plans to be used for Apps in the account.
