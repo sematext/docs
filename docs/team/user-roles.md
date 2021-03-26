@@ -2,7 +2,7 @@ title: Sematext User Roles
 description: Inviting team members to your account means they get access to all your Apps, dashboards, notification hooks, alert rules, and everything else!
 
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
-When using Sematext as a team we recommend creating a [team account](../#team-account).  Such an account can then serve as a _parent_ account for your whole organization or team.  
+When using Sematext as a team we recommend creating a [team account](../team/#team-account).  Such an account can then serve as a _parent_ account for your whole organization or team.  
 
 ### Owner
 Since the person who created the account would be its `OWNER`, this person
