@@ -3,7 +3,7 @@ description: Logagent message consumer plugin to ZeroMQ. Logagent is light-weigh
 
 ## Logagent Plugin: ZeroMQ
 
-Output plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer using ZeroMQ.
+Output plugin for [@sematext/logagent](https://sematext.com/logagent/). The plugin acts as message consumer using ZeroMQ.
 
 Output plugins support three types of messaging patterns
  

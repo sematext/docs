@@ -151,7 +151,7 @@ kubectl create -f ibm-cloud-logagent-ds.yml
 The following configuration will activate Logagent on every node in the Mesos cluster. Please note that you have to specify the number of Mesos nodes (instances) and Logs App Token. An example call to the Marathon API:
 
 ```
-curl -XPOST -H "Content-type: application/json" http://your_marathon_server:8080/v2/apps  -d '
+curl -XPOST -H "Content-type: application/json" https://your_marathon_server:8080/v2/apps  -d '
 {
   "container": {
     "type": "DOCKER",
@@ -469,7 +469,7 @@ In addition, you can define your own patterns for any log format you need to be 
 - Configuration file in a mounted volume: ```-v PATH_TO_YOUR_FILE:/etc/logagent/patterns.yml```
   - Kubernetes ConfigMap example: [Template for patterns.yml as ConfigMap](https://github.com/sematext/logagent-js/blob/master/kubernetes/configMapExample.yml)
 - Content of the configuration file in an environment variable: ```-e LOGAGENT_PATTERNS=”$(cat patterns.yml)”```
-- Set patterns URL as environment variable: ```-e PATTERNS_URL=http://yourserver/patterns.yml```
+- Set patterns URL as environment variable: ```-e PATTERNS_URL=https://yourserver/patterns.yml```
 
 The file format for the patterns.yml file is based on JS-YAML, in short:
 
@@ -499,7 +499,7 @@ This example shows a few very interesting features:
 - Automatic Geo-IP lookups including automatic updates for Maxmind Geo-IP lite database
 - Post-processing of parsed logs with JavaScript functions
 
-The component for detecting and parsing log messages — [logagent-js](http://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
+The component for detecting and parsing log messages — [logagent-js](https://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
 
 
 ### Log Routing

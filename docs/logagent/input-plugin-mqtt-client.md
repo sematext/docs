@@ -3,7 +3,7 @@ description: Logagent features modular logging architecture framework where each
 
 ## Input Plugin: MQTT Client
 
-Input plugin for [@sematext/logagent](http://sematext.com/logagent/). This plugin subscribes to MQTT topics. 
+Input plugin for [@sematext/logagent](https://sematext.com/logagent/). This plugin subscribes to MQTT topics. 
 
 ### Configuration
 
