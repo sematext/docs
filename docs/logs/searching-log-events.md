@@ -12,4 +12,4 @@ Logs Management App comes with its own UI, which integrates nicely with other Se
 You can also use [Kibana](kibana)  or deploy your own UI or custom scripts.
 
 Besides web UI, there's also [Logsene CLI](https://www.npmjs.com/package/logsene-cli), a command line interface for searching through logs, with the ability to pipe the output to `awk`, `sed`, `cut`, `sort` and other useful shell commands.
-See [Logsene CLI Introduction](http://blog.sematext.com/2015/07/07/logsene-cli/).
+See [Logsene CLI Introduction](https://blog.sematext.com/2015/07/07/logsene-cli/).

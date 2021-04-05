@@ -3,7 +3,7 @@ description: Event stream captures all your key IT and operations such as server
 
 ### Events: What, Why, How?
 
-[Sematext Cloud](http://sematext.com/cloud/) can graph not only
+[Sematext Cloud](https://sematext.com/cloud/) can graph not only
 performance [metrics](../monitoring) or [logs](../logs), but also events. Such events 
 may represent what is happening with a server or cluster, with an application, etc.
 Think application or server restarts, builds, deployments, alerts, etc.
@@ -29,7 +29,7 @@ or client to post, get, and search events.
 
 ### Searching Events
 
-[Sematext Cloud](http://sematext.com/cloud/) lets you find events, metrics,
+[Sematext Cloud](https://sematext.com/cloud/) lets you find events, metrics,
 and logs from a specific time period. Additionally, the event chart has
 a search box where you can further narrow down events to only those that match
 the input query. You can search on any event field you included in the event when posting
@@ -37,7 +37,7 @@ it.  The query syntax is the same as the [logs search syntax](/logs/search-synta
 
 ### Event Search API
 
-Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
+Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
 events can be searched and retrieved programmatically via
 HTTP(S), using curl or any other Elasticsearch client.  The API endpoint
 is:
@@ -54,7 +54,7 @@ events will be limited to the type specified in the URI:
 https://event-receiver.sematext.com/APP_TOKEN/event
 ```
 
-The simplest way to run a query is using [URI search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
+The simplest way to run a query is using [URI search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
 like this:
 
 ```bash
@@ -65,7 +65,7 @@ https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search?
 
 For more info about ```apiKey``` [see](../logs/search-through-the-elasticsearch-api) .
 
-More complex queries are available when using [request body search](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
+More complex queries are available when using [request body search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
 e.g.:
 
 ```json
@@ -82,4 +82,4 @@ curl -XGET "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 
 This example shows how to use one of the simplest query types: 
 ```query_string```. To see which other query types are available, please
-check [Elasticsearch docs](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).
+check [Elasticsearch docs](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).

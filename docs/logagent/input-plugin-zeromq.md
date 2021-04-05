@@ -3,7 +3,7 @@ description: Logagent features modular logging architecture framework where each
 
 ## Logagent Plugin: ZeroMQ
 
-Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as messages consumer using ZeroMQ.
+Input plugin for [@sematext/logagent](https://sematext.com/logagent/). The plugin acts as messages consumer using ZeroMQ.
 
 Input plugins support three types of messaging patterns:
  

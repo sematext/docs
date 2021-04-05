@@ -10,7 +10,7 @@ can contain the following set of fields, most of which are optional:
 
 Field Name | Field Type | Required | Notes 
 -----------|------------|----------|-------
-```timestamp``` | date       | no       | Time when event happened (if not specified,current time will be assumed). The format is [dateOptionalTime](http://joda-time.sourceforge.netapi-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser) e.g.: ```2014-02-17T21:37:04+0100``` or```  2014-02-17T14:15:01.534471+02:00```.
+```timestamp``` | date       | no       | Time when event happened (if not specified,current time will be assumed). The format is [dateOptionalTime](https://joda-time.sourceforge.netapi-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser) e.g.: ```2014-02-17T21:37:04+0100``` or```  2014-02-17T14:15:01.534471+02:00```.
 ```type``` | string | yes | Event type which could be e.g. ```alert```, ```deployment```, etc. Events are later grouped in timeline based on event type which significantly improves visibility.
 ```message``` | string       | yes       | Short description of event, e.g. ```Elasticsearch node03 onhost somehost06 restarted```. This is a default search field in Sematext UI, so it is good to keep it concise, but search-friendly. Data in this field can be stored in Markdown format to make your messages more pretty and easier to read. For more details [see](#markdown-in-events).
 ```title``` | string       | no       | Event title, can be used as a short label for event, e.g. ```Elasticsearch restart```.
@@ -21,7 +21,7 @@ Field Name | Field Type | Required | Notes
 
 ### Types
 
-[Sematext Cloud](http://sematext.com/cloud/) helps you manage your events better and
+[Sematext Cloud](https://sematext.com/cloud/) helps you manage your events better and
 distinguish between different kinds of events when you provide event type as a ```JSON```
 field. There are no limitations to the number of possible values of ```type``` field. 
 To get the most value out of typed events we strongly suggest using a
@@ -34,7 +34,7 @@ recommended types: ```alert```, ```server-info```, ```deployment```, ```infra```
 Note: when using curl to call the Events API, you may experience **"SSL certificate
 problem"** errors. The reason is that curl doesn't bundle any CA certs
 any more.  For more info see
-[this](http://curl.haxx.se/docs/sslcerts.html). Regardless of curl
+[this](https://curl.haxx.se/docs/sslcerts.html). Regardless of curl
 errors, HTTPS communication should be successful.
 
 
@@ -63,7 +63,7 @@ An example below. Notice message field which contains a text formatted with Mark
 ```json
 {
   "title": "Hello Sematext",
-  "message": "### Hello Sematext\nClick [link](http://sematext.com/ \"Sematext\") \n",
+  "message": "### Hello Sematext\nClick [link](https://sematext.com/ \"Sematext\") \n",
   "tags": ["msg", "env:dev"],
   "severity": "info"
 }

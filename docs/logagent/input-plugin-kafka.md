@@ -3,7 +3,7 @@ description: Logagent features modular logging architecture framework where each
 
 ## Input Plugin: Apache Kafka
 
-Input plugin for [@sematext/logagent](http://sematext.com/logagent/). The plugin acts as message consumer for Apache Kafka.
+Input plugin for [@sematext/logagent](https://sematext.com/logagent/). The plugin acts as message consumer for Apache Kafka.
 
 ### Installation 
 

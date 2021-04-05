@@ -149,7 +149,7 @@ lp.parseLine('log message', 'source name', function (err, data) {
 
 ## How to test log patterns? 
 
-Use the command line tool 'logagent' to test patterns or convert logs from text to JSON. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Sematext](http://sematext.com/logsene) or Elasticsearch.
+Use the command line tool 'logagent' to test patterns or convert logs from text to JSON. It reads from stdin and outputs line delimited JSON (or pretty JSON or YAML) to the console. In addition, it can forward the parsed objects directly to [Sematext](https://sematext.com/logsene) or Elasticsearch.
 
 Test your patterns:
 ```

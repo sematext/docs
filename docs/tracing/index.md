@@ -38,6 +38,6 @@ running applications and troubleshoot performance issues.
 
 ## Resources
 
-  - <http://blog.sematext.com/blog/transaction-tracing-performance-monitoring/>
-  - <http://blog.sematext.com/blog/transaction-tracing-reports/>
-  - <http://blog.sematext.com/blog/introducing-appmap/>
+  - <https://blog.sematext.com/blog/transaction-tracing-performance-monitoring/>
+  - <https://blog.sematext.com/blog/transaction-tracing-reports/>
+  - <https://blog.sematext.com/blog/introducing-appmap/>

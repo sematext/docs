@@ -136,7 +136,7 @@ output:
 
 ### How do I ship only error logs?
 
-Use the ["grep" input filter](http://sematext.com/docs/logagent/input-filter-grep/): 
+Use the ["grep" input filter](https://sematext.com/docs/logagent/input-filter-grep/): 
 
 ```
 input: 
@@ -162,7 +162,7 @@ output:
 
 ### How do I drop logs that match a certain pattern?
 
-Use the ["grep" input filter](http://sematext.com/docs/logagent/input-filter-grep/): 
+Use the ["grep" input filter](https://sematext.com/docs/logagent/input-filter-grep/): 
 
 ```
 input: 

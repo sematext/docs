@@ -31,7 +31,7 @@ Each worker node needs to have:
 - Kubernetes 1.12.x or newer - https://kubernetes.io
 - Helm v2.15.x (package manager for Kubernetes) - https://helm.sh
 
-Please [contact us](http://sematext.com/contact) and we'll provide you
+Please [contact us](https://sematext.com/contact) and we'll provide you
 with the evaluation copy of Sematext Enterprise for your organization.
 
 <!-- For more information check Sematext Enterprise [FAQ]() and [On-premises vs SaaS deployment]() pages. -->

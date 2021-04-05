@@ -15,7 +15,7 @@ sudo npm i -g @sematext/logagent
 
 #### 1. Register for a free account at [Sematext.com](https://apps.sematext.com/ui/registration)
 
-#### 2. [Create a Logs App](https://apps.sematext.com/ui/logs?action=SHOW_CREATE_LOGS) to get a Logs Token for [Sematext Logs](http://www.sematext.com/logsene/)
+#### 2. [Create a Logs App](https://apps.sematext.com/ui/logs?action=SHOW_CREATE_LOGS) to get a Logs Token for [Sematext Logs](https://www.sematext.com/logsene/)
 
 #### 3. Run Logagent as System Service
 

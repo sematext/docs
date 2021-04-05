@@ -42,6 +42,6 @@ Insights these reports provide:
 
   - Top 10 slowest individual operations and drill-in details
 
-  - Integration with [Transaction Tracing](http://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
+  - Integration with [Transaction Tracing](https://blog.sematext.com/2015/08/03/transaction-tracing-performance-monitoring/) allows
     correlation of a specific slow operation with the actual
     transaction/request that triggered it
