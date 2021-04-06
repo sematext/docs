@@ -18,7 +18,7 @@ which you want to change the mode). Set:
 3.  Restart Sematext Agent:
 
     ``` bash
-    sudo /etc/init.d/spm-monitor restart
+    sudo service sematext-agent restart
     ```
 
 4. restart the service you are monitoring
@@ -41,7 +41,7 @@ want to change the mode). Set:
 3. Restart Sematext Agent:
 
     ``` bash
-    sudo /etc/init.d/spm-monitor restart
+    sudo service sematext-agent restart
     ```
 
 4. restart the service you are monitoring

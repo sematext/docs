@@ -57,7 +57,7 @@ SPM_MONITOR_LOGGING_LEVEL=reduced
 
 After you have made the changes, restart your Sematext Agent.
 
-```sudo service spm-monitor restart```
+```sudo service sematext-agent restart```
 
 If you are running Embedded App Agents, restart your application/java process.
 
@@ -82,7 +82,7 @@ recommend setting it to 30000. With bigger values it is possible some
 After you have made the changes, restart your Sematext Agent.
 
 
-```sudo service spm-monitor restart```
+```sudo service sematext-agent restart```
 
 If you are running Embedded App Agents, restart your application/java process.
 
@@ -256,7 +256,7 @@ SPM_MONITOR_JAR="/opt/spm/spm-monitor/lib/spm-monitor-generic.jar:/path/to/your/
 SPM_MONITOR_JMX_PARAMS="-Dspm.remote.jmx.url=service:jmx:remote+http://localhost:9990"
 ```
 
--  Restart spm-monitor with: ```sudo service spm-monitor restart```
+-  Restart spm-monitor with: ```sudo service sematext-agent restart```
 
 At this point the metrics will start appearing in charts. If they don't,
 run the diagnostics script to get fresh output of errors:
@@ -283,7 +283,7 @@ to get around this:
 SPM_MONITOR_USER="wildfly"
 ```
 
-After that restart Sematext Agent with: `sudo service spm-monitor
+After that restart Sematext Agent with: `sudo service sematext-agent
     restart`
 
 2.  Change permissions for the problematic directory, adjusting the path
@@ -363,7 +363,7 @@ After that restart the monitor to apply the change. In case of
 standalone agent, run:
 
 ``` bash
-sudo service spm-monitor restart
+sudo service sematext-agent restart
 ```
 
 And in case of the Embedded App Agent, just restart the service that has this
@@ -460,7 +460,7 @@ After that is done, also do:
   - if you are using standalone App Agent, restart it with:
 
 ``` bash
-sudo service spm-monitor restart
+sudo service sematext-agent restart
 ```
 
 **Note**: In case of **Memcached**, **Apache** and plain **Nginx** -
@@ -891,7 +891,7 @@ Here are a few things to check and do:
 2.  Check if system time is correct. If not, you should adjust the time,
     restart the Sematext Agent with:
 
-        sudo service spm-monitor restart
+        sudo service sematext-agent restart
 
     and restart any other Embedded App Agents by
     restarting your server which is being monitored.
@@ -935,7 +935,7 @@ After 3 PM this server should disappear from the Hosts filter.
 
 Here are a few things to check and do:
 
-1.  Make sure Sematext Agent is running: sudo service spm-monitor restart
+1.  Make sure Sematext Agent is running: sudo service sematext-agent restart
 2.  Make sure disk is not full: `df -h`
 3.  Make sure maximal open files limit was not reached: see **"I
     registered for Sematext Monitoring more than 5 minutes ago and I don't see any of my
@@ -951,7 +951,7 @@ as free, while df does not include reserved disk space by default.
 Simply restart Sematext Agent:
 
 ``` bash
-sudo service spm-monitor restart
+sudo service sematext-agent restart
 ```
 
 and restart any process which is using the Embedded version of
@@ -1009,7 +1009,7 @@ hostname_alias=web1.production.
 
 After that, restart Sematext Agent with:
 
-```sudo service spm-monitor restart```
+```sudo service sematext-agent restart```
 
 and restart any Java process which was using the Embedded
 App Agent.

@@ -92,7 +92,7 @@ To collect user-defined cloud tags from AWS, Azure or GCE environment you need t
 
 Cloud tags collection is enabled by default.  To disable Cloud tags
 collection set `cloud.metadata-enabled` to `false` in `/opt/spm/properties/st-agent.yml` and
-restart spm-monitor using `sudo service spm-monitor restart`.
+restart Sematext Agent using `sudo service sematext-agent restart`.
 
 ## Process Tags
 

@@ -13,7 +13,7 @@ and allows access to them (e.g. via JMX, HTTP, JDBC...)
 After that, the App Agent can be (re)started with:
 
 ``` bash
-sudo service spm-monitor restart
+sudo service sematext-agent restart
 ```
 
 ## JMX Setups - How to Configure the Monitored App/Server
@@ -383,5 +383,5 @@ server, you may want to add the said option to your application/server
 being monitored and restart it. After that, also restart the agent:
 
 ``` bash
-sudo service spm-monitor restart
+sudo service sematext-agent restart
 ```

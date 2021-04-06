@@ -16,5 +16,5 @@ The following properties can be changed:
 Sematext Agent needs to be restarted after any `st-agent.yml`changes:
 
 ``` bash
-sudo service spm-monitor restart
+sudo service sematext-agent restart
 ```
