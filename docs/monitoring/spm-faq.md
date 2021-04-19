@@ -670,6 +670,12 @@ Yes. You can update the proxy settings using the following command:
 sudo bash /opt/spm/bin/setup-env --proxy-host "HOST" --proxy-port "PORT" --proxy-user "USER" --proxy-password "PASSWORD"
 ```
 
+After this, run the following command to apply the settings:
+
+```
+sudo service sematext-agent restart 
+```
+
 ### Can I change the region settings for the Sematext Agent installation?
 
 Yes. By default the region is set to US. You can change it to EU using:
