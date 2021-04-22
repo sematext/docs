@@ -33,8 +33,12 @@ One of the key things when working with time based data is the timestamp that re
         1444128321.426
         2015-11-13T09:21:45.298
 
+6. NGINX non-ISO date format, for example:
+        
+        22/Apr/2016:14:40:13 +0200
+
 **Please note:**
 
   - if `@timestamp` field is not provided Sematext will set `@timestamp` to the time when the event is received by Sematext.
-  - if time specified in `@timestamp` does not include timezone
-    information, Logs App will assume UTC.
+  - if the `@timestamp` field is not parsable by Sematext, the `@timestamp` field will be set to teh time when the event is received by Sematext.
+  - if time specified in `@timestamp` does not include timezone information, Logs App will assume UTC.

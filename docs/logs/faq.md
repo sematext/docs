@@ -614,6 +614,16 @@ example, if you send logs that are "2 hours ahead of real time" they
 will be accepted, but will not be displayed until 2 hours
 later.
 
+### What happens if I try to send data with @timestamp in a not supported format?
+
+If your log events are sent to Sematext Cloud with a format that is not supported our 
+platform will try to parse the **time** field if it is present and if not, it will set 
+the **@timestamp** field to the current date and time and set the timezone to UTC.
+
+See [Supported Date Formats](supported-date-formats) for
+more examples of supported date and time formats.
+
+
 ## Alerts
 
 ### What are Logs App Alerts?
