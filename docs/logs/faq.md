@@ -617,8 +617,7 @@ later.
 ### What happens if I try to send data with @timestamp in a not supported format?
 
 If your log events are sent to Sematext Cloud with a format that is not supported our 
-platform will try to parse the **time** field if it is present and if not, it will set 
-the **@timestamp** field to the current date and time and set the timezone to UTC.
+platform the **@timestamp** field value will be set to the current date and time using the UTC timezone.
 
 See [Supported Date Formats](supported-date-formats) for
 more examples of supported date and time formats.
