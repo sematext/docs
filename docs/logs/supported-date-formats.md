@@ -41,4 +41,4 @@ One of the key things when working with time based data is the timestamp that re
 
   - if `@timestamp` field is not provided Sematext will set `@timestamp` to the time when the event is received by Sematext.
   - if the `@timestamp` field is not parsable by Sematext, the `@timestamp` field will be set to teh time when the event is received by Sematext.
-  - if time specified in `@timestamp` does not include timezone information, Logs App will assume UTC.
+  - if time specified in `@timestamp` does not include timezone information, the Logs App will assume UTC.
