@@ -19,7 +19,7 @@ See: [sematext/logagent](https://hub.docker.com/r/sematext/logagent/) on Docker 
 ## Getting started
 
 To ship logs to Sematext you will need a Logs App Token.
-If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/logs?action=SHOW_CREATE_LOGS).
+If you don't have Logs Apps yet, you can [create Apps now](https://apps.sematext.com/ui/logs-create/app/logsene).
 
 The Logagent container can be configured through the following environment variables:
 

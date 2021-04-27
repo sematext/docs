@@ -3,8 +3,8 @@ description: Getting started with Sematext Experience real user monitoring
 
 To start monitoring your website, create an account in Sematext Cloud in either EU or US and then:
 
- * [Click here](https://apps.sematext.com/ui/rum?action=SHOW_CREATE_RUM) to create the App in US data center
- * OR [click here](https://apps.eu.sematext.com/ui/rum?action=SHOW_CREATE_RUM) to create the App in EU data center
+ * [Click here](https://apps.sematext.com/ui/rum-create/app/rum) to create the App in US data center
+ * OR [click here](https://apps.eu.sematext.com/ui/rum-create/app/rum) to create the App in EU data center
 
 You should see the form below:
 
