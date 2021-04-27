@@ -3,8 +3,8 @@ description: Getting started with Sematext Synthetics monitoring
 
 To start monitoring your website OR API, create an account in Sematext Cloud in either EU or US and then:
 
- * [Click here](https://apps.sematext.com/ui/synthetics?action=SHOW_CREATE_SYNTHETICS) to create the App in US data center
- * OR [click here](https://apps.eu.sematext.com/ui/synthetics?action=SHOW_CREATE_SYNTHETICS) to create the App in EU data center
+ * [Click here](https://apps.sematext.com/ui/synthetics-create/app/Synthetics) to create the App in US data center
+ * OR [click here](https://apps.eu.sematext.com/ui/synthetics-create/app/Synthetics) to create the App in EU data center
 
 You should see the form below:
 
