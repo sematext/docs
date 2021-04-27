@@ -1016,9 +1016,12 @@ Yes, you can obfuscate or alias hostnames. This lets you:
     cryptic (e.g. have Sematext show "my-solr-host1" instead of
     "ip-12-123-321-123")
 
-To achieve this, after Sematext Agent is installed, open
+How this is done depends on the environment in which you've deployed Sematext Agent.
+In container environments (Kubernetes, Docker Swarm, etc.) set the hostname alias using the HOSTNAME_ALIAS environment variable.  This needs to be set before starting the Sematext Agent container.
+
+In non-container environments, after Sematext Agent is installed, open
 `/opt/spm/properties/agent.properties` file and just add desired
-hostname to the value of property `hostname_alias`, e.g.
+hostname as the value of the `hostname_alias` property, e.g.
 
 ``` properties
 hostname_alias=web1.production.
