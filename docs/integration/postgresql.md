@@ -1,9 +1,55 @@
 title: PostgreSQL Monitoring Integration
 description: Comprehensive view of your database’s health and performance with Sematext PostgreSQL monitoring integration. Our infrastructure monitoring tools provide real-time visibility into the performance and availability of various PostgreSQL databases metrics. Use built-in reports and dashboards, and identify and investigate PostgreSQL database server issues before they become incidents
 
-## Integration
+Use the Sematext PostgreSQL Monitoring integration to check on your PostgreSQL metrics. From number of rows and connections to index and function-specific metrics, all the relevant stats are collected and displayed in built-in dashboards:
 
-- Instructions: [https://apps.sematext.com/ui/howto/postgresql/overview](https://apps.sematext.com/ui/howto/postgresql/overview)
+<img
+  class="content-modal-image"
+  alt="PostgreSQL Monitoring Overview"
+  src="../../images/agents/postgresql_monitoring_overview.png"
+  title="PostgreSQL Monitoring Overview"
+/>
+
+Be sure to check out the [PostgreSQL Logs integration](./postgresql-logs.md) as well, to get a complete view on PostgreSQL. For example, if you see a spike in number of rows fetched, you can check logs to see which queries fetch too many rows. A concrete example of doing that can be found in [this article](https://sematext.com/blog/postgresql-slow-queries/).
+
+## Agent Install
+
+You can find the [complete instructions](https://apps.sematext.com/ui/howto/postgresql/overview) in the Integrations screen of your Monitoring App, but the basic steps are:
+
+- install the Sematext Agent
+- create a user for the Sematext Agent to use
+- configure Sematext Agent to connect to the PostgreSQL host and port (localhost:5432 by default), using your App token and the newly created user's credentials
+
+## Important RabbitMQ Metrics to Watch
+
+You'd normally start from the Overview screen to check the higher-level metrics, such as number of rows or connections over time. Other high-level metrics can be found under Activity or Tables dashboards:
+
+<img
+  class="content-modal-image"
+  alt="PostgreSQL Monitoring Tables"
+  src="../../images/agents/postgresql_monitoring_tables.png"
+  title="PostgreSQL Monitoring Tables"
+/>
+
+Then, if necessary, you can dive deeper into a specific direction. For example, if you think that indexes are over-used or not used enough, you can check their metrics in the Indexes dashboard. Like how often the index blocks are hit:
+
+<img
+  class="content-modal-image"
+  alt="PostgreSQL Monitoring Indexes"
+  src="../../images/agents/postgresql_monitoring_indexes.png"
+  title="PostgreSQL Monitoring Indexes"
+/>
+
+Finally, OS-level metrics can also point out bottlenecks, such as network or CPU:
+
+<img
+  class="content-modal-image"
+  alt="PostgreSQL CPU Chart"
+  src="../../images/agents/postgresql_monitoring_cpu.png"
+  title="PostgreSQL CPU Chart"
+/>
+
+You can find a full list of PostgreSQL-specific metrics that are collected below.
 
 ## Metrics
 
