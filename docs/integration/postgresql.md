@@ -20,7 +20,7 @@ You can find the [complete instructions](https://apps.sematext.com/ui/howto/post
 - create a user for the Sematext Agent to use
 - configure Sematext Agent to connect to the PostgreSQL host and port (localhost:5432 by default), using your App token and the newly created user's credentials
 
-## Important RabbitMQ Metrics to Watch
+## Important PostgreSQL Metrics to Watch
 
 You'd normally start from the Overview screen to check the higher-level metrics, such as number of rows or connections over time. Other high-level metrics can be found under Activity or Tables dashboards:
 
