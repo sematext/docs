@@ -3,7 +3,6 @@ description: Apache monitoring integration sends workers, scoreboard, php fpm, a
 
 ## Integration
 
-- Agent: [https://github.com/sematext/sematext-agent-httpd](https://github.com/sematext/sematext-agent-httpd)
 - Instructions: [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview)
 
 ## Metrics
@@ -29,12 +28,13 @@ logging | apache.workers.logging | Avg | Double | <b>logging</b>: Number of work
 waiting | apache.workers.waiting | Avg | Double | <b>waiting</b>: Number of workers currently waiting for a connection
 dns lookup | apache.workers.dns | Avg | Double | <b>dnslookup</b>: Number of workers currently requesting DNS lookup
 
+## PHP-FPM Monitoring
+
+PHP-FPM monitoring can be enabled along with Apache monitoring. See [PHP-FPM](./php) for more details.
+
 ## Troubleshooting
 
-If you are not seeing some or any Apache metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
+If you are having issues with Sematext Monitoring, i.e. not seeing Apache metrics, see
+[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-```
-sudo spm-httpd-diagnostics
-```
-
-This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
+For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
