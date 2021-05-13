@@ -5,7 +5,7 @@ description: Apache monitoring integration sends workers, scoreboard, php fpm, a
 
 - Instructions: [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview)
 
-## Metrics
+## Apache Metrics
 
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
