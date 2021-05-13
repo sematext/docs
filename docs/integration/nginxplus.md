@@ -3,7 +3,6 @@ description: The Sematext monitoring agent can collect many metrics from NginxPl
 
 ## Integration
 
-- Agent: [https://github.com/sematext/sematext-agent-nginx](https://github.com/sematext/sematext-agent-nginx)
 - Instructions: [https://apps.sematext.com/ui/howto/Nginx-Plus/overview](https://apps.sematext.com/ui/howto/Nginx-Plus/overview)
 
 ## Metrics

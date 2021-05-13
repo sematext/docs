@@ -4,6 +4,7 @@ description: The Sematext monitoring agent can collect many metrics from NGINX i
 Sematext offers a simple, easy to install, Nginx monitoring agent with minimal CPU and memory overhead.
 
 ## Install Nginx Monitoring Agent
+
 Setting up the monitoring agent takes less than 5 minutes:
 
 1.  Activate the Nginx stub_status module in the server section of your Nginx config file. If you are using the default Nginx config file it will be in `/etc/nginx/sites-enabled/default`:
