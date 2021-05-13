@@ -1,7 +1,7 @@
 title: Apache Web Server Monitoring Integration
 description: Apache monitoring integration sends workers, scoreboard, php fpm, and httpd server performance metrics and other inventory data from your OS and web server to Sematext in cloud SaaS / private on-premises infrastructure and application monitoring & log management service 
 
-Sematext offers a simple, easy to install, Nginx monitoring agent with minimal CPU and memory overhead.
+Sematext offers a simple, easy to install, Apache monitoring agent with minimal CPU and memory overhead.
 
 ## Install Apache Monitoring Agent
 
@@ -15,7 +15,7 @@ Setting up the monitoring agent takes less than 5 minutes:
         </Location>
 
 2.  Create an Apache App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data. The short  [What is an App in Sematext Cloud](https://www.youtube.com/watch?v=tr_qxdr8dvk&index=14&list=plt_fd32ofypflbfzz_hiafnqjdltth1ns) video has more details.
-3.  Name your Apache monitoring App and, if you want to collect Nginx logs as well, create an Nginx App along the way.
+3.  Name your Apache monitoring App and, if you want to collect Apache logs as well, create a Logs App along the way.
 4.  Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview) displayed in the UI.
 
 ## Apache Metrics
