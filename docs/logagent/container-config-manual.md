@@ -1,6 +1,8 @@
 title: Logagent Configuration Manual for Containers
 description: Logagent, Sematext log shipper and Logstash alternative, is available as Docker image. It has automatic Docker installation and seamless logging system service integration with our log management and analysis platform
 
+The Logagent container can be configured to include/exclude logs collection from any container in your cluster. Additionally, you can also configure log routing and advanced log parsing to fit your needs.
+
 ## Blacklisting and Whitelisting Logs
 
 Not all logs might be of interest, so sooner or later you will have the need to blacklist some log types.  This is one of the reasons why Logagent automatically adds the following tags to all logs:
