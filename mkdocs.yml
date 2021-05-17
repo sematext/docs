@@ -261,12 +261,16 @@ pages:
         - Installation:
           - Linux: logagent/installation.md
           - Docker: logagent/installation-docker.md
+          - Kubernetes: logagent/installation-kubernetes.md
+          - Helm: logagent/installation-helm.md
           - Mac: logagent/installation-mac.md
           - Windows: logagent/installation-windows.md
           - Heroku: logagent/installation-heroku.md
         - Usage:
-          - Configuration: logagent/config-file.md
+          - Configuration File: logagent/config-file.md
           - Command Line Parameters: logagent/cli-parameters.md
+          - Container Configuration Parameters: logagent/container-config-parameters.md
+          - Container Configuration Manual: logagent/container-config-manual.md
           - Log Parser Patterns: logagent/parser.md
           - Monitoring: logagent/monitoring.md
         - Plugins:
