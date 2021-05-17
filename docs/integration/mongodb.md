@@ -5,69 +5,17 @@ description: Monitor all key MongoDB metrics and stats, namely server state, glo
 <iframe class="video" src="https://www.youtube.com/embed/BIERrXzbiNM" frameborder="0" allowfullscreen ></iframe>
 </div>
 
-## Overview
+Sematext offers a simple, easy to install, MongoDB monitoring agent with minimal CPU and memory overhead.
 
-Sematext MongoDB monitoring agent is an open-source [mongodb monitoring agent](https://github.com/sematext/spm-agent-mongodb).  It continuously collects MongoDB metrics and sends them to Sematext. It is available as an [NPM package](https://www.npmjs.com/package/spm-agent-mongodb) (see Installation & Configuration section below).
+## Install MongoDB Monitoring Agent
 
-** Installation and Configuration **
+Setting up the monitoring agent takes less than 5 minutes:
 
-1.  Create a Monitoring App of type "MongoDB" in Sematext 
-2.  Click the "**Install Monitor**" button and follow the customized
-    instructions for the created Monitoring App (basically how to install
-    the [NPM package](https://www.npmjs.com/package/spm-agent-mongodb)
-    and configure the App Token)
+1.  Create a MongoDB App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data. The short  [What is an App in Sematext Cloud](https://www.youtube.com/watch?v=tr_qxdr8dvk&index=14&list=plt_fd32ofypflbfzz_hiafnqjdltth1ns) video has more details.
+2.  Name your MongoDB monitoring App and, if you want to collect MongoDB logs as well, create a Logs App along the way.
+3.  Install the Sematext Agent according to the  [setup instructions](https://apps.sematext.com/ui/howto/MongoDB/overview) displayed in the UI.
 
-## Troubleshooting and How-to
-
-** Generate diagnostics file for Sematext Support **
-
-If you are not seeing some or any MongoDB metrics, you can create a "diagnostics dump" and contact us via live chat or email. To create the diagnostics dump just run the following:
-
-```
-sudo spm-mongodb-diagnostics
-```
-
-This will create a ZIP file and show the Sematext Support email address to which the ZIP file should be sent.
-
-** Using Sematext for monitoring MongoDB behind Firewalls / Proxy servers **
-
-By default data is transmitted to Sematext via HTTPS. If no direct connection
-is possible, a proxy server can be used by setting the environment
-variable HTTPS_PROXY=[https://your-proxy](https://your-proxy/).
-
-** Installation of native modules on Windows **
-
-The native modules are automatically compiled during "npm install"
-(using node-gyp). On Windows the required build tools like python or C++
-compilers are typically not installed by default. In this case please check
-<https://github.com/TooTallNate/node-gyp> for details about the required compiler and build tools.
-
-** Upgrading to a new Node.js version **
-
-If you switch the Node.js version (e.g. from 9.x to 10.x), the
-spm-agent-mongodb package will need to be installed again (due to the
-fact that included native modules may change from version to version).
-  After the version change please run a fresh installation "npm i
-spm-agent-mongodb -g".
-
-** Upgrading to the latest version of spm-agent-mongodb **
-
-To use the latest version of spm-agent-mongodb we recommend you
-install/upgrade using:
-
-    npm i spm-agent-mongodb@latest -g
-
-** Github Repository **
-
-The latest version and related information is available in the Github
-repository
- [sematext/spm-agent-mongodb](https://github.com/sematext/spm-agent-mongodb)
-
-## Integration
-
-- Instructions: [https://apps.sematext.com/ui/howto/MongoDB/overview](https://apps.sematext.com/ui/howto/MongoDB/overview)
-
-## Metrics
+## MongoDB Metrics
 
 Metric Name | Key | Agg | Type | Description
 --- | --- | --- | --- | ---
@@ -116,3 +64,162 @@ update | mongo.ops.update | Sum | Long | Update operations
 delete | mongo.ops.delete | Sum | Long | Delete operations
 getmore | mongo.ops.getmore | Sum | Long | Getmore operations
 getmore | mongo.replica.ops.getmore | Sum | Long | Getmore operations
+mongo.active_reads | mongo.active_reads | Avg | long |
+mongo.active_writes | mongo.active_writes | Avg | long |
+mongo.aggregate_command_failed | mongo.aggregate_command_failed | Avg | long |
+mongo.aggregate_command_total | mongo.aggregate_command_total | Avg | long |
+mongo.assert_msg | mongo.assert_msg | Avg | long |
+mongo.assert_regular | mongo.assert_regular | Avg | long |
+mongo.assert_rollovers | mongo.assert_rollovers | Avg | long |
+mongo.assert_user | mongo.assert_user | Avg | long |
+mongo.assert_warning | mongo.assert_warning | Avg | long |
+mongo.available_reads | mongo.available_reads | Avg | long |
+mongo.available_writes | mongo.available_writes | Avg | long |
+mongo.commands.failed | mongo.commands.failed | Avg | long |
+mongo.commands.total | mongo.commands.total | Avg | long |
+mongo.commands_per_sec | mongo.commands_per_sec | Avg | long |
+mongo.connections_available | mongo.connections_available | Avg | long |
+mongo.cursor_no_timeout | mongo.cursor_no_timeout | Avg | long |
+mongo.cursor_no_timeout_count | mongo.cursor_no_timeout_count | Avg | long |
+mongo.cursor_pinned | mongo.cursor_pinned | Avg | long |
+mongo.cursor_pinned_count | mongo.cursor_pinned_count | Avg | long |
+mongo.cursor_timed_out | mongo.cursor_timed_out | Avg | long |
+mongo.cursor_timed_out_count | mongo.cursor_timed_out_count | Avg | long |
+mongo.cursor_total | mongo.cursor_total | Avg | long |
+mongo.cursor_total_count | mongo.cursor_total_count | Avg | long |
+mongo.delete_command_failed | mongo.delete_command_failed | Avg | long |
+mongo.delete_command_total | mongo.delete_command_total | Avg | long |
+mongo.deletes | mongo.deletes | Avg | long |
+mongo.deletes_per_sec | mongo.deletes_per_sec | Avg | long |
+mongo.distinct_command_failed | mongo.distinct_command_failed | Avg | long |
+mongo.distinct_command_total | mongo.distinct_command_total | Avg | long |
+mongo.find_and_modify_command_failed | mongo.find_and_modify_command_failed | Avg | long |
+mongo.find_and_modify_command_total | mongo.find_and_modify_command_total | Avg | long |
+mongo.find_command_failed | mongo.find_command_failed | Avg | long |
+mongo.find_command_total | mongo.find_command_total | Avg | long |
+mongo.flushes_per_sec | mongo.flushes_per_sec | Avg | long |
+mongo.get_more_command_failed | mongo.get_more_command_failed | Avg | long |
+mongo.get_more_command_total | mongo.get_more_command_total | Avg | long |
+mongo.getmores_per_sec | mongo.getmores_per_sec | Avg | long |
+mongo.insert_command_failed | mongo.insert_command_failed | Avg | long |
+mongo.insert_command_total | mongo.insert_command_total | Avg | long |
+mongo.inserts_per_sec | mongo.inserts_per_sec | Avg | long |
+mongo.jumbo_chunks | mongo.jumbo_chunks | Avg | long |
+mongo.latency_commands | mongo.latency_commands | Avg | long |
+mongo.latency_commands_count | mongo.latency_commands_count | Avg | long |
+mongo.latency_reads | mongo.latency_reads | Avg | long |
+mongo.latency_reads_count | mongo.latency_reads_count | Avg | long |
+mongo.latency_writes | mongo.latency_writes | Avg | long |
+mongo.latency_writes_count | mongo.latency_writes_count | Avg | long |
+mongo.net_in_bytes_count | mongo.net_in_bytes_count | Avg | long |
+mongo.net_out_bytes_count | mongo.net_out_bytes_count | Avg | long |
+mongo.open_connections | mongo.open_connections | Avg | long |
+mongo.operation_scan_and_order | mongo.operation_scan_and_order | Avg | long |
+mongo.operation_write_conflicts | mongo.operation_write_conflicts | Avg | long |
+mongo.page_faults | mongo.page_faults | Avg | long |
+mongo.percent_cache_dirty | mongo.percent_cache_dirty | Avg | double |
+mongo.percent_cache_used | mongo.percent_cache_used | Avg | double |
+mongo.queries_per_sec | mongo.queries_per_sec | Avg | long |
+mongo.queued_reads | mongo.queued_reads | Avg | long |
+mongo.queued_writes | mongo.queued_writes | Avg | long |
+mongo.repl_apply_batches_num | mongo.repl_apply_batches_num | Avg | long |
+mongo.repl_apply_batches_total_millis | mongo.repl_apply_batches_total_millis | Avg | long |
+mongo.repl_apply_ops | mongo.repl_apply_ops | Avg | long |
+mongo.repl_buffer_count | mongo.repl_buffer_count | Avg | long |
+mongo.repl_buffer_size_bytes | mongo.repl_buffer_size_bytes | Avg | long |
+mongo.repl_commands_per_sec | mongo.repl_commands_per_sec | Avg | long |
+mongo.repl_deletes_per_sec | mongo.repl_deletes_per_sec | Avg | long |
+mongo.repl_executor_pool_in_progress_count | mongo.repl_executor_pool_in_progress_count | Avg | long |
+mongo.repl_executor_queues_network_in_progress | mongo.repl_executor_queues_network_in_progress | Avg | long |
+mongo.repl_executor_queues_sleepers | mongo.repl_executor_queues_sleepers | Avg | long |
+mongo.repl_executor_unsignaled_events | mongo.repl_executor_unsignaled_events | Avg | long |
+mongo.repl_getmores_per_sec | mongo.repl_getmores_per_sec | Avg | long |
+mongo.repl_inserts_per_sec | mongo.repl_inserts_per_sec | Avg | long |
+mongo.repl_lag | mongo.repl_lag | Avg | long |
+mongo.repl_network_bytes | mongo.repl_network_bytes | Avg | long |
+mongo.repl_network_getmores_num | mongo.repl_network_getmores_num | Avg | long |
+mongo.repl_network_getmores_total_millis | mongo.repl_network_getmores_total_millis | Avg | long |
+mongo.repl_network_ops | mongo.repl_network_ops | Avg | long |
+mongo.repl_oplog_window_sec | mongo.repl_oplog_window_sec | Avg | long |
+mongo.repl_queries_per_sec | mongo.repl_queries_per_sec | Avg | long |
+mongo.repl_state | mongo.repl_state | Avg | long |
+mongo.repl_updates_per_sec | mongo.repl_updates_per_sec | Avg | long |
+mongo.storage_freelist_search_bucket_exhausted | mongo.storage_freelist_search_bucket_exhausted | Avg | long |
+mongo.storage_freelist_search_requests | mongo.storage_freelist_search_requests | Avg | long |
+mongo.storage_freelist_search_scanned | mongo.storage_freelist_search_scanned | Avg | long |
+mongo.tcmalloc_central_cache_free_bytes | mongo.tcmalloc_central_cache_free_bytes | Avg | long |
+mongo.tcmalloc_current_allocated_bytes | mongo.tcmalloc_current_allocated_bytes | Avg | long |
+mongo.tcmalloc_current_total_thread_cache_bytes | mongo.tcmalloc_current_total_thread_cache_bytes | Avg | long |
+mongo.tcmalloc_heap_size | mongo.tcmalloc_heap_size | Avg | long |
+mongo.tcmalloc_max_total_thread_cache_bytes | mongo.tcmalloc_max_total_thread_cache_bytes | Avg | long |
+mongo.tcmalloc_pageheap_commit_count | mongo.tcmalloc_pageheap_commit_count | Avg | long |
+mongo.tcmalloc_pageheap_committed_bytes | mongo.tcmalloc_pageheap_committed_bytes | Avg | long |
+mongo.tcmalloc_pageheap_decommit_count | mongo.tcmalloc_pageheap_decommit_count | Avg | long |
+mongo.tcmalloc_pageheap_free_bytes | mongo.tcmalloc_pageheap_free_bytes | Avg | long |
+mongo.tcmalloc_pageheap_reserve_count | mongo.tcmalloc_pageheap_reserve_count | Avg | long |
+mongo.tcmalloc_pageheap_scavenge_count | mongo.tcmalloc_pageheap_scavenge_count | Avg | long |
+mongo.tcmalloc_pageheap_total_commit_bytes | mongo.tcmalloc_pageheap_total_commit_bytes | Avg | long |
+mongo.tcmalloc_pageheap_total_decommit_bytes | mongo.tcmalloc_pageheap_total_decommit_bytes | Avg | long |
+mongo.tcmalloc_pageheap_total_reserve_bytes | mongo.tcmalloc_pageheap_total_reserve_bytes | Avg | long |
+mongo.tcmalloc_pageheap_unmapped_bytes | mongo.tcmalloc_pageheap_unmapped_bytes | Avg | long |
+mongo.tcmalloc_spinlock_total_delay_ns | mongo.tcmalloc_spinlock_total_delay_ns | Avg | long |
+mongo.tcmalloc_thread_cache_free_bytes | mongo.tcmalloc_thread_cache_free_bytes | Avg | long |
+mongo.tcmalloc_total_free_bytes | mongo.tcmalloc_total_free_bytes | Avg | long |
+mongo.tcmalloc_transfer_cache_free_bytes | mongo.tcmalloc_transfer_cache_free_bytes | Avg | long |
+mongo.total_available | mongo.total_available | Avg | long |
+mongo.total_created | mongo.total_created | Avg | long |
+mongo.total_docs_scanned | mongo.total_docs_scanned | Avg | long |
+mongo.total_in_use | mongo.total_in_use | Avg | long |
+mongo.total_keys_scanned | mongo.total_keys_scanned | Avg | long |
+mongo.total_refreshing | mongo.total_refreshing | Avg | long |
+mongo.total_tickets_reads | mongo.total_tickets_reads | Avg | long |
+mongo.total_tickets_writes | mongo.total_tickets_writes | Avg | long |
+mongo.ttl_deletes | mongo.ttl_deletes | Avg | long |
+mongo.ttl_deletes_per_sec | mongo.ttl_deletes_per_sec | Avg | long |
+mongo.ttl_passes | mongo.ttl_passes | Avg | long |
+mongo.ttl_passes_per_sec | mongo.ttl_passes_per_sec | Avg | long |
+mongo.update_command_failed | mongo.update_command_failed | Avg | long |
+mongo.update_command_total | mongo.update_command_total | Avg | long |
+mongo.updates_per_sec | mongo.updates_per_sec | Avg | long |
+mongo.uptime_ns | mongo.uptime_ns | Avg | long |
+mongo.wtcache_app_threads_page_read_count | mongo.wtcache_app_threads_page_read_count | Avg | long |
+mongo.wtcache_app_threads_page_read_time | mongo.wtcache_app_threads_page_read_time | Avg | long |
+mongo.wtcache_app_threads_page_write_count | mongo.wtcache_app_threads_page_write_count | Avg | long |
+mongo.wtcache_bytes_read_into | mongo.wtcache_bytes_read_into | Avg | long |
+mongo.wtcache_bytes_written_from | mongo.wtcache_bytes_written_from | Avg | long |
+mongo.wtcache_current_bytes | mongo.wtcache_current_bytes | Avg | long |
+mongo.wtcache_internal_pages_evicted | mongo.wtcache_internal_pages_evicted | Avg | long |
+mongo.wtcache_max_bytes_configured | mongo.wtcache_max_bytes_configured | Avg | long |
+mongo.wtcache_modified_pages_evicted | mongo.wtcache_modified_pages_evicted | Avg | long |
+mongo.wtcache_pages_evicted_by_app_thread | mongo.wtcache_pages_evicted_by_app_thread | Avg | long |
+mongo.wtcache_pages_queued_for_eviction | mongo.wtcache_pages_queued_for_eviction | Avg | long |
+mongo.wtcache_pages_read_into | mongo.wtcache_pages_read_into | Avg | long |
+mongo.wtcache_pages_requested_from | mongo.wtcache_pages_requested_from | Avg | long |
+mongo.wtcache_pages_written_from | mongo.wtcache_pages_written_from | Avg | long |
+mongo.wtcache_server_evicting_pages | mongo.wtcache_server_evicting_pages | Avg | long |
+mongo.wtcache_tracked_dirty_bytes | mongo.wtcache_tracked_dirty_bytes | Avg | long |
+mongo.wtcache_unmodified_pages_evicted | mongo.wtcache_unmodified_pages_evicted | Avg | long |
+mongo.wtcache_worker_thread_evictingpages | mongo.wtcache_worker_thread_evictingpages | Avg | long |
+mongo.mongodb_col_stats.avg_obj_size | mongo.mongodb_col_stats.avg_obj_size | Avg | double |
+mongo.mongodb_col_stats.count | mongo.mongodb_col_stats.count | Avg | long |
+mongo.mongodb_col_stats.ok | mongo.mongodb_col_stats.ok | Avg | long |
+mongo.mongodb_col_stats.size | mongo.mongodb_col_stats.size | Avg | long |
+mongo.mongodb_col_stats.storage_size | mongo.mongodb_col_stats.storage_size | Avg | long |
+mongo.mongodb_col_stats.total_index_size | mongo.mongodb_col_stats.total_index_size | Avg | long |
+mongo.mongodb_col_stats.avg_obj_size | mongo.mongodb_col_stats.avg_obj_size | Avg | double |
+mongo.mongodb_col_stats.count | mongo.mongodb_col_stats.count | Avg | long |
+mongo.mongodb_col_stats.ok | mongo.mongodb_col_stats.ok | Avg | long |
+mongo.mongodb_col_stats.size | mongo.mongodb_col_stats.size | Avg | long |
+mongo.mongodb_col_stats.storage_size | mongo.mongodb_col_stats.storage_size | Avg | long |
+mongo.mongodb_col_stats.total_index_size | mongo.mongodb_col_stats.total_index_size | Avg | long |
+mongo.mongodb_shard_stats.in_use | mongo.mongodb_shard_stats.in_use | Avg | long |
+mongo.mongodb_shard_stats.available | mongo.mongodb_shard_stats.available | Avg | long |
+mongo.mongodb_shard_stats.available | mongo.mongodb_shard_stats.available | Avg | long |
+mongo.mongodb_shard_stats.refreshing | mongo.mongodb_shard_stats.refreshing | Avg | long |
+
+## Troubleshooting
+
+If you are having issues with Sematext Monitoring, i.e. not seeing Apache metrics, see
+[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+
+For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
