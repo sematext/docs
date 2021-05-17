@@ -85,7 +85,7 @@ In this case, parameter `ST_MONITOR_PHPFPM_STATUS_URL` should have a value `http
 
 ## Integration with Nginx
 
-Sematext Agent can be installed to monitor [Apache](./apache).
+Sematext Agent can be installed to monitor [Nginx](./nginx).
 
 When using [Autodiscovery](../monitoring/autodiscovery), Sematext Agent will automatically discover PHP-FPM status
 URL and will gather additional metrics from it.
@@ -104,26 +104,21 @@ Add a parameter `ST_MONITOR_PHPFPM_STATUS_URL` with a value
 
 In some scenarios, e.g. in Docker containers, the monitoring agent
 might not have access to the local UNIX socket. In such cases the
-PHP-FPM status page needs to be exposed via Apache httpd.  To expose
-the PHP-FPM status page via Apache httpd change the configuration
-```/etc/httpd/conf.d/mod_fastcgi.conf``` e.g.:
+PHP-FPM status page needs to be exposed via Nginx. To expose
+the PHP-FPM status page via Nginx, change the Nginx configuration
+```/etc/nginx/sites-enabled/default```:
 
 ```
-LoadModule fastcgi_module modules/mod_fastcgi.so
-
-<IfModule mod_fastcgi.c>
-          DirectoryIndex index.php index.html index.shtml index.cgi
-          AddHandler php5-fcgi .php
-          Action php5-fcgi /php5-fcgi
-          Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
-          FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /var/run/php-fpm.sock -pass-header Authorization
-
-   # For monitoring status with e.g. Sematext Monitoring for Apache httpd
-   <LocationMatch "/(ping|status)">
-                  SetHandler php5-fcgi-virt
-                  Action php5-fcgi-virt /php5-fcgi virtual
-   </LocationMatch>
-</IfModule>
+location ~ ^/(status|ping)$ {
+       # access_log off;
+       allow all;
+       # allow SPM-MONITOR-IP;
+       # deny all;
+       fastcgi_pass unix:/var/run/php-fpm.sock;
+       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+       fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+       include fastcgi_params;
+}
 ```
 
 In this case, parameter `ST_MONITOR_PHPFPM_STATUS_URL` should have a value `http://localhost/status`.
