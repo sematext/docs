@@ -219,7 +219,7 @@ mongo.mongodb_shard_stats.refreshing | mongo.mongodb_shard_stats.refreshing | Av
 
 ## Troubleshooting
 
-If you are having issues with Sematext Monitoring, i.e. not seeing Apache metrics, see
+If you are having issues with Sematext Monitoring, i.e. not seeing MongoDB metrics, see
 [How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.

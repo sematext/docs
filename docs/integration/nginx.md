@@ -30,11 +30,11 @@ active | nginx.requests.connections.active | Avg | Double | <b>active</b>: numbe
 
 ## PHP-FPM Monitoring
 
-PHP-FPM monitoring can be enabled along with Apache monitoring. See [PHP-FPM](./php) for more details.
+PHP-FPM monitoring can be enabled along with Nginx monitoring. See [PHP-FPM](./php) for more details.
 
 ## Troubleshooting
 
-If you are having issues with Sematext Monitoring, i.e. not seeing Apache metrics, see
+If you are having issues with Sematext Monitoring, i.e. not seeing Nginx metrics, see
 [How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
