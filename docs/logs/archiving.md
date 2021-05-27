@@ -74,11 +74,11 @@ For our Logs App AWS S3 Settings, besides S3 bucket name, you'll need
 Log in to your AWS account, go to `IAM > Users` and open (or create) a
 user that you want to use for S3 uploads:
 
-![](attachments/6520901/75759631.png?effects=drop-shadow&height=250)
+![](../../images/logs/archiving/create-access-key.png?effects=drop-shadow&height=250)
 
 Click on `Create Access Key`:
 
-![](attachments/6520901/75759633.png?effects=drop-shadow&height=250)
+![](../../images/logs/archiving/new-access-key.png?effects=drop-shadow&height=250)
 
 Note down `Access Key ID` and `Secret Access Key` (you can `Download
 Credentials` to a safe place if you like, but it's not necessary).
@@ -148,7 +148,7 @@ following path on `May 01, 2021 at 11:20PM UTC`:
 
 
 
-![(warning)](images/icons/emoticons/warning.png "(warning)") **Note:**
+<img src="../../images/warning.png?effects=drop-shadow" alt="warning"  style="display: inline-block;" /> **Note:**
 
 Before **May 01, 2017 **the folder hierarchy was more flat:
 

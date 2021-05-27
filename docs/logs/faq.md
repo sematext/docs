@@ -40,11 +40,11 @@ From the application, click the `App Actions` button and select
 `Usage`. There's also `Settings` button next to [any of your Logs apps](https://apps.sematext.com/ui/logs) in
 the `Logs > All Logs Apps` section in our centralized logging and monitoring management solution.
 
-<a href="#logging-usage-menu"><img alt="Logs App Usage Menu" src="/docs/images/logs/logging-usage-menu.png" title="Logs App Usage Menu"></a>
+<a href="#logging-usage-menu"><img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu"></a>
 
 On click, `App Settings > Usage` page will present both Total Volume in Gb and Total Count of indexed logs for that particular Logs App.
 
-<img alt="Logs App Log Count" src="/docs/images/logs/logging-app-usage-page.png" title="Logs App usage page">
+<img alt="Logs App Log Count" src="../../images/logs/logging-app-usage-page.png" title="Logs App usage page">
 
 ### How can I check the number of logs I currently have in a Logs App?
 
@@ -52,7 +52,7 @@ Total Count of indexed logs is displayed in `App Settings > Usage` page.
 
 The number of logs will be also displayed in the right corner of the Log Counts panel just below the app's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
 
-<img alt="Logs App Log Count" src="/docs/images/logs/logging-app-logs-count.png" title="Logs App Log Count">
+<img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
 You can also do that from Kibana
 by searching for all your logs without adding any time filters. The
@@ -67,7 +67,7 @@ retention, volume, and plan at any time.
 
 Click the `App Actions` button and select `App Settings`. App Info page will open where you can see and change Daily Retention, Daily Volume, and Plan for that particular Logs App.
 
-<img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="/docs/images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
+<img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="../../images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
 
 ### Can I send old logs?
 
@@ -161,7 +161,7 @@ app or make sure there are no conflicting fields.
 Yes, when you change your index structure using Field Editor you will
 be given the opportunity to reindex your data.
 
-<img alt="Logs App Log Count" src="/docs/images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
+<img alt="Logs App Log Count" src="../../images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
           
 Please keep in mind that the speed of reindexing depends on how much
 data needs to be reindexed and that reindexing is treated like original
@@ -175,7 +175,7 @@ the normal plan charges apply. Because reindexing counts just like
 the original data ingestion, before reindexing the estimated cost of
 reindexing is shown in the UI.
 
-![](attachments/6520901/102003301.png?width=300)
+![](../images/logs/reindex-estimate.png?width=300)
 
 If the amount of data ingested for the day, plus data to be reindexed
 is smaller than your Max Daily Log Volume Limit then no additional charges
@@ -634,7 +634,7 @@ will expand and allow you to customize alert specific to that particular search 
 
 Click on the Alert Icon located in the left navigation and then select Alert Rules.
 
-<img alt="Alert Rules" src="/docs/images/logs/alert-rules.png" title="Alert Rules">
+<img alt="Alert Rules" src="../../images/logs/alert-rules.png" title="Alert Rules">
 
 ### What is the difference between threshold-based Alerts and Anomaly Detection (aka Algolerts)?
 
@@ -681,7 +681,7 @@ event information when Alert events are triggered. See [alerts FAQ](/faq#alerts)
       <h2>Logs App - Usage Menu Link</h2>
     </div>
     <div class="copy">
-      <img alt="Logs App Usage Menu" src="/docs/images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
+      <img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
     </div>
   </div>
   <a href="#">
