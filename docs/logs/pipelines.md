@@ -1,33 +1,27 @@
 title: Log Pipelines
 description: Add processing steps to log ingestion
 
-Sometimes raw log events are not exactly the way you want them to be and it might be hard to set up log shipper that is able to transform or filter log events. An alternative approach is to configure processing steps that are injected in ingestion flow. We call that pipelines. Pielines can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents.
+Sometimes raw log events are not exactly the way you want them to be and it might be hard to set up log shipper that is able to transform or filter log events. An alternative approach is to configure processing steps that are injected in ingestion flow. We call that pipelines. Pipelines can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents.
 Pipelines are easily accessible and link to pipeline builder is available in the main menu of every log report.
 
 ![Pipelines Button](../../images/logs/pipelines/pipeline-button.png)
 
 
-### Upgrade to PRO
-Pipelines is the feature that is not available in all plans. In case your App is not on plan that supports pipelines, you'll be prompted to upgrade your plan.
-
-![Upgrade Plan](../../images/logs/pipelines/upgrade-plan.png)
-
-Once app is on the right plan you can start configuring the pipeline.
-
 ### Pipeline Builder
 Pipeline builder is opened as a full page and has basic structure as any other page.
 
-![Pipeline Builder](../../images/logs/pipelines/pipeline-builder-unsaved.png)
+![Pipeline Builder](../../images/logs/pipelines/pipeline-builder-saved.png)
 
-On top we have header and subnav that can be used to pick documents for preview. The paga is split between resizable preview section and pipeline configuration section. Preview shows documents before and after processing. Pipeline configuration section has list of processors on the left and configuration details for a selected processor on the right.
+On top we have header and subnav that can be used to pick documents for preview. The page is split between resizable preview section and pipeline configuration section. Preview shows documents before and after processing. Pipeline configuration section has list of processors on the left and configuration details for a selected processor on the right.
 
 Header and subnav let you define time and filters that will be used to load sample data for previewing pipeline.
 
-![Pipeline Builder](../../images/logs/pipelines/pipeline-builder-unsaved.png)
+![Pipeline Builder](../../images/logs/pipelines/pipeline-builder-header.png)
 
 By default, we will load only 10 documents but you can also change it to 50 or 100. Note that larger number of documents may slow preview a bit down since documents are sent for processing on each pipeline configuration change.
 
-#### Processors Configuration
+#### Processors
+Processors are units of processing in pipelines. They can change, drop or even produce additional events. Their are chained to form a pipeline. The output of one processor is the input for the next processor.
 Configuration section will be empty in most cases when you initially open pipeline builder.
 
 ![Empty Pipeline](../../images/logs/pipelines/empty-pipeline.png)
