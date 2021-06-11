@@ -53,7 +53,7 @@ pages:
         - Shipping Kubernetes Logs: logs/discovery/tailing-k8s-logs.md
         - Shipping Journald Logs: logs/discovery/tailing-journald-logs.md
       - Correlation: logs/correlation.md
-      - Changelog: logs/changelog.md
+      - Changelog: changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
       - Overview: monitoring/index.md
@@ -71,7 +71,7 @@ pages:
       - Correlation: monitoring/correlation.md
       - Tags: monitoring/tags.md
       - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
-      - Changelog: monitoring/changelog.md
+      - Changelog: changelog.md
       - FAQ: monitoring/spm-faq.md
     - Experience:
       - Overview: experience/index.md
@@ -90,9 +90,9 @@ pages:
       - Browser Memory: experience/browser-memory.md
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
-      - Changelog: experience/changelog.md
       - Sampling: experience/sampling.md
       - Correlation: experience/correlation.md
+      - Changelog: changelog.md
       - FAQ: experience/faq.md
     - Synthetics:
       - Overview: synthetics/index.md
@@ -106,6 +106,7 @@ pages:
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
       - Correlation: synthetics/correlation.md
+      - Changelog: changelog.md
       - FAQ: synthetics/faq.md
     - Tracing:
       - Overview: tracing/index.md
