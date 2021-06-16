@@ -11,7 +11,7 @@ The browser monitor can be used to monitor a single web page or a user journey a
 * **Interval** - Monitor execution interval.
 * **Locations** - List of locations to run the monitor.
 
-### URL/Script
+### User Journeys / Transactions
 
 To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a script to simulate user actions.
 
@@ -92,7 +92,7 @@ For every run, the browser monitor collects all the resources fetched during the
 Each browser monitor run is executed in an isolated environment using a fresh instance of a headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
 
 * **Node.js** - 12.x
-* **Google Chrome** - 86.0.4240.0
+* **Google Chrome** - 89.0.4389.0
 * **Puppeteer** - 5.3.1
 
 Default runtime configuration values are:
