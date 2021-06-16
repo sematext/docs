@@ -73,7 +73,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 					<h4>
 						Events
 					</h4>
-					<p>Capture builds, deployments, restarts, failures and other key events</p>
+					<p>Capture builds, deployments, restarts, failures & other events</p>
 				</div>
 			</div>
 		</a>
