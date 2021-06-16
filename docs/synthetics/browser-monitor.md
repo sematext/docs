@@ -103,4 +103,4 @@ Default runtime configuration values are:
 * Memory - 2048 MB
 * CPU - 1 vCPU
 * Network - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
-* User Agent - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/86.0.4240.0 Safari/537.36`
+* User Agent - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.0 Safari/537.36 +SematextSyntheticsRobot`
