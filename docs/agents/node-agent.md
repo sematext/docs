@@ -26,12 +26,14 @@ auto-discovery and many more.
 To install the new agent, just follow the instructions in Sematext Cloud UI.
 
 Before that, uninstall the old Node.js based agent if you were previously using one of:
+
 - https://github.com/sematext/sematext-agent-nginx
 - https://github.com/sematext/sematext-agent-httpd
 - https://github.com/sematext/spm-agent-mongodb
 
 The old agent was installed as an upstart or a systemd service, depending on your OS. To uninstall it,
 just uninstall it like any other service. The names of the services related to these agents are:
+
 - sematext-agent-nginx
 - sematext-agent-httpd
 - spm-agent-mongodb
