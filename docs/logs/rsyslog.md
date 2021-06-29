@@ -12,7 +12,7 @@ instructions at <http://www.rsyslog.com/downloads/download-other/>.
 
 ## Overview
 
-rsyslog is a modern syslog daemon focused on performance. Logsene gives
+rsyslog is a modern syslog daemon focused on performance. Sematext gives
 you lots of ways to forward your logs with rsyslog:
 
   - UDP
@@ -24,7 +24,7 @@ you lots of ways to forward your logs with rsyslog:
 You can also send [JSON over syslog](json-messages-over-syslog) if you need support for
 structured data.
 
-There are 3 steps for configuring your rsyslog for Logsene:
+There are 3 steps for configuring your rsyslog for Sematext:
 
 1.  Configure one or more inputs. For example, configure rsyslog to
     send [local logs](http://www.rsyslog.com/doc/imuxsock.html),
@@ -32,7 +32,7 @@ There are 3 steps for configuring your rsyslog for Logsene:
     on
 2.  Choose a protocol and an authentication method. For UDP, TCP, TLS
     and RELP you can [authorize your public IP](authorizing-ips-for-syslog). However, **we
-    strongly recommend using the Logsene app's token**, which
+    strongly recommend using the Sematext Logs App's token**, which
     works with all supported protocols
 3.  Configure the output. Based on the chosen protocol and
     authentication method, you'll have to configure the appropriate
@@ -41,7 +41,7 @@ There are 3 steps for configuring your rsyslog for Logsene:
 ## Configuring Inputs
 
 First, configure rsyslog to receive logs that you'd like to send to
-Logsene. The most common input module is
+Sematext. The most common input module is
 [imuxsock](http://www.rsyslog.com/doc/imuxsock.html), which will take
 logs from your local /dev/log socket. To start listening on local logs,
 add this line at the beginning of your **/etc/rsyslog.conf**:
@@ -100,10 +100,10 @@ input(type="imfile"
 ## Protocol and Authentication
 
 To forward logs, you can use HTTP/HTTPS and authenticate by using your
-Logsene application token (recommended\!). Alternatively, you can use
-UDP, TCP/TLS or RELP and authenticate either by using the Logsene
-application token, or by [authorizing your public IP](authorizing-ips-for-syslog)
-in the Logsene application settings.
+Logs App token (recommended\!). Alternatively, you can use
+UDP, TCP/TLS or RELP and authenticate either by using the Logs App
+token, or by [authorizing your public IP](authorizing-ips-for-syslog)
+in the Logs App settings.
 
 ### HTTP/HTTPS via the Elasticsearch API
 
@@ -151,7 +151,7 @@ template(name="LogseneFormat" type="list" option.json="on") {
 
 You can send [RFC-3164](https://tools.ietf.org/html/rfc3164) and
 [RFC-5424](https://tools.ietf.org/html/rfc5424) compatible syslog to
-Logsene via any of the following protocols:
+Sematet via any of the following protocols:
 
   - UDP: fire-and-forget protocol that doesn't guarantee any reliability
     but is also the fastest and simplest implementation
@@ -164,7 +164,7 @@ Logsene via any of the following protocols:
     application-level acknowledgments
 
 Again, with all these protocols, you can either authenticate with your
-Logsene application token, or by [registering your public IP](authorizing-ips-for-syslog).
+Logs App token, or by [registering your public IP](authorizing-ips-for-syslog).
 
 #### Requirements
 
@@ -179,13 +179,13 @@ from source).
 #### Configuration
 
 If you chose to authorize using static IP address, instead of
-authenticating using Logsene application token (which is the recommended
+authenticating using Logs App token (which is the recommended
 option), you don't need to make any configuration changes in this step.
-Instead, go to the[ Logsene web application and authorize the public IP ](authorizing-ips-for-syslog)(or multiple IPs) of the
+Instead, go to the [Sematext and authorize the public IP](authorizing-ips-for-syslog)(or multiple IPs) of the
 server(s) from where you send your logs.
 
-To use the Logsene application token, you'll first have to obtain it
-from your [list of Logsene applications](https://apps.sematext.com/ui/logs).
+To use the Logs App token, you'll first have to obtain it
+from your [list of LogsApps](https://apps.sematext.com/ui/logs).
 Then, in **/etc/rsyslog.conf**, define a
 [template](http://www.rsyslog.com/doc/rsyslog_conf_templates.html) that
 forwards your messages in [CEE-formatted JSON over syslog](json-messages-over-syslog),
@@ -228,7 +228,7 @@ new fields, reformat messages):
 ## Configuring Outputs
 
 The last step is to configure an output module for sending your logs to
-Logsene. This depends on your chosen protocol.
+Sematext. This depends on your chosen protocol.
 
 ### HTTP / HTTPS via Omelasticsearch
 
@@ -255,7 +255,7 @@ change **`serverport`** to `"443"` and add `usehttps="on"`.
 
 ### UDP
 
-If you're using Logsene application token for authentication, specify
+If you're using Logs App token for authentication, specify
 the LogseneFormat template in your *action* line. The host you'll
 connect to is **logsene-syslog-receiver.sematext.com** or **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe):
 
@@ -275,7 +275,7 @@ will do:
 With TCP, the *action* line looks similar to UDP, except you'll have two
 @ signs.
 
-If you're authorizing using Logsene application token:
+If you're authorizing using Logs App token:
 
 ``` bash
 *.* @@logsene-syslog-receiver.sematext.com;LogseneFormat
@@ -349,7 +349,7 @@ To forward via RELP, load the [RELP output module](http://www.rsyslog.com/doc/om
 **logsene-syslog-receiver.sematext.com** (or **logsene-syslog-receiver.eu.sematext.com** if using Sematext Cloud Europe) on **port 20514**.
 
 As with TCP or UDP, specify the LogseneFormat template for authorizing
-with your Logsene application token:
+with your Logs App token:
 
 ``` bash
 $ModLoad omrelp
@@ -365,7 +365,7 @@ $ModLoad omrelp
 
 ## Tag Your Logs
 
-From your syslog messages, Logsene will populate a number of [special fields](special-fields), such as the **source** and
+From your syslog messages, Sematext will populate a number of [special fields](special-fields), such as the **source** and
 **host**. You can also configure rsyslog to add one or more tags to logs
 matching certain criteria. This is useful when you want to quickly
 identify a special kind of logs. For example, you could tag events that
@@ -377,7 +377,7 @@ sorting, ...
 To achieve this, define a template similar to the ones [described above](rsyslog/#configuring-outputs),
 where you'd add a **tags** field. Then, you'd use a
 [conditional](http://www.rsyslog.com/doc/rsyslog_conf_filter.html) to
-match those messages and send them to Logsene using the newly defined
+match those messages and send them to Sematext using the newly defined
 template:
 
  
