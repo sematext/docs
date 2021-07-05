@@ -95,6 +95,21 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_solr_requests.png)
 
+## Correlation with Logs
+
+Be sure to check out the [Solr Logs integration](./solr-logs.md) as well, to get a complete view on Solr: what kind of errors or warnings are happening, how fast is each request, when Solr was restarted and so on.
+
+You can also correlate logs with metrics using [Split Screen](../guide/split-screen.md). For example, if you have a slow query in the logs, you can bring your Solr Monitoring app on the same screen and dig deeper in four steps:
+
+![](https://sematext.com/wp-content/uploads/2021/01/solr-performance-01.png)
+
+1. Click the Split Screen button to bring a new app to your screen.
+2. Select your Solr Monitoring app.
+3. Select the report/dashboard you're interested in, such as the CPU and Memory report.
+4. Hover the mouse over the latency spike and you'll see the vertical bar showing the same time on all charts from both sides of your screen.
+
+A full example of Solr metrics and logs correlation can be found in [this article](https://sematext.com/blog/solr-slow-queries/).
+
 ## Troubleshooting
 
 If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, see
