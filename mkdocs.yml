@@ -162,6 +162,7 @@ pages:
         - RabbitMQ: integration/rabbitmq-logs.md
         - Solr: integration/solr-logs.md
         - Vercel: integration/vercel-logs-integration.md
+        - JVM: integration/jvm-logs.md
       - Notification Hooks:
         - Custom Webhooks: integration/alerts-webhooks-integration.md
         - Big Panda: integration/alerts-bigpanda-integration.md
