@@ -1,7 +1,7 @@
 title: Mobile App Log Shipping Tools
-description: Ship logs from iOS and Android apps to Sematext
+description: Ship logs from iOS, WatchOS, and Android apps to Sematext
 
-Use the following two libraries for shipping logs from mobile applications and devices running Android and iOS to Sematext Logs.
+Use the following two libraries for shipping logs from mobile applications and devices running Android and iOS or WatchOS to Sematext Logs.
 
 Both libraries have the following in common:
 
@@ -17,7 +17,7 @@ Use the **Mobile Application Logs** Integration to get out-of-the-box reports wi
 
 Get an overview of your mobile apps with information like:
  
- - top iOS and Android versions
+ - top iOS or WatchOS and Android versions
  - top log severities and version names
 
 <img
@@ -30,7 +30,7 @@ Get an overview of your mobile apps with information like:
 Explore the common errors associated with your mobile applications and see an aggregated error view including:
 
  - number of errors and theirs count over time
- - top operating systems, top iOS and Android versions that are reporting errors
+ - top operating systems, top iOS or WatchOS and Android versions that are reporting errors
  - error log events
 
 <img
@@ -40,7 +40,7 @@ Explore the common errors associated with your mobile applications and see an ag
   title="Mobile Logs Errors"
 /> 
 
-Get insights from dedicated Android and iOS reports that include:
+Get insights from dedicated Android and iOS or WatchOS reports that include:
 
  - mobile operating system logs count histogram and their count
  - top severities, versions, version codes, and version names
@@ -56,4 +56,4 @@ Get insights from dedicated Android and iOS reports that include:
 Both libraries for shipping mobile application logs are open-source and available on Github:
 
 - [Sematext for Android Applications](https://github.com/sematext/sematext-logsene-android)
-- [Sematext for iOS Applications](https://github.com/sematext/sematext-logsene-ios)
+- [Sematext for iOS and WatchOS Applications](https://github.com/sematext/sematext-logsene-ios)
