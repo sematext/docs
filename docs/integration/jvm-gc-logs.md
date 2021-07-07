@@ -20,9 +20,9 @@ Once the data is in, you can explore it using the built-in reports or create you
 
 <img
   class="content-modal-image"
-  alt="Solr G1 GC Report"
+  alt="JVM G1 GC Report"
   src="../../images/agents/jvm_logs_g1gc.png"
-  title="Solr G1 GC Report"
+  title="JVM G1 GC Report"
 />
 
 Other built-in reports include:
@@ -31,3 +31,15 @@ Other built-in reports include:
 - **G1GC**: report dedicated to the garbage first garbage collector and its metrics 
 - **Meta**: meta and class regions dedicated report
 - **Survivor Stats**: information regarding the survivor region
+
+## Alerts 
+
+With the built-in support for alerting you can be notified on any garbage collector metric derivated from your logs, such as the number of full garbage collections, an increasing number of workers, and many, many more. Use the threshold-based alerts or fully rely on anomaly detection to detect the unusual patterns in the metrics coming from your garbage collector logs.
+
+<img
+  class="content-modal-image"
+  alt="JVM and Solr Split Screen"
+  src="../../images/agents/jvm_logs_split.png"
+  title="JVM and Solr Split Screen"
+/>
+
