@@ -32,9 +32,9 @@ Other built-in reports include:
 - **Meta**: meta and class regions dedicated report
 - **Survivor Stats**: information regarding the survivor region
 
-## Alerts 
+## Correlation with Metrics
 
-With the built-in support for alerting you can be notified on any garbage collector metric derivated from your logs, such as the number of full garbage collections, an increasing number of workers, and many, many more. Use the threshold-based alerts or fully rely on anomaly detection to detect the unusual patterns in the metrics coming from your garbage collector logs.
+Use the [Split Screen](https://sematext.com/docs/guide/split-screen/) feature to correlate the metrics calculated from the JVM garbage collector logs with the metrics coming from your application monitoring for quick root-cause analysis:
 
 <img
   class="content-modal-image"
@@ -43,3 +43,13 @@ With the built-in support for alerting you can be notified on any garbage collec
   title="JVM and Solr Split Screen"
 />
 
+## Alerts 
+
+With the built-in support for alerting you can be notified on any garbage collector metric derivated from your logs, such as the number of full garbage collections, an increasing number of workers, and many, many more. Use the threshold-based alerts or fully rely on anomaly detection to detect the unusual patterns in the metrics coming from your garbage collector logs.
+
+<img
+  class="content-modal-image"
+  alt="JVM Logs Alerts Creation"
+  src="../../images/agents/jvm_logs_alerts.png"
+  title="JVM Logs Alerts Creation"
+/>
