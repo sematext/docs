@@ -54,7 +54,7 @@ $ logagent [options] [file list]
 | `-f, --file <patternFile>` | file with pattern definitions, use multiple -f options for multiple files| 
 | `--skipDefaultPatterns` | skips loading of default patterns.yml file |
 | `-s, --suppress` | silent, print no logs to stdout; print only stats on exit |
-| `--printStats` | print processing stats in the given interval in seconds, e.g. ```--print_stats 30``` to stderr. Useful with -s to see Logagent activity on the console without printing the parsed logs to stdout.|
+| `--printStats` | print processing stats in the given interval in seconds, e.g. ```--printStats 30``` to stderr. Useful with -s to see Logagent activity on the console without printing the parsed logs to stdout.|
 | __Log input options__| |
 | `--stdin` | read from stdin, default if no other input like files or UDP are set|
 | list of files | Every argument after the options list is interpreted as a file name. All files in the file list (e.g. /var/log/*.log) are watched by [tail-forever](https://www.npmjs.com/package/tail-forever) starting at end of file|
