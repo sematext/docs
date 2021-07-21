@@ -55,6 +55,30 @@ This way you can e.g. drop events that have message field `*password*`.
 ##### Sampling
 Events sampling is possible using Pipeline. It can be applied on all events or filters can be used to sample only some subset of events, e.g. only events from some service. Sample rate is expressed as percentage of events that should be stored. By default it is 100%, meaning no events will be dropped. Setting sampling to 10% means that only 1 in 10 events will be stored and 9 will be dropped.
 
+##### Field Extractor
+Structuring data into fields is important if you are using Logsene: there are analysis possibilities you can do later with these fields (draw charts/diagrams or use for grouping/filtering).
+
+By using Grok patterns Extractor, you can extract multiple fields from other message fields. 
+
+Grok works by combining text patterns into something that matches your logs.
+The syntax for a grok pattern is `%{SYNTAX:SEMANTIC}`
+
+Imagine we have a message field:
+`Got document of 142 kb from 255.35.244.0`
+
+The `SYNTAX` is the name of the pattern that will match your text. For example, `142` will be matched by the `NUMBER` pattern and `255.35.244.0` will be matched by the `IP` pattern. The syntax is how you match.
+
+The `SEMANTIC` is the identifier you give to the piece of text being matched. For example, `142` could be the size of a document in bytes, so you could call it simply size. Further, a string `255.35.244.0` might identify the `IP` of device which sending a document.
+
+For the above example, your grok filter would look something like this:
+
+`Got document of %{NUMBER:sizeOfDoc} kb from %{IP:deviceIp}`
+
+Field Extractor provides you bunch of predefined patterns you may use for your purposes, autocompletion will help you with navigation thru all of them
+
+![Processor Grok Field Extractor](../../images/logs/pipelines/processor-grok.png)
+
+
 #### Preview
 Preview section is a helper tool to see how configured pipeline is working by running loaded or manually entered input through configured pipeline and showing differences.
 
