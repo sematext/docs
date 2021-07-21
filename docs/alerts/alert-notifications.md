@@ -10,7 +10,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/bigpanda.svg" alt="BigPanda" title="BigPanda Alerts Integration" style="width: 56px;">
+                            <img src="../../images/alerts/notifications/bigpanda.svg" alt="BigPanda" title="BigPanda Alerts Integration" style="width: 56px;">
                         </div>
                         <div class="side back">
                             <h5>BigPanda</h5>
@@ -27,7 +27,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/mail.svg" alt="Email" title="Email Alerts Integration" style="height: 96px; padding-top: 44px;">
+                            <img src="../../images/alerts/notifications/mail.svg" alt="Email" title="Email Alerts Integration" style="height: 96px; padding-top: 44px;">
                         </div>
                         <div class="side back">
                             <h5>Email</h5>Want alerts via email? That’s the default, of course. Email notifications include embedded
@@ -44,7 +44,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/hipchat.svg" alt="Hipchat Alerts Integration" title="Hipchat Alerts Integration"
+                            <img src="../../images/alerts/notifications/hipchat.svg" alt="Hipchat Alerts Integration" title="Hipchat Alerts Integration"
                                 style="width: 128px;">
                         </div>
                         <div class="side back">
@@ -60,7 +60,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/nagios.jpg" alt="Cassandra" title="Cassandra Monitoring" style="width: 96px; height: 32px; margin-top: 60px;">
+                            <img src="../../images/alerts/notifications/nagios.jpg" alt="Cassandra" title="Cassandra Monitoring" style="width: 96px; height: 32px; margin-top: 60px;">
                         </div>
                         <div class="side back">
                             <h5>Nagios</h5>
@@ -79,7 +79,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/opsgenie.svg" alt="Opsgenie" title="Opsgenie Alerts Integration" style="width: 128px;">
+                            <img src="../../images/alerts/notifications/opsgenie.svg" alt="Opsgenie" title="Opsgenie Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Opsgenie</h5>Easy integration with OpsGenie incident response orchestration platform for DevOps
@@ -96,7 +96,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/pagerduty.svg" alt="Pagerduty" title="PagerDuty - PagerDuty" style="width: 128px;">
+                            <img src="../../images/alerts/notifications/pagerduty.svg" alt="Pagerduty" title="PagerDuty - PagerDuty" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>PagerDuty</h5>Send alerts to PagerDuty's SaaS incident response platform for IT departments.
@@ -113,7 +113,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/pushover.svg" alt="Pushover Alerts Integration" title="Pushover  Alerts Integration"
+                            <img src="../../images/alerts/notifications/pushover.svg" alt="Pushover Alerts Integration" title="Pushover  Alerts Integration"
                                 style="width: 64px;">
                         </div>
                         <div class="side back">
@@ -130,7 +130,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/slack.svg" alt="Slack" title="Slack Alerts Integration" style="width: 128px;">
+                            <img src="../../images/alerts/notifications/slack.svg" alt="Slack" title="Slack Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Slack</h5>Easy Sematext alerts integration with Slack's team collaboration tools and services.</div>
@@ -147,7 +147,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/victorops.svg" alt="Victorops" title="VictorOps Alerts Integration" style="width: 128px;">
+                            <img src="../../images/alerts/notifications/victorops.svg" alt="Victorops" title="VictorOps Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Victorops</h5>Fast alerts integration with Victorops' incident management software purpose-built
@@ -164,7 +164,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/webhooks.svg" alt="Webhooks" title="Webhooks Alerts Integration" style="width: 128px;">
+                            <img src="../../images/alerts/notifications/webhooks.svg" alt="Webhooks" title="Webhooks Alerts Integration" style="width: 128px;">
                         </div>
                         <div class="side back">
                             <h5>Webhooks</h5>Have a custom WebHook you’d like to call? No problem – define the endpoint, format
@@ -181,7 +181,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/zapier.svg" alt="Zapier Alerts Integration" title="Zapier  Alerts Integration"
+                            <img src="../../images/alerts/notifications/zapier.svg" alt="Zapier Alerts Integration" title="Zapier  Alerts Integration"
                                 style="width: 96px;">
                         </div>
                         <div class="side back">
@@ -197,7 +197,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/spike.svg" alt="Spike.sh" title="Spike.sh Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/spike.svg" alt="Spike.sh" title="Spike.sh Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>Spike.sh</h5>Easy Sematext alerts integration with Spike.sh on-call management and escalations platform.
@@ -213,7 +213,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/squadcast.svg" alt="Squadcast" title="Squadcast Alerts Integration" style="width: 80px;">
+                            <img src="../../images/alerts/notifications/squadcast.svg" alt="Squadcast" title="Squadcast Alerts Integration" style="width: 80px;">
                         </div>
                         <div class="side back">
                             <h5>Squadcast</h5>Send all alerts to Squadcast modern incident response and on-call management platform.
@@ -229,7 +229,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/teams.svg" alt="Microsoft Teams" title="Microsoft Teams Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/teams.svg" alt="Microsoft Teams" title="Microsoft Teams Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>Microsoft Teams</h5>Easy Sematext alerts integration with Microsoft Teams collaboration tools and services.
@@ -245,7 +245,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/telegram.svg" alt="Telegram" title="Telegram Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/telegram.svg" alt="Telegram" title="Telegram Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>Telegram</h5>Have all the important alert notifications from Sematext sent to your favorite messaging app.
@@ -261,7 +261,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="/docs/images/alerts/notifications/twilio.svg" alt="Twilio" title="Twilio Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/twilio.svg" alt="Twilio" title="Twilio Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>Twilio SMS</h5>Get notified about alerts via SMS using the Twilio SMS service.
@@ -273,10 +273,6 @@ The primary purpose of alert rules is to send notifications when triggered. This
     </div>
 </div>
 
-An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view. A convenient way to navigate here is using the shortcut on top of the Alert Rules view.
+An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view that is part of Alerts menu.
 
-![Sematext Alerts](https://sematext.com/docs/images/alerts/image_10.png "Sematext Alerts")
-
-It’s a shortcut for Integrations > Notification Hooks.
-
-![Sematext Alerts](https://sematext.com/docs/images/alerts/image_11.png "Sematext Alerts")
+![Sematext Alerts](../images/alerts/image_10.png "Sematext Alerts")
