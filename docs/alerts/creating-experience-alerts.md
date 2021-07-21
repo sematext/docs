@@ -29,7 +29,7 @@ The above metrics can also be chosen from the alert rule creation dialog:
 
 ![Experience Alert Metric](../images/alerts/experience_alert_metrics.png)
 
-While creating an alert you'll get a chart preview of the alert threshold or anomaly. For example, the preview screen when setting up a new alert rule for the page load time higher than 4500 milliseconds on average would look like the following one:
+While creating an alert you'll get a chart preview of the alert threshold or anomaly. For example, the preview screen when setting up a new alert rule for the page load time higher than 1200 milliseconds on average would look like the following one:
 
 ![Page Load Alert Preview](../images/alerts/experience_alert_preview.png)
 

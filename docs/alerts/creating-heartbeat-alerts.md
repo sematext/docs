@@ -39,6 +39,6 @@ Then, in the group by section, add the `os.host` and `container.image.name` tags
 
 You can see a preview of the heartbeat bars split and grouped by the selected tags.
 
-There are six bars because we have three `os.host` tag values and two `container.image.name` tag values. There are six combinations because two containers are running on each one of the three available hosts.
+There are four bars because we have two `os.host` tag values and two `container.image.name` tag values. There are four combinations because two containers are running on each one of the two available hosts.
 
 This example Heartbeat Alert rule shows `os.host`+`container.image.name` combinations. You will get notified if some container with a particular image name moves to another host or disappears from a container host altogether.
