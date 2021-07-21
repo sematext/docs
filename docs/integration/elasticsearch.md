@@ -242,9 +242,9 @@ thread pool max<br>**es.thread.pool.max** <br>*(long gauge)*                    
 
 ## FAQ
 
-** Why doesn't the number of documents I see in SPM match the number of documents in my Elasticsearch index **
+** Why doesn't the number of documents I see in Sematext match the number of documents in my Elasticsearch index **
 
-SPM collects index stats from primary shards only.  To see the
+Sematext collects index stats from primary shards only.  To see the
 total number of documents in an index, select all shards in that index
 and choose "sum".  The list of shards and the "sum" function can be
 found in the "Shard filter" in the Index Stats
@@ -294,4 +294,4 @@ primary shards, so it is possible that you installed Sematext Agent on some
 Elasticsearch node which hosts only replicas. The same is also true for
 Refresh/Flush and Merge stats. Also note that Sematext Agent
 should be installed on all your Elasticsearch nodes to get the complete
-picture of your cluster in SPM Reports UI.
+picture of your cluster in Sematext Reports UI.
