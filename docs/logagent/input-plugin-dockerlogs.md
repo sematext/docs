@@ -36,7 +36,7 @@ outputFilter:
 output:
     elasticsearch:
       module: elasticsearch
-      url: http://logsene.reciver.sematext.com
+      url: http://logsene-receiver.sematext.com
       index: YOUR_LOGSENE_TOKEN
 
 ```
