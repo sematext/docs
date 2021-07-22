@@ -1,5 +1,5 @@
 title: Apache Logs Integration
-description: Sematext Apache Logs integration allows you to troubleshoot connection, access, and other RabbitMQ issues.
+description: Sematext Apache Logs integration allows you to troubleshoot connection, access, and other Apache issues.
 
 To make use of the Sematext Apache Logs integration, you'll need to send Apache logs to your Sematext Logs App. The easiest way is via [Discovery](../logs/discovery/setup), which can parse Apache logs out of the box.
 
