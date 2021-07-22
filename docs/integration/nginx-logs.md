@@ -1,5 +1,5 @@
 title: Nginx Logs Integration
-description: Sematext Nginx Logs integration allows you to troubleshoot connection, access, and other RabbitMQ issues.
+description: Sematext Nginx Logs integration allows you to troubleshoot connection, access, and other Nginx issues.
 
 To make use of the Sematext Nginx Logs integration, you'll need to send Nginx logs to your Sematext Logs App. The easiest way is via [Discovery](../logs/discovery/setup), which can parse Nginx logs out of the box.
 
