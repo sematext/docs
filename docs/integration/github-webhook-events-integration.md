@@ -110,3 +110,13 @@ curl -X POST \
   ] 
 }'
 ```
+
+## Exploring logs
+The Github integration comes with several pre-built dashboards that, you will find, provide valuable insight about your team's development speed.  Below is an example of one such dashboards, but as you can see on the left side of this screenshot, there are other reports reports that this integration provides out of the box.
+
+<img
+  class="content-modal-image"
+  alt="Github Team Pulse Dashboard"
+  src="../../images/logs/github-webhooks-team-pulse.png"
+  title="Github Team Pulse Dashboard"
+/>
