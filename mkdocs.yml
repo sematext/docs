@@ -152,17 +152,17 @@ pages:
         - ZooKeeper: integration/zookeeper.md
       - Logs:
         - Generic Logs: integration/generic-logs-integration.md
+        - Apache Logs: integration/apache-logs.md
         - AWS ECS: integration/ecs-logs.md
         - GitHub Webhook Events: integration/github-webhook-events-integration.md
         - IBM Cloud Kubernetes Logs: integration/ibm-cloud-kubernetes-logs.md
         - Kubernetes Audit: integration/kubernetes-audit-integration.md
         - Linux Journald: integration/journald-integration.md
         - Mobile Apps Logs: integration/mobile-apps-logs.md
+        - Nginx Logs: integration/nginx-logs.md
         - PostgreSQL: integration/postgresql-logs.md
         - RabbitMQ: integration/rabbitmq-logs.md
         - Solr: integration/solr-logs.md
-        - Apache Logs: integration/apache-logs.md
-        - Nginx Logs: integration/nginx-logs.md
         - Vercel: integration/vercel-logs-integration.md
       - Notification Hooks:
         - Custom Webhooks: integration/alerts-webhooks-integration.md
