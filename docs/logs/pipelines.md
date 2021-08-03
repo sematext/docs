@@ -1,7 +1,9 @@
 title: Log Pipelines
 description: Add processing steps to log ingestion
 
-Sometimes raw log events are not exactly the way you want them to be and it might be hard to set up log shipper that is able to transform or filter log events. An alternative approach is to configure processing steps that are injected in ingestion flow. We call that pipelines. Pipelines can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents.
+Log events are not always structured the way you want them to be. It might be hard to set up a log shipper to transform or filter log events.
+
+An alternative approach is to configure processing steps that are injected in the ingestion flow. We call this **pipelines**. Pipelines can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents.
 Pipelines are easily accessible and link to pipeline builder is available in the main menu of every log report.
 
 ![Pipelines Button](../../images/logs/pipelines/pipeline-button.png)
@@ -100,7 +102,6 @@ Changes made to pipelines are not automatically saved. Once you made some change
 ![Save Pipeline](../../images/logs/pipelines/save-pipeline.png)
 
 The new configuration will not be applied immediatelly. It can take up to 5 min before you can see effects on your changes. Make sure you adjust field types using [Field Editor](./fields/#field-editor).
-
 
 
 
