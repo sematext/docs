@@ -20,7 +20,7 @@ Use cases:
 # Collect Azure Events
 input:
   azure-events: 
-    module: azure-eventhub
+    module: azure-event-hub
     # Event Hub Name
     name: hub1
     # Your Event Hub endpoint, requires read permissions 
