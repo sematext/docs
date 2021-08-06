@@ -3,7 +3,10 @@ description: Add processing steps to log ingestion
 
 Log events are not always structured the way you want them to be. It might be hard to set up a log shipper to transform or filter log events.
 
-An alternative approach is to configure processing steps that are injected in the ingestion flow. We call this **pipelines**. Pipelines can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents.
+An alternative approach is to configure processing steps that are injected in the ingestion flow. We call this **pipelines**. 
+
+Pipelines can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents.
+
 Pipelines are easily accessible in the main menu of every Logs App. This gives you access to the pipeline builder.
 
 ![Pipelines Button](../../images/logs/pipelines/pipeline-button.png)
@@ -25,7 +28,10 @@ The header and subnav let you define time and filters that will be used to load 
 By default, we will load only 10 documents. You can also change it to 50 or 100. Note that a larger number of documents may slow the preview down a bit since documents are sent for processing on each pipeline configuration change.
 
 #### Processors
-Processors are units of processing in pipelines. They can change, drop, or even produce additional events. They are chained to form a pipeline. The output of one processor is the input for the next processor.
+Processors are units of processing in pipelines. 
+
+They can change, drop, or even produce additional events. They are chained to form a pipeline. The output of one processor is the input for the next processor.
+
 Configuration section will be empty in most cases when you initially open pipeline builder.
 
 ![Empty Pipeline](../../images/logs/pipelines/empty-pipeline.png)
@@ -39,7 +45,9 @@ You can also add processors by duplicating existing processors.
 
 ![Processor Actions](../../images/logs/pipelines/processor-actions.png)
 
-The duplicate action is below the standard action button in the list of processors. Note that **the order of processors matters** since the **output of one processor is the input for the next processor**. You can reorder processors using the drag handle to the left of the processor's name.
+The duplicate action is below the standard action button in the list of processors. Note that **the order of processors matters** since the **output of one processor is the input for the next processor**. 
+
+You can reorder processors using the drag handle to the left of the processor's name.
 
 The selected processor configuration will be displayed on the right side. Every processor has at least a name and description field, but all processors will also have additional, processor-specific configurations.
 
@@ -53,11 +61,24 @@ Almost all processors have optional filters. With filters, you can select only a
 
 ![Processor Filters](../../images/logs/pipelines/processor-filters.png)
 
-Processors use the same filtering you're already used to in Sematext. The only difference is that you can also enter fields that are not keywords or even defined yet. Another important difference is that you can use wildcards for values. It supports standard wildcards `*`, matches any number of characters, and `?`, matches a single character.
+Processors use the same filtering you're already used to in Sematext. 
+
+The only difference is that you can also enter fields that are not keywords or even defined yet. 
+
+Another important difference is that you can use wildcards for values. It supports standard wildcards `*`, matches any number of characters, and `?`, matches a single character.
+
 This way you can e.g. drop events that have message field `*password*`.
 
 ##### Sampling
-You can do events sampling with Pipeline as well. It can be applied on all events, or by using filters you can sample only a subset of events. One example might be to filter by events from one specific service. The sample rate is expressed as a percentage of events that should be stored. By default, it is 100%, meaning no events will be dropped. Setting sampling to 10% means that only 1 in 10 events will be stored and 9 will be dropped.
+You can do events sampling with Pipeline as well. 
+
+It can be applied on all events, or by using filters you can sample only a subset of events.
+ 
+One example might be to filter by events from one specific service. The sample rate is expressed as a percentage of events that should be stored. By default, it is 100%, meaning no events will be dropped. Setting sampling to 10% means that only 1 in 10 events will be stored and 9 will be dropped.
+
+Below is an example where we were leave only 30% of log lines with severity `Information`, others severities will go as is, untouched.
+
+![Edit Input](../../images/logs/pipelines/processor-sampling.png)
 
 ##### Field Extractor
 Structuring data into fields is important if you are using Logsene: there are analysis possibilities you can do later with these fields (draw charts/diagrams or use for grouping/filtering).
@@ -89,6 +110,7 @@ The preview section is a helper tool you use to see how the pipeline you configu
 ![Processor Filters](../../images/logs/pipelines/pipeline-preview.png)
 
 The differences are presented in a way you're already used to, line by line. Since our events are JSON objects, you can expand them and see which part of every event was changed, removed or added.
+
 The input is automatically loaded from the App, respecting the selected time, filters and number of documents. However, the App might be empty, or documents in the App might already be processed by the pipeline so they do not have cases that you would like to test. In such cases, manual editing is the way to enter or adjust the input. You can toggle between editing and preview.
 
 ![Edit Input](../../images/logs/pipelines/edit-input.png)
