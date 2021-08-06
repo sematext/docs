@@ -65,9 +65,12 @@ Processors use the same filtering you're already used to in Sematext.
 
 The only difference is that you can also enter fields that are not keywords or even defined yet. 
 
+###### Wildcards
 Another important difference is that you can use wildcards for values. It supports standard wildcards `*`, matches any number of characters, and `?`, matches a single character.
 
-This way you can e.g. drop events that have message field `*password*`.
+This way you can e.g. drop events that have message field `*raws*` as in example below
+
+![Wildcards_Filtering](../../images/logs/pipelines/wildcards-filtering.png)
 
 ##### Sampling
 You can do events sampling with Pipeline as well. 
@@ -78,7 +81,7 @@ One example might be to filter by events from one specific service. The sample r
 
 Below is an example where we were leave only 30% of log lines with severity `Information`, others severities will go as is, untouched.
 
-![Edit Input](../../images/logs/pipelines/processor-sampling.png)
+![Processor_Sampling](../../images/logs/pipelines/processor-sampling.png)
 
 ##### Field Extractor
 Structuring data into fields is important if you are using Logsene: there are analysis possibilities you can do later with these fields (draw charts/diagrams or use for grouping/filtering).
