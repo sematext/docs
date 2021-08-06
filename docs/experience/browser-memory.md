@@ -37,3 +37,21 @@ Sematext Experience [Browser SDK](https://sematext.com/docs/agents/browser/) use
 
 ## Supported Browsers
 At the moment, the only web browser that supports memory usage measurements is Chrome. The memory usage measurement feature was under Chrome Origin Trials until [13th January 2021](https://web.dev/origin-trials/) and is available to all users starting with [Chrome 89](https://www.chromestatus.com/feature/5685965186138112). 
+
+## Limitations
+The memory measurement is enabled by default starting with Chrome 89, but only for the web pages that are **cross-origin isolated**. Your website can achieve that state by sending the following headers in the main document:
+
+```javascript
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+```
+
+You can determine if your website is cross-origin isolated by using:
+
+```javascript
+self.crossOriginIsolated
+```
+
+If the website is not cross-origin isolated the memory measurement API is not available, and the measurements will not be visible in your Experience App. 
+
+Learn more about the [Cross-Origin-Embedder-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) and the [Cross-Origin-Resource-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)) headers.
