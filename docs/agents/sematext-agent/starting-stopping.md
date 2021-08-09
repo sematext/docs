@@ -78,3 +78,19 @@ kubectl delete SematextAgent sematextagent
 kubectl delete -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
 ```
 
+## Nomad
+
+To remove the agent running in Nomad environment, run:
+
+```
+nomad job stop sematext-agent
+```
+
+
+## Podman
+
+Removing the agent in Podman setup can be done with the command:
+
+```
+podman rm -f st-agent
+```
