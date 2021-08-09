@@ -46,12 +46,6 @@ In Swarm environment agent can be started using `docker service create` command 
 To remove the agent run:
 
 ```
-docker service scale st-agent=0
-```
-
-To completely remove the agent service run:
-
-```
 docker service rm st-agent
 ```
 
@@ -80,12 +74,17 @@ kubectl delete -f https://raw.githubusercontent.com/sematext/sematext-operator/m
 
 ## Nomad
 
-To remove the agent running in Nomad environment, run:
+To stop the agent running in Nomad environment, run:
 
 ```
 nomad job stop sematext-agent
 ```
 
+To remove it, run:
+
+```
+nomad job delete sematext-agent
+```
 
 ## Podman
 
