@@ -229,6 +229,7 @@ pages:
           - Kubernetes: agents/sematext-agent/kubernetes/installation.md
           - Chef Recipe: agents/sematext-agent/chef-recipe.md
           - Permission requirements: agents/sematext-agent/permission-requirements.md
+        - Starting/stopping: agents/sematext-agent/starting-stopping.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
         - App Agent:
           - Overview:  agents/sematext-agent/app-agent/index.md
