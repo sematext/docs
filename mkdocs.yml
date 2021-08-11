@@ -70,6 +70,7 @@ pages:
       - On Demand Profiling: monitoring/on-demand-profiling.md
       - Correlation: monitoring/correlation.md
       - Tags: monitoring/tags.md
+      - Custom Metrics: monitoring/custom-metrics.md
       - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: changelog.md
       - FAQ: monitoring/spm-faq.md

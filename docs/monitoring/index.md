@@ -17,6 +17,8 @@ Use [**Database Monitoring**](https://sematext.com/database-monitoring/) to get 
 
 You can create [**custom dashboards**](../dashboards/) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
+And you can additionally send any kind of [**custom metrics**](./custom-metrics).
+
 If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with over 40 integrations to choose from.
 
 
@@ -27,7 +29,7 @@ The first step to monitoring with Sematext is to create a Monitoring App. Go to 
 Follow along the [Quick Start](./quick-start) guide to learn how.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/sematext-create-docker-app.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sem  atext-create-docker-app.mp4" type="video/mp4" />
 </video>
 
 ### App Settings
