@@ -71,7 +71,7 @@ This way you can, for example, drop events whose message field contains `*raws*`
 ##### Sampling
 You can do events sampling with Pipeline as well. 
 
-Without sampling Pipelines are applied to all events, but by using filters you can sample only a subset of events.
+Without filters sampling is applied to all events, but by using filters you can sample only a subset of events.
  
 One example might be to filter by events from one specific service. The sample rate is expressed as a percentage of events that should be stored. By default, the sampling rate is 100%, meaning no events will be dropped. Setting sampling to 10% means that only 10 in 100 events will be stored and 90 will be dropped.
 
@@ -101,6 +101,29 @@ For the above example, your grok filter would look something like this:
 Field Extractor provides a bunch of predefined patterns you may use for your purposes. Autocompletion makes it easy to navigate through and select them.
 
 ![Processor Grok Field Extractor](../../images/logs/pipelines/processor-grok.png)
+
+##### Scripting
+Simple scripting is supported using Script processor. String processing and basic math operations are supported. You can access fields using `get` method. It also supports storing/reading intermediate results using `vars` method.
+The following is supported:
+
+- Math operators: +, -, /, *, %, ^, e.g. `get('size.kb')*2^10`
+- Relational operators: ==, !=, <, <=, >, >=, e.g. `get('size') > 10`
+- Logical operators: and, or, not, e.g. `get('size') > -1 and get('size') < 10`
+- Ternary operator, e.g. `get('speed') < 1000 ? 'OK' : 'SLOW'`
+- Elvis operator `?:`, e.g. `get('severity')?:'INFO'`
+- String functions, e.g. `get('severity').toUpperCase()` or `get('message').split('-')[3]`
+- vars method, e.g. `vars(idx, get('message').indexOf('-'))` and `get('message').substring(vars('idx'), vars('idx') + 3)`
+
+Conditional block and loops are not supported and each line can have only a single statement. The last line should result in a value that will be stored as a field, while other lines should only be vars statements.
+
+Imagine we have a message field:
+`Got document of 142 kb from 255.35.244.0`
+and that we want to extract number of kilobytes. The script could be something like:
+
+```
+vars('kbIdx', get('message').indexOf(' kb'))
+get('message').substring(17, vars('kbIdx'))
+```
 
 
 #### Preview
