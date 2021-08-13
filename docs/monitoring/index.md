@@ -29,7 +29,7 @@ The first step to monitoring with Sematext is to create a Monitoring App. Go to 
 Follow along the [Quick Start](./quick-start) guide to learn how.
 
 <video style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/sem  atext-create-docker-app.mp4" type="video/mp4" />
+  <source src="https://cdn.sematext.com/videos/sematext-create-docker-app.mp4" type="video/mp4" />
 </video>
 
 ### App Settings
