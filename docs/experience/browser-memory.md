@@ -39,7 +39,7 @@ Sematext Experience [Browser SDK](https://sematext.com/docs/agents/browser/) use
 At the moment, the only web browser that supports memory usage measurements is Chrome. The memory usage measurement feature was under Chrome Origin Trials until [13th January 2021](https://web.dev/origin-trials/) and is available to all users starting with [Chrome 89](https://www.chromestatus.com/feature/5685965186138112). 
 
 ## Limitations
-The memory measurement is enabled by default starting with Chrome 89, but only for the web pages that are **cross-origin isolated**. Your website can achieve that state by sending the following headers in the main document:
+The memory measurement is enabled by default starting with Chrome 89, but only for web pages that are **cross-origin isolated**. Your website can achieve that state by sending the following headers in the main document:
 
 ```javascript
 Cross-Origin-Embedder-Policy: require-corp
@@ -52,11 +52,11 @@ You can determine if your website is cross-origin isolated by using:
 self.crossOriginIsolated
 ```
 
-If the website is not cross-origin isolated the memory measurement API is not available, and the measurements will not be visible in your Experience App. 
+If the website is not cross-origin isolated the memory measurement API will not be available and the measurements will not be visible in your Experience App. 
 
 ### Identifying Resources Affected by Cross-Origin Isolation
 
-Before enabling the cross-origin isolation headers we encourage you to check which resources your website uses will be affected by the new security policy. To do that you can include additional reporting headers you the main document of your website. Those headers are:
+Before enabling the cross-origin isolation headers we encourage you to check which resources used by your website will be affected by the new security policy. To do that you can include additional reporting headers to the main document of your website. Those headers are:
 
 ```
 Cross-Origin-Opener-Policy-Report-Only: same-origin
@@ -84,6 +84,6 @@ For iframes you can use the **allow="cross-origin-isolated"** attribute.
 
 ### Potential Problems
 
-The current implementation of the cross-origin isolation is known to cause issues with integrations that require cross-origin window interactions such as various payment providers and OAuth authorization. There are works to mitigate that problem by relaxing the strictness of the cross-origin isolation policies and it may change in the future versions on Chrome.
+The current implementation of the cross-origin isolation is known to cause issues with integrations that require cross-origin window interactions such as various payment providers and OAuth authorization. There is work in progress aimed at mitigating that problem by relaxing the strictness of the cross-origin isolation policies, so the situation may change in the future versions on Chrome.
 
 Learn more about the [Cross-Origin-Embedder-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) and the [Cross-Origin-Resource-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)) headers.
