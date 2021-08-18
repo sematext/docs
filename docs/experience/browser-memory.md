@@ -74,7 +74,7 @@ You can either configure your webserver to save the reports or open Chrome and i
 
 ### Mitigating the Impact of Cross-Origin Isolation For Resources
 
-Once the affected resources are identified you can use the **crossorigin** attribute in the HTML tags that are known to be server with the Cross-Origin-Resource-Sharing, simply CORS. You can for example do the following:
+Once the affected resources are identified you can add the **crossorigin** attribute to the HTML tags that will be served with the Cross-Origin-Resource-Sharing, simply CORS. You can for example do the following:
 
 ```
 <img src="https://some.other.domain/sematext.png" crossorigin />
