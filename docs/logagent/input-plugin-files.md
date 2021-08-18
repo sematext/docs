@@ -17,6 +17,8 @@ input:
     - '/var/log/**/*.log'
     - '/opt/myapp/**/*.log'
     - '/opt/another-log-directory/another.log'
+    # Windows example
+    # - 'D:\logs\**\*.log'
     
 output:
   stdout: yaml
