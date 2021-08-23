@@ -5,13 +5,13 @@ Log events are not always structured the way you want them to be. For various re
 
 Each Pipeline consists of one or more **Processors** that are executed in the order in which they are defined in a Pipeline.  Pipelines and its Processors can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents, and more.  They are easily accessible in the main menu of every Logs App. This gives you access to the Pipeline Builder.
 
-![Pipelines Button](../../images/logs/pipelines/pipeline-button.png)
+![Pipelines Button](../images/logs/pipelines/pipeline-button.png)
 
 
 ### Pipeline Builder
 The Pipeline Builder is, as its name implies, what you use to set up Pipelines.  Once the Pipeline Builder is opened, you'll see a dedicated page where you can configure ingestion settings.
 
-![Pipeline Builder](../../images/logs/pipelines/pipeline-builder-saved.png)
+![Pipeline Builder](../../../images/logs/pipelines/pipeline-builder-saved.png)
 
 On top we have a header and subnav that can be used to pick events to preview. The page is split between a resizable preview section and a Pipeline configuration section.
 
