@@ -28,7 +28,7 @@ ecosystem.
 ### Metrics line example
 
 ```
-appStats,token=00000000-1111-2222-3333-444444444444,os.host=host001,region=us user.requests.count=10i,user.requests.time=327i 1628605794318000000
+appStats,token=00000000-1111-2222-3333-444444444444,os.host=host001,service=registration user.requests.count=10i,user.requests.time=327i 1628605794318000000
 ```
 
 In this example we can see:
@@ -36,8 +36,8 @@ In this example we can see:
   anything that makes sense to you. It will be used as a prefix to all metrics in this line (so, full name of a metric
   `user.requests.count` is actually `appStats.user.requests.count`)
 - `token` - a token of your Sematext monitoring App
-- `os.host` and `region` - two tags used to describe these metrics. You can append more tags by appending them after
-  `region=us` (tags have to be separated by a comma)
+- `os.host` and `service` - two tags used to describe these metrics. You can append more tags by appending them after
+  `service=registration` (tags have to be separated by a comma)
 - `user.requests.count` and `user.requests.time` - two metrics. You can append more metrics, metrics should be comma
   separated.
 - `1628605794318000000` - the third and the final element of a metric line, measurement timestamp expressed in
@@ -50,9 +50,9 @@ lines, but would still like the metrics to appear in the UI as soon as possible,
 Example of sending a batch of metrics:
 ```
 curl -XPOST -H "Content-Type: text/plain" "https://spm-receiver.sematext.com/write?db=metrics" -d '
-appStats,token=00000000-1111-2222-3333-444444444444,os.host=host001,region=us user.requests.count=10i,user.requests.time=327i 1628605794318000000
-appStats,token=00000000-1111-2222-3333-444444444444,os.host=host002,region=asia user.requests.count=31i,user.requests.time=1152i 1628605797988000000
-appStats,token=00000000-1111-2222-3333-444444444444,os.host=host003,region=eu user.requests.count=20i,user.requests.time=218i 1628605812295000000
+appStats,token=00000000-1111-2222-3333-444444444444,os.host=host001,service=registration user.requests.count=10i,user.requests.time=327i 1628605794318000000
+appStats,token=00000000-1111-2222-3333-444444444444,os.host=host002,service=payment user.requests.count=31i,user.requests.time=1152i 1628605797988000000
+appStats,token=00000000-1111-2222-3333-444444444444,os.host=host003,service=email user.requests.count=20i,user.requests.time=218i 1628605812295000000
 '
 ```
 
