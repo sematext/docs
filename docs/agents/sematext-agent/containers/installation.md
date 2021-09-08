@@ -27,6 +27,25 @@ By default, the US region receiver endpoints are used to ship data to Sematext C
 
 **Note that if any of the** `*_URL` **environment variables are set, region specific receiver endpoints are ignored.**
 
+## Docker for OSX
+To deploy the Sematext Agent on Docker for OSX, run the following command:
+
+```bash
+docker run -d  --restart always --privileged -P --name st-agent \
+-v /:/hostfs:ro \
+-v /sys/:/hostfs/sys:ro \
+-v /var/run/:/var/run/ \
+-v /sys/kernel/debug:/sys/kernel/debug \
+-v /etc/passwd:/etc/passwd:ro \
+-v /etc/group:/etc/group:ro \
+-v /var/run/docker.sock:/var/run/docker.sock:ro \
+-e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
+-e REGION=<US or EU> \
+sematext/agent:latest
+```
+
+Docker on OSX relies on virtualization capabilities to spawn the containers inside the VM. The side effect is that Sematext Agent will report the OS metrics of the VM box and not the bare-metal machine where the OSX is running.
+
 ### Run Sematext Agent with a Config File
 
 Mount the configuration file into the container and set the path to the configuration file ```-v /opt/st-agent/st-agent.yml:/opt/st-agent/st-agent.yml ``` via `CONFIG_FILE` environment variable.
