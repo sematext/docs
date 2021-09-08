@@ -127,19 +127,38 @@ A typical troubleshooting workflow starts from detecting a spike in the metrics,
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                          |  Description
 ---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
+parent max size<br>**es.circuitBreaker.parent.size.max** <br>*(long gauge)* *(bytes)*                    |  max parent circuit breaker size
+parent estimated size<br>**es.circuitBreaker.parent.size.estimate** <br>*(long gauge)* *(bytes)*                    |  estimated parent circuit breaker size
+parent overhead<br>**es.circuitBreaker.parent.size.overhead** <br>*(double gauge)*                   |  parent circuit breaker overhead
+parent tripped<br>**es.circuitBreaker.parent.tripped** <br>*(counter)*                    |  parent circuit breaker tripped
+inFlightRequests max size<br>**es.circuitBreaker.inFlightRequests.size.max** <br>*(long gauge)* *(bytes)*                    |  max in-flight requests size
+inFlightRequests estimated size<br>**es.circuitBreaker.inFlightRequests.size.estimate** <br>*(long gauge)* *(bytes)*                    |  estimated in-flight requests size
+inFlightRequests overhead<br>**es.circuitBreaker.inFlightRequests.size.overhead** <br>*(double gauge)*                   |  in-flight requests overhead
+inFlightRequests tripped<br>**es.circuitBreaker.inFlightRequests.tripped** <br>*(counter)*                    |  in-flight requests circuit breaker tripped
 fieldData max size<br>**es.circuitBreaker.fieldData.size.max** <br>*(long gauge)* *(bytes)*                    |  max fieldData size
 fieldData estimated size<br>**es.circuitBreaker.fieldData.size.estimate** <br>*(long gauge)* *(bytes)*         |  estimated fieldData size
 fieldData overhead<br>**es.circuitBreaker.fieldData.size.overhead** <br>*(double gauge)*                       |  fieldData overhead
 request maximum size<br>**es.circuitBreaker.request.size.max** <br>*(long gauge)* *(bytes)*                    |  max request size
+fieldData tripped<br>**es.circuitBreaker.fieldData.tripped** <br>*(counter)*                    |  fieldData circuit breaker tripped
 request estimated size<br>**es.circuitBreaker.request.size.estimate** <br>*(long gauge)* *(bytes)*             |  estimated request size
 request overhead<br>**es.circuitBreaker.request.size.overhead** <br>*(double gauge)*                           |  request overhead
+request tripped<br>**es.circuitBreaker.request.tripped** <br>*(counter)*                    |  request circuit breaker tripped
 ES nodes<br>**es.cluster.nodes** <br>*(long gauge)*                                                            |  Number of nodes in the ES cluster
 ES data nodes<br>**es.cluster.nodes.data** <br>*(long gauge)*                                                  |  Number of data nodes in the ES cluster
+number of processors<br>**es.cpu.allocated.count** <br>*(long gauge)*                                                            |  number of processors allocated to the Elasticsearch process
+full cluster state updates<br>**es.cluster.state.published.full** <br>*(long counter)*                                                            |  full cluster state updates published
+cluster state incompatible diff updates<br>**es.cluster.state.published.diff.incompatible** <br>*(long counter)*                                                            |  cluster state incompatible diff updates published
+cluster state compatible diff updates<br>**es.cluster.state.published.diff.compatible** <br>*(long counter)*                                                            |  cluster state compatible diff updates published
 active primary shards<br>**es.cluster.health.shards.active.primary** <br>*(long gauge)*                        |  Number of active primary shards
 active shards<br>**es.cluster.health.shards.active** <br>*(long gauge)*                                        |  Number of active shards
 relocating shards<br>**es.cluster.health.shards.relocating** <br>*(long gauge)*                                |  Number of currently relocating shards
 initializing shards<br>**es.cluster.health.shards.initializing** <br>*(long gauge)*                            |  Number of currently initializing shards
 unassigned shards<br>**es.cluster.health.shards.unassigned** <br>*(long gauge)*                                |  Number of currently unassigned shards
+outgoing searches<br>**es.adaptiveReplicaSelection.searches.outgoing** <br>*(long gauge)*                                |  searches from the monitored node to the remote node
+average queue size<br>**es.adaptiveReplicaSelection.queue.size.avg** <br>*(double gauge)*                                |  exponentially weighted moving average queue size for searches on the remote node
+average service time<br>**es.adaptiveReplicaSelection.service.time.avg** <br>*(long gauge)* *(ms)*                               |  exponentially weighted moving average task execution time on the remote node
+average response time<br>**es.adaptiveReplicaSelection.response.time.avg** <br>*(long gauge)* *(ms)*                               |  exponentially weighted moving average response time on the remote node
+rank<br>**es.adaptiveReplicaSelection.rank** <br>*(double gauge)*                                |  rank of the remote node used for replica selection
 open HTTP conns<br>**es.connection.http.current.open** <br>*(long gauge)*                                      |  open HTTP conns (current_open)
 total opened HTTP conns<br>**es.connection.http.total.opened** <br>*(long gauge)*                              |  total opened HTTP conns (total_opened)
 open TCP conns<br>**es.connection.tcp.server.open** <br>*(long gauge)*                                         |  open TCP conns (server_open)
@@ -171,6 +190,31 @@ indexed docs (all)<br>**es.indexing.docs.added.total** <br>*(long counter)*     
 deleted docs (all)<br>**es.indexing.docs.deleted.total** <br>*(long counter)*                                  |  docs deleted on all (primary and replica) shards
 indexing time (all)<br>**es.indexing.time.added.total** <br>*(long counter)* *(ms)*                            |  time spent indexing on all (primary and replica) shards
 deleting time (all)<br>**es.indexing.time.deleted.total** <br>*(long counter)* *(ms)*                          |  time spent deleting on all (primary and replica) shards
+recovery throttle time<br>**es.index.recovery.time.throttled** <br>*(long counter)* *(ms)*                          |  time during which recovery was throttled (due to indices.recovery.max_bytes_per_sec limit)
+completion memory<br>**es.index.completion.size** <br>*(long gauge)* *(bytes)*                               |  memory used by the Completion Suggester
+translog size<br>**es.index.translog.size** <br>*(long gauge)* *(bytes)*                               |  transaction log size
+translog operations<br>**es.index.translog.operations** <br>*(long gauge)*                               |  number of operations in the transaction log
+translog uncommitted size<br>**es.index.translog.uncommittedSize** <br>*(long gauge)* *(bytes)*                               |  transaction log uncommitted size
+translog uncommitted operations<br>**es.index.translog.uncommittedOperations** <br>*(long gauge)*                               |  number of uncommitted operations in the transaction log
+segments count<br>**es.segments.count.total** <br>*(long gauge)*                               |  number of segments
+segments memory<br>**es.segments.memory.total** <br>*(long gauge)* *(bytes)*                               |  total memory for segment-related data structures
+terms memory<br>**es.segments.memory.terms** <br>*(long gauge)* *(bytes)*                               |  memory used by the terms dictionary
+stored fields memory<br>**es.segments.memory.storedFields** <br>*(long gauge)* *(bytes)*                               |  memory used by stored fields
+term vectors memory<br>**es.segments.memory.termVectors** <br>*(long gauge)* *(bytes)*                               |  memory used by term vectors
+norms memory<br>**es.segments.memory.norms** <br>*(long gauge)* *(bytes)*                               |  memory used by (length) norms
+points memory<br>**es.segments.memory.points** <br>*(long gauge)* *(bytes)*                               |  memory used by point fields (includes numeric, date, geo)
+doc values memory<br>**es.segments.memory.docValues** <br>*(long gauge)* *(bytes)*                               |  memory used by doc values
+indexing buffer memory<br>**es.segments.memory.indexWriter** <br>*(long gauge)* *(bytes)*                               |  memory used by the IndexWriter
+version map memory<br>**es.segments.memory.versionMap** <br>*(long gauge)* *(bytes)*                               |  memory used by the version map
+fixed bitset memory<br>**es.segments.memory.fixedBitSet** <br>*(long gauge)* *(bytes)*                               |  memory used by the fixed bitset that speeds up nested queries/aggregations
+read ops<br>**es.disk.io.operations.read** <br>*(long counter)*                               |  disk IO read operations
+write ops<br>**es.disk.io.operations.write** <br>*(long counter)*                               |  disk IO write operations
+script compilations<br>**es.script.compilations.total** <br>*(long counter)*                               |  script compilations (use params in scripts to reduce them)
+script cache evictions<br>**es.script.cache.evictions** <br>*(long counter)*                               |  script cache evictions
+script compilations limit triggered<br>**es.script.compilations.limitTriggered** <br>*(long counter)*                               |  script compilations circuit breaker triggered (see script.max_compilations_rate setting)
+ingest calls<br>**es.ingest.calls.total** <br>*(long counter)*                               |  number of calls to this pipeline
+ingest failures<br>**es.ingest.calls.errors** <br>*(long counter)*                               |  number of failed calls to this pipeline
+ingest time<br>**es.ingest.time** <br>*(long counter)* *(ms)*                               |  time spent in this pipeline
 gc collection count<br>**jvm.gc.collection.count** <br>*(long counter)*                                        |  count of GC collections
 gc collection time<br>**jvm.gc.collection.time** <br>*(long counter)* *(ms)*                                   |  duration of GC collections
 open files<br>**jvm.files.open** <br>*(long gauge)*                                                            |  jvm currently open files
@@ -183,14 +227,23 @@ merge count (prim)<br>**es.indexing.merges.primaries** <br>*(long counter)*     
 merge time (prim)<br>**es.indexing.merges.time.primaries** <br>*(long counter)* *(ms)*                         |  merge time on primary shards
 merged docs count (prim)<br>**es.indexing.merges.docs.primaries** <br>*(long counter)*                         |  merged docs count on primary shards
 merged docs size (prim)<br>**es.indexing.merges.docs.size.primaries** <br>*(long counter)* *(bytes)*           |  merged docs size on primary shards
+throttled merge time (prim)<br>**es.indexing.merges.throttled.time.primaries** <br>*(long counter)* *(ms)*           |  throttled time for merges (i.e. when merges fall behind) on primary shards
 merge count (all)<br>**es.indexing.merges.total** <br>*(long counter)*                                         |  merge count on all (primary and replica) shards
 merge time (all)<br>**es.indexing.merges.time.total** <br>*(long counter)* *(ms)*                              |  merge time on all (primary and replica) shards
 merged docs count (all)<br>**es.indexing.merges.docs.total** <br>*(long counter)*                              |  merged docs count on all (primary and replica) shards
 merged docs size (all)<br>**es.indexing.merges.docs.size.total** <br>*(long counter)* *(bytes)*                |  merged docs size on all (primary and replica) shards
+throttled merge time (all)<br>**es.indexing.merges.throttled.time.total** <br>*(long counter)* *(ms)*           |  throttled time for merges (i.e. when merges fall behind) on all (primary and replica) shards
 field cache evictions<br>**es.cache.field.evicted** <br>*(long counter)*                                       |  Field cache evictions
 field cache size<br>**es.cache.field.size** <br>*(long gauge)* *(bytes)*                                       |  Field cache size
 filter cache evictions<br>**es.cache.filter.evicted** <br>*(long counter)*                                     |  Filter cache evictions
 filter cache size<br>**es.cache.filter.size** <br>*(long gauge)* *(bytes)*                                     |  Filter cache size
+filter/query cache count<br>**cache.filter.size.count** <br>*(long counter)*                                     |   Filter/query cache count of elements
+filter/query cache hit count<br>**es.cache.filter.hits** <br>*(long counter)*                                     |  Number of requests hitting the filter/query cache
+filter/query cache miss count<br>**es.cache.filter.misses** <br>*(long counter)*                                     |  Number of requests missing the filter/query cache
+request cache evictions<br>**es.cache.request.evicted** <br>*(long counter)*                                     |  Request cache evictions
+request cache size<br>**es.cache.request.size** <br>*(long gauge)* *(bytes)*                                     |  Request cache size
+request cache hit count<br>**es.cache.request.hits** <br>*(long counter)*                                     |  Number of requests hitting the request cache
+request cache miss count<br>**es.cache.request.misses** <br>*(long counter)*                                     |  Number of requests missing the request cache
 warmer current<br>**es.cache.warmer.current** <br>*(long gauge)*                                               |  Warmer current
 warmer total<br>**es.cache.warmer.total** <br>*(long counter)* *(bytes)*                                       |  Warmer total
 warmer total time<br>**es.cache.warmer.time** <br>*(long counter)* *(ms)*                                      |  Warmer total time
@@ -208,11 +261,21 @@ query latency (prim)<br>**es.query.latency.time.primaries** <br>*(long counter)*
 fetch count (prim)<br>**es.fetch.count.primaries** <br>*(long counter)*                                        |  fetch count on primary shards
 fetch latency (prim)<br>**es.fetch.latency.time.primaries** <br>*(long counter)* *(ms)*                        |  fetch latency on primary shards
 avg. query latency (primaries)<br>**es.query.latency.primaries.avg** <br>*(long gauge)* *(ms)*                 |  avg. query latency on primary shards
+suggest count (prim)<br>**es.suggest.count.primaries** <br>*(long counter)*                                        |  suggest count on primary shards
+suggest latency (prim)<br>**es.suggest.latency.time.primaries** <br>*(long counter)* *(ms)*                        |  suggest latency on primary shards
+scroll count (prim)<br>**es.scroll.count.primaries** <br>*(long counter)*                                        |  scroll count on primary shards
+scroll latency (prim)<br>**es.scroll.latency.time.primaries** <br>*(long counter)* *(ms)*                        |  scroll latency on primary shards
+search open contexts (prim)<br>**es.opencontexts.primaries** <br>*(long gauge)*                                        |  open search contexts on primary shards
 query count (all)<br>**es.query.count.total** <br>*(long counter)*                                             |  query count on all (primary and replica) shards
 query latency (all)<br>**es.query.latency.time.total** <br>*(long counter)* *(ms)*                             |  query latency on all (primary and replica) shards
 fetch count (all)<br>**es.fetch.count.total** <br>*(long counter)*                                             |  fetch count on all (primary and replica) shards
 fetch latency (all)<br>**es.fetch.latency.time.total** <br>*(long counter)* *(ms)*                             |  fetch latency on all (primary and replica) shards
 avg. query latency (all)<br>**es.query.latency.total.avg** <br>*(long gauge)* *(ms)*                           |  avg. query latency on all (primary and replica) shards
+suggest count (all)<br>**es.suggest.count.total** <br>*(long counter)*                                        |  suggest count on all (primary and replica) shards
+suggest latency (all)<br>**es.suggest.latency.time.total** <br>*(long counter)* *(ms)*                        |  suggest latency on all (primary and replica) shards
+scroll count (all)<br>**es.scroll.count.total** <br>*(long counter)*                                        |  scroll count on all (primary and replica) shards
+scroll latency (all)<br>**es.scroll.latency.time.total** <br>*(long counter)* *(ms)*                        |  scroll latency on all (primary and replica) shards
+search open contexts (all)<br>**es.opencontexts.total** <br>*(long gauge)*                                        |  open search contexts on all (primary and replica) shards
 real-time get count (prim)<br>**es.request.rtg.primaries** <br>*(long counter)*                                |  real-time get count on primary shards
 real-time get latency (prim)<br>**es.request.rtg.time.primaries** <br>*(long counter)* *(ms)*                  |  real-time latency on primary shards
 real-time get exists count (prim)<br>**es.request.rtg.exists.primaries** <br>*(long counter)*                  |  real-time get exists count on primary shards
