@@ -35,16 +35,16 @@ With the **Incoming Webhook** configured we can now use the **Webhook URL** to c
 
 **1.** Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in [EU](https://apps.eu.sematext.com/ui/hooks/create)) and select Google Chat card to create a new Google Chat notification hook.
 
-<img class="content-modal-image" alt="Create Google Chat Integration - New Webhook" src="../../images/integrations/create-googlechat-integration-new-hook.png" title="Create Google Chat Integration - New Webhook">
+<img class="content-modal-image" alt="Create Google Chat Integration - New Notification Hook" src="../../images/integrations/create-googlechat-integration-new-hook.png" title="Create Google Chat Integration - New Notification Hook">
 
 **2.** Give your webhook a name and add your Google Chat **Webhook URL**.
 
-<img class="content-modal-image" alt="Create Google Chat Integration - Paste Webhook" src="../../images/integrations/create-googlechat-integration-paste-hook.png" title="Create Google Chat Integration - Paste Webhook">
+<img class="content-modal-image" alt="Create Google Chat Integration - Paste Webhook URL" src="../../images/integrations/create-googlechat-integration-paste-hook.png" title="Create Google Chat Integration - Paste Webhook URL">
 
 **3.** Next, click the **Send Test Notification** button. Google Chat should return **200 (OK)** indicating everything is configured correctly. Check your Google Chat channel for the test message from Sematext.
 
-<img class="content-modal-image" alt="Create Google Chat Integration - Test Webhook" src="../../images/integrations/create-googlechat-integration-test-hook.png" title="Create Google Chat Integration - Test Webhook">
+<img class="content-modal-image" alt="Create Google Chat Integration - Test Notification Hook" src="../../images/integrations/create-googlechat-integration-test-hook.png" title="Create Google Chat Integration - Test Notification Hook">
 
-<img class="content-modal-image" alt="Create Google Chat Integration - Receive Webhook" src="../../images/integrations/create-googlechat-integration-receive-hook.png" title="Create Google Chat Integration - Receive Webhook">
+<img class="content-modal-image" alt="Create Google Chat Integration - Receive Notification Hook" src="../../images/integrations/create-googlechat-integration-receive-hook.png" title="Create Google Chat Integration - Receive Notification Hook">
 
 Once the test message is visible, click the **Save Notification Hook** button to save your configuration. 

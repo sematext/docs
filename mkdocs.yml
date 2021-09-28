@@ -170,6 +170,7 @@ pages:
         - Custom Webhooks: integration/alerts-webhooks-integration.md
         - Big Panda: integration/alerts-bigpanda-integration.md
         - Email: integration/alerts-email-integration.md
+        - Google Chat: integration/alerts-googlechat-integration.md
         - HipChat: integration/alerts-hipchat-integration.md
         - Nagios: integration/alerts-nagios-integration.md
         - OpsGenie: integration/alerts-opsgenie-integration.md
