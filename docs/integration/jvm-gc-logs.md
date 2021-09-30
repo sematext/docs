@@ -27,10 +27,8 @@ Once the data is in, you can explore it using the built-in reports or create you
 
 Other built-in reports include:
 
-- **Errors**: breakdown of errors coming from your logs
-- **G1GC**: report dedicated to the garbage first garbage collector and its metrics 
-- **Meta**: meta and class regions dedicated report
-- **Survivor Stats**: information regarding the survivor region
+- **CMS**: dedicated reports for threads stopping and stopped, survivors, timing and generations.
+- **G1**: details, phases and regions related to G1GC, each in a dedicated report.
 
 ## Correlation with Metrics
 
