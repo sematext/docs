@@ -296,7 +296,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                             <img src="../../images/alerts/notifications/signl4.svg" alt="Twilio" title="Twilio Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
-                            <h5>Twilio SMS</h5>Get notified about Sematext alerts via Signl4.
+                            <h5>Signl4</h5>Get notified about Sematext alerts via Signl4.
                         </div>
                     </div>
                 </div>
