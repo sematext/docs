@@ -277,7 +277,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="../../images/alerts/notifications/googlechat.svg" alt="Twilio" title="Twilio Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/googlechat.svg" alt="Google Chat" title="Google Chat Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>Google Chat</h5>Get your Sematext notifications on Google Chat.
@@ -293,7 +293,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="../../images/alerts/notifications/signl4.svg" alt="Twilio" title="Twilio Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/signl4.svg" alt="Signl4" title="Signl4 Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>Signl4</h5>Get notified about Sematext alerts via Signl4.
