@@ -57,7 +57,15 @@ Both HTTP and Browser monitor requests will have the string "SematextSyntheticsR
 ### Where can I find user journey scripts that I can customize for my own needs?
 You can find Browser monitor scripts for common use cases by selecting the Browse Examples link in the Create Monitor page. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
 
-![Browse Examples](../images/synthetics/browser-examples-faq.png)
+### You can whitelist Synthetics elastic IP according to your region
+N. Virginia (us-east-1)    - 52.202.60.97
+N. California (us-west-1)  - 184.72.63.129
+Mumbai (ap-south-1)        - 15.207.239.77
+Singapore (ap-southeast-1) - 3.0.44.28
+Sydney (ap-southeast-2)    - 54.153.196.213
+Frankfurt (eu-central-1)   - 18.159.198.132
+Ireland (eu-west-1)        - 54.77.99.140
+Sao Paulo (sa-east-1)      - 54.207.1.35
 
 ## Sharing
 
