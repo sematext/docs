@@ -103,26 +103,41 @@ Field Extractor provides a bunch of predefined patterns you may use for your pur
 ![Processor Grok Field Extractor](../images/logs/pipelines/processor-grok.png)
 
 ##### Scripting
-Simple scripting is supported using Script processor. String processing and basic math operations are supported. You can access fields using `get` method. It also supports storing/reading intermediate results using `vars` method.
+Scripting is supported using Script processor which uses [painless](https://www.elastic.co/guide/en/elasticsearch/painless/current/painless-guide.html) language. Painless is a simple scripting language similar to Java. It can safely be used for stored scripts.
+You can access fields using `doc` method. Since value type can be anything, before using it you must cast value to a specific type like: String, Integer, Double, etc.
+
 The following is supported:
 
-- Math operators: +, -, /, *, %, ^, e.g. `get('size.kb')*2^10`
-- Relational operators: ==, !=, <, <=, >, >=, e.g. `get('size') > 10`
-- Logical operators: and, or, not, e.g. `get('size') > -1 and get('size') < 10`
-- Ternary operator, e.g. `get('speed') < 1000 ? 'OK' : 'SLOW'`
-- Elvis operator `?:`, e.g. `get('severity')?:'INFO'`
-- String functions, e.g. `get('severity').toUpperCase()` or `get('message').split('-')[3]`
-- vars method, e.g. `vars(idx, get('message').indexOf('-'))` and `get('message').substring(vars('idx'), vars('idx') + 3)`
+- Math operators: +, -, /, *, %, ^, e.g. `(Integer)doc['size.kb']*2`
+- Relational operators: ==, !=, <, <=, >, >=, e.g. `(Integer)doc['size'] > 10`
+- Logical operators: &&, ||, !, e.g. `(Integer)doc['size'] > -1 && (Integer)doc['size'] < 10`
+- Ternary operator, e.g. `(Integer)doc['speed'] < 1000 ? "OK" : "SLOW"`
+- String functions, e.g. `((String)doc['severity']).toUpperCase()` or `((String)doc['message']).splitOnToken('-')[3]`
 
-Conditional block and loops are not supported and each line can have only a single statement. The last line should result in a value that will be stored as a field, while other lines should only be vars statements.
+Conditional block and loops are supported. The last line should result in a value that will be stored as a field.
+Artificial example bellow shows this. 
+
+```java
+String[] tokens = ((String)doc['message']).splitOnToken(' '); 
+if(tokens.length % 2 != 0){
+  String result = "Iterator ";
+  for(int i = 0; i < tokens.length; i++){
+      result += i;
+  }
+  result;
+}
+else {
+  tokens.length * 10;
+}
+```
 
 Imagine we have a message field:
 `Got document of 142 kb from 255.35.244.0`
 and that we want to extract number of kilobytes. The script could be something like:
 
-```
-vars('kbIdx', get('message').indexOf(' kb'))
-get('message').substring(17, vars('kbIdx'))
+```java
+int kbIdx = ((String)doc['message']).indexOf(' kb');
+((String)doc['message']).substring(17, kbIdx)
 ```
 
 
