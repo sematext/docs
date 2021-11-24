@@ -104,7 +104,9 @@ Field Extractor provides a bunch of predefined patterns you may use for your pur
 
 ##### Scripting
 Scripting is supported using Script processor which uses [painless](https://www.elastic.co/guide/en/elasticsearch/painless/current/painless-guide.html) language. Painless is a simple scripting language similar to Java. It can safely be used for stored scripts.
-You can access fields using `doc` method. Since type of value can be anything before using it you must cast value to specific type like: String, Integer, Double etc.
+You can access fields using `doc` method. Since value type can be anything, before using it you must cast value to a specific type like: String, Integer, Double, etc.
+
+The following is supported:
 
 - Math operators: +, -, /, *, %, ^, e.g. `(Integer)doc['size.kb']*2`
 - Relational operators: ==, !=, <, <=, >, >=, e.g. `(Integer)doc['size'] > 10`
@@ -113,9 +115,10 @@ You can access fields using `doc` method. Since type of value can be anything be
 - String functions, e.g. `((String)doc['severity']).toUpperCase()` or `((String)doc['message']).splitOnToken('-')[3]`
 
 Conditional block and loops are supported. The last line should result in a value that will be stored as a field.
+Artificial example bellow shows this. 
 
 ```java
-String[] tokens = ((String)doc['message']).splitOnToken(' ');
+String[] tokens = ((String)doc['message']).splitOnToken(' '); 
 if(tokens.length % 2 != 0){
   String result = "Iterator ";
   for(int i = 0; i < tokens.length; i++){
@@ -132,7 +135,7 @@ Imagine we have a message field:
 `Got document of 142 kb from 255.35.244.0`
 and that we want to extract number of kilobytes. The script could be something like:
 
-```
+```java
 int kbIdx = ((String)doc['message']).indexOf(' kb');
 ((String)doc['message']).substring(17, kbIdx)
 ```
