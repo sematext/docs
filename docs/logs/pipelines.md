@@ -103,8 +103,8 @@ Field Extractor provides a bunch of predefined patterns you may use for your pur
 ![Processor Grok Field Extractor](../images/logs/pipelines/processor-grok.png)
 
 ##### Scripting
-Scripting is supported using Script processor which uses [painless](https://www.elastic.co/guide/en/elasticsearch/painless/current/painless-guide.html) language. Painless is a simple scripting language similar to Java. It can safely be used for stored scripts.
-You can access fields using `doc` method. Since value type can be anything, before using it you must cast value to a specific type like: String, Integer, Double, etc.
+Scripting is supported using the Script processor. It uses [painless](https://www.elastic.co/guide/en/elasticsearch/painless/current/painless-guide.html), a simple scripting language similar to Java. 
+You can access fields using the `doc` method. Since the field value can be of any type, before using it you must cast the value to a specific type like: String, Integer, Double, etc.
 
 The following is supported:
 
@@ -114,8 +114,7 @@ The following is supported:
 - Ternary operator, e.g. `(Integer)doc['speed'] < 1000 ? "OK" : "SLOW"`
 - String functions, e.g. `((String)doc['severity']).toUpperCase()` or `((String)doc['message']).splitOnToken('-')[3]`
 
-Conditional block and loops are supported. The last line should result in a value that will be stored as a field.
-Artificial example bellow shows this. 
+Conditional block and loops are supported. The last line should result in a value that will then be stored as a field.  Here is a made up example:
 
 ```java
 String[] tokens = ((String)doc['message']).splitOnToken(' '); 
@@ -133,7 +132,7 @@ else {
 
 Imagine we have a message field:
 `Got document of 142 kb from 255.35.244.0`
-and that we want to extract number of kilobytes. The script could be something like:
+and that we want to extract the number of kilobytes. The script might look something like:
 
 ```java
 int kbIdx = ((String)doc['message']).indexOf(' kb');
