@@ -158,6 +158,8 @@ spec:
         image: sematext/agent:latest
         imagePullPolicy: Always
         env:
+        - name: AUTODISCO_VECTOR_SERVICE_ACCOUNT
+          value: sematext-agent-vector
         - name: INFRA_TOKEN
           value: <YOUR_INFRA_TOKEN>
         - name: LOGS_TOKEN
