@@ -72,6 +72,9 @@ If you want to switch the domain from which you are sending data, note that it
 may take up to 5 minutes for the data to start being accepted if your pricing
 plan supports only one domain.
 
+Note that subdomains are treated as domains, meaning that foo.example.com and 
+bar.example.com are counted as two domains.
+
 ### What are the user satisfaction scores shown in Experience based on?
 
 The scores are based on the time threshold defined in the [Configure
