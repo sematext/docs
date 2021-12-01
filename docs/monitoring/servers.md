@@ -1,5 +1,5 @@
 title: Sematext Core Server Monitoring
-description: Monitor over 40 different software integrations with Sematext by installing a simple Agent and using our interface that shows everything in one screen.
+description: Monitor over 100 different software integrations with Sematext by installing a simple Agent and using our interface that shows everything in one screen.
 
 Monitor over 40 different software [integrations](../integration) with Sematext by installing a simple Agent and using our interface that shows everything in one screen.
 
