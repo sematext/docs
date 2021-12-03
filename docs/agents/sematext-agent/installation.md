@@ -56,8 +56,8 @@ sudo yum install sematext-agent
  <div class="mdl-tabs__panel" id="fedora">
    <pre>
 sudo wget https://pub-repo.sematext.com/fedora/sematext.repo -O /etc/yum.repos.d/sematext.repo
-sudo yum clean all
-sudo yum install sematext-agent
+sudo dnf clean all
+sudo dnf install sematext-agent
    </pre>
  </div>
 
