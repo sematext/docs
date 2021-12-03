@@ -62,7 +62,7 @@ First install `systemd-journal-remote` on your machine.
  </div>
 
  <div class="mdl-tabs__panel" id="fedora">
-   <pre>sudo yum install systemd-journal-remote</pre>
+   <pre>sudo dnf install systemd-journal-remote</pre>
  </div>
 </div>
 
