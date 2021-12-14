@@ -45,6 +45,10 @@ Yes. You can update the below setting in Edit Configuration -> Configure Alerts 
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the HTTP and Browser monitors are documented in their respective environment settings.
 
+### How are redirects handled?
+HTTP monitors don't follow redirects.  If you think redirects should be followed please let us know.
+Browser monitors follow redirects by default and collect metrics from the page to which the monitor has been redirected.
+
 * [HTTP Monitor](./http-monitor/#run-environment)
 * [Browser Monitor](./browser-monitor/#run-environment)
 
@@ -52,7 +56,6 @@ Currently, it is not possible to change the default settings, except for the def
 
 ### How can I filter requests from HTTP & Browser monitors?
 Both HTTP and Browser monitor requests will have the string "SematextSyntheticsRobot" in the User-Agent header. If your analytics software doesn't already filter out requests from Synthetics, you can use the User-Agent header to filter requests from Synthetics.
-
 
 ### Where can I find user journey scripts that I can customize for my own needs?
 You can find Browser monitor scripts for common use cases by selecting the Browse Examples link in the Create Monitor page. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
@@ -62,7 +65,7 @@ Short answer: because they are measuring somewhat different things.
 
 The HTTP monitor measures how long it takes to execute a single HTTP request and get a response. This includes performing a DNS lookup, establishing a TCP connection, sending of the request, and content transfer.  On the other hand, the Browser monitor measures all of that, plus how long it takes to load and render the whole page, which includes fetching of external resources references in that page (e.g., CSS resources, JavaScript resources, etc.).  If a user journey script is used with a Browser monitor then that is included as well.  Thus, it is expected that Browser monitors display higher latency.
 
-### You can whitelist Synthetics elastic IP according to your region
+### What are the IP addresses from which monitors are run?
 N. Virginia (us-east-1)    - 52.202.60.97   <br/>
 N. California (us-west-1)  - 184.72.63.129  <br/>
 Mumbai (ap-south-1)        - 15.207.239.77  <br/>
