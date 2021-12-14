@@ -10,6 +10,22 @@ Browsers manage the memory used by web pages automatically without user interact
   src="../../images/experience/memory/overview.png"
 />
 
+## Limitations
+The memory measurement is enabled by default starting with Chrome 89, but only for web pages that are **cross-origin isolated**. Your website can achieve that state by sending the following headers in the main document:
+
+```javascript
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+```
+
+You can determine if your website is cross-origin isolated by using:
+
+```javascript
+self.crossOriginIsolated
+```
+
+If the website is not cross-origin isolated the memory measurement API will not be available and the measurements will not be visible in your Experience App.
+
 ## Use Cases
 There are many use cases where having insight into the browser's memory usage can be crucial to identify and fix problems as soon as possible. Those include:
 
@@ -37,22 +53,7 @@ Sematext Experience [Browser SDK](https://sematext.com/docs/agents/browser/) use
 
 ## Supported Browsers
 At the moment, the only web browser that supports memory usage measurements is Chrome. The memory usage measurement feature was under Chrome Origin Trials until [13th January 2021](https://web.dev/origin-trials/) and is available to all users starting with [Chrome 89](https://www.chromestatus.com/feature/5685965186138112). 
-
-## Limitations
-The memory measurement is enabled by default starting with Chrome 89, but only for web pages that are **cross-origin isolated**. Your website can achieve that state by sending the following headers in the main document:
-
-```javascript
-Cross-Origin-Embedder-Policy: require-corp
-Cross-Origin-Opener-Policy: same-origin
-```
-
-You can determine if your website is cross-origin isolated by using:
-
-```javascript
-self.crossOriginIsolated
-```
-
-If the website is not cross-origin isolated the memory measurement API will not be available and the measurements will not be visible in your Experience App. 
+ 
 
 ### Identifying Resources Affected by Cross-Origin Isolation
 
