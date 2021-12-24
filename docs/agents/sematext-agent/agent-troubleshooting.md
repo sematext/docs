@@ -4,7 +4,7 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 
 1. Check the Sematext Agent logs and filter by errors. By default they'll be located at `/opt/spm/spm-monitor/logs/st-agent`. 
    1. If you see errors related to permission denied while accessing log files or system information, [stop the agent and start it](https://sematext.com/docs/agents/sematext-agent/starting-stopping) again with [elevated privileges](https://sematext.com/docs/agents/sematext-agent/permission-requirements/). 
-   2. If you see errors like `"cloud" collector failed to complete the initial run` check out our [tags common schema docs](https://sematext.com/docs/tags/common-schema/#cloud-tags) and verify your IAM roles are setup correctly.
+   2. If you see errors like `"cloud" collector failed to complete the initial run` check out our [tags common schema docs](https://sematext.com/docs/tags/common-schema/#cloud-tags) and verify your IAM roles are set up correctly.
    
 
 2. Try restarting the agent. Specific instructions on how to do so depending on your environment can be found [here](https://sematext.com/docs/agents/sematext-agent/starting-stopping).
@@ -13,11 +13,11 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 ![Fleet](../../images/agents/fleet-menu.png)
 If there is an update available for a particular agent, you'll see a warning next to the agent's version.
 
-4. Journal is a buffer we use to store failed events. In case of outages or internal communication issues, the Journal files may grow rapidly and produce high system load. If you are experiencing high CPU usage, do the following:
+4. Journal is a buffer we use to store data when shipping fails. In case of outages or internal communication issues, the Journal files may grow rapidly and produce high system load. If you are experiencing high CPU usage, do the following:
    1. Navigate to the journal directory, by default `/opt/spm/spm-monitor/st-agent/journal`.
    2. See if it contains a large number of files. If it does, it might be the cause of high CPU usage.
    
-   Disabling Journal may lower the CPU usage. However, logs and metrics that fail to ship will be lost, so disabling Journal may lead to gaps in the data stored in Sematext Cloud. You can disable Journal by following these steps:
+   Disabling Journal may lower the CPU usage. However, data that fails to ship will be lost, so disabling Journal may lead to gaps in the data stored in Sematext Cloud. You can disable Journal by following these steps:
    1. Open the following file in your text editor: `/opt/spm/properties/st-agent.yml`. 
    2. Comment out the `journal` section by adding the character `#` at the beginning of every line in the section.
    3. [Restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
