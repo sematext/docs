@@ -9,7 +9,9 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 
 2. Try restarting the agent. Specific instructions on how to do so depending on your environment can be found [here](https://sematext.com/docs/agents/sematext-agent/starting-stopping).
 
-3. Update the agent to the latest version. For more details on how to do that, see our [Agent Upgrade Instructions](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
+3. Update the agent to the latest version. For more details on how to do that, see our [Agent Upgrade Instructions](https://sematext.com/docs/monitoring/spm-faq/#agent-updating). You can see which agents need to be updated in the Fleet section of Sematext Cloud.
+![Fleet](../../images/agents/fleet-menu.png)
+If there is an update available for a particular agent, you'll see a warning next to the agent's version.
 
 4. Journal is a buffer we use to store failed events. In case of outages or internal communication issues, the Journal files may grow rapidly and produce high system load. If you are experiencing high CPU usage, do the following:
    1. Navigate to the journal directory, by default `/opt/spm/spm-monitor/st-agent/journal`.
