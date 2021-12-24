@@ -4,7 +4,7 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 
 1. Check the Sematext Agent logs and filter by errors. By default they'll be located at `/opt/spm/spm-monitor/logs/st-agent`. 
    1. If you see errors related to permission denied while accessing log files or system information, [stop the agent and start it](https://sematext.com/docs/agents/sematext-agent/starting-stopping) again with [elevated privileges](https://sematext.com/docs/agents/sematext-agent/permission-requirements/). 
-   2. If you see errors like `"cloud" collector failed to complete the initial run` check out our [tags common schema docs](https://sematext.com/docs/tags/common-schema).
+   2. If you see errors like `"cloud" collector failed to complete the initial run` check out our [tags common schema docs](https://sematext.com/docs/tags/common-schema/#cloud-tags) and verify your IAM roles are setup correctly.
    
 
 2. Try restarting the agent. Specific instructions on how to do so depending on your environment can be found [here](https://sematext.com/docs/agents/sematext-agent/starting-stopping).
