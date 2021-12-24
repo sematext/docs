@@ -17,10 +17,11 @@ If there is an update available for a particular agent, you'll see a warning nex
    1. Navigate to the journal directory, by default `/opt/spm/spm-monitor/st-agent/journal`.
    2. See if it contains a large number of files. If it does, it might be the cause of high CPU usage.
    
-   You can disable Journal by following these steps:
+   Disabling Journal may lower the CPU usage. However, logs and metrics that fail to ship will be lost, so disabling Journal may lead to gaps in the data stored in Sematext Cloud. You can disable Journal by following these steps:
    1. Open the following file in your text editor: `/opt/spm/properties/st-agent.yml`. 
    2. Comment out the `journal` section by adding the character `#` at the beginning of every line in the section.
    3. [Restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
+   Note that this is a temporary solution, and you should contact [our support team](https://sematext.com/docs/agent/agent-troubleshooting/#support) to help you identify and solve the root cause of your issue.
    
 5. If you are still having trouble, you can send us the diagnostics package, and we will assist you as soon as possible. To do so:
    1. Go to your Sematext Cloud dashboard.
@@ -32,5 +33,6 @@ If there is an update available for a particular agent, you'll see a warning nex
    5. Click on `Report a problem` and describe your issue.
    6. Once you're done, click on `Send a report` and we will reply shortly.
 
+## Support
 Remember you can always contact us via chat on the bottom right corner of [our webpage](https://sematext.com/) and the Help button on Sematext Cloud, or via email at [support@sematext.com](mailto:support@sematext.com).
 ![Sematext Cloud Help](../../images/agents/sc-help.png)
