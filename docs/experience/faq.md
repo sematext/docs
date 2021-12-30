@@ -86,19 +86,18 @@ adjust the time thresholds or [User
 Satisfaction](/experience/user-satisfaction) to learn more about Apdex scores
 in general.
 
+### Can I see a single user's full session?
+
+Yes, with a few caveats:
+* Ensure your Experience App doesn't have [sampling](/experience/faq/#when-should-i-use-sampling) enabled
+* Ensure you select the appropriate views/month to accomodate all your monthly page views and [avoid staggering](/experience/faq/#can-i-receive-more-data-than-my-monthly-plan-limit-allows).  You can see your daily page views and change the views/month for each Experience App under App Settings.
+* See also [Why are some page loads not shown in Experience?](/experience/faq/#why-are-some-page-loads-not-shown-in-experience)
+
 ### How are memory measurements performed?
 
 Memory measurements requested by the [Browser SDK](/agents/browser/) are requested 
 with every page load. In addition to that, the measurements are taken periodically 
 so that you can see the memory usage over time. 
-
-### Why I'm not seeing page loads with, but I'm seeing memory usage measurements? 
-
-After the initial page load, the memory measurements will be taken periodically in 
-scheduled intervals. If your users leave the application open in the browser for a 
-longer time period the measurements will be taken and sent to Sematext Cloud 
-constantly. Your selected time range may include memory measurements, but the page 
-load may be outside of it. 
 
 ## Troubleshooting
 
@@ -126,7 +125,7 @@ according to the installation instructions.
 If the script is configured correctly, and your daily limits are not reached
 please contact us via live chat or <support@sematext.com>.
 
-### Some page loads are not shown in Experience
+### Why are some page loads not shown in Experience?
 
 There are multiple factors that affect if a page load will be recorded in Experience or not:
 
@@ -135,6 +134,13 @@ There are multiple factors that affect if a page load will be recorded in Experi
  * We pause most data collection when the browser tab is in the background
  * Certain ad blockers might prevent the Browser SDK script from loading or block network requests for data collection
 
+### Why am I not seeing page loads, but I'm seeing memory usage measurements? 
+
+After the initial page load, the memory measurements will be taken periodically in 
+scheduled intervals. If your users leave the application open in the browser for a 
+longer time period the measurements will be taken and sent to Sematext Cloud 
+constantly. Your selected time range may include memory measurements, but the page 
+load may be outside of it. 
 
 ## Sharing
 
