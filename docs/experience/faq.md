@@ -89,6 +89,7 @@ in general.
 ### Can I see a single visitor's full session?
 
 Yes, with a few caveats:
+
  * Ensure your Experience App doesn't have [sampling](/experience/faq/#when-should-i-use-sampling) enabled
  * Ensure you select the appropriate views/month to accomodate all your monthly page views and [avoid staggering](/experience/faq/#can-i-receive-more-data-than-my-monthly-plan-limit-allows).  You can see your daily page views and change the views/month for each Experience App under App Settings.
  * See also [Why are some page loads not shown in Experience?](/experience/faq/#why-are-some-page-loads-not-shown-in-experience)
