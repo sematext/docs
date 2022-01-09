@@ -68,6 +68,18 @@ user you want to transfer the App to, and hit **Transfer Ownership**.
 ## Team Account
 If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email.  Instead, if you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone else who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that account.  This way all assets created in Sematext remain in this team account and when individuals leave the company their access to this account can easily be removed with just a few clicks. 
 
+Changing the ownership of the account can be done with the "Convert to Team Account" feature. By converting your account to a Team Account everything in your account will be transferred to the Team Account - Apps, Alert Rules, Dashboards, Payment Method, etc.
+To start the conversion, go to [General Settings](https://apps.sematext.com/ui/account/info) and press the Convert to Team Account button.
+
+![General Setting With Conversion Option](../images/team/convert_to_team_account_intro.png)
+
+You will have a chance to review what will be transferred. In the second step, you will be prompted to insert the new team account email. In the third step, you will be able to edit existing team members and their roles. Finally, in step 4 you will have an overview of the changes to the team and the chance to initiate the conversion. Once the conversion is initiated, you will be logged out of the browser. You can use your old credentials to log in as a member of the new team account.
+If there is anything in your account that you do not wish to have in the Team Account it needs to be deleted from your account first.  
+After the conversion is done, your account with the old email login will be completely empty but you will have access to the Team Account and will be able to switch into it.
+
+![Convert To Team Account Form](../images/team/convert_to_team_account.png)
+
+
 ## Typical use of Roles in an Organization or Team
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
 This account might be considered [a _parent_ account](./user-roles) for your whole organization or team.  
