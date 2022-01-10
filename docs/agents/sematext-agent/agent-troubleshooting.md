@@ -13,7 +13,7 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 ![Fleet](../../images/agents/fleet-menu.png)
 If there is an update available for a particular agent, you'll see a warning next to the agent's version.
 
-4. If data can not be shipped, you may be behind a proxy. If that's the case, follow [these instructions](https://sematext.com/docs/monitoring/spm-faq/#can-i-install-sematext-agent-on-servers-that-are-behind-a-proxy) to configure the agent.
+4. If data cannot be shipped, you may be behind a proxy. If that's the case, follow [these instructions](https://sematext.com/docs/monitoring/spm-faq/#can-i-install-sematext-agent-on-servers-that-are-behind-a-proxy) to configure the agent.
 
 5. Journal is a buffer we use to store data when shipping fails. In case of outages or internal communication issues, the Journal files may grow rapidly and produce high system load. If you are experiencing high CPU usage, do the following:
    1. Navigate to the Journal directory, by default `/opt/spm/spm-monitor/st-agent/journal`.
