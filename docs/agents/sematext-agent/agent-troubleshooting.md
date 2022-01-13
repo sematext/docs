@@ -10,8 +10,10 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 2. Try restarting the agent. Specific instructions on how to do so depending on your environment can be found [here](https://sematext.com/docs/agents/sematext-agent/starting-stopping).
 
 3. Update the agent to the latest version. For more details on how to do that, see our [Agent Upgrade Instructions](https://sematext.com/docs/monitoring/spm-faq/#agent-updating). You can see which agents need to be updated in the Fleet section of Sematext Cloud.
-![Fleet](../../images/agents/fleet-menu.png)
+![Fleet](../../images/fleet/fleet-menu.png)
 If there is an update available for a particular agent, you'll see a warning next to the agent's version.
+
+Find the full Fleet documentation [here](https://sematext.com/docs/fleet/).
 
 4. If data cannot be shipped, you may be behind a proxy. If that's the case, follow [these instructions](https://sematext.com/docs/monitoring/spm-faq/#can-i-install-sematext-agent-on-servers-that-are-behind-a-proxy) to configure the agent.
 
@@ -28,10 +30,10 @@ If there is an update available for a particular agent, you'll see a warning nex
 6. If you are still having trouble, you can send us the diagnostics package, and we will assist you as soon as possible. To do so:
    1. Go to your Sematext Cloud dashboard.
    2. On the menu on the left, select `Fleet`.
-   ![Fleet screen](../../images/agents/fleet.png)
+   ![Fleet screen](../../images/fleet/fleet.png)
    3. Find your host on the list and click on it.
    4. Navigate to the `Diagnostics` tab.
-   ![Fleet screen](../../images/agents/agent-diagnostics.png)
+   ![Fleet screen](../../images/fleet/agent-diagnostics.png)
    5. Click on `Report a problem` and describe your issue.
    6. Once you're done, click on `Send a report` and we will reply shortly.
 
