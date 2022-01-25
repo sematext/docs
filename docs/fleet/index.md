@@ -14,7 +14,7 @@ At first glance, you can see the following data in the table:
   * Dead: The agent has stopped due to an error. You can see the errors in the Agent Information Panel, in the Errors tab, and you can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
   * Pending or Unknown: the agent is not sending data to Sematext Cloud. Check if the agent is still running on your system. If it is, there may be connection issues.
 * *Started*: Time elapsed since the Sematext Agent began sending data to Sematext Cloud.
-* *Infra App*: the Infra App which is receiving the data from the Sematext Agent. Clicking on the app name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
+* *Infra App*: the Infra App which is receiving the data from the Sematext Agent. Clicking on the App name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
 
 # Agent Information Panel
 ## Info
