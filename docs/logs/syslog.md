@@ -14,16 +14,30 @@ destination host is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-
 
 ## Authorization
 
-There are two ways to authorize when you send logs. Authorizing means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](json-messages-over-syslog). Step-by-step instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng), and a raw example are below.
+Authorizing syslog essentially means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](json-messages-over-syslog). Step-by-step instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng), and a raw example are below.
+
+You can also put the Logs Management App token in the [tag](https://datatracker.ietf.org/doc/html/rfc3164#section-4.1.3) or the [APP-NAME](https://datatracker.ietf.org/doc/html/rfc5424#section-6.2.5) part of your syslog message. You'll see an example below as well.
 
 Alternatively, [authorize your public IPs](authorizing-ips-for-syslog) and then send messages directly. Note that configuring your log shipper to send your Logs Management App token is preferred to authorizing source IPs. You can see specific instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng) and [syslogd](syslogd) for how to forward messages in this case.  
 
-## Example
+## Examples
 
-A quick way to ship messages via TCP syslog is with netcat:
+Here's a quick way to ship messages via TCP syslog is with netcat. We add the App token as a field in the message:
 
 ``` bash
-echo 'my-host my-process:@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world2!"}' | nc logsene-syslog-receiver.sematext.com 514
+echo 'my-host my-process:@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world!"}' | nc logsene-syslog-receiver.sematext.com 514
+```
+
+If you prefer to add the token as a syslog tag:
+
+``` bash
+echo 'my-host LOGSENE_APP_TOKEN_GOES_HERE:hello world!' | nc logsene-syslog-receiver.sematext.com 514
+```
+
+To upload each line of `file.txt`:
+
+``` bash
+cat file.txt | while read -r LINE; do echo "my-host LOGSENE_APP_TOKEN_GOES_HERE:$LINE"; done | nc logsene-syslog-receiver.sematext.com 514
 ```
 
 ## Ways to Ship Logs
