@@ -22,23 +22,25 @@ Alternatively, [authorize your public IPs](authorizing-ips-for-syslog) and then 
 
 ## Examples
 
-Here's a quick way to ship messages via TCP syslog is with netcat. We add the App token as a field in the message:
+Here's a quick way to ship messages via TCP syslog with netcat. We add the App token as a field in the message:
 
 ``` bash
-echo 'my-host my-process:@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "hello world!"}' | nc logsene-syslog-receiver.sematext.com 514
+echo 'my-host my-process:@cee: {"logsene-app-token": "LOGS_APP_TOKEN_GOES_HERE", "message": "hello world!"}' | nc logsene-syslog-receiver.sematext.com 514
 ```
 
 If you prefer to add the token as a syslog tag:
 
 ``` bash
-echo 'my-host LOGSENE_APP_TOKEN_GOES_HERE:hello world!' | nc logsene-syslog-receiver.sematext.com 514
+echo 'my-host LOGS_APP_TOKEN_GOES_HERE:hello world!' | nc logsene-syslog-receiver.sematext.com 514
 ```
 
 To upload each line of `file.txt`:
 
 ``` bash
-cat file.txt | while read -r LINE; do echo "my-host LOGSENE_APP_TOKEN_GOES_HERE:$LINE"; done | nc logsene-syslog-receiver.sematext.com 514
+cat file.txt | while read -r LINE; do echo "my-host LOGS_APP_TOKEN_GOES_HERE:$LINE"; done | nc logsene-syslog-receiver.sematext.com 514
 ```
+
+Note that the above will ship every line in the file as the `message` field. It will not parse the lines, for example if you have a timestamp (the `@timestamp` field will be populated with the time of the upload). Have a look at [logs discovery](discovery/intro) and [pipelines](pipelines) for more details on parsing.
 
 ## Ways to Ship Logs
 
