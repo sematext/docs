@@ -48,6 +48,9 @@ input:
     # query events every 10 seconds
     interval: 10
     maxEvents: 1000
+  # if you're tailing files, you need to escape backslashes
+  files:
+      - 'c:\\tmp\\testfile.log'
 
 output:
   local-es:
