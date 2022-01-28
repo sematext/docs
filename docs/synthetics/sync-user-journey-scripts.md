@@ -7,12 +7,12 @@ One way to add User Journey scripts to Sematext is to do so directly, via the Se
 
 ## Setup GitHub Actions
 
-To sync User Journey scripts, you will need to set up GitHub Actions in your GitHub repository. There are two available workflows.  You can choose to use only one of them or you can use them both - they are complementary. The [sync_updated_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_updated_scripts.yml) workflow detects updated script files and updates the [Browser monitor’s](./browser-monitor.md)) scripts in Sematext Cloud. The  [sync_added_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_added_scripts.yml) workflow detects any added scripts and creates a new Browser monitor for each script added to your repository. The workflows will be executed every time you push new commits or merge a PR to your default branch.
+To sync User Journey scripts, you will need to set up GitHub Actions in your GitHub repository. There are two available synchronization workflows. You can choose to use only one of them or you can use them both - they complement each other. The [sync_updated_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_updated_scripts.yml) workflow detects updated script files and updates the [Browser monitor’s](./browser-monitor.md)) scripts in Sematext Cloud. The  [sync_added_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_added_scripts.yml) workflow detects any added scripts and creates a new Browser monitor for each script added to your repository. The workflows will be executed every time you push new commits or merge a PR to your default branch.
 
 Notes:
 * These workflows don’t do anything with scripts you delete from your repository.  In other words, if you delete a script from your repository the script will remain in Sematext until you explicitly remove it from there by yourself.
 
-* The sync is unidirectional. That is, syncing is only from GitHub to Sematext.  This means that if you modify a User Journey script in Sematext, the changes will not be propagated to the GitHub repository. If you update the script in your repository then all the changes that were added directly in Sematext will be overwritten.
+* The sync is unidirectional. That is, syncing is only from GitHub to Sematext.  This means that if you modify a User Journey script in Sematext, the changes will not be propagated to the GitHub repository. If you update the script in your repository then all the changes to that script that were made directly in Sematext will be overwritten.
 
 * If your default branch is not “master” you will need to update the workflows with the name of your default branch.
 
