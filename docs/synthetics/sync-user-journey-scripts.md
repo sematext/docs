@@ -23,9 +23,9 @@ To enable syncing of your User Journey scripts, you need to do the following:
 
     ![Add Repo secrets](../images/synthetics/sync-browser-scripts-adding-repo-secrets.png)
 
-      - You should set your Sematext Cloud API key as the value for the SC_API_KEY. Your API key can be found at https://apps.sematext.com/ui/account/api for the US region, or alternatively at https://apps.eu.sematext.com/ui/account/api for the EU region. 
+      - You should set your Sematext Cloud API key as the value for the `SC_API_KEY`. Your API key can be found at https://apps.sematext.com/ui/account/api for the US region, or alternatively at https://apps.eu.sematext.com/ui/account/api for the EU region. 
   
-      - The value of SC_API_BASE_URL should be set to https://apps.sematext.com (US region) or https://apps.eu.sematext.com (EU region).
+      - The value of `SC_API_BASE_URL` should be set to https://apps.sematext.com (US region) or https://apps.eu.sematext.com (EU region).
 
 2. Add the `.github/workflows` directory inside the root directory of your repository and place the `sync_updated_scripts.yml` and `sync_added_scripts.yml` workflow files inside the newly created directory.
 
