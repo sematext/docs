@@ -66,4 +66,4 @@ If you are using Sematext Cloud Europe then you’ll want to replace the default
  
 Replace `"locations":[1]` with `"locations":[2]` and the default location will be set to Ireland.
 
-This is also where you may replace `1h` with another value you want to be used by default. Allowed values for interval are `10m`, `15m`, `30m` and `1h`.  
+This is also where you may replace `1h` with another value you want to be used by default. Allowed values for interval are `10m`, `15m`, `30m` and `1h`. Specifying any other value will cause the synchronization to fail.  
