@@ -48,7 +48,7 @@ Now that you’ve configured the workflows, it’s time to prepare the User Jour
     
     Any spaces are ignored, so feel free to add spaces for readability.
 
-3. If you are adding a new script and want to automatically create a new Browser Monitor, the first line of the script must contain a special comment with the App ID.
+3. If you are adding a new script and want to automatically create a new Browser Monitor, the first line of the script must contain a special comment with the only App ID.
 Example: `//appId=398`. The monitor will be created with the following values: 
 
       - Monitor name = name of the script file
