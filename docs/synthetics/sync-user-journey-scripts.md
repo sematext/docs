@@ -81,7 +81,7 @@ If your sync workflow run fails, you can see which step caused the failure and r
 If either AppID or MonitorIDs is invalid the synchronization of the script with invalid IDs will fail.
 When syncing multiple scripts only the script that contains invalid IDs will fail. The workflow run will be marked as failed even though some scripts were successfully synced to raise awareness that some scripts weren't synced.
 
- ![Troubleshooting syncing issues - invalid Monitor IS](../images/synthetics/sync-browser-scripts-troubleshooting-2.png)
+ ![Troubleshooting syncing issues - invalid Monitor ID](../images/synthetics/sync-browser-scripts-troubleshooting-2.png)
 
 In the logs for that run there will be messages such as:
 
