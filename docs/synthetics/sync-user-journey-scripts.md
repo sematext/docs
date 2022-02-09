@@ -48,7 +48,7 @@ Now that you’ve configured the workflows, it’s time to prepare the User Jour
     
     Any spaces are ignored, so feel free to add spaces for readability.
 
-3. If you are adding a new script and want to automatically create a new Browser Monitor, the first line of the script must contain a special comment with the only App ID.
+3. If you are adding a new script and want to automatically create a new Browser Monitor, the first line of the script must contain a special comment with only the App ID. If you are adding a new script and you specify monitor ID(s) as well then the corresponding monitor(s) will be updated with this script.
 Example: `//appId=398`. The monitor will be created with the following values: 
 
       - Monitor name = name of the script file
@@ -67,3 +67,33 @@ If you are using Sematext Cloud Europe then you’ll want to replace the default
 Replace `"locations":[1]` with `"locations":[2]` and the default location will be set to Ireland.
 
 This is also where you may replace `1h` with another value you want to be used by default. Allowed values for interval are `10m`, `15m`, `30m` and `1h`. Specifying any other value will cause the synchronization to fail.  
+
+## Troubleshooting syncing issues
+
+If your sync workflow run fails, you can see which step caused the failure and review the logs to troubleshoot. In the example below we can see which scripts weren't synced and why the sync failed (API key was not provided).
+
+ ![Troubleshooting syncing issues - invalid API key](../images/synthetics/sync-browser-scripts-troubleshooting-1.png)
+
+ You can learn more about monitoring and troubleshooting GitHub workflows [here](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows).
+
+ If either the SC_API_KEY or the SC_API_BASE_URL is incorrect, the synchronization will fail.  The results of each workflow execution run can be found at `https://github.com/{ORGANIZATION}/{REPO}/actions`. 
+
+If either AppID or MonitorIDs is invalid the synchronization of the script with invalid IDs will fail.
+When syncing multiple scripts only the script that contains invalid IDs will fail. The workflow run will be marked as failed even though some scripts were successfully synced to raise awareness that some scripts weren't synced.
+
+ ![Troubleshooting syncing issues - invalid Monitor IS](../images/synthetics/sync-browser-scripts-troubleshooting-2.png)
+
+In the logs for that run there will be messages such as:
+
+```
+
+Warning: The following scripts are not synced, please check workflow logs for more details:
+file name: browser_monitor_scripts/test_products_overview.js
+
+```
+
+The logs will also contain the Sematext API response indicating the sync failure reason:
+
+```
+{"success":false,"message":"invalid monitor id 271"}
+```
