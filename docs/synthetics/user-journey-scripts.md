@@ -1,9 +1,7 @@
 title: Sync User Journey scripts from GitHub to Sematext
-description: Guide to how to setup sync of User Journey scripts from GitHub to Sematext
+description: Guide for synchronization of User Journey scripts from GitHub to Sematext
 
 One way to add User Journey scripts to Sematext is to do so directly, via the Sematext UI.  You can simply type in the scripts or paste them in.  Once they are in Sematext, you can also edit them at any point in time.  Another way to get User Journey scripts into Sematext is by setting up synchronization with a GitHub repository where you have your scripts.  This way you can manage them with GitHub, author and modify them with your preferred tools, benefit from version control, and automate their publishing to Sematext without doing any extra manual work, like typing or pasting them in.
-
-
 
 ## Setup GitHub Actions
 
@@ -14,7 +12,7 @@ Notes:
 
 * The sync is unidirectional. That is, syncing is only from GitHub to Sematext.  This means that if you modify a User Journey script in Sematext, the changes will not be propagated to the GitHub repository. If you update the script in your repository then all the changes to that script that were made directly in Sematext will be overwritten.
 
-* If your default branch is not “master” you will need to update the workflows with the name of your default branch.
+* If your default branch is not "master" you will need to update the workflows with the name of your default branch.
 
 To enable syncing of your User Journey scripts, you need to do the following:
 
