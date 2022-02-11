@@ -101,6 +101,7 @@ pages:
       - Getting Started: synthetics/getting-started.md
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
+      - User Journey Scripts: synthetics/user-journey-scripts.md
       - Alerts: synthetics/alerts.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration: synthetics/ci-cd-integration.md
@@ -110,7 +111,6 @@ pages:
       - Correlation: synthetics/correlation.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
-      - Sync User Journey scripts: synthetics/user-journey-scripts.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
