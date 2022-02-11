@@ -13,15 +13,7 @@ The browser monitor can be used to monitor a single web page or a user journey a
 
 ### User Journeys / Transactions
 
-To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a script to simulate user actions.
-
-When you configure the URL of the website, the browser monitor will load the URL in the Google Chrome browser and take a screenshot of the website once the page load is complete.
-
-The user journey scripts are Node.js scripts that control a headless Chrome browser and use the [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, refer to the `Browse Examples` section while creating a browser monitor. 
-
-Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page match your requirements. If any assertion fails, the system declares the run as a failure. Monitor run logs, shown in the run details page, contain failure details.
-
-Checkout [awesome-puppeteer](https://github.com/transitive-bullshit/awesome-puppeteer) GitHub repository for more examples and tips for writing puppeteer scripts.
+To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a [User Journey script](./user-journey-scripts.md) to simulate user actions.
 
 ## Conditions
 
