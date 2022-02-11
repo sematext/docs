@@ -110,6 +110,7 @@ pages:
       - Correlation: synthetics/correlation.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
+      - Sync User Journey scripts: synthetics/sync-user-journey-scripts.md
     - Tracing:
       - Overview: tracing/index.md
       - Enabling: tracing/enable.md
