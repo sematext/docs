@@ -1,11 +1,25 @@
-title: Sync User Journey scripts from GitHub to Sematext
-description: Guide for synchronization of User Journey scripts from GitHub to Sematext
+title: User Journey Scripts
+description: User Journey Scripts for monitoring multi-page and multi-step user journeys
+
+## User Journey Scripts
+
+To monitor a single website, you can directly configure the URL of the website to be monitored. This can be accomplished with either [HTTP Monitor](./http-monitor.md) or [Browser Monitor](./browser-monitor.md).  To monitor a user journey across multiple pages or perform actions on your website, you use a Browser Monitor configured with a User Journey script that simulates user actions.
+
+When you configure the URL of the website, the Browser Monitor will load the URL in the Google Chrome browser and, among other things, take a screenshot of the website once the page load is complete.
+
+The User Journey scripts are Node.js scripts that control a headless Chrome browser and use the [Google Puppeteer](https://github.com/puppeteer/puppeteer#puppeteer) framework to drive the browser. For every run, the monitor will invoke the `testScript()` method with Puppeteer [Page](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page) object as a parameter. The script content should be inside the `testScript()` method. For more information on specific use cases, refer to the `Browse Examples` section while creating a Browser Monitor. 
+
+Use Node.js [assert](https://nodejs.org/api/assert.html) API to check if the values in the page match your requirements. If any assertion fails, the system declares the run as a failure. Monitor run logs, shown in the run details page, contain failure details.
+
+Check out [awesome-puppeteer](https://github.com/transitive-bullshit/awesome-puppeteer) GitHub repository for more examples and tips for writing puppeteer scripts.
+
+## Sync User Journey scripts from GitHub to Sematext
 
 One way to add User Journey scripts to Sematext is to do so directly, via the Sematext UI.  You can simply type in the scripts or paste them in.  Once they are in Sematext, you can also edit them at any point in time.  Another way to get User Journey scripts into Sematext is by setting up synchronization with a GitHub repository where you have your scripts.  This way you can manage them with GitHub, author and modify them with your preferred tools, benefit from version control, and automate their publishing to Sematext without doing any extra manual work, like typing or pasting them in.
 
 ## Setup GitHub Actions
 
-To sync User Journey scripts, you will need to set up GitHub Actions in your GitHub repository. There are two available synchronization workflows. You can choose to use only one of them or you can use them both - they complement each other. The [sync_updated_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_updated_scripts.yml) workflow detects updated script files and updates the [Browser monitor’s](./browser-monitor.md)) scripts in Sematext Cloud. The  [sync_added_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_added_scripts.yml) workflow detects any added scripts and creates a new Browser monitor for each script added to your repository. The workflows will be executed every time you push new commits or merge a PR to your default branch.
+To sync User Journey scripts, you will need to set up GitHub Actions in your GitHub repository. There are two available synchronization workflows. You can choose to use only one of them or you can use them both - they complement each other. The [sync_updated_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_updated_scripts.yml) workflow detects updated script files and updates the [Browser Monitor’s](./browser-monitor.md)) scripts in Sematext Cloud. The  [sync_added_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_added_scripts.yml) workflow detects any added scripts and creates a new Browser Monitor for each script added to your repository. The workflows will be executed every time you push new commits or merge a PR to your default branch.
 
 Notes:
 * These workflows don’t do anything with scripts you delete from your repository.  In other words, if you delete a script from your repository the script will remain in Sematext until you explicitly remove it from there by yourself.
