@@ -27,7 +27,7 @@ Yes, see [API Reference](/api).
 
 ## Organizing Apps
 
-### I have N environments (production, staging, test, etc). How many Apps for Logging/Monitoring should I create?
+### I have N environments (production, staging, test, etc). How many Apps for Logs/Monitoring should I create?
 
 Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, less retention for testing than for prod.
 
