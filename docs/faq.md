@@ -25,6 +25,24 @@ Yes, see [Transaction Tracing](/tracing).
 
 Yes, see [API Reference](/api).
 
+## Organizing Apps
+
+### I have N environments (production, staging, test, etc). How many Apps for Logs/Monitoring should I create?
+
+Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, less retention for testing than for prod.
+
+The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Autodiscovery](/monitoring/autodiscovery).
+
+### Can you give me an example?
+
+Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/monitoring/infrastructure), you have to have those Infra Apps, you can set them up with the [Basic (free) plan](https://sematext.com/pricing/#spm). Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/monitoring/quick-start).
+
+Then you'd set up [Solr Monitoring](/integration/solr) Apps: one per environment. At this point, you shouldn't need to touch the hosts: when it comes to shipping Solr metrics, simply select the corresponding Infra App and use [Autodiscovery](/monitoring/autodiscovery) to set up monitoring.
+
+You'll do the same with [Solr Logs](/integration/solr-logs): create one App per environment, select the right Infra App and use [Logs Discovery](/logs/discovery/intro).
+
+At this point, if you add a new host in an environment, all you have to do is to install Sematext Agent and point it to the right Infra App. Your Solr logs and metrics will automatically be shipped to the right Apps.
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
