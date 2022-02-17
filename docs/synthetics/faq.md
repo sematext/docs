@@ -1,4 +1,4 @@
-title: Sematext Experience FAQ
+title: Sematext Synthetics FAQ
 description: FAQ about Sematext Synthetics, a synthetics monitoring solution for APIs and websites
 
 ## General 
