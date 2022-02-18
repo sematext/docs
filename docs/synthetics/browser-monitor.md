@@ -83,9 +83,9 @@ For every run, the browser monitor collects all the resources fetched during the
 
 Each browser monitor run is executed in an isolated environment using a fresh instance of a headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
 
-* **Node.js** - 12.x
-* **Google Chrome** - 89.0.4389.0
-* **Puppeteer** - 5.3.1
+* **Node.js** - 14.x
+* **Google Chrome** - 93.0.4577.0
+* **Puppeteer** - 10.4.0
 
 Default runtime configuration values are:
 
@@ -95,4 +95,4 @@ Default runtime configuration values are:
 * Memory - 2048 MB
 * CPU - 1 vCPU
 * Network - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
-* User Agent - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.0 Safari/537.36 +SematextSyntheticsRobot`
+* User Agent - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/93.0.4577.0 Safari/537.36 +SematextSyntheticsRobot`
