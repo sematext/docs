@@ -12,17 +12,17 @@ question please email <support@sematext.com> or use our live chat.
 Use a [Browser monitor](./browser-monitor.md) when you want to:
 
 * Monitor the performance of your web pages (page load time, web vitals, resource performance, and [many more](./metrics/#browser-monitor-metrics))
-* Simulate and monitor user journey/click path/web transactions using a real browser
-* Monitor SSL certificates of your website
+* Simulate and monitor [user journey/click path/web transactions](./user-journey-scripts.md) using a real browser
+* [Monitor SSL certificates](./ssl-certificate-monitoring.md) of your website
 
 Use an [HTTP monitor](./http-monitor.md) when you want to:
 
 * Monitor the uptime of your APIs, web URLs or any HTTP endpoint
 * Monitor the [performance](./metrics/#http-monitor-metrics) of your APIs
-* Monitor SSL certificates of your APIs or web URLs
+* [Monitor SSL certificates](./ssl-certificate-monitoring.md) of your APIs or web URLs
 
 ### Can I monitor the endpoints and web pages behind the firewall?
-Yes. You can use private agents to monitor the endpoints and web pages behind the firewall. 
+Yes. You can use [private agents](./private-locations.md) to monitor the endpoints and web pages behind the firewall. 
 
 If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain x-sematext-origin: synthetics in their headers. For Browser monitors, you can [configure](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagesetrequestinterceptionvalue) the script to include a custom header for all requests.
 
