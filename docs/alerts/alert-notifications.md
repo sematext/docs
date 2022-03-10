@@ -303,6 +303,22 @@ The primary purpose of alert rules is to send notifications when triggered. This
             </div>
         </a>
     </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/alerts-servicenow-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="../../images/alerts/notifications/servicenow.svg" alt="ServiceNow" title="ServiceNow Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>ServiceNow</h5>Get your Sematext notifications on ServiceNow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view that is part of Alerts menu.
