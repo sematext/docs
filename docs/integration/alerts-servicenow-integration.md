@@ -15,7 +15,7 @@ description: Sematext threshold, anomaly and/or heartbeat Alerts integration wit
 
 <img class="content-modal-image" alt="Create Service Now Integration - Scripted REST API Creation" src="../../images/integrations/create-servicenow-integration-scripted-api-creation.png" title="Create Service Now Integration - Scripted REST API Creation">
 
-**4.** Once you've created the API, you will be taken to the initial Scripted Rest API screen. You can find your application by entering the app name in the search bar and clicking Enter on your keyboard. The app should be shown in the results. Click on the name of the application to continue the setup.
+**4.** Once you've created the API, you will be taken to the initial Scripted Rest API screen. You can find your application by entering the API name in the search bar and clicking Enter on your keyboard. The API should be shown in the results. Click on the name of the API to continue the setup.
 
 <img class="content-modal-image" alt="Create Service Now Integration - Scripted REST API Search" src="../../images/integrations/create-servicenow-integration-scripted-api-search.png" title="Create Service Now Integration - Scripted REST API Search">
 
