@@ -32,15 +32,16 @@ appStats,token=00000000-1111-2222-3333-444444444444,os.host=host001,service=regi
 ```
 
 In this example we can see:
-- `appStats` - a `measurement` or a `namespace`, it describes the type of metrics in this particular line and it can be
+
+  - `appStats` - a `measurement` or a `namespace`, it describes the type of metrics in this particular line and it can be
   anything that makes sense to you. It will be used as a prefix to all metrics in this line (so, full name of a metric
   `user.requests.count` is actually `appStats.user.requests.count`)
-- `token` - a token of your Sematext Monitoring App
-- `os.host` and `service` - two tags used to describe these metrics. You can append more tags by appending them after
+  - `token` - a token of your Sematext Monitoring App
+  - `os.host` and `service` - two tags used to describe these metrics. You can append more tags by appending them after
   `service=registration` (tags have to be separated by a comma)
-- `user.requests.count` and `user.requests.time` - two metrics. You can append more metrics. Metrics need to be comma
+  - `user.requests.count` and `user.requests.time` - two metrics. You can append more metrics. Metrics need to be comma
   separated.
-- `1628605794318000000` - the third and the final element of a metric line is the measurement timestamp expressed in
+  - `1628605794318000000` - the third and the final element of a metric line is the measurement timestamp expressed in
   nanoseconds
 
 A single request can contain any number of metric lines, each line added in a new line (`\n` as a separator between the
@@ -63,6 +64,7 @@ Each metric has attributes that describe how it is used in the UI. Sematext spec
 application.
 
 Metric attributes are:
+
 - name - in the example above, names are `user.requests.count` and `user.requests.time`
 - label - name that will be used in charts
 - description - longer description of the meaning of a particular metric
@@ -83,6 +85,7 @@ Metainfo entries can be sent in a single batch, each entry in a new line. The en
 `spm-receiver.eu.sematext.com`)
 
 If the metainfo for some metric is missing, the following values will be used:
+
 - name - whatever is the name of the metric, e.g. `user.requests.count`
 - label - name will be used instead
 - description - it will be empty
