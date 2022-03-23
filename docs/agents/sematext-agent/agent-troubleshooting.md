@@ -5,7 +5,6 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 1. Check the Sematext Agent logs and filter by errors. By default they'll be located at `/opt/spm/spm-monitor/logs/st-agent`. 
    1. If you see errors related to permission denied while accessing log files or system information, [restart the agent](https://sematext.com/docs/agents/sematext-agent/starting-stopping) with [elevated privileges](https://sematext.com/docs/agents/sematext-agent/permission-requirements/). 
    2. If you see errors like `"cloud" collector failed to complete the initial run` check out our [tags common schema docs](https://sematext.com/docs/tags/common-schema/#cloud-tags) and verify your IAM roles are set up correctly.
-   
 
 2. Try restarting the agent. Specific instructions on how to do so depending on your environment can be found [here](https://sematext.com/docs/agents/sematext-agent/starting-stopping).
 
@@ -22,12 +21,14 @@ Find the full Fleet documentation [here](https://sematext.com/docs/fleet/).
    2. See if it contains a large number of files. If it does, it might be the cause of high CPU usage.
    
    Disabling Journal may lower the CPU usage. However, data that fails to ship will be lost, so disabling Journal may lead to gaps in the data stored in Sematext Cloud. You can disable Journal by following these steps:
+   
    1. Open the following file in your text editor: `/opt/spm/properties/st-agent.yml`. 
    2. Comment out the `journal` section by adding the character `#` at the beginning of every line in the section.
    3. [Restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
    Note that this is a temporary solution, and you should contact [our support team](https://sematext.com/docs/agent/agent-troubleshooting/#support) to help you identify and solve the root cause of your issue.
    
-6. If you are still having trouble, you can send us the diagnostics package, and we will assist you as soon as possible. To do so:
+If you are still having trouble, you can send us the diagnostics package, and we will assist you as soon as possible. To do so:
+
    1. Go to your Sematext Cloud dashboard.
    2. On the menu on the left, select `Fleet`.
    ![Fleet screen](../../images/fleet/fleet.png)
