@@ -192,6 +192,8 @@ pages:
         - Custom Params: integration/alerts-webhooks-custom-params.md
       - Orchestration:
         - Terraform: integration/terraform.md
+      - Synthetics:
+        - Vercel: integration/vercel-synthetics-integration.md
     - Alerts:
       - Overview: alerts/index.md
       - Creating Logs Alerts: alerts/creating-logs-alerts.md
