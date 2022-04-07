@@ -16,7 +16,7 @@ setx PATH "%PATH%;%ProgramData%\npm" /M
 call npm i -g @sematext/logagent
 call npm i -g logagent-input-elasticsearch-stats
 call npm i -g logagent-input-windows-events
-call npm i -g node-windows
+call npm i -g node-windows@1.0.0-beta.6
 # run logagent windows version
 logagent-windows --help
 ```
