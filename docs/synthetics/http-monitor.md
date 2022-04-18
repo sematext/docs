@@ -52,7 +52,7 @@ By default, the UI adds the below conditions while creating an HTTP monitor. You
 
 ## Run environment
 
-Each HTTP monitor run is executed in an isolated environment. [Go HTTP Client](https://golang.org/pkg/net/http/) library is used to execute the HTTP requests. Each run is allocated 128MB memory.
+Each HTTP monitor run is executed in an isolated environment. [Go HTTP Client](https://golang.org/pkg/net/http/) library is used to execute the HTTP requests. Each run is allocated 128MB memory.  Response body is trimmed to 2 MB.
 
 The default values for various timeouts are:
 
