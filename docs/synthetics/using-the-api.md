@@ -299,6 +299,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 ### API Reference: operator
 
 **HTTP Monitor**
+
 | Operator | Alert Condition Availability
 | --- | --- |
 | Contains | -- |
@@ -345,6 +346,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | | Error |
 
 **Browser Monitor**
+
 | Operator | Alert Condition Availability
 | --- | --- |
 | Contains | Error |
