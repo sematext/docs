@@ -270,15 +270,15 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | | | ERROR | Error | |
 | | | SSL_CERT_EXPIRY | SSL Certificate Expiry (days) | *Only > operator available |
 | key | STRING | -- | Alert condition field | Only for the following value in type: |
-| | | synthetics.http.time.dns | DNS time (ms) | Metric |
-| | | synthetics.http.time.connect | Connect time (ms) | Metric |
-| | | synthetics.http.time.tls | TLS time (ms) | Metric |
-| | | synthetics.http.time.firstbyte | Time to first byte (ms) | Metric |
-| | | synthetics.http.time.download | Download time (ms) | Metric |
-| | | synthetics.browser.transfer.size  | Bytes Transferred (Bytes) | Metric - Only browser monitor |
-| | | synthetics.browser.request.count | Request Count | Metric - Only browser monitor |
-| | | synthetics.time.response | Response time (ms) | Metric |
-| | | synthetics.http.response.size | Response size (bytes) | Metric |
+| | | synthetics.http.time.dns | DNS time (ms) | METRIC |
+| | | synthetics.http.time.connect | Connect time (ms) | METRIC |
+| | | synthetics.http.time.tls | TLS time (ms) | METRIC |
+| | | synthetics.http.time.firstbyte | Time to first byte (ms) | METRIC |
+| | | synthetics.http.time.download | Download time (ms) | METRIC |
+| | | synthetics.browser.transfer.size  | Bytes Transferred (Bytes) | METRIC - Only for Browser monitor |
+| | | synthetics.browser.request.count | Request Count | METRIC - Only for Browser monitor |
+| | | synthetics.time.response | Response time (ms) | METRIC |
+| | | synthetics.http.response.size | Response size (bytes) | METRIC |
 | | | User-defined | JSON path | RESPONSE_BODY_JSON |
 | | | User-defined | Header name | RESPONSE_HEADER |
 | operator | STRING | -- | Operator type | YES |
