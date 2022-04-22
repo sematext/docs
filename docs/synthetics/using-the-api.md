@@ -166,6 +166,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 ### API Reference
 
 **Browser Monitor**
+
 | Key | Type | Value | Description | Required
 | --- | --- | --- | --- | --- |
 | name | STRING | User-defined | Title of the monitor | YES |
@@ -196,6 +197,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 
 
 **HTTP Monitor**
+
 | Key | Type | Value | Description | Required
 | --- | --- | --- | --- | --- |
 | name | STRING | User-defined | Title of the monitor | YES |
