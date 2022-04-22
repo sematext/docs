@@ -109,6 +109,7 @@ pages:
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
       - Correlation: synthetics/correlation.md
+      - Using the API: synthetics/using-the-api.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
     - Tracing:
