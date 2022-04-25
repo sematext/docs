@@ -1,11 +1,16 @@
-title: Using the API.
-description: How to use the Synthetics API.
+title: Using the Synthetics API for triggering and creating monitors
+description: How to use the Synthetics API for triggering and creating monitors.
 
 In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your [CI/CD pipeline](./ci-cd-integration.md) and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](../alerts/alert-notifications.md). The run monitor API can be used to:
 
 * Test the APIs, websites, and the user journeys in your PR and staging environments and annotate the pull requests with the results. 
 * Test the APIs, websites, and the user journeys in production immediately after deployment and alert when it fails.
 * Track and catch major changes in website metrics like page load time, page size, request count, 3rd Party API performance, etc introduced as part of code changes.
+
+Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a user journey script. The create monitor API can be used to add multiple monitors in bulk using a script, allowing the easy configuration of multiple domains at once. The create monitor API can be used to:
+
+* Create single HTTP and Browser monitors, with and without a User Journey Script. 
+* Create multiple HTTP and Browser monitors at once, for the easy configuration of multiple domain monitoring.
 
 ## Run Monitor API
 
@@ -34,8 +39,13 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 ]
 ```
 
-* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
+### Getting the apiKey
 * `<apiKey>` of your account can be copied from Settings -> API page.
+
+### Getting the appId
+* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
+
+### Getting the locationId
 * `<locationId>` - List of locations to run the monitor from. If not specified, the monitor will be run from all locations specified in the monitor configuration. The supported locations are:
 
 | Location ID  | Location |
@@ -136,8 +146,12 @@ The create monitor API can be triggered by sending a HTTP request with the below
 
 **Request Headers** - `Authorization: apiKey <apiKey>`
 
-### appId
-The `<appId>` can be obtained by sending a GET request using the above request header and `<apiKey>` to the required endpoint:
+### Getting the apiKey
+* `<apiKey>` of your account can be copied from Settings -> API page.
+
+### Getting the appId
+* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
+* The `<appId>` can also be obtained by sending a GET request using the above request header and `<apiKey>` to the required endpoint:
 
 | Region | Endpoint
 | --- | --- |
@@ -419,7 +433,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | end | STRING | HH:MM | End time HH:MM | YES |
 
 ### Create a Browser Monitor
-To create a Browser Monitor which monitors a website without a specified User Journey script, we would send a HTTP request as follows:
+To create a Browser Monitor which monitors a URL using a User Journey script, we would send a HTTP request as follows:
 ```
 curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/browser' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd' \
@@ -524,7 +538,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 }'
 ```
 
-To create a Browser Monitor to monitor a website, we would send a HTTP request as follows:
+To create a Browser Monitor which monitors a URL without using a User Journey script, we would send a HTTP request as follows:
 ```
 curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/browser' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd' \
@@ -618,7 +632,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 }'
 ```
 
-### Create a HTTP Monitor
+### Create an HTTP Monitor
 To create a HTTP Monitor, we would send a HTTP request as follows:
 ```
 curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/http' \
@@ -720,9 +734,9 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
     "allowInsecureSSL": false
 }'
 ```
-## Get all Monitors for an app
+## Get all Monitors for an App
 
-To get all the available monitors for an app, the API can be triggered by sending a HTTP request with the below configuration:
+To get all the available monitors for an App, the API can be triggered by sending a HTTP request with the below configuration:
 
 | Region | Endpoint
 | --- | --- |
@@ -735,7 +749,7 @@ To get all the available monitors for an app, the API can be triggered by sendin
 
 Example:
 
-In order to get all the available monitors for the app with `<appId>` of `17174`, we would send a HTTP request as follows:
+In order to get all the available monitors for the App with `<appId>` of `17174`, we would send a HTTP request as follows:
 ```
 curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
@@ -751,9 +765,9 @@ Result:
 
 In the above example we can see that the `<monitorId>` for the `Example HTTP monitor` is `3124`. Using the obtained `<monitorId>`, we can then perform an API request to retrieve only information on the `Example HTTP monitor`.
 
-## Get single Monitor for an app
+## Get single Monitor for an App
 
-To get information on a single monitor for an app, the API can be triggered by sending a HTTP request with the below configuration:
+To get information on a single monitor for an App, the API can be triggered by sending a HTTP request with the below configuration:
 
 | Region | Endpoint
 | --- | --- |
@@ -766,7 +780,7 @@ To get information on a single monitor for an app, the API can be triggered by s
 
 Example:
 
-In order to get information on the monitor with a `<monitorId>` of `3124` for the app with `<appId>` equal to `17174`, we would send a HTTP request as follows:
+In order to get information on the monitor with a `<monitorId>` of `3124` for the App with `<appId>` equal to `17174`, we would send a HTTP request as follows:
 ```
 curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/3124' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
