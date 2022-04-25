@@ -45,6 +45,12 @@ Yes. You can update the below setting in Edit Configuration -> Configure Alerts 
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the HTTP and Browser monitors are documented in their respective environment settings.
 
+### Is the an API available?
+Yes. Please see [using the API](./using-the-api.md).
+
+### Can I add monitors in bulk for monitoring multiple domains?
+Yes. This can be achieved by using a script with the API. Please see [using the API](./using-the-api.md#create-monitor-api).
+
 ### How are redirects handled?
 HTTP monitors don't follow redirects.  If you think redirects should be followed please let us know.
 Browser monitors follow redirects by default and collect metrics from the page to which the monitor has been redirected.
