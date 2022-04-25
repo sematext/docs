@@ -1,4 +1,4 @@
-title: Using the Synthetics API for fetching and creating monitor
+title: Using the Synthetics API for fetching and creating monitors
 description: How to use the Synthetics API for fetching and creating monitors.
 
 In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your [CI/CD pipeline](./ci-cd-integration.md) and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](../alerts/alert-notifications.md). The run monitor API can be used to:
