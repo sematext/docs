@@ -433,6 +433,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | end | STRING | HH:MM | End time HH:MM | YES |
 
 ### Create a Browser Monitor
+When creating a Browser Monitor which uses a User Journey script, special characters in the User Journey script should be correctly escaped.
 To create a Browser Monitor which monitors a URL using a User Journey script, we would send a HTTP request as follows:
 ```
 curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/browser' \
@@ -633,7 +634,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 ```
 
 ### Create an HTTP Monitor
-To create a HTTP Monitor, we would send a HTTP request as follows:
+To create an HTTP Monitor, we would send a HTTP request as follows:
 ```
 curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/http' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd' \
@@ -765,7 +766,7 @@ Result:
 
 In the above example we can see that the `<monitorId>` for the `Example HTTP monitor` is `3124`. Using the obtained `<monitorId>`, we can then perform an API request to retrieve only information on the `Example HTTP monitor`.
 
-## Get single Monitor for an App
+## Get a single Monitor for an App
 
 To get information on a single monitor for an App, the API can be triggered by sending a HTTP request with the below configuration:
 
