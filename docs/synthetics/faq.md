@@ -45,7 +45,7 @@ Yes. You can update the below setting in Edit Configuration -> Configure Alerts 
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the HTTP and Browser monitors are documented in their respective environment settings.
 
-### Is the an API available?
+### Is there an API available?
 Yes. Please see [using the API](./using-the-api.md).
 
 ### Can I add monitors in bulk for monitoring multiple domains?
