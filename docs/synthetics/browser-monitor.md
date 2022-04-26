@@ -12,7 +12,7 @@ The browser monitor can be used to monitor a single web page or a user journey a
 * **Device type** - Determines which device will be emulated during monitor execution by setting the appropriate User-Agent and Viewport/Resolution.
 * **Locations** - List of locations to run the monitor.
 
-Note that multiple monitors created in the same `Create Browser Monitor` screen will have different names, intervals and devices, but share the same locations, `User Journey` settings and `Alert Conditions`, which lets you quickly set up multiple monitors with different devices for the same use case.
+Note that multiple monitors created in the same `Create Browser Monitor` flow will have different names, intervals and devices, but share the same locations, `User Journey` settings and `Alert Conditions`, which lets you quickly set up multiple monitors with different devices for the same use case.
 
 ### User Journeys / Transactions
 
