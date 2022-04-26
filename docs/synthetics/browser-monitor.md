@@ -32,7 +32,7 @@ By default, the UI adds the below conditions while creating a browser monitor. Y
 
 ## Screenshots
 
-The browser monitor script allows the collection of page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. The resolution of a screenshot corresponds to the selected `Device type` (`Desktop` defaults to `1920x1080`). JPEG and PNG image types are supported. The number of screenshots per run is limited to three for the Pro plan, and to one for the Pay-As-You-Go and Standard plans. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
+The browser monitor script allows the collection of page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. The resolution of a screenshot corresponds to the selected `Device type` (`Desktop` defaults to `1920x1080`). JPEG and PNG image types are supported. The number of screenshots per run varies depending on [the plan](https://sematext.com/pricing/#synthetics) you're using. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
 
 ## Console Errors
 
