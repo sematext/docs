@@ -81,6 +81,9 @@ Frankfurt (eu-central-1)   - 18.159.198.132 <br/>
 Ireland (eu-west-1)        - 54.77.99.140   <br/>
 Sao Paulo (sa-east-1)      - 54.207.1.35    <br/>
 
+### Where can I see if a certain device is supported for browser monitors?
+You can simply type the name of your desired device into the _Device type_ dropdown while creating a monitor and see if a matching option will be displayed. You can also find the list of devices we support, as well as their specific properties, in the official [Puppeteer docs](https://github.com/puppeteer/puppeteer/blob/v13.6.0/src/common/DeviceDescriptors.ts).
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?

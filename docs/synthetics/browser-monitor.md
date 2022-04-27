@@ -9,7 +9,10 @@ The browser monitor can be used to monitor a single web page or a user journey a
 
 * **Name** - Name of the monitor. Max length is 255 characters.
 * **Interval** - Monitor execution interval.
+* **Device type** - Determines which device will be emulated during monitor execution by setting the appropriate User-Agent and Viewport/Resolution.
 * **Locations** - List of locations to run the monitor.
+
+Note that multiple monitors created in the same `Create Browser Monitor` flow will have different names, intervals and devices, but share the same locations, `User Journey` settings and `Alert Conditions`, which lets you quickly set up multiple monitors with different devices for the same use case.
 
 ### User Journeys / Transactions
 
@@ -29,7 +32,7 @@ By default, the UI adds the below conditions while creating a browser monitor. Y
 
 ## Screenshots
 
-The browser monitor script allows the collection of page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. JPEG and PNG image types are supported. Currently, the number of screenshots per run is limited to one. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
+The browser monitor script allows the collection of page screenshots at any point during the execution. This can be collected using [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) Puppeteer API. The resolution of a screenshot corresponds to the selected `Device type` (`Desktop` defaults to `1920x1080`). JPEG and PNG image types are supported. The number of screenshots per run varies depending on [the plan](https://sematext.com/pricing/#synthetics) you're using. On failure of the script due to errors like navigation timeout, assertion failed, etc., a screenshot `error.png` will be collected for analysis.
 
 ## Console Errors
 
