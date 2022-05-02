@@ -31,7 +31,7 @@ Yes, see [API Reference](/api).
 
 Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, less retention for testing than for prod.
 
-The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Autodiscovery](/monitoring/autodiscovery).
+The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Autodiscovery](/monitoring/autodiscovery). If is not possible to create a seperate App for each environment, then it also possible to use [Custom Tags](/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/guide/saved-views).
 
 ### Can you give me an example?
 
