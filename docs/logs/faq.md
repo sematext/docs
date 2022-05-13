@@ -88,6 +88,11 @@ If you have retention set to 7 days, all log events that are received more than 
 For paid plans we remove whole 24-hour periods once a day. For free plans we
 remove old data every 30 minutes.
 
+### How long is my data stored?
+
+This depends on the data retention you selected for each of your logging
+apps.  Backups are stored in S3 and kept for 90 days.
+
 ### Is data retention based on index/import/upload/receive time or the actual log event @timestamp?
 
 Data retention is based on log events' receive timestamp.
@@ -471,11 +476,6 @@ your API calls using `apiKey`. You can read more about this [here](search-throug
 ### Where is my data stored?
 
 Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
-
-### How long is my data stored?
-
-This depends on the data retention you selected for each of your logging
-apps.  Backups are stored in S3 and kept for 90 days.
 
 ## Kibana
 
