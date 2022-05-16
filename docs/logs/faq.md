@@ -5,7 +5,7 @@ description:  Cloud based SaaS / On-premises logging as a service platform FAQ o
 
 ### How many logs can I store?
 
-There is no limit to how many logs you can store in your logging management app.
+There is no limit to how many logs you can store in your logging management App.
  That said, you should try to pick the ideal Daily Volume when picking
 your plan, as that is going to give you the most optimal $/GB
 price.
@@ -50,7 +50,7 @@ On click, `App Settings > Usage` page will present both Total Volume in Gb and T
 
 Total Count of indexed logs is displayed in `App Settings > Usage` page.
 
-The number of logs will be also displayed in the right corner of the Log Counts panel just below the app's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
+The number of logs will be also displayed in the right corner of the Log Counts panel just below the App's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
 
 <img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
@@ -61,7 +61,7 @@ number of hits represents the number of all your logs.
 ### How long are my logs stored?
 
 How long your logs are stored depends on what Data Retention you
-selected when you picked your Logging Management App plan.  Each such app can have a
+selected when you picked your Logging Management App plan.  Each such App can have a
 different Daily Retention, Daily Volume, and plan.  You can change
 retention, volume, and plan at any time.
 
@@ -91,7 +91,10 @@ remove old data every 30 minutes.
 ### How long is my data stored?
 
 This depends on the data retention you selected for each of your logging
-apps.  Backups are stored in S3 and kept for 90 days.
+Apps.  Backups are stored in S3 and kept for 90 days.
+
+### How do I configure archiving for my Logs?
+Please see [Log Archiving](https://sematext.com/docs/logs/archiving/)
 
 ### Is data retention based on index/import/upload/receive time or the actual log event @timestamp?
 
@@ -159,7 +162,7 @@ has a purely numeric field "size" and another log source also has a
 field "size", but can have non-numeric values, this will cause issues.
 
 Thus, either keep logs of different structures in separate logging
-app or make sure there are no conflicting fields.
+App or make sure there are no conflicting fields.
 
 ### My data structure changed, can I reindex my data automatically?
 
@@ -204,11 +207,11 @@ You can use [numerous log shippers, logging libraries, and platform integrations
 
 You can use Logstash to copy logs from your own ELK / Elastic Stack to our Logs App as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
 
-### How can I ship logs from Android and iOS apps?
+### How can I ship logs from Android and iOS Apps?
 
-For shipping logs from Android apps use
+For shipping logs from Android Apps use
 <https://github.com/sematext/sematext-logsene-android> and for
-shipping logs from iOS apps use
+shipping logs from iOS Apps use
 <https://github.com/sematext/sematext-logsene-ios>.
 
 ### How can I ship AWS CloudTrail logs, AWS VPC logs, and other logs from S3?
@@ -444,7 +447,7 @@ What could be done in this situation?  There are basically two options:
 {"detail_object": {"code": -1, "error":  "Some Error message here", "module": "myapp"}
 ```
 
-The renaming could take place in your apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
+The renaming could take place in your Apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
 
 3) You could ship the logs of "Service B" to a separate Logs App (different App token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
 
@@ -668,7 +671,7 @@ notify you when the overall volume of your logs suddenly changes, which
 may be a signal that you should look for what suddenly increased logging
 (e.g. maybe something started logging lots of errors, exceptions,
 timeouts, or some such), or why logging volume suddenly dropped (e.g.
-maybe some of your server(s) or app(s) stopped working and sending
+maybe some of your server(s) or App(s) stopped working and sending
 logs).
 
 ### Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?
