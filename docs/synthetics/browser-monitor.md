@@ -88,7 +88,7 @@ Each browser monitor run is executed in an isolated environment using a fresh in
 
 * **Node.js** - 14.x
 * **Google Chrome** - 93.0.4577.0
-* **Puppeteer** - 10.4.0
+* **Puppeteer** - 14.1.0
 
 Default runtime configuration values are:
 
