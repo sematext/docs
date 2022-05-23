@@ -30,7 +30,7 @@ If you do not want to run private agents yourself, you can also configure the fi
 No. The HTTP monitor does not support OAuth authentication before sending the actual request. HTTP monitor supports header-based authentication. 
 
 ### Can I monitor API endpoints protected by Basic authentication?
-Yes, please see [authorization](./http-monitor/#authorization).
+Yes, please see [authentication](./http-monitor/#authentication).
 
 ### Can I stop Synthetics Alerts during scheduled maintenance?
 Yes. You can temporarily disable the notifications from Edit Configuration -> Configure Alerts -> Notifications. Once the maintenance window is over, you can enable the notifications.
