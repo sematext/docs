@@ -53,7 +53,7 @@ It is possible to get the **Base64** encoded value of your `username` and `passw
 echo -n "username:password" | base64
 ```
 
-You can also get the **Base64** encoded value of your `username` and `password` by using an online **Base64** encoder/decoder such as [base64encode.org](https://www.base64encode.org)
+You can also get the **Base64** encoded value of your `username` and `password` by using an online **Base64** encoder/decoder such as [base64encode.org](https://www.base64encode.org).
 
 ## Conditions
 
