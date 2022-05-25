@@ -321,6 +321,12 @@ The primary purpose of alert rules is to send notifications when triggered. This
     </div>
 </div>
 
+### SMS Notification Hooks
+
+SMS notifications can be enabled by integrating Sematext Notification Hooks with the the 3rd-party service **Twilio**. For further information, please see [Twilio Alerts Integration](../integration/alerts-twilio-integration).
+
+### Email Notification Hooks
+
 An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view that is part of Alerts menu.
 
 ![Sematext Alerts](../images/alerts/image_10.png "Sematext Alerts")
