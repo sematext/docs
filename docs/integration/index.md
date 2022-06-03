@@ -711,3 +711,4 @@ Multiple types of [alerts](/alerts) can be triggered on metrics and on logs and 
 - [Nagios](/integration/alerts-nagios-integration/)
 - [Hipchat](/integration/alerts-hipchat-integration/)
 - [Zapier](/integration/alerts-zapier-integration/)
+- [AlertOps](/integration/alerts-alertops-integration/)
