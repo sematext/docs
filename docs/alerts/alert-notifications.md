@@ -325,7 +325,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
                 <div class="flip-card-container">
                     <div class="flip-card">
                         <div class="side">
-                            <img src="../../images/alerts/notifications/alertops.svg" alt="AlertOps" title="AlertOps Alerts Integration" style="width: 72px;">
+                            <img src="../../images/alerts/notifications/alertops.png" alt="AlertOps" title="AlertOps Alerts Integration" style="width: 72px;">
                         </div>
                         <div class="side back">
                             <h5>AlertOps</h5>Get your Sematext notifications on AlertOps.
