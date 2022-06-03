@@ -319,6 +319,22 @@ The primary purpose of alert rules is to send notifications when triggered. This
             </div>
         </a>
     </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/alerts-alertops-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="../../images/alerts/notifications/alertops.png" alt="AlertOps" title="AlertOps Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>AlertOps</h5>Get your Sematext notifications on AlertOps.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 ### SMS Notification Hooks
