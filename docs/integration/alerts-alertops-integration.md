@@ -16,10 +16,10 @@ Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in 
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
-Enter required parameters and copy incoming AlertOps **API URL**. Click Test button to confirm that Sematext app is sending data and save your AlertOps alerts integration.
+Enter required parameters and copy incoming AlertOps **API URL**. Click Test button to confirm that Sematext App is sending data and save your AlertOps alerts integration.
 Once the test message is visible, click the **Save Notification Hook** button to save your configuration. 
 
 ![AlertOps Alerts Integration](https://sematext.com/docs/images/integrations/alertops-integration.png "AlertOps Integration")
 
-**Done.** Every alert from your Sematext app will be forwarded to AlertOps,
+**Done.** Every alert from your Sematext App will be forwarded to AlertOps,
 where you can manage escalation policies based on priority in received notification from Sematext.
