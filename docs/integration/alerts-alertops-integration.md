@@ -7,7 +7,7 @@ The above scenario and scope for integration is due to the fact that AlertOps ha
 
 ## **In AlertOps**
 
-Log into your [AlertOps account](https://alertops.com/) and configure *inbound* integration between AlertOps and Sematext APM, Log Management, Tracing, Experience, and Synthetics platform. Also check [AlertOps's integration guide](https://help.alertops.com/en/articles/5554660-sematext) for more integration details.
+Log into your [AlertOps account](https://alertops.com/) and configure *inbound* integration between AlertOps and Sematext. Also check [AlertOps's integration guide](https://help.alertops.com/en/articles/5554660-sematext) for more integration details.
 
 
 ## **In Sematext**
@@ -16,10 +16,10 @@ Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in 
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png "Sematext Notification Hook")
 
-Enter required parameters and copy incoming AlertOps **API URL**. Click Test button to confirm that Sematext app is sending data and save your VictorOps alerts integration.
+Enter required parameters and copy incoming AlertOps **API URL**. Click Test button to confirm that Sematext App is sending data and save your AlertOps alerts integration.
 Once the test message is visible, click the **Save Notification Hook** button to save your configuration. 
 
 ![AlertOps Alerts Integration](https://sematext.com/docs/images/integrations/alertops-integration.png "AlertOps Integration")
 
-**Done.** Every alert from your Sematext Monitoring app will be forwarded to AlertOps,
+**Done.** Every alert from your Sematext App will be forwarded to AlertOps,
 where you can manage escalation policies based on priority in received notification from Sematext.
