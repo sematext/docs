@@ -23,8 +23,8 @@ Once the test message is visible, click the **Save Notification Hook** button to
 
 
 ## **Mapping priority in AlertOps**
-Sematext Alerts let you set the priority for your alert rules. With this functionality, you will be able to differentiate between info, warn, error, and critical alerts. By default, all existing alert rules will have the WARN priority.
-You can check how to setup escalation rules in AlertOps on [AlertOps's escalation policies](https://help.alertops.com/en/articles/1650437-escalation-policies)
+Sematext Alerts let you set the priority for your alert rules. With this functionality, you will be able to differentiate between info, warn, error, and critical alerts.
+You can check how to set up Escalation rules in AlertOps on [AlertOps's escalation policies](https://help.alertops.com/en/articles/1650437-escalation-policies)
 
 You can utilize alert priority in AlertOps by mapping priority field to an Escalation rule.
 This can be configured in `Inbound Integrations -> Sematext integration -> Advanced rules` menu option.
