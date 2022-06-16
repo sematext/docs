@@ -35,12 +35,11 @@ metadata:
   name: test-sematextagent
 spec:
   region: <"US" or "EU">
-  logsToken: YOUR_LOGS_TOKEN
   infraToken: YOUR_INFRA_TOKEN
 ```
 
 This operator uses all the same options as the Sematext Agent helm chart.
-For more details refer to [operator docs](https://github.com/sematext/sematext-operator/blob/master/README.md).
+For more details refer to [operator docs](operator.md).
 
 ## Manual Installation
 
