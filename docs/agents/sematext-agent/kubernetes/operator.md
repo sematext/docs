@@ -15,7 +15,7 @@ kubectl apply -f https://raw.githubusercontent.com/sematext/sematext-operator/ma
 
 ## Settings
 
-This operator uses all the same options as the [Sematext Agent Helm Chart](helm.md), please take a look to all the options in the following table:
+This operator uses all the same options as the [Sematext Agent Helm Chart](helm.md), please take a look at all the options in the following table:
 
 |             Parameter            |            Description            |                  Default                  |
 |----------------------------------|-----------------------------------|-------------------------------------------|
