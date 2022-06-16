@@ -239,9 +239,6 @@ pages:
             - Installation: agents/sematext-agent/kubernetes/installation.md
             - Helm Chart: agents/sematext-agent/kubernetes/helm.md
             - Operator: agents/sematext-agent/kubernetes/operator.md
-            - Configuration Variables: agents/sematext-agent/kubernetes/configuration.md
-            - Supported Metrics: agents/sematext-agent/kubernetes/metrics.md
-            - Supported Events: agents/sematext-agent/kubernetes/events.md
           - Chef Recipe: agents/sematext-agent/chef-recipe.md
           - Permission requirements: agents/sematext-agent/permission-requirements.md
         - Starting/stopping: agents/sematext-agent/starting-stopping.md
