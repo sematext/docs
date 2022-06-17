@@ -5,7 +5,7 @@ This chart installs the Sematext Agent to all nodes in your cluster via a `Daemo
 ## Prerequisites
 
 - Kubernetes 1.13+
-- You need to create [an Infra App in Sematext Cloud](https://apps.sematext.com/ui/monitoring-create/app/infra) to get your infra token.
+- You need to create an Infra App in [Sematext Cloud US](https://apps.sematext.com/ui/monitoring-create/app/infra) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/monitoring-create/app/infra) to get your Infra App Token.
 
 ## Installation
 
@@ -19,18 +19,13 @@ $ helm install st-agent \
     sematext/sematext-agent
 ```
 
-To install the chart for both logs and monitoring run the following command:
+The agent is running as a privileged container. It will not work correctly otherwise.
 
-```bash
-$ helm repo add sematext https://cdn.sematext.com/helm-charts/
-$ helm install st-agent \
-    --set logsToken=YOUR_LOGS_TOKEN \
-    --set infraToken=YOUR_INFRA_TOKEN \
-    --set region=US \
-    sematext/sematext-agent
-```
+**NOTE:** If you want to use Sematext hosted in the EU region set the region parameter to `--set region=EU`.
 
-To provide your infra token as a kubernetes secret instead, create a secret with `infra-token` as a key, and provide its name to the install command:
+Kubernetes Secrets lets you securely store items such as tokens, passwords or keys, removing the need to store them in Pod definitions or container images.
+
+If you would like to provide your infra token as a Kubernetes Secret, create a secret with `infra-token` as a key, and provide its name to the installation command:
 
 ```bash
 $ kubectl create secret generic sematext-secret \
@@ -45,9 +40,8 @@ $ helm install st-agent \
 
 
 
-After a few minutes, you should see your services appear in the [Discovery page in Sematext Cloud](https://apps.sematext.com/ui/discovery/services), where you can enable the collection of metrics, events and logs.
+After a few minutes, you should see your services appear in the Discovery page in [Sematext Cloud US](https://apps.sematext.com/ui/discovery/services) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/discovery/services), where you can enable the collection of metrics, events and logs.
 
-**NOTE:** If you want to use Sematext hosted in the EU region set the region parameter to `--set region=EU`. Also, it is worth mentioning that the agent is running as a privileged container.
 
 ## Removal
 
@@ -58,7 +52,7 @@ To uninstall the chart use:
 $ helm uninstall st-agent
 ```
 
-The command removes all the Kubernetes components associated with the chart and deletes the release.
+The command removes all Kubernetes components associated with the chart and deletes the release.
 
 ## Configuration
 

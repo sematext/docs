@@ -50,7 +50,7 @@ spec:
   infraToken: YOUR_INFRA_TOKEN
 ```
 
-**NOTE:** You need to create [an Infra App in Sematext Cloud](https://apps.sematext.com/ui/monitoring-create/app/infra) to get your infra token.
+**NOTE:** You need to create an Infra App in [Sematext Cloud US](https://apps.sematext.com/ui/monitoring-create/app/infra) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/monitoring-create/app/infra) to get your Infra App Token.
 
 Once you have created the above resource, you can apply this file with `kubectl apply -f`.
 
