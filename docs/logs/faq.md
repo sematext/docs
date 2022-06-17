@@ -271,7 +271,7 @@ Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handl
 
 ### How much does your centralized logging management solution cost?
 
-Check the [Logs App Plans & Prices](https://www.sematext.com/logsene/pricing).
+Check the [Logs App Plans & Prices](https://www.sematext.com/pricing#logsene).
 
 ### What happens with my logs when I change from the free to a paid plan or vice versa?
 
