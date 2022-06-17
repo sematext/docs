@@ -46,7 +46,6 @@ metadata:
   name: test-sematextagent
 spec:
   region: "EU"
-  containerToken: YOUR_CONTAINER_TOKEN
   infraToken: YOUR_INFRA_TOKEN
 ```
 
