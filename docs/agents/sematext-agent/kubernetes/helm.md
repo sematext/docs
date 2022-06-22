@@ -23,6 +23,8 @@ The agent is running as a privileged container. It will not work correctly other
 
 **NOTE:** If you want to use Sematext hosted in the EU region set the region parameter to `--set region=EU`.
 
+### Using Kubernetes Secrets
+
 Kubernetes Secrets lets you securely store items such as tokens, passwords or keys, removing the need to store them in Pod definitions or container images.
 
 If you would like to provide your infra token as a Kubernetes Secret, create a secret with `infra-token` as a key, and provide its name to the installation command:
