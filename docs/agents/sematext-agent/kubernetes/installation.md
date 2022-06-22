@@ -2,19 +2,18 @@ title: Installing Sematext Agent on Kubernetes
 
 ## Helm Chart
 
-The preferred way to install Sematext Agent is via a Helm chart. [Sematext Agent helm chart](https://github.com/sematext/helm-charts/tree/master/charts/sematext-agent) is available in official charts repo and it installs the Sematext Agent to all nodes in your cluster via `DaemonSet` resource.
+The preferred way to install Sematext Agent is via a Helm chart. [Sematext Agent helm chart](https://github.com/sematext/helm-charts/tree/master/charts/sematext-agent) is available in official charts' repositories, and it installs the Sematext Agent to all nodes in your cluster via `DaemonSet` resource.
 
-To install it run the following command:
+To install it, run the following command:
 
 ```sh
 helm install --name sematext-agent \
   --set infraToken=<YOUR_INFRA_TOKEN> \
-  --set logsToken=<YOUR_LOGS_TOKEN> \
   --set region=<"US" or "EU"> \
   stable/sematext-agent
 ```
 
-For more details, refer to [helm chart docs](https://github.com/sematext/helm-charts/tree/master/charts/sematext-agent/README.md).
+For more details, refer to our [helm chart docs](helm.md).
 
 ## Sematext Operator
 
@@ -36,12 +35,11 @@ metadata:
   name: test-sematextagent
 spec:
   region: <"US" or "EU">
-  logsToken: YOUR_LOGS_TOKEN
   infraToken: YOUR_INFRA_TOKEN
 ```
 
 This operator uses all the same options as the Sematext Agent helm chart.
-For more details refer to [operator docs](https://github.com/sematext/sematext-operator/blob/master/README.md).
+For more details refer to [operator docs](operator.md).
 
 ## Manual Installation
 
@@ -127,7 +125,7 @@ kubectl apply -f st-agent-crb.yml
 
 ### Create and Deploy the DaemonSet
 
-Create a `st-agent-ds.yml` file for the deployment (replace with your tokens and region):
+Create a `st-agent-ds.yml` file for the deployment (replace with your token and region):
 
 ```yaml
 apiVersion: v1
@@ -162,8 +160,6 @@ spec:
           value: sematext-agent-vector
         - name: INFRA_TOKEN
           value: <YOUR_INFRA_TOKEN>
-        - name: LOGS_TOKEN
-          value: <YOUR_LOGS_TOKEN>
         - name: REGION
           value: <"US" or "EU">
         - name: KUBERNETES_CLUSTER_ID
@@ -203,17 +199,6 @@ spec:
           - name: http
             containerPort: 80
             protocol: TCP
-      - name: logagent
-        image: sematext/logagent:latest
-        imagePullPolicy: Always
-        - name: LOGS_TOKEN
-          value: <YOUR_LOGS_TOKEN>
-        - name: REGION
-          value: <"US" or "EU">
-        volumeMounts:
-          - name: docker-sock
-            mountPath: /var/run/docker.sock
-        resources:
       volumes:
         - name: hostfs
           hostPath:
