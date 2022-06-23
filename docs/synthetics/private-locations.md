@@ -30,7 +30,7 @@ If you have multiple private locations, you need to install agents individually 
 
 ## Using Private Locations
 
-Once you create a private location from the UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private locations behave exactly the same as public locations. The only exception to this is that private locations won't be able to use *sensitive data* for script-based Browser monitors, due to security concerns.
+Once you create a private location from the UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private locations behave exactly the same as public locations. The only exception to this is that private locations won't be able to use [sensitive data](./user-journey-scripts/#storing-your-user-journey-script-credentials-securely) for script-based Browser monitors, due to security concerns.
 
 ### Schedule a Monitor to Run from Private Locations
 
