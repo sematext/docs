@@ -63,13 +63,16 @@ Currently, it is not possible to change the default settings, except for the def
 ### How can I filter requests from HTTP & Browser monitors?
 Both HTTP and Browser monitor requests will have the string "SematextSyntheticsRobot" in the User-Agent header. If your analytics software doesn't already filter out requests from Synthetics, you can use the User-Agent header to filter requests from Synthetics.
 
-### Where can I find user journey scripts that I can customize for my own needs?
+### Where can I find User Journey scripts that I can customize for my own needs?
 You can find Browser monitor scripts for common use cases by selecting the Browse Examples link in the Create Monitor page. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
+
+### How can I securely store the credentials I supply to User Journey scripts?
+By adding them as Sensitive Data, on which you can find more information [here](./user-journey-scripts/#storing-your-user-journey-script-credentials-securely)
 
 ### Why is the latency reported by Browser monitors different from latency reported by HTTP monitors?
 Short answer: because they are measuring somewhat different things.
 
-The HTTP monitor measures how long it takes to execute a single HTTP request and get a response. This includes performing a DNS lookup, establishing a TCP connection, sending of the request, and content transfer.  On the other hand, the Browser monitor measures all of that, plus how long it takes to load and render the whole page, which includes fetching of external resources references in that page (e.g., CSS resources, JavaScript resources, etc.).  If a user journey script is used with a Browser monitor then that is included as well.  Thus, it is expected that Browser monitors display higher latency.
+The HTTP monitor measures how long it takes to execute a single HTTP request and get a response. This includes performing a DNS lookup, establishing a TCP connection, sending of the request, and content transfer.  On the other hand, the Browser monitor measures all of that, plus how long it takes to load and render the whole page, which includes fetching of external resources references in that page (e.g., CSS resources, JavaScript resources, etc.).  If a User Journey script is used with a Browser monitor then that is included as well.  Thus, it is expected that Browser monitors display higher latency.
 
 ### What are the IP addresses from which monitors are run?
 N. Virginia (us-east-1)    - 52.202.60.97   <br/>
