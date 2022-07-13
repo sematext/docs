@@ -15,6 +15,7 @@ All options work with log shippers such as
 [Logstash](logstash),
 [Logagent](/logagent),
 [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch),
+[Fluent Bit](fluentbit),
 [rsyslog](rsyslog) or
 [syslog-ng](syslog-ng). And you can always write your own
 application or script that works with
