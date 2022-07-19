@@ -14,6 +14,7 @@ All options work with log shippers such as
 [Logstash](logstash),
 [Logagent](/logagent),
 [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch),
+[Fluent Bit](fluentbit),
 [rsyslog](rsyslog) or
 [syslog-ng](syslog-ng)... and many, many more.  Instructions for a lot more log shipping methods are inside Sematext Cloud itself.
 
