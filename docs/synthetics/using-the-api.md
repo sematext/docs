@@ -131,6 +131,214 @@ AllLocations    276 us-west-1   passed  3/3 Passed  https://apps.sematext.com/ui
 AllLocations    276 ap-south-1  passed  3/3 Passed  https://apps.sematext.com/ui/synthetics/12345/monitors/276/runs/5173800
 ```
 
+
+## Monitor Overview API
+
+The monitor overview API can be invoked by sending an HTTP request with the below configuration:
+
+| Region | Endpoint
+| --- | --- |
+| US | `https://apps.sematext.com/synthetics-api/api/apps/<appId>/monitors` |
+| EU | `https://apps.eu.sematext.com/synthetics-api/api/apps/<appId>/monitors` |
+
+**HTTP Method** - `GET`
+
+**Request Headers** - `Authorization: apiKey <apiKey>`
+
+### Getting the apiKey
+* Your account's `<apiKey>` can be copied from the `Settings -> API` page.
+
+### Getting the appId
+The `<appId>` can be obtained by sending a GET request using the above request header and `<apiKey>` to the required endpoint:
+
+| Region | Endpoint
+| --- | --- |
+| US | `https://apps.sematext.com/users-web/api/v3/apps` |
+| EU | `https://apps.eu.sematext.com/users-web/api/v3/apps` |
+
+Example:
+```
+curl -L -X GET 'https://apps.sematext.com/users-web/api/v3/apps' \
+-H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
+```
+Response:
+```
+  "success": true,
+  "message": null,
+  "data": {
+    "apps": [
+      {
+        "id": 15642,
+        "name": "My Synthetics App",
+        "appType": "Synthetics",
+        "appTypeId": 40000,
+```
+From the above response, we can determine that the `<appId>` for the Synthetics App named `My Synthetics App` is `15642`.
+
+### API Reference
+
+| Key | Type | Value | Description
+| --- | --- | --- | --- |
+| success | BOOLEAN | -- | API call response status |
+| | | true | Succesful |
+| | | false | Failed |
+| data | Array of JSON Objects | *See [API Reference: data](#api-reference-data)  | Monitor overview response data |
+
+
+### API Reference: data
+| Key | Type | Value | Description
+| --- | --- | --- | --- |
+| id | INTEGER | Variable | `<monitorId>` of the monitor |
+| name | STRING | Variable | Name of the monitor |
+| interval | STRING | -- | Interval the monitor is set to run |
+| | | 1m | 1 minute intervals |
+| | | 5m | 5 minute intervals |
+| | | 10m | 10 minute intervals |
+| | | 15m | 15 minute intervals |
+| intervalInSeconds | INTEGER | -- | Interval the monitor is set to run in seconds |
+| | | 60 | 1 minute intervals |
+| | | 300 | 5 minute intervals |
+| | | 600 | 10 minute intervals |
+| | | 900 | 15 minute intervals |
+| enabled | BOOLEAN | -- | Monitor is Enabled/Disabled |
+| | | true | Enabled state |
+| | | false | Disabled state  |
+| locations | ARRAY | -- | Locations the monitor is set to run from |
+| | | 1 | N. Virginia, USA |
+| | | 2 | Ireland |
+| | | 3 | Mumbai, India |
+| | | 4 | Singapore |
+| | | 5 | Sydney, Australia |
+| | | 6 | Frankfurt, Germany |
+| | | 7 | Sao Paulo, Brazil |
+| | | 8 | N. California, USA|
+| lastScheduledAt | INTEGER | Variable | Last scheduled run of the monitor (Epoch milliseconds) |
+| status | STRING | -- | Current status of the monitor |
+| | | PASSING | Monitor is passing |
+| | | FAILING | Monitor is failing |
+| appId | INTEGER | Variable | `<appId>` of the monitor's parent App |
+| type | STRING | -- | Type of monitor |
+| | | HTTP | Is an HTTP Monitor |
+| | | BROWSER | Is a Browser Monitor |
+| conditions | Array of JSON Objects | *See [API Reference: conditions](#api-reference-conditions) | Alert conditions |
+| lastFailedResult | JSON Object | *See [API Reference: lastFailedResult](#api-reference-lastfailedresult) | Last failed run |
+| availability | JSON Object | *See [API Reference: availability](#api-reference-availability) | Average overall availability |
+
+
+### API Reference: conditions
+| Key | Type | Value | Description
+| --- | --- | --- | --- |
+| id | INTEGER | Variable | `<ruleId>` of the alert condition |
+| type | STRING | -- | Alert condition type |
+| | | METRIC | Metric |
+| | | RESPONSE_BODY | Response Body |
+| | | RESPONSE_BODY_JSON | Response Body JSON |
+| | | RESPONSE_HEADER | Response Header |
+| | | RESPONSE_CODE | Response Code |
+| | | ERROR | Error |
+| | | SSL_CERT_EXPIRY | SSL Certificate Expiry (days) |
+| key | STRING | -- | Alert condition field |
+| | | synthetics.http.time.dns | DNS time (ms) |
+| | | synthetics.http.time.connect | Connect time (ms) |
+| | | synthetics.http.time.tls | TLS time (ms) |
+| | | synthetics.http.time.firstbyte | Time to first byte (ms) |
+| | | synthetics.http.time.download | Download time (ms) |
+| | | synthetics.browser.transfer.size  | Bytes Transferred (Bytes) |
+| | | synthetics.browser.request.count | Request Count |
+| | | synthetics.time.response | Response time (ms) |
+| | | synthetics.http.response.size | Response size (bytes) |
+| | | Variable | JSON path/Header name |
+| operator | STRING | -- | Operator type |
+| | | contains | Contains |
+| | | does not contain | Does Not Contain |
+| | | > | Greater Than |
+| | | < | Less Than |
+| | | = | Equal To |
+| | | !=  | Not Equal To |
+| | | Starts With | Starts With |
+| value | STRING | Variable | Rule value |
+| enabled | BOOLEAN | -- | Condition is Enabled/Disabled |
+| | | true | Condition enabled |
+| | | false | Condition disabled |
+
+
+### API Reference: lastFailedResult
+| Key | Type | Value | Description
+| --- | --- | --- | --- |
+| timestamp | INTEGER | Variable | Last failed run of the monitor (Epoch milliseconds) |
+| runId | INTEGER | Variable | `<runId>` of the failed run |
+
+
+### API Reference: availability
+| Key | Type | Value | Description
+| --- | --- | --- | --- |
+| day | INTEGER | Variable | Daily availibility percentage (5 decimals) |
+| week | INTEGER | Variable | Weekly availibility percentage (5 decimals) |
+| month | INTEGER | Variable |  Monthly availibility percentage (5 decimals) |
+| custom | INTEGER | 0 | N/A |
+
+Example:
+
+To query the monitor overview API for the Synthetics App named `My Synthetics App` with an `<appId>` of `15642`, we would run the following:
+```
+curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/15642/monitors' \
+-H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
+```
+Response:
+```
+{
+  "success": true,
+  "data": [
+    {
+      "id": 7463,
+      "name": "My HTTP Monitor",
+      "interval": "1m",
+      "intervalInSeconds": 60,
+      "enabled": true,
+      "locations": {
+        "2": "Ireland",
+        "6": "Frankfurt, Germany"
+      },
+      "lastScheduledAt": 1658418224000,
+      "status": "PASSING",
+      "appId": 15642,
+      "type": "HTTP",
+      "conditions": [
+        {
+          "id": 9602,
+          "type": "ERROR",
+          "value": "",
+          "operator": "=",
+          "enabled": true
+        },
+        {
+          "id": 9603,
+          "type": "RESPONSE_CODE",
+          "value": "200",
+          "operator": "=",
+          "enabled": true
+        },
+        {
+          "id": 9604,
+          "type": "METRIC",
+          "key": "synthetics.time.response",
+          "value": "20000",
+          "operator": "<",
+          "enabled": true
+        }
+      ],
+      "availability": {
+        "day": 99.56982,
+        "week": 99.57245,
+        "month": 99.42566,
+        "custom": 0
+      }
+    }
+  ]
+}
+```
+
+
 ## Create Monitor API
 
 The create monitor API can be triggered by sending an HTTP request with the below configuration:
