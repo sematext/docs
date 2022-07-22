@@ -134,7 +134,7 @@ AllLocations    276 ap-south-1  passed  3/3 Passed  https://apps.sematext.com/ui
 
 ## Monitor Overview API
 
-The monitor overview API can be triggered by sending a HTTP request with the below configuration:
+The monitor overview API can be invoked by sending an HTTP request with the below configuration:
 
 | Region | Endpoint
 | --- | --- |
