@@ -257,9 +257,9 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | | | !=  | Not Equal To |
 | | | Starts With | Starts With |
 | value | STRING | Variable | Rule value |
-| enabled | BOOLEAN | -- | Line is Enabled/Disabled |
-| | | true | Line enabled |
-| | | false | Line disabled |
+| enabled | BOOLEAN | -- | Condition is Enabled/Disabled |
+| | | true | Condition enabled |
+| | | false | Condition disabled |
 
 
 ### API Reference: lastFailedResult
