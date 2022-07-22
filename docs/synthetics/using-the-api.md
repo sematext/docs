@@ -146,7 +146,7 @@ The monitor overview API can be invoked by sending an HTTP request with the belo
 **Request Headers** - `Authorization: apiKey <apiKey>`
 
 ### Getting the apiKey
-* `<apiKey>` of your account can be copied from Settings -> API page.
+* Your account's `<apiKey>` can be copied from the `Settings -> API` page.
 
 ### Getting the appId
 The `<appId>` can be obtained by sending a GET request using the above request header and `<apiKey>` to the required endpoint:
