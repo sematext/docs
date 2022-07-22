@@ -272,9 +272,9 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 ### API Reference: availability
 | Key | Type | Value | Description
 | --- | --- | --- | --- |
-| day | INTEGER | Variable | Daily availibility percentage (5 decimals) |
-| week | INTEGER | Variable | Weekly availibility percentage (5 decimals) |
-| month | INTEGER | Variable |  Monthly availibility percentage (5 decimals) |
+| day | INTEGER | Variable | Daily availability % (5 decimals) |
+| week | INTEGER | Variable | Weekly availability % (5 decimals) |
+| month | INTEGER | Variable |  Monthly availability % (5 decimals) |
 | custom | INTEGER | 0 | N/A |
 
 Example:
