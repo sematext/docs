@@ -7,10 +7,10 @@ In addition to scheduled monitor runs, you can also trigger monitor runs by usin
 * Test the APIs, websites, and the user journeys in production immediately after deployment and alert when it fails.
 * Track and catch major changes in website metrics like page load time, page size, request count, 3rd Party API performance, etc introduced as part of code changes.
 
-Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a user journey script. The create monitor API can be used to add multiple monitors in bulk using a script, allowing the easy configuration of multiple domains at once. The create monitor API can be used to:
+Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a [User Journey Script](user-journey-scripts). The create monitor API can be used to add multiple monitors in bulk using a script. The create monitor API can be used to:
 
 * Create single HTTP and Browser monitors, with and without a User Journey Script. 
-* Create multiple HTTP and Browser monitors at once, for the easy configuration of multiple domain monitoring.
+* Create multiple HTTP and Browser monitors at once.
 
 ## Run Monitor API
 
