@@ -108,8 +108,10 @@ To mask your passwords and hide sensitive data please see [Storing User Journey 
 ```
  Extract token from the response
 ```javascript
+  // response.text() prints out the response body as a string, useful if you're not using JSON
+  // response.json() parses the response body JSON and throws an error if it isn't valid JSON
   bodyJSON = await response.json();
-```
+ ```
 Pass the extracted token in the next request in the request body
 ```javascript
  // Intercept the next request, change its method to POST and add the request body using the response we got from the first request
