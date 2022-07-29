@@ -124,7 +124,7 @@ Pass the extracted token in the next request in the request body
   });
 
   console.log("Sending second request using info from the first response");
-  const result = await page.goto(`https://private-xxx-stcloudtest.apiary-mock.com/${bodyJSON.loginPath}`);
+  const result = await page.goto(`https://private-xxxxx.apiary-mock.com/exampleSecureEndpoint`);
   console.log({
     url: result.url(),
     statusCode: result.status(),
