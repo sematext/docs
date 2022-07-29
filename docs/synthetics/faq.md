@@ -104,7 +104,7 @@ To mask your passwords and hide sensitive data please see [Storing User Journey 
   });
 
   console.log("Sending request to get token");
-  const response = await page.goto("https://private-xxx-stcloudtest.xxx-mock.com/authenticate");
+  const response = await page.goto("https://private-xxxxx.apiary-mock.com/authenticate");
 ```
  Extract token from the response
 ```javascript
