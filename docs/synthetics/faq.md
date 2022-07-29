@@ -88,7 +88,7 @@ Sao Paulo (sa-east-1)      - 54.207.1.35    <br/>
 You can simply type the name of your desired device into the _Device type_ dropdown while creating a monitor and see if a matching option will be displayed. You can also find the list of devices we support, as well as their specific properties, in the official [Puppeteer docs](https://github.com/puppeteer/puppeteer/blob/v13.6.0/src/common/DeviceDescriptors.ts).
 
 ### Can I extract a token from a request and use it for another request?
-Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select Monitor a User Journey. Within the script you can grab a token by using the ```javascriptsetRequestInterception``` function.
+Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select **Monitor a User Journey** in the **Configure URL/Script** step. Within the script you can send a POST request to your token provider API with Puppeteer's `page.setRequestInterception` function.
 After grabbing the token from the response, you can intercept the next request and add your credentials to the request body with the following code.
 
 ```javascript
