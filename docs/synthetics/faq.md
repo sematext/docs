@@ -89,7 +89,7 @@ You can simply type the name of your desired device into the _Device type_ dropd
 
 ### Can I extract a token from a request and use it for another request?
 Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select Monitor a User Journey. Within the script you can grab a token by using the ```javascriptsetRequestInterception``` function.
-Intercept the next request, add your credentials to the request body with the following code.
+After grabbing the token from the response, you can intercept the next request and add your credentials to the request body with the following code.
 
 ```javascript
  await page.setRequestInterception(true);
