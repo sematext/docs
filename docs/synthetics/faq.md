@@ -87,6 +87,51 @@ Sao Paulo (sa-east-1)      - 54.207.1.35    <br/>
 ### Where can I see if a certain device is supported for browser monitors?
 You can simply type the name of your desired device into the _Device type_ dropdown while creating a monitor and see if a matching option will be displayed. You can also find the list of devices we support, as well as their specific properties, in the official [Puppeteer docs](https://github.com/puppeteer/puppeteer/blob/v13.6.0/src/common/DeviceDescriptors.ts).
 
+### Can I extract a token from a request and use it for another request?
+Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select **Monitor a User Journey** in the **Configure URL/Script** step. Within the script you can send a POST request to your token provider API with Puppeteer's `page.setRequestInterception` function.
+After grabbing the token from the response, you can intercept the next request and add your credentials to the request body with the following code.
+
+```javascript
+ await page.setRequestInterception(true);
+  // Intercept the next request, change its method to POST and add the request body
+  page.once("request", async interceptedRequest => {
+    interceptedRequest.continue({
+      method: "POST",
+      postData: '{"username": "exampleUser","password": "examplePassword"}',
+      headers: { ...interceptedRequest.headers(), "content-type": "application/json" }
+    });
+  });
+
+  console.log("Sending request to get token");
+  const response = await page.goto("https://private-xxxxx.apiary-mock.com/authenticate");
+```
+ Extract token from the response
+```javascript
+  // response.text() prints out the response body as a string, useful if you're not using JSON
+  // response.json() parses the response body JSON and throws an error if it isn't valid JSON
+  bodyJSON = await response.json();
+ ```
+Pass the extracted token in the next request in the request body
+```javascript
+ // Intercept the next request, change its method to POST and add the request body using the response we got from the first request
+  page.once("request", async interceptedRequest => {
+    interceptedRequest.continue({
+      method: "POST",
+      postData: `{"token": "${bodyJSON.token}"}`,
+      headers: { ...interceptedRequest.headers(), "content-type": "application/json" }
+    });
+  });
+
+  console.log("Sending second request using info from the first response");
+  const result = await page.goto(`https://private-xxxxx.apiary-mock.com/exampleSecureEndpoint`);
+  console.log({
+    url: result.url(),
+    statusCode: result.status(),
+    body: await result.text()
+  });
+```
+To mask the passwords and other sensitive data you use for authentication please see [Storing User Journey Script Credentials Securely](https://sematext.com/docs/synthetics/user-journey-scripts/#storing-your-user-journey-script-credentials-securely)
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
