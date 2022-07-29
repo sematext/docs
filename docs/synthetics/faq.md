@@ -131,7 +131,7 @@ Pass the extracted token in the next request in the request body
     body: await result.text()
   });
 ```
- 
+To mask the passwords and other sensitive data you use for authentication please see [Storing User Journey Script Credentials Securely](https://sematext.com/docs/synthetics/user-journey-scripts/#storing-your-user-journey-script-credentials-securely)
 
 ## Sharing
 
