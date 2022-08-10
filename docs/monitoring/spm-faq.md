@@ -995,6 +995,14 @@ when being sent to Sematext over the Internet), you can adjust that in
 server_base_url=https://spm-receiver.sematext.com
 ```
 
+### Why are some system information fields empty?
+
+It may happen that some of the system information fields are unavailable. Depending on the architecture, since the Kernel version **2.6.26**, the `CONFIG_STRICT_DEVMEM` kernel configuration option limits access to the `/dev/mem` character device by default. This character device provides userspace access to all physical memory. It is primarily used to access the system's IO memory addresses in relation to peripheral hardware. When `CONFIG_STRICT_DEVMEM` is enabled in the Kernel, access to the `/dev/mem` character device is disabled from userspace even for the root user. The Sematext Agent uses this character device to gather machine information. With `CONFIG_STRICT_DEVMEM` enabled in the Kernel, the Sematext Agent may log errors relating to `/dev/mem` and will not be able to gather complete machine information, resulting in some missing system information fields. To resolve this, it is necessary to recompile the kernel with `CONFIG_STRICT_DEVMEM=n` set in the kernel configuration options. It is usually possible to check if `CONFIG_STRICT_DEVMEM` is currently enabled in the kernel, by running the following command:
+
+```
+cat /boot/config-$(uname -r) | grep CONFIG_STRICT_DEVMEM
+```
+
 ## Security
 
 ### What information are App Agents sending?
