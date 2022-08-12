@@ -136,7 +136,7 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 				<div class="flip-card-container">
 					<div class="flip-card">
 						<div class="side">
-							<img src="../../images/integrations/google-tag-maanger.svg" alt="Google Tag Manager" title="Google Tag Manager" style="padding-top:40px;height:110px;">
+							<img src="../../images/integrations/google-tag-manager.svg" alt="Google Tag Manager" title="Google Tag Manager" style="padding-top:40px;height:110px;">
 						</div>
 						<div class="side back">
 							<h5>Google Tag Manager</h5>Integrate Experience using Google Tag Manager.
