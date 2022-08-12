@@ -130,6 +130,22 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="#google-tag-manager">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../../images/integrations/google-tag-maanger.svg" alt="Google Tag Manager" title="Google Tag Manager" style="padding-top:40px;height:110px;">
+						</div>
+						<div class="side back">
+							<h5>Google Tag Manager</h5>Integrate Experience using Google Tag Manager.
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
@@ -286,3 +302,16 @@ Adding Experience to Next.js web sites is slightly different since there is no i
 
 Instead, you should use the `<Head>` Next.js component on all pages where Experience should be added. When you create an Experience App select Next.js on the instructions screen to get the exact code snippet that you should add to the `<Head>` component.
 
+## Google Tag Manager 
+
+Integrating Experience using Google Tag Manager is as simple as copy and pasting the code.
+
+Create a **New Tag** in GTM and give this a name such as **Sematext RUM Script**.
+Under **Tag Configuration** choose **Custom HTML** and paste in the script from the **first** step of the Experience installation instructions.
+Under **Triggering** select **All Pages**.
+
+Create a second **New Tag** in GTM, giving this a name such as **Sematext RUM Config**.
+Under **Tag Configuration** choose **Custom HTML** and paste in the script from the **second** step of the Experience installation instructions.
+Under **Triggering** select **All Pages**.
+
+You should now be ready to go.
