@@ -146,6 +146,22 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="#wordpress">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../../images/integrations/wordpress-logo.svg" alt="WordPress" title="WordPress" style="padding-top:40px;height:110px;">
+						</div>
+						<div class="side back">
+							<h5>WordPress</h5>Add Experience to a WordPress site.
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
@@ -315,3 +331,12 @@ Under **Tag Configuration** choose **Custom HTML** and paste in the script from 
 Under **Triggering** select **All Pages**.
 
 You should now be ready to go.
+
+## WordPress
+
+Adding Experience to a WordPress site is done by using an external 3rd-party plugin. Please make sure the [Insert Headers and Footers](https://wordpress.org/plugins/insert-headers-and-footers/) plugin is installed and activated before continuing with the next steps.
+
+In the WordPress Admin panel, go to **Settings >> Insert Headers and Footers**.
+In the **Scripts in Header** box, paste both the scripts found in the first and second steps of the Experience installation instructions.
+
+Save the changes and you should be good to go.
