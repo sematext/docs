@@ -1,4 +1,4 @@
-title: Pagerduty Alerts Integration
+title: PagerDuty Alerts Integration
 description: Sematext threshold, anomaly and / or heartbeat Alerts integration with PagerDuty devops management and analytics platform. Use them together to gain full visibility into enterprise services, systems, incident response, and IT infrastructure health.
 
 Use PagerDuty’s on-call schedules and escalation policies so that the right people are notified when events are triggered from Sematext 's server and application performance monitoring, alerting, and anomaly detection platform.
@@ -44,3 +44,5 @@ Check PagerDuty's [Generating a General Access REST API Key](https://support.pag
 **Done.** Every alert from your Sematext Monitoring app will be forwarded to PagerDuty,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.
+
+If you need help with this integration, send us an email at support@sematext.com or talk with us directly using live chat.
