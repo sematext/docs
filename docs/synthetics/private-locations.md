@@ -9,7 +9,7 @@ The private locations feature allows you to run synthetic tests from your privat
 
 ## Create Private Location
 
-To create a private location, navigate to Synthetics -> Private Locations -> New Private Location. 
+To create a private location, navigate to **Synthetics** -> **Private Locations** -> **New Private Location**. 
 
 ![Create Private Location](../images/synthetics/create-private-location.png)
 

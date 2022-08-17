@@ -114,7 +114,7 @@ jobs:
 
 **Create API Key Secret**
 
-Create a secret from the Repository Settings, for Sematext API Key.
+Create a secret from the repository's **Settings** page for the Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -165,9 +165,9 @@ On every deployment event, the action will be invoked and the action logs will c
 
 <img
   class="content-modal-image"
-  alt="CI/CD GitHub Secret"
+  alt="CI/CD GitHub Actions Logs"
   src="../../images/synthetics/ci-cd-github-actions-log.png"
-  title="Add Secret in Github"
+  title="GitHub Actions Logs"
 />
 
 
@@ -175,7 +175,7 @@ On every deployment event, the action will be invoked and the action logs will c
 
 **Create API Key Secret**
 
-Create a secret from the Repository Settings -> Repository Variables, for Sematext API Key.
+Create a secret from the **Repository Settings** -> **Repository Variables**, for Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -206,7 +206,7 @@ pipelines:
 
 **Create API Key Variable**
 
-Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext API Key.
+Create a CI/CD variable from **Settings** -> **CI/CD** -> **Variables** for the Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -217,7 +217,7 @@ Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext AP
 
 **Configure Run Monitor Step in Pipeline YAML**
 
-Configure run monitor stage in `.gitlab-ci.yml` to trigger run after deployment and upload the artifacts.
+Configure the run monitor stage in `.gitlab-ci.yml` to trigger a run after deployment and upload the artifacts.
 
 ```yaml
 stages:
@@ -243,8 +243,8 @@ run-sematext-monitor:
 
 ### Vercel
 
-Configure [GitHub Action](#github-actions) to run the monitor on deployment event. If the Vercel project repository is GitHub, the action will be automatically triggered on PR or production deployment.
+Configure a [GitHub Action](#github-actions) to run the monitor on a deployment event. If the Vercel project repository is on GitHub, the action will be automatically triggered on a PR or production deployment.
 
 ### Netlify
 
-Configure [GitHub Action](#github-actions) to run the monitor on deployment event. If the Netlify project repository is GitHub, the action will be automatically triggered on production deployment.
+Configure a [GitHub Action](#github-actions) to run the monitor on a deployment event. If the Netlify project repository is on GitHub, the action will be automatically triggered on a production deployment.

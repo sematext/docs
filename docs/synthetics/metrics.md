@@ -19,7 +19,7 @@ Synthetics monitors collect the following metrics as part of every run. You can 
 
 ### Run Metrics
 
-For every browser run, the monitor collects the below run-level metrics:
+The following run-level metrics are collected for every Browser monitor run:
 
 | Name  | Label  | Description  | Unit  |
 |---|---|---|---|
@@ -29,23 +29,23 @@ For every browser run, the monitor collects the below run-level metrics:
 
 ### Page Load Metrics
 
-The browser monitor collects the below page load (navigation) metrics for every run. If there are multiple page loads during the execution of the script, the last page-load metrics are collected.
+The Browser monitor collects the below page load (navigation) metrics for every run. If there are multiple page loads during the execution of the script, the last page-load metrics are collected.
 
-| Name  | Label  | Description  | Unit  |
+| Name | Label | Description | Unit |
 |---|---|---|---|
 | synthetics.browser.time.frontend | Frontend time | Time taken for the browser to parse and create the page | ms |
-| synthetics.browser.time.backend | Backend time |  Time taken for the network and the server to generate and start sending the HTML | | ms |
+| synthetics.browser.time.backend | Backend time | Time taken for the network and the server to generate and start sending the HTML | ms |
 | synthetics.browser.time.pageload | Page load time | Time taken for the page to load, from initiation of the page load (e.g., click on a page link) to load completion in the browser | ms |
 | synthetics.browser.time.dns | DNS time | DNS resolution time for the URL of the page | ms |
 | synthetics.browser.time.connection | Socket connect time | Time taken to connect to server | ms |
 | synthetics.browser.time.response | Time to first byte | Time taken for the server to send the response | ms |
 | synthetics.browser.time.download | Download time | Time taken to download the page contents | ms |
 | synthetics.browser.time.dom.interactive | DOM interactive time | Time taken by the browser to parse the document, including the network time from the user's location to your server | ms |
-| synthetics.browser.time.dom.contentload | DOM content load time | Time taken by the browser to parse the document and execute deferred and parser-inserted scripts including the network time from the user's location to your server | ms |
+| synthetics.browser.time.dom.contentload | DOM content load time | Time taken by the browser to parse the document and execute deferred and parser-inserted scripts, including the network time from the user's location to your server | ms |
 | synthetics.browser.time.paint.first | First Paint (FP) | The time from navigation to the time when the first paint happens on the screen | ms |
-| synthetics.browser.time.paint.firstcontentful | First Contentful Paint (FCP) |  The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
-| synthetics.browser.time.paint.largestcontentful | Largest Contentful Paint (LCP) |  The time for largest content element to be visible in the viewport. | ms |
-| synthetics.browser.cumulativelayoutshift | Cumulative Layout Shift (CLS) |  The sum total of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page ||
+| synthetics.browser.time.paint.firstcontentful | First Contentful Paint (FCP) | The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
+| synthetics.browser.time.paint.largestcontentful | Largest Contentful Paint (LCP) | The time for largest content element to be visible in the viewport. | ms |
+| synthetics.browser.cumulativelayoutshift | Cumulative Layout Shift (CLS) | The sum total of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page |  |
 
 ### Resource Metrics
 
@@ -58,4 +58,4 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
-You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time take to display auto-suggestions on your website or collect & monitor the value from an element in your webpage.  To collect a custom metric use `context.setMetric(name, value)` method in the Browser monitor script. For more info on how to use this API, look into the examples while creating the Browser monitor. The metric name should be unique for this Synthetics App and will be automatically pre-pended with `synthetics.` prefix. You could use [Chart Builder](../dashboards/chart-builder/) to create a custom chart to monitor this metric. You could also create a threshold or anomaly alert on this metric.
+You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage.  To collect a custom metric use `context.setMetric(name, value)` method in the Browser monitor script. For more info on how to use this API, look into the examples while creating the Browser monitor. The metric name should be unique for this Synthetics App and will be automatically pre-pended with `synthetics.` prefix. You could use [Chart Builder](../dashboards/chart-builder/) to create a custom chart to monitor this metric. You could also create a threshold or anomaly alert on this metric.
