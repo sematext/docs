@@ -7,9 +7,9 @@ In addition to scheduled monitor runs, you can also trigger monitor runs by usin
 * Test the APIs, websites, and the user journeys in production immediately after deployment and alert when it fails.
 * Track and catch major changes in website metrics like page load time, page size, request count, 3rd Party API performance, etc introduced as part of code changes.
 
-Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a [User Journey Script](user-journey-scripts). The create monitor API can be used to add multiple monitors in bulk using a script. The create monitor API can be used to:
+Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a [User Journey script](user-journey-scripts). The create monitor API can be used to add multiple monitors in bulk using a script. The create monitor API can be used to:
 
-* Create single HTTP and Browser monitors, with and without a User Journey Script. 
+* Create single HTTP and Browser monitors, with and without a User Journey script. 
 * Create multiple HTTP and Browser monitors at once.
 
 ## Run Monitor API
@@ -40,10 +40,10 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 ```
 
 ### Getting the apiKey
-* `<apiKey>` of your account can be copied from Settings -> API page.
+*  Your account's  `<apiKey>` can be copied from the **Settings** -> **API** page.
 
 ### Getting the appId
-* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
+* The `<appId>` and `<monitorId>` values can be extracted from the URL of the **Monitor Overview** page. For example, if the **Monitor Overview** page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
 
 ### Getting the locationId
 * `<locationId>` - List of locations to run the monitor from. If not specified, the monitor will be run from all locations specified in the monitor configuration. The supported locations are:
@@ -83,17 +83,17 @@ curl --request POST \
 
 ### Customize Request Configuration
 
-There are cases where you might want to customize request parameters depending on the environment. For example, the deployment URL for running the monitor in a PR env or a different HTTP header for the staging environment. You can pass these custom configurations as part of run monitor API data. When the custom values are passed the configured values for scheduled runs will be overridden with the custom values.
+There are cases where you might want to customize request parameters depending on the environment. For example, the deployment URL for running the monitor in a PR environment or a different HTTP header for the staging environment. You can pass these custom configurations as part of run monitor API data. When the custom values are passed the configured values for scheduled runs will be overridden with the custom values.
 
 For [HTTP monitors](./http-monitor.md), the following fields can be customized:
 
-* URL
-* Request Headers
-* Request Cookies
-* Request Params
-* Request Body
+* **URL**
+* **Request Headers**
+* **Request Cookies**
+* **Request Params**
+* **Request Body**
 
-Below is an example, where we are override the HTTP configuration parameters:
+Below is an example where we are override the HTTP configuration parameters:
 
 ```sh
 curl --request POST \
@@ -117,6 +117,7 @@ curl --request POST \
 For [Browser monitors](./browser-monitor.md), the URL of the website can be customized.
 
 For Browser monitors with a script, you can pass custom parameters as variables, that could be referenced in the script.
+<!-- TODO: Expand this and explain how it's done -->
 
 ### Customize Output Format
 
@@ -146,7 +147,7 @@ The monitor overview API can be invoked by sending an HTTP request with the belo
 **Request Headers** - `Authorization: apiKey <apiKey>`
 
 ### Getting the apiKey
-* Your account's `<apiKey>` can be copied from the `Settings -> API` page.
+* Your account's `<apiKey>` can be copied from the **Settings** -> **API** page.
 
 ### Getting the appId
 The `<appId>` can be obtained by sending a GET request using the above request header and `<apiKey>` to the required endpoint:
@@ -279,7 +280,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 
 Example:
 
-To query the monitor overview API for the Synthetics App named `My Synthetics App` with an `<appId>` of `15642`, we would run the following:
+To query the monitor overview API for a Synthetics App with an `<appId>` of `15642`, we would run the following:
 ```
 curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/15642/monitors' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
@@ -388,6 +389,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 ### API Reference
 
 **Browser Monitor**
+<!-- TODO: Update this with the information about Devices and Secrets after the Browser monitor insecure SSL support epic is done -->
 
 | Key | Type | Value | Description | Required
 | --- | --- | --- | --- | --- |
@@ -410,7 +412,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | | | 7 | Sao Paulo, Brazil | |
 | | | 8 | N. California, USA| |
 | url | STRING | User-defined | URL to monitor | YES - Empty for User Journey |
-| script | STRING | User-defined | User Journey Script | YES - Empty for Website Monitor |
+| script | STRING | User-defined | User Journey script | YES - Empty for Website Monitor |
 | scriptBased | BOOLEAN | -- | Browser Monitor mode | YES |
 | | | true | Monitor a User Journey | |
 | | | false | Monitor a Website | |
@@ -958,7 +960,7 @@ To get all the available monitors for an App, the API can be triggered by sendin
 
 Example:
 
-In order to get all the available monitors for the App with `<appId>` of `17174`, we would send an HTTP request as follows:
+In order to get all the available monitors for the App with an `<appId>` of `17174`, we would send an HTTP request as follows:
 ```
 curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors' \
 -H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
