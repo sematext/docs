@@ -26,6 +26,7 @@ Condition types supported in the Browser monitor are:
 * **Metric** - Used to make sure the metrics are within the expected range. 
 
 By default, the UI adds the below conditions while creating a Browser monitor. You can change them during the creation:
+
 * **Error** *equals* **empty**
 * **Response Time** metric *less than* **20000 ms**
 
@@ -35,11 +36,11 @@ Browser monitor scripts allow for the collection of page screenshots at any poin
 
 ## Console Errors
 
-The browser, which executes the Browser monitor's script, logs any errors while loading the web pages (such as JavaScript errors, network errors, etc.) in the browser console. The Browser monitor collects such errors. These errors can be used to gain some additional insight into the issues with the website, or to debug run failures. If the Browser monitor's script could successfully complete its execution, then these errors will be shown in the `Logs` section of run details. If your Browser monitor doesn't have a script defined, but is instead set to monitor a fixed URL, then any errors found there will also be shown in this section.
+The browser, which executes the Browser monitor's script, logs any errors while loading the web pages (such as JavaScript errors, network errors, etc.) in the browser console. The Browser monitor collects such errors. These errors can be used to gain some additional insight into the issues with the website, or to debug run failures. If the Browser monitor's script could successfully complete its execution, then these errors will be shown in the **Logs** section of run details. If your Browser monitor doesn't have a script defined, but is instead set to monitor a fixed URL, then any errors found there will also be shown in this section.
 
 ![Browser monitor console logs](../images/synthetics/browser-monitor-logs.png)
 
-However, if the errors are such that the script can't properly execute, then the `Script Error` section will be displayed instead. If possible, the line in the script where the issue occurred will be highlighted and the stack trace will be displayed to aid you in diagnosing the issue.
+However, if the errors are such that the script can't properly execute, then the **Script Error** section will be displayed instead. If possible, the line in the script where the issue occurred will be highlighted and the stack trace will be displayed to aid you in diagnosing the issue.
 
 ![Browser monitor script error](../images/synthetics/browser-monitor-script-error.png)
 
@@ -95,10 +96,10 @@ Each Browser monitor run is executed in an isolated environment using a fresh in
 
 Default runtime configuration values are:
 
-* Chrome browser environment - Desktop
-* Resolution - `1920x1080`
-* Default Navigation timeout - 30 seconds
-* Memory - 2048 MB
-* CPU - 1 vCPU
-* Network - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
-* User Agent - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/93.0.4577.0 Safari/537.36 +SematextSyntheticsRobot`
+* **Chrome browser environment** - Desktop
+* **Resolution** - `1920x1080`
+* **Default Navigation timeout** - 30 seconds
+* **Memory** - 2048 MB
+* **CPU** - 1 vCPU
+* **Network** - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
+* **User Agent** - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/93.0.4577.0 Safari/537.36 +SematextSyntheticsRobot`

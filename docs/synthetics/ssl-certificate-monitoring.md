@@ -18,6 +18,7 @@ Synthetics performs a set of validity checks on SSL certificates sent by the ser
 ![Relaxed SSL certificate check](../images/synthetics/ssl-check-type.png)
 
 The HTTP monitor performs the following checks:
+
 * If there is a valid chain, connecting the leaf certificate of the server to a trusted root
 * Certificate has not expired
 * Certificate is active (if the certificate is not used before its validity starts)
@@ -26,6 +27,7 @@ The HTTP monitor performs the following checks:
 * Hostname validation, check if the hostname of the website/API is present in the list of allowed DNS names of the certificate
 
 The Browser monitor loads the website in a real Google Chrome browser and performs all the checks done by the Google Chrome browser. We update the Chrome browser periodically, so that the list of checks stays up-to-date with recent implementations. Alongside all the checks above done by the HTTP monitor, the Browser monitor performs the following extra checks:
+
 * Certificate is revoked
 * Certificate uses a weak signature algorithm (e.g. SHA-1)
 * Certificate authority is not trusted

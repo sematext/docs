@@ -16,9 +16,13 @@ Together with scheduled monitor runs, the API can also be used in the creation o
 
 The run monitor API can be triggered by sending an HTTP request with the below configuration:
 
-**US Region Endpoint** - `https://apps.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
+**US Region Endpoint**
 
-**EU Region Endpoint** - `https://apps.eu.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
+* `https://apps.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
+
+**EU Region Endpoint**
+
+* `https://apps.eu.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
 
 **HTTP Method** - `POST`
 

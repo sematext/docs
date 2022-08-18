@@ -28,6 +28,7 @@ The following fields are required to create a status page:
 * **Custom Domain** - Optionally you can host the status page in your own custom domain.
 
 Every status page will have a unique public URL in this format:
+
 * `https://apps.sematext.com/ui/statuspages/<unique-token>`
 
 You can use this URL to preview the status page before opening to the public. Disabling the status page will block the public access for the status page.

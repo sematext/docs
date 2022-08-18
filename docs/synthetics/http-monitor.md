@@ -58,6 +58,7 @@ You can also get the **Base64** encoded value of your `username` and `password` 
 ## Conditions
 
 Conditions can be configured on the response fields and metrics. The conditions are evaluated for every run result. All the conditions should pass for a run to be declared as passing. If any condition fails, the run will fail and the monitor will be marked as failing. The supported condition types are:
+
 * **Error** - During each run, if there's an error like connection, timeout, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body.
 * **Response Code** - HTTP Status Code. Used to make sure the response code should be of specific value or range.
 * **Metric** - Used to make sure the metrics are within the expected range.
@@ -68,6 +69,7 @@ Conditions can be configured on the response fields and metrics. The conditions 
 Various operators like **Equals**, **Less Than**, **Greater Than**, **Contains** are supported based on condition type.
 
 By default, the UI adds the below conditions while creating an HTTP monitor. You can change them during the creation:
+
 * **Error** *equals* **empty**
 * **Response Code** *equals* `200`
 * **Response Time** metric *less than* **20000 ms**
@@ -77,6 +79,7 @@ By default, the UI adds the below conditions while creating an HTTP monitor. You
 Each HTTP monitor run is executed in an isolated environment. [Go HTTP Client](https://golang.org/pkg/net/http/) library is used to execute the HTTP requests. Each run is allocated 128MB memory. The response body is trimmed to 2 MB.
 
 The default values for various timeouts are:
+
 * **Socket Connection Timeout** - 10 seconds.
 * **TLS Handshake Timeout** - 10 seconds.
 * **Total Timeout** - Timeout for complete request-response operation - 25 seconds.
