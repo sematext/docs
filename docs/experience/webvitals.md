@@ -16,15 +16,15 @@ Both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/b
 
 #### Largest Contentful Paint (LCP) 
 
-Measures *page loading* performance. Google suggests that **LCP** should be **below 2500 milliseconds**, which means that to provide a good user experience, the largest contentful paint should occur within 2.5 seconds of when the page first starts loading.
+Measures *page loading* performance. Google suggests that **LCP** should be **below 2500 milliseconds**, which means that to provide a good user experience, the largest contentful paint should occur within 2.5 seconds of when the page first starts loading.  [Learn more about Largest Contentful Paint](https://sematext.com/glossary/largest-contentful-paint/).
 
 #### First Input Delay (FID)
 
-Measures *interactivity* of the web application. Google suggests that to provide good user experience, pages should have a first input delay of **less than 100 milliseconds**. Please note that FID is not measured in [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals).
+Measures *interactivity* of the web application. Google suggests that to provide good user experience, pages should have a first input delay of **less than 100 milliseconds**. Please note that FID is not measured in [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals), but it is measured in Sematext Experience.  [Learn more about First Input Delay](https://sematext.com/glossary/first-input-delay/).
 
 #### Cumulative Layout Shift (CLS)
 
-Measures *visual* stability of the web page. To provide a good user experience Google suggests that the pages should maintain a cumulative layout shift of **less than 0.1**.
+Measures *visual* stability of the web page. To provide a good user experience Google suggests that the pages should maintain a cumulative layout shift of **less than 0.1**.  [Learn more about Cumulative Layout Shift](https://sematext.com/glossary/cumulative-layout-shift/).
 
 ### Other Web Vitals Metrics
 
