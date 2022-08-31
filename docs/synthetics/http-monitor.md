@@ -64,7 +64,7 @@ Conditions can be configured on the response fields and metrics. The conditions 
 * **Metric** - Used to make sure the metrics are within the expected range.
 * **Response Header** - Can be used to compare the value of a specific header field against the expected value.
 * **Response Body** - Compare the response body against the specified value using an operator.
-* **Response Body JSON** - If the response body is JSON, [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare against the expected value. More information on how to set these conditions up is provided in the [next subsection](#configuring-custom-alerts-based-on-json-response).
+* **Response Body JSON** - If the response body is JSON, [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare against the expected value. More information on how to set up these conditions is provided in the [next subsection](#configuring-custom-alerts-based-on-json-response).
 
 Various operators like **Equals**, **Less Than**, **Greater Than**, **Contains** are supported based on condition type.
 
@@ -76,7 +76,7 @@ By default, the UI adds the below conditions while creating an HTTP monitor. You
 
 
 ### Configuring Custom Alerts based on JSON response
-In addition to our preconfigured alert conditions, you can also create your own based on the JSON returned in the response body. As mentioned above, this can be done using the **Response Body JSON** type, where [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare it against the expected value.
+In addition to our preconfigured alert conditions, you can also create your own based on the JSON returned in the response body. This can be done using the **Response Body JSON** type, where [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare it against the expected value.
 
 Let's say that you have an API which returns information about the internal status of your services. When everything is working fine, this is the response you get:
 
