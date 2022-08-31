@@ -58,4 +58,85 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
-You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage.  To collect a custom metric use `context.setMetric(name, value)` method in the Browser monitor script. For more info on how to use this API, look into the examples while creating the Browser monitor. The metric name should be unique for this Synthetics App and will be automatically pre-pended with `synthetics.` prefix. You could use [Chart Builder](../dashboards/chart-builder/) to create a custom chart to monitor this metric. You could also create a threshold or anomaly alert on this metric.
+You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically pre-pended with a `synthetics.browser.custom.` prefix.
+
+Here's an example of a Browser monitor script which defines two custom metrics: the used JavaScript heap size and how long the combined duration of JavaScript execution is. For your convenience, this example is also listed as **Using Custom Metrics** under the **Browse Examples** section while creating the Browser monitor.
+
+```javascript
+async function testPage(page, context) {
+  // Create a Chrome DevTools Protocol (CDP) session and start measuring performance metrics
+  const client = await page.target().createCDPSession();
+  await client.send('Performance.enable');
+  await page.goto('https://youtube.com/');
+  
+  // Fetch the performance metrics and choose the metrics we want from the performance metrics array
+  const performanceMetrics = await client.send('Performance.getMetrics');
+  const scriptDuration = performanceMetrics.metrics.find((x) => x.name === 'ScriptDuration').value;
+  const usedHeap = performanceMetrics.metrics.find((x) => x.name === 'JSHeapUsedSize').value;
+  
+  // Define the chosen metrics as custom metrics in Sematext Synthetics
+  // The metric names should be unique for this Synthetics application
+  context.setMetric('heap.size', usedHeap);
+  context.setMetric('script.time', scriptDuration);
+}
+
+module.exports = testPage;
+```
+
+Once you have defined your chosen custom metrics, you can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/). Go to your **Dashboards** and create a new component. In this example we'll use the **Time Series Chart**. You will then be able to find the custom metrics you've defined in the **Metrics** dropdown. In the script above, we've defined two metrics: `heap.size` and `script.time`. With the previously mentioned added prefix, these will be displayed as `synthetics.browser.custom.heap.size` and `synthetics.browser.custom.script.time`.
+
+![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.png)
+
+Because Browser monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
+
+![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
+
+You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the JS execution time is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
+
+![Custom Metrics Chart Alert](../images/synthetics/custom-metrics-chart-alert.png)
+
+After that, set the **Rollup by** field to **max** and set the alert condition to alert you if the metric value is greater than two and you're good to go.
+
+![Custom Metrics New Alert](../images/synthetics/custom-metrics-new-alert.png)
+
+___
+
+Here's an additional example of getting custom metrics from a response body JSON. Let's say some API returns information about current and peak values of CPU and RAM usage, and that we want to use those as custom metrics to chart and alert on. This example is likewise listed in the **Browse Examples** section found in the Browser monitor creation/editing flow.
+
+```javascript
+async function testPage(page, context) {
+
+  /* This is an example of a response the API generates
+    {
+        "cpuUsage": {
+            "average": 52,
+            "peak": 89
+        },
+        "ramUsage": {
+            "average": 31,
+            "peak": 56
+        }
+    }
+  */
+
+  const response = await page.goto("https://private-c82e7-stcloudtest.apiary-mock.com/getData");
+  bodyJSON = await response.json();
+
+  // Extract the values from the response JSON and define them as custom metrics
+  const avgCPU = bodyJSON.cpuUsage.average;
+  const peakCPU = bodyJSON.cpuUsage.peak;
+  const avgRAM = bodyJSON.ramUsage.average;
+  const peakRAM = bodyJSON.ramUsage.peak;
+  console.log(avgCPU, peakCPU, avgRAM, peakRAM);
+  context.setMetric('cpu.usage', avgCPU);
+  context.setMetric('cpu.peak', peakCPU);
+  context.setMetric('ram.usage', avgRAM);
+  context.setMetric('ram.peak', peakRAM);
+}
+
+module.exports = testPage;
+```
+
+The charting and alerting process is identical as in the previous example, and once again you will be able to see the custom metrics you've defined in the **Metrics** dropdown.
+
+![Custom Metrics JSON](../images/synthetics/custom-metrics-json.png)

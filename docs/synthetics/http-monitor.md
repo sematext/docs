@@ -64,7 +64,7 @@ Conditions can be configured on the response fields and metrics. The conditions 
 * **Metric** - Used to make sure the metrics are within the expected range.
 * **Response Header** - Can be used to compare the value of a specific header field against the expected value.
 * **Response Body** - Compare the response body against the specified value using an operator.
-* **Response Body JSON** - If the response body is JSON, [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare against the expected value.
+* **Response Body JSON** - If the response body is JSON, [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare against the expected value. More information on how to set these conditions up is provided in the [next subsection](#configuring-custom-alerts-based-on-json-response).
 
 Various operators like **Equals**, **Less Than**, **Greater Than**, **Contains** are supported based on condition type.
 
@@ -73,6 +73,63 @@ By default, the UI adds the below conditions while creating an HTTP monitor. You
 * **Error** *equals* **empty**
 * **Response Code** *equals* `200`
 * **Response Time** metric *less than* **20000 ms**
+
+
+### Configuring Custom Alerts based on JSON response
+In addition to our preconfigured alert conditions, you can also create your own based on the JSON returned in the response body. As mentioned above, this can be done using the **Response Body JSON** type, where [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare it against the expected value.
+
+Let's say that you have an API which returns information about the internal status of your services. When everything is working fine, this is the response you get:
+
+```json
+{
+  "results":[
+    {
+      "name":"Database",
+      "status":"OK"
+    },
+    {
+      "name":"Redis",
+      "status":"OK"
+    },
+    {
+      "name":"Elasticsearch",
+      "status":"OK"
+    }
+  ],
+  "serviceStatusCode":"0"
+}
+```
+
+In the event where one of the services encounters issues, its status will change from `OK` to `Error`, like so:
+
+```json
+{
+  "results":[
+    {
+      "name":"Database",
+      "status":"OK"
+    },
+    {
+      "name":"Redis",
+      "status":"Error"
+    },
+    {
+      "name":"Elasticsearch",
+      "status":"OK"
+    }
+  ],
+  "serviceStatusCode":"2"
+}
+```
+
+With this JSON structure in mind, you can define a **Response Body JSON** alert condition like in the image below.
+
+![Custom Alert Condition](../images/synthetics/custom-alert-condition.png)
+
+The field is defined as `$.results[:].status`, meaning that all the `status` fields inside of `results` will be checked, and the monitor run will fail if any of them are equal to `Error`. Here's an example of a run failing upon one of these services reporting an error.
+
+![Custom Condition Failing](../images/synthetics/custom-alert-condition-fail.png)
+
 
 ## Run environment
 
