@@ -79,7 +79,6 @@ async function testPage(page, context) {
   context.setMetric('heap.size', usedHeap);
   context.setMetric('script.time', scriptDuration);
 }
-
 module.exports = testPage;
 ```
 
@@ -101,39 +100,21 @@ After that, set the **Rollup by** field to **max** and set the alert condition t
 
 ___
 
-Here's an additional example of getting custom metrics from a response body JSON. Let's say some API returns information about current and peak values of CPU and RAM usage, and that we want to use those as custom metrics to chart and alert on. This example is likewise listed in the **Browse Examples** section found in the Browser monitor creation/editing flow.
+Here's an additional example of getting custom metrics from a response body JSON. Let's say some API returns information about currency exchange rates, and that you'd like to chart these exchange rates over time and perhaps set up alerts if they reach certain points. This example is likewise listed in the **Browse Examples** section found in the Browser monitor creation/editing flow.
 
 ```javascript
+// This script gets the exchange rates of various currencies and defines the results as custom metrics
 async function testPage(page, context) {
-
-  /* This is an example of a response the API generates
-    {
-        "cpuUsage": {
-            "average": 52,
-            "peak": 89
-        },
-        "ramUsage": {
-            "average": 31,
-            "peak": 56
-        }
-    }
-  */
-
-  const response = await page.goto("https://private-c82e7-stcloudtest.apiary-mock.com/getData");
+  const response = await page.goto("https://api.exchangerate.host/latest");
   bodyJSON = await response.json();
-
-  // Extract the values from the response JSON and define them as custom metrics
-  const avgCPU = bodyJSON.cpuUsage.average;
-  const peakCPU = bodyJSON.cpuUsage.peak;
-  const avgRAM = bodyJSON.ramUsage.average;
-  const peakRAM = bodyJSON.ramUsage.peak;
-  console.log(avgCPU, peakCPU, avgRAM, peakRAM);
-  context.setMetric('cpu.usage', avgCPU);
-  context.setMetric('cpu.peak', peakCPU);
-  context.setMetric('ram.usage', avgRAM);
-  context.setMetric('ram.peak', peakRAM);
+  
+  const USD = bodyJSON.rates.USD;
+  const AUD = bodyJSON.rates.AUD;
+  const CNY = bodyJSON.rates.CNY;
+  context.setMetric('currency.EUR-USD', USD);
+  context.setMetric('currency.EUR-AUD', AUD);
+  context.setMetric('currency.EUR-CNY', CNY);
 }
-
 module.exports = testPage;
 ```
 
