@@ -82,7 +82,7 @@ async function testPage(page, context) {
 module.exports = testPage;
 ```
 
-Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed this process up by manually scheduling an on-demand run). You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/). Go to your **Dashboards** and create a new component. In this example we'll use the **Time Series Chart**. You will then be able to find the custom metrics you've defined in the **Metrics** dropdown. In the script above, we've defined two metrics: `heap.size` and `script.time`. With the previously mentioned added prefix, these will be displayed as `synthetics.browser.custom.heap.size` and `synthetics.browser.custom.script.time`.
+Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/). Go to your **Dashboards** and create a new component. In this example we'll use the **Time Series Chart**. You will then be able to find the custom metrics you've defined in the **Metrics** dropdown. In the script above, we've defined two metrics: `heap.size` and `script.time`. With the previously mentioned added prefix, these will be displayed as `synthetics.browser.custom.heap.size` and `synthetics.browser.custom.script.time`.
 
 ![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.png)
 
