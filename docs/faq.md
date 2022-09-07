@@ -1,4 +1,4 @@
-title: Sematext FAQ
+title: Sematext Cloud FAQ
 description: Sematext Cloud Frequently Asked Questions
 
 ## General
@@ -24,7 +24,7 @@ Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](
 
 Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, shorter retention for testing than for production.
 
-The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Service Discovery](/monitoring/autodiscovery). Alternatively to using separate Apps is using a shared App and relying on [Custom Tags](/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/guide/saved-views).
+The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Service Discovery](/monitoring/autodiscovery). An alternative to using separate Apps is using a shared App and relying on [Custom Tags](/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/guide/saved-views).
 
 ### Can you give me an example?
 
