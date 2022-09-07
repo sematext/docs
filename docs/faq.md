@@ -1,41 +1,34 @@
 title: Sematext FAQ
-description: FAQ about Sematext monitoring and logging products, integrations, alerts, api, billing, security, private vs SaaS options and more. APM, Log Management, Tracing, RUM are part of the Sematext solutions, available both on premises and in cloud SaaS
+description: Sematext Cloud Frequently Asked Questions
 
 ## General
 
 ### What should I do if I can't find the answer to my question in the FAQ?
 
-Check out [monitoring FAQ](/monitoring/spm-faq) and [logging
-FAQ](/logs/faq). If you can't find the answer to your question please
-email <support@sematext.com> or use our live chat.
+Check out the FAQs for each of Sematext Cloud solutions:
 
-### Is there an On Premises version of Sematext I can run on my own servers? 
+- [Sematext Monitoring FAQ](/monitoring/spm-faq)
+- [Sematext Logs FAQ](/logs/faq)
+- [Sematext Synthetics FAQ](/synthetics/faq)
+- [Sematext Experience FAQ](/experience/faq)
 
-Yes there is.  Please see [Sematext Enterprise](/sematext-enterprise).
+If you can't find the answer to your question please email <support@sematext.com> or use our live chat.
 
-### Does Sematext integrate with ChatOps like Slack and HipChat? How about PagerDuty or custom WebHooks?
+### Does Sematext integrate with Slack? How about PagerDuty or custom WebHooks?
 
 Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](/alerts).
-
-### Can I use Sematext for (business) transaction tracing?
-
-Yes, see [Transaction Tracing](/tracing).
-
-### Is there an HTTP API?
-
-Yes, see [API Reference](/api).
 
 ## Organizing Apps
 
 ### I have N environments (production, staging, test, etc). How many Apps for Logs/Monitoring should I create?
 
-Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, less retention for testing than for prod.
+Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, shorter retention for testing than for production.
 
-The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Autodiscovery](/monitoring/autodiscovery). If it is not possible to create a separate App for each environment, then it also possible to use [Custom Tags](/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/guide/saved-views).
+The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Service Discovery](/monitoring/autodiscovery). Alternatively to using separate Apps is using a shared App and relying on [Custom Tags](/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/guide/saved-views).
 
 ### Can you give me an example?
 
-Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/monitoring/infrastructure), you have to have those Infra Apps, you can set them up with the [Basic (free) plan](https://sematext.com/pricing/#spm). Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/monitoring/quick-start).
+Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/monitoring/infrastructure), you'll need to have those Infra Apps.  You can have them on the [Basic (free) plan](https://sematext.com/pricing/#spm) to avoid any costs. Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/monitoring/quick-start).
 
 Then you'd set up [Solr Monitoring](/integration/solr) Apps: one per environment. At this point, you shouldn't need to touch the hosts: when it comes to shipping Solr metrics, simply select the corresponding Infra App and use [Autodiscovery](/monitoring/autodiscovery) to set up monitoring.
 
@@ -47,36 +40,21 @@ At this point, if you add a new host in an environment, all you have to do is to
 
 ### How can I share my Sematext Apps with other users?
 
-There are two options: **Account Sharing** or **App Sharing**.  With
-Account Sharing, you invite others to your **whole account**, so they
-get access to **all** your Apps, dashboards, notification
-hooks, alert rules, etc. They can also create new Apps under your
-account and invite other users. Depending on the role you assign to
-invitees, they may be able to administer your Apps, dashboards, users
-or even billing info (change app plan, assign credit card,
-etc). Account Sharing is very convenient because as soon as a new
-Sematext App is added to your account or new dashboard is created, all
-users added to your account get access to it.  Of course, the level of
-access depends on the role you initially assigned to each person.
+There are two options:
 
-Unlike Account Sharing, App Sharing is restricted only to a particular
-app. Nothing besides the shared app is accessible to the invited user
-(for example, dashboards are at the account level can can thus be shared
-only through Account Sharing). This option is useful if you want to be
-very restrictive about which apps can be seen by others or what kind of
-effect those others have on your team. With plain App Sharing guest
-can't see or edit alert rules created by your team, they can't use your
-team's notification hooks, etc.  
-  
-Account Sharing and App Sharing is not exclusive.  You can use both of
-these two sharing types at the same time. You could Share Account with
-some users, and use App Sharing to share specific apps with other
+ - Account sharing
+ - App sharing
+
+Account sharing is recommended for teams.  It's easier to add and remove access, easier to manage.
+We recommend creating a [team account](/team/#team-account) and sharing that with the team members.
+If you've already set up Apps, Alert Rules, etc. under your own account you can [convert your account to team account](/team/#converting-to-team-account).
+
+See [Team Account Members](/team/#account-members) for more info about account sharing and [App Guests](/team/#app-guests) for info about App sharing.
+
+Account sharing and App sharing is not exclusive.  You can use both of
+these two sharing types at the same time. You could share your account with
+some users, and use App sharing to share specific Apps with other
 users.
-  
-To share Account with other users, go to
-<https://apps.sematext.com/ui/team/account-members>  
-To share App, go
-to <https://apps.sematext.com/ui/team/app-guests>
 
 ### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
@@ -85,31 +63,33 @@ Sharing App (**OWNER**, **ADMIN**, **USER**), and one role which is
 specific only to Account Sharing (**BILLING_ADMIN**).  
   
 Each account has one OWNER (if you created some account, you are its
-OWNER). Each app also has one OWNER (The OWNER of an app is OWNER of
-account under which some app was created. If you create an app under
-your account, you are the OWNER of that app. If some user with whom
-you've shared your account creates a new app under your account, you are
-again the OWNER of that app. However, if that user creates a new app
-under his own account, he will be its OWNER).  
+OWNER). Each App also has one OWNER. The OWNER of an App is OWNER of
+account under which that App was created. If you create an App under
+your account, you are the OWNER of that App. If some user with whom
+you've shared your account creates a new App under your account, you are
+again the OWNER of that App. However, if that user creates a new App
+under their own account, then they will be its OWNER.
   
-Each account and app can have 0 or more ADMINS and USERS. If you added
-some user as ADMIN to your account, he also automatically gets the ADMIN
-role for all your apps (account role is transitive to app role).  
+Each account and App can have 0 or more ADMINS and USERS. If you added
+some user as ADMIN to your account, they also automatically gets the ADMIN
+role for all your Apps (account role is transitive to App role).  
   
-ADMIN users can modify everything under your account/app except billing
-related info. They can: create/delete/update all
-dashboards/alerts/subscriptions/users... Users with USER role have read
+ADMIN users can modify everything under your account/App except billing
+related info. They can: create, delete, and update all
+dashboards, alerts, scheduled reports, users... Users with USER role have read
 rights on everything except billing info (they can view all reports,
 dashboards, alerts...). They can even create/edit their own alerts and
-subscriptions on apps from shared account (but can't edit other user's
-alerts/subscriptions, only ADMINs can do that). If they were added to an
-Account (not to an App), they can also create their own dashboards and
+scheduled reports for Apps from the shared account.  They cannot, however, edit other user's
+alerts or scheduled reports, only ADMINs can do that. If they were added to an
+Account (not to an App), then they can also create their own dashboards and
 add other USERs to your account.  
   
 There is a special role available when Sharing Account - BILLING_ADMIN.
 This role has all rights as the standard ADMIN, but can also access/edit
 billing-related info. The only thing this role cannot do is change
 password of your account.
+
+See [typical roles in an organization](/team/#typical-use-of-roles-in-an-organization-or-team) and [Sematext user roles](/team/user-roles/) for more info.
 
 ### When would I want to add someone as BILLING_ADMIN?
 
@@ -118,7 +98,7 @@ charging, but some other person has it, you should invite this person
 and give them the BILLING_ADMIN role. Similarly, if you created an
 account and defined a credit card, but now want somebody else to take
 care of all billing related activity (assigning plans and credit cards
-to various apps), you'd give them the BILLING_ADMIN role.
+to various Apps), you'd give them the BILLING_ADMIN role.
 
 ### What might a typical use of roles for an organization with many employees look like?
 
@@ -130,7 +110,7 @@ is typically (but not necessarily) a team leader or manager, or somebody
 whose responsibility is to oversee servers/operations, typically in
 production. This person might then choose to share his/her whole Account
 with every other person from the team/organization to allow others to
-easily access all apps created under that account.
+easily access all Apps created under that account.
 
 Some of the invited users might be given the ADMIN role, which gives
 them read and write (and invite) rights. Other invitees might get the
@@ -139,13 +119,13 @@ create/edit their own dashboards/alerts/subscriptions which are
 available to everyone under the shared account). In some cases, account
 OWNER will not be able to handle billing related info and will want to
 invite 1 or more BILLING_ADMINs who will be able to define/edit/delete
-credit cards and choose plans to be used for apps under your account.
+credit cards and choose plans to be used for Apps under your account.
 
 ## Alerts
 
-### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
+### Can I send alerts to Slack, Nagios, or other WebHooks?
 
-Sematext has integrations for Slack, HipChat, PagerDuty, VictorOps,
+Sematext has integrations for Slack, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
 [integrations](/integration) and [alerts docs](/alerts).
 
@@ -181,11 +161,7 @@ See [monitoring FAQ](/monitoring/spm-faq) and [logging FAQ](/logs/faq).
 
 ## Billing
 
-### How do you bill for infrastructure and server monitoring?
-
-See [monitoring billing FAQ](/monitoring/spm-faq#billing).
-
-### How do you bill for Docker container monitoring?
+### How do you bill for infrastructure (servers, containers, kubernetes, VMs...) monitoring?
 
 See [monitoring billing FAQ](/monitoring/spm-faq#billing).
 
@@ -205,7 +181,7 @@ and/or to an alternative email address (e.g. your Accounts Payable department).
 Yes, we offer a pre-payment option through invoicing.  When you select
 this option simply email us and let us know how much you want to
 pre-pay.  If you want that credit to cover some period of time you'll
-want to consider how many apps/servers/containers you need to monitor,
+want to consider how many Apps/servers/containers you need to monitor,
 whether they are running 24/7, or your daily log volume and retention,
 and which plan(s) you'd like.  We'll invoice you and, once we receive
 your payment, we'll add this amount as credit towards your Sematext
@@ -233,7 +209,7 @@ Free plan.
 
 ### Can I download our invoices?
 
-Yes, just log in and look under Account \> Billing \> Invoices.  If
+Yes, just log in and look under Account \> Settings \> Plans & Billing \> Invoices.  If
 you don't see invoices there then you likely need to switch to a
 different account.  To do that look for a pull-down menu at the
-top-right of the UI.
+bottom-left of the UI.
