@@ -1,11 +1,11 @@
-title: Log Management FAQ
-description:  Cloud based SaaS / On-premises logging as a service platform FAQ on log shipping, log events fields and count, data retention and daily volumes, Kibana and more 
+title: Sematext Logs FAQ
+description: Sematext Logs Frequently Asked Questions
 
 ## General
 
 ### How many logs can I store?
 
-There is no limit to how many logs you can store in your logging management App.
+There is no limit to how many logs you can store in your Logs App.
  That said, you should try to pick the ideal Daily Volume when picking
 your plan, as that is going to give you the most optimal $/GB
 price.
