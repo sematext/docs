@@ -44,3 +44,5 @@ Check PagerDuty's [Generating a General Access REST API Key](https://support.pag
 **Done.** Every alert from your Sematext Monitoring app will be forwarded to PagerDuty,
 where you can manage escalation policies and configure notifications to
 other services like HipChat, Slack, Zapier, Flowdock, and more.
+
+If you need help with this integration, send us an email at support@sematext.com or talk with us directly using live chat.
