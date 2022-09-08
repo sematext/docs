@@ -27,7 +27,7 @@ Each series should be configured in a series configuration panel. The panel wher
 ## Data source
 
 With Chart Builder you can create charts and other visual components for all App types
-availalbe in Sematext. We support
+available in Sematext. We support
 [Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/),
 [Experience](https://sematext.com/docs/experience/) and
 [Synthetics](https://sematext.com/docs/synthetics/). This gives you huge flexibility
