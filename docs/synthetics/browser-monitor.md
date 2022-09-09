@@ -91,8 +91,8 @@ For every run, the Browser monitor collects all the resources fetched during the
 Each Browser monitor run is executed in an isolated environment using a fresh instance of a headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
 
 * **Node.js** - 14.x
-* **Google Chrome** - 105.0.5173.0
-* **Puppeteer** - 15.4.0
+* **Google Chrome** - 106.0.5249.0
+* **Puppeteer** - 17.1.1
 
 Default runtime configuration values are:
 
