@@ -4,7 +4,7 @@ description: Collect and monitor key Elasticsearch metrics such as request laten
 ## Agent Install
 Setting up the monitoring agent takes less than 5 minutes:
 
-1.  Create an Elasticsearch App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data. The short  [What is an App in Sematext Cloud](https://www.youtube.com/watch?v=tr_qxdr8dvk&index=14&list=plt_fd32ofypflbfzz_hiafnqjdltth1ns) video has more details.
+1.  Create an Elasticsearch App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data.
 2.  Name your Elasticsearch monitoring App and, if you want to collect Elasticsearch logs as well, create a Logs App along the way.
 3.  Install the Sematext Agent according to the  [setup instructions](https://apps.sematext.com/ui/howto/Elasticsearch/overview) displayed in the UI.
 4.  Enable HTTP metrics by setting `http.enabled: true` and set the `node.name` value in `elasticsearch.yaml`.
