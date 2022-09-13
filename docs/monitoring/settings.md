@@ -7,7 +7,7 @@ App settings and actions include, but are not limited to:
   - [alert rules](../alerts)
   - changing your App's plan
   - connecting Apps
-  - heartbeat alert cration
+  - heartbeat alert creation
   - App ownership transfer
   - scheduled report emails (aka Subscriptions)
   
