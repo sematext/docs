@@ -3,7 +3,7 @@ description: Sending, custom & default mapping, and indexing log events using El
 
 ## The Essentials
 
-Sematext's Logs Management App exposes the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can:
+Sematext Logs exposes the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can:
 
   - send log events through it directly from your application, using
     any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
