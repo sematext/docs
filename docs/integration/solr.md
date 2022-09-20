@@ -6,7 +6,7 @@ Sematext offers simple and versatile Solr monitoring agent written in Java and G
 ## Sematext Solr Monitoring Agent
 This lightweight, open-source [Monitoring Agent](https://github.com/sematext/sematext-agent-java) collects Solr performance metrics and sends them to Sematext. It comes packaged with a Golang-based agent responsible for Operating System level metrics like network, disk I/O, and more. The Solr Monitoring Agent can be installed with RPM/DEB package manager on any host running Linux or in a containerized environment using ```sematext/sematext-agent```.
 
-The Sematext SolrCloud Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Solr node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it runs as a separate process and doesn't require a Solr restart when it is installed or upgraded.
+The Sematext Solr Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Solr node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it runs as a separate process and doesn't require a Solr restart when it is installed or upgraded.
 
 After creating a [Solr App in Sematext](https://apps.sematext.com/ui/monitoring-create) you need to install the Monitoring Agent on each host running Solr that you want to monitor. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/Solr/overview) displayed in the UI.
 
@@ -112,7 +112,7 @@ A full example of Solr metrics and logs correlation can be found in [this articl
 
 ## Troubleshooting
 
-If you are having issues with Sematext Monitoring, i.e. not seeing SolrCloud metrics, see
+If you are having issues with Sematext Monitoring, i.e. not seeing Solr metrics, see
 [How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
