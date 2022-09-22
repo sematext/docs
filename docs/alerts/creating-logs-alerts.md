@@ -9,12 +9,16 @@ For example, let's say you used *include/exclude filters* to search for *Elastic
 
 Clicking on the bell icon creates a new Alert Rule with the applied query and filters.
 
-![image alt text](../images/alerts/image_1.png)
+![image alt text](../images/alerts/image_1_2.png)
 
 Let's say we want to get notified if the number of *slowlog warnings* reaches 3 in any 10 minutes. Notice that *Chart Preview* shows the threshold line to help
 you visualize the threshold value in this context.
 
-![image alt text](../images/alerts/image_2.png)
+![image alt text](../images/alerts/image_2_2.png)
+
+ You can assign priority and define the level of importance of an alert.
+ 
+ ![image alt text](../images/alerts/alert_priority.png)
 
 Apart from a simple log count you can choose any numeric field in the *Alert Metric* section.
 
@@ -22,7 +26,7 @@ Apart from a simple log count you can choose any numeric field in the *Alert Met
 
 The field next to threshold value allows you to easily multiply the threshold and thus has a default value of 1, which is neutral for multiplication.  
 
-![image alt text](../images/alerts/image_5.png)
+![image alt text](../images/alerts/image_5_2.png)
 
 Although less applicable in the case of our *slowlog warnings*, `Ignore regularly occurring spikes and dips` tells the algorithm to ignore regular outliers that are not really anomalies, but are caused by regular spikes/dips.
 
