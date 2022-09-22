@@ -16,7 +16,7 @@ you visualize the threshold value in this context.
 
 ![image alt text](../images/alerts/image_2_2.png)
 
- You can assign priority and define the level of importance of an alert.
+ You can assign priority and define the level of importance of an alert. Include this information in the payload of various notification hooks.
  
  ![image alt text](../images/alerts/alert_priority.png)
 
