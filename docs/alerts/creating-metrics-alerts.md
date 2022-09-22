@@ -36,7 +36,7 @@ Notice that the chart changed to help you get a sense of what would constitute a
 
 The confidence interval shown in the preview is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
 
-You can assign priority and define the level of importance of an alert. Include this information in the payload of various notification hooks.
+You can assign priority and define the level of importance of an alert. Include this information in the payload of various [Notification Hooks](../alerts/alert-notifications.md).
 ![Alert Priority](../images/alerts/alert_priority.png)
 
 You can see and adjust alert metric details in `Alert Metric` tab.
