@@ -2,25 +2,41 @@ title: Logs Table Quick Actions
 
 You can take quick actions from the logs table while going through your logs.
 
-Easily add include/exclude filters for a specific value
+The actions include:
 
-Add the particular field as a separate column in Logs table
+  - Toggle column
+  - Add [Pipeline Processor](../logs/pipelines)
+  - Create a chart
+  - Highlight values
+
+## Toggle Column
+
+To add a field as a separate column, click on the field name. This will open a small context menu where you can click on the Add column button. 
 
 ![toggle_column](../images/logs/logs-table-quick-actions_1.png)
 
 ![new column](../images/logs/logs-table-quick-actions_2.png)
 
-Quickly add a [pipeline processor](../logs/pipelines.md) and structure the field the way you want them to be
+## Add Pipelines Processor
+
+[Pipelines processors](../logs/pipelines) help you structure the fields the way you want them to be. Or drop unwanted logs to save from disk space.
+
+To quickly create a pipeline processor for a particular field, simply click on the field name to open the context menu. Click on the pipelines icon and select the processor that suits your needs. 
 
 ![pipelines](../images/logs/logs-table-quick-actions_3.png)
 
-Create a chart from that field and select the report or dashboard you want to save the chart in, timeframe, style and visualization type
+## Quick Chart
+
+If you want to visualize the values for a specific field, simply click on the field value. This will open a context menu where you can click to add a chart for it.
+You can select the report or dashboard you want to save the chart in, timeframe, style and visualization type.
 
 ![create chart](../images/logs/logs-table-quick-actions_4.png)
 
 ![quick chart builder](../images/logs/logs-table-quick-actions_5.png)
 
-Use the highlighting feature to focus on any value while going through your logs.
+## Highlighting
+
+You can use the highlighting feature to focus on any value while going through your logs.
 Click on the value to open the quick action menu and select manual highlighting.
 
 ![highlight menu](../images/logs/logs-table-quick-actions_6.png)
