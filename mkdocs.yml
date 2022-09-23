@@ -18,6 +18,7 @@ pages:
       - Quick Start: logs/quick-start.md
       - Settings: logs/settings.md
       - Reports & Components: logs/reports-and-components.md
+      - Logs Table Quick Actions: logs/logs-table-quick-actions.md
       - Sending Log Events:
         - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
