@@ -19,7 +19,7 @@ To add a field as a separate column, click on the field name. This will open a s
 
 ## Add Pipelines Processor
 
-[Pipelines processors](../logs/pipelines) help you structure the fields the way you want them to be. Or drop unwanted logs to save from disk space.
+[Pipelines processors](../logs/pipelines) help you structure the fields the way you want them to be. Or drop unwanted logs to reduce the volume of stored logs and thus reduce your costs.
 
 To quickly create a pipeline processor for a particular field, simply click on the field name to open the context menu. Click on the pipelines icon and select the processor that suits your needs. 
 
@@ -45,6 +45,6 @@ Choose the color to highlight the selected value. This specific value will be hi
 
 ![manual highlighting](../images/logs/logs-table-quick-actions_7.png)
 
-You can also enable auto highlighting feature from the quick action menu by clicking on a value. And this will highlight the first 10 unique values of the corresponding field with different colors.
+You can also enable auto highlighting feature from the quick action menu by clicking on a value. This will highlight the first 10 unique values of the corresponding field with different colors.
 
 ![auto highlighting](../images/logs/logs-table-quick-actions_8.png)
