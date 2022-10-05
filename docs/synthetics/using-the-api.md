@@ -595,6 +595,11 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | Key | Type | Value | Description | Required
 | --- | --- | --- | --- | --- |
 | schedule | Array of JSON Objects | *See [API Reference: schedule](#api-reference-schedule) | Notifications Schedule | YES |
+| priority | STRING | -- | Alert priority | YES |
+| | | INFO | Info | |
+| | | WARN | Warning | |
+| | | ERROR | Error | |
+| | | CRITICAL | Critical | |
 | minDelayBetweenNotificationsInMinutes | INTEGER | 1-90 | Delay in minutes between notifications (1-90) | YES |
 | backToNormalNeeded | BOOLEAN | -- | Alert when the value goes back to non-alert level | YES |
 | | | true | Enabled | |
@@ -744,6 +749,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
                 "type": "ACTIVE"
             }
         ],
+        "priority": "WARN",
         "minDelayBetweenNotificationsInMinutes": "10",
         "backToNormalNeeded": true,
         "failedRunCountToAlert": 1,
@@ -838,6 +844,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
                 "type": "ACTIVE"
             }
         ],
+        "priority": "WARN",
         "minDelayBetweenNotificationsInMinutes": "10",
         "backToNormalNeeded": true,
         "failedRunCountToAlert": 1,
@@ -938,6 +945,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
                 "type": "ACTIVE"
             }
         ],
+        "priority": "WARN",
         "minDelayBetweenNotificationsInMinutes": "10",
         "backToNormalNeeded": true,
         "failedRunCountToAlert": 1,
