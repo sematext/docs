@@ -185,7 +185,7 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | Key | Type | Value | Description
 | --- | --- | --- | --- |
 | success | BOOLEAN | -- | API call response status |
-| | | true | Succesful |
+| | | true | Successful |
 | | | false | Failed |
 | data | Array of JSON Objects | *See [API Reference: data](#api-reference-data)  | Monitor overview response data |
 
@@ -422,6 +422,9 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | | | false | Monitor a Website | |
 | conditions | Array of JSON Objects | *See [API Reference: conditions](#api-reference-conditions) | Alert Conditions | YES |
 | alertRule | JSON Object | *See [API Reference: alertRule](#api-reference-alertrule) | Alert Settings | YES |
+| allowInsecureSSL | BOOLEAN | -- | SSL Certificate validation | YES |
+| | | true | Skip SSL Certificate validation | |
+| | | false | Validate SSL Certificates | |
 
 
 **HTTP Monitor**
@@ -465,9 +468,9 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 | monitorSSLChange | BOOLEAN | -- | Alert when SSL certificate change is detected | YES |
 | | | true | SSL certificate change alert enabled | |
 | | | false | SSL certificate change alert disabled | |
-| allowInsecureSSL | BOOLEAN | -- | Type of SSL Certificate check | YES |
-| | | true | Relaxed | |
-| | | false | Strict | |
+| allowInsecureSSL | BOOLEAN | -- | SSL Certificate validation | YES |
+| | | true | Skip SSL Certificate validation | |
+| | | false | Validate SSL Certificates | |
 
 ### API Reference: headers
 | Key | Type | Value | Description | Required
