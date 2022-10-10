@@ -57,7 +57,7 @@ You can also get the **Base64** encoded value of your `username` and `password` 
 
 ## Conditions
 
-Conditions can be configured on the response fields and metrics. The conditions are evaluated for every run result. All the conditions should pass for a run to be declared as passing. If any condition fails, the run will fail and the monitor will be marked as failing. The supported condition types are:
+Alert conditions can be configured on the response fields and metrics. The conditions are evaluated for every run result. All the conditions should pass for a run to be declared as passing. If any condition fails, the run will fail and the monitor will be marked as failing. The supported alert condition types for HTTP monitors are:
 
 * **Error** - During each run, if there's an error like connection, timeout, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body.
 * **Response Code** - HTTP Status Code. Used to make sure the response code should be of specific value or range.
@@ -67,6 +67,7 @@ Conditions can be configured on the response fields and metrics. The conditions 
 * **Response Body JSON** - If the response body is JSON, [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare against the expected value. More information on how to set up these conditions is provided in the [next subsection](#configuring-custom-alerts-based-on-json-response).
 
 Various operators like **Equals**, **Less Than**, **Greater Than**, **Contains** are supported based on condition type.
+These conditions define the alert rule for your monitor. You can choose the priority of the alert rule right below the table where the alert conditions are edited. The default priority for HTTP monitor alert rules is **Warning**. For more information on alerting, refer to the [Creating Synthetics Alerts](/alerts/create-synthetics-alerts) page.
 
 By default, the UI adds the below conditions while creating an HTTP monitor. You can change them during the creation:
 

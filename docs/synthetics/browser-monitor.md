@@ -20,12 +20,14 @@ To monitor a single website, you can directly configure the URL of the website t
 
 ## Conditions
 
-Condition types supported in the Browser monitor are:
+Browser monitors support the following alert condition types:
 
-* **Error** - During each run, if there are any errors like navigation timeout, assertion failed, etc., it will be recorded in the error field of the response. This does not include the error returned as part of the response body. 
+* **Error** - During each run, if there are any errors (like navigation timeout, assertion failed, etc.), they will be recorded in the error field of the response. This does not include the error returned as part of the response body. 
 * **Metric** - Used to make sure the metrics are within the expected range. 
 
-By default, the UI adds the below conditions while creating a Browser monitor. You can change them during the creation:
+These conditions define the alert rule for your monitor. You can choose the priority of the alert rule right below the table where the alert conditions are edited. The default priority for Browser monitor alert rules is **Warning**. For more information on alerting, refer to the [Creating Synthetics Alerts](/alerts/create-synthetics-alerts) page.
+
+By default, the UI adds the below conditions while creating a Browser monitor. You can change them while creating or editing a Browser monitor:
 
 * **Error** *equals* **empty**
 * **Response Time** metric *less than* **20000 ms**
