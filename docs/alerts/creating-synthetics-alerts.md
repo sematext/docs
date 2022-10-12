@@ -1,4 +1,4 @@
-title: Creating Alerts 
+title: Creating Synthetics Alerts 
 description: Step by step guide for creating Synthetics Alerts
 
 Synthetics Apps support two types of alerts:
