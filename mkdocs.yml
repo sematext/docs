@@ -104,7 +104,6 @@ pages:
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
       - User Journey Scripts: synthetics/user-journey-scripts.md
-      - Alerts: synthetics/alerts.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration: synthetics/ci-cd-integration.md
       - Status Pages: synthetics/status-pages.md
@@ -202,6 +201,7 @@ pages:
       - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
       - Creating Heartbeat Alerts: alerts/creating-heartbeat-alerts.md
       - Creating Experience Alerts: alerts/creating-experience-alerts.md
+      - Creating Synthetics Alerts: alerts/creating-synthetics-alerts.md
       - Alerts Meta and Tags: alerts/alerts-meta.md
       - Alert Notifications: alerts/alert-notifications.md
       - Account-default Hooks: alerts/account-default-hooks.md
