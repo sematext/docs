@@ -67,7 +67,7 @@ Alert conditions can be configured on the response fields and metrics. The condi
 * **Response Body JSON** - If the response body is JSON, [JSONPath](https://github.com/json-path/JsonPath) can be used to extract a specific value and compare against the expected value. More information on how to set up these conditions is provided in the [next subsection](#configuring-custom-alerts-based-on-json-response).
 
 Various operators like **Equals**, **Less Than**, **Greater Than**, **Contains** are supported based on condition type.
-These conditions define the alert rule for your monitor. You can choose the priority of the alert rule right below the table where the alert conditions are edited. The default priority for HTTP monitor alert rules is **Warning**. For more information on alerting, refer to the [Creating Synthetics Alerts](/alerts/create-synthetics-alerts) page.
+These conditions define the alert rule for your monitor. You can choose the priority of the alert rule right below the table where the alert conditions are edited. The default priority for HTTP monitor alert rules is **Warning**. For more information on alerting, refer to the [Creating Synthetics Alerts](/alerts/creating-synthetics-alerts) page.
 
 By default, the UI adds the below conditions while creating an HTTP monitor. You can change them during the creation:
 
