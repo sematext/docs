@@ -5,7 +5,7 @@ Each Logs App has one default Report called **Explore**. You can create as many 
 
 ## Logs Search and Report Menu
 
-![Sematext Cloud Monitoring Guide - Monitoring Report Menu](../images/guide/logs/sematext-logs-search-and-report-menu_2.png) 
+![Sematext Cloud Logs Guide - Logs Report Menu](../images/guide/logs/sematext-logs-search-and-report-menu_2.png) 
 
 ### App State
 
@@ -25,7 +25,7 @@ Each alert query is visible in the Alert Rules list.
 
 - **Connected Apps** - Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App**. When you receive an alert notification for an App, the **alert notification will automatically include information and charts from connected Apps**, and thus provide more information and context for you. You can connect any two Apps you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
 
-![](../images/guide/logs/connect-apps_2.png) 
+![Sematext Cloud Logs Guide - Connect Apps](../images/guide/logs/connect-apps_2.png) 
 
 - **Split View** - Split Screen is a product-wide correlation and data-pivoting feature. With Split Screen you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
 
@@ -46,7 +46,7 @@ The Logs and Logs Count Time Series components are added by default to your Logs
 
 These can be configured by whichever search query you want in any way you want. Making it easy to set up your Logs Report just the way you want.
 
-![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/logs/add-logs-component.png) 
+![Sematext Cloud Logs Guide - Add Logs Component](../images/guide/logs/add-logs-component.png) 
 
 Use them together with out-of-the-box metrics, from a Monitoring App, and you will go from metric spikes to Logs in seconds, and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
