@@ -25,7 +25,7 @@ Find the full Fleet documentation [here](https://sematext.com/docs/fleet/).
    1. Open the following file in your text editor: `/opt/spm/properties/st-agent.yml`. 
    2. Comment out the `journal` section by adding the character `#` at the beginning of every line in the section.
    3. [Restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
-   Note that this is a temporary solution, and you should contact [our support team](https://sematext.com/docs/agents/agent-troubleshooting/#support) to help you identify and solve the root cause of your issue.
+   Note that this is a temporary solution, and you should contact [our support team](https://sematext.com/docs/agents/sematext-agent/agent-troubleshooting/#support) to help you identify and solve the root cause of your issue.
    
 If you are still having trouble, you can send us the diagnostics package, and we will assist you as soon as possible. To do so:
 
