@@ -59,3 +59,25 @@ Each Component can be added to a custom Dashboard, and you can organize reports 
 Here's an image of the **Log Events Component** dropdown menu with log specific export and field editor features and the ability to add the component to a custom dashboard.
 
 ![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/logs/logs-component-settings-dropdown.png)
+
+### Table Density Modes
+
+You can set different table density for each Log table from **Edit Component > Styles** tab.
+
+![Sematext Cloud Logs Guide - Edit Logs Component](../images/guide/logs/logs-edit-component.png) 
+
+Choose between **3 density options** for your table rows and control how many rows fit into single page.
+
+ - **Comfortable** - Your rows are less denser and more eye-pleasing.
+
+![Sematext Cloud Logs Guide - Comfortable Density](../images/guide/logs/logs-table-comfortable.png) 
+
+ - **Cozy** - Your tables will remain just as they were so far.
+
+![Sematext Cloud Logs Guide - Cozy Density](../images/guide/logs/logs-table-cozy.png) 
+
+ - **Compact** - Your table fit more rows into a single page.
+
+![Sematext Cloud Logs Guide - Compact Density](../images/guide/logs/logs-table-compact.png) 
+
+You can also override account preference, and set the default table density level. Account level density preference will be applied to all of your data tables. See  [Control density in other tables](https://sematext.com/product-updates/#/2022/control-table-rows-density-in-account-settings).
