@@ -5,13 +5,7 @@ Each Logs App has one default Report called **Explore**. You can create as many 
 
 ## Logs Search and Report Menu
 
-Alerts and Logs are integrated into a single reports pane, and used to search logs, create alerts for anomalies, and much more. 
-
-Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
-
-You can also create and integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
-
-![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/logs/sematext-logs-search-and-report-menu.png) 
+![Sematext Cloud Logs Guide - Logs Report Menu](../images/guide/logs/sematext-logs-search-and-report-menu_2.png) 
 
 ### App State
 
@@ -21,6 +15,7 @@ When your Logs App is loaded the **Save and Reset buttons will be hidden** since
 
 The set of icons in the logs search and report menu let you:
 
+- **Save as View** - Filtering and grouping data is a central part of the Sematext Cloud user interface. With Saved Views you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
 - **Add Alert** - Every query can be use as an **alert query**. The ability to save alerts is part of the essential tools for searching, correlating and investigating logs data..
 Each alert query is visible in the Alert Rules list.
 
@@ -30,15 +25,14 @@ Each alert query is visible in the Alert Rules list.
 
 - **Connected Apps** - Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App**. When you receive an alert notification for an App, the **alert notification will automatically include information and charts from connected Apps**, and thus provide more information and context for you. You can connect any two Apps you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
 
-- **Integrations** - You will need to install **a Log Shipper or Library** so data can be shipped to your Logs App. This section will guide you through installing and running a Log Shipper.
-		
-	Please refer to the [Integrations](https://sematext.com/docs/integration/) documentation pages for particular tech you wish to monitor. Learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS s3, and how to integrate log management with log shippers. You'll find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud there.
+![Sematext Cloud Logs Guide - Connect Apps](../images/guide/logs/connect-apps_2.png) 
 
-### Report Settings
+- **Split View** - Split Screen is a product-wide correlation and data-pivoting feature. With Split Screen you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
 
-- **Report Actions** - Your customized logs report can be better described using **meta name and description**, and you can assign a **unique URL Alias** to identify that report.
+- **Time Picker** - The Time Picker is available whenever an App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed as well.
+**A custom time range can be selected using the time picker dropdown menu.** The Logs App will automatically refresh upon selection and update all the reports accordingly.
 
-- **Legends Position and Extended Charts features** - Except in the default overview mode, each **report can have legends** for each metric name, arranged below, to the left, or hidden entirely for better chart interaction. Extended charts are also displayed below and provide a comparative view into a longer time span relative to the time frame displayed in the main chart. Just like report legends, the extended view can be hidden and only the chart with X and Y values will be displayed.
+- **Live Tail** - Refresh data and Live Tail options are located next to the time picker. The **Live Tail feature provides real-time insights as soon as your data is consumed and indexed.** It can also be stopped so the auto-refresh does not update the data, in case you need to inspect specific incidents or anomalies within a certain time segment.
 
 ## Components
 
@@ -52,11 +46,11 @@ The Logs and Logs Count Time Series components are added by default to your Logs
 
 These can be configured by whichever search query you want in any way you want. Making it easy to set up your Logs Report just the way you want.
 
-![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/logs/add-logs-component.png) 
+![Sematext Cloud Logs Guide - Add Logs Component](../images/guide/logs/add-logs-component.png) 
 
 Use them together with out-of-the-box metrics, from a Monitoring App, and you will go from metric spikes to Logs in seconds, and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
-![Sematext Logs Custom Components](../images/guide/logs/logs-custom-components.png)
+![Sematext Logs Custom Components](../images/guide/logs/logs-custom-components_2.png)
 
 ### Logs Component Settings
 
