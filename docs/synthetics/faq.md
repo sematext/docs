@@ -96,8 +96,8 @@ You can simply type the name of your desired device into the _Device type_ dropd
 Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select **Monitor a User Journey** in the **Configure URL/Script** step. Within the script you can send a POST request to your token provider API with Puppeteer's [page.setRequestInterception()](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.setrequestinterception.md) method.
 After grabbing the token from the response, you can intercept the next request and add your credentials to the request body with the following code.
 
-### How do I do X in a User Journey Script?
-Please see the section on [Example Scripts](./user-journey-scripts/#example-scripts).
+### How do I do X in a User Journey script?
+Please see the section on [User Journey script examples](./user-journey-scripts/#user-journey-script-examples).
 
 ```javascript
  await page.setRequestInterception(true);
