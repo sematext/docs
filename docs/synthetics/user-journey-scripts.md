@@ -134,7 +134,7 @@ Once you finish adding your sensitive data, keep in mind that the secret values 
 
  ![Editing sensitive data ](../images/synthetics/secrets-script-edit-secrets.png)
  
- ## User Journey script examples
+## User Journey script examples
 
 Several examples of some common use-cases which can be used as a starting point, are available when creating a new monitor. These can be accessed by clicking the `Browse Examples` button on the `Configure URL/Script` page when creating a new monitor.
 
