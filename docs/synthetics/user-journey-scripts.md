@@ -133,3 +133,9 @@ If we select the `$__password__` placeholder from the tooltip, it will be insert
 Once you finish adding your sensitive data, keep in mind that the secret values you've filled in won't be accessible on Sematext Cloud anymore. They will only be used while executing your script, allowing you to define the credentials once and avoid having to worry about who has access to them. Because we can't access these secrets from Sematext Cloud, that will also mean that you'll have to input all your secret values if you decide to edit them. The only values we'll be able to display are the placeholders you've defined, so that you can conveniently edit your User Journey scripts and easily reference your credentials without having to edit them. An example of what the **Add Sensitive Data** menu will look like upon saving and then editing the monitor is shown in the screenshot below.
 
  ![Editing sensitive data ](../images/synthetics/secrets-script-edit-secrets.png)
+ 
+ ## User Journey script examples
+
+Several examples of some common use-cases which can be used as a starting point, are available when creating a new monitor. These can be accessed by clicking the `Browse Examples` button on the `Configure URL/Script` page when creating a new monitor.
+
+ ![Browse Examples](../images/synthetics/browse-ujs-examples.png)
