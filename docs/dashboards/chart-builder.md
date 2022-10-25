@@ -219,13 +219,24 @@ charts. In addition to the chart type, you can choose a color from the palette a
 goal of a group color scheme is to determine the colors of the series from the same group. When you group a metric by
 `os.host` as a result you get a couple of series. Each series can get a different color.
 
-![Chart builder styles](../images/dashboards/chart-builder-styles.png)
+![Chart builder styles](../images/dashboards/chart-builder-styles_2.png)
 
 A very important feature in the styles tab is the "Stacked" option. When you select the checkbox data
 of a given series is stacked. This is very useful for area and bar charts. Below you can see
 a comparison of stacked and non-stacked bar charts.
 
 ![Chart builder styles](../images/dashboards/chart-builder-stacked.png)
+
+## Component Switch
+
+You can switch between different kinds of component visualization types.
+
+![Chart builder component switch list](../images/dashboards/component_switch_list.png)
+
+E.g.: You can switch Timeseries to Pie Chart directly from the Chart Builder to see how the data series will be represented in each of them.
+
+![Chart builder component switch](../images/dashboards/component_switch.png)
+
 
 ## Heatbar
 
@@ -268,7 +279,7 @@ Then choose `Logs` data series:
 
 If you're creating your first chart, the initial result may look intimidating at first glance:
 
-![New chart](../images/dashboards/heatbar-3-empty-ts-chart.png)
+![New chart](../images/dashboards/heatbar-3-empty-ts-chart_2.png)
 
 It's just a matter of choosing what we want our chart to show. So far we've chosen a type of chart, but haven't specified which **App** to use as the source of data and which **metric** from that App to show.  
 
@@ -277,30 +288,30 @@ We'll name this data series `Usage logs`, so type that into the `Label` field.
 
 Great, errors are gone and we already see data in our chart preview:
 
-![Chart shows data](../images/dashboards/heatbar-4-count-in-ts-chart.png)
+![Chart shows data](../images/dashboards/heatbar-4-count-in-ts-chart_2.png)
 
 Let's keep things organized, change the `Custom chart` title in the upper left corner to `Usage`. You just need to click on the title to edit it in-place.  
 
 Next, in the `Filter by` section, shown below, we are going to add a filter to our data series by typing `Usage` into the `Query` field. When you're done typing, you can apply the change with the Enter key (while the cursor is still in the `Query` field) and the chart will be updated, now containing only those logs which matched the query.
 
-![Enter query](../images/dashboards/heatbar-5-enter-query.png)
+![Enter query](../images/dashboards/heatbar-5-enter-query_2.png)
 
 So far so good, we can see our `Usage logs` in the chart preview.
 
 Now let's add a heatbar.  
 Duplicate `Usage logs` series using the series action menu (`...`), like this:
 
-![Duplicate Usage logs DS](../images/dashboards/heatbar-6-clone.png)
+![Duplicate Usage logs DS](../images/dashboards/heatbar-6-clone_2.png)
 
 Change the label of the new series to `Errors`.  
 
 Expand the `Filter by` section, under the `Label`. As you can see in the screenshot below and hopefully in your own chart, our `query: Usage` is still here, duplicated correctly from the first series. We'll additionally filter logs to only those with `severity: error`:
 
-![Filter to error severity](../images/dashboards/heatbar-7-severity-error.png)
+![Filter to error severity](../images/dashboards/heatbar-7-severity-error_2.png)
 
 Finally, switch to the `Style` section of our second data series in the upper right corner and change its type to `heatbar` and color to red.
 
-![Changing data series type](../images/dashboards/heatbar-8-ds-style-type-and-color.png)
+![Changing data series type](../images/dashboards/heatbar-8-ds-style-type-and-color_2.png)
 
 And just like that, we have our *Usage chart* with a heatbar of *Usage errors*.
 
