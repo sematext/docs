@@ -49,6 +49,16 @@ After you install and activate an integration, you can:
 - [AWS S3 CloudTrail](../integration/generic-logs-integration/#aws-s3-cloudtrail-flow-logs-elb-access-logs-etc)
 - [AWS CloudWatch Logs](../integration/generic-logs-integration/#aws-cloudwatch-logs)
 - [AWS Lambda](../integration/generic-logs-integration/#centralized-logging-for-aws-lambda)
+- [Apache](../integration/#apache-logs)
+- [Elasticsearch](../integration/#elasticsearch-logs)
+- [GitHub](../integration/#github-webhook-events-integration)
+- [JVM](../integration/#jvm-gc-logs)
+- [Nginx](../integration/#nginx-logs)
+- [PostgreSQL](../integration/#postgresql-logs)
+- [RabbitMQ](../integration/#rabbitmq-logs)
+- [Solr](../integration/solr-logs)
+- [Vercel Logs](../integration/#vercel-logs-integration)
+- [Kubernetes](../integration/#kubernetes-audit-integration)
 
 
 ### Monitoring
@@ -80,6 +90,9 @@ After you install and activate an integration, you can:
 - [Tomcat](../integration/tomcat/)
 - [ZooKeeper](../integration/zookeeper/)
 - [Jenkins](../integration/jenkins/)
+- [RabbitMQ](../integration/rabbitmq/)
+- [PostgreSQL](../integration/postgresql/)
+- [HAProxy](../integration/haproxy/)
 
 ### Webhooks
 
@@ -99,38 +112,54 @@ After you install and activate an integration, you can:
 - [Twilio](../integration/alerts-twilio-integration/)
 - [VictorOps](../integration/alerts-victorops-integration/)
 - [Zapier](../integration/alerts-zapier-integration/)
+- [Signl4](../integration/alerts-signl4-integration/)
+- [GoogleChat](../integration/alerts-googlechat-integration/)
+- [AlertOps](../integration/alerts-alertops-integration/)
+- [ServiceNow](../integration/alerts-servicenow-integration/)
 
 
 ## Creating New Integration
 
-Navigate to [Integrations Overview](https://apps.sematext.com/ui/integrations). Three different integrations are available:
+Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page to create a new Monitoring or Logs integration. Pick a solution type and all the available integrations for that solution will be listed. Hover over any integration card and click to create the respective App.
 
-- Log Shipping and Management App
-- Infrastructure and Application Performance Monitoring App
-- Notification Hooks through various third party integrations, email, and system defined custom webhooks
+Next step is to pick your environment that runs the service you want to monitor.
 
-Hover over any integration card and click to create respective App or a webhook. Initially, there will be no App status and count tag displayed in the left bottom corner of the card, but once related App(s) have been created tag will display the number of App, and grey and green tag colour are used to show if App are not or are receiving data respectively.
+![Sematext Cloud - Select Environment](../images/guide/integrations/environments.png)
 
-Image below illustrates an integration card being hovered over and the App status with the count tag displayed with one example App created.
-
-![Sematext Cloud - Create New App](https://sematext.com/docs/images/guide/integrations/add-new-logging-app.png "Sematext Cloud - Create New App")
+After you select your environment, agent installation page will show up which gives you step by step instructions on how to install [Sematext Agent](../agents/sematext-agent/).
 
 ### App Integration
 
 New integration creation userflow is the same for both monitoring as well as logging App. While Apache monitoring App is being created you can also create complementary logs App as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example, and that particular piece of a IT infrastructure puzzle.
 
-In other words, as monitoring App is being created you can create a logging App as well and vice versa. You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
+In other words, as monitoring App is being created you can create a logging App as well and vice versa. 
 
-![Sematext Cloud - Create New Intergration App](https://sematext.com/docs/images/guide/integrations/create-new-app-integration.png " Sematext Cloud - Create New Integration App")
+You can connect Logs and Monitoring Apps for quick access later when you are troubleshooting.
+
+You can also invite other devops team members and provide them with the same tools and insights while using RBAC (role based access control) model to restrict or provide proper administrative user rights.
+
+### Connected Apps
+
+Connecting a Monitoring App to a Logs App will pre-select that Logs App when you decide to correlate metrics. When you
+receive an alert notification for an App, the alert notification will automatically charts from
+connected Apps, and thus provide more information and context for you. You can connect any two Apps you have access to,
+regardless of their type. A single App can be connected to any number of other Apps. 
+
+To connect Apps go to App Table View and choose Connect App from Integration Menu. 
+
+Or navigate to the App and click on the Connect New App button on the top right of the page.
+
+![Sematext Cloud - Connect Apps](../images/guide/integrations/connect-apps-from-logs-app.png)
 
 ### Webhook Integration
 
 When an integration App is first created our IT system monitoring platform creates several App specific alerts. User account email is used as a default notification mechanism to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [webhook](/guide/integrations-guide/#webhooks) integration.
 
+![Sematext Cloud - Notification Hooks](../images/guide/integrations/notification-hooks.png)
+
 You will first need to create that third party service and obtain required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. Image below shows a third party notification webhook integration being created, Slack in this example.
 
-![Sematext Cloud - Create New Alert Notification Webhook](https://sematext.com/docs/images/guide/integrations/create-new-webhook-integration.png " Sematext Cloud - Create New Alert Notification Webhook")
-
+![Sematext Cloud - Slack Notification Hook](../images/guide/integrations/slack-notification-hook.png)
 
 ### App Table View
 
@@ -147,22 +176,12 @@ You can also add new integrations and filter and search existing App using table
 
 - Type illustrated using integration type logo link to provide visual clue should App naming convention not include any reference to the type
 - Application Name
-- Integration Token is a unique system generated string that you will need to use on your system in order to install Sematext Integration Agent. It is required to authenticate and establish system connections so you can start sending data to the Sematext Cloud. Integration Agent installation will be covered in more depth in the following section.
 - Next table column describes your Integration Plan and plans can be adjusted using App settings. For more information on [infrastructure monitoring pricing](https://sematext.com/pricing#spm) or [logging pricing](https://sematext.com/pricing#logsene) check our website
 - App Status indicator icons show your apps status and either green checkmark is used to indicate that App is sending data to our service, indexed and ready for IT systems monitoring
-- App owner is defined in the last second column
+- Your role is defined in the last second column
 - Last, but not the least, App Settings dropdown menu is the last item in the [apps table](https://github.com/sematext/sematable).
 
-![Sematext Cloud Monitoring and Logging Integrations Table](https://sematext.com/docs/images/guide/integrations/monitoring-and-logging-integrations-table.png "Sematext Cloud Monitoring and Logging Integrations Table")
-
-### Connected Apps
-
-Connecting a Monitoring App to a Logs App will pre-select that Logs App when you decide to correlate metrics. When you
-receive an alert notification for an App, the alert notification will automatically charts from
-connected Apps, and thus provide more information and context for you. You can connect any two Apps you have access to,
-regardless of their type. A single App can be connected to any number of other Apps. 
-
-To connect Apps go to App Table View and choose Connect App from Integration Menu.
+![Sematext Cloud - Apps](../images/guide/integrations/all-apps.png)
 
 ## Sematext Agent Installation
 
