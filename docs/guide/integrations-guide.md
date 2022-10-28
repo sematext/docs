@@ -34,13 +34,7 @@ After you install and activate an integration, you can:
 
 ### Logging
 
-- [Syslog Protocols](../integration/generic-logs-integration/#syslog-protocols)
-- [Log Shippers](../integration/generic-logs-integration/#log-shippers)
-- [Programming Languages](../integration/generic-logs-integration/#programming-languages)
-- [Operating Systems](../integration/generic-logs-integration/#operating-systems)
-- [Containers](../integration/generic-logs-integration/#containers)
-- [Cloud IaaS / PaaS](../integration/generic-logs-integration/#cloud-iaas-paas)
-- [iOS](../integration/generic-logs-integration/#ios)
+- [Apache](../integration/#apache-logs)
 - [Android](../integration/generic-logs-integration/#android)
 - [AWS EC2](../integration/generic-logs-integration/#aws-ec2)
 - [AWS ECS on AWS Fargate with AWS FireLens](../integration/generic-logs-integration/#aws-ecs-on-aws-fargate-with-firelens)
@@ -49,31 +43,43 @@ After you install and activate an integration, you can:
 - [AWS S3 CloudTrail](../integration/generic-logs-integration/#aws-s3-cloudtrail-flow-logs-elb-access-logs-etc)
 - [AWS CloudWatch Logs](../integration/generic-logs-integration/#aws-cloudwatch-logs)
 - [AWS Lambda](../integration/generic-logs-integration/#centralized-logging-for-aws-lambda)
-- [Apache](../integration/#apache-logs)
+- [Cloud IaaS / PaaS](../integration/generic-logs-integration/#cloud-iaas-paas)
+- [Containers](../integration/generic-logs-integration/#containers)
 - [Elasticsearch](../integration/#elasticsearch-logs)
-- [GitHub](../integration/#github-webhook-events-integration)
+- [GitHub Webhook Events](../integration/#github-webhook-events-integration)
+- [IBM Kubernetes Logs](../integration/#ibm-cloud-kubernetes-logs)
+- [iOS](../integration/generic-logs-integration/#ios)
 - [JVM](../integration/#jvm-gc-logs)
+- [Kubernetes Audit](../integration/#kubernetes-audit-integration)
+- [Log Shippers](../integration/generic-logs-integration/#log-shippers)
 - [Nginx](../integration/#nginx-logs)
+- [Operating Systems](../integration/generic-logs-integration/#operating-systems)
 - [PostgreSQL](../integration/#postgresql-logs)
+- [Programming Languages](../integration/generic-logs-integration/#programming-languages)
 - [RabbitMQ](../integration/#rabbitmq-logs)
 - [Solr](../integration/solr-logs)
+- [Syslog Protocols](../integration/generic-logs-integration/#syslog-protocols)
 - [Vercel Logs](../integration/#vercel-logs-integration)
-- [Kubernetes](../integration/#kubernetes-audit-integration)
 
 
 ### Monitoring
 
 - [Akka](../integration/akka/)
 - [Apache](../integration/apache/)
+- [Apache Spark](../integration/spark/)
+- [Apache Storm](../integration/storm/)
 - [AWS (Amazon Web Services)](../integration/aws/)
 - [Cassandra](../integration/cassandra/)
 - [ClickHouse](../integration/clickhouse/)
 - [Docker](../integration/docker/)
 - [Elasticsearch](../integration/elasticsearch)
 - [Express.js](../integration/express.js)
+- [Hadoop](../integration/hadoop/)
+- [HAProxy](../integration/haproxy/)
 - [HBase](../integration/hbase)
 - [Infra](../integration/infra/)
 - [Java](../integration/jvm/)
+- [Jenkins](../integration/jenkins/)
 - [Kafka](../integration/kafka/)
 - [MySQL](../integration/mysql/)
 - [MongoDB](../integration/mongodb/)
@@ -81,30 +87,29 @@ After you install and activate an integration, you can:
 - [Nginx+](../integration/nginxplus/)
 - [Node.js](../integration/node.js)
 - [PHP](../integration/php/)
+- [PostgreSQL](../integration/postgresql/)
+- [RabbitMQ](../integration/rabbitmq/)
 - [Redis](../integration/redis/)
-- [Hadoop](../integration/hadoop/)
 - [Solr](../integration/solr/)
 - [Solr Cloud](../integration/solrcloud/)
-- [Apache Spark](../integration/spark/)
-- [Apache Storm](../integration/storm/)
 - [Tomcat](../integration/tomcat/)
 - [ZooKeeper](../integration/zookeeper/)
-- [Jenkins](../integration/jenkins/)
-- [RabbitMQ](../integration/rabbitmq/)
-- [PostgreSQL](../integration/postgresql/)
-- [HAProxy](../integration/haproxy/)
 
 ### Webhooks
 
-- [Email as default system webhhook](../integration/alerts-email-integration/)
-- [Custom user defined webhooks](../integration/alerts-webhooks-integration/)
+- [AlertOps](../integration/alerts-alertops-integration/)
 - [Big Panda](../integration/alerts-bigpanda-integration/)
+- [Custom user defined webhooks](../integration/alerts-webhooks-integration/)
+- [Email as default system webhhook](../integration/alerts-email-integration/)
+- [GoogleChat](../integration/alerts-googlechat-integration/)
 - [Hipchat](../integration/alerts-hipchat-integration/)
 - [Microsoft Teams](../integration/alerts-microsoft-teams-integration/)
 - [Nagios](../integration/alerts-nagios-integration/)
 - [OpsGenie](../integration/alerts-opsgenie-integration/)
 - [PagerDuty](../integration/alerts-pagerduty-integration/)
 - [Pushover](../integration/alerts-pushover-integration/)
+- [ServiceNow](../integration/alerts-servicenow-integration/)
+- [Signl4](../integration/alerts-signl4-integration/)
 - [Slack](../integration/alerts-slack-integration/)
 - [Spike.sh](../integration/alerts-spikesh-integration/)
 - [Squadcast](../integration/alerts-squadcast-integration/)
@@ -112,10 +117,6 @@ After you install and activate an integration, you can:
 - [Twilio](../integration/alerts-twilio-integration/)
 - [VictorOps](../integration/alerts-victorops-integration/)
 - [Zapier](../integration/alerts-zapier-integration/)
-- [Signl4](../integration/alerts-signl4-integration/)
-- [GoogleChat](../integration/alerts-googlechat-integration/)
-- [AlertOps](../integration/alerts-alertops-integration/)
-- [ServiceNow](../integration/alerts-servicenow-integration/)
 
 
 ## Creating New Integration
@@ -126,7 +127,7 @@ Next step is to pick your environment that runs the service you want to monitor.
 
 ![Sematext Cloud - Select Environment](../images/guide/integrations/environments.png)
 
-After you select your environment, agent installation page will show up which gives you step by step instructions on how to install [Sematext Agent](../agents/sematext-agent/).
+After you select your environment, the agent installation page will show up, which gives you step-by-step instructions on how to install [Sematext Agent](../agents/sematext-agent/).
 
 ### App Integration
 
@@ -141,7 +142,7 @@ You can also invite other devops team members and provide them with the same too
 ### Connected Apps
 
 Connecting a Monitoring App to a Logs App will pre-select that Logs App when you decide to correlate metrics. When you
-receive an alert notification for an App, the alert notification will automatically charts from
+receive an alert notification for an App, the alert notification will contain charts from
 connected Apps, and thus provide more information and context for you. You can connect any two Apps you have access to,
 regardless of their type. A single App can be connected to any number of other Apps. 
 
