@@ -25,7 +25,7 @@ Starting with version 1.24.10, the Sematext Agent provides ability to track
 application transactions, thus making it easier to find bottleneck in
 running applications and troubleshoot performance issues.
 
-[![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](http://blog.sematext.com/blog/introducing-appmap/)
+[![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](https://blog.sematext.com/blog/introducing-appmap/)
 
 ## Notes
 
