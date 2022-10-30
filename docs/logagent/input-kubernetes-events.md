@@ -19,7 +19,7 @@ Applications:
 Requirements: 
 
 - A working `kubectl` config
-- Or run Loagent in a pod, role bindings to access k8s API pods, events, and namespaces 
+- Or run Logagent in a pod, role bindings to access k8s API pods, events, and namespaces 
 
 ### Configuration
 
