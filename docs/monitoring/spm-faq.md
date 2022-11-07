@@ -1063,16 +1063,16 @@ Note:
 Usage is metered hourly on a per-agent basis. For example:
 
 If you send metrics from a server A to Monitoring App Foo between 01:00 and
-02:00 that's $0.035 for the Standard plan.
+02:00 that's $0.005 for the Standard plan.
 
 If another agent is monitoring something else, even if that is running on the same
-server A, and sending metrics to a different Monitoring App Bar, that's another $0.035.
+server A, and sending metrics to a different Monitoring App Bar, that's another $0.005.
 
 If you are not sending metrics from a server A for a Monitoring App Foo between
 02:00 and 03:00 then you pay $0 for that hour.
 
-A single agent monitoring 24/7 will end up being ~ $25/month.  If you
-run another agent on another server it will be 2 x ~ $25/mo.
+A single agent monitoring 24/7 will end up being $3.6/month.  If you
+run another agent on another server it will be 2 x $3.6/month.
 
 ### How do you bill for container monitoring?
 
