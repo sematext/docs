@@ -10,7 +10,7 @@ Issues with SSL/TLS certificates doesn't only cause downtime of APIs and website
 
 Sematext Synthetics alerts you on the failure of these checks via the monitor's configured [alert notification hooks](../alerts/alert-notifications.md). Apart from these checks, Synthetics also provides an SSL certificate report, with details of all the certificates in the chain.
 
-Both the HTTP and Browser monitors perform these checks. Except certificate change detection is not available for Browser monitors.
+Both the HTTP and Browser monitors perform these checks, though certificate change detection is available only for HTTP monitors.
 
 ## Certificate Validation
 
@@ -40,7 +40,7 @@ The Browser monitor loads the website in a real Google Chrome browser and perfor
 
 Sematext Synthetics checks the certificate expiry every day and alerts you via the monitor's configured [alert notification hooks](../alerts/alert-notifications.md) multiple times before it expires. We make sure you're reminded about the expiry multiple times.
 
-You can set the certificate expiry alert condition within Conditions tab for both HTTP and Browser monitors
+You can set the certificate expiry alert condition within the Conditions tab for both HTTP and Browser monitors
 
 ![Certificate expiry BM](../images/synthetics/cert-expiry2.png)
 
@@ -56,12 +56,12 @@ The monitor performs the expiry check for all the certificates in the chains - l
 
 Sematext Synthetics checks the certificate authority for both Root or Intermediate level and alerts you via the monitor's configured [alert notification hooks](../alerts/alert-notifications.md) if the conditions are not met.
 
-The alert condition is supported for both HTTP and Browser monitors and can be set from Conditions tab
+The alert condition is supported for both HTTP and Browser monitors and can be set from the Conditions tab
 
 ![CA check](../images/synthetics/cert-authority.png)
 
 
-Using a Browser monitor with a user journey script that visits multiple pages will perform the checks on the SSL of the first page only.
+Using a Browser monitor with a User Journey script that visits multiple pages will perform SSL certificate checks for the first page only.
 
 Visiting a http:// instead of a https:// website, or a https:// website that doesn’t provide the full certificate chain will cause the condition to fail and display an error that the full certificate chain wasn’t provided.
 
