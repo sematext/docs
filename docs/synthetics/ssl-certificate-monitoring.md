@@ -6,10 +6,11 @@ Issues with SSL/TLS certificates doesn't only cause downtime of APIs and website
 * **Certificate Validation** - Validates the SSL certificates of the API/websites in every run
 * **Certificate Expiry** - Checks for the expiration of the certificates every day and alerts you 28, 14, 7 and 3 days before the expiry
 * **Certificate Change** - Checks for certificate change every 10 minutes and alerts you on detecting any changes, with a detailed change report
+* **Certificate Authority** - Checks Root/Intermediate certificate authorities and alerts you if they don't match with the expected authority
 
 Sematext Synthetics alerts you on the failure of these checks via the monitor's configured [alert notification hooks](../alerts/alert-notifications.md). Apart from these checks, Synthetics also provides an SSL certificate report, with details of all the certificates in the chain.
 
-Both the HTTP and Browser monitors perform these checks, except for Browser monitors with a configured User Journey script.
+Both the HTTP and Browser monitors perform these checks, though certificate change detection is available only for HTTP monitors.
 
 ## Certificate Validation
 
@@ -39,9 +40,31 @@ The Browser monitor loads the website in a real Google Chrome browser and perfor
 
 Sematext Synthetics checks the certificate expiry every day and alerts you via the monitor's configured [alert notification hooks](../alerts/alert-notifications.md) multiple times before it expires. We make sure you're reminded about the expiry multiple times.
 
+You can set the certificate expiry alert condition within the Conditions tab for both HTTP and Browser monitors
+
+![Certificate expiry BM](../images/synthetics/cert-expiry2.png)
+
+Or from SSL Monitoring tab for HTTP Monitors
+
+![Relaxed SSL certificate check](../images/synthetics/ssl-check-type.png)
+
 The monitor performs the expiry check for all the certificates in the chains - leaf, intermediate, or root certificates. The **Monitor Overview** page displays the expiry time of the recently expiring certificate.
 
 ![Certificate expiry](../images/synthetics/cert-expiry.png)
+
+## Certificate Authority
+
+Sematext Synthetics checks the certificate authority for both Root or Intermediate level and alerts you via the monitor's configured [alert notification hooks](../alerts/alert-notifications.md) if the conditions are not met.
+
+The alert condition is supported for both HTTP and Browser monitors and can be set from the Conditions tab
+
+![CA check](../images/synthetics/cert-authority.png)
+
+
+Using a Browser monitor with a User Journey script that visits multiple pages will perform SSL certificate checks for the first page only.
+
+Visiting a http:// instead of a https:// website, or a https:// website that doesn’t provide the full certificate chain will cause the condition to fail and display an error that the full certificate chain wasn’t provided.
+
 
 ## Certificate Change
 
