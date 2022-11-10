@@ -140,6 +140,9 @@ To mask the passwords and other sensitive data you use for authentication please
 ### How do I do X in a User Journey script?
 Please see the section on [User Journey script examples](./user-journey-scripts/#user-journey-script-examples).
 
+### How Web Vitals are calculated when User Journey Script visits multiple pages?
+Web vitals are calculated only for the last page user journey script visits.
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
