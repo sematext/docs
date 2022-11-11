@@ -58,7 +58,7 @@ Simply click on any of the field values from Logs Table;
 
 ![Navigate Infra](../images/logs/logs-table-navigate-infra.png)
 
-And you will be navigated to the Infra App automatically filtered by that value to see relevant metrics.
+And you will see related Infrastructure performance metrics automatically filtered by the log field value you selected.
 
 ![Host Flyout](../images/logs/host-flyout.png)
 
