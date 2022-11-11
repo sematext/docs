@@ -8,6 +8,7 @@ The actions include:
   - Add [Pipeline Processor](../logs/pipelines)
   - Create a chart
   - Highlight values
+  - Correlate with metrics
 
 ## Toggle Column
 
@@ -48,3 +49,16 @@ Choose the color to highlight the selected value. This specific value will be hi
 You can also enable auto highlighting feature from the quick action menu by clicking on a value. This will highlight the first 10 unique values of the corresponding field with different colors.
 
 ![auto highlighting](../images/logs/logs-table-quick-actions_8.png)
+
+## Correlate with Metrics
+
+You can easily navigate to metrics from any of the standard fields that are listed in [Sematext Common Schema](../tags/common-schema). 
+
+Simply click on any of the field values from Logs Table;
+
+![Navigate Infra](../images/logs/logs-table-navigate-infra.png)
+
+And you will see related Infrastructure performance metrics automatically filtered by the log field value you selected.
+
+![Host Flyout](../images/logs/host-flyout.png)
+
