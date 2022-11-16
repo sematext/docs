@@ -7,24 +7,24 @@ Get started in minutes with **out-of-the-box dashboards**, [**alerts**](https://
 
 The integrations cover several key features. You have [**Server Monitoring**](../monitoring/#setting-up-monitoring-agents) giving you complete insight about the utilization of your servers and cloud instances. [**Monitor Containers**](../monitoring/containers) with [**Sematext Agent**](../agents/sematext-agent/), which is deployed seamlessly with Docker or Kubernetes.
 
-Our SaaS/on-premises monitoring product goes beyond just collecting metrics. 
+Sematext Monitoring goes beyond just collecting metrics. 
 
 Use [**Database Monitoring**](https://sematext.com/database-monitoring/) to get a complete overview of your database health whether you are running it on your own infrastructure or using AWS RDS. 
 
 [**Transaction Tracing**](https://sematext.com/tracing/) will show slow database operations, full SQL statements, end-to-end HTTP transaction context, top 10 operations by throughput, latency, or time consumed, filter database operations, and much more...
 
-**Inventory Monitoring** will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
+[**Inventory Monitoring**](https://sematext.com/docs/monitoring/inventory/) will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
 
 You can create [**custom dashboards**](../dashboards/) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
 And you can additionally send any kind of [**custom metrics**](./custom-metrics).
 
-If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with over 40 integrations to choose from.
+If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with a wide selection of integrations to choose from.
 
 
 ### Creating Monitoring Apps
 
-The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on add new app button, select your integration and create monitoring App.
+The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on New Monitoring App button, select your integration and create monitoring App.
 
 Follow along the [Quick Start](./quick-start) guide to learn how.
 
@@ -36,12 +36,13 @@ Follow along the [Quick Start](./quick-start) guide to learn how.
 
 App settings and actions include, but are not limited to:
 
-  - inviting others to your App
-  - [alert rules](../alerts)
   - changing your App's plan
-  - connecting Apps
-  - heartbeat alert cration
-  - App ownership transfer
+  - [managing alert rules](../alerts)
+  - [connecting Apps](https://sematext.com/docs/guide/integrations-guide/#connected-apps)
+  - [heartbeat alert creation](https://sematext.com/docs/alerts/creating-heartbeat-alerts/)
+  - [inviting others to your App](https://sematext.com/docs/team/app-guests/)
+  - [App ownership transfer](https://sematext.com/docs/team/transfer-apps/)
+  - [setting up a Sematext Monitoring Agent to ship metrics](https://sematext.com/docs/monitoring/quick-start/#setting-up-monitoring-agents)
   - scheduled report emails (aka Subscriptions)
 
 Check out the [Settings](./settings) guide to learn more.
