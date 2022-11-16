@@ -7,27 +7,31 @@ For example, if you have a development and a production environment, it might ma
 
 ## Creating a Monitoring App
 
-You create an App by pressing the **+ Create Monitoring App** button or by clicking **+ New Monitoring App** in the Monitoring tab.
+You create an App by pressing the **Create Monitoring App** button or by clicking **+ New Monitoring App** in the Monitoring tab.
 
-![Create a new Monitoring App](../images/guide/monitoring/sematext-monitoring-app-create.png)
+<img class="content-modal-image" alt="Create a new Sematext Monitoring App" src="../images/monitoring/monitoring-app-create-first-app.png" title="Create a new Sematext Monitoring App">
 
 Choose one of the many available integrations.
 
-![Choose Monitoring App Integration](../images/guide/monitoring/monitoring-app-integrations.png)
+<img class="content-modal-image" alt="Choose a Monitoring Integration" src="../images/monitoring/monitoring-app-select-integration.png" title="Choose a Monitoring Integration">
 
 Once clicking on your desired integration, add a name, and press **Create App**.
 
-![Name Monitoring App Integration](../images/guide/monitoring/name-monitoring-app.png)
-<p align="center" style="font-style:italic;font-size:12px;">A sample of creating an Infra Monitoring App</p>
+<img class="content-modal-image" alt="Enter a Monitoring App name" src="../images/monitoring/monitoring-app-enter-name.png" title="Enter a Monitoring App name">
 
-This will immediately open up the Agent installation instructions, based on your environment. Follow the steps and data will start flowing in!
+This will immediately open up the Agent installation wizard to select your environment.
 
-![Install Agent](../images/guide/monitoring/install-monitoring-agent.png)
-<p align="center" style="font-style:italic;font-size:12px;">Every type of Integration has a dedicated Agent Installation Guide</p>
+<img class="content-modal-image" alt="Select Agent Installation Environment" src="../images/monitoring/monitoring-app-select-env.png" title="Select Agent Installation Environment">
+
+Based on your environment, follow the Agent installation instructions and data will start flowing in!
+
+<img class="content-modal-image" alt="Agent Installation Instructions" src="../images/monitoring/monitoring-app-agent-instructions.png" title="Agent Installation Instructions">
+
+Every type of Integration has a dedicated Agent Installation Guide.
 
 Once you have data flowing you can **analyze metrics** by a number of context-aware filters, add **alerts** and **anomaly detection**, and **correlate metrics** with events and logs.
 
-![Monitoring Agent Shipping Data](../images/guide/monitoring/monitoring-agent-shipping.png)
+<img class="content-modal-image" alt="Monitoring App Data Flowing" src="../images/monitoring/monitoring-app-data-flowing.png" title="Monitoring App Data Flowing">
 
 You can have any number of Monitoring Apps and each App can be shared
 with different people, giving them different access roles. Each App has its own plan.
