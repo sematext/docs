@@ -57,8 +57,7 @@ Every Monitoring App can have multiple Reports that act as buckets for your metr
 
 Read more in the [Reports and Components](./reports-and-components) guide.
 
-![Sematext Cloud Monitoring Guide - Monitoring Report Menu](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-report-menu.png) 
-
+<img class="content-modal-image" alt="Sematext Monitoring App Options UI screen" src="../images/monitoring/monitoring-app-reports.png" title="Sematext Monitoring App Options">
 
 ### Quickly start monitoring with Autodiscovery
 
