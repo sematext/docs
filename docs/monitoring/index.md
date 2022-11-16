@@ -45,9 +45,11 @@ App settings and actions include, but are not limited to:
   - [setting up a Sematext Monitoring Agent to ship metrics](https://sematext.com/docs/monitoring/quick-start/#setting-up-monitoring-agents)
   - scheduled report emails (aka Subscriptions)
 
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-actions.png" title="Sematext Monitoring App Actions">
+
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-options.png" title="Sematext Monitoring App Options">
+
 Check out the [Settings](./settings) guide to learn more.
-  
-<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings Screen">
 
 ### Reports And Components
 
