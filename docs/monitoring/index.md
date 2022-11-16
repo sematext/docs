@@ -13,7 +13,7 @@ Use [**Database Monitoring**](https://sematext.com/database-monitoring/) to get 
 
 [**Transaction Tracing**](https://sematext.com/tracing/) will show slow database operations, full SQL statements, end-to-end HTTP transaction context, top 10 operations by throughput, latency, or time consumed, filter database operations, and much more...
 
-[**Inventory Monitoring**](https://sematext.com/docs/monitoring/inventory/) will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
+[**Inventory Monitoring**](./inventory) will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification.
 
 You can create [**custom dashboards**](../dashboards/) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
@@ -36,11 +36,11 @@ App settings and actions include, but are not limited to:
 
   - changing your App's plan
   - [managing alert rules](../alerts)
-  - [connecting Apps](https://sematext.com/docs/guide/integrations-guide/#connected-apps)
-  - [heartbeat alert creation](https://sematext.com/docs/alerts/creating-heartbeat-alerts/)
-  - [inviting others to your App](https://sematext.com/docs/team/app-guests/)
-  - [App ownership transfer](https://sematext.com/docs/team/transfer-apps/)
-  - [setting up a Sematext Monitoring Agent to ship metrics](https://sematext.com/docs/monitoring/quick-start/#setting-up-monitoring-agents)
+  - [connecting Apps](../guide/integrations-guide/#connected-apps)
+  - [heartbeat alert creation](../alerts/creating-heartbeat-alerts)
+  - [inviting others to your App](../team/app-guests)
+  - [App ownership transfer](../team/transfer-apps)
+  - [setting up a Sematext Monitoring Agent to ship metrics](./quick-start/#setting-up-monitoring-agents)
   - scheduled report emails (aka Subscriptions)
 
 <img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-actions.png" title="Sematext Monitoring App Actions">
