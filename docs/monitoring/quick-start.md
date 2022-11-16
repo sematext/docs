@@ -7,20 +7,20 @@ For example, if you have a development and a production environment, it might ma
 
 ## Creating a Monitoring App
 
-You create an App by pressing the **+ Create Monitoring App** button in the Monitoring tab.
+You create an App by pressing the **+ Create Monitoring App** button or by clicking **+ New Monitoring App** in the Monitoring tab.
 
 ![Create a new Monitoring App](../images/guide/monitoring/sematext-monitoring-app-create.png)
 
-Choose one of the 40 integrations.
+Choose one of the many available integrations.
 
 ![Choose Monitoring App Integration](../images/guide/monitoring/monitoring-app-integrations.png)
 
-Once clicking on your desired integration, add a name, and press **Continue**.
+Once clicking on your desired integration, add a name, and press **Create App**.
 
 ![Name Monitoring App Integration](../images/guide/monitoring/name-monitoring-app.png)
-<p align="center" style="font-style:italic;font-size:12px;">A sample of creating a Docker Monitoring App</p>
+<p align="center" style="font-style:italic;font-size:12px;">A sample of creating an Infra Monitoring App</p>
 
-This will immediately open up the Agent installation instructions. Follow the steps and data will start flowing in!
+This will immediately open up the Agent installation instructions, based on your environment. Follow the steps and data will start flowing in!
 
 ![Install Agent](../images/guide/monitoring/install-monitoring-agent.png)
 <p align="center" style="font-style:italic;font-size:12px;">Every type of Integration has a dedicated Agent Installation Guide</p>
@@ -35,21 +35,9 @@ Some Apps can use the free plan, while others can use paid plans, thus enabling 
 
 ## Setting up Monitoring Agents
 
-Metrics are shipped to Sematext Monitoring using Agents. To monitor your infrastructure you need to set up a **Sematext Monitoring Agent**. You can choose from:
+Metrics are shipped to Sematext Monitoring using the [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing fast Go-based Monitoring Agent with a tiny footprint for both infrastructure and containers. Also includes Java based App Agent that collects application metrics.
 
-  - [Sematext Agent](../agents/sematext-agent/), a lightweight, blazing
-    fast Go-based Monitoring Agent with a tiny footprint for both
-    infrastructure and containers. Also includes Java based App Agent that collects application metrics.
-
-  - [Node.js-based App Agent](../agents/node-agent), which can [monitor
-    Apache](../integration/apache) and [Nginx](../integration/nginx)
-    (including [Nginx Plus](../integration/nginxplus)).
-
-  - Sematext Docker Agent (Deprecated), which can collect not
-    only container and host metrics, but also container events and
-    also logs, it can parse and structure out of the box.
-
-The setup instructions for each of the agents are shown in the UI and you can also see them under individual [integrations](../integration).
+The setup instructions are shown in the UI and you can also see them under individual [integrations](../integration).
 
 Once the agent is set up metrics will start coming to Sematext
 instantly. If you do not see performance charts 5 minutes after setting up the agent, have a
