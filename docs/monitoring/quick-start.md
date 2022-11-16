@@ -51,4 +51,5 @@ look at the [troubleshooting](./spm-faq) page.
 
 This guide will help you get started with our Monitoring App and discover reporting, monitoring, and other features and functionalities. Here's the default monitoring view and shown are the main application and system elements.
 
-![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide.png)
+<img class="content-modal-image" alt="Monitoring App Layout" src="../images/monitoring/monitoring-app-layout.png" title="Monitoring App Layout">
+
