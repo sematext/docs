@@ -99,8 +99,7 @@ services:
 
 Create an Infra Monitoring App in Sematext and follow the instructions in the UI.
 
-The Swarm network has to be created **only** if you're deploying the agent with docker service command. On the contrary, if you're using the `docker stack deploy` command and using the `docker-compose.yml` descriptor, it is not necessary to create the
-agent network.
+Create a new st-agent-net network.
 
 ```bash
 docker network create -d overlay --attachable --scope=swarm st-agent-net
