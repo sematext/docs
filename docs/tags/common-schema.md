@@ -62,6 +62,8 @@ Below are the OS related tags sent as part of OS metrics/logs. They are collecte
 | os.distro.name | Distribution name of the OS. e.g. `ubuntu` |
 | os.distro.version | Version of the OS. e.g. `16.04` |
 | os.kernel | Version of the Kernel. e.g. `4.4.0-130-generic` |
+| os.name | Name of the OS. e.g. `linux` |
+| os.arch | Name of the architecture e.g. `amd64` |
 | jvm.version | Version of JVM, if available in `PATH` |
 | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
 | - | All user-defined container labels. These tag are mapped to `os.host` and `container.id` |
