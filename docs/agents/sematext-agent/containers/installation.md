@@ -99,12 +99,6 @@ services:
 
 Create an Infra Monitoring App in Sematext and follow the instructions in the UI.
 
-Create a new st-agent-net network.
-
-```bash
-docker network create -d overlay --attachable --scope=swarm st-agent-net
-```
-
 After that, Sematext Agent can be activated with a single command, but has to be run manually on each node:
 
 ```bash
