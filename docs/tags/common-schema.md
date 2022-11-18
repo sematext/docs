@@ -139,9 +139,9 @@ Below are Kubernetes related tags sent as part of metrics/logs in the Kubernetes
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | kubernetes.pod.name | Name of the kubernetes pod | pod
-| kubernetes.pod.node | Node name where the pod is running |
 | kubernetes.pod.ip | IP of the kubernetes pod |
 | kubernetes.pod.uid | Unique identifier of the kubernetes pod |
+| kubernetes.node.name | Node name where the pod is running |
 | kubernetes.cluster.name | Kubernetes cluster name |
 | kubernetes.deployment.name | Kubernetes deployment name |
 | kubernetes.namespace | Kubernetes namespace |
