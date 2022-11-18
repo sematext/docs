@@ -211,7 +211,6 @@ pages:
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md
-      - Fields: events/fields.md
       - Timeline/Histogram: events/timeline.md
       - Correlation: events/correlation.md
     - Dashboards:
