@@ -21,3 +21,47 @@ All options work with log shippers such as
 Additionally, you can always write your own application or script that works with
 [Elasticsearch](index-events-via-elasticsearch-api) or syslog or any other tool that can send data to
 [Sematext's Elasticsearch API](index-events-via-elasticsearch-api).
+
+### Elasticsearch API
+
+The easiest way to **send logs is with** [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](../logs/index-events-via-elasticsearch-api) and [searching](../logs/search-through-the-elasticsearch-api). 
+
+If you're using a particular **programming language**, configuring your **logging framework to send data to Sematext Logs** is also an option.
+
+The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
+
+Don't forget, if you're using **Docker**, setting up [Logagent](../logagent/installation-docker/) is incredibly simple.
+
+Here's how to send a message from the terminal.
+```bash
+curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/example/ -d '{
+  "message": "Hello from Sematext!"
+}'
+```
+
+Here `example` represents the desired type. It can be anything from `log`, `event`, `host`, `node`, and anything in between, giving freedom to create custom types for logs. This value gets stored in the `logsene_type` field allowing for easy filtering on types when needed.
+
+![Logs App Elasticsearch integration](../images/logs/elasticsearch-api-guide.png)
+
+[This guide](../logs/index-events-via-elasticsearch-api/) will show you more details on using the Elasticsearch REST API with Sematext.
+
+### Syslog
+
+You can forward syslog via **UDP** (port 514), **TCP** (port 514), **RELP** (port 20514) and **TLS** (port 10514). The host name is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
+
+To get started with syslog shipping quickly, you can use our configuration script and add your App token as a parameter:
+
+``` bash
+curl -O https://apps.sematext.com/logsene/configure-syslog.py
+sudo python configure-syslog.py $YOUR-TOKEN-GOES-RIGHT-HERE
+```
+
+You can also use this snippet:
+
+```bash
+echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
+```
+
+![Logs App Syslog integration](../images/logs/syslog-guide.png)
+
+For more details, take a look at the [Syslog](../logs/syslog) page, and the pages that are linked from it.
