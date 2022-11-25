@@ -7,73 +7,36 @@ For example, if you have a development and a production environment, it might ma
 
 ## Creating a Logs App
 
-You create an App by pressing the **+ Create Logs App** button in the Logs tab.
+You create an App by pressing the **Create Logs App** button in the Logs tab.
 
-![Create a new Logs App](../images/guide/logs/sematext-logs-app-create.png)
+![Create a new Logs App](../images/logs/create-logs-app.png)
 
-Add a name and press **Continue**.
+Choose one of the many available [integrations](../guide/integrations-guide).
 
-![Create a new Logs App Modal](../images/guide/logs/sematext-logs-app-create-modal.png)
+![Logs Integrations](../images/logs/integrations.png)
 
-After creating a Logs App you will see an **integrations** screen that tells you how to [send data to your new Logs App](../logs/sending-log-events). 
+ Click on your desired integration, add a name, and press **Create App**.
+ 
+ Then choose the platform you want to install [Sematext Agent](../agents/sematext-agent).
 
-![Logs App Elasticsearch integration](../images/guide/logs/sematext-app-logs-elasticsearch.png)
+![Logs App Environments](../images/logs/environments.png)
+
+And this will open up the agent installation instruction page for the selected environment.
+
+If you don’t see your platform in the Automatic Integrations list navigate to the Custom Integrations section to set up log shipping manually. Custom integrations screen tells you how to [manually send data to your new Logs App](../logs/sending-log-events).
+
+![Custom Integrations](../images/logs/custom-integrations.png)
 
 Once you start sending data, you can start [searching and analyzing these logs](../logs/searching-log-events) in the Logs App or [explore your data with Kibana](../logs/kibana).
 
-![Searching Log Events](../images/logs/logsene-ui.png)
+![Custom Integrations](../images/logs/logs-app.png)
+
+See [Reports And Components](../logs/reports-and-components) for more details. 
 
 ### Adding Data to Your Logs App
 
-There are two ingestion endpoints to which you can send data to your Logs App:
+You can add more log sources into your Logs App by navigating to the Ship Logs section from the left menu panel. Pick an environment to install Sematext Agent to another host or set up log shipping from the custom integrations section with [manual instructions](../logs/sending-log-events). 
 
-- [Elasticsearch API](../logs/index-events-via-elasticsearch-api)
-- [Syslog](../logs/syslog)
-
-
-### Elasticsearch API
-
-The easiest way to **send logs is with** [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](../logs/index-events-via-elasticsearch-api) and [searching](../logs/search-through-the-elasticsearch-api). 
-
-If you're using a particular **programming language**, configuring your **logging framework to send data to Sematext Logs** is also an option.
-
-The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
-
-Don't forget, if you're using **Docker**, setting up [Logagent](../logagent/installation-docker/) is incredibly simple.
-
-Here's how to send a message from the terminal.
-```bash
-curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/example/ -d '{
-  "message": "Hello from Sematext!"
-}'
-```
-
-Here `example` represents the desired type. It can be anything from `log`, `event`, `host`, `node`, and anything in between, giving freedom to create custom types for logs. This value gets stored in the `logsene_type` field allowing for easy filtering on types when needed.
-
-[This guide](../logs/index-events-via-elasticsearch-api/) will show you more details on using the Elasticsearch REST API with Sematext.
-
-![Logs App Elasticsearch integration](../images/guide/logs/sematext-app-logs-elasticsearch.png)
-
-### Syslog
-
-You can forward syslog via **UDP** (port 514), **TCP** (port 514), **RELP** (port 20514) and **TLS** (port 10514). The host name is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
-
-To get started with syslog shipping quickly, you can use our configuration script and add your App token as a parameter:
-
-``` bash
-curl -O https://apps.sematext.com/logsene/configure-syslog.py
-sudo python configure-syslog.py $YOUR-TOKEN-GOES-RIGHT-HERE
-```
-
-You can also use this snippet:
-
-```bash
-echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
-```
-
-![Logs App Syslog integration](../images/guide/logs/sematext-app-logs-syslog.png)
-
-For more details, take a look at the [Syslog](../logs/syslog) page, and the pages that are linked from it.
 
 ## Troubleshooting With Logs
 
@@ -97,8 +60,14 @@ Moving on, let's see how to make the best out of a Logs App.
 
 ## Logs App Layout
 
-The image below shows the default logs view and marked are the main application and system UI elements. 
+The image below shows the default logs view. 
 
-![Sematext Cloud Monitoring Guide](https://sematext.com/docs/images/guide/logs/sematext-logs-guide.png)
+![Sematext Cloud Logs App](../images/logs/logs-app.png)
+
+ Marked are the main application and system UI elements
+
+![Sematext Cloud UI Elements](../images/guide/logs/sematext-logs-search-and-report-menu_2.png)
+
+See [Reports And Components](../logs/reports-and-components) for more details. 
 
 You can create custom dashboards that can integrate multiple charts and views of your real-time data that help you understand important trends, summarize top values and view the frequency of conditions.  Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
