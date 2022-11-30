@@ -31,6 +31,14 @@ By default, the HTTP monitor adds the headers below for all requests sent from t
 | `x-sematext-origin` | `synthetics` | Origin of the request. Can be used to identify Synthetics requests in the back end or filter the requests in a firewall. |
 | `x-sematext-synthetics-id` | `<run-id>` | Uniquely identifies this request. Can be used for tracing and correlation in the back end. |
 
+### Response Settings
+
+* **Save Response Body** - Disable this option to prevent response body from being saved at runtime. This can be helpful to ensure no sensitive data gets featured in your test results.
+
+If the option is disabled, the response will be hidden from users in Run details page.
+
+![Save Response Body Disabled](../images/synthetics/response-body-disabled.png)
+
 ## Authentication
 
 HTTP monitors support header-based authentication. Custom HTTP request headers can be specified when creating a monitor. To use Basic authentication, add a custom request header according to the following specifications:
