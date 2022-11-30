@@ -1,24 +1,24 @@
 title: Connected Apps Guide
-description: Connected Apps  is a data pivoting feature and available in all solutions. You can connect any two Apps you have access to, regardless of their type.
+description: Connected Apps is a data pivoting feature and available in all solutions. You can connect any two Apps you have access to, regardless of their type.
 
-Connected Apps  is a data pivoting feature and available in all solutions. You can connect any two Apps you have access to, regardless of their type.
+Connected Apps is a data pivoting feature and available in all solutions. You can connect any two Apps you have access to, regardless of their type.
 
 Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App.**
 
-To connect Apps, click on the connect Apps icon on top right from any report and click **“+ Connect New App”** button 
+To connect Apps, click on the connect Apps icon on top right from any report and click **“+ Connect New App”** button.
 
 ![Sematext Cloud Connected Apps - Connect Apps Drop Down](../images/guide/connected-apps/connect-apps-dropdown.png)
 
-Select the Apps and click **“Connect Apps”** button
+Select the Apps and click **“Connect Apps”** button.
 
 ![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/connect-apps-page.png)
 
-Once you connect Apps together, you can easily navigate from one to another with a single click or open the second App in [Split Screen](https://sematext.com/docs/guide/split-screen/) to **correlate metrics and logs**.
+Once you connect Apps together, you can easily navigate from one App to the other with a single click or open the second App in [Split Screen](https://sematext.com/docs/guide/split-screen/) to **correlate metrics and logs**.
 
 Let’s say we are monitoring a ClickHouse database and shipping metrics and logs to Sematext Cloud. You started seeing a significant amount of error logs and you want to investigate it further by comparing with metrics.
 
 If the two Apps are connected, you can easily open the Monitoring App in [Split Screen](https://sematext.com/docs/guide/split-screen/) and see if there are any significant spikes in metrics within that time period. 
-Instantly check if insufficient resources or unexpected amount of query rate or connections are causing the error logs in your database.
+Instantly check if insufficient resources or unexpected query rates or connections are the source of error logs coming from your database.
 
 ![Sematext Cloud Connected Apps - Connected Apps Drop Down](../images/guide/connected-apps/connected-apps-dropdown.png)
 
