@@ -3,7 +3,7 @@ description: Connected Apps is a data pivoting feature and available in all solu
 
 Connected Apps is a data pivoting feature and available in all solutions. You can connect any two Apps you have access to, regardless of their type.
 
-Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App.**
+When you connect two Apps, selecting Connected Apps while viewing one of those Apps will automatically select the other connected App when you decide to **correlate their data** via [Split Screen](https://sematext.com/docs/guide/split-screen/).
 
 To connect Apps, click on the connect Apps icon on top right from any report and click **“+ Connect New App”** button.
 
@@ -13,7 +13,7 @@ Select the Apps and click **“Connect Apps”** button.
 
 ![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/connect-apps-page.png)
 
-Once you connect Apps together, you can easily navigate from one App to the other with a single click or open the second App in [Split Screen](https://sematext.com/docs/guide/split-screen/) to **correlate metrics and logs**.
+Once you connect Apps together, you can easily navigate from one App to the other with a single click or open the second App in [Split Screen](https://sematext.com/docs/guide/split-screen/) to **correlate their data**.
 
 Let’s say we are monitoring a ClickHouse database and shipping metrics and logs to Sematext Cloud. You started seeing a significant amount of error logs and you want to investigate it further by comparing with metrics.
 
