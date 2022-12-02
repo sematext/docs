@@ -1,5 +1,5 @@
 title: Sending Log Events
-description: Send new log events to Sematext using Elasticsearch API or syslog, and log shippers such as Vector, Logstash, Logagent, Fluentd, rsyslog, syslog-ng, Fluentbit and more
+description: Send new log events to Sematext using Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
 
 The simplest way to ship logs to Sematext is via the [Discovery](discovery/intro/) screen after the [initial setup](discovery/setup/).  Alernatively, there are many other ways to ship log events to Sematext.  Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs.  Sematext also accepts syslogs.
 
@@ -12,7 +12,6 @@ The simplest way to ship logs to Sematext is via the [Discovery](discovery/intro
 
 All options work with log shippers such as
 [Logstash](logstash),
-[Logagent](/logagent),
 [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch),
 [Fluent Bit](fluentbit),
 [rsyslog](rsyslog) or
@@ -24,13 +23,11 @@ Additionally, you can always write your own application or script that works wit
 
 ### Elasticsearch API
 
-The easiest way to **send logs is with** [Logagent](../logs/logagent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](../logs/index-events-via-elasticsearch-api) and [searching](../logs/search-through-the-elasticsearch-api). 
+The easiest way to **send logs is with** [Sematext Agent](../agents/sematext-agent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](../logs/index-events-via-elasticsearch-api) and [searching](../logs/search-through-the-elasticsearch-api). 
 
 If you're using a particular **programming language**, configuring your **logging framework to send data to Sematext Logs** is also an option.
 
 The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
-
-Don't forget, if you're using **Docker**, setting up [Logagent](../logagent/installation-docker/) is incredibly simple.
 
 Here's how to send a message from the terminal.
 ```bash
