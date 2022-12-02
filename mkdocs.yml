@@ -11,6 +11,7 @@ pages:
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
       # - Dashboards Guide: guide/dashboards-guide.md
+      - Connected Apps: guide/connected-apps.md
       - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
     - Logs:
