@@ -70,4 +70,4 @@ The image below shows the default logs view.
 
 See [Reports And Components](../logs/reports-and-components) for more details. 
 
-You can create custom dashboards that can integrate multiple charts and views of your real-time data that help you understand important trends, summarize top values and view the frequency of conditions.  Sematext log management system lets your devops and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
+You can create custom dashboards that can integrate multiple charts and views of your real-time data that help you understand important trends, summarize top values and view the frequency of conditions.  Sematext log management system lets your DevOps and business teams analyze your data further with advanced visualizations, chart overlay and pan and zoom controls and more.
