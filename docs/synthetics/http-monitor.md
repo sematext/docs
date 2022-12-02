@@ -35,7 +35,7 @@ By default, the HTTP monitor adds the headers below for all requests sent from t
 
 * **Save Response Body** - Disable this option to prevent response body from being saved at runtime. This can be helpful to ensure no sensitive data gets featured in your test results.
 
-If the option is disabled, the response **won't be saved** by Sematext and will be **hidden** from users in Run details page.
+If you disable this option, we **won’t save the response body** hence it **will not be shown** on the Run details screen.
 
 ![Save Response Body Disabled](../images/synthetics/response-body-disabled.png)
 
