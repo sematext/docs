@@ -33,8 +33,8 @@ network transmitted packets<br>**transport.tx.packets** <br>*(counter)*         
 network transmitted size<br>**transport.tx.bytes** <br>*(counter)* *(bytes)*                                      |  network transmitted size (tx_size)
 cluster state incompatible diff updates<br>**cluster.state.published.diff.incompatible** <br>*(counter)*          |  cluster state incompatible diff updates published
 cluster state compatible diff updates<br>**cluster.state.published.diff.compatible** <br>*(counter)*              |  cluster state compatible diff updates published
-
-
+docs count<br>**index.docs.total** <br>*(long gauge)*                                                             |  docs count on all (primary and replica) shards
+docs deleted<br>**index.docs.deleted.total** <br>*(long gauge)*                                                   |  docs deleted on all (primary and replica) shards
 
 
 
