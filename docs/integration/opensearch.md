@@ -88,4 +88,7 @@ indexing buffer memory<br>**segments.memory.indexWriter** <br>*(long gauge)* *(b
 version map memory<br>**segments.memory.versionMap** <br>*(long gauge)* *(bytes)*                                 |  memory used by the version map
 fixed bitset memory<br>**segments.memory.fixedBitSet** <br>*(long gauge)* *(bytes)*                               |  memory used by the fixed bitset that speeds up nested queries/aggregations
 unassigned shards<br>**cluster.shards.unassigned** <br>*(long gauge)*                                             |  Number of unassigned shards
-
+active shards<br>**cluster.shards.active** <br>*(long gauge)*                                                     |  Number of active shards
+active primary shards<br>**cluster.shards.active.primary** <br>*(long gauge)*                                     |  Number of active primary shards
+initializing shards<br>**cluster.shards.initializing** <br>*(long gauge)*                                         |  Number of initializing shards
+relocating shards<br>**cluster.shards.relocating** <br>*(long gauge)*                                             |  Number of relocating shards
