@@ -31,6 +31,8 @@ network received packets<br>**transport.rx.packets** <br>*(counter)*            
 network received size<br>**transport.rx.bytes** <br>*(counter)* *(bytes)*                                         |  network received size (rx_size)
 network transmitted packets<br>**transport.tx.packets** <br>*(counter)*                                           |  network transmitted packets count (tx_count)
 network transmitted size<br>**transport.tx.bytes** <br>*(counter)* *(bytes)*                                      |  network transmitted size (tx_size)
+cluster state incompatible diff updates<br>**cluster.state.published.diff.incompatible** <br>*(counter)*          |  cluster state incompatible diff updates published
+cluster state compatible diff updates<br>**cluster.state.published.diff.compatible** <br>*(counter)*              |  cluster state compatible diff updates published
 
 
 
