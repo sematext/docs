@@ -60,5 +60,6 @@ throttled merge time<br>**indexing.merges.throttled.time.total** <br>*(counter)*
 throttled merge size<br>**indexing.merges.throttled.size.total** <br>*(counter)* *(bytes)*                        |  size of throttled merges on all (primary and replica) shards
 field cache evictions<br>**cache.field.evicted** <br>*(counter)*                                                  |  Field cache evictions
 field cache size<br>**cache.field.size** <br>*(long gauge)*                                                       |  Field cache size
+number of processors<br>**cpu.allocated.count** <br>*(long gauge)*                                                |  number of processors allocated to the OpenSearch process
 
         
