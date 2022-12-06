@@ -46,5 +46,5 @@ heap_used<br>**heap.used** <br>*(gauge)* *(bytes)*                              
 heap.committed<br>**heap.committed** <br>*(gauge)* *(bytes)*                                                      |  jvm heap committed
 non_heap_used<br>**nonheap.used** <br>*(gauge)* *(bytes)*                                                         |  jvm non-heap used memory
 non_heap_committed<br>**nonheap.committed** <br>*(gauge)* *(bytes)*                                               |  jvm non-heap committed
-     
-        
+open files<br>**files.open** <br>*(gauge)*                                                                        |  jvm currently open files
+max open files<br>**files.max** <br>*(gauge)*                                                                     |  jvm max open files limit
