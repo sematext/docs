@@ -50,3 +50,5 @@ open files<br>**files.open** <br>*(gauge)*                                      
 max open files<br>**files.max** <br>*(gauge)*                                                                     |  jvm max open files limit
 used<br>**pool.used** <br>*(gauge)* *(bytes)*                                                                     |  jvm pool used memory
 max<br>**pool.max** <br>*(gauge)* *(bytes)*                                                                       |  jvm pool max memory
+thread count<br>**threads** <br>*(gauge)*                                                                         |  jvm thread count
+peak thread count<br>**threads.peak** <br>*(gauge)*                                                               |  peak jvm thread count
