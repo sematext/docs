@@ -26,12 +26,11 @@ relocating shards<br>**cluster.health.shards.relocating** <br>*(long gauge)*    
 unassigned shards<br>**cluster.health.shards.unassigned** <br>*(long gauge)*                                      |  Number of currently unassigned shards
 pending tasks<br>**cluster.health.pendingTasks.total** <br>*(long gauge)*                                         |  Number of currently pending tasks in master's queue
 pending tasks max waiting time<br>**cluster.health.pendingTasks.maxQueueTime** <br>*(long gauge)* *(ms)*          |  Maximum time for a task in master's queue
-
-
-
-
-
-
+open TCP conns<br>**connection.tcp.server.open** <br>*(long gauge)*                                               |  open TCP conns (server_open)
+network received packets<br>**transport.rx.packets** <br>*(counter)*                                              |  network received packets count (rx_count)
+network received size<br>**transport.rx.bytes** <br>*(counter)* *(bytes)*                                         |  network received size (rx_size)
+network transmitted packets<br>**transport.tx.packets** <br>*(counter)*                                           |  network transmitted packets count (tx_count)
+network transmitted size<br>**transport.tx.bytes** <br>*(counter)* *(bytes)*                                      |  network transmitted size (tx_size)
 
 
 
