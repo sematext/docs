@@ -87,3 +87,5 @@ doc values memory<br>**segments.memory.docValues** <br>*(long gauge)* *(bytes)* 
 indexing buffer memory<br>**segments.memory.indexWriter** <br>*(long gauge)* *(bytes)*                            |  memory used by the IndexWriter
 version map memory<br>**segments.memory.versionMap** <br>*(long gauge)* *(bytes)*                                 |  memory used by the version map
 fixed bitset memory<br>**segments.memory.fixedBitSet** <br>*(long gauge)* *(bytes)*                               |  memory used by the fixed bitset that speeds up nested queries/aggregations
+unassigned shards<br>**cluster.shards.unassigned** <br>*(long gauge)*                                             |  Number of unassigned shards
+
