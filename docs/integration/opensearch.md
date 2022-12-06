@@ -42,3 +42,9 @@ read ops<br>**disk.io.operations.read** <br>*(counter)*                         
 write ops<br>**disk.io.operations.write** <br>*(counter)*                                                         |  disk IO write operations
 gc collection count<br>**gc.collection.count** <br>*(counter)*                                                    |  count of GC collections
 gc collection time<br>**gc.collection.time** <br>*(counter)* *(ms)*                                               |  duration of GC collections
+heap_used<br>**heap.used** <br>*(gauge)* *(bytes)*                                                                |  jvm heap used memory
+heap.committed<br>**heap.committed** <br>*(gauge)* *(bytes)*                                                      |  jvm heap committed
+non_heap_used<br>**nonheap.used** <br>*(gauge)* *(bytes)*                                                         |  jvm non-heap used memory
+non_heap_committed<br>**nonheap.committed** <br>*(gauge)* *(bytes)*                                               |  jvm non-heap committed
+     
+        
