@@ -66,3 +66,13 @@ refresh time<br>**indexing.refreshes.time.total** <br>*(counter)* *(ms)*        
 script compilations<br>**script.compilations.total** <br>*(counter)*                                              |  script compilations (use params in scripts to reduce them)
 script cache evictions<br>**script.cache.evictions** <br>*(counter)*                                              |  script cache evictions
 script compilations limit triggered<br>**script.compilations.limitTriggered** <br>*(counter)*                     |  script compilations circuit breaker triggered (see script.max_compilations_rate setting)
+query count<br>**query.count.total** <br>*(counter)*                                                              |  query count on all (primary and replica) shards
+query latency<br>**query.latency.time.total** <br>*(counter)* *(ms)*                                              |  query latency on all (primary and replica) shards
+fetch count<br>**fetch.count.total** <br>*(counter)*                                                              |  fetch count on all (primary and replica) shards
+fetch latency<br>**fetch.latency.time.total** <br>*(counter)* *(ms)*                                              |  fetch latency on all (primary and replica) shards
+suggest count<br>**suggest.count.total** <br>*(counter)*                                                          |  suggest count on all (primary and replica) shards
+suggest latency<br>**suggest.latency.time.total** <br>*(counter)* *(ms)*                                          |  suggest latency on all (primary and replica) shards
+scroll count<br>**scroll.count.total** <br>*(counter)*                                                            |  scroll count on all (primary and replica) shards
+scroll latency<br>**scroll.latency.time.total** <br>*(counter)* *(ms)*                                            |  scroll latency on all (primary and replica) shards
+search open contexts<br>**search.opencontexts.total** <br>*(long gauge)*                                          |  open search contexts on all (primary and replica) shards
+avg. query latency<br>**query.latency.total.avg** <br>*(gauge)* *(ms)*                                            |  avg. query latency on all (primary and replica) shards
