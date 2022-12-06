@@ -35,6 +35,8 @@ cluster state incompatible diff updates<br>**cluster.state.published.diff.incomp
 cluster state compatible diff updates<br>**cluster.state.published.diff.compatible** <br>*(counter)*              |  cluster state compatible diff updates published
 docs count<br>**index.docs.total** <br>*(long gauge)*                                                             |  docs count on all (primary and replica) shards
 docs deleted<br>**index.docs.deleted.total** <br>*(long gauge)*                                                   |  docs deleted on all (primary and replica) shards
-
+ingest calls<br>**ingest.calls.total** <br>*(counter)*                                                            |  number of calls to this pipeline
+ingest failures<br>**ingest.calls.errors** <br>*(counter)*                                                        |  number of failed calls to this pipeline
+ingest time<br>**ingest.time** <br>*(counter)* *(ms)*                                                             |  time spent in this pipeline
 
 
