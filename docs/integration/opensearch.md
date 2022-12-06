@@ -40,4 +40,5 @@ ingest failures<br>**ingest.calls.errors** <br>*(counter)*                      
 ingest time<br>**ingest.time** <br>*(counter)* *(ms)*                                                             |  time spent in this pipeline
 read ops<br>**disk.io.operations.read** <br>*(counter)*                                                           |  disk IO read operations
 write ops<br>**disk.io.operations.write** <br>*(counter)*                                                         |  disk IO write operations
-
+gc collection count<br>**gc.collection.count** <br>*(counter)*                                                    |  count of GC collections
+gc collection time<br>**gc.collection.time** <br>*(counter)* *(ms)*                                               |  duration of GC collections
