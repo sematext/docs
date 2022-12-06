@@ -63,5 +63,6 @@ field cache size<br>**cache.field.size** <br>*(long gauge)*                     
 number of processors<br>**cpu.allocated.count** <br>*(long gauge)*                                                |  number of processors allocated to the OpenSearch process
 refresh count<br>**indexing.refreshes.total** <br>*(counter)*                                                     |  refresh count on all (primary and replica) shards
 refresh time<br>**indexing.refreshes.time.total** <br>*(counter)* *(ms)*                                          |  refresh time on all (primary and replica) shards
-
-
+script compilations<br>**script.compilations.total** <br>*(counter)*                                              |  script compilations (use params in scripts to reduce them)
+script cache evictions<br>**script.cache.evictions** <br>*(counter)*                                              |  script cache evictions
+script compilations limit triggered<br>**script.compilations.limitTriggered** <br>*(counter)*                     |  script compilations circuit breaker triggered (see script.max_compilations_rate setting)
