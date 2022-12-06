@@ -7,8 +7,10 @@ description: Collect and monitor key OpenSearch metrics such as Cluster States a
 
 ## Metrics (WIP)
 
-Metric Name<br> Key *(Type)* *(Unit)*                                                                          |  Description
----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
-parent max size<br>**es.circuitBreaker.parent.size.max** <br>*(long gauge)* *(bytes)*                    |  max parent circuit breaker size
-parent estimated size<br>**es.circuitBreaker.parent.size.estimate** <br>*(long gauge)* *(bytes)*                    |  estimated parent circuit breaker size
-
+Metric Name<br> Key *(Type)* *(Unit)*                                                                     |  Description
+----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
+outgoing searches<br>**adaptiveReplicaSelection.searches.outgoing** <br>*(long gauge)*                    |  searches from the monitored node to the remote node
+average queue size<br>**adaptiveReplicaSelection.queue.size.avg** <br>*(double gauge)*                    |  exponentially weighted moving average queue size for searches on the remote node
+average service time<br>**adaptiveReplicaSelection.service.time.avg** <br>*(long gauge)* *(ns)*           |  exponentially weighted moving average task execution time on the remote node
+average response time<br>**adaptiveReplicaSelection.response.time.avg** <br>*(long gauge)* *(ns)*         |  exponentially weighted moving average response time on the remote node
+rank<br>**adaptiveReplicaSelection.rank** <br>*(double gauge)*                                            |  rank of the remote node used for replica selection
