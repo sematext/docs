@@ -38,5 +38,6 @@ docs deleted<br>**index.docs.deleted.total** <br>*(long gauge)*                 
 ingest calls<br>**ingest.calls.total** <br>*(counter)*                                                            |  number of calls to this pipeline
 ingest failures<br>**ingest.calls.errors** <br>*(counter)*                                                        |  number of failed calls to this pipeline
 ingest time<br>**ingest.time** <br>*(counter)* *(ms)*                                                             |  time spent in this pipeline
-
+read ops<br>**disk.io.operations.read** <br>*(counter)*                                                           |  disk IO read operations
+write ops<br>**disk.io.operations.write** <br>*(counter)*                                                         |  disk IO write operations
 
