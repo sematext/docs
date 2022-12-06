@@ -7,10 +7,14 @@ description: Collect and monitor key OpenSearch metrics such as Cluster States a
 
 ## Metrics (WIP)
 
-Metric Name<br> Key *(Type)* *(Unit)*                                                                     |  Description
-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
-outgoing searches<br>**adaptiveReplicaSelection.searches.outgoing** <br>*(long gauge)*                    |  searches from the monitored node to the remote node
-average queue size<br>**adaptiveReplicaSelection.queue.size.avg** <br>*(double gauge)*                    |  exponentially weighted moving average queue size for searches on the remote node
-average service time<br>**adaptiveReplicaSelection.service.time.avg** <br>*(long gauge)* *(ns)*           |  exponentially weighted moving average task execution time on the remote node
-average response time<br>**adaptiveReplicaSelection.response.time.avg** <br>*(long gauge)* *(ns)*         |  exponentially weighted moving average response time on the remote node
-rank<br>**adaptiveReplicaSelection.rank** <br>*(double gauge)*                                            |  rank of the remote node used for replica selection
+Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
+------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
+outgoing searches<br>**adaptiveReplicaSelection.searches.outgoing** <br>*(long gauge)*                            |  searches from the monitored node to the remote node
+average queue size<br>**adaptiveReplicaSelection.queue.size.avg** <br>*(double gauge)*                            |  exponentially weighted moving average queue size for searches on the remote node
+average service time<br>**adaptiveReplicaSelection.service.time.avg** <br>*(long gauge)* *(ns)*                   |  exponentially weighted moving average task execution time on the remote node
+average response time<br>**adaptiveReplicaSelection.response.time.avg** <br>*(long gauge)* *(ns)*                 |  exponentially weighted moving average response time on the remote node
+rank<br>**adaptiveReplicaSelection.rank** <br>*(double gauge)*                                                    |  rank of the remote node used for replica selection
+inFlightRequests max size<br>**circuitBreaker.inFlightRequests.size.max** <br>*(long gauge)* *(bytes)*            |  max in-flight requests size
+inFlightRequests estimated size<br>**circuitBreaker.inFlightRequests.size.estimate** <br>*(long gauge)* *(bytes)* |  estimated in-flight requests size
+inFlightRequests overhead<br>**circuitBreaker.inFlightRequests.size.overhead** <br>*(double gauge)*               |  in-flight requests overhead
+inFlightRequests tripped<br>**circuitBreaker.inFlightRequests.tripped** <br>*(counter)*                           |  in-flight requests circuit breaker tripped
