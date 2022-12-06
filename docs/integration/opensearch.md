@@ -8,7 +8,7 @@ description: Collect and monitor key OpenSearch metrics such as Cluster States a
 ## Metrics (WIP)
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------|------------------------------------------------------
 outgoing searches<br>**adaptiveReplicaSelection.searches.outgoing** <br>*(long gauge)*                            |  searches from the monitored node to the remote node
 average queue size<br>**adaptiveReplicaSelection.queue.size.avg** <br>*(double gauge)*                            |  exponentially weighted moving average queue size for searches on the remote node
 average service time<br>**adaptiveReplicaSelection.service.time.avg** <br>*(long gauge)* *(ns)*                   |  exponentially weighted moving average task execution time on the remote node
@@ -92,3 +92,12 @@ active shards<br>**cluster.shards.active** <br>*(long gauge)*                   
 active primary shards<br>**cluster.shards.active.primary** <br>*(long gauge)*                                     |  Number of active primary shards
 initializing shards<br>**cluster.shards.initializing** <br>*(long gauge)*                                         |  Number of initializing shards
 relocating shards<br>**cluster.shards.relocating** <br>*(long gauge)*                                             |  Number of relocating shards
+active threads<br>**thread.pool.active** <br>*(long gauge)*                                                       |  active threads
+thread pool size<br>**thread.pool.size** <br>*(long gauge)*                                                       |  thread pool size
+thread pool queue<br>**thread.pool.queue** <br>*(long gauge)*                                                     |  thread pool queue
+thread pool queue size<br>**thread.pool.queue.size** <br>*(long gauge)*                                           |  thread pool queue size
+rejected threads<br>**thread.pool.rejected** <br>*(counter)*                                                      |  rejected threads
+thread pool largest<br>**thread.pool.largest** <br>*(long gauge)*                                                 |  thread pool largest
+completed threads<br>**thread.pool.completed** <br>*(counter)*                                                    |  complete threads
+thread pool min<br>**thread.pool.min** <br>*(long gauge)*                                                         |  thread pool min
+thread pool max<br>**thread.pool.max** <br>*(long gauge)*                                                         |  thread pool max
