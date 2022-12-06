@@ -52,3 +52,9 @@ used<br>**pool.used** <br>*(gauge)* *(bytes)*                                   
 max<br>**pool.max** <br>*(gauge)* *(bytes)*                                                                       |  jvm pool max memory
 thread count<br>**threads** <br>*(gauge)*                                                                         |  jvm thread count
 peak thread count<br>**threads.peak** <br>*(gauge)*                                                               |  peak jvm thread count
+merge count<br>**indexing.merges.total** <br>*(counter)*                                                          |  merge count on all (primary and replica) shards
+merge time<br>**indexing.merges.time.total** <br>*(counter)* *(ms)*                                               |  merge time on all (primary and replica) shards
+merged docs count<br>**indexing.merges.docs.total** <br>*(counter)*                                               |  merged docs count on all (primary and replica) shards
+merged docs size<br>**indexing.merges.docs.size.total** <br>*(counter)* *(bytes)*                                 |  merged docs size on all (primary and replica) shards
+throttled merge time<br>**indexing.merges.throttled.time.total** <br>*(counter)* *(ms)*                           |  throttled time for merges (i.e. when merges fall behind) on all (primary and replica) shards
+throttled merge size<br>**indexing.merges.throttled.size.total** <br>*(counter)* *(bytes)*                        |  size of throttled merges on all (primary and replica) shards
