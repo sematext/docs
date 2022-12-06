@@ -58,3 +58,7 @@ merged docs count<br>**indexing.merges.docs.total** <br>*(counter)*             
 merged docs size<br>**indexing.merges.docs.size.total** <br>*(counter)* *(bytes)*                                 |  merged docs size on all (primary and replica) shards
 throttled merge time<br>**indexing.merges.throttled.time.total** <br>*(counter)* *(ms)*                           |  throttled time for merges (i.e. when merges fall behind) on all (primary and replica) shards
 throttled merge size<br>**indexing.merges.throttled.size.total** <br>*(counter)* *(bytes)*                        |  size of throttled merges on all (primary and replica) shards
+field cache evictions<br>**cache.field.evicted** <br>*(counter)*                                                  |  Field cache evictions
+field cache size<br>**cache.field.size** <br>*(long gauge)*                                                       |  Field cache size
+
+        
