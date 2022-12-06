@@ -76,3 +76,14 @@ scroll count<br>**scroll.count.total** <br>*(counter)*                          
 scroll latency<br>**scroll.latency.time.total** <br>*(counter)* *(ms)*                                            |  scroll latency on all (primary and replica) shards
 search open contexts<br>**search.opencontexts.total** <br>*(long gauge)*                                          |  open search contexts on all (primary and replica) shards
 avg. query latency<br>**query.latency.total.avg** <br>*(gauge)* *(ms)*                                            |  avg. query latency on all (primary and replica) shards
+segments count<br>**segments.count.total** <br>*(long gauge)*                                                     |  number of segments
+segments memory<br>**segments.memory.total** <br>*(long gauge)* *(bytes)*                                         |  total memory for segment-related data structures
+terms memory<br>**segments.memory.terms** <br>*(long gauge)* *(bytes)*                                            |  memory used by the terms dictionary
+stored fields memory<br>**segments.memory.storedFields** <br>*(long gauge)* *(bytes)*                             |  memory used by stored fields
+term vectors memory<br>**segments.memory.termVectors** <br>*(long gauge)* *(bytes)*                               |  memory used by term vectors
+norms memory<br>**segments.memory.norms** <br>*(long gauge)* *(bytes)*                                            |  memory used by (length) norms
+points memory<br>**segments.memory.points** <br>*(long gauge)* *(bytes)*                                          |  memory used by point fields (includes numeric, date, geo)
+doc values memory<br>**segments.memory.docValues** <br>*(long gauge)* *(bytes)*                                   |  memory used by doc values
+indexing buffer memory<br>**segments.memory.indexWriter** <br>*(long gauge)* *(bytes)*                            |  memory used by the IndexWriter
+version map memory<br>**segments.memory.versionMap** <br>*(long gauge)* *(bytes)*                                 |  memory used by the version map
+fixed bitset memory<br>**segments.memory.fixedBitSet** <br>*(long gauge)* *(bytes)*                               |  memory used by the fixed bitset that speeds up nested queries/aggregations
