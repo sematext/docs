@@ -271,6 +271,20 @@ Sematext Monitoring supports 100+ different integrations.  Each integration come
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/opensearch/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/opensearch.svg" alt="OpenSearch" title="OpenSearch Monitoring" style="width: 48px;">
+						</div>
+						<div class="side back"><h5>OpenSearch</h5>Cluster Health, Shard Stats, Index Stats, Search, Cache, Thread Pools, Circuit Breakers, Connections, Scripting, Ingest...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/php/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
