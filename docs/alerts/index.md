@@ -10,7 +10,7 @@ For example, you might want to be notified when available disk space reaches a c
 <br/>
 
 ## Alert Types
-[Sematext Cloud](https://sematext.com/cloud) includes multiple **types** of alerts that integrate with PagerDuty, Slack, email, and [other 3rd party services](#notifications-tab).  
+[Sematext Cloud](https://sematext.com/cloud) includes multiple **types** of alerts that integrate with PagerDuty, Slack, email, and [other 3rd party services](alert-notifications).  
 
 1. **Threshold** alerts are the classic threshold based alerts. They are triggered when a certain pre-defined threshold is met.
 1. **Anomaly** alerts are based on statistical anomaly detection. They are triggered when values suddenly change and deviate from the continously computed baseline.
