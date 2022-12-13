@@ -86,7 +86,7 @@ After you install and activate an integration for a service you want to monitor,
 - [Tomcat](../integration/tomcat/)
 - [ZooKeeper](../integration/zookeeper/)
 
-### Webhooks
+### Notification Hooks
 
 - [AlertOps](../integration/alerts-alertops-integration/)
 - [Big Panda](../integration/alerts-bigpanda-integration/)
@@ -110,7 +110,7 @@ After you install and activate an integration for a service you want to monitor,
 - [Zapier](../integration/alerts-zapier-integration/)
 
 
-## Creating a New Integration
+## Adding a New Integration
 
 An [App](app-guide) is core concept in Sematext.  When adding monitoring you will start by creating an App for the desired integration type.
 Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page to create a new App. Pick a solution type and all the available integrations for that solution will be listed. Hover over any integration card and click to create the respective App.
@@ -121,7 +121,7 @@ Next step is to pick your environment that runs the service you want to monitor.
 
 After you select your environment, the agent installation page will show up, which gives you step-by-step instructions on how to install [Sematext Agent](../agents/sematext-agent/).
 
-### Connected Apps
+### Connecting Apps
 
 To help speed up troubleshooting make use of [Connected Apps](connected-apps). For example, connecting a Monitoring App to a Logs App will pre-select that Logs App when you decide to correlate metrics. When you receive an alert notification for an App, the alert notification will contain charts from
 connected Apps, and thus provide more information and context for you. You can connect any two Apps you have access to, regardless of their type. A single App can be connected to any number of other Apps. 
@@ -132,15 +132,12 @@ Or navigate to the App and click on the Connect New App button on the top right 
 
 ![Sematext Cloud - Connect Apps](../images/guide/integrations/connect-apps-from-logs-app.png)
 
-### Webhook Integration
+### Notification Hooks Integrations
 
-When an App is first created you may find that Sematext autoamtically created several App [default, integration-specific alerts](../alerts/default-alerts/). User account email is used as a [default notification hook](alerts/account-default-hooks/) to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [notification hook](/guide/integrations-guide/#webhooks) integration.
+When an App is first created you may find that Sematext automatically created several App [default, integration-specific alerts](../alerts/default-alerts/). User account email is used as a [default notification hook](alerts/account-default-hooks/) to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [notification hook](/guide/integrations-guide/#webhooks) integration.
 
 ![Sematext Cloud - Notification Hooks](../images/guide/integrations/notification-hooks.png)
 
-You will first need to create that third party service and obtain the required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. The image below shows a third party notification hook integration being created, Slack in this example.
-
-![Sematext Cloud - Slack Notification Hook](../images/guide/integrations/slack-notification-hook.png)
 
 ### App Table View
 
