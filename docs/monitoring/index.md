@@ -36,7 +36,7 @@ App settings and actions include, but are not limited to:
 
   - changing your App's plan
   - [managing alert rules](../alerts)
-  - [connecting Apps](../guide/integrations-guide/#connected-apps)
+  - [connecting Apps](../guide/connected-apps)
   - [heartbeat alert creation](../alerts/creating-heartbeat-alerts)
   - [inviting others to your App](../team/app-guests)
   - [App ownership transfer](../team/transfer-apps)
