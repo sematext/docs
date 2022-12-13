@@ -24,7 +24,7 @@ This opens the Create Alert Rule dialog, where you can set up a threshold or ano
 
 ![Create Metric Alert Rule](../images/synthetics/create-metric-alert-rule.png)
 
-### SSL Certificate Alerts
+## SSL Certificate Alerts
 SSL certificate alerts are generated on the following conditions for both HTTP and Browser monitors:
 
 * 28, 14, 7 and 3 days before the expiry of leaf, intermediate, or root certificate in the chain
