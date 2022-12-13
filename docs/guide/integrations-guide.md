@@ -1,33 +1,25 @@
 title: Sematext Integrations Guide
-description: Sematext Cloud provides over 40 built-in integrations used to monitor across all your systems, Apps, and services.
+description: Sematext Cloud has 100+ built-in integrations for monitoring services, infrastructure, websites, APIs, etc.
 
-Sematext Cloud and on-premises IT monitoring system provides over 40 built-in infrastructure integrations used to monitor across all your systems, Apps, and services.
+Sematext Cloud provides over 100 built-in [integrations](https://sematext.com/integrations) used to monitor all your systems, apps, service, websites, etc.
 
-You can report data from various systems to the Sematext Cloud, analyze and visualize it using APM and logging tools, and set alerts on the behaviour of these systems. Once infrastructure agent is installed, integrations provide monitoring capabilities for the following type of data:
+You can collect data from various systems and send them to Sematext Cloud where you can then analyze and visualize them using APM and logging tools, and set alerts on the behaviour of these systems. Once the Sematext Agent is installed, integrations provide monitoring capabilities for the following types of data:
 
-- Metrics and inventory data such as OS & Network, server, and much more depending on the metrics type your integration sends with control over how data is collected and shared within your organization.
-- Logs where stored data is received through the Elasticsearch API and also through a variety of Syslog protocols.
+- Metrics from your infrastructure or services running on it
+- Logs from your applications, servers, etc.
+- Events such as services starting or restarting, package installs and version updates, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be correlated with metrics or logs components to enable faster troubleshooting.
 
-- Events such as services starting or restarting, version updates, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be shown next to metrics or logs components, and together added to your custom dashboards.
+To start monitoring and alerting for your infrastructure performance and logs you need to set up the [Sematext Agent](../agents/sematext-agent/).
+Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also performs service discovery and logs discovery, so you can easily set up monitoring for your services and logs.
 
-Essentially, you can report data from any system on your server or hosts by creating your own custom reports.
+Sematext Agent is not needed to monitor your website, APIs, or user experience.  Synthetic monitoring of websites and APIs requires no installation of any kind - it is all configurable in the UI.  User Experience monitoring provides you with a snippet of JavaScript for insertion in your web pages.
 
-To start monitoring your IT infrastructure you need to set up the
-appropriate Sematext monitoring agent. You can choose from:
 
-- [Sematext Agent](../agents/sematext-agent/) Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also collects metrics for various [integrations](/integration) using App Agents. App Agents can also instrument JVM-based App to collect transaction traces and perform [on demand profiling](../monitoring/on-demand-profiling).
-
-- [Node-based App Agent](../agents/node-agent), which can [monitor
-Apache](../integration/apache) and [Nginx](../integration/nginx)
-(including [Nginx Plus](../integration/nginxplus)).
-
-After you install and activate an integration, you can:
+After you install and activate an integration for a service you want to monitor, you can:
 
 - Filter and analyze the metrics and configuration data
-
 - Query your data and create custom dashboards
-
-- Create alert conditions to monitor problems with your services' performance with Sematext alerting tools
+- Create alert rules to detect problems with your services, infrastructure, website, etc. and get alerted via one or more alert notification hooks.
 
 
 ## Available Integrations
@@ -119,7 +111,7 @@ After you install and activate an integration, you can:
 - [Zapier](../integration/alerts-zapier-integration/)
 
 
-## Creating New Integration
+## Creating a New Integration
 
 Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page to create a new Monitoring or Logs integration. Pick a solution type and all the available integrations for that solution will be listed. Hover over any integration card and click to create the respective App.
 
@@ -131,7 +123,7 @@ After you select your environment, the agent installation page will show up, whi
 
 ### App Integration
 
-New integration creation userflow is the same for both monitoring as well as logging App. While Apache monitoring App is being created you can also create complementary logs App as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example, and that particular piece of a IT infrastructure puzzle.
+New integration creation user flow is the same for both monitoring as well as logging App. While a monitoring App is being created you can also create complementary logs App as well. It makes perfect sense, and it is the only way to have full observability into performance and issues of the Apache server for example, and that particular piece of a IT infrastructure puzzle.
 
 In other words, as monitoring App is being created you can create a logging App as well and vice versa. 
 
@@ -248,5 +240,3 @@ Recommendations for learning more about Sematext products and services:
 
 - Infrastructure [integrations documentation](/integration/)
 - Our [website](https://sematext.com/)
-- For open-source integrations and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
-- or just talk to us using chat located in right bottom corner of any page, and one of our engineers will help you navigate Sematext waters.
