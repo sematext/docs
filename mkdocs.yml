@@ -146,6 +146,7 @@ pages:
         - Nginx: integration/nginx.md
         - Nginx Plus: integration/nginxplus.md
         - Node.js: integration/node.js.md
+        - OpenSearch: integration/opensearch.md
         - PHP: integration/php.md
         - PostgreSQL: integration/postgresql.md
         - RabbitMQ: integration/rabbitmq.md
