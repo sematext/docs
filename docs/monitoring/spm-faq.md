@@ -75,9 +75,10 @@ your Sematext Agent properties files located in
 SPM_MONITOR_COLLECT_INTERVAL=30000
 ```
 
-The value is expressed in milliseconds. If you are adjusting it, we
-recommend setting it to 30000. With bigger values it is possible some
-1-minute intervals would be displayed without the data in the UI.
+The value is expressed in milliseconds and it can be adjusted from 
+10000 to 60000. If you are adjusting it, we recommend setting it to 30000. 
+With bigger values it is possible some 1-minute intervals would be displayed 
+without the data in the UI.
 
 After you have made the changes, restart your Sematext Agent.
 
