@@ -25,7 +25,7 @@ Supported integrations are [React](https://sematext.com/docs/experience/integrat
 
 ## Standard website
 
-General tab desribes the configuration steps to add JavaScript snippets to start monitoring your website. [Google Tag](https://sematext.com/docs/experience/integrations/#google-tag-manager) and [WordPress](https://sematext.com/docs/experience/integrations/#wordpress) integrations are also availble and each tab has specific configuration steps to follow and configure your website monitoring.
+General tab desribes the configuration steps to add JavaScript snippets to start monitoring your website. [Google Tag](https://sematext.com/docs/experience/integrations/#google-tag-manager) and [WordPress](https://sematext.com/docs/experience/integrations/#wordpress) integrations are also available and each tab has specific configuration steps to follow and configure your website monitoring.
  
 ![Standard Website Instructions](../images/experience/standard-website-instructions.png)
 
