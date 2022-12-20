@@ -3,12 +3,7 @@ description: Overview on how to identify users
 
 By default, all users that interact with your website will be given an anonymous identifier. You will get an overview of the number of sessions for each given user, page loads and network requests, as well as User Satisfaction for these events, which browser was used and the country from which the user is interacting with your website. 
 
-<img
-  class="content-modal-image"
-  alt="Users Overview"
-  src="../../images/experience/users.png"
-  title="Users Overview"
-/>
+![Users](../images/experience/users-2.png)
 
 This behavior can be altered by calling the `identify` function that allows you to inform the script about the user's identity. Here's an example. If the user interacting with your application is already logged in, you can pass along their name and identifier (email, email hash, or anything that is unique) so that later you can find data for this user in Experience.
 
