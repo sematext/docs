@@ -148,7 +148,7 @@ Caching can be bypassed by using the *Cache-Control* header directives:
 * *no-cache*: cache should be revalidated with the original resource before the response is sent back.
 * *no-store*: response from the request should not be stored.
 
-*Cache-Control* header can be set multiple values to obtain desired strategy:
+The *Cache-Control* header can be assigned multiple values to obtain the desired functionality:
 ```javascript
 'Cache-Control: no-cache, no-store'
 ```
