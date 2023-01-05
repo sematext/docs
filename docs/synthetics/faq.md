@@ -152,7 +152,7 @@ The *Cache-Control* header can be assigned multiple values to obtain the desired
 ```javascript
 'Cache-Control: no-cache, no-store'
 ```
-Note that, server must be configured to respect the *Cache-Control* header. Therefore, result is dependent on the server that request is sent.
+Note that the server must be configured to take the *Cache-Control* header into consideration, thus making the result dependent on the server that the request is sent to.
 
 *Cache-Control* HTTP header introduced in HTTP 1.1. For systems using HTTP 1.0, *Pragma* header can be used:
 ```javascript
