@@ -154,7 +154,7 @@ The *Cache-Control* header can be assigned multiple values to obtain the desired
 ```
 Note that the server must be configured to take the *Cache-Control* header into consideration, thus making the result dependent on the server that the request is sent to.
 
-*Cache-Control* HTTP header introduced in HTTP 1.1. For systems using HTTP 1.0, *Pragma* header can be used:
+The *Cache-Control* HTTP header was introduced in HTTP 1.1. Systems using HTTP 1.0 can instead make use of the *Pragma* header:
 ```javascript
 'Pragma: no-cache'
 ```
