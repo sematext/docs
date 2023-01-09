@@ -143,6 +143,22 @@ Please see the section on [User Journey script examples](./user-journey-scripts/
 ### How are Web Vitals calculated when a User Journey script visits multiple pages?
 Web vitals are calculated only for the last page the User Journey script visits.
 
+### How do I bypass caching?
+Caching can be bypassed by using the *Cache-Control* header directives:
+* *no-cache*: cache should be revalidated with the original resource before the response is sent back.
+* *no-store*: response from the request should not be stored.
+
+The *Cache-Control* header can be assigned multiple values to obtain the desired functionality:
+```javascript
+'Cache-Control: no-cache, no-store'
+```
+Note that the server must be configured to take the *Cache-Control* header into consideration, thus making the result dependent on the server that the request is sent to.
+
+The *Cache-Control* HTTP header was introduced in HTTP 1.1. Systems using HTTP 1.0 can instead make use of the *Pragma* header:
+```javascript
+'Pragma: no-cache'
+```
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
