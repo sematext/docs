@@ -5,6 +5,23 @@ description: Collect and monitor key OpenSearch metrics such as Cluster States a
 
 - Instructions: [https://apps.sematext.com/ui/howto/opensearch/overview](https://apps.sematext.com/ui/howto/opensearch/overview)
 
+## Important Metrics to Watch and Alert on
+
+WIP: add a description and screenshots for each bullet below
+
+### OpenSearch specific metrics
+- search: request rate and latency
+- indexing: indexing rate + refresh, flush and merge times
+- cache hit ratios
+- rejected threadpools
+- tripped circuit breakers
+- number of nodes, shards, recoveries + cluster states published and pending tasks
+
+### System and JVM Metrics
+- CPU, specifically the breakdown between user,system,IOwait
+- disk, specifically IOPS
+- JVM: GC time, heap usage per pool
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
