@@ -7,20 +7,31 @@ description: Collect and monitor key OpenSearch metrics such as Cluster States a
 
 ## Important Metrics to Watch and Alert on
 
-WIP: add a description and screenshots for each bullet below
-
 ### OpenSearch specific metrics
-- search: request rate and latency
-- indexing: indexing rate + refresh, flush and merge times
-- cache hit ratios
-- rejected threadpools
-- tripped circuit breakers
-- number of nodes, shards, recoveries + cluster states published and pending tasks
+
+#### Search Query performance metrics: Request Rate and Latency
+When the cluster receives a request, it may need to access data from multiple shards, across multiple nodes. Knowing the rate at which the system is processing and returning requests, how many requests are currently in progress, and how long requests are taking can provide valuable insights into the health and performance of the OpenSearch cluster.
+
+---- todo: screenshot 1 ----- 
+
+#### Indexing Rate and Merge Times
+Monitoring the OpenSearch indexing rate of documents and merge time can help with identifying anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
+
+---- todo: screenshot 2 ----- 
 
 ### System and JVM Metrics
-- CPU, specifically the breakdown between user,system,IOwait
-- disk, specifically IOPS
-- JVM: GC time, heap usage per pool
+OS metrics like CPU, memory, IO, and network play an essential role in OpenSearch Monitoring. A healthy CPU graph looks like this:
+
+---- todo: screenshot 3 ----- 
+
+OpenSearch runs within a Java Virtual Machine (JVM) and monitoring JVM heap usage is critical to ensure cluster performance. Moreover, JVM supports garbage collection, which means that garbage collection frequency and duration are just as important to measure.
+
+---- todo: screenshot 4 ----- 
+
+Finally, high disk reads and writes can indicate a poorly tuned system. Since accessing the disk is an expensive process in terms of time, a well-tuned system should reduce disk I/O wherever possible.
+
+---- todo: screenshot 5 ----- 
+
 
 ## Metrics
 
