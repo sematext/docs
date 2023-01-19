@@ -5,6 +5,31 @@ description: Collect and monitor key OpenSearch metrics such as Cluster States a
 
 - Instructions: [https://apps.sematext.com/ui/howto/opensearch/overview](https://apps.sematext.com/ui/howto/opensearch/overview)
 
+## Important Metrics to Watch and Alert on
+
+### OpenSearch specific metrics
+
+#### Search Query performance metrics: Request Rate and Latency
+When the cluster receives a request, it may need to access data from multiple shards, across multiple nodes. Knowing the rate at which the system is processing and returning requests, how many requests are currently in progress, and how long requests are taking can provide valuable insights into the health and performance of the OpenSearch cluster.
+
+<img class="content-modal-image" alt="Request Rate" src="../../images/integrations/opensearch-request-rate.png" title="Request Rate">
+
+<img class="content-modal-image" alt="Latency" src="../../images/integrations/opensearch-latency.png" title="Latency">
+
+#### Indexing Rate and Merge Times
+Monitoring the OpenSearch document indexing rate and merge time can help identify anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
+
+<img class="content-modal-image" alt="Merged Documents" src="../../images/integrations/opensearch-merged-documents.png" title="Merged Documents">
+
+<img class="content-modal-image" alt="Refresh, Flush, Merge" src="../../images/integrations/opensearch-indexing-merge.png" title="Refresh, Flush, Merge">
+
+### System and JVM Metrics
+OS metrics like CPU, memory, disk I/O, and network play an essential role in OpenSearch monitoring.
+
+OpenSearch runs within a Java Virtual Machine (JVM) and [monitoring JVM](https://sematext.com/docs/integration/jvm/) heap usage is critical to ensure cluster performance. Moreover, JVM supports [garbage collection](https://sematext.com/docs/integration/jvm-gc-logs/), which means that garbage collection frequency and duration are just as important to measure.
+
+Finally, high disk reads and writes can indicate a poorly tuned system. Since accessing the disk is an expensive process in terms of time, a well-tuned system should reduce disk I/O wherever possible.
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
