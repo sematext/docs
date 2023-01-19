@@ -17,14 +17,14 @@ When the cluster receives a request, it may need to access data from multiple sh
 <img class="content-modal-image" alt="Latency" src="../../images/integrations/opensearch-latency.png" title="Latency">
 
 #### Indexing Rate and Merge Times
-Monitoring the OpenSearch indexing rate of documents and merge time can help with identifying anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
+Monitoring the OpenSearch document indexing rate and merge time can help identify anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
 
 <img class="content-modal-image" alt="Merged Documents" src="../../images/integrations/opensearch-merged-documents.png" title="Merged Documents">
 
 <img class="content-modal-image" alt="Refresh, Flush, Merge" src="../../images/integrations/opensearch-indexing-merge.png" title="Refresh, Flush, Merge">
 
 ### System and JVM Metrics
-OS metrics like CPU, memory, IO, and network play an essential role in OpenSearch Monitoring.
+OS metrics like CPU, memory, disk I/O, and network play an essential role in OpenSearch monitoring.
 
 OpenSearch runs within a Java Virtual Machine (JVM) and monitoring JVM heap usage is critical to ensure cluster performance. Moreover, JVM supports garbage collection, which means that garbage collection frequency and duration are just as important to measure.
 
