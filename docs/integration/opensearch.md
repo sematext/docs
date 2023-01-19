@@ -26,7 +26,7 @@ Monitoring the OpenSearch document indexing rate and merge time can help identif
 ### System and JVM Metrics
 OS metrics like CPU, memory, disk I/O, and network play an essential role in OpenSearch monitoring.
 
-OpenSearch runs within a Java Virtual Machine (JVM) and monitoring JVM heap usage is critical to ensure cluster performance. Moreover, JVM supports garbage collection, which means that garbage collection frequency and duration are just as important to measure.
+OpenSearch runs within a Java Virtual Machine (JVM) and [monitoring JVM](https://sematext.com/docs/integration/jvm/) heap usage is critical to ensure cluster performance. Moreover, JVM supports [garbage collection](https://sematext.com/docs/integration/jvm-gc-logs/), which means that garbage collection frequency and duration are just as important to measure.
 
 Finally, high disk reads and writes can indicate a poorly tuned system. Since accessing the disk is an expensive process in terms of time, a well-tuned system should reduce disk I/O wherever possible.
 
