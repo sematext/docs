@@ -343,7 +343,15 @@ For most of these notification hooks, you will first need to create that third p
 
 ### SMS Notification Hooks
 
-SMS notifications can be enabled by integrating Sematext Notification Hooks with the the 3rd-party service **Twilio**. For further information, please see [Twilio Alerts Integration](../integration/alerts-twilio-integration).
+You can use Sematext's email Notification Hook to receive alert notifications via SMS / text:
+
+- Verizon: [phone number]@vtext.com (sms)
+- AT&T: [phone number]@txt.att.net (sms) / [phone number]@mms.att.net (mms) 
+- T-Mobile: phonenumber@tmomail.net (sms+mms) 
+- Virgin mobile: [phone number]@vmobil.com 
+
+
+SMS notifications can also be enabled by integrating Sematext Notification Hooks with the the 3rd-party service **Twilio**. For further information, please see [Twilio Alerts Integration](../integration/alerts-twilio-integration).
 
 ### Email Notification Hooks
 
