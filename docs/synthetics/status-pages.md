@@ -16,7 +16,7 @@ You can create multiple status pages under your account. To create a status page
 
 Doing so will show the form where you can customize the status page. 
 
-![Create Status Page](../images/synthetics/status-page-create.png)
+![Create Status Page](../images/synthetics/status-page-create-2.png)
 
 The following fields are required to create a status page:
 
@@ -32,6 +32,41 @@ Every status page will have a unique public URL in this format:
 * `https://apps.sematext.com/ui/statuspages/<unique-token>`
 
 You can use this URL to preview the status page before opening to the public. Disabling the status page will block the public access for the status page.
+
+## Edit Status Pages
+
+To edit a status page simply click on the **“...”** that appears when you hover over a status page name on the side bar. Then click on Edit from the menu.
+All the monitors that are already added to the status page will be pre-selected. 
+You can **filter included/not included** monitors by clicking on the buttons next to the search bar.
+
+![Edit Status Page](../images/synthetics/status-page-edit.png)
+
+# Incidents
+
+Incidents lets you inform your users via status pages. This is useful when there is planned maintenance or downtime in your system. 
+
+To create an incident simply click on a status page and then click on the **“+ New Incident”** button on the top right corner of the page.
+
+![New Incident](../images/synthetics/incident-new.png)
+
+You have the option to select between 3 different incident types;
+
+* **Major Incident** - Incident that caused downtime or otherwise makes it impossible to use or access the service
+* **Minor Incident** - Incident causing minor delays, longer response times or otherwise not affecting to use the service
+* **Scheduled Maintenance** - Scheduled maintenance  usually involves some downtime.
+
+Set the start and end date for an incident and enter title and description.
+
+![Incident Timeline](../images/synthetics/incident-create.png)
+
+After you create an incident, when the current date and time falls into the incident start and end dates, the messages you entered in the title and description will appear in your public status pages to inform your users.
+
+![Incident Window](../images/synthetics/incident-window.png)
+
+You can resolve an incident at any time by navigating to the status page in Sematext Cloud, click on New Update and select the new status of the incident.
+
+![Incident Update](../images/synthetics/incident-update.png)
+![Incident Resolve](../images/synthetics/incident-resolve.png)
 
 # Custom Domain Setup
 
