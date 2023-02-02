@@ -125,25 +125,25 @@ The charting and alerting process is identical as in the previous example, and o
 
 ## How to add availability as metric in Dashboards
 
-Dashboards are your central location where you put everything together. Logs, service metrics, infrastructure inventory and processes. They let you see everything in one place. If you want to see any of your monitor’s availability within a Dashboard and compare with performance metrics that are shipped from services hosting your websites and APIs here is how you should do it.
+[Dashboards](https://sematext.com/docs/dashboards/) are your central location where you put everything together. Logs, service metrics, infrastructure inventory and processes. They let you see everything in one place. If you want to see any of your monitor’s availability within a Dashboard and compare it with performance metrics that are shipped from services hosting your websites and APIs. Here is how to do it.
 
-Availability is shown for each HTTP and Browser monitor within All Monitors page and Overview pages of monitors.
+Availability is shown for each HTTP and Browser monitor within the All Monitors page and Overview pages of monitors.
 
 ![All Monitors Availability](../images/synthetics/availability-all-monitors-page.png)
 
 When you want to add monitor availability as a metric to any of your [Dashboards](https://sematext.com/docs/dashboards/), you can use [Chart Builder](../dashboards/chart-builder/)’s  transformation feature to do it. 
 
-To do this, navigate to the Dashboards page and click on any of your existing Dashboards or create a new one. Then click to “add component” on the top right corner of the report.
+To do this, navigate to the Dashboards page and click on any of your existing Dashboards or create a new one. Then click on “add component” in the top right corner of the report.
 
 ![Add Availability as Component](../images/synthetics/availability-add-component.png)
 
-Select the component type you want to add(We will use the Timeseries chart in this example). This will open the [Chart Builder](../dashboards/chart-builder/). 
+Select the component type you want to add. We will use the Timeseries chart in this example. This will open the [Chart Builder](../dashboards/chart-builder/). 
 
-Select an Synthetic App and a monitor, pick ```synthetics.run.passed``` and ```synthetics.run.failed``` as metrics.
+Select a Synthetic App and a monitor, pick ```synthetics.run.passed``` and ```synthetics.run.failed``` as metrics.
 
 ![Edit Component](../images/synthetics/availability-edit-component.png)
 
-Within Transformation box enter the expression below;
+Within Transformation box enter the expression below:
 
 ```
 ifNull(synthetics.run.passed, 1) / (synthetics.run.failed + ifNull(synthetics.run.passed, 1)) * 100
