@@ -43,13 +43,13 @@ You can **filter included/not included** monitors by clicking on the buttons nex
 
 # Incidents
 
-Incidents lets you inform your users via status pages. This is useful when there is planned maintenance or downtime in your system. 
+Incidents let you inform your users of planned maintenance, downtime, or any other issues your service is experiencing.
 
 To create an incident simply click on a status page and then click on the **“+ New Incident”** button on the top right corner of the page.
 
 ![New Incident](../images/synthetics/incident-new.png)
 
-You have the option to select between 3 different incident types;
+You have the option to select between 3 different incident types:
 
 * **Major Incident** - Incident that caused downtime or otherwise makes it impossible to use or access the service
 * **Minor Incident** - Incident causing minor delays, longer response times or otherwise not affecting to use the service
@@ -59,11 +59,11 @@ Set the start and end date for an incident and enter title and description.
 
 ![Incident Timeline](../images/synthetics/incident-create.png)
 
-After you create an incident, when the current date and time falls into the incident start and end dates, the messages you entered in the title and description will appear in your public status pages to inform your users.
+After you create an incident, when the current date and time falls between the incident start and end dates, the incident title and description will appear in your public status pages to inform your users. Thus allows you to pre-create and schedule incidents ahead of time, have them show up on the status page at a pre-determined time in the future, and have them automatically disappear.
 
 ![Incident Window](../images/synthetics/incident-window.png)
 
-You can resolve an incident at any time by navigating to the status page in Sematext Cloud, click on New Update and select the new status of the incident.
+You can resolve an incident at any time by navigating to the status page in Sematext Cloud, clicking on New Update and selecting the new status of the incident.
 
 ![Incident Update](../images/synthetics/incident-update.png)
 ![Incident Resolve](../images/synthetics/incident-resolve.png)
