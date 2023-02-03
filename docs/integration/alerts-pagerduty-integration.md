@@ -35,11 +35,11 @@ Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in 
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
-Enter required parameters and copy incoming PagerDuty Key. Click Test button to confirm that Sematext app is sending data and save your PagerDuty alerts integration.
+Enter the required parameters and copy the incoming PagerDuty Key, click the Test button to confirm that Sematext is sending data and save your PagerDuty alerts integration.
 
 ![PagerDuty Alerts Integration](../images/integrations/create-pagerduty-integration-add-hook-2.png  "Create PagerDuty Integration")
 
-To start sending alert events to PagerDuty, navigate to the Notification tab of any Alert Rule and pick PagerDuty within the “**Additionally send to**” dropdown.
+To start sending alert events to PagerDuty, navigate to the Notification tab of any Alert Rule and pick PagerDuty from the “**Additionally send to**” dropdown.
 
 ![Pick PagerDuty Integration](../images/integrations/pick-pagerduty-nh.png  "Pick PagerDuty Integration")
 
