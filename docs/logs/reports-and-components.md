@@ -27,7 +27,7 @@ Each alert query is visible in the Alert Rules list.
 
 ![Sematext Cloud Logs Guide - Connect Apps](../images/guide/logs/connect-apps_2.png) 
 
-- **Split View** - [Split Screen](../guide/split-screen) is a product-wide correlation and data-pivoting feature. With [Split Screen](../guide/split-screen) you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
+- **Split Screen** - [Split Screen](../guide/split-screen) is a product-wide correlation and data-pivoting feature. With [Split Screen](../guide/split-screen) you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
 
 - **Time Picker** - The Time Picker is available whenever an App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed as well.
 **A custom time range can be selected using the time picker dropdown menu.** The Logs App will automatically refresh upon selection and update all the reports accordingly.
