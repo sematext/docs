@@ -10,6 +10,13 @@ The actions include:
   - Highlight values
   - Correlate with metrics
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/wuPKnCr4ByE" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+
 ## Toggle Column
 
 To add a field as a separate column, click on the field name. This will open a small context menu where you can click on the Add column button. 

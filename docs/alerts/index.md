@@ -1,6 +1,12 @@
 title: Alerts Overview
 description: Threshold, anomaly, and heartbeat alerts for your logs, infrastructure and user-experience metrics with email notifications and various 3rd party integrations and notification hooks such as PagerDuty, Slack and more
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/ik_L7Qk_Aug" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
 Alerts are used to notify you when one or more pre-defined conditions in your *metrics*, *logs* or *experience* data are met.  
 
 For example, you might want to be notified when available disk space reaches a certain threshold - *metrics alert*, or when the number of logs with `severity: warning` gets too high - *logs alert*, or when your users start experiencing high response time - *experience alert*.

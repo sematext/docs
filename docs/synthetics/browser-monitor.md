@@ -48,6 +48,13 @@ However, if the errors are such that the script can't properly execute, then the
 
 ## Web Vitals
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/pTswmgVWSH8" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+
 [Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web. These are a set of performance metrics that they consider are essential for improving user experience. The Core Web Vitals are:
 
 * [Largest Contentful Paint (LCP)](https://web.dev/lcp/)

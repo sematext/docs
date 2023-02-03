@@ -4,7 +4,7 @@ description: Sematext Cloud is a modern monitoring, log management, and real use
 
 ## Monitoring Report Menu
 
-The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. It lets you add additional components to a report, create alerts, connect apps and quickly filter or group data. You can also correlate monitoring data with your logs, events or experience data using **[split screen](#split-screen)**.
+The **Monitoring Report Menu** is where the true power of Sematext Performance and Infrastructure Monitoring lies. This is where Observability comes to life. It lets you add additional components to a report, create alerts, connect apps and quickly filter or group data. You can also correlate monitoring data with your logs, events or experience data using **[Split Screen](#split-screen)**.
 
 ![Sematext Cloud Monitoring Guide - Monitoring Report Menu](../images/guide/monitoring/monitoring-header_2.png) 
 
@@ -18,11 +18,11 @@ If your browser is suddenly closed, and no changes were saved or reset, the App 
 
 ### Split Screen
 
-Split screen gives you a single view for Metrics, Logs, and Events. This is a huge time saver to let you move from **Metrics spikes** to **drill down to Logs and Events** that caused them.
+[Split Screen](../guide/split-screen) gives you a single view for Metrics, Logs, and Events. This is a huge time saver to let you move from **Metrics spikes** to **drill down to Logs and Events** that caused them.
 
 ![Sematext Cloud Monitoring Guide - Monitoring Split Screen](../images/guide/monitoring/monitoring-split-screen.png) 
 
-Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[split screen](/guide/split-screen)**.
+Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[Split Screen](/guide/split-screen)**.
 
 The set of icons in the logs search and report menu let you:
 

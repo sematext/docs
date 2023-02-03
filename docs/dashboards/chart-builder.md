@@ -10,9 +10,12 @@ series with metrics, optional filters, and groupings. Charts built through the
 builder give you insight into spikes and trends, helping you to understand how your
 infrastructure or applications behave now or how they behaved in the past.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/chart-builder-20200207-3.mp4" type="video/mp4" />
-</video>
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/8PxtgrwY8SQ" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
 
 You can display many series on a single chart. Each of them can be configured to have its own color and
 style:

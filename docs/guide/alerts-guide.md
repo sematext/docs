@@ -1,6 +1,13 @@
 title: Sematext Alerts User Guide
 description: Sematext Cloud Alerts give you a flexible centralized notification system that lets you manage Alert Rules and Alert Conditions across your whole stack. Use Events to correlate them with Metrics and/or Logs, and see what is happening with your infrastructure.  
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/ik_L7Qk_Aug" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+
 Receiving Alerts when your software is misbehaving or underperforming is crucial for every developer. Good alerting practices include:
 
 - **Alert Rules** that **detect Anomalies** and notify when key **performance indicators spike or drop**

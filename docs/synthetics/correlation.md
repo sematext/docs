@@ -10,6 +10,6 @@ Once you select a report you want to correlate with, it’ll be remembered so th
 
 ### Connect Apps
 When you receive an alert notification for an App, the **alert notification will automatically include information and charts from connected Apps**, and thus provide more information and context for you. You can connect any two Apps you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
-Connecting a Synthetics App to any other App will **let you easily open it in a Split Screen when you decide to correlate metrics or logs from the connected App**. When your website or API fails you can easily see the metrics or logs from the services that are hosting the API and dig deeper into troubleshooting.
+Connecting a Synthetics App to any other App will **let you easily open it in a [Split Screen](../guide/split-screen) when you decide to correlate metrics or logs from the connected App**. When your website or API fails you can easily see the metrics or logs from the services that are hosting the API and dig deeper into troubleshooting.
 
 ![Sematext Cloud Logs Guide - Connect Apps](../images/guide/logs/connect-apps_2.png)

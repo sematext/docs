@@ -11,7 +11,7 @@ shippers](https://sematext.com/docs/integration/#log-shippers). Every
 App is isolated and standalone.
 
 <div class="video_container">
-<iframe src="https://www.youtube.com/embed/TR_qXdR8DVk" 
+<iframe src="https://www.youtube.com/embed/cTFpbnlHMsI" 
 frameborder="0" allow="autoplay; encrypted-media" 
 allowfullscreen class="video"></iframe>
 </div>

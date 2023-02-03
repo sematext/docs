@@ -1,6 +1,13 @@
 title: Creating Heartbeat Alerts
 description: Step-by-step Heartbeat alert creation instructions 
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/TGuNiZIU7Q0" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+
 Monitoring Apps have [Heartbeat Alerts](https://sematext.com/docs/alerts/#alert-types) as part of their settings. You can find them in the App dropdown menu in the top-left corner.
 
 ![image alt text](../images/alerts/heartbeat_image_01.png)

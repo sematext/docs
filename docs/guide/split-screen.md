@@ -1,6 +1,13 @@
 title: Split Screen Guide
 description: Split Screen is product-wide correlation and data-pivoting feature. With Split Screen you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/N3oXASgIt2E" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+
 Split Screen is a product-wide correlation and data-pivoting feature. With Split Screen you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
 
 The Split Screen is available across the whole product and you can open any dashboard or report with events, logs, or metrics within the Split Screen. 

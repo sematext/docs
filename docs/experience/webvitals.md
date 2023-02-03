@@ -12,6 +12,12 @@ Supported by Chrome, the [Web Vitals](https://web.dev/vitals/) is a Google initi
 
 ### Core Web Vitals
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/pTswmgVWSH8" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
 Both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals) support the Core Web Vitals out of the box and include the following metrics:
 
 #### Largest Contentful Paint (LCP) 
