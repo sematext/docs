@@ -35,9 +35,17 @@ Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in 
 
 ![Sematext Notification Hooks](https://sematext.com/docs/images/integrations/sematext-notification-hooks.png  "Sematext Notification Hook")
 
-Enter required parameters and copy incoming PagerDuty Service API Key. Click Test button to confirm that Sematext app is sending data and save your PagerDuty alerts integration.
+Enter the required parameters and copy the incoming PagerDuty Key, click the Test button to confirm that Sematext is sending data and save your PagerDuty alerts integration.
 
-![PagerDuty Alerts Integration](https://sematext.com/docs/images/integrations/create-pagerduty-integration-add-hook.png  "Create PagerDuty Integration")
+![PagerDuty Alerts Integration](../images/integrations/create-pagerduty-integration-add-hook-2.png  "Create PagerDuty Integration")
+
+To start sending alert events to PagerDuty, navigate to the Notification tab of any Alert Rule and pick PagerDuty from the “**Additionally send to**” dropdown.
+
+![Pick PagerDuty Integration](../images/integrations/pick-pagerduty-nh.png  "Pick PagerDuty Integration")
+
+Note that the **priority level** set for the alert will be automatically mapped to ```payload.severity``` parameter in PagerDuty alert events.
+
+![Alert Priority](../images/integrations/alert-priority.png  "Alert Priority")
 
 Check PagerDuty's [Generating a General Access REST API Key](https://support.pagerduty.com/docs/using-the-api#section-generating-an-api-key) documentation for more information on Service API Key.
 
