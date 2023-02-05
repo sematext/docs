@@ -14,6 +14,7 @@ pages:
       - Connected Apps: guide/connected-apps.md
       - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
+      - Scheduled Reports: guide/scheduled-reports.md      
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
