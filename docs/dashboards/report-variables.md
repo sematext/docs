@@ -31,19 +31,19 @@ Group by Variables are used for grouping components by a number of different Tag
 
 Report Variables can be created by selecting the "Manage Variables" option under report settings.
 
-TODO: add screenshot
+![Report Variables Menu Settings](../images/dashboards/report-variables-menu-settings.png)
 
 Click on the “Add Variable” button and select the preferred variable type.
 
-TODO: add screenshot
+![Report Variables Type](../images/dashboards/report-variables-type.png)
 
 In the example below, we created three Report Variables, one of each Type: os.host, GroupBy and Elastic App.
 
-TODO: add screenshot
+![Report Variables Names](../images/dashboards/report-variables-names.png)
 
 After creating a variable, each component needs to be configured so that filtering using Report Variables can be applied. In the example below, we have configured two filters, $os.host and $groupBy. The “$” sign is used to identify the Report Variables.
 
-TODO: add screenshot
+![Report Variables Component](../images/dashboards/report-variables-component.png)
 
 Report Variables can be applied to each DS in a component.
 
@@ -51,18 +51,22 @@ Note that it is mandatory to configure at least one component with a Report Vari
 
 All Report Variables are automatically added on the top of the dashboard.
 
-TODO: add screenshot
+![Report Variables Top Menu](../images/dashboards/report-variables-top-menu.png)
+
+Tag Variables appear in the report’s Filters as predefined filters.
+
+![Report Variables Filter](../images/dashboards/report-variables-filter.png)
 
 We can now easily filter by our preferred Elasticsearch App:
 
-TODO: add screenshot
+![Report Variables App Type](../images/dashboards/report-variables-apptype.png)
 
 We can also group the components of each Report by specific Tags, for example es.node:
 
-TODO: add screenshot
+![Report Variables Group](../images/dashboards/report-variables-group.png)
 
 Additionally we can group various tables in our reports per selected filter, for example the Linux Kernel version, that may help us identify an issue with a recent Kernel:
 
-TODO: add screenshot
+![Report Variables Group Host](../images/dashboards/report-variables-group-host.png)
 
 Overall, Report Variables provide a flexible and powerful way to customize and filter components in your reports based on specific conditions and allow you to save time during troubleshooting issues in your infrastructure.
