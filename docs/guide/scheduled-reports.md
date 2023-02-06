@@ -1,4 +1,5 @@
-title: Scheduled Reports Guide description: Sematext Scheduled Reports let you receive emails with dashboards or reports embedded in them at a specified frequency.
+title: Scheduled Reports Guide 
+description: Sematext Scheduled Reports let you receive emails with dashboards or reports embedded in them at a specified frequency.
 
 ## What are Scheduled Reports
 
