@@ -41,7 +41,7 @@ App settings and actions include, but are not limited to:
   - [inviting others to your App](../team/app-guests)
   - [App ownership transfer](../team/transfer-apps)
   - [setting up a Sematext Monitoring Agent to ship metrics](./quick-start/#setting-up-monitoring-agents)
-  - scheduled report emails (aka Subscriptions)
+  - [scheduled report emails (aka Subscriptions)](../guide/scheduled-reports)
 
 <img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-actions.png" title="Sematext Monitoring App Actions">
 
