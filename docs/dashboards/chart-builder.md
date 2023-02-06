@@ -185,7 +185,7 @@ _NOTE: Recommended for expert users._
 
 ## Variables
 
-Variables are used to dynamically filter and group components by tags.
+[Variables](./report-variables/) are used to dynamically filter and group components by tags.
 
 Filters from the `Filter by` section don't have to be configured statically when a chart
 is created. Sometimes you need charts on the dashboard to react to a global filter
