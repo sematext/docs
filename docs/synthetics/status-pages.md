@@ -41,7 +41,7 @@ You can **filter included/not included** monitors by clicking on the buttons nex
 
 ![Edit Status Page](../images/synthetics/status-page-edit.png)
 
-# Incidents
+## Incidents
 
 Incidents let you inform your users of planned maintenance, downtime, or any other issues your service is experiencing.
 
@@ -68,7 +68,7 @@ You can resolve an incident at any time by navigating to the status page in Sema
 ![Incident Update](../images/synthetics/incident-update.png)
 ![Incident Resolve](../images/synthetics/incident-resolve.png)
 
-# Custom Domain Setup
+## Custom Domain Setup
 
 To use a custom domain for your status page (e.g. `status.company.com`), you will need to:
 
