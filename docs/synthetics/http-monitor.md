@@ -15,6 +15,7 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 
 ### Request Settings
 
+* **Authentication** - Fetch token for each run and pass it in your API requests, or pass username and password to connect to your protected APIs.
 * **Headers** - List of HTTP headers to be sent.
 * **Query Params** - List of request query parameters to be appended to the URL.
 * **Cookies** - List of Cookies to be sent.
@@ -31,6 +32,7 @@ By default, the HTTP monitor adds the headers below for all requests sent from t
 | `x-sematext-origin` | `synthetics` | Origin of the request. Can be used to identify Synthetics requests in the back end or filter the requests in a firewall. |
 | `x-sematext-synthetics-id` | `<run-id>` | Uniquely identifies this request. Can be used for tracing and correlation in the back end. |
 
+
 ### Response Settings
 
 * **Save Response Body** - Disable this option to prevent response body from being saved at runtime. This can be helpful to ensure no sensitive data gets featured in your test results.
@@ -41,7 +43,21 @@ If you disable this option, we **won’t save the response body** hence it **wil
 
 ## Authentication
 
-HTTP monitors support header-based authentication. Custom HTTP request headers can be specified when creating a monitor. To use Basic authentication, add a custom request header according to the following specifications:
+You can **dynamically fetch a token** for each run with token support and pass that token in your API requests. 
+
+When creating an HTTP monitor, navigate to the Authentication tab and select **Bearer/Access Token** authentication type.
+
+![Access Token Authentication](../images/synthetics/authentication-token.png)
+
+Enter the access token url and the source field to get the token from response. Enter body parameters to fetch the token such as grant-type, username and password.
+
+Before Sematext Cloud calls the endpoint an access token will be fetched based on the parameters entered within this tab and it will be passed to the API request.
+
+You also have the option to select **Basic Authentication** type within the Authentication tab and pass username and password to connect your **protected APIs**. 
+
+![Basic Authentication](../images/synthetics/authentication-basic.png)
+
+HTTP monitors also support header-based authentication. Custom HTTP request headers can be specified when creating a monitor. To use Basic authentication, add a custom request header according to the following specifications:
 
 | Name | Value | Description |
 | --- | --- | --- |
@@ -49,7 +65,7 @@ HTTP monitors support header-based authentication. Custom HTTP request headers c
 
 After **Base64** encoding the string `username:password` above, would become `dXNlcm5hbWU6cGFzc3dvcmQ=`. This is then prepended with `Basic` to get the final `Authorization` header value of `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`.
 
-So if your username was `username` and you password was `password`, then your `Authorization` header would look as follows:
+So if your username was `username` and your password was `password`, then your `Authorization` header would look as follows:
 
 | Name | Value |
 | --- | --- |
