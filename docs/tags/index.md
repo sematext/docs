@@ -29,6 +29,41 @@ Containers, Kubernetes clusters and cloud environments regularly start and termi
   <source src="https://cdn.sematext.com/videos/groupbytags2.mp4" type="video/mp4" />
 </video>
 
+### Benefits of using Tags ###
+Some benefits of using tags are:
+
+#### Better organization ####
+Tags provide a flexible way to organize logs and metrics into logical groups. This can be especially useful when dealing with large amounts of data, as it can help users to quickly and easily find the information they need. For example, a tag could be used to group logs from different components of an application or to group metrics by geographic region.
+
+#### Easier filtering ####
+Tags allow users to filter data based on specific criteria. For example, users can filter logs or metrics by tag to quickly see all the data associated with a particular component or service. This makes it easier to find and troubleshoot issues. Filtering by tag is also useful when creating alerts, as users can set up alerts based on specific tags to be notified of issues related to a particular component or service.
+
+#### Improved searchability ####
+Tags provide additional context for logs and metrics, which makes them more searchable and discoverable. Users can search for logs or metrics based on tag values to find related data, even if the data is spread across multiple sources. This can be especially useful when investigating issues, as it can help users to quickly find all the relevant data in one place.
+
+#### Enhanced monitoring ####
+Tags can be used to monitor specific components or services. Users can set up alert rules based on specific tags to be notified of issues related to a particular component or service. This can help users to quickly identify and resolve issues, before they impact users.
+
+#### Customizable dashboards and reports ####
+Tags can be used to create custom dashboards and reports that display data specific to certain tags. This provides a more focused view of performance metrics and logs. For example, a dashboard could be created to display metrics related to a particular component or service, making it easier to monitor and optimize performance. Dashboards can be shared with other users, providing a consistent view of performance metrics across a team or organization.
+
+In summary, tags provide a powerful way to organize, filter, search, and monitor data. They can be used to provide additional context and metadata, making it easier to navigate and analyze large amounts of data.
+
+### Common ways to use Tags ###
+Here are some examples of the most common ways to use tags in a Kubernetes cluster:
+
+#### Tag by Service Role ####
+Service role tags can be used, for example, to group Kubernetes pods belonging to a specific service, such as "frontend" or "backend".
+
+#### Tag by Team ####
+These tags can be used to indicate which team is responsible for managing a particular Kubernetes resource. For example, a "devops" team may be responsible for managing deployments, while a "development" team may be responsible for managing services. 
+
+#### Tag by Region ####
+These tags can be used to indicate the geographical region in which a Kubernetes cluster is located. For example, a Kubernetes cluster may be located in a "US East" region or a "Europe" region.
+
+#### Tag by Environment ####
+These tags can be used to indicate the environment in which a Kubernetes resource is running, such as "development", "staging", or "production". This will ensure that resources are not accidentally modified in a production environment.
+
 ### Defining you own tags
 It is not recommended to use the names from our [Common Schema](./common-schema) for your own [Custom Tags](./custom-tags). Read more about defining tags on the [Custom Tags](./custom-tags) page.
 
