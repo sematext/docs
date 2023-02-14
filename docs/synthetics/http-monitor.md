@@ -49,9 +49,9 @@ When creating an HTTP monitor, navigate to the Authentication tab and select **B
 
 ![Access Token Authentication](../images/synthetics/authentication-token.png)
 
-Enter the access token url and the source field to get the token from response. Enter body parameters to fetch the token such as grant-type, username and password.
+Enter the access token URL and the source field to get the token from response. Enter body parameters to fetch the token such as grant-type, username and password.
 
-Before Sematext Cloud calls the endpoint an access token will be fetched based on the parameters entered within this tab and it will be passed to the API request.
+Before Sematext calls the endpoint, an access token will be fetched based on the parameters entered within this tab and it will be passed to the API request.
 
 You also have the option to select **Basic Authentication** type within the Authentication tab and pass username and password to connect your **protected APIs**. 
 
@@ -63,7 +63,7 @@ HTTP monitors also support header-based authentication. Custom HTTP request head
 | --- | --- | --- |
 | `Authorization` | `Basic XYZ` | **XYZ** is the **Base64** encoding of the **username:password** string. |
 
-After **Base64** encoding the string `username:password` above, would become `dXNlcm5hbWU6cGFzc3dvcmQ=`. This is then prepended with `Basic` to get the final `Authorization` header value of `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`.
+After **Base64** encoding the string `username:password` above would become `dXNlcm5hbWU6cGFzc3dvcmQ=`. This is then prepended with `Basic` to get the final `Authorization` header value of `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`.
 
 So if your username was `username` and your password was `password`, then your `Authorization` header would look as follows:
 
