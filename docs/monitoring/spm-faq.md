@@ -717,6 +717,19 @@ avoid certificate checking. In case the command with wget is failing in
 your case, add `--no-check-certificate` as wget argument. If command
 with curl is failing, add `-k` flag.
 
+### When installing Sematext Agent, I see "gnupg do not seem to be installed" or a similar error. How can I avoid it?
+
+Debian based sematext-agent installation requires adding gpg key to your system and to be able to add a gpg key, you need to have **gnupg** package installed.
+
+```bash
+sudo apt install gnupg
+```
+
+After that, you should be able to add the key to your system.  
+```bash
+wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
+```
+
 ### How do I create the diagnostics package?
 
 Preparing diagnostics data differs depending on the setup you have.
