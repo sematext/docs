@@ -36,18 +36,15 @@ Some benefits of using tags are:
 Tags provide a flexible way to organize logs and metrics into logical groups. This can be especially useful when dealing with large amounts of data, as it can help users to quickly and easily find the information they need. For example, a tag could be used to group logs from different components of an application or to group metrics by geographic region.
 
 #### Easier filtering ####
-Tags allow users to filter data based on specific criteria. For example, users can filter logs or metrics by tag to quickly see all the data associated with a particular component or service. This makes it easier to find and troubleshoot issues. Filtering by tag is also useful when creating alerts, as users can set up alerts based on specific tags to be notified of issues related to a particular component or service.
+Tags allow users to filter data based on specific criteria. For example, users can filter logs or metrics by tag to quickly see all the data associated with a particular component or service. This makes it easier to find and troubleshoot issues. Filtering by tag is also useful when [creating alerts](https://sematext.com/docs/alerts/), as users can set up alert rules based on specific tags.
 
 #### Improved searchability ####
 Tags provide additional context for logs and metrics, which makes them more searchable and discoverable. Users can search for logs or metrics based on tag values to find related data, even if the data is spread across multiple sources. This can be especially useful when investigating issues, as it can help users to quickly find all the relevant data in one place.
 
-#### Enhanced monitoring ####
-Tags can be used to monitor specific components or services. Users can set up alert rules based on specific tags to be notified of issues related to a particular component or service. This can help users to quickly identify and resolve issues, before they impact users.
-
 #### Customizable dashboards and reports ####
-Tags can be used to create custom dashboards and reports that display data specific to certain tags. This provides a more focused view of performance metrics and logs. For example, a dashboard could be created to display metrics related to a particular component or service, making it easier to monitor and optimize performance. Dashboards can be shared with other users, providing a consistent view of performance metrics across a team or organization.
+Tags can be used to create custom dashboards and reports that display data specific to certain tags. This provides a more focused view of performance metrics and logs. For example, a dashboard could be created to display specific application metrics, making it easier to monitor and optimize performance. Dashboards can be shared with other users, providing a consistent view of performance metrics across a team or organization.
 
-In summary, tags provide a powerful way to organize, filter, search, and monitor data. They can be used to provide additional context and metadata, making it easier to navigate and analyze large amounts of data.
+In summary, tags provide a powerful way to organize, filter and search data. They can be used to provide additional context and metadata, making it easier to navigate and analyze large amounts of data.
 
 ### Common ways to use Tags ###
 Here are some examples of the most common ways to use tags in a Kubernetes cluster:
