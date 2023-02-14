@@ -42,7 +42,7 @@ Tags allow users to filter data based on specific criteria. For example, users c
 Tags provide additional context for logs and metrics, which makes them more searchable and discoverable. Users can search for logs or metrics based on tag values to find related data, even if the data is spread across multiple sources. This can be especially useful when investigating issues, as it can help users to quickly find all the relevant data in one place.
 
 #### Customizable dashboards and reports ####
-Tags can be used to create custom dashboards and reports that display data specific to certain tags. This provides a more focused view of performance metrics and logs. For example, a dashboard could be created to display specific application metrics, making it easier to monitor and optimize performance. Dashboards can be shared with other users, providing a consistent view of performance metrics across a team or organization.
+Tags can be used to create custom [dashboards](https://sematext.com/docs/dashboards/) and [reports](https://sematext.com/docs/dashboards/reports-and-components/) that display data specific to certain tags. For example, a dashboard could be created to display specific application metrics, making it easier to monitor and optimize performance. Dashboards can be [shared](https://sematext.com/docs/team/account-members/) with others, providing a consistent view of metrics across a team or organization.
 
 In summary, tags provide a powerful way to organize, filter and search data. They can be used to provide additional context and metadata, making it easier to navigate and analyze large amounts of data.
 
