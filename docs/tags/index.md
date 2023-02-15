@@ -73,7 +73,7 @@ Example tags: <br>
 `region: eu` <br>
 `region: us` <br>
 
-Production servers are usually deployed across several regions to have more stable and high availability systems. You can tag each service by region and [create alerts](https://sematext.com/docs/alerts/) or have separate [Views](https://sematext.com/docs/guide/saved-views/) and [Dashboards] for each region. 
+Production servers are usually deployed across several regions to have more stable and high availability systems. You can tag each service by region and [create alerts](https://sematext.com/docs/alerts/) or have separate [Views](https://sematext.com/docs/guide/saved-views/) and [Dashboards](https://sematext.com/docs/dashboards/) for each region. 
 
 #### Tag by Environment ####
 Example tags: <br>
