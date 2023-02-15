@@ -187,6 +187,7 @@ pages:
         - ServiceNow: integration/alerts-servicenow-integration.md
         - SIGNL4: integration/alerts-signl4-integration.md
         - Slack: integration/alerts-slack-integration.md
+        - SMS/text: integration/alerts-sms-integration.md
         - Spike.sh: integration/alerts-spikesh-integration.md
         - Squadcast: integration/alerts-squadcast-integration.md
         - Teams: integration/alerts-microsoft-teams-integration.md
