@@ -351,7 +351,7 @@ You can use Sematext's email Notification Hook to receive alert notifications vi
 - Virgin mobile: [phone number]@vmobil.com 
 
 
-SMS notifications can also be enabled by integrating Sematext Notification Hooks with the the 3rd-party service **Twilio**. For further information, please see [Twilio Alerts Integration](../integration/alerts-twilio-integration).
+SMS notifications can also be enabled by integrating Sematext Notification Hooks with 3rd-party services like **Twilio**. For further information, please see [SMS/Text Alerts Integration](../integration/alerts-sms-integration).
 
 ### Email Notification Hooks
 
