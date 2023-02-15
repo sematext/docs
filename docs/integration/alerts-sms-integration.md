@@ -9,11 +9,11 @@ Navigate to [Notification Hooks](https://apps.sematext.com/ui/hooks/create) (in 
 
 ![SMS / Text Notification Hooks](../images/integrations/create-sms-integration-new.png "SMS New Notification Hook")
 
-Enter required hook name and email address. Simply type in the email to SMS gateway for whatever carrier your recipient uses, and include their cell phone number in front of the “@” sign. For example, if your recipient’s cell phone number is 1-123-456-7891 and their carrier is AT&T, you would type in the following address in the email: 11234567891@txtatt.net. 
+Enter the required hook name and email address. Simply type in the email to SMS gateway for whatever carrier your recipient uses, and include their cell phone number in front of the “@” sign. For example, if your recipient’s cell phone number is 1-123-456-7891 and their carrier is AT&T, you would type in the following address in the email: 11234567891@txtatt.net. 
 
 ![SMS / Text Notification Hooks](../images/integrations/create-sms-integration-hook.png "SMS Notification Hook")
 
-Almost every single carrier has its own address for this specific purpose, here is a list of all the major carriers’ email to sms gateways:
+Almost every single carrier has its own address for this specific purpose. Here is a list of all the major carriers’ email to SMS gateways:
 - T-Mobile – number@tmomail.net 
 - Virgin Mobile – number@vmobl.com
 - AT&T – number@txt.att.net
