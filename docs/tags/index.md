@@ -42,7 +42,7 @@ Tags allow users to filter data based on specific criteria. For example, users c
 Tags provide additional context for logs and metrics, which makes them more searchable and discoverable. Users can search for logs or metrics based on tag values to find related data, even if the data is spread across multiple sources. This can be especially useful when investigating issues, as it can help users to quickly find all the relevant data in one place.
 
 #### Customizable dashboards and reports ####
-Tags can be used to create custom [dashboards](https://sematext.com/docs/dashboards/) and [reports](https://sematext.com/docs/dashboards/reports-and-components/) that display data specific to certain tags. For example, a dashboard could be created to display specific application metrics, making it easier to monitor and optimize performance. Dashboards can be [shared](https://sematext.com/docs/team/account-members/) with others, providing a consistent view of metrics across a team or organization.
+Tags can be used to create custom [Dashboards](https://sematext.com/docs/dashboards/) and [Reports](https://sematext.com/docs/dashboards/reports-and-components/) that display data specific to certain tags. For example, a dashboard could be created to display specific application metrics, making it easier to monitor and optimize performance. Dashboards can be [shared](https://sematext.com/docs/team/account-members/) with others, providing a consistent view of metrics across a team or organization.
 
 In summary, tags provide a powerful way to organize, filter and search data. They can be used to provide additional context and metadata, making it easier to navigate and analyze large amounts of data.
 
@@ -59,21 +59,21 @@ Example tags: <br>
 `service: billing` <br>
 `service: employment` <br>
 
-By tagging all services running payment transactions with service:payment you can categorize each service with their business role. The same applies for billing, employment transactions, and so on. You can later create Saved Views or Dashboards to aggregate and analyze all running services, particularly payment transactions. Isolate them for a more comprehensive analysis.
+By tagging all services running payment transactions with `service:payment` you can categorize each service with their business role. The same applies for billing, employment transactions, and so on. You can later create [Saved Views](https://sematext.com/docs/guide/saved-views/) or [Dashboards](https://sematext.com/docs/dashboards/) to aggregate and analyze all running services, particularly payment transactions. Isolate them for a more comprehensive analysis.
 
 #### Tag by Team ####
 Example tags: <br>
 `team: backend` <br>
 `team: frontend` <br>
 
-If you have many teams in your organization and each team is responsible for tracking a wide range of monitors and services, you can use tags to set which teams own that service. You can create alerts based on team tags and benefit from [Slack Notification Hook](https://sematext.com/docs/integration/alerts-slack-integration/) to send the alerts to a specific team channel.
+If you have many teams in your organization and each team is responsible for tracking a wide range of monitors and services, you can use tags to set which teams own that service. You can [create alerts](https://sematext.com/docs/alerts/) based on team tags and benefit from [Slack Notification Hook](https://sematext.com/docs/integration/alerts-slack-integration/) to send the alerts to a specific team channel.
 
 #### Tag by Region ####
 Example tags: <br>
 `region: eu` <br>
 `region: us` <br>
 
-Production servers are usually deployed across several regions to have more stable and high availability systems. You can tag each service by region and create alerts or have separate  Views and Dashboards for each region. 
+Production servers are usually deployed across several regions to have more stable and high availability systems. You can tag each service by region and [create alerts](https://sematext.com/docs/alerts/) or have separate [Views](https://sematext.com/docs/guide/saved-views/) and [Dashboards] for each region. 
 
 #### Tag by Environment ####
 Example tags: <br>
@@ -81,7 +81,7 @@ Example tags: <br>
 `env: staging`<br>
 `env: development` <br>
 
-These tags can be used to indicate the environment in which a your services are running, such as `development`, `staging`, or `production`. This will ensure that services are not accidentally modified in a production environment and helps you distinguish between what is running in the production environment and the need to take immediate action when there is an outage.
+These tags can be used to indicate the environment in which a your services are running, such as `development`, `staging`, or `production`. This helps you distinguish between what is running in the production environment and the need to take immediate action when there is an outage.
 
 ### Defining you own tags
 It is not recommended to use the names from our [Common Schema](./common-schema) for your own [Custom Tags](./custom-tags). Read more about defining tags on the [Custom Tags](./custom-tags) page.
