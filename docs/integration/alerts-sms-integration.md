@@ -26,4 +26,4 @@ Almost every single carrier has its own address for this specific purpose, here 
 - Metro PCS – number@mymetropcs.com
 
 ## Third-Party Services
-SMS / text notifications can also be enabled by integrating Sematext Notification Hooks with the the third-party service Twilio. For further information, please see [Twilio Alerts Integration](https://sematext.com/docs/integration/alerts-twilio-integration).
+SMS / text notifications can also be enabled by integrating Sematext Notification Hooks with the third-party service Twilio. For further information, please see [Twilio Alerts Integration](https://sematext.com/docs/integration/alerts-twilio-integration).
