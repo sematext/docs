@@ -47,19 +47,41 @@ Tags can be used to create custom [dashboards](https://sematext.com/docs/dashboa
 In summary, tags provide a powerful way to organize, filter and search data. They can be used to provide additional context and metadata, making it easier to navigate and analyze large amounts of data.
 
 ### Common ways to use Tags ###
-Here are some examples of the most common ways to use tags in a Kubernetes cluster:
+You can efficiently organize and analyze all your data and set up alerts based on tags.
+Tags are in `key:value` format, specified in [agent configuration files](https://sematext.com/docs/tags/custom-tags/). You can set tags to distinguish and organize data shipped from different hosts and containers based on your needs.
+After you tag your services, you can create [Saved Views](https://sematext.com/docs/guide/saved-views/) or [Dashboards](https://sematext.com/docs/dashboards/) based on tags, and isolate them for more comprehensive analysis.
+
+Here are some examples of the most common ways to use tags:
 
 #### Tag by Service Role ####
-Service role tags can be used, for example, to group Kubernetes pods belonging to a specific service, such as "frontend" or "backend".
+Example tags: <br>
+`service: payment` <br>
+`service: billing` <br>
+`service: employment` <br>
+
+By tagging all services running payment transactions with service:payment you can categorize each service with their business role. The same applies for billing, employment transactions, and so on. You can later create Saved Views or Dashboards to aggregate and analyze all running services, particularly payment transactions. Isolate them for a more comprehensive analysis.
 
 #### Tag by Team ####
-These tags can be used to indicate which team is responsible for managing a particular Kubernetes resource. For example, a "devops" team may be responsible for managing deployments, while a "development" team may be responsible for managing services. 
+Example tags: <br>
+`team: backend` <br>
+`team: frontend` <br>
+
+If you have many teams in your organization and each team is responsible for tracking a wide range of monitors and services, you can use tags to set which teams own that service. You can create alerts based on team tags and benefit from [Slack Notification Hook](https://sematext.com/docs/integration/alerts-slack-integration/) to send the alerts to a specific team channel.
 
 #### Tag by Region ####
-These tags can be used to indicate the geographical region in which a Kubernetes cluster is located. For example, a Kubernetes cluster may be located in a "US East" region or a "Europe" region.
+Example tags: <br>
+`region: eu` <br>
+`region: us` <br>
+
+Production servers are usually deployed across several regions to have more stable and high availability systems. You can tag each service by region and create alerts or have separate  Views and Dashboards for each region. 
 
 #### Tag by Environment ####
-These tags can be used to indicate the environment in which a Kubernetes resource is running, such as "development", "staging", or "production". This will ensure that resources are not accidentally modified in a production environment.
+Example tags: <br>
+`env: production` <br>
+`env: staging`<br>
+`env: development` <br>
+
+These tags can be used to indicate the environment in which a your services are running, such as `development`, `staging`, or `production`. This will ensure that services are not accidentally modified in a production environment and helps you distinguish between what is running in the production environment and the need to take immediate action when there is an outage.
 
 ### Defining you own tags
 It is not recommended to use the names from our [Common Schema](./common-schema) for your own [Custom Tags](./custom-tags). Read more about defining tags on the [Custom Tags](./custom-tags) page.
