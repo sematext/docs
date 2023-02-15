@@ -209,7 +209,7 @@ Kubernetes events show what's happening inside a cluster, node, pod, or containe
 Field Name                 | Field Type   | Required | Notes 
 ---------------------------|--------------|----------|-------------
 ```kubernetes.namespace``` | string       | no       | Namespace of the resource that originated the event
-```kubernetes.name```      | string       | no       | Name of the resource associated to this event
+```kubernetes.name```      | string       | no       | Name of the resource associated with this event
 ```kubernetes.reason```    | string       | no       | Reason for the transition into the object's current status
 ```message```              | string       | no       | Human-readable description of the status of this operation
 ```kubernetes.kind```      | string       | no       | Identifier of Kubernetes resource
