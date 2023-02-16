@@ -14,6 +14,7 @@ Enter the required hook name and email address. Simply type in the email to SMS 
 ![SMS / Text Notification Hooks](../images/integrations/create-sms-integration-hook.png "SMS Notification Hook")
 
 Almost every single carrier has its own address for this specific purpose. Here is a list of all major carriers’ email to SMS gateways:
+
 - T-Mobile – number@tmomail.net 
 - Virgin Mobile – number@vmobl.com
 - AT&T – number@txt.att.net
