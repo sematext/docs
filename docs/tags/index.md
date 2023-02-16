@@ -1,7 +1,7 @@
 title: Getting Started with Tags 
 description: A Tag is an attribute of a data point (or metric) that could be used for grouping and filtering.
 
-Tags are a way of adding dimensions to metrics, so they can be filtered, aggregated, grouped, and compared in Sematext Cloud. Using tags enables you to observe and aggregate performance across a number of hosts and narrow the set further based on specific elements. 
+Tags are a way of adding dimensions to observability data (e.g. metrics), so they can be filtered, aggregated, grouped, and compared in Sematext Cloud. Using tags enables you to observe and aggregate performance across a number of hosts and narrow the set further based on specific elements. 
 
 Tagging binds different data types in Sematext Cloud, allowing for correlation, data pivoting, and creating actionable metrics and logs. This is accomplished with reserved tags that you can find in our [Common Schema](./common-schema). Here are some examples:
 
@@ -19,18 +19,17 @@ Tagging binds different data types in Sematext Cloud, allowing for correlation, 
 | | kubernetes.*  | Segregation, aggregation and filtering of kubernetes metrics
 
 ### Why Tags matter?
-An example is when you look at containers, cloud infrastructure, or Kubernetes clusters. It is more useful to look at the CPU usage across a collection of hosts that belong to a service or cluster, rather than looking at the CPU usage for the hosts separately.
+Today's infrastructure is dynamic.  For example, containers, cloud instances, or Kubernetes pods are not static.  They come and go.  They get moved from one host to another. It is thus much more useful to look at observability data (e.g. CPU usage) for a collection of hosts, containers, pods, or services that are all tagged with a common tag or set of tags than it would be to look at the CPU usage while filtering or grouping data based on specific host names.  What happens when you deploy an additional host that runs the service you are monitoring?  Any filters or grouping that is referencing specific hosts would miss this new host.  But if your filters and groupings use tags, then as long as you tag the new host correctly, it will automatically be included in your charts, dashboards, alert rules, etc.
 
 For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers.
 
-Containers, Kubernetes clusters and cloud environments regularly start and terminate hosts, so it is critical to tag them to allow for aggregation of the metrics you’re getting. Alongside our full-text search, tagging is a powerful tool to make your life easier.
+Containers, Kubernetes clusters and cloud environments regularly start, stop, and move containers and pods, so it is critical to tag them in order to be able to group and filter their data regardless which host they are currently running on.
 
 <video style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/groupbytags2.mp4" type="video/mp4" />
 </video>
 
 ### Benefits of using Tags ###
-Some benefits of using tags are:
 
 #### Better organization ####
 Tags provide a flexible way to organize logs and metrics into logical groups. This can be especially useful when dealing with large amounts of data, as it can help users to quickly and easily find the information they need. For example, a tag could be used to group logs from different components of an application or to group metrics by geographic region.
