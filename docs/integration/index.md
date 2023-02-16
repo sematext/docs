@@ -718,6 +718,7 @@ Multiple types of [alerts](/alerts) can be triggered on metrics and on logs and 
 - [Pushover](/integration/alerts-pushover-integration/)
 - [Telegram](/integration/alerts-telegram-integration/)
 - [Microsoft Teams](/integration/alerts-microsoft-teams-integration/)
+- [SMS / text](/integration/alerts-sms-integration/)
 - [Spike.sh](/integration/alerts-spikesh-integration/)
 - [Squadcast](/integration/alerts-squadcast-integration/)
 - [Twilio](/integration/alerts-twilio-integration/)
