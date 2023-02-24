@@ -33,6 +33,14 @@ Every status page will have a unique public URL in this format:
 
 You can use this URL to preview the status page before opening to the public. Disabling the status page will block the public access for the status page.
 
+If you want to **restrict access** to the status page, you can enable **password protection** within the create new status page below Header settings.
+
+![Status Page Set Password](../images/synthetics/status-page-set-password.png)
+
+If the password protection is enabled, users will be prompted to enter password when they navigate to the public status page URL.
+
+![Password Protected Status Page](../images/synthetics/status-page-password-protected.png)
+
 ## Edit Status Pages
 
 To edit a status page simply click on the **“...”** that appears when you hover over a status page name on the side bar. Then click on Edit from the menu.
