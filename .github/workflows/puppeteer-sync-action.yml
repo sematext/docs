@@ -19,7 +19,7 @@ jobs:
       - name: Pushes scriptExamples.js to the repo
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.JENKINS_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.SEMATEXT_CLOUD_TOKEN }}
         with:
           source_file: 'docs/synthetics/scriptExamples.js'
           destination_repo: 'sematext/sematext-cloud'
