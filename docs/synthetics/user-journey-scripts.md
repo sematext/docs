@@ -137,5 +137,6 @@ Once you finish adding your sensitive data, keep in mind that the secret values 
 ## User Journey script examples
 
 Several examples of some common use-cases which can be used as a starting point, are available when creating a new monitor. These can be accessed by clicking the `Browse Examples` button on the `Configure URL/Script` page when creating a new monitor.
+These examples are also publicly available [here](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts).
 
  ![Browse Examples](../images/synthetics/browse-ujs-examples.png)
