@@ -208,6 +208,7 @@ pages:
       - Creating Synthetics Alerts: alerts/creating-synthetics-alerts.md
       - Alerts Meta and Tags: alerts/alerts-meta.md
       - Alert Notifications: alerts/alert-notifications.md
+      - Alert Recipients: alerts/alert-recipients.md
       - Account-default Hooks: alerts/account-default-hooks.md
       - Alert Scheduling: alerts/alert-scheduling.md
       - Default Alerts: alerts/default-alerts.md
