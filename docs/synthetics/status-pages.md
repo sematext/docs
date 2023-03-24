@@ -33,6 +33,8 @@ Every status page will have a unique public URL in this format:
 
 You can use this URL to preview the status page before opening to the public. Disabling the status page will block the public access for the status page.
 
+### Restrict Access with Password Protection
+
 If you want to **restrict access** to the status page, enable **password protection** in the "Create New Status Page", which is located below the Header settings. 
 
 ![Status Page Set Password](../images/synthetics/status-page-set-password.png)
