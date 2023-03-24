@@ -7,7 +7,7 @@ The Inventory information is available in the *Inventory* section of the *Infras
 
 <!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
 
-<video style="display:block; width:100%; height:auto;" controls autoplay>
+<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-group-by-v1.mp4" type="video/mp4" />
 </video>
 
@@ -46,7 +46,7 @@ In addition, an overview of all the installed packages on a given system is avai
 
 The Inventory UI let's you compare different systems to quickly see the differences between them and use filtering to see differences between specific packages.
 
-<video style="display:block; width:100%; height:auto;" controls>
+<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-hosts-compare-v1.mp4" type="video/mp4" />
 </video>
 
@@ -62,7 +62,7 @@ Provides quick insight into how unified your packages are by showing:
 - Number of different packages
 - Number of package installations
 
-<video style="display:block; width:100%; height:auto;" controls>
+<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-packages-v1.mp4" type="video/mp4" />
 </video>
 
@@ -78,7 +78,7 @@ Provides quick insight into how unified your container images are by showing:
 - Number of different container image versions
 - Total number of container images
 
-<video style="display:block; width:100%; height:auto;" controls>
+<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls>
   <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-container-images-v1.mp4" type="video/mp4" />
 </video>
 
