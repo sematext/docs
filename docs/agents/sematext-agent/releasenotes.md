@@ -1,6 +1,8 @@
 title: Sematext Agent Release Notes
 description: Features and improvements releases for Sematext Agent
 
+Sematext Agent is a dynamic project with frequent releases. This Changelog contains only important changes, new features, and critical bug fixes. 
+
 # Version 2.0.0
 
 ## New Features
@@ -10,7 +12,7 @@ description: Features and improvements releases for Sematext Agent
 
 ## Bugfixes
 
-- Swarm housekeeping functionalty.
+- Swarm housekeeping functionality.
 
 ## Breaking changes
 
