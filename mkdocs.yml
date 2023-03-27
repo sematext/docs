@@ -279,6 +279,7 @@ pages:
           - Credential sets:  agents/sematext-agent/autodisco/credential-sets.md
           - Resource limits: agents/sematext-agent/autodisco/resource-limits.md
         - Troubleshooting: agents/sematext-agent/agent-troubleshooting.md
+        - Release Notes: agents/sematext-agent/releasenotes.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
