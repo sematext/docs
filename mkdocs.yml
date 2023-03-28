@@ -131,6 +131,7 @@ pages:
         - AWS: integration/aws.md
         - Cassandra: integration/cassandra.md
         - ClickHouse: integration/clickhouse.md
+        - Couchbase: integration/couchbase.md
         - Docker: integration/docker.md
         - Elasticsearch: integration/elasticsearch.md
         - Express.js: integration/express.js.md
