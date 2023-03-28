@@ -186,3 +186,16 @@ data disk size <br> **docs.disk.actual.size** <br> (long_gauge) (bytes) | Couch 
 views size <br> **views.size** <br> (long_gauge) (bytes) | Couch views data size
 views disk size <br> **views.disk.size** <br> (long_gauge) (bytes) | Couch views data size on disk
 memory items <br> **items.replica** <br> (long_gauge) () | Number of in memory items
+cores <br> **cores** <br> (long_gauge) () | Cores
+gc num <br> **gc.num** <br> (counter) () | Number of objects garbage collected
+gc pause percent <br> **gc.pause.percent** <br> (gauge) (%) | Garbage collection pause percentage
+gc pause time <br> **gc.pause.time** <br> (counter) (seconds) | Garbage collection pause time
+system memory <br> **memory.system** <br> (long_gauge) (bytes) | Memory used by the system
+total memory <br> **memory.total** <br> (long_gauge) (bytes) | Memory used by Couchbase over the total period of time
+usage memory <br> **memory.usage** <br> (long_gauge) (bytes) | Memory currently used by Couchbase
+active requests <br> **request.active.count** <br> (long_gauge) () | Number of active requests
+requests completed <br> **request.completed.count** <br> (counter) () | Number of requests completed
+request prepared percent <br> **request.prepared.percent** <br> (gauge) (%) | Percentage of requests prepared
+request time mean <br> **request.time.mean** <br> (gauge) (seconds) | Average request time
+total threads <br> **threads.total** <br> (long_gauge) () | total_threads
+
