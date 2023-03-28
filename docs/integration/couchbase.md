@@ -179,3 +179,10 @@ vb replica queue size <br> **vb.replica.queue.size** <br> (long_gauge) () | Repl
 vb replica resident items ratio <br> **vb.replica.resident.items.ratio** <br> (double_gauge) (%) | Number of resident replica items
 vb total queue age <br> **vb.queue.age.total** <br> (long_gauge) (ms) | Sum of disk queue item age
 XDCR ops <br> **xdc.ops** <br> (double_counter) () | Number of cross-datacenter replication operations
+active items <br> **items.active** <br> (long_gauge) () | Number of active items in memory
+total items <br> **items.total** <br> (long_gauge) () | Total number of items
+data size <br> **docs.size** <br> (long_gauge) (bytes) | Couch docs data size
+data disk size <br> **docs.disk.actual.size** <br> (long_gauge) (bytes) | Couch docs total size on disk
+views size <br> **views.size** <br> (long_gauge) (bytes) | Couch views data size
+views disk size <br> **views.disk.size** <br> (long_gauge) (bytes) | Couch views data size on disk
+memory items <br> **items.replica** <br> (long_gauge) () | Number of in memory items
