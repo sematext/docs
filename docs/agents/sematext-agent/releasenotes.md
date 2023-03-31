@@ -11,7 +11,7 @@ Sematext Agent is a dynamic project with frequent releases. This Changelog conta
 
 - 
 
-## Bugfixes
+## Bug Fixes
 
 - 
 
@@ -36,7 +36,7 @@ NULL
 - OpenSearch auto-discovery support. Now you can easily start to collect the metrics of your OpenSearch services. Check [**OpenSearch Monitoring Integration**](https://sematext.com/integrations/opensearch/) for more information.
 - StatefulSets and DaemonSets metrics collecting support.
 
-## Bugfixes
+## Bug Fixes
 
 - Swarm housekeeping functionality.
 
