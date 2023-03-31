@@ -8,7 +8,7 @@ Kubernetes is gaining popularity every day. Using an Ingress controller is the p
 __Note: Make sure that the following prerequisites are met before continuing:__
 
 - Nginx Ingress is [installed](https://github.com/helm/charts/tree/master/stable/nginx-ingress) 
-- Logagent is [installed](https://github.com/helm/charts/tree/master/stable/sematext-agent)
+- Logagent is [installed](https://github.com/sematext/helm-charts/)
 
 Enable JSON logging, by updating the Ingress [config section](https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/configmap.md#log-format-upstream):
 
