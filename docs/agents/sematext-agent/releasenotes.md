@@ -15,7 +15,7 @@ Sematext Agent is a dynamic project with frequent releases. This Changelog conta
 
 - 
 
-## Breaking changes
+## Breaking Changes
 
 NULL
 
@@ -40,7 +40,7 @@ NULL
 
 - Swarm housekeeping functionality.
 
-## Breaking changes
+## Breaking Changes
 
 We added StatefulSets and DaemonSets metrics collection support. This new feature requires some additional cluster roles. If you're using Kubernetes and you installed the agent with `kubectl`, please update the clusterroles before upgrading your agent by running the following command:
 
