@@ -25,6 +25,13 @@ Cache Miss Rate is a performance metric that indicates the percentage of times a
 ### Total Items
 This metric counts the total number of current items stored in a bucket including those not active (replica, dead and pending states). It is an important indicator of the size and growth of a Couchbase bucket, as well as the overall workload on the cluster. It can be used to monitor and manage the storage capacity and performance of a Couchbase deployment, and to optimize the allocation of resources such as memory, disk space, and network bandwidth.
 
+### Memory Usage High Watermark
+The Memory High Watermark metric is a configurable threshold that determines the maximum amount of memory that the data service will allocate for storing active data in a bucket. When the active data reaches the Memory High Watermark, the data service will begin to evict items from memory to maintain the threshold.
+
+The Memory High Watermark is expressed as a percentage of the total memory available to the Couchbase server. By default, the Memory HWM is set to 85%, which means that when the active data reaches 85% of the available memory, the data service will begin to evict items.
+
+This is an important metric for monitoring the memory usage of your Couchbase cluster. It allows you to control the allocation of resources and prevent the data service from consuming all available memory, which could result in performance degradation or even crashes.
+
 ### Current Connections
 The Current Connections metric indicates the number of active network connections between clients and the Couchbase cluster. This includes connections for data access, management operations, and other network traffic.
 
