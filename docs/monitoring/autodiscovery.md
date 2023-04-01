@@ -20,6 +20,7 @@ Sematext Agent can automatically discover and start monitoring the following ser
 
 - Cassandra
 - ClickHouse
+- Couchbase
 - Elasticsearch
 - HAProxy
 - Jenkins
