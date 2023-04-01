@@ -6,7 +6,29 @@ description: Collect and monitor key Couchbase metrics with built-in anomaly det
 - Instructions: [https://apps.sematext.com/ui/howto/couchbase/overview](https://apps.sematext.com/ui/howto/couchbase/overview)
 
 ## Important Metrics to Watch and Alert on
-TODO
+
+### View Operations
+The View Operations metric measures the number of view queries executed by the Couchbase cluster.
+
+It is an important metric for monitoring the performance and throughput of view queries in your Couchbase cluster. High view operation rates can indicate that the number of view queries is increasing and that the design of the views may need to be optimized for better performance. On the other hand, low view operation rates may indicate that the views are not being utilized effectively and may need to be re-evaluated.
+
+### Resident Item Ratio
+The Resident Item Ratio metric indicates the percentage of active items in a bucket that are currently residing in the memory of the Couchbase server. In other words, it is the ratio of the number of active items residing in memory to the total number of active items in the bucket.
+
+A high ratio means that a large portion of the active items in the bucket are resident in memory, which can lead to faster read and write performance. On the other hand, a low ratio indicates that most of the active items are residing on disk, which can lead to increased disk I/O and slower response times.
+
+The Resident Item Ratio is an important metric for Couchbase performance tuning, as it can help identify if a bucket has sufficient memory resources to accommodate its working set. It can also help to determine if the working set of data is too large for the available memory, which can result in a high number of disk I/O operations and reduced performance.
+
+### Cache Miss Rate
+Cache Miss Rate is a performance metric that indicates the percentage of times a requested item is not found in the cache and must be retrieved from the disk. A high cache miss rate can indicate that the working set of data is too large for the available cache size or that the cache eviction policy is not effective. It can lead to increased disk I/O, longer response times, and reduced throughput. On the other hand, a low cache miss rate means that most requested items are found in the cache, which results in faster response times and better overall performance. This number should be as close to zero as possible.
+
+### Total Items
+This metric counts the total number of current items stored in a bucket including those not active (replica, dead and pending states). It is an important indicator of the size and growth of a Couchbase bucket, as well as the overall workload on the cluster. It can be used to monitor and manage the storage capacity and performance of a Couchbase deployment, and to optimize the allocation of resources such as memory, disk space, and network bandwidth.
+
+### Current Connections
+The Current Connections metric indicates the number of active network connections between clients and the Couchbase cluster. This includes connections for data access, management operations, and other network traffic.
+
+It's used for monitoring the load on the Couchbase cluster and for identifying potential bottlenecks or capacity issues. A high number of current connections can indicate that the cluster is experiencing heavy load and may need additional resources, such as increased network bandwidth or additional nodes.
 
 ## Metrics
 
