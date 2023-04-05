@@ -87,6 +87,21 @@ Sematext Monitoring supports 100+ different integrations.  Each integration come
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/couchbase/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/couchbase.svg" alt="Couchbase" title="Couchbase Monitoring">
+						</div>
+						<div class="side back">
+							<h5>Couchbase</h5>current metrics, db operations, documents, cache, connections, memory usage, ...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/docker/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
