@@ -24,17 +24,24 @@ Each metric chart has a bell icon which, when clicked, shows a dropdown menu of 
 
 While creating an alert you'll get a chart preview of the alert threshold or anomaly.
 
+### Threshold Alerts
+
 Let's say you want to configure an alert to notify you when the CPU is over 40% during a 10 minute period. You can start from OS CPU chart and select to create alert for `user` metric. All you have to do is set 40 for the threshold value.
 
-![Metric Threshold Alert](../images/alerts/metric-alert.png)
+![Metric Threshold Alert](../images/alerts/metric-alert_2.png)
+
+### Anomaly Alerts
 
 If you don't want to use a specific threshold value and instead get notified when the CPU usage deviates from a continuously computed baseline, you'd change `Alert type` to `Anomaly alert`.
 
-![Metric Anomaly Alert](../images/alerts/metric-anomaly-alert.png)
+![Metric Anomaly Alert](../images/alerts/metric-anomaly-alert_2.png)
 
 Notice that the chart changed to help you get a sense of what would constitute an anomalous value. In this case, the dots outside the gray confidence interval.
 
 The confidence interval shown in the preview is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
+
+You can assign priority and define the level of importance of an alert. Include this information in the payload of various [Notification Hooks](../alerts/alert-notifications).
+![Alert Priority](../images/alerts/alert_priority.png)
 
 You can see and adjust alert metric details in `Alert Metric` tab.
 

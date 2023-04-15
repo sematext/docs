@@ -319,7 +319,41 @@ The primary purpose of alert rules is to send notifications when triggered. This
             </div>
         </a>
     </div>
+    <div class="mdl-cell mdl-cell--3-col">
+        <a href="/docs/integration/alerts-alertops-integration/">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="flip-card-container">
+                    <div class="flip-card">
+                        <div class="side">
+                            <img src="../../images/alerts/notifications/alertops.svg" alt="AlertOps" title="AlertOps Alerts Integration" style="width: 72px;">
+                        </div>
+                        <div class="side back">
+                            <h5>AlertOps</h5>Get your Sematext notifications on AlertOps.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
+
+For most of these notification hooks, you will first need to create that third party service and obtain the required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. The image below shows a third party notification hook integration being created, Slack in this example.
+
+![Sematext Cloud - Slack Notification Hook](../images/guide/integrations/slack-notification-hook.png)
+
+### SMS Notification Hooks
+
+You can use Sematext's email Notification Hook to receive alert notifications via SMS / text:
+
+- Verizon: [phone number]@vtext.com (sms)
+- AT&T: [phone number]@txt.att.net (sms) / [phone number]@mms.att.net (mms) 
+- T-Mobile: phonenumber@tmomail.net (sms+mms) 
+- Virgin mobile: [phone number]@vmobil.com 
+
+
+SMS notifications can also be enabled by integrating Sematext Notification Hooks with 3rd-party services like **Twilio**. For further information, please see [SMS/Text Alerts Integration](../integration/alerts-sms-integration).
+
+### Email Notification Hooks
 
 An email notification hook is created automatically during signup. Additional notification hooks can be created on the Notification Hooks view that is part of Alerts menu.
 

@@ -83,6 +83,10 @@ strum('config', { token: '8763d12d-1j3t-932v-b498-544290z98k43', receiverUrl: 'h
 
 For some web technologies, especially those used in single-page applications additional integration may be needed. Have a look at the [Sematext Experience Integrations](/experience/integrations/) to learn more.
 
+### Customizing Browser SDK
+
+You can use the Sematext Browser SDK to implement more complex monitoring solutions and collect the exact metrics you want from real users in real browsers in real time.  See [Getting Started with Sematext Browser SDK for Front-end Performance Monitoring](https://sematext.com/blog/browser-sdk/).
+
 ## Contributing
 
 Pull requests for bug fixes, improvements and new features for the [Browser SDK](https://github.com/sematext/browser-sdk) are more than welcome. You can open a pull request on the [project Github page](https://github.com/sematext/browser-sdk). When opening a new pull request please take the time to briefly describe the changes. Make sure that the newly introduced code passes the `lint` and `flow` checks along with the integration tests.

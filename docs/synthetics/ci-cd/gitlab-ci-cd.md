@@ -3,7 +3,7 @@ description: Guide on how to integrate Sematext Synthetics with GitLab CI/CD.
 
 **Create an API Key Variable**
 
-Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext API Key.
+Create a CI/CD variable from **Settings** -> **CI/CD** -> **Variables** for the Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -14,7 +14,7 @@ Create a CI/CD variable from the Settings -> CI/CD -> Variables, for Sematext AP
 
 **Configure Run Monitor Step in Pipeline YAML**
 
-Configure run monitor stage in `.gitlab-ci.yml` to trigger run after deployment and upload the artifacts.
+Configure the run monitor stage in `.gitlab-ci.yml` to trigger a run after deployment and upload the artifacts.
 
 ```yaml
 stages:

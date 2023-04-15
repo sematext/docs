@@ -1,7 +1,7 @@
-title: Sematext Autodiscovery for Monitoring
+title: Sematext Service Discovery
 description: Sematext Autodiscovery Monitoring automatically scans for services that can be monitored using Sematext Agent and, depending on your configuration, automatically sets up monitoring agents. 
 
-The centerpiece of our Autodiscovery feature is [Sematext Agent](../agents/sematext-agent). It scans for services that can be monitored by Sematext
+The centerpiece of Service Discovery is [Sematext Agent](../agents/sematext-agent). It scans for services that can be monitored by Sematext
 [supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It works in both bare-metal/virtual machine and in container environments. Data about discovered services is displayed under Discovery.
 
 <img class="content-modal-image" alt="Sematext Autodiscovery" src="../../images/monitoring/autodiscovery-ui.png" title="Sematext Autodiscovery">
@@ -20,19 +20,21 @@ Sematext Agent can automatically discover and start monitoring the following ser
 
 - Cassandra
 - ClickHouse
+- Couchbase
 - Elasticsearch
 - HAProxy
+- Jenkins
+- JVM
 - Kafka
 - MySQL
 - Nginx+
+- OpenSearch
 - Redis
 - Solr
 - Spark
 - Storm
-- JVM
 - Tomcat
 - ZooKeeper
-- Jenkins
 
 Additionally, Sematext Agent will also discover the following services, but at the moment it can't automatically start monitoring them:
 
@@ -45,19 +47,19 @@ Additionally, Sematext Agent will also discover the following services, but at t
 
 \* For Node.js services it is possible to install a Sematext-supported monitoring agent manually by following the instructions in the UI 
 
-### How do I start using Autodiscovery?
+### How do I start using Service Discovery?
 
 Simply go to [Discovery](https://apps.sematext.com/ui/discovery/overview) ([EU](https://apps.eu.sematext.com/ui/discovery/overview)). You will be presented with instructions to install Sematext Agent. On each machine, Kubernetes, Swarm, or Docker Enterprise cluster where Sematext Agent
 is installed, it will instantly start discovering services that can be monitored. Discovered services will be displayed in Discovery. Clicking on each service lets you enable automatic monitoring for that type of service. In most cases Sematext Agent knows how to start monitoring them without requiring you to take any additional actions. This means service metrics will start appearing a few seconds after you enable automatic monitoring. In other cases you may have to provide credentials so monitoring agents can connect to the service you wish to monitor. In either case, the Discovery screen will guide you and provide the exact instructions.
 
-### How does Sematext Autodiscovery work in bare-metal/virtual machine environments?
+### How does Sematext Service Discovery work in bare-metal/virtual machine environments?
 
 It is enough to install sematext-agent RPM/DEB package and set up one of your Infra App tokens by following the instructions. This will start Sematext Agent which will
 automatically start scanning for known service types. Separately, it will connect to the Sematext backend to fetch info about any automatic monitoring rules you may have defined.
 
 In bare-metal/virtual machine environments, Sematext Agent will automatically start monitoring discovered services only if configured to do so via the Discovery screen.
 
-### How does Sematext Autodiscovery work in container environments? 
+### How does Sematext Service Discovery work in container environments? 
 
 The Sematext Agent container gets distributed to every Kubernetes, Docker Swarm, or Docker Enterprise node. Sematext Agent uses eBPF to watch for services starting, as well as stopping, so it can start and stop monitoring agent containers and pods.
 

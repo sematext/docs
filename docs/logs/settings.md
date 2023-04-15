@@ -9,43 +9,38 @@ The settings include:
   - [changing your App's plan](../logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
-  ![Sematext Logs App Settings](https://sematext.com/docs/images/logs/logsene-app-settings.png)
+  ![Sematext Logs App Settings](../images/guide/logs/logs-app-settings.png)
 
 
 ## Side Navigation
 
-The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, transaction tracing, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
+The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
 
-Side navigation top level sections for infrastructure and application performance monitoring, log management, transaction tracing, and real user monitoring:
+Side navigation top level sections for infrastructure and application performance monitoring, log management, and real user monitoring:
 
-- Dashboards
-- Infrastructure
-- Monitoring
-- Logs
-- Experience
-- Correlations
-- Alerts and Events
-- Integrations
+- [Discovery](https://sematext.com/docs/logs/discovery/intro/)
+- [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/)
+- [Monitoring](https://sematext.com/docs/monitoring/)
+- [Logs](https://sematext.com/docs/logs/)
+- [Synthetics](https://sematext.com/docs/synthetics/)
+- [Experience](https://sematext.com/docs/experience/)
+- [Alerts](https://sematext.com/docs/experience/)
+- [Events](https://sematext.com/docs/events/)
+- [Dashboards](https://sematext.com/docs/dashboards/)
 
-Side navigation sections for user and team features:
+Side navigation sections for team features and settings:
 
-- Invites
-- Team
-- Account 
+- [Team](https://sematext.com/docs/team/)
+- Settings
 
-![](../images/guide/logs/side-navigation.png)
-
-## App & Dashboard Selector
-
-The App & Dashboard dropdown selector lets you **choose any Logs, Monitoring, or Experience App** as well as any **Dashboards and Reports** that you have generated from those Apps. Infrastructure views such as AppMap, NetMap, Servers, and Containers are also available for selection, and together provide seamless switching and navigation between logs, application and infrastructure monitoring, which is essential when rushing to fix production issues.
+![](../images/guide/logs/side-navigation_2.png)
 
 ## App Actions
 
-Right next to the App & Dashboard Selector is the **App Actions dropdown menu** and **horizontal ellipsis icon**. 
+The Logs App view allows for easy interaction between various App settings.
+From the App Actions drop down menu, the horizontal elipsis icon shows your App options and lets you open various App-specific function, like, **App Settings, alert rules, connect App, invite team members, ship logs, whitelist IPs, archive logs, see usage, and transfer App ownership.**
 
-The App Actions dropdown menu allows you to **quickly switch between your Dashboards and Apps**. While the horizontal elipsis icon shows your App options and lets you open various App-specific functions, like instructions to **install monitors and start sending metrics, App settings, alert rules, heartbeat alerts, as well as ability to connect two different Apps, invite team members, and transfer App ownership**.
-
-All App actions open in a modal dialogue window as temporary UI regions and let you adjust and edit settings or create various alerts. The Logs App view remains unchanged and allows for easy interaction between various system settings and reports views.
+![](../images/guide/logs/logs-app-actions.png)
 
 ## Report Selector
 
@@ -53,33 +48,22 @@ Once you create a Logs App, and start shipping data, you will get a **default Re
 
 ![](../images/guide/logs/report-selector.png)
 
+### Report Settings
+ - **Report Actions** - Your customized logs report can be better described using meta name and description, and you can assign a unique URL Alias to identify that report.
+ - **Legends Position and Extended Charts features** - Except in the default overview mode, each **report can have legends** for each metric name, arranged below, to the left, or hidden entirely for better chart interaction. Extended charts are also displayed below and provide a comparative view into a longer time span relative to the time frame displayed in the main chart. Just like report legends, the extended view can be hidden and only the chart with X and Y values will be displayed.
 
-## Time Picker
+## Logs Search and Report Menu
 
-The Time Picker is available whenever an App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed as well.
+Alerts and Logs are integrated into a single reports pane, and used to search logs, create alerts for anomalies, and much more. 
 
-A **custom time range can be selected using the time picker dropdown menu**. The Logs App will automatically refresh upon selection and update all the reports accordingly.
+Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
 
-## Refresh and Live Tail
+You can also create and integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
 
-Refresh data and Live Tail options are located next to the time picker. The **Live Tail feature provides real-time insights as soon as your data is consumed and indexed**. It can also be stopped so the auto-refresh does not update the data, in case you need to inspect specific incidents or anomalies within a certain time segment.
+## Integrations
 
-## Notifications
+You will need to install **a Log Shipper or Library** so data can be shipped to your Logs App. This section will guide you through installing and running a Log Shipper.
+	
+Please refer to the [Integrations](https://sematext.com/docs/integration/) documentation pages for particular tech you wish to monitor. Learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS s3, and how to integrate log management with log shippers. You'll find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud there.
 
-The megaphone icon in the right section of the header is used to open the notifications. If your plan is in need of an upgrade, a new feature is announced, or similar system and service updates require your attention, they'll be shown in the notifications view.
-
-## User Settings
-
-The User Settings is the last right-aligned item in the header. **Switching accounts, Inviting team members, Billing, Help, Subscriptions**, and other user related system functionalities are located in the user settings dropdown menu. They are also top level items easily accessible from the left sidebar. 
-
-Here you can see the main navigation sections:
-
-- Side navigation 
-- App & Dashboard Selector dropdown menu
-- App Actions dropdown menu
-- User Settings dropdown menu
-- Time Picker component 
-
-![Sematext Cloud Monitoring Guide - Menus](https://sematext.com/docs/images/guide/monitoring/sematext-monitoring-guide-app-menus.png)
-
-The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your Monitoring App, do report specific actions, connect your Apps, and more.
+The next section describes the Logs reports & components and help you discover how to add new components, correlate your logs and events with your Logs App, do report specific actions, connect your Apps and more.

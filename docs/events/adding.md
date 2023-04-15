@@ -61,3 +61,5 @@ need to leave a message on the timeline for future analysis how the deployment i
 system or application metrics.
 
 [![Create a custom event](../images/events/custom-event.png "Create a custom event")](../images/events/custom-event.png)
+
+See [Sematext Common Schema](../tags/common-schema/) for recommended event fields.

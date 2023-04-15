@@ -99,26 +99,18 @@ services:
 
 Create an Infra Monitoring App in Sematext and follow the instructions in the UI.
 
-The Swarm network has to be created **only** if you're deploying the agent with docker service command. On the contrary, if you're using the `docker stack deploy` command and using the `docker-compose.yml` descriptor, it is not necessary to create the
-agent network.
+After that, Sematext Agent can be activated with a single command, but has to be run manually on each node:
 
 ```bash
-docker network create -d overlay --attachable --scope=swarm st-agent-net
-```
-
-After that, Sematext Agent can be deployed as a global service on all Swarm nodes with a single command:
-
-```bash
-docker service create --mode global --network st-agent-net \
---name st-agent \
---restart-condition any \
---mount type=bind,src=/,dst=/hostfs,readonly \
---mount type=bind,src=/etc/passwd,dst=/etc/passwd,readonly \
---mount type=bind,src=/etc/group,dst=/etc/group,readonly \
---mount type=bind,src=/var/run,dst=/var/run/ \
---mount type=bind,src=/sys/kernel/debug,dst=/sys/kernel/debug \
---mount type=bind,src=/sys,dst=/host/sys,readonly \
---mount type=bind,src=/dev,dst=/hostfs/dev,readonly \
+docker run -d --restart always --privileged  -P --name st-agent --memory 512MB \
+-v /:/hostfs:ro \
+-v /sys/:/hostfs/sys:ro \
+-v /var/run/:/var/run/ \
+-v /sys/kernel/debug:/sys/kernel/debug \
+-v /etc/passwd:/etc/passwd:ro \
+-v /etc/group:/etc/group:ro \
+-v /dev:/hostfs/dev:ro \
+-v /var/run/docker.sock:/var/run/docker.sock:ro \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
 sematext/agent:latest
@@ -127,49 +119,25 @@ sematext/agent:latest
 If you like using `docker stack`, the following `docker-compose.yml` provides a working configuration:
 
 ```yaml
-version: "3"
+# docker-compose.yml
 services:
-  st-agent:
-    image: sematext/agent:latest
+  sematext-agent:
+    image: 'sematext/agent:latest'
     environment:
-      INFRA_TOKEN: <YOUR_INFRA_APP_TOKEN_HERE>
-      REGION: <US or EU>
-    deploy:
-      mode: global
-      restart_policy:
-        condition: any
+      - INFRA_TOKEN: <YOUR_INFRA_APP_TOKEN_HERE>
+      - REGION: <US or EU>
+    cap_add:
+      - SYS_ADMIN
+    restart: always
     volumes:
-    - type: bind
-      source: /
-      target: /hostfs
-      read_only: true
-    - type: bind
-      source: /etc/passwd
-      target: /etc/passwd
-      read_only: true
-    - type: bind
-      source: /etc/group
-      target: /etc/group
-      read_only: true
-    - type: bind
-      source: /var/run
-      target: /var/run/
-    - type: bind
-      source: /sys/kernel/debug
-      target: /sys/kernel/debug
-    - type: bind
-      source: /sys
-      target: /host/sys
-      read_only: true
-    - type: bind
-      source: /dev
-      target: /hostfs/dev
-      read_only: true
-networks:
-  default:
-    name: st-agent-net
-    driver: overlay
-    attachable: true
+      - '/:/hostfs:ro'
+      - '/etc/passwd:/etc/passwd:ro'
+      - '/etc/group:/etc/group:ro'
+      - '/var/run/:/var/run/'
+      - '/sys/kernel/debug:/sys/kernel/debug'
+      - '/sys:/host/sys:ro'
+      - '/dev:/hostfs/dev:ro'
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
 ```
 
 Then you run:

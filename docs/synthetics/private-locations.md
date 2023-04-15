@@ -9,7 +9,7 @@ The private locations feature allows you to run synthetic tests from your privat
 
 ## Create Private Location
 
-To create a private location, navigate to Synthetics -> Private Locations -> New Private Location. 
+To create a private location, navigate to **Synthetics** -> **Private Locations** -> **New Private Location**. 
 
 ![Create Private Location](../images/synthetics/create-private-location.png)
 
@@ -30,7 +30,7 @@ If you have multiple private locations, you need to install agents individually 
 
 ## Using Private Locations
 
-Once you create a private location from the UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private locations behave exactly the same as public locations. 
+Once you create a private location from the UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private locations behave exactly the same as public locations. The only exception to this is that private locations won't be able to use [sensitive data](./user-journey-scripts/#storing-your-user-journey-script-credentials-securely) for script-based Browser monitors, due to security concerns.
 
 ### Schedule a Monitor to Run from Private Locations
 

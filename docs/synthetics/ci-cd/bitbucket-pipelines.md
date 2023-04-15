@@ -3,7 +3,7 @@ description: Guide on how to integrate Sematext Synthetics with Bitbucket pipeli
 
 **Create API Key Secret**
 
-Create a secret from the Repository Settings -> Repository Variables, for Sematext API Key.
+Create a secret from the **Repository Settings** -> **Repository Variables**, for Sematext API Key.
 
 <img
   class="content-modal-image"

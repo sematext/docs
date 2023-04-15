@@ -75,9 +75,10 @@ your Sematext Agent properties files located in
 SPM_MONITOR_COLLECT_INTERVAL=30000
 ```
 
-The value is expressed in milliseconds. If you are adjusting it, we
-recommend setting it to 30000. With bigger values it is possible some
-1-minute intervals would be displayed without the data in the UI.
+The value is expressed in milliseconds and it can be adjusted from 
+10000 to 60000. If you are adjusting it, we recommend setting it to 30000. 
+With bigger values it is possible some 1-minute intervals would be displayed 
+without the data in the UI.
 
 After you have made the changes, restart your Sematext Agent.
 
@@ -717,6 +718,19 @@ avoid certificate checking. In case the command with wget is failing in
 your case, add `--no-check-certificate` as wget argument. If command
 with curl is failing, add `-k` flag.
 
+### When installing Sematext Agent, I see "gnupg do not seem to be installed" or a similar error. How can I avoid it?
+
+Debian based sematext-agent installation requires adding gpg key to your system and to be able to add a gpg key, you need to have **gnupg** package installed.
+
+```bash
+sudo apt install gnupg
+```
+
+After that, you should be able to add the key to your system.  
+```bash
+wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
+```
+
 ### How do I create the diagnostics package?
 
 Preparing diagnostics data differs depending on the setup you have.
@@ -995,6 +1009,14 @@ when being sent to Sematext over the Internet), you can adjust that in
 server_base_url=https://spm-receiver.sematext.com
 ```
 
+### Why are some system information fields empty?
+
+It may happen that some of the system information fields are unavailable. Depending on the architecture, since the Kernel version **2.6.26**, the `CONFIG_STRICT_DEVMEM` kernel configuration option limits access to the `/dev/mem` character device by default. This character device provides userspace access to all physical memory. It is primarily used to access the system's IO memory addresses in relation to peripheral hardware. When `CONFIG_STRICT_DEVMEM` is enabled in the Kernel, access to the `/dev/mem` character device is disabled from userspace even for the root user. The Sematext Agent uses this character device to gather machine information. With `CONFIG_STRICT_DEVMEM` enabled in the Kernel, the Sematext Agent may log errors relating to `/dev/mem` and will not be able to gather complete machine information, resulting in some missing system information fields. To resolve this, it is necessary to recompile the kernel with `CONFIG_STRICT_DEVMEM=n` set in the kernel configuration options. It is usually possible to check if `CONFIG_STRICT_DEVMEM` is currently enabled in the kernel, by running the following command:
+
+```
+cat /boot/config-$(uname -r) | grep CONFIG_STRICT_DEVMEM
+```
+
 ## Security
 
 ### What information are App Agents sending?
@@ -1052,19 +1074,32 @@ Note:
 
 ### How do you bill for infrastructure and server monitoring?
 
-Usage is metered hourly on a per-agent basis. For example:
+Usage is metered hourly on a per-agent basis. There are two types of Monitoring Apps, and they are priced differently:
 
-If you send metrics from a server A to Monitoring App Foo between 01:00 and
-02:00 that's $0.035 for the Standard plan.
+-  Infra Monitoring Apps, starting at $0.005/hour per host for the Standard plan and 7 days of data retention.
+-  Monitoring Apps for our supported Integrations, starting at $0.014/hour per agent for the Standard plan and 7 days of data retention.
+
+For example:
+
+If you send metrics from a server A to Infra Monitoring App Foo between 01:00 and
+02:00 that's $0.005 for the Standard plan and 7 days of data retention.
 
 If another agent is monitoring something else, even if that is running on the same
-server A, and sending metrics to a different Monitoring App Bar, that's another $0.035.
+server A, and sending metrics to a different Infra Monitoring App Bar, that's another $0.005.
 
-If you are not sending metrics from a server A for a Monitoring App Foo between
+If you are not sending metrics from a server A for a Infra Monitoring App Foo between
 02:00 and 03:00 then you pay $0 for that hour.
 
-A single agent monitoring 24/7 will end up being ~ $25/month.  If you
-run another agent on another server it will be 2 x ~ $25/mo.
+If you send metrics from a server A to Integration Monitoring App Baz between 01:00 and
+02:00 that's $0.014 for the Standard plan and 7 days of data retention.
+
+A single agent monitoring 24/7 will end up being $3.6/month. If you
+run another agent on another server it will be 2 x $3.6/month. And 
+for each integration, it will be an extra $10.08/month.
+
+Note:
+
+- For each Integration Monitoring App, an Infra Monitoring App is required for monitoring your OS, container, and process metrics, along with info about your hosts, package and container image inventory, system events, and more.
 
 ### How do you bill for container monitoring?
 

@@ -11,16 +11,20 @@ pages:
       - Alerts Guide: guide/alerts-guide.md
       - Events Guide: guide/events-guide.md
       # - Dashboards Guide: guide/dashboards-guide.md
+      - Connected Apps: guide/connected-apps.md
       - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
+      - Scheduled Reports: guide/scheduled-reports.md      
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
       - Settings: logs/settings.md
       - Reports & Components: logs/reports-and-components.md
+      - Logs Table Quick Actions: logs/logs-table-quick-actions.md
       - Sending Log Events:
         - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
+        - Fluent Bit: logs/fluentbit.md
         - Logagent: logs/logagent.md
         - Logstash: logs/logstash.md
         - Syslog:
@@ -102,7 +106,6 @@ pages:
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
       - User Journey Scripts: synthetics/user-journey-scripts.md
-      - Alerts: synthetics/alerts.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration:
         - Overview: synthetics/ci-cd/overview.md
@@ -118,6 +121,7 @@ pages:
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
       - Correlation: synthetics/correlation.md
+      - Using the API: synthetics/using-the-api.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
     - Tracing:
@@ -136,6 +140,7 @@ pages:
         - AWS: integration/aws.md
         - Cassandra: integration/cassandra.md
         - ClickHouse: integration/clickhouse.md
+        - Couchbase: integration/couchbase.md
         - Docker: integration/docker.md
         - Elasticsearch: integration/elasticsearch.md
         - Express.js: integration/express.js.md
@@ -152,6 +157,7 @@ pages:
         - Nginx: integration/nginx.md
         - Nginx Plus: integration/nginxplus.md
         - Node.js: integration/node.js.md
+        - OpenSearch: integration/opensearch.md
         - PHP: integration/php.md
         - PostgreSQL: integration/postgresql.md
         - RabbitMQ: integration/rabbitmq.md
@@ -191,6 +197,7 @@ pages:
         - ServiceNow: integration/alerts-servicenow-integration.md
         - SIGNL4: integration/alerts-signl4-integration.md
         - Slack: integration/alerts-slack-integration.md
+        - SMS/text: integration/alerts-sms-integration.md
         - Spike.sh: integration/alerts-spikesh-integration.md
         - Squadcast: integration/alerts-squadcast-integration.md
         - Teams: integration/alerts-microsoft-teams-integration.md
@@ -198,6 +205,7 @@ pages:
         - Twilio: integration/alerts-twilio-integration.md
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
+        - AlertOps: integration/alerts-alertops-integration.md
         - Custom Params: integration/alerts-webhooks-custom-params.md
       - Orchestration:
         - Terraform: integration/terraform.md
@@ -209,8 +217,10 @@ pages:
       - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
       - Creating Heartbeat Alerts: alerts/creating-heartbeat-alerts.md
       - Creating Experience Alerts: alerts/creating-experience-alerts.md
+      - Creating Synthetics Alerts: alerts/creating-synthetics-alerts.md
       - Alerts Meta and Tags: alerts/alerts-meta.md
       - Alert Notifications: alerts/alert-notifications.md
+      - Alert Recipients: alerts/alert-recipients.md
       - Account-default Hooks: alerts/account-default-hooks.md
       - Alert Scheduling: alerts/alert-scheduling.md
       - Default Alerts: alerts/default-alerts.md
@@ -218,7 +228,6 @@ pages:
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md
-      - Fields: events/fields.md
       - Timeline/Histogram: events/timeline.md
       - Correlation: events/correlation.md
     - Dashboards:
@@ -227,6 +236,7 @@ pages:
       - Settings: dashboards/settings.md
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
+      - Report Variables: dashboards/report-variables.md
     - Tags:
       - Overview: tags/index.md
       - Custom Tags: tags/custom-tags.md
@@ -244,7 +254,10 @@ pages:
         - Installation:
           - Linux: agents/sematext-agent/installation.md
           - Docker: agents/sematext-agent/containers/installation.md
-          - Kubernetes: agents/sematext-agent/kubernetes/installation.md
+          - Kubernetes:
+            - Installation: agents/sematext-agent/kubernetes/installation.md
+            - Helm Chart: agents/sematext-agent/kubernetes/helm.md
+            - Operator: agents/sematext-agent/kubernetes/operator.md
           - Chef Recipe: agents/sematext-agent/chef-recipe.md
           - Permission requirements: agents/sematext-agent/permission-requirements.md
         - Starting/stopping: agents/sematext-agent/starting-stopping.md
@@ -278,6 +291,7 @@ pages:
           - Credential sets:  agents/sematext-agent/autodisco/credential-sets.md
           - Resource limits: agents/sematext-agent/autodisco/resource-limits.md
         - Troubleshooting: agents/sematext-agent/agent-troubleshooting.md
+        - Release Notes: agents/sematext-agent/releasenotes.md
       - Node.js Agent: agents/node-agent.md
       - Logagent:
         - Overview: logagent/index.md
@@ -367,11 +381,6 @@ pages:
         - FAQ: logagent/faq.md
       - Mobile App SDKs: agents/mobile.md
       - Browser SDK: agents/browser.md
-    - Sematext Enterprise:
-      - Overview: sematext-enterprise/index.md
-      - Licensing: sematext-enterprise/licensing.md
-      - On-premises vs SaaS: sematext-enterprise/on-premises-vs-saas.md
-      - FAQ: sematext-enterprise/faq.md
     - Fleet: fleet/index.md
     - API: api/index.md
     - FAQ: faq.md

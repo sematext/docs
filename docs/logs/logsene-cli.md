@@ -1,7 +1,7 @@
 title: Sematext Logs CLI
 description: Logging CLI used to view, filter, and analyze logs in Sematext's centralized log management solution.
 
-[Sematext Logs](http://sematext.com/logsene) *Command-line Interface* enables viewing, searching, filtering, and analyzing of log entries. Currently it supports OS X and Linux.
+[Sematext Logs](https://sematext.com/logsene) *Command-line Interface* enables viewing, searching, filtering, and analyzing of log entries. Currently it supports OS X and Linux.
 
 ## Installation
 
@@ -23,19 +23,18 @@ npm link
 npm test
 ```
 
-## Logsene
+## Sematext Logs
 
-[Logsene](http://sematext.com/logsene)  is a centralized log management
-solution where you can upload your logs in bulk or real-time from all
+[Sematext Logs](https://sematext.com/logsene) is a centralized log management
+solution where you can ship your logs in bulk or real-time from all
 your servers.
 
-Those logs are then aggregated by time and shown in the Logsene web
-application, where you have the ability to search for specific terms,
+Those logs are then aggregated by time and shown in Sematext, where you have the ability to search for specific terms,
 narrow down time ranges, filter fields, setup alerts and more.
 
-<img alt="Sematext Logsene - Logging Management" src="/docs/images/logs/logsene-ui.png" title="Sematext Logging Management UI screen">
+<img alt="Sematext Logs - Log Management" src="/docs/images/logs/logsene-ui.png" title="Sematext Logs Management UI screen">
 
-A quick rundown of most notable features of Logsene:
+A quick rundown of most notable features of Sematext Logs:
 
   - All your logs accessible in one place
   - Control who sees which data
@@ -44,8 +43,7 @@ A quick rundown of most notable features of Logsene:
   - Log Alerts & Anomaly Detection
   - Saved Views
   - Scheduled Reporting
-  - CoreOS Log Collection
-  - Docker container monitoring
+  - Correlation of metrics and logs
   - REST API
 
 ## Logsene CLI
@@ -76,14 +74,14 @@ the release of Logsene CLI.
 We define L-CLI session as a set of commands issued by the user, with no
 more than 30m between them. Every session has a set of configuration
 parameters that control the way L-CLI behaves. E.g. which Sematext
-account is used (`--api-key`); which Logsene application is used
+account is used (`--api-key`); which Logs App is used
 (`--app-key`); is tracing information going to be displayed (--trace).
 
 For controlling those settings, we use `config set` and `config
 get` commands. For convenience reasons, you don't have to deal with API
 and APP keys manually. L-CLI automatically retrieves both keys on each
-session start, as users login (`--api-key`) and choose Logsene
-application (`--app-key`). L-CLI then writes those parameters to the
+session start, as users login (`--api-key`) and choose Logs App
+(`--app-key`). L-CLI then writes those parameters to the
 session configuration store and reuses them on each subsequent command,
 until the session times
 out.
@@ -91,7 +89,7 @@ out.
 The session primitives were introduced in order to enable frictionless
 multi-user experience, where all users may possibly be accessing L-CLI
 from the same box (while being SSHd into it), using the same Sematext
-account and possibly even the same Logsene application.
+account and possibly even the same Logs App.
 
 
 
@@ -268,14 +266,14 @@ Usage: logsene config set [OPTIONS]
     --trace <true|false>
 
 It is not necessary to explicitly set api-key nor app-key.
-Logsene CLI will ask you to log in and choose Logsene application
+Logsene CLI will ask you to log in and choose Logs App
 if keys are missing from the configuration
 Examples:
   logsene config set --api-key 11111111-1111-1111-1111-111111111111
       sets the api key for the current session
 
   logsene config set --app-key 22222222-2222-2222-2222-222222222222
-      sets Logsene application key for the current session
+      sets Logs App key for the current session
 
   logsene config set --default-size 3000
       sets default number of hits returned for the current session (overrides the default 200)

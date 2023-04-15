@@ -20,33 +20,19 @@ After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <htt
 
 For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
-<video style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/sematext-create-logs-app.mp4" type="video/mp4" />
-</video>
-
-Check out the [Quick Start](./quick-start) for more info.
-
-## Adding Data to Your App
-
-The easiest way to send logs is [through Logstash](logstash), Filebeat, or [Logagent](/logagent). You can also use any tool that works with Elasticsearch's REST API, for both [indexing](index-events-via-elasticsearch-api) and [searching](search-through-the-elasticsearch-api).
-
-The only condition is to use the App's token as the index name, and **https://logsene-receiver.sematext.com:443** (or https://logsene-receiver.eu.sematext.com:443 if using Sematext Cloud Europe) as the address.
-
-For more details on using the Elasticsearch REST API with Sematext see [Index Events via Elasticsearch API](index-events-via-elasticsearch-api).
+Follow along the [Quick Start](./quick-start) guide to learn how.
 
 ## App Settings
 
 App's settings include, but are not limited to:
 
-  - inviting new users to your application
-  - [authorizing public IPs to send data to your app via syslog](authorizing-ips-for-syslog)
+  - inviting new users to your App
+  - [authorizing public IPs to send data to your app via syslog](../logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
-  - [changing your app's plan](faq/#plans-prices)
+  - [changing your App's plan](../logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
-  <img alt="Sematext Logging App Settings" src="../images/logs/logsene-app-settings.png" title="Sematext Logging App Settings"></a>
-
-Read more on the [Settings](./settings) page.
+Check out the [Settings](./settings) section for more info.
 
 ## Getting Support
 

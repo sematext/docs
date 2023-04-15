@@ -1,11 +1,11 @@
-title: Log Management FAQ
-description:  Cloud based SaaS / On-premises logging as a service platform FAQ on log shipping, log events fields and count, data retention and daily volumes, Kibana and more 
+title: Sematext Logs FAQ
+description: Sematext Logs Frequently Asked Questions
 
 ## General
 
 ### How many logs can I store?
 
-There is no limit to how many logs you can store in your logging management app.
+There is no limit to how many logs you can store in your Logs App.
  That said, you should try to pick the ideal Daily Volume when picking
 your plan, as that is going to give you the most optimal $/GB
 price.
@@ -26,7 +26,9 @@ logs.
 This means you have more than the allowed number of distinct fields in your Logs App.  To manually remove some fields use the Field Editor, but if you continue shipping logs with fields you've removed via Field Editor those fields will be recreated.
 
 Some reasons why this may happen and how to address it:
+
 * You have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.  You can [ship logs from different sources to different Logs Apps](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-to-multiple-destinations-sematext-logs-apps), [ship logs to different Logs Apps based on the matching patterns](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-that-match-different-patterns-to-different-destinations-sematext-logs-apps)), or use [grep plugin](/logagent/input-filter-grep/) to [drop logs that match a certain pattern](https://sematext.com/docs/logagent/faq/#how-do-i-drop-logs-that-match-a-certain-pattern).
+
 * You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields.  If you are using [Logagent](/logagent) you can use REMOVE_FIELDs or [remove-fields output filter](/logagent/output-filter-removefields/) to remove fields.
 
 ### What is @timestamp field?
@@ -50,7 +52,7 @@ On click, `App Settings > Usage` page will present both Total Volume in Gb and T
 
 Total Count of indexed logs is displayed in `App Settings > Usage` page.
 
-The number of logs will be also displayed in the right corner of the Log Counts panel just below the app's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
+The number of logs will be also displayed in the right corner of the Log Counts panel just below the App's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
 
 <img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
@@ -61,7 +63,7 @@ number of hits represents the number of all your logs.
 ### How long are my logs stored?
 
 How long your logs are stored depends on what Data Retention you
-selected when you picked your Logging Management App plan.  Each such app can have a
+selected when you picked your Logging Management App plan.  Each such App can have a
 different Daily Retention, Daily Volume, and plan.  You can change
 retention, volume, and plan at any time.
 
@@ -87,6 +89,14 @@ Data retention mechanism is responsible for removing old log events.
 If you have retention set to 7 days, all log events that are received more than 7 days ago will be removed. 
 For paid plans we remove whole 24-hour periods once a day. For free plans we
 remove old data every 30 minutes.
+
+### How long is my data stored?
+
+This depends on the data retention you selected for each of your logging
+Apps.  Backups are stored in S3 and kept for 90 days.
+
+### How do I configure archiving for my Logs?
+Please see [Log Archiving](https://sematext.com/docs/logs/archiving/)
 
 ### Is data retention based on index/import/upload/receive time or the actual log event @timestamp?
 
@@ -154,7 +164,7 @@ has a purely numeric field "size" and another log source also has a
 field "size", but can have non-numeric values, this will cause issues.
 
 Thus, either keep logs of different structures in separate logging
-app or make sure there are no conflicting fields.
+App or make sure there are no conflicting fields.
 
 ### My data structure changed, can I reindex my data automatically?
 
@@ -199,11 +209,11 @@ You can use [numerous log shippers, logging libraries, and platform integrations
 
 You can use Logstash to copy logs from your own ELK / Elastic Stack to our Logs App as described at [Elastic Stack Import-Export with Logstash & Logsene](https://sematext.com/blog/logstash-migrating-data-logsene/).
 
-### How can I ship logs from Android and iOS apps?
+### How can I ship logs from Android and iOS Apps?
 
-For shipping logs from Android apps use
+For shipping logs from Android Apps use
 <https://github.com/sematext/sematext-logsene-android> and for
-shipping logs from iOS apps use
+shipping logs from iOS Apps use
 <https://github.com/sematext/sematext-logsene-ios>.
 
 ### How can I ship AWS CloudTrail logs, AWS VPC logs, and other logs from S3?
@@ -263,7 +273,7 @@ Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handl
 
 ### How much does your centralized logging management solution cost?
 
-Check the [Logs App Plans & Prices](https://www.sematext.com/logsene/pricing).
+Check the [Logs App Plans & Prices](https://www.sematext.com/pricing#logsene).
 
 ### What happens with my logs when I change from the free to a paid plan or vice versa?
 
@@ -439,7 +449,7 @@ What could be done in this situation?  There are basically two options:
 {"detail_object": {"code": -1, "error":  "Some Error message here", "module": "myapp"}
 ```
 
-The renaming could take place in your apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
+The renaming could take place in your Apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
 
 3) You could ship the logs of "Service B" to a separate Logs App (different App token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
 
@@ -471,11 +481,6 @@ your API calls using `apiKey`. You can read more about this [here](search-throug
 ### Where is my data stored?
 
 Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
-
-### How long is my data stored?
-
-This depends on the data retention you selected for each of your logging
-apps.  Backups are stored in S3 and kept for 90 days.
 
 ## Kibana
 
@@ -668,7 +673,7 @@ notify you when the overall volume of your logs suddenly changes, which
 may be a signal that you should look for what suddenly increased logging
 (e.g. maybe something started logging lots of errors, exceptions,
 timeouts, or some such), or why logging volume suddenly dropped (e.g.
-maybe some of your server(s) or app(s) stopped working and sending
+maybe some of your server(s) or App(s) stopped working and sending
 logs).
 
 ### Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?

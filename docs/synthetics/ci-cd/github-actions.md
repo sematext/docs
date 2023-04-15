@@ -3,7 +3,7 @@ description: Guide on how to integrate Sematext Synthetics with GitHub Actions.
 
 **Create API Key Secret**
 
-Create a secret from the Repository Settings, for Sematext API Key.
+Create a secret from the repository's **Settings** page for the Sematext API Key.
 
 <img
   class="content-modal-image"
@@ -54,7 +54,7 @@ On every deployment event, the action will be invoked and the action logs will c
 
 <img
   class="content-modal-image"
-  alt="CI/CD GitHub Secret"
+  alt="CI/CD GitHub Actions Logs"
   src="../../images/synthetics/ci-cd-github-actions-log.png"
-  title="Add Secret in Github"
+  title="GitHub Actions Logs"
 />

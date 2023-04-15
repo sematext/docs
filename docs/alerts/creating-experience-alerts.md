@@ -31,7 +31,7 @@ The above metrics can also be chosen from the alert rule creation dialog:
 
 While creating an alert you'll get a chart preview of the alert threshold or anomaly. For example, the preview screen when setting up a new alert rule for the page load time higher than 1200 milliseconds on average would look like the following one:
 
-![Page Load Alert Preview](../images/alerts/experience_alert_preview.png)
+![Page Load Alert Preview](../images/alerts/experience_alert_preview_2.png)
 
 When setting up the [Apdex score](../experience/configure-requirements.md) based alert rule, the threshold can be set to one of the following values:
 
@@ -42,4 +42,4 @@ When setting up the [Apdex score](../experience/configure-requirements.md) based
 
 Here's how to setup an *Experience* *alert rule* that will be triggered when the `HTTP Requests` *Apdex score* remains worse than `Good` for 10 minutes:
 
-![image alt text](../images/alerts/experience_alert_apdex.png)
+![image alt text](../images/alerts/experience_alert_apdex_2.png)

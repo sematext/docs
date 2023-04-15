@@ -19,7 +19,7 @@ Synthetics monitors collect the following metrics as part of every run. You can 
 
 ### Run Metrics
 
-For every browser run, the monitor collects the below run-level metrics:
+The following run-level metrics are collected for every Browser monitor run:
 
 | Name  | Label  | Description  | Unit  |
 |---|---|---|---|
@@ -29,23 +29,23 @@ For every browser run, the monitor collects the below run-level metrics:
 
 ### Page Load Metrics
 
-The browser monitor collects the below page load (navigation) metrics for every run. If there are multiple page loads during the execution of the script, the last page-load metrics are collected.
+The Browser monitor collects the below page load (navigation) metrics for every run. If there are multiple page loads during the execution of the script, the last page-load metrics are collected.
 
-| Name  | Label  | Description  | Unit  |
+| Name | Label | Description | Unit |
 |---|---|---|---|
 | synthetics.browser.time.frontend | Frontend time | Time taken for the browser to parse and create the page | ms |
-| synthetics.browser.time.backend | Backend time |  Time taken for the network and the server to generate and start sending the HTML | | ms |
+| synthetics.browser.time.backend | Backend time | Time taken for the network and the server to generate and start sending the HTML | ms |
 | synthetics.browser.time.pageload | Page load time | Time taken for the page to load, from initiation of the page load (e.g., click on a page link) to load completion in the browser | ms |
 | synthetics.browser.time.dns | DNS time | DNS resolution time for the URL of the page | ms |
 | synthetics.browser.time.connection | Socket connect time | Time taken to connect to server | ms |
 | synthetics.browser.time.response | Time to first byte | Time taken for the server to send the response | ms |
 | synthetics.browser.time.download | Download time | Time taken to download the page contents | ms |
 | synthetics.browser.time.dom.interactive | DOM interactive time | Time taken by the browser to parse the document, including the network time from the user's location to your server | ms |
-| synthetics.browser.time.dom.contentload | DOM content load time | Time taken by the browser to parse the document and execute deferred and parser-inserted scripts including the network time from the user's location to your server | ms |
+| synthetics.browser.time.dom.contentload | DOM content load time | Time taken by the browser to parse the document and execute deferred and parser-inserted scripts, including the network time from the user's location to your server | ms |
 | synthetics.browser.time.paint.first | First Paint (FP) | The time from navigation to the time when the first paint happens on the screen | ms |
-| synthetics.browser.time.paint.firstcontentful | First Contentful Paint (FCP) |  The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
-| synthetics.browser.time.paint.largestcontentful | Largest Contentful Paint (LCP) |  The time for largest content element to be visible in the viewport. | ms |
-| synthetics.browser.cumulativelayoutshift | Cumulative Layout Shift (CLS) |  The sum total of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page ||
+| synthetics.browser.time.paint.firstcontentful | First Contentful Paint (FCP) | The time from navigation to the time when the browser renders the first bit of content from the DOM | ms |
+| synthetics.browser.time.paint.largestcontentful | Largest Contentful Paint (LCP) | The time for largest content element to be visible in the viewport. | ms |
+| synthetics.browser.cumulativelayoutshift | Cumulative Layout Shift (CLS) | The sum total of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page |  |
 
 ### Resource Metrics
 
@@ -58,4 +58,100 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
-You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time take to display auto-suggestions on your website or collect & monitor the value from an element in your webpage.  To collect a custom metric use `context.setMetric(name, value)` method in the Browser monitor script. For more info on how to use this API, look into the examples while creating the Browser monitor. The metric name should be unique for this Synthetics App and will be automatically pre-pended with `synthetics.` prefix. You could use [Chart Builder](../dashboards/chart-builder/) to create a custom chart to monitor this metric. You could also create a threshold or anomaly alert on this metric.
+You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically prefixed with `synthetics.browser.custom.`.
+
+Here's an example of a User Journey script which defines two custom metrics: the used JavaScript heap size and how long the combined duration of JavaScript execution is. For your convenience, this example is also listed as **Using Custom Metrics** under the **Browse Examples** section while creating the Browser monitor.
+
+```javascript
+async function testPage(page, context) {
+  // Create a Chrome DevTools Protocol (CDP) session and start measuring performance metrics
+  const client = await page.target().createCDPSession();
+  await client.send('Performance.enable');
+  await page.goto('https://youtube.com/');
+  
+  // Fetch the performance metrics and choose the metrics we want from the performance metrics array
+  const performanceMetrics = await client.send('Performance.getMetrics');
+  const scriptDuration = performanceMetrics.metrics.find((x) => x.name === 'ScriptDuration').value;
+  const usedHeap = performanceMetrics.metrics.find((x) => x.name === 'JSHeapUsedSize').value;
+  
+  // Define the chosen metrics as custom metrics in Sematext Synthetics
+  // The metric names should be unique for this Synthetics application
+  context.setMetric('heap.size', usedHeap);
+  context.setMetric('script.time', scriptDuration);
+}
+module.exports = testPage;
+```
+
+Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/). Go to your **Dashboards** and create a new component. In this example we'll use the **Time Series Chart**. You will then be able to find the custom metrics you've defined in the **Metrics** dropdown. In the script above, we've defined two metrics: `heap.size` and `script.time`. With the previously mentioned added prefix, these will be displayed as `synthetics.browser.custom.heap.size` and `synthetics.browser.custom.script.time`.
+
+![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.png)
+
+Because Browser monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
+
+![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
+
+You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the JS execution time is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
+
+![Custom Metrics Chart Alert](../images/synthetics/custom-metrics-chart-alert.png)
+
+After that, set the **Rollup by** field to **max** and set the alert condition to alert you if the metric value is greater than two and you're good to go.
+
+![Custom Metrics New Alert](../images/synthetics/custom-metrics-new-alert.png)
+
+___
+
+Here's an additional example of getting custom metrics from a response body JSON. Let's say some API returns information about currency exchange rates, and that you'd like to chart these exchange rates over time and perhaps set up alerts if they reach certain points. This example is likewise listed in the **Browse Examples** section found in the Browser monitor creation/editing flow.
+
+```javascript
+// This script gets the exchange rates of various currencies and defines the results as custom metrics
+async function testPage(page, context) {
+  const response = await page.goto("https://api.exchangerate.host/latest");
+  bodyJSON = await response.json();
+  
+  // Extract the values from the response JSON and define them as custom metrics
+  const USD = bodyJSON.rates.USD;
+  const AUD = bodyJSON.rates.AUD;
+  const CNY = bodyJSON.rates.CNY;
+  context.setMetric('currency.EUR-USD', USD);
+  context.setMetric('currency.EUR-AUD', AUD);
+  context.setMetric('currency.EUR-CNY', CNY);
+}
+module.exports = testPage;
+```
+
+The charting and alerting process is identical as in the previous example, and once again you will be able to see the custom metrics you've defined in the **Metrics** dropdown.
+
+![Custom Metrics JSON](../images/synthetics/custom-metrics-json.png)
+
+## How to add availability as metric in Dashboards
+
+[Dashboards](https://sematext.com/docs/dashboards/) are your central location where you put everything together. Logs, service metrics, infrastructure inventory and processes. They let you see everything in one place. If you want to see any of your monitor’s availability within a Dashboard and compare it with performance metrics that are shipped from services hosting your websites and APIs. Here is how to do it.
+
+Availability is shown for each HTTP and Browser monitor within the All Monitors page and Overview pages of monitors.
+
+![All Monitors Availability](../images/synthetics/availability-all-monitors-page.png)
+
+When you want to add monitor availability as a metric to any of your [Dashboards](https://sematext.com/docs/dashboards/), you can use [Chart Builder](../dashboards/chart-builder/)’s  transformation feature to do it. 
+
+To do this, navigate to the Dashboards page and click on any of your existing Dashboards or create a new one. Then click on “add component” in the top right corner of the report.
+
+![Add Availability as Component](../images/synthetics/availability-add-component.png)
+
+Select the component type you want to add. We will use the Timeseries chart in this example. This will open the [Chart Builder](../dashboards/chart-builder/). 
+
+Select a Synthetic App and a monitor, pick ```synthetics.run.passed``` and ```synthetics.run.failed``` as metrics.
+
+![Edit Component](../images/synthetics/availability-edit-component.png)
+
+Within Transformation box enter the expression below:
+
+```
+ifNull(synthetics.run.passed, 1) / (synthetics.run.failed + ifNull(synthetics.run.passed, 1)) * 100
+```
+
+Click on save and the time series chart showing availability for the selected monitor will be added to the Dashboard.
+
+![Availability Dashboard](../images/synthetics/availability-added-to-dashboard.png)
+
+
+

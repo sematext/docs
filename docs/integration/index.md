@@ -3,7 +3,7 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 
 ## Monitoring
 
-Sematext Monitoring supports dozens of different integrations.  Each integration comes with a number of useful dashboards and reports out of the box, as well as out of the box alert rules.  A number of integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without installing any additional agents, modifying, or restarting any services.
+Sematext Monitoring supports 100+ different integrations.  Each integration comes with a number of useful dashboards and reports out of the box, as well as out of the box alert rules.  A number of integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without modifying, or restarting any services.
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
@@ -81,6 +81,21 @@ Sematext Monitoring supports dozens of different integrations.  Each integration
 						</div>
 						<div class="side back">
 							<h5>ClickHouse</h5>current metrics, profile events, asynchronous metrics, part stats, replication & replica metrics, ...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/couchbase/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/couchbase.svg" alt="Couchbase" title="Couchbase Monitoring">
+						</div>
+						<div class="side back">
+							<h5>Couchbase</h5>current metrics, db operations, documents, cache, connections, memory usage, ...</div>
 					</div>
 				</div>
 			</div>
@@ -265,6 +280,20 @@ Sematext Monitoring supports dozens of different integrations.  Each integration
 							<img src="../images/integrations/expressjs-icon.svg" alt="Express.js" title="Express.js Monitoring" style="width: 116px;">
 						</div>
 						<div class="side back"><h5>Express.js</h5>process memory, workers, event loop latency, garbage collection, response/request rates, HTTP monitoring, ...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/opensearch/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/opensearch.svg" alt="OpenSearch" title="OpenSearch Monitoring" style="width: 48px;">
+						</div>
+						<div class="side back"><h5>OpenSearch</h5>Cluster Health, Shard Stats, Index Stats, Search, Cache, Thread Pools, Circuit Breakers, Connections, Scripting, Ingest...</div>
 					</div>
 				</div>
 			</div>
@@ -704,6 +733,7 @@ Multiple types of [alerts](/alerts) can be triggered on metrics and on logs and 
 - [Pushover](/integration/alerts-pushover-integration/)
 - [Telegram](/integration/alerts-telegram-integration/)
 - [Microsoft Teams](/integration/alerts-microsoft-teams-integration/)
+- [SMS / text](/integration/alerts-sms-integration/)
 - [Spike.sh](/integration/alerts-spikesh-integration/)
 - [Squadcast](/integration/alerts-squadcast-integration/)
 - [Twilio](/integration/alerts-twilio-integration/)
@@ -711,3 +741,4 @@ Multiple types of [alerts](/alerts) can be triggered on metrics and on logs and 
 - [Nagios](/integration/alerts-nagios-integration/)
 - [Hipchat](/integration/alerts-hipchat-integration/)
 - [Zapier](/integration/alerts-zapier-integration/)
+- [AlertOps](/integration/alerts-alertops-integration/)

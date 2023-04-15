@@ -62,6 +62,8 @@ Below are the OS related tags sent as part of OS metrics/logs. They are collecte
 | os.distro.name | Distribution name of the OS. e.g. `ubuntu` |
 | os.distro.version | Version of the OS. e.g. `16.04` |
 | os.kernel | Version of the Kernel. e.g. `4.4.0-130-generic` |
+| os.name | Name of the OS. e.g. `linux` |
+| os.arch | Name of the architecture e.g. `amd64` |
 | jvm.version | Version of JVM, if available in `PATH` |
 | virtualization | Virtualization Type. Possible values are `BareMetal`, `VM`, `Container` |
 | - | All user-defined container labels. These tag are mapped to `os.host` and `container.id` |
@@ -137,7 +139,9 @@ Below are Kubernetes related tags sent as part of metrics/logs in the Kubernetes
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
 | kubernetes.pod.name | Name of the kubernetes pod | pod
-| kubernetes.pod.node | Node name where the pod is running |
+| kubernetes.pod.ip | IP of the kubernetes pod |
+| kubernetes.pod.uid | Unique identifier of the kubernetes pod |
+| kubernetes.node.name | Node name where the pod is running |
 | kubernetes.cluster.name | Kubernetes cluster name |
 | kubernetes.deployment.name | Kubernetes deployment name |
 | kubernetes.namespace | Kubernetes namespace |
@@ -179,3 +183,90 @@ Below are tags that are reserved for future use:
 | service.type | Service type e.g. `hadoop` |
 | span.id | Building block of a trace in distributed tracing |
 | trace.id | Building block of a trace in distributed tracing |
+
+## Events Tags
+
+When you create an event you can send a ```JSON``` document which consists of multiple
+fields. Each field can contain event main information or metadata. Even though there is
+no strict format of such a ```JSON``` document we recommend to some of fields. An event
+can contain the following set of fields, most of which are optional:
+
+Field Name | Field Type | Required | Notes 
+-----------|------------|----------|-------
+```timestamp``` | date       | no       | Time when event happened (if not specified,current time will be assumed). The format is [dateOptionalTime](https://joda-time.sourceforge.netapi-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser) e.g.: ```2014-02-17T21:37:04+0100``` or```  2014-02-17T14:15:01.534471+02:00```.
+```os.host``` | string       | no       | Name of the host where the event has occurred.
+```type``` | string | yes | Event type which could be e.g. ```alert```, ```deployment```, etc. Events are later grouped in timeline based on event type which significantly improves visibility.
+```message``` | string       | yes       | Short description of event, e.g. ```Elasticsearch node03 on host somehost06 restarted```. This is a default search field in Sematext UI, so it is good to keep it concise, but search-friendly. Data in this field can be stored in Markdown format to make your messages more pretty and easier to read. For more details [see](#markdown-in-events).
+```title``` | string       | no       | Event title, can be used as a short label for event, e.g. ```Elasticsearch restart```.
+```tags``` | string array     | no       | Multivalued field. Each tag should be specified as aseparate array element e.g., <br> ```"tags":[ "elasticsearch", "restart", "emergency fix"]```
+```severity``` | string | no | A single-valued field which says what kind of an event it is. It should have such values as ```error```,  ```info``` or ```warning``` and lets you easily navigate through important and less important events.
+```creator``` | string       | no       | Person, application, or component that created an event. E.g. ```John Smith```, ```Elasticsearch```, ```Some Batch Job```
+```data``` | string       | no       | Additional event data. It can be anything you may find useful to have along inside of event object. E.g., it could be  stacktrace in case of ```app_error``` event, base64 encoded content of file, etc.
+
+### Kubernetes Event Tags
+Kubernetes events show what's happening inside a cluster, node, pod, or container.
+
+Field Name                 | Field Type   | Required | Notes 
+---------------------------|--------------|----------|-------------
+```kubernetes.namespace``` | string       | no       | Namespace of the resource that originated the event
+```kubernetes.name```      | string       | no       | Name of the resource associated with this event
+```kubernetes.reason```    | string       | no       | Reason for the transition into the object's current status
+```message```              | string       | no       | Human-readable description of the status of this operation
+```kubernetes.kind```      | string       | no       | Identifier of Kubernetes resource
+```kubernetes.node```      | string       | no       | Name of Kubelet node
+```title```                | string       | no       | Short title for this event
+```tags```                 | []string     | no       | List of custom tags for Kubernetes event
+
+
+When you ship events to Sematext Cloud, we recommend using the common fields listed in this page. This way you can easily correlate between your events, metrics and logs. For example, when you see CPU usage spikes or start seeing more error logs and you want to investigate it further. You can use [Split Screen](../guide/split-screen) and load the Events in the right half of the screen and see if there was any deployment type of event that might be the cause of that spike. Or search for events that are shipped from a specific host that started using more resources than expected. This way you can pinpoint the source of the problems easily.
+
+### Types
+
+[Sematext Cloud](https://sematext.com/cloud/) helps you manage your events better and
+distinguish between different kinds of events when you provide an event type. There are no limitations to the number of possible values of ```type``` field. 
+To get the most value out of typed events we strongly suggest using a
+smaller number of distinct event types (1-10) to keep things manageable.
+Keeping the list of unique types concise help with faster navigation. Examples of
+recommended types: ```alert```, ```server-info```, ```deployment```, ```infra```,
+```outage```.
+
+
+Note: when using curl to call the Events API, you may experience **"SSL certificate
+problem"** errors. The reason is that curl doesn't bundle any CA certs
+any more.  For more info see
+[this](https://curl.haxx.se/docs/sslcerts.html). Regardless of curl
+errors, HTTPS communication should be successful.
+
+
+### Example of well defined event
+
+```json
+{
+  "timestamp": "2019-05-30T09:58:43.455Z",
+  "creator": "Jenkins",
+  "os.host": "jenkins-host",
+  "title": "Starting deployment",
+  "message": "Started deployment of Test v1.23 to production",
+  "severity": "info",
+  "type": "deployment",
+  "tags": ["version:1.23", "env:prod"],
+}
+```
+
+
+### Markdown in events
+
+Event message supports [markdown](https://daringfireball.net/projects/markdown/syntax).
+
+An example below. Notice message field which contains a text formatted with Markdown.
+
+```json
+{
+  "title": "Hello Sematext",
+  "message": "### Hello Sematext\nClick [link](https://sematext.com/ \"Sematext\") \n",
+  "tags": ["msg", "env:dev"],
+  "severity": "info"
+}
+```
+
+![Markdown](../images/events/markdown.png "Markdown")
