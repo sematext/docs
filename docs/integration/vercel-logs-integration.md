@@ -21,13 +21,13 @@ We give you 7 reports out-of-the-box. You can add as many additional custom repo
 
 ## Install the Sematext Logs Vercel Integration
 
-Install the [Sematext Logs integration from the Vercel Integrations Marketplace](https://vercel.com/integrations/sematext-log-drain) to add it to your Vercel account.
+Go to the [Sematext Logs integration on the Vercel Integrations Marketplace](https://vercel.com/integrations/sematext-logs) to add it to your Vercel account by clicking the **Add Integration** button near the top right corner.
 
-![](https://vercel.com/docs/static/guides/debugging-and-troubleshooting-vercel-logs-with-sematext/step-2-sematext-log-drain.png)
+![](../images/integrations/vercel-logs-add-integration.png)
 
 Select the account or team your deployed project belongs to. You will then be redirected to Sematext Logs.
 
-![](https://vercel.com/docs/static/guides/debugging-and-troubleshooting-vercel-logs-with-sematext/step-2-add-sematext-log-drain.png)
+![](../images/integrations/vercel-logs-select-account.png)
 
 ## Create a Vercel Logs App
 
