@@ -17,7 +17,7 @@ The Sematext Vercel Logs Integration collects logs from the following:
 - Serverless Functions that fail, crash, or cause an error
 - Serverless Functions that are cold starts
 
-We give you 7 reports out-of-the-box. You can add as many additional custom reports and charts as you want!
+We give you 7 reports out-of-the-box. You can add as many additional custom reports and charts as you want! Additionally, you can also use the [Sematext Synthetics](https://vercel.com/integrations/sematext-synthetics-monitoring) Vercel integration to monitor your Vercel projects' frontends and APIs.
 
 ## Install the Sematext Logs Vercel Integration
 
