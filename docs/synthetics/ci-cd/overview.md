@@ -1,0 +1,135 @@
+title: CI/CD Integration
+description: Guide to how to run HTTP/Browser monitors from your CI/CD pipeline.
+
+In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your CI/CD pipeline and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](../alerts/alert-notifications.md). The run monitor API can be used to:
+
+* Test the APIs, websites, and the user journeys in your PR and staging environments and annotate the pull requests with the results. 
+* Test the APIs, websites, and the user journeys in production immediately after deployment and alert when it fails.
+* Track and catch major changes in website metrics like page load time, page size, request count, 3rd Party API performance, etc introduced as part of code changes.
+
+## Run Monitor API
+
+The run monitor API can be triggered by sending an HTTP request with the below configuration:
+
+**US Region Endpoint** - `https://apps.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
+
+**EU Region Endpoint** - `https://apps.eu.sematext.com/synthetics-api/api/v3/apps/<appId>/monitors/runs`
+
+**HTTP Method** - `POST`
+
+**Request Headers** - `Authorization: apiKey <apiKey>`
+
+**Request Body**
+```json
+[
+    {
+        "monitorId": <monitorId-1>,
+        "locations": [<locationId-1>, <locationId-2>,...],
+    },
+    {
+        "monitorId": <monitorId-2>,
+        "locations": [<locationId-1>, <locationId-2>,...],
+    },
+    ...
+]
+```
+
+* The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
+* `<apiKey>` of your account can be copied from Settings -> API page.
+* `<locationId>` - List of locations to run the monitor from. If not specified, the monitor will be run from all locations specified in the monitor configuration. The supported locations are:
+
+| Location ID  | Location |
+|---|---|
+| us-east-1      | N. Virginia, USA   |
+| eu-west-1      | Ireland            |
+| ap-south-1     | Mumbai, India      |
+| ap-southeast-1 | Singapore          |
+| ap-southeast-2 | Sydney, Australia  |
+| eu-central-1   | Frankfurt, Germany |
+| sa-east-1      | São Paulo, Brazil  |
+| us-west-1      | N. California, USA |
+
+
+**Example Request**
+
+The below API triggers runs for monitors with ID `276` and `335` belonging to App with ID `12345` from locations `N.Virginia, USA`, `Mumbai, India` and `N.Virginia, USA`, `Ireland, Europe` respectively.
+
+```sh
+curl --request POST \
+  --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \
+  --header 'Authorization: apiKey 1d7a2d6b-xxxx-xxxx-xxxx-10f83c5c8da7' \
+  --header 'Content-Type: application/json' \
+  --data '[
+    {
+        "monitorId": 276,
+        "regions": ["us-east-1","ap-south-1"]
+    },
+    {
+        "monitorId": 335,
+        "regions": ["us-east-1","eu-west-1"]
+    }
+]'
+```
+
+### Customize Request Configuration
+
+There are cases where you might want to customize request parameters depending on the environment. For example, the deployment URL for running the monitor in a PR env or a different HTTP header for the staging environment. You can pass these custom configurations as part of run monitor API data. When the custom values are passed the configured values for scheduled runs will be overridden with the custom values.
+
+For [HTTP monitors](./http-monitor.md), the following fields can be customized:
+
+* URL
+* Request Headers
+* Request Cookies
+* Request Params
+* Request Body
+
+Below is an example, where we are override the HTTP configuration parameters:
+
+```sh
+curl --request POST \
+  --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \
+  --header 'Authorization: apiKey 1d7a2d6b-xxxx-xxxx-xxxx-10f83c5c8da7' \
+  --header 'Content-Type: application/json' \
+  --data '[
+    {
+        "monitorId": 276,
+        "url": "https://pr-2589.app.acme.com",
+        "headers": [
+            {
+                "name": "Authorization",
+                "value": "pr-env-key"
+            }
+        ]
+    }
+]'
+```
+
+For [Browser monitors](./browser-monitor.md), the URL of the website can be customized.
+
+For Browser monitors with a script, you can pass custom parameters as variables, that could be referenced in the script.
+
+### Customize Output Format
+
+By default the API output will be in JSON format. While invoking the API in build pipelines, it might be useful to display the output in a table format, so that the output could be easily interpreted. To get the output in table format, set the `Accept` header to `text/plain`. The API response contains the summary of the request and lists the individual run results with the link to the run result page. Below is an example request along with the output:
+
+```sh
+curl -s --request POST --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs --header 'authorization: apiKey 1d7e2d6b-xxxx-xxxx-xxxx-10f83c5a8da7' --header 'accept: text/plain'        --header 'content-type: application/json' --data '[{"monitorId": 276}]' 
+
+All monitors passed successfully.
+Name            ID  Region      Status  Conditions  URL
+AllLocations    276 us-east-1   passed  3/3 Passed  https://apps.sematext.com/ui/synthetics/12345/monitors/276/runs/5173798
+AllLocations    276 us-west-1   passed  3/3 Passed  https://apps.sematext.com/ui/synthetics/12345/monitors/276/runs/5173805
+AllLocations    276 ap-south-1  passed  3/3 Passed  https://apps.sematext.com/ui/synthetics/12345/monitors/276/runs/5173800
+```
+
+## Integrations
+
+Using the run monitor API, you can integrate [Sematext Synthetics](./index.md) to your CI/CD pipeline. Below are the steps to trigger monitor runs from various CI/CD tools.
+- [Jenkins](./jenkins/)
+- [Travis CI](./travis-ci/)
+- [Circle CI](./circle-ci/)
+- [GitHub Actions](./github-actions/)
+- [Bitbucket Pipelines](./bitbucket-pipelines/)
+- [GitLab CI/CD](./gitlab-ci-cd/)
+- [Vercel](./vercel/)
+- [Netlify](./netlify/)
