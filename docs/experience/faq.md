@@ -98,7 +98,17 @@ Yes, with a few caveats:
 
 Memory measurements requested by the [Browser SDK](/agents/browser/) are requested 
 with every page load. In addition to that, the measurements are taken periodically 
-so that you can see the memory usage over time. 
+so that you can see the memory usage over time.
+
+### How can I exclude a specified URL(s)?
+
+An array of URLs to exclude, can be specified in the global variable `STRUM_IGNORE_AJAX`:
+```
+<script type="text/javascript">
+  // Array of domains to exclude
+  window.STRUM_IGNORE_AJAX = ['https://domain1.com', 'https://domain2.com'];
+</script>
+``` 
 
 ## Troubleshooting
 
