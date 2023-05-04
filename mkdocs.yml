@@ -107,7 +107,16 @@ pages:
       - Browser Monitor: synthetics/browser-monitor.md
       - User Journey Scripts: synthetics/user-journey-scripts.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
-      - CI/CD Integration: synthetics/ci-cd-integration.md
+      - CI/CD Integration:
+        - Overview: synthetics/ci-cd/overview.md
+        - Jenkins: synthetics/ci-cd/jenkins.md
+        - Travis CI: synthetics/ci-cd/travis-ci.md
+        - Circle CI: synthetics/ci-cd/circle-ci.md
+        - GitHub Actions: synthetics/ci-cd/github-actions.md
+        - Bitbucket Pipelines: synthetics/ci-cd/bitbucket-pipelines.md
+        - GitLab CI/CD: synthetics/ci-cd/gitlab-ci-cd.md
+        - Vercel: synthetics/ci-cd/vercel.md
+        - Netlify: synthetics/ci-cd/netlify.md
       - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
@@ -192,6 +201,8 @@ pages:
         - Custom Params: integration/alerts-webhooks-custom-params.md
       - Orchestration:
         - Terraform: integration/terraform.md
+      - Synthetics:
+        - Vercel: integration/vercel-synthetics-integration.md
     - Alerts:
       - Overview: alerts/index.md
       - Creating Logs Alerts: alerts/creating-logs-alerts.md
