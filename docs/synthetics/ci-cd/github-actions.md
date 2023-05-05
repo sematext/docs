@@ -5,12 +5,7 @@ description: Guide on how to integrate Sematext Synthetics with GitHub Actions.
 
 Create a secret from the repository's **Settings** page for the Sematext API Key.
 
-<img
-  class="content-modal-image"
-  alt="CI/CD GitHub Secret"
-  src="../../images/synthetics/ci-cd-github-secret.png"
-  title="Add Secret in Github"
-/>
+![CI/CD GitHub Secret](./images/ci-cd-github-secret.png)
 
 **Add Run Monitor Job to GitHub Action Workflow YAML**
 
@@ -52,9 +47,4 @@ jobs:
 
 On every deployment event, the action will be invoked and the action logs will contain the results.
 
-<img
-  class="content-modal-image"
-  alt="CI/CD GitHub Actions Logs"
-  src="./images/ci-cd-github-actions-log.png"
-  title="GitHub Actions Logs"
-/>
+![CI/CD GitHub Actions Logs](./images/ci-cd-github-actions-log.png)
