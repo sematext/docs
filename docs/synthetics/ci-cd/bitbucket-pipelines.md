@@ -5,12 +5,7 @@ description: Guide on how to integrate Sematext Synthetics with Bitbucket pipeli
 
 Create a secret from the **Repository Settings** -> **Repository Variables**, for Sematext API Key.
 
-<img
-  class="content-modal-image"
-  alt="CI/CD Bitbucket Secret"
-  src="./images/ci-cd-bitbucket-secret.png"
-  title="Add Secret in BitBucket"
-/>
+![CI/CD Bitbucket Secret](./images/ci-cd-bitbucket-secret.png)
 
 **Add Run Monitor Job to Bitbucket Pipeline Workflow YAML**
 

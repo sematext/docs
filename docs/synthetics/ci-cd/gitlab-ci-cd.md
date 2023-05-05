@@ -5,12 +5,7 @@ description: Guide on how to integrate Sematext Synthetics with GitLab CI/CD.
 
 Create a CI/CD variable from **Settings** -> **CI/CD** -> **Variables** for the Sematext API Key.
 
-<img
-  class="content-modal-image"
-  alt="CI/CD GitLab Secret"
-  src="./images/ci-cd-gitlab-secret.png"
-  title="Add Secret in GitLab"
-/>
+![CI/CD GitLab Secret](./images/ci-cd-gitlab-secret.png)
 
 **Configure Run Monitor Step in Pipeline YAML**
 
