@@ -8,7 +8,7 @@ Create a CI/CD variable from **Settings** -> **CI/CD** -> **Variables** for the 
 <img
   class="content-modal-image"
   alt="CI/CD GitLab Secret"
-  src="../../images/synthetics/ci-cd-gitlab-secret.png"
+  src="./images/ci-cd-gitlab-secret.png"
   title="Add Secret in GitLab"
 />
 

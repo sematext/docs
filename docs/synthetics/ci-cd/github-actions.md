@@ -55,6 +55,6 @@ On every deployment event, the action will be invoked and the action logs will c
 <img
   class="content-modal-image"
   alt="CI/CD GitHub Actions Logs"
-  src="../../images/synthetics/ci-cd-github-actions-log.png"
+  src="./images/ci-cd-github-actions-log.png"
   title="GitHub Actions Logs"
 />

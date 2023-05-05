@@ -8,7 +8,7 @@ Create a secret credential for Sematext API Key to be used in the run monitor AP
 <img
   class="content-modal-image"
   alt="CI/CD Jenkins Credentials"
-  src="../../images/synthetics/ci-cd-jenkins-secret.png"
+  src="./images/ci-cd-jenkins-secret.png"
   title="Add Secret Credential in Jenkins"
 />
 

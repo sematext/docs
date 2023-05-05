@@ -8,7 +8,7 @@ Create a secret from the **Repository Settings** -> **Repository Variables**, fo
 <img
   class="content-modal-image"
   alt="CI/CD Bitbucket Secret"
-  src="../../images/synthetics/ci-cd-bitbucket-secret.png"
+  src="./images/ci-cd-bitbucket-secret.png"
   title="Add Secret in BitBucket"
 />
 
