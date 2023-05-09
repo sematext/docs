@@ -108,6 +108,7 @@ Default runtime configuration values are:
 * **Chrome browser environment** - Desktop
 * **Resolution** - `1920x1080`
 * **Default Navigation timeout** - 30 seconds
+* **Chrome web security flag (same-origin, CORS)** - Disabled (to facilitate testing, can be enabled in the UI)
 * **Memory** - 2048 MB
 * **CPU** - 1 vCPU
 * **Network** - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.

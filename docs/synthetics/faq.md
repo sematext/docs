@@ -137,6 +137,12 @@ Pass the extracted token to the next request in the request body
 ```
 To mask the passwords and other sensitive data you use for authentication please see [Storing User Journey script credentials securely](https://sematext.com/docs/synthetics/user-journey-scripts/#storing-your-user-journey-script-credentials-securely)
 
+### Can I enforce same-origin policy for Browser monitors (CORS)?
+Yes. We keep this setting disabled by default, but you can choose to enforce it in the `Configure Options` tab while creating or editing your Browser monitors. The reason why you would potentially want to enable this is that it being disabled could keep your Browser monitors from working properly if your website requires strict CSP+CORS to be enabled.
+
+### Why are some elements missing from my page during Browser monitor runs, even though they show up when I open it manually?
+Please see the `same-origin` question right above this one, this issue could very well be fixed by toggling the option to enforce `same-origin` policy on. Also make sure to double check from which locations you're using the monitor, as your website may display different content for different locations.
+
 ### How do I do X in a User Journey script?
 Please see the section on [User Journey script examples](./user-journey-scripts/#user-journey-script-examples).
 
