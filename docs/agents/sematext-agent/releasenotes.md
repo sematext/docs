@@ -33,6 +33,24 @@ NULL
 
 -->
 
+# Version 2.2.0
+
+## New Features
+
+- SC-15689 Introducing a new command to gather information about Kubernetes Cluster Roles: This new feature enables our agent to collect Cluster Roles and provide more useful information in Sematext Cloud.
+- SC-13098 HTTPS support for OpenSearch and ElasticSearch: Sematext-Agent now supports both HTTP and HTTPS. The agent automatically detects whether HTTPS is available and uses it accordingly.
+
+## Improvements
+
+- SC-15905 Rewritten agent app logs to be under `st-agent`: The Sematext Agent logs are now displayed under `st-agent`, resulting in cleaner and more organized dashboards.
+- SC-14375 Removed unnecessary errors from Fleet/Agent Errors page: We've cleaned up some noise from the Fleet/Agent Errors page to improve your monitoring experience.
+
+## Bug Fixes
+
+- SC-15754 Fixed ClickHouse discovery service signature: We have addressed an issue that caused some log files to not be selected.
+- SC-16064 Fixed empty data for Infra info page: This fix resolves an issue with delayed data on the Infra info page.
+- SC-16072 Fixed non-displayed HTTP request codes for Apache Logs: We have corrected our log field generator for this case, ensuring that all HTTP request codes are properly displayed.
+
 # Version 2.1.0
 
 ## New Features
