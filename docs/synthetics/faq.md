@@ -44,6 +44,7 @@ Yes. You can update the below setting in **Edit Configuration** -> **Configure A
 
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the monitors are covered in their respective documentation pages, in the run environment section:
+
 * [HTTP Monitor](./http-monitor.md#run-environment)
 * [Browser Monitor](./browser-monitor.md#run-environment)
 
