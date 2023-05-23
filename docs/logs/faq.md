@@ -42,7 +42,7 @@ From the application, click the `App Actions` button and select
 `Usage`. There's also `Settings` button next to [any of your Logs apps](https://apps.sematext.com/ui/logs) in
 the `Logs > All Logs Apps` section in our centralized logging and monitoring management solution.
 
-<a href="#logging-usage-menu"><img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu"></a>
+<img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
 
 On click, `App Settings > Usage` page will present both Total Volume in Gb and Total Count of indexed logs for that particular Logs App.
 
@@ -682,23 +682,3 @@ Yes. Our centralized logging management solution lets one configure arbitrary We
 event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
 
 
-<div id="logging-usage-menu" class="modal" role="dialog" aria-labelledby="Logs App Usage Menu" aria-describedby="Logs App Usage Menu">
-  <div class="modal-content">
-    <div class="header">
-      <a href="#" id="close">
-        <div class="box box3">
-          <svg viewBox="0 0 40 40">
-					    <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
-					  </svg>
-        </div>
-      </a>
-      <h2>Logs App - Usage Menu Link</h2>
-    </div>
-    <div class="copy">
-      <img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
-    </div>
-  </div>
-  <a href="#">
-    <div class="overlay"></div>
-  </a>
-</div>
