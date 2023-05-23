@@ -1,7 +1,7 @@
 title: Solr Logs Integration
 description: Sematext Solr Logs integration allows you to check query distribution, analyze errors, Zookeeper and Overseer logs and much more.
 
-To make use of the Sematext Solr Logs integration, you'll need to install the Sematext Agent and configure it to ship Solr logs via the Logs Discovery. You will want to create or select an existing Solr Logs App because that is what will provide you with all the out of the box dashboards, some of which you can see below.
+To make use of the Sematext Solr Logs integration, you'll need to install the Sematext Agent and configure it to ship Solr logs via the Logs Discovery. You will want to create or select an existing Solr Logs App because that is what will provide you with all the out of the box dashboards and alert rules, some of which you can see below.
 
 Once data is in, you can explore it via the built-in reports: 
 
@@ -31,3 +31,7 @@ Other built-in reports include:
 - **Zookeeper**: logs produced by Solr's [Zookeeper](https://zookeeper.apache.org) client and other Zookeeper-related classes and threads. Look here for insights on SolrCloud's stability. For the Zookeeper ensemble itself, check out our [Zookeeper monitoring integration](./zookeeper.md)
 - **Overseer**: logs produced by SolrCloud's [Overseer](https://lucene.apache.org/solr/8_6_0/solr-core/org/apache/solr/cloud/Overseer.html) thread and other Overseer activities (e.g. shard leader election)
 - **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
+
+## Troubleshooting
+
+If you are having trouble sending logs, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
