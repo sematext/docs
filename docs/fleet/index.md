@@ -46,3 +46,16 @@ Remember you can always contact us via chat on the bottom right corner of [our w
 
 In this tab you'll find information on how to upgrade the Sematext Agent to the latest version for all supported environments.
 ![Agent Info](../images/fleet/fleet-upgrade-instructions.png)
+
+## FAQ
+
+### What are the possible status values in my Log Shipper displayed under the Log Agents panel?
+
+The following status values are currently available for Log Shippers:
+
+* Running: The Log Shipper is running without issues
+* Not Configured: This is the initial state of Log Shipper. It means that it has not been configured yet in [Discovery](https://sematext.com/docs/logs/discovery/intro/), or another Log Shipper has been used to ship logs
+* Dead: The Sematext Agent started the Log Shipper but something went wrong. Usually, this means that the Log Shipper process is not available (bare metal), or the status of the Log Shipper container/pod is not running.
+* Init Failure: Systemd is not available (bare metal), there is an error pulling the Log Shipper container image, or there is an issue creating/starting the Log Shipper container/pod.
+* Stopped: The Log Shipper process has been stopped by the Sematext Agent
+
