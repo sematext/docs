@@ -18,6 +18,7 @@ At first glance, you can see the following data in the table:
 * *Infra App*: the Infra App which is receiving the data from the Sematext Agent. Clicking on the App name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
 
 # Agent Information Panel
+
 ## Info
 The Info panel contains information about the host system and the installed Agents. 
 
@@ -44,6 +45,7 @@ The following status values are currently available for Log Shippers:
 ## Metrics Agents
 
 This panel contains a list of the Metrics Agents installed on the host. Clicking on one will take you to the Monitoring Agents panel, where you can see the process or container being monitored, the destination Monitoring App and its corresponding Infra App, service data such as sockets, ports and the command used to start the service, as well as any errors. You can also see diagnostics data and report a problem from the last tab.
+
 ![Metrics Agents](../images/fleet/fleet-metrics-agents.png)
 
 ## Agent Errors 
