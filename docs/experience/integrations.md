@@ -162,6 +162,22 @@ descriptions: The Sematext Experience integrations cover all types of websites a
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="#micro-frontend">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../../images/integrations/micro-frontend.png" alt="microfrontend" title="Micro Frontend" style="padding-top:40px;height:110px;">
+						</div>
+						<div class="side back">
+							<h5>Micro Frontend</h5>Add Experience to micro frontend based web applications.
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
@@ -340,3 +356,73 @@ In the WordPress Admin panel, go to **Settings >> Insert Headers and Footers**.
 In the **Scripts in Header** box, paste both the scripts found in the first and second steps of the Experience installation instructions.
 
 Save the changes and you should be good to go.
+
+## Micro Frontend
+
+You can monitor your micro frontend based web applications from a single Experience App.
+After you create an Experience App, the script installation page will show. 
+
+![Experience Instructions](../../images/integrations/experience-instructions.png)
+
+Follow the instructions from the first two steps and add the scripts to each of your individual applications’ `index.html` file just before the `<head>` section ends.
+
+The next step is adding history tracking to your main component where the routing of your application happens.
+Open the file where you have the route object and add `import { createBrowserHistory as createHistory } from 'history';` as the last line of the import section.
+
+Then create the history object and listener just before the `MainLayout` function.
+
+```js	
+const history = createHistory();
+history.listen((location, action) => {
+ if (action !== 'REPLACE') {
+   window['strum']('routeChange', window.location.href);
+ }
+})
+```
+As the final step you will return the history object within the `MainLayout` function.
+
+```js
+export default function MainLayout() {
+ return (
+   <Router history={history}>
+```
+
+An example of a `MainLayout.jsx` file can be seen below.
+
+```js
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "remixicon/fonts/remixicon.css";
+import "./index.scss";
+import Header from "home/Header";
+import Footer from "home/Footer";
+import PDPContent from "pdp/PDPContent";
+import HomeContent from "home/HomeContent";
+import CartContent from "cart/CartContent";
+import { createBrowserHistory as createHistory } from 'history';
+const history = createHistory();
+history.listen((location, action) => {
+ if (action !== 'REPLACE') {
+   window['strum']('routeChange', window.location.href);
+ }
+})
+export default function MainLayout() {
+ return (
+   <Router history={history}>
+     <div className="text-3xl mx-auto max-w-6xl">
+       <Header />
+       <div className="my-10">
+         <Switch>
+           <Route exact path="/" component={HomeContent} />
+           <Route path="/product/:id" component={PDPContent} />
+           <Route path="/cart" component={CartContent} />
+         </Switch>
+       </div>
+       <Footer />
+     </div>
+   </Router>
+ );
+}
+```
+You are all set! In a few minutes you should be able to see the load routes in your Experience App, get results for the remotely loaded components and track the metrics of individual application parts.
+
