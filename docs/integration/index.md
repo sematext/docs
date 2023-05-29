@@ -3,7 +3,7 @@ descriptions: Sematext integrations with ready to use monitoring agents and log 
 
 ## Monitoring
 
-Sematext Monitoring supports 100+ different integrations.  Each integration comes with a number of useful dashboards and reports out of the box, as well as out of the box alert rules.  A number of integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without modifying, or restarting any services.
+Sematext Monitoring supports over 100 different integrations that automatically collect thousands of metrics. Each integration includes a number of pre-built dashboards, reports, and alert rules that are readily available, requiring no additional configuration. Additionally, several integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without the need for modifying or restarting any services.
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
