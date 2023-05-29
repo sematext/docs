@@ -21,14 +21,18 @@ We give you 7 reports out-of-the-box. You can add as many additional custom repo
 
 ## Install the Sematext Logs Vercel Integration
 
-Installing the Sematext Logs Vercel integration can be done in just a few steps:
-- Go to the [Sematext Logs integration on the Vercel Integrations Marketplace](https://vercel.com/integrations/sematext-logs) to add it to your Vercel account by clicking the **Add Integration** button near the top right corner.
+Installing the Sematext Logs Vercel integration can be done in just a few steps.
+
+Go to the [Sematext Logs integration on the Vercel Integrations Marketplace](https://vercel.com/integrations/sematext-logs) to add it to your Vercel account by clicking the **Add Integration** button near the top right corner.
 ![](../images/integrations/vercel-logs-add-integration.png)
-- Select the account or team your deployed project belongs to. You will then be redirected to Sematext Logs.
+
+Select the account or team your deployed project belongs to. You will then be redirected to Sematext Logs.
 ![](../images/integrations/vercel-logs-select-account.png)
-- In case you don't already have an existing Logs App in Sematext Cloud, you can create a new one during the installation process.
+
+In case you don't already have an existing Logs App in Sematext Cloud, you can create a new one during the installation process.
 ![](../images/integrations/vercel-logs-new-app.png)
-- Select the Vercel project and target Sematext Logs App to create a log drain. You can create a single log drain for all your Vercel projects, or you can create separate log drains for each of your Vercel projects.
+
+Select the Vercel project and target Sematext Logs App to create a log drain. You can create a single log drain for all your Vercel projects, or you can create separate log drains for each of your Vercel projects.
 ![](../images/integrations/vercel-logs-add-log-drain.png)
 
 By default, you get a set of reports out of the box, with default alert rules to notify you for common errors and timeouts. You can modify, disable, or delete them, and add your own custom alert rules, of course.
