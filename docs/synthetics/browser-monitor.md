@@ -8,7 +8,7 @@ The Browser monitor can be used to monitor a single web page or a user journey a
 ### General
 
 * **Name** - Name of the monitor. Max length is 255 characters.
-* **Interval** - Monitor execution interval.
+* **Interval** - Monitor execution interval. Supported intervals are 5m, 10m, 15m, 30m, 1h.
 * **Device type** - Determines which device will be emulated during monitor execution by setting the appropriate User-Agent and Viewport/Resolution.
 * **Locations** - List of locations the monitor will be run from.
 
