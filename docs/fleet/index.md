@@ -6,16 +6,17 @@ The Fleet section of Sematext Cloud gives you an overview of all the Sematext Ag
 ![Fleet screen](../images/fleet/fleet.png)
 
 At first glance, you can see the following data in the table:
-* *Host*: Name of the hosts in which the Sematext Agent is installed. Clicking on the name will open the Agent Information Panel.
-* *Version*: Installed version of the Sematext Agent and whether important updates are available. If they are, you can update the agent by just clicking the link and following the instructions. You can also find those instructions [here](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
-* *Status*: Indicates the status of the Sematext Agent. Possible statuses are:
+
+* Host: Name of the hosts in which the Sematext Agent is installed. Clicking on the name will open the Agent Information Panel.
+* Version: Installed version of the Sematext Agent and whether important updates are available. If they are, you can update the agent by just clicking the link and following the instructions. You can also find those instructions [here](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
+* Status: Indicates the status of the Sematext Agent. Possible statuses are:
   * Running: Everything is nominal.
   * Stopped: The agent has been stopped by the user. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
   * Failed: The agent is reporting errors. You can see them in the Agent Information Panel, in the Errors tab.
   * Dead: The agent has stopped due to an error. You can see the errors in the Agent Information Panel, in the Errors tab, and you can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
   * Pending or Unknown: the agent is not sending data to Sematext Cloud. Check if the agent is still running on your system. If it is, there may be connection issues.
-* *Started*: Time elapsed since the Sematext Agent began sending data to Sematext Cloud.
-* *Infra App*: the Infra App which is receiving the data from the Sematext Agent. Clicking on the App name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
+* Started: Time elapsed since the Sematext Agent began sending data to Sematext Cloud.
+* Infra App: the Infra App which is receiving the data from the Sematext Agent. Clicking on the App name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
 
 # Agent Information Panel
 
