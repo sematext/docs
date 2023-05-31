@@ -20,7 +20,7 @@ You can use any of the above variables in the parameters when you create your cu
 
 <img class="content-modal-image" alt="Custom Webhook With Parameters" src="../../images/integrations/custom-webhook-with-parameters.png" title="Create Custom Webhook With Parameters">
 
-If the alert definiation has a Group by tag, the tag values that triggered the alert are included automatically within the webhook payload. 
+If the alert definition has a Group by tag, the tag values that triggered the alert are included automatically within the webhook payload. 
 
 For example, if you create a Heartbeat alert, grouped by os.host
 
