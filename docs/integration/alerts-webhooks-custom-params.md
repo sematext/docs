@@ -19,3 +19,13 @@ The following variables are supported:
 You can use any of the above variables in the parameters when you create your custom Webhook:
 
 <img class="content-modal-image" alt="Custom Webhook With Parameters" src="../../images/integrations/custom-webhook-with-parameters.png" title="Create Custom Webhook With Parameters">
+
+If the alert definiation has a Group by tag, the tag values that triggered the alert are included automatically within the webhook payload. 
+
+For example, if you create a Heartbeat alert, grouped by os.host
+
+![Heartbeat Groupby](../../images/integrations/heartbeat-alert-groupby.png) 
+
+The webhook payload will have the os.host info that triggered the alert within the filters field.
+
+![Heartbeat Oshost](../../images/integrations/heartbeat-alert-oshost.png) 
