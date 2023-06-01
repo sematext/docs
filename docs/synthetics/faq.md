@@ -165,6 +165,17 @@ The *Cache-Control* HTTP header was introduced in HTTP 1.1. Systems using HTTP 1
 ```javascript
 'Pragma: no-cache'
 ```
+### Can I call GraphQL endpoints?
+Yes. You can call GraphQL endpoints with [HTTP Monitors](https://sematext.com/docs/synthetics/http-monitor/). In `General` tab pick the `Method Type` and enter the GraphQL endpoint. Set `Content-Type` to `application/json` from the Configure Requests --> Headers tab. 
+
+To send a `GET` request, set the query parameter from the `Query Params` tab.
+
+![GraphQL GET](../images/synthetics/synthetics-faq-graphql-get.png)
+
+To send a `POST` request, open the `Body` tab, set the content type to `JSON` and enter the query.
+
+![GraphQL POST](../images/synthetics/synthetics-faq-graphql-post.png)
+
 
 ## Sharing
 
