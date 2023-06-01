@@ -360,13 +360,13 @@ Save the changes and you should be good to go.
 ## Micro Frontend
 
 You can monitor your micro frontend based web applications from a single Experience App.
-After you create an Experience App, the script installation page will show. 
+After you create an Experience App, the script installation page will be displayed. 
 
 ![Experience Instructions](../../images/integrations/experience-instructions.png)
 
 Follow the instructions from the first two steps and add the scripts to each of your individual applications’ `index.html` file just before the `<head>` section ends.
 
-The next step is adding history tracking to your main component where the routing of your application happens.
+The next step involves adding history tracking to your main component where the routing of your application happens.
 Open the file where you have the route object and add `import { createBrowserHistory as createHistory } from 'history';` as the last line of the import section.
 
 Then create the history object and listener just before the `MainLayout` function.
