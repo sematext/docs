@@ -18,7 +18,7 @@ The processes view provides similar information as the Linux top command. It sho
 - Grouping metrics by hosts, process names, containers, etc. 
 - Filtering by tags
 
-<video style="display:block; width:100%; height:auto;" controls autoplay>
+<video poster="../images/monitoring/thumbnail-process-infra.png" style="display:block; width:100%; height:auto;" controls autoplay>
   <source src="https://cdn.sematext.com/videos/sematext-infra-processes.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
