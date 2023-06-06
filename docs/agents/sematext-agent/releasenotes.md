@@ -55,7 +55,7 @@ Date: June 6, 2023
 
 ## Packaging and Installation
 
-- SC-15777 Introduced Beta version for Sematext Agent: We are pleased to introduce the Beta version of the Sematext Agent. This release is a testament to our commitment to providing you with a more stable and reliable product. We highly value your support and feedback as we continue to enhance and improve the agent. To opt for the Beta version, you can now install the `sematext-agent-beta` package instead of the standard `sematext-agent`. Please note that currently, the Beta version is only available for Debian and Ubuntu distributions.
+- SC-15777 Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`.   When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
 
 # Version 2.2.0
 
