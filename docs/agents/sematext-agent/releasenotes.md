@@ -5,6 +5,8 @@ Sematext Agent is a dynamic project with frequent releases. This Changelog conta
 
 <!-- Template:
 
+Date: MM D, YYYY
+
 # Version X.X.X
 
 ## New Features
@@ -33,7 +35,30 @@ NULL
 
 -->
 
+# Version 2.3.0
+
+Date: June 6, 2023
+
+## New Features
+
+- SC-15751 MySQL logs parsing support: We have enhanced the log parsing capabilities of Sematext Agent with this update. Your log messages can now be parsed more effectively, leading to improved visibility and analysis. Furthermore, we are excited to announce that MySQL logs integration will be released soon, further enhancing your logging experience.
+
+## Improvements
+
+- SC-15612 Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification.
+
+## Bug Fixes
+
+- SC-16410 Fixed an edge case for tracer to check network packets via eBPF: We have addressed an issue that previously prevented the tracer from effectively checking network packets via eBPF. This fix improves the functionality and reliability of the tracer, ensuring accurate monitoring of network traffic.
+- SC-16445 Fixed nil pointer issue for MySQL and resolved broken portmatcher for MySQL: We have resolved a nil pointer issue that affected MySQL, eliminating potential errors and ensuring smooth operation. Additionally, we fixed a broken portmatcher specifically for MySQL, allowing for accurate monitoring and analysis of MySQL environments.
+
+## Packaging and Installation
+
+- SC-15777 Introduced Beta version for Sematext Agent: We are pleased to introduce the Beta version of the Sematext Agent. This release is a testament to our commitment to providing you with a more stable and reliable product. We highly value your support and feedback as we continue to enhance and improve the agent.
+
 # Version 2.2.0
+
+Date: May 10, 2023
 
 ## New Features
 
@@ -52,6 +77,8 @@ NULL
 - SC-16072 Fixed non-displayed HTTP request codes for Apache Logs: We have corrected our log field generator for this case, ensuring that all HTTP request codes are properly displayed.
 
 # Version 2.1.0
+
+Date: April 6, 2023
 
 ## New Features
 
@@ -74,6 +101,8 @@ NULL
 - SC-15761 CentOS 9 package was released.
 
 # Version 2.0.0
+
+Date: March 8, 2023
 
 ## New Features
 
