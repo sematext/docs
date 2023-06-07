@@ -51,7 +51,7 @@ Date: June 6, 2023
 
 - SC-16410 Fixed an edge case for tracer to check network packets via eBPF: We have addressed an issue that previously prevented the tracer from effectively checking network packets via eBPF. This fix improves the functionality and reliability of the tracer, ensuring accurate monitoring of network traffic.
 - SC-16445 Fixed nil pointer issue for MySQL and resolved broken portmatcher for MySQL: We have resolved a nil pointer issue that affected MySQL, eliminating potential errors and ensuring smooth operation. Additionally, we fixed a broken portmatcher specifically for MySQL, allowing for accurate monitoring and analysis of MySQL environments.
-- SC-16364 Fixed connection issue to MongoDB: We have resolved an issue that caused by an outdated data collector.
+- SC-16364 Fixed connection issue to MongoDB: We have resolved an issue caused by an outdated data collector.
 
 ## Packaging and Installation
 
