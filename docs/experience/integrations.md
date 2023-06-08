@@ -362,7 +362,12 @@ Save the changes and you should be good to go.
 You can monitor your micro frontend based web applications from a single Experience App.
 After you create an Experience App, the script installation page will be displayed. 
 
-![Experience Instructions](../../images/integrations/experience-instructions.png)
+<img
+  class="content-modal-image"
+  alt="Experience Instructions"
+  title="Experience Instructions"
+  src="../../images/integrations/experience-instructions.png"
+/>
 
 Follow the instructions from the first two steps and add the scripts to each of your individual applications’ `index.html` file just before the `<head>` section ends.
 
