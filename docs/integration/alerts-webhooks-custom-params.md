@@ -24,8 +24,8 @@ If the alert definition includes a Group by tag, the tag values that triggered t
 
 For example, if you create a Heartbeat alert, grouped by `os.host`
 
-![Heartbeat Groupby](../../images/integrations/heartbeat-alert-groupby.png) 
+<img class="content-modal-image" alt="Heartbeat Groupby" src="../../images/integrations/heartbeat-alert-groupby.png" title="Heartbeat Groupby">
 
 The webhook payload will have the `os.host` info that triggered the alert within the filters field.
 
-![Heartbeat Oshost](../../images/integrations/heartbeat-alert-oshost.png) 
+<img class="content-modal-image" alt="Heartbeat Oshost" src="../../images/integrations/heartbeat-alert-oshost.png" title="Heartbeat Oshost">
