@@ -1,7 +1,7 @@
 title: PostgreSQL Logs Integration
 description: Sematext PostgreSQL Logs integration allows you to dive deeper into statement duration breakdown, as well as users accessing the databases
 
-To make use of the Sematext PostgreSQL Logs integration, you'll need to install the Sematext Agent and configure it to ship PostgreSQL logs via the Logs Discovery. You will want to create or select an existing PostgreSQL Logs App because that is what will provide you with all the out of the box dashboards and alert rules, some of which you can see below.
+To make use of the Sematext PostgreSQL Logs integration, you'll need to install the Sematext Agent and configure it to ship PostgreSQL logs via the [Logs Discovery](../logs/discovery/setup). You will want to create or select an existing PostgreSQL Logs App because that is what will provide you with all the out of the box dashboards and alert rules, some of which you can see below.
 
 Once data is in, you can explore it via the built-in reports: 
 
