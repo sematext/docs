@@ -1,7 +1,7 @@
 title: RabbitMQ Logs Integration
 description: Sematext RabbitMQ Logs integration allows you to troubleshoot connection, access, and other RabbitMQ issues.
 
-To make use of the Sematext RabbitMQ Logs integration, you'll need to install the Sematext Agent and configure it to ship RabbitMQ logs via the Logs Discovery. You will want to create or select an existing RabbitMQ Logs App because that is what will provide you with all the out of the box dashboards and alert rules, some of which you can see below.
+To make use of the Sematext RabbitMQ Logs integration, you'll need to install the Sematext Agent and configure it to ship RabbitMQ logs via the [Logs Discovery](https://sematext.com/docs/logs/discovery/intro/). You will want to create or select an existing RabbitMQ Logs App because that is what will provide you with all the out of the box dashboards and alert rules, some of which you can see below.
 
 Once data is in, you can explore it via the built-in reports: 
 
