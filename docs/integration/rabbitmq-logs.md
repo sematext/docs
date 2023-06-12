@@ -1,7 +1,7 @@
 title: RabbitMQ Logs Integration
 description: Sematext RabbitMQ Logs integration allows you to troubleshoot connection, access, and other RabbitMQ issues.
 
-To make use of the Sematext RabbitMQ Logs integration, you'll need to send parsed RabbitMQ logs to your Sematext Logs App. The easiest way is via [Logagent](../logagent/index.md), which can parse RabbitMQ logs out of the box.
+To make use of the Sematext RabbitMQ Logs integration, you'll need to install the Sematext Agent and configure it to ship RabbitMQ logs via the [Logs Discovery](https://sematext.com/docs/logs/discovery/intro/). You will want to create or select an existing RabbitMQ Logs App because that is what will provide you with all the out of the box dashboards and alert rules, some of which you can see below.
 
 Once data is in, you can explore it via the built-in reports: 
 
@@ -13,44 +13,6 @@ Once data is in, you can explore it via the built-in reports:
 />
 
 Be sure to check out the [RabbitMQ Monitoring integration](./rabbitmq.md) as well, to get a complete view on RabbitMQ. For example, if you see an increase in authentication errors, monitoring can tell what's the impact on RabbitMQ's memory usage, garbage collection and CPU.
-
-## Setting up Logagent
-
-With [Node.js installed](https://nodejs.org/en/download/package-manager/), you'd first need to install Logagent:
-```bash
-sudo npm i -g @sematext/logagent
-```
-
-Then, write a config file that tails your RabbitMQ logs and sends them to your RabbitMQ Logs App. Parsing happens out of the box, since we match the `rabbit` source:
-```
-# Global options
-options:
-  # print stats every 60 seconds 
-  printStats: 60
-  # don't write parsed logs to stdout
-  suppress: true
-
-input:
-  files:
-    - /var/log/rabbitmq/**/*.log
-
-output:
-  elasticsearch:
-    module: elasticsearch
-    # use logsene-receiver.eu.sematext.com for the EU region
-    url: https://logsene-receiver.sematext.com
-    indices:
-      # send RabbitMQ logs to this Logs App
-      YOUR_LOGS_TOKEN_GOES_HERE:
-        - .*rabbit.*\.log
-```
-
-Finally, use `logagent-setup` to copy the config to `/etc/sematext/logagent.conf`, then set up the init script and start Logagent:
-```bash
-sudo logagent-setup -c /path/to/logagent.conf
-```
-
-If you already have Logagent installed, you can simply append to the `files` input the RabbitMQ log file, then the two lines (token+pattern) in the `elasticsearch` output. In the end, restart Logagent.
 
 ## Exploring logs
 
@@ -70,6 +32,4 @@ Other built-in reports include:
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of Logagent via `sudo npm i -g @sematext/logagent`. Also, make sure Logagent is pointed to the right path and Logs App token.
-
-If logs don't get parsed properly, or you need additional parsing, feel free to open an issue or to contribute to [Logagent built-in patterns](https://github.com/sematext/logagent-js/blob/master/patterns.yml). These patterns are open-source, as well as Logagent itself.
+If you are having trouble sending logs, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
