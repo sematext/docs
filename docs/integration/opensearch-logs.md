@@ -1,5 +1,5 @@
 title: OpenSearch Logs Integration
-description: Sematext OpenSearch Logs integration allows you to check query distribution, analyze errors, deprecations and master logs and much more.
+description: Sematext OpenSearch Logs integration allows you to check query distribution, analyze errors, deprecations and cluster manager logs and much more.
 
 To make use of the Sematext OpenSearch Logs integration, you'll need to install the [Sematext Agent](../agents/sematext-agent/index.md) and configure it to ship OpenSearch logs via the [Logs Discovery](../logs/discovery/intro.md). You will want to create or select an existing OpenSearch Logs App because that is what will provide you with all the out of the box dashboards, some of which you can see below.
 
@@ -28,8 +28,8 @@ Once data is in, you can explore it using the built-in reports or create your ow
 Other built-in reports include:
 
 - **Queries**: breakdown of your queries
-- **Clustering**: logs produced by components that have to do with cluster coordination: master logs, logs related to a node joining/leaving a cluster and shard allocation
-- **Deprecation**: breakdown of deprecation logs by node and coomponent
+- **Clustering**: logs produced by components that have to do with cluster coordination: cluster coordinator logs, logs related to a node joining/leaving a cluster and shard allocation
+- **Deprecation**: breakdown of deprecation logs by node and component
 - **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
 
 ## Troubleshooting
