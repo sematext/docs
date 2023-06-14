@@ -151,6 +151,8 @@ spec:
         app: sematext-agent
     spec:
       serviceAccountName: sematext-agent
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: agent
         image: sematext/agent:latest
@@ -164,6 +166,8 @@ spec:
           value: <"US" or "EU">
         - name: KUBERNETES_CLUSTER_ID
           value: "default"
+        - name: API_SERVER_PORT
+          value: "8675"
         - name: STA_NAMESPACE
           valueFrom:
           fieldRef:
@@ -171,11 +175,11 @@ spec:
         livenessProbe:
           httpGet:
             path: /health
-            port: 80
+            port: 8675
         readinessProbe:
           httpGet:
             path: /health
-            port: 80
+            port: 8675
         volumeMounts:
           - name: hostfs
             mountPath: /hostfs
@@ -197,7 +201,7 @@ spec:
           privileged: true
         ports:
           - name: http
-            containerPort: 80
+            containerPort: 8675
             protocol: TCP
       volumes:
         - name: hostfs
