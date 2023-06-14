@@ -17,6 +17,6 @@ If you want to turn off `hostNetwork` access, it's important to note that you ma
 
 Include the following parameter in your regular Helm installation command: `--set hostNetwork=false`.
 
-### Kubernetes
+### Kubectl
 
 Remove the following variables from your YAML file if they are present: `hostNetwork`, `dnsPolicy`.
