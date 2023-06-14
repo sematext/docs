@@ -749,7 +749,7 @@ Include the following parameter in your regular helm installation command: `--se
 
 **Kubectl:**
 
-Update the `API_SERVER_PORT` environment variable with the new `<Free-Port>` value in your YAML file. Additionally, make sure to update the port values for `livenessProbe`, `startupProbe`, and `ports` accordingly, using the same `<Free-Port>` value.
+Update the `API_SERVER_PORT` environment variable with the new `<Free-Port>` value in your YAML file. The new `<Free-Port>` value should be an available port number that is not already in use. Additionally, make sure to update the port values for `livenessProbe`, `startupProbe`, and `ports` accordingly, using the same `<Free-Port>` value.
 
 By following these instructions, you should be able to avoid the "Pending" status and successfully install Sematext Agent on your Kubernetes Cluster.
 
