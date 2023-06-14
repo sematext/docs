@@ -172,6 +172,7 @@ pages:
         - Linux Journald: integration/journald-integration.md
         - Mobile Apps Logs: integration/mobile-apps-logs.md
         - Nginx Logs: integration/nginx-logs.md
+        - OpenSearch: integration/opensearch-logs.md
         - PostgreSQL: integration/postgresql-logs.md
         - RabbitMQ: integration/rabbitmq-logs.md
         - Solr: integration/solr-logs.md
