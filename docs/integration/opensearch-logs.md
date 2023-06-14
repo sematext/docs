@@ -8,7 +8,7 @@ Once data is in, you can explore it via the built-in reports:
 <img
   class="content-modal-image"
   alt="OpenSearch Logs Overview Report"
-  src="../../images/agents/opensearch-logs-overview.png"
+  src="../../images/integrations/opensearch-logs-overview.png"
   title="OpenSearch Logs Overview Report"
 />
 
@@ -21,7 +21,7 @@ Once data is in, you can explore it using the built-in reports or create your ow
 <img
   class="content-modal-image"
   alt="OpenSearch Errors Report"
-  src="../../images/agents/opensearch-logs-errors.png"
+  src="../../images/integrations/opensearch-logs-errors.png"
   title="OpenSearch Errors Report"
 />
 
