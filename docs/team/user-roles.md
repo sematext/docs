@@ -48,14 +48,16 @@ Upgrade/downgrade Apps [^1] | ✔️ | ✔️ | ✖️
 [^1]: App guests with ADMIN role cannot upgrade/downgrade the Apps but account members with ADMIN role can.
 
 ### Account Level Actions
-Action | Admin | User
---- | :---: | :---:
-Create [App](https://sematext.com/docs/guide/app-guide/) [^2] | ✔️ | ✖️
-[Invite Others](https://sematext.com/docs/team/account-members/) to the account | ✔️ | ✖️
-See discovered [log sources](https://sematext.com/docs/logs/discovery/intro/) & [services](https://sematext.com/docs/monitoring/autodiscovery/)  | ✔️ | ✔️
-Ship logs & metrics from discovered log sources & services | ✔️ | ✖️
-Convert to [team account](https://sematext.com/docs/team/#team-account) | ✔️ | ✖️
-Close the account | ✔️ | ✖️
+Action | Billing Admin | Admin | User 
+--- | :---:  | :---: | :---:
+Create [App](https://sematext.com/docs/guide/app-guide/) [^2] | ✔️ | ✔️ | ✖️
+[Invite Others](https://sematext.com/docs/team/account-members/) to the account | ✔️ | ✔️ | ✖️
+See discovered [log sources](https://sematext.com/docs/logs/discovery/intro/) & [services](https://sematext.com/docs/monitoring/autodiscovery/)  | ✔️ | ✔️ | ✔️
+Ship logs & metrics from discovered log sources & services | ✔️ | ✔️ | ✖️
+Convert to [team account](https://sematext.com/docs/team/#team-account) | ✔️ | ✔️ | ✖️
+Close the account | ✔️ | ✔️ | ✖️
+Close the team account | ✔️ | ✖️ | ✖️
+Update payment info  | ✔️ | ✖️ | ✖️
 
 [^2]: Account members with USER role can create Logs & Monitoring Apps with free plan but they cannot create Synthetics & Experience Apps because these solutions don't have free plans.
 See [Sematext pricing](https://sematext.com/pricing/) page for more info.
