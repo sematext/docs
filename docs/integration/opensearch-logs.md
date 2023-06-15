@@ -16,7 +16,22 @@ Be sure to check out the [OpenSearch Monitoring integration](./opensearch.md) as
 
 ## Exploring logs
 
-Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Errors report to see breakdown of what's wrong, for example, which nodes or components generate errors:
+Once data is in, you can explore it using the built-in reports or create your own. 
+
+### Queries Report
+
+You can use the Queries report to see a breakdown of your queries and "zoom in" to the ones you're interested in:
+
+<img
+  class="content-modal-image"
+  alt="OpenSearch Queries Report"
+  src="../../images/integrations/opensearch-logs-queries.png"
+  title="OpenSearch Queries Report"
+/>
+
+### Errors Report
+
+You can use the Errors report to see breakdown of what's wrong, for example, which nodes or components generate errors:
 
 <img
   class="content-modal-image"
@@ -25,12 +40,38 @@ Once data is in, you can explore it using the built-in reports or create your ow
   title="OpenSearch Errors Report"
 />
 
-Other built-in reports include:
+### Clustering Report
 
-- **Queries**: breakdown of your queries
-- **Clustering**: logs produced by components that have to do with cluster coordination: cluster coordinator logs, logs related to a node joining/leaving a cluster and shard allocation
-- **Deprecation**: breakdown of deprecation logs by node and component
-- **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
+You can use the Clustering report to see logs produced by components that have to do with cluster coordination. Cluster coordinator logs, logs related to a node joining/leaving a cluster and shard allocation:
+
+<img
+  class="content-modal-image"
+  alt="OpenSearch Clustering Report"
+  src="../../images/integrations/opensearch-logs-clustering.png"
+  title="OpenSearch Clustering Report"
+/>
+
+### Deprecation Report
+
+You can use the Deprecation report to see a breakdown of deprecation logs by node and component:
+
+<img
+  class="content-modal-image"
+  alt="OpenSearch Deprecation Report"
+  src="../../images/integrations/opensearch-logs-deprecation.png"
+  title="OpenSearch Deprecation Report"
+/>
+
+### Start & Stop Report
+
+You can use the Start & Stop report to see startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started:
+
+<img
+  class="content-modal-image"
+  alt="OpenSearch Start & Stop Report"
+  src="../../images/integrations/opensearch-logs-startstop.png"
+  title="OpenSearch Start & Stop Report"
+/>
 
 ## Troubleshooting
 
