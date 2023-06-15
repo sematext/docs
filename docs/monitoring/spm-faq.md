@@ -733,9 +733,9 @@ wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key a
 
 ### How to prevent "Pending" status when installing Sematext Agent on a Kubernetes Cluster?
 
-If you notice that the pods for Sematext Agent are stuck in a "Pending" status during the installation on your Kubernetes Cluster, there are steps you can take to avoid this issue.
+If you notice that the pods for Sematext Agent are stuck in a "Pending" status with an error similar to "Port is already in use" during the installation on your Kubernetes Cluster, it may related to `hostNetwork` setting. 
 
-Sematext Agent requires `hostNetwork` access in order to access and monitor Kubernetes the control plane components. However, if you enable `hostNetwork` and the default port (8675) is already being used on your host, it can result in the Sematext Agent pods remaining in a "Pending" state. To resolve this problem, you need to modify the port being used.
+Sematext Agent requires `hostNetwork` access in order to access and monitor the Kubernetes control plane components. However, if you enable `hostNetwork` and the default port (8675) is already being used on your host, it can result in the Sematext Agent pods remaining in a "Pending" state. To resolve this problem, you need to modify the port being used.
 
 If you have concerns about `hostNetwork` usage or you don't want to use it in your system, please refer to [this page](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
