@@ -7,7 +7,7 @@ In Kubernetes, the `hostNetwork` is a configuration option that allows a contain
 
 ## Sematext Agent and `hostNetwork` Access
 
-Sematext Agent requires `hostNetwork` access to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
+Sematext Agent requires `hostNetwork: true` setting to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
 
 ## Turning Off `hostNetwork` Access
 

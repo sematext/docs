@@ -739,9 +739,7 @@ Sematext Agent requires `hostNetwork` access in order to access and monitor the 
 
 If you have concerns about `hostNetwork` usage or you don't want to use it in your system, please refer to [this page](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
-If you will continue to use `hostNetwork` (which is required for fully featured Kubernetes monitoring), please follow the steps below:
-
-Here are the instructions based on the installation method you are using:
+If you will continue to use `hostNetwork` (which is required for fully featured Kubernetes monitoring), please follow the steps below, depending on the installation method you are using:
 
 **Helm:**
 
