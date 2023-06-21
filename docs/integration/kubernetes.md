@@ -8,65 +8,14 @@ Kubernetes is a portable, extensible, open-source platform for managing containe
 Sematext Monitoring will give you detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics. Speaking of metrics, check out [this ](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/)page for a summarized list of the key metrics you can follow with Sematext as well as a short explanation for each one of them.
 
 
-
-
 ![alt_text](https://sematext.com/wp-content/uploads/2020/03/Kubernetes-Pod-Overview.png "Sematext Monitoring")
 
 
+### Agent Install
+To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting up the agent takes less than 5 minutes:
 
-### Helm Chart
-
-To start monitoring Kubernetes with Sematext install the Sematext Agent. The easiest way to do that is with a Helm chart. It’s available in the official charts repo and it will install to all nodes in your cluster. To install it run the following command:
-
-
-
-
-```
-helm install --name sematext-agent \
-  --set infraToken=<YOUR_INFRA_TOKEN> \
-  --set logsToken=<YOUR_LOGS_TOKEN> \
-  --set region=<"US" or "EU"> \
-  stable/sematext-agent
-```
-
-
-
-Check out [github](https://github.com/helm/charts/blob/master/stable/sematext-agent/README.md) for more details.
-
-
-### Sematext Operator
-
-You can also install Sematext Operator using this command:
-
-
-
-
-```
-kubectl apply -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
-```
-
-
-
-
-After the installation has finished you can create the SematextAgent resource that deploys the agent to all the nodes in your cluster.
-
-
-
-
-```
-apiVersion: sematext.com/v1alpha1
-kind: SematextAgent
-metadata:
-  name: sematext-agent
-spec:
-  region: <"US" or "EU">
-  logsToken: YOUR_LOGS_TOKEN
-  infraToken: YOUR_INFRA_TOKEN
-```
-
-
-
-For those looking for a more hands-on approach, there’s a [manual installation procedure](https://sematext.com/docs/agents/sematext-agent/kubernetes/installation/#manual-installation) with `kubectl`.
+1.  Create a new Infra App on https://apps.sematext.com/ui/monitoring-create by choosing the INFRA App card from the list of integrations.
+2.  Name your Infra App, select the Kubernetes environment and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
 
 
 ## Shipping Kubernetes logs to Sematext
