@@ -23,32 +23,13 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
 
+All you need to do is use [Discovery](../logs/discovery/setup) to Set Up log shipping:
+
+<img class="content-modal-image" alt="Kubernetes logs - Discovery" src="../../images/integrations/kubernetes-logs-disco.png" title="Kubernetes logs - Discovery">
+
+Once data is in, you can explore it via the built-in reports:
+
 <img class="content-modal-image" alt="Kubernetes logs" src="../../images/integrations/kubernetes-logs.png" title="Kubernetes logs">
-
-
-To configure Kubernetes log shipping we’re going to use Helm.
-
-
-### Helm
-
-To install Logagent with Helm you’ll need to run the following command:
-
-```
-
-helm install st-logagent \
-  --set logsToken=<YOUR_LOGS_TOKEN> \
-  --set region=<US or EU> \
-  stable/sematext-agent
-```
-
-Deleting Logagent can be done with:
-
-```
-
-helm delete st-logagent
-
-```
-
 
 If you are looking to use a different type of integration you can check out this [page](https://sematext.com/docs/logagent/installation-docker/#kubernetes-and-openshift).
 
