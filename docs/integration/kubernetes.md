@@ -23,11 +23,7 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
 
-
-
-
-
-![alt_text](https://sematext.com/docs/images/logs/logsene-ui.png "Sematext Logs")
+<img class="content-modal-image" alt="Kubernetes logs" src="../../images/integrations/kubernetes-logs.png" title="Kubernetes logs">
 
 
 To configure Kubernetes log shipping we’re going to use Helm.
