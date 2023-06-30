@@ -206,18 +206,18 @@ pages:
         - Vercel: integration/vercel-synthetics-integration.md
     - Alerts:
       - Overview: alerts/index.md
+      - Alert Events: alerts/alert-events.md
       - Creating Logs Alerts: alerts/creating-logs-alerts.md
       - Creating Metrics Alerts: alerts/creating-metrics-alerts.md
       - Creating Heartbeat Alerts: alerts/creating-heartbeat-alerts.md
       - Creating Experience Alerts: alerts/creating-experience-alerts.md
       - Creating Synthetics Alerts: alerts/creating-synthetics-alerts.md
-      - Alerts Meta and Tags: alerts/alerts-meta.md
-      - Alert Notifications: alerts/alert-notifications.md
-      - Alert Recipients: alerts/alert-recipients.md
-      - Account-default Hooks: alerts/account-default-hooks.md
-      - Alert Scheduling: alerts/alert-scheduling.md
       - Default Alerts: alerts/default-alerts.md
-      - Alert Events: alerts/alert-events.md
+      - Alert Notification Hooks: alerts/alert-notifications.md
+      - Account-default Hooks: alerts/account-default-hooks.md
+      - Alerts Meta and Tags: alerts/alerts-meta.md
+      - Alert Scheduling: alerts/alert-scheduling.md
+      - Alert Recipients: alerts/alert-recipients.md
     - Events:
       - Overview: events/index.md
       - Adding Events: events/adding.md
