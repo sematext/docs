@@ -42,14 +42,25 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 * Request Throughput: Tracks the number of API server requests processed per unit of time
 * Error Rate: Monitors the rate of API server errors
 
+TODO: add screenshot
+
 #### CoreDNS Metrics
 
 * DNS Request Latency: Measures the time taken to process DNS requests by CoreDNS
 * DNS Local and Remote Cache Misses: Counts the number of cache misses for DNS queries in CoreDNS's local or remote cache.
 * Error Rate: Monitors the rate of DNS errors encountered by CoreDNS
 
+TODO: add screenshot
+
 #### etcd Metrics
-TODO
+
+* Leader Changes: Tracks the number of times the etcd cluster leadership changes
+* Disk Space Usage: Monitors the amount of disk space used by etcd
+* WAL Write Latency: Measures the latency of write operations to the etcd Write-Ahead Log (WAL)
+* WAL Snapshot Latency: Measures the latency of taking snapshots of the etcd Write-Ahead Log (WAL)
+* WAL Commit Latency: Measures the latency of committing changes from the etcd Write-Ahead Log (WAL) to the database
+
+TODO: add screenshot
 
 #### kube-proxy Metrics
 
@@ -58,8 +69,12 @@ TODO
 * Synchronization of Proxy Rules: Measures the time taken to synchronize proxy rules for services
 * Request Latency by Host, HTTP Method, Path: Measures the latency of requests proxied by kube-proxy, categorized by host, HTTP method or Path
 
+TODO: add screenshot
+
 #### Scheduler Metrics
 TODO
+
+TODO: add screenshot
 
 ### Pod Metrics
 
