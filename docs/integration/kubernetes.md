@@ -15,9 +15,7 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 1.  Create a new Infra App on https://apps.sematext.com/ui/monitoring-create by choosing the INFRA App card from the list of integrations.
 2.  Name your Infra App, select the Kubernetes environment and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
 
-
 ## Shipping Kubernetes logs to Sematext
-
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
 
@@ -36,10 +34,23 @@ If you are looking to use a different type of integration you can check out this
 
 Container and Kubernetes metrics are collected along with labels and tags, which are exposed in the UI to allow slicing and dicing and building of custom dashboards.
 
+### Kubernetes Control Plane Metrics
+
+#### API Server Metrics
+TODO
+
+#### CoreDNS Metrics
+
+#### etcd Metrics
+TODO
+
+#### kube-proxy Metrics
+TODO
+
+#### Scheduler Metrics
+TODO
 
 ### Pod Metrics
-
-
 
 *   Pod count - The total nodes in the cluster
 *   Pod restarts - The total number of pods scheduled across nodes
@@ -50,29 +61,17 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 *   Pending pods - The number of pods in pending state
 *   Running pods - Reflects the current number of running pods
 
-
-
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image2.png "Sematext Kubernetes Metrics")
 
-
-
 ### Deployment
-
-
 
 *   Current replicas - The number of active deployment replicas
 *   Available replicas - The number of pod instances targeted by the deployment
 *   Desired replicas - The number of non-terminated pods targeted by the deployment that have the desired template specification
 
-
-
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image6.png "Sematext Kubernetes Metrics")
 
-
-
 ### Storage
-
-
 
 *   Read bytes - The number of bytes read from the disk
 *   Read time - The total amount of time (in nanoseconds) between read request dispatch and request completion
@@ -84,10 +83,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image1.png "Sematext Kubernetes Metrics")
 
-
-
 ### Network
-
 
 *   Received bytes - Received amount of bytes on the network interface
 *   Received packets - Received amount of packets on the network interface
@@ -102,7 +98,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Memory
 
-
 *   Memory fail counter - The number of times that memory cgroup limit was exceeded
 *   Memory limit - Designates the max allowed memory limit for the container cgroup
 *   Memory pages in - The number of events each time the page is accounted to the container cgroup
@@ -114,7 +109,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 
 ### CPU
-
 
 *   Cpu usage - The container CPU usage in %
 *   Throttled time - The total amount of time that processes have been throttled in the container cgroup
