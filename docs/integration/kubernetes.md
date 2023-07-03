@@ -5,11 +5,9 @@ Kubernetes is a portable, extensible, open-source platform for managing containe
 
 ## Monitoring Kubernetes with Sematext
 
-Sematext Monitoring will give you detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics. Speaking of metrics, check out [this ](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/)page for a summarized list of the key metrics you can follow with Sematext as well as a short explanation for each one of them.
-
+Sematext Monitoring will provide you with detailed insights into your cluster's control plane components and their health, performance metrics, and resource counts, among other important metrics. Speaking of metrics, you can check out [this page ](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/) for a summarized list of key metrics that you can track using Sematext. It also includes a short explanation for each metric.
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/03/Kubernetes-Pod-Overview.png "Sematext Monitoring")
-
 
 ### Agent Install
 To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting up the agent takes less than 5 minutes:
