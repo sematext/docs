@@ -37,9 +37,16 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 ### Kubernetes Control Plane Metrics
 
 #### API Server Metrics
-TODO
+
+* Request Latency: Measures the time taken to process API server requests
+* Request Throughput: Tracks the number of API server requests processed per unit of time
+* Error Rate: Monitors the rate of API server errors
 
 #### CoreDNS Metrics
+
+* DNS Request Latency: Measures the time taken to process DNS requests by CoreDNS
+* DNS Local and Remote Cache Misses: Counts the number of cache misses for DNS queries in CoreDNS's local or remote cache.
+* Error Rate: Monitors the rate of DNS errors encountered by CoreDNS
 
 #### etcd Metrics
 TODO
