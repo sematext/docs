@@ -72,7 +72,11 @@ TODO: add screenshot
 TODO: add screenshot
 
 #### Scheduler Metrics
-TODO
+
+* Scheduling Latency by Attempts: Measures the scheduling latency for pods based on the number of attempts made
+* Failed Scheduling Attempts: Monitors the number of failed pod scheduling attempts
+* Queued Pods by Queue: Tracks the number of pods currently in the scheduler's queue, categorized by the queue name
+* Unschedulable Pods: Tracks the number of pods that cannot be scheduled due to resource constraints
 
 TODO: add screenshot
 
