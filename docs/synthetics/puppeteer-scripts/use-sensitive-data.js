@@ -2,7 +2,7 @@ async function testPage(page) {
     await page.goto('https://en.wikipedia.org/');
     await Promise.all([
         page.waitForNavigation(),
-        page.click('#pt-login'),
+        page.click('#pt-login-2'),
     ]);
     // Uses Secret Keys instead of actual credentials
     await page.type('#wpName1', '$__username__');
