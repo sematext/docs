@@ -52,7 +52,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 TODO
 
 #### kube-proxy Metrics
-TODO
+
+* Service Changes: Tracks the number of changes in services detected by kube-proxy
+* Endpoint Changes: Tracks the number of changes in endpoints detected by kube-proxy
+* Synchronization of Proxy Rules: Measures the time taken to synchronize proxy rules for services
+* Request Latency by Host, HTTP Method, Path: Measures the latency of requests proxied by kube-proxy, categorized by host, HTTP method or Path
 
 #### Scheduler Metrics
 TODO
