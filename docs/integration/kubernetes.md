@@ -147,6 +147,16 @@ TODO: add screenshot
 
 ## Metrics Fields
 
+### Cluster Metrics
+
+|Name|Type|Unit|Numeric Type|Label|Description|
+|----|----|----|------------|-----|-----------|
+|kubernetes.cluster.pod.count|gauge|ns|long|total pod count|number of pods in the cluster|
+|kubernetes.cluster.deployment.count|gauge|ns|long|total deployment count|number of deployments in the cluster|
+|kubernetes.cluster.node.count|gauge|ns|long|total node count|number of node comprising the cluster|
+
+### Pod Metrics
+
 |Name|Type|Unit|Numeric Type|Label|Description|
 |----|----|----|------------|-----|-----------|
 |kubernetes.pod.restarts|counter|ns|long|pod restarts|number of pod restarts|
@@ -157,16 +167,749 @@ TODO: add screenshot
 |kubernetes.pod.count.unknown|gauge|ns|long|unknown pod count|equal to one if pod state can't be obtained|
 |kubernetes.pod.count.pending|gauge|ns|long|pending pod count|equal to one if the pod has been accepted by the scheduler and his containers are waiting to be created|
 |kubernetes.pod.count.running|gauge|ns|long|running pod count|equal to one if the pod has been scheduled on a node and at least one of his containers is running|
+
+### Deployment Metrics
+
+|Name|Type|Unit|Numeric Type|Label|Description|
+|----|----|----|------------|-----|-----------|
 |kubernetes.deployment.count|gauge|ns|long|deployment count|deployment count which is always equal to one|
 |kubernetes.deployment.replicas|gauge|ns|long|replica count|number of active replicas|
 |kubernetes.deployment.replicas.avail|gauge|ns|long|available replica count|number of available replicas. Replicas are marked as available if they are passing the health check|
 |kubernetes.deployment.replicas.desired|gauge|ns|long|desired replica count|number of desired replicas as defined in the deployment|
+
+### Storage Metrics
+
+|Name|Type|Unit|Numeric Type|Label|Description|
+|----|----|----|------------|-----|-----------|
 |kubernetes.pvc.available|gauge|bytes|long|available bytes|number of available bytes in the volume|
 |kubernetes.pvc.used|gauge|bytes|long|used bytes|number of used bytes in the volume|
 |kubernetes.pvc.capacity|gauge|bytes|long|volume capacity|the capacity in bytes of the volume|
-|kubernetes.cluster.pod.count|gauge|ns|long|total pod count|number of pods in the cluster|
-|kubernetes.cluster.deployment.count|gauge|ns|long|total deployment count|number of deployments in the cluster|
-|kubernetes.cluster.node.count|gauge|ns|long|total node count|number of node comprising the cluster|
+
+### Kubelet Metrics
+#### PVC
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|pvc.used|int64||
+|pvc.available|int64||
+|pvc.capacity|int64||
+
+#### RuntimeOperation
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.runtime_operation.count|int64||
+|kubelet.runtime_operation.errors|int64||
+|kubelet.runtime_operation.total_num|int64||
+|kubelet.runtime_operation.duration|float64||
+|kubelet.runtime_operation.p50latency|float64||
+|kubelet.runtime_operation.p75latency|float64||
+|kubelet.runtime_operation.p90latency|float64||
+|kubelet.runtime_operation.p95latency|float64||
+|kubelet.runtime_operation.p99latency|float64||
+
+#### Kubelet
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pods.instances|int||
+|kubelet.pods.running|float64||
+|kubelet.pods.started|float64||
+|kubelet.pods.started_error|float64||
+|kubelet.containers.created|float64||
+|kubelet.containers.exited|float64||
+|kubelet.containers.running|float64||
+|kubelet.containers.unknown|float64||
+
+#### PodStartDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pod_start.total_num|float64||
+|kubelet.pod_start.duration|float64||
+|kubelet.pod_start.p50latency|float64||
+|kubelet.pod_start.p75latency|float64||
+|kubelet.pod_start.p90latency|float64||
+|kubelet.pod_start.p95latency|float64||
+|kubelet.pod_start.p99latency|float64||
+
+#### PodWorkerDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pod_worker.total_num|int64||
+|kubelet.pod_worker.duration|float64||
+|kubelet.pod_worker.p50latency|float64||
+|kubelet.pod_worker.p75latency|float64||
+|kubelet.pod_worker.p90latency|float64||
+|kubelet.pod_worker.p95latency|float64||
+|kubelet.pod_worker.p99latency|float64||
+
+#### PodWorkerStartDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pod_worker_start.total_num|int64||
+|kubelet.pod_worker_start.duration|float64||
+|kubelet.pod_worker_start.p50latency|float64||
+|kubelet.pod_worker_start.p75latency|float64||
+|kubelet.pod_worker_start.p90latency|float64||
+|kubelet.pod_worker_start.p95latency|float64||
+|kubelet.pod_worker_start.p99latency|float64||
+
+#### VolumeManager
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.volume_manager.count|float64||
+|kubelet.volume_manager.desired.count|float64||
+
+#### StorageOperation
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.storage.total_num|int64||
+|kubelet.storage.duration|float64||
+|kubelet.storage.p50latency|float64||
+|kubelet.storage.p75latency|float64||
+|kubelet.storage.p90latency|float64||
+|kubelet.storage.p95latency|float64||
+|kubelet.storage.p99latency|float64||
+
+#### CGroupManager
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.cgroup.total_num|int64||
+|kubelet.cgroup.duration|float64||
+|kubelet.cgroup.p50latency|float64||
+|kubelet.cgroup.p75latency|float64||
+|kubelet.cgroup.p90latency|float64||
+|kubelet.cgroup.p95latency|float64||
+|kubelet.cgroup.p99latency|float64||
+
+#### PLEGRelistInterval
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pleg_relist_interval.total_num|int64||
+|kubelet.pleg_relist_interval.duration|float64||
+|kubelet.pleg_relist_interval.p50latency|float64||
+|kubelet.pleg_relist_interval.p75latency|float64||
+|kubelet.pleg_relist_interval.p90latency|float64||
+|kubelet.pleg_relist_interval.p95latency|float64||
+|kubelet.pleg_relist_interval.p99latency|float64||
+
+#### ContainerLogFilesystemUsed
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.container_log_filesystem.total_num|float64||
+
+#### DockerOperations
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.docker_operation.errors|float64||
+|kubelet.docker_operation.operations|float64||
+|kubelet.docker_operation.total_num|int64||
+|kubelet.docker_operation.duration|float64||
+|kubelet.docker_operation.p50latency|float64||
+|kubelet.docker_operation.p75latency|float64||
+|kubelet.docker_operation.p90latency|float64||
+|kubelet.docker_operation.p95latency|float64||
+|kubelet.docker_operation.p99latency|float64||
+
+#### HTTPInflightRequest
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.http_inflight_request.total_num|float64||
+
+#### HTTPRequestDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.http_request.operations|float64||
+|kubelet.http_request.total_num|int64||
+|kubelet.http_request.duration|float64||
+|kubelet.http_request.p50latency|float64||
+|kubelet.http_request.p75latency|float64||
+|kubelet.http_request.p90latency|float64||
+|kubelet.http_request.p95latency|float64||
+|kubelet.http_request.p99latency|float64||
+
+#### NetworkPluginOperations
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.network_plugin_operation.errors|float64||
+|kubelet.network_plugin_operation.operations|float64||
+|kubelet.network_plugin_operation.total_num|int64||
+|kubelet.network_plugin_operation.duration|float64||
+|kubelet.network_plugin_operation.p50latency|float64||
+|kubelet.network_plugin_operation.p75latency|float64||
+|kubelet.network_plugin_operation.p90latency|float64||
+|kubelet.network_plugin_operation.p95latency|float64||
+|kubelet.network_plugin_operation.p99latency|float64||
+
+#### PLEGRelistDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pleg_relist.total_num|int64||
+|kubelet.pleg_relist.duration|float64||
+|kubelet.pleg_relist.p50duration|float64||
+|kubelet.pleg_relist.p75duration|float64||
+|kubelet.pleg_relist.p90duration|float64||
+|kubelet.pleg_relist.p95duration|float64||
+|kubelet.pleg_relist.p99duration|float64||
+
+#### StartedContainers
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.started_containers.errors|float64||
+|kubelet.started_containers.total_num|float64||
+
+#### VolumeStatsInode
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.volume_stats_inode.free|float64||
+|kubelet.volume_stats_inode.used|float64||
+|kubelet.volume_stats_inode.maximum|float64||
+
+#### PLEGEvents
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubelet.pleg_events.discard|int64||
+|kubelet.pleg_events.last_seen|int64||
+
+### API Server Metrics
+#### InflightRequests
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.inflight_requests.total_num|uint64||
+
+#### AuditEvents
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.audit_events.total_num|uint64||
+
+#### WorkqueueAdds
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.work_queue_adds.total_num|uint64||
+
+#### EtcdRequestDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.etcd_request_duration.p50latency|float64||
+|apiserver.etcd_request_duration.p75latency|float64||
+|apiserver.etcd_request_duration.p90latency|float64||
+|apiserver.etcd_request_duration.p95latency|float64||
+|apiserver.etcd_request_duration.p99latency|float64||
+|apiserver.etcd_request_duration.duration|float64||
+|apiserver.etcd_request_duration.total_num|uint64||
+
+#### StorageObjects
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.storage_objects.total_num|uint64||
+
+#### ClientRequests
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.client_requests.total_num|uint64||
+
+#### RejectedAuditReq
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.rejected_audit_req.total_num|uint64||
+
+#### CurrentExecutingReqs
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.current_executing_reqs.total_num|uint64||
+
+#### CurrentInqueueReqs
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.current_inqueue_reqs.total_num|uint64||
+
+#### DispatchedReq
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.dispatched_req.total_num|uint64||
+
+#### ClientReqDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.client_req_duration.p50latency|float64||
+|apiserver.client_req_duration.p75latency|float64||
+|apiserver.client_req_duration.p90latency|float64||
+|apiserver.client_req_duration.p95latency|float64||
+|apiserver.client_req_duration.p99latency|float64||
+|apiserver.client_req_duration.duration|float64||
+|apiserver.client_req_duration.total_num|uint64||
+
+#### AdmissionDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.admission_duration.p50latency|float64||
+|apiserver.admission_duration.p75latency|float64||
+|apiserver.admission_duration.p90latency|float64||
+|apiserver.admission_duration.p95latency|float64||
+|apiserver.admission_duration.p99latency|float64||
+|apiserver.admission_duration.duration|float64||
+|apiserver.admission_duration.total_num|uint64||
+
+#### StepAdmissionDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.step_admission_duration.p50latency|float64||
+|apiserver.step_admission_duration.p75latency|float64||
+|apiserver.step_admission_duration.p90latency|float64||
+|apiserver.step_admission_duration.p95latency|float64||
+|apiserver.step_admission_duration.p99latency|float64||
+|apiserver.step_admission_duration.duration|float64||
+|apiserver.step_admission_duration.total_num|uint64||
+
+#### RegWatchers
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.reg_watchers.total_num|uint64||
+
+#### TLSError
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.tls_handshake_error.total_num|uint64||
+
+#### AuthDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.auth_duration.p50latency|float64||
+|apiserver.auth_duration.p75latency|float64||
+|apiserver.auth_duration.p90latency|float64||
+|apiserver.auth_duration.p95latency|float64||
+|apiserver.auth_duration.p99latency|float64||
+|apiserver.auth_duration.duration|float64||
+|apiserver.auth_duration.total_num|uint64||
+
+#### AuthUserReq
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.auth_user_req.total_num|uint64||
+
+#### ClientCertExpiry
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.client_cert_expiry.p50latency|float64||
+|apiserver.client_cert_expiry.p75latency|float64||
+|apiserver.client_cert_expiry.p90latency|float64||
+|apiserver.client_cert_expiry.p95latency|float64||
+|apiserver.client_cert_expiry.p99latency|float64||
+|apiserver.client_cert_expiry.duration|float64||
+|apiserver.client_cert_expiry.total_num|uint64||
+
+#### EvaluatedObj
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.evaluated_object.total_num|uint64||
+
+#### FetchedObj
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.fetched_object.total_num|uint64||
+
+#### ReturnedObj
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.returned_object.total_num|uint64||
+
+#### TotalObj
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.total_object.total_num|uint64||
+
+#### KeyGenFails
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.key_gen_fails.total_num|uint64||
+
+#### ApisrwerCacheMisses
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.cache_misses.total_num|uint64||
+
+#### KeyGenDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.key_gen_duration.p50latency|float64||
+|apiserver.key_gen_duration.p75latency|float64||
+|apiserver.key_gen_duration.p90latency|float64||
+|apiserver.key_gen_duration.p95latency|float64||
+|apiserver.key_gen_duration.p99latency|float64||
+|apiserver.key_gen_duration.duration|float64||
+|apiserver.key_gen_duration.total_num|uint64||
+
+#### RequestTotal
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.request_total.total_num|uint64||
+
+#### APIServerRequestDuration
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|apiserver.request_duration.p50latency|float64||
+|apiserver.request_duration.p75latency|float64||
+|apiserver.request_duration.p90latency|float64||
+|apiserver.request_duration.p95latency|float64||
+|apiserver.request_duration.p99latency|float64||
+|apiserver.request_duration.duration|float64||
+|apiserver.request_duration.total_num|uint64||
+
+### Etcd Metrics
+#### GSE
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.has_leader|uint64||
+|etcd.leader.changes_seen|uint64||
+|etcd.proposals.applied|uint64||
+|etcd.proposals.committed|uint64||
+|etcd.proposals.failed|uint64||
+|etcd.proposals.pending|uint64||
+|etcd.version|float64||
+
+#### DBC
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.disk_backend_commit.p50latency|float64||
+|etcd.disk_backend_commit.p75latency|float64||
+|etcd.disk_backend_commit.p90latency|float64||
+|etcd.disk_backend_commit.p95latency|float64||
+|etcd.disk_backend_commit.p99latency|float64||
+|etcd.disk_backend_commit.total_num|uint64||
+|etcd.disk_backend_commit.duration|float64||
+
+#### DBW
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.disk_wal_fsync.p50latency|float64||
+|etcd.disk_wal_fsync.p75latency|float64||
+|etcd.disk_wal_fsync.p90latency|float64||
+|etcd.disk_wal_fsync.p95latency|float64||
+|etcd.disk_wal_fsync.p99latency|float64||
+|etcd.disk_wal_fsync.total_num|uint64||
+|etcd.disk_wal_fsync.duration|float64||
+
+#### DBS
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.disk_backend_snapshot.p50latency|float64||
+|etcd.disk_backend_snapshot.p75latency|float64||
+|etcd.disk_backend_snapshot.p90latency|float64||
+|etcd.disk_backend_snapshot.p95latency|float64||
+|etcd.disk_backend_snapshot.p99latency|float64||
+|etcd.disk_backend_snapshot.total_num|uint64||
+|etcd.disk_backend_snapshot.duration|float64||
+
+#### GRPCRecEtcd
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.grpc.msg.received|uint64||
+
+#### GRPCSentEtcd
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.grpc.msg.sent|uint64||
+
+#### GRPCStartedEtcd
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.grpc.started|uint64||
+
+#### GRPCTotalEtcd
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.grpc.handled|uint64||
+
+#### DBGS
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.mvcc.keys|uint64||
+|etcd.mvcc.events|uint64||
+|etcd.mvcc.keys_bytes|uint64||
+|etcd.mvcc.watch_stream|uint64||
+|etcd.mvcc.watcher|uint64||
+|etcd.mvcc.db_read|uint64||
+|etcd.mvcc.db_size|uint64||
+|etcd.mvcc.db_used|uint64||
+|etcd.mvcc.puts|uint64||
+|etcd.mvcc.deletes|uint64||
+|etcd.mvcc.slow_watches|uint64||
+|etcd.watch.requests|uint64||
+|etcd.store.watchers|uint64||
+
+#### DDR
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.commit_rebalance_duration.p50latency|float64||
+|etcd.commit_rebalance_duration.p75latency|float64||
+|etcd.commit_rebalance_duration.p90latency|float64||
+|etcd.commit_rebalance_duration.p95latency|float64||
+|etcd.commit_rebalance_duration.p99latency|float64||
+|etcd.commit_rebalance_duration.total_num|uint64||
+|etcd.commit_rebalance_duration.duration|float64||
+
+#### DDW
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.commit_write.p50latency|float64||
+|etcd.commit_write.p75latency|float64||
+|etcd.commit_write.p90latency|float64||
+|etcd.commit_write.p95latency|float64||
+|etcd.commit_write.p99latency|float64||
+|etcd.commit_write.total_num|uint64||
+|etcd.commit_write.duration|float64||
+
+#### DDC
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.mvcc_db_compaction.p50latency|float64||
+|etcd.mvcc_db_compaction.p75latency|float64||
+|etcd.mvcc_db_compaction.p90latency|float64||
+|etcd.mvcc_db_compaction.p95latency|float64||
+|etcd.mvcc_db_compaction.p99latency|float64||
+|etcd.mvcc_db_compaction.total_num|uint64||
+|etcd.mvcc_db_compaction.duration|float64||
+
+#### DDS
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.snapshot_duration.p50latency|float64||
+|etcd.snapshot_duration.p75latency|float64||
+|etcd.snapshot_duration.p90latency|float64||
+|etcd.snapshot_duration.p95latency|float64||
+|etcd.snapshot_duration.p99latency|float64||
+|etcd.snapshot_duration.total_num|uint64||
+|etcd.snapshot_duration.duration|float64||
+
+#### RuntimeEtcd
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|etcd.runtime.resident_memory|uint64||
+|etcd.runtime.virtual_memory|uint64||
+|etcd.runtime.max_fds|uint64||
+|etcd.runtime.open_fds|uint64||
+
+### Kube-proxy Metrics
+#### GSK
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubeproxy.endpoint.changes|uint64||
+|kubeproxy.endpoint.changes_pending|uint64||
+|kubeproxy.restore.failures|uint64||
+|kubeproxy.service.changes|uint64||
+|kubeproxy.service.changes_pending|uint64||
+
+#### RC
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubeproxy.rest_client.total_num|uint64||
+
+#### RDLL
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubeproxy.rest_client_duration.p50latency|float64||
+|kubeproxy.rest_client_duration.p75latency|float64||
+|kubeproxy.rest_client_duration.p90latency|float64||
+|kubeproxy.rest_client_duration.p95latency|float64||
+|kubeproxy.rest_client_duration.p99latency|float64||
+|kubeproxy.rest_client_duration.duration|float64||
+|kubeproxy.rest_client_duration.total_num|uint64||
+
+#### SPRDL
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubeproxy.sync_proxy_rules.p50latency|float64||
+|kubeproxy.sync_proxy_rules.p75latency|float64||
+|kubeproxy.sync_proxy_rules.p90latency|float64||
+|kubeproxy.sync_proxy_rules.p95latency|float64||
+|kubeproxy.sync_proxy_rules.p99latency|float64||
+|kubeproxy.sync_proxy_rules.duration|float64||
+|kubeproxy.sync_proxy_rules.total_num|uint64||
+
+#### RuntimeKubeproxy
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|kubeproxy.runtime.os_threads|uint64||
+|kubeproxy.runtime.goroutines|uint64||
+|kubeproxy.runtime.resident_memory|uint64||
+|kubeproxy.runtime.virtual_memory|uint64||
+|kubeproxy.runtime.number_frees|uint64||
+|kubeproxy.runtime.number_mallocs|uint64||
+|kubeproxy.runtime.heap_obtained|uint64||
+|kubeproxy.runtime.heap_used|uint64||
+|kubeproxy.runtime.heap_waiting|uint64||
+|kubeproxy.runtime.number_heap_objects|uint64||
+|kubeproxy.runtime.stack_obtained|uint64||
+|kubeproxy.runtime.stack_used|uint64||
+|kubeproxy.runtime.gc_duration|float64||
+|kubeproxy.runtime.gc_count|uint64||
+
+### CoreDNS Metrics
+#### GS
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.cache.entries|uint64||
+|coredns.cache.hits|uint64||
+|coredns.cache.misses|uint64||
+|coredns.panics.total_num|uint64||
+|coredns.failed_reloads.total_num|uint64||
+|coredns.healthcheck_broken.total_num|uint64||
+|coredns.forward_max_concurrent_rejects.total_num|uint64||
+
+#### RDL
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.request_duration.p50latency|float64||
+|coredns.request_duration.p75latency|float64||
+|coredns.request_duration.p90latency|float64||
+|coredns.request_duration.p95latency|float64||
+|coredns.request_duration.p99latency|float64||
+|coredns.request_duration.duration|float64||
+|coredns.request_duration.total_num|uint64||
+
+#### RCZ
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.request_counter.total_num|uint64||
+
+#### RSCC
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.response_code.total_num|uint64||
+
+#### FCH
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.forward_cache.hits|uint64||
+
+#### FCM
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.forward_cache.misses|uint64||
+
+#### FRL
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.forward_request.p50latency|float64||
+|coredns.forward_request.p75latency|float64||
+|coredns.forward_request.p90latency|float64||
+|coredns.forward_request.p95latency|float64||
+|coredns.forward_request.p99latency|float64||
+|coredns.forward_request.duration|float64||
+|coredns.forward_request.total_num|uint64||
+
+#### FRT
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.forward_response.total_num|uint64||
+
+#### RuntimeCoredns
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|coredns.runtime.os_threads|uint64||
+|coredns.runtime.goroutines|uint64||
+|coredns.runtime.resident_memory|uint64||
+|coredns.runtime.virtual_memory|uint64||
+|coredns.runtime.number_frees|uint64||
+|coredns.runtime.number_mallocs|uint64||
+|coredns.runtime.heap_obtained|uint64||
+|coredns.runtime.heap_used|uint64||
+|coredns.runtime.heap_waiting|uint64||
+|coredns.runtime.number_heap_objects|uint64||
+|coredns.runtime.stack_obtained|uint64||
+|coredns.runtime.stack_used|uint64||
+|coredns.runtime.gc_duration|float64||
+|coredns.runtime.gc_count|uint64||
+
+### Scheduler Metrics
+#### PA
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.preemption_attempts.total_num|uint64||
+
+#### PP
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.pending_pods.total_num|uint64||
+
+#### QIP
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.incoming_pods.total_num|uint64||
+
+#### SAT
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.schedule_attempts.total_num|uint64||
+
+#### SG
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.go_routines.total_num|uint64||
+
+#### SCS
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.cache.total_num|uint64||
+
+#### E2ESD
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.e2e_duration.p50latency|float64||
+|scheduler.e2e_duration.p75latency|float64||
+|scheduler.e2e_duration.p90latency|float64||
+|scheduler.e2e_duration.p95latency|float64||
+|scheduler.e2e_duration.p99latency|float64||
+|scheduler.e2e_duration.total_num|uint64||
+|scheduler.e2e_duration.duration|float64||
+
+#### SAD
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.scheduling_algorithm.p50latency|float64||
+|scheduler.scheduling_algorithm.p75latency|float64||
+|scheduler.scheduling_algorithm.p90latency|float64||
+|scheduler.scheduling_algorithm.p95latency|float64||
+|scheduler.scheduling_algorithm.p99latency|float64||
+|scheduler.scheduling_algorithm.total_num|uint64||
+|scheduler.scheduling_algorithm.duration|float64||
+
+#### PV
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.preemption_victims.p50latency|float64||
+|scheduler.preemption_victims.p75latency|float64||
+|scheduler.preemption_victims.p90latency|float64||
+|scheduler.preemption_victims.p95latency|float64||
+|scheduler.preemption_victims.p99latency|float64||
+|scheduler.preemption_victims.total_num|uint64||
+|scheduler.preemption_victims.duration|float64||
+
+#### PSDS
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.scheduling_duration.p50latency|float64||
+|scheduler.scheduling_duration.p75latency|float64||
+|scheduler.scheduling_duration.p90latency|float64||
+|scheduler.scheduling_duration.p95latency|float64||
+|scheduler.scheduling_duration.p99latency|float64||
+|scheduler.scheduling_duration.total_num|uint64||
+|scheduler.scheduling_duration.duration|float64||
+
+#### FEPD
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.framework_extension.p50latency|float64||
+|scheduler.framework_extension.p75latency|float64||
+|scheduler.framework_extension.p90latency|float64||
+|scheduler.framework_extension.p95latency|float64||
+|scheduler.framework_extension.p99latency|float64||
+|scheduler.framework_extension.total_num|uint64||
+|scheduler.framework_extension.duration|float64||
+
+#### PSA
+|Metric Name|Unit|Description|
+|----|----|-----------|
+|scheduler.attempts.total_num|uint64||
+
+
 
 ## Sematext Agent
 
