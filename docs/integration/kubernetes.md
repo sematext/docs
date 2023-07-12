@@ -553,18 +553,18 @@ TODO: add screenshot
 |apiserver.request_duration.total_num|uint64||
 
 ### Etcd Metrics
-#### GSE
+#### Generic
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|etcd.has_leader|uint64||
-|etcd.leader.changes_seen|uint64||
-|etcd.proposals.applied|uint64||
-|etcd.proposals.committed|uint64||
-|etcd.proposals.failed|uint64||
-|etcd.proposals.pending|uint64||
-|etcd.version|float64||
+|etcd.has_leader|uint64|Whether or not a leader exists|
+|etcd.leader.changes_seen|uint64|The number of leader changes seen|
+|etcd.proposals.applied|uint64|The total number of consensus proposals applied|
+|etcd.proposals.committed|uint64|The total number of consensus proposals committed|
+|etcd.proposals.failed|uint64|The total number of failed proposals seen|
+|etcd.proposals.pending|uint64|The current number of pending proposals to commit|
+|etcd.version|float64|Which version is running|
 
-#### DBC
+#### Commit
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.disk_backend_commit.p50latency|float64||
@@ -573,9 +573,9 @@ TODO: add screenshot
 |etcd.disk_backend_commit.p95latency|float64||
 |etcd.disk_backend_commit.p99latency|float64||
 |etcd.disk_backend_commit.total_num|uint64||
-|etcd.disk_backend_commit.duration|float64||
+|etcd.disk_backend_commit.duration|float64|The latency distributions of commit called by backend|
 
-#### DBW
+#### WAL
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.disk_wal_fsync.p50latency|float64||
@@ -584,9 +584,9 @@ TODO: add screenshot
 |etcd.disk_wal_fsync.p95latency|float64||
 |etcd.disk_wal_fsync.p99latency|float64||
 |etcd.disk_wal_fsync.total_num|uint64||
-|etcd.disk_wal_fsync.duration|float64||
+|etcd.disk_wal_fsync.duration|float64|The latency distributions of fsync called by WAL|
 
-#### DBS
+#### Backend Snapshots
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.disk_backend_snapshot.p50latency|float64||
@@ -595,46 +595,46 @@ TODO: add screenshot
 |etcd.disk_backend_snapshot.p95latency|float64||
 |etcd.disk_backend_snapshot.p99latency|float64||
 |etcd.disk_backend_snapshot.total_num|uint64||
-|etcd.disk_backend_snapshot.duration|float64||
+|etcd.disk_backend_snapshot.duration|float64|The latency distribution of backend snapshots|
 
-#### GRPCRecEtcd
+#### GRPC Received
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|etcd.grpc.msg.received|uint64||
+|etcd.grpc.msg.received|uint64|The total number of bytes received from grpc clients|
 
-#### GRPCSentEtcd
+#### GRPC Sent
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|etcd.grpc.msg.sent|uint64||
+|etcd.grpc.msg.sent|uint64|The total number of bytes sent to grpc clients|
 
-#### GRPCStartedEtcd
+#### GRPC Started
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.grpc.started|uint64||
 
-#### GRPCTotalEtcd
+#### GRPC Total
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|etcd.grpc.handled|uint64||
+|etcd.grpc.handled|uint64|Total number of RPCs completed on the server, regardless of success or failure|
 
-#### DBGS
+#### MVCC
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|etcd.mvcc.keys|uint64||
-|etcd.mvcc.events|uint64||
+|etcd.mvcc.keys|uint64|Total number of keys|
+|etcd.mvcc.events|uint64|Total number of events sent by this member|
 |etcd.mvcc.keys_bytes|uint64||
-|etcd.mvcc.watch_stream|uint64||
-|etcd.mvcc.watcher|uint64||
-|etcd.mvcc.db_read|uint64||
-|etcd.mvcc.db_size|uint64||
-|etcd.mvcc.db_used|uint64||
-|etcd.mvcc.puts|uint64||
-|etcd.mvcc.deletes|uint64||
-|etcd.mvcc.slow_watches|uint64||
-|etcd.watch.requests|uint64||
-|etcd.store.watchers|uint64||
+|etcd.mvcc.watch_stream|uint64|Total number of watch streams|
+|etcd.mvcc.watcher|uint64|Total number of watchers|
+|etcd.mvcc.db_read|uint64|The number of currently open read transactions|
+|etcd.mvcc.db_size|uint64|Total size of the underlying database physically allocated in bytes.|
+|etcd.mvcc.db_used|uint64|Total size of the underlying database logically in use in bytes|
+|etcd.mvcc.puts|uint64|Total number of puts seen by this member|
+|etcd.mvcc.deletes|uint64|Total number of deletes seen by this member|
+|etcd.mvcc.slow_watches|uint64|Total number of unsynced slow watchers|
+|etcd.watch.requests|uint64|Total number of incoming watch requests (new or reestablished)|
+|etcd.store.watchers|uint64|Count of currently active watchers|
 
-#### DDR
+#### Commit Rebalance
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.commit_rebalance_duration.p50latency|float64||
@@ -643,9 +643,9 @@ TODO: add screenshot
 |etcd.commit_rebalance_duration.p95latency|float64||
 |etcd.commit_rebalance_duration.p99latency|float64||
 |etcd.commit_rebalance_duration.total_num|uint64||
-|etcd.commit_rebalance_duration.duration|float64||
+|etcd.commit_rebalance_duration.duration|float64|The latency distributions of commit.rebalance called by bboltdb backend|
 
-#### DDW
+#### Commit Write
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.commit_write.p50latency|float64||
@@ -654,9 +654,9 @@ TODO: add screenshot
 |etcd.commit_write.p95latency|float64||
 |etcd.commit_write.p99latency|float64||
 |etcd.commit_write.total_num|uint64||
-|etcd.commit_write.duration|float64||
+|etcd.commit_write.duration|float64|The latency distributions of commit.write called by bboltdb backend|
 
-#### DDC
+#### DB Compaction Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |etcd.mvcc_db_compaction.p50latency|float64||
@@ -664,27 +664,8 @@ TODO: add screenshot
 |etcd.mvcc_db_compaction.p90latency|float64||
 |etcd.mvcc_db_compaction.p95latency|float64||
 |etcd.mvcc_db_compaction.p99latency|float64||
-|etcd.mvcc_db_compaction.total_num|uint64||
+|etcd.mvcc_db_compaction.total_num|uint64|Db compaction total duration|
 |etcd.mvcc_db_compaction.duration|float64||
-
-#### DDS
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|etcd.snapshot_duration.p50latency|float64||
-|etcd.snapshot_duration.p75latency|float64||
-|etcd.snapshot_duration.p90latency|float64||
-|etcd.snapshot_duration.p95latency|float64||
-|etcd.snapshot_duration.p99latency|float64||
-|etcd.snapshot_duration.total_num|uint64||
-|etcd.snapshot_duration.duration|float64||
-
-#### RuntimeEtcd
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|etcd.runtime.resident_memory|uint64||
-|etcd.runtime.virtual_memory|uint64||
-|etcd.runtime.max_fds|uint64||
-|etcd.runtime.open_fds|uint64||
 
 ### Kube-proxy Metrics
 #### GSK
