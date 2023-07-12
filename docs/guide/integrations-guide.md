@@ -10,7 +10,7 @@ You can collect data from various systems and send them to Sematext Cloud where 
 - [Events](../events) such as services starting or restarting, package installs and version updates, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be correlated with metrics or logs components to enable faster troubleshooting.
 
 To start monitoring and alerting for your infrastructure performance and logs you need to set up the [Sematext Agent](../agents/sematext-agent/).
-Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also performs [service discovery](../monitoring/autodiscovery/) and [logs discovery](../discovery/intro/), so you can easily set up monitoring for your services and logs.
+Sematext Agent collects server, container, and Kubernetes metrics, network connections, process metrics, infrastructure inventory data, Docker and Kubernetes events, and more. It also performs [service discovery](../monitoring/autodiscovery/) and [logs discovery](../logs/discovery/intro/), so you can easily set up monitoring for your services and logs.
 
 Sematext Agent is not needed to monitor your website, APIs, or user experience.  [Synthetic monitoring](../synthetics) of websites and APIs requires no installation of any kind - it is all configurable in the UI.  [User Experience monitoring](../experience) provides you with a snippet of JavaScript for insertion in your web pages.
 
@@ -134,7 +134,7 @@ Or navigate to the App and click on the Connect New App button on the top right 
 
 ### Notification Hooks Integrations
 
-When an App is first created you may find that Sematext automatically created several App [default, integration-specific alerts](../alerts/default-alerts/). User account email is used as a [default notification hook](alerts/account-default-hooks/) to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [notification hook](/guide/integrations-guide/#webhooks) integration.
+When an App is first created you may find that Sematext automatically created several App [default, integration-specific alerts](../alerts/default-alerts/). User account email is used as a [default notification hook](../alerts/account-default-hooks/) to send those alert notifications. If you want to use any of the popular third party messaging services that you use in your operations workflow, you can do so by creating related [notification hook](/guide/integrations-guide/#webhooks) integration.
 
 ![Sematext Cloud - Notification Hooks](../images/guide/integrations/notification-hooks.png)
 
@@ -157,15 +157,14 @@ You can also add new integrations and filter and search existing App using table
 - Next table column describes your Integration Plan and plans can be adjusted using App settings. For more information on [infrastructure monitoring pricing](https://sematext.com/pricing#spm) or [logging pricing](https://sematext.com/pricing#logsene) check our website
 - App Status indicator icons show your apps status and either green checkmark is used to indicate that App is sending data to our service, indexed and ready for IT systems monitoring
 - Your role is defined in the last second column
-- Last, but not the least, App Settings dropdown menu is the last item in the [apps table](https://github.com/sematext/sematable).
 
 ![Sematext Cloud - Apps](../images/guide/integrations/all-apps.png)
 
 ## Sematext Agent Installation
 
-### Logging
+### Log Monitoring
 
-Sematext stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install the agent on them. Logging Apps require log shipper installation on your end, and information below explains the process.
+Sematext stores data received through the Elasticsearch API and also through a variety of Syslog protocols. In order for the Sematext Cloud to receive data from your systems you need to install an agent on them. Logs Apps require log shipper installation on your end, and information below explains the process.
 
 #### Elasticsearch API
 
@@ -206,11 +205,11 @@ Two steps are required when creating a Monitoring App:
 
 #### Agent Installation
 
-You need to add the Sematext repository and install Sematext Agent. It is available for various Linux distributions as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. Choose your distribution and install required packages. Once installed, move to the App Agent Setup step.
+You need to add the Sematext repository and install Sematext Agent. It is available for various Linux distributions, various versions of Kubernetes, Containers, as well as infrastructure orchestration tools like Ansible, Puppet, and Chef. To install, simply choose your distribution and copy-paste commands from the screen.
 
 #### App Agent Setup
 
-App Agent collects performance metrics of your application (Solr, Elasticsearch, HBase...). It can run in two different modes:
+App Agent collects performance metrics of your application (Solr, Elasticsearch, MySQL, Nginx, etc.). It can run in two different modes:
 
 - [In-process as a javaagent](/agents/sematext-agent/app-agent/spm-monitor-javaagent/)
 - [Standalone as a separate process](/agents/sematext-agent/app-agent/spm-monitor-standalone/)
@@ -218,8 +217,6 @@ App Agent collects performance metrics of your application (Solr, Elasticsearch,
 For more information check App Agent [overview page](/agents/sematext-agent/app-agent)
 
 You'll start seeing your performance data in Sematext in a few minutes. If you do not see performance charts in 5 minutes, have a look at [Troubleshooting page](/monitoring/spm-faq/) for tips and if nothing works give us a shout @Sematext or at support@sematext.com.
-
-[Register](https://apps.sematext.com/ui/registration) for free or [Login](https://apps.sematext.com/ui/login/) into Sematext IT systems monitoring platform to get started and create your logs App. Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
 
 Recommendations for learning more about Sematext products and services:
 
