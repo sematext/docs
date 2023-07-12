@@ -704,37 +704,19 @@ TODO: add screenshot
 |kubeproxy.sync_proxy_rules.duration|float64|SyncProxyRules latency in seconds|
 |kubeproxy.sync_proxy_rules.total_num|uint64||
 
-#### Runtime
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|kubeproxy.runtime.os_threads|uint64||
-|kubeproxy.runtime.goroutines|uint64||
-|kubeproxy.runtime.resident_memory|uint64||
-|kubeproxy.runtime.virtual_memory|uint64||
-|kubeproxy.runtime.number_frees|uint64||
-|kubeproxy.runtime.number_mallocs|uint64||
-|kubeproxy.runtime.heap_obtained|uint64||
-|kubeproxy.runtime.heap_used|uint64||
-|kubeproxy.runtime.heap_waiting|uint64||
-|kubeproxy.runtime.number_heap_objects|uint64||
-|kubeproxy.runtime.stack_obtained|uint64||
-|kubeproxy.runtime.stack_used|uint64||
-|kubeproxy.runtime.gc_duration|float64||
-|kubeproxy.runtime.gc_count|uint64||
-
 ### CoreDNS Metrics
-#### GS
+#### Generic
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|coredns.cache.entries|uint64||
-|coredns.cache.hits|uint64||
-|coredns.cache.misses|uint64||
-|coredns.panics.total_num|uint64||
-|coredns.failed_reloads.total_num|uint64||
-|coredns.healthcheck_broken.total_num|uint64||
-|coredns.forward_max_concurrent_rejects.total_num|uint64||
+|coredns.cache.entries|uint64|The number of elements in the cache|
+|coredns.cache.hits|uint64|The count of cache hits|
+|coredns.cache.misses|uint64|The count of cache misses|
+|coredns.panics.total_num|uint64|A metrics that counts the number of panics|
+|coredns.failed_reloads.total_num|uint64|Counter of the number of failed reload attempts|
+|coredns.healthcheck_broken.total_num|uint64|Counter of the number of complete failures of the healthchecks|
+|coredns.forward_max_concurrent_rejects.total_num|uint64|Counter of the number of queries rejected because the concurrent queries were at maximum|
 
-#### RDL
+#### Request Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |coredns.request_duration.p50latency|float64||
@@ -742,30 +724,30 @@ TODO: add screenshot
 |coredns.request_duration.p90latency|float64||
 |coredns.request_duration.p95latency|float64||
 |coredns.request_duration.p99latency|float64||
-|coredns.request_duration.duration|float64||
+|coredns.request_duration.duration|float64|The time each request took|
 |coredns.request_duration.total_num|uint64||
 
-#### RCZ
+#### Requests Total
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|coredns.request_counter.total_num|uint64||
+|coredns.request_counter.total_num|uint64|Total number of requests|
 
-#### RSCC
+#### Response Status Codes
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|coredns.response_code.total_num|uint64||
+|coredns.response_code.total_num|uint64|Counter of response status codes|
 
-#### FCH
+#### Forward Cache Hits
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|coredns.forward_cache.hits|uint64||
+|coredns.forward_cache.hits|uint64|Counter of connection cache hits per upstream and protocol.|
 
-#### FCM
+#### Forward Cache Misses
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|coredns.forward_cache.misses|uint64||
+|coredns.forward_cache.misses|uint64|Counter of connection cache misses per upstream and protocol|
 
-#### FRL
+#### Forward Request Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |coredns.forward_request.p50latency|float64||
@@ -773,31 +755,14 @@ TODO: add screenshot
 |coredns.forward_request.p90latency|float64||
 |coredns.forward_request.p95latency|float64||
 |coredns.forward_request.p99latency|float64||
-|coredns.forward_request.duration|float64||
+|coredns.forward_request.duration|float64|The time each request took|
 |coredns.forward_request.total_num|uint64||
 
-#### FRT
+#### Forward Responses
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|coredns.forward_response.total_num|uint64||
+|coredns.forward_response.total_num|uint64|Counter of responses received per upstream|
 
-#### RuntimeCoredns
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.runtime.os_threads|uint64||
-|coredns.runtime.goroutines|uint64||
-|coredns.runtime.resident_memory|uint64||
-|coredns.runtime.virtual_memory|uint64||
-|coredns.runtime.number_frees|uint64||
-|coredns.runtime.number_mallocs|uint64||
-|coredns.runtime.heap_obtained|uint64||
-|coredns.runtime.heap_used|uint64||
-|coredns.runtime.heap_waiting|uint64||
-|coredns.runtime.number_heap_objects|uint64||
-|coredns.runtime.stack_obtained|uint64||
-|coredns.runtime.stack_used|uint64||
-|coredns.runtime.gc_duration|float64||
-|coredns.runtime.gc_count|uint64||
 
 ### Scheduler Metrics
 #### PA
