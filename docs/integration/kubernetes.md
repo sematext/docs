@@ -379,12 +379,12 @@ TODO: add screenshot
 |----|----|-----------|
 |apiserver.audit_events.total_num|uint64|Counter of audit events generated and sent to the audit backend|
 
-#### WorkqueueAdds
+#### Work Queue Adds
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.work_queue_adds.total_num|uint64|Total number of adds handled by workqueue|
 
-#### EtcdRequestDuration
+#### Request Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.etcd_request_duration.p50latency|float64||
@@ -395,37 +395,37 @@ TODO: add screenshot
 |apiserver.etcd_request_duration.duration|float64|Etcd request latency in seconds for each operation and object type|
 |apiserver.etcd_request_duration.total_num|uint64||
 
-#### StorageObjects
+#### Storage Objects
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.storage_objects.total_num|uint64|Number of stored objects at the time of last check split by kind|
 
-#### ClientRequests
+#### Client Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.client_requests.total_num|uint64|Number of HTTP requests|
 
-#### RejectedAuditReq
+#### Rejected Audit Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.rejected_audit_req.total_num|uint64||
 
-#### CurrentExecutingReqs
+#### Current Executing Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.current_executing_reqs.total_num|uint64|Number of requests in regular execution phase in the API Priority and Fairness system|
 
-#### CurrentInqueueReqs
+#### Current Inqueue Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.current_inqueue_reqs.total_num|uint64|Number of requests currently pending in queues of the API Priority and Fairness system|
 
-#### DispatchedReq
+#### Dispatched Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.dispatched_req.total_num|uint64|Number of requests released by API Priority and Fairness system for service|
 
-#### ClientReqDuration
+#### Client Request Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.client_req_duration.p50latency|float64||
@@ -436,7 +436,7 @@ TODO: add screenshot
 |apiserver.client_req_duration.duration|float64|Request latency in seconds|
 |apiserver.client_req_duration.total_num|uint64||
 
-#### AdmissionDuration
+#### Admission Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.admission_duration.p50latency|float64||
@@ -447,7 +447,7 @@ TODO: add screenshot
 |apiserver.admission_duration.duration|float64|Admission controller latency in seconds|
 |apiserver.admission_duration.total_num|uint64||
 
-#### StepAdmissionDuration
+#### Step Admission Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.step_admission_duration.p50latency|float64||
@@ -458,17 +458,17 @@ TODO: add screenshot
 |apiserver.step_admission_duration.duration|float64|Admission sub-step latency in seconds|
 |apiserver.step_admission_duration.total_num|uint64||
 
-#### RegWatchers
+#### Registered Watchers
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.reg_watchers.total_num|uint64|Number of currently registered watchers for a given resources|
 
-#### TLSError
+#### TLS Error
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.tls_handshake_error.total_num|uint64|Number of requests dropped with 'TLS handshake error from' error|
 
-#### AuthDuration
+#### Authentication Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.auth_duration.p50latency|float64||
@@ -479,12 +479,12 @@ TODO: add screenshot
 |apiserver.auth_duration.duration|float64|Authentication duration in seconds|
 |apiserver.auth_duration.total_num|uint64||
 
-#### AuthUserReq
+#### Authenticated User Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.auth_user_req.total_num|uint64|Counter of authenticated requests|
 
-#### ClientCertExpiry
+#### Client Certificate Expiry
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.client_cert_expiry.p50latency|float64||
@@ -495,37 +495,37 @@ TODO: add screenshot
 |apiserver.client_cert_expiry.duration|float64|Distribution of the remaining lifetime on the certificate used to authenticate a request|
 |apiserver.client_cert_expiry.total_num|uint64||
 
-#### EvaluatedObj
+#### Evaluated Objects
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.evaluated_object.total_num|uint64|Number of objects tested in the course of serving a LIST request from storage|
 
-#### FetchedObj
+#### Fetched Objects
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.fetched_object.total_num|uint64|Number of objects read from storage in the course of serving a LIST request|
 
-#### ReturnedObj
+#### Returned Objects
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.returned_object.total_num|uint64|Number of objects returned for a LIST request from storage|
 
-#### TotalObj
+#### Total Objects
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.total_object.total_num|uint64|Number of LIST requests served from storage|
 
-#### KeyGenFails
+#### Key Geneneration Fails
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.key_gen_fails.total_num|uint64|Total number of failed data encryption key(DEK) generation operations|
 
-#### ApisrwerCacheMisses
+#### Cache Misses
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.cache_misses.total_num|uint64|Total number of cache misses while accessing key decryption key(KEK)|
 
-#### KeyGenDuration
+#### Key Generation Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.key_gen_duration.p50latency|float64||
@@ -536,12 +536,12 @@ TODO: add screenshot
 |apiserver.key_gen_duration.duration|float64|Latencies in seconds of data encryption key(DEK) generation operations|
 |apiserver.key_gen_duration.total_num|uint64||
 
-#### RequestTotal
+#### Requests Total
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.request_total.total_num|uint64|Counter of apiserver requests|
 
-#### APIServerRequestDuration
+#### Requests Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.request_duration.p50latency|float64||
@@ -727,7 +727,7 @@ TODO: add screenshot
 |coredns.request_duration.duration|float64|The time each request took|
 |coredns.request_duration.total_num|uint64||
 
-#### Requests Total
+#### Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |coredns.request_counter.total_num|uint64|Total number of requests|
@@ -765,37 +765,37 @@ TODO: add screenshot
 
 
 ### Scheduler Metrics
-#### PA
+#### Preemption Attempts
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.preemption_attempts.total_num|uint64||
+|scheduler.preemption_attempts.total_num|uint64|Total preemption attempts in the cluster till now|
 
-#### PP
+#### Pending Pods
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.pending_pods.total_num|uint64||
+|scheduler.pending_pods.total_num|uint64|Number of pending pods, by the queue type|
 
-#### QIP
+#### Queue Incoming Pods
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.incoming_pods.total_num|uint64||
+|scheduler.incoming_pods.total_num|uint64|Number of pods added to scheduling queues by event and queue type|
 
-#### SAT
+#### Scheduler Attempts
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.schedule_attempts.total_num|uint64||
+|scheduler.schedule_attempts.total_num|uint64|Number of attempts to schedule pods, by the result|
 
-#### SG
+#### Go Routines
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.go_routines.total_num|uint64||
+|scheduler.go_routines.total_num|uint64|Number of running goroutines split by the work they do such as binding|
 
-#### SCS
+#### Cache
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.cache.total_num|uint64||
+|scheduler.cache.total_num|uint64|Number of nodes, pods, and assumed (bound) pods in the scheduler cache|
 
-#### E2ESD
+#### E2E Scheduling Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |scheduler.e2e_duration.p50latency|float64||
@@ -804,9 +804,9 @@ TODO: add screenshot
 |scheduler.e2e_duration.p95latency|float64||
 |scheduler.e2e_duration.p99latency|float64||
 |scheduler.e2e_duration.total_num|uint64||
-|scheduler.e2e_duration.duration|float64||
+|scheduler.e2e_duration.duration|float64|E2e scheduling latency in seconds (scheduling algorithm + binding)|
 
-#### SAD
+#### Scheduling Algorithm Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |scheduler.scheduling_algorithm.p50latency|float64||
@@ -815,9 +815,9 @@ TODO: add screenshot
 |scheduler.scheduling_algorithm.p95latency|float64||
 |scheduler.scheduling_algorithm.p99latency|float64||
 |scheduler.scheduling_algorithm.total_num|uint64||
-|scheduler.scheduling_algorithm.duration|float64||
+|scheduler.scheduling_algorithm.duration|float64|Scheduling algorithm latency in seconds|
 
-#### PV
+#### Preemption Victims
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |scheduler.preemption_victims.p50latency|float64||
@@ -825,10 +825,10 @@ TODO: add screenshot
 |scheduler.preemption_victims.p90latency|float64||
 |scheduler.preemption_victims.p95latency|float64||
 |scheduler.preemption_victims.p99latency|float64||
-|scheduler.preemption_victims.total_num|uint64||
-|scheduler.preemption_victims.duration|float64||
+|scheduler.preemption_victims.total_num|uint64|Number of selected preemption victims|
+|scheduler.preemption_victims.duration|float64|Selected preemption victims duration|
 
-#### PSDS
+#### Scheduling Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |scheduler.scheduling_duration.p50latency|float64||
@@ -837,9 +837,9 @@ TODO: add screenshot
 |scheduler.scheduling_duration.p95latency|float64||
 |scheduler.scheduling_duration.p99latency|float64||
 |scheduler.scheduling_duration.total_num|uint64||
-|scheduler.scheduling_duration.duration|float64||
+|scheduler.scheduling_duration.duration|float64|Scheduling algorithm latency in seconds|
 
-#### FEPD
+#### Framework Extension Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |scheduler.framework_extension.p50latency|float64||
@@ -848,13 +848,12 @@ TODO: add screenshot
 |scheduler.framework_extension.p95latency|float64||
 |scheduler.framework_extension.p99latency|float64||
 |scheduler.framework_extension.total_num|uint64||
-|scheduler.framework_extension.duration|float64||
+|scheduler.framework_extension.duration|float64|Latency for running all plugins of a specific extension point|
 
-#### PSA
+#### Scheduler Attempts
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|scheduler.attempts.total_num|uint64||
-
+|scheduler.attempts.total_num|uint64|Number of attempts to schedule pods|
 
 
 ## Sematext Agent
