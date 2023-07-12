@@ -668,21 +668,21 @@ TODO: add screenshot
 |etcd.mvcc_db_compaction.duration|float64||
 
 ### Kube-proxy Metrics
-#### GSK
+#### Generic
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubeproxy.endpoint.changes|uint64||
-|kubeproxy.endpoint.changes_pending|uint64||
-|kubeproxy.restore.failures|uint64||
-|kubeproxy.service.changes|uint64||
-|kubeproxy.service.changes_pending|uint64||
+|kubeproxy.endpoint.changes|uint64|Cumulative proxy rules Endpoint changes|
+|kubeproxy.endpoint.changes_pending|uint64|Pending proxy rules Endpoint changes|
+|kubeproxy.restore.failures|uint64|Cumulative proxy iptables restore failures|
+|kubeproxy.service.changes|uint64|Cumulative proxy rules Service changes|
+|kubeproxy.service.changes_pending|uint64|Pending proxy rules Service changes|
 
-#### RC
+#### Client Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubeproxy.rest_client.total_num|uint64||
+|kubeproxy.rest_client.total_num|uint64|Number of HTTP requests, partitioned by status code, method, and host|
 
-#### RDLL
+#### Client Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubeproxy.rest_client_duration.p50latency|float64||
@@ -690,10 +690,10 @@ TODO: add screenshot
 |kubeproxy.rest_client_duration.p90latency|float64||
 |kubeproxy.rest_client_duration.p95latency|float64||
 |kubeproxy.rest_client_duration.p99latency|float64||
-|kubeproxy.rest_client_duration.duration|float64||
+|kubeproxy.rest_client_duration.duration|float64|Request latency in seconds|
 |kubeproxy.rest_client_duration.total_num|uint64||
 
-#### SPRDL
+#### Sync Proxy Rules Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubeproxy.sync_proxy_rules.p50latency|float64||
@@ -701,10 +701,10 @@ TODO: add screenshot
 |kubeproxy.sync_proxy_rules.p90latency|float64||
 |kubeproxy.sync_proxy_rules.p95latency|float64||
 |kubeproxy.sync_proxy_rules.p99latency|float64||
-|kubeproxy.sync_proxy_rules.duration|float64||
+|kubeproxy.sync_proxy_rules.duration|float64|SyncProxyRules latency in seconds|
 |kubeproxy.sync_proxy_rules.total_num|uint64||
 
-#### RuntimeKubeproxy
+#### Runtime
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubeproxy.runtime.os_threads|uint64||
