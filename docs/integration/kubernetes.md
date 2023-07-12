@@ -372,17 +372,17 @@ TODO: add screenshot
 #### InflightRequests
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.inflight_requests.total_num|uint64||
+|apiserver.inflight_requests.total_num|uint64|Maximal number of currently used inflight request limit of this apiserver per request kind in last second|
 
 #### AuditEvents
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.audit_events.total_num|uint64||
+|apiserver.audit_events.total_num|uint64|Counter of audit events generated and sent to the audit backend|
 
 #### WorkqueueAdds
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.work_queue_adds.total_num|uint64||
+|apiserver.work_queue_adds.total_num|uint64|Total number of adds handled by workqueue|
 
 #### EtcdRequestDuration
 |Metric Name|Unit|Description|
@@ -392,18 +392,18 @@ TODO: add screenshot
 |apiserver.etcd_request_duration.p90latency|float64||
 |apiserver.etcd_request_duration.p95latency|float64||
 |apiserver.etcd_request_duration.p99latency|float64||
-|apiserver.etcd_request_duration.duration|float64||
+|apiserver.etcd_request_duration.duration|float64|Etcd request latency in seconds for each operation and object type|
 |apiserver.etcd_request_duration.total_num|uint64||
 
 #### StorageObjects
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.storage_objects.total_num|uint64||
+|apiserver.storage_objects.total_num|uint64|Number of stored objects at the time of last check split by kind|
 
 #### ClientRequests
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.client_requests.total_num|uint64||
+|apiserver.client_requests.total_num|uint64|Number of HTTP requests|
 
 #### RejectedAuditReq
 |Metric Name|Unit|Description|
@@ -413,17 +413,17 @@ TODO: add screenshot
 #### CurrentExecutingReqs
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.current_executing_reqs.total_num|uint64||
+|apiserver.current_executing_reqs.total_num|uint64|Number of requests in regular execution phase in the API Priority and Fairness system|
 
 #### CurrentInqueueReqs
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.current_inqueue_reqs.total_num|uint64||
+|apiserver.current_inqueue_reqs.total_num|uint64|Number of requests currently pending in queues of the API Priority and Fairness system|
 
 #### DispatchedReq
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.dispatched_req.total_num|uint64||
+|apiserver.dispatched_req.total_num|uint64|Number of requests released by API Priority and Fairness system for service|
 
 #### ClientReqDuration
 |Metric Name|Unit|Description|
@@ -433,7 +433,7 @@ TODO: add screenshot
 |apiserver.client_req_duration.p90latency|float64||
 |apiserver.client_req_duration.p95latency|float64||
 |apiserver.client_req_duration.p99latency|float64||
-|apiserver.client_req_duration.duration|float64||
+|apiserver.client_req_duration.duration|float64|Request latency in seconds|
 |apiserver.client_req_duration.total_num|uint64||
 
 #### AdmissionDuration
@@ -444,7 +444,7 @@ TODO: add screenshot
 |apiserver.admission_duration.p90latency|float64||
 |apiserver.admission_duration.p95latency|float64||
 |apiserver.admission_duration.p99latency|float64||
-|apiserver.admission_duration.duration|float64||
+|apiserver.admission_duration.duration|float64|Admission controller latency in seconds|
 |apiserver.admission_duration.total_num|uint64||
 
 #### StepAdmissionDuration
@@ -455,18 +455,18 @@ TODO: add screenshot
 |apiserver.step_admission_duration.p90latency|float64||
 |apiserver.step_admission_duration.p95latency|float64||
 |apiserver.step_admission_duration.p99latency|float64||
-|apiserver.step_admission_duration.duration|float64||
+|apiserver.step_admission_duration.duration|float64|Admission sub-step latency in seconds|
 |apiserver.step_admission_duration.total_num|uint64||
 
 #### RegWatchers
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.reg_watchers.total_num|uint64||
+|apiserver.reg_watchers.total_num|uint64|Number of currently registered watchers for a given resources|
 
 #### TLSError
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.tls_handshake_error.total_num|uint64||
+|apiserver.tls_handshake_error.total_num|uint64|Number of requests dropped with 'TLS handshake error from' error|
 
 #### AuthDuration
 |Metric Name|Unit|Description|
@@ -476,13 +476,13 @@ TODO: add screenshot
 |apiserver.auth_duration.p90latency|float64||
 |apiserver.auth_duration.p95latency|float64||
 |apiserver.auth_duration.p99latency|float64||
-|apiserver.auth_duration.duration|float64||
+|apiserver.auth_duration.duration|float64|Authentication duration in seconds|
 |apiserver.auth_duration.total_num|uint64||
 
 #### AuthUserReq
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.auth_user_req.total_num|uint64||
+|apiserver.auth_user_req.total_num|uint64|Counter of authenticated requests|
 
 #### ClientCertExpiry
 |Metric Name|Unit|Description|
@@ -492,38 +492,38 @@ TODO: add screenshot
 |apiserver.client_cert_expiry.p90latency|float64||
 |apiserver.client_cert_expiry.p95latency|float64||
 |apiserver.client_cert_expiry.p99latency|float64||
-|apiserver.client_cert_expiry.duration|float64||
+|apiserver.client_cert_expiry.duration|float64|Distribution of the remaining lifetime on the certificate used to authenticate a request|
 |apiserver.client_cert_expiry.total_num|uint64||
 
 #### EvaluatedObj
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.evaluated_object.total_num|uint64||
+|apiserver.evaluated_object.total_num|uint64|Number of objects tested in the course of serving a LIST request from storage|
 
 #### FetchedObj
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.fetched_object.total_num|uint64||
+|apiserver.fetched_object.total_num|uint64|Number of objects read from storage in the course of serving a LIST request|
 
 #### ReturnedObj
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.returned_object.total_num|uint64||
+|apiserver.returned_object.total_num|uint64|Number of objects returned for a LIST request from storage|
 
 #### TotalObj
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.total_object.total_num|uint64||
+|apiserver.total_object.total_num|uint64|Number of LIST requests served from storage|
 
 #### KeyGenFails
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.key_gen_fails.total_num|uint64||
+|apiserver.key_gen_fails.total_num|uint64|Total number of failed data encryption key(DEK) generation operations|
 
 #### ApisrwerCacheMisses
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.cache_misses.total_num|uint64||
+|apiserver.cache_misses.total_num|uint64|Total number of cache misses while accessing key decryption key(KEK)|
 
 #### KeyGenDuration
 |Metric Name|Unit|Description|
@@ -533,13 +533,13 @@ TODO: add screenshot
 |apiserver.key_gen_duration.p90latency|float64||
 |apiserver.key_gen_duration.p95latency|float64||
 |apiserver.key_gen_duration.p99latency|float64||
-|apiserver.key_gen_duration.duration|float64||
+|apiserver.key_gen_duration.duration|float64|Latencies in seconds of data encryption key(DEK) generation operations|
 |apiserver.key_gen_duration.total_num|uint64||
 
 #### RequestTotal
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|apiserver.request_total.total_num|uint64||
+|apiserver.request_total.total_num|uint64|Counter of apiserver requests|
 
 #### APIServerRequestDuration
 |Metric Name|Unit|Description|
@@ -549,7 +549,7 @@ TODO: add screenshot
 |apiserver.request_duration.p90latency|float64||
 |apiserver.request_duration.p95latency|float64||
 |apiserver.request_duration.p99latency|float64||
-|apiserver.request_duration.duration|float64||
+|apiserver.request_duration.duration|float64|Response latency distribution in seconds|
 |apiserver.request_duration.total_num|uint64||
 
 ### Etcd Metrics
