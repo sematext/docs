@@ -186,195 +186,195 @@ TODO: add screenshot
 |kubernetes.pvc.capacity|gauge|bytes|long|volume capacity|the capacity in bytes of the volume|
 
 ### Kubelet Metrics
-#### PVC
+#### Volume Stats
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|pvc.used|int64||
-|pvc.available|int64||
-|pvc.capacity|int64||
+|pvc.used|int64|Number of used inodes in the volume|
+|pvc.available|int64|Number of available bytes in the volume|
+|pvc.capacity|int64|Capacity in bytes of the volume|
 
-#### RuntimeOperation
+#### Runtime Operations
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.runtime_operation.count|int64||
-|kubelet.runtime_operation.errors|int64||
+|kubelet.runtime_operation.count|int64|Cumulative number of runtime operations by operation type|
+|kubelet.runtime_operation.errors|int64|Cumulative number of runtime operation errors by operation type|
 |kubelet.runtime_operation.total_num|int64||
-|kubelet.runtime_operation.duration|float64||
-|kubelet.runtime_operation.p50latency|float64||
-|kubelet.runtime_operation.p75latency|float64||
-|kubelet.runtime_operation.p90latency|float64||
-|kubelet.runtime_operation.p95latency|float64||
-|kubelet.runtime_operation.p99latency|float64||
+|kubelet.runtime_operation.duration|Duration of runtime operations|
+|kubelet.runtime_operation.p50latency|float64|Latency in microseconds of runtime operations|
+|kubelet.runtime_operation.p75latency|float64|Latency in microseconds of runtime operations|
+|kubelet.runtime_operation.p90latency|float64|Latency in microseconds of runtime operations|
+|kubelet.runtime_operation.p95latency|float64|Latency in microseconds of runtime operations|
+|kubelet.runtime_operation.p99latency|float64|Latency in microseconds of runtime operations|
 
 #### Kubelet
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.pods.instances|int||
-|kubelet.pods.running|float64||
-|kubelet.pods.started|float64||
-|kubelet.pods.started_error|float64||
-|kubelet.containers.created|float64||
-|kubelet.containers.exited|float64||
-|kubelet.containers.running|float64||
-|kubelet.containers.unknown|float64||
+|kubelet.pods.instances|int|Pods Instances|
+|kubelet.pods.running|float64|Running Pods|
+|kubelet.pods.started|float64|Started Pods|
+|kubelet.pods.started_error|float64|Pods Started Errors|
+|kubelet.containers.created|float64|Containers with status Created|
+|kubelet.containers.exited|float64|Containers with status Exited|
+|kubelet.containers.running|float64|Containers with status Running|
+|kubelet.containers.unknown|float64|Containers with status Unknown|
 
-#### PodStartDuration
+#### Pod Start Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.pod_start.total_num|float64||
-|kubelet.pod_start.duration|float64||
-|kubelet.pod_start.p50latency|float64||
-|kubelet.pod_start.p75latency|float64||
-|kubelet.pod_start.p90latency|float64||
-|kubelet.pod_start.p95latency|float64||
-|kubelet.pod_start.p99latency|float64||
+|kubelet.pod_start.total_num|float64|Pod start counter|
+|kubelet.pod_start.duration|float64|Pod start duration|
+|kubelet.pod_start.p50latency|float64|P50 latency in microseconds for a single pod to go from pending to running|
+|kubelet.pod_start.p75latency|float64|P75 latency in microseconds for a single pod to go from pending to running|
+|kubelet.pod_start.p90latency|float64|P90 latency in microseconds for a single pod to go from pending to running|
+|kubelet.pod_start.p95latency|float64|P95 latency in microseconds for a single pod to go from pending to running|
+|kubelet.pod_start.p99latency|float64|P99 latency in microseconds for a single pod to go from pending to running|
 
-#### PodWorkerDuration
+#### Pod Worker Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.pod_worker.total_num|int64||
-|kubelet.pod_worker.duration|float64||
-|kubelet.pod_worker.p50latency|float64||
-|kubelet.pod_worker.p75latency|float64||
-|kubelet.pod_worker.p90latency|float64||
-|kubelet.pod_worker.p95latency|float64||
-|kubelet.pod_worker.p99latency|float64||
+|kubelet.pod_worker.total_num|int64|Pod worker counter|
+|kubelet.pod_worker.duration|float64|Pod worker duration|
+|kubelet.pod_worker.p50latency|float64|P50 latency in microseconds to sync a single pod|
+|kubelet.pod_worker.p75latency|float64|P75 latency in microseconds to sync a single pod|
+|kubelet.pod_worker.p90latency|float64|P90 latency in microseconds to sync a single pod|
+|kubelet.pod_worker.p95latency|float64|P95 latency in microseconds to sync a single pod|
+|kubelet.pod_worker.p99latency|float64|P99 latency in microseconds to sync a single pod|
 
-#### PodWorkerStartDuration
+#### Pod Worker Start Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.pod_worker_start.total_num|int64||
-|kubelet.pod_worker_start.duration|float64||
-|kubelet.pod_worker_start.p50latency|float64||
-|kubelet.pod_worker_start.p75latency|float64||
-|kubelet.pod_worker_start.p90latency|float64||
-|kubelet.pod_worker_start.p95latency|float64||
-|kubelet.pod_worker_start.p99latency|float64||
+|kubelet.pod_worker_start.total_num|int64|Worker start counter|
+|kubelet.pod_worker_start.duration|float64|Duration for starting a worker|
+|kubelet.pod_worker_start.p50latency|float64|P50 latency in microseconds from seeing a pod to starting a worker|
+|kubelet.pod_worker_start.p75latency|float64|P75 latency in microseconds from seeing a pod to starting a worker|
+|kubelet.pod_worker_start.p90latency|float64|P90 latency in microseconds from seeing a pod to starting a worker|
+|kubelet.pod_worker_start.p95latency|float64|P95 latency in microseconds from seeing a pod to starting a worker|
+|kubelet.pod_worker_start.p99latency|float64|P99 latency in microseconds from seeing a pod to starting a worker|
 
-#### VolumeManager
+#### Volume Manager
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.volume_manager.count|float64||
 |kubelet.volume_manager.desired.count|float64||
 
-#### StorageOperation
+#### Storage Operation
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.storage.total_num|int64||
-|kubelet.storage.duration|float64||
+|kubelet.storage.duration|float64|Storage operation duration|
 |kubelet.storage.p50latency|float64||
 |kubelet.storage.p75latency|float64||
 |kubelet.storage.p90latency|float64||
 |kubelet.storage.p95latency|float64||
 |kubelet.storage.p99latency|float64||
 
-#### CGroupManager
+#### Cgroup Manager
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.cgroup.total_num|int64||
-|kubelet.cgroup.duration|float64||
-|kubelet.cgroup.p50latency|float64||
-|kubelet.cgroup.p75latency|float64||
-|kubelet.cgroup.p90latency|float64||
-|kubelet.cgroup.p95latency|float64||
-|kubelet.cgroup.p99latency|float64||
+|kubelet.cgroup.duration|float64|Cgroup manager duration|
+|kubelet.cgroup.p50latency|float64|P50 latency in microseconds for cgroup manager operations|
+|kubelet.cgroup.p75latency|float64|P75 latency in microseconds for cgroup manager operations|
+|kubelet.cgroup.p90latency|float64|P90 latency in microseconds for cgroup manager operations|
+|kubelet.cgroup.p95latency|float64|P95 latency in microseconds for cgroup manager operations|
+|kubelet.cgroup.p99latency|float64|P99 latency in microseconds for cgroup manager operations|
 
-#### PLEGRelistInterval
+#### PLEG Relist Interval
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.pleg_relist_interval.total_num|int64||
-|kubelet.pleg_relist_interval.duration|float64||
+|kubelet.pleg_relist_interval.duration|float64|Interval in microseconds between relisting in PLEG|
 |kubelet.pleg_relist_interval.p50latency|float64||
 |kubelet.pleg_relist_interval.p75latency|float64||
 |kubelet.pleg_relist_interval.p90latency|float64||
 |kubelet.pleg_relist_interval.p95latency|float64||
 |kubelet.pleg_relist_interval.p99latency|float64||
 
-#### ContainerLogFilesystemUsed
+#### Container Log Filesystem Used
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.container_log_filesystem.total_num|float64||
 
-#### DockerOperations
+#### Docker Operations
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.docker_operation.errors|float64||
+|kubelet.docker_operation.errors|float64|Cumulative number of Docker operation errors by operation type|
 |kubelet.docker_operation.operations|float64||
-|kubelet.docker_operation.total_num|int64||
+|kubelet.docker_operation.total_num|int64|Cumulative number of Docker operations by operation type|
 |kubelet.docker_operation.duration|float64||
-|kubelet.docker_operation.p50latency|float64||
-|kubelet.docker_operation.p75latency|float64||
-|kubelet.docker_operation.p90latency|float64||
-|kubelet.docker_operation.p95latency|float64||
-|kubelet.docker_operation.p99latency|float64||
+|kubelet.docker_operation.p50latency|float64|P50 latency in microseconds of Docker operations|
+|kubelet.docker_operation.p75latency|float64|P75 latency in microseconds of Docker operations|
+|kubelet.docker_operation.p90latency|float64|P90 latency in microseconds of Docker operations|
+|kubelet.docker_operation.p95latency|float64|P95 latency in microseconds of Docker operations|
+|kubelet.docker_operation.p99latency|float64|P99 latency in microseconds of Docker operations|
 
-#### HTTPInflightRequest
+#### HTTP Inflight Request
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.http_inflight_request.total_num|float64||
+|kubelet.http_inflight_request.total_num|float64|Total inflight requests|
 
-#### HTTPRequestDuration
+#### HTTP Request Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.http_request.operations|float64||
-|kubelet.http_request.total_num|int64||
-|kubelet.http_request.duration|float64||
-|kubelet.http_request.p50latency|float64||
-|kubelet.http_request.p75latency|float64||
-|kubelet.http_request.p90latency|float64||
-|kubelet.http_request.p95latency|float64||
-|kubelet.http_request.p99latency|float64||
+|kubelet.http_request.operations|float64|Total number of HTTP request operations|
+|kubelet.http_request.total_num|int64|Total number of HTTP requests|
+|kubelet.http_request.duration|float64|HTTP request duration|
+|kubelet.http_request.p50latency|float64|P50 HTTP request latencies in microseconds|
+|kubelet.http_request.p75latency|float64|P75 HTTP request latencies in microseconds|
+|kubelet.http_request.p90latency|float64|P90 HTTP request latencies in microseconds|
+|kubelet.http_request.p95latency|float64|P95 HTTP request latencies in microseconds|
+|kubelet.http_request.p99latency|float64|P99 HTTP request latencies in microseconds|
 
-#### NetworkPluginOperations
+#### Network Plugin Operations
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.network_plugin_operation.errors|float64||
+|kubelet.network_plugin_operation.errors|float64|Network plugin operation errors|
 |kubelet.network_plugin_operation.operations|float64||
-|kubelet.network_plugin_operation.total_num|int64||
-|kubelet.network_plugin_operation.duration|float64||
-|kubelet.network_plugin_operation.p50latency|float64||
-|kubelet.network_plugin_operation.p75latency|float64||
-|kubelet.network_plugin_operation.p90latency|float64||
-|kubelet.network_plugin_operation.p95latency|float64||
-|kubelet.network_plugin_operation.p99latency|float64||
+|kubelet.network_plugin_operation.total_num|int64|Total number of network plugin operations|
+|kubelet.network_plugin_operation.duration|float64|Network plugin operations duration|
+|kubelet.network_plugin_operation.p50latency|float64|P50 latency in microseconds of network plugin operations|
+|kubelet.network_plugin_operation.p75latency|float64|P75 latency in microseconds of network plugin operations|
+|kubelet.network_plugin_operation.p90latency|float64|P90 latency in microseconds of network plugin operations|
+|kubelet.network_plugin_operation.p95latency|float64|P95 latency in microseconds of network plugin operations|
+|kubelet.network_plugin_operation.p99latency|float64|P99 latency in microseconds of network plugin operations|
 
-#### PLEGRelistDuration
+#### PLEG Relist Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.pleg_relist.total_num|int64||
-|kubelet.pleg_relist.duration|float64||
+|kubelet.pleg_relist.duration|float64|Interval in microseconds between relisting in PLEG|
 |kubelet.pleg_relist.p50duration|float64||
 |kubelet.pleg_relist.p75duration|float64||
 |kubelet.pleg_relist.p90duration|float64||
 |kubelet.pleg_relist.p95duration|float64||
 |kubelet.pleg_relist.p99duration|float64||
 
-#### StartedContainers
+#### Started Containers
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.started_containers.errors|float64||
-|kubelet.started_containers.total_num|float64||
+|kubelet.started_containers.errors|float64|Number of started containers with errors|
+|kubelet.started_containers.total_num|float64|Total number of started containers|
 
-#### VolumeStatsInode
+#### Volume Stats Inode
 |Metric Name|Unit|Description|
 |----|----|-----------|
-|kubelet.volume_stats_inode.free|float64||
-|kubelet.volume_stats_inode.used|float64||
-|kubelet.volume_stats_inode.maximum|float64||
+|kubelet.volume_stats_inode.free|float64|Number of free inodes in the volume|
+|kubelet.volume_stats_inode.used|float64|Number of used inodes in the volume|
+|kubelet.volume_stats_inode.maximum|float64|Maximum number of inodes in the volume|
 
-#### PLEGEvents
+#### PLEG Events
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |kubelet.pleg_events.discard|int64||
 |kubelet.pleg_events.last_seen|int64||
 
 ### API Server Metrics
-#### InflightRequests
+#### Inflight Requests
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.inflight_requests.total_num|uint64|Maximal number of currently used inflight request limit of this apiserver per request kind in last second|
 
-#### AuditEvents
+#### Audit Events
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.audit_events.total_num|uint64|Counter of audit events generated and sent to the audit backend|
