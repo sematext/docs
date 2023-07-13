@@ -68,6 +68,10 @@ user you want to transfer the App to, and hit **Transfer Ownership**.
 ## Team Account
 If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email.  Instead, if you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone else who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that account.  This way all assets created in Sematext remain in this team account and when individuals leave the company their access to this account can easily be removed with just a few clicks.
 
+If you are using an internal group email, you need to allow posting by non-members or from an email that's not your organization's email in order to be able to receive emails from Sematext. In Google Suite, you can enable this from Groups --> Settings page.
+
+![Google Group Settings](../images/team/team-account-google-group-settings.png)
+
 ## Converting to Team Account
 If you've set up Apps, Alert Rules, etc. in your own account and would like to convert it to a Team Account the process is very simple.  Changing the ownership of the account can be done with the [Convert to Team Account](https://apps.sematext.com/ui/account/convert-to-team-account) ([EU](https://apps.eusematext.com/ui/account/convert-to-team-account)) feature. By converting your account to a Team Account everything in your account will be transferred to the Team Account - Apps, Alert Rules, Dashboards, Payment Method, etc.  To start the conversion, go to [General Settings](https://apps.sematext.com/ui/account/info) ([EU](https://apps.eu.sematext.com/ui/account/info)) and press the Convert to Team Account button.
 
