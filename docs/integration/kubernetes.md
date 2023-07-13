@@ -15,6 +15,9 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 1.  Create a new Infra App on https://apps.sematext.com/ui/monitoring-create by choosing the INFRA App card from the list of integrations.
 2.  Name your Infra App, select the Kubernetes environment and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
 
+### Agent Configuration
+The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer ot our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
+
 ## Shipping Kubernetes logs to Sematext
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
@@ -42,7 +45,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 * Request Throughput: Tracks the number of API server requests processed per unit of time
 * Error Rate: Monitors the rate of API server errors
 
-TODO: add screenshot
+<img class="content-modal-image" alt="API Server Requests" src="../../images/integrations/kubernetes-apiserver-requests.png" title="API Server Requests">
+
+<img class="content-modal-image" alt="API Server Auth" src="../../images/integrations/kubernetes-apiserver-auth.png" title="API Server Auth">
 
 #### CoreDNS Metrics
 
@@ -50,7 +55,9 @@ TODO: add screenshot
 * DNS Local and Remote Cache Misses: Counts the number of cache misses for DNS queries in CoreDNS's local or remote cache.
 * Error Rate: Monitors the rate of DNS errors encountered by CoreDNS
 
-TODO: add screenshot
+<img class="content-modal-image" alt="CoreDNS Overview" src="../../images/integrations/kubernetes-coredns-overview.png" title="CoreDNS Overview">
+
+<img class="content-modal-image" alt="CoreDNS Cache" src="../../images/integrations/kubernetes-coredns-cache.png" title="CoreDNS Cache">
 
 #### etcd Metrics
 
@@ -60,7 +67,9 @@ TODO: add screenshot
 * WAL Snapshot Latency: Measures the latency of taking snapshots of the etcd Write-Ahead Log (WAL)
 * WAL Commit Latency: Measures the latency of committing changes from the etcd Write-Ahead Log (WAL) to the database
 
-TODO: add screenshot
+<img class="content-modal-image" alt="etcd overview" src="../../images/integrations/kubernetes-etcd-overview.png" title="etcd overview">
+
+<img class="content-modal-image" alt="etcd mvcc" src="../../images/integrations/kubernetes-etcd-mvcc.png" title="etcd mvcc">
 
 #### kube-proxy Metrics
 
@@ -69,7 +78,9 @@ TODO: add screenshot
 * Synchronization of Proxy Rules: Measures the time taken to synchronize proxy rules for services
 * Request Latency by Host, HTTP Method, Path: Measures the latency of requests proxied by kube-proxy, categorized by host, HTTP method or Path
 
-TODO: add screenshot
+<img class="content-modal-image" alt="kube-proxy overview" src="../../images/integrations/kubernetes-kubeproxy-overview.png" title="kube-proxy overview">
+
+<img class="content-modal-image" alt="kube-proxy sync proxy rules" src="../../images/integrations/kubernetes-kubeproxy-syncproxyrules.png" title="kube-proxy sync proxy rules">
 
 #### Scheduler Metrics
 
@@ -78,7 +89,9 @@ TODO: add screenshot
 * Queued Pods by Queue: Tracks the number of pods currently in the scheduler's queue, categorized by the queue name
 * Unschedulable Pods: Tracks the number of pods that cannot be scheduled due to resource constraints
 
-TODO: add screenshot
+<img class="content-modal-image" alt="scheduler overview" src="../../images/integrations/kubernetes-schedulers-overview.png" title="scheduler overview">
+
+<img class="content-modal-image" alt="scheduler latency" src="../../images/integrations/kubernetes-schedulers-latency.png" title="scheduler latency">
 
 ### Pod Metrics
 
@@ -854,10 +867,6 @@ TODO: add screenshot
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |scheduler.attempts.total_num|uint64|Number of attempts to schedule pods|
-
-## Sematext Agent Configuration
-
-The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer ot our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
 
 ## Troubleshooting
 
