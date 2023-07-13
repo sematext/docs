@@ -855,91 +855,9 @@ TODO: add screenshot
 |----|----|-----------|
 |scheduler.attempts.total_num|uint64|Number of attempts to schedule pods|
 
+## Sematext Agent Configuration
 
-## Sematext Agent
-
-The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize.
-
-
-<table>
-  <tr>
-   <td><strong>Kubernetes Settings</strong>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_ENABLED
-   </td>
-   <td>Specifies if the Kubernetes monitoring functionality is active. Default value is <code>true</code>. To disable Kubernetes collector set <code>KUBERNETES_ENABLED=false</code>.
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_EVENTS_NAMESPACE
-   </td>
-   <td>Designates a namespace for Kubernetes event watcher. By default all namespaces are watched for Kubernetes events and forwarded to event/log receivers.
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_NAMESPACES
-   </td>
-   <td>Defines the comma separated list of namespaces that are queried for Kubernetes resources such as pods or deployments. By default all namespaces are fetched. You can adjust specific namespaces such as <code>KUBERNETES_NAMESPACES=default,kube-system</code>.
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_INTERVAL
-   </td>
-   <td>Defines the collection interval for Kubernetes resources (default 10s)
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_CLUSTER_ID
-   </td>
-   <td>Uniquely identifies the cluster where agent is deployed
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_KUBELET_AUTH_TOKEN
-   </td>
-   <td>Specifies the path for account service token
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_KUBELET_CA_PATH
-   </td>
-   <td>Determines the file path for the certificate authority utilized during TLS verification
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_KUBELET_CERT_PATH
-   </td>
-   <td>Determines the file path for the certificate file utilized during TLS verification
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_KUBELET_KEY_PATH
-   </td>
-   <td>Determines the file path for the private key utilized during TLS verification
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_KUBELET_INSECURE_SKIP_TLS_VERIFY
-   </td>
-   <td>Indicates whether to skip TLS verification
-   </td>
-  </tr>
-  <tr>
-   <td>KUBERNETES_KUBELET_METRICS_PORT
-   </td>
-   <td>Specifies the port where kubelet Prometheus metrics are exposed (default 10250)
-   </td>
-  </tr>
-</table>
-
-
-You can find a complete list of **Environment Variables** available at this [link](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
-
-Containers are discovered from **_cgroupfs _** and the metrics are fetched directly through **_cgroup _** controllers. Check out [this ](https://sematext.com/docs/agents/sematext-agent/containers/metrics/)page for a complete list of the container metrics shipped by the Sematext Agent.
+The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer ot our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
 
 ## Troubleshooting
 
