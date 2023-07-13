@@ -940,3 +940,16 @@ The Sematext Agent offers a versatile container engine monitoring and visibility
 You can find a complete list of **Environment Variables** available at this [link](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
 
 Containers are discovered from **_cgroupfs _** and the metrics are fetched directly through **_cgroup _** controllers. Check out [this ](https://sematext.com/docs/agents/sematext-agent/containers/metrics/)page for a complete list of the container metrics shipped by the Sematext Agent.
+
+## Troubleshooting
+
+If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monintoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
+
+### Cluster Roles / RBAC Rules
+
+In case you have trouble getting data in Kubernetes Master Components reports (e.g. Kubelet, Scheduler, kube-proxy, Etcd, CoreDNS) or some of the Workloads reports (e.g. DaemonSets, StatefulSets), make sure that RBAC is enabled in your cluster. Also you'll need to update your RBAC rules configuration:
+
+```kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml```
+
+Also, please make sure that your agent is [up to date](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
+
