@@ -79,10 +79,12 @@ If you've set up Apps, Alert Rules, etc. in your own account and would like to c
 
 You will have a chance to review what will be transferred to a new Team Account. In the second step, you will be prompted to insert the new team account email. In the third step, you will be able to edit existing team members and their roles in the new Team Account, or even completely remove their access to that account. Finally, in the fourth step you will see an overview of all changes and the chance to initiate the conversion. Once the conversion is initiated, you will be logged out of your own Sematext account. You will then be able to use your old credentials to log in as a member of the new Team Account.
 If there is anything in your account that you do not wish to have in the Team Account it needs to be deleted from your account first.  
-After the conversion is done, your account with the old email login will be completely empty but you will have access to the Team Account and will be able to switch into it.
 
 ![Convert To Team Account Form](../images/team/convert_to_team_account.png)
 
+After the conversion is done, your account with the old email login will be completely empty and you will be logged out. In order to switch to the team account, login with your individual account email and then switch into the team account.
+
+![Switch To Team Account Form](../images/team/switch-to-team-account.png)
 
 ## Typical use of Roles in an Organization or Team
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
