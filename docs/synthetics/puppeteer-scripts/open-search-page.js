@@ -2,7 +2,7 @@ const assert = require('assert');
 
 async function testPage(page) {
     await page.goto('https://duckduckgo.com/');
-    await page.type('#search_form_input_homepage', 'google');
+    await page.type('input[aria-label="Search with DuckDuckGo"]', 'google');
     await Promise.all([
         page.waitForNavigation({
             waitUntil: 'networkidle0',
