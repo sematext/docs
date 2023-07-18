@@ -28,4 +28,6 @@ the action menu that will give you options to **Accept** the invite, **Accept an
 Accounts that you have access to are in the **Active** state and by clicking on the **three dots(...)** you 
 will open the action menu that will give you an option to **Leave** that account.
 
+You can switch between accounts from the menu in the bottom left corner of the screen.
 
+![Switch To Team Account Form](../images/team/switch-to-team-account.png)
