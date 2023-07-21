@@ -880,3 +880,5 @@ In case you have trouble getting data in Kubernetes Master Components reports (e
 
 Also, please make sure that your agent is [up to date](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
 
+### Why we need ```hostNetwork``` access and how to turn it off if desired
+Check out [our page about hostnetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
