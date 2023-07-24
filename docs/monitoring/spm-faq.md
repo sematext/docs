@@ -731,6 +731,26 @@ After that, you should be able to add the key to your system.
 wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
 ```
 
+### How to prevent "Pending" status when installing Sematext Agent on a Kubernetes Cluster?
+
+If you notice that the pods for Sematext Agent are stuck in a "Pending" status with an error similar to "Port is already in use" during the installation on your Kubernetes Cluster, it might be related to `hostNetwork` setting. 
+
+Sematext Agent requires `hostNetwork` access in order to access and monitor the Kubernetes control plane components. However, if you enable `hostNetwork` and the default port (8675) is already being used on your host, it can result in the Sematext Agent pods remaining in a "Pending" state. To resolve this problem, you need to modify the port being used.
+
+If you have concerns about `hostNetwork` usage or you don't want to use it in your system, please refer to [this page](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+
+If you want to proceed with `hostNetwork` (which is required for fully featured Kubernetes monitoring), please follow the steps below, depending on the installation method you are using:
+
+**Helm:**
+
+Include the following parameter in your regular helm installation command: `--set agent.service.port=<Free-Port>`. Replace `<Free-Port>` with a port that is not in use.
+
+**Kubectl:**
+
+Update the `API_SERVER_PORT` environment variable with the new `<Free-Port>` value in your YAML file. The new `<Free-Port>` value should be a port that is not in use. Additionally, make sure to update the port values for `livenessProbe`, `startupProbe`, and `ports` accordingly, using the same `<Free-Port>` value.
+
+By following these instructions, you should be able to avoid the "Pending" status and successfully install Sematext Agent on your Kubernetes Cluster.
+
 ### How do I create the diagnostics package?
 
 Preparing diagnostics data differs depending on the setup you have.

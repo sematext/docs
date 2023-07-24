@@ -25,7 +25,7 @@ This operator uses all the same options as the [Sematext Agent Helm Chart](helm.
 | `agent.image.repository`         | The image repository              | `sematext/agent`                          |
 | `agent.image.tag`                | The image tag                     | `latest`                                  |
 | `agent.image.pullPolicy`         | Image pull policy                 | `Always`                                  |
-| `agent.service.port`             | Service port                      | `80`                                      |
+| `agent.service.port`             | Service port                      | `8675`                                    |
 | `agent.service.type`             | Service type                      | `ClusterIP`                               |
 | `agent.resources`                | Agent resources                   | `{}`                                      |
 | `serverBaseUrl`                  | Custom Base URL                   | `Nil`                                     |
