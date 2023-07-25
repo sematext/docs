@@ -741,11 +741,11 @@ If you have concerns about `hostNetwork` usage or you don't want to use it in yo
 
 If you want to proceed with `hostNetwork` (which is required for fully featured Kubernetes monitoring), please follow the steps below, depending on the installation method you are using:
 
-**Helm:**
+**Helm Installation Method**
 
 Include the following parameter in your regular helm installation command: `--set agent.service.port=<Free-Port>`. Replace `<Free-Port>` with a port that is not in use.
 
-**Kubectl:**
+**kubectl Installation Method**
 
 Update the `API_SERVER_PORT` environment variable with the new `<Free-Port>` value in your YAML file. The new `<Free-Port>` value should be a port that is not in use. Additionally, make sure to update the port values for `livenessProbe`, `startupProbe`, and `ports` accordingly, using the same `<Free-Port>` value.
 
