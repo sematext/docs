@@ -41,12 +41,12 @@ Date: July 25, 2023
 
 ## New Features
 
-- SC-5833 [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for the details.
-- SC-16057 Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
+- [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for the details.
+- Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
 
 ## Improvements
 
-- SC-16586 Improved discovery for OpenSearch integration: We have enhanced the OpenSearch integration by preventing the discovery of `.json` files, which are not supported. Now, Sematext Agent will only discover and support `.log` files for OpenSearch integration, ensuring a smoother experience.
+- Improved discovery for OpenSearch integration: We have enhanced the OpenSearch integration by preventing the discovery of `.json` files, which are not supported. Now, Sematext Agent will only discover and support `.log` files for OpenSearch integration, ensuring a smoother experience.
 
 ## Bug Fixes
 
@@ -96,11 +96,11 @@ Date: June 6, 2023
 
 ## New Features
 
-- SC-15751 MySQL logs parsing support: We have enhanced the log parsing capabilities of Sematext Agent with this update. Your log messages can now be parsed more effectively, leading to improved visibility and analysis.
+- MySQL logs parsing support: We have enhanced the log parsing capabilities of Sematext Agent with this update. Your log messages can now be parsed more effectively, leading to improved visibility and analysis.
 
 ## Improvements
 
-- SC-15612 Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification.
+- Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification.
 
 ## Bug Fixes
 
@@ -110,7 +110,7 @@ Date: June 6, 2023
 
 ## Packaging and Installation
 
-- SC-15777 Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`. When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
+- Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`. When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
 
 # Version 2.2.0
 
@@ -118,13 +118,13 @@ Date: May 10, 2023
 
 ## New Features
 
-- SC-15689 Introducing a new command to gather information about Kubernetes Cluster Roles: This new feature enables our agent to collect Cluster Roles and provide more useful information in Sematext Cloud.
-- SC-13098 HTTPS support for OpenSearch and ElasticSearch: Sematext-Agent now supports both HTTP and HTTPS. The agent automatically detects whether HTTPS is available and uses it accordingly.
+- Introducing a new command to gather information about Kubernetes Cluster Roles: This new feature enables our agent to collect Cluster Roles and provide more useful information in Sematext Cloud.
+- HTTPS support for OpenSearch and ElasticSearch: Sematext-Agent now supports both HTTP and HTTPS. The agent automatically detects whether HTTPS is available and uses it accordingly.
 
 ## Improvements
 
-- SC-15905 Rewritten agent app logs to be under `st-agent`: The Sematext Agent logs are now displayed under `st-agent`, resulting in cleaner and more organized dashboards.
-- SC-14375 Removed unnecessary errors from Fleet/Agent Errors page: We've cleaned up some noise from the Fleet/Agent Errors page to improve your monitoring experience.
+- Rewritten agent app logs to be under `st-agent`: The Sematext Agent logs are now displayed under `st-agent`, resulting in cleaner and more organized dashboards.
+- Removed unnecessary errors from Fleet/Agent Errors page: We've cleaned up some noise from the Fleet/Agent Errors page to improve your monitoring experience.
 
 ## Bug Fixes
 
@@ -138,12 +138,12 @@ Date: April 6, 2023
 
 ## New Features
 
-- SC-14822 OpenSearch logs parsing support: With this update, we now parse fields of your log messages. We will also be releasing OpenSearch logs integration soon to enhance your logging experience.
+- OpenSearch logs parsing support: With this update, we now parse fields of your log messages. We will also be releasing OpenSearch logs integration soon to enhance your logging experience.
 
 ## Improvements
 
-- SC-14963 Additional Kubelet metrics: You can now collect a wider range of metrics from your Kubelet nodes, providing you with greater visibility into the health and performance of your Kubernetes cluster.
-- SC-15285 Logging process improvements: We have made several enhancements to our logging process to reduce noise and simplify logs shown in Fleet.
+- Additional Kubelet metrics: You can now collect a wider range of metrics from your Kubelet nodes, providing you with greater visibility into the health and performance of your Kubernetes cluster.
+- Logging process improvements: We have made several enhancements to our logging process to reduce noise and simplify logs shown in Fleet.
 
 ## Bug Fixes
 
