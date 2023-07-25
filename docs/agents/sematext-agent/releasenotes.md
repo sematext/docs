@@ -5,9 +5,9 @@ Sematext Agent is a dynamic project with frequent releases. This Changelog conta
 
 <!-- Template:
 
-Date: MM D, YYYY
-
 # Version X.X.X
+
+Date: MM D, YYYY
 
 ## New Features
 
@@ -35,6 +35,51 @@ NULL
 
 -->
 
+# Version 3.0.0
+
+Date: July 25, 2023
+
+## New Features
+
+- SC-5833 [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration.
+- SC-16057 Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
+
+## Improvements
+
+- SC-16586 Improved discovery for OpenSearch integration: We have enhanced the OpenSearch integration by preventing the discovery of `.json` files, which are not supported. Now, Sematext Agent will only discover and support `.log` files for OpenSearch integration, ensuring a smoother experience.
+
+## Bug Fixes
+
+- SC-16613 Fixed incorrect `Not Configured` status for the log shipper: We have resolved an issue that was causing the log shipper to display an incorrect status message. With this fix, you will now receive accurate log shipper status updates.
+
+## Breaking Changes
+
+The new Kubernetes Components monitoring integration introduces additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
+
+### kubectl Installation Method
+
+Please re-apply `sematext-clusterroles.yaml` to your cluster.
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+### Helm Installation Method
+
+Please update your `sematext` repository and follow the upgrade steps from Sematext Cloud.
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
+
+Ensure that you have at least **1.2.1** version for the `sematext-agent` package:
+```
+> helm search repo sematext
+NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
+sematext/sematext-agent	1.2.1        	1.0        	Helm chart for deploying Sematext Agent and Log...
+```
+
 # Version 2.3.0
 
 Date: June 6, 2023
@@ -55,7 +100,7 @@ Date: June 6, 2023
 
 ## Packaging and Installation
 
-- SC-15777 Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`.   When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
+- SC-15777 Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`. When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
 
 # Version 2.2.0
 
