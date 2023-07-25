@@ -41,7 +41,7 @@ Date: July 25, 2023
 
 ## New Features
 
-- SC-5833 [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration.
+- SC-5833 [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for the details.
 - SC-16057 Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
 
 ## Improvements
@@ -79,6 +79,16 @@ Ensure that you have at least **1.2.1** version for the `sematext-agent` package
 NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
 sematext/sematext-agent	1.2.1        	1.0        	Helm chart for deploying Sematext Agent and Log...
 ```
+
+### New hostNetwork usage after 3.0.0 version
+
+In Kubernetes, the `hostNetwork` is a configuration option that allows a container to share the network namespace of its host node. Sematext Agent requires `hostNetwork: true` setting to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
+
+If you want to turn off `hostNetwork` access, check [our page about hostnetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+
+### Troubleshooting
+
+For any errors, check our [Sematext Monintoring FAQ](https://sematext.com/docs/monitoring/spm-faq/).
 
 # Version 2.3.0
 
