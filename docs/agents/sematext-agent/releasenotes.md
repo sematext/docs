@@ -80,7 +80,7 @@ NAME                   	CHART VERSION	APP VERSION	DESCRIPTION
 sematext/sematext-agent	1.2.1        	1.0        	Helm chart for deploying Sematext Agent and Log...
 ```
 
-### New hostNetwork usage after 3.0.0 version
+### `hostNetwork` Setting Usage
 
 In Kubernetes, the `hostNetwork` is a configuration option that allows a container to share the network namespace of its host node. Sematext Agent requires `hostNetwork: true` setting to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
 

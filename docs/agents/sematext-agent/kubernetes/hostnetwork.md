@@ -13,10 +13,10 @@ Sematext Agent requires `hostNetwork: true` setting to monitor the control plane
 
 If you want to turn off `hostNetwork` access, it's important to note that you may lose the ability to monitor some control plane components. However, if you still want to proceed, here are the instructions based on the installation method you are using:
 
-### Helm
+### Helm Installation Method
 
 Include the following parameter in your regular Helm installation command: `--set hostNetwork=false`.
 
-### Kubectl
+### kubectl Installation Method
 
 Remove the following variables from your YAML file if they are present: `hostNetwork`, `dnsPolicy`.
