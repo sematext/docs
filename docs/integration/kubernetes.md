@@ -870,7 +870,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ## Troubleshooting
 
-If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monintoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
+If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
 
 ### Cluster Roles / RBAC Rules
 
