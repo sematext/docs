@@ -5,9 +5,9 @@ Sematext Agent is a dynamic project with frequent releases. This Changelog conta
 
 <!-- Template:
 
-Date: MM D, YYYY
-
 # Version X.X.X
+
+Date: MM D, YYYY
 
 ## New Features
 
@@ -35,27 +35,86 @@ NULL
 
 -->
 
+# Version 3.0.0
+
+Date: July 25, 2023
+
+## New Features
+
+- [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for details.
+- Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
+
+## Improvements
+
+- Improved discovery for OpenSearch integration: We have enhanced the OpenSearch integration by preventing the discovery of `.json` files, which are not supported. Now, Sematext Agent will only discover and support `.log` files for OpenSearch integration, ensuring a smoother experience.
+
+## Bug Fixes
+
+- Fixed incorrect `Not Configured` status for the log shipper: We have resolved the issue that was causing the log shipper to display an incorrect status message.
+
+## Breaking Changes
+
+The new Kubernetes Components monitoring integration introduces additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
+
+### kubectl Installation
+
+Please re-apply `sematext-clusterroles.yaml` to your cluster.
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+After applying the new cluster roles, follow the agent upgrade steps from Sematext Cloud.
+
+### Helm Installation
+
+Please update your `sematext` Helm repository. 
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
+
+Ensure that you have at least **1.2.1** version for the `sematext-agent` Helm package.
+```
+> helm search repo sematext
+NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
+sematext/sematext-agent	1.2.1        	1.0        	Helm chart for deploying Sematext Agent and Log...
+```
+
+After updating the Helm chart, follow the agent upgrade steps from Sematext Cloud.
+
+### hostNetwork Setting Usage
+
+In Kubernetes, the `hostNetwork` is a configuration option that allows a container to share the network namespace of its host node. Sematext Agent requires `hostNetwork: true` setting to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
+
+If you want to turn off `hostNetwork` access, check [our docs about hostNetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+
+### Troubleshooting
+
+For any errors, check our [Sematext Monintoring FAQ](https://sematext.com/docs/monitoring/spm-faq/).
+
 # Version 2.3.0
 
 Date: June 6, 2023
 
 ## New Features
 
-- SC-15751 MySQL logs parsing support: We have enhanced the log parsing capabilities of Sematext Agent with this update. Your log messages can now be parsed more effectively, leading to improved visibility and analysis.
+- MySQL logs parsing support: We have enhanced the log parsing capabilities of Sematext Agent with this update. Your log messages can now be parsed more effectively, leading to improved visibility and analysis.
 
 ## Improvements
 
-- SC-15612 Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification.
+- Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification. For details, check [our docs about tags](https://sematext.com/docs/tags/common-schema/#container-tags).
 
 ## Bug Fixes
 
-- SC-16410 Fixed an edge case for tracer to check network packets via eBPF: We have addressed an issue that previously prevented the tracer from effectively checking network packets via eBPF. This fix improves the functionality and reliability of the tracer, ensuring accurate monitoring of network traffic.
-- SC-16445 Fixed nil pointer issue for MySQL and resolved broken portmatcher for MySQL: We have resolved a nil pointer issue that affected MySQL, eliminating potential errors and ensuring smooth operation. Additionally, we fixed a broken portmatcher specifically for MySQL, allowing for accurate monitoring and analysis of MySQL environments.
-- SC-16364 Fixed connection issue to MongoDB: We have resolved an issue caused by an outdated data collector.
+- Fixed an edge case for tracer to check network packets via eBPF: We have addressed the issue that previously prevented the tracer from effectively checking network packets via eBPF. This fix improves the functionality and reliability of the tracer, ensuring accurate monitoring of network traffic.
+- Fixed nil pointer issue for MySQL and resolved broken portmatcher for MySQL: We have resolved a nil pointer issue that affected MySQL, eliminating potential errors and ensuring smooth operation. Additionally, we fixed a broken portmatcher specifically for MySQL, allowing for accurate monitoring and analysis of MySQL environments.
+- Fixed connection issue to MongoDB: We have resolved the issue caused by an outdated data collector.
 
 ## Packaging and Installation
 
-- SC-15777 Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`.   When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
+- Introduced Beta version for Sematext Agent: This release includes the ability to install the Beta version of the Sematext Agent (currently available for Debian and Ubuntu distributions only).  To opt for the Beta version, install the `sematext-agent-beta` package instead of the standard `sematext-agent`. When you install `sematext-agent-beta` you will receive regular updates like 2.4.0, 2.4.1, 2.5.0, as well as release candidates like 2.4.0-rc.1, for example.
 
 # Version 2.2.0
 
@@ -63,19 +122,19 @@ Date: May 10, 2023
 
 ## New Features
 
-- SC-15689 Introducing a new command to gather information about Kubernetes Cluster Roles: This new feature enables our agent to collect Cluster Roles and provide more useful information in Sematext Cloud.
-- SC-13098 HTTPS support for OpenSearch and ElasticSearch: Sematext-Agent now supports both HTTP and HTTPS. The agent automatically detects whether HTTPS is available and uses it accordingly.
+- Introducing a new command to gather information about Kubernetes Cluster Roles: This new feature enables our agent to collect Cluster Roles and provide more useful information in Sematext Cloud.
+- HTTPS support for OpenSearch and ElasticSearch: Sematext-Agent now supports both HTTP and HTTPS. The agent automatically detects whether HTTPS is available and uses it accordingly.
 
 ## Improvements
 
-- SC-15905 Rewritten agent app logs to be under `st-agent`: The Sematext Agent logs are now displayed under `st-agent`, resulting in cleaner and more organized dashboards.
-- SC-14375 Removed unnecessary errors from Fleet/Agent Errors page: We've cleaned up some noise from the Fleet/Agent Errors page to improve your monitoring experience.
+- Rewritten agent app logs to be under `st-agent`: The Sematext Agent logs are now displayed under `st-agent`, resulting in cleaner and more organized dashboards.
+- Removed unnecessary errors from Fleet/Agent Errors page: We've cleaned up some noise from the Fleet/Agent Errors page to improve your monitoring experience.
 
 ## Bug Fixes
 
-- SC-15754 Fixed ClickHouse discovery service signature: We have addressed an issue that caused some log files to not be selected.
-- SC-16064 Fixed empty data for Infra info page: This fix resolves an issue with delayed data on the Infra info page.
-- SC-16072 Fixed non-displayed HTTP request codes for Apache Logs: We have corrected our log field generator for this case, ensuring that all HTTP request codes are properly displayed.
+- Fixed ClickHouse discovery service signature: We have addressed the issue that caused some log files to not be selected.
+- Fixed empty data for Infra info page: This fix resolves the issue with delayed data on the Infra info page.
+- Fixed non-displayed HTTP request codes for Apache Logs: We have corrected our log field generator for this case, ensuring that all HTTP request codes are properly displayed.
 
 # Version 2.1.0
 
@@ -83,19 +142,19 @@ Date: April 6, 2023
 
 ## New Features
 
-- SC-14822 OpenSearch logs parsing support: With this update, we now parse fields of your log messages. We will also be releasing OpenSearch logs integration soon to enhance your logging experience.
+- OpenSearch logs parsing support: With this update, we now parse fields of your log messages. We will also be releasing OpenSearch logs integration soon to enhance your logging experience.
 
 ## Improvements
 
-- SC-14963 Additional Kubelet metrics: You can now collect a wider range of metrics from your Kubelet nodes, providing you with greater visibility into the health and performance of your Kubernetes cluster.
-- SC-15285 Logging process improvements: We have made several enhancements to our logging process to reduce noise and simplify logs shown in Fleet.
+- Additional Kubelet metrics: You can now collect a wider range of metrics from your Kubelet nodes, providing you with greater visibility into the health and performance of your Kubernetes cluster.
+- Logging process improvements: We have made several enhancements to our logging process to reduce noise and simplify logs shown in Fleet.
 
 ## Bug Fixes
 
-- SC-15581 Fixed missing Docker container memory issue: We have resolved the issue where the Docker container memory was not being properly displayed.
+- Fixed missing Docker container memory issue: We have resolved the issue where the Docker container memory was not being properly displayed.
 - Fixed missing `[]*types.ContainerInfo` issue: We have addressed the issue where `[]*types.ContainerInfo` was missing.
-- SC-12977 Fixed JVM garbage collection detection: We have corrected the issue where the JVM GC logs were being identified as logs of another type.
-- SC-15891 Fixed log shipping in Docker Swarm for some cases: We have resolved the issue where log shipping was not working properly for Docker Swarm.
+- Fixed JVM garbage collection detection: We have corrected the issue where the JVM GC logs were being identified as logs of another type.
+- Fixed log shipping in Docker Swarm for some cases: We have resolved the issue where log shipping was not working properly for Docker Swarm.
 
 ## Packaging and Installation
 

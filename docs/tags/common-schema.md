@@ -129,6 +129,7 @@ Below are container related tags sent as part of metrics/logs in the container e
 | container.name | Container name |
 | container.id | Container identifier |
 | container.image.name | Container image name |
+| container.image.tag | Container image tag |
 | container.hostname | Hostname of the container being monitored |
 | container.host.hostname | Hostname of the host where the container is running |
 
