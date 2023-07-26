@@ -20,7 +20,7 @@ The Sematext Agent offers a versatile container engine monitoring and visibility
 
 ## Shipping Kubernetes logs to Sematext
 
-Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has too. Sematext helps you shed light on what caused the anomaly that led to the crash.
+Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has to. Sematext helps you shed light on what caused issues with your Kubernetes cluster by collecting Kubernetes logs and events.
 
 All you need to do is use [Discovery](../logs/discovery/setup) to Set Up log shipping:
 
