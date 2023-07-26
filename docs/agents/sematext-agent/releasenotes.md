@@ -41,7 +41,7 @@ Date: July 25, 2023
 
 ## New Features
 
-- [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for the details.
+- [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for details.
 - Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
 
 ## Improvements
@@ -50,13 +50,13 @@ Date: July 25, 2023
 
 ## Bug Fixes
 
-- SC-16613 Fixed incorrect `Not Configured` status for the log shipper: We have resolved an issue that was causing the log shipper to display an incorrect status message. With this fix, you will now receive accurate log shipper status updates.
+- Fixed incorrect `Not Configured` status for the log shipper: We have resolved the issue that was causing the log shipper to display an incorrect status message.
 
 ## Breaking Changes
 
 The new Kubernetes Components monitoring integration introduces additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
 
-### kubectl Installation Method
+### kubectl Installation
 
 Please re-apply `sematext-clusterroles.yaml` to your cluster.
 
@@ -64,7 +64,7 @@ Please re-apply `sematext-clusterroles.yaml` to your cluster.
 kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
 ```
 
-### Helm Installation Method
+### Helm Installation
 
 Please update your `sematext` repository and follow the upgrade steps from Sematext Cloud.
 
@@ -80,11 +80,11 @@ NAME                   	CHART VERSION	APP VERSION	DESCRIPTION
 sematext/sematext-agent	1.2.1        	1.0        	Helm chart for deploying Sematext Agent and Log...
 ```
 
-### `hostNetwork` Setting Usage
+### hostNetwork Setting Usage
 
 In Kubernetes, the `hostNetwork` is a configuration option that allows a container to share the network namespace of its host node. Sematext Agent requires `hostNetwork: true` setting to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
 
-If you want to turn off `hostNetwork` access, check [our page about hostnetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+If you want to turn off `hostNetwork` access, check [our docs about hostNetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
 ### Troubleshooting
 
@@ -100,13 +100,13 @@ Date: June 6, 2023
 
 ## Improvements
 
-- Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification.
+- Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification. For details, check [our docs about tags](https://sematext.com/docs/tags/common-schema/#container-tags).
 
 ## Bug Fixes
 
-- SC-16410 Fixed an edge case for tracer to check network packets via eBPF: We have addressed an issue that previously prevented the tracer from effectively checking network packets via eBPF. This fix improves the functionality and reliability of the tracer, ensuring accurate monitoring of network traffic.
-- SC-16445 Fixed nil pointer issue for MySQL and resolved broken portmatcher for MySQL: We have resolved a nil pointer issue that affected MySQL, eliminating potential errors and ensuring smooth operation. Additionally, we fixed a broken portmatcher specifically for MySQL, allowing for accurate monitoring and analysis of MySQL environments.
-- SC-16364 Fixed connection issue to MongoDB: We have resolved an issue caused by an outdated data collector.
+- Fixed an edge case for tracer to check network packets via eBPF: We have addressed the issue that previously prevented the tracer from effectively checking network packets via eBPF. This fix improves the functionality and reliability of the tracer, ensuring accurate monitoring of network traffic.
+- Fixed nil pointer issue for MySQL and resolved broken portmatcher for MySQL: We have resolved a nil pointer issue that affected MySQL, eliminating potential errors and ensuring smooth operation. Additionally, we fixed a broken portmatcher specifically for MySQL, allowing for accurate monitoring and analysis of MySQL environments.
+- Fixed connection issue to MongoDB: We have resolved the issue caused by an outdated data collector.
 
 ## Packaging and Installation
 
@@ -128,9 +128,9 @@ Date: May 10, 2023
 
 ## Bug Fixes
 
-- SC-15754 Fixed ClickHouse discovery service signature: We have addressed an issue that caused some log files to not be selected.
-- SC-16064 Fixed empty data for Infra info page: This fix resolves an issue with delayed data on the Infra info page.
-- SC-16072 Fixed non-displayed HTTP request codes for Apache Logs: We have corrected our log field generator for this case, ensuring that all HTTP request codes are properly displayed.
+- Fixed ClickHouse discovery service signature: We have addressed the issue that caused some log files to not be selected.
+- Fixed empty data for Infra info page: This fix resolves the issue with delayed data on the Infra info page.
+- Fixed non-displayed HTTP request codes for Apache Logs: We have corrected our log field generator for this case, ensuring that all HTTP request codes are properly displayed.
 
 # Version 2.1.0
 
@@ -147,10 +147,10 @@ Date: April 6, 2023
 
 ## Bug Fixes
 
-- SC-15581 Fixed missing Docker container memory issue: We have resolved the issue where the Docker container memory was not being properly displayed.
+- Fixed missing Docker container memory issue: We have resolved the issue where the Docker container memory was not being properly displayed.
 - Fixed missing `[]*types.ContainerInfo` issue: We have addressed the issue where `[]*types.ContainerInfo` was missing.
-- SC-12977 Fixed JVM garbage collection detection: We have corrected the issue where the JVM GC logs were being identified as logs of another type.
-- SC-15891 Fixed log shipping in Docker Swarm for some cases: We have resolved the issue where log shipping was not working properly for Docker Swarm.
+- Fixed JVM garbage collection detection: We have corrected the issue where the JVM GC logs were being identified as logs of another type.
+- Fixed log shipping in Docker Swarm for some cases: We have resolved the issue where log shipping was not working properly for Docker Swarm.
 
 ## Packaging and Installation
 
