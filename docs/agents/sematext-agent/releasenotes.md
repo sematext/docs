@@ -92,7 +92,7 @@ If you want to turn off `hostNetwork` access, check [our docs about hostNetwork]
 
 ### Troubleshooting
 
-For any errors, check our [Sematext Monintoring FAQ](https://sematext.com/docs/monitoring/spm-faq/).
+For any errors, check our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/).
 
 # Version 2.3.0
 
