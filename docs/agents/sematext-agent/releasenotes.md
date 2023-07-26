@@ -64,9 +64,11 @@ Please re-apply `sematext-clusterroles.yaml` to your cluster.
 kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
 ```
 
+After applying the new cluster roles, follow the agent upgradation steps from Sematext Cloud.
+
 ### Helm Installation
 
-Please update your `sematext` repository and follow the upgrade steps from Sematext Cloud.
+Please update your `sematext` Helm repository. 
 
 ```
 helm repo add sematext https://cdn.sematext.com/helm-charts
@@ -79,6 +81,8 @@ Ensure that you have at least **1.2.1** version for the `sematext-agent` package
 NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
 sematext/sematext-agent	1.2.1        	1.0        	Helm chart for deploying Sematext Agent and Log...
 ```
+
+After updating the Helm chart, follow the agent upgradation steps from Sematext Cloud.
 
 ### hostNetwork Setting Usage
 

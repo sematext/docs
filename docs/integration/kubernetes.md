@@ -876,9 +876,20 @@ If you are having trouble sending metrics, try out the latest version of the [Se
 
 In case you have trouble getting data in Kubernetes Master Components reports (e.g. Kubelet, Scheduler, kube-proxy, Etcd, CoreDNS) or some of the Workloads reports (e.g. DaemonSets, StatefulSets), make sure that RBAC is enabled in your cluster. Also you'll need to update your RBAC rules configuration:
 
-```kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml```
+**kubectl Installation**
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+**Helm Installation**
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
 
 Also, please make sure that your agent is [up to date](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
 
-### Why we need ```hostNetwork``` access and how to turn it off if desired
+### Why we need hostNetwork access and how to turn it off if desired
 Check out [our page about hostnetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
