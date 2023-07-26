@@ -75,7 +75,7 @@ helm repo add sematext https://cdn.sematext.com/helm-charts
 helm repo update
 ```
 
-Ensure that you have at least **1.2.1** version for the `sematext-agent` package.
+Ensure that you have at least **1.2.1** version for the `sematext-agent` Helm package.
 ```
 > helm search repo sematext
 NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
