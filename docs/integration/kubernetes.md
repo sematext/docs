@@ -392,11 +392,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |----|----|-----------|
 |apiserver.audit_events.total_num|uint64|Counter of audit events generated and sent to the audit backend|
 
-#### Work Queue Adds
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.work_queue_adds.total_num|uint64|Total number of adds handled by workqueue|
-
 #### Request Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
@@ -433,22 +428,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |----|----|-----------|
 |apiserver.current_inqueue_reqs.total_num|uint64|Number of requests currently pending in queues of the API Priority and Fairness system|
 
-#### Dispatched Requests
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.dispatched_req.total_num|uint64|Number of requests released by API Priority and Fairness system for service|
-
-#### Client Request Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.client_req_duration.p50latency|float64||
-|apiserver.client_req_duration.p75latency|float64||
-|apiserver.client_req_duration.p90latency|float64||
-|apiserver.client_req_duration.p95latency|float64||
-|apiserver.client_req_duration.p99latency|float64||
-|apiserver.client_req_duration.duration|float64|Request latency in seconds|
-|apiserver.client_req_duration.total_num|uint64||
-
 #### Admission Duration
 |Metric Name|Unit|Description|
 |----|----|-----------|
@@ -459,22 +438,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.admission_duration.p99latency|float64||
 |apiserver.admission_duration.duration|float64|Admission controller latency in seconds|
 |apiserver.admission_duration.total_num|uint64||
-
-#### Step Admission Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.step_admission_duration.p50latency|float64||
-|apiserver.step_admission_duration.p75latency|float64||
-|apiserver.step_admission_duration.p90latency|float64||
-|apiserver.step_admission_duration.p95latency|float64||
-|apiserver.step_admission_duration.p99latency|float64||
-|apiserver.step_admission_duration.duration|float64|Admission sub-step latency in seconds|
-|apiserver.step_admission_duration.total_num|uint64||
-
-#### Registered Watchers
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.reg_watchers.total_num|uint64|Number of currently registered watchers for a given resources|
 
 #### TLS Error
 |Metric Name|Unit|Description|
@@ -508,35 +471,10 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.client_cert_expiry.duration|float64|Distribution of the remaining lifetime on the certificate used to authenticate a request|
 |apiserver.client_cert_expiry.total_num|uint64||
 
-#### Evaluated Objects
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.evaluated_object.total_num|uint64|Number of objects tested in the course of serving a LIST request from storage|
-
-#### Fetched Objects
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.fetched_object.total_num|uint64|Number of objects read from storage in the course of serving a LIST request|
-
-#### Returned Objects
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.returned_object.total_num|uint64|Number of objects returned for a LIST request from storage|
-
-#### Total Objects
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.total_object.total_num|uint64|Number of LIST requests served from storage|
-
 #### Key Geneneration Fails
 |Metric Name|Unit|Description|
 |----|----|-----------|
 |apiserver.key_gen_fails.total_num|uint64|Total number of failed data encryption key(DEK) generation operations|
-
-#### Cache Misses
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|apiserver.cache_misses.total_num|uint64|Total number of cache misses while accessing key decryption key(KEK)|
 
 #### Key Generation Duration
 |Metric Name|Unit|Description|
@@ -609,21 +547,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.disk_backend_snapshot.p99latency|float64||
 |etcd.disk_backend_snapshot.total_num|uint64||
 |etcd.disk_backend_snapshot.duration|float64|The latency distribution of backend snapshots|
-
-#### GRPC Received
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|etcd.grpc.msg.received|uint64|The total number of bytes received from grpc clients|
-
-#### GRPC Sent
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|etcd.grpc.msg.sent|uint64|The total number of bytes sent to grpc clients|
-
-#### GRPC Started
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|etcd.grpc.started|uint64||
 
 #### GRPC Total
 |Metric Name|Unit|Description|
@@ -770,12 +693,6 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.forward_request.p99latency|float64||
 |coredns.forward_request.duration|float64|The time each request took|
 |coredns.forward_request.total_num|uint64||
-
-#### Forward Responses
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.forward_response.total_num|uint64|Counter of responses received per upstream|
-
 
 ### Scheduler Metrics
 #### Preemption Attempts
