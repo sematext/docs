@@ -93,35 +93,33 @@ _If you’re new here, read below for a high-level overview of Sematext._
 </div>
 
 ## Latest Updates
-Stay informed about the most recent developments in our product and agent releases. 
+Stay informed about the most recent developments in our product and agent releases.
 <div class="mdl-grid" style="padding:0;margin:-8px;">
-	<div class="mdl-grid" style="padding:0;margin:-8px;">
-		<div class="mdl-cell mdl-cell--4-col">
-			<a href="https://sematext.com/product-updates/">
-				<div class="demo-card-event mdl-card mdl-shadow--2dp whats-new-card">
-					<div class="mdl-card__title mdl-card--expand custom-mdl-card">
-						<h4>
-							What's New?
-						</h4>
-						<p>Check the latest product updates</p>
-					</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="https://sematext.com/product-updates/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp whats-new-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						What's New?
+					</h4>
+					<p>Check the latest product updates</p>
 				</div>
-			</a>
-		</div>
-		<div class="mdl-cell mdl-cell--4-col">
-			<a href="./agents/sematext-agent/releasenotes/">
-				<div class="demo-card-event mdl-card mdl-shadow--2dp release-notes-card">
-					<div class="mdl-card__title mdl-card--expand custom-mdl-card">
-						<h4>
-							Agent Release Notes
-						</h4>
-						<p>Learn about all the latest features of Sematext Agent</p>
-					</div>
-				</div>
-			</a>
-		</div>
+			</div>
+		</a>
 	</div>
- </div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="./agents/sematext-agent/releasenotes/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp release-notes-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Agent Release Notes
+					</h4>
+					<p>Learn about all the latest features of Sematext Agent</p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
 
 ## How Sematext works
 Sematext integrations let you collect metrics, logs and events across your whole stack from frontend to backend. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications, etc.

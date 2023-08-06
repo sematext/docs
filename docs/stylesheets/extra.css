@@ -504,6 +504,14 @@ pre {
   margin-top:5px;
   text-align: center;
 }
+.whats-new-card{
+  /* background: #00A3EF; */
+  background: #ff404a;
+}
+.release-notes-card{
+  /* background: #00A3EF; */
+  background: #165088;
+}
 .integrations-card-list img{
     width: 64px;
     min-width: 64px;
