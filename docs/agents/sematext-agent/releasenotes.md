@@ -1,7 +1,7 @@
 title: Sematext Agent Release Notes
 description: Features and improvements releases for Sematext Agent
 
-Sematext Agent is a dynamic project with frequent releases. This Changelog contains only important changes, new features, and critical bug fixes. To upgrade the Sematext Agent, make sure to follow the Sematext Agent Installation instructions provided in Sematext Cloud and refer to our [FAQ section](https://sematext.com/docs/monitoring/spm-faq/#agent-updating) for further assistance on agent updating.
+Sematext Agent is a dynamic project with frequent releases. This Changelog contains only important changes, new features, and critical bug fixes. To install or upgrade the Sematext Agent, make sure to follow the Sematext Agent Installation instructions provided in Sematext Cloud and refer to our [FAQ section](https://sematext.com/docs/monitoring/spm-faq/#agent-updating) for further assistance on agent updating.
 
 <!-- Template:
 
