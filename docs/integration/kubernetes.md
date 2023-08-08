@@ -648,137 +648,137 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.forward_max_concurrent_rejects.total_num|uint64| number of queries rejected because the concurrent queries were at maximum |
 
 #### Request Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.request_duration.p50latency|float64||
-|coredns.request_duration.p75latency|float64||
-|coredns.request_duration.p90latency|float64||
-|coredns.request_duration.p95latency|float64||
-|coredns.request_duration.p99latency|float64||
-|coredns.request_duration.duration|float64|The time each request took|
-|coredns.request_duration.total_num|uint64||
+|Metric Name|Unit| Description                                           |
+|----|----|-------------------------------------------------------|
+|coredns.request_duration.p50latency|float64|                                                       |
+|coredns.request_duration.p75latency|float64|                                                       |
+|coredns.request_duration.p90latency|float64|                                                       |
+|coredns.request_duration.p95latency|float64|                                                       |
+|coredns.request_duration.p99latency|float64|                                                       |
+|coredns.request_duration.duration|float64| duration of DNS requests handled by CoreDNS in seconds |
+|coredns.request_duration.total_num|uint64| number of DNS requests handled by CoreDNS             |
 
 #### Requests
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.request_counter.total_num|uint64|Total number of requests|
+|Metric Name|Unit| Description                           |
+|----|----|---------------------------------------|
+|coredns.request_counter.total_num|uint64| number of requests handled by CoreDNS |
 
 #### Response Status Codes
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.response_code.total_num|uint64|Counter of response status codes|
+|Metric Name|Unit| Description                     |
+|----|----|---------------------------------|
+|coredns.response_code.total_num|uint64| number of response status codes |
 
 #### Forward Cache Hits
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.forward_cache.hits|uint64|Counter of connection cache hits per upstream and protocol.|
+|Metric Name|Unit| Description                                               |
+|----|----|-----------------------------------------------------------|
+|coredns.forward_cache.hits|uint64| number of connection cache hits per upstream and protocol |
 
 #### Forward Cache Misses
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.forward_cache.misses|uint64|Counter of connection cache misses per upstream and protocol|
+|Metric Name|Unit| Description                                                 |
+|----|----|-------------------------------------------------------------|
+|coredns.forward_cache.misses|uint64| number of connection cache misses per upstream and protocol |
 
 #### Forward Request Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|coredns.forward_request.p50latency|float64||
-|coredns.forward_request.p75latency|float64||
-|coredns.forward_request.p90latency|float64||
-|coredns.forward_request.p95latency|float64||
-|coredns.forward_request.p99latency|float64||
-|coredns.forward_request.duration|float64|The time each request took|
-|coredns.forward_request.total_num|uint64||
+|Metric Name|Unit| Description                                                       |
+|----|----|-------------------------------------------------------------------|
+|coredns.forward_request.p50latency|float64|                                                                   |
+|coredns.forward_request.p75latency|float64|                                                                   |
+|coredns.forward_request.p90latency|float64|                                                                   |
+|coredns.forward_request.p95latency|float64|                                                                   |
+|coredns.forward_request.p99latency|float64|                                                                   |
+|coredns.forward_request.duration|float64| duration of forwarding DNS requests handled by CoreDNS in seconds |
+|coredns.forward_request.total_num|uint64| number of forwarding DNS requests handled by CoreDNS              |
 
 ### Scheduler Metrics
 #### Preemption Attempts
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.preemption_attempts.total_num|uint64|Total preemption attempts in the cluster till now|
+|Metric Name|Unit| Description                                       |
+|----|----|---------------------------------------------------|
+|scheduler.preemption_attempts.total_num|uint64| number preemption attempts in the cluster         |
 
 #### Pending Pods
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.pending_pods.total_num|uint64|Number of pending pods, by the queue type|
+|Metric Name|Unit| Description                               |
+|----|----|-------------------------------------------|
+|scheduler.pending_pods.total_num|uint64| number of pending pods, by the queue type |
 
 #### Queue Incoming Pods
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.incoming_pods.total_num|uint64|Number of pods added to scheduling queues by event and queue type|
+|Metric Name|Unit| Description                                                       |
+|----|----|-------------------------------------------------------------------|
+|scheduler.incoming_pods.total_num|uint64| number of pods added to scheduling queues by event and queue type |
 
 #### Scheduler Attempts
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.schedule_attempts.total_num|uint64|Number of attempts to schedule pods, by the result|
+|Metric Name|Unit| Description                                        |
+|----|----|----------------------------------------------------|
+|scheduler.schedule_attempts.total_num|uint64| number of attempts to schedule pods, by the result |
 
 #### Go Routines
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.go_routines.total_num|uint64|Number of running goroutines split by the work they do such as binding|
+|Metric Name|Unit| Description                                                            |
+|----|----|------------------------------------------------------------------------|
+|scheduler.go_routines.total_num|uint64| number of running goroutines split by the work they do such as binding |
 
 #### Cache
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.cache.total_num|uint64|Number of nodes, pods, and assumed (bound) pods in the scheduler cache|
+|Metric Name|Unit| Description                                                            |
+|----|----|------------------------------------------------------------------------|
+|scheduler.cache.total_num|uint64| number of nodes, pods, and assumed (bound) pods in the scheduler cache |
 
 #### E2E Scheduling Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.e2e_duration.p50latency|float64||
-|scheduler.e2e_duration.p75latency|float64||
-|scheduler.e2e_duration.p90latency|float64||
-|scheduler.e2e_duration.p95latency|float64||
-|scheduler.e2e_duration.p99latency|float64||
-|scheduler.e2e_duration.total_num|uint64||
-|scheduler.e2e_duration.duration|float64|E2e scheduling latency in seconds (scheduling algorithm + binding)|
+|Metric Name|Unit| Description                                                                                      |
+|----|----|--------------------------------------------------------------------------------------------------|
+|scheduler.e2e_duration.p50latency|float64|                                                                                                  |
+|scheduler.e2e_duration.p75latency|float64|                                                                                                  |
+|scheduler.e2e_duration.p90latency|float64|                                                                                                  |
+|scheduler.e2e_duration.p95latency|float64|                                                                                                  |
+|scheduler.e2e_duration.p99latency|float64|                                                                                                  |
+|scheduler.e2e_duration.total_num|uint64| number of end-to-end scheduling operations                                                       |
+|scheduler.e2e_duration.duration|float64| duration of end-to-end scheduling operations measured in seconds (scheduling algorithm + binding) |
 
 #### Scheduling Algorithm Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.scheduling_algorithm.p50latency|float64||
-|scheduler.scheduling_algorithm.p75latency|float64||
-|scheduler.scheduling_algorithm.p90latency|float64||
-|scheduler.scheduling_algorithm.p95latency|float64||
-|scheduler.scheduling_algorithm.p99latency|float64||
-|scheduler.scheduling_algorithm.total_num|uint64||
-|scheduler.scheduling_algorithm.duration|float64|Scheduling algorithm latency in seconds|
+|Metric Name|Unit| Description                                          |
+|----|----|------------------------------------------------------|
+|scheduler.scheduling_algorithm.p50latency|float64|                                                      |
+|scheduler.scheduling_algorithm.p75latency|float64|                                                      |
+|scheduler.scheduling_algorithm.p90latency|float64|                                                      |
+|scheduler.scheduling_algorithm.p95latency|float64|                                                      |
+|scheduler.scheduling_algorithm.p99latency|float64|                                                      |
+|scheduler.scheduling_algorithm.total_num|uint64| number of scheduling algorithm execution             |
+|scheduler.scheduling_algorithm.duration|float64| duration of scheduling algorithm execution in seconds |
 
 #### Preemption Victims
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.preemption_victims.p50latency|float64||
-|scheduler.preemption_victims.p75latency|float64||
-|scheduler.preemption_victims.p90latency|float64||
-|scheduler.preemption_victims.p95latency|float64||
-|scheduler.preemption_victims.p99latency|float64||
-|scheduler.preemption_victims.total_num|uint64|Number of selected preemption victims|
-|scheduler.preemption_victims.duration|float64|Selected preemption victims duration|
+|Metric Name|Unit| Description                                                                                    |
+|----|----|------------------------------------------------------------------------------------------------|
+|scheduler.preemption_victims.p50latency|float64|                                                                                                |
+|scheduler.preemption_victims.p75latency|float64|                                                                                                |
+|scheduler.preemption_victims.p90latency|float64|                                                                                                |
+|scheduler.preemption_victims.p95latency|float64|                                                                                                |
+|scheduler.preemption_victims.p99latency|float64|                                                                                                |
+|scheduler.preemption_victims.total_num|uint64| number of preemption victims identified by the scheduler for resource reclamation              |
+|scheduler.preemption_victims.duration|float64| duration of preemption victims identified by the scheduler for resource reclamation in seconds |
 
 #### Scheduling Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.scheduling_duration.p50latency|float64||
-|scheduler.scheduling_duration.p75latency|float64||
-|scheduler.scheduling_duration.p90latency|float64||
-|scheduler.scheduling_duration.p95latency|float64||
-|scheduler.scheduling_duration.p99latency|float64||
-|scheduler.scheduling_duration.total_num|uint64||
-|scheduler.scheduling_duration.duration|float64|Scheduling algorithm latency in seconds|
+|Metric Name|Unit| Description                                                                |
+|----|----|----------------------------------------------------------------------------|
+|scheduler.scheduling_duration.p50latency|float64|                                                                            |
+|scheduler.scheduling_duration.p75latency|float64|                                                                            |
+|scheduler.scheduling_duration.p90latency|float64|                                                                            |
+|scheduler.scheduling_duration.p95latency|float64|                                                                            |
+|scheduler.scheduling_duration.p99latency|float64|                                                                            |
+|scheduler.scheduling_duration.total_num|uint64| number of pod scheduling operations in the scheduler                       |
+|scheduler.scheduling_duration.duration|float64| duration of pod scheduling operations in the scheduler measured in seconds |
 
 #### Framework Extension Duration
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.framework_extension.p50latency|float64||
-|scheduler.framework_extension.p75latency|float64||
-|scheduler.framework_extension.p90latency|float64||
-|scheduler.framework_extension.p95latency|float64||
-|scheduler.framework_extension.p99latency|float64||
-|scheduler.framework_extension.total_num|uint64||
-|scheduler.framework_extension.duration|float64|Latency for running all plugins of a specific extension point|
+|Metric Name|Unit| Description                                                        |
+|----|----|--------------------------------------------------------------------|
+|scheduler.framework_extension.p50latency|float64|                                                                    |
+|scheduler.framework_extension.p75latency|float64|                                                                    |
+|scheduler.framework_extension.p90latency|float64|                                                                    |
+|scheduler.framework_extension.p95latency|float64|                                                                    |
+|scheduler.framework_extension.p99latency|float64|                                                                    |
+|scheduler.framework_extension.total_num|uint64| number of framework extension point execution measured             |
+|scheduler.framework_extension.duration|float64| duration of framework extension point execution measured in seconds |
 
 #### Scheduler Attempts
-|Metric Name|Unit|Description|
-|----|----|-----------|
-|scheduler.attempts.total_num|uint64|Number of attempts to schedule pods|
+|Metric Name|Unit| Description                         |
+|----|----|-------------------------------------|
+|scheduler.attempts.total_num|uint64| number of attempts to schedule pods |
 
 ## Troubleshooting
 
