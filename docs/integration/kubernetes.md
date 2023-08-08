@@ -213,11 +213,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.runtime_operation.errors| int64 | cumulative number of runtime operation errors by operation type |
 |kubelet.runtime_operation.total_num| int64 | total number of runtime operations                              |
 |kubelet.runtime_operation.duration| int64 | duration of runtime operations                                  |
-|kubelet.runtime_operation.p50latency| float64 | latency in microseconds of runtime operations                   |
-|kubelet.runtime_operation.p75latency| float64 | latency in microseconds of runtime operations                   |
-|kubelet.runtime_operation.p90latency| float64 | latency in microseconds of runtime operations                   |
-|kubelet.runtime_operation.p95latency| float64 | latency in microseconds of runtime operations                   |
-|kubelet.runtime_operation.p99latency| float64 | latency in microseconds of runtime operations                   |
+|kubelet.runtime_operation.p50latency| float64 | latency in seconds of runtime operations                        |
+|kubelet.runtime_operation.p75latency| float64 | latency in seconds of runtime operations                        |
+|kubelet.runtime_operation.p90latency| float64 | latency in seconds of runtime operations                        |
+|kubelet.runtime_operation.p95latency| float64 | latency in seconds of runtime operations                        |
+|kubelet.runtime_operation.p99latency| float64 | latency in seconds of runtime operations                        |
 
 #### Kubelet
 |Metric Name|Unit| Description                    |
@@ -232,37 +232,37 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.containers.unknown|float64| containers with status Unknown |
 
 #### Pod Start Duration
-|Metric Name|Unit| Description                                                                |
-|----|----|----------------------------------------------------------------------------|
-|kubelet.pod_start.total_num|float64| pod start counter                                                          |
-|kubelet.pod_start.duration|float64| pod start duration                                                         |
-|kubelet.pod_start.p50latency|float64| p50 latency in microseconds for a single pod to go from pending to running |
-|kubelet.pod_start.p75latency|float64| p75 latency in microseconds for a single pod to go from pending to running |
-|kubelet.pod_start.p90latency|float64| p90 latency in microseconds for a single pod to go from pending to running |
-|kubelet.pod_start.p95latency|float64| p95 latency in microseconds for a single pod to go from pending to running |
-|kubelet.pod_start.p99latency|float64| p99 latency in microseconds for a single pod to go from pending to running |
+|Metric Name|Unit| Description                                                           |
+|----|----|-----------------------------------------------------------------------|
+|kubelet.pod_start.total_num|float64| number of pod starts                                                  |
+|kubelet.pod_start.duration|float64| duration of a pod start in seconds                                    |
+|kubelet.pod_start.p50latency|float64| p50 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p75latency|float64| p75 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p90latency|float64| p90 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p95latency|float64| p95 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p99latency|float64| p99 latency in seconds for a single pod to go from pending to running |
 
 #### Pod Worker Duration
 |Metric Name|Unit| Description                                      |
 |----|----|--------------------------------------------------|
 |kubelet.pod_worker.total_num|int64| pod worker counter                               |
 |kubelet.pod_worker.duration|float64| pod worker duration                              |
-|kubelet.pod_worker.p50latency|float64| p50 latency in microseconds to sync a single pod |
-|kubelet.pod_worker.p75latency|float64| p75 latency in microseconds to sync a single pod |
-|kubelet.pod_worker.p90latency|float64| p90 latency in microseconds to sync a single pod |
-|kubelet.pod_worker.p95latency|float64| p95 latency in microseconds to sync a single pod |
-|kubelet.pod_worker.p99latency|float64| p99 latency in microseconds to sync a single pod |
+|kubelet.pod_worker.p50latency|float64| p50 latency in seconds to sync a single pod      |
+|kubelet.pod_worker.p75latency|float64| p75 latency in seconds to sync a single pod      |
+|kubelet.pod_worker.p90latency|float64| p90 latency in seconds to sync a single pod      |
+|kubelet.pod_worker.p95latency|float64| p95 latency in seconds to sync a single pod      |
+|kubelet.pod_worker.p99latency|float64| p99 latency in seconds to sync a single pod      |
 
 #### Pod Worker Start Duration
 |Metric Name|Unit| Description                                                        |
 |----|----|--------------------------------------------------------------------|
 |kubelet.pod_worker_start.total_num|int64| worker start counter                                               |
 |kubelet.pod_worker_start.duration|float64| duration for starting a worker                                     |
-|kubelet.pod_worker_start.p50latency|float64| p50 latency in microseconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p75latency|float64| p75 latency in microseconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p90latency|float64| p90 latency in microseconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p95latency|float64| p95 latency in microseconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p99latency|float64| p99 latency in microseconds from seeing a pod to starting a worker |
+|kubelet.pod_worker_start.p50latency|float64| p50 latency in seconds from seeing a pod to starting a worker      |
+|kubelet.pod_worker_start.p75latency|float64| p75 latency in seconds from seeing a pod to starting a worker      |
+|kubelet.pod_worker_start.p90latency|float64| p90 latency in seconds from seeing a pod to starting a worker      |
+|kubelet.pod_worker_start.p95latency|float64| p95 latency in seconds from seeing a pod to starting a worker      |
+|kubelet.pod_worker_start.p99latency|float64| p99 latency in seconds from seeing a pod to starting a worker      |
 
 #### Volume Manager
 |Metric Name|Unit| Description                                 |
@@ -310,11 +310,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.docker_operation.operations|float64| total number of Docker operations                |
 |kubelet.docker_operation.total_num|int64| number of Docker operations                      |
 |kubelet.docker_operation.duration|float64| duration of docker operations in seconds         |
-|kubelet.docker_operation.p50latency|float64| p50 latency in microseconds of Docker operations |
-|kubelet.docker_operation.p75latency|float64| p75 latency in microseconds of Docker operations |
-|kubelet.docker_operation.p90latency|float64| p90 latency in microseconds of Docker operations |
-|kubelet.docker_operation.p95latency|float64| p95 latency in microseconds of Docker operations |
-|kubelet.docker_operation.p99latency|float64| p99 latency in microseconds of Docker operations |
+|kubelet.docker_operation.p50latency|float64| p50 latency in seconds of Docker operations      |
+|kubelet.docker_operation.p75latency|float64| p75 latency in seconds of Docker operations      |
+|kubelet.docker_operation.p90latency|float64| p90 latency in seconds of Docker operations      |
+|kubelet.docker_operation.p95latency|float64| p95 latency in seconds of Docker operations      |
+|kubelet.docker_operation.p99latency|float64| p99 latency in seconds of Docker operations      |
 
 #### HTTP Inflight Request
 |Metric Name|Unit| Description                 |
@@ -327,24 +327,24 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.http_request.operations|float64| total number of HTTP request operations    |
 |kubelet.http_request.total_num|int64| total number of HTTP requests              |
 |kubelet.http_request.duration|float64| HTTP request duration                      |
-|kubelet.http_request.p50latency|float64| p50 HTTP request latencies in microseconds |
-|kubelet.http_request.p75latency|float64| p75 HTTP request latencies in microseconds |
-|kubelet.http_request.p90latency|float64| p90 HTTP request latencies in microseconds |
-|kubelet.http_request.p95latency|float64| p95 HTTP request latencies in microseconds |
-|kubelet.http_request.p99latency|float64| p99 HTTP request latencies in microseconds |
+|kubelet.http_request.p50latency|float64| p50 HTTP request latencies in seconds      |
+|kubelet.http_request.p75latency|float64| p75 HTTP request latencies in seconds      |
+|kubelet.http_request.p90latency|float64| p90 HTTP request latencies in seconds      |
+|kubelet.http_request.p95latency|float64| p95 HTTP request latencies in seconds      |
+|kubelet.http_request.p99latency|float64| p99 HTTP request latencies in seconds      |
 
 #### Network Plugin Operations
-|Metric Name|Unit| Description                                              |
-|----|----|----------------------------------------------------------|
-|kubelet.network_plugin_operation.errors|float64| network plugin operation errors                          |
-|kubelet.network_plugin_operation.operations|float64|                                                          |
-|kubelet.network_plugin_operation.total_num|int64| total number of network plugin operations                |
-|kubelet.network_plugin_operation.duration|float64| network plugin operations duration                       |
-|kubelet.network_plugin_operation.p50latency|float64| p50 latency in microseconds of network plugin operations |
-|kubelet.network_plugin_operation.p75latency|float64| p75 latency in microseconds of network plugin operations |
-|kubelet.network_plugin_operation.p90latency|float64| p90 latency in microseconds of network plugin operations |
-|kubelet.network_plugin_operation.p95latency|float64| p95 latency in microseconds of network plugin operations |
-|kubelet.network_plugin_operation.p99latency|float64| p99 latency in microseconds of network plugin operations |
+|Metric Name|Unit| Description                                            |
+|----|----|--------------------------------------------------------|
+|kubelet.network_plugin_operation.errors|float64| network plugin operation errors                        |
+|kubelet.network_plugin_operation.operations|float64|                                                        |
+|kubelet.network_plugin_operation.total_num|int64| total number of network plugin operations              |
+|kubelet.network_plugin_operation.duration|float64| network plugin operations duration                     |
+|kubelet.network_plugin_operation.p50latency|float64| p50 latency in seconds of network plugin operations    |
+|kubelet.network_plugin_operation.p75latency|float64| p75 latency in seconds of network plugin operations    |
+|kubelet.network_plugin_operation.p90latency|float64| p90 latency in seconds of network plugin operations    |
+|kubelet.network_plugin_operation.p95latency|float64| p95 latency in seconds of network plugin operations    |
+|kubelet.network_plugin_operation.p99latency|float64| p99 latency in seconds of network plugin operations    |
 
 #### PLEG Relist Duration
 |Metric Name|Unit| Description                                               |
