@@ -213,11 +213,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.runtime_operation.errors| int64 | cumulative number of runtime operation errors by operation type |
 |kubelet.runtime_operation.total_num| int64 | total number of runtime operations                              |
 |kubelet.runtime_operation.duration| int64 | duration of runtime operations                                  |
-|kubelet.runtime_operation.p50latency| float64 | latency in seconds of runtime operations                        |
-|kubelet.runtime_operation.p75latency| float64 | latency in seconds of runtime operations                        |
-|kubelet.runtime_operation.p90latency| float64 | latency in seconds of runtime operations                        |
-|kubelet.runtime_operation.p95latency| float64 | latency in seconds of runtime operations                        |
-|kubelet.runtime_operation.p99latency| float64 | latency in seconds of runtime operations                        |
+|kubelet.runtime_operation.p50latency| float64 | p50 latency in seconds of runtime operations                    |
+|kubelet.runtime_operation.p75latency| float64 | p75 latency in seconds of runtime operations                    |
+|kubelet.runtime_operation.p90latency| float64 | p90 latency in seconds of runtime operations                    |
+|kubelet.runtime_operation.p95latency| float64 | p95 latency in seconds of runtime operations                    |
+|kubelet.runtime_operation.p99latency| float64 | p99 latency in seconds of runtime operations                    |
 
 #### Kubelet
 |Metric Name|Unit| Description                    |
@@ -271,15 +271,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.volume_manager.desired.count|float64| total volumes desired by the volume manager |
 
 #### Storage Operation
-|Metric Name| Unit  | Description                                        |
-|----|-------|----------------------------------------------------|
-|kubelet.storage.total_num| int64| total number of storage operations                 |
-|kubelet.storage.duration| float64| duration of storage operations in seconds          |
-|kubelet.storage.p50latency| float64|                                                    |
-|kubelet.storage.p75latency| float64|                                                    |
-|kubelet.storage.p90latency| float64|                                                    |
-|kubelet.storage.p95latency| float64|                                                    |
-|kubelet.storage.p99latency| float64|                                                    |
+|Metric Name| Unit  | Description                               |
+|----|-------|-------------------------------------------|
+|kubelet.storage.total_num| int64| total number of storage operations        |
+|kubelet.storage.duration| float64| duration of storage operations in seconds |
+|kubelet.storage.p50latency| float64| p50 latency to perform storage operations |
+|kubelet.storage.p75latency| float64| p75 latency to perform storage operations |
+|kubelet.storage.p90latency| float64| p90 latency to perform storage operations |
+|kubelet.storage.p95latency| float64| p95 latency to perform storage operations |
+|kubelet.storage.p99latency| float64| p99 latency to perform storage operations |
 
 #### Cgroup Manager
 |Metric Name|Unit| Description                                                 |
@@ -297,11 +297,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |----|----|------------------------------------------------------------|
 |kubelet.pleg_relist_interval.total_num|int64| total number of intervals between pod relisting operations |
 |kubelet.pleg_relist_interval.duration|float64| duration of intervals between pod relisting operations     |
-|kubelet.pleg_relist_interval.p50latency|float64|                                                            |
-|kubelet.pleg_relist_interval.p75latency|float64|                                                            |
-|kubelet.pleg_relist_interval.p90latency|float64|                                                            |
-|kubelet.pleg_relist_interval.p95latency|float64|                                                            |
-|kubelet.pleg_relist_interval.p99latency|float64|                                                            |
+|kubelet.pleg_relist_interval.p50latency|float64| p50 latency of intervals between pod relisting operations  |
+|kubelet.pleg_relist_interval.p75latency|float64| p75 latency of intervals between pod relisting operations  |
+|kubelet.pleg_relist_interval.p90latency|float64| p90 latency of intervals between pod relisting operations  |
+|kubelet.pleg_relist_interval.p95latency|float64| p95 latency of intervals between pod relisting operations  |
+|kubelet.pleg_relist_interval.p99latency|float64| p99 latency of intervals between pod relisting operations  |
 
 #### Docker Operations
 |Metric Name|Unit| Description                                      |
@@ -347,21 +347,21 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.network_plugin_operation.p99latency|float64| p99 latency in seconds of network plugin operations    |
 
 #### PLEG Relist Duration
-|Metric Name|Unit| Description                                               |
-|----|----|-----------------------------------------------------------|
-|kubelet.pleg_relist.total_num|int64| number of pod relisting performed by kubelet              |
+|Metric Name|Unit| Description                   |
+|----|----|-------------------------------|
+|kubelet.pleg_relist.total_num|int64| number of pod relisting performed by kubelet |
 |kubelet.pleg_relist.duration|float64| duration of pod relisting performed by kubelet in seconds |
-|kubelet.pleg_relist.p50duration|float64|                                                           |
-|kubelet.pleg_relist.p75duration|float64|                                                           |
-|kubelet.pleg_relist.p90duration|float64|                                                           |
-|kubelet.pleg_relist.p95duration|float64|                                                           |
-|kubelet.pleg_relist.p99duration|float64|                                                           |
+|kubelet.pleg_relist.p50duration|float64| p50 latency of pod relisting  |
+|kubelet.pleg_relist.p75duration|float64| p75 latency of pod relisting  |
+|kubelet.pleg_relist.p90duration|float64| p90 latency of pod relisting  |
+|kubelet.pleg_relist.p95duration|float64| p95 latency of pod relisting  |
+|kubelet.pleg_relist.p99duration|float64| p99 latency of pod relisting   |
 
 #### Started Containers
-|Metric Name|Unit| Description                              |
-|----|----|------------------------------------------|
+|Metric Name|Unit| Description                           |
+|----|----|---------------------------------------|
 |kubelet.started_containers.errors|float64| number of started containers with errors |
-|kubelet.started_containers.total_num|float64| total number of started containers       |
+|kubelet.started_containers.total_num|float64| total number of started containers    |
 
 #### Volume Stats Inode
 |Metric Name|Unit| Description                            |
@@ -388,15 +388,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.audit_events.total_num|uint64| counter of audit events generated and sent to the audit backend |
 
 #### Request Duration
-|Metric Name|Unit| Description                                   |
-|----|----|-----------------------------------------------|
-|apiserver.etcd_request_duration.p50latency|float64|                                               |
-|apiserver.etcd_request_duration.p75latency|float64|                                               |
-|apiserver.etcd_request_duration.p90latency|float64|                                               |
-|apiserver.etcd_request_duration.p95latency|float64|                                               |
-|apiserver.etcd_request_duration.p99latency|float64|                                               |
+|Metric Name|Unit| Description                          |
+|----|----|--------------------------------------|
+|apiserver.etcd_request_duration.p50latency|float64| p50 latency of etcd requests         |
+|apiserver.etcd_request_duration.p75latency|float64| p75 latency of etcd requests         |
+|apiserver.etcd_request_duration.p90latency|float64| p90 latency of etcd requests         |
+|apiserver.etcd_request_duration.p95latency|float64| p95 latency of etcd requests         |
+|apiserver.etcd_request_duration.p99latency|float64| p99 latency of etcd requests         |
 |apiserver.etcd_request_duration.duration|float64| duration of etcd requests measured in seconds |
-|apiserver.etcd_request_duration.total_num|uint64| number of etcd requests                       |
+|apiserver.etcd_request_duration.total_num|uint64| number of etcd requests              |
 
 #### Storage Objects
 |Metric Name|Unit| Description                                                      |
@@ -424,15 +424,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.current_inqueue_reqs.total_num|uint64| number of requests currently pending in queues of the API Priority and Fairness system |
 
 #### Admission Duration
-|Metric Name|Unit| Description                                                             |
-|----|----|-------------------------------------------------------------------------|
-|apiserver.admission_duration.p50latency|float64|                                                                         |
-|apiserver.admission_duration.p75latency|float64|                                                                         |
-|apiserver.admission_duration.p90latency|float64|                                                                         |
-|apiserver.admission_duration.p95latency|float64|                                                                         |
-|apiserver.admission_duration.p99latency|float64|                                                                         |
-|apiserver.admission_duration.duration|float64| duration of admission controller processing in the API server           |
-|apiserver.admission_duration.total_num|uint64| number of admission controller processing in the API server             |
+|Metric Name|Unit| Description                                    |
+|----|----|------------------------------------------------|
+|apiserver.admission_duration.p50latency|float64| p50 latency of admission controller processing |
+|apiserver.admission_duration.p75latency|float64| p75 latency of admission controller processing |
+|apiserver.admission_duration.p90latency|float64| p90 latency of admission controller processing |
+|apiserver.admission_duration.p95latency|float64| p95 latency of admission controller processing |
+|apiserver.admission_duration.p99latency|float64| p99 latency of admission controller processing  |
+|apiserver.admission_duration.duration|float64| duration of admission controller processing in the API server |
+|apiserver.admission_duration.total_num|uint64| number of admission controller processing in the API server |
 
 #### TLS Error
 |Metric Name|Unit| Description                                                      |
@@ -440,15 +440,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.tls_handshake_error.total_num|uint64| number of requests dropped with 'TLS handshake error from' error |
 
 #### Authentication Duration
-|Metric Name|Unit| Description                                     |
-|----|----|-------------------------------------------------|
-|apiserver.auth_duration.p50latency|float64|                                                 |
-|apiserver.auth_duration.p75latency|float64|                                                 |
-|apiserver.auth_duration.p90latency|float64|                                                 |
-|apiserver.auth_duration.p95latency|float64|                                                 |
-|apiserver.auth_duration.p99latency|float64|                                                 |
+|Metric Name|Unit| Description                               |
+|----|----|-------------------------------------------|
+|apiserver.auth_duration.p50latency|float64| p50 latency of authentication process     |
+|apiserver.auth_duration.p75latency|float64| p75 latency of authentication process     |
+|apiserver.auth_duration.p90latency|float64| p90 latency of authentication process     |
+|apiserver.auth_duration.p95latency|float64| p50 latency of authentication process     |
+|apiserver.auth_duration.p99latency|float64| p50 latency of authentication process     |
 |apiserver.auth_duration.duration|float64| duration of authentication processes in seconds |
-|apiserver.auth_duration.total_num|uint64| number of authentication processes              |
+|apiserver.auth_duration.total_num|uint64| number of authentication processes        |
 
 #### Authenticated User Requests
 |Metric Name|Unit| Description                      |
@@ -456,15 +456,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.auth_user_req.total_num|uint64| number of authenticated requests |
 
 #### Client Certificate Expiry
-|Metric Name|Unit| Description                                                                                    |
-|----|----|------------------------------------------------------------------------------------------------|
-|apiserver.client_cert_expiry.p50latency|float64|                                                                                                |
-|apiserver.client_cert_expiry.p75latency|float64|                                                                                                |
-|apiserver.client_cert_expiry.p90latency|float64|                                                                                                |
-|apiserver.client_cert_expiry.p95latency|float64|                                                                                                |
-|apiserver.client_cert_expiry.p99latency|float64|                                                                                                |
+|Metric Name|Unit| Description                    |
+|----|----|--------------------------------|
+|apiserver.client_cert_expiry.p50latency|float64| p50 latency of expiration time |
+|apiserver.client_cert_expiry.p75latency|float64| p75 latency of expiration time |
+|apiserver.client_cert_expiry.p90latency|float64| p90 latency of expiration time |
+|apiserver.client_cert_expiry.p95latency|float64| p95 latency of expiration time |
+|apiserver.client_cert_expiry.p99latency|float64| p99 latency of expiration time |
 |apiserver.client_cert_expiry.duration|float64| expiration time in seconds of the client certificates used to authenticate with the API server |
-|apiserver.client_cert_expiry.total_num|uint64| number of clients certificates used to authenticate with the API server                        |
+|apiserver.client_cert_expiry.total_num|uint64| number of clients certificates used to authenticate with the API server |
 
 #### Key Geneneration Fails
 |Metric Name|Unit| Description                                                   |
@@ -474,11 +474,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Key Generation Duration
 |Metric Name|Unit| Description                                                                        |
 |----|----|------------------------------------------------------------------------------------|
-|apiserver.key_gen_duration.p50latency|float64|                                                                                    |
-|apiserver.key_gen_duration.p75latency|float64|                                                                                    |
-|apiserver.key_gen_duration.p90latency|float64|                                                                                    |
-|apiserver.key_gen_duration.p95latency|float64|                                                                                    |
-|apiserver.key_gen_duration.p99latency|float64|                                                                                    |
+|apiserver.key_gen_duration.p50latency|float64| p50 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p75latency|float64| p75 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p90latency|float64| p90 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p95latency|float64| p95 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p99latency|float64| p99 latency of key generation for storing data                                     |
 |apiserver.key_gen_duration.duration|float64| duration of key generation for storing data in the API server's storage in seconds |
 |apiserver.key_gen_duration.total_num|uint64| number of key generation for storing data in the API server's storage              |
 
@@ -488,15 +488,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.request_total.total_num|uint64| number of apiserver requests |
 
 #### Requests Duration
-|Metric Name|Unit| Description                               |
-|----|----|-------------------------------------------|
-|apiserver.request_duration.p50latency|float64|                                           |
-|apiserver.request_duration.p75latency|float64|                                           |
-|apiserver.request_duration.p90latency|float64|                                           |
-|apiserver.request_duration.p95latency|float64|                                           |
-|apiserver.request_duration.p99latency|float64|                                           |
-|apiserver.request_duration.duration|float64| duration of API server requestsin seconds |
-|apiserver.request_duration.total_num|uint64| number of API server requests             |
+|Metric Name|Unit| Description                                |
+|----|----|--------------------------------------------|
+|apiserver.request_duration.p50latency|float64| p50 latency of API server requests         |
+|apiserver.request_duration.p75latency|float64| p75 latency of API server requests         |
+|apiserver.request_duration.p90latency|float64| p90 latency of API server requests         |
+|apiserver.request_duration.p95latency|float64| p95 latency of API server requests         |
+|apiserver.request_duration.p99latency|float64| p99 latency of API server requests         |
+|apiserver.request_duration.duration|float64| duration of API server requests in seconds |
+|apiserver.request_duration.total_num|uint64| number of API server requests              |
 
 ### Etcd Metrics
 #### Generic
@@ -511,35 +511,35 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.version|float64| version of etcd running                 |
 
 #### Commit
-|Metric Name|Unit| Description                                                      |
-|----|----|------------------------------------------------------------------|
-|etcd.disk_backend_commit.p50latency|float64|                                                                  |
-|etcd.disk_backend_commit.p75latency|float64|                                                                  |
-|etcd.disk_backend_commit.p90latency|float64|                                                                  |
-|etcd.disk_backend_commit.p95latency|float64|                                                                  |
-|etcd.disk_backend_commit.p99latency|float64|                                                                  |
-|etcd.disk_backend_commit.total_num|uint64| number of commit operations for etcd's disk bakend commits       |
+|Metric Name|Unit| Description                       |
+|----|----|-----------------------------------|
+|etcd.disk_backend_commit.p50latency|float64| p50 latency of commit operations  |
+|etcd.disk_backend_commit.p75latency|float64| p75 latency of commit operations  |
+|etcd.disk_backend_commit.p90latency|float64| p90 latency of commit operations  |
+|etcd.disk_backend_commit.p95latency|float64| p95 latency of commit operations  |
+|etcd.disk_backend_commit.p99latency|float64| p99 latency of commit operations  |
+|etcd.disk_backend_commit.total_num|uint64| number of commit operations for etcd's disk bakend commits |
 |etcd.disk_backend_commit.duration|float64| duration of commit operations for etcd's disk backend in seconds |
 
 #### WAL
-|Metric Name|Unit| Description                                                                                                  |
-|----|----|--------------------------------------------------------------------------------------------------------------|
-|etcd.disk_wal_fsync.p50latency|float64|                                                                                                              |
-|etcd.disk_wal_fsync.p75latency|float64|                                                                                                              |
-|etcd.disk_wal_fsync.p90latency|float64|                                                                                                              |
-|etcd.disk_wal_fsync.p95latency|float64|                                                                                                              |
-|etcd.disk_wal_fsync.p99latency|float64|                                                                                                              |
-|etcd.disk_wal_fsync.total_num|uint64| number of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend              |
+|Metric Name|Unit| Description                      |
+|----|----|----------------------------------|
+|etcd.disk_wal_fsync.p50latency|float64| p50 latency of fsync operations  |
+|etcd.disk_wal_fsync.p75latency|float64| p75 latency of fsync operations  |
+|etcd.disk_wal_fsync.p90latency|float64| p90 latency of fsync operations  |
+|etcd.disk_wal_fsync.p95latency|float64| p95 latency of fsync operations  |
+|etcd.disk_wal_fsync.p99latency|float64| p99 latency of fsync operations  |
+|etcd.disk_wal_fsync.total_num|uint64| number of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend |
 |etcd.disk_wal_fsync.duration|float64| duration of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend in seconds |
 
 #### Backend Snapshots
 |Metric Name|Unit| Description                                                      |
 |----|----|------------------------------------------------------------------|
-|etcd.disk_backend_snapshot.p50latency|float64|                                                                  |
-|etcd.disk_backend_snapshot.p75latency|float64|                                                                  |
-|etcd.disk_backend_snapshot.p90latency|float64|                                                                  |
-|etcd.disk_backend_snapshot.p95latency|float64|                                                                  |
-|etcd.disk_backend_snapshot.p99latency|float64|                                                                  |
+|etcd.disk_backend_snapshot.p50latency|float64| p50 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p75latency|float64| p75 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p90latency|float64| p90 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p95latency|float64| p95 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p99latency|float64| p99 latency of snapshot creation                                 |
 |etcd.disk_backend_snapshot.total_num|uint64| number of snapshot creation for etcd's disk backend              |
 |etcd.disk_backend_snapshot.duration|float64| duration of snapshot creation for etcd's disk backend in seconds |
 
@@ -566,36 +566,36 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.store.watchers| uint64| number of currently active watchers                                                         |
 
 #### Commit Rebalance
-|Metric Name|Unit| Description                                                                  |
-|----|----|------------------------------------------------------------------------------|
-|etcd.commit_rebalance_duration.p50latency|float64|                                                                              |
-|etcd.commit_rebalance_duration.p75latency|float64|                                                                              |
-|etcd.commit_rebalance_duration.p90latency|float64|                                                                              |
-|etcd.commit_rebalance_duration.p95latency|float64|                                                                              |
-|etcd.commit_rebalance_duration.p99latency|float64|                                                                              |
-|etcd.commit_rebalance_duration.total_num|uint64| number of commit and rebalance operations for etcd disk backend              |
+|Metric Name|Unit| Description                                      |
+|----|----|--------------------------------------------------|
+|etcd.commit_rebalance_duration.p50latency|float64| p50 latency of commit and rebalance operations   |
+|etcd.commit_rebalance_duration.p75latency|float64| p75 latency of commit and rebalance operations   |
+|etcd.commit_rebalance_duration.p90latency|float64| p90 latency of commit and rebalance operations   |
+|etcd.commit_rebalance_duration.p95latency|float64| p95 latency of commit and rebalance operations   |
+|etcd.commit_rebalance_duration.p99latency|float64| p99 latency of commit and rebalance operations   |
+|etcd.commit_rebalance_duration.total_num|uint64| number of commit and rebalance operations for etcd disk backend |
 |etcd.commit_rebalance_duration.duration|float64| duration of commit and rebalance operations for etcd disk backend in seconds |
 
 #### Commit Write
 |Metric Name|Unit| Description                                                     |
 |----|----|-----------------------------------------------------------------|
-|etcd.commit_write.p50latency|float64|                                                                 |
-|etcd.commit_write.p75latency|float64|                                                                 |
-|etcd.commit_write.p90latency|float64|                                                                 |
-|etcd.commit_write.p95latency|float64|                                                                 |
-|etcd.commit_write.p99latency|float64|                                                                 |
+|etcd.commit_write.p50latency|float64| p50 latency of write operations during commit                   |
+|etcd.commit_write.p75latency|float64| p75 latency of write operations during commit                   |
+|etcd.commit_write.p90latency|float64| p90 latency of write operations during commit                   |
+|etcd.commit_write.p95latency|float64| p95 latency of write operations during commit                   |
+|etcd.commit_write.p99latency|float64| p99 latency of write operations during commit                   |
 |etcd.commit_write.total_num|uint64| number of write operations during commit in etcd disk backend   |
 |etcd.commit_write.duration|float64| duration of write operations during commit in etcd disk backend |
 
 #### DB Compaction Duration
-|Metric Name|Unit| Description                                                     |
-|----|----|-----------------------------------------------------------------|
-|etcd.mvcc_db_compaction.p50latency|float64|                                                                 |
-|etcd.mvcc_db_compaction.p75latency|float64|                                                                 |
-|etcd.mvcc_db_compaction.p90latency|float64|                                                                 |
-|etcd.mvcc_db_compaction.p95latency|float64|                                                                 |
-|etcd.mvcc_db_compaction.p99latency|float64|                                                                 |
-|etcd.mvcc_db_compaction.total_num|uint64| number of MVCC database compactation operations                 |
+|Metric Name|Unit| Description                                                      |
+|----|----|------------------------------------------------------------------|
+|etcd.mvcc_db_compaction.p50latency|float64| p50 latency of MVCC database compactation operations             |
+|etcd.mvcc_db_compaction.p75latency|float64| p75 latency of MVCC database compactation operations             |
+|etcd.mvcc_db_compaction.p90latency|float64| p90 latency of MVCC database compactation operations             |
+|etcd.mvcc_db_compaction.p95latency|float64| p95 latency of MVCC database compactation operations             |
+|etcd.mvcc_db_compaction.p99latency|float64| p99 latency of MVCC database compactation operations             |
+|etcd.mvcc_db_compaction.total_num|uint64| number of MVCC database compactation operations                  |
 |etcd.mvcc_db_compaction.duration|float64| duration of MVCC database compactation operations in miliseconds |
 
 ### Kube-proxy Metrics
@@ -616,22 +616,22 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Client Duration
 |Metric Name| Unit  | Description                                 |
 |----|-------|---------------------------------------------|
-|kubeproxy.rest_client_duration.p50latency| float64|                                             |
-|kubeproxy.rest_client_duration.p75latency| float64|                                             |
-|kubeproxy.rest_client_duration.p90latency| float64|                                             |
-|kubeproxy.rest_client_duration.p95latency| float64|                                             |
-|kubeproxy.rest_client_duration.p99latency| float64|                                             |
+|kubeproxy.rest_client_duration.p50latency| float64| p50 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p75latency| float64| p75 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p90latency| float64| p90 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p95latency| float64| p95 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p99latency| float64| p99 latency of REST client requests         |
 |kubeproxy.rest_client_duration.duration| float64| duration of REST client requests in seconds |
 |kubeproxy.rest_client_duration.total_num| uint64| number of REST client requests              |
 
 #### Sync Proxy Rules Duration
 |Metric Name| Unit  | Description                                        |
 |----|-------|----------------------------------------------------|
-|kubeproxy.sync_proxy_rules.p50latency| float64|                                                    |
-|kubeproxy.sync_proxy_rules.p75latency| float64|                                                    |
-|kubeproxy.sync_proxy_rules.p90latency| float64|                                                    |
-|kubeproxy.sync_proxy_rules.p95latency| float64|                                                    |
-|kubeproxy.sync_proxy_rules.p99latency| float64|                                                    |
+|kubeproxy.sync_proxy_rules.p50latency| float64| p50 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p75latency| float64| p75 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p90latency| float64| p90 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p95latency| float64| p95 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p99latency| float64| p99 latency of proxy rules synchronization         |
 |kubeproxy.sync_proxy_rules.duration| float64| duration of proxy rules synchronization in seconds |
 |kubeproxy.sync_proxy_rules.total_num| uint64| number of proxy rules synchronization              |
 
@@ -648,15 +648,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.forward_max_concurrent_rejects.total_num|uint64| number of queries rejected because the concurrent queries were at maximum |
 
 #### Request Duration
-|Metric Name|Unit| Description                                           |
-|----|----|-------------------------------------------------------|
-|coredns.request_duration.p50latency|float64|                                                       |
-|coredns.request_duration.p75latency|float64|                                                       |
-|coredns.request_duration.p90latency|float64|                                                       |
-|coredns.request_duration.p95latency|float64|                                                       |
-|coredns.request_duration.p99latency|float64|                                                       |
+|Metric Name|Unit| Description                                            |
+|----|----|--------------------------------------------------------|
+|coredns.request_duration.p50latency|float64| p50 latency of DNS requests handled                    |
+|coredns.request_duration.p75latency|float64| p75 latency of DNS requests handled                    |
+|coredns.request_duration.p90latency|float64| p90 latency of DNS requests handled                    |
+|coredns.request_duration.p95latency|float64| p95 latency of DNS requests handled                    |
+|coredns.request_duration.p99latency|float64| p99 latency of DNS requests handled                    |
 |coredns.request_duration.duration|float64| duration of DNS requests handled by CoreDNS in seconds |
-|coredns.request_duration.total_num|uint64| number of DNS requests handled by CoreDNS             |
+|coredns.request_duration.total_num|uint64| number of DNS requests handled by CoreDNS              |
 
 #### Requests
 |Metric Name|Unit| Description                           |
@@ -679,15 +679,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.forward_cache.misses|uint64| number of connection cache misses per upstream and protocol |
 
 #### Forward Request Duration
-|Metric Name|Unit| Description                                                       |
-|----|----|-------------------------------------------------------------------|
-|coredns.forward_request.p50latency|float64|                                                                   |
-|coredns.forward_request.p75latency|float64|                                                                   |
-|coredns.forward_request.p90latency|float64|                                                                   |
-|coredns.forward_request.p95latency|float64|                                                                   |
-|coredns.forward_request.p99latency|float64|                                                                   |
+|Metric Name|Unit| Description                                                      |
+|----|----|------------------------------------------------------------------|
+|coredns.forward_request.p50latency|float64| p50 latency of forwarded DNS requests handled                    |
+|coredns.forward_request.p75latency|float64| p75 latency of forwarded DNS requests handled                    |
+|coredns.forward_request.p90latency|float64| p90 latency of forwarded DNS requests handled                    |
+|coredns.forward_request.p95latency|float64| p95 latency of forwarded DNS requests handled                    |
+|coredns.forward_request.p99latency|float64| p99 latency of forwarded DNS requests hanndled                   |
 |coredns.forward_request.duration|float64| duration of forwarding DNS requests handled by CoreDNS in seconds |
-|coredns.forward_request.total_num|uint64| number of forwarding DNS requests handled by CoreDNS              |
+|coredns.forward_request.total_num|uint64| number of forwarding DNS requests handled by CoreDNS             |
 
 ### Scheduler Metrics
 #### Preemption Attempts
@@ -721,58 +721,58 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |scheduler.cache.total_num|uint64| number of nodes, pods, and assumed (bound) pods in the scheduler cache |
 
 #### E2E Scheduling Duration
-|Metric Name|Unit| Description                                                                                      |
-|----|----|--------------------------------------------------------------------------------------------------|
-|scheduler.e2e_duration.p50latency|float64|                                                                                                  |
-|scheduler.e2e_duration.p75latency|float64|                                                                                                  |
-|scheduler.e2e_duration.p90latency|float64|                                                                                                  |
-|scheduler.e2e_duration.p95latency|float64|                                                                                                  |
-|scheduler.e2e_duration.p99latency|float64|                                                                                                  |
-|scheduler.e2e_duration.total_num|uint64| number of end-to-end scheduling operations                                                       |
+|Metric Name|Unit| Description                                                                                       |
+|----|----|---------------------------------------------------------------------------------------------------|
+|scheduler.e2e_duration.p50latency|float64| p50 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p75latency|float64| p75 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p90latency|float64| p90 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p95latency|float64| p95 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p99latency|float64| p99 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.total_num|uint64| number of end-to-end scheduling operations                                                        |
 |scheduler.e2e_duration.duration|float64| duration of end-to-end scheduling operations measured in seconds (scheduling algorithm + binding) |
 
 #### Scheduling Algorithm Duration
-|Metric Name|Unit| Description                                          |
-|----|----|------------------------------------------------------|
-|scheduler.scheduling_algorithm.p50latency|float64|                                                      |
-|scheduler.scheduling_algorithm.p75latency|float64|                                                      |
-|scheduler.scheduling_algorithm.p90latency|float64|                                                      |
-|scheduler.scheduling_algorithm.p95latency|float64|                                                      |
-|scheduler.scheduling_algorithm.p99latency|float64|                                                      |
-|scheduler.scheduling_algorithm.total_num|uint64| number of scheduling algorithm execution             |
+|Metric Name|Unit| Description                                           |
+|----|----|-------------------------------------------------------|
+|scheduler.scheduling_algorithm.p50latency|float64| p50 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p75latency|float64| p75 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p90latency|float64| p90 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p95latency|float64| p95 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p99latency|float64| p99 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.total_num|uint64| number of scheduling algorithm execution              |
 |scheduler.scheduling_algorithm.duration|float64| duration of scheduling algorithm execution in seconds |
 
 #### Preemption Victims
 |Metric Name|Unit| Description                                                                                    |
 |----|----|------------------------------------------------------------------------------------------------|
-|scheduler.preemption_victims.p50latency|float64|                                                                                                |
-|scheduler.preemption_victims.p75latency|float64|                                                                                                |
-|scheduler.preemption_victims.p90latency|float64|                                                                                                |
-|scheduler.preemption_victims.p95latency|float64|                                                                                                |
-|scheduler.preemption_victims.p99latency|float64|                                                                                                |
+|scheduler.preemption_victims.p50latency|float64| p50 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p75latency|float64| p75 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p90latency|float64| p90 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p95latency|float64| p95 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p99latency|float64| p99 latency of preemption victims                                                              |
 |scheduler.preemption_victims.total_num|uint64| number of preemption victims identified by the scheduler for resource reclamation              |
 |scheduler.preemption_victims.duration|float64| duration of preemption victims identified by the scheduler for resource reclamation in seconds |
 
 #### Scheduling Duration
 |Metric Name|Unit| Description                                                                |
 |----|----|----------------------------------------------------------------------------|
-|scheduler.scheduling_duration.p50latency|float64|                                                                            |
-|scheduler.scheduling_duration.p75latency|float64|                                                                            |
-|scheduler.scheduling_duration.p90latency|float64|                                                                            |
-|scheduler.scheduling_duration.p95latency|float64|                                                                            |
-|scheduler.scheduling_duration.p99latency|float64|                                                                            |
+|scheduler.scheduling_duration.p50latency|float64| p50 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p75latency|float64| p75 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p90latency|float64| p90 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p95latency|float64| p95 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p99latency|float64| p99 latency of pod scheduling operations                                   |
 |scheduler.scheduling_duration.total_num|uint64| number of pod scheduling operations in the scheduler                       |
 |scheduler.scheduling_duration.duration|float64| duration of pod scheduling operations in the scheduler measured in seconds |
 
 #### Framework Extension Duration
-|Metric Name|Unit| Description                                                        |
-|----|----|--------------------------------------------------------------------|
-|scheduler.framework_extension.p50latency|float64|                                                                    |
-|scheduler.framework_extension.p75latency|float64|                                                                    |
-|scheduler.framework_extension.p90latency|float64|                                                                    |
-|scheduler.framework_extension.p95latency|float64|                                                                    |
-|scheduler.framework_extension.p99latency|float64|                                                                    |
-|scheduler.framework_extension.total_num|uint64| number of framework extension point execution measured             |
+|Metric Name|Unit| Description                                                         |
+|----|----|---------------------------------------------------------------------|
+|scheduler.framework_extension.p50latency|float64| p50 latency of framework extension point executions                 |
+|scheduler.framework_extension.p75latency|float64| p75 latency of framework extension point executions                 |
+|scheduler.framework_extension.p90latency|float64| p90 latency of framework extension point executions                 |
+|scheduler.framework_extension.p95latency|float64| p95 latency of framework extension point executions                 |
+|scheduler.framework_extension.p99latency|float64| p99 latency of framework extension point executions                 |
+|scheduler.framework_extension.total_num|uint64| number of framework extension point execution measured              |
 |scheduler.framework_extension.duration|float64| duration of framework extension point execution measured in seconds |
 
 #### Scheduler Attempts
