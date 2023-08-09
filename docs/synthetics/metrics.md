@@ -58,6 +58,8 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
+#### Browser Monitors
+
 You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically prefixed with `synthetics.browser.custom.`.
 
 Here's an example of a User Journey script which defines two custom metrics: the used JavaScript heap size and how long the combined duration of JavaScript execution is. For your convenience, this example is also listed as **Using Custom Metrics** under the **Browse Examples** section while creating the Browser monitor.
@@ -81,12 +83,33 @@ async function testPage(page, context) {
 }
 module.exports = testPage;
 ```
+#### HTTP Monitors
 
-Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/). Go to your **Dashboards** and create a new component. In this example we'll use the **Time Series Chart**. You will then be able to find the custom metrics you've defined in the **Metrics** dropdown. In the script above, we've defined two metrics: `heap.size` and `script.time`. With the previously mentioned added prefix, these will be displayed as `synthetics.browser.custom.heap.size` and `synthetics.browser.custom.script.time`.
+To extract custom metrics from HTTP monitors, navigate to **Configure Response** tab, enable to **Save Response Body**. You will see the option to choose between XML, JSON based on your response body type. Once you select it, you can manually enter a sample input or fetch a sample response from the HTTP url specified.
 
-![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.png)
+After fetching the sample input, enter the path to extract the custom metric. You will see the output within the **Extracted Value** box and you will need to specify a name for the extracted metric. 
 
-Because Browser monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
+screenshot placeholder
+
+### How to visualize and alert on metrics
+
+Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run through the run flyout.
+
+screenshot placeholder
+
+You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and click on the **Add to Dashboard** icon. 
+
+screenshot placeholder
+
+In this example we'll create a **Time Series Chart** to chart `synthetics.browser.custom.script.time` metric that we have extracted from Browser Monitor user jurney script sample above. 
+
+gif here
+
+After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then choose the specific **Dashboard** you selected when creating the chart. 
+
+screenshot placeholder
+
+Because monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
 
 ![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
 
