@@ -445,8 +445,8 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.auth_duration.p50latency|float64| p50 latency of authentication process     |
 |apiserver.auth_duration.p75latency|float64| p75 latency of authentication process     |
 |apiserver.auth_duration.p90latency|float64| p90 latency of authentication process     |
-|apiserver.auth_duration.p95latency|float64| p50 latency of authentication process     |
-|apiserver.auth_duration.p99latency|float64| p50 latency of authentication process     |
+|apiserver.auth_duration.p95latency|float64| p95 latency of authentication process     |
+|apiserver.auth_duration.p99latency|float64| p99 latency of authentication process     |
 |apiserver.auth_duration.duration|float64| duration of authentication processes in seconds |
 |apiserver.auth_duration.total_num|uint64| number of authentication processes        |
 
