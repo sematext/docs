@@ -85,27 +85,23 @@ module.exports = testPage;
 ```
 #### HTTP Monitors
 
-To extract custom metrics from HTTP monitors, navigate to **Configure Response** tab, enable to **Save Response Body**. You will see the option to choose between XML, JSON based on your response body type. Once you select it, you can manually enter a sample input or fetch a sample response from the HTTP url specified.
+To extract custom metrics from HTTP monitors, navigate to the **Configure Response** tab and enable **Save Response Body**. Select either JSON or XML, depending on the format of the HTTP response body. Fetch a sample response from the specified HTTP URL or manually provide the response body, then enter the path to extract the metric. You will see the output within the **Extracted Value** box, and you will need to specify a name for the extracted metric.
 
-After fetching the sample input, enter the path to extract the custom metric. You will see the output within the **Extracted Value** box and you will need to specify a name for the extracted metric. 
+![Custom Metrics HTTP Monitor](../images/synthetics/custom-metrics-http-monitor.png)
 
-screenshot placeholder
+Note that **+ New JSON Path** in the screenshot above.  This lets you extract multiple different metrics.
 
 ### How to visualize and alert on metrics
 
-Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run through the run flyout.
+Once you have defined your chosen custom metrics either with HTTP or Browser monitor, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run in the run flyout.
 
 screenshot placeholder
 
-You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and click on the **Add to Dashboard** icon. 
-
-screenshot placeholder
-
-In this example we'll create a **Time Series Chart** to chart `synthetics.browser.custom.script.time` metric that we have extracted from Browser Monitor user jurney script sample above. 
+You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and clicking on the **Add to Dashboard** icon. In this example, we'll create a **Time Series Chart** to chart `synthetics.browser.custom.heap.time` metric that we extracted from the Browser Monitor user jurney script sample above. 
 
 gif here
 
-After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then choose the specific **Dashboard** you selected when creating the chart. 
+After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then select the specific **Dashboard** you chose when creating the chart. 
 
 screenshot placeholder
 
