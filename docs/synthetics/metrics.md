@@ -105,7 +105,7 @@ After configuring and saving your chart, navigate to the **Dashboards** using th
 
 [add screenshot here after https://sematext.atlassian.net/browse/SC-17072]
 
-Because monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
+Because monitors run once every several minutes, you might want to navigate to the **Axes** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
 
 ![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
 
