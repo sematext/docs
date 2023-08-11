@@ -95,15 +95,15 @@ module.exports = testPage;
 
 Once you have defined your chosen custom metrics either with HTTP or Browser monitor, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run in the run flyout.
 
-screenshot placeholder
+[add screenshot here after https://sematext.atlassian.net/browse/SC-17072]
 
 You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and clicking on the **Add to Dashboard** icon. In this example, we'll create a **Time Series Chart** to chart `synthetics.browser.custom.heap.time` metric that we extracted from the Browser Monitor user jurney script sample above. 
 
-gif here
+[add gif here after https://sematext.atlassian.net/browse/SC-17072]
 
 After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then select the specific **Dashboard** you chose when creating the chart. 
 
-screenshot placeholder
+[add screenshot here after https://sematext.atlassian.net/browse/SC-17072]
 
 Because monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
 
