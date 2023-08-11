@@ -58,6 +58,14 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
+#### HTTP Monitors
+
+To extract custom metrics from HTTP monitors, navigate to the **Configure Response** tab and enable **Save Response Body**. Select either JSON or XML, depending on the format of the HTTP response body. Fetch a sample response from the specified HTTP URL or manually provide the response body, then enter the path to extract the metric. You will see the output within the **Extracted Value** box, and you will need to specify a name for the extracted metric.
+
+![Custom Metrics HTTP Monitor](../images/synthetics/custom-metrics-http-monitor.png)
+
+Note that **+ New JSON Path** in the screenshot above.  This lets you extract multiple different metrics.
+
 #### Browser Monitors
 
 You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically prefixed with `synthetics.browser.custom.`.
@@ -83,14 +91,6 @@ async function testPage(page, context) {
 }
 module.exports = testPage;
 ```
-#### HTTP Monitors
-
-To extract custom metrics from HTTP monitors, navigate to the **Configure Response** tab and enable **Save Response Body**. Select either JSON or XML, depending on the format of the HTTP response body. Fetch a sample response from the specified HTTP URL or manually provide the response body, then enter the path to extract the metric. You will see the output within the **Extracted Value** box, and you will need to specify a name for the extracted metric.
-
-![Custom Metrics HTTP Monitor](../images/synthetics/custom-metrics-http-monitor.png)
-
-Note that **+ New JSON Path** in the screenshot above.  This lets you extract multiple different metrics.
-
 ### How to visualize and alert on metrics
 
 Once you have defined your chosen custom metrics either with HTTP or Browser monitor, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run in the run flyout.
