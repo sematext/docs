@@ -192,19 +192,19 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Storage Metrics
 
-|Name|Type|Unit|Numeric Type|Label| Description                           |
-|----|----|----|------------|-----|---------------------------------------|
-|kubernetes.pvc.available|gauge|bytes|long|available bytes|number of available bytes in the volume |
-|kubernetes.pvc.used|gauge|bytes|long|used bytes|number of used bytes in the volume     |
-|kubernetes.pvc.capacity|gauge|bytes|long|volume capacity|the capacity in bytes of the volume    |
+|Name|Type|Unit|Numeric Type| Description |
+|----|----|----|---------|-|
+|kubernetes.pvc.available|gauge|bytes|long|number of available bytes in the volume |
+|kubernetes.pvc.used|gauge|bytes|long|number of used bytes in the volume |
+|kubernetes.pvc.capacity|gauge|bytes|long|the capacity in bytes of the volume    |
 
 ### Kubelet Metrics
 #### Volume Stats
-|Metric Name|Unit| Description                           |
-|----|----|---------------------------------------|
-|pvc.used|int64|number of used inodes in the volume    |
-|pvc.available|int64|number of available bytes in the volume |
-|pvc.capacity|int64|capacity in bytes of the volume        |
+| Metric Name              |Unit| Description                           |
+|--------------------------|----|---------------------------------------|
+| kubernetes.pvc.used      |int64|number of used inodes in the volume    |
+| kubernetes.pvc.available |int64|number of available bytes in the volume |
+| kubernetes.pvc.capacity  |int64|capacity in bytes of the volume        |
 
 #### Runtime Operations
 |Metric Name| Unit  | Description                                                     |
@@ -322,16 +322,16 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.http_inflight_request.total_num|float64| number of inflight requests |
 
 #### HTTP Request Duration
-|Metric Name|Unit| Description                                |
-|----|----|--------------------------------------------|
-|kubelet.http_request.operations|float64| total number of HTTP request operations    |
-|kubelet.http_request.total_num|int64| total number of HTTP requests              |
-|kubelet.http_request.duration|float64| HTTP request duration                      |
-|kubelet.http_request.p50latency|float64| p50 HTTP request latencies in seconds      |
-|kubelet.http_request.p75latency|float64| p75 HTTP request latencies in seconds      |
-|kubelet.http_request.p90latency|float64| p90 HTTP request latencies in seconds      |
-|kubelet.http_request.p95latency|float64| p95 HTTP request latencies in seconds      |
-|kubelet.http_request.p99latency|float64| p99 HTTP request latencies in seconds      |
+|Metric Name|Unit| Description                             |
+|----|----|-----------------------------------------|
+|kubelet.http_request.operations|float64| total number of HTTP request operations |
+|kubelet.http_request.total_num|int64| total number of HTTP requests           |
+|kubelet.http_request.duration|float64| HTTP request duration                   |
+|kubelet.http_request.p50latency|float64| p50 HTTP request latency in seconds     |
+|kubelet.http_request.p75latency|float64| p75 HTTP request latency in seconds     |
+|kubelet.http_request.p90latency|float64| p90 HTTP request latency in seconds     |
+|kubelet.http_request.p95latency|float64| p95 HTTP request latency in seconds     |
+|kubelet.http_request.p99latency|float64| p99 HTTP request latency in seconds     |
 
 #### Network Plugin Operations
 |Metric Name|Unit| Description                                            |
@@ -383,9 +383,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.inflight_requests.total_num|uint64| number of in-flight requests being processed by API server |
 
 #### Audit Events
-|Metric Name|Unit| Description                                                     |
-|----|----|-----------------------------------------------------------------|
-|apiserver.audit_events.total_num|uint64| counter of audit events generated and sent to the audit backend |
+|Metric Name|Unit| Description                                                    |
+|----|----|----------------------------------------------------------------|
+|apiserver.audit_events.total_num|uint64| number of audit events generated and sent to the audit backend |
 
 #### Request Duration
 |Metric Name|Unit| Description                          |
@@ -483,9 +483,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.key_gen_duration.total_num|uint64| number of key generation for storing data in the API server's storage              |
 
 #### Requests Total
-|Metric Name|Unit| Description                  |
-|----|----|------------------------------|
-|apiserver.request_total.total_num|uint64| number of apiserver requests |
+|Metric Name|Unit| Description                   |
+|----|----|-------------------------------|
+|apiserver.request_total.total_num|uint64| number of API server requests |
 
 #### Requests Duration
 |Metric Name|Unit| Description                                |
@@ -511,14 +511,14 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.version|float64| version of etcd running                 |
 
 #### Commit
-|Metric Name|Unit| Description                       |
-|----|----|-----------------------------------|
-|etcd.disk_backend_commit.p50latency|float64| p50 latency of commit operations  |
-|etcd.disk_backend_commit.p75latency|float64| p75 latency of commit operations  |
-|etcd.disk_backend_commit.p90latency|float64| p90 latency of commit operations  |
-|etcd.disk_backend_commit.p95latency|float64| p95 latency of commit operations  |
-|etcd.disk_backend_commit.p99latency|float64| p99 latency of commit operations  |
-|etcd.disk_backend_commit.total_num|uint64| number of commit operations for etcd's disk bakend commits |
+|Metric Name|Unit| Description                                                      |
+|----|----|------------------------------------------------------------------|
+|etcd.disk_backend_commit.p50latency|float64| p50 latency of commit operations                                 |
+|etcd.disk_backend_commit.p75latency|float64| p75 latency of commit operations                                 |
+|etcd.disk_backend_commit.p90latency|float64| p90 latency of commit operations                                 |
+|etcd.disk_backend_commit.p95latency|float64| p95 latency of commit operations                                 |
+|etcd.disk_backend_commit.p99latency|float64| p99 latency of commit operations                                 |
+|etcd.disk_backend_commit.total_num|uint64| number of commit operations for etcd's disk backend commits      |
 |etcd.disk_backend_commit.duration|float64| duration of commit operations for etcd's disk backend in seconds |
 
 #### WAL
@@ -549,21 +549,21 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.grpc.handled|uint64| number of RPCs completed on the server, regardless of success or failure|
 
 #### MVCC
-|Metric Name| Unit  | Description                                                                                 |
-|----|-------|---------------------------------------------------------------------------------------------|
-|etcd.mvcc.keys| uint64| number of keys                                                                              |
-|etcd.mvcc.events| uint64| number of events sent by this member                                                        |
-|etcd.mvcc.keys_bytes| uint64| number of MVCC keys involved in etcd debugging operations                                   |
-|etcd.mvcc.watch_stream| uint64| number of watch streams                                                                     |
-|etcd.mvcc.watcher| uint64| number of watchers                                                                          |
-|etcd.mvcc.db_read| uint64| number of currently open read transactions                                                  |
-|etcd.mvcc.db_size| uint64| size of the underlying database physically allocated in bytes.                              |
-|etcd.mvcc.db_used| uint64| size of the underlying database logically in use in bytes                                   |
-|etcd.mvcc.puts| uint64| number of puts seen by this member                                                          |
-|etcd.mvcc.deletes| uint64| number of deletes seen by this member                                                       |
-|etcd.mvcc.slow_watches| uint64| number of unsynced slow watchers                                                            |
-|etcd.watch.requests| uint64| number of incoming watch requests (new or reestablished)                                    |
-|etcd.store.watchers| uint64| number of currently active watchers                                                         |
+|Metric Name| Unit  | Description                                                                                |
+|----|-------|--------------------------------------------------------------------------------------------|
+|etcd.mvcc.keys| uint64| number of keys                                                                             |
+|etcd.mvcc.events| uint64| number of events sent by this member                                                       |
+|etcd.mvcc.keys_bytes| uint64| number of MVCC keys involved in etcd debugging operations                                  |
+|etcd.mvcc.watch_stream| uint64| number of watch streams                                                                    |
+|etcd.mvcc.watcher| uint64| number of watchers                                                                         |
+|etcd.mvcc.db_read| uint64| number of currently open read transactions                                                 |
+|etcd.mvcc.db_size| uint64| size of the underlying database physically allocated in bytes                              |
+|etcd.mvcc.db_used| uint64| size of the underlying database logically in use in bytes                                  |
+|etcd.mvcc.puts| uint64| number of puts seen by this member                                                         |
+|etcd.mvcc.deletes| uint64| number of deletes seen by this member                                                      |
+|etcd.mvcc.slow_watches| uint64| number of unsynced slow watchers                                                           |
+|etcd.watch.requests| uint64| number of incoming watch requests (new or reestablished)                                   |
+|etcd.store.watchers| uint64| number of currently active watchers                                                        |
 
 #### Commit Rebalance
 |Metric Name|Unit| Description                                      |
@@ -588,15 +588,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.commit_write.duration|float64| duration of write operations during commit in etcd disk backend |
 
 #### DB Compaction Duration
-|Metric Name|Unit| Description                                                      |
-|----|----|------------------------------------------------------------------|
-|etcd.mvcc_db_compaction.p50latency|float64| p50 latency of MVCC database compactation operations             |
-|etcd.mvcc_db_compaction.p75latency|float64| p75 latency of MVCC database compactation operations             |
-|etcd.mvcc_db_compaction.p90latency|float64| p90 latency of MVCC database compactation operations             |
-|etcd.mvcc_db_compaction.p95latency|float64| p95 latency of MVCC database compactation operations             |
-|etcd.mvcc_db_compaction.p99latency|float64| p99 latency of MVCC database compactation operations             |
-|etcd.mvcc_db_compaction.total_num|uint64| number of MVCC database compactation operations                  |
-|etcd.mvcc_db_compaction.duration|float64| duration of MVCC database compactation operations in miliseconds |
+|Metric Name|Unit| Description                                                                                                        |
+|----|----|--------------------------------------------------------------------------------------------------------------------|
+|etcd.mvcc_db_compaction.p50latency|float64| p50 latency of MVCC database compaction operations                                                                 |
+|etcd.mvcc_db_compaction.p75latency|float64| p75 latency of MVCC database compaction operations                                                                 |
+|etcd.mvcc_db_compaction.p90latency|float64| p90 latency of MVCC database compaction operations                                                                 |
+|etcd.mvcc_db_compaction.p95latency|float64| p95 latency of MVCC database compaction operations                                                                 |
+|etcd.mvcc_db_compaction.p99latency|float64| p99 latency of MVCC database compaction operations                                                                 |
+|etcd.mvcc_db_compaction.total_num|uint64| number of MVCC database compaction operations                                                                      |
+|etcd.mvcc_db_compaction.duration|float64| duration of MVCC database compaction operations in miliseconds                                                               |
 
 ### Kube-proxy Metrics
 #### Generic
@@ -691,9 +691,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Scheduler Metrics
 #### Preemption Attempts
-|Metric Name|Unit| Description                                       |
-|----|----|---------------------------------------------------|
-|scheduler.preemption_attempts.total_num|uint64| number preemption attempts in the cluster         |
+|Metric Name|Unit| Description                                  |
+|----|----|----------------------------------------------|
+|scheduler.preemption_attempts.total_num|uint64| number of preemption attempts in the cluster |
 
 #### Pending Pods
 |Metric Name|Unit| Description                               |
