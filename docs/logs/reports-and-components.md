@@ -62,7 +62,7 @@ From the Log Table Component, you can quickly add or remove columns, highlight v
 
 Additionally, you can expand each log to view its details in either Table or JSON format, providing you with easy access to the full log event payload, ability to add additional field value-based filters, copy field values, etc.
 
-![Sematext Cloud Logs Guide - Logs Table Details Format](../images/guide/logs/logs-details-format.gif) 
+![Sematext Cloud Logs Guide - Logs Table Details Format](../images/guide/logs/logs-table-details-format.gif) 
 
 Furthermore, you have the option to switch to **Terminal View**, which allows you to view your logs in a more condensed and compact format.
 
