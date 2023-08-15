@@ -54,11 +54,27 @@ Use them together with out-of-the-box metrics, from a Monitoring App, and you wi
 
 ### Logs Component Settings
 
-Each Component can be added to a custom Dashboard, and you can organize reports from one or several applications, both Logs Apps as well as Monitoring Apps. Creating rich data and visualization reports based on various metrics and logs data has never been easier.
-
-Here's an image of the **Log Events Component** dropdown menu with log specific export and field editor features and the ability to add the component to a custom dashboard.
+Here's an image of the **Log Table Component** dropdown menu with log specific export and field editor features.
 
 ![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/logs/logs-component-settings-dropdown.png)
+
+From the Log Table Component, you can quickly add or remove columns, highlight values, create charts, and apply filters. See [Logs Table Quick Actions](https://sematext.com/docs/logs/logs-table-quick-actions/) for more details. 
+
+Additionally, you can expand each log to view its details in either Table or JSON format, providing you with easy access to the full log event payload, ability to add additional field value-based filters, copy field values, etc.
+
+![Sematext Cloud Logs Guide - Logs Table Details Format](../images/guide/logs/logs-details-format.gif) 
+
+Furthermore, you have the option to switch to **Terminal View**, which allows you to view your logs in a more condensed and compact format.
+
+![Sematext Cloud Logs Guide - Logs Table Terminal View](../images/guide/logs/logs-table-terminal-view.png) 
+
+See [Logs Table Terminal View](https://sematext.com/docs/logs/logs-table-terminal-view/) for more details.
+
+Each component can be added to a [Custom Dashboard](https://sematext.com/docs/dashboards/) by clicking on the three dots in the top-right corner of the component.
+
+![Sematext Cloud Logs Guide - Logs Table Add To Dashboard](../images/guide/logs/logs-table-add-to-dashboard.png) 
+
+You can organize reports from one or several Apps, both Logs Apps as well as [Monitoring](https://sematext.com/docs/monitoring/), [Synthetics](https://sematext.com/docs/synthetics/) and [Experience](https://sematext.com/docs/experience/) Apps. 
 
 ### Table Density Modes
 
