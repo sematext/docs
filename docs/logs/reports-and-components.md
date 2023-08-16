@@ -66,9 +66,9 @@ Additionally, you can expand each log to view its details in either Table or JSO
 
 Furthermore, you have the option to switch to **Terminal View**, which allows you to view your logs in a more condensed and compact format.
 
-![Sematext Cloud Logs Guide - Logs Table Terminal View](../images/guide/logs/logs-table-terminal-view.png) 
+![Sematext Cloud Logs Guide - Logs Terminal View](../images/guide/logs/logs-table-terminal-view.png) 
 
-See [Logs Table Terminal View](https://sematext.com/docs/logs/logs-table-terminal-view/) for more details.
+See [Logs Terminal View](https://sematext.com/docs/logs/logs-table-terminal-view/) for more details.
 
 Each component can be added to a [Custom Dashboard](https://sematext.com/docs/dashboards/) by clicking on the three dots in the top-right corner of the component.
 
