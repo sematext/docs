@@ -68,7 +68,7 @@ Furthermore, you have the option to switch to **Terminal View**, which allows yo
 
 ![Sematext Cloud Logs Guide - Logs Terminal View](../images/guide/logs/logs-table-terminal-view.png) 
 
-See [Logs Terminal View](https://sematext.com/docs/logs/logs-table-terminal-view/) for more details.
+See [Logs Terminal View](https://sematext.com/docs/logs/logs-terminal-view/) for more details.
 
 Each component can be added to a [Custom Dashboard](https://sematext.com/docs/dashboards/) by clicking on the three dots in the top-right corner of the component.
 
