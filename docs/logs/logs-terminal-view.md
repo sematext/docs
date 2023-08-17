@@ -1,4 +1,4 @@
-title: Sematext Logs Terminal View
+title: Terminal View for Logs
 description: Sematext Logs has a Terminal View option. Check out how to use it.
 
 Terminal View offers the ability to view logs in a more compact format. It provides a terminal-like display of logs, eliminating all the visual noise of a rich graphical UI.
