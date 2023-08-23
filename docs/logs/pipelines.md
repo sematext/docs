@@ -108,10 +108,10 @@ You can access fields using the `doc` method. Since the field value can be of an
 
 The following is supported:
 
-- Math operators: +, -, /, *, %, ^, e.g. `(Integer)doc['size.kb']*2`
-- Relational operators: ==, !=, <, <=, >, >=, e.g. `(Integer)doc['size'] > 10`
-- Logical operators: &&, ||, !, e.g. `(Integer)doc['size'] > -1 && (Integer)doc['size'] < 10`
-- Ternary operator, e.g. `(Integer)doc['speed'] < 1000 ? "OK" : "SLOW"`
+- Math operators: +, -, /, *, %, ^, e.g. `((Integer)doc['size.kb']).intValue()*2`
+- Relational operators: ==, !=, <, <=, >, >=, e.g. `((Integer)doc['size']).intValue() > 10`
+- Logical operators: &&, ||, !, e.g. `((Integer)doc['size']).intValue() > -1 && ((Integer)doc['size']).intValue() < 10`
+- Ternary operator, e.g. `((Integer)doc['speed']).intValue() < 1000 ? "OK" : "SLOW"`
 - String functions, e.g. `((String)doc['severity']).toUpperCase()` or `((String)doc['message']).splitOnToken('-')[3]`
 
 Conditional block and loops are supported. The last line should result in a value that will then be stored as a field.  Here is a made up example:
