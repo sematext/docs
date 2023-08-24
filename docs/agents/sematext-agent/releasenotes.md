@@ -41,22 +41,21 @@ Date: August 24, 2023
 
 ### New Features
 
-- Varnish Cache metrics monitoring support: With this update, Sematext Agent can now discover and monitor your Varnish Cache service. Stay tuned for the upcoming release of Varnish Cache monitoring integration in Sematext Cloud.
-- Now supporting for kube-proxy and API server monitoring in Google Kubernetes Engine (GKE) as part of our Kubernetes monitoring integration.
+- Varnish Cache metrics monitoring support: With this update, Sematext Agent can now discover and and collect metrics from your Varnish Cache service. Stay tuned for the upcoming release of Varnish Cache monitoring integration in Sematext Cloud.
+- Support has been added for kube-proxy and API server monitoring in Google Kubernetes Engine (GKE) as part of our Kubernetes monitoring integration.
 
 ### Improvements
 
 - We've fine-tuned data collection in the Kubernetes monitoring integration, resulting in improved performance and efficiency.
-- Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by preventing the discovery of `.log` files, which are not supported. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration, ensuring a smoother experience.
-- Introducing unified runtime metrics (goCollector) to provide a comprehensive view of system performance in the Kubernetes monitoring integration.
-- Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups, facilitating better troubleshooting.
+- Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by preventing the discovery of `.log` files, which are not supported. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration.
+- Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups.
 - Introducing unified runtime metrics (goCollector) to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
 
 ### Bug Fixes
 
-- Rectified incorrect expected and live instances metrics in the Kubernetes monitoring integration.
+- Corrected inaccurate expected and live instance metrics within the Kubernetes monitoring integration.
 - Added `/etc/machine-id` as a new option to obtain system UUID.
-- Addressed MariaDB monitoring issue by adding `mariadbd` signature to the MySQL integration.
+- Addressed MariaDB monitoring issue by adding `mariadbd` signature to the MySQL integration. Fixed MySQL version checking issue.
 
 ## Version 3.0.0
 
