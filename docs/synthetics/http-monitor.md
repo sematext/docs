@@ -72,7 +72,15 @@ You can also fill in the optional **Domain** and **Workstation** fields in the *
 
 ### Header-based Authentication
 
-HTTP monitors also support header-based authentication. Custom HTTP request headers can be specified when creating a monitor. To use Basic authentication, add a custom request header according to the following specifications:
+HTTP monitors also support header-based authentication. You can specify custom HTTP request headers when creating a monitor.
+
+For instance, if you need to monitor an endpoint using an API key, you can include it as a custom request header, like so:
+
+| Name | Value |
+| --- | --- |
+| `API_KEY` | `XYZ` |
+
+For Basic authentication using only headers, follow these specifications to add a custom request header:
 
 | Name | Value | Description |
 | --- | --- | --- |
