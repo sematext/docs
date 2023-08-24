@@ -55,7 +55,7 @@ Date: August 24, 2023
 
 - Corrected inaccurate expected and live instance metrics within the Kubernetes monitoring integration.
 - Added `/etc/machine-id` as a new option to obtain system UUID.
-- Addressed MariaDB monitoring issue by adding `mariadbd` signature to the MySQL integration. Fixed MySQL version checking issue.
+- Addressed MariaDB monitoring issue by adding `mariadbd` signature to the MySQL integration.
 
 ## Version 3.0.0
 
