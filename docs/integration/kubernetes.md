@@ -781,22 +781,22 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |scheduler.attempts.total_num|uint64| number of attempts to schedule pods |
 
 ### Runtime Metrics
-| Metric Name                            |Unit| Description                                                             |
-|----------------------------------------|----|-------------------------------------------------------------------------|
-| kubernetes.runtime.os_threads          |uint64| number of operating system threads used                                 |
-| kubernetes.runtime.goroutines          |uint64| number of goroutines active                                             |
-| kubernetes.runtime.resident_memory     |uint64| amount of memory for process's code and data occupied                   |
-| kubernetes.runtime.virtual_memory      |uint64| amount of virtual memory used                                           |
-| kubernetes.runtime.number_frees        |uint64| number of allocated memory blocks that have been freed                  |
-| kubernetes.runtime.number_mallocs      |uint64| number of memory allocations performed                                  |
-| kubernetes.runtime.heap_obtained       |uint64| memory obtained from the operating system for the heap                  |
-| kubernetes.runtime.heap_used           |uint64| amount of heap memory in use                                            |
+| Metric Name                            |Unit| Description                                                           |
+|----------------------------------------|----|-----------------------------------------------------------------------|
+| kubernetes.runtime.os_threads          |uint64| number of operating system threads used                               |
+| kubernetes.runtime.goroutines          |uint64| number of goroutines active                                           |
+| kubernetes.runtime.resident_memory     |uint64| amount of memory for process code and data occupied                   |
+| kubernetes.runtime.virtual_memory      |uint64| amount of virtual memory used                                         |
+| kubernetes.runtime.number_frees        |uint64| number of allocated memory blocks that have been freed                |
+| kubernetes.runtime.number_mallocs      |uint64| number of memory allocations performed                                |
+| kubernetes.runtime.heap_obtained       |uint64| memory obtained from the operating system for the heap                |
+| kubernetes.runtime.heap_used           |uint64| amount of heap memory in use                                          |
 | kubernetes.runtime.heap_waiting        |uint64| amount of heap memory currently unused and can be potentially allocated |
-| kubernetes.runtime.number_heap_objects |uint64| number of allocated objects in the heap memory                          |
-| kubernetes.runtime.stack_obtained      |uint64| memory obtained from the operating system for the stack space           |
-| kubernetes.runtime.stack_used          |uint64| amount of stack memory in use                                           |
-| kubernetes.runtime.gc_duration         |uint64| duration of a garbage collection event                                  |
-| kubernetes.runtime.gc_count            |uint64| number of garbage collection events                                     |
+| kubernetes.runtime.number_heap_objects |uint64| number of allocated objects in the heap memory                        |
+| kubernetes.runtime.stack_obtained      |uint64| memory obtained from the operating system for the stack space         |
+| kubernetes.runtime.stack_used          |uint64| amount of stack memory in use                                         |
+| kubernetes.runtime.gc_duration         |uint64| duration of a garbage collection event                                |
+| kubernetes.runtime.gc_count            |uint64| number of garbage collection events                                   |
 
 ## Troubleshooting
 
