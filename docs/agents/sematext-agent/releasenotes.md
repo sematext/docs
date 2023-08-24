@@ -41,7 +41,7 @@ Date: August 24, 2023
 
 ### New Features
 
-- Varnish Cache metrics monitoring support: With this update, Sematext Agent can now discover and and collect metrics from your Varnish Cache service. Stay tuned for the upcoming release of Varnish Cache monitoring integration in Sematext Cloud.
+- Varnish Cache monitoring support: With this update, Sematext Agent can now discover and collect metrics from your Varnish Cache service. Stay tuned for the upcoming release of Varnish Cache monitoring integration in Sematext Cloud.
 - Support has been added for kube-proxy and API server monitoring in Google Kubernetes Engine (GKE) as part of our Kubernetes monitoring integration.
 
 ### Improvements
@@ -49,7 +49,7 @@ Date: August 24, 2023
 - We've fine-tuned data collection in the Kubernetes monitoring integration, resulting in improved performance and efficiency.
 - Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by preventing the discovery of `.log` files, which are not supported. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration.
 - Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups.
-- Introducing unified runtime metrics (goCollector) to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
+- Introducing unified runtime metrics to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
 
 ### Bug Fixes
 
