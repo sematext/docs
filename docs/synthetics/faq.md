@@ -27,10 +27,13 @@ Yes. You can use [private agents](./private-locations.md) to monitor the endpoin
 If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.setrequestinterception.md) the script to include a custom header for all requests.
 
 ### Can I monitor API endpoints protected by OAuth authentication?
-No. The HTTP monitor does not support OAuth authentication before sending the actual request. HTTP monitor supports header-based authentication. 
+Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
 
 ### Can I monitor API endpoints protected by Basic authentication?
-Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication).
+Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
+
+### Can I monitor API endpoints protected by NTLM authentication?
+Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
 
 ### Can I stop Synthetics Alerts during scheduled maintenance?
 Yes. You can temporarily disable the notifications from **Edit Configuration** -> **Configure Alerts** -> **Notifications**. Once the maintenance window is over, you can re-enable the notifications.

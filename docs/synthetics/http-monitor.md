@@ -43,9 +43,11 @@ If you disable this option, we **won’t save the response body** hence it **wil
 
 ## Authentication
 
+### Bearer / Access Token
+
 You can **dynamically fetch a token** for each run with token support and pass that token in your API requests. 
 
-When creating an HTTP monitor, navigate to the Authentication tab and select **Bearer/Access Token** authentication type.
+When creating an HTTP monitor, navigate to the Authentication tab and select **Bearer/Access Token** authentication option.
 
 ![Access Token Authentication](../images/synthetics/authentication-token.png)
 
@@ -53,9 +55,22 @@ Enter the access token URL and the source field to get the token from response. 
 
 Before Sematext calls the endpoint, an access token will be fetched based on the parameters entered within this tab and it will be passed to the API request.
 
-You also have the option to select **Basic Authentication** type within the Authentication tab and pass username and password to connect your **protected APIs**. 
+### Basic Authentication
+
+You can select **Basic Authentication** option within the Authentication tab and pass username and password to connect your **protected APIs**. 
 
 ![Basic Authentication](../images/synthetics/authentication-basic.png)
+
+### NTLM Authentication
+
+You can select the **NTLM Authentication** option within the Authentication tab and enter your credentials. Both NTLMv2 and NTLMv1 are supported.
+
+
+![NTLM Authentication](../images/synthetics/authentication-ntlm.png)
+
+You can further configure authentication using the **Advanced Configuration** section. If no advanced configuration is specified, default empty values will be auto-generated.
+
+### Header-based Authentication
 
 HTTP monitors also support header-based authentication. Custom HTTP request headers can be specified when creating a monitor. To use Basic authentication, add a custom request header according to the following specifications:
 

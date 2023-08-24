@@ -7,9 +7,9 @@ async function testPage(page, context) {
     const USD = bodyJSON.rates.USD;
     const AUD = bodyJSON.rates.AUD;
     const CNY = bodyJSON.rates.CNY;
-    context.setMetric('currency.EUR-USD', USD);
-    context.setMetric('currency.EUR-AUD', AUD);
-    context.setMetric('currency.EUR-CNY', CNY);
+    context.setMetric('currency.EUR_USD', USD);
+    context.setMetric('currency.EUR_AUD', AUD);
+    context.setMetric('currency.EUR_CNY', CNY);
 
     // Log out the values at the start to make sure you're getting the metrics
     console.log(USD);
