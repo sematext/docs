@@ -35,6 +35,28 @@ NULL
 
 -->
 
+## Version 3.1.0
+
+Date: August 24, 2023
+
+### New Features
+
+- Varnish Cache monitoring support: With this update, Sematext Agent can now discover and collect metrics from your Varnish Cache service. Stay tuned for the upcoming release of Varnish Cache monitoring integration in Sematext Cloud.
+- Support has been added for kube-proxy and API server monitoring in Google Kubernetes Engine (GKE) as part of our Kubernetes monitoring integration.
+
+### Improvements
+
+- We've fine-tuned data collection in the Kubernetes monitoring integration, resulting in improved performance and efficiency.
+- Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by preventing the discovery of `.log` files, which are not supported. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration.
+- Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups.
+- Introducing unified runtime metrics to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
+
+### Bug Fixes
+
+- Corrected inaccurate expected and live instance metrics within the Kubernetes monitoring integration.
+- Added `/etc/machine-id` as a new option to obtain system UUID.
+- Addressed MariaDB monitoring issue by adding `mariadbd` signature to the MySQL integration.
+
 ## Version 3.0.0
 
 Date: July 25, 2023
@@ -158,7 +180,7 @@ Date: April 6, 2023
 
 ### Packaging and Installation
 
-- SC-15761 CentOS 9 package was released.
+- CentOS 9 package was released.
 
 ## Version 2.0.0
 
