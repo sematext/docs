@@ -180,7 +180,7 @@ Date: April 6, 2023
 
 ### Packaging and Installation
 
-- SC-15761 CentOS 9 package was released.
+- CentOS 9 package was released.
 
 ## Version 2.0.0
 
