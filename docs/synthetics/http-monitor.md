@@ -57,7 +57,7 @@ Before Sematext calls the endpoint, an access token will be fetched based on the
 
 ### Basic Authentication
 
-You can select **Basic Authentication** option within the Authentication tab and pass username and password to connect your **protected APIs**. 
+You can select the **Basic Authentication** option within the Authentication tab and add the username and password needed to connect to your **protected APIs**. 
 
 ![Basic Authentication](../images/synthetics/authentication-basic.png)
 
@@ -68,7 +68,7 @@ You can select the **NTLM Authentication** option within the Authentication tab 
 
 ![NTLM Authentication](../images/synthetics/authentication-ntlm.png)
 
-You can further configure authentication using the **Advanced Configuration** section. If no advanced configuration is specified, default empty values will be auto-generated.
+You can also fill in the optional **Domain** and **Workstation** fields in the **Advanced Configuration** section, if those are required for your setup. If no advanced configuration is specified, default empty values will be auto-generated.
 
 ### Header-based Authentication
 

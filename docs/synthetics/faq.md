@@ -30,10 +30,10 @@ If you do not want to run private agents yourself, you can also configure the fi
 Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
 
 ### Can I monitor API endpoints protected by Basic authentication?
-Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
+Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
 
 ### Can I monitor API endpoints protected by NTLM authentication?
-Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
+Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
 
 ### Can I stop Synthetics Alerts during scheduled maintenance?
 Yes. You can temporarily disable the notifications from **Edit Configuration** -> **Configure Alerts** -> **Notifications**. Once the maintenance window is over, you can re-enable the notifications.
