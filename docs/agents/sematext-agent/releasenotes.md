@@ -50,6 +50,7 @@ Date: August 24, 2023
 - Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by preventing the discovery of `.log` files, which are not supported. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration, ensuring a smoother experience.
 - Introducing unified runtime metrics (goCollector) to provide a comprehensive view of system performance in the Kubernetes monitoring integration.
 - Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups, facilitating better troubleshooting.
+- Introducing unified runtime metrics (goCollector) to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
 
 ### Bug Fixes
 
