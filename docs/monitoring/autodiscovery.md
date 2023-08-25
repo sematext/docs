@@ -34,12 +34,12 @@ Sematext Agent can automatically discover and start monitoring the following ser
 - Spark
 - Storm
 - Tomcat
+- Varnish Cache
 - ZooKeeper
 
 Additionally, Sematext Agent will also discover the following services, but at the moment it can't automatically start monitoring them:
 
 - Node.js *
-- Couchbase
 - Flink
 - NATS
 - PostgreSQL
