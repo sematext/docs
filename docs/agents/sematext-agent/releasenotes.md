@@ -47,9 +47,9 @@ Date: August 24, 2023
 ### Improvements
 
 - We've fine-tuned data collection in the Kubernetes monitoring integration, resulting in improved performance and efficiency.
-- Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by preventing the discovery of `.log` files, which are not supported. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration.
+- Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by excluding the unsupported `.log` files. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration.
 - Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups.
-- Introducing unified runtime metrics to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
+- Introducing unified runtime metrics to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You can check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
 
 ### Bug Fixes
 
@@ -68,7 +68,7 @@ Date: July 25, 2023
 
 ### Improvements
 
-- Improved discovery for OpenSearch integration: We have enhanced the OpenSearch integration by preventing the discovery of `.json` files, which are not supported. Now, Sematext Agent will only discover and support `.log` files for OpenSearch integration, ensuring a smoother experience.
+- Improved discovery for OpenSearch integration: We have enhanced the OpenSearch integration by excluding the unsupported `.json` files. Now, Sematext Agent will only discover and support `.log` files for OpenSearch integration, ensuring a smoother experience.
 
 ### Bug Fixes
 
