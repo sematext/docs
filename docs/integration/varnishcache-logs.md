@@ -3,7 +3,11 @@ description: Sematext Varnish Cache Logs integration allows you to check respons
 
 To make use of the Sematext Varnish Cache Logs integration, you'll need to install the [Sematext Agent](../agents/sematext-agent/index.md) and configure it to ship Varnish Cache logs via the [Logs Discovery](../logs/discovery/intro.md). You will want to create or select an existing Varnish Cache Logs App because that is what will provide you with all the out of the box dashboards, some of which you can see below. Moreover, pre-configured anomaly alert rules are available to notify about increasing 4xx and 5xx response rates.
 
-Once data is in, you can explore it via the built-in reports: 
+## Setting the Log Format
+
+## Exploring logs
+
+Once data is in, you can explore it via the built-in reports or create your own. 
 
 <img
   class="content-modal-image"
@@ -11,10 +15,6 @@ Once data is in, you can explore it via the built-in reports:
   src="../../images/integrations/varnishcache-logs-overview.png"
   title="Varnish Cache Logs Overview Report"
 />
-
-## Exploring logs
-
-Once data is in, you can explore it using the built-in reports or create your own. 
 
 ### Traffic Insight Report
 
@@ -40,7 +40,7 @@ You can use the Traffic Distribution report to see the traffic distribution acro
 
 ### Client Side Logs Report
 
-You can use the Clustering report to see logs produced by components that have to do with cluster coordination. Cluster coordinator logs, logs related to a node joining/leaving a cluster and shard allocation:
+You can use the Client Side Logs report to see the requests made to client side:
 
 <img
   class="content-modal-image"
@@ -51,7 +51,7 @@ You can use the Clustering report to see logs produced by components that have t
 
 ### Backend Side Logs Report
 
-You can use the Deprecation report to see a breakdown of deprecation logs by node and component:
+You can use the Backend Side Logs report to see the requests made to backend side:
 
 <img
   class="content-modal-image"
