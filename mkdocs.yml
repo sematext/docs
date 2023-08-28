@@ -177,6 +177,7 @@ pages:
         - PostgreSQL: integration/postgresql-logs.md
         - RabbitMQ: integration/rabbitmq-logs.md
         - Solr: integration/solr-logs.md
+        - Varnish Cache: integration/varnishcache-logs.md
         - Vercel: integration/vercel-logs-integration.md
       - Notification Hooks:
         - Custom Webhooks: integration/alerts-webhooks-integration.md
