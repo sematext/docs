@@ -62,7 +62,7 @@ You can use the Traffic Distribution report to see the traffic distribution acro
 
 ### Client Side Logs Report
 
-You can use the Client Side Logs report to see the requests made to client side:
+You can use the Client Side Logs report to see the requests made to the client side:
 
 <img
   class="content-modal-image"
@@ -73,7 +73,7 @@ You can use the Client Side Logs report to see the requests made to client side:
 
 ### Backend Side Logs Report
 
-You can use the Backend Side Logs report to see the requests made to backend side:
+You can use the Backend Side Logs report to see the requests made to the backend side:
 
 <img
   class="content-modal-image"
