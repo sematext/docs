@@ -95,21 +95,21 @@ module.exports = testPage;
 
 Once you have defined your chosen custom metrics either with HTTP or Browser monitor, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run in the run flyout.
 
-[add screenshot here after https://sematext.atlassian.net/browse/SC-17072]
+![Custom Metrics Flyout](../images/synthetics/custom-metrics-flyout.png)
 
 You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and clicking on the **Add to Dashboard** icon. In this example, we'll create a **Time Series Chart** to chart `synthetics.browser.custom.heap.time` metric that we extracted from the Browser Monitor user jurney script sample above. 
 
-[add gif here after https://sematext.atlassian.net/browse/SC-17072]
+![Custom Metrics Add to Dashboard](../images/synthetics/custom-metrics-add-to-dashboard.gif)
 
 After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then select the specific **Dashboard** you chose when creating the chart. 
 
-[add screenshot here after https://sematext.atlassian.net/browse/SC-17072]
+![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.gif)
 
 Because monitors run once every several minutes, you might want to navigate to the **Axes** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
 
 ![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
 
-You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the JS execution time is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
+You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the script duration is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
 
 ![Custom Metrics Chart Alert](../images/synthetics/custom-metrics-chart-alert.png)
 
