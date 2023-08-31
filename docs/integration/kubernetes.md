@@ -209,15 +209,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Runtime Operations
 |Metric Name| Type  | Unit    | Description                                                     |
 |----|-------|---------|-----------------------------------------------------------------|
-|kubelet.runtime_operation.count| gauge | int64   | cumulative number of runtime operations by operation type       |
-|kubelet.runtime_operation.errors| gauge | int64   | cumulative number of runtime operation errors by operation type |
-|kubelet.runtime_operation.total_num| gauge | int64   | total number of runtime operations           |
-|kubelet.runtime_operation.duration| gauge | int64   | duration of runtime operations               |
-|kubelet.runtime_operation.p50latency| gauge | float64 | p50 latency in seconds of runtime operations |
-|kubelet.runtime_operation.p75latency| gauge | float64 | p75 latency in seconds of runtime operations |
-|kubelet.runtime_operation.p90latency| gauge | float64 | p90 latency in seconds of runtime operations |
-|kubelet.runtime_operation.p95latency| gauge | float64 | p95 latency in seconds of runtime operations |
-|kubelet.runtime_operation.p99latency| gauge | float64 | p99 latency in seconds of runtime operations |
+|kubelet.runtime_operation.count| gauge | number  | cumulative number of runtime operations by operation type       |
+|kubelet.runtime_operation.errors| gauge | number  | cumulative number of runtime operation errors by operation type |
+|kubelet.runtime_operation.total_num| gauge | number  | total number of runtime operations           |
+|kubelet.runtime_operation.duration| gauge | seconds | duration of runtime operations               |
+|kubelet.runtime_operation.p50latency| gauge | seconds | p50 latency in seconds of runtime operations |
+|kubelet.runtime_operation.p75latency| gauge | seconds | p75 latency in seconds of runtime operations |
+|kubelet.runtime_operation.p90latency| gauge | seconds | p90 latency in seconds of runtime operations |
+|kubelet.runtime_operation.p95latency| gauge | seconds | p95 latency in seconds of runtime operations |
+|kubelet.runtime_operation.p99latency| gauge | seconds | p99 latency in seconds of runtime operations |
 
 #### Kubelet
 |Metric Name| Type    | Unit    | Description                    |
@@ -234,87 +234,87 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Pod Start Duration
 |Metric Name| Type  | Unit    | Description                                                           |
 |----|-------|---------|-----------------------------------------------------------------------|
-|kubelet.pod_start.total_num| gauge | float64 | number of pod starts                                                  |
-|kubelet.pod_start.duration| gauge | float64 | duration of a pod start in seconds                                    |
-|kubelet.pod_start.p50latency| gauge | float64 | p50 latency in seconds for a single pod to go from pending to running |
-|kubelet.pod_start.p75latency| gauge | float64 | p75 latency in seconds for a single pod to go from pending to running |
-|kubelet.pod_start.p90latency| gauge | float64 | p90 latency in seconds for a single pod to go from pending to running |
-|kubelet.pod_start.p95latency| gauge | float64 | p95 latency in seconds for a single pod to go from pending to running |
-|kubelet.pod_start.p99latency| gauge | float64 | p99 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.total_num| gauge | number  | number of pod starts                                                  |
+|kubelet.pod_start.duration| gauge | seconds  | duration of a pod start in seconds                                    |
+|kubelet.pod_start.p50latency| gauge | seconds | p50 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p75latency| gauge | seconds | p75 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p90latency| gauge | seconds | p90 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p95latency| gauge | seconds | p95 latency in seconds for a single pod to go from pending to running |
+|kubelet.pod_start.p99latency| gauge | seconds | p99 latency in seconds for a single pod to go from pending to running |
 
 #### Pod Worker Duration
-|Metric Name| Type  | Unit     | Description                                      |
-|----|-------|----------|--------------------------------------------------|
-|kubelet.pod_worker.total_num| gauge | int64    | pod worker counter                          |
-|kubelet.pod_worker.duration| gauge |  float64 | pod worker duration                         |
-|kubelet.pod_worker.p50latency| gauge | float64  | p50 latency in seconds to sync a single pod |
-|kubelet.pod_worker.p75latency| gauge | float64  | p75 latency in seconds to sync a single pod |
-|kubelet.pod_worker.p90latency| gauge | float64  | p90 latency in seconds to sync a single pod |
-|kubelet.pod_worker.p95latency| gauge | float64  | p95 latency in seconds to sync a single pod |
-|kubelet.pod_worker.p99latency| gauge | float64  | p99 latency in seconds to sync a single pod |
+|Metric Name| Type  | Unit    | Description                                      |
+|----|-------|---------|--------------------------------------------------|
+|kubelet.pod_worker.total_num| gauge | number  | pod worker counter                          |
+|kubelet.pod_worker.duration| gauge | seconds | pod worker duration                         |
+|kubelet.pod_worker.p50latency| gauge | seconds | p50 latency in seconds to sync a single pod |
+|kubelet.pod_worker.p75latency| gauge | seconds | p75 latency in seconds to sync a single pod |
+|kubelet.pod_worker.p90latency| gauge | seconds | p90 latency in seconds to sync a single pod |
+|kubelet.pod_worker.p95latency| gauge | seconds | p95 latency in seconds to sync a single pod |
+|kubelet.pod_worker.p99latency| gauge | seconds | p99 latency in seconds to sync a single pod |
 
 #### Pod Worker Start Duration
 |Metric Name| Type  | Unit    | Description                                                        |
 |----|-------|---------|--------------------------------------------------------------------|
-|kubelet.pod_worker_start.total_num| gauge | int64   | worker start counter                                          |
-|kubelet.pod_worker_start.duration| gauge | float64 | duration for starting a worker                                |
-|kubelet.pod_worker_start.p50latency| gauge | float64 | p50 latency in seconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p75latency| gauge | float64 | p75 latency in seconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p90latency| gauge | float64 | p90 latency in seconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p95latency| gauge | float64 | p95 latency in seconds from seeing a pod to starting a worker |
-|kubelet.pod_worker_start.p99latency| gauge | float64 | p99 latency in seconds from seeing a pod to starting a worker |
+|kubelet.pod_worker_start.total_num| gauge | number  | worker start counter                                          |
+|kubelet.pod_worker_start.duration| gauge | seconds  | duration for starting a worker                                |
+|kubelet.pod_worker_start.p50latency| gauge | seconds | p50 latency in seconds from seeing a pod to starting a worker |
+|kubelet.pod_worker_start.p75latency| gauge | seconds | p75 latency in seconds from seeing a pod to starting a worker |
+|kubelet.pod_worker_start.p90latency| gauge | seconds | p90 latency in seconds from seeing a pod to starting a worker |
+|kubelet.pod_worker_start.p95latency| gauge | seconds | p95 latency in seconds from seeing a pod to starting a worker |
+|kubelet.pod_worker_start.p99latency| gauge | seconds | p99 latency in seconds from seeing a pod to starting a worker |
 
 #### Volume Manager
-|Metric Name| Type | Unit                                        | Description                                 |
-|----|-----|---------------------------------------------|---------------------------------------------|
-|kubelet.volume_manager.count| float64  | total volumes managed by the volume manager |
-|kubelet.volume_manager.desired.count| float64  | total volumes desired by the volume manager |
+|Metric Name| Type | Unit    | Description                                 |
+|----|-----|---------|---------------------------------------------|
+|kubelet.volume_manager.count| | float64 | total volumes managed by the volume manager |
+|kubelet.volume_manager.desired.count| | float64 | total volumes desired by the volume manager |
 
 #### Storage Operation
 |Metric Name| Type  | Unit    | Description                               |
 |----|-------|---------|-------------------------------------------|
-|kubelet.storage.total_num| gauge | int64   | total number of storage operations        |
-|kubelet.storage.duration| gauge | float64 | duration of storage operations in seconds |
-|kubelet.storage.p50latency| gauge | float64 | p50 latency to perform storage operations |
-|kubelet.storage.p75latency| gauge | float64 | p75 latency to perform storage operations |
-|kubelet.storage.p90latency| gauge | float64 | p90 latency to perform storage operations |
-|kubelet.storage.p95latency| gauge | float64 | p95 latency to perform storage operations |
-|kubelet.storage.p99latency| gauge | float64 | p99 latency to perform storage operations |
+|kubelet.storage.total_num| gauge | number  | total number of storage operations        |
+|kubelet.storage.duration| gauge | seconds  | duration of storage operations in seconds |
+|kubelet.storage.p50latency| gauge | seconds | p50 latency to perform storage operations |
+|kubelet.storage.p75latency| gauge | seconds | p75 latency to perform storage operations |
+|kubelet.storage.p90latency| gauge | seconds | p90 latency to perform storage operations |
+|kubelet.storage.p95latency| gauge | seconds | p95 latency to perform storage operations |
+|kubelet.storage.p99latency| gauge | seconds | p99 latency to perform storage operations |
 
 #### Cgroup Manager
 |Metric Name| Type  | Unit    | Description                                                 |
 |----|-------|---------|-------------------------------------------------------------|
-|kubelet.cgroup.total_num| gauge | int64   | total number of cgroup management operations by the kubelet |
-|kubelet.cgroup.duration| gauge | float64 | duration of cgroup management by the kubelet in seconds |
-|kubelet.cgroup.p50latency| gauge | float64 | p50 latency for cgroup manager operations |
-|kubelet.cgroup.p75latency| gauge | float64 | p75 latency for cgroup manager operations |
-|kubelet.cgroup.p90latency| gauge | float64 | p90 latency for cgroup manager operations |
-|kubelet.cgroup.p95latency| gauge | float64 | p95 latency for cgroup manager operations |
-|kubelet.cgroup.p99latency| gauge | float64 | p99 latency for cgroup manager operations |
+|kubelet.cgroup.total_num| gauge | number  | total number of cgroup management operations by the kubelet |
+|kubelet.cgroup.duration| gauge | seconds  | duration of cgroup management by the kubelet in seconds |
+|kubelet.cgroup.p50latency| gauge | seconds | p50 latency for cgroup manager operations |
+|kubelet.cgroup.p75latency| gauge | seconds | p75 latency for cgroup manager operations |
+|kubelet.cgroup.p90latency| gauge | seconds | p90 latency for cgroup manager operations |
+|kubelet.cgroup.p95latency| gauge | seconds | p95 latency for cgroup manager operations |
+|kubelet.cgroup.p99latency| gauge | seconds | p99 latency for cgroup manager operations |
 
 #### PLEG Relist Interval
 |Metric Name| Type  | Unit    | Description                                                |
 |----|-------|---------|------------------------------------------------------------|
-|kubelet.pleg_relist_interval.total_num| gauge | int64   | total number of intervals between pod relisting operations |
-|kubelet.pleg_relist_interval.duration| gauge | float64 | duration of intervals between pod relisting operations    |
-|kubelet.pleg_relist_interval.p50latency| gauge | float64 | p50 latency of intervals between pod relisting operations |
-|kubelet.pleg_relist_interval.p75latency| gauge | float64 | p75 latency of intervals between pod relisting operations |
-|kubelet.pleg_relist_interval.p90latency| gauge | float64 | p90 latency of intervals between pod relisting operations |
-|kubelet.pleg_relist_interval.p95latency| gauge | float64 | p95 latency of intervals between pod relisting operations |
-|kubelet.pleg_relist_interval.p99latency| gauge | float64 | p99 latency of intervals between pod relisting operations |
+|kubelet.pleg_relist_interval.total_num| gauge | number  | total number of intervals between pod relisting operations |
+|kubelet.pleg_relist_interval.duration| gauge | seconds  | duration of intervals between pod relisting operations    |
+|kubelet.pleg_relist_interval.p50latency| gauge | seconds | p50 latency of intervals between pod relisting operations |
+|kubelet.pleg_relist_interval.p75latency| gauge | seconds | p75 latency of intervals between pod relisting operations |
+|kubelet.pleg_relist_interval.p90latency| gauge | seconds | p90 latency of intervals between pod relisting operations |
+|kubelet.pleg_relist_interval.p95latency| gauge | seconds | p95 latency of intervals between pod relisting operations |
+|kubelet.pleg_relist_interval.p99latency| gauge | seconds | p99 latency of intervals between pod relisting operations |
 
 #### Docker Operations
 |Metric Name| Type  | Unit    | Description                                      |
 |----|-------|---------|--------------------------------------------------|
-|kubelet.docker_operation.errors| gauge | float64 | number of Docker operation errors           |
-|kubelet.docker_operation.operations| gauge | float64 | total number of Docker operations           |
-|kubelet.docker_operation.total_num| gauge | int64   | number of Docker operations                 |
-|kubelet.docker_operation.duration| gauge | float64 | duration of docker operations in seconds    |
-|kubelet.docker_operation.p50latency| gauge | float64 | p50 latency in seconds of Docker operations |
-|kubelet.docker_operation.p75latency| gauge | float64 | p75 latency in seconds of Docker operations |
-|kubelet.docker_operation.p90latency| gauge | float64 | p90 latency in seconds of Docker operations |
-|kubelet.docker_operation.p95latency| gauge | float64 | p95 latency in seconds of Docker operations |
-|kubelet.docker_operation.p99latency| gauge | float64 | p99 latency in seconds of Docker operations |
+|kubelet.docker_operation.errors| gauge | number  | number of Docker operation errors           |
+|kubelet.docker_operation.operations| gauge | number  | total number of Docker operations           |
+|kubelet.docker_operation.total_num| gauge | number  | number of Docker operations                 |
+|kubelet.docker_operation.duration| gauge | seconds | duration of docker operations in seconds    |
+|kubelet.docker_operation.p50latency| gauge | seconds | p50 latency in seconds of Docker operations |
+|kubelet.docker_operation.p75latency| gauge | seconds | p75 latency in seconds of Docker operations |
+|kubelet.docker_operation.p90latency| gauge | seconds | p90 latency in seconds of Docker operations |
+|kubelet.docker_operation.p95latency| gauge | seconds | p95 latency in seconds of Docker operations |
+|kubelet.docker_operation.p99latency| gauge | seconds | p99 latency in seconds of Docker operations |
 
 #### HTTP Inflight Request
 | Metric Name                              | Type| Unit    | Description                 |
@@ -324,38 +324,38 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### HTTP Request Duration
 |Metric Name| Type  | Unit    | Description                             |
 |----|-------|---------|-----------------------------------------|
-|kubelet.http_request.operations| gauge | float64 | total number of HTTP request operations |
-|kubelet.http_request.total_num| gauge | int64   | total number of HTTP requests       |
-|kubelet.http_request.duration| gauge | float64 | HTTP request duration               |
-|kubelet.http_request.p50latency| gauge | float64 | p50 HTTP request latency in seconds |
-|kubelet.http_request.p75latency| gauge | float64 | p75 HTTP request latency in seconds |
-|kubelet.http_request.p90latency| gauge | float64 | p90 HTTP request latency in seconds |
-|kubelet.http_request.p95latency| gauge | float64 | p95 HTTP request latency in seconds |
-|kubelet.http_request.p99latency| gauge | float64 | p99 HTTP request latency in seconds |
+|kubelet.http_request.operations| gauge | number  | total number of HTTP request operations |
+|kubelet.http_request.total_num| gauge | number  | total number of HTTP requests       |
+|kubelet.http_request.duration| gauge | seconds | HTTP request duration               |
+|kubelet.http_request.p50latency| gauge | seconds | p50 HTTP request latency in seconds |
+|kubelet.http_request.p75latency| gauge | seconds | p75 HTTP request latency in seconds |
+|kubelet.http_request.p90latency| gauge | seconds | p90 HTTP request latency in seconds |
+|kubelet.http_request.p95latency| gauge | seconds | p95 HTTP request latency in seconds |
+|kubelet.http_request.p99latency| gauge | seconds | p99 HTTP request latency in seconds |
 
 #### Network Plugin Operations
 |Metric Name| Type  | Unit    | Description                                            |
 |----|-------|---------|--------------------------------------------------------|
-|kubelet.network_plugin_operation.errors| gauge | float64 | network plugin operation errors                     |
-|kubelet.network_plugin_operation.operations| gauge | float64 |                                                     |
-|kubelet.network_plugin_operation.total_num| gauge | int64   | total number of network plugin operations           |
-|kubelet.network_plugin_operation.duration| gauge | float64 | network plugin operations duration                  |
-|kubelet.network_plugin_operation.p50latency| gauge | float64 | p50 latency in seconds of network plugin operations |
-|kubelet.network_plugin_operation.p75latency| gauge | float64 | p75 latency in seconds of network plugin operations |
-|kubelet.network_plugin_operation.p90latency| gauge | float64 | p90 latency in seconds of network plugin operations |
-|kubelet.network_plugin_operation.p95latency| gauge | float64 | p95 latency in seconds of network plugin operations |
-|kubelet.network_plugin_operation.p99latency| gauge | float64 | p99 latency in seconds of network plugin operations |
+|kubelet.network_plugin_operation.errors| gauge | number  | network plugin operation errors                     |
+|kubelet.network_plugin_operation.operations| gauge | number  |                                                     |
+|kubelet.network_plugin_operation.total_num| gauge | number  | total number of network plugin operations           |
+|kubelet.network_plugin_operation.duration| gauge | seconds | network plugin operations duration                  |
+|kubelet.network_plugin_operation.p50latency| gauge | seconds | p50 latency in seconds of network plugin operations |
+|kubelet.network_plugin_operation.p75latency| gauge | seconds | p75 latency in seconds of network plugin operations |
+|kubelet.network_plugin_operation.p90latency| gauge | seconds | p90 latency in seconds of network plugin operations |
+|kubelet.network_plugin_operation.p95latency| gauge | seconds | p95 latency in seconds of network plugin operations |
+|kubelet.network_plugin_operation.p99latency| gauge | seconds | p99 latency in seconds of network plugin operations |
 
 #### PLEG Relist Duration
 |Metric Name| Type  | Unit    | Description                   |
 |----|-------|---------|-------------------------------|
-|kubelet.pleg_relist.total_num| gauge | int64   | number of pod relisting performed by kubelet              |
-|kubelet.pleg_relist.duration| gauge | float64 | duration of pod relisting performed by kubelet in seconds |
-|kubelet.pleg_relist.p50duration| gauge | float64 | p50 latency of pod relisting |
-|kubelet.pleg_relist.p75duration| gauge | float64 | p75 latency of pod relisting |
-|kubelet.pleg_relist.p90duration| gauge | float64 | p90 latency of pod relisting |
-|kubelet.pleg_relist.p95duration| gauge | float64 | p95 latency of pod relisting |
-|kubelet.pleg_relist.p99duration| gauge | float64 | p99 latency of pod relisting |
+|kubelet.pleg_relist.total_num| gauge | number  | number of pod relisting performed by kubelet              |
+|kubelet.pleg_relist.duration| gauge | seconds | duration of pod relisting performed by kubelet in seconds |
+|kubelet.pleg_relist.p50duration| gauge | seconds | p50 latency of pod relisting |
+|kubelet.pleg_relist.p75duration| gauge | seconds | p75 latency of pod relisting |
+|kubelet.pleg_relist.p90duration| gauge | seconds | p90 latency of pod relisting |
+|kubelet.pleg_relist.p95duration| gauge | seconds | p95 latency of pod relisting |
+|kubelet.pleg_relist.p99duration| gauge | seconds | p99 latency of pod relisting |
 
 #### Started Containers
 |Metric Name| Type | Unit    | Description                           |
@@ -390,13 +390,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Request Duration
 |Metric Name| Type  | Unit    | Description                          |
 |----|-------|---------|--------------------------------------|
-|apiserver.etcd_request_duration.p50latency| gauge | float64 | p50 latency of etcd requests                  |
-|apiserver.etcd_request_duration.p75latency| gauge | float64 | p75 latency of etcd requests                  |
-|apiserver.etcd_request_duration.p90latency| gauge | float64 | p90 latency of etcd requests                  |
-|apiserver.etcd_request_duration.p95latency| gauge | float64 | p95 latency of etcd requests                  |
-|apiserver.etcd_request_duration.p99latency| gauge | float64 | p99 latency of etcd requests                  |
-|apiserver.etcd_request_duration.duration| gauge | float64 | duration of etcd requests measured in seconds |
-|apiserver.etcd_request_duration.total_num| gauge | uint64  | number of etcd requests |
+|apiserver.etcd_request_duration.p50latency| gauge | seconds | p50 latency of etcd requests                  |
+|apiserver.etcd_request_duration.p75latency| gauge | seconds | p75 latency of etcd requests                  |
+|apiserver.etcd_request_duration.p90latency| gauge | seconds | p90 latency of etcd requests                  |
+|apiserver.etcd_request_duration.p95latency| gauge | seconds | p95 latency of etcd requests                  |
+|apiserver.etcd_request_duration.p99latency| gauge | seconds | p99 latency of etcd requests                  |
+|apiserver.etcd_request_duration.duration| gauge | seconds | duration of etcd requests measured in seconds |
+|apiserver.etcd_request_duration.total_num| gauge | number  | number of etcd requests |
 
 #### Storage Objects
 |Metric Name| Type | Unit   | Description                                                      |
@@ -426,13 +426,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Admission Duration
 | Metric Name                             |       | Unit    | Description                                    |
 |-----------------------------------------|-------|---------|------------------------------------------------|
-| apiserver.admission_duration.p50latency | gauge | float64 | p50 latency of admission controller processing                |
-| apiserver.admission_duration.p75latency | gauge | float64 | p75 latency of admission controller processing                |
-| apiserver.admission_duration.p90latency | gauge | float64 | p90 latency of admission controller processing                |
-| apiserver.admission_duration.p95latency | gauge | float64 | p95 latency of admission controller processing                |
-| apiserver.admission_duration.p99latency | gauge | float64 | p99 latency of admission controller processing                |
-| apiserver.admission_duration.duration   | gauge | float64 | duration of admission controller processing in the API server |
-| apiserver.admission_duration.total_num  | gauge | uint64  | number of admission controller processing in the API server |
+| apiserver.admission_duration.p50latency | gauge | seconds | p50 latency of admission controller processing                |
+| apiserver.admission_duration.p75latency | gauge | seconds | p75 latency of admission controller processing                |
+| apiserver.admission_duration.p90latency | gauge | seconds | p90 latency of admission controller processing                |
+| apiserver.admission_duration.p95latency | gauge | seconds | p95 latency of admission controller processing                |
+| apiserver.admission_duration.p99latency | gauge | seconds | p99 latency of admission controller processing                |
+| apiserver.admission_duration.duration   | gauge | seconds | duration of admission controller processing in the API server |
+| apiserver.admission_duration.total_num  | gauge | number  | number of admission controller processing in the API server |
 
 #### TLS Error
 | Metric Name | Type                      | Unit   | Description                                                      |
@@ -440,15 +440,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 | apiserver.tls_handshake_error.total_num | | uint64 | number of requests dropped with 'TLS handshake error from' error |
 
 #### Authentication Duration
-|Metric Name| Type  | Unit     | Description                               |
-|----|-------|----------|-------------------------------------------|
-|apiserver.auth_duration.p50latency| gauge | float64  | p50 latency of authentication process           |
-|apiserver.auth_duration.p75latency| gauge | float64  | p75 latency of authentication process           |
-|apiserver.auth_duration.p90latency| gauge | float64  | p90 latency of authentication process           |
-|apiserver.auth_duration.p95latency| gauge | float64  | p95 latency of authentication process           |
-|apiserver.auth_duration.p99latency| gauge | float64  | p99 latency of authentication process           |
-|apiserver.auth_duration.duration| gauge |  float64 | duration of authentication processes in seconds |
-|apiserver.auth_duration.total_num| gauge | uint64   | number of authentication processes |
+|Metric Name| Type  | Unit   | Description                               |
+|----|-------|--------|-------------------------------------------|
+|apiserver.auth_duration.p50latency| gauge | seconds | p50 latency of authentication process           |
+|apiserver.auth_duration.p75latency| gauge | seconds | p75 latency of authentication process           |
+|apiserver.auth_duration.p90latency| gauge | seconds | p90 latency of authentication process           |
+|apiserver.auth_duration.p95latency| gauge | seconds | p95 latency of authentication process           |
+|apiserver.auth_duration.p99latency| gauge | seconds | p99 latency of authentication process           |
+|apiserver.auth_duration.duration| gauge | seconds       | duration of authentication processes in seconds |
+|apiserver.auth_duration.total_num| gauge | number | number of authentication processes |
 
 #### Authenticated User Requests
 |Metric Name| Type| Unit   | Description                      |
@@ -458,13 +458,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Client Certificate Expiry
 |Metric Name| Type  | Unit    | Description                    |
 |----|-------|---------|--------------------------------|
-|apiserver.client_cert_expiry.p50latency| gauge | float64 | p50 latency of expiration time                                                                 |
-|apiserver.client_cert_expiry.p75latency| gauge | float64 | p75 latency of expiration time                                                                 |
-|apiserver.client_cert_expiry.p90latency| gauge | float64 | p90 latency of expiration time                                                                 |
-|apiserver.client_cert_expiry.p95latency| gauge | float64 | p95 latency of expiration time                                                                 |
-|apiserver.client_cert_expiry.p99latency| gauge | float64 | p99 latency of expiration time                                                                 |
-|apiserver.client_cert_expiry.duration| gauge | float64 | expiration time in seconds of the client certificates used to authenticate with the API server |
-|apiserver.client_cert_expiry.total_num| gauge | uint64  | number of clients certificates used to authenticate with the API server |
+|apiserver.client_cert_expiry.p50latency| gauge | seconds | p50 latency of expiration time                                                                 |
+|apiserver.client_cert_expiry.p75latency| gauge | seconds | p75 latency of expiration time                                                                 |
+|apiserver.client_cert_expiry.p90latency| gauge | seconds | p90 latency of expiration time                                                                 |
+|apiserver.client_cert_expiry.p95latency| gauge | seconds | p95 latency of expiration time                                                                 |
+|apiserver.client_cert_expiry.p99latency| gauge | seconds | p99 latency of expiration time                                                                 |
+|apiserver.client_cert_expiry.duration| gauge | seconds | expiration time in seconds of the client certificates used to authenticate with the API server |
+|apiserver.client_cert_expiry.total_num| gauge | number  | number of clients certificates used to authenticate with the API server |
 
 #### Key Geneneration Fails
 |Metric Name| Type | Unit   | Description                                                   |
@@ -474,13 +474,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Key Generation Duration
 |Metric Name| Type  | Unit    | Description                                                                        |
 |----|-------|---------|------------------------------------------------------------------------------------|
-|apiserver.key_gen_duration.p50latency| gauge | float64 | p50 latency of key generation for storing data                                     |
-|apiserver.key_gen_duration.p75latency| gauge | float64 | p75 latency of key generation for storing data                                     |
-|apiserver.key_gen_duration.p90latency| gauge | float64 | p90 latency of key generation for storing data                                     |
-|apiserver.key_gen_duration.p95latency| gauge | float64 | p95 latency of key generation for storing data                                     |
-|apiserver.key_gen_duration.p99latency| gauge | float64 | p99 latency of key generation for storing data                                     |
-|apiserver.key_gen_duration.duration| gauge | float64 | duration of key generation for storing data in the API server's storage in seconds |
-|apiserver.key_gen_duration.total_num| gauge | uint64  | number of key generation for storing data in the API server's storage |
+|apiserver.key_gen_duration.p50latency| gauge | seconds | p50 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p75latency| gauge | seconds | p75 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p90latency| gauge | seconds | p90 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p95latency| gauge | seconds | p95 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.p99latency| gauge | seconds | p99 latency of key generation for storing data                                     |
+|apiserver.key_gen_duration.duration| gauge | seconds | duration of key generation for storing data in the API server's storage in seconds |
+|apiserver.key_gen_duration.total_num| gauge | number  | number of key generation for storing data in the API server's storage |
 
 #### Requests Total
 |Metric Name| Type | Unit   | Description                   |
@@ -490,13 +490,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Requests Duration
 |Metric Name| Type  | Unit    | Description                                |
 |----|-------|---------|--------------------------------------------|
-|apiserver.request_duration.p50latency| gauge | float64 | p50 latency of API server requests         |
-|apiserver.request_duration.p75latency| gauge | float64 | p75 latency of API server requests         |
-|apiserver.request_duration.p90latency| gauge | float64 | p90 latency of API server requests         |
-|apiserver.request_duration.p95latency| gauge | float64 | p95 latency of API server requests         |
-|apiserver.request_duration.p99latency| gauge | float64 | p99 latency of API server requests         |
-|apiserver.request_duration.duration| gauge | float64 | duration of API server requests in seconds |
-|apiserver.request_duration.total_num| gauge | uint64  | number of API server requests |
+|apiserver.request_duration.p50latency| gauge | seconds | p50 latency of API server requests         |
+|apiserver.request_duration.p75latency| gauge | seconds | p75 latency of API server requests         |
+|apiserver.request_duration.p90latency| gauge | seconds | p90 latency of API server requests         |
+|apiserver.request_duration.p95latency| gauge | seconds | p95 latency of API server requests         |
+|apiserver.request_duration.p99latency| gauge | seconds | p99 latency of API server requests         |
+|apiserver.request_duration.duration| gauge | seconds | duration of API server requests in seconds |
+|apiserver.request_duration.total_num| gauge | number  | number of API server requests |
 
 ### Etcd Metrics
 #### Generic
@@ -513,35 +513,35 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Commit
 |Metric Name| Type  | Unit    | Description                                                      |
 |----|-------|---------|------------------------------------------------------------------|
-|etcd.disk_backend_commit.p50latency| gauge | float64 | p50 latency of commit operations                                 |
-|etcd.disk_backend_commit.p75latency| gauge | float64 | p75 latency of commit operations                                 |
-|etcd.disk_backend_commit.p90latency| gauge | float64 | p90 latency of commit operations                                 |
-|etcd.disk_backend_commit.p95latency| gauge | float64 | p95 latency of commit operations                                 |
-|etcd.disk_backend_commit.p99latency| gauge | float64 | p99 latency of commit operations                                 |
-|etcd.disk_backend_commit.total_num| gauge | uint64  | number of commit operations for etcd's disk backend commits      |
-|etcd.disk_backend_commit.duration| gauge | float64 | duration of commit operations for etcd's disk backend in seconds |
+|etcd.disk_backend_commit.p50latency| gauge | seconds | p50 latency of commit operations                                 |
+|etcd.disk_backend_commit.p75latency| gauge | seconds | p75 latency of commit operations                                 |
+|etcd.disk_backend_commit.p90latency| gauge | seconds | p90 latency of commit operations                                 |
+|etcd.disk_backend_commit.p95latency| gauge | seconds | p95 latency of commit operations                                 |
+|etcd.disk_backend_commit.p99latency| gauge | seconds | p99 latency of commit operations                                 |
+|etcd.disk_backend_commit.duration| gauge | seconds | duration of commit operations for etcd's disk backend in seconds |
+|etcd.disk_backend_commit.total_num| gauge | number  | number of commit operations for etcd's disk backend commits      |
 
 #### WAL
 |Metric Name| Type  | Unit    | Description                      |
 |----|-------|---------|----------------------------------|
-|etcd.disk_wal_fsync.p50latency| gauge | float64 | p50 latency of fsync operations                                                                              |
-|etcd.disk_wal_fsync.p75latency| gauge | float64 | p75 latency of fsync operations                                                                              |
-|etcd.disk_wal_fsync.p90latency| gauge | float64 | p90 latency of fsync operations                                                                              |
-|etcd.disk_wal_fsync.p95latency| gauge | float64 | p95 latency of fsync operations                                                                              |
-|etcd.disk_wal_fsync.p99latency| gauge | float64 | p99 latency of fsync operations                                                                              |
-|etcd.disk_wal_fsync.total_num| gauge | uint64  | number of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend              |
-|etcd.disk_wal_fsync.duration| gauge | float64 | duration of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend in seconds |
+|etcd.disk_wal_fsync.p50latency| gauge | seconds | p50 latency of fsync operations                                                                              |
+|etcd.disk_wal_fsync.p75latency| gauge | seconds | p75 latency of fsync operations                                                                              |
+|etcd.disk_wal_fsync.p90latency| gauge | seconds | p90 latency of fsync operations                                                                              |
+|etcd.disk_wal_fsync.p95latency| gauge | seconds | p95 latency of fsync operations                                                                              |
+|etcd.disk_wal_fsync.p99latency| gauge | seconds | p99 latency of fsync operations                                                                              |
+|etcd.disk_wal_fsync.total_num| gauge | number  | number of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend              |
+|etcd.disk_wal_fsync.duration| gauge | seconds | duration of fsync (flush to disk) operations for etcd's write-ahead log (WAL) on the disk backend in seconds |
 
 #### Backend Snapshots
 |Metric Name| Type  | Unit    | Description                                                      |
 |----|-------|---------|------------------------------------------------------------------|
-|etcd.disk_backend_snapshot.p50latency| gauge | float64 | p50 latency of snapshot creation                                 |
-|etcd.disk_backend_snapshot.p75latency| gauge | float64 | p75 latency of snapshot creation                                 |
-|etcd.disk_backend_snapshot.p90latency| gauge | float64 | p90 latency of snapshot creation                                 |
-|etcd.disk_backend_snapshot.p95latency| gauge | float64 | p95 latency of snapshot creation                                 |
-|etcd.disk_backend_snapshot.p99latency| gauge | float64 | p99 latency of snapshot creation                                 |
-|etcd.disk_backend_snapshot.total_num| gauge | uint64  | number of snapshot creation for etcd's disk backend              |
-|etcd.disk_backend_snapshot.duration| gauge | float64 | duration of snapshot creation for etcd's disk backend in seconds |
+|etcd.disk_backend_snapshot.p50latency| gauge | seconds | p50 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p75latency| gauge | seconds | p75 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p90latency| gauge | seconds | p90 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p95latency| gauge | seconds | p95 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.p99latency| gauge | seconds | p99 latency of snapshot creation                                 |
+|etcd.disk_backend_snapshot.total_num| gauge | number  | number of snapshot creation for etcd's disk backend              |
+|etcd.disk_backend_snapshot.duration| gauge | seconds | duration of snapshot creation for etcd's disk backend in seconds |
 
 #### GRPC Total
 |Metric Name| Type | Unit   | Description                                                            |
@@ -568,35 +568,35 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Commit Rebalance
 |Metric Name| Type  | Unit    | Description |
 |----|-------|---------|-------------|
-|etcd.commit_rebalance_duration.p50latency| gauge | float64 | p50 latency of commit and rebalance operations   |
-|etcd.commit_rebalance_duration.p75latency| gauge | float64 | p75 latency of commit and rebalance operations                               |
-|etcd.commit_rebalance_duration.p90latency| gauge | float64 | p90 latency of commit and rebalance operations                               |
-|etcd.commit_rebalance_duration.p95latency| gauge | float64 | p95 latency of commit and rebalance operations                               |
-|etcd.commit_rebalance_duration.p99latency| gauge | float64 | p99 latency of commit and rebalance operations                               |
-|etcd.commit_rebalance_duration.total_num| gauge | uint64  | number of commit and rebalance operations for etcd disk backend              |
-|etcd.commit_rebalance_duration.duration| gauge | float64 | duration of commit and rebalance operations for etcd disk backend in seconds |
+|etcd.commit_rebalance_duration.p50latency| gauge | seconds | p50 latency of commit and rebalance operations   |
+|etcd.commit_rebalance_duration.p75latency| gauge | seconds | p75 latency of commit and rebalance operations                               |
+|etcd.commit_rebalance_duration.p90latency| gauge | seconds | p90 latency of commit and rebalance operations                               |
+|etcd.commit_rebalance_duration.p95latency| gauge | seconds | p95 latency of commit and rebalance operations                               |
+|etcd.commit_rebalance_duration.p99latency| gauge | seconds | p99 latency of commit and rebalance operations                               |
+|etcd.commit_rebalance_duration.total_num| gauge | number  | number of commit and rebalance operations for etcd disk backend              |
+|etcd.commit_rebalance_duration.duration| gauge | seconds | duration of commit and rebalance operations for etcd disk backend in seconds |
 
 #### Commit Write
 |Metric Name| Type  | Unit    | Description                                                     |
 |----|-------|---------|-----------------------------------------------------------------|
-|etcd.commit_write.p50latency| gauge | float64 | p50 latency of write operations during commit                   |
-|etcd.commit_write.p75latency| gauge | float64 | p75 latency of write operations during commit                   |
-|etcd.commit_write.p90latency| gauge | float64 | p90 latency of write operations during commit                   |
-|etcd.commit_write.p95latency| gauge | float64 | p95 latency of write operations during commit                   |
-|etcd.commit_write.p99latency| gauge | float64 | p99 latency of write operations during commit                   |
-|etcd.commit_write.total_num| gauge | uint64  | number of write operations during commit in etcd disk backend   |
-|etcd.commit_write.duration| gauge | float64 | duration of write operations during commit in etcd disk backend |
+|etcd.commit_write.p50latency| gauge | seconds | p50 latency of write operations during commit                   |
+|etcd.commit_write.p75latency| gauge | seconds | p75 latency of write operations during commit                   |
+|etcd.commit_write.p90latency| gauge | seconds | p90 latency of write operations during commit                   |
+|etcd.commit_write.p95latency| gauge | seconds | p95 latency of write operations during commit                   |
+|etcd.commit_write.p99latency| gauge | seconds | p99 latency of write operations during commit                   |
+|etcd.commit_write.total_num| gauge | number  | number of write operations during commit in etcd disk backend   |
+|etcd.commit_write.duration| gauge | seconds | duration of write operations during commit in etcd disk backend |
 
 #### DB Compaction Duration
 |Metric Name| Type  | Unit    | Description                                                                                                        |
 |--|-------|---------|--------------------------------------------------------------------------------------------------------------------|
-|etcd.mvcc_db_compaction.p50latency| gauge | float64 | p50 latency of MVCC database compaction operations                                                                 |
-|etcd.mvcc_db_compaction.p75latency| gauge | float64 | p75 latency of MVCC database compaction operations             |
-|etcd.mvcc_db_compaction.p90latency| gauge | float64 | p90 latency of MVCC database compaction operations             |
-|etcd.mvcc_db_compaction.p95latency| gauge | float64 | p95 latency of MVCC database compaction operations             |
-|etcd.mvcc_db_compaction.p99latency| gauge | float64 | p99 latency of MVCC database compaction operations             |
-|etcd.mvcc_db_compaction.total_num| gauge | uint64  | number of MVCC database compaction operations                  |
-|etcd.mvcc_db_compaction.duration| gauge | float64 | duration of MVCC database compaction operations in miliseconds |
+|etcd.mvcc_db_compaction.p50latency| gauge | seconds | p50 latency of MVCC database compaction operations                                                                 |
+|etcd.mvcc_db_compaction.p75latency| gauge | seconds | p75 latency of MVCC database compaction operations             |
+|etcd.mvcc_db_compaction.p90latency| gauge | seconds | p90 latency of MVCC database compaction operations             |
+|etcd.mvcc_db_compaction.p95latency| gauge | seconds | p95 latency of MVCC database compaction operations             |
+|etcd.mvcc_db_compaction.p99latency| gauge | seconds | p99 latency of MVCC database compaction operations             |
+|etcd.mvcc_db_compaction.total_num| gauge | number  | number of MVCC database compaction operations                  |
+|etcd.mvcc_db_compaction.duration| gauge | seconds | duration of MVCC database compaction operations in miliseconds |
 
 ### Kube-proxy Metrics
 #### Generic
@@ -616,24 +616,24 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Client Duration
 |Metric Name| Type  | Unit    | Description                                 |
 |----|-------|---------|---------------------------------------------|
-|kubeproxy.rest_client_duration.p50latency| gauge | float64 | p50 latency of REST client requests         |
-|kubeproxy.rest_client_duration.p75latency| gauge | float64 | p75 latency of REST client requests         |
-|kubeproxy.rest_client_duration.p90latency| gauge | float64 | p90 latency of REST client requests         |
-|kubeproxy.rest_client_duration.p95latency| gauge | float64 | p95 latency of REST client requests         |
-|kubeproxy.rest_client_duration.p99latency| gauge | float64 | p99 latency of REST client requests         |
-|kubeproxy.rest_client_duration.duration| gauge | float64 | duration of REST client requests in seconds |
-|kubeproxy.rest_client_duration.total_num| gauge | uint64  | number of REST client requests |
+|kubeproxy.rest_client_duration.p50latency| gauge | seconds | p50 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p75latency| gauge | seconds | p75 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p90latency| gauge | seconds | p90 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p95latency| gauge | seconds | p95 latency of REST client requests         |
+|kubeproxy.rest_client_duration.p99latency| gauge | seconds | p99 latency of REST client requests         |
+|kubeproxy.rest_client_duration.duration| gauge | seconds | duration of REST client requests in seconds |
+|kubeproxy.rest_client_duration.total_num| gauge | number  | number of REST client requests |
 
 #### Sync Proxy Rules Duration
 |Metric Name| Type  | Unit    | Description                                        |
 |----|-------|---------|----------------------------------------------------|
-|kubeproxy.sync_proxy_rules.p50latency| gauge | float64 | p50 latency of proxy rules synchronization         |
-|kubeproxy.sync_proxy_rules.p75latency| gauge | float64 | p75 latency of proxy rules synchronization         |
-|kubeproxy.sync_proxy_rules.p90latency| gauge | float64 | p90 latency of proxy rules synchronization         |
-|kubeproxy.sync_proxy_rules.p95latency| gauge | float64 | p95 latency of proxy rules synchronization         |
-|kubeproxy.sync_proxy_rules.p99latency| gauge | float64 | p99 latency of proxy rules synchronization         |
-|kubeproxy.sync_proxy_rules.duration| gauge | float64 | duration of proxy rules synchronization in seconds |
-|kubeproxy.sync_proxy_rules.total_num| gauge | uint64  | number of proxy rules synchronization |
+|kubeproxy.sync_proxy_rules.p50latency| gauge | seconds | p50 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p75latency| gauge | seconds | p75 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p90latency| gauge | seconds | p90 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p95latency| gauge | seconds | p95 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.p99latency| gauge | seconds | p99 latency of proxy rules synchronization         |
+|kubeproxy.sync_proxy_rules.duration| gauge | seconds | duration of proxy rules synchronization in seconds |
+|kubeproxy.sync_proxy_rules.total_num| gauge | number  | number of proxy rules synchronization |
 
 ### CoreDNS Metrics
 #### Generic
@@ -650,13 +650,13 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### Request Duration
 |Metric Name| Type  | Unit    | Description                                            |
 |----|-------|---------|--------------------------------------------------------|
-|coredns.request_duration.p50latency| gauge | float64 | p50 latency of DNS requests handled                    |
-|coredns.request_duration.p75latency| gauge | float64 | p75 latency of DNS requests handled                    |
-|coredns.request_duration.p90latency| gauge | float64 | p90 latency of DNS requests handled                    |
-|coredns.request_duration.p95latency| gauge | float64 | p95 latency of DNS requests handled                    |
-|coredns.request_duration.p99latency| gauge | float64 | p99 latency of DNS requests handled                    |
-|coredns.request_duration.duration| gauge | float64 | duration of DNS requests handled by CoreDNS in seconds |
-|coredns.request_duration.total_num| gauge | uint64  | number of DNS requests handled by CoreDNS |
+|coredns.request_duration.p50latency| gauge | seconds | p50 latency of DNS requests handled                    |
+|coredns.request_duration.p75latency| gauge | seconds | p75 latency of DNS requests handled                    |
+|coredns.request_duration.p90latency| gauge | seconds | p90 latency of DNS requests handled                    |
+|coredns.request_duration.p95latency| gauge | seconds | p95 latency of DNS requests handled                    |
+|coredns.request_duration.p99latency| gauge | seconds | p99 latency of DNS requests handled                    |
+|coredns.request_duration.duration| gauge | seconds | duration of DNS requests handled by CoreDNS in seconds |
+|coredns.request_duration.total_num| gauge | number  | number of DNS requests handled by CoreDNS |
 
 #### Requests
 |Metric Name| | Unit   | Description                           |
@@ -679,15 +679,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.forward_cache.misses| | uint64 | number of connection cache misses per upstream and protocol |
 
 #### Forward Request Duration
-|Metric Name| Type  | Unit     | Description                                                      |
-|----|-------|----------|------------------------------------------------------------------|
-|coredns.forward_request.p50latency| gauge | float64  | p50 latency of forwarded DNS requests handled                     |
-|coredns.forward_request.p75latency| gauge | float64  | p75 latency of forwarded DNS requests handled                     |
-|coredns.forward_request.p90latency| gauge | float64  | p90 latency of forwarded DNS requests handled                     |
-|coredns.forward_request.p95latency| gauge | float64  | p95 latency of forwarded DNS requests handled                     |
-|coredns.forward_request.p99latency| gauge | float64  | p99 latency of forwarded DNS requests hanndled                    |
-|coredns.forward_request.duration| gauge |  float64 | duration of forwarding DNS requests handled by CoreDNS in seconds |
-|coredns.forward_request.total_num| gauge | uint64   | number of forwarding DNS requests handled by CoreDNS |
+|Metric Name| Type  | Unit    | Description                                                      |
+|----|-------|---------|------------------------------------------------------------------|
+|coredns.forward_request.p50latency| gauge | seconds | p50 latency of forwarded DNS requests handled                     |
+|coredns.forward_request.p75latency| gauge | seconds | p75 latency of forwarded DNS requests handled                     |
+|coredns.forward_request.p90latency| gauge | seconds | p90 latency of forwarded DNS requests handled                     |
+|coredns.forward_request.p95latency| gauge | seconds | p95 latency of forwarded DNS requests handled                     |
+|coredns.forward_request.p99latency| gauge | seconds | p99 latency of forwarded DNS requests hanndled                    |
+|coredns.forward_request.duration| gauge | seconds | duration of forwarding DNS requests handled by CoreDNS in seconds |
+|coredns.forward_request.total_num| gauge | number  | number of forwarding DNS requests handled by CoreDNS |
 
 ### Scheduler Metrics
 #### Preemption Attempts
@@ -723,57 +723,57 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 #### E2E Scheduling Duration
 |Metric Name| Type  | Unit    | Description                                                                                       |
 |----|-------|---------|---------------------------------------------------------------------------------------------------|
-|scheduler.e2e_duration.p50latency| gauge | float64 | p50 latency of end-to-end scheduling operations                                                   |
-|scheduler.e2e_duration.p75latency| gauge | float64 | p75 latency of end-to-end scheduling operations                                                   |
-|scheduler.e2e_duration.p90latency| gauge | float64 | p90 latency of end-to-end scheduling operations                                                   |
-|scheduler.e2e_duration.p95latency| gauge | float64 | p95 latency of end-to-end scheduling operations                                                   |
-|scheduler.e2e_duration.p99latency| gauge | float64 | p99 latency of end-to-end scheduling operations                                                   |
-|scheduler.e2e_duration.total_num| gauge | uint64  | number of end-to-end scheduling operations                                                        |
-|scheduler.e2e_duration.duration| gauge | float64 | duration of end-to-end scheduling operations measured in seconds (scheduling algorithm + binding) |
+|scheduler.e2e_duration.p50latency| gauge | seconds | p50 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p75latency| gauge | seconds | p75 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p90latency| gauge | seconds | p90 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p95latency| gauge | seconds | p95 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.p99latency| gauge | seconds | p99 latency of end-to-end scheduling operations                                                   |
+|scheduler.e2e_duration.total_num| gauge | number  | number of end-to-end scheduling operations                                                        |
+|scheduler.e2e_duration.duration| gauge | seconds | duration of end-to-end scheduling operations measured in seconds (scheduling algorithm + binding) |
 
 #### Scheduling Algorithm Duration
 |Metric Name| Type  | Unit    | Description                                           |
 |----|-------|---------|-------------------------------------------------------|
-|scheduler.scheduling_algorithm.p50latency| gauge | float64 | p50 latency of scheduling algorithm executions        |
-|scheduler.scheduling_algorithm.p75latency| gauge | float64 | p75 latency of scheduling algorithm executions        |
-|scheduler.scheduling_algorithm.p90latency| gauge | float64 | p90 latency of scheduling algorithm executions        |
-|scheduler.scheduling_algorithm.p95latency| gauge | float64 | p95 latency of scheduling algorithm executions        |
-|scheduler.scheduling_algorithm.p99latency| gauge | float64 | p99 latency of scheduling algorithm executions        |
-|scheduler.scheduling_algorithm.total_num| gauge | uint64  | number of scheduling algorithm execution              |
-|scheduler.scheduling_algorithm.duration| gauge | float64 | duration of scheduling algorithm execution in seconds |
+|scheduler.scheduling_algorithm.p50latency| gauge | seconds | p50 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p75latency| gauge | seconds | p75 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p90latency| gauge | seconds | p90 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p95latency| gauge | seconds | p95 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.p99latency| gauge | seconds | p99 latency of scheduling algorithm executions        |
+|scheduler.scheduling_algorithm.total_num| gauge | number  | number of scheduling algorithm execution              |
+|scheduler.scheduling_algorithm.duration| gauge | seconds | duration of scheduling algorithm execution in seconds |
 
 #### Preemption Victims
 |Metric Name| Type  | Unit    | Description                                                                                    |
 |----|-------|---------|------------------------------------------------------------------------------------------------|
-|scheduler.preemption_victims.p50latency| gauge | float64 | p50 latency of preemption victims                                                              |
-|scheduler.preemption_victims.p75latency| gauge | float64 | p75 latency of preemption victims                                                              |
-|scheduler.preemption_victims.p90latency| gauge | float64 | p90 latency of preemption victims                                                              |
-|scheduler.preemption_victims.p95latency| gauge | float64 | p95 latency of preemption victims                                                              |
-|scheduler.preemption_victims.p99latency| gauge | float64 | p99 latency of preemption victims                                                              |
-|scheduler.preemption_victims.total_num| gauge | uint64  | number of preemption victims identified by the scheduler for resource reclamation              |
-|scheduler.preemption_victims.duration| gauge | float64 | duration of preemption victims identified by the scheduler for resource reclamation in seconds |
+|scheduler.preemption_victims.p50latency| gauge | seconds | p50 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p75latency| gauge | seconds | p75 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p90latency| gauge | seconds | p90 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p95latency| gauge | seconds | p95 latency of preemption victims                                                              |
+|scheduler.preemption_victims.p99latency| gauge | seconds | p99 latency of preemption victims                                                              |
+|scheduler.preemption_victims.total_num| gauge | number  | number of preemption victims identified by the scheduler for resource reclamation              |
+|scheduler.preemption_victims.duration| gauge | seconds | duration of preemption victims identified by the scheduler for resource reclamation in seconds |
 
 #### Scheduling Duration
 |Metric Name| Type  | Unit    | Description                                                                |
 |----|-------|---------|----------------------------------------------------------------------------|
-|scheduler.scheduling_duration.p50latency| gauge | float64 | p50 latency of pod scheduling operations                                   |
-|scheduler.scheduling_duration.p75latency| gauge | float64 | p75 latency of pod scheduling operations                                   |
-|scheduler.scheduling_duration.p90latency| gauge | float64 | p90 latency of pod scheduling operations                                   |
-|scheduler.scheduling_duration.p95latency| gauge | float64 | p95 latency of pod scheduling operations                                   |
-|scheduler.scheduling_duration.p99latency| gauge | float64 | p99 latency of pod scheduling operations                                   |
-|scheduler.scheduling_duration.total_num| gauge | uint64  | number of pod scheduling operations in the scheduler                       |
-|scheduler.scheduling_duration.duration| gauge | float64 | duration of pod scheduling operations in the scheduler measured in seconds |
+|scheduler.scheduling_duration.p50latency| gauge | seconds | p50 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p75latency| gauge | seconds | p75 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p90latency| gauge | seconds | p90 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p95latency| gauge | seconds | p95 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.p99latency| gauge | seconds | p99 latency of pod scheduling operations                                   |
+|scheduler.scheduling_duration.total_num| gauge | number  | number of pod scheduling operations in the scheduler                       |
+|scheduler.scheduling_duration.duration| gauge | seconds | duration of pod scheduling operations in the scheduler measured in seconds |
 
 #### Framework Extension Duration
 |Metric Name| Type  | Unit    | Description                                                         |
 |----|-------|---------|---------------------------------------------------------------------|
-|scheduler.framework_extension.p50latency| gauge | float64 | p50 latency of framework extension point executions                 |
-|scheduler.framework_extension.p75latency| gauge | float64 | p75 latency of framework extension point executions                 |
-|scheduler.framework_extension.p90latency| gauge | float64 | p90 latency of framework extension point executions                 |
-|scheduler.framework_extension.p95latency| gauge | float64 | p95 latency of framework extension point executions                 |
-|scheduler.framework_extension.p99latency| gauge | float64 | p99 latency of framework extension point executions                 |
-|scheduler.framework_extension.total_num| gauge | uint64  | number of framework extension point execution measured              |
-|scheduler.framework_extension.duration| gauge | float64 | duration of framework extension point execution measured in seconds |
+|scheduler.framework_extension.p50latency| gauge | seconds | p50 latency of framework extension point executions                 |
+|scheduler.framework_extension.p75latency| gauge | seconds | p75 latency of framework extension point executions                 |
+|scheduler.framework_extension.p90latency| gauge | seconds | p90 latency of framework extension point executions                 |
+|scheduler.framework_extension.p95latency| gauge | seconds | p95 latency of framework extension point executions                 |
+|scheduler.framework_extension.p99latency| gauge | seconds | p99 latency of framework extension point executions                 |
+|scheduler.framework_extension.total_num| gauge | number  | number of framework extension point execution measured              |
+|scheduler.framework_extension.duration| gauge | seconds | duration of framework extension point execution measured in seconds |
 
 #### Scheduler Attempts
 |Metric Name| Type | Unit   | Description                         |
