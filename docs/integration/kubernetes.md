@@ -162,50 +162,42 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Cluster Metrics
 
-|Name|Type|Unit|Numeric Type|Label|Description|
-|----|----|----|------------|-----|-----------|
-|kubernetes.cluster.pod.count|gauge|ns|long|total pod count|number of pods in the cluster|
-|kubernetes.cluster.deployment.count|gauge|ns|long|total deployment count|number of deployments in the cluster|
-|kubernetes.cluster.node.count|gauge|ns|long|total node count|number of node comprising the cluster|
+|Name| Type   | Unit   | Description |
+|----|--------|--------|-------------|
+|kubernetes.cluster.pod.count| gauge  | number |number of pods in the cluster|
+|kubernetes.cluster.deployment.count| gauge  | number |number of deployments in the cluster|
+|kubernetes.cluster.node.count| gauge  | number |number of node comprising the cluster|
 
 ### Pod Metrics
 
-|Name|Type|Unit|Numeric Type|Label|Description|
-|----|----|----|------------|-----|-----------|
-|kubernetes.pod.restarts|counter|ns|long|pod restarts|number of pod restarts|
-|kubernetes.pod.container.count|gauge|ns|long|container count|number of containers inside pod|
-|kubernetes.pod.count|gauge|ns|long|pod count|pod count which is always equal to one|
-|kubernetes.pod.count.succeeded|gauge|ns|long|succeeded pod count|equal to one if all containers inside pod have terminated in success|
-|kubernetes.pod.count.failed|gauge|ns|long|failed pod count|equal to one if all containers inside pod have terminated and at least one container has terminated in failure|
-|kubernetes.pod.count.unknown|gauge|ns|long|unknown pod count|equal to one if pod state can't be obtained|
-|kubernetes.pod.count.pending|gauge|ns|long|pending pod count|equal to one if the pod has been accepted by the scheduler and his containers are waiting to be created|
-|kubernetes.pod.count.running|gauge|ns|long|running pod count|equal to one if the pod has been scheduled on a node and at least one of his containers is running|
+|Name| Type  | Unit | Description                                                                                                   |
+|----|-------|------|---------------------------------------------------------------------------------------------------------------|
+|kubernetes.pod.restarts| counter| long | number of pod restarts                                                                                        |
+|kubernetes.pod.container.count| gauge | long | number of containers inside pod                                                                               |
+|kubernetes.pod.count| gauge | long | pod count which is always equal to one                                                                        |
+|kubernetes.pod.count.succeeded| gauge | long  | equal to one if all containers inside pod have terminated in success                                          |
+|kubernetes.pod.count.failed| gauge | long | equal to one if all containers inside pod have terminated and at least one container has terminated in failure|
+|kubernetes.pod.count.unknown| gauge | long | equal to one if pod state can't be obtained                                                                   |
+|kubernetes.pod.count.pending| gauge | long | equal to one if the pod has been accepted by the scheduler and his containers are waiting to be created       |
+|kubernetes.pod.count.running| gauge | long |equal to one if the pod has been scheduled on a node and at least one of his containers is running|
 
 ### Deployment Metrics
 
-|Name|Type|Unit|Numeric Type|Label|Description|
-|----|----|----|------------|-----|-----------|
-|kubernetes.deployment.count|gauge|ns|long|deployment count|deployment count which is always equal to one|
-|kubernetes.deployment.replicas|gauge|ns|long|replica count|number of active replicas|
-|kubernetes.deployment.replicas.avail|gauge|ns|long|available replica count|number of available replicas. Replicas are marked as available if they are passing the health check|
-|kubernetes.deployment.replicas.desired|gauge|ns|long|desired replica count|number of desired replicas as defined in the deployment|
+|Name|Type| Unit   | Label | Description          |
+|----|----|--------|-------|----------------------|
+|kubernetes.deployment.count|gauge| number | deployment count | number of active deployments |
+|kubernetes.deployment.replicas|gauge| number | replica count | number of active replicas |
+|kubernetes.deployment.replicas.avail|gauge| number | number of available replicas. Replicas are marked as available if they are passing the health check |
+|kubernetes.deployment.replicas.desired|gauge| number | number of desired replicas as defined in the deployment |
 
 ### Storage Metrics
-
-|Name|Type|Unit|Numeric Type| Description |
-|----|----|----|---------|-|
-|kubernetes.pvc.available|gauge|bytes|long|number of available bytes in the volume |
-|kubernetes.pvc.used|gauge|bytes|long|number of used bytes in the volume |
-|kubernetes.pvc.capacity|gauge|bytes|long|the capacity in bytes of the volume    |
-
-### Kubelet Metrics
-#### Volume Stats
 | Metric Name              | Type  | Unit  | Description                           |
 |--------------------------|-------|-------|---------------------------------------|
 | kubernetes.pvc.used      | gauge | bytes |number of used inodes in the volume    |
 | kubernetes.pvc.available | gauge | bytes |number of available bytes in the volume |
 | kubernetes.pvc.capacity  | gauge | bytes |capacity in bytes of the volume        |
 
+### Kubelet Metrics
 #### Runtime Operations
 |Metric Name| Type  | Unit    | Description                                                     |
 |----|-------|---------|-----------------------------------------------------------------|
