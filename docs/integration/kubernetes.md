@@ -200,11 +200,11 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Kubelet Metrics
 #### Volume Stats
-| Metric Name              | Type | Unit  | Description                           |
-|--------------------------|-----|-------|---------------------------------------|
-| kubernetes.pvc.used      | | int64 |number of used inodes in the volume    |
-| kubernetes.pvc.available | | int64 |number of available bytes in the volume |
-| kubernetes.pvc.capacity  | | int64 |capacity in bytes of the volume        |
+| Metric Name              | Type  | Unit  | Description                           |
+|--------------------------|-------|-------|---------------------------------------|
+| kubernetes.pvc.used      | gauge | bytes |number of used inodes in the volume    |
+| kubernetes.pvc.available | gauge | bytes |number of available bytes in the volume |
+| kubernetes.pvc.capacity  | gauge | bytes |capacity in bytes of the volume        |
 
 #### Runtime Operations
 |Metric Name| Type  | Unit    | Description                                                     |
@@ -220,16 +220,16 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.runtime_operation.p99latency| gauge | seconds | p99 latency in seconds of runtime operations |
 
 #### Kubelet
-|Metric Name| Type    | Unit    | Description                    |
-|----|---------|---------|--------------------------------|
-|kubelet.pods.instances|         | int     | pods Instances                 |
-|kubelet.pods.running|         | float64 | running Pods                   |
-|kubelet.pods.started|         | float64 | started Pods                   |
-|kubelet.pods.started_error|         | float64 | pods Started Errors            |
-|kubelet.containers.created| | float64 | containers with status Created |
-|kubelet.containers.exited| | float64 | containers with status Exited  |
-|kubelet.containers.running| | float64 | containers with status Running |
-|kubelet.containers.unknown| | float64 | containers with status Unknown |
+|Metric Name| Type  | Unit   | Description                    |
+|----|-------|--------|--------------------------------|
+|kubelet.pods.instances| gauge | number | pods Instances                 |
+|kubelet.pods.running| gauge | number | running Pods                   |
+|kubelet.pods.started| gauge | number | started Pods                   |
+|kubelet.pods.started_error| gauge | number | pods Started Errors            |
+|kubelet.containers.created| gauge | number | containers with status Created |
+|kubelet.containers.exited| gauge | number | containers with status Exited  |
+|kubelet.containers.running| gauge | number | containers with status Running |
+|kubelet.containers.unknown| gauge | number | containers with status Unknown |
 
 #### Pod Start Duration
 |Metric Name| Type  | Unit    | Description                                                           |
@@ -265,10 +265,10 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.pod_worker_start.p99latency| gauge | seconds | p99 latency in seconds from seeing a pod to starting a worker |
 
 #### Volume Manager
-|Metric Name| Type | Unit    | Description                                 |
-|----|-----|---------|---------------------------------------------|
-|kubelet.volume_manager.count| | float64 | total volumes managed by the volume manager |
-|kubelet.volume_manager.desired.count| | float64 | total volumes desired by the volume manager |
+|Metric Name| Type  | Unit   | Description                                 |
+|----|-------|--------|---------------------------------------------|
+|kubelet.volume_manager.count| gauge | number | total volumes managed by the volume manager |
+|kubelet.volume_manager.desired.count| gauge | number | total volumes desired by the volume manager |
 
 #### Storage Operation
 |Metric Name| Type  | Unit    | Description                               |
@@ -317,9 +317,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.docker_operation.p99latency| gauge | seconds | p99 latency in seconds of Docker operations |
 
 #### HTTP Inflight Request
-| Metric Name                              | Type| Unit    | Description                 |
-|------------------------------------------|------|---------|-----------------------------|
-| kubelet.http_inflight_request.total_num  | | float64 | number of inflight requests |
+| Metric Name                              | Type  | Unit   | Description                 |
+|------------------------------------------|-------|--------|-----------------------------|
+| kubelet.http_inflight_request.total_num  | gauge | number | number of inflight requests |
 
 #### HTTP Request Duration
 |Metric Name| Type  | Unit    | Description                             |
@@ -358,34 +358,34 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubelet.pleg_relist.p99duration| gauge | seconds | p99 latency of pod relisting |
 
 #### Started Containers
-|Metric Name| Type | Unit    | Description                           |
-|----|-----|---------|---------------------------------------|
-|kubelet.started_containers.errors| | float64 | number of started containers with errors |
-|kubelet.started_containers.total_num| | float64 | total number of started containers |
+|Metric Name| Type  | Unit   | Description                           |
+|----|-------|--------|---------------------------------------|
+|kubelet.started_containers.errors| gauge | number | number of started containers with errors |
+|kubelet.started_containers.total_num| gauge | number | total number of started containers |
 
 #### Volume Stats Inode
-|Metric Name| Type | Unit    | Description                            |
-|----|------|---------|----------------------------------------|
-|kubelet.volume_stats_inode.free| | float64 | number of free inodes in the volume    |
-|kubelet.volume_stats_inode.used| | float64 | number of used inodes in the volume    |
-|kubelet.volume_stats_inode.maximum| | float64 | maximum number of inodes in the volume |
+|Metric Name| Type  | Unit   | Description                            |
+|----|-------|--------|----------------------------------------|
+|kubelet.volume_stats_inode.free| gauge | number | number of free inodes in the volume    |
+|kubelet.volume_stats_inode.used| gauge | number | number of used inodes in the volume    |
+|kubelet.volume_stats_inode.maximum| gauge | number | maximum number of inodes in the volume |
 
 #### PLEG Events
-|Metric Name| Type| Unit  | Description                                  |
-|----|-------|-------|----------------------------------------------|
-|kubelet.pleg_events.discard| | int64 | number of discarded events by kubelet's PLEG |
-|kubelet.pleg_events.last_seen| | int64 | last timestamp in which PLEG was observed |
+|Metric Name| Type  | Unit      | Description                                  |
+|----|-------|-----------|----------------------------------------------|
+|kubelet.pleg_events.discard| gauge | number    | number of discarded events by kubelet's PLEG |
+|kubelet.pleg_events.last_seen|       | timestamp | last timestamp in which PLEG was observed |
 
 ### API Server Metrics
 #### Inflight Requests
-|Metric Name| Type | Unit   | Description                                                |
-|----|------|--------|------------------------------------------------------------|
-|apiserver.inflight_requests.total_num| | uint64 | number of in-flight requests being processed by API server |
+|Metric Name| Type  | Unit   | Description                                                |
+|----|-------|--------|------------------------------------------------------------|
+|apiserver.inflight_requests.total_num| gauge | number | number of in-flight requests being processed by API server |
 
 #### Audit Events
-|Metric Name| Type | Unit   | Description                                                    |
-|----|------|--------|----------------------------------------------------------------|
-|apiserver.audit_events.total_num| | uint64 | number of audit events generated and sent to the audit backend |
+|Metric Name| Type  | Unit   | Description                                                    |
+|----|-------|--------|----------------------------------------------------------------|
+|apiserver.audit_events.total_num| gauge | number | number of audit events generated and sent to the audit backend |
 
 #### Request Duration
 |Metric Name| Type  | Unit    | Description                          |
@@ -399,29 +399,29 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.etcd_request_duration.total_num| gauge | number  | number of etcd requests |
 
 #### Storage Objects
-|Metric Name| Type | Unit   | Description                                                      |
-|----|------|--------|------------------------------------------------------------------|
-|apiserver.storage_objects.total_num| | uint64 | number of stored objects at the time of last check split by kind |
+|Metric Name| Type  | Unit   | Description                                                      |
+|----|-------|--------|------------------------------------------------------------------|
+|apiserver.storage_objects.total_num| gauge | number | number of stored objects at the time of last check split by kind |
 
 #### Client Requests
-|Metric Name| Type | Unit   | Description             |
-|----|-----|--------|-------------------------|
-|apiserver.client_requests.total_num| | uint64 | number of HTTP requests |
+|Metric Name| Type  | Unit   | Description             |
+|----|-------|--------|-------------------------|
+|apiserver.client_requests.total_num| gauge | number | number of HTTP requests |
 
 #### Rejected Audit Requests
-|Metric Name| Type | Unit   | Description                                           |
-|----|------|--------|-------------------------------------------------------|
-|apiserver.rejected_audit_req.total_num| | uint64 | number of API server audit requests rejected |
+|Metric Name| Type  | Unit   | Description                                           |
+|----|-------|--------|-------------------------------------------------------|
+|apiserver.rejected_audit_req.total_num| gauge | number | number of API server audit requests rejected |
 
 #### Current Executing Requests
-|Metric Name| Type | Unit   | Description                                                                           |
-|----|-----|--------|---------------------------------------------------------------------------------------|
-|apiserver.current_executing_reqs.total_num| | uint64 | number of requests in regular execution phase in the API Priority and Fairness system |
+|Metric Name| Type  | Unit   | Description                                                                           |
+|----|-------|--------|---------------------------------------------------------------------------------------|
+|apiserver.current_executing_reqs.total_num| gauge | number | number of requests in regular execution phase in the API Priority and Fairness system |
 
 #### Current Inqueue Requests
-|Metric Name| Type | Unit   | Description                                                                            |
-|----|--|--------|----------------------------------------------------------------------------------------|
-|apiserver.current_inqueue_reqs.total_num| | uint64 | number of requests currently pending in queues of the API Priority and Fairness system |
+|Metric Name| Type  | Unit   | Description                                                                            |
+|----|-------|--------|----------------------------------------------------------------------------------------|
+|apiserver.current_inqueue_reqs.total_num| gauge | number | number of requests currently pending in queues of the API Priority and Fairness system |
 
 #### Admission Duration
 | Metric Name                             |       | Unit    | Description                                    |
@@ -435,9 +435,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 | apiserver.admission_duration.total_num  | gauge | number  | number of admission controller processing in the API server |
 
 #### TLS Error
-| Metric Name | Type                      | Unit   | Description                                                      |
-|--------------|---------------------------|--------|------------------------------------------------------------------|
-| apiserver.tls_handshake_error.total_num | | uint64 | number of requests dropped with 'TLS handshake error from' error |
+| Metric Name | Type  | Unit   | Description                                                      |
+|--------------|-------|--------|------------------------------------------------------------------|
+| apiserver.tls_handshake_error.total_num | gauge | number | number of requests dropped with 'TLS handshake error from' error |
 
 #### Authentication Duration
 |Metric Name| Type  | Unit   | Description                               |
@@ -451,9 +451,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.auth_duration.total_num| gauge | number | number of authentication processes |
 
 #### Authenticated User Requests
-|Metric Name| Type| Unit   | Description                      |
-|----|-----|--------|----------------------------------|
-|apiserver.auth_user_req.total_num| | uint64 | number of authenticated requests |
+|Metric Name| Type  | Unit   | Description                      |
+|----|-------|--------|----------------------------------|
+|apiserver.auth_user_req.total_num| gauge | number | number of authenticated requests |
 
 #### Client Certificate Expiry
 |Metric Name| Type  | Unit    | Description                    |
@@ -467,9 +467,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.client_cert_expiry.total_num| gauge | number  | number of clients certificates used to authenticate with the API server |
 
 #### Key Geneneration Fails
-|Metric Name| Type | Unit   | Description                                                   |
-|----|------|--------|---------------------------------------------------------------|
-|apiserver.key_gen_fails.total_num| | uint64 | number of failed data encryption key(DEK) generation operations |
+|Metric Name| Type  | Unit   | Description                                                   |
+|----|-------|--------|---------------------------------------------------------------|
+|apiserver.key_gen_fails.total_num| gauge | number | number of failed data encryption key(DEK) generation operations |
 
 #### Key Generation Duration
 |Metric Name| Type  | Unit    | Description                                                                        |
@@ -483,9 +483,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |apiserver.key_gen_duration.total_num| gauge | number  | number of key generation for storing data in the API server's storage |
 
 #### Requests Total
-|Metric Name| Type | Unit   | Description                   |
+|Metric Name| Type  | Unit   | Description                   |
 |----|-------|--------|-------------------------------|
-|apiserver.request_total.total_num| | uint64 | number of API server requests |
+|apiserver.request_total.total_num| gauge | number | number of API server requests |
 
 #### Requests Duration
 |Metric Name| Type  | Unit    | Description                                |
@@ -500,15 +500,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Etcd Metrics
 #### Generic
-|Metric Name| Type | Unit    | Description                             |
-|----|-----|---------|-----------------------------------------|
-|etcd.has_leader| | uint64  | whether or not a leader exists          |
-|etcd.leader.changes_seen| | uint64  | number of leader changes seen           |
-|etcd.proposals.applied| | uint64  | number of consensus proposals applied   |
-|etcd.proposals.committed| | uint64  | number of consensus proposals committed |
-|etcd.proposals.failed| | uint64  | number of failed proposals seen       |
-|etcd.proposals.pending| | uint64  | number of pending proposals to commit |
-|etcd.version| | float64 | version of etcd running |
+|Metric Name| Type  | Unit    | Description                             |
+|----|-------|---------|-----------------------------------------|
+|etcd.has_leader| gauge | number  | whether or not a leader exists          |
+|etcd.leader.changes_seen| gauge | number  | number of leader changes seen           |
+|etcd.proposals.applied| gauge | number  | number of consensus proposals applied   |
+|etcd.proposals.committed| gauge | number  | number of consensus proposals committed |
+|etcd.proposals.failed| gauge | number  | number of failed proposals seen       |
+|etcd.proposals.pending| gauge | number  | number of pending proposals to commit |
+|etcd.version|       | version | version of etcd running |
 
 #### Commit
 |Metric Name| Type  | Unit    | Description                                                      |
@@ -544,26 +544,26 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |etcd.disk_backend_snapshot.duration| gauge | seconds | duration of snapshot creation for etcd's disk backend in seconds |
 
 #### GRPC Total
-|Metric Name| Type | Unit   | Description                                                            |
-|----|------|--------|------------------------------------------------------------------------|
-|etcd.grpc.handled|      | uint64 | number of RPCs completed on the server, regardless of success or failure |
+|Metric Name| Type  | Unit   | Description                                                            |
+|----|-------|--------|------------------------------------------------------------------------|
+|etcd.grpc.handled| gauge | number | number of RPCs completed on the server, regardless of success or failure |
 
 #### MVCC
-|Metric Name| Type | Unit   | Description                                                                                |
-|----|------|--------|--------------------------------------------------------------------------------------------|
-|etcd.mvcc.keys|      | uint64 | number of keys                                                |
-|etcd.mvcc.events|      | uint64 | number of events sent by this member                          |
-|etcd.mvcc.keys_bytes|      | uint64 | number of MVCC keys involved in etcd debugging operations     |
-|etcd.mvcc.watch_stream|      | uint64 | number of watch streams                                       |
-|etcd.mvcc.watcher|      | uint64 | number of watchers                                            |
-|etcd.mvcc.db_read|      | uint64 | number of currently open read transactions                    |
-|etcd.mvcc.db_size|      | uint64 | size of the underlying database physically allocated in bytes |
-|etcd.mvcc.db_used|      | uint64 | size of the underlying database logically in use in bytes |
-|etcd.mvcc.puts|      | uint64 | number of puts seen by this member                       |
-|etcd.mvcc.deletes|      | uint64 | number of deletes seen by this member                    |
-|etcd.mvcc.slow_watches|      | uint64 | number of unsynced slow watchers                         |
-|etcd.watch.requests|      | uint64 | number of incoming watch requests (new or reestablished) |
-|etcd.store.watchers|      | uint64 | number of currently active watchers |
+|Metric Name| Type  | Unit   | Description                                                                                |
+|----|-------|--------|--------------------------------------------------------------------------------------------|
+|etcd.mvcc.keys| gauge | number | number of keys                                                |
+|etcd.mvcc.events| gauge | number | number of events sent by this member                          |
+|etcd.mvcc.keys_bytes| gauge | number | number of MVCC keys involved in etcd debugging operations     |
+|etcd.mvcc.watch_stream| gauge | number | number of watch streams                                       |
+|etcd.mvcc.watcher| gauge | number | number of watchers                                            |
+|etcd.mvcc.db_read| gauge | number | number of currently open read transactions                    |
+|etcd.mvcc.db_size| gauge | bytes  | size of the underlying database physically allocated in bytes |
+|etcd.mvcc.db_used| gauge | bytes  | size of the underlying database logically in use in bytes |
+|etcd.mvcc.puts| gauge | number | number of puts seen by this member                       |
+|etcd.mvcc.deletes| gauge | number | number of deletes seen by this member                    |
+|etcd.mvcc.slow_watches| gauge | number | number of unsynced slow watchers                         |
+|etcd.watch.requests| gauge | number | number of incoming watch requests (new or reestablished) |
+|etcd.store.watchers| gauge | number | number of currently active watchers |
 
 #### Commit Rebalance
 |Metric Name| Type  | Unit    | Description |
@@ -600,18 +600,18 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Kube-proxy Metrics
 #### Generic
-|Metric Name| Type | Unit   | Description                                    |
-|----|------|--------|------------------------------------------------|
-|kubeproxy.endpoint.changes| | uint64 | number of proxy rules endpoint changes         |
-|kubeproxy.endpoint.changes_pending| | uint64 | number of proxy rules endpoint changes pending |
-|kubeproxy.restore.failures| | uint64 | number of proxy iptables restore failures     |
-|kubeproxy.service.changes| | uint64 | number of proxy rules service changes         |
-|kubeproxy.service.changes_pending| | uint64 | number of proxy rules service changes pending |
+|Metric Name| Type  | Unit   | Description                                    |
+|----|-------|--------|------------------------------------------------|
+|kubeproxy.endpoint.changes| gauge | number | number of proxy rules endpoint changes         |
+|kubeproxy.endpoint.changes_pending| gauge | number | number of proxy rules endpoint changes pending |
+|kubeproxy.restore.failures| gauge | number | number of proxy iptables restore failures     |
+|kubeproxy.service.changes| gauge | number | number of proxy rules service changes         |
+|kubeproxy.service.changes_pending| gauge | number | number of proxy rules service changes pending |
 
 #### Client Requests
-|Metric Name| Type | Unit   | Description                                                           |
-|----|-----|--------|-----------------------------------------------------------------------|
-|kubeproxy.rest_client.total_num| | uint64 | number of HTTP requests, partitioned by status code, method, and host |
+|Metric Name| Type  | Unit   | Description                                                           |
+|----|-------|--------|-----------------------------------------------------------------------|
+|kubeproxy.rest_client.total_num| gauge | number | number of HTTP requests, partitioned by status code, method, and host |
 
 #### Client Duration
 |Metric Name| Type  | Unit    | Description                                 |
@@ -637,15 +637,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### CoreDNS Metrics
 #### Generic
-|Metric Name| Type | Unit   | Description                                                               |
-|----|------|--------|---------------------------------------------------------------------------|
-|coredns.cache.entries|      | uint64 | number of elements in the cache                                           |
-|coredns.cache.hits|      | uint64 | number of cache hits                                                      |
-|coredns.cache.misses|      | uint64 | number of cache misses                                                    |
-|coredns.panics.total_num|      | uint64 | number of panics                                                          |
-|coredns.failed_reloads.total_num|      | uint64 | number of failed reload attempts                                          |
-|coredns.healthcheck_broken.total_num|      | uint64 | number of complete failures of the healthchecks                           |
-|coredns.forward_max_concurrent_rejects.total_num|      | uint64 | number of queries rejected because the concurrent queries were at maximum |
+|Metric Name| Type  | Unit   | Description                                                               |
+|----|-------|--------|---------------------------------------------------------------------------|
+|coredns.cache.entries| gauge | number | number of elements in the cache                                           |
+|coredns.cache.hits| gauge | number | number of cache hits                                                      |
+|coredns.cache.misses| gauge | number | number of cache misses                                                    |
+|coredns.panics.total_num| gauge | number | number of panics                                                          |
+|coredns.failed_reloads.total_num| gauge | number | number of failed reload attempts                                          |
+|coredns.healthcheck_broken.total_num| gauge | number | number of complete failures of the healthchecks                           |
+|coredns.forward_max_concurrent_rejects.total_num| gauge | number | number of queries rejected because the concurrent queries were at maximum |
 
 #### Request Duration
 |Metric Name| Type  | Unit    | Description                                            |
@@ -659,24 +659,24 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.request_duration.total_num| gauge | number  | number of DNS requests handled by CoreDNS |
 
 #### Requests
-|Metric Name| | Unit   | Description                           |
-|----|-|--------|---------------------------------------|
-|coredns.request_counter.total_num| | uint64 | number of requests handled by CoreDNS |
+|Metric Name|       | Unit   | Description                           |
+|----|-------|--------|---------------------------------------|
+|coredns.request_counter.total_num| gauge | number | number of requests handled by CoreDNS |
 
 #### Response Status Codes
-|Metric Name| | Unit   | Description                     |
-|----|-|--------|---------------------------------|
-|coredns.response_code.total_num| | uint64 | number of response status codes |
+|Metric Name|       | Unit   | Description                     |
+|----|-------|--------|---------------------------------|
+|coredns.response_code.total_num| gauge | number | number of response status codes |
 
 #### Forward Cache Hits
-|Metric Name| Type | Unit   | Description                                               |
-|----|-----|--------|-----------------------------------------------------------|
-|coredns.forward_cache.hits| | uint64 | number of connection cache hits per upstream and protocol |
+|Metric Name| Type  | Unit   | Description                                               |
+|----|-------|--------|-----------------------------------------------------------|
+|coredns.forward_cache.hits| gauge | number | number of connection cache hits per upstream and protocol |
 
 #### Forward Cache Misses
-|Metric Name| Type | Unit   | Description                                                 |
-|----|-----|--------|-------------------------------------------------------------|
-|coredns.forward_cache.misses| | uint64 | number of connection cache misses per upstream and protocol |
+| Metric Name                   | Type  | Unit   | Description                                                 |
+|-------------------------------|-------|--------|-------------------------------------------------------------|
+| coredns.forward_cache.misses  | gauge | number | number of connection cache misses per upstream and protocol |
 
 #### Forward Request Duration
 |Metric Name| Type  | Unit    | Description                                                      |
@@ -691,34 +691,34 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Scheduler Metrics
 #### Preemption Attempts
-|Metric Name| Type | Unit   | Description                                  |
+|Metric Name| Type  | Unit   | Description                                  |
 |----|-------|--------|----------------------------------------------|
-|scheduler.preemption_attempts.total_num| | uint64 | number of preemption attempts in the cluster |
+|scheduler.preemption_attempts.total_num| gauge | number | number of preemption attempts in the cluster |
 
 #### Pending Pods
 |Metric Name| Type  | Unit   | Description                               |
 |----|-------|--------|-------------------------------------------|
-|scheduler.pending_pods.total_num|  | uint64 | number of pending pods, by the queue type |
+|scheduler.pending_pods.total_num| gauge | number | number of pending pods, by the queue type |
 
 #### Queue Incoming Pods
-|Metric Name| Type | Unit   | Description                                                       |
-|----|------|--------|-------------------------------------------------------------------|
-|scheduler.incoming_pods.total_num|      | uint64 | number of pods added to scheduling queues by event and queue type |
+|Metric Name| Type  | Unit   | Description                                                       |
+|----|-------|--------|-------------------------------------------------------------------|
+|scheduler.incoming_pods.total_num| gauge | number | number of pods added to scheduling queues by event and queue type |
 
 #### Scheduler Attempts
-|Metric Name| Type | Unit   | Description                                        |
-|----|------|--------|----------------------------------------------------|
-|scheduler.schedule_attempts.total_num|      | uint64 | number of attempts to schedule pods, by the result |
+|Metric Name| Type  | Unit   | Description                                        |
+|----|-------|--------|----------------------------------------------------|
+|scheduler.schedule_attempts.total_num| gauge | number | number of attempts to schedule pods, by the result |
 
 #### Go Routines
-|Metric Name| Type | Unit   | Description                                                            |
-|----|------|--------|------------------------------------------------------------------------|
-|scheduler.go_routines.total_num| | uint64 | number of running goroutines split by the work they do such as binding |
+|Metric Name| Type  | Unit   | Description                                                            |
+|----|-------|--------|------------------------------------------------------------------------|
+|scheduler.go_routines.total_num| gauge | number | number of running goroutines split by the work they do such as binding |
 
 #### Cache
-|Metric Name| Type | Unit   | Description                                                            |
-|----|-----|--------|------------------------------------------------------------------------|
-|scheduler.cache.total_num| | uint64 | number of nodes, pods, and assumed (bound) pods in the scheduler cache |
+| Metric Name                | Type  | Unit   | Description                                                            |
+|----------------------------|-------|--------|------------------------------------------------------------------------|
+| scheduler.cache.total_num  | gauge | number | number of nodes, pods, and assumed (bound) pods in the scheduler cache |
 
 #### E2E Scheduling Duration
 |Metric Name| Type  | Unit    | Description                                                                                       |
@@ -776,27 +776,27 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |scheduler.framework_extension.duration| gauge | seconds | duration of framework extension point execution measured in seconds |
 
 #### Scheduler Attempts
-|Metric Name| Type | Unit   | Description                         |
-|----|-----|--------|-------------------------------------|
-|scheduler.attempts.total_num| | uint64 | number of attempts to schedule pods |
+|Metric Name| Type  | Unit   | Description                         |
+|----|-------|--------|-------------------------------------|
+|scheduler.attempts.total_num| gauge | number | number of attempts to schedule pods |
 
 ### Runtime Metrics
-| Metric Name                   | Type  | Unit   | Description                                                           |
-|----------------|-------|--------|-----------------------------------------------------------------------|
-| kubernetes.runtime.os_threads          | gauge | uint64 | number of operating system threads used                               |
-| kubernetes.runtime.goroutines          |       | uint64 | number of goroutines active                                           |
-| kubernetes.runtime.resident_memory     |       | uint64 | amount of memory for process code and data occupied                     |
-| kubernetes.runtime.virtual_memory      |       | uint64 | amount of virtual memory used                                           |
-| kubernetes.runtime.number_frees        |       | uint64 | number of allocated memory blocks that have been freed                  |
-| kubernetes.runtime.number_mallocs      |       | uint64 | number of memory allocations performed                                  |
-| kubernetes.runtime.heap_obtained       |       | uint64 | memory obtained from the operating system for the heap                  |
-| kubernetes.runtime.heap_used           |       | uint64 | amount of heap memory in use                                            |
-| kubernetes.runtime.heap_waiting        |       | uint64 | amount of heap memory currently unused and can be potentially allocated |
-| kubernetes.runtime.number_heap_objects |       | uint64 | number of allocated objects in the heap memory                |
-| kubernetes.runtime.stack_obtained      |       | uint64 | memory obtained from the operating system for the stack space |
-| kubernetes.runtime.stack_used          |       | uint64 | amount of stack memory in use          |
-| kubernetes.runtime.gc_duration         |       | uint64 | duration of a garbage collection event |
-| kubernetes.runtime.gc_count            |       | uint64 | number of garbage collection events |
+| Metric Name                   | Type  | Unit    | Description                                                           |
+|----------------|-------|---------|-----------------------------------------------------------------------|
+| kubernetes.runtime.os_threads          | gauge | number  | number of operating system threads used                               |
+| kubernetes.runtime.goroutines          | gauge | number  | number of goroutines active                                           |
+| kubernetes.runtime.resident_memory     | gauge | bytes   | amount of memory for process code and data occupied                     |
+| kubernetes.runtime.virtual_memory      | gauge | bytes   | amount of virtual memory used                                           |
+| kubernetes.runtime.number_frees        | gauge | number  | number of allocated memory blocks that have been freed                  |
+| kubernetes.runtime.number_mallocs      | gauge | number  | number of memory allocations performed                                  |
+| kubernetes.runtime.heap_obtained       | gauge | bytes   | memory obtained from the operating system for the heap                  |
+| kubernetes.runtime.heap_used           | gauge | bytes   | amount of heap memory in use                                            |
+| kubernetes.runtime.heap_waiting        | gauge | bytes   | amount of heap memory currently unused and can be potentially allocated |
+| kubernetes.runtime.number_heap_objects | gauge | number  | number of allocated objects in the heap memory                |
+| kubernetes.runtime.stack_obtained      | gauge | bytes   | memory obtained from the operating system for the stack space |
+| kubernetes.runtime.stack_used          | gauge | bytes   | amount of stack memory in use          |
+| kubernetes.runtime.gc_duration         | gauge | seconds | duration of a garbage collection event |
+| kubernetes.runtime.gc_count            | gauge | number  | number of garbage collection events |
 
 ## Troubleshooting
 
