@@ -58,6 +58,16 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
+#### HTTP Monitors
+
+To extract custom metrics from HTTP monitors, navigate to the **Configure Response** tab and enable **Save Response Body**. Select either JSON or XML, depending on the format of the HTTP response body. Fetch a sample response from the specified HTTP URL or manually provide the response body, then enter the path to extract the metric. You will see the output within the **Extracted Value** box, and you will need to specify a name for the extracted metric.
+
+![Custom Metrics HTTP Monitor](../images/synthetics/custom-metrics-http-monitor.png)
+
+Note that **+ New JSON Path** in the screenshot above.  This lets you extract multiple different metrics.
+
+#### Browser Monitors
+
 You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically prefixed with `synthetics.browser.custom.`.
 
 Here's an example of a User Journey script which defines two custom metrics: the used JavaScript heap size and how long the combined duration of JavaScript execution is. For your convenience, this example is also listed as **Using Custom Metrics** under the **Browse Examples** section while creating the Browser monitor.
@@ -81,16 +91,25 @@ async function testPage(page, context) {
 }
 module.exports = testPage;
 ```
+### How to visualize and alert on metrics
 
-Once you have defined your chosen custom metrics, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/). Go to your **Dashboards** and create a new component. In this example we'll use the **Time Series Chart**. You will then be able to find the custom metrics you've defined in the **Metrics** dropdown. In the script above, we've defined two metrics: `heap.size` and `script.time`. With the previously mentioned added prefix, these will be displayed as `synthetics.browser.custom.heap.size` and `synthetics.browser.custom.script.time`.
+Once you have defined your chosen custom metrics either with HTTP or Browser monitor, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run in the run flyout.
 
-![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.png)
+![Custom Metrics Flyout](../images/synthetics/custom-metrics-flyout.png)
 
-Because Browser monitors run once every several minutes, you might want to navigate to the **Component** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
+You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and clicking on the **Add to Dashboard** icon. In this example, we'll create a **Time Series Chart** to chart `synthetics.browser.custom.heap.time` metric that we extracted from the Browser Monitor user jurney script sample above. 
+
+![Custom Metrics Add to Dashboard](../images/synthetics/custom-metrics-add-to-dashboard.gif)
+
+After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then select the specific **Dashboard** you chose when creating the chart. 
+
+![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.gif)
+
+Because monitors run once every several minutes, you might want to navigate to the **Axes** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
 
 ![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
 
-You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the JS execution time is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
+You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the script duration is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
 
 ![Custom Metrics Chart Alert](../images/synthetics/custom-metrics-chart-alert.png)
 
