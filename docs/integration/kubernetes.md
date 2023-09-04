@@ -817,7 +817,8 @@ Also, please make sure that your agent is [up to date](https://sematext.com/docs
 Check out [our page about hostnetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
 ### Setting TLS Certificate Paths
-While monitoring Kubernetes master components, the Sematext agent will automatically retrieve certificates from the host machine. 
+While monitoring Kubernetes master components, the Sematext Agent will automatically retrieve certificates from the host machine. 
+
 However, if the necessary paths are not present within the [common paths](https://kubernetes.io/docs/setup/best-practices/certificates/#certificate-paths), 
 some additional configuration will be needed to enable querying of the metrics endpoints.
 
