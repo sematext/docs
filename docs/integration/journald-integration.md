@@ -13,7 +13,7 @@ You will want to create or select an existing Logs App because that is what will
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Generic Logs App explore SSH logs:
 
-<img class="content-modal-image" alt="Journald Logs Explore" src="../../images/integrations/opensearch-request-rate.png" title="Journald Logs Explore">
+<img class="content-modal-image" alt="Journald Logs Explore" src="../../images/integrations/journald-log-explore.png" title="Journald Logs Explore">
 
 ## Troubleshooting
 
