@@ -5,19 +5,19 @@ To make use of the Sematext Varnish Cache Logs integration, you'll need to insta
 
 ## Log Collection
 
-1. To enable Varnish logging uncomment the following in `/etc/default/varnishncsa`:
+- To enable Varnish logging uncomment the following in `/etc/default/varnishncsa`:
 
 ``` bash
   VARNISHNCSA_ENABLED=1
 ```
 
-2. Create `st_varnishncsa_format` file and add the following:
+- Create `st_varnishncsa_format` file and add the following:
 
 ``` bash
 "Timestamp": "%t", "network_client_ip": "%h", "varnish_hit_miss": "%{Varnish:hitmiss}x", "varnish_side": "%{Varnish:side}x", "age": %{age}o, "handling": "%{Varnish:handling}x", "http_request": "%r", "varnish_time_first_byte": %{Varnish:time_firstbyte}x, "http_method": "%m", "http_status_code": %s, "response_reason": "%{VSL:RespReason}x", "fetch_error": "%{VSL:FetchError}x", "x_forwarded_for": "%{x-forwarded-for}i", "remote_user": "%u", "network_bytes_written": "%b", "http_response_time": %D, "http_user_agent": "%{User-agent}i", "http_referer": "%{Referer}i", "x_varnish": "%{x-varnish}o", "x_magento_yags": "%{x-magento-tags}o"
 ```
 
-3. Execute the `sudo systemctl edit varnishncsa` command to edit `ExecStart` property and paste the following:
+- Execute the `sudo systemctl edit varnishncsa` command to edit `ExecStart` property and paste the following:
 
 ``` bash
 [Service]
@@ -26,7 +26,7 @@ ExecStart=/usr/bin/varnishncsa -a -w /var/log/varnish/varnishncsa.log -D -c -b -
 ```
 You should provide the full path to the `st_varnishncsa_format` file in the command above. In this example, the file was located within the `/home/user` folder.
 
-4. Restart the varnishncsa to apply the changes.
+- Restart the varnishncsa to apply the changes.
 
 ## Exploring logs
 
