@@ -1,7 +1,7 @@
 title: Varnish Cache Logs Integration
 description: Sematext Varnish Cache Logs integration allows you to check response time, first byte served, along with traffic distribution across servers and requests made to the client and backend side.
 
-To make use of the Sematext Varnish Cache Logs integration, you'll need to install the [Sematext Agent](../agents/sematext-agent/index.md) and configure it to ship Varnish Cache logs via the [Logs Discovery](../logs/discovery/intro.md). You will want to create or select an existing Varnish Cache Logs App because that is what will provide you with all the out of the box dashboards, some of which you can see below. Moreover, pre-configured anomaly alert rules are available to notify about increasing **4xx** and **5xx** response rates.
+To use the Sematext Varnish Cache Logs integration simply install the [Sematext Agent](../agents/sematext-agent/index.md).  The agent will [discover your logs](../logs/discovery/intro.md) and you'll be able to configure Varnish Cache log shipping via the UI. When doing that, you will want to create or select an existing Varnish Cache Logs App because that is what will provide you with all the out of the box dashboards, some of which you can see below. Moreover, the pre-configured anomaly alert rules will notify you about increasing **4xx** and **5xx** response rates.
 
 ## Log Collection
 
@@ -24,7 +24,7 @@ To make use of the Sematext Varnish Cache Logs integration, you'll need to insta
 ExecStart=
 ExecStart=/usr/bin/varnishncsa -a -w /var/log/varnish/varnishncsa.log -D -c -b -f /home/user/st_varnishncsa_format -P /run/varnishncsa/varnishncsa.pid
 ```
-You should provide the full path to the `st_varnishncsa_format` file in the command above. In this example, the file was located within the `/home/user` folder.
+You should provide the full path to the `st_varnishncsa_format` file in the command above. In this example, the file was located within the `/home/user` directory.
 
 - Restart the varnishncsa to apply the changes.
 
@@ -41,7 +41,7 @@ Once data is in, you can explore it via the built-in reports or create your own.
 
 ### Traffic Insight Report
 
-You can use the Traffic Insight report to see top clients, referrers, average response time and time to serve first byte based on servers and "zoom in" to the ones you're interested in:
+You can use the Traffic Insight report to see top clients, referrers, average response time and time to serve the first byte based on servers and "zoom in" to the ones you're interested in:
 
 <img
   class="content-modal-image"
@@ -85,6 +85,6 @@ You can use the Backend Side Logs report to see the requests made to the backend
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Varnish Cache Logs App. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Varnish Cache Logs App. Lastly, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
 
 
