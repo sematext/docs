@@ -236,9 +236,11 @@ boot_default_fail_etimedout <br> **varnish.boot.default.fail.etimedout** <br> (c
 boot_default_fail_other <br> **varnish.boot.default.fail.other** <br> (counter) (sec) | Connections failed for other reason
 boot_default_helddown <br> **varnish.boot.default.helddown** <br> (counter) (sec) | Connection opens not attempted
 
+## Troubleshooting
 
+If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
 
+### Varnish Permissions
+In case you encounter issues getting metrics from Varnish Cache, make sure that the Sematext `spmon` user is a member of the `varnish` group. It can be added using the command below:
 
-
-
-
+```sudo usermod -a -G varnish spmmon```
