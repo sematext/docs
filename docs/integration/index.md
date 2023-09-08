@@ -173,311 +173,311 @@ Sematext Monitoring supports over 100 different integrations that automatically 
     		</div>
     	</a>
     </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/jvm/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/java.svg" alt="JVM" title="JVM Monitoring" style="width: 54px;">
+                                          </div>
+                                          <div class="side back"><h5>JVM</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
   </div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/jvm/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/java.svg" alt="JVM" title="JVM Monitoring" style="width: 54px;">
-						</div>
-						<div class="side back"><h5>JVM</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/kafka/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/kafka.svg" alt="Kafka" title="Kafka Monitoring" style="width: 36px;">
-						</div>
-						<div class="side back"><h5>Kafka</h5>consumer lag, ISR, purgatory, active controllers, requests, topic bytes/messages, consumer request time, partitions, log cleaner, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/kubernetes/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/kubernetes.svg" alt="Kubernetes" title="Kubernetes Monitoring" style="width: 48px;">
-						</div>
-						<div class="side back"><h5>Kubernetes</h5> Get detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/mysql/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/mysql.svg" alt="Mysql" title="Mysql" style="width: 56px;">
-						</div>
-						<div class="side back"><h5>Mysql</h5>connections, queries/questions rate, select rate, mysql traffic, cache usage, mysql trafffic, MyISAM key, InnoDB, table stats, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/mongodb/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/mongodb.svg" alt="MongoDB" title="MongoDB" style="width: 128px">
-						</div>
-						<div class="side back"><h5>MongoDB</h5>storage, DB memory, locks, documents, DB network, DB operations, DB journal, background flushes, network connections, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/nginx/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/nginx.svg" alt="Nginx" title="Nginx Monitoring" style="width: 96px;">
-						</div>
-						<div class="side back">
-							<h5>Nginx</h5>total requests, connections, serving connections, CPU, load, memory, I/O read/wriew, total network traffic, ...
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/nginxplus/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/nginx-plus.svg" alt="Nginx Plus" title="Nginx Plus Monitoring" style="width: 116px;">
-						</div>
-						<div class="side back"><h5>Nginx Plus</h5>requests, cache hits, server checks, status zones, caches, upstreams, CPU, IO read/write, disk space used, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/node.js/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/nodejs-icon.svg" alt="Node.js" title="Node.js Monitoring" style="width: 56px;">
-						</div>
-						<div class="side back"><h5>Node.js</h5>process memory, workers, event loop latency, garbage collection, CG released memory, response time, request rate, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/express.js/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/expressjs-icon.svg" alt="Express.js" title="Express.js Monitoring" style="width: 116px;">
-						</div>
-						<div class="side back"><h5>Express.js</h5>process memory, workers, event loop latency, garbage collection, response/request rates, HTTP monitoring, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/opensearch/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/opensearch.svg" alt="OpenSearch" title="OpenSearch Monitoring" style="width: 48px;">
-						</div>
-						<div class="side back"><h5>OpenSearch</h5>Cluster Health, Shard Stats, Index Stats, Search, Cache, Thread Pools, Circuit Breakers, Connections, Scripting, Ingest...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/php/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/php.svg" alt="PHP" title="PHP Monitoring" style="width: 74px">
-						</div>
-						<div class="side back"><h5>PHP</h5>active processes, idle processes, max listen queue, slow request count, total processes, listen queue, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/redis/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/redis.svg" alt="Redis" title="Redis Monitoring" style="width: 64px;">
-						</div>
-						<div class="side back">
-							<h5>Redis</h5>connected clients, keyspace missses, command processes, expired keys, keyspace hits, evicted keys, used memory, connected slaves, ...
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/hadoop/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/hadoop.svg" alt="hadoop" title="Hadoop Monitoring" style="width: 74px;">
-						</div>
-						<div class="side back"><h5>Hadoop</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time / time, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-		<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/postgresql/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
-						</div>
-						<div class="side back">
-							<h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/solr/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/solr.svg" alt="Solr" title="Solr Monitoring" style="width: 74px">
-						</div>
-						<div class="side back"><h5>Solr</h5>index stats, request rate, added docs, JVM pool size, query result cache, doxument cache, filter cache, warmup, indexing, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/solrcloud/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/solr-cloud.svg" alt="Solr Cloud" title="Solr Cloud Monitoring" style="width: 64px;">
-						</div>
-						<div class="side back">
-							<h5>Solr Cloud</h5>error count, deletes by id, added docs, rollbacks, soft commits, lookups, evictions, hits, max doc, segments, autocommit max time, ...
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/spark/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 96px;">
-						</div>
-						<div class="side back"><h5>Spark</h5>last received delay, unprocessed batches, receivers, waiting batches, active jobs, driver memory used, all jobs, executors, cores free, write ops, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/storm/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/storm.svg" alt="Apache Storm" title="Apache Storm Monitoring" style="width: 80%;">
-						</div>
-						<div class="side back"><h5>Storm</h5>supervisors, topologies, slots, acked, failed, executed, tasks, emitted, transferred, acked, failed, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/tomcat/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/tomcat.svg" alt="Solr" title="Tomcat Monitoring" style="width: 74px">
-						</div>
-						<div class="side back"><h5>Tomcat</h5>bytes sent, error requests, max connections, poller thread count, current threads busy, queue size, pool size, rejected sessions, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-		<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/varnishcache/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/varnishcache.svg" alt="Varnish" title="Varnish Cache Monitoring" style="width: 48px;">
-						</div>
-						<div class="side back"><h5>Varnish Cache</h5>Backend and Client connections and requests, Cache Hits and Misses, Threads, Bans...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/zookeeper/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/zookeeper.svg" alt="Zookeeper" title="Zookeeper Monitoring" style="width: 150px;">
-						</div>
-						<div class="side back">
-							<h5>Zookeeper</h5>quorum size, outstanding requests, watch count, count, ephemerals, node count, sent, approximate data size, sent, count, ...
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/kafka/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/kafka.svg" alt="Kafka" title="Kafka Monitoring" style="width: 36px;">
+                                          </div>
+                                          <div class="side back"><h5>Kafka</h5>consumer lag, ISR, purgatory, active controllers, requests, topic bytes/messages, consumer request time, partitions, log cleaner, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/kubernetes/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/kubernetes.svg" alt="Kubernetes" title="Kubernetes Monitoring" style="width: 48px;">
+                                          </div>
+                                          <div class="side back"><h5>Kubernetes</h5> Get detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/mysql/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/mysql.svg" alt="Mysql" title="Mysql" style="width: 56px;">
+                                          </div>
+                                          <div class="side back"><h5>Mysql</h5>connections, queries/questions rate, select rate, mysql traffic, cache usage, mysql trafffic, MyISAM key, InnoDB, table stats, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/mongodb/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/mongodb.svg" alt="MongoDB" title="MongoDB" style="width: 128px">
+                                          </div>
+                                          <div class="side back"><h5>MongoDB</h5>storage, DB memory, locks, documents, DB network, DB operations, DB journal, background flushes, network connections, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/nginx/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/nginx.svg" alt="Nginx" title="Nginx Monitoring" style="width: 96px;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>Nginx</h5>total requests, connections, serving connections, CPU, load, memory, I/O read/wriew, total network traffic, ...
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/nginxplus/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/nginx-plus.svg" alt="Nginx Plus" title="Nginx Plus Monitoring" style="width: 116px;">
+                                          </div>
+                                          <div class="side back"><h5>Nginx Plus</h5>requests, cache hits, server checks, status zones, caches, upstreams, CPU, IO read/write, disk space used, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/node.js/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/nodejs-icon.svg" alt="Node.js" title="Node.js Monitoring" style="width: 56px;">
+                                          </div>
+                                          <div class="side back"><h5>Node.js</h5>process memory, workers, event loop latency, garbage collection, CG released memory, response time, request rate, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/express.js/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/expressjs-icon.svg" alt="Express.js" title="Express.js Monitoring" style="width: 116px;">
+                                          </div>
+                                          <div class="side back"><h5>Express.js</h5>process memory, workers, event loop latency, garbage collection, response/request rates, HTTP monitoring, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/opensearch/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/opensearch.svg" alt="OpenSearch" title="OpenSearch Monitoring" style="width: 48px;">
+                                          </div>
+                                          <div class="side back"><h5>OpenSearch</h5>Cluster Health, Shard Stats, Index Stats, Search, Cache, Thread Pools, Circuit Breakers, Connections, Scripting, Ingest...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/php/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/php.svg" alt="PHP" title="PHP Monitoring" style="width: 74px">
+                                          </div>
+                                          <div class="side back"><h5>PHP</h5>active processes, idle processes, max listen queue, slow request count, total processes, listen queue, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/redis/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/redis.svg" alt="Redis" title="Redis Monitoring" style="width: 64px;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>Redis</h5>connected clients, keyspace missses, command processes, expired keys, keyspace hits, evicted keys, used memory, connected slaves, ...
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/hadoop/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/hadoop.svg" alt="hadoop" title="Hadoop Monitoring" style="width: 74px;">
+                                          </div>
+                                          <div class="side back"><h5>Hadoop</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time / time, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+          <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/postgresql/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/solr/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/solr.svg" alt="Solr" title="Solr Monitoring" style="width: 74px">
+                                          </div>
+                                          <div class="side back"><h5>Solr</h5>index stats, request rate, added docs, JVM pool size, query result cache, doxument cache, filter cache, warmup, indexing, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/solrcloud/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/solr-cloud.svg" alt="Solr Cloud" title="Solr Cloud Monitoring" style="width: 64px;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>Solr Cloud</h5>error count, deletes by id, added docs, rollbacks, soft commits, lookups, evictions, hits, max doc, segments, autocommit max time, ...
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/spark/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/spark.svg" alt="Apache Spark" title="Apache Spark Monitoring" style="width: 96px;">
+                                          </div>
+                                          <div class="side back"><h5>Spark</h5>last received delay, unprocessed batches, receivers, waiting batches, active jobs, driver memory used, all jobs, executors, cores free, write ops, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/storm/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/storm.svg" alt="Apache Storm" title="Apache Storm Monitoring" style="width: 80%;">
+                                          </div>
+                                          <div class="side back"><h5>Storm</h5>supervisors, topologies, slots, acked, failed, executed, tasks, emitted, transferred, acked, failed, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/tomcat/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/tomcat.svg" alt="Solr" title="Tomcat Monitoring" style="width: 74px">
+                                          </div>
+                                          <div class="side back"><h5>Tomcat</h5>bytes sent, error requests, max connections, poller thread count, current threads busy, queue size, pool size, rejected sessions, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+          <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/varnishcache/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/varnishcache.svg" alt="Varnish" title="Varnish Cache Monitoring" style="width: 48px;">
+                                          </div>
+                                          <div class="side back"><h5>Varnish Cache</h5>Backend and Client connections and requests, Cache Hits and Misses, Threads, Bans...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/zookeeper/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/zookeeper.svg" alt="Zookeeper" title="Zookeeper Monitoring" style="width: 150px;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>Zookeeper</h5>quorum size, outstanding requests, watch count, count, ephemerals, node count, sent, approximate data size, sent, count, ...
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+</div>
 
 ## Logging
 ### Ingestion
