@@ -160,6 +160,7 @@ pages:
         - Spark: integration/spark.md
         - Storm: integration/storm.md
         - Tomcat: integration/tomcat.md
+        - Varnish Cache: integration/varnishcache.md
         - ZooKeeper: integration/zookeeper.md
       - Logs:
         - Generic Logs: integration/generic-logs-integration.md

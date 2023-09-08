@@ -157,6 +157,23 @@ Sematext Monitoring supports over 100 different integrations that automatically 
       </div>
     </a>
   </div>
+  <div class="mdl-cell mdl-cell--3-col">
+    	<a href="../integration/jenkins/">
+    		<div class="demo-card-event mdl-card mdl-shadow--2dp">
+    			<div class="flip-card-container">
+    				<div class="flip-card">
+    					<div class="side">
+    						<img src="../images/integrations/jenkins.png" alt="Jenkins" title="Jenkins Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
+    					</div>
+    					<div class="side back">
+    						<h5>Jenkins</h5>health and executors state; builds, nodes, jobs, runs activity; http requests and responses...
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</a>
+    </div>
+  </div>
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/jvm/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -343,6 +360,22 @@ Sematext Monitoring supports over 100 different integrations that automatically 
 			</div>
 		</a>
 	</div>
+		<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/postgresql/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
+						</div>
+						<div class="side back">
+							<h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/solr/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -415,6 +448,20 @@ Sematext Monitoring supports over 100 different integrations that automatically 
 			</div>
 		</a>
 	</div>
+		<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/varnishcache/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/varnishcache.svg" alt="Varnish" title="Varnish Cache Monitoring" style="width: 48px;">
+						</div>
+						<div class="side back"><h5>Varnish Cache</h5>Backend and Client connections and requests, Cache Hits and Misses, Threads, Bans...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/zookeeper/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -431,39 +478,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
 			</div>
 		</a>
 	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/postgresql/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
-						</div>
-						<div class="side back">
-							<h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-    		<a href="../integration/jenkins/">
-    			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-    				<div class="flip-card-container">
-    					<div class="flip-card">
-    						<div class="side">
-    							<img src="../images/integrations/jenkins.png" alt="Jenkins" title="Jenkins Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
-    						</div>
-    						<div class="side back">
-    							<h5>Jenkins</h5>health and executors state; builds, nodes, jobs, runs activity; http requests and responses...
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</a>
-    </div>
-</div>
 
 ## Logging
 ### Ingestion
