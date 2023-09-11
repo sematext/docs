@@ -43,6 +43,8 @@ If you disable this option, we **won’t save the response body** hence it **wil
 
 ## Authentication
 
+To monitor pages protected by some form of authentication each monitor can be configured to use one of the following types of authentication.
+
 ### Bearer / Access Token
 
 You can **dynamically fetch a token** for each run with token support and pass that token in your API requests. 
