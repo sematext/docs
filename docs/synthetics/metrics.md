@@ -68,7 +68,7 @@ Note that **+ New JSON Path** in the screenshot above.  This lets you extract mu
 
 #### Browser Monitors
 
-You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically prefixed with `synthetics.browser.custom.`.
+You can script the Browser monitor to collect custom metrics that are specific to your website or use case. For example, you might need to measure the time it takes to display auto-suggestions on your website or collect & monitor the value from an element on your webpage. You can use the `context.setMetric(name, value)` method in the Browser monitor script in order to define a custom metric. All metrics defined in monitors within one Synthetics App should have unique names and will be automatically prefixed with `synthetics.browser.custom.`. All names should be alphanumeric and can contain underscores and dots for example: `heap.size` or `heap_size`. Otherwise they will be ignored while being fetched in the UI.
 
 Here's an example of a User Journey script which defines two custom metrics: the used JavaScript heap size and how long the combined duration of JavaScript execution is. For your convenience, this example is also listed as **Using Custom Metrics** under the **Browse Examples** section while creating the Browser monitor.
 
@@ -131,9 +131,9 @@ async function testPage(page, context) {
   const USD = bodyJSON.rates.USD;
   const AUD = bodyJSON.rates.AUD;
   const CNY = bodyJSON.rates.CNY;
-  context.setMetric('currency.EUR-USD', USD);
-  context.setMetric('currency.EUR-AUD', AUD);
-  context.setMetric('currency.EUR-CNY', CNY);
+  context.setMetric('currency.EUR_USD', USD);
+  context.setMetric('currency.EUR_AUD', AUD);
+  context.setMetric('currency.EUR_CNY', CNY);
 }
 module.exports = testPage;
 ```
