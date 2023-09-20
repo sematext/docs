@@ -10,7 +10,7 @@ async function testPage(page, context) {
     const usedHeap = performanceMetrics.metrics.find((x) => x.name === 'JSHeapUsedSize').value;
 
     // Define the chosen metrics as custom metrics in Sematext Synthetics
-    // Metric names should be unique for this Synthetics application
+    // Metric names should be unique for this Synthetics App
     // Metric names should be alphanumeric, otherwise they will be ignored
     context.setMetric('heap.size', usedHeap);
     context.setMetric('script.time', scriptDuration);
