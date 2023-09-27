@@ -774,15 +774,15 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ### Kube-controller Metrics
 #### Workqueue Wait
-| Metric Name                              | Type  | Unit    | Description                                          |
-|------------------------------------------|-------|---------|------------------------------------------------------|
-| kubecontroller.workqueue_wait.p50latency | gauge | seconds | p50 latency of waiting time before item is processed |
-| kubecontroller.workqueue_wait.p75latency | gauge | seconds | p75 latency of waiting time before item is processed |
-| kubecontroller.workqueue_wait.p90latency | gauge | seconds | p90 latency of waiting time before item is processed |
-| kubecontroller.workqueue_wait.p95latency | gauge | seconds | p95 latency of waiting time before item is processed |
-| kubecontroller.workqueue_wait.p99latency | gauge | seconds | p99 latency of waiting time before item is processed |
-| kubecontroller.workqueue_wait.duration   | gauge | seconds | duration of waiting time before item is processed    |
-| kubecontroller.workqueue_wait.total_num  | gauge |   | number of items being processed                      |
+| Metric Name                              | Type  | Unit    | Description                                               |
+|------------------------------------------|-------|---------|-----------------------------------------------------------|
+| kubecontroller.workqueue_wait.p50latency | gauge | seconds | p50 wait time latency before item is processed |
+| kubecontroller.workqueue_wait.p75latency | gauge | seconds | p75 wait time latency before item is processed      |
+| kubecontroller.workqueue_wait.p90latency | gauge | seconds | p90 wait time latency before item is processed      |
+| kubecontroller.workqueue_wait.p95latency | gauge | seconds | p95 wait time latency before item is processed      |
+| kubecontroller.workqueue_wait.p99latency | gauge | seconds | p99 wait time latency before item is processed      |
+| kubecontroller.workqueue_wait.duration   | gauge | seconds | duration of waiting time before item is processed         |
+| kubecontroller.workqueue_wait.total_num  | gauge |   | number of items being processed                           |
 
 #### Workqueue Process
 |Metric Name| Type  | Unit    | Description                                            |
@@ -792,23 +792,23 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubecontroller.workqueue_process.p90latency| gauge | seconds | p90 latency of item being processed by Kube-controller |
 |kubecontroller.workqueue_process.p95latency| gauge | seconds | p95 latency of item being processed by Kube-controller |
 |kubecontroller.workqueue_process.p99latency| gauge | seconds | p99 latency of item being processed by Kube-controller |
-|kubecontroller.workqueue_process.duration| gauge | seconds | duration of item being processed by Kube-controller    |
-|kubecontroller.workqueue_process.total_num| gauge |   | number items being processed by Kube-controller        |
+|kubecontroller.workqueue_process.duration| gauge | seconds | duration of processing an item by Kube-controller      |
+|kubecontroller.workqueue_process.total_num| gauge |   | number of items being processed by Kube-controller     |
 
 #### Workqueue Depth
 |Metric Name| Type  | Unit    | Description                                 |
 |----|-------|---------|---------------------------------------------|
-|kubecontroller.workqueue_depth.total_num| gauge |   | number of items pending for being processed |
+|kubecontroller.workqueue_depth.total_num| gauge |   | number of items queued for processing |
 
 #### Workqueue Unfinished Work
-|Metric Name| Type  | Unit    | Description                                         |
-|----|-------|---------|-----------------------------------------------------|
-|kubecontroller.workqueue_unfinished_work.total_num| gauge |   | number of items remaining unfinished in a workqueue |
+|Metric Name| Type  | Unit    | Description                                        |
+|----|-------|---------|----------------------------------------------------|
+|kubecontroller.workqueue_unfinished_work.total_num| gauge |   | number of items in the workqueue |
 
 #### Workqueue Longest Running
-|Metric Name| Type  | Unit    | Description                                                 |
-|----|-------|---------|-------------------------------------------------------------|
-|kubecontroller.workqueue_longest_running.total_num| gauge |   | number of longest-running task processor within a workqueue |
+|Metric Name| Type  | Unit    | Description                                                |
+|----|-------|---------|------------------------------------------------------------|
+|kubecontroller.workqueue_longest_running.total_num| gauge |   | number of longest-running task processors in workqueue |
 
 #### Registered Nodes
 |Metric Name| Type  | Unit    | Description                               |
@@ -826,9 +826,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 | kubecontroller.unhealthy_nodes.percentage | gauge |   | number of unhealthy nodes in a specific zone |
 
 #### Workqueue Retries
-|Metric Name| Type  | Unit    | Description                                                   |
-|----|-------|---------|---------------------------------------------------------------|
-|kubecontroller.workqueue_retries.total_num| gauge |   | number of retries that have been attempted by workqueue items |
+|Metric Name| Type  | Unit    | Description                                    |
+|----|-------|---------|------------------------------------------------|
+|kubecontroller.workqueue_retries.total_num| gauge |   | number of retries attempted by workqueue items |
 
 ### Runtime Metrics
 | Metric Name                   | Type  | Unit   | Description                                                           |
