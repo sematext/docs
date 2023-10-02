@@ -190,6 +190,52 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubernetes.deployment.replicas.avail|gauge|  | number of available replicas. Replicas are marked as available if they are passing the health check |
 |kubernetes.deployment.replicas.desired|gauge|  | number of desired replicas as defined in the deployment |
 
+
+### CronJob overview Metrics
+
+| Metric Name | Type  | Unit  | Description                          |
+|-----|-------|-------|--------------------------------------|
+| kubernetes.cronjob.total | gauge |  | total number of cron jobs            |
+| kubernetes.cronjob.suspended.total | gauge |  | total number of suspended cron jobs  |
+| kubernetes.cronjob.successful.total | gauge |  | total number of successful cron jobs |
+| kubernetes,cronjob.failed.total    | gauge |  | total number of failed cron jobs     |
+
+### Job overview Metrics
+
+| Metric Name                    | Type  | Unit  | Description                     |
+|--------------------------------|-------|-------|---------------------------------|
+| kubernetes.job.total           | gauge |  | total number of jobs            |
+| kubernetes.job.completed.total | gauge |  | total number of completed jobs  |
+| kubernetes.job.failed.total    | gauge |  | total number of failed jobs |
+
+### CronJob Metrics
+
+| Metric Name                     | Type    | Unit      | Description             |
+|---------------------------------|---------|-----------|-------------------------|
+| kubernetes.cronjob.name         | tag     |           | Cronjob name            |
+| kubernetes.cronjob.cluster.name | tag     |           | cluster name            |
+| kubernetes.cronjob.namespace    | tag     |           | namespace               |
+| kubernetes.cronjob.scheduled    | tag     |           | schedule setup  [* 1 * *] |
+| kubernetes.cronjob.suspended    |  | boolean   | has suspended state or not |
+| kubernetes.cronjob.successful   |  | boolean   | has successful state or not |
+| kubernetes.cronjob.failed       |  | boolean   | has failed state or not |
+| kubernetes.cronjob.active       |   | number    | '1' if is active and '0' if not |
+| kubernetes.cronjob.timestamp    |    | timestamp | last time scheduled timestamp |
+| kubernetes.cronjob.creation.timestamp  |    | timestamp    | time creation timestamp |
+
+### Job Metrics
+
+| Metric Name                 | Type    | Unit   | Description                 |
+|-----------------------------|---------|--------|-----------------------------|
+| kubernetes.job.name         | tag     |        | Job name                    |
+| kubernetes.job.cluster.name | tag     |        | cluster name                |
+| kubernetes.job.namespace    | tag     |        | namespace                   |
+| kubernetes.job.cronjob.name | tag     |        | Cronjob owner name          |
+| kubernetes.job.condition    |  | number | is the job finish condition, completed: 2, failed: 0 or suspended: 1 |
+| kubernetes.job.executions   |  | number | job number of executions    |
+| kubernetes.job.failures     |  | number | job number of failures      |
+| kubernetes.job.creation.timestamp     |   | number | time creation timestamp     |
+
 ### Storage Metrics
 | Metric Name              | Type  | Unit  | Description                           |
 |--------------------------|-------|-------|---------------------------------------|
