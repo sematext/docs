@@ -1,16 +1,23 @@
 title: Sematext Service Discovery
 description: Sematext Autodiscovery Monitoring automatically scans for services that can be monitored using Sematext Agent and, depending on your configuration, automatically sets up monitoring agents. 
 
-The centerpiece of Service Discovery is [Sematext Agent](../agents/sematext-agent). It scans for services that can be monitored by Sematext
-[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It works in both bare-metal/virtual machine and in container environments. Data about discovered services is displayed under Discovery.
+The centerpiece of Service Discovery is [Sematext Agent](../agents/sematext-agent). When Sematext Agent is installed and running on a server/node/instance it scans for services (it also [discovers logs](https://sematext.com/docs/logs/discovery/intro/)) that can be monitored by Sematext
+[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). The discovered services and logs are displayed under Discovery.  From there, one can set up monitoring via the UI without any additional installation or configuration.  Moreover, this is where auto-monitoring can be enabled, allowing Sematext Agent to automatically start monitoring newly discovered instances of the service for which you've set up monitoring.  For example, if you have set up monitoring for Elasticsearch any new Elasticsearch nodes that are added to the cluster will automatically get monitored.
 
 <img class="content-modal-image" alt="Sematext Autodiscovery" src="../../images/monitoring/autodiscovery-ui.png" title="Sematext Autodiscovery">
 
 ## Autodiscovery-based Monitoring
 Autodiscovered services can be monitored in two ways:
 
-- **Manually** - in the case of bare-metal/virtual machine setups, you can use the classic Agent installation instructions. In container environments you can just add `MONITORING_TOKEN` as an environment variable to your container. Sematext Agent will automatically match it to the type of the discovered service and set up a monitoring agent container specifically for that service. If a service requires authentication for monitoring, you will also need to provide credentials, e.g., as environment variables with username or password for monitoring MySQL or as a Kubernetes Secret. Again, just follow the classic monitoring installation instructions to set this up.
-- **Automatically** - In many cases Sematext Agent will be able to start and stop monitoring discovered services without requiring any changes from you and without restarting of services you wish to monitor. As services start, Sematext Agent automatically ensures they are monitored according to the rules you specified. For each discovered service type you can enable or disable automatic monitoring at any point. For example, if Sematext Agent discovered your Elasticsearch cluster and you see it in Discovery UI, you can easily start its monitoring with a single click. No actions are required from you on Elasticsearch nodes. Similarly, if you decide to stop monitoring the cluster, single click will do the trick again. 
+### Auto-monitoring
+This is the recommended way of setting up monitoring with Sematext.  It relieves you from having to manually start the monitoring of additional instances of a service that is already being monitored with Sematext.  For example, if you are running one Nginx instance today, and tomorrow you start the second one, use the auto-monitoring option in Sematext to have the Sematext Agent start monitoring the second Nginx as soon as it is discovered.  For each discovered service type you can enable or disable automatic monitoring at any point via the Disovery UI.  If you decide to stop monitoring, a single click in the UI will stop it.
+
+### Manually
+#### Bare Metal / Virtual Machine Monitoring
+In the case of bare-metal/virtual machine setups, you can use the classic Agent installation instructions available in Sematext Cloud for manual agent installation. This means installing a Sematext Agent package for RedHat or Debian or some other distribution.  
+
+#### Containers
+In containerized environments you can just add `MONITORING_TOKEN` as an environment variable to your container. Sematext Agent will automatically match it to the type of service running inside the container and will set up a monitoring agent container specifically for that service. If a service requires authentication for monitoring, you will also need to provide credentials, e.g., as environment variables with username or password for monitoring MySQL or as a Kubernetes Secret. Again, just follow the classic monitoring installation instructions in Sematext Cloud to set this up.
 
 <img class="content-modal-image" alt="Enabling Automatic Autodiscovery-base Monitoring" src="../../images/monitoring/automatic-autodiscovery-monitoring.png" title="Enabling Automatic Autodiscovery-based Monitoring">
 
