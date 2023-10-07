@@ -10,7 +10,7 @@ The centerpiece of Service Discovery is [Sematext Agent](../agents/sematext-agen
 Autodiscovered services can be monitored in two ways:
 
 ### Auto-monitoring
-This is the recommended way of setting up monitoring with Sematext.  It relieves you from having to manually start the monitoring of additional instances of a service that is already being monitored with Sematext.  For example, if you are running one Nginx instance today, and tomorrow you start the second one, use the auto-monitoring option in Sematext to have the Sematext Agent start monitoring the second Nginx as soon as it is discovered.  For each discovered service type you can enable or disable automatic monitoring at any point via the Disovery UI.  If you decide to stop monitoring, a single click in the UI will stop it.
+This is the recommended way of setting up monitoring with Sematext.  It relieves you from having to manually start the monitoring of additional instances of a service that is already being monitored with Sematext.  For example, if you are running one Nginx instance today, and tomorrow you start the second one, use the auto-monitoring option in Sematext to have the Sematext Agent start monitoring the second Nginx as soon as it is discovered.  For each discovered service type you can enable or disable automatic monitoring at any point via the Discovery UI.  If you decide to stop monitoring, a single click in the UI will stop it.
 
 ### Manually
 #### Bare Metal / Virtual Machine Monitoring
