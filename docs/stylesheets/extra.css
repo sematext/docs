@@ -477,6 +477,9 @@ pre {
   /* background: #FF9325; */
   background: #63b567;
 }
+.fleetdisco-card{
+  background: #2ebfb6;
+}
 .tracing-card{
   background: #bd5666;
   margin-left: calc(100% + 16px);
