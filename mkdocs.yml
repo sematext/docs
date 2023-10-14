@@ -64,7 +64,7 @@ pages:
     - Monitoring:
       - Overview: monitoring/index.md
       - Quick Start: monitoring/quick-start.md
-      - Autodiscovery: monitoring/autodiscovery.md
+      - Service Discovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md
       - Reports & Components: monitoring/reports-and-components.md
       - Infrastructure: monitoring/infrastructure.md
@@ -282,6 +282,7 @@ pages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
         - Autodiscovery:
+          - Overview: agents/sematext-agent/autodisco/index.md
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX Attaching: agents/sematext-agent/jmx-attaching.md
           - MySQL driver: agents/sematext-agent/autodisco/mysql-driver.md
@@ -378,7 +379,10 @@ pages:
         - FAQ: logagent/faq.md
       - Mobile App SDKs: agents/mobile.md
       - Browser SDK: agents/browser.md
-    - Fleet: fleet/index.md
+    - Fleet and Discovery: 
+      - Overview: fleet/index.md
+      - Fleet: fleet/fleet.md
+      - Discovery: fleet/discovery.md
     - API: api/index.md
     - FAQ: faq.md
 
