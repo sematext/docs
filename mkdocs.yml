@@ -281,7 +281,7 @@ pages:
         - Packages:
           - Configuration: agents/sematext-agent/packages/configuration.md
           - Data: agents/sematext-agent/packages/data.md
-        - Autodiscovery:
+        - Service Discovery:
           - Overview: agents/sematext-agent/autodisco/index.md
           - Removing stale resources: agents/sematext-agent/autodisco/removing-stale-resources.md
           - JMX Attaching: agents/sematext-agent/jmx-attaching.md
