@@ -11,7 +11,7 @@ The rows have the following columns:
 - `Automatic Shipping` determines whether the logs are automatically shipped for some group. Initially, if no log shipping was set up, this column shows the `Set Up` button. Conversely, if log shipping was configured, this column displays a toggle that permits enabling/disabling the automatic log shipping.
 - `Actions` column that contains various log shipping-related actions.
 
-![Logs Discovery](images/logs-start-page.png)
+![Logs Discovery]("../../images/fleet/fnd-discovery-services.png")
 
 ## Log sources
 
@@ -23,10 +23,19 @@ As shown above, the Kafka group has three log file sources that pertain to the K
 
 ![Log File Instances](images/log-file-instances.png)
 
+- `Kubernetes` show all Kubernetes services and components, grouped by type of service/process producing the logs.
+
+![Kubernetes Log Sources]("../../images/fleet/fnd-discovery-logs-kubernetes.png")
+
 - `Containers` reveal all discovered Docker containers grouped by image name or the image digest. This log source contains plain Docker containers, meaning they are not controlled by the orchestrators such as Kubernetes.
 
-![Container Log Sources](images/log-sources-containers.png)
+![Containers Log Sources]("../../images/fleet/fnd-discovery-logs-containers.png")
 
 In a similar manner to log file sources, each container log group shows a collection of containers that might be running on different nodes.
 
 ![Protokube Container Logs](images/protokube-container.png)
+
+
+- `Journald` show all systemd services grouped by type of process producing the logs.
+
+![Journald Log Sources]("../../images/fleet/fnd-discovery-logs-journald.png")

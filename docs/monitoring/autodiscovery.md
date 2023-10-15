@@ -80,7 +80,7 @@ Manual Monitoring is also available by following the Agent installation instruct
 
 <img class="content-modal-image" alt="Sematext Discovery Manual Monitoring" src="../../images/fleet/fnd-discovery-services-manual-monitoring.png" title="Sematext Discovery Manual Monitoring">
 
-This will also enable the automatic connection of those Apps which will enable you to correlate their data via Split Screen.
+This will also enable the automatic connection of those Apps which will enable you to correlate their data via [Split Screen](https://sematext.com/docs/guide/split-screen/).
 
 <img class="content-modal-image" alt="Sematext Discovery Connected Apps" src="../../images/fleet/fnd-discovery-services-connected-apps.png" title="Sematext Discovery Connected Apps">
 

@@ -3,9 +3,9 @@ description: Shipping Kubernetes Log Sources
 
 Collecting and shipping Kubernetes logs is accomplished in a similar manner to [log files](/logs/discovery/tailing-log-files) and [plain container](/logs/discovery/tailing-containers) logs. The Kubernetes containers are grouped by type of service or process that is running inside the container.
 
-![Kubernetes Logs Discovery](images/kubernetes-logs-discovery.png)
+![Kubernetes Logs Discovery]("../../images/fleet/fnd-discovery-logs-kubernetes.png")
 
-To start shipping the logs that are produced by the specific service group or process, click on the `Set Up` button.
+To enable automatic Kubernetes logs shipping head to the [Logs Discovery UI](https://apps.sematext.com/ui/fleet-and-discovery/discovery/logs/) (or [EU Discovery](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/logs/) if you use Sematext EU), and start by clicking on the `Set Up` button for the service, group or process whose Kubernetes logs you would like to ship.
 
 ![Kubernetes Log Shipping](images/k8s-setup-log-shipping.png)
 

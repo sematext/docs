@@ -5,4 +5,5 @@ To set up logs discovery simply deploy the Sematext Agent in your infrastructure
 
 Once you have successfully deployed the agent, navigate to the `Fleed & Discovery > Discovery > Logs` screen where you can explore all of your discovered log sources.
 
-![Logs Discovery](images/logs-start-page.png)
+![Logs Discovery]("../../images/fleet/fnd-discovery-services.png")
+
