@@ -3,11 +3,11 @@ description: Overview of Fleet - Sematext Agent management panel
 
 The Fleet section of Fleet and Discovery gives you an overview of all the Sematext Agents that are running in your systems.
 
-![Fleet screen](../images/fleet/fleet.png)
+![Fleet Screen](../images/fleet/fnd-agents-collapsed.png)
 
 At first glance, you can see the following data in the table:
 
-- Host: Name of the hosts in which the Sematext Agent is installed. Clicking on the name will open the Agent Information Panel.
+- Host: Names of the hosts where the Sematext Agent is installed. You can either click on the name to open the Agent Information Panel or click on the expand view to reveal the list of Discovered Services available on the specific host. For further details, refer to the individual sections below in the document.
 - Version: Installed version of the Sematext Agent and whether important updates are available. If they are, you can update the agent by just clicking the link and following the instructions. You can also find those instructions [here](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
 - Status: Indicates the status of the Sematext Agent. Possible statuses are:
     - Running: Everything is nominal.
@@ -53,7 +53,7 @@ This panel contains a list of the Metrics Agents installed on the host. Clicking
 
 ### Agent Errors 
 
-Here you will see any errors that appear in the Sematext Agent's own logs. The severity field will always be error, and they'll include a timestamp and a message. You can find troubleshooting information [here](https://sematext.com/docs/agents/sematext-agent/agent-troubleshooting/). You can find information about diagnostics in the [Diagnostics Tab](https://sematext.com/docs/fleet/#Diagnostics).
+Here, you will find any errors that appear in the Sematext Agent's own logs. The severity field will always be error, and they'll include a timestamp and a message. You can find troubleshooting information [here](https://sematext.com/docs/agents/sematext-agent/agent-troubleshooting/). You can find information about diagnostics in the [Diagnostics Tab](https://sematext.com/docs/fleet/#Diagnostics).
 
 ![Agent Errors](../images/fleet/fleet-agent-errors.png)
 
@@ -71,3 +71,7 @@ In this tab you'll find information on how to upgrade the Sematext Agent to the 
 
 ![Agent Info](../images/fleet/fleet-upgrade-instructions.png)
 
+## Discovered Services
+Here, you can find all the discovered services and logs for a specific host, including an overall view of the number of hosts where these services are available, monitored, and log shipping has been configured. You can use the eye icons to navigate to either the discovered [services](https://sematext.com/docs/monitoring/autodiscovery/) or [logs](https://sematext.com/docs/logs/discovery/intro/).
+
+![Fleet Expanded](../images/fleet/fnd-agents-expanded.png)
