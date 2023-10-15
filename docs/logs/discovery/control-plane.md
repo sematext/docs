@@ -29,7 +29,7 @@ As shown above, the Kafka group has three log file sources that pertain to the K
 
 - `Containers` reveal all discovered Docker containers grouped by image name or the image digest. This log source contains plain Docker containers, meaning they are not controlled by the orchestrators such as Kubernetes.
 
-![Containers Log Sources]("../../images/fleet/fnd-discovery-logs-containers.png")
+![Container Log Sources]("../../images/fleet/fnd-discovery-logs-containers.png")
 
 In a similar manner to log file sources, each container log group shows a collection of containers that might be running on different nodes.
 
