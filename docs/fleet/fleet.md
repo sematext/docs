@@ -18,9 +18,9 @@ At first glance, you can see the following data in the table:
 - Started: Time elapsed since the Sematext Agent began sending data to Sematext Cloud.
 - Infra App: the Infra App which is receiving the data from the Sematext Agent. Clicking on the App name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
 
-# Agent Information Panel
+## Agent Information Panel
 
-## Info
+### Info
 The Info panel contains information about the host system and the installed Agents. 
 
 If the Agents are installed in a Kubernetes environment, you will see information about the Kubernetes environment, like Namespace and Node. If, however, the Agents are installed in a baremetal environment, this panel will show information related to the Agent process, like the Pid. 
@@ -29,7 +29,7 @@ You can also find a link to the Infra App the Agent is associated with.
 
 ![Agent Info](../images/fleet/fleet-agent-info.png)
 
-## Log Agents
+### Log Agents
 
 This panel contains a list of the Log Shippers installed on the host. If you click on one, it will take you to the Log Shipper panel, where you will find information about the Log Shipper version and type, the files and containers it's collecting logs from, as well as any errors. You can also see diagnostics data and report a problem from the Diagnostics tab.
 
@@ -45,19 +45,19 @@ The following status values are currently available for Log Shippers:
 - Init Failure: Systemd is not available (bare metal), there is an error pulling the Log Shipper container image, or there is an issue creating/starting the Log Shipper container/pod. Ensure that your system has enough resources to run the container/pod and confirm that you don't have issues with network connectivity to pull container images
 - Stopped: The Log Shipper process has been stopped by the Sematext Agent. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent
 
-## Metrics Agents
+### Metrics Agents
 
 This panel contains a list of the Metrics Agents installed on the host. Clicking on one will take you to the Monitoring Agents panel, where you can see the process or container being monitored, the destination Monitoring App and its corresponding Infra App, service data such as sockets, ports and the command used to start the service, as well as any errors. You can also see diagnostics data and report a problem from the last tab.
 
 ![Metrics Agents](../images/fleet/fleet-metrics-agents.png)
 
-## Agent Errors 
+### Agent Errors 
 
 Here you will see any errors that appear in the Sematext Agent's own logs. The severity field will always be error, and they'll include a timestamp and a message. You can find troubleshooting information [here](https://sematext.com/docs/agents/sematext-agent/agent-troubleshooting/). You can find information about diagnostics in the [Diagnostics Tab](https://sematext.com/docs/fleet/#Diagnostics).
 
 ![Agent Errors](../images/fleet/fleet-agent-errors.png)
 
-## Diagnostics
+### Diagnostics
 
 If you are having issues sending data from your host, in this tab you can find the most recent logs from the agent, as well as some of what's inside the configuration files. You can find our Agent Troubleshooting documentation [here](https://sematext.com/docs/agents/sematext-agent/agent-troubleshooting). If you need any help troubleshooting, you can click on the `Report a Problem` button, write a short description of your issue and our support team will receive the message alongside a copy of the diagnostics data.
 
@@ -65,7 +65,7 @@ Remember you can always contact us via chat on the bottom right corner of [our w
 
 ![Agent Diagnostics](../images/fleet/agent-diagnostics.png)
 
-## Upgrade Instructions
+### Upgrade Instructions
 
 In this tab you'll find information on how to upgrade the Sematext Agent to the latest version for all supported environments.
 
