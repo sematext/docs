@@ -64,7 +64,7 @@ You will be presented with instructions to install Sematext Agent in case you ha
 <img class="content-modal-image" alt="Sematext Agent Installation" src="../../images/fleet/fnd-discovery-services-agent-install.png" title="Sematext Agent Installation">
 
 
-On each machine, Kubernetes, Swarm, or Docker Enterprise cluster where Sematext Agent is installed, it will instantly start discovering services that can be monitored. Discovered services will be displayed in Services.
+On each host, Kubernetes, Swarm, or Docker Enterprise cluster where Sematext Agent is installed, it will instantly start discovering services that can be monitored. Discovered services will be displayed in Services.
 
 Clicking the setup button in the Metrics or Logs column of each service will open the setup wizard. 
 

@@ -1,18 +1,18 @@
 title: Fleet and Discovery Overview
-description: Overview of Fleet and Discovery - Sematext Fleet & Discovery management panel
+description: Overview of Fleet and Discovery - Fleet & Discovery management panel
 
 Sematext Fleet & Discovery are two major components of your infrastructure [monitoring](https://sematext.com/docs/monitoring/) and [log management](https://sematext.com/docs/logs/). Think of them as the 'eyes and ears' of your entire infrastructure. They enable you to monitor the health, performance, and configuration changes of your infrastructure.
 
 ## Visibility Across Your Fleet
-[Sematext Fleet](./fleet) provides a centralized view of all the [Sematext Agents](https://sematext.com/docs/agents/sematext-agent/) installed throughout your infrastructure, offering several key advantages:
+[Fleet](./fleet) provides a centralized view of all the [Sematext Agents](https://sematext.com/docs/agents/sematext-agent/) installed throughout your infrastructure, offering several key advantages:
 
-- List all the hosts with installed Sematext Agents to get an overal view of your infrastructure
+- List all the hosts with installed Sematext Agents to get an overall view of your infrastructure
 - Get valuable info from each host, including host diagnostics, metrics, logs and events
 - Monitor the health status of each agent and check for available updates
 - Access a list of discovered services per host, which can be further configured in Discovery
 
 ## Discovery - Service and Logs Autodiscovery
-Sematext Discovery extends the capabilities of Fleet by automating the identification and categorization of services and collecting log data from various log sources. Below, you can explore some of the main benefits of Discovery:
+Discovery extends the capabilities of Fleet by automating the identification and categorization of services and collecting log data from various log sources. Below, you can explore some of the main benefits of Discovery:
 
 - Centralized view of all the discovered services and their current configurations within one or more Monitoring and Logs Integrations
 - Discovered services that can be automatically monitored through one of our [supported integrations](https://sematext.com/docs/integration/), eliminating the need for manual tracking and configuration
