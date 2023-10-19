@@ -45,25 +45,25 @@ Date: October 19, 2023
 
 ### New Features
 
-- CronJobs Monitoring: We are happy to introduce metrics collection for CronJobs. Now, you can gain insights into the metrics of your CronJobs. You can check all supported CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
-- Kube-controller Monitoring: We now support the collection of metrics from kube-controller, providing you with valuable data to monitor Kubernetes controller performance. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
-- Kubernetes Pod Labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
-- MySQL General Logs Support: In this update, we introduce support for parsing MySQL general logs.
+- Kubernetes CronJobs monitoring: We are happy to introduce metrics collection for CronJobs. Now, you can gain insights into the metrics of your CronJobs. You can check all supported CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
+- Kube-controller monitoring: We now support the collection of metrics from kube-controller, providing you with valuable data to monitor Kubernetes controller performance. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
+- Kubernetes pod labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
+- MySQL General Logs support: In this update, we introduce support for parsing MySQL general logs.
 
 ### Improvements
 
-- API Server: We now monitor the API server even if the nodes are unreachable.
-- Ship Heartbeat Failures: With this improvement, we ensure that heartbeat failures are properly handled and reported.
+- Kubernetes API Server: We now monitor the API server even if the nodes are unreachable.
+- Ship Heartbeat failures: With this improvement, we ensure that heartbeat failures are properly handled and reported.
 
 ### Bug Fixes
 
-- Resolved Log Spam Issue: In version 3.1.0, we identified a log spamming issue, and we are pleased to announce that this issue has been resolved. No more unnecessary log spam.
-- Kafka Signature Issue: We've covered a new signature for Kafka that may affect auto-discovery.
-- Set OpenSearch Processes to `opensearch` Type: We have updated the categorisation of OpenSearch processes to `opensearch` type instead of `jvm`.
+- Resolved log spam issue: In version 3.1.0, we identified a log spamming issue, and we are pleased to announce that this issue has been resolved. No more unnecessary log spam.
+- Kafka signature issue: We've covered a new signature for Kafka that may affect auto-discovery.
+- Set OpenSearch processes to `opensearch` Type: We have updated the categorisation of OpenSearch processes to `opensearch` type instead of `jvm`.
 
 ### Action Required Changes
 
-The new CronJobs monitoring integration requires additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
+The new Kubernetes CronJobs monitoring requires additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
 
 #### kubectl Installation
 
