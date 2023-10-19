@@ -132,7 +132,7 @@ Date: July 25, 2023
 
 - Fixed incorrect `Not Configured` status for the log shipper: We have resolved the issue that was causing the log shipper to display an incorrect status message.
 
-### Breaking Changes
+### Action Required Changes
 
 The new Kubernetes Components monitoring integration introduces additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
 
