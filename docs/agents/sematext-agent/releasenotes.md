@@ -21,6 +21,10 @@ NULL
 
 NULL
 
+### Action Required Changes
+
+NULL
+
 ### Breaking Changes
 
 NULL
@@ -34,6 +38,60 @@ NULL
 NULL
 
 -->
+
+## Version 3.2.0
+
+Date: October 19, 2023
+
+### New Features
+
+- CronJobs Metrics: We are happy to introduce metrics collection for CronJobs. Now, you can gain insights into the performance of your CronJobs.
+- kube-controller Metrics Collection: We now support the collection of metrics from kube-controller, providing you with valuable data to monitor Kubernetes controller performance.
+- Kubernetes Pod Labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
+- MySQL General Logs Support: In this update, we introduce support for parsing MySQL general logs.
+
+### Improvements
+
+- Monitor API Server Even When Nodes Cannot Be Reached: We now monitor the API server even if the nodes are unreachable, ensuring comprehensive visibility into your cluster's health.
+- Ship Heartbeat Failures: With this improvement, we ensure that heartbeat failures are properly handled and reported.
+
+### Bug Fixes
+
+- Resolved Log Spam Issue: In version 3.1.0, we identified a log spamming issue, and we are pleased to announce that this issue has been resolved. No more unnecessary log spam.
+- Kafka Signature Issue: We've covered a new signature for Kafka that may affect auto-discovery.
+- Set OpenSearch Processes to `opensearch` Type: We have updated the categorisation of OpenSearch processes to `opensearch` type instead of `jvm`.
+
+### Action Required Changes
+
+The new CronJobs monitoring integration introduces additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
+
+#### kubectl Installation
+
+Please re-apply `sematext-clusterroles.yaml` to your cluster.
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+After applying the new cluster roles, follow the agent upgrade steps from Sematext Cloud.
+
+#### Helm Installation
+
+Please update your `sematext` Helm repository. 
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
+
+Ensure that you have at least **1.3.0** version for the `sematext-agent` Helm package.
+```
+> helm search repo sematext
+NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
+sematext/sematext-agent	1.3.0        	1.0        	Helm chart for deploying Sematext Agent and Log...
+```
+
+After updating the Helm chart, follow the agent upgrade steps from Sematext Cloud.
 
 ## Version 3.1.0
 
