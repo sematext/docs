@@ -59,7 +59,7 @@ Date: October 19, 2023
 
 - Resolved log spam issue: In version 3.1.0, we identified a log spamming issue, and we are pleased to announce that this issue has been resolved. No more unnecessary log spam.
 - Kafka signature issue: We've covered a new signature for Kafka that may affect auto-discovery.
-- Set OpenSearch processes to `opensearch` Type: We have updated the categorisation of OpenSearch processes to `opensearch` type instead of `jvm`.
+- Set OpenSearch processes to `opensearch` group: We have updated the categorisation of OpenSearch processes to `opensearch` group instead of `jvm`.
 
 ### Action Required Changes
 
