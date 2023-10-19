@@ -233,6 +233,7 @@ pages:
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
       - Report Variables: dashboards/report-variables.md
+      - Color Guidelines: color-guidelines.md
     - Tags:
       - Overview: tags/index.md
       - Custom Tags: tags/custom-tags.md
