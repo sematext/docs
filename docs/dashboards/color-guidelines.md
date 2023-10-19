@@ -1,4 +1,4 @@
-title: Sematext Dashboards Reports and Components
+title: Sematext Dashboards Reports and Components TETTTEOITEJOTITJ
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system that includes a plethora of different integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
 ## Dashboards Reports
