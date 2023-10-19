@@ -1,26 +1,66 @@
-title: Sematext Dashboards Reports and Components TETTTEOITEJOTITJ
-description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system that includes a plethora of different integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
+# Color Guidelines for Conditional Coloring
 
-## Dashboards Reports
+Welcome to the **Color Usage Guidelines for Conditional Coloring** in Sematext. 
+These guidelines are designed to help you create clear and effective visualizations while ensuring accessibility for all users. 
 
-The **Report Menu** is where the true power of Sematext's Dashboards lies. This is where Observability comes to life. **Events, Logs, Metrics, Experience, Synthetics, and Infrastructure data** are **integrated** in a **single Reports pane**, and used to **correlate metrics** with **application and server logs, events, alerts, anomalies**, and much more! 
+> While we provide best practices and recommendations, please remember that users can customize their experience to their liking. <br/>By following these guidelines, you can maintain consistency and clarity in your charts, ensuring that your data is presented in the most meaningful way possible.
 
-Here's how you can **correlate Metrics with Events and Logs**, and view it all in a single view.
+<br/>
 
-![Dashboard Reports](../images/dashboards/reports.png)
+## Color Usage
+In Sematext, the effective use of colors is essential for conveying data insights clearly. 
+<br/>Here are some best practices to follow when using colors in your charts:
 
-## Dashboard Components
+### Purposeful Color Application
 
-The image below shows a common Monitoring App component showing its functionality and interactive elements. Using the component settings dropdown menu, you can easily add any metrics components from one or more Apps to the Dashboard. Create correlations reports, observe and analyze how multiple technologies coexist in your system. Zoom and time shift through charts, display a single component in full view, create alerts, and effortlessly share reports across your organization. 
+Colors should have a clear and meaningful purpose in your charts. 
+<br/>Consider what each color represents and how it aids in user understanding. 
+<br/>Avoid using colors indiscriminately or for purely decorative purposes.
 
-![Metrics Dashboards Component](https://sematext.com/docs/images/guide/dashboards/metrics-dashboard-component.png "Metrics Dashboards Component")
+### Neutral
 
-Just like a Monitoring App component, a Logs App components have interactive elements as well. Here you can choose from Log Tables, Logs counts, and much more. Use the **+ Add New Component** button to add a Logs App component to your Dashboard, and combine them with Monitoring App components for full observability of your stack. 
+| Examples  |  | Elements |
+| ------------- | ------------- |------------- |
+| ![Neutral Colors](../images/dashboards/color-guide/color-example-neutral.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-neutral-elements.png)  |
 
-![Logs Dashboards Component](https://sematext.com/docs/images/guide/dashboards/logs-dashboard-component.png "Logs Dashboards Component")
+<br/>
 
-Our tools will help your DevOps team find common exceptions, detect patterns in behaviours, and solve performance issues and availability problems.
+#### Informational
 
-### Saved Views
+| Examples  |  | Elements |
+| ------------- | ------------- |------------- |
+| ![Informational Colors](../images/dashboards/color-guide/color-example-info.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-info-elements.png)  |
 
-With [Saved Views](/guide/saved-views) you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
+<br/>
+
+#### Success
+
+| Examples  |  | Elements |
+| ------------- | ------------- |------------- |
+| ![Informational Colors](../images/dashboards/color-guide/color-example-success.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-success-elements.png)  |
+
+<br/>
+
+#### Warning
+
+| Examples  |  | Elements |
+| ------------- | ------------- |------------- |
+| ![Warning Colors](../images/dashboards/color-guide/color-example-warning.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-warning-elements.png)  |
+
+<br/>
+
+#### Error
+
+| Examples  |  | Elements |
+| ------------- | ------------- |------------- |
+| ![Error Colors](../images/dashboards/color-guide/color-example-error.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-error-elements.png)  |
+
+### Color for Highlighting
+
+Use colors to highlight specific data points, trends, or anomalies. <br/> 
+Highlighting can draw attention to critical information, making it easier for users to identify key insights at a glance.
+
+### Color Consistency
+
+Maintain consistency in your color usage throughout the app.  <br/> 
+For example, if you use green to represent success in one chart, continue using green consistently for success in other charts and visualizations.
