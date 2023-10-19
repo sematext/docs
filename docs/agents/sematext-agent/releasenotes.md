@@ -45,8 +45,8 @@ Date: October 19, 2023
 
 ### New Features
 
-- Kubernetes CronJobs monitoring: We are happy to introduce metrics collection for Kubernetes CronJobs. Now, you can gain insights into the metrics of your CronJobs. You can check all supported CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
-- Kube-controller monitoring: We now support the collection of metrics from kube-controller, providing you with valuable data to monitor Kubernetes controller performance. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
+- Kubernetes CronJobs monitoring: We are happy to introduce metrics collection for Kubernetes CronJobs. You can check all supported CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
+- Kube-controller monitoring: We now support the collection of metrics from kube-controller. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
 - Kubernetes pod labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
 - MySQL General Logs support: In this update, we introduce support for parsing MySQL general logs.
 
