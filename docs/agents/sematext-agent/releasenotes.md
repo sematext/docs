@@ -46,14 +46,14 @@ Date: October 19, 2023
 ### New Features
 
 - Kubernetes CronJobs monitoring: We introduce metrics collection for Kubernetes CronJobs. You can check all supported CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
-- Kube-controller monitoring: We now support the collection of metrics from kube-controller. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
-- Kubernetes pod labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
+- Kubernetes Controller Manager monitoring: We now support the collection of metrics from kube-controller. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
+- Kubernetes Pod labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
 - MySQL General Logs support: In this update, we introduce support for parsing MySQL general logs.
 
 ### Improvements
 
 - Kubernetes API Server: We now monitor the API server even if the nodes are unreachable.
-- Ship Heartbeat failures: With this improvement, we ensure that heartbeat failures are properly handled and reported.
+- Ship heartbeat failures from Etcd: We added a metric from Etcd that represents the heartbeat failures for that component.
 
 ### Bug Fixes
 
