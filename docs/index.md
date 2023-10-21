@@ -114,9 +114,9 @@ Stay informed about the most recent developments in our product and agent releas
 			<div class="demo-card-event mdl-card mdl-shadow--2dp release-notes-card">
 				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
-						Agent Release Notes
+						Agent Releases
 					</h4>
-					<p>Learn about all the latest features of Sematext Agent</p>
+					<p>Learn about the latest Sematext Agent features</p>
 				</div>
 			</div>
 		</a>
