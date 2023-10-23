@@ -37,8 +37,7 @@ Colors should have a clear and meaningful purpose in your charts.
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Success Colors](../images/dashboards/color-guide/color-example-success.png) | **When to Use:** Green indicates successful or positive outcomes. 
-Use it to highlight instances where everything is functioning as expected or when goals have been met. <br/> <br/> **Examples of Use:** Employ green to showcase performance metrics meeting or exceeding targets, or to denote systems operating efficiently.  | ![Success Color Elements](../images/dashboards/color-guide/color-example-success-elements.png)  |
+| ![Success Colors](../images/dashboards/color-guide/color-example-success.png) | **When to Use:** Green indicates successful or positive outcomes. Use it to highlight instances where everything is functioning as expected or when goals have been met. <br/> <br/> **Examples of Use:** Employ green to showcase performance metrics meeting or exceeding targets, or to denote systems operating efficiently.  | ![Success Color Elements](../images/dashboards/color-guide/color-example-success-elements.png)  |
 
 <br/>
 
@@ -46,8 +45,7 @@ Use it to highlight instances where everything is functioning as expected or whe
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Warning Colors](../images/dashboards/color-guide/color-example-warning.png) | **When to Use:** Yellow signifies a warning or a state that requires attention.
-Use it when there are potential issues or conditions that need monitoring but are not yet critical. <br/> <br/> **Examples of Use:** Yellow can be used to highlight approaching thresholds, potential performance issues, or conditions that may lead to problems if not addressed.  | ![Warning Color Elements](../images/dashboards/color-guide/color-example-warning-elements.png)  |
+| ![Warning Colors](../images/dashboards/color-guide/color-example-warning.png) | **When to Use:** Yellow signifies a warning or a state that requires attention. Use it when there are potential issues or conditions that need monitoring but are not yet critical. <br/> <br/> **Examples of Use:** Yellow can be used to highlight approaching thresholds, potential performance issues, or conditions that may lead to problems if not addressed.  | ![Warning Color Elements](../images/dashboards/color-guide/color-example-warning-elements.png)  |
 
 <br/>
 
