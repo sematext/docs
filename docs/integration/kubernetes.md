@@ -38,15 +38,13 @@ Kubernetes events track a wide range of activities within a Kubernetes cluster, 
 
 In the top-right corner of the Kubernetes overview, you’ll find a chart with the distribution of all Kubernetes events, coloured by severity, within your selected time range. This is really useful to quickly pinpoint when an incident happened.
 
-todo: add image
+<img class="content-modal-image" alt="Kubernetes Events Overview" src="../../images/integrations/k8s-overview-events.png" title="Kubernetes Events Overview">
 
 In Kubernetes Events you can explore and filter all the events received within the selecting time range. They are also color-coded by severity and you can quickly see the event message, the available event tags (fields) and the Infra App name to which they belong. Each event can be expanded to get all the details, nicely structured based on all available event tags and their respective values. 
 
-todo: add image
+<img class="content-modal-image" alt="Kubernetes Events" src="../../images/integrations/k8s-events-screen.png" title="Kubernetes Events">
 
 In the expanded view, you can filter the events by each individual tag value, whether to include or exclude it.
-
-todo add image
 
 For additional information about Kubernetes events tags, please refer to our [Common Schema](https://sematext.com/docs/tags/common-schema/#kubernetes-event-tags).
 
