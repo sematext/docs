@@ -32,6 +32,25 @@ Once data is in, you can explore it via the built-in reports:
 
 If you are looking to use a different type of integration you can check out this [page](https://sematext.com/docs/logagent/installation-docker/#kubernetes-and-openshift).
 
+## Kubernetes Events
+
+Kubernetes events track a wide range of activities within a Kubernetes cluster, making them really important in monitoring and troubleshooting the cluster's health and reliability. They provide detailed information about the state and behavior of resources in the cluster, such as pods, nodes, services, and other objects. That's why you can find these events both in the Kubernetes overview and in a dedicated Events report.
+
+In the top-right corner of the Kubernetes overview, you’ll find a chart with the distribution of all Kubernetes events, coloured by severity, within your selected time range. This is really useful to quickly pinpoint when an incident happened.
+
+todo: add image
+
+In Kubernetes Events you can explore and filter all the events received within the selecting time range. They are also color-coded by severity and you can quickly see the event message, the available event tags (fields) and the Infra App name to which they belong. Each event can be expanded to get all the details, nicely structured based on all available event tags and their respective values. 
+
+todo: add image
+
+In the expanded view, you can filter the events by each individual tag value, whether to include or exclude it.
+
+todo add image
+
+For additional information about Kubernetes events tags, please refer to our [Common Schema](https://sematext.com/docs/tags/common-schema/#kubernetes-event-tags).
+
+If desired, the [Sematext Agent can be configured](https://sematext.com/docs/agents/sematext-agent/kubernetes/events/) to exclude a number of Kubernetes events.
 
 ## Kubernetes Metrics
 
