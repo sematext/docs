@@ -29,7 +29,7 @@ Colors should have a clear and meaningful purpose in your charts.
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Informational Colors](../images/dashboards/color-guide/color-example-info.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-info-elements.png)  |
+| ![Informational Colors](../images/dashboards/color-guide/color-example-info.png) | **When to Use:** Blue is employed to convey general or informational content. It is suitable for data that does not require immediate attention but provides context or supplementary details. <br/> <br/> **Examples of Use:** se blue for labeling axes, legends, tooltips, or annotations. It can also represent data points that are informational rather than alerting.  | ![Informational Color Elements](../images/dashboards/color-guide/color-example-info-elements.png)  |
 
 <br/>
 
@@ -37,7 +37,8 @@ Colors should have a clear and meaningful purpose in your charts.
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Informational Colors](../images/dashboards/color-guide/color-example-success.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-success-elements.png)  |
+| ![Success Colors](../images/dashboards/color-guide/color-example-success.png) | **When to Use:** Green indicates successful or positive outcomes. 
+Use it to highlight instances where everything is functioning as expected or when goals have been met. <br/> <br/> **Examples of Use:** Employ green to showcase performance metrics meeting or exceeding targets, or to denote systems operating efficiently.  | ![Success Color Elements](../images/dashboards/color-guide/color-example-success-elements.png)  |
 
 <br/>
 
@@ -45,7 +46,8 @@ Colors should have a clear and meaningful purpose in your charts.
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Warning Colors](../images/dashboards/color-guide/color-example-warning.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-warning-elements.png)  |
+| ![Warning Colors](../images/dashboards/color-guide/color-example-warning.png) | **When to Use:** Yellow signifies a warning or a state that requires attention.
+Use it when there are potential issues or conditions that need monitoring but are not yet critical. <br/> <br/> **Examples of Use:** Yellow can be used to highlight approaching thresholds, potential performance issues, or conditions that may lead to problems if not addressed.  | ![Warning Color Elements](../images/dashboards/color-guide/color-example-warning-elements.png)  |
 
 <br/>
 
@@ -53,7 +55,7 @@ Colors should have a clear and meaningful purpose in your charts.
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Error Colors](../images/dashboards/color-guide/color-example-error.png) | **When to Use:** Neutral grey is primarily used for non-essential or neutral elements in your charts. It helps create a visual hierarchy by distinguishing between critical and less important information. <br/> <br/> **Examples of Use:** You can use grey for background elements, gridlines, or non-essential labels. It can also be used for secondary data or data that is less important in a specific context.  | ![Neutral Color Elements](../images/dashboards/color-guide/color-example-error-elements.png)  |
+| ![Error Colors](../images/dashboards/color-guide/color-example-error.png) | **When to Use:** Red represents errors or critical issues that demand immediate attention. Use it for situations where an urgent response is required to resolve problems. <br/> <br/> **Examples of Use:** Red is suitable for indicating system failures, outages, security breaches, or other critical issues that require immediate action.  | ![Error Color Elements](../images/dashboards/color-guide/color-example-error-elements.png)  |
 
 ### Color for Highlighting
 
