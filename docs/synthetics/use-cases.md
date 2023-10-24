@@ -41,10 +41,7 @@ See [How to Periodically Extract Webpage Performance Metrics from Browser API](h
 
 ## Track Your Position in a List on a Web Page
 
-Do you want to track your position on any sort of list?  For example, maybe something you care about is listed in some Top N list. 
-Maybe your want to track your product’s placement in one or more categories on a review site.  
-Or maybe you just want to track your position in Google’s search results.  Or your competitors’ positions.  You can do that with [User Journey Scripts](https://sematext.com/docs/synthetics/user-journey-scripts/).  
-Have a look at [examples](https://sematext.com/docs/synthetics/user-journey-scripts/#user-journey-script-examples) to get started.
+Do you want to track your position on any sort of list?  For example, maybe something you care about is listed in some Top N list. Maybe your want to track your product’s placement in one or more categories on a review site.  Or maybe you just want to track your position in Google’s search results.  Or your competitors’ positions.  You can do that with [User Journey Scripts](https://sematext.com/docs/synthetics/user-journey-scripts/).  Have a look at [examples](https://sematext.com/docs/synthetics/user-journey-scripts/#user-journey-script-examples) to get started.
 
 ## Competitor’s Website or API Performance
 
