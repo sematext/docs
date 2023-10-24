@@ -21,6 +21,10 @@ NULL
 
 NULL
 
+### Action Required Changes
+
+NULL
+
 ### Breaking Changes
 
 NULL
@@ -34,6 +38,60 @@ NULL
 NULL
 
 -->
+
+## Version 3.2.0
+
+Date: October 19, 2023
+
+### New Features
+
+- Kubernetes Jobs and CronJobs monitoring: We introduce metrics collection for Kubernetes Jobs and CronJobs. You can check all supported Job and CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
+- Kubernetes Controller Manager monitoring: We now support the collection of metrics from kube-controller. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
+- Kubernetes Pod labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
+- MySQL General Logs support: In this update, we introduce support for parsing MySQL General Logs.
+
+### Improvements
+
+- Kubernetes API Server: We now monitor the API server even if the nodes are unreachable.
+- Ship heartbeat failures from Etcd: We added a metric from Etcd that represents the heartbeat failures for that component.
+
+### Bug Fixes
+
+- Resolved log spam issue: In version 3.1.0, we identified a log spamming issue, and we are pleased to announce that this issue has been resolved. No more unnecessary log spam.
+- Kafka signature issue: We've covered a new signature for Kafka that may affect auto-discovery.
+- Set OpenSearch processes to `opensearch` group: We have updated the categorisation of OpenSearch processes to `opensearch` group instead of `jvm`.
+
+### Action Required Changes
+
+The new Kubernetes CronJobs monitoring requires additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
+
+#### kubectl Installation
+
+Please re-apply `sematext-clusterroles.yaml` to your cluster.
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+After applying the new cluster roles, follow the agent upgrade steps from Sematext Cloud.
+
+#### Helm Installation
+
+Please update your `sematext` Helm repository. 
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
+
+Ensure that you have at least **1.3.0** version for the `sematext-agent` Helm package.
+```
+> helm search repo sematext
+NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
+sematext/sematext-agent	1.3.0        	1.0        	Helm chart for deploying Sematext Agent and Log...
+```
+
+After updating the Helm chart, follow the agent upgrade steps from Sematext Cloud.
 
 ## Version 3.1.0
 
@@ -74,7 +132,7 @@ Date: July 25, 2023
 
 - Fixed incorrect `Not Configured` status for the log shipper: We have resolved the issue that was causing the log shipper to display an incorrect status message.
 
-### Breaking Changes
+### Action Required Changes
 
 The new Kubernetes Components monitoring integration introduces additional cluster roles for proper functioning. If you are using Kubernetes, follow the installation method specific steps below:
 

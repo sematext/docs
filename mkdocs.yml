@@ -123,6 +123,7 @@ pages:
       - Metrics: synthetics/metrics.md
       - Correlation: synthetics/correlation.md
       - Using the API: synthetics/using-the-api.md
+      - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
     - Integrations:
@@ -234,6 +235,7 @@ pages:
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
       - Report Variables: dashboards/report-variables.md
+      - Color Guidelines: dashboards/color-guidelines.md
     - Tags:
       - Overview: tags/index.md
       - Custom Tags: tags/custom-tags.md
