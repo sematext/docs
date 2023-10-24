@@ -8,14 +8,13 @@ If you start thinking of Sematext Synthetic as your little cronjob executioner i
 ## Extraction of Numerical Data from a Web Page
 
 If there is any web page with any sort of numerical data that you would like to extract periodically so that you can chart it and see its trend over time, 
-or alert when it goes over or below some threshold, you can use Sematext Synthetics to do that for you.  The web page doesn’t have to be yours.  
-Here are some examples of such data:
+or alert when it goes over or below some threshold, you can use Sematext Synthetics to do that for you.  The web page doesn’t have to be yours. Here are some examples of such data:
 
 * Product ratings on review sites - if you want to track how your or somebody else’s rating changes over time.
-* A price of a product - if you want to be alerted when the price goes up or down and get alerted about it, or simply to see how it’s changed over time.
+* A price of a product - if you want to be alerted when the price goes up or down or simply to see how it’s changed over time.
 * Competitor pricing - if you want to track when your competitors change their pricing
 * Weather data like temperature, rainfall, etc.
-* Mortgage rates, currency exchange rates, numeric of matches for a search, etc.
+* Mortgage rates, currency exchange rates, the number of matches for a query in a search engine, etc.
 * ...
 
 Have a look at [Browser Monitor Custom Metrics](https://sematext.com/docs/synthetics/metrics/#browser-monitors) docs, or the 
