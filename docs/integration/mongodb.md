@@ -1,17 +1,13 @@
 title: MongoDB Monitoring Integration
 description: Monitor all key MongoDB metrics and stats, namely server state, global lock ratio, current vs. available connections, opcounters, and more. View and analyze performance reports with our infractructure monitoring and logging management platform, and let your whole devops team monitor MongoDB database deployments with multi-user RBAC and application sharing support
 
-<div class="video_container">
-<iframe class="video" src="https://www.youtube.com/embed/BIERrXzbiNM" frameborder="0" allowfullscreen ></iframe>
-</div>
-
-Sematext offers a simple, easy to install, MongoDB monitoring agent with minimal CPU and memory overhead.
+Sematext offers a simple, easy to install, MongoDB monitoring with minimal CPU and memory overhead.
 
 ## Install MongoDB Monitoring Agent
 
 Setting up the monitoring agent takes less than 5 minutes:
 
-1.  Create a MongoDB App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data. The short  [What is an App in Sematext Cloud](https://www.youtube.com/watch?v=tr_qxdr8dvk&index=14&list=plt_fd32ofypflbfzz_hiafnqjdltth1ns) video has more details.
+1.  Create a MongoDB App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data.
 2.  Name your MongoDB monitoring App and, if you want to collect MongoDB logs as well, create a Logs App along the way.
 3.  Install the Sematext Agent according to the  [setup instructions](https://apps.sematext.com/ui/howto/MongoDB/overview) displayed in the UI.
 
