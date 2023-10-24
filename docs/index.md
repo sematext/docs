@@ -268,6 +268,7 @@ Sematext provides over 100+ built-in integrations used to collect metrics from s
 We also provide you with easy to install Agents that collect data about your software and send it to Sematext.
 
 <div class="mdl-grid" style="padding:0;margin:0 -8px;">
+	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./logagent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
@@ -279,6 +280,8 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
+	-->
+	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/sematext-agent/containers/installation/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
@@ -290,6 +293,7 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
+	-->
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/sematext-agent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">
