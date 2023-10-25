@@ -43,7 +43,7 @@ Yes. You can temporarily disable the notifications from **Edit Configuration** -
 ### Can I configure a monitor to alert only after N successive failures?
 Yes. You can update the below setting in **Edit Configuration** -> **Configure Alerts** -> **Notifications** to notify only when there are N consecutive failures from any location. The default value is 1.
 
-![Configure run failure count](../images/synthetics/synthetics-faq-notifications-2.png)
+![Configure run failure count](../images/synthetics/synthetics-faq-alert-after-N-times.png)
 
 ### What is the difference between 'Consecutive Runs' and 'Alert after N Consecutive Failures' settings?
 The **Alert after N Consecutive Failures from a Specific Location** setting is located in the **Configure Alerts** -> **Notifications** tab. Its purpose is to withhold alerts until the monitor has failed N times consecutively before triggering an alert. On the other hand, the **Consecutive Runs** setting can be found in the **General** tab. It does not consider the monitor as failed after N retry attempts.
