@@ -10,7 +10,7 @@ The Browser monitor can be used to monitor a single web page or a user journey a
 * **Name** - Name of the monitor. Max length is 255 characters.
 * **Interval** - Monitor execution interval. Supported intervals are 5m, 10m, 15m, 30m, 1h.
 * **Device type** - Determines which device will be emulated during monitor execution by setting the appropriate User-Agent and Viewport/Resolution.
-* **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing false positive alerts in the event of intermittent network issues. It is important to distinguish this configuration from the 'Alert after N consecutive failures from a specific location' setting within the 'Configure Alerts' tab, as the latter aims to withhold alerts until the monitor has failed N times, while the consecutive runs setting doesn't count the monitor as failed after N retry attempts.
+* **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing false positive alerts in the event of intermittent network issues.
 * **Locations** - List of locations the monitor will be run from.
 
 Note that multiple monitors created in the same **Create Browser Monitor** flow will have different names, intervals and devices, but share the same locations, **User Journey** settings and **Alert Conditions**, which lets you quickly set up multiple monitors with different devices for the same use case.
