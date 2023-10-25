@@ -11,7 +11,9 @@ Synthetics alerts are the alerts that notify about the failure of a monitor. The
 
 You can customize the alert priority, notification settings and schedule while creating the monitor. You can disable notifications by turning off `Enable Notifications`. When you turn off the notifications, the monitor will continue to run, but no notifications will be sent on failure. 
 
-You can control when the alert should be triggered based on the consecutive run failures. By default, the alert will be triggered when the monitor fails from any of the locations. You could change the below parameter to control this behavior. For example, by setting this to 2 for a monitor that runs every 10 minutes from Frankfurt and Mumbai, the alert will be triggered only when the monitor fails twice consecutively from Frankfurt or Mumbai.
+### Eliminating False Positives
+
+You can control when the alert should be triggered based on the consecutive run failures. By default, the alert will be triggered each time a monitor fails from any of the locations. You could change the below parameter to control this behavior. For example, by setting this to 2 for a monitor that runs every 10 minutes from Frankfurt and Mumbai, the alert will be triggered only when the monitor fails twice consecutively from Frankfurt or Mumbai.
 
 ![Run count based alerting](../images/synthetics/create-monitor-run-count-alert.png)
 
