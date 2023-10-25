@@ -154,6 +154,9 @@ Yes. We keep this setting disabled by default, but you can choose to enforce it 
 ### Why are some elements missing from my page during Browser monitor runs, even though they show up when I open it manually?
 Please see the `same-origin` question right above this one, this issue could very well be fixed by toggling the option to enforce `same-origin` policy on. Also make sure to double check from which locations you're using the monitor, as your website may display different content for different locations.
 
+### How do I avoid intermittent issues from affecting the availability of my monitors?
+The consecutive runs feature available in the **General** section for both HTTP and Browser monitors allows you to automatically run the monitor again after a failed run. Since the retried run will be run as soon as the failed run is reported, this can help avoid network errors or similar intermittent issues from affecting your overall availability, while still alerting you on issues which persist after multiple retries. Note that we reserve an extra 5% of the monitor's currently reserved runs per retry, with these extra runs being figured into the calculation at the bottom of the **General** page.
+
 ### How do I do X in a User Journey script?
 Please see the section on [User Journey script examples](./user-journey-scripts/#user-journey-script-examples).
 
