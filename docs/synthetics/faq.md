@@ -46,9 +46,11 @@ Yes. You can update the below setting in **Edit Configuration** -> **Configure A
 ![Configure run failure count](../images/synthetics/synthetics-faq-alert-after-N-times.png)
 
 ### What is the difference between 'Consecutive Runs' and 'Alert after N Consecutive Failures' settings?
-The **Alert after N Consecutive Failures from a Specific Location** setting is located in the **Configure Alerts** -> **Notifications** tab. Its purpose is to withhold alerts until the monitor has failed N times consecutively before triggering an alert. On the other hand, the **Consecutive Runs** setting can be found in the **General** tab. It does not consider the monitor as failed after N retry attempts.
+The **Alert after N Consecutive Failures from a Specific Location** setting is located in the **Configure Alerts** -> **Notifications** tab. Its purpose is to withhold alerts until the monitor has failed N times consecutively before triggering an alert. 
 
-See [HTTP](./http-monitor/#configuration) or [Browser](./browser-monitor/#configuration) monitor configuration.
+On the other hand, the **Consecutive Runs** setting can be found in the **General** tab. It won't consider the monitor as failed after N retry attempts, and the retries will occur immediately after the run fails, instead of waiting for the usual interval. Because the retried runs are not treated as failed, these two settings will thus affect the monitor's availability statistics differently.
+
+See [HTTP](./http-monitor/#configuration) or [Browser](./browser-monitor/#configuration) monitor configuration for more information on these settings.
 
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the monitors are covered in their respective documentation pages, in the run environment section:
