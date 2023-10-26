@@ -11,6 +11,7 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 * **HTTP Method** - HTTP Method.
 * **URL** - URL of the HTTP monitor of format `<http(s)>://hostname:port/path`.
 * **Interval** - Monitor execution interval.
+* **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations to run the monitor.
 
 ### Request Settings

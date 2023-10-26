@@ -43,7 +43,14 @@ Yes. You can temporarily disable the notifications from **Edit Configuration** -
 ### Can I configure a monitor to alert only after N successive failures?
 Yes. You can update the below setting in **Edit Configuration** -> **Configure Alerts** -> **Notifications** to notify only when there are N consecutive failures from any location. The default value is 1.
 
-![Configure run failure count](../images/synthetics/synthetics-faq-notifications-2.png)
+![Configure run failure count](../images/synthetics/synthetics-faq-alert-after-N-times.png)
+
+### What is the difference between 'Consecutive Runs' and 'Alert after N Consecutive Failures' settings?
+The **Alert after N Consecutive Failures from a Specific Location** setting is located in the **Configure Alerts** -> **Notifications** tab. Its purpose is to withhold alerts until the monitor has failed N times consecutively before triggering an alert. 
+
+On the other hand, the **Consecutive Runs** setting can be found in the **General** tab. It won't consider the monitor as failed after N retry attempts, and the retries will occur immediately after the run fails, instead of waiting for the usual interval. Because the retried runs are not treated as failed, these two settings will thus affect the monitor's availability statistics differently.
+
+See [HTTP](./http-monitor/#configuration) or [Browser](./browser-monitor/#configuration) monitor configuration for more information on these settings.
 
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the monitors are covered in their respective documentation pages, in the run environment section:
@@ -146,6 +153,9 @@ Yes. We keep this setting disabled by default, but you can choose to enforce it 
 
 ### Why are some elements missing from my page during Browser monitor runs, even though they show up when I open it manually?
 Please see the `same-origin` question right above this one, this issue could very well be fixed by toggling the option to enforce `same-origin` policy on. Also make sure to double check from which locations you're using the monitor, as your website may display different content for different locations.
+
+### How do I avoid intermittent issues from affecting the availability of my monitors?
+The consecutive runs feature available in the **General** section for both HTTP and Browser monitors allows you to automatically run the monitor again after a failed run. Since the retried run will be run as soon as the failed run is reported, this can help avoid network errors or similar intermittent issues from affecting your overall availability, while still alerting you on issues which persist after multiple retries. Note that we reserve an extra 5% of the monitor's currently reserved runs per retry, with these extra runs being figured into the calculation at the bottom of the **General** page.
 
 ### How do I do X in a User Journey script?
 Please see the section on [User Journey script examples](./user-journey-scripts/#user-journey-script-examples).
