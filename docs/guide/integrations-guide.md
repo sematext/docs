@@ -24,7 +24,7 @@ An [App](app-guide) is a core concept in Sematext.  As part of the monitoring se
 
 Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page to create a new App. Pick a solution type and all the available integrations for that solution will be listed. 
 
-TODO: add image
+![Sematext Cloud - Add New App](../images/guide/integrations/add-new-solution.jpg)
 
 Hover over any integration card and click to create the respective App.
 
@@ -49,7 +49,7 @@ For a Synthetics or Experience App, the Sematext Agent is not needed to monitor 
 
 Synthetic monitoring of websites and APIs requires no installation of any kind - it is all configurable in the UI.
 
-TODO: add image
+![Sematext Cloud - Create New Monitor](../images/guide/integrations/synthetics-monitor.png)
 
 When creating an Experience App, you’ll get step-by-step instructions to add and configure a snippet of JavaScript for insertion in your web pages. This library is securely delivered to your website visitors via HTTPS with the rest of your site.
 
