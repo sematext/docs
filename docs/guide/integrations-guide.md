@@ -28,7 +28,7 @@ Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page to create 
 
 Hover over any integration card and click to create the respective App.
 
-### Infrastructure, Service, and Log Monitoring
+### Monitoring Infrastructure, Services, and Logs
 After you create a Monitoring or Logs App, pick the environment that runs the service you want to monitor.
 
 ![Sematext Cloud - Select Environment](../images/guide/integrations/environments.png)
@@ -43,11 +43,11 @@ Once the Sematext Agent is installed, integrations provide monitoring capabiliti
 - [Logs](../logs) from your applications, servers, etc.
 - [Events](../events) such as services starting or restarting, package installs and version updates, builds, deployments, alerts, etc. Events are graphed in timeseries charts and these charts can be correlated with metrics or logs components to enable faster troubleshooting.
 
-### Website and API Monitoring
+### Monitoring Websites, User Journeys, APIs, and User Experience
 
-For a Synthetics or Experience App, the Sematext Agent is not needed to monitor your website, APIs, or user experience. 
+For a [Synthetics](../synthetics) or [Experience](../experience) App, the Sematext Agent is not needed to monitor your website, user journeys, APIs, or user experience. 
 
-Synthetic monitoring of websites and APIs requires no installation of any kind - it is all configurable in the UI.
+Synthetic monitoring of websites, user journeys, or APIs requires no installation of any kind - it is all configurable in the UI.
 
 ![Sematext Cloud - Create New Monitor](../images/guide/integrations/synthetics-monitor.png)
 
@@ -76,11 +76,10 @@ Or navigate to the App and click on the Connect New App button on the top right 
 ![Sematext Cloud - Connect Apps](../images/guide/integrations/connect-apps-from-logs-app.png)
 
 ## Get Started
-Ready to create your first integration? Get started by creating a new App for monitoring
+Ready to create your first integration? Get started by creating a new App for monitoring.
 
 - [Infrastructure and backend services](https://sematext.com/docs/monitoring/quick-start/)
 - [Logs](https://sematext.com/docs/logs/quick-start/)
 - [User experience](https://sematext.com/docs/experience/getting-started/)
 - [Websites and APIs](https://sematext.com/docs/synthetics/getting-started)
 
-Start now!
