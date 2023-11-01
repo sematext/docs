@@ -3,6 +3,7 @@ description: Kubernetes is a portable, extensible, open-source platform for mana
 
 Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. To start monitoring Kubernetes with Sematext, you only need to install a tiny agent that adds basically no CPU or memory overhead.
 
+
 ## Monitoring Kubernetes with Sematext
 
 Sematext Monitoring will provide you with detailed insights into your cluster's control plane components and their health, performance metrics, and resource counts, among other important metrics. Speaking of metrics, you can check out [this page](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/) for a summarized list of key metrics that you can track using Sematext. It also includes a short explanation for each metric.
@@ -18,6 +19,7 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 ### Agent Configuration
 The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer ot our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
 
+
 ## Shipping Kubernetes logs to Sematext
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has to. Sematext helps you shed light on what caused issues with your Kubernetes cluster by collecting Kubernetes logs and events.
@@ -31,6 +33,7 @@ Once data is in, you can explore it via the built-in reports:
 <img class="content-modal-image" alt="Kubernetes logs" src="../../images/integrations/kubernetes-logs.png" title="Kubernetes logs">
 
 If you are looking to use a different type of integration you can check out this [page](https://sematext.com/docs/logagent/installation-docker/#kubernetes-and-openshift).
+
 
 ## Kubernetes Events
 
@@ -50,67 +53,73 @@ For additional information about Kubernetes events tags, please refer to our [Co
 
 If desired, the [Sematext Agent can be configured](https://sematext.com/docs/agents/sematext-agent/kubernetes/events/) to exclude a number of Kubernetes events.
 
-## Kubernetes Metrics
+
+
+## Important Kubernetes Metrics
 
 Container and Kubernetes metrics are collected along with labels and tags, which are exposed in the UI to allow slicing and dicing and building of custom dashboards.
 
-### Kubernetes Control Plane Metrics
 
-#### API Server Metrics
+### Control Plane Metrics
 
-* Request Latency: Measures the time taken to process API server requests
-* Request Throughput: Tracks the number of API server requests processed per unit of time
-* Error Rate: Monitors the rate of API server errors
+#### API Server
+
+* Request Latency - Measures the time taken to process API server requests
+* Request Throughput - Tracks the number of API server requests processed per unit of time
+* Error Rate - Monitors the rate of API server errors
 
 <img class="content-modal-image" alt="API Server Requests" src="../../images/integrations/kubernetes-apiserver-requests.png" title="API Server Requests">
 
 <img class="content-modal-image" alt="API Server Auth" src="../../images/integrations/kubernetes-apiserver-auth.png" title="API Server Auth">
 
-#### CoreDNS Metrics
+#### CoreDNS
 
-* DNS Request Latency: Measures the time taken to process DNS requests by CoreDNS
-* DNS Local and Remote Cache Misses: Counts the number of cache misses for DNS queries in CoreDNS's local or remote cache.
-* Error Rate: Monitors the rate of DNS errors encountered by CoreDNS
+* DNS Request Latency - Measures the time taken to process DNS requests by CoreDNS
+* DNS Local and Remote Cache Misses - Counts the number of cache misses for DNS queries in CoreDNS's local or remote cache.
+* Error Rate - Monitors the rate of DNS errors encountered by CoreDNS
 
 <img class="content-modal-image" alt="CoreDNS Overview" src="../../images/integrations/kubernetes-coredns-overview.png" title="CoreDNS Overview">
 
 <img class="content-modal-image" alt="CoreDNS Cache" src="../../images/integrations/kubernetes-coredns-cache.png" title="CoreDNS Cache">
 
-#### etcd Metrics
+#### etcd
 
-* Leader Changes: Tracks the number of times the etcd cluster leadership changes
-* Disk Space Usage: Monitors the amount of disk space used by etcd
-* WAL Write Latency: Measures the latency of write operations to the etcd Write-Ahead Log (WAL)
-* WAL Snapshot Latency: Measures the latency of taking snapshots of the etcd Write-Ahead Log (WAL)
-* WAL Commit Latency: Measures the latency of committing changes from the etcd Write-Ahead Log (WAL) to the database
+* Leader Changes - Tracks the number of times the etcd cluster leadership changes
+* Disk Space Usage - Monitors the amount of disk space used by etcd
+* WAL Write Latency - Measures the latency of write operations to the etcd Write-Ahead Log (WAL)
+* WAL Snapshot Latency - Measures the latency of taking snapshots of the etcd Write-Ahead Log (WAL)
+* WAL Commit Latency - Measures the latency of committing changes from the etcd Write-Ahead Log (WAL) to the database
 
 <img class="content-modal-image" alt="etcd overview" src="../../images/integrations/kubernetes-etcd-overview.png" title="etcd overview">
 
 <img class="content-modal-image" alt="etcd mvcc" src="../../images/integrations/kubernetes-etcd-mvcc.png" title="etcd mvcc">
 
-#### kube-proxy Metrics
+#### kube-proxy
 
-* Service Changes: Tracks the number of changes in services detected by kube-proxy
-* Endpoint Changes: Tracks the number of changes in endpoints detected by kube-proxy
-* Synchronization of Proxy Rules: Measures the time taken to synchronize proxy rules for services
-* Request Latency by Host, HTTP Method, Path: Measures the latency of requests proxied by kube-proxy, categorized by host, HTTP method or Path
+* Service Changes - Tracks the number of changes in services detected by kube-proxy
+* Endpoint Changes - Tracks the number of changes in endpoints detected by kube-proxy
+* Synchronization of Proxy Rules - Measures the time taken to synchronize proxy rules for services
+* Request Latency by Host, HTTP Method, Path - Measures the latency of requests proxied by kube-proxy, categorized by host, HTTP method or Path
 
 <img class="content-modal-image" alt="kube-proxy overview" src="../../images/integrations/kubernetes-kubeproxy-overview.png" title="kube-proxy overview">
 
 <img class="content-modal-image" alt="kube-proxy sync proxy rules" src="../../images/integrations/kubernetes-kubeproxy-syncproxyrules.png" title="kube-proxy sync proxy rules">
 
-#### Scheduler Metrics
+#### Scheduler
 
-* Scheduling Latency by Attempts: Measures the scheduling latency for pods based on the number of attempts made
-* Failed Scheduling Attempts: Monitors the number of failed pod scheduling attempts
-* Queued Pods by Queue: Tracks the number of pods currently in the scheduler's queue, categorized by the queue name
-* Unschedulable Pods: Tracks the number of pods that cannot be scheduled due to resource constraints
+* Scheduling Latency by Attempts - Measures the scheduling latency for pods based on the number of attempts made
+* Failed Scheduling Attempts - Monitors the number of failed pod scheduling attempts
+* Queued Pods by Queue - Tracks the number of pods currently in the scheduler's queue, categorized by the queue name
+* Unschedulable Pods - Tracks the number of pods that cannot be scheduled due to resource constraints
 
 <img class="content-modal-image" alt="scheduler overview" src="../../images/integrations/kubernetes-schedulers-overview.png" title="scheduler overview">
 
 <img class="content-modal-image" alt="scheduler latency" src="../../images/integrations/kubernetes-schedulers-latency.png" title="scheduler latency">
 
-### Pod Metrics
+
+### Workload Metrics
+
+#### Pods
 
 *   Pod count - The total nodes in the cluster
 *   Pod restarts - The total number of pods scheduled across nodes
@@ -123,7 +132,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image2.png "Sematext Kubernetes Metrics")
 
-### Deployment
+#### Deployments
 
 *   Current replicas - The number of active deployment replicas
 *   Available replicas - The number of pod instances targeted by the deployment
@@ -131,7 +140,41 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image6.png "Sematext Kubernetes Metrics")
 
-### Storage
+#### DeamonSets
+todo
+
+#### StatefulSets
+todo
+
+#### CronJobs
+todo
+
+#### Jobs
+todo
+
+
+
+### CPU, Memory, Storage and Network Metrics
+
+#### CPU Metrics
+
+*   Cpu usage - The container CPU usage in %
+*   Throttled time - The total amount of time that processes have been throttled in the container cgroup
+
+![alt_text](https://sematext.com/wp-content/uploads/2020/04/CPU.png "Sematext Kubernetes Metrics")
+
+#### Memory Metrics
+
+*   Memory fail counter - The number of times that memory cgroup limit was exceeded
+*   Memory limit - Designates the max allowed memory limit for the container cgroup
+*   Memory pages in - The number of events each time the page is accounted to the container cgroup
+*   Memory pages out - The number of events each time a page is unaccounted from the container cgroup
+*   Memory pages fault - Represents the number of page faults accounted the cgroup
+*   Swap size - The number of bytes of swap usage
+
+![alt_text](https://sematext.com/wp-content/uploads/2020/04/ram.png "Sematext Kubernetes Metrics")
+
+#### Storage Metrics
 
 *   Read bytes - The number of bytes read from the disk
 *   Read time - The total amount of time (in nanoseconds) between read request dispatch and request completion
@@ -143,7 +186,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image1.png "Sematext Kubernetes Metrics")
 
-### Network
+#### Network Metrics
 
 *   Received bytes - Received amount of bytes on the network interface
 *   Received packets - Received amount of packets on the network interface
@@ -156,24 +199,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/network.png "Sematext Kubernetes Metrics")
 
-### Memory
 
-*   Memory fail counter - The number of times that memory cgroup limit was exceeded
-*   Memory limit - Designates the max allowed memory limit for the container cgroup
-*   Memory pages in - The number of events each time the page is accounted to the container cgroup
-*   Memory pages out - The number of events each time a page is unaccounted from the container cgroup
-*   Memory pages fault - Represents the number of page faults accounted the cgroup
-*   Swap size - The number of bytes of swap usage
-
-![alt_text](https://sematext.com/wp-content/uploads/2020/04/ram.png "Sematext Kubernetes Metrics")
-
-
-### CPU
-
-*   Cpu usage - The container CPU usage in %
-*   Throttled time - The total amount of time that processes have been throttled in the container cgroup
-
-![alt_text](https://sematext.com/wp-content/uploads/2020/04/CPU.png "Sematext Kubernetes Metrics")
 
 ## Metrics Fields
 
@@ -232,7 +258,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 | kubernetes.cronjob.name         | tag     |           | Cronjob name            |
 | kubernetes.cronjob.cluster.name | tag     |           | cluster name            |
 | kubernetes.cronjob.namespace    | tag     |           | namespace               |
-| kubernetes.cronjob.scheduled    | tag     |           | schedule setup  [* 1 * *] |
+| kubernetes.cronjob.scheduled    | tag     |           | schedule setup  [ * 1 * * ] |
 | kubernetes.cronjob.suspended    |  | boolean   | has suspended state or not |
 | kubernetes.cronjob.successful   |  | boolean   | has successful state or not |
 | kubernetes.cronjob.failed       |  | boolean   | has failed state or not |
@@ -260,7 +286,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 | kubernetes.pvc.available | gauge | bytes |number of available bytes in the volume |
 | kubernetes.pvc.capacity  | gauge | bytes |capacity in bytes of the volume        |
 
+
 ### Kubelet Metrics
+
 #### Runtime Operations
 |Metric Name| Type  | Unit    | Description                                                     |
 |----|-------|---------|-----------------------------------------------------------------|
@@ -690,7 +718,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |kubeproxy.sync_proxy_rules.duration| gauge | seconds | duration of proxy rules synchronization in seconds |
 |kubeproxy.sync_proxy_rules.total_num| gauge |   | number of proxy rules synchronization |
 
+
 ### CoreDNS Metrics
+
 #### Generic
 |Metric Name| Type  | Unit   | Description                                                               |
 |----|-------|--------|---------------------------------------------------------------------------|
@@ -745,6 +775,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |coredns.forward_request.total_num| gauge |   | number of forwarding DNS requests handled by CoreDNS |
 
 ### Scheduler Metrics
+
 #### Preemption Attempts
 |Metric Name| Type  | Unit   | Description                                  |
 |----|-------|--------|----------------------------------------------|
@@ -835,7 +866,9 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |----|-------|--------|-------------------------------------|
 |scheduler.attempts.total_num| gauge |  | number of attempts to schedule pods |
 
+
 ### Kube-controller Metrics
+
 #### Workqueue Wait
 | Metric Name                              | Type  | Unit    | Description                                               |
 |------------------------------------------|-------|---------|-----------------------------------------------------------|
@@ -893,6 +926,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 |----|-------|---------|------------------------------------------------|
 |kubecontroller.workqueue_retries.total_num| gauge |   | number of retries attempted by workqueue items |
 
+
 ### Runtime Metrics
 | Metric Name                   | Type  | Unit   | Description                                                           |
 |----------------|-------|--------|-----------------------------------------------------------------------|
@@ -910,6 +944,7 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 | kubernetes.runtime.stack_used          | gauge | bytes  | amount of stack memory in use          |
 | kubernetes.runtime.gc_duration         | gauge | seconds | duration of a garbage collection event |
 | kubernetes.runtime.gc_count            | gauge |   | number of garbage collection events |
+
 
 ## Troubleshooting
 
