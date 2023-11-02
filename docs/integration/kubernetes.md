@@ -121,38 +121,50 @@ Container and Kubernetes metrics are collected along with labels and tags, which
 
 #### Pods
 
-*   Pod count - The total nodes in the cluster
-*   Pod restarts - The total number of pods scheduled across nodes
-*   Containers count - The total number ofcontainers
-*   Succeeded pods - The number of pods that are successfully scheduled
-*   Failed pods - The number of failed pods
-*   Unknown pods - The number of pods that are in unknown state
-*   Pending pods - The number of pods in pending state
-*   Running pods - Reflects the current number of running pods
+* Pod count - The total nodes in the cluster
+* Pod restarts - The total number of pods scheduled across nodes
+* Containers count - The total number ofcontainers
+* Succeeded pods - The number of pods that are successfully scheduled
+* Failed pods - The number of failed pods
+* Unknown pods - The number of pods that are in unknown state
+* Pending pods - The number of pods in pending state
+* Running pods - Reflects the current number of running pods
 
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/image2.png "Sematext Kubernetes Metrics")
 
 #### Deployments
 
-*   Current replicas - The number of active deployment replicas
-*   Available replicas - The number of pod instances targeted by the deployment
-*   Desired replicas - The number of non-terminated pods targeted by the deployment that have the desired template specification
+* Current replicas - The number of active deployment replicas
+* Available replicas - The number of pod instances targeted by the deployment
+* Desired replicas - The number of non-terminated pods targeted by the deployment that have the desired template specification
 
-![alt_text](https://sematext.com/wp-content/uploads/2020/04/image6.png "Sematext Kubernetes Metrics")
+![alt_text](https://sematext.com/wp-content/uploads/2023/10/k8s-workloads-deployments.png "Sematext Kubernetes Deployments")
 
-#### DeamonSets
-todo
+#### DaemonSets
+* Available DaemonSets - Number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready
+* Scheduled DaemonSets - Number of nodes that are running at least one daemon pod and are supposed to run the daemon pod
+* Desired DaemonSets - Number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod)
+
+![alt_text](https://sematext.com/wp-content/uploads/2023/10/k8s-workloads-daemonsets.png "Sematext Kubernetes DaemonSets")
 
 #### StatefulSets
-todo
+* Desired Replicas - Number of desired replicas
+* Current Replicas -  Number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision
+* Ready Replicas - Number of Pods created by the StatefulSet controller that have a Ready Condition
 
-#### CronJobs
-todo
+![alt_text](https://sematext.com/wp-content/uploads/2023/10/k8s-workloads-statefulsets.png "Sematext Kubernetes StatefulSets")
 
-#### Jobs
-todo
+#### Jobs and CronJobs
+* Schedule - Cronjob schedule setup
+* Last Scheduled - Cronjob last time scheduled timestamp
+* Successful / Failed - Defines if the cronjob is successful or not
+* Suspended - Defines if the cronjob is suspended or not
+* Job Condition - Job finish condition, completed: 2, failed: 0 or suspended: 1
+* Job Executions - Number of job executions
+* Job Failures - Number of job failures
+* CronJob Name - Name of cronjob thata the job belongs to
 
-
+![alt_text](https://sematext.com/wp-content/uploads/2023/10/k8s-workloads-cronjobs.png "Sematext Kubernetes CronJobs")
 
 ### CPU, Memory, Storage and Network Metrics
 
