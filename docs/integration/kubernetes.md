@@ -17,7 +17,7 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 2.  Name your Infra App, select the Kubernetes environment and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
 
 ### Agent Configuration
-The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer ot our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
+The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer to our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
 
 
 ## Shipping Kubernetes logs to Sematext
@@ -233,23 +233,19 @@ todo
 |kubernetes.deployment.replicas.avail|gauge|  | number of available replicas. Replicas are marked as available if they are passing the health check |
 |kubernetes.deployment.replicas.desired|gauge|  | number of desired replicas as defined in the deployment |
 
+### DaemonSet Metrics
+|Name|Type| Unit   | Description                  |
+|----|----|--------|-------|----------------------|
+|kubernetes.daemonset.number.available|gauge| long | number of nodes that should be running the daemon pod |
+|kubernetes.daemonset.number.misscheduled|gauge| long | number of nodes that are not supposed to run the daemon pod |
+|kubernetes.daemonset.number.ready|gauge| long | number of nodes that have one or more of the daemon pods running and ready |
+|kubernetes.daemonset.number.unavailable|gauge| long | number of nodes that have none of the daemon pods running and available |
+|kubernetes.daemonset.scheduled.updated|gauge| long |  number of nodes that are running updated daemon pod |
+|kubernetes.daemonset.scheduled.current|gauge| long | number of nodes that are running at least 1 daemon pod |
+|kubernetes.daemonset.scheduled.desired|gauge| long | number of nodes that should be running the daemon pod  |
 
-### CronJob overview Metrics
-
-| Metric Name | Type  | Unit  | Description                          |
-|-----|-------|-------|--------------------------------------|
-| kubernetes.cronjob.total | gauge |  | total number of cron jobs            |
-| kubernetes.cronjob.suspended.total | gauge |  | total number of suspended cron jobs  |
-| kubernetes.cronjob.successful.total | gauge |  | total number of successful cron jobs |
-| kubernetes,cronjob.failed.total    | gauge |  | total number of failed cron jobs     |
-
-### Job overview Metrics
-
-| Metric Name                    | Type  | Unit  | Description                     |
-|--------------------------------|-------|-------|---------------------------------|
-| kubernetes.job.total           | gauge |  | total number of jobs            |
-| kubernetes.job.completed.total | gauge |  | total number of completed jobs  |
-| kubernetes.job.failed.total    | gauge |  | total number of failed jobs |
+### StatefulSet Metrics
+todo
 
 ### CronJob Metrics
 
@@ -265,6 +261,11 @@ todo
 | kubernetes.cronjob.active       |   | number    | '1' if is active and '0' if not |
 | kubernetes.cronjob.timestamp    |    | timestamp | last time scheduled timestamp |
 | kubernetes.cronjob.creation.timestamp  |    | timestamp    | time creation timestamp |
+| kubernetes.cronjob.total | gauge |  | total number of cron jobs            |
+| kubernetes.cronjob.suspended.total | gauge |  | total number of suspended cron jobs  |
+| kubernetes.cronjob.successful.total | gauge |  | total number of successful cron jobs |
+| kubernetes,cronjob.failed.total    | gauge |  | total number of failed cron jobs     |
+
 
 ### Job Metrics
 
@@ -277,7 +278,11 @@ todo
 | kubernetes.job.condition    |  | number | is the job finish condition, completed: 2, failed: 0 or suspended: 1 |
 | kubernetes.job.executions   |  | number | job number of executions    |
 | kubernetes.job.failures     |  | number | job number of failures      |
-| kubernetes.job.creation.timestamp     |   | number | time creation timestamp     |
+| kubernetes.job.creation.timestamp |   | number | time creation timestamp |
+| kubernetes.job.total           | gauge |  | total number of jobs            |
+| kubernetes.job.completed.total | gauge |  | total number of completed jobs  |
+| kubernetes.job.failed.total    | gauge |  | total number of failed jobs |
+
 
 ### Storage Metrics
 | Metric Name              | Type  | Unit  | Description                           |
