@@ -245,7 +245,16 @@ todo
 |kubernetes.daemonset.scheduled.desired|gauge| long | number of nodes that should be running the daemon pod  |
 
 ### StatefulSet Metrics
-todo
+|Name|Type| Unit   | Description                  |
+|----|----|--------|-------|----------------------|
+|kubernetes.statefulset.desired.replicas|gauge| long | number of desired replicas |
+|kubernetes.statefulset.replicas|gauge| long | number of active replicas |
+|kubernetes.statefulset.replicas.current|gauge| long | number of current replicas |
+|kubernetes.statefulset.replicas.updated|gauge| long | number of updated replicas |
+|kubernetes.statefulset.replicas.ready|gauge| long | number of Pods that have a Ready Condition |
+|kubernetes.statefulset.revision.update|gauge| long | update revision |
+|kubernetes.statefulset.revision.current|gauge| long | the current version of the StatefulSet used to generate Pods |
+
 
 ### CronJob Metrics
 
