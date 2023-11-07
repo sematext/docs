@@ -29,7 +29,7 @@ Colors should have a clear and meaningful purpose in your charts.
 
 | Examples  |  | Elements |
 | ------------- | ------------- |------------- |
-| ![Informational Colors](../images/dashboards/color-guide/color-example-info.png) | **When to Use:** Blue is employed to convey general or informational content. It is suitable for data that does not require immediate attention but provides context or supplementary details. <br/> <br/> **Examples of Use:** se blue for labeling axes, legends, tooltips, or annotations. It can also represent data points that are informational rather than alerting.  | ![Informational Color Elements](../images/dashboards/color-guide/color-example-info-elements.png)  |
+| ![Informational Colors](../images/dashboards/color-guide/color-example-info.png) | **When to Use:** Blue is employed to convey general or informational content. It is suitable for data that does not require immediate attention but provides context or supplementary details. <br/> <br/> **Examples of Use:** Use blue for labeling axes, legends, tooltips, or annotations. It can also represent data points that are informational rather than alerting.  | ![Informational Color Elements](../images/dashboards/color-guide/color-example-info-elements.png)  |
 
 <br/>
 
