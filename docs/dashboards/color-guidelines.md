@@ -3,7 +3,7 @@
 Welcome to the **Color Usage Guidelines for Conditional Coloring** in Sematext. 
 These guidelines are designed to help you create clear and effective visualizations while ensuring accessibility for all users. 
 
-> While we provide best practices and recommendations, please remember that users can customize their experience to their liking. <br/>By following these guidelines, you can maintain consistency and clarity in your charts, ensuring that your data is presented in the most meaningful way possible.
+> While we provide best practices and recommendations, please remember that you can customize your experience to your liking. <br/>By following these guidelines, you can maintain consistency and clarity in your charts, ensuring that your data is presented in the most meaningful way possible.
 
 <br/>
 
@@ -62,5 +62,5 @@ Highlighting can draw attention to critical information, making it easier for us
 
 ### Color Consistency
 
-Maintain consistency in your color usage throughout the app.  <br/> 
+Maintain consistency in your color usage throughout the App.  <br/> 
 For example, if you use green to represent success in one chart, continue using green consistently for success in other charts and visualizations.
