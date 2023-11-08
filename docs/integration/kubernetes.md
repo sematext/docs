@@ -13,7 +13,7 @@ Sematext Monitoring will provide you with detailed insights into your cluster's 
 ### Agent Install
 To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting up the agent takes less than 5 minutes:
 
-1.  Create a new Infra App on https://apps.sematext.com/ui/monitoring-create by choosing the INFRA App card from the list of integrations.
+1.  Create a new Infra App in [Sematext Cloud US](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)) by choosing the INFRA App card from the list of integrations.
 2.  Name your Infra App, select the Kubernetes environment and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
 
 ### Agent Configuration
