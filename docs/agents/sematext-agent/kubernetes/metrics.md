@@ -36,8 +36,8 @@ Sematext Agent seamlessly integrates with Kubernetes and cooperates with its lea
 |kubernetes.deployment.replicas.desired|gauge|  | number of desired replicas as defined in the deployment |
 
 ### DaemonSet Metrics
-|Name|Type| Unit   | Description                  |
-|----|----|--------|-------|----------------------|
+|Name|Type| Unit   | Description          |
+|----|--------|-------|----------------------|
 |kubernetes.daemonset.number.available|gauge| long | number of nodes that should be running the daemon pod |
 |kubernetes.daemonset.number.misscheduled|gauge| long | number of nodes that are not supposed to run the daemon pod |
 |kubernetes.daemonset.number.ready|gauge| long | number of nodes that have one or more of the daemon pods running and ready |
@@ -47,8 +47,8 @@ Sematext Agent seamlessly integrates with Kubernetes and cooperates with its lea
 |kubernetes.daemonset.scheduled.desired|gauge| long | number of nodes that should be running the daemon pod  |
 
 ### StatefulSet Metrics
-|Name|Type| Unit   | Description                  |
-|----|----|--------|-------|----------------------|
+|Name|Type| Unit   | Description          |
+|----|----|--------|----------------------|
 |kubernetes.statefulset.desired.replicas|gauge| long | number of desired replicas |
 |kubernetes.statefulset.replicas|gauge| long | number of active replicas |
 |kubernetes.statefulset.replicas.current|gauge| long | number of current replicas |
