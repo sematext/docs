@@ -62,10 +62,6 @@ Sematext Agent seamlessly integrates with Kubernetes and cooperates with its lea
 
 | Metric Name                     | Type    | Unit      | Description             |
 |---------------------------------|---------|-----------|-------------------------|
-| kubernetes.cronjob.name         | tag     |           | Cronjob name            |
-| kubernetes.cronjob.cluster.name | tag     |           | cluster name            |
-| kubernetes.cronjob.namespace    | tag     |           | namespace               |
-| kubernetes.cronjob.scheduled    | tag     |           | schedule setup  [ * 1 * * ] |
 | kubernetes.cronjob.suspended    |  | boolean   | has suspended state or not |
 | kubernetes.cronjob.successful   |  | boolean   | has successful state or not |
 | kubernetes.cronjob.failed       |  | boolean   | has failed state or not |
@@ -82,10 +78,6 @@ Sematext Agent seamlessly integrates with Kubernetes and cooperates with its lea
 
 | Metric Name                 | Type    | Unit   | Description                 |
 |-----------------------------|---------|--------|-----------------------------|
-| kubernetes.job.name         | tag     |        | Job name                    |
-| kubernetes.job.cluster.name | tag     |        | cluster name                |
-| kubernetes.job.namespace    | tag     |        | namespace                   |
-| kubernetes.job.cronjob.name | tag     |        | Cronjob owner name          |
 | kubernetes.job.condition    |  | number | is the job finish condition, completed: 2, failed: 0 or suspended: 1 |
 | kubernetes.job.executions   |  | number | job number of executions    |
 | kubernetes.job.failures     |  | number | job number of failures      |
