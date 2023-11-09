@@ -1,5 +1,5 @@
 title: Sematext Dashboards Quick Start
-description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system. Dashboarding is system's powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events. 
+description: Sematext Cloud Dashboards for monitoring metrics, logs, APIs, websites, etc.
 
 
 After you log into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Dashboard. A Dashboard is a collection for different types of data. This is where you keep logs, metrics, events, infrastructure data and experience statistics in a single screen for easy correlation and troubleshooting.
@@ -32,14 +32,21 @@ The image below shows a sample of a custom Kafka report panel that was created b
 
 ![Add Metric Dashboards Component](https://sematext.com/docs/images/guide/dashboards/add-metric-report-to-dashboard.png "Add Metric Dashboards Component")
 
-Available dashboard components:
+## Available Dashboard Components
 
-- Line, Area, Bar charts metrics component binned by metric creation date
-- Bar chart component binned by event creation date
+- Line, Area, Bar charts metrics component binned by data creation date
+- Bar chart component binned by data creation date
 - Table of events component in reverse chronological order
-- Log Table component with logs listed in reverse chronological order
+- Log table component with logs listed in reverse chronological order
 - Logs count bar chart time series component 
 - Numeric field time series component 
-- Events Count bar chart time series component
-- Top N Values of given log event field component
+- Events count bar chart time series component
+- Top N values of given log event field component
+- Pie chart
+- Doughnut chart
+- Geo map
+- 24x7 Heatmap
+- Heatbar
+- Numeric panel for a single numerical value
+- Metric panel for multiple numerical values from different Apps
 - Markdown free form editor component used to create textual panels used to add custom event notes
