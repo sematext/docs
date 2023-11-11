@@ -50,9 +50,8 @@ Date: November 11, 2023
 
 ### Bug Fixes
 
-- Resolved network detection issue for Docker Swarm.
-- Fixed a nil pointer issue for CronJob.
-- Prevented empty grok fields from being overwritten.
+- Addressed a network detection problem specific to Docker Swarm.
+- Resolved a nil pointer issue associated with CronJob.
 
 ## Version 3.2.0
 
