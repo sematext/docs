@@ -39,6 +39,21 @@ NULL
 
 -->
 
+## Version 3.2.1
+
+Date: November 11, 2023
+
+### Improvements
+
+- We added additional metrics: system load percentage metric, swap total memory metric, OOM metric, process count metric, mem available metric, mem total metric.
+- Improved Kubernetes event fields to ensure unique identification.
+
+### Bug Fixes
+
+- Resolved network detection issue for Docker Swarm.
+- Fixed a nil pointer issue for CronJob.
+- Prevented empty grok fields from being overwritten.
+
 ## Version 3.2.0
 
 Date: October 19, 2023
