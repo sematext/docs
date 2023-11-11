@@ -45,7 +45,7 @@ Date: November 11, 2023
 
 ### Improvements
 
-- We added additional metrics: system load percentage metric, swap total memory metric, OOM metric, process count metric, mem available metric, mem total metric.
+- Metrics added: `system load percentage`, `swap total memory`, `OOM`, `process count`, `mem available`, `mem total`.
 - Improved Kubernetes event fields to ensure unique identification.
 
 ### Bug Fixes
