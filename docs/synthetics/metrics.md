@@ -58,6 +58,8 @@ Browser monitor collects the below metrics for every resource loaded during the 
 
 ### Custom Metrics
 
+Aside from the predefined metrics which are collected with each monitor run, you can also define up to 10 custom metrics per monitor for your HTTP and Browser monitors.
+
 #### HTTP Monitors
 
 To extract custom metrics from HTTP monitors, navigate to the **Configure Response** tab and enable **Save Response Body**. Select either JSON or XML, depending on the format of the HTTP response body. Fetch a sample response from the specified HTTP URL or manually provide the response body, then enter the path to extract the metric. You will see the output within the **Extracted Value** box, and you will need to specify a name for the extracted metric.
