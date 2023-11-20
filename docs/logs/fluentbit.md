@@ -8,7 +8,11 @@ need to configure it with the [Elasticsearch plugin](https://docs.fluentbit.io/m
 
   - **Port:** 80 / 443
 
-  - **Index:** [Logsene App Token](https://apps.sematext.com/ui/logs)
+  - **Index:**  Your Logs App token which can be seen under Custom Integrations page
+    
+    ![Logs App Token](../images/logs/logs-app-token.png)
+
+    Note: **this token should be kept secret** (n.b. you can have N Logs Apps, each with its own token)
 
   - **tls:** On / Off
 
