@@ -15,9 +15,9 @@ instructions at <http://www.rsyslog.com/downloads/download-other/>.
 rsyslog is a modern syslog daemon focused on performance. Sematext gives
 you lots of ways to forward your logs with rsyslog:
 
-  - UDP
-  - TCP (you can also encrypt logs with TLS)
-  - [RELP](http://www.rsyslog.com/doc/relp.html) (uses application-level
+  - [UDP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imudp.html)
+  - [TCP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imudp.html) (you can also encrypt logs with TLS)
+  - [RELP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imrelp.html) (uses application-level
     acknowledgement for increased reliability over plain TCP)
   - HTTP / HTTPS over the [Elasticsearch API](index-events-via-elasticsearch-api)
 
