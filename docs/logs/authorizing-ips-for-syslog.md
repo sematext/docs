@@ -13,28 +13,22 @@ logs originating from some IP should be routed.  As such, a given IP
 address can be authorized in only one Logs Management Apps. 
 
 You can authorize IPs from the Logs Management application's Settings within
-your Sematext account ([click here](https://apps.sematext.com/ui/logs) to go to the list of
-your Logs Management applications), or from the application itself.
+your Sematext account.
 
 ## Method 1: From the Application Settings
 
-First, you have to get to your [list of Logs Management Apps](https://apps.sematext.com/ui/logs). You can do
-that from anywhere by going to **Integrations-\> Apps**.
-
-From the list of applications, click on the **Actions** button next to
+Get to your Logs Apps from the left menu panel. From the list of applications, click on the **Actions** button next to
 the Logs Management application you need to work with:
 
 Click on **Whitelist IP** item and add your IPs to the list:
 
-<img src="/docs/images/logs/syslog-ip-authorize-method-1-min.gif" alt="whitelist syslog IP">
+<img src="/docs/images/logs/logs-app-syslog-ip-authorize-method-1-min.gif" alt="whitelist syslog IP">
 
 ## Method 2: From the Logs Management Application
 
-You can also authorize IPs without leaving the Sematext Logs Management application. To
-do that, click on the **App actions→App Settings** button on the
-upper-right side.
+You can also authorize IPs without leaving the Sematext Logs Management App. To
+do that, click on the **App Settings** from the left menu panel.
 
-Select **Source IPs** tab. From the **IPs authorized for...** screen,
-you can start adding IPs:
+Select **Source IPs** tab. And click on **+Add New IP**:
 
-<img src="/docs/images/logs/syslog-ip-authorize-method-2-min.gif" alt="syslog IP Authorize">
+<img src="/docs/images/logs/logs-app-syslog-ip-authorize-method-2-min.gif" alt="syslog IP Authorize">
