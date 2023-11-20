@@ -1,7 +1,7 @@
 title: Sematext Logagent Integration
 description: Logagent can be used to send logs to Sematext monitoring and logging platform. Parse logs with grok filter, tag specific events, aggregate and index data and metrics from different sources
 
-The recommended method for sending logs to Sematest is by installing the [Sematext Agent and configuring log shipping from Discovery](sending-log-events).
+The recommended method for sending logs to Sematext is by installing the [Sematext Agent and configuring log shipping from Discovery](sending-log-events).
 
 Please note that Logagent is deprecated, and does not support [Discovery](discovery/intro/). Therefore, you'll need to manually set up Logagent to transmit the content of log files defined in `logagent.cnf`.
 
