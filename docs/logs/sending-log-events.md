@@ -3,7 +3,7 @@ description: Send new log events to Sematext using Sematext Agent, Elasticsearch
 
 The simplest way to ship logs to Sematext is via the [Discovery](discovery/intro/) screen after the [initial setup](discovery/setup/). 
 
-By following these step-by-step instructions for setting up the [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) through the Logs App.
+Follow these step-by-step instructions for setting up the [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) through the Logs App.
 
 **Create Logs App:** After creating the Logs App, the environment selection screen for agent installation will be displayed.
 
@@ -30,8 +30,8 @@ Furthermore, at any time, you can navigate to the Discovery screen to view the l
 
 ![Sematext Discovery](../images/logs/sematext-discovery.png)
 
-** Custom Integration Options
+### Custom Integration Options
 
-Alternatively, you can explore various custom integration options for shipping log events to Sematext. This includes support for [Elasticsearch and OpenSearch APIs](index-events-via-elasticsearch-api), [Syslog](syslog-ng), multiple programming languages, and popular log shippers such as [rsyslog](rsyslog), [Logstash](logstash), [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch), among others.
+Alternatively, you can explore various custom integration options for shipping log events to Sematext. This includes support for [Elasticsearch API](index-events-via-elasticsearch-api), [syslog-ng](syslog-ng), multiple programming languages, and popular log shippers such as [rsyslog](rsyslog), [Logstash](logstash), [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch), and many many more.
 
 ![Logs App Custom Integrations](../images/logs/custom-integrations.png)
