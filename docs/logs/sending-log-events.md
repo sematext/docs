@@ -16,7 +16,7 @@ Follow the provided instructions to install the agent. Once installed, the Logs 
 
 ![Logs App Discovered Logs](../images/logs/discovered-logs.png)
 
-**Set Up Automatic Log Shipping:** Click on the "Set Up" button next to the services from which you want to ship logs. This enables automatic log shipping for the selected services. For example, you can configure the system to send all log sources from Linux daemon services to Sematext Cloud as soon as they are discovered.
+**Set Up Automatic Log Shipping:** Click on the **Set Up** button next to the services from which you want to ship logs. This enables automatic log shipping for the selected services. For example, you can configure the system to send all log sources from Linux daemon services to Sematext Cloud as soon as they are discovered.
 
 ![Logs App Set Up Log Shipping](../images/logs/set-up-log-shipping.png)
 
