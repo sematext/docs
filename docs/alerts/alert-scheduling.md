@@ -1,11 +1,11 @@
 title: Alert Scheduling
 description: Configuring schedules for Alerts
 
-This tab is used to set a detailed weekly schedule when notifications will be active. Default is *always active*.
+This tab is used to set a detailed weekly schedule when notifications will be active. Default is *always active*.  Thus, if you specify e.g. Monday 09:00 - 17:00 interval then on Mondays you will receive notifications for any alerts that are triggeed between 9 AM and 5 PM, and on Mondays you will not receive notifications for any alerts outside that time period.
 
 ![image alt text](../images/alerts/image_17.png)
 
-Let's say you want to restrict notification only to workdays between 9AM and 5PM. You would first +Add Interval 09:00 - 17:00 to Monday, copy Monday to all other days with Copy To > All action.
+Let's say you want to receive notifications only to workdays between 9AM and 5PM. You would first +Add Interval 09:00 - 17:00 to Monday, copy Monday to all other days with Copy To > All action.
 
 ![image alt text](../images/alerts/image_18.png)
 

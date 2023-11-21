@@ -78,6 +78,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
+	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/fleet/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp fleetdisco-card">
@@ -102,6 +103,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
+	-->
 </div>
 
 ## Latest Updates
@@ -124,9 +126,9 @@ Stay informed about the most recent developments in our product and agent releas
 			<div class="demo-card-event mdl-card mdl-shadow--2dp release-notes-card">
 				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
-						Agent Release Notes
+						Agent Releases
 					</h4>
-					<p>Learn about all the latest features of Sematext Agent</p>
+					<p>Learn about the latest Sematext Agent features</p>
 				</div>
 			</div>
 		</a>
@@ -278,6 +280,7 @@ Sematext provides over 100+ built-in integrations used to collect metrics from s
 We also provide you with easy to install Agents that collect data about your software and send it to Sematext.
 
 <div class="mdl-grid" style="padding:0;margin:0 -8px;">
+	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./logagent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp logagent-card">
@@ -289,6 +292,8 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
+	-->
+	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/sematext-agent/containers/installation/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp docker-card">
@@ -300,6 +305,7 @@ We also provide you with easy to install Agents that collect data about your sof
 			</div>
 		</a>
 	</div>
+	-->
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="./agents/sematext-agent/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp kubernetes-card">

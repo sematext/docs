@@ -8,8 +8,11 @@ need to configure it with the [Elasticsearch plugin](https://www.elastic.co/guid
 
   - **80** or **443** as the **port**
 
-  - [your Logs Management App token](https://apps.sematext.com/ui/logs) as
-    the index name
+  - **Index**: Your Logs App token which can be seen under Custom Integrations page
+    
+    ![Logs App Token](../images/logs/logs-app-token.png)
+
+    Note: **this token should be kept secret** (n.b. you can have N Logs Apps, each with its own token)
 
   - **http** as the **protocol**
 

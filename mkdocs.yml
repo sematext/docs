@@ -123,6 +123,7 @@ pages:
       - Metrics: synthetics/metrics.md
       - Correlation: synthetics/correlation.md
       - Using the API: synthetics/using-the-api.md
+      - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
     - Integrations:
@@ -173,6 +174,7 @@ pages:
         - Kubernetes Audit: integration/kubernetes-audit-integration.md
         - Linux Journald: integration/journald-integration.md
         - Mobile Apps Logs: integration/mobile-apps-logs.md
+        - MySQL Logs: integration/mysql-logs.md
         - Nginx Logs: integration/nginx-logs.md
         - OpenSearch: integration/opensearch-logs.md
         - PostgreSQL: integration/postgresql-logs.md
@@ -233,6 +235,7 @@ pages:
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
       - Report Variables: dashboards/report-variables.md
+      - Color Guidelines: dashboards/color-guidelines.md
     - Tags:
       - Overview: tags/index.md
       - Custom Tags: tags/custom-tags.md

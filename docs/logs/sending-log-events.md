@@ -1,64 +1,37 @@
 title: Sending Log Events
-description: Send new log events to Sematext using Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
+description: Send new log events to Sematext using Sematext Agent, Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
 
-The simplest way to ship logs to Sematext is via the [Discovery](discovery/intro/) screen after the [initial setup](discovery/setup/).  Alernatively, there are many other ways to ship log events to Sematext.  Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs.  Sematext also accepts syslogs.
+The simplest way to ship logs to Sematext is via the [Discovery](discovery/intro/) screen after the [initial setup](discovery/setup/). 
 
-  - HTTP / HTTPS (ports 80 / 443), by using the Elasticsearch API on
-    **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com**
-  - UDP / TCP / RELP / TLS, by using the syslog receiver on
-    **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
-  - UDP / TCP by using the socket receiver for JSON on 
-    **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
+Follow these step-by-step instructions for setting up the [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) through the Logs App.
 
-All options work with log shippers such as
-[Logstash](logstash),
-[Fluentd](https://github.com/uken/fluent-plugin-elasticsearch),
-[Fluent Bit](fluentbit),
-[rsyslog](rsyslog) or
-[syslog-ng](syslog-ng)... and many, many more.  Instructions for a lot more log shipping methods are inside Sematext Cloud itself.
+**Create Logs App:** After creating the Logs App, the environment selection screen for agent installation will be displayed.
 
-Additionally, you can always write your own application or script that works with
-[Elasticsearch](index-events-via-elasticsearch-api) or syslog or any other tool that can send data to
-[Sematext's Elasticsearch API](index-events-via-elasticsearch-api).
+![Logs App Select an Environment](../images/logs/select-environment.png)
 
-### Elasticsearch API
+Choose the environment in which you intend to install the agent. The installation instructions specific to that environment will be displayed.
+Follow the provided instructions to install the agent. Once installed, the Logs App will identify the host and display the discovered log sources within it.
 
-The easiest way to **send logs is with** [Sematext Agent](../agents/sematext-agent), [Logstash](../logs/logstash), or Filebeat. Have in mind any log shipper will get the job done. You can also use **any tool that works with Elasticsearch's REST API**, for both [indexing](../logs/index-events-via-elasticsearch-api) and [searching](../logs/search-through-the-elasticsearch-api). 
+**View Discovered Logs:** Discovered Logs shows a list of log sources discovered within the host grouped by service type.
 
-If you're using a particular **programming language**, configuring your **logging framework to send data to Sematext Logs** is also an option.
+![Logs App Discovered Logs](../images/logs/discovered-logs.png)
 
-The only condition is to **use the App's token as the index name**, and `https://logsene-receiver.sematext.com:443`, or `https://logsene-receiver.eu.sematext.com:443` as the Elasticsearch endpoint.
+**Set Up Automatic Log Shipping:** Click on the **Set Up** button next to the services from which you want to ship logs. This enables automatic log shipping for the selected services. For example, you can configure the system to send all log sources from Linux daemon services to Sematext Cloud as soon as they are discovered.
 
-Here's how to send a message from the terminal.
-```bash
-curl -XPOST https://logsene-receiver.sematext.com/YOUR-TOKEN-GOES-RIGHT-HERE/example/ -d '{
-  "message": "Hello from Sematext!"
-}'
-```
+![Logs App Set Up Log Shipping](../images/logs/set-up-log-shipping.png)
 
-Here `example` represents the desired type. It can be anything from `log`, `event`, `host`, `node`, and anything in between, giving freedom to create custom types for logs. This value gets stored in the `logsene_type` field allowing for easy filtering on types when needed.
+**Finalization:** Congratulations! You have successfully configured automatic log shipping for logs discovered under Linux daemon services without any additional configuration.
 
-![Logs App Elasticsearch integration](../images/logs/elasticsearch-api-guide.png)
+If you want to ship logs from different hosts and containers to the same Logs App, you can always navigate to the Ship Logs screen from the left Menu panel and repeat the steps to install the agent to another host.
 
-[This guide](../logs/index-events-via-elasticsearch-api/) will show you more details on using the Elasticsearch REST API with Sematext.
+![Logs App Ship Logs](../images/logs/ship-logs.png)
 
-### Syslog
+Furthermore, at any time, you can navigate to the Discovery screen to view the log sources and services identified across your infrastructure, from all the containers and hosts where the [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) is installed. From this screen, you have the option to configure automatic log shipping or metrics without the need for any additional installations.
 
-You can forward syslog via **UDP** (port 514), **TCP** (port 514), **RELP** (port 20514) and **TLS** (port 10514). The host name is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com**
+![Sematext Discovery](../images/logs/sematext-discovery.png)
 
-To get started with syslog shipping quickly, you can use our configuration script and add your App token as a parameter:
+### Custom Integration Options
 
-``` bash
-curl -O https://apps.sematext.com/logsene/configure-syslog.py
-sudo python configure-syslog.py $YOUR-TOKEN-GOES-RIGHT-HERE
-```
+Alternatively, you can explore various custom integration options for shipping log events to Sematext. This includes support for [Elasticsearch API](index-events-via-elasticsearch-api), [syslog-ng](syslog-ng), multiple programming languages, and popular log shippers such as [rsyslog](rsyslog), [Logstash](logstash), [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch), and many many more.
 
-You can also use this snippet:
-
-```bash
-echo 'example.com eed460a3-9516-458c-8c5c-8e7c495665cd:Hello from Sematext!' | nc logsene-syslog-receiver.sematext.com 514
-```
-
-![Logs App Syslog integration](../images/logs/syslog-guide.png)
-
-For more details, take a look at the [Syslog](../logs/syslog) page, and the pages that are linked from it.
+![Logs App Custom Integrations](../images/logs/custom-integrations.png)
