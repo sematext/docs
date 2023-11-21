@@ -1,11 +1,21 @@
 title: Sematext Logagent Integration
 description: Logagent can be used to send logs to Sematext monitoring and logging platform. Parse logs with grok filter, tag specific events, aggregate and index data and metrics from different sources
 
+The recommended method for sending logs to Sematext is by installing the [Sematext Agent and configuring log shipping from Discovery](sending-log-events).
 
-Sending logs to a [Sematext Logs App](https://sematext.com/logsene/) with [Logagent](https://sematext.com/logagent/) is configured by using the Elasticsearch module in the output configuration, and setting the `LOGS_TOKEN` as the index.
+Please note that Logagent is deprecated, and does not support [Discovery](discovery/intro/). Therefore, you'll need to manually set up Logagent to transmit the content of log files defined in `logagent.cnf`.
+
+Follow the instructions in Custom Integrations → Log Shippers → Logagent screen to install the agent.
+
+![Logs App Logagent Instructions](../images/logs/logs-app-logagent-instructions.png)
+
+This will do two things. First, generate a YAML configuration file in the `/etc/sematext/` directory called `logagent.conf`. But also create a system service for Logagent and run the log shipper.
 
 ### Tailing Log Files
-To send the contents of all log files in the `/var/log/` directory, you'd configure Logagent like this:
+
+Since Logagent doesn’t support [Discovery](discovery/intro/), to send the contents of all log files in a directory, you'd have to configure Logagent.
+
+Below is an example of sending contents of all log files in the  `/var/log/` directory.
 
 ```yaml hl_lines="17 18 19"
 # /etc/sematext/logagent.conf
@@ -28,14 +38,4 @@ output:
     url: https://logsene-receiver.sematext.com
     index: <LOGS_TOKEN>
 ```
-
-To get started, first install Logagent and run the `logagent-setup` CLI command, where you replace `<LOGS_TOKEN>` with your Sematext Logs App token.
-
-```bash
-sudo npm i -g @sematext/logagent
-sudo logagent-setup -i <LOGS_TOKEN>
-```
-
-This will do two things. First, generate a YAML configuration file in the `/etc/sematext/` directory called `logagent.conf`. But also create a system service for Logagent and run the log shipper.
-
 Read more about Logagent in the [docs here](../logagent).
