@@ -17,8 +17,8 @@ your Sematext account.
 
 ## Method 1: From the Application Settings
 
-Get to your Logs Apps from the left menu panel. From the list of applications, click on the **Actions** button next to
-the Logs Management application you need to work with:
+Get to your Logs Apps from the left menu panel. From the list of Apps, click on the **Actions** button next to
+the Logs App you need to work with:
 
 Click on **Whitelist IP** item and add your IPs to the list:
 
@@ -26,7 +26,7 @@ Click on **Whitelist IP** item and add your IPs to the list:
 
 ## Method 2: From the Logs Management Application
 
-You can also authorize IPs without leaving the Sematext Logs Management App. To
+You can also authorize IPs without leaving the Sematext Logs App. To
 do that, click on the **App Settings** from the left menu panel.
 
 Select **Source IPs** tab. And click on **+Add New IP**:
