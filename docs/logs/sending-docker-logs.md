@@ -17,5 +17,5 @@ Note that Sematext Agent recognizes log formats from various applications and pr
 
 <img src="/docs/images/logs/integrations.png" alt="docker environment">
 
-You also have the option to create a Generic logs App and create custom Reports based on your log source. 
+You also have the option to create a generic logs App and create custom Reports based on your log source. 
 
