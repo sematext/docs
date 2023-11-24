@@ -7,7 +7,7 @@ The Fleet section of Fleet and Discovery gives you an overview of all the Semate
 
 At first glance, you can see the following data in the table:
 
-- Host: Names of hosts where the Sematext Agent is installed and running. You can either click on the name to open the Agent Information Panel or click on the expand view to reveal the list of Discovered Services available on the specific host. For further details, refer to the individual sections below in the document.
+- Host: Names of hosts where the Sematext Agent is installed and running. You can either click on the name to open the Agent Information Panel or click on the expand view to reveal the list of discovered services running on the specific host. For further details, refer to the individual sections below.
 - Version: Installed version of the Sematext Agent and whether important updates are available. If they are, you can update the agent by just clicking the link and following the instructions. You can also find those instructions [here](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
 - Status: Indicates the status of the Sematext Agent. Possible statuses are:
     - Running: Everything is nominal.
