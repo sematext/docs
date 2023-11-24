@@ -62,7 +62,7 @@ The default timeouts for the monitors are covered in their respective documentat
 Yes. Please see [using the API](./using-the-api.md).
 
 ### Can I add monitors in bulk for monitoring multiple domains?
-Yes. This can be achieved by using a script with the API. Please see [using the API](./using-the-api.md#create-monitor-api).
+Yes. This can be achieved by using a [script with the API](./using-the-api.md#create-monitor-api) or by using the [add bulk monitors](./http-monitor/#bulk-monitors) feature for HTTP monitors.
 
 ### How are redirects handled?
 HTTP monitors don't follow redirects. If you think redirects should be followed please let us know.
