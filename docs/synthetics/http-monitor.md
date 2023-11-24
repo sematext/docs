@@ -50,6 +50,7 @@ When creating an HTTP Monitor, you can add multiple URLs on the same page. These
 
 Alternatively, click the '+ Bulk Add' button. A pop-up will appear, allowing you to paste the list of URLs. Ensure each URL is separated by a new line within the pop-up. This enables you to add numerous endpoints for monitoring without the need to input each one individually.
 
+Placeholder for a gif on adding bulk monitors when the PR env issue is fixed.
 ![HTTP Bulk Add Monitors](../images/synthetics/http-bulk-add-monitors.gif)
 
 ## Authentication
