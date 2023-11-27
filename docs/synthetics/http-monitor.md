@@ -44,7 +44,7 @@ If you disable this option, we **won’t save the response body** hence it **wil
 
 ## Bulk Adding HTTP Monitors
 
-When creating an HTTP Monitor, you can add multiple URLs on the same page. These URLs will inherit the same configuration settings applied during the creation process. To add URLs individually, click the '+ New Monitor' button for each one.
+When creating an HTTP Monitor, you can add multiple URLs at once. All configuration settings specified during the creation process will be applied to URLs added in bulk. To add URLs individually, click the '+ New Monitor' button for each one.
 
 ![HTTP Add New Monitor](../images/synthetics/http-add-new-monitor.png)
 
