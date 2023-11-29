@@ -48,7 +48,7 @@ We recommend using our [Sensitive Data](./sensitive-data.js) feature (mentioned 
 
 ### [Shopping Cart](./shopping-cart.js)
 
-This script navigates to a Shopify based e-commerce website, adds a book to the cart and fills in the form for the checkout process, while ensuring that the payment button is present on the final checkout form.
+This script navigates to a Shopify based e-commerce website, adds a book to the cart and fills in the form for the checkout process.
 
 
 
@@ -70,7 +70,7 @@ This script launches a booking website (AirBnB) and searches for properties in a
 
 Browser monitors allow you to define and collect custom metrics in the script. Custom metrics can be a value from a web page element, any performance metric that is not supported out of the box in Sematext Browser monitor, or any custom measurement (e.g. time to display suggestions in autocomplete) that needs custom logic. Once the measurement is added in the script, you can see its value in run results and chart it in your Dashboards.
 
-This example uses the Performance API of the Chrome browser to fetch script duration & JavaScript Heap Size and adds them as custom metrics using the `context.setMetric(name, value)` API. Note that `context` is defined as the second parameter of the `testPage()` function, so remember to include it in your script.
+The script uses the Performance API of the Chrome browser to fetch the JavaScript script duration and heap size metrics, then adds those values as custom metrics using the `context.setMetric(name, value)` API. Note that `context` is defined as the second parameter of the `testPage()` function, so remember to include it in your script.
 
 
 
