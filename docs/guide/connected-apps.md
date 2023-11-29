@@ -29,3 +29,14 @@ In addition, when you receive an alert notification for an App, **the alert noti
 ![Sematext Cloud Connected Apps - Connected Apps Alerts](../images/guide/connected-apps/connected-apps-alerts.png)
 
 Any App can be connected to any number of Apps. 
+
+## Companion Apps
+Companion Apps allow you to create a Logs App directly from a Monitoring App and vice versa. Within your existing App, simply click on the Companion App. 
+
+todo: add screenshot
+
+You can use the suggested name or edit a new one for your Companion App. A checkbox controls whether you want to connect both Apps, enabled by default. You always have the option to connect them manually later. Once you click the "Create an App" button, both Apps will be automatically connected. Furthermore, the already installed Agents can be used, allowing you to directly configure the newly created App.
+
+todo: add screenshot
+
+With both Apps automatically connected, you can now correlate their data for further troubleshooting via [Split Screen](https://sematext.com/docs/guide/split-screen/).
