@@ -106,7 +106,11 @@ pages:
       - Getting Started: synthetics/getting-started.md
       - HTTP Monitor: synthetics/http-monitor.md
       - Browser Monitor: synthetics/browser-monitor.md
-      - User Journey Scripts: synthetics/user-journey-scripts.md
+      - User Journey Scripts:
+        - Overview: synthetics/user-journey-scripts/overview.md
+        - Syncing with GitHub: synthetics/user-journey-scripts/syncing-with-github.md
+        - Handling Sensitive Data: synthetics/user-journey-scripts/sensitive-data.md
+        - Examples: synthetics/user-journey-scripts/examples.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration:
         - Overview: synthetics/ci-cd/overview.md
