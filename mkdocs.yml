@@ -25,9 +25,6 @@ pages:
       - Sending Log Events:
         - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
-        - Fluent Bit: logs/fluentbit.md
-        - Logagent: logs/logagent.md
-        - Logstash: logs/logstash.md
         - Syslog:
           - Overview: logs/syslog.md
           - JSON Messages over Syslog: logs/json-messages-over-syslog.md
@@ -36,8 +33,6 @@ pages:
           - syslog-ng: logs/syslog-ng.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
-        - Sending Container Logs:
-          - Docker: logs/sending-docker-logs.md
       - Searching Log Events:
         - Overview: logs/searching-log-events.md
         - Logsene CLI: logs/logsene-cli.md
