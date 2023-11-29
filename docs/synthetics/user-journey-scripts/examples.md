@@ -40,7 +40,7 @@ This script loads the web page, navigates to the login page, fills in the login 
 
 ### [Use Sensitive Data](../puppeteer-scripts/use-sensitive-data.js)
 
-This script utilizes our sensitive data protection feature to load possible user secrets such as usernames and passwords. We navigate to our desired page and fill in the form. For sensitive data we use the secret keys instead of the actual credentials. When this script is run, our script manager will automatically replace the secret key with the actual value.
+This script utilizes our [Sensitive Data protection feature](./sensitive-data.md) to load possible user secrets such as usernames and passwords. We navigate to our desired page and fill in the form. For sensitive data we use the secret keys instead of the actual credentials. When this script is run, our script manager will automatically replace the secret key with the actual value.
 
 
 
@@ -54,7 +54,7 @@ We recommend using our [Sensitive Data](./sensitive-data.js) feature (mentioned 
 
 ### [Shopping Cart](../puppeteer-scripts/shopping-cart.js)
 
-This script navigates to a Shopify based e-commerce website, adds a book to the cart and fills in the form for the checkout process, while ensuring that the payment button is present on the final checkout form.
+This script navigates to a Shopify based e-commerce website, adds a book to the cart and fills in the form for the checkout process.
 
 
 
