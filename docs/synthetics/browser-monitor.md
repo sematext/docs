@@ -17,7 +17,7 @@ Note that multiple monitors created in the same **Create Browser Monitor** flow 
 
 ### User Journeys / Transactions
 
-To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a [User Journey script](./user-journey-scripts.md) to simulate user actions.
+To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a [User Journey script](./user-journey-scripts/overview.md) to simulate user actions.
 
 ## Conditions
 
