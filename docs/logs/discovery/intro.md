@@ -1,9 +1,9 @@
 title: Logs Discovery
 description: Logs Discovery Introduction
 
-Logs discovery aims to automate the classification and shipping of your infrastructure and application log files as well as container logs. With a simple control plane at your disposal it's easy to explore and manage discovered log sources across bare-metal/virtual machines and containers.
+Logs discovery, a component of [Fleet & Discovery](https://sematext.com/docs/fleet/), automates the classification and shipping of your infrastructure, application, and container log files. With a user-friendly interface, you can easily explore and manage discovered log sources across bare-metal/virtual machines and containers.
 
-![Logs Discovery](images/logs-start-page.png)
+![Logs Discovery]("../../images/fleet/fnd-discovery-services.png")
 
 ## Features
 

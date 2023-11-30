@@ -80,6 +80,18 @@ _If you’re new here, read below for a high-level overview of Sematext._
 	</div>
 	<!--
 	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/fleet/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp fleetdisco-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Fleet & Discovery
+					</h4>
+					<p>Fleet management, discovery and automatic configuration of services and logs</p>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/tracing/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp tracing-card">
 				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
