@@ -3,7 +3,7 @@ description: Shipping Container Log Sources
 
 Container Logs Discovery groups the containers by the type of service running inside the container. When the service type isn't recognized, the process name is shown instead. 
 
-![Container Logs Discovery]("../../images/fleet/fnd-discovery-logs-containers.png")
+![Container Logs Discovery](../../images/fleet/fnd-discovery-logs-containers.png)
 
 To enable automatic container logs shipping head to the [Logs Discovery UI](https://apps.sematext.com/ui/fleet-and-discovery/discovery/logs/) (or [EU Discovery](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/logs/) if you use Sematext EU), and start by clicking on the `Set Up` button for the service whose container logs you would like to ship.
 
