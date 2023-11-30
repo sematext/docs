@@ -10,7 +10,7 @@ To enable automatic Journald logs shipping head to the [Logs Discovery UI](https
 
 This will display a panel where you can configure Journald log shipping:
 
-![Enable Journald Logs]("../../images/fleet/fnd-discovery-logs-journald.png")
+![Enable Journald Logs](../../images/fleet/fnd-discovery-logs-journald.png)
 
 1. Enable the "Automatically ship <group-name> logs" toggle
 2. Select the destination Logs App. If the Logs App doesn't exist, you'll be able to create one from the same screen
