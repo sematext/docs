@@ -42,6 +42,7 @@ Now that you’ve configured the workflows, it’s time to prepare the User Jour
 Here's an example: 
 
     ```
+    
         //appId=398;monitorId=1238 
 
         or
