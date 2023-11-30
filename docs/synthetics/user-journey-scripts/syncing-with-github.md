@@ -41,14 +41,11 @@ Now that you’ve configured the workflows, it’s time to prepare the User Jour
 2. For existing Browser Monitors the first line of the script must contain a special comment with the Sematext App ID and monitor ID(s). That is how the workflows know which monitors need to be updated. The ID(s) can be found in the browser address bar when you open the details for the particular Browser Monitor in Sematext. The URL will be in the following format: `https://apps.eu.sematext.com/ui/synthetics/{appID}/monitors/{monitorID}.` 
 Here's an example: 
 
-    ```
-    
         //appId=398;monitorId=1238 
 
         or
 
         //appId=398;monitorId=1238,1240
-    ```
     
     Any spaces are ignored, so feel free to add spaces for readability.
 
