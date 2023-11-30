@@ -1,7 +1,7 @@
 title: User Journey Scripts
 description: User Journey scripts for monitoring multi-page and multi-step user journeys
 
-To monitor a single website, you can directly configure the URL of the website to be monitored. This can be accomplished with either [HTTP Monitor](./http-monitor.md) or [Browser Monitor](./browser-monitor.md). To monitor a user journey across multiple pages or perform actions on your website, you use a Browser monitor configured with a User Journey script that simulates user actions.
+To monitor a single website, you can directly configure the URL of the website to be monitored. This can be accomplished with either [HTTP Monitor](../http-monitor.md) or [Browser Monitor](../browser-monitor.md). To monitor a user journey across multiple pages or perform actions on your website, you use a Browser monitor configured with a User Journey script that simulates user actions.
 
 When you configure the URL of the website, the Browser monitor will load the URL in the Google Chrome browser and, among other things, take a screenshot of the website once the page load is complete.
 

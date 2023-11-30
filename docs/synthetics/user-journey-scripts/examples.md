@@ -48,7 +48,7 @@ This script utilizes our [Sensitive Data protection feature](./sensitive-data.md
 
 This script demonstrates how to fetch a token from an authentication API, then use that token in a different request to a secure endpoint.
 
-We recommend using our [Sensitive Data](./sensitive-data.js) feature (mentioned in the previous example) to store the passwords and other credentials you use for performing the authentication. 
+We recommend using our [Sensitive Data](./sensitive-data.md) feature (covered in the previous example) to store the passwords and other credentials you use for performing the authentication. 
 
 
 
