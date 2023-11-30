@@ -32,6 +32,8 @@ Furthermore, at any time, you can navigate to the Discovery screen to view the l
 
 ### Custom Integration Options
 
-Alternatively, you can explore various custom integration options for shipping log events to Sematext. This includes support for [Elasticsearch API](index-events-via-elasticsearch-api), [syslog-ng](syslog-ng), multiple programming languages, and popular log shippers such as [rsyslog](rsyslog), [Logstash](logstash), [Fluentd](https://github.com/uken/fluent-plugin-elasticsearch), and many many more.
+Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Elasticsearch API](index-events-via-elasticsearch-api), [syslog-ng](syslog-ng), various programming languages, and popular log shippers such as [rsyslog](rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and navigating to the Custom Integrations tab.
 
 ![Logs App Custom Integrations](../images/logs/custom-integrations.png)
+
+For further insights, refer to [Logging Libraries vs Log Shippers](https://sematext.com/blog/logging-libraries-vs-log-shippers/).

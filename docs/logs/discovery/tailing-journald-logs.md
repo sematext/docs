@@ -5,11 +5,12 @@ description: Shipping Journald Log Sources
 
 ![Journald Logs Discovery](images/journald-logs.png)
 
-To enable automatic Journald logs shipping head to the [Logs Discovery UI](https://apps.sematext.com/ui/discovery/) (or [EU Discovery](https://apps.eu.sematext.com/ui/discovery/) if you use Sematext EU), and start by clicking on the `Set Up` button to configure log collection for the particular _systemd_ service(s).
+To enable automatic Journald logs shipping head to the [Logs Discovery UI](https://apps.sematext.com/ui/fleet-and-discovery/discovery/logs/) (or [EU Discovery](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/logs/) if you use Sematext EU), and start by clicking on the `Set Up` button to configure log collection for the particular _systemd_ service(s).
+
 
 This will display a panel where you can configure Journald log shipping:
 
-![Enable Journald Logs](images/journald-logs-rule.png)
+![Enable Journald Logs](../../images/fleet/fnd-discovery-logs-journald.png)
 
 1. Enable the "Automatically ship <group-name> logs" toggle
 2. Select the destination Logs App. If the Logs App doesn't exist, you'll be able to create one from the same screen
