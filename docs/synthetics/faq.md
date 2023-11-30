@@ -12,7 +12,7 @@ question please email <support@sematext.com> or use our live chat in the bottom 
 Use a [Browser monitor](./browser-monitor.md) when you want to:
 
 * Monitor the performance of your web pages (page load time, web vitals, resource performance, and [many more metrics](./metrics/#browser-monitor-metrics))
-* Simulate and monitor [user journey/click path/web transactions](./user-journey-scripts.md) using a real browser
+* Simulate and monitor [user journey/click path/web transactions](./user-journey-scripts/overview.md) using a real browser
 * [Monitor SSL certificates](./ssl-certificate-monitoring.md) of your website
 
 Use an [HTTP monitor](./http-monitor.md) when you want to:
@@ -81,7 +81,7 @@ Both HTTP and Browser monitor requests will have the string `SematextSyntheticsR
 You can find Browser monitor scripts for common use cases by selecting the **Browse Examples** button on the **Configure URL/Script** page while creating or editing a monitor. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
 
 ### How can I securely store the credentials I supply to User Journey scripts?
-By adding them as Sensitive Data, on which you can find more information [here](./user-journey-scripts/#storing-your-user-journey-script-credentials-securely)
+By adding them as Sensitive Data, on which you can find more information [here](./user-journey-scripts/sensitive-data.md)
 
 ### Why is the latency reported by Browser monitors different from latency reported by HTTP monitors?
 Short answer: Because they are measuring somewhat different things.
@@ -146,7 +146,7 @@ Pass the extracted token to the next request in the request body
     body: await result.text()
   });
 ```
-To mask the passwords and other sensitive data you use for authentication please see [Storing User Journey script credentials securely](https://sematext.com/docs/synthetics/user-journey-scripts/#storing-your-user-journey-script-credentials-securely)
+To mask the passwords and other sensitive data you use for authentication please see [Storing User Journey script credentials securely](./user-journey-scripts/sensitive-data.md)
 
 ### Can I enforce same-origin policy for Browser monitors (CORS)?
 Yes. We keep this setting disabled by default, but you can choose to enforce it in the `Configure Options` tab while creating or editing your Browser monitors. The reason why you would potentially want to enable this is that it being disabled could keep your Browser monitors from working properly if your website requires strict CSP+CORS to be enabled.
@@ -158,7 +158,7 @@ Please see the `same-origin` question right above this one, this issue could ver
 The consecutive runs feature available in the **General** section for both HTTP and Browser monitors allows you to automatically run the monitor again after a failed run. Since the retried run will be run as soon as the failed run is reported, this can help avoid network errors or similar intermittent issues from affecting your overall availability, while still alerting you on issues which persist after multiple retries. Note that we reserve an extra 5% of the monitor's currently reserved runs per retry, with these extra runs being figured into the calculation at the bottom of the **General** page.
 
 ### How do I do X in a User Journey script?
-Please see the section on [User Journey script examples](./user-journey-scripts/#user-journey-script-examples).
+Please see the section on [User Journey script examples](./user-journey-scripts/examples.md).
 
 ### How are Web Vitals calculated when a User Journey script visits multiple pages?
 Web vitals are calculated only for the last page the User Journey script visits.
