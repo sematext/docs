@@ -8,4 +8,4 @@ description:   Service Discovery: Additional Configuration for Sematext Agent
 - [JMX Attaching](https://sematext.com/docs/agents/sematext-agent/jmx-attaching/)
 - [Removing stale](https://sematext.com/docs/agents/sematext-agent/autodisco/removing-stale-resources/) Sematext Agent resources after deinstallation
 
-For more information about service discovery in Sematext, please refer to the [Fleet & Discovery](https://sematext.com/docs/fleet/) docs.
+For more information about service discovery in Sematext, please refer to the [Fleet & Discovery](https://sematext.com/docs/fleet/discovery) docs.

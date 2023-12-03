@@ -1,7 +1,12 @@
 title: Fleet Overview
 description: Overview of Fleet - Sematext Agent management panel
 
-The Fleet section of Fleet and Discovery gives you an overview of all the Sematext Agents that are running in your systems.
+Fleet provides a centralized view of all the [Sematext Agents](https://sematext.com/docs/agents/sematext-agent/) installed throughout your infrastructure, offering several key advantages:
+
+- List all the hosts with installed Sematext Agents to get an overall view of your infrastructure
+- Get valuable info from each host, including host diagnostics, metrics, logs and events
+- Monitor the health status of each agent and check for available updates
+- Access a list of discovered services per host, which can be further configured in Discovery
 
 ![Fleet Screen](../images/fleet/fnd-agents-collapsed.png)
 
