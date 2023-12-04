@@ -384,6 +384,7 @@ pages:
     - Fleet and Discovery: 
       - Overview: fleet/index.md
       - Fleet: fleet/fleet.md
+      - Discovery: fleet/discovery.md
     - API: api/index.md
     - FAQ: faq.md
 

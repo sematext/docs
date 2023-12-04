@@ -78,7 +78,6 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
-	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/fleet/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp fleetdisco-card">
@@ -91,6 +90,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
+	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/tracing/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp tracing-card">
