@@ -1,7 +1,7 @@
 title: Fleet Overview
 description: Overview of Fleet - Sematext Agent management panel
 
-Fleet provides a centralized view of all the [Sematext Agents](https://sematext.com/docs/agents/sematext-agent/) installed throughout your infrastructure, offering several key advantages:
+Fleet provides a centralized view of all the [Sematext Agents](https://sematext.com/docs/agents/sematext-agent/) installed throughout your infrastructure.  Think of it as cockpit for all your agents where you can:
 
 - List all the hosts with installed Sematext Agents to get an overall view of your infrastructure
 - Get valuable info from each host, including host diagnostics, metrics, logs and events
@@ -10,20 +10,36 @@ Fleet provides a centralized view of all the [Sematext Agents](https://sematext.
 
 ![Fleet Screen](../images/fleet/fnd-agents-collapsed.png)
 
+## The Agent List
 At first glance, you can see the following data in the table:
 
-- Host: Names of hosts where the Sematext Agent is installed and running. You can either click on the name to open the Agent Information Panel or click on the expand view to reveal the list of discovered services running on the specific host. For further details, refer to the individual sections below.
+- **Host**: Names of hosts where the Sematext Agent is installed and running. You can either click on the name to open the Agent Information Panel or click on the expand view to reveal the list of discovered services running on the specific host. For further details, refer to the individual sections below.
 - Version: Installed version of the Sematext Agent and whether important updates are available. If they are, you can update the agent by just clicking the link and following the instructions. You can also find those instructions [here](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
-- Status: Indicates the status of the Sematext Agent. Possible statuses are:
-    - Running: Everything is nominal.
-    - Stopped: The agent has been stopped by the user. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
-    - Failed: The agent is reporting errors. You can see them in the Agent Information Panel, in the Errors tab.
-    - Dead: The agent has stopped due to an error. You can see the errors in the Agent Information Panel, in the Errors tab, and you can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
-    - Pending or Unknown: the agent is not sending data to Sematext Cloud. Check if the agent is still running on your system. If it is, there may be connection issues.
-- Started: Time elapsed since the Sematext Agent began sending data to Sematext Cloud.
-- Infra App: the Infra App which is receiving the data from the Sematext Agent. Clicking on the App name will navigate you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) section of Sematext Cloud.
+- **Status**: Indicates the status of the Sematext Agent.
+- **Started**: Time elapsed since the Sematext Agent began sending data to Sematext Cloud.
+- **Infra App**: The Infra App which is receiving data from the Sematext Agent. Clicking on the App name takes you to the overview of the corresponding App in the [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/) screen.
+
+## Agent Versions & Updating
+The version of Sematext Agent tells you how up to date each agent instance is.  You can always check the [Sematext Agent Release Notes](https://sematext.com/docs/agents/sematext-agent/releasenotes/) to see all changes in each agent version, including any breaking changes, which are always called out explicitly.  When any instance of Sematext Agent in your infrastructure is out of date it will be marked as outdated.  You can see all outdated agent instances by clicking on the outdated badge.
+
+<screenshot showing the outdated badge>
+
+The agent update instructions are shown in the [Upgrade Instructions](https://sematext.com/docs/fleet/fleet/#upgrade-instructions) tab.
+
+## Agent Status
+At any one time an agent is in one of the following statuses:
+
+- **Running**: Everything is nominal.
+- **Stopped**: The agent has been stopped by the user. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
+- **Failed**: The agent is reporting errors. You can see them in the Agent Information Panel, in the Errors tab.
+- **Dead**: The agent has stopped due to an error. You can see the errors in the Agent Information Panel, in the Errors tab, and you can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent.
+- **Pending** or **Unknown**: the agent is not sending data to Sematext Cloud. Check if the agent is still running on your system. If it is, there may be connection issues.
+
+If an agent is not healthy, check [Agent Errors](https://sematext.com/docs/fleet/fleet/#agent-errors) or run [Agent Diagnostics](https://sematext.com/docs/fleet/fleet/#diagnostics).
 
 ## Agent Information Panel
+
+Clicking in any host in Fleet will open up a set of panels with more information about all agents running on that host.
 
 ### Info
 The Info panel contains information about the host system and the installed Agents. 
@@ -42,13 +58,13 @@ This panel contains a list of the Log Shippers installed on the host. If you cli
 
 The following status values are currently available for Log Shippers:
 
-- Running: The Log Shipper is running without issues
-- Not Configured: This is the initial state of Log Shipper. Potential causes:
+- **Running**: The Log Shipper is running without issues
+- **Not Configured**: This is the initial state of Log Shipper. Potential causes:
     - Log Shipper has not been configured yet in [Discovery](https://sematext.com/docs/logs/discovery/intro/), or another Log Shipper has been used to ship logs. Make sure to review the configuration of Log Shipper in [Discovery](https://sematext.com/docs/logs/discovery/intro/).
     - If you are working in a Kubernetes environment, it may indicate issues with the permissions within a namespace or across the cluster. Check the Agent installation instructions to ensure that RBAC rules are set, and verify that all Kubernetes permissions have been properly configured.
-- Dead: The Sematext Agent started the Log Shipper but something went wrong. Usually, this means that the Log Shipper process is not available (bare metal), or the status of the Log Shipper container/pod is not running. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent
-- Init Failure: Systemd is not available (bare metal), there is an error pulling the Log Shipper container image, or there is an issue creating/starting the Log Shipper container/pod. Ensure that your system has enough resources to run the container/pod and confirm that you don't have issues with network connectivity to pull container images
-- Stopped: The Log Shipper process has been stopped by the Sematext Agent. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent
+- **Dead**: The Sematext Agent started the Log Shipper but something went wrong. Usually, this means that the Log Shipper process is not available (bare metal), or the status of the Log Shipper container/pod is not running. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent
+- **Init Failure**: Systemd is not available (bare metal), there is an error pulling the Log Shipper container image, or there is an issue creating/starting the Log Shipper container/pod. Ensure that your system has enough resources to run the container/pod and confirm that you don't have issues with network connectivity to pull container images
+- **Stopped**: The Log Shipper process has been stopped by the Sematext Agent. You can [manually restart](https://sematext.com/docs/agents/sematext-agent/starting-stopping) the Sematext Agent
 
 ### Metrics Agents
 
@@ -72,7 +88,7 @@ Remember you can always contact us via chat on the bottom right corner of [our w
 
 ### Upgrade Instructions
 
-In this tab you'll find information on how to upgrade the Sematext Agent to the latest version for all supported environments.
+In this tab you'll find information on how to upgrade the Sematext Agent to the latest version for all supported environments.  Don't forget to check out [Sematext Agent Release Notes](https://sematext.com/docs/agents/sematext-agent/releasenotes/) to see what's new.
 
 ![Agent Info](../images/fleet/fleet-upgrade-instructions.png)
 
