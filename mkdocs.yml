@@ -59,20 +59,20 @@ pages:
     - Monitoring:
       - Overview: monitoring/index.md
       - Quick Start: monitoring/quick-start.md
-      - Service Discovery: monitoring/autodiscovery.md
+      - Infrastructure Monitoring:
+        - Overview: monitoring/infrastructure.md
+        - Servers: monitoring/servers.md
+        - Containers: monitoring/containers.md
+        - Inventory: monitoring/inventory.md
+        - Processes: monitoring/processes.md
+      - Service Monitoring:
+        - Overview: monitoring/service-monitoring.md
+        - Service Discovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md
       - Reports & Components: monitoring/reports-and-components.md
-      - Infrastructure: monitoring/infrastructure.md
-      - Servers: monitoring/servers.md
-      - Containers: monitoring/containers.md
-      - Inventory: monitoring/inventory.md
-      - Processes: monitoring/processes.md
-      - Network Map: monitoring/network-map.md
-      - On Demand Profiling: monitoring/on-demand-profiling.md
       - Correlation: monitoring/correlation.md
       - Tags: monitoring/tags.md
       - Custom Metrics: monitoring/custom-metrics.md
-      - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
       - Changelog: changelog.md
       - FAQ: monitoring/spm-faq.md
     - Experience:
@@ -270,6 +270,7 @@ pages:
           - Metrics: agents/sematext-agent/containers/metrics.md
           - Metadata: agents/sematext-agent/containers/metadata.md
           - Events: agents/sematext-agent/containers/events.md
+          - JMX Monitoring: monitoring/manually-setting-jmx-containers.md
         - Kubernetes:
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
