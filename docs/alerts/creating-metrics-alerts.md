@@ -24,13 +24,13 @@ Each metric chart has a bell icon which, when clicked, shows a dropdown menu of 
 
 While creating an alert you'll get a chart preview of the alert threshold or anomaly.
 
-### Threshold Alerts
+## Threshold Alerts
 
 Let's say you want to configure an alert to notify you when the CPU is over 40% during a 10 minute period. You can start from OS CPU chart and select to create alert for `user` metric. All you have to do is set 40 for the threshold value.
 
 ![Metric Threshold Alert](../images/alerts/metric-alert_2.png)
 
-### Anomaly Alerts
+## Anomaly Alerts
 
 If you don't want to use a specific threshold value and instead get notified when the CPU usage deviates from a continuously computed baseline, you'd change `Alert type` to `Anomaly alert`.
 
@@ -47,7 +47,7 @@ You can see and adjust alert metric details in `Alert Metric` tab.
 
 ![Alert Metric](../images/alerts/metric-series.png)
 
-# Transformation
+## Transformation
 
 Transformations are used to modify metrics using mathematical expressions and functions. For example, imagine you want to get alerted when both `os.cpu.user` and `os.cpu.system` together exceed some threshold or become anomalous.  You would then transform them into a single dataseries by using an expression like this:
 
