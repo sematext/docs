@@ -13,9 +13,11 @@ Event `type` is one of the required event fields.  Events that originate from Se
 
 ## Adding Events via API
 
+Adding events via an API is meant to integration with other tools or scripts.  For example, you would call the events API to add your deployments to Sematext as events.
+
 The endpoint for the API used for adding events is:
 
-`https://event-receiver.sematext.com/APP_TOKEN/event`
+`https://event-receiver.sematext.com/APP_TOKEN/event` in Sematext Cloud US and `https://event-receiver.eu.sematext.com/APP_TOKEN/event` for EU.
 
 Because an event is always associated with a Sematext App, the App token must
 be specified in the URL. Thus, to send multiple events associated with multiple
@@ -25,12 +27,11 @@ Apps, separate API call will need to be made for each App.  
 
 ### Example 1
 
-Consider an App with token ```1111111-2222-3333-4444-555555555555``` (find your real App tokens [here](https://apps.sematext.com/ui/integrations/apps)).  To send a ```server-info``` event
-call the Events API with the App token in the URL:
+Consider an App with token `1111111-2222-3333-4444-555555555555` (find your real App tokens [here](https://apps.sematext.com/ui/integrations/apps) Sematext Cloud US or [here](https://apps.eu.sematext.com/ui/integrations/apps) for EU).  To send a `server-info` type of event call the events API with the App token in the URL:
 
 `https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event`
 
-with POST content, including event type, in ```JSON``` format like this:
+with POST content, including event type, in `JSON` format like this:
 
 ```json
 curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
@@ -49,10 +50,10 @@ Same App, but we want to post a `deployment` event with more event properties po
 ```json
 curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
 {
-  "timestamp" : "2018-02-17T15:58:04+0100",
-  "message" : "Solr 7.0.0 version deployed on prodhost06",
-  "name" : "Solr 7.0.0 deployment",
-  "tags" : ["solr", "7.0.0", "deployment", "upgrade"],
+  "timestamp" : "2024-02-17T15:58:04+0100",
+  "message" : "Solr 9.0.0 version deployed on prodhost06",
+  "name" : "Solr 9.0.0 deployment",
+  "tags" : ["solr", "9.0.0", "deployment", "upgrade"],
   "severity": "info",
   "priority" : "High",
   "creator" : "John Smith",
