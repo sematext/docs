@@ -1,7 +1,7 @@
 title: Adding Events to Sematext
 description: How to add Events to Sematext interactively via the UI or via an API
 
-Events can be added interactively via the UI, but you can also add them via the API as well.
+Events can be added interactively via the UI as well as via the API.
 
 ## Event Fields
 
