@@ -14,9 +14,7 @@ trace issues down to a specific commit.
 
 ### Infrastructure Changes
 
-Any changes in the infrastructure or its configuration can cause performance changes - whether positive or negative.  
-A reduction or misconfiguration of infrastructure could cause errors caused by insufficient capacity.
-Sending an event when infrastructure changes are made in production helps you track track the root cause of issues.
+Any changes in the infrastructure or its configuration can cause performance changes - whether positive or negative.   A reduction or misconfiguration of infrastructure could cause errors caused by insufficient capacity. Sending an event when infrastructure changes are made in production helps you track track the root cause of issues.
 
 ### Builds
 
