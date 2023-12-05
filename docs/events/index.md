@@ -9,7 +9,7 @@ See [Event Examples](event-examples.md) for inspiration.
 
 ## Why Events
 
-One of the popular uses of events is for [correlation with other data]() in Sematext, such as [performance metrics]() or [logs]().  For example, when you send [deployment events]() to Sematext you are able to correlate performance regressions or newly application errors with your application releases.
+One of the popular uses of events is for [correlation with other data](correlation.md) in Sematext, such as [correlation in Monitoring](../monitoring/correlation/) or [correlation in Logs](../logs/correlation/).  For example, when you send [deployment events](event-examples.md) to Sematext you are able to correlate performance regressions or newly application errors with your application releases.
 
 See [Correlating Events](correlation.md) for more info.
 
