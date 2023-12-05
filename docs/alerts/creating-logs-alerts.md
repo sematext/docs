@@ -38,13 +38,11 @@ Notice that the chart changed to help you get a sense of what would constitute a
 
 The *confidence interval* is an approximation of Sematext Cloud's anomaly detection algorithm, so don't expect each and every red dot on the chart to have triggered the alert.
 
-# Transformation
+## Transformation
 
 Transformations are used to modify metrics using mathematical expressions and functions. For example, imagine you want to get alerted when both `request.size` and `response.size` together exceed some threshold or become anomalous.  You would then transform them into a single dataseries by using an expression like this:
 
-```
-request.size + response.size
-```
+`request.size + response.size`
 
 And then you would create an alert on this new data series.
 
