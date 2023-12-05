@@ -223,7 +223,7 @@ pages:
       - Alert Scheduling: alerts/alert-scheduling.md
       - Alert Recipients: alerts/alert-recipients.md
     - Events:
-      - Overview: events/index.
+      - Overview: events/index.md
       - Examples: events/event-examples.md
       - Adding Events: events/adding.md
       - Timeline/Histogram: events/timeline.md
