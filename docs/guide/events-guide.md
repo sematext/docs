@@ -19,7 +19,7 @@ Events can be visualized as time-series charts, heatbars, or tables using [Chart
 
 ## Events Correlations
 
-You can [correlate events](../events/correlate.md) with metrics, logs, user experience or synthetic monitoring data using [split screen](./split-screen/). This type of correlation enables you to see how certain events, such as deployments, affected performance or to see whether a performance or error spike co-occured with an event such as application restart, or any other change in the application or infrastructure.  You can view events, logs, and metrics on the same timeline, saving you huge amounts of time when debugging.  See [correlation for metrics](../monitoring/correlation/) and [correlation for logs](../logs/correlation/).
+You can [correlate events](../events/correlation.md) with metrics, logs, user experience or synthetic monitoring data using [split screen](./split-screen/). This type of correlation enables you to see how certain events, such as deployments, affected performance or to see whether a performance or error spike co-occured with an event such as application restart, or any other change in the application or infrastructure.  You can view events, logs, and metrics on the same timeline, saving you huge amounts of time when debugging.  See [correlation for metrics](../monitoring/correlation/) and [correlation for logs](../logs/correlation/).
 
 ![Sematext Cloud Events and Metrics and Logs Correlation](../images/guide/split-screen/monitoring-events.png "Sematext Cloud Events and Metrics Correlation")
 
