@@ -5,13 +5,13 @@ description: Event stream captures all your key IT and operations such as server
 
 Unlike log events, which tend to be generated on an ongoing basis and often in high volume, events in Sematext are intended for low-volume, high-signal sort of events.  What exactly are important events varies from team to team, but alert events and deployment events are among the most commonly used event types.
 
-See [Event Examples]() for inspiration.
+See [Event Examples](event-examples.md) for inspiration.
 
 ## Why Events
 
 One of the popular uses of events is for [correlation with other data]() in Sematext, such as [performance metrics]() or [logs]().  For example, when you send [deployment events]() to Sematext you are able to correlate performance regressions or newly application errors with your application releases.
 
-See [Correlating Events]() for more info.
+See [Correlating Events](correlation.md) for more info.
 
 ## Adding Events
 
@@ -24,7 +24,7 @@ In addition, you can add events yourself:
 - via an API
 - interactively through the user interface
 
-See [Adding Events]() for more info.
+See [Adding Events](adding.md) for more info.
 
 ## Charting, Viewing, Searching, and Filtering Events
 
