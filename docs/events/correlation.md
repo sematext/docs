@@ -9,7 +9,7 @@ With [Split Screen](../guide/split-screen) you can compare and correlate events 
 ![Correlate Events with Infrastructure in Split Screen](../images/guide/split-screen/events-infra.png)
 
 ## Event-Event Correlation
-Correlation with Events can also be done from other reports by selecting Events from within [Split Screen](../guide/split-screen).
+Correlation of one type of events with another type of events can also be done.  Simply select events from within [Split Screen](../guide/split-screen) and apply two different filters and/or queries to select different sets of events on left and right side of the split screen.
 
 ![Correlate Monitoring with Events in Split Screen](../images/guide/split-screen/monitoring-events.png)
 
