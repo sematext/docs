@@ -30,7 +30,7 @@ See [Adding Events](adding.md) for more info.
 
 The default events screen shows an event histogram grouped by event type along with the list of events.  All events can be searched and filtered.
 
-See [Viewing Events]() for more info.
+See [Viewing Events](timeline.md) for more info.
 
 ## Events API
 
