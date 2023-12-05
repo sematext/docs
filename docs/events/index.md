@@ -34,5 +34,5 @@ See [Viewing Events]() for more info.
 
 ## Events API
 
-Events can be added and retrieved via an API.
+Events can be added, searched, and retrieved via an [event API](event-api.md).
 
