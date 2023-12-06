@@ -105,6 +105,19 @@ _If you’re new here, read below for a high-level overview of Sematext._
 		</a>
 	</div>
 
+ 	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/team/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Team
+					</h4>
+					<p>App vs. Account access, team account, inviting others, setting roles</p>
+				</div>
+			</div>
+		</a>
+	</div>
+
         <div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/fleet/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp fleetdisco-card">
