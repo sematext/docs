@@ -19,7 +19,7 @@ By connecting Apps you benefit from having more context when you get an alert an
 
 ### Connected Apps in Alert Notications
 
-When Sematext emails an alert notification it captures the screen with App reports where the alert rule that generated the notification was created.  This way you will immediately and visually see the problem on one of the charts included in the emailed report.  However, when the App whose alert was triggered is connected to other Apps, Sematext automatically captures the screen of all connected Apps and includes them in the notification.  Thus, you can get more context about the alert and your other related applications and infrastructure that might either be affected by the issue or may have been the cause of the problem to begin with.  You can simply look at all reports included in the alert notification and get the broader sense of what happened without opening an alert in Sematext to investigate.
+When Sematext emails an [alert notification](../alerts/alert-notifications/) it captures the screen with App reports where the alert rule that generated the notification was created.  This way you will immediately and visually see the problem on one of the charts included in the emailed report.  However, when the App whose alert was triggered is connected to other Apps, Sematext automatically captures the screen of all connected Apps and includes them in the notification.  Thus, you can get more context about the alert and your other related applications and infrastructure that might either be affected by the issue or may have been the cause of the problem to begin with.  You can simply look at all reports included in the alert notification and get the broader sense of what happened without opening an [alert event](../alerts/alert-events/) in Sematext to investigate.
 
 ### Connected Apps on the Alert Details Screen
 
@@ -45,7 +45,7 @@ Select the Apps and click **“Connect Apps”** button.
 
 Once you connect Apps, you can easily navigate from one App to the other with a single click or open the second App in [Split Screen](https://sematext.com/docs/guide/split-screen/) to correlate their data.
 
-Let’s say we are monitoring a ClickHouse database and shipping its metrics and logs to Sematext Cloud. You started seeing a significant amount of error logs and you want to investigate it further by comparing with metrics.
+Let’s say you are monitoring a ClickHouse database and shipping its metrics and logs to Sematext Cloud. You started seeing a significant amount of error logs and you want to investigate it further by comparing with metrics.
 
 If the two Apps are connected, you can easily open the Monitoring App in [Split Screen](https://sematext.com/docs/guide/split-screen/) as shown below.
 
