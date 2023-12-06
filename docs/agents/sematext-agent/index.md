@@ -1,7 +1,7 @@
 title: Sematext Agent
 description: Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes), containers (Docker, rkt, containerd) and orchestrator platforms.
 
-Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes), containers (Docker, rkt, containerd) and orchestrator platforms and ships that to [Sematext Cloud](https://sematext.com/cloud). To gain deep insight into the Linux kernel, Sematext Agent relies on eBPF to implant instrumentation points (attach eBPF programs to kprobes) on kernel functions. Using Linux kernel instrumentation allows Sematext Agent a very efficient and powerful system exploration approach. It has the ability to [auto-discover services](../../fleet/discovery/#service-discovery) deployed on physical/virtual hosts and containers, as well as a mechanism for reporting [inventory info](../../monitoring/inventory/). It also collects [events](../../events/) from different sources such as OOM notifications, system-wide kill events, container or [Kubernetes events](kubernetes/events/).
+Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes), containers (Docker, rkt, containerd) and orchestrator platforms and ships that to [Sematext Cloud](https://sematext.com/cloud). To gain deep insight into the Linux kernel, Sematext Agent relies on eBPF to implant instrumentation points (attach eBPF programs to kprobes) on kernel functions. Using Linux kernel instrumentation allows Sematext Agent a very efficient and powerful system exploration approach. It has the ability to [auto-discover services and logs](../../fleet/discovery/) deployed on physical/virtual hosts and containers, as well as a mechanism for reporting [inventory info](../../monitoring/inventory/). It also collects [events](../../events/) from different sources such as OOM notifications, system-wide kill events, container or [Kubernetes events](kubernetes/events/).
 
 
 ## Capabilities
@@ -14,3 +14,4 @@ other metric sources.
 - [Inventory tracking](https://sematext.com/docs/monitoring/inventory) of your whole infrastructure including packages, server details, container metadata and more.
 - [Process monitoring](https://sematext.com/docs/monitoring/processes) that helps out identifying top CPU or memory consumers.
 - [Service discovery](../../monitoring/autodiscovery/) and automated monitoring for vanilla Docker and Kubernetes workloads.
+- [Logs discovery](../../logs/discovery/intro/) and parsing.
