@@ -5,7 +5,7 @@ Connected Apps is a data pivoting feature and available in all solutions. You ca
 
 ## Benefits of Connecting Apps
 
-Having Apps connected provides more context and enables faster troubleshooting.  Details below.
+Having Apps connected provides more context and enables faster troubleshooting.  Connecting Apps makes it easier to go from metrics to logs or vice versa, or to look at them side by side in order to correlate spikes, dips in performance or log volume or type patterns and discover the root cause of a problem easier and faster. Details below.
 
 ## When Connecting Apps is Handy
 
