@@ -24,16 +24,26 @@ However, nothing stops you from having data from multiple environments or cluste
 
 The above few examples are not exhaustive.  For example, even in a single environment there will be nodes that serve a different purpose, have a different role.  You may have database servers, web servers, Elasticsearch nodes, application nodes, etc. all sending their metrics to the same App.  But you may want to view their each of their performance metrics separately, not just in aggregate.  To see their metrics separately you would select filters that show only your database servers and you would save that view.  Then you would select filters that show only your web servers and you would save that as another view.  And so on.  Thus, if you have a single environment or cluster the Saved Views functionality can be helpful.
 
-But how do you select only your database servers?  How do you select only your web servers?  
+Q: But how do you select only your database servers?  How do you select only your web servers?  
 
-By using tags.  Saved Views let you save your filters and groups for faster access later.  Values you see in filters and groups in Sematext are [tags](../tags/).  But where do these tags come from?  They come from the Sematext Agent.  There are 2 types of tags:
+A: By using tags!  
+
+Saved Views let you save your filters and groups for faster access later.  Values you see in filters and groups in Sematext are [tags](../tags/).  
+
+Q: But where do these tags come from?
+
+A: They come from the Sematext Agent.  There are 2 types of tags:
 
 1. Default tags that Sematext Agent collects and ships.  For example, the hostname is shipped in a tag called `os.host`, as can be seen in the [Sematext Common Schema](../tags/common-schema/).
 2. [Custom tags](../tags/custom-tags/) that you define in the Sematext Agent's configuration file.
 
-This second option is what you want to use to be able to filter and group better - even if you don't use Saved Views.  When deploying Sematext Agent to your database servers you would deploy it with the configuration file that includes a tag such as `role:database`, while Sematext Agents installed on your web servers would have a configuration with `role:web` tag.
+This second option is what you want to use -- even if you don't use Saved Views --  to be able to filter and group better.  
 
-Once configured like this, tags are sent by the Sematext Agent as part of every data point or log event and they are shown in UI as filters.
+When deploying Sematext Agent to your database servers you would deploy it with the configuration file that includes a tag such as `role:database`, while Sematext Agents installed on your web servers would have a configuration with `role:web` tag.
+
+Once configured like this, tags are sent by the Sematext Agent as part of every data point or log event and they are shown in UI as filters.  When you select the `role:database` from the filter you will see only data for your database servers, and when you select `role:web` you will see only your web servers' metrics.  With a setup like this you can save views to see database and web servers's metrics separately and, because your views are based on custom tags and not hard-coded to specific hostname via `os.host` tag, your views will automatically include or exclude any new or removed hosts as your infrastructure changes without requiring you to update your filters/views.
+
+While we used monitoring and performance metrics in the above example, the same logic applies to all other data in Sematext where filtering is available.
 
 Read [tags docs](../tags/) to undertand why tags are useful, their benefits beyond filtering, [common ways to use tags](../tags/#common-ways-to-use-tags), and [how to define your own tags](../tags/#defining-you-own-tags) that make sense for your monitoring.
 
