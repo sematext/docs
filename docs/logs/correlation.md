@@ -9,7 +9,7 @@ When troubleshooting issues you will most likely want to correlate logs with [pe
 
 ### Correlating Logs with Metrics
 
-Often times, issues correlate with an increase in error or warning logs.  Correlating a performance spike, dip, or any other anomaly with logs will often lead you to error logs that will either immediately explain what is going on or will at least guide you in the right direction.  You can correlate any Log App's report with any Monitoring App's report, but any [Connected Apps](../guide/connected-apps/) will be more easily accessible during correlation.
+Often times, issues correlate with an increase in error or warning logs.  Correlating a performance spike, dip, or any other anomaly with logs will often lead you to error logs that will either immediately explain what is going on or will at least guide you in the right direction.  You can correlate any Log App's report with any Monitoring App's report. The [Connected Apps](../guide/connected-apps/) will be more easily accessible during correlation, so consider connecting your Apps approrpriately.
 
 ### Correlating Logs with Events
 
