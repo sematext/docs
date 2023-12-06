@@ -23,7 +23,7 @@ When Sematext emails an alert notification it captures the screen with App repor
 
 ### Connected Apps on the Alert Details Screen
 
-In addition, when you look at the individual alert incident to troubleshoot, all connected Apps and their data will be right there, as shown below, to aid with discovering the root cause.
+In addition, when you look at the [individual alert event](../alerts/alert-events/) to troubleshoot, all connected Apps and their data will be right there, as shown below, to aid with discovering the root cause.
 
 ![Sematext Cloud Connected Apps - Connected Apps Alerts](../images/guide/connected-apps/connected-apps-alerts.png)
 
