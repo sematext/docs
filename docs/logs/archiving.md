@@ -1,5 +1,5 @@
-title: Log Archiving
-description: Archiving logs to an S3-compatible object store
+title: Archiving Logs in Sematext
+description: Archiving logs to an S3-compatible object store for long-term and cheap storage
 
 <div style="padding-top:40px;display:grid;grid-template-columns:150px 150px 150px 150px;grid-template-rows:100px 100px;">
   <a href="https://aws.amazon.com/s3" target="_blank" title="Amazon AWS S3">
@@ -22,8 +22,7 @@ description: Archiving logs to an S3-compatible object store
   </a>
 </div>
 
-You can configure each Logs App to compress and store all logs it receives
-to an S3-compatible object store.   This includes:
+You can configure each Logs App to compress and store all logs it receives to an S3-compatible object store. This includes:
 
 - [AWS S3](https://aws.amazon.com/s3/)
 - [Microsoft Azure Storage](https://azure.microsoft.com/services/storage/)
@@ -31,9 +30,9 @@ to an S3-compatible object store.   This includes:
 - [IBM Cloud Object Storage](https://www.ibm.com/cloud/storage)
 - [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/)
 - [Minio](http://minio.io/)
-- …
+- ...
 
-### How do I configure archiving for my Logs App?
+## How to Configure Log Archiving
 
 In Sematext, go to `Logs` view and choose `Archive Logs` in the App context
 menu (*three-dots* icon) of the App whose logs you want to ship to an
@@ -49,7 +48,6 @@ a service endpoint. Cloud object store providers, like *DigitalOcean
 Spaces* or *IBM Cloud Object Storage* usually refer to it as a 
 `Public Service Endpoint` in bucket configuration. For Minio users
 this would be your Minio public URL.  
-Note that this is available in [Sematext Enterprise](https://sematext.com/enterprise), too.
 
 <img src="../../images/logs/archiving/non-aws-s3.png" style="height:477px;width:490px;">
 
@@ -66,7 +64,7 @@ valid using the AWS S3 API.
 After the check is done you'll see a feedback message confirming
 information validity or an error message.
 
-### How to obtain credentials from AWS?
+## How to Obtain Credentials from AWS
 
 For our Logs App AWS S3 Settings, besides S3 bucket name, you'll need
 `Access Key ID` and `Secret Access Key`.
@@ -83,7 +81,7 @@ Click on `Create Access Key`:
 Note down `Access Key ID` and `Secret Access Key` (you can `Download
 Credentials` to a safe place if you like, but it's not necessary).
 
-### Which credentials are required when using AWS S3 Bucket Access Policy?
+## Credentials Required When Using the AWS S3 Bucket Access Policy
 
 In order to verify access to your S3 bucket, the Logs App will first use
 the credentials to log in and, if successful, proceed to create
@@ -104,7 +102,7 @@ permission from the bucket policy.
 **NOTE:** if deletion of the dummy object fails the Logs App will
 ignore it and conclude that it can start shipping logs.
 
-### How are logs compressed in S3?
+## Compression of Archived Logs
 
 You have the option of choosing between two modern, lossless
 compression codecs from the [`LZ77` family](https://en.wikipedia.org/wiki/LZ77_and_LZ78), with excellent
@@ -113,29 +111,27 @@ speed/compression ratio, **`LZ4`** and **`LZF`**.
 If you choose `No compression` option, logs will be stored in raw,
 uncompressed format, as JSON files.
 
-### How can I decompress logs archived in S3?
+## Decompressing Archived Logs
 
-You can decompress logs by installing these command line programs (then
-use` man lz4 `or` man lzf` for further instructions):
+You can decompress logs by installing these command line programs (then use` man lz4 `or` man lzf` for further instructions):
 
-#### Ubuntu/Debian
+### Ubuntu/Debian
 
 ``` bash
 sudo apt-get install liblz4-tool
 sudo apt-get install libcompress-lzf-java (landed in Ubuntu 15.04)
 ```
 
-#### OSX
+### OSX
 
 ``` bash
 brew install lz4
 brew install liblzf
 ```
 
-### Which folder structure is used when uploading logs to S3?
+## Folder Structure Used for Logs Archived in S3
 
-Inside a bucket that you specify in settings, the following folder
-hierarchy is created:
+Inside a bucket that you specify in settings, the following folder hierarchy is created:
 
 `sematext_[app-token-start]/[year]/[month]/[day]/[hour]`
 
