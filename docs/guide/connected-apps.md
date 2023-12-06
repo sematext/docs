@@ -12,9 +12,9 @@ Having Apps connected provides more context and enables faster troubleshooting. 
 Here are just two examples for when connecting Apps is not only useful, but recommended.
 
 - If you are collecting both performance metrics and logs for an Elasticsearch cluster, you might want to connect the Monitoring App and Logs App with these data so you can more easily switch from Elasticsearch metrics to logs and vice versa.
-- Technologies like ClickHouse, Kafka, SolrCloud and others use ZooKeeper.  Thus, the performance and health of ZooKeeper is critical and affects the performance and health for the performance and health of these technologies.  In other words, not only do you want to monitor ZooKeeper if you are running SolrCloud, for example, but you may also want to connect any Monitoring or Logs Apps that with SolrCloud and ZooKeeper metrics or logs.
+- Technologies like ClickHouse, Kafka, SolrCloud and others use ZooKeeper.  Thus, the performance and health of ZooKeeper is critical and affects the performance and health of these technologies.  In other words, not only do you want to monitor ZooKeeper if you are running SolrCloud, for example, but you may also want to connect any Monitoring or Logs Apps that with SolrCloud and ZooKeeper metrics or logs.
 
-By connecting Apps you benefit from having more context and can troubleshoot faster, as described below.
+By connecting Apps you benefit from having more context when you get an alert and can troubleshoot faster, as described below.
 
 
 ### Connected Apps in Alert Notications
