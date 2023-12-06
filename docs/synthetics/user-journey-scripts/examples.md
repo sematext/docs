@@ -66,12 +66,6 @@ This script launches a single-page app. The elements are loaded asynchronously, 
 
 
 
-### [Booking](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/booking.js)
-
-This script launches a booking website (AirBnB) and searches for properties in a specific location and date by filling out a form. It submits the form and waits for listings to load, after which it fetches the name of the first listing and prints it.
-
-
-
 ### [Using custom metrics](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/custom-metric.js)
 
 Browser monitors allow you to define and collect custom metrics in the script. Custom metrics can be a value from a web page element, any performance metric that is not supported out of the box in Sematext Browser monitor, or any custom measurement (e.g. time to display suggestions in autocomplete) that needs custom logic. Once the measurement is added in the script, you can see its value in run results and chart it in your Dashboards.
