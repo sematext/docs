@@ -107,7 +107,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 
  	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/team/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp events-card">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp tracing-card">
 				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
 					<h4>
 						Team
@@ -125,7 +125,7 @@ _If you’re new here, read below for a high-level overview of Sematext._
 					<h4>
 						Fleet & Discovery
 					</h4>
-					<p>Fleet management, discovery and automatic configuration of services and logs</p>
+					<p>Agent fleet, discovery & automatic setup of services and logs</p>
 				</div>
 			</div>
 		</a>
