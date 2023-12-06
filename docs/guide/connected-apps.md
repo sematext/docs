@@ -19,7 +19,7 @@ By connecting Apps you benefit from having more context when you get an alert an
 
 ### Connected Apps in Alert Notications
 
-When Sematext emails an alert notification it captures the screen with App reports where the alert rule that generated the notification was created.  When the App whose alert was triggered is connected to another App, Sematext automatically captures the screen of all connected Apps and includes them in the notification.  Thus, you can get more context about the alert by simply looking at reports included in the alert notification before, or even without opening an alert in Sematext to investigate.
+When Sematext emails an alert notification it captures the screen with App reports where the alert rule that generated the notification was created.  This way you will immediately and visually see the problem on one of the charts included in the emailed report.  However, when the App whose alert was triggered is connected to other Apps, Sematext automatically captures the screen of all connected Apps and includes them in the notification.  Thus, you can get more context about the alert and your other related applications and infrastructure that might either be affected by the issue or may have been the cause of the problem to begin with.  You can simply look at all reports included in the alert notification and get the broader sense of what happened without opening an alert in Sematext to investigate.
 
 ### Connected Apps on the Alert Details Screen
 
