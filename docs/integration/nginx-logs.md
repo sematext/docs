@@ -8,7 +8,7 @@ Once data is in, you can explore it via the built-in reports:
 <img
   class="content-modal-image"
   alt="Nginx Logs Overview"
-  src="../../images/logs/nginx-logpack-1.png"
+  src="../../images/logs/nginx-logpack.png"
   title="Nginx Logs Overview"
 />
 
