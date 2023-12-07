@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 async function testPage(page) {
   await page.goto('https://abookapart.com/products/practical-pair-programming');
 
@@ -52,8 +50,7 @@ async function testPage(page) {
   await page.waitForTimeout(300);
 
   // Make sure that the button for finalizing the purchase has rendered
-  const PAY_BUTTON_SELECTOR = await page.$('[id="pay-button-container"]');
-  assert(PAY_BUTTON_SELECTOR !== null);
+  await page.waitForSelector('[id="pay-button-container"]');
   
   await page.screenshot({ path: 'shoppingCart.jpg', fullPage: true });
 }
