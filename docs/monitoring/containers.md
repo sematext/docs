@@ -40,7 +40,7 @@ There are 3 types of [alerts](../alerts) in Sematext:
 ![](https://sematext.com/wp-content/uploads/2021/01/docker-container-alerts-min.gif)
 
 ## Container Events
-Events reflect changes in your infrastructure, from node restarts to container deployments, or changes in running containers. Events can track every Docker command. **Sematext Agent collects Events from the Docker Engine and Kubernetes API.** Whenever something goes wrong in your container stack, you can **correlate Logs or Metrics with the time of Docker events!**
+[Events](../events/) reflect changes in your infrastructure, from node restarts to container deployments, or changes in running containers. Events can track every Docker command. Sematext Agent collects Events from the Docker Engine and Kubernetes API. Whenever something goes wrong in your container stack, you can [correlate Logs or Metrics with the time of Docker events](../events/correlation/)
 
 Here's the list of Docker container events Sematext collects:
 
