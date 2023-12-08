@@ -54,7 +54,7 @@ We recommend using our [Sensitive Data](./sensitive-data.md) feature (covered in
 
 ### [Shopping Cart](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/shopping-cart.js)
 
-This script navigates to a Shopify based e-commerce website, adds a book to the cart and fills in the form for the checkout process.
+This script navigates to a Shopify based e-commerce website, adds a book to the cart and fills in the form for the checkout process. Due to the behavior of the website, an example of how to deal with a website performing differently under the same circumstances (such as with A/B testing randomly redirecting a user to a modified page) is also shown.
 
 
 
@@ -62,13 +62,7 @@ This script navigates to a Shopify based e-commerce website, adds a book to the 
 
 In single-page apps, the page load event happens only during the initial launch. Any navigation across the app does not trigger a new page load/navigation event. The script has to rely on the visibility/availability of elements for the navigation. 
 
-This script launches a single-page app. The elements are loaded asynchronously, so we cannot rely on the navigation event. It waits for a specific element (sign up link) to appear, clicks the element, then waits for sign up form to load and then goes back to the login page. In the whole script, there is only a single page load during the initial launch of the web page. No instances of navigation after the initial launch trigger any page loads.
-
-
-
-### [Booking](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/booking.js)
-
-This script launches a booking website (AirBnB) and searches for properties in a specific location and date by filling out a form. It submits the form and waits for listings to load, after which it fetches the name of the first listing and prints it.
+This script launches a single-page app. The elements are loaded asynchronously, so we cannot rely on the navigation event. It waits for a specific element (Synthetics link in the sidebar) to appear, clicks the element, then waits for the page to load before navigating to a different page. In the whole script, there is only a single page load during the initial launch of the web page. No instances of navigation after the initial launch trigger any page loads.
 
 
 

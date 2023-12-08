@@ -1,6 +1,6 @@
 // This script gets the exchange rates of various currencies and defines the results as custom metrics
 async function testPage(page, context) {
-    const response = await page.goto("https://api.exchangerate.host/latest");
+    const response = await page.goto("https://api.frankfurter.app/latest?from=EUR");
     bodyJSON = await response.json();
 
     // Extract the values from the response JSON and define them as custom metrics
