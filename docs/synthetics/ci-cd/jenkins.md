@@ -22,7 +22,13 @@ stage('Run Sematext monitors') {
                     --header 'content-type: application/json' \
                       --data '[{"monitorId": 276}]' > results.txt
             cat results.txt
-            if [ \$(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; fi
+            if [ \$(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; else curl -XPOST "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/event" -d '
+{
+  "timestamp" : "2024-02-17T15:29:04+0100",
+  "message" : "Deployment successful",
+  "severity": "info",
+  "type" : "deployment"
+}' fi
           """
       }
     }
