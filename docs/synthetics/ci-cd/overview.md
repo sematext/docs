@@ -15,3 +15,7 @@ Using the run monitor API, you can integrate [Sematext Synthetics](../index.md) 
 - [GitLab CI/CD](./gitlab-ci-cd/)
 - [Vercel](./vercel/)
 - [Netlify](./netlify/)
+
+## Deployment Tracking
+
+You can also track successful deployments by [sending deployment events to Sematext](../../events/event-examples/#application-deployment-tracking) using the [events API](../../events/event-api/).
