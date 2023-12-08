@@ -78,7 +78,6 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
-
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/dashboards/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp dashboards-card">
@@ -91,7 +90,6 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
-
  	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/tags/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp tags-card">
@@ -104,7 +102,6 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
-
  	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/team/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp team-card">
@@ -117,7 +114,6 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
-
         <div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/fleet/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp fleetdisco-card">
