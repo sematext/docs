@@ -9,7 +9,7 @@ Each integration comes with prebuilt alerts based on fine-tuned thresholds, hear
 
 For more information make sure to check:
 
-- [Service Discovery](https://sematext.com/docs/monitoring/service-monitoring/autodiscovery/)
+- [Service Discovery](https://sematext.com/docs/monitoring/autodiscovery/)
 - [Monitoring Integrations](https://sematext.com/docs/integration/#monitoring)
 - [Alerts](https://sematext.com/docs/alerts/)
 - [Dashboard Components and Reports](https://sematext.com/docs/monitoring/reports-and-components/)
