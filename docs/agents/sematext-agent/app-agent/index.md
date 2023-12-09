@@ -1,5 +1,5 @@
 title: App Agent
-description: App Agent is used for collecting application metrics from JMX, REST APIs, and from databases that support JDBC as well as transaction traces collection and on demand JVM profiling.
+description: App Agent is used for collecting application metrics from JMX, REST APIs, and from databases that support JDBC
 
 The App Agent is open-source, written in Java (but not limited to
 monitoring Java!), with a number of built-in integrations available
@@ -19,16 +19,6 @@ lost.
 Lightweight and pluggable, this agent comes with a number of out of
 the box integrations. It has built-in support for collecting metrics
 from JMX, REST APIs, and from databases that support JDBC.
-
-### Tracing
-
-The Sematext Agent can also instrument JVM-based apps using Java bytecode
-instrumentation to collect [transaction traces](../../../tracing).
-
-### Profiling
-
-On demand [JVM profiling](../../../monitoring/on-demand-profiling) is built-in and help
-you find bottlenecks in your code.
 
 ## App Agent Run modes
 
