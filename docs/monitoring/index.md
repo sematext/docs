@@ -68,10 +68,6 @@ To help you manage your metrics, hosts, and containers, and to help you create m
 
 Check the [Tags](./tags) page for different ways to use tags.
 
-The [Network Map](network-map) visualizes your network topology.  It show discovered hosts and the communication between them, including  details such as the amount of received or transmitted data on each port.
-
-[On-demand profiling](on-demand-profiling) lets you profile your own JVM-based applications or even any 3rd party JVM-based applications (e.g. Spark, Elasticsearch, Solr, Kafka, Hadoop, Storm, Cassandra, HBase, etc.).  It works with both embedded and standalone agent and has negligible overhead.
-
 You can [create custom dashboards](../dashboards) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
 
 ### Getting Support

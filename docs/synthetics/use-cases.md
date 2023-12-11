@@ -35,13 +35,13 @@ where we use the example of getting the currency exchange rate from a public API
 ## Extraction of Performance Data from a Browser API
 
 Web browsers expose a lot of APIs. A number of them return performance information about the page the browser has opened.  
-With the help of User Journey Scripts you can extract numeric responses from any browser API and plot it, whether it’s about performance or anything else.
+With the help of User Journey scripts you can extract numeric responses from any browser API and plot it, whether it’s about performance or anything else.
 
 See [How to Periodically Extract Webpage Performance Metrics from Browser API](https://sematext.com/blog/how-to-periodically-extract-webpage-performance-metrics-from-browser-api/) to learn how to do that.
 
 ## Track Your Position in a List on a Web Page
 
-Do you want to track your position on any sort of list?  For example, maybe something you care about is listed in some Top N list. Maybe your want to track your product’s placement in one or more categories on a review site.  Or maybe you just want to track your position in Google’s search results.  Or your competitors’ positions.  You can do that with [User Journey Scripts](https://sematext.com/docs/synthetics/user-journey-scripts/).  Have a look at [examples](https://sematext.com/docs/synthetics/user-journey-scripts/#user-journey-script-examples) to get started.
+Do you want to track your position on any sort of list?  For example, maybe something you care about is listed in some Top N list. Maybe your want to track your product’s placement in one or more categories on a review site.  Or maybe you just want to track your position in Google’s search results.  Or your competitors’ positions.  You can do that with [User Journey scripts](./user-journey-scripts/overview.md). Have a look at the [examples](./user-journey-scripts/examples.md) to get started.
 
 ## Competitor’s Website or API Performance
 

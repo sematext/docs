@@ -1,12 +1,27 @@
 async function testPage(page) {
-    await page.goto('https://www.instagram.com/');
-    // wait for sign up link element to appear, since it is loaded asynchronously
-    await page.waitForSelector('a[href="/accounts/emailsignup/"]');
-    await page.click('a[href="/accounts/emailsignup/"]');
-    // again wait for login link to appear
-    await page.waitForSelector('a[href="/accounts/login/?source=auth_switcher"]');
-    await page.click('a[href="/accounts/login/?source=auth_switcher"]');
-    await page.waitForSelector('a[href="/accounts/password/reset/"]');
+    // Set the screen resolution, as things render differently on different screen widths
+    await page.setViewport({
+        width: 1200,
+        height: 800,
+    })
+
+    // Go to the URL which switches into the demo account and wait for the redirect to finish
+    await page.goto('https://apps.sematext.com/demo');
+    await page.waitForTimeout(3000);
+
+    const SYNTHETICS_APP_SELECTOR = 'a[href="/ui/synthetics"]';
+    await page.waitForSelector(SYNTHETICS_APP_SELECTOR);
+    await page.click(SYNTHETICS_APP_SELECTOR);
+
+    // Wait for the locations map to show up, then wait a bit more for it to load fully for the screenshot
+    await page.waitForSelector('[id="locationsMap"]');
+    await page.waitForTimeout(2500); // We only need this to load everything for the screenshot
+    await page.screenshot({ path: 'synthetics.png' });
+
+    // Ensure the sidebar element for navigating to the Infra page exists, then click it
+    const INFRA_APP_SELECTOR = 'a[href="/ui/infrastructure"]';
+    await page.waitForSelector(INFRA_APP_SELECTOR);
+    await page.click(INFRA_APP_SELECTOR);
 }
 
 module.exports = testPage

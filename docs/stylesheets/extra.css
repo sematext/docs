@@ -477,6 +477,18 @@ pre {
   /* background: #FF9325; */
   background: #63b567;
 }
+.dashboards-card{
+  background: #2196f3;
+}
+.tags-card{
+  background: #7d21f3;
+}
+.team-card{
+  background: #21f3ed;
+}
+.fleetdisco-card{
+  background: #2ebfb6;
+}
 .tracing-card{
   background: #bd5666;
   margin-left: calc(100% + 16px);
@@ -490,7 +502,7 @@ pre {
 .kubernetes-card{
     background: #00202F;
 }
-.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .browser-sdk-card .mdl-card__title, .mobile-sdk-card .mdl-card__title, .tracing-card .mdl-card__title, .experience-card .mdl-card__title, .alerts-card .mdl-card__title, .events-card .mdl-card__title, .synthetics-card .mdl-card__title, .whats-new-card .mdl-card__title, .release-notes-card .mdl-card__title {
+.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .browser-sdk-card .mdl-card__title, .mobile-sdk-card .mdl-card__title, .tracing-card .mdl-card__title, .experience-card .mdl-card__title, .alerts-card .mdl-card__title, .events-card .mdl-card__title, .synthetics-card .mdl-card__title, .whats-new-card .mdl-card__title, .release-notes-card .mdl-card__title, .fleetdisco-card .mdl-card__title, .dashboards-card .mdl-card__title, .tags-card .mdl-card__title, .team-card .mdl-card__title {
     color: #fff;
 }
 .custom-mdl-card {

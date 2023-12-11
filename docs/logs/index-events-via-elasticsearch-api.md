@@ -1,15 +1,17 @@
-title: Index Events via Elasticsearch API
-description: Sending, custom & default mapping, and indexing log events using Elasticsearch API. Use other applications such as Logstash, Beats, Vector, Fluentd, Logagent, etc. to send log events and search for logs using UI.
+title: Index Logs Events in Sematext via Elasticsearch API
+description: Sending, custom & default mapping, and indexing log events using Elasticsearch API
 
 Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs. 
 
-You can:
+> **Note** the recommended way of shipping logs to Sematext us using [log discovery](https://sematext.com/docs/logs/discovery/intro/) screen, which lets you set up log shipping without installing any additional agents.
 
-  - send log events through it directly from your application, using
-    any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html)
-  - send log events by using existing application such as
-    [Logstash](logstash), Filebeat, [Logagent](../logagent), or [Apache Flume](http://flume.apache.org/), or [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
-  - [search for logs from your own application](search-through-the-elasticsearch-api), or by using tools such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene) or Grafana
+If you have to ship logs yourself, or you want to send them directly from your application using a logging library, you can do that, too.
+
+You can:
+  - send log events to the Sematext's Elasticsearch/OpenSearch bulk index API from your application, using
+    any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html) that can ship logs to an Open Source version of Elasticsearch.
+  - send log events by using existing application such as the Open Source versions of Logstash or Filebeat, [Logagent](../logagent), Fluentbit, Vector, [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
+  - [search for logs from your own application](search-through-the-elasticsearch-api)
   - optionally define [custom mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
     your log types, so you can tweak the way your logs are indexed
 
@@ -80,7 +82,7 @@ is a way to define how your logs are indexed - which fields are in each log even
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date.  See [Supported Date Formats](supported-date-formats).
   - the **geoip** field is an object that contains a **location** [geo point](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html)
-    field (this works well if you're using [Logstash](logstash))
+    field (this works well if you're using Logstash)
   - **host**, **facility**, **severity**, **syslog-tag**, **source**, and **tags** are
     [Special Fields](/tags/common-schema) that are not analyzed, which enables only exact matches (you can still use wildcards, for example
     to search for **web-server\*** and get **web-server01**)

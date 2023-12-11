@@ -21,7 +21,7 @@ Each private location is assigned a unique token. You can disable or delete a lo
 
 ## Install Private Agents
 
-After creating the private location from the UI, you need to install the agents on a machine in your private network. Private agents are deployed as Docker containers. There are two Docker images, one for HTTP monitors and another for Browser monitors.
+After creating the private location from the UI, you need to install the agents on a machine in your private network. Private agents are deployed as Docker containers. You can run them anywhere Docker container can be run - Linux, Windows, etc. There are two Docker images, one for HTTP monitors and another for Browser monitors.
 You can deploy either the HTTP or Browser monitor or both. Follow the instructions in the UI to install private agents in your network.
 
 ![Installation Instructions](../images/synthetics/private-location-installation.png)
@@ -30,7 +30,7 @@ If you have multiple private locations, you need to install agents individually 
 
 ## Using Private Locations
 
-Once you create a private location from the UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private locations behave exactly the same as public locations. The only exception to this is that private locations won't be able to use [sensitive data](./user-journey-scripts/#storing-your-user-journey-script-credentials-securely) for script-based Browser monitors, due to security concerns.
+Once you create a private location from the UI and install the agents, you can use it while creating the monitors or update existing monitors to run from the private location. Private locations behave exactly the same as public locations. The only exception to this is that private locations won't be able to use [sensitive data](./user-journey-scripts/sensitive-data.md) for script-based Browser monitors, due to security concerns.
 
 ### Schedule a Monitor to Run from Private Locations
 

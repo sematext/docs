@@ -78,6 +78,54 @@ _If you’re new here, read below for a high-level overview of Sematext._
 			</div>
 		</a>
 	</div>
+	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/dashboards/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp dashboards-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Dashboards
+					</h4>
+					<p>Add new reports or customize pre-built dashboards</p>
+				</div>
+			</div>
+		</a>
+	</div>
+ 	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/tags/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp tags-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Tags
+					</h4>
+					<p>For better filtering and grouping in dynamic infrastructures</p>
+				</div>
+			</div>
+		</a>
+	</div>
+ 	<div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/team/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp team-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Team
+					</h4>
+					<p>App vs. Account access, team account, inviting others, setting roles</p>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="mdl-cell mdl-cell--4-col">
+		<a href="/docs/fleet/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp fleetdisco-card">
+				<div class="mdl-card__title mdl-card--expand custom-mdl-card">
+					<h4>
+						Fleet & Discovery
+					</h4>
+					<p>Agent fleet, discovery & automatic setup of services and logs</p>
+				</div>
+			</div>
+		</a>
+	</div>
 	<!--
 	<div class="mdl-cell mdl-cell--4-col">
 		<a href="/docs/tracing/">

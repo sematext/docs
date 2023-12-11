@@ -312,13 +312,7 @@ this is not needed, but one needs to add the Sematext Agent to the Java
 command-line and restart the process of the monitored application. When
 running Standalone monitor one can update the App Agent without
 restarting the Java process being monitored, while a restart is needed
-when the Embedded App Agent is being used. To be able to [trace transactions](../tracing)
-or [database operations](../tracing/database-operations) you need to use the
-Embedded App Agent.
-
-### Can I use Sematext for (business) transaction tracing?
-
-Yes, see [Transaction Tracing](../tracing).
+when the Embedded App Agent is being used.
 
 ### Can I move Sematext Agent to a different directory?
 

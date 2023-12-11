@@ -1,85 +1,38 @@
-title: Monitoring Events 
+title: Events in Sematext
 description: Event stream captures all your key IT and operations such as server, container, docker, and business events, and lets you search and filter historical alerts and add custom events via the UI or the REST API
 
-### Events: What, Why, How?
+## What are Events
 
-[Sematext Cloud](https://sematext.com/cloud/) can graph not only
-performance [metrics](../monitoring) or [logs](../logs), but also events. Such events 
-may represent what is happening with a server or cluster, with an application, etc.
-Think application or server restarts, builds, deployments, alerts, etc.
-Events are graphed as a timeline. Events timeline can be shown
-next to metrics or logs charts. This makes it possible to easily
-correlate events with metrics and/or logs. In addition to showing
-events as timeseries charts, a detailed listing of events can be seen
-and, of course, events can have tags, and can be searched and
-filtered.
+Unlike log events, which tend to be generated on an ongoing basis and often in high volume, events in Sematext are intended for low-volume, high-signal sort of events.  What exactly are important events varies from team to team, but alert events and deployment events are among the most commonly used event types.
 
-Beyond events that you want to see as part of your operations
-intelligence think about events that matter to your team or your
-organization in general.  All kinds of "business events" can be shipped
-to Sematext, too. [Read](/events/adding#adding-events-through-ui) more about
-adding custom events. You can create an event when your web application encounters
-an outage and when the problem which caused the outage has been fixed.
+See [Event Examples](event-examples.md) for inspiration.
 
-Besides being shown in the UI events are also exposed via a [REST API](../api)
-that lets you post, retrieve, and search your events. This REST API
-matches the Elasticsearch API, so you can use any Elasticsearch tool
-or client to post, get, and search events.
+## Why Events
 
+One of the popular uses of events is for [correlation with other data](correlation.md) in Sematext, such as [correlation in Monitoring](../monitoring/correlation/) or [correlation in Logs](../logs/correlation/).  For example, when you send [deployment events](event-examples.md) to Sematext you are able to correlate performance regressions or newly application errors with your application releases.
 
-### Searching Events
+See [Correlating Events](correlation.md) for more info.
 
-[Sematext Cloud](https://sematext.com/cloud/) lets you find events, metrics,
-and logs from a specific time period. Additionally, the event chart has
-a search box where you can further narrow down events to only those that match
-the input query. You can search on any event field you included in the event when posting
-it.  The query syntax is the same as the [logs search syntax](/logs/search-syntax/).
+## Adding Events
 
-### Event Search API
+Events in Sematext come from multiple sources.  They are automatically generated and collected from:
+- Sematext Agent itself
+- monitored environments that emit events, such as Kubernetes
+- alerts
 
-Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
-events can be searched and retrieved programmatically via
-HTTP(S), using curl or any other Elasticsearch client.  The API endpoint
-is:
+In addition, you can add events yourself:
+- via an API
+- interactively through the user interface
 
-```
-https://event-receiver.sematext.com/APP_TOKEN
-```
+See [Adding Events](adding.md) for more info.
 
-Alternatively, you can also use the same endpoint which was used when
-adding events, where event type is specified, in which case the matching
-events will be limited to the type specified in the URI:
+## Charting, Viewing, Searching, and Filtering Events
 
-```bash
-https://event-receiver.sematext.com/APP_TOKEN/event
-```
+The default events screen shows an event histogram grouped by event type along with the list of events.  All events can be searched and filtered.
 
-The simplest way to run a query is using [URI search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
-like this:
+See [Viewing Events](timeline.md) for more info.
 
-```bash
-curl
-https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search?q=creator:john \
--H 'Authorization: apiKey 1111111-2222-3333-4444-555555555555'
-```
+## Events API
 
-For more info about ```apiKey``` [see](../logs/search-through-the-elasticsearch-api) .
+Events can be added, searched, and retrieved via an [event API](event-api.md).
 
-More complex queries are available when using [request body search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
-e.g.:
-
-```json
-curl -XGET "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search" -d '
-  "query" : {
-    "query_string" : {
-      "query" : "MyHost04",
-      "default_field" : "message"
-    }
-  } 
-' \
--H 'Authorization: apiKey 1111111-2222-3333-4444-555555555555' 
-```
-
-This example shows how to use one of the simplest query types: 
-```query_string```. To see which other query types are available, please
-check [Elasticsearch docs](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).

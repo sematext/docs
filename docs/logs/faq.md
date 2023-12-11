@@ -56,8 +56,7 @@ The number of logs will be also displayed in the right corner of the Log Counts 
 
 <img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
-You can also do that from Kibana
-by searching for all your logs without adding any time filters. The
+You can also do that from Kibana by searching for all your logs without adding any time filters. The
 number of hits represents the number of all your logs.
 
 ### How long are my logs stored?
@@ -122,7 +121,7 @@ application is using the *Basic* plan, our logging management platform will acce
 KB in size. If your application is using the *Standard* plan, it
 will allow logs up to 128 KB. If your application is using the *Pro*
 plan, it will accept logs up to 256 KB in size. If your logs are
-larger than the mentioned limits, please consider using the *Enterprise*
+larger than the mentioned limits, please consider using the *Pro*
 plan.
 
 ### My logs have special structure.  Can Logs App handle that?
@@ -483,10 +482,6 @@ your API calls using `apiKey`. You can read more about this [here](search-throug
 Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
 
 ## Kibana
-
-### Can I use my own Kibana?
-
-Yes.
 
 ### How can I get a nice map of the world in Kibana?
 

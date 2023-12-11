@@ -18,7 +18,7 @@ Tagging binds different data types in Sematext Cloud, allowing for correlation, 
 | | container.*  | Segregation, aggregation and filtering of container metrics
 | | kubernetes.*  | Segregation, aggregation and filtering of kubernetes metrics
 
-### Why Tags matter?
+### Why Tags matter
 Today's infrastructure is dynamic.  For example, containers, cloud instances, or Kubernetes pods are not static.  They come and go.  They get moved from one host to another. It is thus much more useful to look at observability data (e.g. CPU usage) for a collection of hosts, containers, pods, or services that are all tagged with a common tag or set of tags than it would be to look at the CPU usage while filtering or grouping data based on specific host names.  What happens when you deploy an additional host that runs the service you are monitoring?  Any filters or grouping that is referencing specific hosts would miss this new host.  But if your filters and groupings use tags, then as long as you tag the new host correctly, it will automatically be included in your charts, dashboards, alert rules, etc.
 
 For example, tags like `env:prod` can be configured on all production servers and `env:dev` on all development servers.

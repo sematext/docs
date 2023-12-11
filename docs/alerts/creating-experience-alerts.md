@@ -5,7 +5,7 @@ Each Experience App metric that you can create alert rules on has a bell icon th
 
 ![Bell Icon for Page Load](../images/alerts/experience_alert_bell.png)
 
-The supported Experience metrics are:
+## Supported Experience metrics
 
 - Apdex score for Page load
 - Apdex score for HTTP requests  
