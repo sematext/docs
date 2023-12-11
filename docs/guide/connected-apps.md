@@ -59,7 +59,7 @@ Once both Apps' data is shown in the Split Screen you will be able to see whethe
 
 Companion Apps allow you to create a Logs App directly from a Monitoring App and vice versa. Within your existing App, simply click on the Companion App. 
 
-When you monitor something with Sematext you can chooose what aspect of it you want to monitor.  For example, if you are running OpenSearch, you can choose to monitor its performance metrics or its logs.  Nothing in Sematext forces you to monitor both metrics and logs.  However, ideally, you would monitor both of these in order to make it easier to troubleshoot.  Thus, when you are in a Monitoring App for e.g. OpenSearch metrics Sematext will suggest you create a Logs App for monitoring OpenSearch logs.  Upon creating the companion App, the two Apps can be connected.
+When you monitor something with Sematext you can choose what aspect of it you want to monitor.  For example, if you are running OpenSearch, you can choose to monitor its performance metrics or its logs.  Nothing in Sematext forces you to monitor both metrics and logs.  However, ideally, you would monitor both of these in order to have a more complete picture of the performance and health of OpenSearch and make it easier to troubleshoot.  Thus, when you are in a Monitoring App (e.g., for OpenSearch metrics) Sematext will suggest you create a Logs App for monitoring OpenSearch logs.  Upon creating the companion App, the two Apps can be connected.
 
 ![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/companion-apps-button.png)
 
