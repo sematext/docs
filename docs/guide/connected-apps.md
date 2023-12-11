@@ -56,13 +56,15 @@ Once both Apps' data is shown in the Split Screen you will be able to see whethe
 ![Sematext Cloud Connected Apps - Connected Apps Split Screen](../images/guide/connected-apps/connected-apps-split-screen.png)
 
 ## Companion Apps
+
 Companion Apps allow you to create a Logs App directly from a Monitoring App and vice versa. Within your existing App, simply click on the Companion App. 
+
+When you monitor something with Sematext you can chooose what aspect of it you want to monitor.  For example, if you are running OpenSearch, you can choose to monitor its performance metrics or its logs.  Nothing in Sematext forces you to monitor both metrics and logs.  However, ideally, you would monitor both of these in order to make it easier to troubleshoot.  Thus, when you are in a Monitoring App for e.g. OpenSearch metrics Sematext will suggest you create a Logs App for monitoring OpenSearch logs.  Upon creating the companion App, the two Apps can be connected.
 
 ![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/companion-apps-button.png)
 
-You can use the suggested name or edit a new one for your Companion App. A checkbox controls whether you want to connect both Apps, enabled by default. You always have the option to connect them manually later. Once you click the "Create an App" button, both Apps will be automatically connected. Furthermore, the already installed Agents can be used, allowing you to directly configure the newly created App.
+Sematext recommends the name for the new App.  You can use the suggested name or edit a new one for the new companion App. A checkbox controls whether you want to connect both Apps, enabled by default. You always have the option to connect them manually later. Once you click the "Create an App" button, both Apps will be automatically connected. Furthermore, the already installed Agents can be used, allowing you to directly configure the newly created App.
 
 ![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/companion-apps-newapp.png)
 
 With both Apps automatically connected, you can now correlate their data for further troubleshooting via [Split Screen](https://sematext.com/docs/guide/split-screen/).
-
