@@ -51,7 +51,18 @@ If the two Apps are connected, you can easily open the Monitoring App in [Split 
 
 ![Sematext Cloud Connected Apps - Connected Apps Drop Down](../images/guide/connected-apps/connected-apps-dropdown.png)
 
-
 Once both Apps' data is shown in the Split Screen you will be able to see whether there are any significant spikes in metrics that correlate with the spike in error logs.  For example, this may help you identify that it is the insufficient resources or the unexpected query rates or connections that are the source of error logs coming from your database.
 
 ![Sematext Cloud Connected Apps - Connected Apps Split Screen](../images/guide/connected-apps/connected-apps-split-screen.png)
+
+## Companion Apps
+Companion Apps allow you to create a Logs App directly from a Monitoring App and vice versa. Within your existing App, simply click on the Companion App. 
+
+![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/companion-apps-button.png)
+
+You can use the suggested name or edit a new one for your Companion App. A checkbox controls whether you want to connect both Apps, enabled by default. You always have the option to connect them manually later. Once you click the "Create an App" button, both Apps will be automatically connected. Furthermore, the already installed Agents can be used, allowing you to directly configure the newly created App.
+
+![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/companion-apps-newapp.png)
+
+With both Apps automatically connected, you can now correlate their data for further troubleshooting via [Split Screen](https://sematext.com/docs/guide/split-screen/).
+
