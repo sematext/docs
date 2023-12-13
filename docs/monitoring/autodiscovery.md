@@ -133,14 +133,17 @@ The switch from manual to automatic monitoring is done by first removing the age
 In bare-metal/virtual machine setups there are two types of agents - in-process (with javaagent) and standalone.
 
 If you are using the in-process variant, do the following:
+
 - remove `-javaagent` definition from the startup script of your service and restart the service
 - from the directory `/opt/spm/spm-monitor/conf`, remove the config file whose name contains an App token used by this specific service
 
 If you are using the standalone variant:
+
 - from the directory `/opt/spm/spm-monitor/conf`, remove the config file whose name contains an App token used by this specific service
 - restart the agent with `sudo service sematext-agent restart
 
 In container environments it's much simpler - remove the environment variable named `MONITORING_TOKEN` from your containers:
+
 - if using `docker run` command to start your service, remove MONITORING_TOKEN from the command line
 - if using `docker-compose.yml` to start your service, remove MONITORING_TOKEN from that file
 - if using kubernetes, remove MONITORING_TOKEN from service deployment manifest
@@ -152,6 +155,7 @@ Sematext Agent will notice the change in few minutes and, if you enabled automat
 
 ### Additional Configuration for Sematext Agent
 For special cases, such as defining different sets of credentials in Kubernetes, additional steps are required to properly configure service discovery. 
+
 - Defining monitoring agent [credential sets](../agents/sematext-agent/autodisco/credential-sets) in Kubernetes
 - Providing [MySQL JDBC driver](../agents/sematext-agent/autodisco/mysql-driver) in container environments
 - [JMX Attaching](../agents/sematext-agent/jmx-attaching/)
