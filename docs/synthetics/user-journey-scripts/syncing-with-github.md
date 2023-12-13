@@ -13,8 +13,6 @@ Keep in mind that:
 
 * The sync is unidirectional - syncing is only done from GitHub to Sematext Cloud. This means that if you modify a User Journey script in Sematext Cloud, the changes will not be propagated to the GitHub repository. If you update the script in your repository then all the changes to that script that were made directly in Sematext Cloud will be overwritten.
 
-* If your default branch is not `master` you will need to update the workflows with the name of your default branch.
-
 ___
 
 To enable syncing of your User Journey scripts, you need to do the following:
@@ -30,6 +28,13 @@ To enable syncing of your User Journey scripts, you need to do the following:
         - https://apps.eu.sematext.com (EU region)
 
 2. Add the `.github/workflows` directory inside the root directory of your repository and place the `sync_updated_scripts.yml` and `sync_added_scripts.yml` workflow files inside the newly created directory.
+
+3. If your default branch is not `master` you will need to update the workflows you just added with the name of your default branch. To set the name of your branch simply replace `master` with your default branch name in the following code block, located at the start of both files:
+
+        on:
+          push:
+            branches:
+              - master
 
 
 ### Prepare User Journey scripts
@@ -56,15 +61,25 @@ The monitor will be created with the following values:
       - **Interval** = 1h
       - **Location** = N. Virginia
 
-Note that after the new monitor gets automatically created from such a script the `monitorID` will be automatically added to the comment in the script. When that happens the author name displayed in the GitHub commit will be `SematextSyncBot`.
+Note that after the new monitor gets automatically created from such a script the `monitorID` will be automatically added to the comment in the script. When that happens the author name displayed in the GitHub commit will be `SematextSyncBot`. In order for this to work, you will have to give the workflows permissions to edit files in the repository, which you can do by clicking on **Settings** in your repository, then clicking **Actions -> General** in the sidebar, which will take you to `https://github.com/{ORGANIZATION}/{YOUR_REPO_NAME}/settings/actions`. Scroll to the bottom of the page where the **Workflow permissions** section is located and make sure that the `Read and write permissions` option is checked, like in the screenshot below, then save your changes.
+
+![Setting Workflow permissions for your repository](../../images/synthetics/sync-browser-scripts-workflow-permissions.png)
  
-If you are using Sematext Cloud Europe then you’ll want to replace the default location.  You can do that by editing the workflow YML file(s). Simply look for this:
+You also have the option to replace the default location for monitors which will be created through newly added scripts in your repository. This can be done by editing the `sync_added_scripts.yml` workflow file. Simply look for this line:
 
 ```
 body='{"name":"'$name'","interval":"1h","locations":[1],"scriptBased":'$scriptBased',"enabled":'$enabled',"script":"'$script_content'","isGitHubSync":'$isGitHubSync'}'
 ```
 
-Replace `"locations":[1]` with `"locations":[2]` and the default location will be set to Ireland.
+Replace the `1` in `"locations":[1]` with the ID of the location of your choice. Consult the table below for a list of regions and their IDs.
+
+| AMERICAS  | EUROPE  | ASIA PACIFIC  |
+|---|---|---|
+| [**1**] N. Virginia, USA  | [**2**]  Ireland, Europe | [**3**] Mumbai, India  |
+| [**8**] N. California, USA  | [**6**]  Frankfurt, Germany | [**4**] Singapore  |
+| [**7**] São Paulo, Brazil  |   | [**5**] Sydney, Australia  |
+
+For example, `"locations":[2]` will set the default location to *Ireland*. You can also provide multiple comma-separated IDs to use multiple locations for the monitors which are created this way: `"locations":[6,8]` would make all newly created monitors run from both *Frankfurt* and *N. California*.
 
 This is also where you may replace `1h` with another value you want to be used as the default monitor interval. The allowed values for the interval are `5m`, `10m`, `15m`, `30m` and `1h`. Specifying any other value will cause the synchronization to fail.
 
