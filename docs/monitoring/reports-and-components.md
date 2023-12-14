@@ -50,7 +50,7 @@ By checking out the [Integrations documentation](https://sematext.com/docs/integ
 ### Groups
 Report components can be grouped by tags using the `Groups` drop down menu in the Monitoring Report Menu. One of the [available tags](https://sematext.com/docs/tags/common-schema/) for grouping is the `os.kernel` tag, which will put hosts running the same Linux kernel in the same group. This can be useful to check whether some hosts need to be upgraded with a newer kernel.
 
-<todo: add screenshot>
+![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-infra.png) 
 
 Similar customized group menus can be created using [`Group By` report variables](https://sematext.com/docs/dashboards/report-variables/groups).
 
@@ -64,7 +64,7 @@ Each component can also be added to a custom dashboard you define.
 
 Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order are available for your Monitoring App.
 
-![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/monitoring/components.png) 
+![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/monitoring/components.png)
 
 Use them together with out-of-the-box metrics reports and visualizations, generated when your Monitoring App is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. 
 
