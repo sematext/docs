@@ -27,7 +27,7 @@ The differences are presented in a way you're already used to, line by line. Sin
 
 ![Processor Filters](../images/logs/pipelines/pipeline-preview.png)
 
-#### Custom Input
+### Custom Input
 
 The input is automatically loaded from the App, respecting the selected time, filters and number of events. However, the App might be empty, or log events in the App might already be processed by the Pipeline so they may not have cases that you would like to test. In such situations, you can switch to enter custom tab and enter or adjust the input.
 
@@ -38,7 +38,8 @@ Once the input is manually edited, a warning will be displayed if you try to rel
 
 ![Reload Warning](../images/logs/pipelines/reload-warning.png)
 
-#### Processor Coloring
+
+### Processor Coloring
 
 The order of the processors defined in the Preview section determines their sequence of application. Processors highlighted in **blue** indicate that operations within those processors are applied to the logs visible in the input section. If a processor is marked in **yellow** are **'Not Applied'**. It means that, due to filters or patterns within that processor, it hasn't affected the log displayed on the input side. When calculating the **'Not Applied'** status, we check if there is any difference between the log shown on the input side and the log shown on the preview side.
 
@@ -53,7 +54,7 @@ To view the impact of processors up to a specific point in the Preview section, 
 
 ![Pipeline On Click](../images/logs/pipelines/processor-on-click.png)
 
-#### NOT APPLIED Behavior
+### NOT APPLIED Behavior
 
 The processors defined in pipelines are processed just before being inserted into the Elasticsearch database. So only the processed version of the log is stored in the database. We do not store raw logs.
 
