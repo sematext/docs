@@ -5,20 +5,19 @@ Processors are units of processing in Pipelines. They can change, drop, or even 
 
 Processors available in Logs Pipelines are:
 
-- [XML Parser](../logs/xml-parser)
-- [Size processor](../logs/size-processor)
-- [Drop processor](../logs/drop-processor)
-- [Flattener processor](../logs/flattener-processor)
-- [User-Agent processor](../logs/user-Agent-processor)
-- [URL Parser](../logs/url-parser)
-- [Rename Fields Processor](../logs/rename-fields-processor)
-- [Remove Fields Processor](../logs/remove-fields-processor)
-- [Field Extractor Processor](../logs/field-extractor-processor)
-- [Field Masking Processor](../logs/field-masking-processor)
-- [Script Field Processor](../logs/script-field-processor)
-- [Sampling Processor](../logs/sampling-processor)
-- [Geo Processor](../logs/geo-processor)
-- [URL Parser](../logs/url-parser)
+- **XML Parser**: Parse XML formatted fields into separate fields.
+- **Size processor**: Estimates size of document and extracts the information into a new field.
+- **Drop processor**: Drop all documents that match a specified filter.
+- [**Flattener processor**](../logs/flattener-processor): Used to flatten a nested structure into separate fields.
+- **User-Agent processor**: Extract OS, browser, device and other data from a User-Agent attribute using an external [library](https://yauaa.basjes.nl/expect/fieldvalues/).
+- **URL Parser**: Extracts query parameters and other important parameters from a URL.
+- **Rename Fields Processor**: Change the names of fields.
+- **Remove Fields Processor**: Remove fields that contain [sensitive information](../logs/handle-sensitive-data-with-pipelines) or redundant data to save from costs. See [Reducing Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for more information.
+- [**Field Extractor Processor**](../logs/field-extractor-processor): Extract fields using a grok pattern.
+- [**Field Masking Processor**](../logs/field-masking-processor): Maskk fields using a regex pattern and hide sensitive data. See [Handle Sensitive Data](../logs/handle-sensitive-data-with-pipelines) for more information.
+- [**Script Field Processor**](../logs/script-field-processor): Add or change a field using a script.
+- [**Sampling Processor**](../logs/sampling-processor): Keep only a certain percentage of your data using random sampling.
+- **Geo Processor**: Enrich documents with reverse geocoding location or IP address.
 
 Configuration section will be empty in most cases when you initially open Pipeline Builder.
 
