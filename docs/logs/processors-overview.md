@@ -1,5 +1,5 @@
 title: Processors
-description: Logs Pipeline Processors
+description: Add or change a field using a script
 
 Processors are units of processing in Pipelines. They can change, drop, or even produce additional events. They are chained to form a Pipeline. The output of one Processor is the input for the next Processor.
 
