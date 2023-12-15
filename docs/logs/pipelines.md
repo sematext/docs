@@ -19,13 +19,15 @@ The preview shows log events before and after processing. The Pipeline configura
 
 The header and subnav let you define time and filters that will be used to load sample data for previewing the Pipeline. The logs displayed in the input section are sorted in descending order. Based on the applied filters and selected time frame, the most recent log will appear at the first page. To navigate through these logs, use the pagination at the bottom of the input/preview section to view up to the 10 most recent logs.
 
-### How Preview Works
+### Preview
 
 The preview section is a helper tool you use to see how the Pipeline you are configuring is working. It runs loaded or manually entered input through the configured Pipeline and shows the difference between input and output log events.
 
 The differences are presented in a way you're already used to, line by line. Since structured events can be presented as JSON objects, you can expand them and see which part of every event was changed, removed or added.
 
 ![Processor Filters](../images/logs/pipelines/pipeline-preview.png)
+
+#### Custom Input
 
 The input is automatically loaded from the App, respecting the selected time, filters and number of events. However, the App might be empty, or log events in the App might already be processed by the Pipeline so they may not have cases that you would like to test. In such situations, you can switch to enter custom tab and enter or adjust the input.
 
@@ -35,6 +37,8 @@ At the moment, JSON is the only input format that is supported. The input editor
 Once the input is manually edited, a warning will be displayed if you try to reload data.
 
 ![Reload Warning](../images/logs/pipelines/reload-warning.png)
+
+#### Processor Coloring
 
 The order of the processors defined in the Preview section determines their sequence of application. Processors highlighted in **blue** indicate that operations within those processors are applied to the logs visible in the input section. If a processor is marked in **yellow** are **'Not Applied'**. It means that, due to filters or patterns within that processor, it hasn't affected the log displayed on the input side. When calculating the **'Not Applied'** status, we check if there is any difference between the log shown on the input side and the log shown on the preview side.
 
@@ -49,7 +53,7 @@ To view the impact of processors up to a specific point in the Preview section, 
 
 ![Pipeline On Click](../images/logs/pipelines/processor-on-click.png)
 
-### NOT APPLIED Behavior
+#### NOT APPLIED Behavior
 
 The processors defined in pipelines are processed just before being inserted into the Elasticsearch database. So only the processed version of the log is stored in the database. We do not store raw logs.
 
