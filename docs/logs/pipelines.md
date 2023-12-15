@@ -8,7 +8,7 @@ Each Pipeline consists of one or more **Processors** that are executed in the or
 ![Pipelines Button](../images/logs/pipelines/pipeline-button.png)
 
 
-### Pipeline Builder
+## Pipeline Builder
 The Pipeline Builder is, as its name implies, what you use to set up Pipelines.  Once the Pipeline Builder is opened, you'll see a dedicated page where you can configure ingestion settings.
 
 ![Pipeline Builder](../images/logs/pipelines/pipeline-builder-saved.png)
@@ -17,56 +17,29 @@ On top we have a header and subnav that can be used to pick events to preview. T
 
 The preview shows log events before and after processing. The Pipeline configuration section has a list of Processors on the left and configuration details for a selected Processor on the right.
 
-The header and subnav let you define time and filters that will be used to load sample data for previewing the Pipeline.
+The header and subnav let you define time and filters that will be used to load sample data for previewing the Pipeline. The logs displayed in the input section are sorted in descending order. Based on the applied filters and selected time frame, the most recent log will appear at the first page. To navigate through these logs, use the pagination at the bottom of the input/preview section to view up to the 10 most recent logs.
 
-![Pipeline Builder](../images/logs/pipelines/pipeline-builder-header.png)
+### How Preview Works
 
-By default, only 10 log events are loaded. You can also change it to 50 or 100. Note that a higher number of log events may slow the preview down a bit since events are sent for processing on each Pipeline configuration change.
+The order of the processors defined in the Preview section determines their sequence of application. Processors highlighted in **blue** indicate that operations within those processors are applied to the logs visible in the input section. If a processor is marked in **yellow** are **'Not Applied'**. It means that, due to filters or patterns within that processor, it hasn't affected the log displayed on the input side. When calculating the **'Not Applied'** status, we check if there is any difference between the log shown on the input side and the log shown on the preview side.
 
-#### Processors
-Processors are units of processing in Pipelines. 
+![Processor Order](../images/logs/pipelines/processor-order.png)
 
-They can change, drop, or even produce additional events. They are chained to form a Pipeline. The output of one Processor is the input for the next Processor.
+Processors displayed with a **gray background** are disabled, indicating they won't affect any logs.
 
-Configuration section will be empty in most cases when you initially open Pipeline Builder.
+![Disabled Processor](../images/logs/pipelines/disabled-processor.png)
 
-![Empty Pipeline](../images/logs/pipelines/empty-pipeline.png)
 
-In such cases, instead of a selected Processor configuration, there will be a list of available Processors. Clicking on any Processor card will add a Processor with default values. Processors can also be added by clicking the "Add Processor" button.
+To view the impact of processors up to a specific point in the Preview section, click on that processor. This action will display the effects on the log up to the selected processor in the Preview section. The blue lines or arrows between processors indicate which processors are applied and displayed in the preview section, up until a specific processor.
 
-![Add Processor](../images/logs/pipelines/add-processor.png)
+![Pipeline On Click](../images/logs/pipelines/processor-on-click.png)
 
-When clicking this button, a modal with a searchable list of Processors will appear. You can then select which Processor to add.
-You can also add Processors by duplicating existing Processors.
+### NOT APPLIED Behavior
 
-![Processor Actions](../images/logs/pipelines/processor-actions.png)
+The processors defined in pipelines are processed just before being inserted into the Elasticsearch database. So only the processed version of the log is stored in the database. We do not store raw logs.
 
-The duplicate action is below the standard action button in the list of Processors. Note that **the order of Processors matters** since the **output of one Processor is the input for the next Processor**. 
+If the log has been received after the processors were saved, the displayed version on the input side already reflects the applied state of the saved processors. In this case, there's no difference between the Input and Preview sections, so it's normal for that processor to appear as 'NOT APPLIED.' However, this doesn’t indicate that the operations defined in these processors won't be applied to the newly arrived records.
 
-You can reorder Processors using the drag handle to the left of each Processor's name.
-
-The selected Processor configuration will be displayed on the right side. Every Processor has at least a name and a description field, but all Processors will also have additional, Processor-specific configurations.
-
-##### Errors
-![Processor Errors](../images/logs/pipelines/processor-errors.png)
-
-If a Processor is not configured correctly, the number of errors will be displayed next to the Processor's name and the `Save Changes` button will be disabled.
-
-##### Filters
-Almost all Processors have optional filters. With filters, you can select only a subset of events that the Processor should be applied to. Events that do not match filters will be ignored.
-
-![Processor Filters](../images/logs/pipelines/processor-filters.png)
-
-Processors use the same filtering you are already used to in Sematext. 
-
-The only difference is that you can also enter fields that are not keywords or even defined yet. 
-
-###### Wildcards
-Another important difference is that you can use wildcards for values. There is support for standard wildcard characters: `*` matches any number of characters, and `?` matches a single character.
-
-This way you can, for example, drop events whose message field contains `*raws*` as in example below
-
-![Wildcards_Filtering](../images/logs/pipelines/wildcards-filtering.png)
 
 ##### Sampling
 You can do events sampling with Pipeline as well. 
