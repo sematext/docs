@@ -3,7 +3,7 @@ description: Kubernetes is a portable, extensible, open-source platform for mana
 
 Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. To start monitoring Kubernetes with Sematext, you only need to install a tiny agent that adds basically no CPU or memory overhead.
 
-If you are new to Sematext's Kubernetes Monitoring, the following 3 minute video is a good way to get a sneak-peak.  Note that it's from late 2023 and our Kubernetes monitoring is constantly evolving and improving.
+If you are new to Sematext's Kubernetes Monitoring, the following 4 minute video is a good way to get a sneak-peak.  Note that it's from late 2023 and our Kubernetes monitoring is constantly evolving and improving.
 
 <div class="video_container">
 <iframe src="https://www.youtube.com/embed/5bJF5HX6u40"
