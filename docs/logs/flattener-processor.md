@@ -27,6 +27,6 @@ The process involves:
 
 This transformation enables you to utilize these fields effectively for data visualization.
 
-If the extracted field values contain both text and numerical information, such as units, you can use [Field Extractor processor](../logs/field-extractor-processor) and trim the accompanying text, keeping only the numerical value.
+If the extracted field values contain both text and numerical information, such as units, you can use [Field Extractor](../logs/field-extractor-processor) processor and trim the accompanying text, keeping only the numerical value.
 
 Once the numerical fields are obtained, you can navigate to the [Field Editor](https://sematext.com/docs/logs/fields/#field-editor) to set the type of the newly created fields as `float` or `integer`, enabling their use in visualizing data using the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
