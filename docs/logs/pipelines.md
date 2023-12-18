@@ -3,13 +3,21 @@ description: Add processing steps to log ingestion
 
 Log events are not always structured the way you want them to be. For various reasons it might be hard to set up a log shipper to transform or filter log events.  An alternative approach is to configure processing steps that are executed during log event ingestion. We call this **Pipelines**. 
 
-Each Pipeline consists of one or more [Processors](../logs/processors-overview) that are executed in the order in which they are defined in a Pipeline.  Pipelines and its Processors can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents, and more.  They are easily accessible in the main menu of every Logs App. This gives you access to the Pipeline Builder.
+Each Pipeline consists of one or more [Processors](../logs/processors-overview) that are executed in the order in which they are defined in a Pipeline.  Pipelines and its Processors can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents, and more. 
 
-![Pipelines Button](../images/logs/pipelines/pipeline-button.png)
+### Managing Log Costs with  Pipelines
 
+Understanding the dynamics of log monitoring costs is pivotal, particularly as it directly correlates with the volume of stored logs. It's important to note that the cost doesn't hinge upon the volume of logs shipped to Sematext. Any data eliminated during the ingestion process **doesn’t have additional cost** and is **free**. This unique feature allows for efficient management of log volumes without incurring unnecessary expenses.
+
+You can transmit significant amounts of logs to Sematext. An intriguing aspect is that while these logs can be transmitted to Sematext, the ingestion cost doesn't escalate if you opt to drop specific logs through [Pipelines Processors](../logs/processors-overview). This presents an advantageous scenario wherein logs can be available at a moment's notice through a simple toggle using the enable/disable option within the processors. 
+
+Consequently, this flexibility ensures that even if logs are not actively stored, they remain accessible, allowing for swift activation whenever required.
+
+See [Reducing Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for more information.
 
 ## Pipeline Builder
-The Pipeline Builder is, as its name implies, what you use to set up Pipelines.  Once the Pipeline Builder is opened, you'll see a dedicated page where you can configure ingestion settings.
+
+The Pipeline Builder accessible in the main menu of every Logs App, as its name implies, what you use to set up Pipelines.  Once the Pipeline Builder is opened, you'll see a dedicated page where you can configure ingestion settings.
 
 ![Pipeline Builder](../images/logs/pipelines/pipeline-builder-saved.png)
 
