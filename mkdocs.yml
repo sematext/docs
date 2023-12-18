@@ -55,7 +55,7 @@ pages:
        - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
        - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
-      - Logs Usage Screen: logs/logs-usage-screen
+      - Logs Usage Screen: logs/logs-usage-screen.md
       - Archiving: logs/archiving.md
       - Discovery:
         - Overview: logs/discovery/intro.md
