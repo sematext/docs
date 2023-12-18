@@ -3,7 +3,7 @@ description: Extract fields using a GROK pattern
 
 Structuring data into fields is important if you are using Sematext Logs.  Having your logs structured makes it easy to analyze logs, create charts with data from individual fields, filter log events, or group them by their field values.
 
-By using Grok Patterns Extractor, you can extract multiple fields from other fields. 
+By using Grok Patterns Extractor, you can extract multiple fields from other fields. With GROK patterns, you can efficiently extract essential information from lengthy text fields, eliminating redundant data, thus reducing costs. To learn more, check out [How Logs Pipelines Can Reduce Your Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for additional information.
 
 Grok works by combining text patterns into something that matches your logs.
 The syntax for a grok pattern is `%{SYNTAX:SEMANTIC}`
@@ -19,6 +19,11 @@ For the above example, your grok filter would look something like this:
 
 `Got document of %{NUMBER:sizeOfDoc} kb from %{IP:deviceIp}`
 
-Field Extractor provides a bunch of predefined patterns you may use for your purposes. Autocompletion makes it easy to navigate through and select them.
+Field Extractor provides a bunch of predefined patterns you may use for your purposes, readily accessible within the tooltip while inputting the GROK pattern. Autocompletion makes it easy to navigate through and select them.
 
-![Processor Grok Field Extractor](../images/logs/pipelines/processor-grok.png)
+![Processor Grok Field Extractor](../images/logs/pipelines/field-extractor-tooltip.gif)
+
+Upon selecting the source field and entering the GROK pattern, note that we promptly showcase both the original value of the field and the newly extracted fields just below the pattern box. This immediate display allows you to effortlessly track the results of the GROK pattern as you type.
+
+![Processor Grok Field Extractor Showcase](../images/logs/pipelines/grok-showcase.png)
+
