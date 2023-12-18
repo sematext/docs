@@ -23,7 +23,7 @@ After entering the necessary GROK pattern, the message field will be trimmed, re
 
 ## Masking Processor
 
-The [Field Masking processor](field-masking-processor) accepts regex as input and masks the matching phrases in the source field, replacing them with masked characters. Here is an example of masking IP addresses within a message field.
+The [Field Masking](field-masking-processor) processor accepts regex as input and masks the matching phrases in the source field, replacing them with masked characters. Here is an example of masking IP addresses within a message field.
 
 ![Mask IP address](../images/logs/pipelines/sensitive-data-mask-ip-address.gif)
 
