@@ -3,7 +3,7 @@ description: Use Logs Pipeline processor to drop noise events and extract vital 
 
 Log [pipelines](../logs/pipelines) offer a range of [processors](../logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
 
-> Note: Be sure to check out [Recommended Logs Plans](../logs/recommended-log-plans) to ensure you’re using the most cost-effective plan for your logs in Sematext.
+**Note:** Be sure to check out [Recommended Logs Plans](../logs/recommended-log-plans) to ensure you’re using the most cost-effective plan for your logs in Sematext.
 
 Let's consider a scenario where we have a Logs App that is receiving query response logs from a database, resulting in a lengthy message field.
 
@@ -15,7 +15,7 @@ Let's consider a scenario where we have a Logs App that is receiving query respo
 
 Because your log monitoring cost depends on the volume of stored logs (side note: it does not depend on the volume of logs you shipped to Sematext because any data you eliminate during the ingestion is virtually free - see XXXXX) anything you can remove from chunky log events like this will reduce your costs.
 
-In this example, we will aim to remove redundant and duplicated information. We’ll extract the essential details, specifically focusing on isolating the **response status**, which serves as a crucial metric, along with specifying the** type of exception**. Besides reducing the cost, this extraction has another positive side effect - it  enhances data clarity and facilitates a more precise analysis of the log information, this making it possible for you to get more insights and value from these logs.
+In this example, we will aim to remove redundant and duplicated information. We’ll extract the essential details, specifically focusing on isolating the **response status**, which serves as a crucial metric, along with specifying the **type of exception**. Besides reducing the cost, this extraction has another positive side effect - it  enhances data clarity and facilitates a more precise analysis of the log information, this making it possible for you to get more insights and value from these logs.
 
 Instructions on achieving this goal with various pipeline processors, are detailed in the steps below.
 
@@ -47,7 +47,7 @@ Log pipelines enable complete removal of unwanted fields within log data. By eli
 
 We have extracted all the information that is vital to us from the message field. Let’s dive into the second step where we want to drop some unwanted events.
 
-> Note: At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Recommended Logs Plans](../logs/recommended-log-plans).
+**Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Recommended Logs Plans](../logs/recommended-log-plans).
 
 Everything above was aimed at eventually removing a field after extracting valuable bits worth keeping.  You can, of course, do that with multiple fields in your logs, not just one field like in our example.  But there is an even more radical thing you can do – you can drop complete log events.  See below.
 
