@@ -13,7 +13,7 @@ Selecting the appropriate Daily Volume plan is pivotal for achieving an **optima
 It's imperative to understand that the GB/day volume serves as a benchmark for the cost per GB and is not a strict limit. Exceeding the selected Daily Volume doesn't lead to data rejection.
 Instead, any data over the chosen daily volume is tracked and added to the monthly cost using the $/GB rate corresponding to the selected Daily Volume. For added protection, consider using the **Max Daily Volume** feature, which enables the rejection of logs if the daily log volume exceeds a specified limit in GB.
 
-The Daily Volume Limit and Max Daily Volume Limit can be easily set and modified from the Usage screen at any time. Additionally, the estimated monthly amount is displayed on the top right of the screen.
+The **Daily Volume Limit** and **Max Daily Volume Limit** can be easily set and modified from the Usage screen at any time. Additionally, the estimated monthly amount is displayed on the top right of the screen.
 
 ![Logs Usage Daily Limits](../images/logs/logs-usage-dlv.png)
 
