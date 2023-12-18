@@ -3,7 +3,7 @@ description: Use Logs Pipeline processor to drop noise events and extract vital 
 
 Log [pipelines](../logs/pipelines) offer a range of [processors](../logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
 
-**Note:** Be sure to check out [Recommended Logs Plans](../logs/recommended-log-plans) to ensure you’re using the most cost-effective plan for your logs in Sematext.
+**Note:** Be sure to check out [Plan Recommendations](../logs/plan-recommendations) to ensure you’re using the most cost-effective plan for your logs in Sematext.
 
 Let's consider a scenario where we have a Logs App that is receiving query response logs from a database, resulting in a lengthy message field.
 
@@ -47,7 +47,7 @@ Log pipelines enable complete removal of unwanted fields within log data. By eli
 
 We have extracted all the information that is vital to us from the message field. Let’s dive into the second step where we want to drop some unwanted events.
 
-**Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Recommended Logs Plans](../logs/recommended-log-plans).
+**Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Plan Recommendations](../logs/plan-recommendations).
 
 Everything above was aimed at eventually removing a field after extracting valuable bits worth keeping.  You can, of course, do that with multiple fields in your logs, not just one field like in our example.  But there is an even more radical thing you can do – you can drop complete log events.  See below.
 
@@ -81,7 +81,7 @@ Now, let’s consider the overall log size, initially at 4 KBs for this case. By
 
 On top of that, we’ve effectively filtered out all noise events based on specific conditions, leading to an additional 30% decrease in daily log volume.
 
-See [Logs Usage Screen](../logs/logs-usage-screen) and [Recommended Logs Plans](../logs/recommended-log-plans) for more information.
+See [Logs Usage Screen](../logs/logs-usage-screen) and [Plan Recommendations](../logs/plan-recommendations) for more information.
 
 ## How Our Team Can Support You
 
