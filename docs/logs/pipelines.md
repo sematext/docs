@@ -5,7 +5,7 @@ Log events are not always structured the way you want them to be. For various re
 
 Each Pipeline consists of one or more [Processors](../logs/processors-overview) that are executed in the order in which they are defined in a Pipeline.  Pipelines and its Processors can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents, and more. 
 
-### Managing Log Costs with  Pipelines
+### Log Ingestion and Storage Costs with Pipelines
 
 Understanding the dynamics of log monitoring costs is pivotal, particularly as it directly correlates with the volume of stored logs. It's important to note that the cost doesn't hinge upon the volume of logs shipped to Sematext. Any data eliminated during the ingestion process **doesn’t have additional cost** and is **free**. This unique feature allows for efficient management of log volumes without incurring unnecessary expenses.
 
