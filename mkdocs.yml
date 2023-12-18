@@ -53,7 +53,9 @@ pages:
           - Script Field Processor: logs/script-field-processor.md
           - Sampling Processor: logs/sampling-processor.md
        - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
-        - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
+       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
+      - Recommended Logs Plans: logs/recommended-log-plans.md
+      - Logs Usage Screen: logs/logs-usage-screen
       - Archiving: logs/archiving.md
       - Discovery:
         - Overview: logs/discovery/intro.md
