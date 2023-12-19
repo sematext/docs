@@ -22,6 +22,14 @@ pages:
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
+      - Discovery:
+        - Overview: logs/discovery/intro.md
+        - Setup: logs/discovery/setup.md
+        - Control Plane: logs/discovery/control-plane.md
+        - Shipping Log Files: logs/discovery/tailing-log-files.md
+        - Shipping Containers Logs: logs/discovery/tailing-containers.md
+        - Shipping Kubernetes Logs: logs/discovery/tailing-k8s-logs.md
+        - Shipping Journald Logs: logs/discovery/tailing-journald-logs.md
       - Settings: logs/settings.md
       - Reports & Components: logs/reports-and-components.md
       - Logs Terminal View: logs/logs-terminal-view.md
@@ -61,14 +69,6 @@ pages:
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
       - Archiving: logs/archiving.md
-      - Discovery:
-        - Overview: logs/discovery/intro.md
-        - Setup: logs/discovery/setup.md
-        - Control Plane: logs/discovery/control-plane.md
-        - Shipping Log Files: logs/discovery/tailing-log-files.md
-        - Shipping Containers Logs: logs/discovery/tailing-containers.md
-        - Shipping Kubernetes Logs: logs/discovery/tailing-k8s-logs.md
-        - Shipping Journald Logs: logs/discovery/tailing-journald-logs.md
       - Correlation: logs/correlation.md
       - Changelog: changelog.md
       - FAQ: logs/faq.md
