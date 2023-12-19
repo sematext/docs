@@ -24,6 +24,10 @@ For example, you might want to be notified when available disk space reaches a c
 
 ![Sematext Anomaly Alerts](../images/guide/alerts-and-events/anomaly-alerts.png)
 
+When an anomaly alert is triggered, you'll be able to observe spikes and dips within the alert details flyout upon clicking on the [alert event](https://sematext.com/docs/alerts/alert-events/). The chart also features a confidence band that illustrates the range of certainty around the expected values.
+
+![Sematext Anomaly Alert Confidence Band](../images/guide/alerts-and-events/anomaly-alert-confidence-band.png)
+
 <br/>
 
 ## Alert Sources
