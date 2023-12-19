@@ -3,7 +3,7 @@ description: Extract fields using a GROK pattern
 
 Structuring data into fields is important if you are using Sematext Logs.  Having your logs structured makes it easy to analyze logs, create charts with data from individual fields, filter log events, or group them by their field values.
 
-By using Grok Patterns Extractor, you can extract multiple fields from other fields. With GROK patterns, you can efficiently extract essential information from lengthy text fields, eliminating redundant data, thus reducing costs. Check out [How Logs Pipelines Can Reduce Your Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for additional information.
+By using Field Patterns Extractor, you can extract multiple fields from other fields. With GROK patterns, you can efficiently extract essential information from lengthy text fields, eliminating redundant data, thus reducing costs. Check out [How Logs Pipelines Can Reduce Your Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for additional information.
 
 Grok works by combining text patterns into something that matches your logs.
 The syntax for a grok pattern is `%{SYNTAX:SEMANTIC}`
