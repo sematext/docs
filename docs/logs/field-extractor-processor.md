@@ -63,7 +63,7 @@ IPORHOST (?:%{HOSTNAME}|%{IP})
 HOSTPORT %{IPORHOST}:%{POSINT}
 ```
 
-### paths
+### Paths
 ```
 PATH (?:%{UNIXPATH}|%{WINPATH})
 UNIXPATH (?>/(?>[\w_%!$@:.,-]+|\\.)*)+
