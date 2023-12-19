@@ -45,7 +45,7 @@ pages:
       - Mappings and Templates: logs/mappings-templates.md
       - Pipelines:
         - Overview: logs/pipelines.md
-        - Processors: logs/pipelines.md
+        - Processors:
           - Overview: logs/processors-overview.md
           - Flattener processor: logs/flattener-processor.md
           - Field Extractor Processor: logs/field-extractor-processor.md
