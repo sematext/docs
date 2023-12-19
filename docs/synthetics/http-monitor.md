@@ -52,6 +52,7 @@ Alternatively, click the '+ Bulk Add' button. A pop-up will appear, allowing you
 
 ![HTTP Bulk Add Monitors](../images/synthetics/http-bulk-add-monitors.gif)
 
+
 ## Authentication
 
 To monitor pages protected by some form of authentication each monitor can be configured to use one of the following types of authentication.
