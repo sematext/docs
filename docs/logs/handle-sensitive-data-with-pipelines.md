@@ -1,7 +1,7 @@
 title: How to Handle Sensitive Data
 description: How to handle sensitive data using various processors offered in Logs Pipelines
 
-Logs can contain sensitive information that requires handling to maintain security and compliance with data protection regulations, and the protection of personal data. In Logs Pipelines, various processors allow protection of sensitive data before insertion into the database.
+Logs can contain sensitive information that requires handling to maintain security and compliance with data protection regulations, and the protection of personal data. In Logs Pipelines, various processors allow protection of sensitive data before it is actually stored in Sematext.
 
 ## Field Extractor Processor (Trimming)
 
