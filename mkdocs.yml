@@ -15,6 +15,10 @@ pages:
       - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
       - Scheduled Reports: guide/scheduled-reports.md      
+    - Fleet and Discovery: 
+      - Overview: fleet/index.md
+      - Fleet: fleet/fleet.md
+      - Discovery: fleet/discovery.md
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
@@ -52,8 +56,8 @@ pages:
           - Field Masking Processor: logs/field-masking-processor.md
           - Script Field Processor: logs/script-field-processor.md
           - Sampling Processor: logs/sampling-processor.md
-        - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
-        - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
+      - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
+      - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
       - Archiving: logs/archiving.md
@@ -395,10 +399,6 @@ pages:
         - FAQ: logagent/faq.md
       - Mobile App SDKs: agents/mobile.md
       - Browser SDK: agents/browser.md
-    - Fleet and Discovery: 
-      - Overview: fleet/index.md
-      - Fleet: fleet/fleet.md
-      - Discovery: fleet/discovery.md
     - API: api/index.md
     - FAQ: faq.md
 
