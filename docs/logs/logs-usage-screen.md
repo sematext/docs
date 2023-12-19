@@ -1,7 +1,7 @@
 title: Logs Usage Screen
 description: Learn about Daily Log Volume, its impact on pricing, and how Sematext provides transparent cost structures, empowering informed decisions for optimized log storage.
 
-The Logs Usage screen provides insights into historical data concerning daily log volumes received and stored for Admins and Owners of the Logs Apps. It's important to note that there are no predefined limits to the number of logs you can store within your Logs App. However, selecting an optimal Daily Volume plan is crucial, as it directly impacts the $/GB price, ensuring cost-effectiveness.
+The Logs Usage screen provides insights into historical data concerning daily log volumes received and stored for Admins and Owners of the Logs Apps. It's important to note that there are no predefined limits to the number of logs you can store within your Logs App. However, selecting an optimal Daily Volume plan is crucial, as it directly impacts the $/GB price, ensuring cost-effectiveness. See [Plan Recommendations](../logs/plan-recommendations).
 
 ![Logs Usage Stored and Received](../images/logs/logs-usage-stored-received.png)
 
@@ -23,7 +23,7 @@ The selection of the Daily Volume tier significantly impacts the per GB price. F
 
 Transparency in cost structures is a core value for us, we analyze the average daily log volume shipped to a Logs App over the last 7 days. Based on this analysis, we recommend more suitable and cost-effective plans whenever available. 
 
-Once a better plan is detected, it will be visibly suggested in the Usage Screen, App Settings, and Manage Plan sections.
+Once a better plan is detected, '$' will appear in the left menu panel of the Logs App and the plan suggestions will become visible in the Usage Screen, App Settings, and Manage Plan sections.
 
 ![Logs Usage Plan Recommendations](../images/logs/logs-usage-plan-recommendations.png)
 
