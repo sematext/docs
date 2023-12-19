@@ -43,7 +43,19 @@ pages:
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
       - Mappings and Templates: logs/mappings-templates.md
-      - Pipelines: logs/pipelines.md
+      - Pipelines:
+        - Overview: logs/pipelines.md
+        - Processors: logs/pipelines.md
+          - Overview: logs/processors-overview.md
+          - Flattener processor: logs/flattener-processor.md
+          - Field Extractor Processor: logs/field-extractor-processor.md
+          - Field Masking Processor: logs/field-masking-processor.md
+          - Script Field Processor: logs/script-field-processor.md
+          - Sampling Processor: logs/sampling-processor.md
+       - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
+       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
+      - Plan Recommendations: logs/plan-recommendations.md
+      - Logs Usage Screen: logs/logs-usage-screen.md
       - Archiving: logs/archiving.md
       - Discovery:
         - Overview: logs/discovery/intro.md
