@@ -18,21 +18,23 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 [Sematext Alerts](../alerts) help you address underlying issues before they affect user experience. There are three types of Alerts. 
 
 - **Threshold** - Alerts that are based on classic thresholds. They are **triggered** when something **crosses a pre-defined threshold**.
+- **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud.
 - **Anomaly** - Alerts based on statistical anomaly detection. They are **triggered** when **values** suddenly **change and deviate from the baseline**. 
-- **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud. 
+
+![Sematext Anomaly Alerts]((../images/guide/alerts-and-events/anomaly-alerts.png)
 
 **Threshold** and **Anomaly** Alerts can be triggered for both [Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/), [Synthetics](https://sematext.com/docs/synthetics/) and [Experience](https://sematext.com/docs/experience/) Apps, while **Heartbeat** Alerts are only available for [Monitoring](https://sematext.com/docs/monitoring/) Apps.
 
 Sematext lets you manage Alert Rules across your whole stack. You can use various notification channels to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
 
-- PagerDuty
-- OpsGenie
-- HipChat
-- Slack, and [many more](https://sematext.com/docs/integration/#alerts-notifications). 
+- [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/)
+- [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/)
+- [HipChat](https://sematext.com/docs/integration/alerts-hipchat-integration/)
+- [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), and [many more](https://sematext.com/docs/integration/#alerts-notifications). 
 
 ## Default Alerts
 
-As soon as an [App](./app-guide) is created, either for [Logs](../logs) or [Monitoring](../monitoring), you will see several app-specific Alerts Rules created for you by default. 
+For [Logs](../logs) or [Monitoring](../monitoring), as soon as an [App](./app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
 
 Default Alerts for a Logs App:
 
@@ -43,6 +45,8 @@ Default Alerts for a Monitoring App:
 - **Metric Alert for Disk Usage**
 - **Heartbeat Alert** if the **Agent stops sending data to the Monitoring App**
 - **Metric Anomaly Alert** for misbehaving Nodes
+
+There are also default alerts for [integrations](https://sematext.com/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
 
 In this example which is an Elasticsearch Monitoring App, the Java usage threshold and Elasticsearch Node Anomalies are integration-specific default Alerts.
 
