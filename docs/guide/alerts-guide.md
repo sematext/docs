@@ -23,6 +23,10 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 
 ![Sematext Anomaly Alerts](../images/guide/alerts-and-events/anomaly-alerts.png)
 
+When an anomaly alert is triggered, you'll be able to observe spikes and dips within the alert details flyout upon clicking on the [alert event](https://sematext.com/docs/alerts/alert-events/). The chart also features a confidence band that illustrates the range of certainty around the expected values.
+
+![Sematext Anomaly Alert Confidence Band](../images/guide/alerts-and-events/anomaly-alert-confidence-band.png)
+
 **Threshold** and **Anomaly** Alerts can be triggered for [Monitoring](https://sematext.com/docs/alerts/creating-metrics-alerts/), [Logs](https://sematext.com/docs/alerts/creating-logs-alerts/), [Synthetics](https://sematext.com/docs/alerts/creating-synthetics-alerts/) and [Experience](https://sematext.com/docs/alerts/creating-experience-alerts/) Apps, while [**Heartbeat**](https://sematext.com/docs/alerts/creating-heartbeat-alerts/) Alerts are only available for Monitoring Apps.
 
 Sematext lets you manage Alert Rules across your whole stack. You can use various [notification channels](https://sematext.com/docs/alerts/alert-notifications/) to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
