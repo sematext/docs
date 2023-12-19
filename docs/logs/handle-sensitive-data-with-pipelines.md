@@ -29,11 +29,11 @@ The [Field Masking](field-masking-processor) processor accepts regex as input an
 
 ## Drop Processor
 
-For scenarios where certain log events need to be eliminated entirely, the Drop processor is employed to remove these events from the logs. Here is an example of dropping events that are under financial information category.
+For scenarios where certain log events need to be eliminated entirely, the Drop processor is employed to remove these events from the logs. Here is an example of dropping events that contain sensitive financial information.
 
 ![Drop Finance Data](../images/logs/pipelines/sensitive-data-drop-finance-data.gif)
 
-After applying the filter to drop events containing financial transaction information, the preview section will appear empty for these types of logs. This indicates that these logs will be dropped and will not be stored in the database.
+After applying the filter to drop events containing financial transaction information, the preview section will appear empty for these types of logs. This indicates that these logs will be dropped and will not be stored in Sematext.
 
 ## Remove Field Processor
 
