@@ -34,7 +34,7 @@ Sematext lets you manage Alert Rules across your whole stack. You can use variou
 
 ## Default Alerts
 
-For [Logs](../logs) or [Monitoring](../monitoring), as soon as an [App](./app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
+For [Logs](../logs), [Monitoring](../monitoring), or [Synthetics](../synthetics), as soon as an [App](./app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
 
 Default Alerts for a Logs App:
 
@@ -46,7 +46,7 @@ Default Alerts for a Monitoring App:
 - **Heartbeat Alert** if the **Agent stops sending data to the Monitoring App**
 - **Metric Anomaly Alert** for misbehaving Nodes
 
-There are also default alerts for [integrations](https://sematext.com/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
+For [Logs](../logs) or [Monitoring](../monitoring), there are also default alerts for [integrations](https://sematext.com/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
 
 In this example which is an Elasticsearch Monitoring App, the Java usage threshold and Elasticsearch Node Anomalies are integration-specific default Alerts.
 
