@@ -88,7 +88,7 @@ This is where you select the [alert type](https://sematext.com/docs/alerts/#aler
 #### Ignore regularly occuring spikes and dips 
 
 We look at historical data and try to decide if an alert fits the regular stream of spikes and dips in metrics. If it does, we won't interrupt you with notifications.
-Based on the filter combination we find all previous spikes and dips from the past. Split them into group-by values (+-5% we assume as the same), find LCM (least common multiple) in the groups. This means we're trying to include the current value into our LCM groups to check if it fits any of them or not. If it fits, we assume this is a regular event and ignore it.
+Based on the filter combination we find all previous spikes and dips from the past. We split them into group-by values (+-5% we assume as the same), find LCM (least common multiple) in the groups. This means we're trying to include the current value into our LCM groups to check if it fits any of them or not. If it fits, we assume this is a regular event and ignore it.
 
 ### Meta Data
 
