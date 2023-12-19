@@ -23,7 +23,7 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 
 ![Sematext Anomaly Alerts](../images/guide/alerts-and-events/anomaly-alerts.png)
 
-**Threshold** and **Anomaly** Alerts can be triggered for [Events](https://sematext.com/docs/events/) and [Monitoring](https://sematext.com/docs/alerts/creating-metrics-alerts/), [Logs](https://sematext.com/docs/alerts/creating-logs-alerts/), [Synthetics](https://sematext.com/docs/alerts/creating-synthetics-alerts/) and [Experience](https://sematext.com/docs/alerts/creating-experience-alerts/) Apps, while [**Heartbeat**](https://sematext.com/docs/alerts/creating-heartbeat-alerts/) Alerts are only available for Monitoring Apps.
+**Threshold** and **Anomaly** Alerts can be triggered for [Monitoring](https://sematext.com/docs/alerts/creating-metrics-alerts/), [Logs](https://sematext.com/docs/alerts/creating-logs-alerts/), [Synthetics](https://sematext.com/docs/alerts/creating-synthetics-alerts/) and [Experience](https://sematext.com/docs/alerts/creating-experience-alerts/) Apps, while [**Heartbeat**](https://sematext.com/docs/alerts/creating-heartbeat-alerts/) Alerts are only available for Monitoring Apps.
 
 Sematext lets you manage Alert Rules across your whole stack. You can use various [notification channels](https://sematext.com/docs/alerts/alert-notifications/) to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
 
