@@ -13,7 +13,7 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 - **Alert Rules** that **detect Anomalies** and notify when key **performance indicators spike or drop**
 - **Criteria** that trigger **Alerts for monitored resources**
 - **Thresholds** defined for **Alerts** when selected **metrics reach certain severity levels**
-- **Notification channels** through which the responsible team will be notified about the incident
+- [**Notification channels**](https://sematext.com/docs/integration/#alerts-notifications) through which the responsible team will be notified about the incident
 
 [Sematext Alerts](../alerts) help you address underlying issues before they affect user experience. There are three types of Alerts. 
 
@@ -21,14 +21,14 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 - **Anomaly** - Alerts based on statistical anomaly detection. They are **triggered** when **values** suddenly **change and deviate from the baseline**. 
 - **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud. 
 
-**Threshold** and **Anomaly** Alerts can be triggered for both Monitoring and Logs Apps, while **Heartbeat** Alerts are only available for Monitoring Apps.
+**Threshold** and **Anomaly** Alerts can be triggered for both [Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/), [Synthetics](https://sematext.com/docs/synthetics/) and [Experience](https://sematext.com/docs/experience/) Apps, while **Heartbeat** Alerts are only available for [Monitoring](https://sematext.com/docs/monitoring/) Apps.
 
 Sematext lets you manage Alert Rules across your whole stack. You can use various notification channels to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
 
 - PagerDuty
 - OpsGenie
 - HipChat
-- Slack, and [many more](https://sematext.com/docs/integration/). 
+- Slack, and [many more](https://sematext.com/docs/integration/#alerts-notifications). 
 
 ## Default Alerts
 
