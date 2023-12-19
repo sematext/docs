@@ -73,14 +73,11 @@ You would choose tag name `os.host` and single value `host-x`.
 
 ####  Group by
 
-In the Group by section you choose what data series to group on. For example, if you
-choose the `os.host` tag and for the aggregation in `Aggregation` field you choose `all separately`
-the alert will trigger for each host separately.
+In the Group by section you choose what data series to group on. For example, if you choose the `os.host` tag and for the aggregation in `Aggregation` field you choose `all separately` the alert will trigger for each host separately.
 
 ####  Rollup by
 
-Data points sent to Sematext Cloud have a time label. If a metric is updated every 10 seconds, and you are
-looking at a 24-hour time range, you need 14,400 points to display all data points.. Rollup by is a function used to group data points in time buckets. So the metrics coming in within the specified time window of the alert (which is set in the condition tab) will be aggregated by the selected function in this section.
+Data points sent to Sematext Cloud have a time label. If a metric is updated every 10 seconds, and you are looking at a 24-hour time range, you need 14,400 points to display all data points. Rollup by is a function used to group data points in time buckets. So the metrics coming in within the specified time window of the alert (which is set in the condition tab) will be aggregated by the selected function in this section.
 
 Refer to [Rollup By](../dashboards/chart-builder/#rollup-by) to learn more.
 
