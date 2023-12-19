@@ -83,7 +83,7 @@ Refer to [Rollup By](../dashboards/chart-builder/#rollup-by) to learn more.
 
 ### Alert Condition Tab
 
-This is where you select the [alert type](https://sematext.com/docs/alerts/#alert-types) and the priority. If you select threshold type alert you need to enter the threshold value to trigger and alert and specify a time window.
+This is where you select the [alert type](https://sematext.com/docs/alerts/#alert-types) and the priority. If you select threshold type alert then you need to enter the threshold value to trigger an alert and specify a time window.
 
 #### Ignore regularly occuring spikes and dips 
 
