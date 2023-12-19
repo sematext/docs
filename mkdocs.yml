@@ -15,9 +15,21 @@ pages:
       - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
       - Scheduled Reports: guide/scheduled-reports.md      
+    - Fleet and Discovery: 
+      - Overview: fleet/index.md
+      - Fleet: fleet/fleet.md
+      - Discovery: fleet/discovery.md
     - Logs:
       - Overview: logs/index.md
       - Quick Start: logs/quick-start.md
+      - Discovery:
+        - Overview: logs/discovery/intro.md
+        - Setup: logs/discovery/setup.md
+        - Control Plane: logs/discovery/control-plane.md
+        - Shipping Log Files: logs/discovery/tailing-log-files.md
+        - Shipping Containers Logs: logs/discovery/tailing-containers.md
+        - Shipping Kubernetes Logs: logs/discovery/tailing-k8s-logs.md
+        - Shipping Journald Logs: logs/discovery/tailing-journald-logs.md
       - Settings: logs/settings.md
       - Reports & Components: logs/reports-and-components.md
       - Logs Terminal View: logs/logs-terminal-view.md
@@ -52,19 +64,11 @@ pages:
           - Field Masking Processor: logs/field-masking-processor.md
           - Script Field Processor: logs/script-field-processor.md
           - Sampling Processor: logs/sampling-processor.md
-        - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
-        - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
+      - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
+      - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
       - Archiving: logs/archiving.md
-      - Discovery:
-        - Overview: logs/discovery/intro.md
-        - Setup: logs/discovery/setup.md
-        - Control Plane: logs/discovery/control-plane.md
-        - Shipping Log Files: logs/discovery/tailing-log-files.md
-        - Shipping Containers Logs: logs/discovery/tailing-containers.md
-        - Shipping Kubernetes Logs: logs/discovery/tailing-k8s-logs.md
-        - Shipping Journald Logs: logs/discovery/tailing-journald-logs.md
       - Correlation: logs/correlation.md
       - Changelog: changelog.md
       - FAQ: logs/faq.md
@@ -231,7 +235,6 @@ pages:
       - Default Alerts: alerts/default-alerts.md
       - Alert Notification Hooks: alerts/alert-notifications.md
       - Account-default Hooks: alerts/account-default-hooks.md
-      - Alerts Meta and Tags: alerts/alerts-meta.md
       - Alert Scheduling: alerts/alert-scheduling.md
       - Alert Recipients: alerts/alert-recipients.md
     - Events:
@@ -396,10 +399,6 @@ pages:
         - FAQ: logagent/faq.md
       - Mobile App SDKs: agents/mobile.md
       - Browser SDK: agents/browser.md
-    - Fleet and Discovery: 
-      - Overview: fleet/index.md
-      - Fleet: fleet/fleet.md
-      - Discovery: fleet/discovery.md
     - API: api/index.md
     - FAQ: faq.md
 

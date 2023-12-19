@@ -13,26 +13,31 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 - **Alert Rules** that **detect Anomalies** and notify when key **performance indicators spike or drop**
 - **Criteria** that trigger **Alerts for monitored resources**
 - **Thresholds** defined for **Alerts** when selected **metrics reach certain severity levels**
-- **Notification channels** through which the responsible team will be notified about the incident
+- [**Notification channels**](https://sematext.com/docs/alerts/alert-notifications/) through which the responsible team will be notified about the incident
 
 [Sematext Alerts](../alerts) help you address underlying issues before they affect user experience. There are three types of Alerts. 
 
 - **Threshold** - Alerts that are based on classic thresholds. They are **triggered** when something **crosses a pre-defined threshold**.
+- **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud.
 - **Anomaly** - Alerts based on statistical anomaly detection. They are **triggered** when **values** suddenly **change and deviate from the baseline**. 
-- **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud. 
 
-**Threshold** and **Anomaly** Alerts can be triggered for both Monitoring and Logs Apps, while **Heartbeat** Alerts are only available for Monitoring Apps.
+![Sematext Anomaly Alerts](../images/guide/alerts-and-events/anomaly-alerts.png)
 
-Sematext lets you manage Alert Rules across your whole stack. You can use various notification channels to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
+When an anomaly alert is triggered, you'll be able to observe spikes and dips within the alert details flyout upon clicking on the [alert event](https://sematext.com/docs/alerts/alert-events/). The chart also features a confidence band that illustrates the range of certainty around the expected values.
 
-- PagerDuty
-- OpsGenie
-- HipChat
-- Slack, and [many more](https://sematext.com/docs/integration/). 
+![Sematext Anomaly Alert Confidence Band](../images/guide/alerts-and-events/anomaly-alert-confidence-band.png)
+
+**Threshold** and **Anomaly** Alerts can be triggered for [Monitoring](https://sematext.com/docs/alerts/creating-metrics-alerts/), [Logs](https://sematext.com/docs/alerts/creating-logs-alerts/), [Synthetics](https://sematext.com/docs/alerts/creating-synthetics-alerts/) and [Experience](https://sematext.com/docs/alerts/creating-experience-alerts/) Apps, while [**Heartbeat**](https://sematext.com/docs/alerts/creating-heartbeat-alerts/) Alerts are only available for Monitoring Apps.
+
+Sematext lets you manage Alert Rules across your whole stack. You can use various [notification channels](https://sematext.com/docs/alerts/alert-notifications/) to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
+
+- [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/)
+- [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/)
+- [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), and [many more](https://sematext.com/docs/alerts/alert-notifications/). 
 
 ## Default Alerts
 
-As soon as an [App](./app-guide) is created, either for [Logs](../logs) or [Monitoring](../monitoring), you will see several app-specific Alerts Rules created for you by default. 
+For [Logs](../logs), [Monitoring](../monitoring), or [Synthetics](../synthetics), as soon as an [App](./app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
 
 Default Alerts for a Logs App:
 
@@ -44,53 +49,14 @@ Default Alerts for a Monitoring App:
 - **Heartbeat Alert** if the **Agent stops sending data to the Monitoring App**
 - **Metric Anomaly Alert** for misbehaving Nodes
 
+For [Logs](../logs) or [Monitoring](../monitoring), there are also default alerts for [integrations](https://sematext.com/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
+
 In this example which is an Elasticsearch Monitoring App, the Java usage threshold and Elasticsearch Node Anomalies are integration-specific default Alerts.
 
-![Sematext Cloud System Generated Alerts](https://sematext.com/docs/images/guide/alerts-and-events/system-generated-alerts.png "Sematext Cloud System Generated Alerts")
+![Sematext Cloud System Generated Alerts](../images/guide/alerts-and-events/system-generated-alerts.png)
 
-You can view all the default and custom Alerts on the [Alert Rules](https://apps.sematext.com/ui/events/alerts/rules) page. This is where you can toggle, edit or delete any existing Alerts.
+You can view all the default and custom Alerts on the [Alert Rules](https://apps.sematext.com/ui/alerts/rules) page. This is where you can toggle, edit or delete any existing Alerts.
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Alerts Rules Window")
 
-## Creating Alerts
-
-Sematext Alerts can cover both complicated alerting scenarios with multiple rules for both Logs and Monitoring, as well as Events. A basic Alert Rule with an email or Slack notification is enough to cover elementary alerting needs.
-
-### Alerting on Logs
-
-To **create an Alert** you need to run a **search query** and press **Save Query/Alert Rule**. 
-
-![Create Alert Search Query](../images/guide/alerts-and-events/create-alert-logs-search-query.png)
-
-A **Save Query** window will open with the option to **Enable Alert**. When it's toggled, the **Alert Type picker** and **Condition** will expand, and the **Notifications** and **Schedule** tabs will be enabled. You'll see:
-
-- **Alert Type**, to choose either Threshold Alerts or Anomaly Alerts. For more information on alerting capabilities check [alerts](https://sematext.com/docs/alerts/) documentation pages.
-- **Condition**, to choose when the Alert will be triggered.
-- **Ignore regularly occuring spikes and dips**, where we look at historical data and try to decide if an alert fits the regular stream of spikes and dips in metrics. If it does, we won't interrupt you with notifications. 
-    
-    Based on the filter combination we find all previous spikes and dips from the past. Split them into group-by values (+-5% we assume as the same), find LCM (least common multiple) in the groups. This means we're trying to include the current value into our LCM groups to check if it fits any of them or not. If it fits, we assume this is a regular event and ignore it.
-
-![Enable Alert Notification](../images/guide/alerts-and-events/save-alert-1.png)
-
-- **Notification hook details** with a **default email** notification hook used to send the message to your account. You can also add additional email addresses as well as other types of notification hooks.
-
-![Set Alert Notification Hooks](../images/guide/alerts-and-events/save-alert-2.png)
-
-- **Schedule**, to choose when the Alerts will notify you based on a period, schedule or time.
-
-<video style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/alert-scheduling.mp4" type="video/mp4" />
-</video>
-
-
-Press Save and you're done. Check out the [integrations](https://sematext.com/docs/integration/) documentation for more information about alert notification hooks.
-
-### Alerting on Metrics
-
-Monitoring Apps have **metric-based Alerting**. Metrics have both **Threshold** and **Anomaly** Alerts which can be created on a per-metric basis.
-
-![Sematext Cloud Metric Component Alerts](https://sematext.com/docs/images/guide/alerts-and-events/metric-component-alert.png "Sematext Cloud Metric Component Alerts")
-
-Monitoring Apps also have **Heartbeat** Alerts as part of their settings. You can find it in the App Settings dropdown menu. They are triggered when what you are monitoring, like your servers, containers, or your applications stop sending data to Sematext.
-
-![Sematext Cloud Metric Component Custom Alerts](https://sematext.com/docs/images/guide/alerts-and-events/create-heartbeat-alerts.png "Sematext Cloud Metric Component Custom Alerts")
+More detailed instructions are provided in [Alerts Overview](https://sematext.com/docs/alerts/#creating-an-alert-rule).
