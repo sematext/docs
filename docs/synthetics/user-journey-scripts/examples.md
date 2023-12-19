@@ -91,3 +91,18 @@ This script utilizes Puppeteer's request interception feature to intercept and t
 ### [Text search](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/text-search.js)
 
 This script uses [waitForXpath](https://pptr.dev/api/puppeteer.page.waitforxpath) to search for the text “Troubleshooting Just Got Easier” on the page.
+
+
+
+### [Extract Google Play Store metrics](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/google-play.js)
+
+This script will scrape and extract various metrics related to an App listed on the Google Play Store.
+The script navigates through the App's store page, capturing and processing data such as overall ratings, the number of reviews, and the number of downloads.
+Additionally, it interacts with platform-specific buttons (Phone, Tablet, Watch, Chromebook, TV), extracting the respective ratings for each as custom metrics.
+
+
+
+### [Extract Apple Store metrics](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/apple-store.js)
+
+This script will scrape and extract various metrics related to an App listed on the Apple Store.
+The script waits for the reviews elements to appear, and then extracts the App's rating, total reviews, and percentages of 5-star, 4-star, 3-star, 2-star, and 1-star ratings. The extracted values are then defined as custom metrics using the Sematext context.
