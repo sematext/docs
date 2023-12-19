@@ -6,18 +6,18 @@ Processors are units of processing in Pipelines. They can change, drop, or even 
 Processors available in Logs Pipelines are:
 
 - **XML Parser**: Parse XML formatted fields into separate fields.
-- **Size processor**: Estimates size of document and extracts the information into a new field.
-- **Drop processor**: Drop all documents that match a specified filter.
+- **Size processor**: Estimates size of log event and extracts the information into a new field.
+- **Drop processor**: Drop all log events that match a specified filter.
 - [**Flattener processor**](../logs/flattener-processor): Used to flatten a nested structure into separate fields.
 - **User-Agent processor**: Extract OS, browser, device and other data from a User-Agent attribute using an external [library](https://yauaa.basjes.nl/expect/fieldvalues/).
 - **URL Parser**: Extracts query parameters and other important parameters from a URL.
-- **Rename Fields Processor**: Change the names of fields.
+- **Rename Fields Processor**: Change the names of log event fields.
 - **Remove Fields Processor**: Remove fields that contain [sensitive information](../logs/handle-sensitive-data-with-pipelines) or redundant data to save from costs. See [Reducing Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for more information.
 - [**Field Extractor Processor**](../logs/field-extractor-processor): Extract fields using a grok pattern.
 - [**Field Masking Processor**](../logs/field-masking-processor): Mask fields using a regex pattern and hide sensitive data. See [Handle Sensitive Data](../logs/handle-sensitive-data-with-pipelines) for more information.
 - [**Script Field Processor**](../logs/script-field-processor): Add or change a field using a script.
 - [**Sampling Processor**](../logs/sampling-processor): Keep only a certain percentage of your data using random sampling.
-- **Geo Processor**: Enrich documents with reverse geocoding location or IP address.
+- **Geo Processor**: Enrich log events with reverse geocoding location or IP address.
 
 Configuration section will be empty in most cases when you initially open Pipeline Builder.
 
