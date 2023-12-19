@@ -50,7 +50,7 @@ There are also default alerts for [integrations](https://sematext.com/docs/integ
 
 In this example which is an Elasticsearch Monitoring App, the Java usage threshold and Elasticsearch Node Anomalies are integration-specific default Alerts.
 
-![Sematext Cloud System Generated Alerts](https://sematext.com/docs/images/guide/alerts-and-events/system-generated-alerts.png "Sematext Cloud System Generated Alerts")
+![Sematext Cloud System Generated Alerts](../images/guide/alerts-and-events/system-generated-alerts.png)
 
 You can view all the default and custom Alerts on the [Alert Rules](https://apps.sematext.com/ui/alerts/rules) page. This is where you can toggle, edit or delete any existing Alerts.
 
