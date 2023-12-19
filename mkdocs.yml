@@ -231,7 +231,6 @@ pages:
       - Default Alerts: alerts/default-alerts.md
       - Alert Notification Hooks: alerts/alert-notifications.md
       - Account-default Hooks: alerts/account-default-hooks.md
-      - Alerts Meta and Tags: alerts/alerts-meta.md
       - Alert Scheduling: alerts/alert-scheduling.md
       - Alert Recipients: alerts/alert-recipients.md
     - Events:
