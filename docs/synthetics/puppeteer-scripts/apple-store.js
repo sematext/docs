@@ -13,7 +13,7 @@ async function testPage(page, context) {
   // Wait for the reviews elements to load
   await page.waitForSelector('.we-customer-ratings', {
       visible: true, // Wait for reviews element to be visible
-      timeout: 0 // Unlimited timeout
+      timeout: 30000 // Unlimited timeout
   });
 
   // Extract ratings information
