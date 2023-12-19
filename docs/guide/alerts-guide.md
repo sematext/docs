@@ -56,4 +56,4 @@ You can view all the default and custom Alerts on the [Alert Rules](https://apps
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Alerts Rules Window")
 
-More detailed instructions are provided in [Alerts Overview](https://sematext.com/docs/alerts/).
+More detailed instructions are provided in [Alerts Overview](https://sematext.com/docs/alerts/#creating-an-alert-rule).
