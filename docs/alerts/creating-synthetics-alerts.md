@@ -17,8 +17,8 @@ You can control when the alert should be triggered based on the consecutive run 
 
 ![Run count based alerting](../images/synthetics/create-monitor-run-count-alert.png)
 
-**NOTE:**
-It is important to distinguish this configuration from the 'Consecutive Runs' setting within the 'General' configuration tab. While 'Alert after N consecutive failures from a specific location' setting aims to withhold alerts until the monitor has failed N times, but shows each run that failed as a failed run, the consecutive runs setting counts the monitor run as failed only if all N retry attempts have failed. Both of these features target alert noise reduction, so what they do have in common is that they both result in alert notifications being sent only after N consecutive failed monitor runs.
+
+> It is important to distinguish this configuration from the 'Consecutive Runs' setting within the 'General' configuration tab. While 'Alert after N consecutive failures from a specific location' setting aims to withhold alerts until the monitor has failed N times, but shows each run that failed as a failed run, the consecutive runs setting counts the monitor run as failed only if all N retry attempts have failed. Both of these features target alert noise reduction, so what they do have in common is that they both result in alert notifications being sent only after N consecutive failed monitor runs.
 
 ## Metric Alerts
 Apart from the auto-created Synthetics alerts, you can create a custom alert on any of the [Synthetics metrics](/synthetics/metrics) and get notified when they are triggered. This could be used to set performance budgets for any of the metrics like page size, resource count, etc. You could create a threshold or anomaly alert. Metric alerts can be created directly from Synthetics charts in the monitor overview page or from custom charts for Synthetics metrics on your [dashboards](/dashboards). You can select the metric to create the alert rule by clicking the bell icon when you hover over the chart.
