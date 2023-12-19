@@ -42,6 +42,17 @@ If you disable this option, we **won’t save the response body** hence it **wil
 
 ![Save Response Body Disabled](../images/synthetics/response-body-disabled.png)
 
+## Bulk Adding HTTP Monitors
+
+When creating an HTTP Monitor, you can add multiple URLs at once. All configuration settings specified during the creation process will be applied to URLs added in bulk. To add URLs individually, click the '+ New Monitor' button for each one.
+
+![HTTP Add New Monitor](../images/synthetics/http-add-new-monitor.png)
+
+Alternatively, click the '+ Bulk Add' button. A pop-up will appear, allowing you to paste the list of URLs. Ensure each URL is separated by a new line within the pop-up. This enables you to add numerous endpoints for monitoring without the need to input each one individually.
+
+![HTTP Bulk Add Monitors](../images/synthetics/http-bulk-add-monitors.gif)
+
+
 ## Authentication
 
 To monitor pages protected by some form of authentication each monitor can be configured to use one of the following types of authentication.
