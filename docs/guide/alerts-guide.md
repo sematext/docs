@@ -29,7 +29,6 @@ Sematext lets you manage Alert Rules across your whole stack. You can use variou
 
 - [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/)
 - [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/)
-- [HipChat](https://sematext.com/docs/integration/alerts-hipchat-integration/)
 - [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), and [many more](https://sematext.com/docs/alerts/alert-notifications/). 
 
 ## Default Alerts
