@@ -40,3 +40,26 @@ Anomaly | yes | yes | yes
 Heartbeat | yes | no | no
 
 You can manage Alert rules interactively via the UI, or you can [manage alerts via the API](../api).
+
+## Creating an Alert Rule
+
+### Alert Metric
+
+#### Transformation
+
+Transformations are used to modify metrics using mathematical expressions and functions. For example, imagine you want to get alerted when both `request.size` and `response.size` together exceed some threshold or become anomalous.  You would then transform them into a single dataseries by using an expression like this:
+
+`request.size + response.size`
+
+And then you would create an alert on this new data series.
+
+Read about [Transformations](../dashboards/chart-builder/#transformation) to learn more about transformations, functions, and expressions used to perform transformations.
+
+
+### Alert Condition
+
+### Meta Data
+
+### Notifications
+
+### Schedule
