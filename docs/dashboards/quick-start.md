@@ -15,16 +15,81 @@ The image below displays a sample of a customized Infrastructure component desig
 
 ![Custom Infra Component](../images/dashboards/custom-infra-component.gif)
 
-## Available Dashboard Components
+## Available Custom Dashboard Components
 
-- Line, Area, Bar charts metrics component binned by data creation date
+- Events
+  - Events table: Table of events in reverse chronological order 
+- Infrastructure
+  - Hosts Tile Map: Colored presentation of your hosts state
+  - Containers Tile Map: Colored presentation of your containers state
+  - Processes Tile Map: Colored presentation of your processes state
+  - Pods Tile Map: Colored presentation of your pods state
+  - Jobs Tile Map: Colored presentation of your jobs state
+  - Cron Jobs Tile Map: Colored presentation of your cron jobs state
+  - Top N Hosts: Time series presentation of top hosts by given metric
+  - Top N Containers: Time series presentation of top containers by given metric
+  - Top N Processes: Time series presentation of top processes by given metric
+  - Top N Pods: Time series presentation of top Kubnernetes pods by given metric
+  - Top N Nodes: Time series presentation of top Kubernetes nodes by given metric
+  - Servers Table Overview: Table overview of your servers state
+  - Containers Table Overview: Table overview of your containers state
+  - Processes Table Overview: Table overview of your processes state
+  - Inventory Table Overview: Table overview of your inventory
+  - Packages Table Overview: Table overview of your packages
+  - Container Images Table Overview: Table overview of your container images
+  - Kubernetes Pods Table Overview: Table overview of Kubernetes pods
+  - Kubernetes Deployments Table Overview: Table overview of Kubernetes deployments
+  - Kubernetes Nodes Table Overview: Table overview Kubernetes nodes
+  - Kubernetes Stateful Sets Table Overview: Table overview of Kubernetes Stateful Sets
+  - Kubernetes Daemon Sets Table Overview: Table overview of Kubernetes Daemon Sets
+  - Kubernetes Jobs Table Overview: Table overview of Kubernetes Jobs
+  - Kubernetes Cron Jobs Table Overview: Table overview of Kubernetes Cron Jobs
+- Logs
+  - Logs Count: Single number panel that shows logs count
+  - Logs: Table of logs in revers chronogical order
+  - Logs Count Time Series: Bar chart binned by log event creation date
+  - Log Fields Top Values: Top N values of a given log event field
+  - Numeric Field Time Series: Avg, min, or max value of a numeric field binned by log event creation date
+- Experience
+  - Apdex: Shows ApdeX scores over time
+  - Resource Load Times: Shows website Resources load times over time
+  - Resource Load Counts: Shows website Resources load counts over time
+  - Resource Transfer Sizes: Shows website Resources load sizes over time
+  - Resource Transfer Type: Shows website Resources grouped by type
+  - Page Load Times: Shows website Page Load times over time
+  - Paint Times: Show website paint times over time
+  - Page Load Counts: Shows website Page Load counts over time
+  - Page Load Histogram: Shows website Page Load times histogram
+  - Memory Usage Histogram: Shows website memory usage histogram
+  - Memory Ysage: Shows website memory usage
+  - HTTP Requests Load Time: Shows website HTTP Requests load times over time
+  - HTTP Requests Count: Shows website HTTP Requests count over time
+  - HTTP Responses: Shows website HTTP Responses statistics
+  - HTTP Requests Histogram: Shows website HTTP Requests load time histogram
+  - Users Count: Shows website Users count over time
+  - Long Task Count: Shows website Page Load long tasks count
+  - Long Task Duration: Shows website Page Load long tasks duration
+  - Element Timing Duration: Shows website Element Timing duration
+  - Element Timing Count: Shows website Element Timing count
+  - User Groups: Shows count of users grouped by different attributes
+  - Time to First Byte: Identifies the time at which your servers sends a response
+  - Largest Contentful Paint: Measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading
+  - First Input Delay: Measures interactivity. To provide a good user experience, pages should have a FID of less than 100 milliseconds
+  - First Contentful Paint: Measures the time from when the page starts loading to when any part of the page's content is rendered on the screen
+  - Cumulative Layout Shift: Measures visual stability. To provide a good user experience, pages should maintain a CLS of less than 0.1
+
+ 
+## Available Generic Component Types
+
+In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Upon selecting a component from this category, you begin by choosing the solution type from which you wish to retrieve data. Next, you complete the necessary and optional parameters, including metrics, filtering, grouping, transformations, styling, and more.
+
+You can retrieve data from a particular App or opt for all Apps within a specific solution type for data visualization. For instance, to view the log count for a specific log [App](https://sematext.com/docs/guide/app-guide/), select the Numeric component and then the logs solution. In the 'Edit Component' dialog, choose the desired App from the Apps dropdown to observe its log count. Alternatively, for the total log count across all your log Apps, select the 'All Apps' option from the dropdown menu.
+
+Each of these components is extensively detailed on their dedicated page. For further insights into filter, grouping, and transformation functionalities, refer to the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
+
+- Time Series Chart: Line, Area, Bar charts metrics component binned by data creation date
 - Bar chart component binned by data creation date
-- Table of events component in reverse chronological order
-- Log table component with logs listed in reverse chronological order
-- Logs count bar chart time series component 
 - Numeric field time series component 
-- Events count bar chart time series component
-- Top N values of given log event field component
 - Pie chart
 - Doughnut chart
 - Geo map
