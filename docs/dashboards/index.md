@@ -1,7 +1,9 @@
 title: Sematext Dashboards
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, real user monitoring, and synthetic monitoring system. Dashboards are a powerful feature for cohesive data analysis from multiple data sources such as logs, metrics, and events.
 
-Dashboards are your central location where you put everything together. Logs, application performance metrics, infrastructure inventory and processes, cluster data with Docker and Kubernetes metrics, and events that give you insight into what is happening with your system in real-time. Everything in one place. 
+Dashboards are your central location where you put everything together. Logs, application performance metrics, infrastructure inventory and processes, cluster data with Docker and Kubernetes metrics, and events that give you insight into what is happening with your system in real-time. Everything in one place for easy correlation and troubleshooting. 
+
+For example, if you have a development and a production environment, it might make sense to have one Dashboard for each. You can create as many Dashboards as you want.
 
 You can create specific reports with various metrics, correlate them with logs and event timelines to get to the bottom of issues much easier.
 
