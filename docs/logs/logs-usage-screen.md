@@ -5,6 +5,8 @@ The Logs Usage screen provides insights into historical data concerning daily lo
 
 ![Logs Usage Stored and Received](../images/logs/logs-usage-stored-received.png)
 
+The costs are affected by the volume of data you send to a Logs App. When you transmit raw log messages to Sematext, a fixed rate of $0.1 per GB applies (received price), regardless of your plan, daily log volume, and retention selection. Once Sematext receives the logs, but before storing them, any defined pipeline processors are applied to structure or discard logs or portions of logs based on your specified pipeline conditions. Storage prices vary across plans, daily log volumes, and retention periods. Therefore, while you can send large amounts of data to Sematext, it's beneficial to filter out noise or unnecessary data to minimize storage expenses. This will not only reduce your costs, but also make your noise cleaner and easier to use.
+
 ## Daily Log Volume and Cost Optimization
 Selecting the appropriate Daily Volume plan is pivotal for achieving the **optimal $/GB** price. If the chosen Daily Volume is consistently exceeded, it can result in a higher $/GB price compared to selecting the next higher Daily Volume tier.
 
