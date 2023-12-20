@@ -247,7 +247,6 @@ pages:
     - Dashboards:
       - Overview: dashboards/index.md
       - Quick Start: dashboards/quick-start.md
-      - Settings: dashboards/settings.md
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
       - Report Variables: dashboards/report-variables.md
