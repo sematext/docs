@@ -10,29 +10,29 @@ Log data is hard to analyze and can be extremely tedious to understand. Dashboar
 ## Creating Dashboards
 To create a Dashboard, start by going to the Dashboards screen and click the **+ Add New Dashboard** button. Give your Dashbord a name and click save.
 
-<video style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/create-dash.mp4" type="video/mp4" />
-</video>
+![Create Dashboard](../images/dashboards/create-dashboard.gif)
 
-Follow along the [Quick Start](./quick-start) guide for more detailed instructions.
+After creating your Dashboard, you'll notice that a default Overview Report is automatically generated in the left menu panel. Additionally, a dialog will appear on the screen, prompting you to create your first component using the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/) and add it to the report.
+
+### Chart Builder
+
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/8PxtgrwY8SQ" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
+Learn more about [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
 
 ## Dashboard Settings
-Dashboard settings include naming, editing, and cloning dashboards, and handling reports and components. You can choose to add any type of component to a dashboard, add, edit and clone reports and manage filters.
 
-<video style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/dash-settings.mp4" type="video/mp4" />
-</video>
+On the Dashboards overview page, you have the ability to edit, delete, or clone your dashboards. Upon opening a dashboard, all the reports you've created within it will be visible in the left menu panel. Hovering over a report name and clicking on the three dots presents options to edit, clone, delete the report, and define [report variables](https://sematext.com/docs/dashboards/report-variables/).
 
-Check out the [Settings](./settings) guide for more info.
+![Dashboard Settings](../images/dashboards/dashboard-settings.gif)
 
-## Reports and Components
 Every Dashboard can have multiple Reports that act as buckets for your metrics, logs, infrastructure, events, and experience data. The data in one report are separated into components, which all live under the same roof in a Dashboard for easy correlation and troubleshooting.
 
-<video style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/component-types.mp4" type="video/mp4" />
-</video>
-
-Read more in the [Reports and Components](./reports-and-components) guide.
+Follow along the [Quick Start](./quick-start) guide for more detailed instructions.
 
 ## Getting Support
 
