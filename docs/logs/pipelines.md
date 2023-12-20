@@ -9,7 +9,13 @@ Each Pipeline consists of one or more [Processors](../logs/processors-overview) 
 
 Understanding the dynamics of log monitoring costs is pivotal, particularly as it directly correlates with the volume of stored logs. It's important to note that the cost doesn't hinge upon the volume of logs shipped to Sematext. Any data eliminated during the ingestion process **doesn’t have additional cost** and is **free**. This unique feature allows for efficient management of log volumes without incurring unnecessary expenses.
 
+#### How to enable/disable processors
+
 You can transmit significant amounts of logs to Sematext. An intriguing aspect is that while these logs can be transmitted to Sematext, the ingestion cost doesn't escalate if you opt to drop specific logs through [Pipelines Processors](../logs/processors-overview). This presents an advantageous scenario wherein logs can be available at a moment's notice through a simple toggle using the enable/disable option within the processors. 
+
+To enable or disable a processor, simply click on the toggle next to each processor within the processors list.
+
+![Pipeline Builder](../images/logs/pipelines/enable-disable-processors.gif)
 
 Consequently, this flexibility ensures that even if logs are not actively stored, they remain accessible, allowing for swift activation whenever required.
 
