@@ -355,7 +355,13 @@ Adding Experience to a WordPress site is done by using an external 3rd-party plu
 In the WordPress Admin panel, go to **Settings >> Insert Headers and Footers**.
 In the **Scripts in Header** box, paste both the scripts found in the first and second steps of the Experience installation instructions.
 
-Save the changes and you should be good to go.
+Save the changes and you should be good to go.  If you are running WordPress be sure to check out the video below - it's chock-full of WordPress-specific performance tips.
+
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/eSSYmt0db7c" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
 
 ## Micro Frontend
 
