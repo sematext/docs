@@ -3,13 +3,13 @@ description: Use Logs Pipeline processor to drop noise events and extract vital 
 
 Log [pipelines](../logs/pipelines) offer a range of [processors](../logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
 
-**Note:** Be sure to check out [Plan Recommendations](../logs/plan-recommendations) to ensure you’re using the most cost-effective plan for your logs in Sematext.
+> **Note:** Be sure to check out [Plan Recommendations](../logs/plan-recommendations) to ensure you’re using the most cost-effective plan for your logs in Sematext.
 
 Let's consider a scenario where we have a Logs App that is receiving query response logs from a database, resulting in a lengthy message field.
 
 ![Lenghty Message Field Log](../images/logs/pipelines/log-with-lenghty-message-field.png)
 
-**Message field content:**
+Let's zoom in on that chunky message field:
 
 `Sent bulk of size 159; permanently failed (stored as failed docs): 2; to retry: 0. Stats: (**mapper_parsing_exception**=2), Stats per index: (xxxxxx-xx-xx-abe5-xxxxxxx-12-08_1=2), Failures: xxxxxxxxxxx-3910-4735-abe5-xxxxxx-12-08_1:{"index":"xxxxxxxxxxxxxxxxx-3910-4735-abe5-xxxxxxxxxxxx-12-08_1","type":"_doc","id":"xxxxxxxxxxxxxxxxx","cause":{"type":"exception","reason":"Elasticsearch exception [type=mapper_parsing_exception, reason=failed to parse field [label.com.docker.compose.project] of type [text] in document with id 'VmPTYowBtgr_p_JHqWkG'. Preview of field's value: '{working_dir=/home/psuser/spacewatch_services, environment_file=/home/psuser/spacewatch_services/.env}']","caused_by":{"type":"exception","reason":"Elasticsearch exception [type=illegal_state_exception, reason=Can't get text on a START_OBJECT at 1:424]"}},"status":400}, xxxxxxxxxxx-3910-4735-abe5-xxxxxxxxxx-12-08_1:{"index":"xxxxxxxxxx-3910-4735-abe5-xxxxxxxxxxx-12-08_1","type":"_doc","id":"xxxxxxxxxxx","cause":{"type":"exception","reason":"Elasticsearch exception [type=mapper_parsing_exception, reason=failed to parse field [label.com.docker.compose.project] of type [text] in document with id 'xxxxxxxxxxxxxxxxxx'. Preview of field's value: '{working_dir=/home/psuser/spacewatch_services, environment_file=/home/psuser/spacewatch_services/.env}']","caused_by":{"type":"exception","reason":"Elasticsearch exception [type=illegal_state_exception, reason=Can't get text on a START_OBJECT at 1:424]"}},**"status":400**}`
 
@@ -17,7 +17,7 @@ Because your log monitoring cost depends on the volume of stored logs (side note
 
 In this example, we will aim to remove redundant and duplicated information. We’ll extract the essential details, specifically focusing on isolating the **response status**, which serves as a crucial metric, along with specifying the **type of exception**. Besides reducing the cost, this extraction has another positive side effect - it  enhances data clarity and facilitates a more precise analysis of the log information, this making it possible for you to get more insights and value from these logs.
 
-Instructions on achieving this goal with various pipeline processors, are detailed in the steps below.
+Instructions on achieving this goal with various pipeline processors are detailed in the steps below.
 
 ## Field Extractor Processor - Extract Metrics
 
@@ -47,7 +47,7 @@ Log pipelines enable complete removal of unwanted fields within log data. By eli
 
 We have extracted all the information that is vital to us from the message field. Let’s dive into the second step where we want to drop some unwanted events.
 
-**Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Plan Recommendations](../logs/plan-recommendations).
+> **Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Plan Recommendations](../logs/plan-recommendations).
 
 Everything above was aimed at eventually removing a field after extracting valuable bits worth keeping.  You can, of course, do that with multiple fields in your logs, not just one field like in our example.  But there is an even more radical thing you can do – you can drop complete log events.  See below.
 
@@ -75,17 +75,16 @@ This should reduce your costs considerably!  And if you need to see those INFO l
 
 # Conclusion
 
-Let’s assess the impact of log pipelines by comparing their before-and-after outcomes. In the scenarios outlined earlier, we encountered a log with a lengthy message field. While it held essential information, it also contained redundant data and noise. 1.5 KB of storage was needed to store the message field with its original value. After extracting key metrics and relocating essential data into new fields, which will take 6 bytes to store, we removed the original field from the log message, effectively eliminating the additional 1.5 KB to store that field. 
+Let’s assess the impact of log pipelines by comparing their before-and-after outcomes. In the scenarios outlined earlier, we encountered a log with a lengthy message field. While it held essential information, it also contained redundant data and noise. 1.5 KB of storage was needed to store the message field with its original value. After extracting key metrics and relocating essential data into new fields, which taku just 6 bytes to store, we removed the original field from the log message, effectively eliminating the 1.5 KB to store that field. 
 
-Now, let’s consider the overall log size, initially at 4 KBs for this case. By extracting vital information and removing the redundant field, each log's size was reduced to 2.5 KBs. This demonstrates a notable 38% reduction in size. Envision these types of logs flowing into your application, each passing through pipeline processors. This optimized process results in an overall 38% daily log volume reduction, resulting in significant cost savings.
+Now, let’s consider the overall log size, initially at 4 KBs for this case. By extracting vital information and removing the redundant field, each log's size was reduced to 2.5 KBs. This is nearly 40% reduction in size. Envision these types of logs flowing into your Logs App, each passing through pipeline processors. This optimized process results in approximately 40% overall daily log volume reduction, resulting in significant cost savings.
 
-On top of that, we’ve effectively filtered out all noise events based on specific conditions, leading to an additional 30% decrease in daily log volume.
+On top of that, we’ve effectively filtered out a ton of noisy events based on specific conditions, leading to an additional 30% decrease in daily log volume.
 
 See [Logs Usage Screen](../logs/logs-usage-screen) and [Plan Recommendations](../logs/plan-recommendations) for more information.
 
 ## How Our Team Can Support You
 
-Our Customer Success Managers and support team are available to assist in implementing these strategies. We can analyze your log structures with you, recommend suitable pipeline processors, and provide guidance to tailor them according to your specific needs—all free of charge.
+Our Customer Success and support team can help you implement these strategies. We can analyze your log structures with you, recommend suitable pipeline processors, and provide guidance to tailor them according to your specific needs — all free of charge.
 
-Reach out to us from support@sematext.com if you need further assistance.
-
+Reach out to us from [support@sematext.com](mailto:support@sematext.com) if you need further assistance.
