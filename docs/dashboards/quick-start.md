@@ -11,9 +11,9 @@ In the example below, we demonstrate the process of adding components from diffe
 
 With the custom reports features you can first create specific logging, events or metric component, and add it to your Dashboard just as you can with out-of-the-box [integration](/integration/) specific components that come included when you first create an App.
 
-The image below shows a sample of a custom Kafka report panel that was created by our DevOps team, and illustrates what will be displayed in a modal window when you add a component to a Dashboard using the components settings dropdown menu.
+The image below displays a sample of a customized Infrastructure component designed to automatically retrieve top data based on CPU, Disk, and Memory usage. To add this component, navigate to the 'Infrastructure' tab on the left and select the 'Top N Hosts' option.
 
-![Add Metric Dashboards Component](https://sematext.com/docs/images/guide/dashboards/add-metric-report-to-dashboard.png "Add Metric Dashboards Component")
+![Custom Infra Component](../images/dashboards/custom-infra-component.gif)
 
 ## Available Dashboard Components
 
