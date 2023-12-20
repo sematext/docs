@@ -5,13 +5,29 @@ Log events are not always structured the way you want them to be. For various re
 
 Each Pipeline consists of one or more [Processors](../logs/processors-overview) that are executed in the order in which they are defined in a Pipeline.  Pipelines and its Processors can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents, and more. 
 
-### Log Ingestion and Storage Costs with Pipelines
+### The Use Case for Pipelines
 
-Understanding the dynamics of log monitoring costs is pivotal, particularly as it directly correlates with the volume of stored logs. It's important to note that the cost doesn't hinge upon the volume of logs shipped to Sematext. Any data eliminated during the ingestion process **doesn’t have additional cost** and is **free**. This unique feature allows for efficient management of log volumes without incurring unnecessary expenses.
+There are several use cases for Pipelines:
 
-You can transmit significant amounts of logs to Sematext. An intriguing aspect is that while these logs can be transmitted to Sematext, the ingestion cost doesn't escalate if you opt to drop specific logs through [Pipelines Processors](../logs/processors-overview). This presents an advantageous scenario wherein logs can be available at a moment's notice through a simple toggle using the enable/disable option within the processors. 
+- Improving signal-to-noise ratio by cleaning up log event content, structure, or even dropping unwanted logs all together
+- Extraction of metrics or other bits into separate fields making them suitable for charting and alerting
+- Masking sensitive data or removing fields or whole events when they contain sensitive data
+- Reducing costs by trimming heavy log events or dropping them
 
-Consequently, this flexibility ensures that even if logs are not actively stored, they remain accessible, allowing for swift activation whenever required.
+These are just a few examples.  The use of Pipelines is not limited to these use cases.
+
+### Understanding Log Ingestion and Storage Costs with Pipelines
+
+Understanding the dynamics of log monitoring costs is pivotal, particularly as it directly correlates with the volume of stored logs. There are two log ingestion factors to understand as it pertains to costs:
+
+1. The volume of logs sent to Sematext.  That's the "Received Price".  It's $0.1/GB and it's the same regardless of which plan your Logs App is on.
+2. The volume of logs stored by Sematext.  That's the "Stored Price".  It differs based on plan and data retention chosen for a Logs App.
+
+It's important to note that the Received Price is significantly lower than the Stored Price.
+
+Any logs sent to Sematext count towards the received log volume, but only logs that end up getting stored in Sematext count towards stored log volume.  Moreover, even when some logs do end up getting stored, trimming them with Pipelines can reduce cost significantly. Put another way, any **data eliminated during the ingestion process doesn’t have additional cost** and is **free**. This unique feature allows for efficient management of log volumes without incurring unnecessary expenses.
+
+In other words, you can transmit large amounts of logs to Sematext and, while these logs can be transmitted to Sematext, the ingestion cost won't go up if you opt to trim heavy log events or drop specific logs through [Pipelines Processors](../logs/processors-overview).
 
 See [Reducing Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for more information.
 
