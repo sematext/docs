@@ -34,7 +34,7 @@ On the Dashboards overview page, you have the ability to edit, delete, or clone 
 
 Every Dashboard can have multiple Reports that act as buckets for your metrics, logs, infrastructure, events, and experience data. The data in one report are separated into components, which all live under the same roof in a Dashboard for easy correlation and troubleshooting.
 
-Follow along the [Quick Start](./quick-start) guide for more detailed instructions.
+Follow along the [Quick Start](./quick-start) guide for more detailed instructions on how to add components to Dashboard reports.
 
 ## Getting Support
 
