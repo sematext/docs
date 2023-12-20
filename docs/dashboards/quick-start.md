@@ -1,30 +1,13 @@
 title: Sematext Dashboards Quick Start
 description: Sematext Cloud Dashboards for monitoring metrics, logs, APIs, websites, etc.
 
-
-After you log into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Dashboard. A Dashboard is a collection for different types of data. This is where you keep logs, metrics, events, infrastructure data and experience statistics in a single screen for easy correlation and troubleshooting.
-
-For example, if you have a development and a production environment, it might make sense to have one Dashboard for each. You can create as many Dashboards as you want.
-
-## Creating a Dashboard
-
-You create a Dashboard by pressing the **+ Add New Dashboard** button in the Dashboards tab.
-
-![Create a new Dashboard](../images/dashboards/create-dash.png)
-
-Give it a name and description.
-
-![Name the Dashboard](../images/dashboards/name-dash.png)
-
-## Adding Components to a Dashboard
-
-Any type of component can be easily added to one or more Dashboards.
+Any type of component can be easily added to one or more Dashboard reports.
 
 Once you have a dashboard created, you can start adding components to it. However, at least one or more Apps need to be created. As soon as your data is consumed and indexed by Sematext Cloud, logs, metrics, experience, events, and infrastructure components will become available to add to Dashboards. 
 
-<video style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/add-components-to-dash-long.mp4" type="video/mp4" />
-</video>
+In the example below, we demonstrate the process of adding components from different solutions, selecting the preferred App to fetch data for each component, adding them to the Dashboard, and organizing the layout for improved visualization.
+
+![Add Components to Dashboard](../images/dashboards/dashboards-add-components.gif)
 
 With the custom reports features you can first create specific logging, events or metric component, and add it to your Dashboard just as you can with out-of-the-box [integration](/integration/) specific components that come included when you first create an App.
 
