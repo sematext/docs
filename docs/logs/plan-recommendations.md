@@ -1,7 +1,9 @@
 title: Plan Recommendations
 description: Make the most cost-effective choice for your log data needs with Plan Recommendations feature.
 
-We understand that every organization has unique needs when it comes to log management. That's why we offer a range of plans with multiple retention periods and daily log volume options. Plan recommendations feature designed to help you make the most cost-effective choice for your log data needs.
+We understand that every organization has unique needs when it comes to log management. That's why we offer a range of plans with multiple retention periods and daily log volume options. Plan recommendations feature is designed to help you make the most cost-effective choice for your log monitoring needs.
+
+> Reminder: Every Logs App has its own plan, retention, and daily log volume selection.  Everything described here applies to each Logs App individually.
 
 ## Daily Volume and Cost Clarification
 
@@ -17,7 +19,7 @@ Our pricing structure allows you to choose higher daily volumes, which results i
 
 ## Cost Estimations and Transparency
 
-If you exceed your selected daily volume, we'll estimate your end-of-month bill, including overage charges. However, with plan recommendations, we proactively recommend better plans to avoid additional costs. You can access these recommendations as soon as you log in to your Sematext Logs App. Conversely, if you ship less data than your chosen daily volume, we'll identify cheaper plans with lower daily volumes and suggest them to you. This way, you won't have to pay for daily log volume that you don't actually need.
+If you exceed your selected daily volume, we'll estimate your end-of-month bill, including overage charges. However, with plan recommendations, we proactively recommend better plans to help you avoid overpaying. You can access these recommendations as soon as you log in to your Sematext Logs App. Conversely, if you ship less data than your chosen daily volume, we'll identify cheaper plans with lower daily volumes and suggest them to you. This way, you won't have to pay for daily log volume that you don't actually need.
 
 **Let's walk through it with an example in Sematext Cloud:**
 
@@ -25,12 +27,12 @@ When you log in to your Sematext Logs App, keep an eye on the left menu panel. I
 
 ![Plan Recommendations Left Menu](../images/logs/plan-recommendations-left-menu.png)
 
-Click on "App Settings" to access your current plan selection. In this example, it's set at 5 GB/day. You can also see the average daily log volume shipped in the last 7 and 30 days, which, in this instance, is 400 MB/day.
+Click on "App Settings" to access your current plan selection. In this example, the Daily Log Volume is set to 5 GB/day. You can also see the average daily log volume shipped in the last 7 and 30 days, which, in this instance, is 400 MB/day.
 
 ![Plan Recommendations 2](../images/logs/plan-recommendations-2.png)
 
-Based on your recent daily log volumes, we recommend a better App plan for you. In this case, it's 1 GB/day, which should more than suffice for your needs. By making this switch, you'll reduce your monthly bill from $250 to just $60. That's a substantial 76% decrease in expenses compared to your current plan.
+Based on your recent daily log volumes, we recommend a better Daily Log Volume selection for you. In this case, the 1 GB/day is cheaper and will more than suffice. By making this switch, the monthly bill will go from $250 down to just $60. That's a massive 76% decrease in cost!
 
 ![Plan Recommendations](../images/logs/plan-recommendations-1.png)
 
-Alongside plan recommendations, you have the opportunity to lower your expenses through [Logs Pipelines](../logs/pipelines). Logs Pipelines allow you to filter out irrelevant events based on your criteria, remove unnecessary fields to reduce storage costs, and serve as a significant money-saving tool.
+Beyond plan recommendations, you have the opportunity to lower your expenses through [Logs Pipelines](../logs/pipelines). Logs Pipelines allow you to filter out irrelevant events based on your criteria, remove unnecessary fields to reduce storage costs, and serve as a significant money-saving tool.  This is described in [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/).  Following steps described there will result in the reduction of your daily log volume and, if the log volume was sufficiently reduced, in a few days you may see a recommendation for a more optimal Daily Log Volume selection.
