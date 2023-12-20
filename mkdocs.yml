@@ -34,7 +34,7 @@ pages:
       - Reports & Components: logs/reports-and-components.md
       - Logs Terminal View: logs/logs-terminal-view.md
       - Logs Table Quick Actions: logs/logs-table-quick-actions.md
-      - Sending Log Events:
+      - Shipping Logs:
         - Overview: logs/sending-log-events.md
         - Using Elasticsearch API: logs/index-events-via-elasticsearch-api.md
         - Syslog:
@@ -45,12 +45,14 @@ pages:
           - syslog-ng: logs/syslog-ng.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
-      - Searching Log Events:
+      - Searching Logs:
         - Overview: logs/searching-log-events.md
         - Logsene CLI: logs/logsene-cli.md
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
         - Kibana: logs/kibana.md
+      - Correlating Logs: logs/correlation.md
+      - Logs Archiving: logs/archiving.md
       - Fields: logs/fields.md
       - Field Types: logs/field-types.md
       - Supported Date Formats: logs/supported-date-formats.md
@@ -64,12 +66,10 @@ pages:
           - Field Masking Processor: logs/field-masking-processor.md
           - Script Field Processor: logs/script-field-processor.md
           - Sampling Processor: logs/sampling-processor.md
-      - Handle Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
+      - Handling Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
-      - Archiving: logs/archiving.md
-      - Correlation: logs/correlation.md
       - Changelog: changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
@@ -86,7 +86,7 @@ pages:
         - Service Discovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md
       - Reports & Components: monitoring/reports-and-components.md
-      - Correlation: monitoring/correlation.md
+      - Correlating Metrics: monitoring/correlation.md
       - Tags: monitoring/tags.md
       - Custom Metrics: monitoring/custom-metrics.md
       - Changelog: changelog.md
@@ -109,7 +109,7 @@ pages:
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Sampling: experience/sampling.md
-      - Correlation: experience/correlation.md
+      - Correlatiing User Experience: experience/correlation.md
       - Changelog: changelog.md
       - FAQ: experience/faq.md
     - Synthetics:
@@ -136,7 +136,7 @@ pages:
       - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
       - Metrics: synthetics/metrics.md
-      - Correlation: synthetics/correlation.md
+      - Correlating: synthetics/correlation.md
       - Using the API: synthetics/using-the-api.md
       - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
@@ -198,8 +198,9 @@ pages:
         - Varnish Cache: integration/varnishcache-logs.md
         - Vercel: integration/vercel-logs-integration.md
       - Notification Hooks:
-        - Custom Webhooks: integration/alerts-webhooks-integration.md
+        - AlertOps: integration/alerts-alertops-integration.md
         - Big Panda: integration/alerts-bigpanda-integration.md
+        - Custom Webhooks: integration/alerts-webhooks-integration.md
         - Email: integration/alerts-email-integration.md
         - Google Chat: integration/alerts-googlechat-integration.md
         - HipChat: integration/alerts-hipchat-integration.md
@@ -218,7 +219,6 @@ pages:
         - Twilio: integration/alerts-twilio-integration.md
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
-        - AlertOps: integration/alerts-alertops-integration.md
         - Custom Params: integration/alerts-webhooks-custom-params.md
       - Orchestration:
         - Terraform: integration/terraform.md
@@ -242,7 +242,7 @@ pages:
       - Examples: events/event-examples.md
       - Adding Events: events/adding.md
       - Viewing Events: events/timeline.md
-      - Correlation: events/correlation.md
+      - Correlating Events: events/correlation.md
       - API: events/event-api.md
     - Dashboards:
       - Overview: dashboards/index.md
