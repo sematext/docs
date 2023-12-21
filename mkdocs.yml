@@ -122,6 +122,7 @@ pages:
         - Syncing with GitHub: synthetics/user-journey-scripts/syncing-with-github.md
         - Handling Sensitive Data: synthetics/user-journey-scripts/sensitive-data.md
         - Examples: synthetics/user-journey-scripts/examples.md
+        - Troubleshooting: synthetics/user-journey-scripts/troubleshooting.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration:
         - Overview: synthetics/ci-cd/overview.md
