@@ -1,0 +1,20 @@
+title: Overview
+description: Components offered in chart builder.
+
+In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Once you select a component from this category, you'll begin by choosing the solution type from which you wish to retrieve data.
+Next, you'll complete the necessary and optional parameters, including metrics, filtering, grouping, transformations, styling, and more to start building your custom component.
+
+![Create Custom Component](../images/dashboards/create-custom-component.gif)
+
+Each of these components is extensively detailed on their dedicated page. For further insights into filter, grouping, and transformation functionalities, refer to the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
+
+- [Time Series](./time-series)
+- [Bar chart](./bar-chart)
+- [Pie chart](./pie-chart)
+- [Doughnut chart](./doughnut-chart)
+- [Geo map](./geomap)
+- [24x7 Heatmap](./heatmap)
+- [Heatbar](./heatbar)
+- [Numeric](./numeric)
+- [Metric panel](./metric-panel)
+- [Markdown](./markdown)
