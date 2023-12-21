@@ -25,7 +25,7 @@ Conditional coloring can be applied to numeric components, enabling the highligh
 
 Conversely, an increase in available disk space is generally positive and could be colored green. However, if it begins nearing zero, it warrants attention and should be represented using red tones.
 
-Refer to the {Color Guidelines](https://sematext.com/docs/dashboards/color-guidelines/) for best practices in conditional coloring.
+Refer to the [Color Guidelines](https://sematext.com/docs/dashboards/color-guidelines/) for best practices in conditional coloring.
 
 The conditional coloring feature enables you to assign colors based on specific conditions, like values exceeding, falling below, or equaling defined thresholds.
 
