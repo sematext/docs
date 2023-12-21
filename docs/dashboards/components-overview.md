@@ -13,6 +13,5 @@ Each of these components is extensively detailed on their dedicated page. For fu
 - [Geo map](./geomap)
 - [24x7 Heatmap](./heatmap)
 - [Heatbar](./heatbar)
-- [Numeric](./numeric)
-- [Metric panel](./metric-panel)
+- [Numeric](./numeric-component)
 - [Markdown](./markdown)
