@@ -8,10 +8,8 @@ Next, you'll complete the necessary and optional parameters, including metrics, 
 
 Each of these components is extensively detailed on their dedicated page. For further insights into filter, grouping, and transformation functionalities, refer to the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
 
-- [Time Series](./time-series)
-- [Bar chart](./bar-chart)
-- [Pie chart](./pie-chart)
-- [Doughnut chart](./doughnut-chart)
+- [Time Series Chart](./time-series-chart)
+- [Bar chart](./bar-pie-donut-chart)
 - [Geo map](./geomap)
 - [24x7 Heatmap](./heatmap)
 - [Heatbar](./heatbar)
