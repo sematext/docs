@@ -11,7 +11,7 @@ The displayed values depends on the selected data time picker located at the top
 
 ## Configuration
 
-You can configure these charts either during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component.
+You can configure these charts either during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component'.
 
 - Choose All Apps or a specific App that you want to fetch data from.
 - Choose one or more metrics metric
