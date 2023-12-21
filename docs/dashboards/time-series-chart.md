@@ -7,7 +7,7 @@ The timeseries chart displays the progression of one or multiple metrics or log 
 
 ## Configuration
 
-You can configure the Time Series chart either during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component.
+You can configure the Time Series chart either during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component'.
 
 - Choose All Apps or a specific App that you want to fetch data from.
 - Choose one or more metrics metric
