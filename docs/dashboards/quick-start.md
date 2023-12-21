@@ -15,7 +15,9 @@ The image below displays a sample of a customized Infrastructure component desig
 
 ![Custom Infra Component](../images/dashboards/custom-infra-component.gif)
 
-## Available Custom Dashboard Components
+## Built-in Components
+
+We provide pre-configured built-in components with predefined metrics and styles tailored to specific purposes. These components are ready to use, requiring just a click to select and add them to your dashboard.
 
 - Events
   - Events table: Table of events in reverse chronological order 
@@ -79,22 +81,6 @@ The image below displays a sample of a customized Infrastructure component desig
   - Cumulative Layout Shift: Measures visual stability. To provide a good user experience, pages should maintain a CLS of less than 0.1
 
  
-## Available Generic Component Types
+## Custom Components
 
-In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Upon selecting a component from this category, you begin by choosing the solution type from which you wish to retrieve data. Next, you complete the necessary and optional parameters, including metrics, filtering, grouping, transformations, styling, and more.
-
-You can retrieve data from a particular App or opt for all Apps within a specific solution type for data visualization. For instance, to view the log count for a specific log [App](https://sematext.com/docs/guide/app-guide/), select the Numeric component and then the logs solution. In the 'Edit Component' dialog, choose the desired App from the Apps dropdown to observe its log count. Alternatively, for the total log count across all your log Apps, select the 'All Apps' option from the dropdown menu.
-
-Each of these components is extensively detailed on their dedicated page. For further insights into filter, grouping, and transformation functionalities, refer to the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
-
-- Time Series Chart: Line, Area, Bar charts metrics component binned by data creation date
-- Bar chart component binned by data creation date
-- Numeric field time series component 
-- Pie chart
-- Doughnut chart
-- Geo map
-- 24x7 Heatmap
-- Heatbar
-- Numeric panel for a single numerical value
-- Metric panel for multiple numerical values from different Apps
-- Markdown free form editor component used to create textual panels used to add custom event notes
+In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Once you select a component from this category, you'll begin by choosing the solution type from which you wish to retrieve data. Next, you'll complete the necessary and optional parameters to start building your custom component. The [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/) section explains the common functionalities offered in all the components. To explore all the component types and learn how to create each one, refer to the [Components Overview](./components-overview).
