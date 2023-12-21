@@ -249,6 +249,14 @@ pages:
       - Quick Start: dashboards/quick-start.md
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
+      - Components:
+        - Overview: dashboards/components-overview.md
+        - Time Series Chart: dashboards/time-series-chart.md
+        - Bar, Pie, and Donut Charts: dashboards/bar-pie-donut-chart.md
+        - Numeric Component: dashboards/numeric-component.md
+        - Heatmap: dashboards/heatmap.md
+        - Geo map: dashboards/geomap.md
+        - Markdown: dashboards/markdown.md
       - Report Variables: dashboards/report-variables.md
       - Color Guidelines: dashboards/color-guidelines.md
     - Tags:
