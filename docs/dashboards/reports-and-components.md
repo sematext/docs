@@ -11,7 +11,7 @@ Here's how you can **correlate Metrics with Events and Logs**, and view it all i
 
 ## Dashboard Components
 
-The image below shows a common Monitoring App component showing its functionality and interactive elements. Using the component settings dropdown menu, you can easily add any metrics components from one or more Apps to the Dashboard. Create correlations reports, observe and analyze how multiple technologies coexist in your system. Zoom and time shift through charts, display a single component in full view, create alerts, and effortlessly share reports across your organization. 
+The image below shows a common Monitoring App component. Using the component settings dropdown menu, you can easily add any metrics components from one or more Apps to the Dashboard. Create correlations reports, observe and analyze how multiple technologies coexist in your system. Zoom and time shift through charts, display a single component in full view, create alerts, and effortlessly share reports across your organization. 
 
 ![Metrics Dashboards Component](../images/dashboards/metrics-dashboard-component-2.png)
 
