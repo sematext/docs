@@ -14,7 +14,7 @@ The displayed values depends on the selected data time picker located at the top
 You can configure these charts either during their initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component'.
 
 - Choose All Apps or a specific App that you want to fetch data from.
-- Choose one or more metrics metric
+- Choose one or more metric
 - Enter optional parameters such as:
   - [Transformation](https://sematext.com/docs/dashboards/chart-builder/#transformation)
   - [Filter By](https://sematext.com/docs/dashboards/chart-builder/#filter-by)
