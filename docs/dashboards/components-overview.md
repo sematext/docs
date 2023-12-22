@@ -1,7 +1,7 @@
 title: Overview
 description: Components offered in chart builder.
 
-In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Once you select a component from this category, you'll begin by choosing the solution type from which you wish to retrieve data.
+As shown in the screenshot below, in the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Once you select a component from this category, you'll begin by choosing the solution type from which you wish to retrieve data.
 Next, you'll complete the necessary and optional parameters, including metrics, filtering, grouping, transformations, styling, and more to start building your custom component.
 
 ![Create Custom Component](../images/dashboards/create-custom-component.gif)
