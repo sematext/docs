@@ -72,4 +72,4 @@ system or application metrics.  Or if you simply want to leave "a note".
 
 Adding events via the UI supports markdown format.
 
-[![Create a custom event](../images/events/custom-event.png "Create a custom event")](../images/events/custom-event.png)
+[![Create a custom event](../images/events/custom-event.png "Create a custom event")](../images/events/custom-event.gif)
