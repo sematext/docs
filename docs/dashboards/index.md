@@ -3,7 +3,11 @@ description: Sematext Cloud is a modern monitoring, log management, transaction 
 
 Dashboards are your central location where you put everything together. Logs, application performance metrics, infrastructure inventory and processes, cluster data with Docker and Kubernetes metrics, and events that give you insight into what is happening with your system in real-time. Everything in one place for easy correlation and troubleshooting. 
 
-For example, if you have a development and a production environment, it might make sense to have one Dashboard for each. You can create as many Dashboards as you want.
+In the example below, we have a apache service endpoint where we are monitoring Core Web Vitals with Synthetics App, we are monitoring Apache service performance metrics such as CPU, Memory usage and Network Traffic with a Monitoring App and we are shipping logs from that service. You can put all the data coming from these Apps in a single dashboard to have everything in one place.
+
+![Apache Dashboard](../images/dashboards/apache-dashboard.gif)
+
+If you have a development and a production environment, it might make sense to have one Dashboard for each. You can create as many Dashboards as you want.
 
 You can create specific reports with various metrics, correlate them with logs and event timelines to get to the bottom of issues much easier.
 
