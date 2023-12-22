@@ -28,4 +28,4 @@ From the Axes tab, you can configure the X and Y axes, select the unit, and adju
 
 ### Granularity
 
-Granularity controls how much time is presented as a single data point. By default it's automatically determined based on the selected time range. When data is sparse, or when you want make a data series smoother, you may want to increase minimal granularity to remove gaps between data points. To reduce smoothing make the minimal granularity smaller. Enable fixed granularity to prevent the system computing it based on the time range. This option can be used only if granularity is set to value greater than 10m.
+Granularity controls how much time is presented as a single data point. By default it's automatically determined based on the selected time range. When data is sparse, or when you want to make a data series smoother, you may want to increase minimal granularity to remove gaps between data points. To reduce smoothing make the minimal granularity smaller. Enable fixed granularity to prevent the system computing it based on the time range. This option can be used only if granularity is set to value greater than 10m.
