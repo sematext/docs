@@ -9,6 +9,8 @@ In the example below, we have an Apache service endpoint and we are monitoring C
 
 If you have a development and a production environment, it might make sense to have one Dashboard for each. You can create as many Dashboards as you want.
 
+Note that top level dashboards differ from what we call [App](https://sematext.com/docs/guide/app-guide/) specific dashboards/reports. App specific reports are placed within each app, displaying data specific to that particular App. In contrast, dashboards can fetch data from multiple different Apps.
+
 You can create specific reports with various metrics, correlate them with logs and event timelines to get to the bottom of issues much easier.
 
 Log data is hard to analyze and can be extremely tedious to understand. Dashboards provide the means to display one or more metrics in parallel with logs, and display them in a unified report for easy correlation and investigation.
