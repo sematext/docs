@@ -29,6 +29,12 @@ In other words, you can transmit large amounts of logs to Sematext and, while th
 
 See [Reducing Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for more information.
 
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/DTX33iA7iDY" 
+frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen class="video"></iframe>
+</div>
+
 
 ## Pipeline Builder
 
