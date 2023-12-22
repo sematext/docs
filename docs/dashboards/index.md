@@ -34,7 +34,7 @@ Learn more about [Chart Builder](https://sematext.com/docs/dashboards/chart-buil
 
 ## Dashboard Settings
 
-On the Dashboards overview page, you have the ability to edit, delete, or clone your dashboards. Upon opening a dashboard, all the reports you've created within it will be visible in the left menu panel. Hovering over a report name and clicking on the three dots presents options to edit, clone, delete the report, and define [report variables](https://sematext.com/docs/dashboards/report-variables/).
+On the Dashboards overview page, you have the ability to edit, delete, or clone your dashboards. Dashboards are top-level pages where you can add multiple reports in it. Upon opening a dashboard, all the reports you've created within it will be visible in the left menu panel. Hovering over a report name and clicking on the three dots presents options to edit, clone, delete the report, and define [report variables](https://sematext.com/docs/dashboards/report-variables/).
 
 ![Dashboard Settings](../images/dashboards/dashboard-settings.gif)
 
