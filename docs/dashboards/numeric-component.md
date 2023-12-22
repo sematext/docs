@@ -7,7 +7,7 @@ Displays the value of the selected metric. The displayed values depends on the s
 
 ## Configuration
 
-You can configure the componenteither during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component'.
+You can configure the component either during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component'.
 
 - Choose All Apps or a specific App that you want to fetch data from.
 - Choose one or more metrics metric
