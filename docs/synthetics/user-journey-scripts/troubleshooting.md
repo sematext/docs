@@ -14,10 +14,9 @@ Consider the following points when troubleshooting User Journey script issues:
 
 As mentioned in the introduction, an issue with your Browser monitor's User Journey scripts could appear at various points in time relative to the last time you modified it:
 
-- Immediately after creating the monitor - there's a good chance that the monitor has some sort of syntax or logic errors. Consider using the `Test` button when creating a new monitor to see how it performs before you finalize its creation.
-- Shortly after modifying it - the logic changes you recently introduced could be at fault, try reverting the script back to what it was before. We recommend storing your scripts in GitHub and [syncing them with Sematext](./syncing-with-github.md) for easy tracking of changes.
-- Randomly, without any changes taking place recently.
-- The website you're monitoring could have changed in the meantime. Please review the User Journey described in your script manually in your browser and check for any deviations from it. If the issue persists and pops up intermittently, consider using the *consecutive runs* feature to re-run the monitor multiple times and only mark the run as failed if all those retries fail. This helps filter out connectivity issues and similar intermittent problems.
+- **Immediately after creating the monitor** - There's a good chance that the monitor has some sort of syntax or logic errors. Consider using the `Test` button when creating a new monitor to see how it performs before you finalize its creation.
+- **Shortly after modifying it** - The logic changes you recently introduced could be at fault, try reverting the script back to what it was before. We recommend storing your scripts in GitHub and [syncing them with Sematext](./syncing-with-github.md) for easy tracking of changes.
+- **Randomly, without any changes taking place recently** - The website you're monitoring could have changed in the meantime. Please review the User Journey described in your script manually in your browser and check for any deviations from it. If the issue persists and pops up intermittently, consider using the *consecutive runs* feature to re-run the monitor multiple times and only mark the run as failed if all those retries fail. This helps filter out connectivity issues and similar intermittent problems.
 
 
 ### Double-check the element selectors manually
