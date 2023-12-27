@@ -149,6 +149,12 @@ pages:
       - JVM: integration/jvm-integration.md
       - Kubernetes: integration/kubernetes.md
       - MySQL: integration/mysql-integration.md
+      - Nginx: integration/nginx-integration.md
+      - Opensearch: integration/opensearch-integration.md
+      - PostgreSQL: integration/postgresql-integration.md
+      - RabbitMQ: integration/rabbitmq-integration.md
+      - Solr: integration/solr-integration.md
+      - Varnish Cache: integration/varnishcache-integration.md
       - Monitoring:
         - Akka: integration/akka.md
         - Apache: integration/apache.md
