@@ -260,7 +260,7 @@ There are 3 types of alerts in Sematext:
 
 Let’s see how to actually create some alert rules for Elasticsearch metrics in the animation below. The request query count chart shows a spike. We normally have up to 100 requests, but we see it can jump to over 600 requests. To create an alert rule on a metric we’d go to the pulldown in the top right corner of a chart and choose “Create alert”. The alert rule applies the filters from the current view and you can choose various notification options such as email or configured [notification hooks](https://sematext.com/docs/alerts/#alert-integrations) (PagerDuty, Slack, VictorOps, BigPanda, OpsGenie, Pusher, generic webhooks etc.)
 
-![Alert creation for Elasticsearch request query count metric](https://sematext.com/wp-content/uploads/2019/03/elasticsearch-create-alert.gif)
+![Alert creation for Elasticsearch request query count metric](../images/integrations/elasticsearch-create-alert.gif)
 
 ## More about Elasticsearch Monitoring
 
