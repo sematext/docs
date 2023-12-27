@@ -13,7 +13,7 @@ Elasticsearch is a distributed, RESTful search and analytics engine designed for
 
 ![Elasticsearch Counterpart](../images/integrations/elasticsearch-counterpart.gif)
 
-Having both Elasticsearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as CPU, memory usage, disk I/O) with logs (search queries, indexing operations), you can identify if a sudden spike in resource usage aligns with a specific type of query or indexing operation. This correlation helps in optimizing queries, indexing strategies, or scaling resources to maintain optimal performance.
+Having both Elasticsearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as CPU, memory usage, disk I/O) with logs (search queries, indexing operations), you can identify if a sudden spike in resource usage aligns with a specific type of query or indexing operation. This correlation helps in optimizing queries, indexing strategies, or scaling resources to maintain optimal performance. Or if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 
 To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
@@ -51,63 +51,6 @@ For example, if refresh time is too high, you might want to adjust the [refresh 
 Last, but certainly not least, you may want to get an alert if a node leaves the cluster, so you can replace it. Once you do, you can keep an eye on shard stats, to see how many are initializing or relocating:
 
 ![Dropping nodes and relocation of shards](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-10.59.52-1.png)
-
-### Alert Setup
-There are 3 types of alerts in Sematext:
-
- - **Heartbeat alerts**, which notify you when a Elasticsearch DB server is down
- - Classic **threshold-based alerts** that notify you when a metric value crosses a predefined threshold
- - Alerts based on statistical **anomaly detection** that notify you when metric values suddenly change and deviate from the baseline
-
-Let’s see how to actually create some alert rules for Elasticsearch metrics in the animation below. The request query count chart shows a spike. We normally have up to 100 requests, but we see it can jump to over 600 requests. To create an alert rule on a metric we’d go to the pulldown in the top right corner of a chart and choose “Create alert”. The alert rule applies the filters from the current view and you can choose various notification options such as email or configured [notification hooks](https://sematext.com/docs/alerts/#alert-integrations) (PagerDuty, Slack, VictorOps, BigPanda, OpsGenie, Pusher, generic webhooks etc.)
-
-![Alert creation for Elasticsearch request query count metric](https://sematext.com/wp-content/uploads/2019/03/elasticsearch-create-alert.gif)
-
-## Correlating Logs and Metrics
-Since having [logs and metrics in one platform](https://sematext.com/metrics-and-logs/) makes troubleshooting simpler and faster let’s ship Elasticsearch logs too. You can use [many log shippers](https://sematext.com/docs/integration/#logging), but we’ll use [Logagent](https://sematext.com/logagent/) because it’s lightweight, easy to set up, and because it can parse and structure logs out of the box.
-### **Shipping Elasticsearch Logs**
- 1. Create a Logs App to obtain an App token
- 2. Install Logagent npm package
-```
-sudo npm i -g @sematext/logagent
-```
-
-you don’t have Node.js, you can install it easily. E.g. On Debian/Ubuntu:
-
-```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
- 3. Install the Logagent service by specifying the logs token and the path to Elasticsearch log files. You can use ``-g ‘var/log/**/elasticsearch*.log` `` to ship only logs from Elasticsearch server. If you run other services, on the same server consider shipping all logs using ``-g `/var/log/**/*.log` `` The default settings ship all logs from /var/log/**/*.log when the -g parameter is not specified. Logagent detects the init system and installs Systemd or Upstart service scripts. On Mac OS X it creates a launchd service. Simply run:
-
-```
-sudo logagent-setup -i YOUR_LOGS_TOKEN -g `var/log/**/elasticsearch*.log`
-#for EU region:
-#sudo logagent-setup -i LOGS_TOKEN
-#-u logsene-receiver.eu.sematext.com
-#-g `var/log/**/elasticsearch*.log`
-```
-
-The setup script generates the configuration file in /etc/sematext/logagent.conf and starts Logagent as system service.
-
-### **Log Search and Dashboards**
-
-Once you have logs in Sematext you can search through them when troubleshooting, save queries you run frequently or  [create your individual logs dashboard](https://sematext.com/product-updates/#/2018/custom-reports-for-monitoring-logs-apps).
-
-![Search for Elasticsearch Logs](https://sematext.com/wp-content/uploads/2019/03/clickhouse-logs-search.png)
-
-### **Elasticsearch Metrics and Log Correlation**
-
-A typical troubleshooting workflow starts from detecting a spike in the metrics, then digging into logs to find the root cause of the problem. Sematext makes this really simple and fast. Your metrics and logs live under the same roof. Logs are centralized, the search is fast, and the powerful  [log search syntax](https://sematext.com/docs/logs/search-syntax/) is simple to use. Correlation of metrics and logs is literally one click away.
-
-![Elasticsearch logs and metrics in a single view](https://sematext.com/wp-content/uploads/2019/03/pasted-image-0-1.png)
-
-## More about Elasticsearch Monitoring
-
-* [Elasticsearch Monitoring Guide](https://sematext.com/blog/elasticsearch-guide/)
-* [Top 10 Elasticsearch Metrics To Monitor](https://sematext.com/blog/top-10-elasticsearch-metrics-to-watch/)
-* [Elasticsearch Open Source Monitoring Tools](https://sematext.com/blog/elasticsearch-open-source-monitoring-tools/)
-* [Monitoring Elasticsearch With Sematext](https://sematext.com/blog/monitoring-elasticsearch-with-sematext/)
 
 ## Metrics
 
@@ -289,7 +232,48 @@ completed threads<br>**es.thread.pool.completed** <br>*(long counter)*          
 thread pool min<br>**es.thread.pool.min** <br>*(long gauge)*                                                   |  thread pool min
 thread pool max<br>**es.thread.pool.max** <br>*(long gauge)*                                                   |  thread pool max
 
-## FAQ
+## Logs
+
+Once data is in, you can explore it via the built-in reports: 
+
+![Elasticsearch Logs Overview Report](../images/agents/elasticsearch_logs_overview.png)
+
+## Exploring logs
+
+Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Queries report to see a breakdown of your queries and "zoom in" to the ones you're interested in:
+
+![Elasticsearch Queries Report](../images/agents/elasticsearch_logs_queries.png)
+
+Other built-in reports include:
+
+- **Errors**: breakdown of what's wrong: which nodes or components generate errors
+- **Clustering**: logs produced by components that have to do with cluster coordination: master logs, logs related to a node joining/leaving a cluster and shard allocation
+- **Deprecation**: breakdown of deprecation logs by node and coomponent
+- **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
+
+### Alert Setup
+There are 3 types of alerts in Sematext:
+
+ - **Heartbeat alerts**, which notify you when a Elasticsearch DB server is down
+ - Classic **threshold-based alerts** that notify you when a metric value crosses a predefined threshold
+ - Alerts based on statistical **anomaly detection** that notify you when metric values suddenly change and deviate from the baseline
+
+Let’s see how to actually create some alert rules for Elasticsearch metrics in the animation below. The request query count chart shows a spike. We normally have up to 100 requests, but we see it can jump to over 600 requests. To create an alert rule on a metric we’d go to the pulldown in the top right corner of a chart and choose “Create alert”. The alert rule applies the filters from the current view and you can choose various notification options such as email or configured [notification hooks](https://sematext.com/docs/alerts/#alert-integrations) (PagerDuty, Slack, VictorOps, BigPanda, OpsGenie, Pusher, generic webhooks etc.)
+
+![Alert creation for Elasticsearch request query count metric](https://sematext.com/wp-content/uploads/2019/03/elasticsearch-create-alert.gif)
+
+## More about Elasticsearch Monitoring
+
+* [Elasticsearch Monitoring Guide](https://sematext.com/blog/elasticsearch-guide/)
+* [Top 10 Elasticsearch Metrics To Monitor](https://sematext.com/blog/top-10-elasticsearch-metrics-to-watch/)
+* [Elasticsearch Open Source Monitoring Tools](https://sematext.com/blog/elasticsearch-open-source-monitoring-tools/)
+* [Monitoring Elasticsearch With Sematext](https://sematext.com/blog/monitoring-elasticsearch-with-sematext/)
+
+## Troubleshooting
+
+If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Elasticsearch Logs App. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+
+### FAQ
 
 ** Why doesn't the number of documents I see in Sematext match the number of documents in my Elasticsearch index **
 
