@@ -10,9 +10,7 @@ MySQL is an open-source relational database management system (RDBMS) that enabl
 3. After installing the agent, the Discovery tab shows all the MySQL services identified on the host and you will start receiving metrics or logs from MySQL services.
 4. If you've created an MySQL Monitoring App and want to collect MySQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from MySQL services and manage log and metric shipping effortlessly.
 
-![MySQL Counterpart](../images/integrations/mysql-counterpart.gif)
-
-Having both MySQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, 
+Having both MySQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as query execution time, throughput, and resource utilization) with logs (query execution logs, error logs) helps in identifying slow queries, inefficient indexing, or resource bottlenecks. This correlation aids in optimizing queries, refining indexing strategies, and fine-tuning resource allocation for better MySQL performance.
 
 To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
