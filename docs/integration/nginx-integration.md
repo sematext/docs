@@ -118,7 +118,7 @@ Once data is in, you can explore it via the built-in reports:
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Users report to check on where the requests are coming from:
 
-![Nginx Users Report](../images/logs/nginx-logpack-2.png.png)
+![Nginx Users Report](../images/logs/nginx-logpack-2.png)
 
 Other built-in reports include:
 
