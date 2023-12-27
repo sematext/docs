@@ -92,7 +92,7 @@ Once data is in, you can explore it via the built-in reports:
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Authentication report to check on granted and denied connections:
 
-![RabbitMQ Authentication Overview](../images/agents/rabbitmq_auth.png.png)
+![RabbitMQ Authentication Overview](../images/agents/rabbitmq_auth.png)
 
 Other built-in reports include:
 
