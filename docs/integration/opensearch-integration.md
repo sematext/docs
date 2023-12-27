@@ -10,8 +10,6 @@ OpenSearch is a powerful, open-source search and analytics engine built for scal
 4. After installing the agent, the Discovery tab shows all the Opensearch services identified on the host and you will start receiving metrics or logs from Opensearch services.
 5. If you've created an Opensearch Monitoring App and want to collect Opensearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Opensearch services and manage log and metric shipping effortlessly.
 
-![Opensearch Counterpart](../images/integrations/Opensearch-counterpart.gif)
-
 Having both Opensearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 
 
