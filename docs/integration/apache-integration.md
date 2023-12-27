@@ -1,4 +1,4 @@
-title: Apache Web Server Monitoring Integration
+title: Apache
 description: Apache monitoring integration sends workers, scoreboard, php fpm, and httpd server performance metrics and other inventory data from your OS and web server to Sematext in cloud SaaS infrastructure and application monitoring & log management service 
 
 Apache is an open-source web server software that serves web pages to users over the internet. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects Apache metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
@@ -12,10 +12,12 @@ Apache is an open-source web server software that serves web pages to users over
           SetHandler server-status
         </Location>
 
-2.  Create an Apache App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data.
-3.  Name your Apache monitoring App and, if you want to collect Apache logs as well, create a Logs App along the way.
-4.  Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview) displayed in the UI.
-5.  After installing the agent, the Discovery tab shows all the Apache services identified on the host. To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+2. Create an Apache App in the  [Integrations / Overview](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)). This will let you install the agent and control access to your monitoring and logs data.
+3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview) displayed in the UI.
+4. After installing the agent, the Discovery tab shows all the Apache services identified on the host and you will start receiving metrics from Apache services.
+5. If you want to collect Apache logs as well, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' page, where you'll find all the discovered log sources from Apache services and manage log shipping effortlessly.
+   
+To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Apache Metrics
 
