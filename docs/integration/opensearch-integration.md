@@ -22,16 +22,16 @@ To [explore logs and services](https://sematext.com/docs/monitoring/autodiscover
 #### Search Query performance metrics: Request Rate and Latency
 When the cluster receives a request, it may need to access data from multiple shards, across multiple nodes. Knowing the rate at which the system is processing and returning requests, how many requests are currently in progress, and how long requests are taking can provide valuable insights into the health and performance of the OpenSearch cluster.
 
-<img class="content-modal-image" alt="Request Rate" src="../../images/integrations/opensearch-request-rate.png" title="Request Rate">
+![Request Rate](../images/integrations/opensearch-request-rate.png)
 
-<img class="content-modal-image" alt="Latency" src="../../images/integrations/opensearch-latency.png" title="Latency">
+![Latency](../images/integrations/opensearch-latency.png)
 
 #### Indexing Rate and Merge Times
 Monitoring the OpenSearch document indexing rate and merge time can help identify anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
 
-<img class="content-modal-image" alt="Merged Documents" src="../../images/integrations/opensearch-merged-documents.png" title="Merged Documents">
+![Merged Documents](../images/integrations/opensearch-merged-documents.png)
 
-<img class="content-modal-image" alt="Refresh, Flush, Merge" src="../../images/integrations/opensearch-indexing-merge.png" title="Refresh, Flush, Merge">
+![Refresh, Flush, Merge](../images/integrations/opensearch-indexing-merge.png)
 
 ### System and JVM Metrics
 OS metrics like CPU, memory, disk I/O, and network play an essential role in OpenSearch monitoring.
