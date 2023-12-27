@@ -144,6 +144,7 @@ pages:
       - FAQ: synthetics/faq.md
     - Integrations:
       - Overview: integration/index.md
+      - Apache: integration/apache-integration.md
       - Monitoring:
         - Akka: integration/akka.md
         - Apache: integration/apache.md
