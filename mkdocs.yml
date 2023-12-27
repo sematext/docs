@@ -147,6 +147,8 @@ pages:
       - Apache: integration/apache-integration.md
       - Elasticsearch: integration/elasticsearch-integration.md
       - JVM: integration/jvm-integration.md
+      - Kubernetes: integration/kubernetes.md
+      - MySQL: integration/mysql-integration.md
       - Monitoring:
         - Akka: integration/akka.md
         - Apache: integration/apache.md
@@ -164,7 +166,6 @@ pages:
         - Jenkins: integration/jenkins.md
         - JVM: integration/jvm.md
         - Kafka: integration/kafka.md
-        - Kubernetes: integration/kubernetes.md
         - MySQL: integration/mysql.md
         - MongoDB: integration/mongodb.md
         - Nginx: integration/nginx.md
