@@ -53,8 +53,6 @@ Make sure that tag ```<jmx />``` is enabled in your ```solrconfig.xml``` file.
 4. After installing the agent, the Discovery tab shows all the Solr services identified on the host and you will start receiving metrics or logs from Solr services.
 5. If you've created an Solr Monitoring App and want to collect Solr logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Solr services and manage log and metric shipping effortlessly.
 
-![Solr Counterpart](../images/integrations/solr-counterpart.gif)
-
 Having both Solr Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, your metrics might indicate a sudden spike in query latency or a rise in memory consumption. By correlating this with the logs, you might discover that during this period of high latency, there were specific queries generating errors or that certain indexing tasks were failing due to insufficient resources.
 
 To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
