@@ -1,6 +1,191 @@
 title: Integrations
 descriptions: Sematext integrations with ready to use monitoring agents and log shippers for infrastructure and container monitoring, log management and analytics, alerting, chatops, and more. Our Cloud and on-premises platform exposes the Elasticsearch API and syslog receivers with built in anomaly detection, data analysis and visualization tools and services
 
+## Monitoring & Logs
+
+Sematext supports over 100 different integrations that automatically collect thousands of metrics and logs. Each integration includes a number of pre-built dashboards, reports, and alert rules that are readily available, requiring no additional configuration. Additionally, several integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without the need for modifying or restarting any services.
+
+<div class="mdl-grid integrations">
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/apache/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/apache.svg" alt="Apache" title="AWS - Apache Monitoring" style="height: 106px; padding-top: 36px;">
+						</div>
+						<div class="side back">
+							<h5>Apache</h5>monitor total network traffic, PHP FPM pool listen queues and processes, scoreboard available worker and
+							connection Ops, request rates, memory, cpu, ...
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+		<a href="../integration/elasticsearch/">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="flip-card-container">
+					<div class="flip-card">
+						<div class="side">
+							<img src="../images/integrations/elasticsearch.svg" alt="Elasticsearch" title="Elasticsearch Monitoring" style="width: 48px;">
+						</div>
+						<div class="side back"><h5>Elasticsearch</h5>request rate, indexing, JVM Pool size, latency, documents, nodes, cluster health, cache, thread pools, circut breakers, search, index stats, ...</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/jvm/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/java.svg" alt="JVM" title="JVM Monitoring" style="width: 54px;">
+                                          </div>
+                                          <div class="side back"><h5>JVM</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/kubernetes/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/kubernetes.svg" alt="Kubernetes" title="Kubernetes Monitoring" style="width: 48px;">
+                                          </div>
+                                          <div class="side back"><h5>Kubernetes</h5> Get detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/mysql/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/mysql.svg" alt="Mysql" title="Mysql" style="width: 56px;">
+                                          </div>
+                                          <div class="side back"><h5>Mysql</h5>connections, queries/questions rate, select rate, mysql traffic, cache usage, mysql trafffic, MyISAM key, InnoDB, table stats, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/nginx/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/nginx.svg" alt="Nginx" title="Nginx Monitoring" style="width: 96px;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>Nginx</h5>total requests, connections, serving connections, CPU, load, memory, I/O read/wriew, total network traffic, ...
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/nginxplus/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/nginx-plus.svg" alt="Nginx Plus" title="Nginx Plus Monitoring" style="width: 116px;">
+                                          </div>
+                                          <div class="side back"><h5>Nginx Plus</h5>requests, cache hits, server checks, status zones, caches, upstreams, CPU, IO read/write, disk space used, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/opensearch/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/opensearch.svg" alt="OpenSearch" title="OpenSearch Monitoring" style="width: 48px;">
+                                          </div>
+                                          <div class="side back"><h5>OpenSearch</h5>Cluster Health, Shard Stats, Index Stats, Search, Cache, Thread Pools, Circuit Breakers, Connections, Scripting, Ingest...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/postgresql/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/solr/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/solr.svg" alt="Solr" title="Solr Monitoring" style="width: 74px">
+                                          </div>
+                                          <div class="side back"><h5>Solr</h5>index stats, request rate, added docs, JVM pool size, query result cache, doxument cache, filter cache, warmup, indexing, ...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/solrcloud/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/solr-cloud.svg" alt="Solr Cloud" title="Solr Cloud Monitoring" style="width: 64px;">
+                                          </div>
+                                          <div class="side back">
+                                                  <h5>Solr Cloud</h5>error count, deletes by id, added docs, rollbacks, soft commits, lookups, evictions, hits, max doc, segments, autocommit max time, ...
+                                          </div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+          <a href="../integration/varnishcache/">
+                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                          <div class="flip-card-container">
+                                  <div class="flip-card">
+                                          <div class="side">
+                                                  <img src="../images/integrations/varnishcache.svg" alt="Varnish" title="Varnish Cache Monitoring" style="width: 48px;">
+                                          </div>
+                                          <div class="side back"><h5>Varnish Cache</h5>Backend and Client connections and requests, Cache Hits and Misses, Threads, Bans...</div>
+                                  </div>
+                          </div>
+                  </div>
+          </a>
+  </div>
+</div>
+
+
 ## Monitoring
 
 Sematext Monitoring supports over 100 different integrations that automatically collect thousands of metrics. Each integration includes a number of pre-built dashboards, reports, and alert rules that are readily available, requiring no additional configuration. Additionally, several integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without the need for modifying or restarting any services.
@@ -17,23 +202,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
 						<div class="side back">
 							<h5>Akka</h5>predefined visualizations and dashboards with mailbox size, routing time, errors count, actors, dispatchers,
 							routers, time in mailbox, ...
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/apache/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/apache.svg" alt="Apache" title="AWS - Apache Monitoring" style="height: 106px; padding-top: 36px;">
-						</div>
-						<div class="side back">
-							<h5>Apache</h5>monitor total network traffic, PHP FPM pool listen queues and processes, scoreboard available worker and
-							connection Ops, request rates, memory, cpu, ...
 						</div>
 					</div>
 				</div>
@@ -116,20 +284,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/elasticsearch/">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/elasticsearch.svg" alt="Elasticsearch" title="Elasticsearch Monitoring" style="width: 48px;">
-						</div>
-						<div class="side back"><h5>Elasticsearch</h5>request rate, indexing, JVM Pool size, latency, documents, nodes, cluster health, cache, thread pools, circut breakers, search, index stats, ...</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--3-col">
 		<a href="../integration/hbase/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
@@ -174,20 +328,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
     	</a>
     </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/jvm/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/java.svg" alt="JVM" title="JVM Monitoring" style="width: 54px;">
-                                          </div>
-                                          <div class="side back"><h5>JVM</h5>max open files, used, deamon thread count, thread count, collection count / avg size / max time, ...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
           <a href="../integration/kafka/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
@@ -202,34 +342,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/kubernetes/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/kubernetes.svg" alt="Kubernetes" title="Kubernetes Monitoring" style="width: 48px;">
-                                          </div>
-                                          <div class="side back"><h5>Kubernetes</h5> Get detailed insights into your cluster’s health, performance metrics, resource counts amongst other important metrics...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/mysql/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/mysql.svg" alt="Mysql" title="Mysql" style="width: 56px;">
-                                          </div>
-                                          <div class="side back"><h5>Mysql</h5>connections, queries/questions rate, select rate, mysql traffic, cache usage, mysql trafffic, MyISAM key, InnoDB, table stats, ...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
           <a href="../integration/mongodb/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
@@ -238,36 +350,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
                                                   <img src="../images/integrations/mongodb.svg" alt="MongoDB" title="MongoDB" style="width: 128px">
                                           </div>
                                           <div class="side back"><h5>MongoDB</h5>storage, DB memory, locks, documents, DB network, DB operations, DB journal, background flushes, network connections, ...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/nginx/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/nginx.svg" alt="Nginx" title="Nginx Monitoring" style="width: 96px;">
-                                          </div>
-                                          <div class="side back">
-                                                  <h5>Nginx</h5>total requests, connections, serving connections, CPU, load, memory, I/O read/wriew, total network traffic, ...
-                                          </div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/nginxplus/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/nginx-plus.svg" alt="Nginx Plus" title="Nginx Plus Monitoring" style="width: 116px;">
-                                          </div>
-                                          <div class="side back"><h5>Nginx Plus</h5>requests, cache hits, server checks, status zones, caches, upstreams, CPU, IO read/write, disk space used, ...</div>
                                   </div>
                           </div>
                   </div>
@@ -296,20 +378,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
                                                   <img src="../images/integrations/expressjs-icon.svg" alt="Express.js" title="Express.js Monitoring" style="width: 116px;">
                                           </div>
                                           <div class="side back"><h5>Express.js</h5>process memory, workers, event loop latency, garbage collection, response/request rates, HTTP monitoring, ...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/opensearch/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/opensearch.svg" alt="OpenSearch" title="OpenSearch Monitoring" style="width: 48px;">
-                                          </div>
-                                          <div class="side back"><h5>OpenSearch</h5>Cluster Health, Shard Stats, Index Stats, Search, Cache, Thread Pools, Circuit Breakers, Connections, Scripting, Ingest...</div>
                                   </div>
                           </div>
                   </div>
@@ -359,52 +427,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
                   </div>
           </a>
   </div>
-          <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/postgresql/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/postgresql.png" alt="PostreSQL" title="PostgreSQL Monitoring" style="width: 80px;height: auto;margin: 34px auto;">
-                                          </div>
-                                          <div class="side back">
-                                                  <h5>PostgreSQL</h5>All key PostgreSQL and OS metrics, in one place.
-                                          </div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/solr/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/solr.svg" alt="Solr" title="Solr Monitoring" style="width: 74px">
-                                          </div>
-                                          <div class="side back"><h5>Solr</h5>index stats, request rate, added docs, JVM pool size, query result cache, doxument cache, filter cache, warmup, indexing, ...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/solrcloud/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/solr-cloud.svg" alt="Solr Cloud" title="Solr Cloud Monitoring" style="width: 64px;">
-                                          </div>
-                                          <div class="side back">
-                                                  <h5>Solr Cloud</h5>error count, deletes by id, added docs, rollbacks, soft commits, lookups, evictions, hits, max doc, segments, autocommit max time, ...
-                                          </div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
   <div class="mdl-cell mdl-cell--3-col">
           <a href="../integration/spark/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -442,20 +464,6 @@ Sematext Monitoring supports over 100 different integrations that automatically 
                                                   <img src="../images/integrations/tomcat.svg" alt="Solr" title="Tomcat Monitoring" style="width: 74px">
                                           </div>
                                           <div class="side back"><h5>Tomcat</h5>bytes sent, error requests, max connections, poller thread count, current threads busy, queue size, pool size, rejected sessions, ...</div>
-                                  </div>
-                          </div>
-                  </div>
-          </a>
-  </div>
-          <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/varnishcache/">
-                  <div class="demo-card-event mdl-card mdl-shadow--2dp">
-                          <div class="flip-card-container">
-                                  <div class="flip-card">
-                                          <div class="side">
-                                                  <img src="../images/integrations/varnishcache.svg" alt="Varnish" title="Varnish Cache Monitoring" style="width: 48px;">
-                                          </div>
-                                          <div class="side back"><h5>Varnish Cache</h5>Backend and Client connections and requests, Cache Hits and Misses, Threads, Bans...</div>
                                   </div>
                           </div>
                   </div>
@@ -510,22 +518,6 @@ Each logs integration comes with a number of useful dashboards and reports out o
 						</div>
 						<div class="side back">
 							<h5>Generic Logs</h5>Logs that support multiple different integrations, log shippers, and configurations.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="./kubernetes-audit-integration">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/kubernetes-audit-logs.png" alt="Kubernetes Audit" title="Kubernetes Audit" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Kubernetes Audit Logs</h5>Kubernetes audit logs are detailed descriptions of each call made to the Kubernetes API Server.
 						</div>
 					</div>
 				</div>
@@ -596,23 +588,6 @@ Each logs integration comes with a number of useful dashboards and reports out o
 			</div>
 		</a>
 	</div>
-	<!-- <div class="mdl-cell mdl-cell--4-col">
-		<a href="./rabbitmq-logs">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../images/integrations/rabbitmq-logs.png" alt="RabbitMQ Logs" title="RabbitMQ Logs" style="padding-top:40px;height:110px;width:140px;">
-						</div>
-						<div class="side back">
-							<h5>RabbitMQ Logs</h5>Ship and manage RabbitMQ logs. Gain insight into logs generated by your RabbitMQ.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div> -->
-</div>
 
 ## Experience
 
