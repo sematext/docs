@@ -83,11 +83,11 @@ spec:
  ...
 ```
 
-You can add additional environment variables by following the `name` and `value` format, where the first is the name of the variable and the second is the value. For example, to skip certain containers based on the name, add the following lines:
+You can add additional environment variables by following the `name` and `value` format, where the first is the name of the variable and the second is the value. For example, to skip certain containers based on the image like `nginx`, add the following lines:
 
 ```yaml
-            - name: CONTAINER_SKIP_BY_NAME
-              value: testContainer
+            - name: CONTAINER_SKIP_BY_IMAGE
+              value: nginx
 ```
 
 If you are using the `helm` installation option instead of `kubectl`, you can add environment variables using the `--set` directive. For example:
@@ -97,7 +97,7 @@ helm install st-agent \
   --set infraToken=<your-infra-token> \
   --set region=US \
   --set clusterName=REPLACE_WITH_CLUSTER_NAME \
-  --set CONTAINER_SKIP_BY_NAME=testContainer \
+  --set CONTAINER_SKIP_BY_IMAGE=image \
   --namespace=sematext \
   --create-namespace \
   sematext/sematext-agent
