@@ -7,7 +7,7 @@ Sematext supports over 100 different integrations that automatically collect tho
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/apache/">
+		<a href="../integration/apache-integration/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
@@ -24,7 +24,7 @@ Sematext supports over 100 different integrations that automatically collect tho
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-		<a href="../integration/elasticsearch/">
+		<a href="../integration/elasticsearch-integration/">
 			<div class="demo-card-event mdl-card mdl-shadow--2dp">
 				<div class="flip-card-container">
 					<div class="flip-card">
@@ -38,7 +38,7 @@ Sematext supports over 100 different integrations that automatically collect tho
 		</a>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/jvm/">
+          <a href="../integration/jvm-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -66,7 +66,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/mysql/">
+          <a href="../integration/mysql-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -80,7 +80,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/nginx/">
+          <a href="../integration/nginx-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -96,7 +96,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/nginxplus/">
+          <a href="../integration/nginx-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -110,7 +110,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/opensearch/">
+          <a href="../integration/opensearch-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -124,7 +124,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/postgresql/">
+          <a href="../integration/postgresql-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -140,7 +140,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/solr/">
+          <a href="../integration/solr-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -154,7 +154,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/solrcloud/">
+          <a href="../integration/solr-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -170,7 +170,7 @@ Sematext supports over 100 different integrations that automatically collect tho
           </a>
   </div>
   <div class="mdl-cell mdl-cell--3-col">
-          <a href="../integration/varnishcache/">
+          <a href="../integration/varnishcache-integration/">
                   <div class="demo-card-event mdl-card mdl-shadow--2dp">
                           <div class="flip-card-container">
                                   <div class="flip-card">
@@ -188,7 +188,9 @@ Sematext supports over 100 different integrations that automatically collect tho
 
 ## Monitoring
 
-Sematext Monitoring supports over 100 different integrations that automatically collect thousands of metrics. Each integration includes a number of pre-built dashboards, reports, and alert rules that are readily available, requiring no additional configuration. Additionally, several integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without the need for modifying or restarting any services.
+Additionally, Sematext Monitoring supports integrations that automatically collect thousands of metrics from the services listed below. Each integration includes a number of pre-built dashboards, reports, and alert rules that are readily available, requiring no additional configuration. Several integrations can be enabled through [Service Autodiscovery](/monitoring/autodiscovery/) without the need for modifying or restarting any services. We don't offer out-of-the-box logs integration for these services. However, you can still send logs from these services by selecting any of the log shippers we provide and creating a [Generic Logs App](https://sematext.com/docs/integration/generic-logs-integration/). Then, you can use [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) to structure your logs and use Chart Builder to generate reports. 
+
+Contact us at support@sematext.com anytime to request out-of-the-box Logs or Monitoring integrations.
 
 <div class="mdl-grid integrations">
 	<div class="mdl-cell mdl-cell--3-col">
