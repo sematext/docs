@@ -490,21 +490,10 @@ Contact us at support@sematext.com anytime to request out-of-the-box Logs or Mon
 </div>
 
 ## Logging
+
 ### Ingestion
-Logs can be shipped to Sematext using a number of different [log shippers, logging libraries, protocols, APIs](./generic-logs-integration), etc.
 
-Two main ingestion APIs are supported:
-- HTTP / REST API which is compatible with Elasticsearch bulk indexing API
-- Syslog via various protocols
-
-The Elasticsearch-compatible API lets you:
-
-- send log events directly from your application, using any logging library that has an Elasticsearch Adapter
-- send log events using a log shipper as Filebeat, Logstash, rsyslog,Fluentd, Logagent, Vector, or anything that can output to Elasticsearch
-
-The Elasticsearch-compatible API is not limited to log ingestion.  It can also be used for querying logs, retrieving them programmatically, or to change the log even structure or mapping in Elasticsearch parlance. Using this API you can:
-- search for logs from your own application, from the command line using tools like `curl`, or by configuring/adapting existing Elasticsearch UIs, such as Kibana
-- optionally define custom mappings for your log types, so you can tweak the way your logs are indexed
+The simplest - and the recommended way - to ship logs to Sematext is via the Discovery screen after the initial setup. Setting up log shipping from there will be the easiest and will yield the best results, resulting in a the most suitable type of Logs App being created with the most useful pre-built dasboards and the most useful alert rules. See [Sending Log Events](https://sematext.com/docs/logs/sending-log-events/) for more information.
 
 ### Dashboards
 Each logs integration comes with a number of useful dashboards and reports out of the box, as well as out of the box alert rules and copy-paste instructions for setting up log collection and shipping.  Log shipping can also be enabled through [Logs Autodiscovery](/logs/discovery/intro/) without installing any additional log shippers and without the need to connect to servers, VMs, containers, etc.
