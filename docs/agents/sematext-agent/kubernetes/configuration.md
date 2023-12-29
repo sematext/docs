@@ -47,7 +47,6 @@ You can adjust the configuration of Sematext Agent with additional environment v
 | JOURNAL_RETRY_INTERVAL | Specifies how often journal directory is scanned for failed events. Default interval is `30s`. You can specify a different interval in either seconds, minutes or hours (`JOURNAL_RETRY_INTERVAL=5m`)                                                                                                                                                                            |
 | AUTODISCO_TEMPLATES_PATH | Defines the location of the `autodisco.yml` file that contains definitions of patterns involved in app auto-discovery.                                                                                                                                                                                                                                                           |
 | HOSTNAME_ALIAS | When specified it overrides the original host name.                                                                                                                                                                                                                                                                                                                              |
-Your documentation is quite clear, but I've made a few adjustments for better clarity and readability. Here's the revised version:
 
 ## Populating Environment Variables in Kubernetes
 
