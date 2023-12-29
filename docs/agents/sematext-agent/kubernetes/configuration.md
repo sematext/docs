@@ -82,7 +82,7 @@ spec:
  ...
 ```
 
-You can add additional environment variables by following the `name` and `value` format, where the first is the name of the variable and the second is the value. For example, to skip certain containers based on the image like `nginx`, add the following lines:
+You can add additional environment variables by following the `name` and `value` format, where the former is the name of the variable and the latter is the value. For example, to skip certain containers based on the image like `nginx`, add the following lines:
 
 ```yaml
             - name: CONTAINER_SKIP_BY_IMAGE
