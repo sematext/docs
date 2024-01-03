@@ -96,8 +96,10 @@ helm install st-agent \
   --set infraToken=<your-infra-token> \
   --set region=US \
   --set clusterName=REPLACE_WITH_CLUSTER_NAME \
-  --set CONTAINER_SKIP_BY_IMAGE=nginx,httpd \
+  --set CONTAINER_SKIP_BY_IMAGE=nginx,apache/httpd \
   --namespace=sematext \
   --create-namespace \
   sematext/sematext-agent
 ```
+
+**Note:** The `CONTAINER_SKIP_BY_IMAGE` values will search for any substring match among the discovered images. Therefore, if you wish to skip the `apache/httpd` image, you can simply use `httpd`.

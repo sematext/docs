@@ -110,9 +110,11 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 -v /:/hostfs:ro \
 -v /sys/:/hostfs/sys:ro \
 # ...
--e CONTAINER_SKIP_BY_IMAGE=nginx,httpd \
+-e CONTAINER_SKIP_BY_IMAGE=nginx,apache/httpd \
 sematext/agent:latest
 ```
+
+**Note:** The `CONTAINER_SKIP_BY_IMAGE` values will search for any substring match among the discovered images. Therefore, if you wish to skip the `apache/httpd` image, you can simply use `httpd`.
 
 If you are using Docker Swarm, append the new line in the `environment` section of your `docker-compose.yml` file:
 
