@@ -102,4 +102,4 @@ helm install st-agent \
   sematext/sematext-agent
 ```
 
-**Note:** The `CONTAINER_SKIP_BY_IMAGE` values will search for any substring match among the discovered images. Therefore, if you wish to skip the `apache/httpd` image, you can simply use `httpd`.
+**Note:** The `CONTAINER_SKIP_BY_IMAGE` values will search for any substring match among the discovered images. Therefore, if you wish to skip the `apache/httpd` image, you can simply use `httpd`. This applies similarly to other matching and skipping options such as `CONTAINER_MATCH_BY_IMAGE`, `CONTAINER_MATCH_BY_NAME`, and `CONTAINER_SKIP_BY_NAME`.
