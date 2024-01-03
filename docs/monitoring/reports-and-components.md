@@ -47,10 +47,14 @@ Each alert query is visible in the Alert Rules list.
 
 By checking out the [Integrations documentation](https://sematext.com/docs/integration/) you can learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS S3, Log Management, and log shippers. There you will find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud.
 
-### Groups
-Report components can be grouped by tags using the `Groups` drop down menu in the Monitoring Report Menu. One of the [available tags](https://sematext.com/docs/tags/common-schema/) for grouping is the `os.kernel` tag, which will put hosts running the same Linux kernel in the same group. This can be useful to check whether some hosts need to be upgraded with a newer kernel.
+### Grouping
+Data in report components can be grouped by tags using the `Groups` drop-down menu in the Monitoring Report Menu. For example, one of the [available tags](https://sematext.com/docs/tags/common-schema/) for grouping is the `os.kernel` tag, which will put hosts running the same Linux kernel in the same group. This can be useful to check whether some hosts need to be upgraded with a newer kernel.
 
-![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-infra.png) 
+![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-infra.png)
+
+Another example is the grouping of the [infrastructure storage charts](https://apps.sematext.com/ui/infrastructure/serversStorage) by the `os.disk` tag, allowing us to quickly check for I/O spikes in specific disks.
+
+![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-osdisk.png)
 
 Similar customized group menus can be created using [`Group By` report variables](https://sematext.com/docs/dashboards/report-variables/groups).
 
