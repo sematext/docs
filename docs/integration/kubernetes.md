@@ -41,6 +41,7 @@ Once data is in, you can explore it via the built-in reports:
 
 If you are looking to use a different type of integration you can check out this [page](https://sematext.com/docs/logagent/installation-docker/#kubernetes-and-openshift).
 
+Sematext also provides a Kubernetes Audit logs receiver endpoint. Check out [Kubernetes Audit Logs Integration](https://sematext.com/docs/integration/kubernetes-audit-integration/) for detailed instructions on shipping Kubernetes audit logs.
 
 ## Kubernetes Events
 
