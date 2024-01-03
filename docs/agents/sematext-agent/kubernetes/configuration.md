@@ -89,7 +89,7 @@ You can add additional environment variables by following the `name` and `value`
               value: nginx
 ```
 
-If you are using the `helm` installation option instead of `kubectl`, you can add environment variables using the `--set` directive. Also, you can skip two images like `nginx` and `httpd` by just placing a comma in the middle like the following example:
+If you are using the `helm` installation option instead of `kubectl`, you can add environment variables using the `--set` directive. Also, you can skip multiple images by separating multiple image names with a comma, as in the following example:
 
 ```bash
 helm install st-agent \

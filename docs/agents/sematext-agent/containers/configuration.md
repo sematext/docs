@@ -103,7 +103,7 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 sematext/agent:latest
 ```
 
-If you want to skip multiple images just place a comma in the middle, like the following example for ignoring containers with the image `nginx` or `httpd`:
+To skip multiple images simply separate them with a comma. In the example below we ignore containers whose names contain `nginx` or `httpd`.
 
 ```bash
 docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
