@@ -103,6 +103,17 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 sematext/agent:latest
 ```
 
+If you want to skip multiple images just place a comma in the middle, like the following example for ignoring containers with the image `nginx` or `httpd`:
+
+```bash
+docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
+-v /:/hostfs:ro \
+-v /sys/:/hostfs/sys:ro \
+# ...
+-e CONTAINER_SKIP_BY_IMAGE=nginx,httpd \
+sematext/agent:latest
+```
+
 If you are using Docker Swarm, append the new line in the `environment` section of your `docker-compose.yml` file:
 
 ```yaml

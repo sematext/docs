@@ -63,7 +63,7 @@ spec:
   selector:
     matchLabels:
       app: sematext-agent
- ...
+ # ...
           env:
             - name: AUTODISCO_VECTOR_SERVICE_ACCOUNT
               value: sematext-agent-vector
@@ -79,7 +79,7 @@ spec:
             httpGet:
               path: /health
               port: 8675
- ...
+# ...
 ```
 
 You can add additional environment variables by following the `name` and `value` format, where the former is the name of the variable and the latter is the value. For example, to skip certain containers based on the image like `nginx`, add the following lines:
@@ -89,14 +89,14 @@ You can add additional environment variables by following the `name` and `value`
               value: nginx
 ```
 
-If you are using the `helm` installation option instead of `kubectl`, you can add environment variables using the `--set` directive. For example:
+If you are using the `helm` installation option instead of `kubectl`, you can add environment variables using the `--set` directive. Also, you can skip two images like `nginx` and `httpd` by just placing a comma in the middle like the following example:
 
 ```bash
 helm install st-agent \
   --set infraToken=<your-infra-token> \
   --set region=US \
   --set clusterName=REPLACE_WITH_CLUSTER_NAME \
-  --set CONTAINER_SKIP_BY_IMAGE=image \
+  --set CONTAINER_SKIP_BY_IMAGE=nginx,httpd \
   --namespace=sematext \
   --create-namespace \
   sematext/sematext-agent
