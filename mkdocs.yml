@@ -109,7 +109,7 @@ pages:
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Sampling: experience/sampling.md
-      - Correlatiing User Experience: experience/correlation.md
+      - Correlating User Experience: experience/correlation.md
       - Changelog: changelog.md
       - FAQ: experience/faq.md
     - Synthetics:
