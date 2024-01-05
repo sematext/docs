@@ -47,6 +47,17 @@ Each alert query is visible in the Alert Rules list.
 
 By checking out the [Integrations documentation](https://sematext.com/docs/integration/) you can learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS S3, Log Management, and log shippers. There you will find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud.
 
+### Grouping
+Data in report components can be grouped by tags using the `Groups` drop-down menu in the Monitoring Report Menu. For example, one of the [available tags](https://sematext.com/docs/tags/common-schema/) for grouping is the `os.kernel` tag, which will put hosts running the same Linux kernel in the same group. This can be useful to check whether some hosts need to be upgraded with a newer kernel.
+
+![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-infra.png)
+
+Another example is the grouping of the [infrastructure storage charts](https://apps.sematext.com/ui/infrastructure/serversStorage) by the `os.disk` tag, allowing us to quickly check for I/O spikes in specific disks.
+
+![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-osdisk.png)
+
+Similar customized group menus can be created using [`Group By` report variables](https://sematext.com/docs/dashboards/report-variables/groups).
+
 ## Components
 
 Using custom components you can add **monitoring metrics time series**, **metric panel**, **markdown notes**, and create custom reports with rich data visualizations and chart tools to analyze your data.
@@ -57,7 +68,7 @@ Each component can also be added to a custom dashboard you define.
 
 Line, Area, Bar charts binned by metric creation date, bar chart binned by event creation date, table of events in reverse chronological order are available for your Monitoring App.
 
-![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/monitoring/components.png) 
+![Sematext Cloud Monitoring Guide - Add Metric Component](../images/guide/monitoring/components.png)
 
 Use them together with out-of-the-box metrics reports and visualizations, generated when your Monitoring App is created, and you will go from metric spikes to your apps’ and servers’ logs in seconds and get to the root cause in minutes. 
 
