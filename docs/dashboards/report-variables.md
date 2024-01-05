@@ -71,7 +71,7 @@ We can easily filter by our preferred Elasticsearch App:
 
 ### Groups
 
-We can also group the components of each Report by specific Tags, for example es.node:
+We can also group the components of each report by specific Tags, for example es.node:
 
 ![Report Variables Group](../images/dashboards/report-variables-group.png)
 
