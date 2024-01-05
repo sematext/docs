@@ -56,7 +56,7 @@ Another example is the grouping of the [infrastructure storage charts](https://a
 
 ![Sematext Cloud Monitoring Guide - Group By](../images/monitoring/group-by-osdisk.png)
 
-Similar customized group menus can be created using [`Group By` report variables](https://sematext.com/docs/dashboards/report-variables/groups).
+Similar customized group menus can be created using [`Group By` report variables](https://sematext.com/docs/dashboards/report-variables/#groups).
 
 ## Components
 
