@@ -27,7 +27,7 @@ App Variables are used for grouping components by [App](https://sematext.com/doc
 
 Group by Variables are used for grouping components by a number of different Tags, for example, all Linux hosts by kernel version.
 
-## How to use Report Variables
+## How to create Report Variables
 
 Report Variables can be created by selecting the "Manage Variables" option under report settings.
 
@@ -49,17 +49,27 @@ Report Variables can be applied to each DS in a component.
 
 Note that it is mandatory to configure at least one component with a Report Variable. Otherwise, the Report Variable is of no use, and it will not allow filtering values from the Filters drop-down menu. That is an important difference between ad-hoc filters and Report Variables.
 
-All Report Variables are automatically added on the top of the dashboard.
+## How to use Report Variables
+
+All Report Variables are automatically added to the top of the dashboard. 
 
 ![Report Variables Top Menu](../images/dashboards/report-variables-top-menu.png)
+
+Sematext already includes a number of predefined Report Variables across our Monitoring Apps. For instance, in the Overview report of our Infra App, you may find 'Groups' and 'Infra App'.
+
+### Tag Variables
 
 Tag Variables appear in the report’s Filters as predefined filters.
 
 ![Report Variables Filter](../images/dashboards/report-variables-filter.png)
 
-We can now easily filter by our preferred Elasticsearch App:
+### Apps
+
+We can easily filter by our preferred Elasticsearch App:
 
 ![Report Variables App Type](../images/dashboards/report-variables-apptype.png)
+
+### Groups
 
 We can also group the components of each Report by specific Tags, for example es.node:
 
