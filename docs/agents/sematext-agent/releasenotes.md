@@ -39,6 +39,23 @@ NULL
 
 -->
 
+## Version 3.2.2
+
+Date: January 8, 2024
+
+### New Features
+
+- Support has been added for [slog](https://go.dev/blog/slog) logs.
+
+### Improvements
+
+- Added `safe-to-evict` annotation to prevent downscaling issues for `st-jmx` Kubernetes pods.
+- Added `org.elasticsearch.launcher.CliToolLauncher` signature to the Elasticsearch autodiscovery signatures.
+
+### Bug Fixes
+
+- Addressed a bug that was preventing the Sematext Agent from spawning monitoring [App Agent](https://sematext.com/docs/agents/sematext-agent/app-agent/) pods in Google Kubernetes Engine (GKE) environments.
+
 ## Version 3.2.1
 
 Date: November 11, 2023
