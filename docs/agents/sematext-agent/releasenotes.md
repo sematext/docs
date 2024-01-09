@@ -49,7 +49,7 @@ Date: January 8, 2024
 
 ### Improvements
 
-- Added `safe-to-evict` annotation to prevent downscaling `st-jmx` Kubernetes pods.
+- Added `safe-to-evict` annotation to prevent downscaling issues for `st-jmx` Kubernetes pods.
 - Added `org.elasticsearch.launcher.CliToolLauncher` signature to the Elasticsearch autodiscovery signatures.
 
 ### Bug Fixes
