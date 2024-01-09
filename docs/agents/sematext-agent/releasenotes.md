@@ -54,7 +54,7 @@ Date: January 8, 2024
 
 ### Bug Fixes
 
-- Addressed a bug that was preventing the Sematext Agent from spawning monitoring app agent pods in Google Kubernetes Engine (GKE) environments.
+- Addressed a bug that was preventing the Sematext Agent from spawning monitoring [App Agent](https://sematext.com/docs/agents/sematext-agent/app-agent/) pods in Google Kubernetes Engine (GKE) environments.
 
 ## Version 3.2.1
 
