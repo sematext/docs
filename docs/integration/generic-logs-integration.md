@@ -34,3 +34,15 @@ Hovering over a report name and clicking on the three dots allows you to clone, 
 ![Generic Logs Edit Report](../images/integrations/generic-logs-app-edit-report.png)
 
 Note that reports specific to an App differ from Dashboards. [Dashboards](https://sematext.com/docs/dashboards/) serve as your central location for consolidating everything. You can create reports within Dashboards that are not tied to a specific App. Dashboards can fetch data from [Logs](https://sematext.com/docs/logs/), [Monitoring](https://sematext.com/docs/monitoring/), [Experience](https://sematext.com/docs/experience/) and [Synthetics](https://sematext.com/docs/synthetics/) Apps and show everything in a single dashboard.
+
+## Creating Alert Rules
+
+You can create alert rules by clicking on the **Alert** icon in the top banner of your App report or by hovering over a chart and clicking on the alert icon in the top right corner. Anomaly or threshold alerts can be created if you have extracted metrics with Logs Pipelines or by the log count in your App.
+
+![Generic Logs Create Alert Rule](../images/integrations/generic-logs-app-alert-rule.gif)
+
+To view or edit all the alert rules created for the App, click on **Alert Rules** in the left menu panel. Additionally, to review all the alerts triggered for that App, click on **Alerts** in the left menu panel. This action will direct you to the Alerts page where you can view all the alerts and their details by clicking on an individual alert.
+
+![Generic Logs Create Alerts](../images/integrations/generic-logs-app-alerts.gif)
+
+For more information about available alert types, refer to the [Alerts Guide](https://sematext.com/docs/guide/alerts-guide/).
