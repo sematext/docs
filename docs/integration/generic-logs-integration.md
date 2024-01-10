@@ -29,7 +29,7 @@ To add more components to the report, click on the "Add Component" icon on the t
 
 All reports share common components available in the top banner. To learn more about report components, refer to the [Logs Search and Report Menu](https://sematext.com/docs/logs/reports-and-components/#logs-search-and-report-menu)  section.
 
-Hovering over a report name and clicking on the three dots allows you to clone the report, edit, delete, or manage [Report Variables](https://sematext.com/docs/dashboards/report-variables/).
+Hovering over a report name and clicking on the three dots allows you to clone, edit, delete the report, or manage [Report Variables](https://sematext.com/docs/dashboards/report-variables/).
 
 ![Generic Logs Edit Report](../images/integrations/generic-logs-app-edit-report.png)
 
