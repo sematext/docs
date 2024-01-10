@@ -34,6 +34,15 @@ Any changes in the infrastructure or its configuration can cause performance cha
 
 Use functionality such as Github Actions to add events with information about builds to Sematext using the [Sematext Events API](adding/#adding-events-via-api).
 
-### Boot / Start / Stop Events
+### Host Boot / Shutdown Events
 
-It's a little retro, perhaps, but a call to the [Events API](adding/#adding-events-via-api) can be made from `/etc/rc.local` to send an event when a host is started.  Similarly, you can add events when your application starts or right before it stops.
+It's a little retro, perhaps, but a call to the [Events API](adding/#adding-events-via-api) can be made from `/etc/rc.local` to send an event when a host is started.  
+
+### Systemd Service Start / Stop Events
+
+You can add events when your application or a service starts or right before it stops.  For example, when things are run under Systemd you can send events by adjusting the Systemd unit file for a service.  In the example below we are using the [Events API](adding/#adding-events-via-api) to send an event when the Elasticsearch service is started and when it's stopped: 
+
+```
+ExecStartPre=/usr/bin/curl -s -XPOST "{{ event_receiver_url }}/{{ app_token }}/event" -d '{"message" : "Starting Elasticsearch on node {{ ansible_hostname }}","type" : "server_start"}'
+ExecStopPost=/usr/bin/curl -s -XPOST "{{ event_receiver_url }}/{{ app_token }}/event" -d '{"message" : "Stopped Elasticsearch on node {{ ansible_hostname }}","type" : "server_stop"}'
+```
