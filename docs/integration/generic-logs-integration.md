@@ -37,7 +37,7 @@ Note that reports specific to an App differ from Dashboards. [Dashboards](https:
 
 ## Creating Alert Rules
 
-You can create alert rules by clicking on the **Alert** icon in the top banner of your App report or by hovering over a chart and clicking on the alert icon in the top right corner. Anomaly or threshold alerts can be created if you have extracted metrics with Logs Pipelines or by the log count in your App.
+You can create alert rules by clicking on the **Alert** icon in the top banner of your App report or by hovering over a chart and clicking on the alert icon in the top right corner. Anomaly or threshold alerts can be created if you have [extracted metrics with Logs Pipelines](https://sematext.com/docs/logs/field-extractor-processor/) or by the log count in your App.
 
 ![Generic Logs Create Alert Rule](../images/integrations/generic-logs-app-alert-rule.gif)
 
