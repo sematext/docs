@@ -1,5 +1,5 @@
 title: Sending Log Events to Sematext
-description: Send new log events to Sematext using Sematext Agent, Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
+description: Send new log events to Sematext using [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/), Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
 
 ## Logs Discovery
 
@@ -28,7 +28,7 @@ After creating the Logs App, the environment selection screen for agent installa
 
 ![Logs App Select an Environment](../images/logs/select-environment.png)
 
-Choose the environment in which you intend to install the Sematext Agent. The installation instructions specific to that environment will be displayed.
+Choose the environment in which you intend to install the [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/). The installation instructions specific to that environment will be displayed.
 Follow the provided instructions to install the agent. Once installed, the Logs App will identify the host and display the discovered log sources within it.
 
 ### View Discovered Logs
