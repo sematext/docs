@@ -579,6 +579,7 @@ Each logs integration comes with a number of useful dashboards and reports out o
 			</div>
 		</a>
 	</div>
+ </div>
 
 ## Experience
 
