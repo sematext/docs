@@ -19,16 +19,18 @@ You can also navigate to [Logs Usage Screen](https://sematext.com/docs/logs/logs
 
 Once you have structured your data, you can add custom reports to your Logs App. To create a custom report, click on the "+ Add Report" button in the left menu panel, name the report, and then click "Apply Changes".
 
-screenshot here
+![Generic Logs Edit Report](../images/integrations/generic-logs-app-add-report.png)
 
-After creating the report, you will see a blank page. To add charts to the report, click on the "Add Component" icon in the top banner. This action will open a dialog where you can choose the component type and access the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/) to create the component.
+After creating the report, you will see a blank page with various chart type options. Selecting a chart type will open the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/) where you can set the metric and critieria to be shown in the chart.
 
-screenshot here
+![Generic Logs Edit Report](../images/integrations/generic-logs-app-new-report.png)
+
+To add more components to the report, click on the "Add Component" icon on the top banner.
 
 All reports share common components available in the top banner. To learn more about report components, refer to the [Logs Search and Report Menu](https://sematext.com/docs/logs/reports-and-components/#logs-search-and-report-menu)  section.
 
 Hovering over a report name and clicking on the three dots allows you to clone the report, edit, delete, or manage [Report Variables](https://sematext.com/docs/dashboards/report-variables/).
 
-screenshot here
+![Generic Logs Edit Report](../images/integrations/generic-logs-app-edit-report.png)
 
 Note that reports specific to an App differ from Dashboards. [Dashboards](https://sematext.com/docs/dashboards/) serve as your central location for consolidating everything. You can create reports within Dashboards that are not tied to a specific App. Dashboards can fetch data from [Logs](https://sematext.com/docs/logs/), [Monitoring](https://sematext.com/docs/monitoring/), [Experience](https://sematext.com/docs/experience/) and [Synthetics](https://sematext.com/docs/synthetics/) Apps and show everything in a single dashboard.
