@@ -36,15 +36,18 @@ narrow down time ranges, filter fields, setup alerts and more.
 
 A quick rundown of most notable features of Sematext Logs:
 
-  - All your logs accessible in one place
-  - Control who sees which data
-  - Be up and running within minutes -- there is nothing to install or
-    maintain
-  - Log Alerts & Anomaly Detection
-  - Saved Views
-  - Scheduled Reporting
-  - Correlation of metrics and logs
-  - REST API
+- All your logs accessible in one place
+- Control who sees which data by sending logs to different [Apps](https://sematext.com/docs/guide/app-guide/) -- - [Invite an unlimited number of users](https://sematext.com/docs/team/) to your Apps and control access permissions based on specific [roles](https://sematext.com/docs/team/user-roles/), determining who can access each App.
+- Get up and running in minutes— Install the [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/). Setting up the agent takes less than 5 minutes, and [Auto Discovery](https://sematext.com/docs/logs/discovery/intro/) will identify log sources available within the installed host.
+- [Integrations](https://sematext.com/docs/integration/) comes out-of-the-box dashboards and alert rules
+- Log [Alerts & Anomaly Detection](https://sematext.com/docs/guide/alerts-guide/)
+- [Saved Views](https://sematext.com/docs/guide/saved-views/)
+- [Scheduled Reporting](https://sematext.com/docs/guide/scheduled-reports/)
+- Correlation of metrics and logs with [Split Screen](https://sematext.com/docs/guide/split-screen/)
+- Use [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) to structure your data or drop noise events to [save from costs](https://sematext.com/docs/logs/reduce-costs-with-pipelines/)
+- [Plan recommendations](https://sematext.com/docs/logs/plan-recommendations/) - Make the most cost-effective choice for your log monitoring needs.
+- REST API
+
 
 ## Logsene CLI
 
