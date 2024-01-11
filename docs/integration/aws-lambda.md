@@ -1,4 +1,4 @@
-title: AWS S3 (CloudTrail, Flow logs, ELB access logs, etc.)
+title: Centralized Logging for AWS Lambda
 description: Subscribe to AWS Lambda log streams and ship logs to Sematext Cloud. 
 
 If you want to automatically subscribe to AWS Lambda log streams you can use
