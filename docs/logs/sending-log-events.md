@@ -150,29 +150,3 @@ We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more deta
 
 We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more detailed out-of-the-box reports.
 
-### AWS S3 (CloudTrail, Flow logs, ELB access logs, etc.) **
-
-If you have logs stored in S3, you can ship them to Sematext <a
-href="https://github.com/sematext/logsene-aws-lambda-s3"
-target="_blank" rel="noopener">via this AWS Lambda function</a>. This
-method also works for when you periodically upload logs to S3 buckets,
-like Amazon CloudTrail does.
-
-### AWS CloudWatch Logs 
-
-If you want to ship CloudWatch logs, you can use <a
-href="https://github.com/sematext/logsene-aws-lambda-cloudwatch"
-target="_blank" rel="noopener">another AWS Lambda function</a>. If
-logs are VPC flowlogs, the Lambda function will also parse them and
-add geoIP information on the source IP addresses.
-
-### Centralized Logging for AWS Lambda
-
-If you want to automatically subscribe to AWS Lambda log streams you can use
-this <a href="https://github.com/sematext/cloudwatch-sematext-aws-lambda-log-shipper" target="_blank" rel="noopener">CloudFormation stack</a>.
-
-It'll let you run a single command and set up log group subscriptions,
-funnel all CloudWatch logs to Kinesis, and use a dedicated Lambda function
-to ship these logs to Sematext.
-
-Read the [full tutorial on our blog](https://sematext.com/blog/centralized-aws-lambda-logs-kinesis-serverless/)!
