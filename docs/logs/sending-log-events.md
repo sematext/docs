@@ -1,5 +1,5 @@
 title: Sending Log Events to Sematext
-description: Send new log events to Sematext using [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/), Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
+description: Send new log events to Sematext using Sematext Agent, Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
 
 ## Logs Discovery
 
