@@ -7,7 +7,7 @@ Sematext Monitoring provides complete insight into your infrastructure:
 - servers
 - containers
 - processes
-- inventory
+- [**Inventory Monitoring**](./inventory) will track all your infrastructure configurations, collect data about machines and group it into sets for easy access and identification
 - events, etc.
 
 The centerpiece is an Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish.
