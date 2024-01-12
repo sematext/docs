@@ -192,7 +192,7 @@ pages:
       - Logs:
         - Generic Logs: integration/generic-logs-integration.md
         - Apache Logs: integration/apache-logs.md
-        - AWS ECS: integration/ecs-logs.md
+        - AWS ECS: integration/aws-ecs-logs.md
         - AWS CloudWatch: integration/aws-cw.md
         - AWS Lambda: integration/aws-lambda.md
         - AWS S3: integration/aws-s3.md
