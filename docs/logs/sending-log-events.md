@@ -134,8 +134,7 @@ For further insights, refer to [Logging Libraries vs Log Shippers](https://semat
 
 ### AWS EC2 
 
-If you're an EC2 user, you can log Sematext from your instances by
-setting up a <a class="" href="https://sematext.com/docs/logs/sending-log-events/#log-shippers">log
+If you're an EC2 user, you can log Sematext from your instances by creating a [US region Logs App](https://apps.sematext.com/ui/logs#) or [EU region Logs App](https://apps.eu.sematext.com/ui/logs#) and setting up a <a class="" href="https://sematext.com/docs/logs/sending-log-events/#log-shippers">log
 shipper</a> like you would from any other physical or virtual machine.
 
 ### AWS ECS on AWS Fargate With FireLens 
