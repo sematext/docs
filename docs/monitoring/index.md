@@ -1,12 +1,14 @@
 title: Sematext Monitoring
 description: Sematext Monitoring covers server, kubernetes, database, container, and application monitoring with alerts and events. It's available as a SaaS or on-premise. Out-of-the-box integrations let you view and report data from various services and give you real-time insight of your entire DevOps ecosystem
 
-Sematext **Application** and [**Infrastructure Monitoring**](../monitoring/infrastructure), with over [100 integrations](https://sematext.com/integrations/), allows you to collect an extensive set of **events** and thousands of metrics across your entire stack.
+Sematext [**Application**](../monitoring/service-monitoring/) and [**Infrastructure Monitoring**](../monitoring/infrastructure), with over [100 integrations](https://sematext.com/docs/integration/), allows you to collect an extensive set of **events** and thousands of metrics across your entire stack.
 
 Get started in minutes with **out-of-the-box dashboards** that include prebuilt charts and other numeric components for the most notable metrics. Get notified with automatic [**alerts**](https://sematext.com/alerts/) powered by [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
 
-## Application Monitoring
-No matter how complex your infrastructure is, you can benefit from our service autodiscovery functionality and get all the important metrics from your applications easily and quickly. Simply choose one of our monitoring integrations and monitor performance and health metrics for all your applications. We provide dedicated dashboards and reports for each application to extract the most value from the metrics we track. Useful tips are presented alongside the charts and other report components. Of course, if you prefer to be notified of important events, we have you covered with our automatic alert rules. Read more in the [Application Monitoring Overview](https://sematext.com/docs/monitoring/service-monitoring/).
+## Application and Service Monitoring
+No matter how complex your infrastructure is, you can benefit from our service autodiscovery functionality and get all the important metrics from your applications and services easily and quickly. Simply choose one of our monitoring integrations and monitor performance and health metrics for all your applications. 
+
+Get dedicated dashboards and reports for each application to extract the most value from the metrics we track. Useful tips are presented alongside the charts and other report components. Of course, if you prefer to be notified of important events, we have you covered with our automatic alert rules. Read more in the [Application Monitoring Overview](https://sematext.com/docs/monitoring/service-monitoring/).
 
 
 ## Infrastructure Monitoring
