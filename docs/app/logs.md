@@ -10,4 +10,4 @@ Logs are aggregated by time and shown in the logging management web application,
 Also check related [Field Types](https://sematext.com/docs/logs/field-types/), [Supported Date Formats](https://sematext.com/docs/logs/supported-date-formats/), [Special Fields](https://sematext.com/docs/logs/special-fields/),
 and [FAQ](https://sematext.com/docs/logs/faq/) about our log management platform features.
 
-Upload your logs from all your servers to our centralized log management solution with Elasticsearch API and integrated Kibana, and experience the first true Hosted ELK Stack.
+Upload your logs from all your servers to our centralized log management solution with Elasticsearch API, and experience the first true Hosted ELK Stack.
