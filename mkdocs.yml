@@ -79,6 +79,7 @@ pages:
         - Overview: monitoring/infrastructure.md
         - Servers: monitoring/servers.md
         - Containers: monitoring/containers.md
+        - Kubernetes: monitoring/kubernetes.md
         - Inventory: monitoring/inventory.md
         - Processes: monitoring/processes.md
       - Service Monitoring:
