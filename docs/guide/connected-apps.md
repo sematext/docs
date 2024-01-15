@@ -57,6 +57,8 @@ Once both Apps' data is shown in the Split Screen you will be able to see whethe
 
 ## Companion Apps
 
+Having a pair of Companion Apps makes troubleshooting a service/application faster.  It does that by enabling you to inspect the service through both its logs and its performance metrics. By using [Split Screen](https://sematext.com/docs/guide/split-screen/) you can see the service logs and its metrics side by side.
+
 Companion Apps allow you to create a Logs App directly from a Monitoring App and vice versa. Within your existing App, simply click on the Companion App. 
 
 When you monitor something with Sematext you can choose what aspect of it you want to monitor.  For example, if you are running OpenSearch, you can choose to monitor its performance metrics or its logs.  Nothing in Sematext forces you to monitor both metrics and logs.  However, ideally, you would monitor both of these in order to have a more complete picture of the performance and health of OpenSearch and make it easier to troubleshoot.  Thus, when you are in a Monitoring App (e.g., for OpenSearch metrics) Sematext will suggest you create a Logs App for monitoring OpenSearch logs.  Upon creating the companion App, the two Apps can be connected.
