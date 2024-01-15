@@ -5,9 +5,9 @@ Kibana is analytics and visualization platform used to perform various searches 
 
 Kibana is fully intergrated with Sematext's cloud and on-premises service used to monitor, search, analyze, and visualize your data interactively. Customize dashboards and use Kibana to analyze log data and perform advanced management tasks.
 
-Click on the **Kibana** button in the App Settings dropdown from the [Logs section](https://apps.sematext.com/ui/logs) in our infrastructure & application monitoring and log management platform.
+Open the App Settings dropdown by clicking on the App name in the left menu panel, and then click on the **Open in Kibana** button.
 
-<img alt="Kibana Integration" src="../../images/logs/kibana-integration.gif" title="Sematext Logging UI - Kibana Integration">
+![Kibana Integration](../images/logs/kibana-integration.gif)
 
 Once you're there, you can customize your dashboard to do all kinds of searches and visualizations to your data.
 

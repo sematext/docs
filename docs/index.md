@@ -174,7 +174,7 @@ Stay informed about the most recent developments in our product and agent releas
 ## How Sematext works
 Sematext integrations let you collect metrics, logs and events across your whole stack from frontend to backend. Our solution goes beyond collecting metrics and detects anomalies, uncovers your slowest transactions, communication between servers and applications, etc.
 
-We include a fully integrated Kibana and expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Filebeat, Vector, NXLog, log4j and many others, and integrates in minutes.
+We expose an Elasticsearch API. Sematext works with all standard log shippers and agents you're already used to, such as syslog, Logstash, Fluentd, Filebeat, Vector, NXLog, log4j and many others, and integrates in minutes.
 
 With Experience you can monitor your frontend or website performance and receive alerts when end-user experience is affected by performance. Sematext Experience provides invaluable insights that keep your business in control of how happy your customers are when interacting with your website or webapp.
 

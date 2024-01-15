@@ -27,7 +27,7 @@ If you don’t see your platform in the Automatic Integrations list navigate to 
 
 ![Custom Integrations](../images/logs/custom-integrations.png)
 
-Once you start sending data, you can start [searching and analyzing these logs](../logs/searching-log-events) in the Logs App or [explore your data with Kibana](../logs/kibana).
+Once you start sending data, you can start [searching and analyzing these logs](../logs/searching-log-events) in the Logs App.
 
 ![Custom Integrations](../images/logs/logs-app.png)
 

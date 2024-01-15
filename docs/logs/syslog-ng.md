@@ -174,8 +174,7 @@ log {
 
  
 
-Then, restart syslog-ng and you should see your logs in the [Logs Management App UI](https://apps.sematext.com/ui/logs) or
-[Kibana](kibana).
+Then, restart syslog-ng and you should see your logs in the [Logs Management App UI](https://apps.sematext.com/ui/logs).
 
 ## Logs Tagging
 
