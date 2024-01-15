@@ -219,6 +219,31 @@ Below you can find a list of the most important Kubernetes metrics to monitor. F
 ![alt_text](https://sematext.com/wp-content/uploads/2020/04/network.png "Sematext Kubernetes Metrics")
 
 
+## Kubernetes Alerts
+
+As soon as you create an Infra App, Sematext automatically creates a set of default alert rules based on pre-defined conditions in important Kubernetes metrics. That way you get notified when Pods are restarted, there are missing replicas in your Kubernetes deployments, etc. Below you can see a list of default alert rules for Kubernetes monitoring:
+
+- High CPU limit usage: Receive notifications when CPU limit usage is exceeded, preventing CPU overloads
+- CPU limit usage reached: Detect when CPU utilization is high and close to the CPU limits. Potentially the system will throttle the CPU usage when it is over the limit and we want to avoid that
+- High etcd leader change: Monitor leadership changes in your Kubernetes etcd cluster
+- Kubelet Volume Manager unavailable: Stay informed about issues with the Kubernetes kubelet volume manager
+- Kubelet Volume Manager “actual” value is zero: Receive alerts when the kubelet volume manager's “actual” value is zero
+- API Server 4XX errors: Detect 4XX errors in your Kubernetes API server
+- API Server 5XX errors: Be aware of 5XX errors in your Kubernetes API server
+- Node under pressure: Receive alerts when Kubernetes nodes are under excessive load
+- Node CPU capacity anomalous: Be alerted to unusual CPU capacity issues on Kubernetes nodes
+- Node memory capacity anomalous: Stay informed about memory capacity issues on Kubernetes nodes
+- Missing replicas for deployments: Detect missing replicas for your Kubernetes deployments
+- Missing Pod replica in StatefulSet: Get notified when pod replicas are missing in Kubernetes StatefulSets
+- Pod status is failed: Receive alerts when pods in Kubernetes are in a "failed" state
+- Pod status is unknown: Be alerted to pods in an "unknown" state in Kubernetes
+- Pod status is pending: Monitor pending pods in Kubernetes
+- Pod restart amount reached: Detect when pods are restarted beyond a specified threshold
+- Pod status is “CrashLoopBackOff”: Be alerted to pods in a "CrashLoopBackOff" state in Kubernetes
+- Pod status is “ImagePullBackOff”: Receive notifications when pods are in an "ImagePullBackOff" state in Kubernetes
+
+You can [create additional alerts](../alerts) on any metric.
+
 ## Troubleshooting
 
 If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
