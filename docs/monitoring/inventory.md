@@ -5,11 +5,7 @@ The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile w
 
 The Inventory information is available in the *Inventory* section of the *Infrastructure* tab of your Sematext Cloud account - your main place for servers, packages and container images information.
 
-<!-- ![Sematext Inventory Main Screen](../images/monitoring/inventory_main_view.png) -->
-
-<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-group-by-v1.mp4" type="video/mp4" />
-</video>
+![Infrastructure Inventory](../images/monitoring/infra-inventory.gif)
 
 ## Servers
 
@@ -46,9 +42,7 @@ In addition, an overview of all the installed packages on a given system is avai
 
 The Inventory UI let's you compare different systems to quickly see the differences between them and use filtering to see differences between specific packages.
 
-<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-hosts-compare-v1.mp4" type="video/mp4" />
-</video>
+![compare hosts](../images/monitoring/infra-inventory-compare.gif)
 
 ### Grouping Hosts By Installed Packages
 
@@ -62,10 +56,6 @@ Provides quick insight into how unified your packages are by showing:
 - Number of different packages
 - Number of package installations
 
-<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-packages-v1.mp4" type="video/mp4" />
-</video>
-
 ### Overview
 
 The Packages overview provides a per-package view of all package installations across hosts. Find out how many installations of each package there are, where they are installed and in which version.
@@ -78,15 +68,11 @@ Provides quick insight into how unified your container images are by showing:
 - Number of different container image versions
 - Total number of container images
 
-<video poster="../images/monitoring/thumbnail-grouping.png" style="display:block; width:100%; height:auto;" controls>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-inventory-container-images-v1.mp4" type="video/mp4" />
-</video>
+![container images](../images/monitoring/infra-inventory-containers.gif)
 
 ### Overview
 
 The Container Images overview provides a view of all container images across hosts. Find out how many copies of each container image there are, where they are installed and which version they are tagged with.
-
-
 
 ## How does it Work?
 
@@ -101,7 +87,7 @@ The Agent checks the state of packages on machines and containers where it's run
 
 ## Enabling Inventory Monitoring
 
-Check out enabling and disabling Inventory Monitoring [here](../agents/sematext-agent/packages/configuration/).
+Make sure to select the [appropriate plan](https://sematext.com/pricing/#infrastructure) to access the Inventory Reports. Check out enabling and disabling Inventory Monitoring [here](../agents/sematext-agent/packages/configuration/). 
 
 ## Gathered Data
 
