@@ -7,6 +7,12 @@ The Inventory information is available in the *Inventory* section of the *Infras
 
 ![Infrastructure Inventory](../images/monitoring/infra-inventory.gif)
 
+## Enabling Inventory Monitoring
+
+Inventory Monitoring is enabled by default in the Sematext Agent. Check out enabling and disabling Inventory Monitoring [here](../agents/sematext-agent/packages/configuration/). 
+
+Make sure to select the [appropriate plan](https://sematext.com/pricing/#infrastructure) to access the Inventory Reports.
+
 ## Servers
 
 Provides quick insight into how unified your servers are by showing:
@@ -84,10 +90,6 @@ The [Sematext Agent](../agents/sematext-agent) tracks all changes done on the fi
 - RPM (e.g., when using RPM package manager)
 
 The Agent checks the state of packages on machines and containers where it's running to ensure all package info is up to date.
-
-## Enabling Inventory Monitoring
-
-Make sure to select the [appropriate plan](https://sematext.com/pricing/#infrastructure) to access the Inventory Reports. Check out enabling and disabling Inventory Monitoring [here](../agents/sematext-agent/packages/configuration/). 
 
 ## Gathered Data
 
