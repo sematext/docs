@@ -1,7 +1,7 @@
 title: Sematext Container Monitoring
-description: Monitor Docker and containerd containers, container orchestration systems like kubernetes, swarm and nomad, or cloud container orchestration services EKS, ECS, AKS, GKE with Sematext by installing Sematext Agent and using our interface that shows everything in one simple screen.
+description: Monitor Docker and containerd containers, container orchestration systems like Swarm and Momad, or cloud container orchestration services EKS, ECS, AKS, GKE with Sematext by installing Sematext Agent and using our interface that shows everything in one simple screen.
 
-Monitor [Docker](https://www.docker.com/) and containerd containers, container orchestration systems like kubernetes, swarm and nomad, or cloud container orchestration services EKS, ECS, AKS, GKE with Sematext by installing [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) and using our interface that shows everything in one simple screen.
+Monitor [Docker](https://www.docker.com/) and containerd containers, container orchestration systems like Swarm and Nomad, or cloud container orchestration services EKS, ECS, AKS, GKE with Sematext by installing [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) and using our interface that shows everything in one simple screen.
 
 ## Create a Sematext Monitoring App
 Creating a Sematext Infra App is as easy as choosing one of our integrations and giving the App a name.
