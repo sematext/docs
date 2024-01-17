@@ -14,6 +14,11 @@ Check out the FAQs for each of Sematext Cloud solutions:
 
 If you can't find the answer to your question please email <support@sematext.com> or use our live chat.
 
+### Plans & Pricing
+
+How much does your monitoring solution cost? Do you offer different plans?
+Check the [Infra Monitoring and Service Monitoring Pricing](https://sematext.com/pricing/#infrastructure).
+
 ### Does Sematext integrate with Slack? How about PagerDuty or custom WebHooks?
 
 Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](/alerts).
