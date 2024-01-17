@@ -9,7 +9,7 @@ The **Monitoring Report Menu** is where the true power of Sematext Performance a
 
 ### Save as View
 
-Filtering and grouping data is a central part of the Sematext Cloud user interface. With Saved Views you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
+Filtering and grouping data is a central part of the Sematext Cloud user interface. With [Saved Views](https://sematext.com/docs/guide/saved-views/) you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
 
 ### Grouping
 Data in report components can be grouped by tags using the `Groups` drop-down menu in the Monitoring Report Menu. For example, one of the [available tags](https://sematext.com/docs/tags/common-schema/) for grouping is the `os.kernel` tag, which will put hosts running the same Linux kernel in the same group. This can be useful to check whether some hosts need to be upgraded with a newer kernel.
@@ -33,7 +33,7 @@ There are E-mail and Subscription types available with time, frequency, and time
 
 ### Connected Apps
 
-Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App**. When you receive an alert notification for an App, the **alert notification will automatically include information and charts from connected Apps**, and thus provide more information and context for you. You can connect any two Apps you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
+Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App**. When you receive an alert notification for an App, the **alert notification will automatically include information and charts from connected Apps**, and thus provide more information and context for you. You can [connect any two Apps](https://sematext.com/docs/guide/connected-apps/) you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
 
 ![Sematext Cloud Monitoring Guide - Connect Apps](../images/guide/logs/connect-apps_2.png) 
 
