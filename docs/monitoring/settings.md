@@ -39,7 +39,7 @@ Side navigation sections for team features and settings:
 - Notifications
 - Settings
 
-![Sematext Monitoring App Sidenav](../images/guide/monitoring/left-side-navigation.png)
+![Sematext Monitoring App Sidenav](../images/monitoring/left-side-navigation.png)
 
 ## Report Settings
 
