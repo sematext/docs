@@ -11,6 +11,7 @@ Creating a Sematext Infra App is as easy as choosing one of our integrations and
 Sematext can easily monitor your infrastructure with the Sematext Agent. You can install the agent during the Infra App creation process by following the Container instructions during environment selection.
 
 Check also:
+
 - [Docker](../agents/sematext-agent/containers/installation/#docker)
 - [Docker Compose](../agents/sematext-agent/containers/installation/#docker-compose)
 - [Docker Swarm](../agents/sematext-agent/containers/installation/#docker-swarm-enterprise)
