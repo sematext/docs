@@ -21,6 +21,8 @@ From the App Actions drop down menu, the horizontal elipsis icon (⋯) shows you
 
 The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
 
+![Sematext Monitoring App Sidenav](../images/monitoring/left-side-navigation.png)
+
 Side navigation top level sections for infrastructure and application performance monitoring, log management, and real user monitoring:
 
 - [Fleet & Discovery](https://sematext.com/docs/fleet/)
@@ -38,8 +40,6 @@ Side navigation sections for team features and settings:
 - [Team](https://sematext.com/docs/team/)
 - Notifications
 - Settings
-
-![Sematext Monitoring App Sidenav](../images/monitoring/left-side-navigation.png)
 
 ## Report Settings
 
