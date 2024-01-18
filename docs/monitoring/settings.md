@@ -1,21 +1,20 @@
 title: Sematext Monitoring App Settings
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
-App settings and actions include, but are not limited to:
+The Monitoring App view ([US](https://apps.sematext.com/ui/monitoring) or [EU](https://apps.eu.sematext.com/ui/monitoring)) allows for easy interaction between various App settings.
 
-  - inviting others to your App
+From the App Actions drop down menu, the horizontal elipsis icon (⋯) shows your App options and lets you open various App-specific functions:
+
+  - [inviting others to your App](https://sematext.com/docs/team/app-guests/)
   - [alert rules](../alerts)
-  - changing your App's plan
-  - connecting Apps
-  - heartbeat alert creation
-  - App ownership transfer
-  - scheduled report emails (aka Subscriptions)
-  
-<!-- <img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/app-settings-menu.png" title="Sematext Monitoring App Settings Screen"> -->
+  - [changing your App's plan](https://sematext.com/pricing/#infrastructure)
+  - [connecting Apps](https://sematext.com/docs/guide/connected-apps/)
+  - [heartbeat alert creation](https://sematext.com/docs/alerts/creating-heartbeat-alerts/)
+  - [App ownership transfer](https://sematext.com/docs/team/transfer-apps/)
+  - [scheduled report emails](https://sematext.com/docs/guide/scheduled-reports/)
 
-<!-- ![Install Agent](../images/monitoring/app-settings-menu.png) -->
 
-![Sematext Monitoring App Settings](../images/guide/monitoring/monitoring-app-settings4.png)
+![](../images/guide/monitoring/monitoring-app-actions.png)
 
 
 ## Side Navigation
@@ -24,45 +23,30 @@ The persistent region on the left that can be collapsed, is used to easily switc
 
 Side navigation top level sections for infrastructure and application performance monitoring, log management, and real user monitoring:
 
-- [Discovery](https://sematext.com/docs/logs/discovery/intro/)
+- [Fleet & Discovery](https://sematext.com/docs/fleet/)
 - [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/)
 - [Monitoring](https://sematext.com/docs/monitoring/)
 - [Logs](https://sematext.com/docs/logs/)
 - [Synthetics](https://sematext.com/docs/synthetics/)
 - [Experience](https://sematext.com/docs/experience/)
-- [Alerts](https://sematext.com/docs/experience/)
+- [Alerts](https://sematext.com/docs/alerts/)
 - [Events](https://sematext.com/docs/events/)
 - [Dashboards](https://sematext.com/docs/dashboards/)
 
 Side navigation sections for team features and settings:
 
 - [Team](https://sematext.com/docs/team/)
+- Notifications
 - Settings
 
+![Sematext Monitoring App Sidenav](../images/guide/monitoring/left-side-navigation.png)
 
-![Sematext Monitoring App Sidenav](../images/guide/monitoring/monitoring-sidenav_2.png)
+## Report Settings
 
-## App Actions
+Once you [create a Monitoring App](https://sematext.com/docs/monitoring/quick-start/#creating-a-monitoring-app), and start your Agent, it will have a set of default [reports and components](https://sematext.com/docs/monitoring/reports-and-components/). You can edit, clone and delete these reports or create new ones. You can also define [report variables](https://sematext.com/docs/dashboards/report-variables/) to dynamically fiter and group data in a report.
 
-The Monitoring App view allows for easy interaction between various App settings.
-From the App Actions drop down menu, the horizontal elipsis icon shows your App options and lets you open various App-specific function, like, **App Settings, alert rules, connect App, invite team members, ship metrics, create heartbeat alert, see usage, and transfer App ownership.**
+![](../images/guide/monitoring/report-menu.png)
 
-![](../images/guide/monitoring/monitoring-app-actions.png)
+Based on what type of Monitoring Integration you chose, more reports get created by default. In this OpenSearch integration you can see three more reports are created by default.
 
-## Report Selector
-
-Once you create a Monitoring App, and start your Agent, you will get a **default Report created for you named Overview**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
-
-![](../images/guide/monitoring/report-selector.png)
-
-Based on what type of Monitoring Integration you chose, more Reports get created by default. In this Docker sample you can see three more Reports are created by default.
-
-### Report Settings
-
-- **Report Actions** - Your customized monitoring report can be better described using meta name and description, and you can assign unique URL Alias to identify that report.
-
-- **Legends Position** and **Extended Charts** features - Except in the **default Overview Report**, each report can have legends for better chart interaction. Extended charts are also displayed below and provide a comparative view about the longer time span relative to the time frame displayed in the main chart. Just like report legends, the extended view can be hidden and only the chart with X and Y values displayed.
-
-
-The next section describes the monitoring report menu located just below the top navigation menu, and help you discover how to add new components, correlate your logs and events with your Monitoring App, do report-specific actions, connect your Apps, and more.
 

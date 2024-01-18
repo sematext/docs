@@ -7,8 +7,9 @@ Process Monitoring is available in the *Infrastructure Monitoring* section of yo
 
 ## Enabling Process Monitoring
 
-Process Monitoring is enabled by default in the [Sematext Agent configuration](../agents/sematext-agent/containers/configuration/). 
-Check out enabling and disabling Process Monitoring [here](../agents/sematext-agent/processes/configuration/). 
+Process Monitoring is enabled by default in Sematext Agent. Check out enabling and disabling Process Monitoring [here](../agents/sematext-agent/processes/configuration/). 
+
+Make sure to select the [appropriate plan](https://sematext.com/pricing/#infrastructure) to access the Processes Reports.
 
 ## Processes View
 
@@ -18,15 +19,11 @@ The processes view provides similar information as the Linux top command. It sho
 - Grouping metrics by hosts, process names, containers, etc. 
 - Filtering by tags
 
-<video poster="../images/monitoring/thumbnail-process-infra.png" style="display:block; width:100%; height:auto;" controls autoplay>
-  <source src="https://cdn.sematext.com/videos/sematext-infra-processes.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
+![Infrastructure Processes](../images/monitoring/infra-processes.gif)
 
 The real-time view of the top N processes contains a time-series chart, a tile map, and a list with the process details that help you identify processes with the highest resource usage.
 
-Expanding a row in the process list shows detailed information about the process:
+Clicking on each row in the process list shows detailed information about the process:
 
 - PID
 - User
@@ -50,7 +47,7 @@ Also, a real-time view of all process metrics is available in the metrics tab. T
 
 The [Sematext Agent](../agents/sematext-agent) tracks all processes and ships the metrics of the top N processes. The agent tags all metrics with process and container metadata and ships the metrics to your [Infra App](./infrastructure/).  
 
-Sematext UI provides visualizations, grouping and filter functionality. 
+Sematext Cloud provides visualizations, grouping and filter functionality. 
 
 ## Gathered Data
 
@@ -76,3 +73,4 @@ Here are some of the common use cases and issues that Process Monitoring helps t
 ## More Details
 
 To read about the inner workings of Process Monitoring check out the [Processes section in the Sematext Agent docs](../agents/sematext-agent/processes/configuration/)!
+

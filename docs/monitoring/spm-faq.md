@@ -1084,6 +1084,11 @@ Note:
     <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
     Monitor on app you are installing)
 
+## Plans & Pricing
+
+How much does your monitoring solution cost? Do you offer different plans?
+Check the [Infra Monitoring and Service Monitoring Pricing](https://sematext.com/pricing/#infrastructure).
+
 ## Billing
 
 ### How do you bill for infrastructure and server monitoring?
@@ -1129,7 +1134,7 @@ monitored by Sematext are metered as separate hosts. In other words, whether
 the monitored application is running in a container or in a VM or
 directly on a server or in a public cloud instance is the same as far as
 metering and billing is concerned. For plans and price details
-see <https://sematext.com/spm/pricing>.
+see <https://sematext.com/pricing/>.
 
 Containers are monitored and charged through Infra Apps which can also monitor
 your bare-metal servers and virtual machines.
