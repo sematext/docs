@@ -6,9 +6,9 @@ Sematext [**Application**](../monitoring/service-monitoring/) and [**Infrastruct
 Get started in minutes with **out-of-the-box dashboards** that include prebuilt charts and other numeric components for the most notable metrics. Get notified with automatic [**alerts**](https://sematext.com/alerts/) powered by [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
 
 ## Application and Service Monitoring
-No matter how complex your infrastructure is, you can benefit from our service autodiscovery functionality and get all the important metrics from your applications and services easily and quickly. Simply choose one of our monitoring integrations and monitor performance and health metrics for all your applications. 
+No matter how complex your infrastructure is, you can benefit from service autodiscovery functionality and get all the important metrics from your applications and services easily and quickly. Simply choose one of the available monitoring integrations and monitor performance and health metrics for all your applications. 
 
-Get dedicated dashboards and reports for each application to extract the most value from the metrics we track. Useful tips are presented alongside the charts and other report components. Of course, if you prefer to be notified of important events, we have you covered with our automatic alert rules. Read more in the [Application Monitoring Overview](https://sematext.com/docs/monitoring/service-monitoring/).
+Get dedicated dashboards and reports for each application to extract the most value from the metrics we track. Useful tips are presented alongside the charts and other report components. Of course, if you prefer to be notified of important events, we have you covered with automatic alert rules. Read more in the [Application Monitoring Overview](https://sematext.com/docs/monitoring/service-monitoring/).
 
 
 ## Infrastructure Monitoring
@@ -47,7 +47,7 @@ App settings and actions include, but are not limited to:
   - [inviting others to your App](../team/app-guests)
   - [App ownership transfer](../team/transfer-apps)
   - [setting up a Sematext Monitoring Agent to ship metrics](./quick-start/#setting-up-monitoring-agents)
-  - [scheduled report emails (aka Subscriptions)](../guide/scheduled-reports)
+  - [scheduled report emails](../guide/scheduled-reports)
 
 <img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-actions.png" title="Sematext Monitoring App Actions">
 

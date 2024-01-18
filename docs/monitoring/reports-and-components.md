@@ -24,12 +24,11 @@ Similar customized group menus can be created using [`Group By` report variables
 
 ### Add Alert
 
-Every query can be use as an **alert query**. The ability to save alerts is part of the essential tools for searching, correlating and investigating logs data..
-Each alert query is visible in the Alert Rules list.
+Every query can be use as an **alert query**. The ability to save alerts is part of the essential tools for searching, correlating and investigating logs data. Each alert query is visible in the Alert Rules list.
 
 ### Scheduled Reports
 
-There are E-mail and Subscription types available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health. Learn more about **[Scheduled Reports](/guide/scheduled-reports)**.
+There are one time E-mail and Scheduled Reports available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health. Learn more about **[Scheduled Reports](/guide/scheduled-reports)**.
 
 ### Connected Apps
 

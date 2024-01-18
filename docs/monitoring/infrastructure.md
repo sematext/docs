@@ -53,8 +53,6 @@ If you've set up Sematext Monitoring at some point in the past, you can easily e
 - [Upgrading](./spm-faq/#agent-updating) your Sematext Agent to the [latest version](https://sematext.com/docs/agents/sematext-agent/releasenotes/)
 - Setting up Infra App token on each of your machines by running the `setup-infra` command
 
-> **Note**: For Docker monitoring, we suggest uninstalling the existing deprecated Agent and going through the new setup steps for Docker monitoring in Sematext Cloud.
-
 When doing a clean installation, regardless of whether you're installing in containerized environment or not, follow monitor installation instructions displayed in Sematext Cloud. Those instructions will always include everything needed to set up an Infra App, either on its own or alongside some other App Agent.
 
 

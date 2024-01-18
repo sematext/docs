@@ -11,7 +11,7 @@ From the App Actions drop down menu, the horizontal elipsis icon (⋯) shows you
   - [connecting Apps](https://sematext.com/docs/guide/connected-apps/)
   - [heartbeat alert creation](https://sematext.com/docs/alerts/creating-heartbeat-alerts/)
   - [App ownership transfer](https://sematext.com/docs/team/transfer-apps/)
-  - [scheduled report emails (aka Subscriptions)](https://sematext.com/docs/guide/scheduled-reports/)
+  - [scheduled report emails](https://sematext.com/docs/guide/scheduled-reports/)
 
 
 ![](../images/guide/monitoring/monitoring-app-actions.png)
