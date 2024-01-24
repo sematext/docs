@@ -397,11 +397,7 @@ See info about user roles in [sharing FAQ](../faq/#sharing).
 
 ### Is there an Ansible Playbook for the Sematext Agent?
 
-Yes, see the
-[Install](https://galaxy.ansible.com/sematext/spm-monitor-install/)
-and
-[Configure](https://galaxy.ansible.com/sematext/spm-monitor-config/)
-playbooks, with examples.
+Yes, see the [Ansible instructions](../agents/sematext-agent/ansible) for installing Sematext Agent in multiple hosts.
 
 ### Is there a Puppet Module for the Sematext Agent?
 
