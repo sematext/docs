@@ -19,13 +19,13 @@ Make sure to add the newly created directories in PATH:
 
 ```pipx ensurepath```
 
-For for installation methods, check out the [official installation instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible).
+For more installation methods, check out the [official installation instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible).
 
 ## Setup Inventory
 An Ansible [inventory](https://docs.ansible.com/ansible/latest/inventory_guide/index.html) is a list of all hosts that will be managed by Ansible. They can be logically grouped by webservers, databases, production, etc. Check out the [official documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups
 ) to learn more.
 
-The file can be saved anywhere, and in its simplest form for two hosts, it appears as shown below:
+The inventory file can be saved anywhere, and in its simplest form for two hosts, it appears as shown below:
 
 ```
 [servers]
@@ -66,7 +66,7 @@ server2 | SUCCESS => {
 
 
 ## Sematext Agent Ansible Role
-The Sematext Agent role contains everything required to install Sematext Agent in a specified list of hosts from Ansible inventory. It can be installed either through Ansible Galaxy or manually from the [ansible-install-sematext repository](https://github.com/sematext/ansible-install-sematext).
+The Sematext Agent role contains everything required to install Sematext Agent in a specified list of hosts according to the Ansible playbook that will be used. It can be installed either through Ansible Galaxy or manually from the [ansible-install-sematext repository](https://github.com/sematext/ansible-install-sematext).
 
 
 ### Install from Ansible Galaxy
@@ -101,7 +101,7 @@ Linux distributions:
 ## Deploying Sematext Agent
 
 ### Create an Infra App in Sematext Cloud
-After you get logged into Sematext Cloud at https://apps.sematext.com (or https://apps.eu.sematext.com if using Sematext Cloud Europe), the first step is to [create an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app) to start monitor your infrastructure. After entering the App name, select Ansible from the list of the environments. Make sure to copy the infra token, it will be needed later to pass it as a var in your Ansible playbook.
+After you get logged into Sematext Cloud at https://apps.sematext.com (or https://apps.eu.sematext.com if using Sematext Cloud Europe), the first step is to [create an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app) to start monitor your infrastructure. After entering the App name, select Ansible from the list of the environments. Make sure to copy the provided infra token, it will be needed later to pass it as a var in your Ansible playbook.
 
 ### Install the agent using an Ansible playbook
 You can integrate the Sematext Ansible role in your existing playbooks or create a new one. Here is an example playbook:
