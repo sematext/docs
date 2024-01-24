@@ -8,7 +8,7 @@ Ansible can be used for automating the deployment of [Sematext Agent](https://se
 
 Ansible uses the concepts of control and managed nodes. It connects from the [control node](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#control-node) where Ansible is installed, to the managed nodes sending commands and instructions to them over SSH protocol.
 
-Ansible utilizes a very simple language, YAML, to define playbooks in a human-readable data format that is really easy to understand from day one.
+Ansible utilizes a very simple language, YAML, to define [playbooks](https://docs.ansible.com/ansible/latest/playbook_guide/index.html) in a human-readable data format that is really easy to understand from day one.
 
 ## Ansible Installation
 You can use `pipx` to install Ansible in your machine:
@@ -22,10 +22,10 @@ Make sure to add the newly created directories in PATH:
 For for installation methods, check out the [official installation instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible).
 
 ## Setup Inventory
-An Ansible inventory is a list of all hosts that will be managed by Ansible. They can be logically grouped to webservers, databases, etc. Check out the [official documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups
+An Ansible [inventory](https://docs.ansible.com/ansible/latest/inventory_guide/index.html) is a list of all hosts that will be managed by Ansible. They can be logically grouped by webservers, databases, production, etc. Check out the [official documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups
 ) to learn more.
 
-The file can be saved anywhere and in the simplest form for 2 hosts, it looks like the one below:
+The file can be saved anywhere, and in its simplest form for two hosts, it appears as shown below:
 
 ```
 [servers]
@@ -39,7 +39,7 @@ where:
 - ansible_host is the IP address of each host
 - ansible_port is the SSH host port
 - ansible_ssh_user is the SSH username
-- ansible_ssh_private_key_file is the private certificate file of each host
+- ansible_ssh_private_key_file is the private SSH certificate file of each host
 
 If your inventory file is named `hosts` then you can verify whether you can ping all your hosts with the following command:
 
@@ -83,7 +83,6 @@ If you want to manually install the role, clone the [ansible-install-sematext](h
 Linux distributions:
 
 - Ubuntu
-    - trusty
     - xenial
     - bionic
     - focal
@@ -95,7 +94,7 @@ Linux distributions:
     - buster
     - bullseye
     - bookworm
-- EL 6, 7, 8, 9
+- Red Hat Enterprise Linux 6, 7, 8, 9
 - Fedora 38
 - Amazon Linux 2
 
