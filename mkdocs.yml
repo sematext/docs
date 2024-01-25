@@ -69,6 +69,7 @@ pages:
       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
+      - Extracting Fields & Metrics from Logs: logs/extracting-metrics-and-insights-from-logs.md
       - Changelog: changelog.md
       - FAQ: logs/faq.md
     - Monitoring:
