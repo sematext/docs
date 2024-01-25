@@ -126,3 +126,21 @@ where `hosts` is your Ansible inventory and `sematext-agent-playbook.yaml` is th
 
 This command will deploy Sematext agent in all hosts defined in your playbook. As soon as the command completes successfully, you can visit Sematext Cloud and see all your hosts online under Infrastructure.
 
+## Configuring Custom Tags
+It is also possible to define [custom tags](https://sematext.com/docs/tags/custom-tags/) in your playbook, by adding the following tasks defining the tags:
+
+```
+  tasks:
+    - name: Append tags to st-agent.yml
+      blockinfile:
+        path: /opt/spm/properties/st-agent.yml
+        block: |
+          tags: "env:dev, project:projectName, role:webfrontend"
+
+    - name: Restart sematext-agent service
+      service:
+        name: sematext-agent
+        state: restarted
+```
+
+Check out [Sematext Tags](https://sematext.com/docs/tags/#why-tags-matter) to learn more about why Tags matter and the benefits using them.
