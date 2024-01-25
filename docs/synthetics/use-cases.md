@@ -17,8 +17,8 @@ or alert when it goes over or below some threshold, you can use Sematext Synthet
 * Mortgage rates, currency exchange rates, the number of matches for a query in a search engine, etc.
 * ...
 
-Have a look at [Browser Monitor Custom Metrics](https://sematext.com/docs/synthetics/metrics/#browser-monitors) docs, or the 
-[How to Track Your Company’s Rating on a Website](https://sematext.com/blog/how-to-track-your-companys-rating-on-a-website/) article.
+Have a look at [Browser Monitor Custom Metrics](https://sematext.com/docs/synthetics/metrics/#browser-monitors) docs, the 
+[How to Track Your Company’s Rating on a Website](https://sematext.com/blog/how-to-track-your-companys-rating-on-a-website/) article, or [How to monitor a mobile App’s store ratings with Sematext](https://sematext.com/blog/how-to-monitor-mobile-app-store-ratings-with-sematext/).
 
 ## Extraction of Numerical Data from an API
 
