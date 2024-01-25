@@ -2,10 +2,12 @@ title: Manual set up of JMX monitoring for Java process running in containers
 description: In some cases it may be required to set up JMX settings of monitored process manually
 
 There are two things which have to be done to make this happen:
+
 - add process arguments which tell JVM to expose JMX port with specific authentication info
 - provide authentication info to Sematext Agent
 
 The first part can be done by defining a specific environment variable. Typically its name is `JAVA_TOOL_OPTIONS`, the exceptions to its name are in case of:
+
 - Solr - `SOLR_OPTS`
 - Tomcat - `CATALINA_OPTS`
 - Zookeeper - `JVMFLAGS`

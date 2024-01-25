@@ -106,3 +106,9 @@ Additionally, it interacts with platform-specific buttons (Phone, Tablet, Watch,
 
 This script will scrape and extract various metrics related to an App listed on the Apple Store.
 The script waits for the reviews elements to appear, and then extracts the App's rating, total reviews, and percentages of 5-star, 4-star, 3-star, 2-star, and 1-star ratings. The extracted values are then defined as custom metrics using the Sematext context.
+
+
+
+### [Multiple Browser Tabs](./multi-tab.js)
+
+This script launches and interacts with multiple browser tabs. It first navigates to a specified URL and waits for it to load. Once loaded it then opens a link in the page in a new browser tab. It then switches to the new tab and captures a screenshot, the title of the new tab is then logged.

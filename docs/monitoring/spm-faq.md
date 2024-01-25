@@ -399,16 +399,6 @@ See info about user roles in [sharing FAQ](../faq/#sharing).
 
 Yes, see the [Ansible instructions](../agents/sematext-agent/ansible) for installing Sematext Agent in multiple hosts.
 
-### Is there a Puppet Module for the Sematext Agent?
-
-Yes, see the Install and
-Configure [module](https://forge.puppet.com/sematext/spm_monitor),
-with examples.
-
-### Is there a Chef Recipe for the Sematext Agent?
-
-Yes, see [Sematext Agent Chef Recipe](../agents/sematext-agent/chef-recipe) example.
-
 ## Agent Updating
 
 ### How do I upgrade the Sematext Agent?
