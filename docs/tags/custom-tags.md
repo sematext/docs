@@ -15,6 +15,10 @@ To add tags to the Sematext Agent, edit the property below in the Sematext Agent
 tags: "env:dev, project:projectName, role:webfrontend"
 ```
 
+### Ansible
+
+It also possible to add custom tags to your Ansible playbook, for details please see [here](https://sematext.com/docs/agents/sematext-agent/ansible/#install-the-agent-using-an-ansible-playbook).
+
 ## Sematext App Agent
 
 To configure tags for an individual App, edit the property below in the monitor configuration file:
