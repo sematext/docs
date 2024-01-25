@@ -22,8 +22,7 @@ Make sure to add the newly created directories in PATH:
 For more installation methods, check out the [official installation instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible).
 
 ## Setup Inventory
-An Ansible [inventory](https://docs.ansible.com/ansible/latest/inventory_guide/index.html) is a list of all hosts that will be managed by Ansible. They can be logically grouped by webservers, databases, production, etc. Check out the [official documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups
-) to learn more.
+An Ansible [inventory](https://docs.ansible.com/ansible/latest/inventory_guide/index.html) is a list of all hosts that will be managed by Ansible. They can be logically grouped by webservers, databases, production, etc. Check out the [official documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups) to learn more.
 
 The inventory file can be saved anywhere, and in its simplest form for two hosts, it appears as shown below:
 
