@@ -77,7 +77,9 @@ The Sematext Agent role contains everything required to install Sematext Agent i
 ### Install from Ansible Galaxy
 Install the [Sematext Agent role from Ansible Galaxy](https://galaxy.ansible.com/ui/standalone/roles/sematext/spm-monitor-install/) on your control node by issuying the following command:
 
-```ansible-galaxy role install sematext.spm-monitor-install```
+```
+ansible-galaxy role install sematext.spm-monitor-install
+```
 
 
 ### Manual Installation
@@ -126,7 +128,9 @@ You can integrate the Sematext Ansible role in your existing playbooks or create
 
 Run your playbook using the following command:
 
-```ansible-playbook -i hosts sematext-agent-playbook.yaml```
+```
+ansible-playbook -i hosts sematext-agent-playbook.yaml
+```
 
 where `hosts` is your Ansible inventory and `sematext-agent-playbook.yaml` is the name of your playbook.
 
