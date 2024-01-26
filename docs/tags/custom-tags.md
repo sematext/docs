@@ -17,7 +17,7 @@ tags: "env:dev, project:projectName, role:webfrontend"
 
 ### Ansible
 
-It also possible to add custom tags to your Ansible playbook, for details please see [here](https://sematext.com/docs/agents/sematext-agent/ansible/#install-the-agent-using-an-ansible-playbook).
+It is also possible to add custom tags to your Ansible playbook, for details please see [here](https://sematext.com/docs/agents/sematext-agent/ansible/#install-the-agent-using-an-ansible-playbook).
 
 ## Sematext App Agent
 
