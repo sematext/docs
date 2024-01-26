@@ -294,6 +294,7 @@ pages:
             - Installation: agents/sematext-agent/kubernetes/installation.md
             - Helm Chart: agents/sematext-agent/kubernetes/helm.md
             - Operator: agents/sematext-agent/kubernetes/operator.md
+          - Ansible: agents/sematext-agent/ansible.md
           - Permission requirements: agents/sematext-agent/permission-requirements.md
         - Starting/stopping: agents/sematext-agent/starting-stopping.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
