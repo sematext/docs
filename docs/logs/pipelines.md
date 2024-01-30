@@ -63,7 +63,14 @@ The input is automatically loaded from the App, respecting the selected time, fi
 ![Edit Input](../images/logs/pipelines/edit-input.png)
 
 At the moment, JSON is the only input format that is supported. The input editor will check each line if it is a valid JSON and report an error if it is not. If there is a specific place where an error is found, clicking on the error icon will place the cursor at the error.
-Once the input is manually edited, a warning will be displayed if you try to reload data.
+
+After manually editing the input, click the "**Show Preview**" button at the bottom to view the result of your custom input when the processors are applied.
+
+![Custom Input](../images/logs/pipelines/custom-input.gif)
+
+If you switch to the "**Received**" tab while on the "**Custom**" tab, the custom logs you entered will be retained. When you switch back, you will still see the custom logs you entered before switching to the "**Received**" section.
+
+Clicking "**Reload Data**" will prompt a warning. If you choose to reload anyway, new logs based on the selected time range will be loaded into the custom section.
 
 ![Reload Warning](../images/logs/pipelines/reload-warning.png)
 
