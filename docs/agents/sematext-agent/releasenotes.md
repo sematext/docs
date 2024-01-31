@@ -39,6 +39,21 @@ NULL
 
 -->
 
+## Version 3.2.3
+
+Date: January 31, 2024
+
+### Improvements
+
+- Started using "always-restart" feature in log-shipping Systemd service to ensure its continuous operation, even in the event of an OOM-kill triggered by the kernel.
+- Added file-descriptor based log-file discovery as a fallback to eBPF based log-file discovery.
+- Enhanced our capability to verify file modified-time values.
+
+### Bug Fixes
+
+- Added guessing `mount_id` offset value to fix broken eBPF based log-file discovery for newer kernels.
+- Fix discarding `gc.log` files for the Elasticsearch service.
+
 ## Version 3.2.2
 
 Date: January 8, 2024
