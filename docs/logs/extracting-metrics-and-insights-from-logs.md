@@ -15,6 +15,8 @@ not really easily accessible because it's embedded.
 
 ### Examples
 #### Business insights hidden in logs
+
+##### Example 1
 `message`: `Customer from New York purchased 7 items totaling $99`
 
 There are 3 nuggets of data here:
@@ -28,6 +30,7 @@ If the quantity of items purchased were extracted and charted, one could work on
 to buy more and a visualization would show how well this is working.
 Same sort of thing for the purchase amount.
 
+##### Example 2
 `message`: `Search query "Mozart Eine Cleine Nacht Music" got 0 matches`
 
 Here we have 2 valuable bits of data:
@@ -39,43 +42,39 @@ If the search query was extracted and the number of search results were extracte
 the number of hits is 0.  Such cases could then be handled in the search engines via synonyms and other methods.
 
 #### DevOps/SRE insights hidden in logs
+##### Example 1
 `message`: `2 out of 10 messages failed to get delivered from Foo to Bar`
 
 There are 4 nuggets of data here:
 
-1. The number of messages that failed to get delivered
-2. The total number of messages
-3. The source
-4. The destination
+1. The number of messages that failed to get delivered: 2
+2. The total number of messages: 10
+3. The source: Foo
+4. The destination: Bar
 
 If these were in their dedicated fields one could create a chart/dashboard based on logs with non-zero failed messages and figure out problematic source and or destination, among other things
 
+##### Example 2
 `message`: `Couldn't store 2 objects of type Basket`
 
 Here we see 2 bits of useful data:
 
-1. The number of objects that had an issue
-2. The type of problematic objects
+1. The number of objects that had an issue: 2
+2. The type of problematic objects: Basket
 
 Having these in separate fields would let one easily identify most problematic objects.
 
 
 ## The Solution
 
-The examples above are just that - examples.  The common problem is that "messy" logs - and they often are "messy" like our examples - cannot be easily charted, you cannot create nice dashboards based on this data, 
-and you cannot create alerts.
+The examples above are just that - examples.  The common problem is that logs are "messy" and unstructured. They often are "messy" like our examples.  Such logs cannot be easily charted, you cannot create nice dashboards based on this data, and you cannot create alerts. Result? You are unable to leverage the valuable data that's embedded in the logs to improve your business, to discover new insights, to spot trends, to troubleshoot product issues, etc. etc.
 
-The solution?  Logs [Pipelines](pipelines).
+The solution? Logs [Pipelines](pipelines).
 
-### Examples
+### How to Structure Logs, Extract Metrics and More with Logs Pipelines
 
-In [Uncovering Business Insights from Logs](https://sematext.com/blog/uncovering-business-insights-from-logs/) you will learn 
-how to extract both numerical and non-numerical data from logs using Pipelines, 
-resulting in a dashboard that reveals insights that one could not otherwise see in the logs.
+In [Uncovering Business Insights from Logs](https://sematext.com/blog/uncovering-business-insights-from-logs/) you will learn how to extract both numerical and non-numerical data from logs using Pipelines, resulting in a dashboard that reveals insights that one could not otherwise see in the logs.
 
-In [How to Create Log-Based Metrics to Improve Application Observability](https://sematext.com/blog/how-to-create-log-based-metrics/) 
-you will see how to use [Quick Chart](logs-table-quick-actions/#quick-chart) functionality to chart both numeric and non-numeric fields, as well as how to use Pipelines 
-to extract metrics from logs and then dashboard them.
+In [How to Create Log-Based Metrics to Improve Application Observability](https://sematext.com/blog/how-to-create-log-based-metrics/) you will see how to use [Quick Chart](logs-table-quick-actions/#quick-chart) functionality to chart both numeric and non-numeric fields, as well as how to use Pipelines to extract metrics from logs and then dashboard them.
 
-In [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/#field-extractor-processor-extract-metrics)
-you will learn how to use [Field Extractor Processor](field-extractor-processor/) to extract metrics from large fields and then drop original fields in order to reduce your costs.
+In [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/#field-extractor-processor-extract-metrics) you will learn how to use [Field Extractor Processor](field-extractor-processor/) to extract metrics from large fields and then drop original fields in order to reduce your costs.
