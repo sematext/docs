@@ -5,6 +5,7 @@ description: How to extract business or DevOps/SRE metrics from logs, chart them
 ## The Unstructured Logs Problem
 
 Logs often include all kinds of valuable information.  When logs are nicely structured they have fields with "clean values".  
+
 For example, they may contain a field like `price` or `size` or `count` or some other numerical values in their own fields.
 Or they might have fields like `category` or `name` or `country`.  
 
@@ -17,6 +18,7 @@ not really easily accessible because it's embedded.
 `message`: `Customer from New York purchased 7 items totaling $99`
 
 There are 3 nuggets of data here:
+
 1. Customer location: New York
 2. Number of items purchased: 7
 3. Purchase amount: $99
@@ -29,6 +31,7 @@ Same sort of thing for the purchase amount.
 `message`: `Search query "Mozart Eine Cleine Nacht Music" got 0 matches`
 
 Here we have 2 valuable bits of data:
+
 1. The search query (which contains misspellings - should be "Mozart Eine Kleine Nachtmusik")
 2. The number of search results: 0
 
@@ -39,6 +42,7 @@ the number of hits is 0.  Such cases could then be handled in the search engines
 `message`: `2 out of 10 messages failed to get delivered from Foo to Bar`
 
 There are 4 nuggets of data here:
+
 1. The number of messages that failed to get delivered
 2. The total number of messages
 3. The source
@@ -49,6 +53,7 @@ If these were in their dedicated fields one could create a chart/dashboard based
 `message`: `Couldn't store 2 objects of type Basket`
 
 Here we see 2 bits of useful data:
+
 1. The number of objects that had an issue
 2. The type of problematic objects
 
