@@ -66,7 +66,14 @@ button to open the side modal, select an App, click **Transfer to...** to procee
 user you want to transfer the App to, and hit **Transfer Ownership**.
 
 ## Team Account
-If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email.  Instead, if you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone else who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that account.  This way all assets created in Sematext remain in this team account and when individuals leave the company their access to this account can easily be removed with just a few clicks.
+If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email.  Instead, if you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone else who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that account.  
+
+### Team Account Benefits
+Team account doesn't cost any money. It's completely free. The benefits of a Team account:
+
+* Single, centralized place for all your team's Sematext assets (e.g. Apps, Dashboards, Alert Rules, payment information, plan management, access roles, etc.)
+* It is easy to invite teammates and, more importantly, remove them from the team account when they leave the organization
+* Longer lifetime.  When an invidual leaves an organization their email typically stops working after a while.  If your team has their Sematext assets in that individual's Sematext account you can imagine that's not really ideal.
 
 If you are using an internal group email, you need to allow posting by non-members or from an email that's not your organization's email in order to be able to receive emails from Sematext. In Google Suite, you can enable this from Groups --> Settings page.
 
