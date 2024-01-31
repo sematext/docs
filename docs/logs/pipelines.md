@@ -8,9 +8,9 @@ Log Pipelines provide an easy to use mechanism to optionally process logs during
 Pipelines and its Processors can be used to drop unwanted log events, remove unwanted fields, enrich or transform your documents, and more.  Here are just a few use cases:
 
 - Improving signal-to-noise ratio by cleaning up log event content, structure, or even dropping unwanted logs all together
-- Extraction of metrics or other bits into separate fields making them suitable for charting and alerting
-- Masking sensitive data or removing fields or whole events when they contain sensitive data
-- Reducing costs by trimming heavy log events or dropping them.  See [Reducing Log Monitoring Costs](../logs/reduce-costs-with-pipelines) for more information.
+- Extraction of metrics or other bits into separate fields making them suitable for charting and alerting.  See [Extracting Metrics from Logs](extracting-metrics-and-insights-from-logs/).
+- Masking sensitive data or removing fields or whole events when they contain sensitive data. See [How to Handle Sensitive Data](handle-sensitive-data-with-pipelines/).
+- Reducing costs by trimming heavy log events or dropping them.  See [Reducing Log Monitoring Costs](reduce-costs-with-pipelines) for more information.
 
 These are just a few examples.  The use of Pipelines is not limited to these use cases.
 
