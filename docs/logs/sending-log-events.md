@@ -104,7 +104,7 @@ For further insights, refer to [Logging Libraries vs Log Shippers](https://semat
 <ul>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=docker">Docker</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=kubernetes">Kubernetes</a></li>
- 	<li><a href="../kubernetes-audit-integration">Kubernetes Audit</a></li>
+ 	<li><a href="../integration/kubernetes-audit-integration">Kubernetes Audit</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=kubernetes-containerd">Kubernetes Containerd</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=kubernetes-crio">Kubernetes CRI-O</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=mesosmarathon">Mesos Marathon</a></li>
