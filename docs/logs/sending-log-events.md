@@ -120,8 +120,8 @@ For further insights, refer to [Logging Libraries vs Log Shippers](https://semat
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=heroku">Heroku</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=cloudfoundry">Cloud Foundry</a></li>
  	<li><a href="https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=gae">Google App Engine</a></li>
- 	<li><a href="../github-webhook-events-integration">GitHub Webhook Events</a></li>
- 	<li><a href="../vercel-logs-integration">Vercel</a></li>
+ 	<li><a href="../integration/github-webhook-events-integration">GitHub Webhook Events</a></li>
+ 	<li><a href="../integration/vercel-logs-integration">Vercel</a></li>
 </ul>
 
 ### iOS 
@@ -139,13 +139,13 @@ shipper</a> like you would from any other physical or virtual machine.
 
 ### AWS ECS on AWS Fargate With FireLens 
 
-We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more detailed out-of-the-box reports.
+We recommend you use the [AWS ECS Logs Integration](../integration/ecs-logs) to get more detailed out-of-the-box reports.
 
 ### AWS ECS on AWS Fargate With AWS Logs
 
-We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more detailed out-of-the-box reports.
+We recommend you use the [AWS ECS Logs Integration](../integration/ecs-logs) to get more detailed out-of-the-box reports.
 
 ### AWS ECS on AWS EC2
 
-We recommend you use the [AWS ECS Logs Integration](./ecs-logs) to get more detailed out-of-the-box reports.
+We recommend you use the [AWS ECS Logs Integration](../integration/ecs-logs) to get more detailed out-of-the-box reports.
 
