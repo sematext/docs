@@ -90,7 +90,7 @@ This script utilizes Puppeteer's request interception feature to intercept and t
 
 ### [Text search](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/text-search.js)
 
-This script uses [waitForXpath](https://pptr.dev/api/puppeteer.page.waitforxpath) to search for the text “Troubleshooting Just Got Easier” on the page.
+This script uses [waitForXpath](https://pptr.dev/api/puppeteer.page.waitforxpath) to search for the text “Sematext provides Monitoring & Alerting” on the page.
 
 
 
