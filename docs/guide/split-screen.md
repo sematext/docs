@@ -50,6 +50,8 @@ You have set up two Apps in Sematext Cloud for [monitoring your Apache server](h
 
 You access the Apache Monitoring App and navigate to the Overview report. There are serveral abnornal spikes following the same pattern in various charts, including CPU, Memory, Network Traffic and Scoreboard Connection Ops. You focus on the Scoreboard Connections Ops chart, where you notice a spike in [worker closing connections](https://sematext.com/docs/integration/apache-integration/#apache-metrics). You suspect that an attacker may be flooding the server with a high volume of requests, causing normal connections to be dropped and resulting in an increase in workers closing connections.
 
+![Sematext Cloud Split Screen Example](../images/guide/split-screen/apache-spikes.png)
+
 Now, you need help from your logs to continue the investigation. If you don't have a Logs App, you can easily use the [Companion Apps](https://sematext.com/docs/guide/connected-apps/#companion-apps) to create an Apache Logs App and connect it with your Apache Monitoring App so that you can correlate logs and metrics, as we will see in the next section.
 
 #### Analyze metrics and logs together
@@ -58,8 +60,12 @@ You will use Split Screen to check the Apache logs and correlate them with the m
 
 Look for any correlation between the spike in scoreboard connections and corresponding logs. You notice an increased number of 5xx HTTP status codes and you'll see that their distribution in Requests chart matches the spikes in scoreboard connections.
 
+![Sematext Cloud Split Screen Example](../images/guide/split-screen/split-screen-correlation-overview.png)
+
 #### Identify suspicious activity
 
 To learn more about these 5xx errors, you can select the Errors report in the Apache Logs App from the left pane. There, you can see that a particular client is causing all these errors. Additionally, there is a specific path associated with all these error requests. To further drill down into specific log entries, you can filter by this client and check the logs. It becomes clear that a file named malicious.php is causing 500 errors and flooding the server with requests.
+
+![Sematext Cloud Split Screen Example](../images/guide/split-screen/split-screen-correlation-logs.png)
 
 Now, you can take appropriate actions by blocking this IP, removing the malicious file, and continuously monitoring your infrastructure to confirm that the incident has been resolved.
