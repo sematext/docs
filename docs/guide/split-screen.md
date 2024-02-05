@@ -48,7 +48,7 @@ You have set up two Apps in Sematext Cloud for [monitoring your Apache server](h
 
 #### Apache metrics
 
-You access the Apache Monitoring App and navigate to the Overview report. There are serveral abnornal spikes following the same pattern in various charts, including CPU, Memory, Network Traffic and Scoreboard Connection Ops. You focus on the Scoreboard Connections Ops chart, where you notice a spike in [worker closing connections](https://sematext.com/docs/integration/apache-integration/#apache-metrics). You suspect that an attacker may be flooding the server with a high volume of requests, causing normal connections to be dropped and resulting in an increase in workers closing connections.
+You access the Apache Monitoring App and navigate to the Overview report. There are several abnornal spikes following the same pattern in various charts, including CPU, Memory, Network Traffic and Scoreboard Connection Ops. You focus on the Scoreboard Connections Ops chart, where you notice a spike in [worker closing connections](https://sematext.com/docs/integration/apache-integration/#apache-metrics). You suspect that an attacker may be flooding the server with a high volume of requests, causing normal connections to be dropped and resulting in an increase in workers closing connections.
 
 ![Sematext Cloud Split Screen Example](../images/guide/split-screen/apache-spikes.png)
 
