@@ -70,3 +70,11 @@ Sematext recommends the name for the new App.  You can use the suggested name or
 ![Sematext Cloud Connected Apps - Connected Apps Page](../images/guide/connected-apps/companion-apps-newapp.png)
 
 With both Apps automatically connected, you can now correlate their data for further troubleshooting via [Split Screen](https://sematext.com/docs/guide/split-screen/).
+
+### Example Use Case
+
+Companion Apps provide an easy way for fast troubleshooting of issues using Split Screen functionality. You can quickly create a Companion App and start monitoring both metrics and logs as shown below.
+
+![Sematext Cloud Companion Apps](../images/guide/connected-apps/companion-apps-creation.gif)
+
+This enables you to investigate and find the root cause of issues in your infrastructure, like the [Apache HTTP server incident example](https://sematext.com/docs/guide/split-screen/#example-use-case) that we analyzed in the Split Screen guide.
