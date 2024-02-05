@@ -270,6 +270,7 @@ pages:
         - Bar, Pie, and Donut Charts: dashboards/bar-pie-donut-chart.md
         - Numeric Component: dashboards/numeric-component.md
         - Heatmap: dashboards/heatmap.md
+        - Heatbar: dashboards/heatbar.md
         - Geo map: dashboards/geomap.md
         - Markdown: dashboards/markdown.md
       - Report Variables: dashboards/report-variables.md
