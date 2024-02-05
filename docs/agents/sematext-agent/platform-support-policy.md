@@ -19,19 +19,19 @@ The Sematext Agent is designed for compatibility across all major GNU/Linux dist
 
 | Platform | Supported Versions |
 |:-:|:-|
-| Kubernetes | 1.25<br>1.26<br>1.27<br>1.28 |
-| Docker | 20.10<br>23.0<br>24.0<br>25.0 | 
-| Red Hat OpenShift | 4.11<br>4.12<br>4.13<br>4.14 | 
-| Nomad | 1.4<br>1.5<br>1.6<br>1.7 | 
+| **Kubernetes** | 1.25<br>1.26<br>1.27<br>1.28 |
+| **Docker** | 20.10<br>23.0<br>24.0<br>25.0 | 
+| **Red Hat OpenShift** | 4.11<br>4.12<br>4.13<br>4.14 | 
+| **Nomad** | 1.4<br>1.5<br>1.6<br>1.7 | 
 
 ## Cloud Providers
 
 | Provider |
 |:-:|
-| Azure AKS |
-| Amazon ECS |
-| Amazon AKS |
-| Google GKE |
+| **Azure AKS** |
+| **Amazon ECS** |
+| **Amazon AKS** |
+| **Google GKE** |
 
 ## Windows
 
