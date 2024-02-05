@@ -34,10 +34,10 @@ The Sematext Agent is designed for compatibility across all major GNU/Linux dist
 
 | Provider |
 |:-:|
-| **Azure AKS** |
-| **Amazon ECS** |
-| **Amazon AKS** |
-| **Google GKE** |
+| Azure AKS |
+| Amazon ECS |
+| Amazon AKS |
+| Google GKE |
 
 ## Windows
 
