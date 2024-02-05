@@ -5,7 +5,7 @@ The Sematext Agent is designed for compatibility across all major GNU/Linux dist
 ## Linux
 
 | Distro | Supported Versions |
-|:-:|:-|
+|:-:|:-:|
 | **Ubuntu** | 16.04<br>18.04<br>20.04<br>22.04<br>23.10 |
 | **Debian** | 10<br>11<br>12 |
 | **CentOS** | 6<br>7<br>8 |
@@ -24,7 +24,7 @@ The Sematext Agent is designed for compatibility across all major GNU/Linux dist
 ## Platforms
 
 | Platform | Supported Versions |
-|:-:|:-|
+|:-:|:-:|
 | **Kubernetes** | 1.25<br>1.26<br>1.27<br>1.28 |
 | **Docker** | 20.10<br>23.0<br>24.0<br>25.0 | 
 | **Red Hat OpenShift** | 4.11<br>4.12<br>4.13<br>4.14 | 
