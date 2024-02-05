@@ -19,7 +19,7 @@ The Sematext Agent is designed for compatibility across all major GNU/Linux dist
 
 
 1. Our eBPF functinality requires at least 4.4.2 version of the Linux kernel.  
-2. The Sematext Agent's bare-metal version relies on Systemd. While using initd remains possible, we strongly recommend adopting Systemd for optimal performance.
+2. The Sematext Agent's bare-metal version relies on SystemD. While using Init remains possible, we strongly recommend adopting SystemD for optimal performance.
 
 ## Platforms
 
