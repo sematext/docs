@@ -6,7 +6,7 @@ The Sematext Agent is designed for compatibility across all major GNU/Linux dist
 
 | Distro | Supported Versions |
 |:-:|:-:|
-| **Ubuntu** | 16.04<br>18.04<br>20.04<br>22.04<br>23.10 |
+| **Ubuntu** | 18.04<br>20.04<br>22.04<br>23.10 |
 | **Debian** | 10<br>11<br>12 |
 | **CentOS** | 6<br>7<br>8 |
 | **CentOS Stream** | 8<br>9 |
