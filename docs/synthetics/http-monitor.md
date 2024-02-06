@@ -65,7 +65,7 @@ When creating an HTTP monitor, navigate to the Authentication tab and select **B
 
 ![Access Token Authentication](../images/synthetics/authentication-token.png)
 
-Enter the access token URL and the source field to get the token from response. Enter header and body parameters to fetch the token such as grant-type, username and password. Both `application/json` and `application/x-www-form-urlencoded` formats are supported as request content types.
+Enter the access token URL and the source field to get the token from the response. Enter headers and body parameters to fetch the token such as `grant_type`, `username` and `password`. We currently support encoding the authentication request's body as `application/json` and `application/x-www-form-urlencoded`. 
 
 Before Sematext calls the endpoint, an access token will be fetched based on the parameters entered within this tab and it will be passed to the API request.
 
