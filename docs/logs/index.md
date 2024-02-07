@@ -1,7 +1,7 @@
 title: Sematext Logs Documentation
-description:  Cloud based SaaSlogging as a service platform. Index machine data, search, correlate and investigate. Build in reports and dashboards with monitoring and alerting capabilities.
+description:  Cloud based SaaS logging as a service platform. Index machine data, search, correlate and investigate. Built in reports and dashboards with monitoring and alerting capabilities.
 
-Sematext Logs is your team's central location for logs. It's SaaS, so there is nothing for your team to manage.
+Sematext Logs is your team's modern log monitoring and alerting cloud solution.
 
 You can collect logs from any part of your software stack, IoT devices, network hardware and much more. By using log shippers you centralize and index logs from all parts in one single place.  You can [send logs](../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, syslogs, and much more.
 
