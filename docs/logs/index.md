@@ -1,15 +1,13 @@
 title: Sematext Logs Documentation
 description:  Cloud based SaaSlogging as a service platform. Index machine data, search, correlate and investigate. Build in reports and dashboards with monitoring and alerting capabilities.
 
-Sematext Logs is a **Log Management-as-a-service**. Think of it as your own **central location for logs** in the cloud.
+Sematext Logs is your team's central location for logs. It's SaaS, so there is nothing for your team to manage.
 
-You can collect logs from any part of your software stack, IoT devices, network hardware and much more. By using log shippers you centralize and index logs from all parts in one single place.
+You can collect logs from any part of your software stack, IoT devices, network hardware and much more. By using log shippers you centralize and index logs from all parts in one single place.  You can [send logs](../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, syslogs, and much more.
 
-You can [send logs](../logs/sending-log-events/) from infrastructure, containers, AWS, applications, custom events, syslogs, and much more.
+Sematext is a cheaper [alternative to Datadog, Splunk, Logz.io, and other vendors](https://sematext.com/resources/industry-comparisons/). Sematext exposes an Elasticsearch and OpenSearch-compatible ingestion and query APIs for indexing and searching. Data can be sent to Sematext from virtually any source, format or location.
 
-Sematext is a cheaper [alternative to Dtadog, Splunk, Logz.io, and other vendors](https://sematext.com/resources/industry-comparisons/). Sematext exposes an Elasticsearch and OpenSearch-compatible ingestion and query APIs for indexing and searching. Data can be sent to Sematext from virtually any source, format or location.
-
-You can create [custom dashboards](../dashboards) with real-time data that helps you understand important trends, summarize top values and view the frequency of conditions.
+You can create [custom dashboards](../dashboards) with real-time data that helps you understand important trends, spot new logs, troubleshoot application and infrastructure issues, etc.
 
 [Searching logs](./searching-log-events/) is easy with a Google-like [query syntax](./search-syntax). You can also turn all searches into real-time [alerts](../alerts/) and automatically trigger notifications. Sematext Logs supports sending **alerts via [E-mail](https://sematext.com/docs/integration/alerts-email-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/)**, and [various other 3rd party integrations](https://sematext.com/docs/integration/#alerts-notifications). Alerts can be triggered based on thresholds, trend-based conditions and other complex searches.
 
