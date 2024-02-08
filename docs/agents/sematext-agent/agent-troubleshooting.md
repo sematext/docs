@@ -17,11 +17,16 @@ Try [restarting the agent](https://sematext.com/docs/agents/sematext-agent/start
 
 ## Update Sematext Agent
 
-Update the agent to the [latest version](https://sematext.com/docs/agents/sematext-agent/releasenotes/). For more details on how to do that, see our [Agent Upgrade Instructions](https://sematext.com/docs/monitoring/spm-faq/#agent-updating). You can see which agents need to be updated in Fleet and Discovery section of Sematext Cloud.
+Update the agent to the [latest version](https://sematext.com/docs/agents/sematext-agent/releasenotes/). For more details on how to do that, see our [Agent Upgrade Instructions](https://sematext.com/docs/monitoring/spm-faq/#agent-updating). 
 
-![Fleet](../../images/fleet/fleet-menu.png)
+You can see which agents need to be updated in Fleet and Discovery section of Sematext Cloud.
+
+![Fleet and Discovery](../../images/agents/fleet-agent-update.png)
 
 If an update is available for a particular agent, the agent's version will be displayed in yellow with an `Update` link right next to it.
+
+![Agent Update Available](../../images/agents/agent-update-needed.png)
+
 
 Visit [Fleet and Discovery]((https://sematext.com/docs/fleet/) documentation for more info.
 
@@ -47,20 +52,21 @@ Disabling Journal may lower the CPU usage. However, data that fails to ship will
 
 Note that this is a temporary solution, and you should contact [our support team](https://sematext.com/docs/agents/sematext-agent/agent-troubleshooting/#support) to help you identify and solve the root cause of your issue.
 
+
 ## Support
 
 If you are still having trouble, you can send us the diagnostics package, and we will assist you as soon as possible. To do so:
 
 1. Go to your Sematext Cloud dashboard.
-2. On the menu on the left, select `Fleet`.
-   ![Fleet screen](../../images/fleet/fleet.png)
+2. On the menu on the left, select `Fleet & Discovery`.
 3. Find your host on the list and click on it.
 4. Navigate to the `Diagnostics` tab.
-   ![Fleet screen](../../images/fleet/agent-diagnostics.png)
 5. Click on `Report a problem` and describe your issue.
 6. Once you're done, click on `Send a report` and we will reply shortly.
 
+![Fleet and Discovery - Diagnostics](../../images/agents/report-diagnostics.gif)
+
 Remember you can always contact us via chat on the bottom right corner of [our webpage](https://sematext.com/) and the Help button on Sematext Cloud, or via email at [support@sematext.com](mailto:support@sematext.com).
 
-![Sematext Cloud Help](../../images/agents/sc-help.png)
+![Sematext Cloud Help](../../images/agents/help-live-chat.gif)
 
