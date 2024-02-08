@@ -68,6 +68,8 @@ Field Editor lets you remove fields that are no longer present in your logs. You
 
 Deleting a field removes it from the logs [mappings](/logs/mappings-templates) and the logs already shipped to your Logs App will not be affected. If you continue to ship logs with such a field it will appear again. To fully delete the field from your Logs App first make sure the deleted field is no longer present in logs you ship to Sematext and then delete it with Field Editor.
 
+Excluding a field makes the specific field inaccessible for search and retrieval operations. When a field is excluded, it is disabled in the logs [mappings](/logs/mappings-templates) and effectively excluded from the index's search capabilities. This means that queries and aggregations will not consider or return results based on the excluded field.
+
 ### Re-indexing data
 
 If you want your changes to apply to old data you can do that by re-indexing it. As you change fields, Field Editor will prompt you with the option to do that. If you start the indexing process all your old logs will be re-indexed in the background and the progress will be displayed on the Field Editor screen. 
