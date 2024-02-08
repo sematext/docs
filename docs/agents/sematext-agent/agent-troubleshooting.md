@@ -61,8 +61,8 @@ If you are still having trouble, you can send us the diagnostics package, and we
 2. On the menu on the left, select `Fleet & Discovery`.
 3. Find your host on the list and click on it.
 4. Navigate to the `Diagnostics` tab.
-5. Click on `Report a problem` and describe your issue.
-6. Once you're done, click on `Send a report` and we will reply shortly.
+5. Click on `Report a Problem` and describe your issue.
+6. Once you're done, click on `Send a Report` and we will reply shortly.
 
 ![Fleet and Discovery - Diagnostics](../../images/agents/report-diagnostics.gif)
 
