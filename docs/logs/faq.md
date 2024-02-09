@@ -31,7 +31,7 @@ To prevent unwanted fields to be created you can exclude them with [Logs Pipelin
 * You can use Remove Fields Processor to drop nested fields that contain redundant data.
 * You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields. You can use Rename Fields Processor to extract useful information from a nested field and then use Remove Fields Processor to drop the nested field.
 
-Some [Pipeline Processsors](https://sematext.com/docs/logs/processors-overview/) for more info.
+See [Pipeline Processsors](https://sematext.com/docs/logs/processors-overview/) for more info.
   
 If you have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.
 
