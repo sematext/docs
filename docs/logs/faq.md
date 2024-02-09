@@ -33,11 +33,7 @@ To prevent unwanted fields to be created you can exclude them with [Logs Pipelin
 
 Some [Pipeline Processsors](https://sematext.com/docs/logs/processors-overview/) for more info.
   
-Some reasons why this may happen and how to address it before sending to Sematext:
-
-* You have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.
-* You can [ship logs from different sources to different Logs Apps](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-to-multiple-destinations-sematext-logs-apps), [ship logs to different Logs Apps based on the matching patterns](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-that-match-different-patterns-to-different-destinations-sematext-logs-apps)), or use [grep plugin](/logagent/input-filter-grep/) to [drop logs that match a certain pattern](https://sematext.com/docs/logagent/faq/#how-do-i-drop-logs-that-match-a-certain-pattern).
-* You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields.  If you are using [Logagent](/logagent) you can use REMOVE_FIELDs or [remove-fields output filter](/logagent/output-filter-removefields/) to remove fields.
+If you have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.
 
 ### What is @timestamp field?
 
