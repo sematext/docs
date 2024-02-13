@@ -23,13 +23,17 @@ logs.
 
 ### We are getting "Too many fields present in the index". What does that mean and how can we fix it?
 
-This means you have more than the allowed number of distinct fields in your Logs App.  To manually remove some fields use the Field Editor, but if you continue shipping logs with fields you've removed via Field Editor those fields will be recreated.
+This means you have more than the allowed number of distinct fields in your Logs App.  To manually remove some fields use the [Field Editor](https://sematext.com/docs/logs/fields/#field-editor), but if you continue shipping logs with fields you've removed via Field Editor those fields will be recreated.
 
-Some reasons why this may happen and how to address it:
+To prevent unwanted fields to be created you can exclude them with [Logs Pipelines](https://sematext.com/docs/logs/pipelines/). 
 
-* You have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.  You can [ship logs from different sources to different Logs Apps](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-to-multiple-destinations-sematext-logs-apps), [ship logs to different Logs Apps based on the matching patterns](https://sematext.com/docs/logagent/faq/#how-do-i-ship-logs-that-match-different-patterns-to-different-destinations-sematext-logs-apps)), or use [grep plugin](/logagent/input-filter-grep/) to [drop logs that match a certain pattern](https://sematext.com/docs/logagent/faq/#how-do-i-drop-logs-that-match-a-certain-pattern).
+* You can use Drop Processor to drop unwanted log events that match a specific condition.
+* You can use Remove Fields Processor to drop nested fields that contain redundant data.
+* You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields. You can use Rename Fields Processor to extract useful information from a nested field and then use Remove Fields Processor to drop the nested field.
 
-* You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields.  If you are using [Logagent](/logagent) you can use REMOVE_FIELDs or [remove-fields output filter](/logagent/output-filter-removefields/) to remove fields.
+See [Pipeline Processsors](https://sematext.com/docs/logs/processors-overview/) for more info.
+  
+If you have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.
 
 ### What is @timestamp field?
 
