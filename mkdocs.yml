@@ -45,6 +45,7 @@ pages:
           - syslog-ng: logs/syslog-ng.md
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
+        - How to Forward Logs from Datadog: logs/datadog-log-forwarding.md
       - Searching Logs:
         - Overview: logs/searching-log-events.md
         - Logsene CLI: logs/logsene-cli.md
