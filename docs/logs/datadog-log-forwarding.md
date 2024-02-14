@@ -17,8 +17,8 @@ Transitioning your logs from Datadog to Sematext requires no installation, and i
 ![DD Log Forwarding](../images/logs/dd_log_forwarding.png)
 
 - Configure the destination by entering Sematext's logs receiver endpoint:
-  - For US: https://logsene-receiver.sematext.com 
-  - For EU: https://logsene-receiver.eu.sematext.com 
+    - For US: https://logsene-receiver.sematext.com 
+    - For EU: https://logsene-receiver.eu.sematext.com 
     
   Make sure to include your Sematext Logs App token as  the index name. Your Logs App token can be found on the Ship Logs → Custom Integrations screen.
 
