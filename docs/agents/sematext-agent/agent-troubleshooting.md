@@ -32,7 +32,7 @@ If an update is available for a particular agent, the agent's version will be di
 ![Agent Update Available](../../images/agents/agent-update-needed.png)
 
 
-Visit [Fleet and Discovery]((https://sematext.com/docs/fleet/) documentation for more info.
+Visit [Fleet and Discovery](https://sematext.com/docs/fleet/) documentation for more info.
 
 
 ## Check Networking
