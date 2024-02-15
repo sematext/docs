@@ -6,7 +6,9 @@ If you are experiencing issues with the Sematext Agent, there are some things yo
 
 Check the Sematext Agent logs by issuing the following command:
 
-```sudo journalctl -u spm-monitor-st-agent -f```
+```
+sudo journalctl -u spm-monitor-st-agent -f
+```
 
 If you want to manually inspect the logs, they are located at `/opt/spm/spm-monitor/logs/st-agent`.
 
