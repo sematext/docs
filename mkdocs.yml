@@ -290,6 +290,7 @@ pages:
       - Overview: agents/index.md
       - Sematext Agent:
         - Overview: agents/sematext-agent/index.md
+        - Platform Support Policy: agents/sematext-agent/platform-support-policy.md
         - Installation:
           - Linux: agents/sematext-agent/installation.md
           - Docker: agents/sematext-agent/containers/installation.md
