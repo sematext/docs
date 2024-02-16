@@ -33,8 +33,8 @@ If a specific version is not listed below, running the agent may still be possib
 
 ## Cloud Managed Kubernetes Services
 
-| Provider |
-|:-:|
-| Azure AKS |
-| Amazon EKS |
-| Google GKE |
+| Provider | Service |
+|:-:|:-:|
+| Azure | Azure Kubernetes Service (AKS) |
+| Amazon | Elastic Kubernetes Service (EKS) |
+| Google | Google Kubernetes Engine (GKE) |
