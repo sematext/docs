@@ -3,7 +3,7 @@ description: Supported distributions and platforms for the Sematext Agent
 
 The Sematext Agent is designed for compatibility across all major GNU/Linux distributions and platforms. Our commitment extends to providing support throughout the entire lifecycle of distros and platforms.  
 
-If a specific version is not listed below, running the agent may still be possible, and we encourage you to explore its functionality on those versions to determine compatibility and performance.
+If a specific version is not listed below, Sematext Agent is still very likely to run, and we encourage you to explore its functionality on those versions.
 
 ## Linux
 
@@ -18,7 +18,7 @@ If a specific version is not listed below, running the agent may still be possib
 | **Fedora Linux** | 37<br>38<br>39 |
 | **openSUSE** | 15.4<br>15.5 |
 
-**Note:** We utilize eBPF technology for various functionalities such as log discovery, service discovery, and system metrics collection. Please note that our eBPF functionality requires a minimum **Linux kernel** version of **4.4.3**. If your kernel version is lower than 4.4.3, the Sematext Agent will still function using fallbacks. However, we strongly recommend using a host with eBPF enabled for optimal performance.
+> **Note:** We utilize eBPF technology for various functionality such as log discovery, service discovery, and system metrics collection. Please note that eBPF functionality requires a minimum **Linux kernel** version of **4.4.3**. If your kernel version is lower than 4.4.3, the Sematext Agent will still function using fallbacks. However, we strongly recommend using a host with eBPF enabled for optimal performance.
 
 ## Container Orchestrators
 
