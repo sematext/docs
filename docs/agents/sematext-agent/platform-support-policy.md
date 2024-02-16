@@ -1,4 +1,5 @@
 title: Platform Support Policy
+description: Supported distributions and platforms for the Sematext Agent
 
 The Sematext Agent is designed for compatibility across all major GNU/Linux distributions and platforms. Our commitment extends to providing support throughout the entire lifecycle of distros and platforms.  
 
@@ -32,6 +33,6 @@ If a specific version is not listed below, running the agent may still be possib
 
 | Provider | Service |
 |:-:|:-:|
-| Microsoft | Azure Kubernetes Service (AKS) |
-| Amazon | Elastic Kubernetes Service (EKS) |
-| Google | Google Kubernetes Engine (GKE) |
+| Microsoft | **Azure Kubernetes Service (AKS)** |
+| Amazon | **Elastic Kubernetes Service (EKS)** |
+| Google | **Google Kubernetes Engine (GKE)** |
