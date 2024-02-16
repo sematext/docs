@@ -17,10 +17,7 @@ If a specific version is not listed below, running the agent may still be possib
 | **Fedora Linux** | 37<br>38<br>39 |
 | **openSUSE** | 15.4<br>15.5 |
 
-**Notes:**
-
-- We utilize eBPF technology for various functionalities such as log discovery, service discovery, and system metrics collection. Please note that our eBPF functionality requires a minimum Linux kernel version of 4.4.3. If your kernel version is lower than 4.4.2, the Sematext Agent will still function using fallbacks. However, we strongly recommend using a host with eBPF enabled for optimal performance.
-- The bare-metal version of the Sematext Agent relies on SystemD. While it is still possible to use Init, we highly recommend adopting SystemD for most efficient operation.
+**Note:** We utilize eBPF technology for various functionalities such as log discovery, service discovery, and system metrics collection. Please note that our eBPF functionality requires a minimum **Linux kernel** version of **4.4.3**. If your kernel version is lower than 4.4.2, the Sematext Agent will still function using fallbacks. However, we strongly recommend using a host with eBPF enabled for optimal performance.
 
 ## Container Orchestrators
 
