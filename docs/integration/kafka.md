@@ -252,11 +252,12 @@ Suppose a Kafka broker typically handles fetch requests without encountering fai
 #### Actions to take
 
 - Check the status of the Kafka broker for any issues such as network connectivity problems, disk failures, or resource constraints that may be causing fetch requests to fail
-- Review disk utilization metrics for the Kafka broker to ensure that there is sufficient disk space available for storing topic data and handling fetch requests
+- Review disk utilization metrics for the Kafka broker to make sure that there is sufficient disk space available for storing topic data and handling fetch requests
 - Review network configurations and connectivity between the Kafka broker and clients for any network issues that may be causing fetch request failures
-- Monitor disk I/O metrics for the Kafka broker to identify any bottlenecks or performance issues related to disk read/write operations
+- Monitor disk I/O metrics for the Kafka broker for any bottlenecks or performance issues related to disk read/write operations
 - Review fetch request settings such as fetch size, timeout, and max fetch retries
 
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
 
 ## Troubleshooting
 

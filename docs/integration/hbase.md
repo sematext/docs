@@ -5,6 +5,23 @@ description: Sematext HBase monitoring captures all key HBase metrics with out o
 
 - Instructions: [https://apps.sematext.com/ui/howto/HBase/overview](https://apps.sematext.com/ui/howto/HBase/overview)
 
+## HBase Alerts
+
+As soon as you create an HBase App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+
+### Node count anomaly
+
+This alert rule continuously monitors the count of nodes running HBase regions in a system, identifying anomalies in the node count over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a system typically maintains a consistent number of servers running HBase regions, but due to hardware failures, scaling events, or maintenance activities, the node count changes unexpectedly. When this happens, the alert rule checks for anomalies in the node count over the last 90 minutes. Upon detecting the anomaly in the node count, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Investigate the reasons behind the observed changes in the node count, such as hardware failures, scaling events, or maintenance activities
+- If the node count decrease is due to hardware failures, replace or repair the failed hardware components
+
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
 ## Metrics
 
 You can choose which of some 300 HBase metrics to collect by adjusting the [HBase integration YML files](https://github.com/sematext/sematext-agent-integrations/tree/master/hbase) once you [install the HBase monitoring agent](https://apps.sematext.com/ui/howto/HBase/overview).
