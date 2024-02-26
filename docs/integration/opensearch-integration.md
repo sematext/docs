@@ -40,6 +40,135 @@ OpenSearch runs within a Java Virtual Machine (JVM) and [monitoring JVM](https:/
 
 Finally, high disk reads and writes can indicate a poorly tuned system. Since accessing the disk is an expensive process in terms of time, a well-tuned system should reduce disk I/O wherever possible.
 
+
+## OpenSearch Default Alerts
+
+As soon as you create an OpenSearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+
+### Node count anomaly
+
+This alert rule continuously monitors the count of nodes in an OpenSearch cluster, checking for anomalies in the number of nodes present within the cluster. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an OpenSearch cluster typically maintains a stable number of nodes, but due to various factors such as node failures, scaling activities, or network issues, the node count experiences sudden changes. When this happens, the alert rule checks for anomalies in the count of nodes over the last 90 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of nodes within the OpenSearch cluster for any nodes that may be offline, unavailable, or experiencing issues
+- If node failures are detected, you may need to restart failed nodes or replace hardware
+- If the node count changes due to scaling activities (e.g., adding or removing nodes), review the recent scaling events to confirm that they are intentional and expected
+- Monitor network connectivity between nodes within the OpenSearch cluster for any network issues that may be affecting communication and node discovery
+
+
+### Java old gen usage > 97%
+
+This alert rule continuously monitors the usage of Java's old generation heap memory in an OpenSearch environment, triggering a warning if the usage exceeds 97%. The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose the Java old generation heap memory usage in the OpenSearch environment starts increasing and eventually exceeds 97% over a 5-minute period.
+
+#### Actions to take
+
+- Analyze the application's memory usage patterns for any memory leaks
+- Review and optimize the Java Virtual Machine (JVM) configuration, including heap size settings, garbage collection algorithms, and memory management parameters
+- Monitor system resources, including memory, CPU, and disk I/O, and consider scaling them up if necessary
+- Investigate recent application changes, updates, or deployments that may have contributed to the spike in memory usage
+
+### Field data size
+
+This alert rule continuously monitors the field data size in an OpenSearch cluster and triggers a warning if the field data size exceeds a certain threshold (20 in this case). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose the field data size in the OpenSearch cluster increases significantly due to increased query loads or inefficient queries. When this happens, the alert rule checks the field data size over the last 10 minutes. If it exceeds 20% of the JVM heap committed memory during this timeframe, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Analyze the query patterns and usage that contribute to the increased field data size. Look for inefficient or resource-intensive queries that may need optimization
+- Optimize queries to reduce the amount of field data loaded into memory. This may involve restructuring queries, using filters, or optimizing aggregations to minimize memory usage
+- Consider scaling up the resources allocated to the OpenSearch cluster, such as increasing the JVM heap size, to accommodate the increased field data size
+
+
+### Tripped parent circuit breaker
+
+This alert rule continuously monitors the tripping of the parent circuit breaker in an OpenSearch cluster, detecting instances where the circuit breaker has been triggered due to resource constraints or overload. When such instances are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an OpenSearch cluster experiences a sudden increase in query load or indexing throughput, leading to resource contention and triggering the parent circuit breaker. When this happens, the alert rule checks for instances of the parent circuit breaker being tripped over the last 5 minutes. The alert is triggered as soon as the circuit breaker is tripped at least once within the specified timeframe.
+
+#### Actions to take
+
+- Analyze resource usage metrics for the OpenSearch cluster, including CPU, memory, and disk utilization, to identify the source of the increased load
+- Review and optimize search queries or indexing operations that may be contributing to the increased load on the cluster. Consider optimizing query performance, reducing indexing throughput
+
+### Unassigned shards anomaly
+
+This alert rule continuously monitors the presence of unassigned shards in an OpenSearch cluster, identifying anomalies in the number of unassigned shards over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an OpenSearch cluster typically maintains a low number of unassigned shards, but due to issues such as node failures or disk space constraints, the number of unassigned shards suddenly increases. When this happens, the alert rule checks for anomalies in the number of unassigned shards over the last 30 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of OpenSearch nodes to determine if any nodes are experiencing issues or are offline
+- Review disk space on OpenSearch nodes to see if there is sufficient space available for shard allocation
+- Review shard allocation settings in the OpenSearch cluster configuration to make sure that shards are allocated properly and evenly across nodes
+- Recover unassigned shards and allocate them to available nodes in the cluster
+
+### Thread pool rejections anomaly
+
+This alert rule continuously monitors thread pool rejections in an OpenSearch environment, identifying anomalies in the rate at which thread pool requests are rejected. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an OpenSearch cluster experiences a sudden increase in thread pool rejections, potentially due to resource limitations or high query loads. When this happens, the alert rule checks for anomalies in thread pool rejections over the last 90 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Review system metrics for the OpenSearch cluster, including CPU, memory, and disk usage, for any resource constraints that may be contributing to thread pool rejections
+- Analyze query patterns for any inefficient or resource-intensive queries. Optimize queries to reduce the load on the cluster
+- Review thread pool configurations and adjust settings such as thread counts, queue sizes, and timeouts to better accommodate the workload and prevent thread pool saturation
+
+### Used memory > 80%
+
+This alert rule continuously monitors memory usage in an OpenSearch environment and triggers a warning (WARN priority) when the used memory exceeds 80% of the total available memory. The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose the OpenSearch cluster experiences a sudden increase in activity or data volume, leading to increased memory usage. When the used memory exceeds 80% of the total available memory, the alert rule checks memory usage over the last hour. Upon crossing the threshold, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Investigate the cause of increased memory usage in the OpenSearch cluster, such as processes or activities contributing to the high memory consumption
+- Review and optimize the configuration settings of the OpenSearch cluster, including heap size allocation and cache settings
+
+### Swap usage
+
+This alert rule continuously monitors swap usage in an OpenSearch environment by tracking the rate of swap input/output operations. When swap usage exceeds the specified threshold, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose the swap usage on a node in the OpenSearch cluster suddenly spikes, indicating potential resource constraints or performance issues. When this happens, the alert rule checks for swap usage over the last 10 minutes. The alert is triggered when the sum of swap input/output operations within the specified timeframe is more than 1 (the threshold value).
+
+#### Action to take
+
+- Review system resource metrics to identify any spikes or anomalies in CPU, memory, or disk usage that may be contributing to high swap usage
+- Evaluate OpenSearch configuration settings and adjust resource allocations as needed to optimize performance and prevent excessive swap usage
+
+### Open files > 85%
+
+This alert rule continuously monitors the percentage of open files in an OpenSearch cluster. When the percentage exceeds 85% within the specified timeframe, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an OpenSearch cluster typically operates with a healthy percentage of open files, but due to increased usage or resource limitations, the percentage of open files exceeds 85%. When this happens, the alert rule checks for instances where the percentage of open files exceeds 85% within the last 10 minutes and triggers a warning.
+
+#### Actions to take
+
+- Review resource usage metrics and system logs to identify any issues contributing to the high percentage of open files
+- Review OpenSearch cluster configuration settings and consider optimizing resource allocation and file management settings to better handle file usage and prevent excessive file opening
+
+### Load average
+
+This alert rule continuously monitors the load average of an OpenSearch cluster and triggers a warning when the load average exceeds a specified threshold (currently when load average is more than 2). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose the average load on the OpenSearch cluster typically remains below 2, but due to increased query loads or resource constraints, the load average spikes above 2. When this happens, the alert rule checks for load average values over the last 30 minutes. Upon detecting the load average anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+-  Review system metrics such as CPU, memory, and disk usage for any source of increased load on the OpenSearch cluster
+- Review and optimize queries or indexing processes that may be contributing to the increased load on the cluster
+- If the increased load is due to resource limitations, consider scaling up resources such as CPU or memory
+
+
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                                             |  Description
