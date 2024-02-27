@@ -97,6 +97,24 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_solr_requests.png)
 
+## Solr Default Alerts
+
+As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+
+### Warmup time > 5m
+
+This alert rule continuously monitors the warmup time of a Solr cache, identifying instances where the warmup time exceeds 5 minutes. When such instances are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Solr cache is configured to warm up before serving requests, and the typical warmup time is around 3 minutes. However, due to increased data volume or inefficient warmup processes, the warmup time suddenly increases to 7 minutes. When this happens, the alert rule checks for warmup time anomalies over the last 5 minutes. Upon detecting the warmup time anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Review the warmup process of the Solr cache for any bottlenecks or configuration issues contributing to the extended warmup time
+- Optimize the warmup process by optimizing queries or adjusting cache configuration settings to reduce warmup time
+
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
+
 ## Metrics
 
 Metric Name<br> Key *(Type)* *(Unit)*                                                     |  Description
