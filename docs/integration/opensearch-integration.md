@@ -134,14 +134,16 @@ Suppose the OpenSearch cluster experiences a sudden increase in activity or data
 
 ### Swap usage
 
-This alert rule continuously monitors swap usage in an OpenSearch environment by tracking the rate of swap input/output operations. When swap usage exceeds the specified threshold, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors swap usage in an OpenSearch environment by tracking the rate of swap input/output operations. When any amount of swap usage is detected, it triggers a warning (WARN priority). This includes even the slightest swap activity, such as reading or writing a single byte to or from swap space.
 
-Suppose the swap usage on a node in the OpenSearch cluster suddenly spikes, indicating potential resource constraints or performance issues. When this happens, the alert rule checks for swap usage over the last 10 minutes. The alert is triggered when the sum of swap input/output operations within the specified timeframe is more than 1 (the threshold value).
+The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose there is some activity detected in the swap usage on a node in the OpenSearch cluster. Despite the relatively small amount of swap activity, the alert rule triggers a warning to prevent any big (and potentially unacceptable) slowdowns in OpenSearch caused by accessing swap memory.
 
 #### Action to take
 
-- Review system resource metrics to identify any spikes or anomalies in CPU, memory, or disk usage that may be contributing to high swap usage
-- Evaluate OpenSearch configuration settings and adjust resource allocations as needed to optimize performance and prevent excessive swap usage
+- Review system resource metrics to identify any spikes or anomalies in CPU, memory, or disk usage that may be contributing to swap usage
+- Evaluate OpenSearch configuration settings and adjust resource allocations as needed to optimize performance and prevent any swap usage
 
 ### Open files > 85%
 
