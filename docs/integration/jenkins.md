@@ -8,17 +8,18 @@ description: Comprehensive view of your Jenkins health and performance with Sema
 
 ## Jenkins Alerts
 
-As soon as you create a Jenkins App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+As soon as you create a Jenkins App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 
 ### Health check score anomaly
-This alert rule continuously monitors the health check score (the ratio of successful health checks to total health checks) of Jenkins instances using [anomaly detection](https://sematext.com/docs/alerts/#alert-types). When anomalies are detected, it triggers warnings (WARN priority) and sends you a [notification](https://sematext.com/docs/alerts/alert-notifications/).
 
-Let's say you have a Jenkins server that typically has a health check score of around 0.9, indicating a healthy system. However, due to a sudden increase in system load or a misconfiguration, the health check score drops significantly to 0.5 within a short period. Upon detecting the anomaly (in this case, a sudden drop in the health check score), the alert rule triggers a warning and sends notifications to the designated recipients.
+This alert rule continuously monitors the health check score (the ratio of successful health checks to total health checks) of Jenkins instances using [anomaly detection](https://sematext.com/docs/alerts/#alert-types). When anomalies are detected, it triggers warnings (WARN priority).
+
+Let's say you have a Jenkins server that typically has a health check score of around 0.9, indicating a healthy system. However, due to a sudden increase in system load or a misconfiguration, the health check score drops significantly to 0.5 within a short period. Upon detecting the anomaly (in this case, a sudden drop in the health check score), the alert rule triggers a warning.
 
 #### Actions to take
 
-- You can examine [system metrics](https://sematext.com/docs/monitoring/infrastructure/) such as CPU usage, memory, disk I/O, and network traffic to identify any spikes that may have contributed to the drop in the health check score
+- You can examine [system metrics](https://sematext.com/docs/monitoring/infrastructure/) such as CPU usage, memory, disk I/O, and network traffic to find any spikes that may have contributed to the drop in the health check score
 - Review Jenkins logs (system log, build logs, and any plugin-specific logs) to get insights into any errors or warnings in the Jenkins environment
 - Review recent changes to Jenkins configuration, including plugin updates, job configurations, and system settings
 
@@ -31,7 +32,7 @@ Suppose the Jenkins master Web UI typically operates smoothly, but due to a misc
 
 #### Actions to take
 
-- Review Jenkins logs and server configurations to identify the cause of the HTTP 500 errors. This may involve checking for misconfigurations, software bugs, or issues with dependencies
+- Review Jenkins logs and server configurations to find the cause of the HTTP 500 errors. This may involve checking for misconfigurations, software bugs, or issues with dependencies
 - If recent changes were made to Jenkins or its dependencies, consider rolling back those changes to restore stability
 
 

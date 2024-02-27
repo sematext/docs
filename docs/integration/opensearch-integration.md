@@ -27,7 +27,7 @@ When the cluster receives a request, it may need to access data from multiple sh
 ![Latency](../images/integrations/opensearch-latency.png)
 
 #### Indexing Rate and Merge Times
-Monitoring the OpenSearch document indexing rate and merge time can help identify anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
+Monitoring the OpenSearch document indexing rate and merge time can help detect anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
 
 ![Merged Documents](../images/integrations/opensearch-merged-documents.png)
 
@@ -43,11 +43,11 @@ Finally, high disk reads and writes can indicate a poorly tuned system. Since ac
 
 ## OpenSearch Default Alerts
 
-As soon as you create an OpenSearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+As soon as you create an OpenSearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Node count anomaly
 
-This alert rule continuously monitors the count of nodes in an OpenSearch cluster, checking for anomalies in the number of nodes present within the cluster. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors the count of nodes in an OpenSearch cluster, detecting anomalies in the number of nodes present within the cluster. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
 Suppose an OpenSearch cluster typically maintains a stable number of nodes, but due to various factors such as node failures, scaling activities, or network issues, the node count experiences sudden changes. When this happens, the alert rule checks for anomalies in the count of nodes over the last 90 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
 
@@ -93,12 +93,12 @@ Suppose an OpenSearch cluster experiences a sudden increase in query load or ind
 
 #### Actions to take
 
-- Analyze resource usage metrics for the OpenSearch cluster, including CPU, memory, and disk utilization, to identify the source of the increased load
+- Analyze resource usage metrics for the OpenSearch cluster, including CPU, memory, and disk utilization, to find the source of the increased load
 - Review and optimize search queries or indexing operations that may be contributing to the increased load on the cluster. Consider optimizing query performance, reducing indexing throughput
 
 ### Unassigned shards anomaly
 
-This alert rule continuously monitors the presence of unassigned shards in an OpenSearch cluster, identifying anomalies in the number of unassigned shards over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors the presence of unassigned shards in an OpenSearch cluster, detecting anomalies in the number of unassigned shards over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
 Suppose an OpenSearch cluster typically maintains a low number of unassigned shards, but due to issues such as node failures or disk space constraints, the number of unassigned shards suddenly increases. When this happens, the alert rule checks for anomalies in the number of unassigned shards over the last 30 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
 
@@ -111,7 +111,7 @@ Suppose an OpenSearch cluster typically maintains a low number of unassigned sha
 
 ### Thread pool rejections anomaly
 
-This alert rule continuously monitors thread pool rejections in an OpenSearch environment, identifying anomalies in the rate at which thread pool requests are rejected. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors thread pool rejections in an OpenSearch environment, detecting anomalies in the rate at which thread pool requests are rejected. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
 Suppose an OpenSearch cluster experiences a sudden increase in thread pool rejections, potentially due to resource limitations or high query loads. When this happens, the alert rule checks for anomalies in thread pool rejections over the last 90 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
 
@@ -142,7 +142,7 @@ Suppose there is some activity detected in the swap usage on a node in the OpenS
 
 #### Action to take
 
-- Review system resource metrics to identify any spikes or anomalies in CPU, memory, or disk usage that may be contributing to swap usage
+- Review system resource metrics to find any spikes or anomalies in CPU, memory, or disk usage that may be contributing to swap usage
 - Evaluate OpenSearch configuration settings and adjust resource allocations as needed to optimize performance and prevent any swap usage
 
 ### Open files > 85%
@@ -153,7 +153,7 @@ Suppose an OpenSearch cluster typically operates with a healthy percentage of op
 
 #### Actions to take
 
-- Review resource usage metrics and system logs to identify any issues contributing to the high percentage of open files
+- Review resource usage metrics and system logs to find any issues contributing to the high percentage of open files
 - Review OpenSearch cluster configuration settings and consider optimizing resource allocation and file management settings to better handle file usage and prevent excessive file opening
 
 ### Load average

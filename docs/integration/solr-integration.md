@@ -99,7 +99,7 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ## Solr Default Alerts
 
-As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Warmup time > 5m
 

@@ -7,7 +7,7 @@ description: Sematext APM monitoring integration for Akka actors, dispatchers, a
 
 ## Akka Default Alerts
 
-As soon as you create an Akka App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will notify you of important events that may require your attention, as shown below.
+As soon as you create an Akka App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### CPU idle < 5%
 
@@ -28,7 +28,7 @@ Suppose an Akka application typically receives network data at a consistent rate
 #### Actions to take
 
 - Check the status of the network infrastructure to determine if there are any issues such as congestion, packet loss, or connectivity problems affecting data reception
-- Review application logs and system metrics to identify any errors or warnings that may be impacting network data reception
+- Review application logs and system metrics for any errors or warnings that may be impacting network data reception
 
 ### Network transmitted anomaly
 
