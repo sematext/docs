@@ -179,6 +179,8 @@ Suppose the average load on the Elasticsearch cluster typically remains below 2,
 - Review and optimize queries or indexing processes that may be contributing to the increased load on the cluster
 - If the increased load is due to resource limitations, consider scaling up resources such as CPU or memory
 
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
 
 ## Metrics
 
