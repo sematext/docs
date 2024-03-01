@@ -45,7 +45,7 @@ Side navigation sections for team features and settings:
 
 Once you [create a Monitoring App](https://sematext.com/docs/monitoring/quick-start/#creating-a-monitoring-app), and start your Agent, it will have a set of default [reports and components](https://sematext.com/docs/monitoring/reports-and-components/). You can edit, clone and delete these reports or create new ones. You can also define [report variables](https://sematext.com/docs/dashboards/report-variables/) to dynamically fiter and group data in a report.
 
-![](../images/guide/monitoring/report-menu.png)
+![](../images/monitoring/report-menu.png)
 
 Based on what type of Monitoring Integration you chose, more reports get created by default. In this OpenSearch integration you can see three more reports are created by default.
 
