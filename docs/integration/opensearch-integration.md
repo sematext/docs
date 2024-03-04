@@ -54,6 +54,7 @@ Suppose an OpenSearch cluster typically maintains a stable number of nodes, but 
 #### Actions to take
 
 - Check the status of nodes within the OpenSearch cluster for any nodes that may be offline, unavailable, or experiencing issues
+- Check the logs of the node that went down and/or logs of the master node
 - If node failures are detected, you may need to restart failed nodes or replace hardware
 - If the node count changes due to scaling activities (e.g., adding or removing nodes), review the recent scaling events to confirm that they are intentional and expected
 - Monitor network connectivity between nodes within the OpenSearch cluster for any network issues that may be affecting communication and node discovery
@@ -61,14 +62,14 @@ Suppose an OpenSearch cluster typically maintains a stable number of nodes, but 
 
 ### Java old gen usage > 97%
 
-This alert rule continuously monitors the usage of Java's old generation heap memory in an OpenSearch environment, triggering a warning if the usage exceeds 97%. The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors the usage of Java's old generation heap memory in an OpenSearch environment, triggering a warning if the usage exceeds 97%. Note that this shouldn't happen in a healthy environment. It's likely that the node will either face an out of memory exception or run into the Parent Circuit Breaker. Either way, you'd have unexpected failures. The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
 Suppose the Java old generation heap memory usage in the OpenSearch environment starts increasing and eventually exceeds 97% over a 5-minute period.
 
 #### Actions to take
 
 - Analyze the application's memory usage patterns for any memory leaks
-- Review and optimize the Java Virtual Machine (JVM) configuration, including heap size settings, garbage collection algorithms, and memory management parameters
+- [Review and optimize the Java Virtual Machine (JVM) configuration](https://sematext.com/blog/jvm-metrics/), including heap size settings, garbage collection algorithms, and memory management parameters
 - Monitor system resources, including memory, CPU, and disk I/O, and consider scaling them up if necessary
 - Investigate recent application changes, updates, or deployments that may have contributed to the spike in memory usage
 
@@ -76,12 +77,11 @@ Suppose the Java old generation heap memory usage in the OpenSearch environment 
 
 This alert rule continuously monitors the field data size in an OpenSearch cluster and triggers a warning if the field data size exceeds a certain threshold (20 in this case). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
-Suppose the field data size in the OpenSearch cluster increases significantly due to increased query loads or inefficient queries. When this happens, the alert rule checks the field data size over the last 10 minutes. If it exceeds 20% of the JVM heap committed memory during this timeframe, the alert rule triggers a warning.
+Significant field data usage points to a misconfiguration. Normally, you'd only use field data for global ordinals. If you're using >20%, you probably do sorting/aggregations on a text field with field data enabled. Which is dangerous (you may run out of heap on an expensive query). So you'd want to pre-process the data in the pipeline before OpenSearch and do your sorting/aggregations on doc_values instead.
 
 #### Actions to take
 
-- Analyze the query patterns and usage that contribute to the increased field data size. Look for inefficient or resource-intensive queries that may need optimization
-- Optimize queries to reduce the amount of field data loaded into memory. This may involve restructuring queries, using filters, or optimizing aggregations to minimize memory usage
+- Check _cat/fielddata, it will tell you which fields use more field data
 - Consider scaling up the resources allocated to the OpenSearch cluster, such as increasing the JVM heap size, to accommodate the increased field data size
 
 
@@ -95,6 +95,7 @@ Suppose an OpenSearch cluster experiences a sudden increase in query load or ind
 
 - Analyze resource usage metrics for the OpenSearch cluster, including CPU, memory, and disk utilization, to find the source of the increased load
 - Review and optimize search queries or indexing operations that may be contributing to the increased load on the cluster. Consider optimizing query performance, reducing indexing throughput
+- Consider scaling up the resources allocated to the OpenSearch cluster, such as increasing the JVM heap size and number of nodes
 
 ### Unassigned shards anomaly
 
@@ -118,19 +119,18 @@ Suppose an OpenSearch cluster experiences a sudden increase in thread pool rejec
 #### Actions to take
 
 - Review system metrics for the OpenSearch cluster, including CPU, memory, and disk usage, for any resource constraints that may be contributing to thread pool rejections
-- Analyze query patterns for any inefficient or resource-intensive queries. Optimize queries to reduce the load on the cluster
-- Review thread pool configurations and adjust settings such as thread counts, queue sizes, and timeouts to better accommodate the workload and prevent thread pool saturation
+- Analyze query patterns for any inefficient or resource-intensive queries. Optimize queries to reduce the load on the cluster (only applies for the search thread pool)
+- Check the calling applications and use fewer threads to talk to OpenSearch
 
 ### Used memory > 80%
 
 This alert rule continuously monitors memory usage in an OpenSearch environment and triggers a warning (WARN priority) when the used memory exceeds 80% of the total available memory. The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
-Suppose the OpenSearch cluster experiences a sudden increase in activity or data volume, leading to increased memory usage. When the used memory exceeds 80% of the total available memory, the alert rule checks memory usage over the last hour. Upon crossing the threshold, the alert rule triggers a warning.
+If the heap size is set too high in the OpenSearch configuration, it might lead to excessive memory usage. In such cases, when the heap memory usage goes over 80% of the total available memory, the alert rule checks memory usage over the last hour. Upon crossing the threshold, the alert rule triggers a warning.
 
 #### Actions to take
 
-- Investigate the cause of increased memory usage in the OpenSearch cluster, such as processes or activities contributing to the high memory consumption
-- Review and optimize the configuration settings of the OpenSearch cluster, including heap size allocation and cache settings
+- Review and optimize the configuration settings of the OpenSearch cluster, including heap size allocation
 
 ### Swap usage
 
@@ -142,8 +142,7 @@ Suppose there is some activity detected in the swap usage on a node in the OpenS
 
 #### Action to take
 
-- Review system resource metrics to find any spikes or anomalies in CPU, memory, or disk usage that may be contributing to swap usage
-- Evaluate OpenSearch configuration settings and adjust resource allocations as needed to optimize performance and prevent any swap usage
+- Turn off swap usage
 
 ### Open files > 85%
 
@@ -153,8 +152,9 @@ Suppose an OpenSearch cluster typically operates with a healthy percentage of op
 
 #### Actions to take
 
-- Review resource usage metrics and system logs to find any issues contributing to the high percentage of open files
-- Review OpenSearch cluster configuration settings and consider optimizing resource allocation and file management settings to better handle file usage and prevent excessive file opening
+- Verify and adjust open file limits for OpenSearch processes. The default open file limit for most systems is 65,536
+- If the open file limit is approaching the recommended threshold, check unusual merge policies or a large number of very small shards
+- A high percentage of open files usually signals a misconfiguration. Review OpenSearch cluster configuration settings and consider optimizing resource allocation and file management settings to better handle file usage and prevent excessive file opening
 
 ### Load average
 
@@ -164,7 +164,7 @@ Suppose the average load on the OpenSearch cluster typically remains below 2, bu
 
 #### Actions to take
 
--  Review system metrics such as CPU, memory, and disk usage for any source of increased load on the OpenSearch cluster
+- Review thread pools, indexing and search operations, heap usage, etc.
 - Review and optimize queries or indexing processes that may be contributing to the increased load on the cluster
 - If the increased load is due to resource limitations, consider scaling up resources such as CPU or memory
 
