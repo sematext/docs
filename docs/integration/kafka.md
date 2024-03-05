@@ -175,6 +175,8 @@ Suppose a Kafka consumer client typically processes messages without significant
 
 - Review Kafka consumer client configurations, message processing logic and system metrics to find the underlying cause of the increased lag
 - If the increased lag is due to limited resources, consider scaling up Kafka consumer client resources such as CPU, memory, or network bandwidth
+- Consider increasing the number of partitions for the relevant topics to distribute the load more evenly across consumers
+- Consider increasing the number of consumer instances to reduce lag
 
 
 ### In-sync replicas anomaly
@@ -224,7 +226,7 @@ Suppose a Kafka cluster typically maintains full replication of partitions acros
 
 - Check the status of Kafka brokers for any broker failures or issues that may be causing partitions to become under-replicated
 - Review the replication configurations for affected topics and partitions and double check that replication factors are set correctly
-- AAddress any network issues or connectivity problems between Kafka brokers that may be impacting the replication of partitions
+- Address any network issues or connectivity problems between Kafka brokers that may be impacting the replication of partitions
 - Consider rebalancing partitions across brokers to have even distribution and optimal replication, especially if certain brokers are overloaded or underutilized
 
 
@@ -239,7 +241,7 @@ Suppose a Kafka cluster typically maintains all partitions online and available 
 - Check the status of Kafka brokers for any broker failures or issues that may be causing partitions to become offline
 - Review the replication status and configuration of affected partitions to understand why they became offline. Determine if there are any replication issues or failures
 - If offline partitions are due to broker failures, try to recover or replace the failed brokers and make sure that partitions are redistributed and replicated properly
-- If offline partitions are due to disk failures or storage issues, address the underlying disk failures and mae sure that Kafka data directories are accessible and properly configured
+- If offline partitions are due to disk failures or storage issues, address the underlying disk failures and make sure that Kafka data directories are accessible and properly configured
 - Monitor the reassignment of offline partitions so that they are brought back online and replicated across available brokers effectively
 - Review data retention policies and disk space management to prevent future occurrences of offline partitions due to disk space issues
 

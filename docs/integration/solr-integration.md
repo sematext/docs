@@ -110,7 +110,10 @@ Suppose a Solr cache is configured to warm up before serving requests, and the t
 #### Actions to take
 
 - Review the warmup process of the Solr cache for any bottlenecks or configuration issues contributing to the extended warmup time
-- Optimize the warmup process by optimizing queries or adjusting cache configuration settings to reduce warmup time
+- Optimize the warmup process by 
+    - Adjusting the autoWarmCount parameter for relevant caches
+    - Verifying the frequency of soft commits (either autoSoftCommit or from the application) to check if they happening too often
+    - Optimizing queries used during warmup or adjusting cache configuration settings to reduce warmup time. This may involve tuning the newSearcher queries
 
 You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
 

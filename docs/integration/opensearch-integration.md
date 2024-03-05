@@ -87,9 +87,9 @@ Significant field data usage points to a misconfiguration. Normally, you'd only 
 
 ### Tripped parent circuit breaker
 
-This alert rule continuously monitors the tripping of the parent circuit breaker in an OpenSearch cluster, detecting instances where the circuit breaker has been triggered due to resource constraints or overload. When such instances are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors the tripping of the parent circuit breaker in an OpenSearch cluster, detecting instances where the circuit breaker has been triggered usually due to very high memory usage (for real memory, current default is 95% of JVM heap). When such instances are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
-Suppose an OpenSearch cluster experiences a sudden increase in query load or indexing throughput, leading to resource contention and triggering the parent circuit breaker. When this happens, the alert rule checks for instances of the parent circuit breaker being tripped over the last 5 minutes. The alert is triggered as soon as the circuit breaker is tripped at least once within the specified timeframe.
+Suppose an OpenSearch cluster experiences a sudden increase in query load or indexing throughput, leading to very high memory usage and triggering the parent circuit breaker. When this happens, the alert rule checks for instances of the parent circuit breaker being tripped over the last 5 minutes. The alert is triggered as soon as the circuit breaker is tripped at least once within the specified timeframe.
 
 #### Actions to take
 

@@ -18,7 +18,9 @@ Having both Elasticsearch Logs and Monitoring Apps lets you correlate performanc
 To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Important Metrics to Watch and Alert on
+
 ### System and JVM Metrics
+
 The first place we would recommend looking for in a new system are the OS metrics: CPU, memory, IO and network. A healthy CPU graph looks like this:
 
 ![CPU usage](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.18.14-1.png)
@@ -34,7 +36,9 @@ When it comes to system memory, don't be worried if you see very little free, li
 ![System memory usage](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.24.02-1.png)
 
 The operating system will try to cache your index files as much as it can. The *cached* memory can be freed up, if the system needs more memory.
+
 ### Elasticsearch-specific metrics
+
 You'll want to monitor query rates and times. In other words, how fast is Elasticsearch responding? Since this will likely impact your users, these are metrics worth alerting on as well.
 
 ![Query and fetch rate](https://sematext.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-26-at-11.09.09-1.png)
@@ -95,9 +99,9 @@ Significant field data usage points to a misconfiguration. Normally, you'd only 
 
 ### Tripped parent circuit breaker
 
-This alert rule continuously monitors the tripping of the parent circuit breaker in an Elasticsearch cluster, detecting instances where the circuit breaker has been triggered due to resource constraints or overload. When such instances are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+This alert rule continuously monitors the tripping of the parent circuit breaker in an Elasticsearch cluster, detecting instances where the circuit breaker has been triggered usually due to very high memory usage (for real memory, current default is 95% of JVM heap). When such instances are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
 
-Suppose an Elasticsearch cluster experiences a sudden increase in query load or indexing throughput, leading to resource contention and triggering the parent circuit breaker. When this happens, the alert rule checks for instances of the parent circuit breaker being tripped over the last 5 minutes. The alert is triggered as soon as the circuit breaker is tripped at least once within the specified timeframe.
+Suppose an Elasticsearch cluster experiences a sudden increase in query load or indexing throughput, leading to very high memory usage and triggering the parent circuit breaker. When this happens, the alert rule checks for instances of the parent circuit breaker being tripped over the last 5 minutes. The alert is triggered as soon as the circuit breaker is tripped at least once within the specified timeframe.
 
 #### Actions to take
 
