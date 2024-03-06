@@ -39,6 +39,19 @@ NULL
 
 -->
 
+## Version 3.3.0
+
+Date: March 5, 2024
+
+### Improvements
+
+- Updated the App-Agent command signature to avoid orphan processes after a OOM happen by the kernel.
+- Set `*_log` named files are recognized as a log file, as default.
+
+### Bug Fixes
+
+- Fixed a service discovery edge-case bug when a cold start happens for the ElasticSearch baremetal service.
+
 ## Version 3.2.3
 
 Date: January 31, 2024
@@ -57,10 +70,6 @@ Date: January 31, 2024
 ## Version 3.2.2
 
 Date: January 8, 2024
-
-### New Features
-
-- Support has been added for [slog](https://go.dev/blog/slog) logs.
 
 ### Improvements
 
