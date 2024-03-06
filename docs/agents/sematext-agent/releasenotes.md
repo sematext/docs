@@ -45,7 +45,7 @@ Date: March 5, 2024
 
 ### Improvements
 
-- Updated the App-Agent command signature to avoid orphan processes after a OOM happen by the kernel.
+- Updated the App-Agent command signature to prevent orphan processes after an Out-of-Memory (OOM) event occurs in the JVM.
 - Set `*_log` named files are recognised as a log file, as default.
 
 ### Bug Fixes
