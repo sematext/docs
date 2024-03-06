@@ -39,6 +39,19 @@ NULL
 
 -->
 
+## Version 3.3.0
+
+Date: March 5, 2024
+
+### Improvements
+
+- Updated the App-Agent command signature to prevent orphan processes after an Out-of-Memory (OOM) event occurs in the JVM.
+- Enhanced log-discovery to automatically identify files named `*_log` as log files, without the need for fallback timestamp checking.
+
+### Bug Fixes
+
+- Fixed a service discovery edge-case bug when a cold start happens for the ElasticSearch baremetal service.
+
 ## Version 3.2.3
 
 Date: January 31, 2024
@@ -57,10 +70,6 @@ Date: January 31, 2024
 ## Version 3.2.2
 
 Date: January 8, 2024
-
-### New Features
-
-- Support has been added for [slog](https://go.dev/blog/slog) logs.
 
 ### Improvements
 
