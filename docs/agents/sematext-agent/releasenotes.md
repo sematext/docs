@@ -46,7 +46,7 @@ Date: March 5, 2024
 ### Improvements
 
 - Updated the App-Agent command signature to avoid orphan processes after a OOM happen by the kernel.
-- Set `*_log` named files are recognized as a log file, as default.
+- Set `*_log` named files are recognised as a log file, as default.
 
 ### Bug Fixes
 
