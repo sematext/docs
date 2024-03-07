@@ -5,6 +5,45 @@ description: Sematext APM monitoring integration for Akka actors, dispatchers, a
 
 - Instructions: [https://apps.sematext.com/ui/howto/Akka/overview](https://apps.sematext.com/ui/howto/Akka/overview)
 
+## Akka Default Alerts
+
+As soon as you create an Akka App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+
+### CPU idle < 5%
+
+This alert rule continuously monitors the CPU idle percentage in an Akka system, triggering a warning (WARN priority) when the CPU idle falls below 5%. The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an Akka system typically operates with CPU idle percentages above 5%. However, due to increased workload, the CPU idle percentage drops below 5%. When this happens, the alert rule  the alert rule triggers a warning.
+
+#### Actions to take
+
+- Review the resource usage of the Akka system to identify the cause of increased CPU usage and decreased idle percentage. This may involve analyzing application load, system configuration, and resource allocation
+
+### Network received anomaly
+
+This alert rule continuously monitors the rate of network data received by an Akka application, checking for anomalies in the received data rate over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose an Akka application typically receives network data at a consistent rate, but due to network congestion or other issues, the rate of data reception suddenly drops or spikes unexpectedly. When this happens, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of the network infrastructure to determine if there are any issues such as congestion, packet loss, or connectivity problems affecting data reception
+- Review application logs and system metrics for any errors or warnings that may be impacting network data reception
+
+### Network transmitted anomaly
+
+This alert rule continuously monitors the rate of network transmission on the operating system level for Akka applications, checking for anomalies in transmission rates over time. When anomalies are detected, it triggers a warning (WARN priority).
+
+Suppose an Akka application typically maintains a stable rate of network transmission, but due to increased network congestion or connectivity issues, the transmission rate suddenly changes unexpectedly. When this happens, the alert rule checks for anomalies in the network transmission rate over the last hour. Upon detecting the anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check for network connectivity issues that may be affecting the transmission rate
+- Review network configurations and adjust settings to optimize network performance
+
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
+
 ## Metrics
 
 Metric Name | Key | Agg | Type | Description

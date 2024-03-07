@@ -161,6 +161,106 @@ The Sematext Kafka monitoring agent collects the following metrics.
 
 ![](https://sematext.com/wp-content/uploads/2019/05/d_kafka_consumer_lag.png)
 
+
+## Kafka Alerts
+As soon as you create a Kafka App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+
+### Consumer lag anomaly
+
+This alert rule continuously monitors consumer lag in Kafka consumer clients, detecting anomalies in lag values over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive notifications triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka consumer client typically processes messages without significant lag, but due to increased message volume or processing issues, the consumer lag suddenly spikes beyond normal levels. When this happens, the alert rule checks for anomalies in consumer lag values over the last 90 minutes and triggers a warning.
+
+#### Actions to take
+
+- Review Kafka consumer client configurations, message processing logic and system metrics to find the underlying cause of the increased lag
+- If the increased lag is due to limited resources, consider scaling up Kafka consumer client resources such as CPU, memory, or network bandwidth
+- Consider increasing the number of partitions for the relevant topics to distribute the load more evenly across consumers
+- Consider increasing the number of consumer instances to reduce lag
+
+
+### In-sync replicas anomaly
+
+This alert rule continuously monitors the number of in-sync replicas (ISRs) in a Kafka cluster, detecting anomalies in ISR counts over time. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka cluster typically maintains a stable number of in-sync replicas across its brokers. However, due to network issues or broker failures, the number of in-sync replicas starts changing unexpectedly. When this happens, the alert rule checks for anomalies in the number of in-sync replicas over the last 10 minutes. Upon detecting the anomaly in ISR counts, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of Kafka brokers to determine if any brokers have become unavailable or are experiencing issues
+- Review network configurations and connectivity between Kafka brokers for any network issues affecting communication and replication
+- If brokers have become unavailable, restore replication and make sure that all partitions have the required number of in-sync replicas
+
+
+### Producer error rate anomaly
+
+This alert rule continuously monitors the error rate of Kafka producers, detecting anomalies in the rate at which producer records encounter errors during message sending. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka producer typically sends messages without getting errors, but due to network issues or limited resources, the errror rate of producer records suddenly spikes. When this happens, the alert rule checks for anomalies in the error rate of producer records over the last 10 minutes and upon detecting an anomaly it triggers a warning.
+
+#### Actions to take
+
+- Check the status of Kafka producers to see if any producers are experiencing issues or errors
+- Review network configurations and connectivity between Kafka producers and brokers for any network issues affecting message sending
+
+
+### Producer topic records error rate anomaly
+
+This alert rule continuously monitors the error rate of Kafka producer records at the topic level, detecting anomalies in the rate at which records encounter errors during message sending for specific topics. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka producer typically sends messages to multiple topics without encountering errors, but due to issues with specific topics or data ingestion processes, the error rate of producer records for certain topics suddenly spikes. When this happens, the alert rule checks for anomalies in the error rate of producer records for specific topics over the last 10 minutes. Upon detecting the anomaly the alert rule triggers a warning.
+
+#### Actions to take
+- Investigate which specific Kafka topics are experiencing an increased error rate in producer records. This can be done by examining the topic-level error rate metrics
+- Review the configuration settings for the affected Kafka topics, including replication factor, partitioning strategy, and retention policy. Make sure that the configurations align with the expected workload
+- Review the configuration settings for Kafka producers, such as batch size, linger time, compression type, and retries
+
+
+### Underreplicated partition count anomaly
+
+This alert rule continuously monitors the count of under-replicated partitions in a Kafka cluster, detecting anomalies in the number of partitions that are not fully replicated across all brokers. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka cluster typically maintains full replication of partitions across all brokers, but due to broker failures, network issues, or limited resources, some partitions become under-replicated. When this happens, the alert rule checks for anomalies in the count of under-replicated partitions over the last 10 minutes. Upon detecting the anomaly in the count of under-replicated partitions, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of Kafka brokers for any broker failures or issues that may be causing partitions to become under-replicated
+- Review the replication configurations for affected topics and partitions and double check that replication factors are set correctly
+- Address any network issues or connectivity problems between Kafka brokers that may be impacting the replication of partitions
+- Consider rebalancing partitions across brokers to have even distribution and optimal replication, especially if certain brokers are overloaded or underutilized
+
+
+### Offline partition count anomaly
+
+This alert rule continuously monitors the count of offline partitions in a Kafka cluster, detecting anomalies in the number of partitions that are currently offline and unavailable. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka cluster typically maintains all partitions online and available for data replication and consumption. However, due to broker failures, disk failures, or other issues, some partitions become offline and unavailable. When this happens, the alert rule checks for anomalies in the count of offline partitions over the last 10 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of Kafka brokers for any broker failures or issues that may be causing partitions to become offline
+- Review the replication status and configuration of affected partitions to understand why they became offline. Determine if there are any replication issues or failures
+- If offline partitions are due to broker failures, try to recover or replace the failed brokers and make sure that partitions are redistributed and replicated properly
+- If offline partitions are due to disk failures or storage issues, address the underlying disk failures and make sure that Kafka data directories are accessible and properly configured
+- Monitor the reassignment of offline partitions so that they are brought back online and replicated across available brokers effectively
+- Review data retention policies and disk space management to prevent future occurrences of offline partitions due to disk space issues
+
+### Failed fetch requests anomaly
+
+This alert rule continuously monitors the count of failed fetch requests in a Kafka broker for topics, detecting anomalies in the number of requests that fail to fetch data. When anomalies are detected, it triggers a warning (WARN priority). The minimum delay between consecutive alerts triggered by this alert rule is set to 10 minutes.
+
+Suppose a Kafka broker typically handles fetch requests without encountering failures, but due to network issues, disk failures, or other factors, some fetch requests begin to fail intermittently. When this happens, the alert rule checks for anomalies in the count of failed fetch requests over the last 10 minutes. Upon detecting the anomaly, the alert rule triggers a warning.
+
+#### Actions to take
+
+- Check the status of the Kafka broker for any issues such as network connectivity problems, disk failures, or resource constraints that may be causing fetch requests to fail
+- Review disk utilization metrics for the Kafka broker to make sure that there is sufficient disk space available for storing topic data and handling fetch requests
+- Review network configurations and connectivity between the Kafka broker and clients for any network issues that may be causing fetch request failures
+- Monitor disk I/O metrics for the Kafka broker for any bottlenecks or performance issues related to disk read/write operations
+- Review fetch request settings such as fetch size, timeout, and max fetch retries
+
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
 ## Troubleshooting
 
 If you are having issues with Sematext Monitoring, i.e. not seeing Kafka metrics, see

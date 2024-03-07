@@ -5,6 +5,54 @@ description: Comprehensive view of your Jenkins health and performance with Sema
 
 - Instructions: [https://apps.sematext.com/ui/howto/Jenkins/overview](https://apps.sematext.com/ui/howto/Jenkins/overview)
 
+
+## Jenkins Alerts
+
+As soon as you create a Jenkins App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+
+
+### Health check score anomaly
+
+This alert rule continuously monitors the health check score (the ratio of successful health checks to total health checks) of Jenkins instances using [anomaly detection](https://sematext.com/docs/alerts/#alert-types). When anomalies are detected, it triggers warnings (WARN priority).
+
+Let's say you have a Jenkins server that typically has a health check score of around 0.9, indicating a healthy system. However, due to a sudden increase in system load or a misconfiguration, the health check score drops significantly to 0.5 within a short period. Upon detecting the anomaly (in this case, a sudden drop in the health check score), the alert rule triggers a warning.
+
+#### Actions to take
+
+- You can examine [system metrics](https://sematext.com/docs/monitoring/infrastructure/) such as CPU usage, memory, disk I/O, and network traffic to find any spikes that may have contributed to the drop in the health check score
+- Review Jenkins logs (system log, build logs, and any plugin-specific logs) to get insights into any errors or warnings in the Jenkins environment
+- Review recent changes to Jenkins configuration, including plugin updates, job configurations, and system settings
+
+
+### Response with Server Error Code
+
+This alert rule continuously monitors the count of HTTP 500 server errors in the Jenkins master Web UI. When the count exceeds zero within the last 5 minutes, it triggers a warning (WARN priority). The minimum delay between consecutive notifications triggered by this alert rule is set to 10 minutes.
+
+Suppose the Jenkins master Web UI typically operates smoothly, but due to a misconfiguration or software bug, it starts responding with HTTP 500 errors. The alert rule checks for occurrences of HTTP 500 errors within the last 5 minutes and it's triggered as soon as a single HTTP 500 error occurs.
+
+#### Actions to take
+
+- Review Jenkins logs and server configurations to find the cause of the HTTP 500 errors. This may involve checking for misconfigurations, software bugs, or issues with dependencies
+- If recent changes were made to Jenkins or its dependencies, consider rolling back those changes to restore stability
+
+
+### Server unavailable response code
+
+This alert rule continuously monitors the count of HTTP 503 server unavailable errors in the Jenkins master Web UI. When the count exceeds zero within the last 5 minutes, it triggers a warning (WARN priority). The minimum delay between consecutive notifications triggered by this alert rule is set to 10 minutes.
+
+Suppose the Jenkins master Web UI experiences a sudden surge in traffic or encounters issues with backend services, leading to an increase in HTTP 503 errors. When this happens, the alert rule checks for occurrences of HTTP 503 errors within the last 5 minutes and is triggered as soon as a single HTTP 503 error occurs.
+
+#### Actions to take
+
+- Investigate the status and health of backend services that Jenkins depends on, such as databases, application servers, or external APIs
+- Check Jenkins configuration settings, including connection settings to external integrations, resource allocation, and plugin configurations
+- [Monitor resource usage](https://sematext.com/docs/monitoring/infrastructure/) on the Jenkins server, including CPU, memory, disk I/O, and network bandwidth
+- If Jenkins is experiencing high traffic, consider scaling up the infrastructure by adding more Jenkins nodes
+
+
+You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+
+
 ## Metrics
 
 Metric Key *(Type)* *(Unit)*                                                                             |  Description
