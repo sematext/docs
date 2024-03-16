@@ -58,6 +58,20 @@ On the list of metrics you can find a special metric `count()`. This
 metric is available for [Logs](https://sematext.com/docs/logs/) and represents the number
 of matching logs.
 
+### Only latest interval
+
+Only Latest Interval toggle is available in [bar](./bar-pie-donut-chart), [pie & donut](./bar-pie-donut-chart), [geomap](./geomap), and [numeric](./numeric-component) components. When it is toggled on, only the latest value of the selected metric is displayed within the specified time range.
+
+![Chart builder metrics](../images/dashboards/chart-builder-latest-interval.png)
+
+If the  [Group By](https://sematext.com/docs/dashboards/chart-builder/#group-by) option is selected when only latest interval toggle is on, the displayed value will depend on the selected group by action.
+
+- **All Separetly:** Shows the latest value of the selected metric for each group. For instance, if you choose to group data by os.host and there are multiple `os.host` categories, the latest value of the selected metric for each distinct `os.host` will be displayed.
+- **AVG:** Shows the average of the all the latest values of the selected metric for each group.
+- **Sum:** Shows the sum of all the latest values of the selected metric for each group.
+- **Min:** Shows the minimum value amonng all the latest values of the selected metric in group.
+- **Max:** Shows the maximum value amonng all the latest values of the selected metric in group.
+
 ## Transformation
 
 Transformations are used to modify metrics with a formula. Why is this useful? Imagine you collect
