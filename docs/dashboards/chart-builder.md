@@ -66,7 +66,7 @@ Only Latest Interval toggle is available in [bar](./bar-pie-donut-chart), [pie &
 
 If the  [Group By](https://sematext.com/docs/dashboards/chart-builder/#group-by) option is selected when only latest interval toggle is on, the displayed value will depend on the selected group by action.
 
-- **Separetly:** Shows the latest value of the selected metric for each group. For instance, if you choose to group data by `os.host` and there are multiple `os.host` values, the latest value of the selected metric for each distinct `os.host` will be displayed.
+- **Separately:** Shows the latest value of the selected metric for each group. For instance, if you choose to group data by `os.host` and there are multiple `os.host` values, the latest value of the selected metric for each distinct `os.host` will be displayed.
 - **Avg:** Shows the average of all latest values of the selected metric for each group.
 - **Sum:** Shows the sum of all the latest values of the selected metric for each group.
 - **Min:** Shows the smallest value among all latest values of the selected metric in group.
