@@ -1,18 +1,19 @@
 title: GitHub Actions Integration
 description: Guide on how to integrate Sematext Synthetics with GitHub Actions.
 
-**Create API Key Secret**
+### Create API Key Secret
 
-Create a secret from the repository's **Settings** page for the Sematext API Key.
+The first step is to create a secret from the repository's **Settings** page for the Sematext API Key, which is needed to authenticate the request to run your desired Synthetics monitor. Go to your repository's **Settings**, and then in the sidebar under **Security** click **Secrets and variables** and then **Actions**. Create a new repository secret and name it `SEMATEXT_API_KEY`, then paste in the [API key for your account](./overview.md#finding-your-sematext-cloud-accounts-api-key).
 
 ![CI/CD GitHub Secret](./images/ci-cd-github-secret.png)
 
-**Add Run Monitor Job to GitHub Action Workflow YAML**
+### Add the Run Monitor Job to your GitHub Action Workflow
 
-Create `.github/workflows/run-monitor.yml` GitHub Actions YAML to run your monitors on various CI/CD events. For example, to run the monitor after a deployment event, create a GitHub Action Job that gets executed on `deployment_status` event. The below action uses the `deployment_status.target_url` to pass the custom URL to the run monitor API.
+Create the `.github/workflows/run-monitor.yml` GitHub Actions file to run your monitors on various CI/CD events. For example, to run the monitor after a deployment event, use the `deployment_status` event as a trigger. The below action uses `deployment_status.target_url` to pass the custom URL to the run monitor API. Make sure to set the appropriate values for [the APP_ID and MONITOR_ID variables](./overview.md#finding-your-synthetics-app-and-monitor-ids).
+
 
 ```yaml
-name: CI
+name: 'Sematext Synthetics CI'
 
 # Execute the run monitor job on deployment status event
 on:
@@ -25,25 +26,26 @@ jobs:
       output1: ${{ steps.run.outputs.test }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Run Sematext Monitor
         env:
           API_KEY: ${{ secrets.SEMATEXT_API_KEY }}
+          # Replace APP_ID and MONITOR_ID with your own values
+          APP_ID: 12345
+          MONITOR_ID: 54321
         id: run
         run: |
           target_url=`cat "$GITHUB_EVENT_PATH" | jq .deployment_status.target_url`
           curl -s --request POST \
-            --url https://apps.sematext.com/synthetics-api/api/v3/apps/12345/monitors/runs \
-              --header 'authorization: apiKey '$API_KEY \
+            --url https://apps.sematext.com/synthetics-api/api/v3/apps/${APP_ID}/monitors/runs \
+              --header 'authorization: apiKey '${API_KEY} \
                 --header 'accept: text/plain' \
                   --header 'content-type: application/json' \
-                    --data '[{"monitorId": 276, "url":'$target_url'}]' > results.txt
+                    --data '[{"monitorId": '${MONITOR_ID}', "url":'$target_url'}]' > results.txt
           cat results.txt
-          if [ $(head -1 results.txt | grep -c 'failed') -ne 0 ]; then exit 1; fi
+          if [ $(head -1 results.txt | grep -c 'passed') -ne 1 ]; then exit 1; fi
 ```
-
-**GitHub Actions Logs**
 
 On every deployment event, the action will be invoked and the action logs will contain the results.
 
