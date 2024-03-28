@@ -10,15 +10,16 @@ These charts are effective in visualizing geographical data such as population d
 
 You can configure these charts either during its initial creation or afterward by clicking on the three dots that appear on hover and selecting 'Edit Component'.
 
-- Choose All Apps or a specific App that you want to fetch data from.
+- Choose All Apps or a specific App that you want to fetch data from
 - Choose one or more metrics metric
 - Enter optional parameters such as:
+  
   - [Transformation](https://sematext.com/docs/dashboards/chart-builder/#transformation)
   - [Filter By](https://sematext.com/docs/dashboards/chart-builder/#filter-by)
   - [Group by](https://sematext.com/docs/dashboards/chart-builder/#group-by)
   - [Rollup By](https://sematext.com/docs/dashboards/chart-builder/#rollup-by)
 
-Edit Component  has a geo section.  Here, you select the **Geo Tag**, which is the field containing geographical data, and from the **Tag Type** field, you should choose the format of the geographical data."
+Edit Component has a Geo section.  Here, select the **Geo Tag**, which is the field containing geographical data, and from the **Tag Type** field choose the format of the geographical data."
 
 ### Tag Types
 
