@@ -2,7 +2,7 @@ title: GitHub Actions Integration
 description: Guide on how to integrate Sematext Synthetics with GitHub Actions.
 
 ## Configure repository variables for the integration
-The GitHub Actions integration works by running a Job which runs a Synthetics monitor of your choice against the desired URL. In order to specify which monitor this will be, as well as the API key required to run it, you need to configure some repository variables first.
+The GitHub Actions integration works by running a Synthetics monitor of your choice against the desired URL. In order to specify which monitor this will be, as well as the API key required to run it, you need to configure some repository variables first.
 
 ### Create API Key Secret
 
@@ -11,12 +11,12 @@ The first step is to create a secret from the repository's **Settings** page for
 ![CI/CD GitHub Secret](./images/ci-cd-github-secret.png)
 
 
-### Create Repository Variables for monitor information
+### Create Repository Variables for Synthetics Monitor information
 
 Once you've set up the repository secret for the API key, you then need to configure some information regarding the monitor which will be used in the Action. This entails defining three *repository variables*:
 - `SEMATEXT_MONITOR_ID` - The ID of the monitor you plan on using with the Action
 - `SEMATEXT_APP_ID` - The ID of the Synthetics App associated with your monitor
-- `SEMATEXT_ENVIRONMENT` - The region in which your account is registered - `US` or `EU`
+- `SEMATEXT_REGION` - The region in which your account is registered - `US` or `EU`
 
 A quick guide on how to find this information can be found [here](./overview.md#finding-your-monitor-information). Make sure that these are configured as *repository variables* and not *repository secrets*.
 

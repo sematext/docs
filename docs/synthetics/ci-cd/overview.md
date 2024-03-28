@@ -10,7 +10,7 @@ If you're interested in using our API, you can find more information about it on
 
 Before we discuss the specifics of setting up the various integrations, you first need to collect some information specific to your Sematext Cloud account.
 
-### Finding your monitor information
+### Finding your Synthetics Monitor information
 
 The first thing you'll need to get is the ID of the Synthetics Monitor that will be in charge of running the check, as well the ID of its associated Synthetics App. You can find these easily by navigating to the desired monitor in the Sematext Cloud UI and then taking a look at the URL, like in the image below. The first number in the URL after `/synthetics/` will be the ID of your Synthetics App, while the second one is the ID of your monitor. The URL also contains information on which region your account is in - if it's `apps.eu.sematext.com`, then it's `EU`, otherwise it's `US`. 
 
