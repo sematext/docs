@@ -44,7 +44,9 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 ```
 
 ### Getting the apiKey
-*  Your account's  `<apiKey>` can be copied from the **Settings** -> **API** page.
+Your account's  `<apiKey>` can be copied from the **Settings** -> **API** page, which can be found:
+- [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
+- [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
 
 ### Getting the appId
 * The `<appId>` and `<monitorId>` values can be extracted from the URL of the **Monitor Overview** page. For example, if the **Monitor Overview** page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
