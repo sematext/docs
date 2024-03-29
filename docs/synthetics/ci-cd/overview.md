@@ -19,6 +19,7 @@ The first thing you'll need to get is the ID of the Synthetics Monitor that will
 ### Finding your Sematext Cloud account's API key
 
 Once that's done, you'll also need the API key for your Sematext Cloud account. You can copy your API key from the **Settings** -> **API** page in the UI, which can be found:
+
 - [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
 - [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
 

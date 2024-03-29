@@ -14,6 +14,7 @@ The first step is to create a secret from the repository's **Settings** page for
 ### Create Repository Variables for Synthetics Monitor information
 
 Once you've set up the repository secret for the API key, you then need to configure some information regarding the monitor which will be used in the Action. This entails defining three *repository variables*:
+
 - `SEMATEXT_MONITOR_ID` - The ID of the monitor you plan on using with the Action
 - `SEMATEXT_APP_ID` - The ID of the Synthetics App associated with your monitor
 - `SEMATEXT_REGION` - The region in which your account is registered - `US` or `EU`
