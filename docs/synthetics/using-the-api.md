@@ -45,6 +45,7 @@ The run monitor API can be triggered by sending an HTTP request with the below c
 
 ### Getting the apiKey
 Your account's  `<apiKey>` can be copied from the **Settings** -> **API** page, which can be found:
+
 - [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
 - [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
 
