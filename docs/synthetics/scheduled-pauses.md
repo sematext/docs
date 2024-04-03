@@ -4,6 +4,7 @@ description: Create scheduled pauses for multiple Synthetics monitors simultaneo
 Sematext Synthetics offers the capability to create scheduled pauses for multiple monitors simultaneously. This is useful when you know monitors will start failing during a certain time period, such as during a planned maintenance.  Instead of disabling a monitor or deleting it, you can simply specify one or more time periods during which a monitor should be paused.
 
 To create a scheduled pause:
+
 - Navigate to the "Scheduled Pauses" section in the left menu panel.
 - Click on "+ New Schedule".
 
