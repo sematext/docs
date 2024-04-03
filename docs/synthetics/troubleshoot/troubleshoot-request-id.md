@@ -36,11 +36,11 @@ Next, you want to add the request ID information to your existing log messages. 
 
 For example, you might be logging something like this:
 
-`logger.log(error', `Data could not be stored. Connection to the database failed.`);`
+`logger.log(error', 'Data could not be stored. Connection to the database failed.');`
 
 Simply append the request ID to it:
 
-`logger.log(error', `Data could not be stored. Connection to the database failed. X-Sematext-Synthetics-Id: ${headerValue}`);`
+`logger.log(error', 'Data could not be stored. Connection to the database failed. X-Sematext-Synthetics-Id: ${headerValue}');`
 
 Include the request ID in all relevant logs. Again, the code for logging will vary from one programming language and framework to another.
 
@@ -64,7 +64,7 @@ Keep in mind that correlating individual monitor runs with logs requires a speci
 
 If you are not able to do this in your application code, you can use [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) to extract this information into the request.id field. For instance, perhaps you added the request ID to your log messages as in our earlier example:
 
-`logger.log(error', `Data could not be stored. Connection to the database failed. X-Sematext-Synthetics-Id: ${headerValue}`);`
+`logger.log(error', 'Data could not be stored. Connection to the database failed. X-Sematext-Synthetics-Id: ${headerValue}');`
 
 In this case, this whole log message will likely end up in a field called `message` in your Logs App.  You’ll want to extract this request ID value and store it in a new field called request.id. Why? Because this is the log event field that is used for filtering your logs for a given monitor run.
 
