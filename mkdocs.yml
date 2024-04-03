@@ -138,6 +138,7 @@ pages:
         - Netlify: synthetics/ci-cd/netlify.md
       - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
+      - Scheduled Monitor Pauses: synthetics/scheduled-pauses.md
       - Metrics: synthetics/metrics.md
       - Correlating: synthetics/correlation.md
       - Troubleshoot:
