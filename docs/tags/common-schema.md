@@ -44,6 +44,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | geo.country_name | The country associated with the log line |
 | geo.country_iso_code | The ISO code associated with the country in the log line |
 | geo.continent_name | The continent associated with the log line |
+| request.id| Synthetics request ID unique to each monitor run. [Learn more](https://sematext.com/docs/synthetics/troubleshoot/troubleshoot-request-id/) |
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
 
