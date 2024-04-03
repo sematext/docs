@@ -142,7 +142,7 @@ pages:
       - Correlating: synthetics/correlation.md
       - Troubleshoot:
         - Overview: synthetics/troubleshoot/overview.md
-        - Synthetics Request ID for Troubleshooting: synthetics/troubleshoot/troubleshoot-request-id.md
+        - Request ID for Troubleshooting: synthetics/troubleshoot/troubleshoot-request-id.md
       - Using the API: synthetics/using-the-api.md
       - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
