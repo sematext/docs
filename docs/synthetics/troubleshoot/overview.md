@@ -79,7 +79,7 @@ Then, we can check charts for request rate and traffic rate to observe trends, a
 
 If you don't find anomalies in these charts, we move on to the logs!
 
-## Logs
+### Logs
 
 Any connected Logs Apps will appear under the Logs tab. Each Logs App will display the number of error and warning logs detected around the time your monitor failed. If you have multiple hosts shipping logs to the same App, you will see errors and warnings specific to each host.
 
