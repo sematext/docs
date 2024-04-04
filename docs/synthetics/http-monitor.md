@@ -13,6 +13,7 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 * **Interval** - Monitor execution interval.
 * **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations to run the monitor.
+* **[Scheduled Monitor Pauses](https://sematext.com/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 
 ### Request Settings
 
