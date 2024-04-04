@@ -1,7 +1,7 @@
 title: Scheduled Monitor Pauses
 description: Create scheduled pauses for multiple Synthetics monitors simultaneously
 
-Sematext Synthetics offers the capability to create scheduled pauses for multiple monitors simultaneously. This is useful when you know monitors will start failing during a certain time period, such as during a planned maintenance.  Instead of disabling a monitor or deleting it, you can simply specify one or more time periods during which a monitor should be paused.
+[Sematext Synthetics](https://sematext.com/docs/synthetics/) offers the capability to create scheduled pauses for multiple monitors simultaneously. This is useful when you know monitors will start failing during a certain time period, such as during a planned maintenance.  Instead of disabling a monitor or deleting it, you can simply specify one or more time periods during which a monitor should be paused.
 
 To create a scheduled pause:
 
@@ -14,7 +14,7 @@ This will open a screen where you can select multiple monitors and define the ti
 
 ![Schedule Pause Create](../images/synthetics/schedule-pause-create.png)
 
-Once a scheduled pause is created for a monitor, you will notice a pause icon next to it in the Monitors table. Also, if you have a Status Page including that monitor, the pause icon and schedule information will appear next to the monitor name in the status pages.
+Once a scheduled pause is created for a monitor, you will notice a pause icon next to it in the Monitors table. Also, if you have a [Status Page](https://sematext.com/docs/synthetics/status-pages/) including that monitor, the pause icon and schedule information will appear next to the monitor name in the [Status Pages](https://sematext.com/docs/synthetics/status-pages/).
 
 ![Schedule Pause Monitors](../images/synthetics/schedule-pause-monitors.png)
 
