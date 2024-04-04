@@ -15,7 +15,7 @@ Let’s see how to set up and use this integration.
 
 The Synthetic monitoring run ID is included in each request the monitor makes to your API, URL, or whatever you are monitoring.  It is included as an HTTP request header called X-Sematext-Synthetics-id. The request ID for each monitor run can be found in the run result flyout under the request tab:
 
-![Synthetics Request ID](../images/synthetics/troubleshoot/synthetics-request-id.png)
+![Synthetics Request ID](../../images/synthetics/troubleshoot/synthetics-request-id.png)
 
 ## Including Request ID to Application Logs
 
