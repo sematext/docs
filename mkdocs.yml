@@ -141,9 +141,9 @@ pages:
       - Scheduled Monitor Pauses: synthetics/scheduled-pauses.md
       - Metrics: synthetics/metrics.md
       - Correlating: synthetics/correlation.md
-      - Troubleshoot:
-        - Overview: synthetics/troubleshoot/overview.md
-        - Request ID for Troubleshooting: synthetics/troubleshoot/troubleshoot-request-id.md
+      - Root Cause Discovery:
+        - Overview: synthetics/root-cause-discovery/overview.md
+        - Request ID for Troubleshooting: synthetics/root-cause-discovery/root-cause-discovery-with-request-id.md
       - Using the API: synthetics/using-the-api.md
       - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
