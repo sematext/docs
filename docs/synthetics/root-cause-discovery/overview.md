@@ -24,7 +24,7 @@ Sematext integrates with popular web servers such as Nginx, Apache, and more, pr
 
 ![Apache Troubleshoot Tab](../../images/synthetics/troubleshoot/apache-troubleshoot-tab.png)
 
-Let’s imagine you’ve created a Monitoring App for Apache, installed Sematext Agent, and started monitoring Apache metrics. Now the Troubleshoot tab will change to Metrics and Logs tabs as shown in the screenshot below. The next time you go into the troubleshooting tab, if you want to add Logs on top of it, you don’t need to install anything additionally. 
+Let’s imagine you’ve created a Monitoring App for Apache, installed [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/), and started monitoring Apache metrics. Now the Troubleshoot tab will change to Metrics and Logs tabs as shown in the screenshot below. The next time you go into the troubleshooting tab, if you want to add Logs on top of it, you don’t need to install anything additionally. 
 
 ![Logs Tab](../../images/synthetics/troubleshoot/logs-tab.png)
 
@@ -40,7 +40,7 @@ In cases where the service type is unknown, all existing Monitoring and Logs App
 
 ![List of Logs Apps](../../images/synthetics/troubleshoot/list-of-logs-apps.png)
 
-If no Apps exist, you can create them from the tab, and they will be automatically connected with your Synthetics App, where you can view metrics and logs the next time your monitor fails. For more details, refer to the [Troubleshooting](#troubleshooting) section.
+If no Apps exist, you can create them from the tab, and they will be automatically connected with your [Synthetics App](https://sematext.com/docs/synthetics/), where you can view metrics and logs the next time your monitor fails. For more details, refer to the [Troubleshooting](#troubleshooting) section.
 
 ![Create Apps](../../images/synthetics/troubleshoot/create-apps.png)
 
@@ -52,17 +52,17 @@ For more information, including how to set that up, refer to [How to troubleshoo
 
 ## Troubleshooting
 
-Once you have configured metrics and log shipping, whether for a known or unknown service type, all Monitoring and Logs Apps that are connected to your Synthetics App will appear under the Troubleshoot  tab.
+Once you have configured metrics and log shipping, whether for a known or unknown service type, all Monitoring and Logs Apps that are connected to your [Synthetics App](https://sematext.com/docs/synthetics/) will appear under the Troubleshoot  tab.
 
 ### Metrics
 
-Under the Metrics tab, you'll find a list of Monitoring Apps connected with your Synthetics App:
+Under the Metrics tab, you'll find a list of Monitoring Apps connected with your [Synthetics App](https://sematext.com/docs/synthetics/):
 
 ![List Of Monitoring Apps](../../images/synthetics/troubleshoot/list-of-monitoring-apps.png)
 
 To analyze metrics around the time your monitor failed, you can open the relevant Monitoring Apps either in a Split Screen or in a new tab. Look for any sudden spikes or anomalies in metrics that are critical for your endpoint. Use these metrics to identify potential root causes of the failure.
 
-In the image below, our sematext.com endpoint has failed, which is hosted by an Apache server. We are shipping metrics from that server into an Apache Monitoring App called EU.Frontend, which is connected to our Synthetics App.
+In the image below, our sematext.com endpoint has failed, which is hosted by an Apache server. We are shipping metrics from that server into an Apache Monitoring App called EU.Frontend, which is connected to our [Synthetics App](https://sematext.com/docs/synthetics/).
 
 We navigate to the Troubleshoot tab and then open the Apache Monitoring App in a new tab by clicking on the App name or within the same screen using the Split Screen button.
 
@@ -102,3 +102,4 @@ Automatic filters are applied to display only warning and error logs around the 
 From there we can look at log events and potentially find the backend issue that is a likely cause of the monitor failure. 
 
 You can also use the [Context View](https://sematext.com/blog/log-event-context/) when troubleshooting your failed monitor runs' application logs. The Context View lets you see logs from before and after an individual log, which helps you understand the sequence of events leading up to and following the failed endpoint request.
+
