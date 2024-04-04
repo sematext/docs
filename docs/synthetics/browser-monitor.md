@@ -12,6 +12,7 @@ The Browser monitor can be used to monitor a single web page or a user journey a
 * **Device type** - Determines which device will be emulated during monitor execution by setting the appropriate User-Agent and Viewport/Resolution.
 * **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations the monitor will be run from.
+* **[Scheduled Monitor Pauses](https://sematext.com/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 
 Note that multiple monitors created in the same **Create Browser Monitor** flow will have different names, intervals and devices, but share the same locations, **User Journey** settings and **Alert Conditions**, which lets you quickly set up multiple monitors with different devices for the same use case.
 
