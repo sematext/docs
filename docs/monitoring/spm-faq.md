@@ -385,6 +385,13 @@ Otherwise:
 - If in-process agent is used also change the token in the javaagent definition in the startup script of the monitored service
 - Run `sudo service sematext-agent restart`
 
+### Can I switch a host to another Infra App? Can I reconfigure the Sematext Agent to send metrics to a different Infra App?
+
+Yes, switching a host to another Infra App is possible by reconfiguring the Sematext Agent running on that host. This is needed to update the Infra App token that is configured in the Agent. Here is how:
+
+- Go to Fleet & Discovery > Agents and click "+Install Agent" in the upper right corner of the page
+- Select your environment and the new Infra App that you wish to switch to
+- Follow the installation instructions. If you are using a baremetal/VM environment, you can skip steps 1-3 from the Agent Installation section and follow only the instructions in the Agent Setup section.
 
 ## Sharing
 
