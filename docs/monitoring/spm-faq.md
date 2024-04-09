@@ -391,7 +391,7 @@ Yes, switching a host to another Infra App is possible by reconfiguring the Sema
 
 - Go to Fleet & Discovery > Agents and click "+Install Agent" in the upper right corner of the page
 - Select your environment and the new Infra App that you wish to switch to
-- Connect to the host and follow the installation instructions. If you are using a baremetal/VM environment, you can skip steps 1-3 from the Agent Installation section and follow only the instructions in the Agent Setup section.
+- Follow the installation instructions. If you are using a baremetal/VM environment, you can skip steps 1-3 from the Agent Installation section and follow only the instructions in the Agent Setup section.
 
 ## Sharing
 
