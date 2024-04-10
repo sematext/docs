@@ -36,3 +36,6 @@ See [Viewing Events](timeline.md) for more info.
 
 Events can be added, searched, and retrieved via an [event API](event-api.md).
 
+## Agent Events
+
+Sematext Agent sends events on various occasions, such as when it's started or stopped, when a process is killed, or when a package is installed or removed. It also sends all events coming from Kubernetes and Containers APIs. Check out [Agent Events](https://sematext.com/docs/agents/sematext-agent/os-metrics/) to learn more.
