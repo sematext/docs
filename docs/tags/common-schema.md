@@ -195,7 +195,7 @@ can contain the following set of fields, most of which are optional:
 
 Field Name | Field Type | Required | Notes 
 -----------|------------|----------|-------
-```timestamp``` | date       | no       | Time when event happened (if not specified,current time will be assumed). The format is [dateOptionalTime](https://joda-time.sourceforge.netapi-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser) e.g.: ```2014-02-17T21:37:04+0100``` or```  2014-02-17T14:15:01.534471+02:00```.
+```timestamp``` | date       | no       | Time when event happened (if not specified,current time will be assumed). The format is [dateOptionalTime](https://joda-time.sourceforge.netapi-release/org/joda/time/format/ISODateTimeFormat.html#dateOptionalTimeParser) e.g.: ```2014-02-17T21:37:04+0100``` or```2014-02-17T14:15:01.534471+02:00```.
 ```os.host``` | string       | no       | Name of the host where the event has occurred.
 ```type``` | string | yes | Event type which could be e.g. ```alert```, ```deployment```, etc. Events are later grouped in timeline based on event type which significantly improves visibility.
 ```message``` | string       | yes       | Short description of event, e.g. ```Elasticsearch node03 on host somehost06 restarted```. This is a default search field in Sematext UI, so it is good to keep it concise, but search-friendly. Data in this field can be stored in Markdown format to make your messages more pretty and easier to read. For more details [see](#markdown-in-events).
@@ -204,6 +204,20 @@ Field Name | Field Type | Required | Notes
 ```severity``` | string | no | A single-valued field which says what kind of an event it is. It should have such values as ```error```,  ```info``` or ```warning``` and lets you easily navigate through important and less important events.
 ```creator``` | string       | no       | Person, application, or component that created an event. E.g. ```John Smith```, ```Elasticsearch```, ```Some Batch Job```
 ```data``` | string       | no       | Additional event data. It can be anything you may find useful to have along inside of event object. E.g., it could be  stacktrace in case of ```app_error``` event, base64 encoded content of file, etc.
+
+### Container Event Tags
+Container events track the activities and changes happening within a Container environment.
+
+Field Name                 | Field Type   | Required | Notes 
+---------------------------|--------------|----------|-------------
+```title```                | string       | no       | Short title for this event
+```message```              | string       | no       | Human-readable description of the event
+```container.name```       | string       | no       | Name of the container associated with the event
+```container.id```         | string       | no       | ID of the container associated with the event
+```container.image```      | string       | no       | The image used to create the container
+```container.object```     | string       | no       | The object type associated with the event
+```container.from```       | string       | no       | The parent image from which the container was created
+```container.status```     | string       | no       | The status of the container associated with the event
 
 ### Kubernetes Event Tags
 Kubernetes events show what's happening inside a cluster, node, pod, or container.
