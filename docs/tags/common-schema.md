@@ -222,16 +222,17 @@ Field Name                 | Field Type   | Required | Notes
 ### Kubernetes Event Tags
 Kubernetes events show what's happening inside a cluster, node, pod, or container.
 
-Field Name                 | Field Type   | Required | Notes 
----------------------------|--------------|----------|-------------
-```kubernetes.namespace``` | string       | no       | Namespace of the resource that originated the event
-```kubernetes.name```      | string       | no       | Name of the resource associated with this event
-```kubernetes.reason```    | string       | no       | Reason for the transition into the object's current status
-```message```              | string       | no       | Human-readable description of the status of this operation
-```kubernetes.kind```      | string       | no       | Identifier of Kubernetes resource
-```kubernetes.node```      | string       | no       | Name of Kubelet node
-```title```                | string       | no       | Short title for this event
-```tags```                 | []string     | no       | List of custom tags for Kubernetes event
+Field Name                    | Field Type   | Required | Notes 
+------------------------------|--------------|----------|-------------
+```title```                   | string       | no       | Short title for this event
+```message```                 | string       | no       | Human-readable description of the status of this operation
+```kubernetes.namespace```    | string       | no       | Namespace of the resource that originated the event
+```kubernetes.name```         | string       | no       | Name of the resource associated with this event
+```kubernetes.cluster.name``` | string       | no       | The cluster name of the resource that originated the event
+```kubernetes.reason```       | string       | no       | Reason for the transition into the object's current status
+```kubernetes.kind```         | string       | no       | Identifier of Kubernetes resource
+```kubernetes.node```         | string       | no       | Name of Kubelet node
+```tags```                    | []string     | no       | List of custom tags for Kubernetes event
 
 
 When you ship events to Sematext Cloud, we recommend using the common fields listed in this page. This way you can easily correlate between your events, metrics and logs. For example, when you see CPU usage spikes or start seeing more error logs and you want to investigate it further. You can use [Split Screen](../guide/split-screen) and load the Events in the right half of the screen and see if there was any deployment type of event that might be the cause of that spike. Or search for events that are shipped from a specific host that started using more resources than expected. This way you can pinpoint the source of the problems easily.
