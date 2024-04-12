@@ -139,3 +139,6 @@ or to list all the events in a specified namespace, execute the command:
 ```
 kubectl get events -n <namespace>
 ```
+
+For additional information on configuring Kubernetes events, please refer to [Kubernetes events configuration](https://sematext.com/docs/agents/sematext-agent/kubernetes/events/) page.
+

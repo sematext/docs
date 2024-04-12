@@ -1,4 +1,4 @@
-title: Kubernetes events
+title: Kubernetes Event Configuration
 description: Explains how to control the event stream collector and available filters
 
 Kubernetes events represent a valuable source of signals that might help during troubleshooting or can simply give insight into different cluster pieces. By default, Sematext Agent captures all the events produced by any Kubernetes resource type. However, you can fine-tune what events you would like to see in the event stream UI.

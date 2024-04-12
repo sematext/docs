@@ -320,7 +320,7 @@ pages:
         - Kubernetes:
           - Configuration: agents/sematext-agent/kubernetes/configuration.md
           - Metrics: agents/sematext-agent/kubernetes/metrics.md
-          - Events: agents/sematext-agent/kubernetes/events.md
+          - Event Configuration: agents/sematext-agent/kubernetes/events.md
           - HostNetwork: agents/sematext-agent/kubernetes/hostnetwork.md
         - Processes:
           - Configuration: agents/sematext-agent/processes/configuration.md
