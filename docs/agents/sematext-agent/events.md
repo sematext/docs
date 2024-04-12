@@ -1,48 +1,126 @@
 title: Sematext Agents Events
 
-Below you can find a list of all the events sent from Sematext Agent
+Below you can find a list of all the events sent from Sematext Agent. 
 
-## Agent started
+## Internal events from Sematext Agent
+
+### Agent started
 
 This event is sent when the agent is started.
 
 Message: agent_started sematext-agent `version` / on `hostname`
 
-## Agent stopped
+### Agent stopped
 
 This event is sent when the agent is stopped.
 
 Message: agent_stopped sematext-agent `version` / on `hostname`
 
-## Out of memory (OOM)
+## Linux Events
 
-This event is sent when a process is terminated by OOM Killer.
+### Out of memory (OOM)
+
+This event is sent when the system's OOM Killer terminates a Linux process due to memory exhaustion.
 
 Message: `process name` process with pid `pid` terminated by OOM killer. Total allocated memory `N` bytes
 
-## Package installed 
+### Package installed 
 
-This event is sent when a new package is installed (Linux only).
+This event is sent when a new package is installed.
 
 Message: Package `package name`, version `version` has been installed on host `hostname`
 
 Package types supported: Node, Python 2.x/3.x, Deb, RPM
 
-## Package removed
+### Package removed
 
-This event is sent when a new package is removed (Linux only).
+This event is sent when a new package is removed.
 
 Message: Package `package name`, version `version` has been removed on host `hostname`
 
 Package types supported: Node, Python 2.x/3.x, Deb, RPM
 
-## Docker events
+## Container events
 
-Sematext Agent sends supports all events from various docker object types, including containers, images, plugins, volumes, networks, daemons, services, nodes, secrets and configs. Learn more about all the available docker events at: https://docs.docker.com/reference/cli/docker/system/events/.
+### Docker events
+
+Sematext Agent collects all events from various docker object types, including containers, images, plugins, volumes, networks, daemons, services, nodes, secrets and configs. Learn more about all the available docker events at: https://docs.docker.com/reference/cli/docker/system/events/.
 
 All docker events sent by the Sematext Agent include the [Docker Events Tags](https://sematext.com/docs/tags/common-schema/#docker-event-tags) as defined in Sematext Common Schema.
 
 All docker events start with `Docker Event: ` in the message field. `container.status` tag gives the docker status of the event, e.g `exec_start`, `exec_create`, `exec_died`.
+
+Here's the list of Docker container events Sematext collects:
+
+#### Docker lifecycle events
+
+- Create – when a container is created
+- Start – when a container starts
+- Restart – when a container gets restarted
+- Stop – when a container stops
+- Oom – when a container runs out of memory
+- Pause – when a container gets paused
+- Unpause – when a container continues to run after a pause
+- Die – when the main process in a container dies
+- Kill – when the container gets killed
+- Destroy – when a container gets destroyed
+
+#### Docker runtime events
+
+- Commit – when changes to the container filesystem are committed. Modifying deployed containers in production is not a common practice, therefore the commit could - indicate a “hack” and should be watched carefully.
+- Copy – when files are copied from/to a container. Could indicate a potential data leak.
+- Attach – when a process connects to container console – somebody is reading your container logs
+- Detach – when a process disconnects from container console streams
+- Exec – when a command is executed in container console, very helpful to investigate in potential hacker attacks
+- Export – when a container gets exported
+- Health_status – when health_status is checked
+- Rename – when a container gets renamed
+- Resize – when a container gets resized
+- Top – when somebody list top processes in a container
+- Update – when a container is updated e.g. with new labels
+
+#### Docker image events
+
+- Delete – when an image gets deleted
+- Import – when an image gets imported
+- Load – when an image is loaded
+- Pull – when an image is pulled from a registry
+- Push – when an image is pushed to a registry
+- Save – when an image is saved
+- Tag – when an image is tagged with labels
+- Untag – when an image tag is removed
+
+#### Docker plugin events
+
+- Enable – when a plugin gets enabled
+- Disable – when a plugin gets disabled
+- Install – when a plugin gets installed
+- Remove – when a plugin gets removed
+
+#### Docker volume events
+
+- Create – when a volume is created
+- Destroy – when a volume gets destroyed
+- Mount – when a volume is mounted to a container
+- Unmount – when a volume is removed from a container
+
+#### Docker network events
+
+- Create – when a  network is created
+- Connect – when a container connects to a network
+- Remove – when the network is removed
+- Destroy – when a network is destroyed
+- Disconnect – when a container disconnects from a network
+
+#### Docker daemon events
+
+- Reload
+
+#### Docker services, nodes, secrets, and config events
+
+- Create – on the creation of a resource
+- Remove – on the removal of a resource
+- Update – on the creation of a resource
 
 ## Kubernetes events
 
