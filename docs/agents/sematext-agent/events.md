@@ -16,7 +16,7 @@ This event is sent when the agent is stopped.
 
 Message: agent_stopped sematext-agent `version` / on `hostname`
 
-## Linux Events
+## Linux events
 
 ### Out of memory (OOM)
 
