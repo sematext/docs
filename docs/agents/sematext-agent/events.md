@@ -46,7 +46,7 @@ Package types supported: Node, Python 2.x/3.x, Deb, RPM.
 
 Sematext Agent collects all events from various docker object types, including containers, images, plugins, volumes, networks, daemons, services, nodes, secrets and configs. Learn more about all the available docker events at: https://docs.docker.com/reference/cli/docker/system/events/.
 
-All docker events sent by the Sematext Agent include the [Docker Events Tags](https://sematext.com/docs/tags/common-schema/#docker-event-tags) as defined in Sematext Common Schema.
+All docker events sent by the Sematext Agent include the [Container Events Tags](https://sematext.com/docs/tags/common-schema/#container-event-tags) as defined in Sematext Common Schema.
 
 All docker events start with `Docker Event: ` in the message field. `container.status` tag gives the docker status of the event, e.g `exec_start`, `exec_create`, `exec_died`.
 
