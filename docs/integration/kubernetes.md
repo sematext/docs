@@ -57,9 +57,7 @@ In Kubernetes Events you can explore and filter all the events received within t
 
 In the expanded view, you can filter the events by each individual tag value, whether to include or exclude it.
 
-For additional information about Kubernetes events tags, please refer to our [Common Schema](https://sematext.com/docs/tags/common-schema/#kubernetes-event-tags).
-
-If desired, the [Sematext Agent can be configured](https://sematext.com/docs/agents/sematext-agent/kubernetes/events/) to exclude a number of Kubernetes events.
+For additional information about Kubernetes events, please refer to the [Agent Kubernetes events](https://sematext.com/docs/agents/sematext-agent/events/#kubernetes-events) page.
 
 
 ## Important Kubernetes Metrics
