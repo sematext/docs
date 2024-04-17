@@ -37,7 +37,7 @@ All reports function as expected with the following limitations due to the servi
 
 - Etcd metrics are missing
 
-### Microsoft Azure Kubernetes Service (AKS
+### Microsoft Azure Kubernetes Service (AKS)
 
 All reports function as expected with the following limitations due to the services being managed by Azure:
 
