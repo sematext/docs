@@ -51,6 +51,7 @@ pages:
         - Logsene CLI: logs/logsene-cli.md
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
+      - Context View: logs/context-view.md
       - Correlating Logs: logs/correlation.md
       - Logs Archiving: logs/archiving.md
       - Fields: logs/fields.md
