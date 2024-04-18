@@ -90,7 +90,7 @@ The request ID is filtered automatically, and the time range for logs is set to 
 
 ## Context View for Logs
 
-The [Context View](https://sematext.com/blog/log-event-context/) might come in handy when troubleshooting your failed monitor runs' application logs. When you are navigated to the Logs App associate with your Synthetics App, the request ID for that individual monitor run is already set as a filter automatically in your logs.
+The [Context View](https://sematext.com/docs/logs/context-view/) might come in handy when troubleshooting your failed monitor runs' application logs. When you are navigated to the Logs App associate with your Synthetics App, the request ID for that individual monitor run is already set as a filter automatically in your logs.
 
 ![Request ID Logs 2](../../images/synthetics/troubleshoot/request-id-logs2.png)
 
