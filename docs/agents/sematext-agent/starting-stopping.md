@@ -20,6 +20,11 @@ sudo service sematext-agent restart
 
 To remove the agent, run distribution-specific command to remove the sematext-agent rpm or deb package.
 
+## Windows
+
+Check the Windows installation page [for starting, stoping or restarting Sematext Agent in Windows](https://sematext.com/docs/agents/sematext-agent/#how-to-start--stop--restart-sematext-agent
+).
+
 ## Docker
 
 In Docker environment agent can be started using `docker run` command or using a docker-compose config. 
