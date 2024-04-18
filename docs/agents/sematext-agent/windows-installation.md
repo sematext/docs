@@ -8,14 +8,14 @@ Installation can be done either by using the GUI installer or through the comman
 
 Before starting, please check the [platform support policy](https://sematext.com/docs/agents/sematext-agent/platform-support-policy/) page to make sure your Windows platform is supported.
 
-To see your Windows host metrics in Sematext Cloud, you need to [create an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app) and select the Windows environment. This will provide you with an Infra token, which is essential for establishing a secure link between Sematext Cloud and Sematext Agent.
+To see your Windows host metrics in Sematext Cloud, you need to [create an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app) and select the Windows environment. This will provide you with an Infra App token, which is essential for establishing a secure link between Sematext Cloud and Sematext Agent.
 
 ## Install from GUI
 
 1. Download the [Sematext Agent installer](https://todo-add-public-installer-repo)
 2. Run the installer as an Administrator
 3. Follow the installation steps and accept the license agreement 
-4. Set the Infra token
+4. Set the Infra App token
 5. Select a region (EU or US) based on where you created your account in Sematext Cloud
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
@@ -30,27 +30,27 @@ Download the [Sematext Agent installer](https://todo-add-public-installer-repo).
 Run the following command as Administrator from the folder that you downloaded the installer:
 
 ```
-    Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-VERSION.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
+    Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-VERSION.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
 ```
 
-Make sure to replace `YOUR_INFRA_TOKEN` with your Infra token and `YOUR_REGION_EU_or_US` with your region. For example:
+Make sure to replace `YOUR_INFRA_APP_TOKEN` with your Infra App token and `YOUR_REGION_EU_or_US` with your region. For example:
 
 ```
-    Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-3.3.0.2.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
+    Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-3.3.0.2.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
 ```
 
-### Using command line:
+### Using Windows CMD:
 
 Run the following command as Administrator from the folder that you downloaded the installer:
 
 ```
-    start /wait msiexec /qn /i "sematext-agent-VERSION.msi" /L*V "sematext-agent-VERSION.msi.log" INFRA_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US
+    start /wait msiexec /qn /i "sematext-agent-VERSION.msi" /L*V "sematext-agent-VERSION.msi.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
 ```
 
-Make sure to replace `YOUR_INFRA_TOKEN` with your Infra token and `YOUR_REGION_EU_or_US` with your region. For example:
+Make sure to replace `YOUR_INFRA_APP_TOKEN` with your Infra App token and `YOUR_REGION_EU_or_US` with your region. For example:
 
 ```
-    start /wait msiexec /qn /i "sematext-agent-3.3.0.2.msi" /L*V "sematext-agent-3.3.0.2.msi.log" INFRA_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
+    start /wait msiexec /qn /i "sematext-agent-3.3.0.2.msi" /L*V "sematext-agent-3.3.0.2.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
 ```
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
@@ -97,7 +97,7 @@ cd  'C:\Program Files\Sematext Agent\' .\st-agent-amd64.exe windows-service rest
 
 Sematext Agent logs are located in the `%LOCALAPPDATA%\sematext-agent\logs\` folder.
 
-## How to change Infra token and region
+## How to change Infra App token and region
 
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
