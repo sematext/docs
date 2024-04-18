@@ -101,5 +101,5 @@ Automatic filters are applied to display only warning and error logs around the 
 
 From there we can look at log events and potentially find the backend issue that is a likely cause of the monitor failure. 
 
-You can also use the [Context View](https://sematext.com/blog/log-event-context/) when troubleshooting your failed monitor runs' application logs. The Context View lets you see logs from before and after an individual log, which helps you understand the sequence of events leading up to and following the failed endpoint request.
+You can also use the [Context View](https://sematext.com/docs/logs/context-view/) when troubleshooting your failed monitor runs' application logs. The Context View lets you see logs from before and after an individual log, which helps you understand the sequence of events leading up to and following the failed endpoint request.
 

@@ -9,6 +9,7 @@ The actions include:
   - Create a chart
   - Highlight values
   - Correlate with metrics
+  - [Context View](https://sematext.com/docs/logs/context-view/)
 
 <div class="video_container">
 <iframe src="https://www.youtube.com/embed/wuPKnCr4ByE" 
