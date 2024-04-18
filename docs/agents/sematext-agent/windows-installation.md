@@ -110,3 +110,13 @@ cd  'C:\Program Files\Sematext Agent\'
 ## How to unistall Sematext Agent
 
 You can uninstall Sematext Agent using the GUI installer or by from Windows Settings > Apps
+
+## Limitations
+
+The Sematext Agent for Windows is still a work in progress and has some limitations:
+
+- Discovery and configuration of services and log sources are not yet supported
+- Inventory functionality is not yet available
+- CPU and memory consumption of Sematext Agent are not yet optimized
+- Custom tags cannot be created
+
