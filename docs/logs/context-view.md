@@ -1,4 +1,4 @@
-title: Context View
+title: Logs Context View
 description: Examine logs surrounding a specific log entry, understand the sequence of events leading up to and following a particular event.
 
 When troubleshooting and inspecting logs, you search and filter logs to narrow down your focus, aiming to find log entries that help you understand what, how, why, or when something occurred. When you search, you see only the logs that match your query. However, if you were to manually examine a log file, you wouldn't just see matching log lines. Instead, you'd see all events, allowing you to observe both preceding and subsequent log entries after locating the event of interest.
