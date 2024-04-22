@@ -53,6 +53,14 @@ All reports function as expected, with the following limitations due to the serv
 - CoreDNS metrics are missing since Google is using kube-dns
 - Schedulers metrics are missing
 
+### Rancher
+
+All reports, including Kubernetes Workloads, function as expected except for most of the control plane metrics, which are either missing or limited. However, all API server metrics are available.
+
+### Red Hat OpenShift
+
+Most of the reports function as expected, with some limitations or missing metrics in the control plane due to the services being managed by Red Hat.
+
 ## Shipping Kubernetes logs to Sematext
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has to. Sematext helps you shed light on what caused issues with your Kubernetes cluster by collecting Kubernetes logs and events.
