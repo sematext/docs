@@ -21,11 +21,45 @@ Sematext Monitoring will provide you with detailed insights into your cluster's 
 To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting up the agent takes less than 5 minutes:
 
 1.  Create a new Infra App in [Sematext Cloud US](https://apps.sematext.com/ui/monitoring-create) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/monitoring-create)) by choosing the INFRA App card from the list of integrations.
-2.  Name your Infra App, select the Kubernetes environment and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
+2.  Name your Infra App, select the Kubernetes distribution of your choice and install the Sematext Agent based on your preferred installation method. Available options include kubectl and a Helm chart.
 
 ### Agent Configuration
+
 The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer to our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
 
+## Kubernetes Distributions
+
+This section provides specific information for all major Kubernetes distributions.
+
+### AWS Elastic Kubernetes Service (EKS)
+
+All reports function as expected with the following limitations due to the services being managed by AWS:
+
+- Etcd metrics are missing
+
+### Microsoft Azure Kubernetes Service (AKS)
+
+All reports function as expected with the following limitations due to the services being managed by Azure:
+
+- Kube controller manager metrics are missing
+- Etcd metrics are missing, except for those originating from the API server
+
+### Google Kubernetes Engine (GKE)
+
+All reports function as expected, with the following limitations due to the services being managed by Google:
+
+- Some metrics in API server are missing
+- Etcd metrics are missing
+- CoreDNS metrics are missing since Google is using kube-dns
+- Schedulers metrics are missing
+
+### Rancher
+
+All reports, including Kubernetes Workloads, function as expected except for most of the control plane metrics, which are either missing or limited. However, all API server metrics are available.
+
+### Red Hat OpenShift
+
+Most of the reports function as expected, with some limitations or missing metrics in the control plane due to the services being managed by Red Hat.
 
 ## Shipping Kubernetes logs to Sematext
 
