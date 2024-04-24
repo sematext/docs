@@ -7,7 +7,7 @@ If a specific version is not listed below, Sematext Agent is still very likely t
 
 ## Linux
 
-| Distro | Supported Versions |
+| Distro | Supported Versions (64-bit only) |
 |:-:|:-:|
 | **Ubuntu** | 18.04<br>20.04<br>22.04<br>23.10 |
 | **Debian** | 10<br>11<br>12 |
@@ -20,11 +20,11 @@ If a specific version is not listed below, Sematext Agent is still very likely t
 
 > **Note:** We utilize eBPF technology for various functionality such as log discovery, service discovery, and system metrics collection. Please note that eBPF functionality requires a minimum **Linux kernel** version of **4.4.3**. If your kernel version is lower than 4.4.3, the Sematext Agent will still function using fallbacks. However, we strongly recommend using a host with eBPF enabled for optimal performance.
 
-### Windows
+## Windows
 
 - Windows Server 2022
 - Windows 11
-- Windows 10
+- Windows 10 (64-bit only)
 
 ## Container Orchestrators
 

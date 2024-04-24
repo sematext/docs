@@ -22,8 +22,7 @@ To remove the agent, run distribution-specific command to remove the sematext-ag
 
 ## Windows
 
-Check the Windows installation page [for starting, stoping or restarting Sematext Agent in Windows](https://sematext.com/docs/agents/sematext-agent/#how-to-start--stop--restart-sematext-agent
-).
+Check the Windows installation page [for starting, stoping or restarting Sematext Agent in Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/#how-to-start--stop--restart-sematext-agent).
 
 ## Docker
 
