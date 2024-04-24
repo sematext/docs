@@ -126,6 +126,8 @@ You can either reinstall Sematext Agent through GUI or by running the following 
 cd  'C:\Program Files\Sematext Agent\'
 .\st-agent-amd64.exe windows-config set-token -t "YOUR_INFRA_TOKEN"
 .\st-agent-amd64.exe windows-config set-region -r "YOUR_REGION_EU_or_US"
+
+After the changes, you need to restart the agent.
 .\st-agent-amd64.exe windows-service restart
 ```
 
