@@ -84,7 +84,13 @@ cd  'C:\Program Files\Sematext Agent\' .\st-agent-amd64.exe windows-service stat
 
 ## How to start / stop / restart Sematext Agent
 
-Run one of the following commands to start, stop or restart Sematext Agent
+To start, stop or restart the Sematext Agent, you can perform these actions through the GUI:
+
+- Start: Open the Windows Services application by searching for "Services" in the Windows search bar, locate "Sematext Agent" in the list of services, right-click on it, and select "Start"
+- Stop: Similarly, in the Services application, locate "Sematext Agent", right-click on it, and select "Stop"
+- Restart: To restart the Sematext Agent, you can either stop and then start it again using the aforementioned steps or right-click on "Sematext Agent" in the Services application and select "Restart"
+
+Alternatively, you can use the command-line interface by running one of the following commands:
 
 Start:
 
@@ -109,12 +115,12 @@ cd  'C:\Program Files\Sematext Agent\'
 
 ## How to check Sematext Agent logs
 
-Sematext Agent logs are located in the `C:\Windows\system32\config\systemprofile\AppData\Local\sematext-agent` folder.
+Sematext Agent logs are located in the `C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent` folder.
 
 For example, you can access the logs file like below;
 
 ```
-cd C:\Windows\system32\config\systemprofile\AppData\Local\sematext-agent
+cd C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent
 
 notepad.exe .\logs\st-agent.log
 ```
@@ -127,8 +133,11 @@ You can either reinstall Sematext Agent through GUI or by running the following 
 cd  'C:\Program Files\Sematext Agent\'
 .\st-agent-amd64.exe windows-config set-token -t "YOUR_INFRA_TOKEN"
 .\st-agent-amd64.exe windows-config set-region -r "YOUR_REGION_EU_or_US"
+```
 
-After the changes, you need to restart the agent.
+After the changes, you need to restart the agent:
+
+```
 .\st-agent-amd64.exe windows-service restart
 ```
 
