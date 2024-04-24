@@ -115,6 +115,7 @@ For example, you can access the logs file like below;
 
 ```
 cd C:\Windows\system32\config\systemprofile\AppData\Local\sematext-agent
+
 notepad.exe .\logs\st-agent.log
 ```
 
