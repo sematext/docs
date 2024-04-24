@@ -109,7 +109,9 @@ cd  'C:\Program Files\Sematext Agent\'
 
 ## How to check Sematext Agent logs
 
-Sematext Agent logs are located in the `C:\Windows\system32\config\systemprofile\AppData\Local\sematext-agent` folder. For example:
+Sematext Agent logs are located in the `C:\Windows\system32\config\systemprofile\AppData\Local\sematext-agent` folder.
+
+For example, you can access the logs file like below;
 
 ```
 cd C:\Windows\system32\config\systemprofile\AppData\Local\sematext-agent
