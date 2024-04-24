@@ -20,7 +20,6 @@ To see your Windows host metrics in Sematext Cloud, you need to [create an Infra
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
 
-
 ## Install from command line
 
 Download the [Sematext Agent installer](https://todo-add-public-installer-repo).
@@ -30,7 +29,7 @@ Download the [Sematext Agent installer](https://todo-add-public-installer-repo).
 Run the following command as Administrator from the folder that you downloaded the installer:
 
 ```
-    Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-VERSION.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-VERSION.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
 ```
 
 Where:
@@ -42,7 +41,7 @@ Where:
 For example:
 
 ```
-    Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-3.3.0.2.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-3.3.0.2.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
 ```
 
 ### Using Windows CMD:
@@ -50,7 +49,7 @@ For example:
 Run the following command as Administrator from the folder that you downloaded the installer:
 
 ```
-    start /wait msiexec /qn /i "sematext-agent-VERSION.msi" /L*V "sematext-agent-VERSION.msi.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
+start /wait msiexec /qn /i "sematext-agent-VERSION.msi" /L*V "sematext-agent-VERSION.msi.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
 ```
 
 Where:
@@ -62,7 +61,7 @@ Where:
 For example:
 
 ```
-    start /wait msiexec /qn /i "sematext-agent-3.3.0.2.msi" /L*V "sematext-agent-3.3.0.2.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
+start /wait msiexec /qn /i "sematext-agent-3.3.0.2.msi" /L*V "sematext-agent-3.3.0.2.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
 ```
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
@@ -91,7 +90,7 @@ Start:
 
 ```
 cd 'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service status
+.\st-agent-amd64.exe windows-service start
 ```
 
 Stop:
