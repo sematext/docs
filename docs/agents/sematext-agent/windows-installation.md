@@ -13,10 +13,9 @@ To see your Windows host metrics in Sematext Cloud, you need to [create an Infra
 ## Install from GUI
 
 1. Download the [Sematext Agent installer](https://todo-add-public-installer-repo)
-2. Run the installer as an Administrator
-3. Follow the installation steps and accept the license agreement 
-4. Set the Infra App token
-5. Select a region (EU or US) based on where you created your account in Sematext Cloud
+2. Follow the installation steps and accept the license agreement 
+3. Set the Infra App token
+4. Select a region (EU or US) based on where you created your account in Sematext Cloud
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
 
@@ -29,14 +28,14 @@ Download the [Sematext Agent installer](https://todo-add-public-installer-repo).
 Run the following command as Administrator from the folder that you downloaded the installer:
 
 ```
-Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-VERSION.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_INSTALLER'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
 ```
 
 Where:
 
 - `YOUR_INFRA_APP_TOKEN`: the Infra App token
 - `YOUR_REGION_EU_or_US`: your Sematext Cloud region
-- `VERSION`: the agent version
+- `AGENT_MSI_INSTALLER`: the filename of the Windows installer for Sematext Agent
 
 For example:
 
@@ -49,14 +48,14 @@ Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-age
 Run the following command as Administrator from the folder that you downloaded the installer:
 
 ```
-start /wait msiexec /qn /i "sematext-agent-VERSION.msi" /L*V "sematext-agent-VERSION.msi.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
+start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
 ```
 
 Where:
 
 - `YOUR_INFRA_APP_TOKEN`: the Infra App token
 - `YOUR_REGION_EU_or_US`: your Sematext Cloud region
-- `VERSION`: the agent version
+- `AGENT_MSI_INSTALLER`: the filename of the Windows installer for Sematext Agent
 
 For example:
 
