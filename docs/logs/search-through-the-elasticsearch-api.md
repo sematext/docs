@@ -1,7 +1,7 @@
 title: Using Sematext Elasticsearch API
 description: Analyze your logs, URI and request body searches, get operations, index events or change the mapping using Elasticsearch API and Sematext logging management and analytics app
 
-With Logs App, we expose the [Elasticsearch API](http://www.elasticsearch.org/guide/reference/api/) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
+With Logs App, we expose the [Elasticsearch API](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as [Kibana](faq/#can-i-run-kibana-4-locally-and-point-it-to-logsene).
 You can also use this API to [index events or change the mapping](index-events-via-elasticsearch-api).
 
 When you use the API, here are the things you need to know:
@@ -43,7 +43,7 @@ In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998
 
 ### URI based search
 
-The simplest search method to get your logs from Sematext is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html).
+The simplest search method to get your logs from Sematext is fully compatible with [URI Search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html).
 
 You need to provide the query using the *q* parameter. For example, to search for the *internal* and *connection* terms you would run the following:
 
@@ -53,7 +53,7 @@ You need to provide the query using the *q* parameter. For example, to search fo
 
 ### Request body based search
 
-The request body based search lets us leverage full [Elasticsearch query DSL language](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) along with its [filtering capabilities](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-filters.html) and [aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
+The request body based search lets us leverage full [Elasticsearch query DSL language](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) along with its [filtering capabilities](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html) and [aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
 
 With full featured Elasticsearch query API we can search and find any
 data we are really looking for.
