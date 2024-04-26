@@ -9,10 +9,10 @@ If you have to ship logs yourself, or you want to send them directly from your a
 
 You can:
   - send log events to the Sematext's Elasticsearch/OpenSearch bulk index API from your application, using
-    any [Elasticsearch library](http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html) that can ship logs to an Open Source version of Elasticsearch.
+    any Elasticsearch library that can ship logs to an Open Source version of Elasticsearch.
   - send log events by using existing application such as the Open Source versions of Logstash or Filebeat, [Logagent](../logagent), Fluentbit, Vector, [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
   - [search for logs from your own application](search-through-the-elasticsearch-api)
-  - optionally define [custom mappings](http://www.elasticsearch.org/guide/reference/mapping/) for
+  - optionally define [custom mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html) for
     your log types, so you can tweak the way your logs are indexed
 
 When you use the API, here are the things you need to know:
@@ -30,10 +30,6 @@ When you use the API, here are the things you need to know:
 
 With the same REST API, you can index logs directly from your own
 application, or you can craft your own "log sender".
-
-**NOTE:**
-If you are sending logs from your application use the Elasticsearch HTTP
-API. If you are sending logs from a Java application use [Elasticsearch Java REST Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/index.html)
 
 Besides specifying your Logs App token as the index name, it's nice
 to have a field named "@timestamp".  Its value should be a valid
@@ -76,7 +72,7 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 
 ## Default Log Index Mapping
 
-A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/glossary.html#mapping)
+A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html)
 is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the fields editor or by using the [mappings and templates](/logs/mappings-templates) functionality. There are some [special fields](/tags/common-schema) though.
 
   - the **@timestamp** field is an
