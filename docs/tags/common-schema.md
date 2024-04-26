@@ -23,19 +23,14 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 
 | Tag Name  | Description  | Synonymous Tags
 |:--|:--|:--
-| host | A single-valued field and should contain the ID, typically a hostname, of the device or server sending logs. |
+| os.host | A single-valued field and should contain the ID, typically a hostname, of the device or server sending logs. |
 | source | A single-valued field and should contain the ID or descriptor of where the data is coming from. For example, this could be a file name or even a full path to a filename, or the name of the application or process |
+| message | A string field that can contain any sort of text (usually the original log line or some other free text). |
+| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](../logs/supported-date-formats). |
 | facility | A single-valued field used by syslog to indicate the [facility level](https://en.wikipedia.org/wiki/Syslog#Facility_levels). Sematext stores the keyword values of these levels (such as *user* or *auth*). |
 | severity | A single-valued field and should contain the log level, such as *error* or *info*. |
 | syslog-tag | A single-valued field used by syslog to indicate the name and the PID of the application generating the event (for example, **httpd\[215\]:**). |
 | tags | A multi-valued array field that can contain zero or more tags (for example, `"tags": ["solr", "search"]`). When searching for logs with these tags you can filter by using `tags:solr AND tags:search`. Tags can also contain multiple tokens separated by space, but they are still treated as a single value (for example. `"tags": ["solr search"]`). |
-| message | A string field that can contain any sort of text (usually the original log line or some other free text). |
-| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](../logs/supported-date-formats). |
-| error.id | A reserved field for errors |
-| error.message | A reserved field for errors |
-| error.type | A reserved field for errors |
-| span.id | Building block of a trace in distributed tracing |
-| trace.id | Building block of a trace in distributed tracing |
 | geo.ip | IP address defining the location associated with the log line |
 | geo.location | A latitude and longitude defining the location associated with the log line |
 | geo.city_name | The city associated with the log line |
@@ -45,6 +40,11 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | geo.country_iso_code | The ISO code associated with the country in the log line |
 | geo.continent_name | The continent associated with the log line |
 | request.id| Synthetics request ID unique to each monitor run. [Learn more](https://sematext.com/docs/synthetics/troubleshoot/troubleshoot-request-id/) |
+| error.id | A reserved field for errors |
+| error.message | A reserved field for errors |
+| error.type | A reserved field for errors |
+| span.id | Building block of a trace in distributed tracing |
+| trace.id | Building block of a trace in distributed tracing |
 
 All of these fields are optional, but their use is strongly encouraged. If found in logs with low-enough cardinality, all distinct values of these fields will be loaded and shown in the UI as filters and thus allowing one to very quickly narrow down the search.
 
@@ -259,7 +259,7 @@ errors, HTTPS communication should be successful.
 
 ```json
 {
-  "timestamp": "2019-05-30T09:58:43.455Z",
+  "timestamp": "2024-05-30T09:58:43.455Z",
   "creator": "Jenkins",
   "os.host": "jenkins-host",
   "title": "Starting deployment",
