@@ -12,7 +12,7 @@ To see your Windows host metrics in Sematext Cloud, you need to [create an Infra
 
 ## Install from GUI
 
-1. Download the [Sematext Agent installer](https://todo-add-public-installer-repo)
+1. Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/pool/main/s/sematext-agent/sematext-agent-latest.msi)
 2. Follow the installation steps and accept the license agreement 
 3. Set the Infra App token
 4. Select a region (EU or US) based on where you created your account in Sematext Cloud
@@ -21,7 +21,7 @@ After completing these steps, Sematext Agent will be automatically started as a 
 
 ## Install from command line
 
-Download the [Sematext Agent installer](https://todo-add-public-installer-repo).
+Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/pool/main/s/sematext-agent/sematext-agent-latest.msi).
 
 ### Using PowerShell
 
