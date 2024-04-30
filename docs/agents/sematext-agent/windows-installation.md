@@ -89,7 +89,7 @@ To start, stop or restart the Sematext Agent, you can perform these actions thro
 - Stop: Similarly, in the Services application, locate "Sematext Agent", right-click on it, and select "Stop"
 - Restart: To restart the Sematext Agent, you can either stop and then start it again using the aforementioned steps or right-click on "Sematext Agent" in the Services application and select "Restart"
 
-Alternatively, you can use the command-line interface by running one of the following commands:
+Alternatively, you can use the command-line interface by running one of the following commands as Administrator:
 
 Start:
 
