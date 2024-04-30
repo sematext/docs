@@ -13,7 +13,8 @@ As you can see, this User Journey script navigates to some page, fills in input 
 
  ![Adding sensitive data for Browser monitor scripts ](../../images/synthetics/secrets-script-creating-secret.png)
 
-Here we can assign placeholder values which will be displayed instead of the actual credentials. Instead of our actual username, we'll use `$__username__` and we'll replace the password with `$__password__`. Note that these placeholders (or *Secret Keys*) must be in this format:  
+Here we can assign placeholder values which will be displayed instead of the actual credentials. Instead of our actual username, we'll use `$__username__` and we'll replace the password with `$__password__`. Note that these placeholders (or *Secret Keys*) must be in this format:
+
 - `$__exampleSecretKey__`
 
 meaning that they must start with `$__` and end with `__`, and they may only contain alphanumeric characters and underscores. Once you're satisfied with the values you've defined, click the Save button in the menu's bottom right corner. You'll then see the keyboard shortcut tooltip below the script editor, which will let you quickly insert the placeholders you've defined into your script, as seen in the screenshot below.
