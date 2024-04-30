@@ -80,7 +80,7 @@ If you are using an internal group email, you need to allow posting by non-membe
 ![Google Group Settings](../images/team/team-account-google-group-settings.png)
 
 ## Converting to Team Account
-If you've set up Apps, Alert Rules, etc. in your own account and would like to convert it to a Team Account the process is very simple.  Changing the ownership of the account can be done with the [Convert to Team Account](https://apps.sematext.com/ui/account/convert-to-team-account) ([EU](https://apps.eusematext.com/ui/account/convert-to-team-account)) feature. By converting your account to a Team Account everything in your account will be transferred to the Team Account - Apps, Alert Rules, Dashboards, Payment Method, etc.  To start the conversion, go to [General Settings](https://apps.sematext.com/ui/account/info) ([EU](https://apps.eu.sematext.com/ui/account/info)) and press the Convert to Team Account button.
+If you've set up Apps, Alert Rules, etc. in your own account and would like to convert it to a Team Account the process is very simple.  Changing the ownership of the account can be done with the [Convert to Team Account](https://apps.sematext.com/ui/team/convert-to-team-account) ([EU](https://apps.eu.sematext.com/ui/team/convert-to-team-account)) feature. By converting your account to a Team Account everything in your account will be transferred to the Team Account - Apps, Alert Rules, Dashboards, Payment Method, etc.  To start the conversion, go to [General Settings](https://apps.sematext.com/ui/account/info) ([EU](https://apps.eu.sematext.com/ui/account/info)) and press the Convert to Team Account button.
 
 ![General Setting With Conversion Option](../images/team/convert_to_team_account_intro.png)
 
