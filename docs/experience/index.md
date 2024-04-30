@@ -6,7 +6,7 @@ Our Monitoring and Logs solution does a great job of monitoring your infrastruct
 ![Experience Overview 1](../images/experience/screen0-1.png)
 ![Experience Overview 2](../images/experience/screen0-2.png)
 
-It is critical for websites and web apps to load fast in order to keep the visitors satisfied. <a href="https://www.thinkwithgoogle.com/intl/en-154/insights-inspiration/research-data/need-mobile-speed-how-mobile-latency-impacts-publisher-revenue/" target="_blank" rel="noopener">Recent research</a> has shown that:
+It is critical for websites and web apps to load fast in order to keep the visitors satisfied. <a href="https://gitnux.org/website-load-time-statistics/" target="_blank" rel="nofollow">Recent research</a> has shown that:
 
  * 53% of visits are likely to be abandoned if pages take longer than 3 seconds to load
  * One out of two people expect a page to load in less than 2 seconds
