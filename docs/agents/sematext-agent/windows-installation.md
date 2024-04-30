@@ -40,7 +40,7 @@ Where:
 For example:
 
 ```
-Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-3.3.0.2.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
 ```
 
 ### Using Windows CMD:
@@ -60,7 +60,7 @@ Where:
 For example:
 
 ```
-start /wait msiexec /qn /i "sematext-agent-3.3.0.2.msi" /L*V "sematext-agent-3.3.0.2.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
+start /wait msiexec /qn /i "sematext-agent-latest.msi" /L*V "sematext-agent-latest.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
 ```
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
