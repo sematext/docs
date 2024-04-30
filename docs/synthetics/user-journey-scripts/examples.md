@@ -87,13 +87,6 @@ This example showcases invoking an endpoint which provides information about cur
 This script utilizes Puppeteer's request interception feature to intercept and then block any URLs containing a string from a pre-defined list. If a requested URL contains any of these strings, the request will be blocked and logged.
 
 
-
-### [Text search](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/text-search.js)
-
-This script uses [waitForXpath](https://pptr.dev/api/puppeteer.page.waitforxpath) to search for the text “Sematext provides Monitoring & Alerting” on the page.
-
-
-
 ### [Extract Google Play Store metrics](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/google-play.js)
 
 This script will scrape and extract various metrics related to an App listed on the Google Play Store, as described in [How to monitor a mobile App’s store ratings with Sematext](https://sematext.com/blog/how-to-monitor-mobile-app-store-ratings-with-sematext/).
