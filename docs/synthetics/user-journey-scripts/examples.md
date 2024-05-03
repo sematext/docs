@@ -100,7 +100,9 @@ Additionally, it interacts with platform-specific buttons (Phone, Tablet, Watch,
 This script will scrape and extract various metrics related to an App listed on the Apple Store, as described in [How to monitor a mobile App’s store ratings with Sematext](https://sematext.com/blog/how-to-monitor-mobile-app-store-ratings-with-sematext/).
 The script waits for the reviews elements to appear, and then extracts the App's rating, total reviews, and percentages of 5-star, 4-star, 3-star, 2-star, and 1-star ratings. The extracted values are then defined as custom metrics using the Sematext context.
 
+### [Extract Page Load Timings](link will be added after Haris adds the sample)
 
+This script utilizes extracting page load times of each page called within the user journey script as a custom metric. For the user journey scripts that are using `waitForTimeout`, refer to [this sample](link will be added after Haris adds the sample).
 
 ### [Multiple Browser Tabs](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/multi-tab.js)
 
