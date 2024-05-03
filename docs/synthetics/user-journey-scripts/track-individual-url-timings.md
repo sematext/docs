@@ -17,14 +17,16 @@ Then, record the end time after the page has loaded in the next line. By subtrac
 
 Here’s an example:
 
-`let start = new Date();
+```
+let start = new Date();
 await page.goto("https://www.my-company-page.com/");
 let end = new Date();
 console.log('google', start, end);
 let seconds = (end.getTime() - start.getTime()) / 1000;
-context.setMetric('googlePageLoadTime', seconds);`
+context.setMetric('googlePageLoadTime', seconds);
+```
 
-Complete examples of two different user journey scripts, demonstrating how to extract page load time, can be found here. One example shows the simple method described above, while the other shows how to extract page load times when using the `waitForTimeOut` function.
+Refer to [extract page load time script](link will be added after Haris S adds the sample) for the complete example. Also, another example on how to extract page load times when using the `waitForTimeOut` can be found [here](link will be added after Haris S adds the sample).
 
 After extracting page load time metrics, you can visualize and create alert rules by following the instructions [here](https://sematext.com/docs/synthetics/metrics/#how-to-visualize-and-alert-on-metrics). This process will result in a dashboard where you can view individual page load times for each monitor run.
 
