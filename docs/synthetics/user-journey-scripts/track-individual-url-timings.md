@@ -28,6 +28,6 @@ context.setMetric('googlePageLoadTime', seconds);
 
 Refer to [extract page load time script](link will be added after Haris S adds the sample) for the complete example. Also, another example on how to extract page load times when using the `waitForTimeOut` can be found [here](link will be added after Haris S adds the sample).
 
-After extracting page load time metrics, you can visualize and create alert rules by following the instructions [here](https://sematext.com/docs/synthetics/metrics/#how-to-visualize-and-alert-on-metrics). This process will result in a dashboard where you can view individual page load times for each monitor run.
+After extracting page load time metrics, you can visualize them and create alert rules by following the instructions [here](https://sematext.com/docs/synthetics/metrics/#how-to-visualize-and-alert-on-metrics). This process will result in a dashboard where you can view individual page load times for each monitor run.
 
 ![Page Load Times Dashboard](../../images/synthetics/page-load-times-dashboard.png)
