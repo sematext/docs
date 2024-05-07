@@ -608,7 +608,7 @@ Note: if SELinux is deliberately enabled on your machines, make sure that policy
 
 ## Alerts
 
-### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
+### Can I send alerts to PagerDuty, Slack, Nagios, or other WebHooks?
 
 See [alerts FAQ](../faq/#alerts).
 
