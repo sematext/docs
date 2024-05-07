@@ -605,17 +605,6 @@ which can be activated using previously mentioned `semodule -i` command.
 
 Note: if SELinux is deliberately enabled on your machines, make sure that policy package being imported is in line with your security guidelines.
 
-### I am seeing error "Failed to start spm-monitor-starter.service: Unit spm-monitor-starter.service not found.", how can I fix it?
-
-One of the common causes is python. Check if you have python installed and that `python` command is avaialable. In case you have `python2` and/or `python3`, but no `python, create a symlink like:
-
-`sudo ln -s /usr/bin/python2 /usr/bin/python`
-
-After that restart the agent:
-
-`sudo service sematext-agent restart`
-
-If you are still having the problem, contact support.
 
 ## Alerts
 
