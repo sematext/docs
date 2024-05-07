@@ -102,7 +102,7 @@ The script waits for the reviews elements to appear, and then extracts the App's
 
 ### [Extract Page Load Timings](link will be added after Haris adds the sample)
 
-This script utilizes extracting page load times of each page called within the user journey script as a custom metric. For the user journey scripts that are using `waitForTimeout`, refer to [this sample](link will be added after Haris adds the sample).
+This script utilizes extracting page load times of each page visited within the User Journey script as a custom metric. For the User Journey scripts that are using `waitForTimeout`, refer to [this sample](link will be added after Haris adds the sample).
 
 ### [Multiple Browser Tabs](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/multi-tab.js)
 
