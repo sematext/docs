@@ -21,9 +21,8 @@ Here’s an example:
 let start = new Date();
 await page.goto("https://www.my-company-page.com/");
 let end = new Date();
-console.log('My page:', start, end);
 let loadTimeInSeconds = (end.getTime() - start.getTime()) / 1000;
-context.setMetric('googlePageLoadTime', loadTimeInSeconds);
+context.setMetric('myWebsitePageLoadTime', loadTimeInSeconds);
 ```
 
 Refer to [extract page load time script](link will be added after Haris S adds the sample) for the complete example. Also, another example on how to extract page load times when using the `waitForTimeout` can be found [here](link will be added after Haris S adds the sample).
