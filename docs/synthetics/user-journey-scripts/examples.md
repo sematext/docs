@@ -102,7 +102,7 @@ The script waits for the reviews elements to appear, and then extracts the App's
 
 ### [Extract Page Load Timings](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/multiple-page-load-times.js)
 
-This script visits multiple pages and records their individual load times as custom metrics, which can then be charted using our dashboards. It also uses some custom helper functions which facilitate finding elements on the page using their selectors.
+This script visits multiple pages and records their individual load times as [custom metrics](https://sematext.com/docs/synthetics/metrics/#custom-metrics), which can then be charted using our [dashboards](https://sematext.com/docs/dashboards/). It also uses some custom helper functions which facilitate finding elements on the page using their selectors.
 
 ### [Multiple Browser Tabs](https://github.com/sematext/docs/tree/master/docs/synthetics/puppeteer-scripts/multi-tab.js)
 
