@@ -14,7 +14,7 @@ If a specific version is not listed below, Sematext Agent is still very likely t
 | **CentOS** | 7 |
 | **CentOS Stream** | 8<br>9 |
 | **Red Hat Enterprise Linux** | 7<br>8<br>9 |
-| **Amazon Linux** | 2023<br>2 |
+| **Amazon Linux** | 2<br>2023 |
 | **Fedora Linux** | 37<br>38<br>39 |
 | **openSUSE** | 15.4<br>15.5 |
 
