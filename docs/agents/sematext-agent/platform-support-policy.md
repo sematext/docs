@@ -9,13 +9,13 @@ If a specific version is not listed below, Sematext Agent is still very likely t
 
 | Distro | Supported Versions |
 |:-:|:-:|
-| **Ubuntu** | 18.04<br>20.04<br>22.04<br>23.10 |
+| **Ubuntu** | 18.04<br>20.04<br>22.04<br>23.10<br>24.04 |
 | **Debian** | 10<br>11<br>12 |
 | **CentOS** | 7 |
 | **CentOS Stream** | 8<br>9 |
 | **Red Hat Enterprise Linux** | 7<br>8<br>9 |
 | **Amazon Linux** | 2023<br>2 |
-| **Fedora Linux** | 37<br>38<br>39 |
+| **Fedora Linux** | 37<br>38<br>39<br>40 |
 | **openSUSE** | 15.4<br>15.5 |
 
 > **Note:** We utilize eBPF technology for various functionality such as log discovery, service discovery, and system metrics collection. Please note that eBPF functionality requires a minimum **Linux kernel** version of **4.4.3**. If your kernel version is lower than 4.4.3, the Sematext Agent will still function using fallbacks. However, we strongly recommend using a host with eBPF enabled for optimal performance.
