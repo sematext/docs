@@ -45,13 +45,16 @@ Date: May 15, 2024
 
 ### Improvements
 
-- Support for monitoring services running on the Containerd runtime in Kubernetes has been added.
-- Implemented a new billing system for CronJobs and Jobs that is more favorable to customers than regular container billing.
+- Implemented a new billing system for CronJobs and Jobs that is more favorable to customers than existing container billing.
 - Enhanced the reliability of the Kubernetes initialization structure.
+- Corrected inaccurate information about `agent_started` events in Sematext Cloud that gave the impression the agent was frequently restarting.
 
 ### Bug Fixes
 
-- Resolved a service discovery edge-case bug occurring during cold starts in ElasticSearch for Kubernetes and Docker environments.
+- Resolved a service discovery bug occurring with ElasticSearch version 8.
+- Fixed a bug that affected reading Nginx configuration files, to able to discover your `server_status` path.
+- Addressed specific scenario where pods were not being monitored when utilizing the Containerd runtime in Kubernetes.
+- Resolved an edge-case bug occurring during discovering services via eBPF, that leads to have incorrect service IP.
 
 ## Version 3.3.0
 
