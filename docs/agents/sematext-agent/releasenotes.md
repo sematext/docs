@@ -52,9 +52,9 @@ Date: May 15, 2024
 ### Bug Fixes
 
 - Resolved a service discovery bug occurring with ElasticSearch version 8.
-- Fixed a bug that affected reading Nginx configuration files, to able to discover your `server_status` path.
+- Fixed a bug that affected reading Nginx configuration files, to enable discovery of your `server_status` path.
 - Addressed specific scenario where pods were not being monitored when utilizing the Containerd runtime in Kubernetes.
-- Resolved an edge-case bug occurring during discovering services via eBPF, that leads to have incorrect service IP.
+- Resolved an edge-case bug occurring during discovering services via eBPF, which led to incorrect service IP addresses.
 
 ## Version 3.3.0
 
