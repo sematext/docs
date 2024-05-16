@@ -39,6 +39,23 @@ NULL
 
 -->
 
+## Version 4.3.1
+
+Date: May 15, 2024
+
+### Improvements
+
+- Implemented a new billing system for CronJobs and Jobs that is more favorable to customers than existing container billing.
+- Enhanced the reliability of the Kubernetes initialization structure.
+- Corrected inaccurate information about `agent_started` events in Sematext Cloud that gave the impression the agent was frequently restarting.
+
+### Bug Fixes
+
+- Resolved a service discovery bug occurring with ElasticSearch version 8.
+- Fixed a bug that affected reading Nginx configuration files, to enable discovery of your `server_status` path.
+- Addressed specific scenario where pods were not being monitored when utilizing the Containerd runtime in Kubernetes.
+- Resolved an edge-case bug occurring during discovering services via eBPF, which led to incorrect service IP addresses.
+
 ## Version 3.3.0
 
 Date: March 5, 2024
@@ -133,7 +150,7 @@ After applying the new cluster roles, follow the agent upgrade steps from Semate
 
 #### Helm Installation
 
-Please update your `sematext` Helm repository. 
+Please update your `sematext` Helm repository.
 
 ```
 helm repo add sematext https://cdn.sematext.com/helm-charts
@@ -204,7 +221,7 @@ After applying the new cluster roles, follow the agent upgrade steps from Semate
 
 #### Helm Installation
 
-Please update your `sematext` Helm repository. 
+Please update your `sematext` Helm repository.
 
 ```
 helm repo add sematext https://cdn.sematext.com/helm-charts
