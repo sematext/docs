@@ -104,26 +104,6 @@ The following `docker-compose.yml` file provides a working configuration that ca
 
 ```yaml
 # docker-compose.yml
-services:
-  sematext-agent:
-    image: 'sematext/agent:latest'
-    environment:
-      - INFRA_TOKEN: <YOUR_INFRA_APP_TOKEN_HERE>
-      - REGION: <US or EU>
-    cap_add:
-      - SYS_ADMIN
-    restart: always
-    volumes:
-      - '/:/hostfs:ro'
-      - '/etc/passwd:/etc/passwd:ro'
-      - '/etc/group:/etc/group:ro'
-      - '/var/run/:/var/run/'
-      - '/sys/kernel/debug:/sys/kernel/debug'
-      - '/sys:/host/sys:ro'
-      - '/dev:/hostfs/dev:ro'
-      - '/var/run/docker.sock:/var/run/docker.sock:ro'
-
-# docker-compose.yml
 version: '3'
 services:
   sematext-agent:
