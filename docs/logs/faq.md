@@ -338,6 +338,12 @@ field will fail.  Note that you *can* change the underlying field
 If none of the above turns out to be a problem in your case, please let
 us know via <support@sematext.com> or via our live chat!
 
+### I've deleted all my Apps and created new ones, but now I'm not seeing my logs
+
+If you've deleted all your Logs and Infra Apps, created new ones, and you can't see your logs,
+it is suggested to restart the Sematext Agent as described in the [Agent starting / stopping](https://sematext.com/docs/agents/sematext-agent/starting-stopping/) 
+instructions.
+
 ### How to check if there are any network connectivity issues?
 
 Things to check to ensure network connectivity is OK:
