@@ -1,10 +1,10 @@
 title: Installing Sematext Agent on Windows
 
-Sematext Agent collects a plethora of metrics about Windows hosts (cpu, memory, disk, network, processes). The installer is responsible to install the Sematext Agent, configuring it, and starting it as a Windows service.
+Sematext Agent collects a plethora of metrics about Windows hosts (CPU, memory, disk, network, processes). The installer is responsible for installing the Sematext Agent, configuring it, and starting it as a Windows Service.
 
 Installation can be done either by using the GUI installer or through the command line.
 
-## Pre-requirements
+## Preconditions
 
 Before starting, please check the [platform support policy](https://sematext.com/docs/agents/sematext-agent/platform-support-policy/) page to make sure your Windows platform is supported.
 
@@ -25,7 +25,7 @@ Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/po
 
 ### Using PowerShell
 
-Run the following command as Administrator from the folder that you downloaded the installer:
+Run the following command as Administrator from the folder where you downloaded the installer:
 
 ```
 Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_INSTALLER'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
@@ -34,8 +34,8 @@ Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_IN
 Where:
 
 - `YOUR_INFRA_APP_TOKEN`: the Infra App token
-- `YOUR_REGION_EU_or_US`: your Sematext Cloud region
-- `AGENT_MSI_INSTALLER`: the filename of the Windows installer for Sematext Agent
+- `YOUR_REGION_EU_or_US`: your Sematext Cloud region - EU or US
+- `AGENT_MSI_INSTALLER`: the filename of the Sematext Agent Windows installer
 
 For example:
 
@@ -45,7 +45,7 @@ Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-age
 
 ### Using Windows CMD:
 
-Run the following command as Administrator from the folder that you downloaded the installer:
+Run the following command as Administrator from the folder where you downloaded the installer:
 
 ```
 start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
@@ -54,8 +54,8 @@ start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" 
 Where:
 
 - `YOUR_INFRA_APP_TOKEN`: the Infra App token
-- `YOUR_REGION_EU_or_US`: your Sematext Cloud region
-- `AGENT_MSI_INSTALLER`: the filename of the Windows installer for Sematext Agent
+- `YOUR_REGION_EU_or_US`: your Sematext Cloud region - EU or US
+- `AGENT_MSI_INSTALLER`: the filename of the Sematext Agent Windows installer
 
 For example:
 
@@ -124,7 +124,7 @@ cd C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent
 notepad.exe .\logs\st-agent.log
 ```
 
-## How to change Infra App token and region
+## How to change Infra App token or region
 
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
@@ -142,7 +142,7 @@ After the changes, you need to restart the agent:
 
 ## How to unistall Sematext Agent
 
-You can uninstall Sematext Agent using the GUI installer or by from Windows Settings > Apps.
+You can uninstall Sematext Agent using the GUI installer or from Windows Settings > Apps.
 
 ## Limitations
 
