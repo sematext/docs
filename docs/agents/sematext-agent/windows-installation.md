@@ -154,8 +154,8 @@ The Sematext Agent for Windows is still a work in progress and has some limitati
 - Sematext Agent for Windows is still in the Beta stage.  
   You may see "Unknown Publisher" errors while installing the agent on your Windows host.
   We are aware of this issue and we will solve this issue soon, here is the SHA256 hash of the file if you need to verify the file is valid:
-  <code>
+  ```
   9d1c1f08b67ff9b3bfc3bab2f7cc3ab96f3ca1d7d8a132caaa8019fe50b220cf  sematext-agent-latest.msi
-  </code>
+  ```
   
 
