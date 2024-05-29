@@ -151,11 +151,10 @@ The Sematext Agent for Windows is still a work in progress and has some limitati
 - Discovery and configuration of services and log sources are not yet supported
 - Inventory functionality is not yet available
 - Custom tags cannot be created
-- Sematext Agent for Windows is still in the Beta stage.  
-  You may see "Unknown Publisher" errors while installing the agent on your Windows host.  
-  We are aware of this issue and we will solve this issue soon, here is the SHA256 hash of the file if you need to verify the file is valid:
+- Sematext Agent for Windows is in Beta.  
+  You may see the "Unknown Publisher" warning while installing the agent on your Windows host.  
+  We are aware of this and will solve it soon. The SHA256 hash of the installer file if you need to verify its validity:
   ```
   9d1c1f08b67ff9b3bfc3bab2f7cc3ab96f3ca1d7d8a132caaa8019fe50b220cf  sematext-agent-latest.msi
   ```
   
-
