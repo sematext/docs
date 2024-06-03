@@ -53,7 +53,7 @@ All of our plans include support via live chat and email. For Standard and Pro P
 - You can invite as many team members as you want at no additional cost.
 - If you use Sematext as a team or company, we recommend creating an account that is not tied to any individual's email and converting it to a [team account](https://sematext.com/docs/team/#team-account). There are no additional costs for using a team account. Others can then be invited to and removed from that account and be assigned roles.
 - Users can have [different roles such as user, admin, and billing admin](https://sematext.com/docs/team/).
-  - Account owners and billing admins can add or remove credit cards and have full control over the Apps within the account.
+    - Account owners and billing admins can add or remove credit cards and have full control over the Apps within the account.
 - You can set a billing email within the Settings screen. This email, along with the account owner's and billing admin’s emails, will receive invoices.
 - We charge credit cards on the 1st of the month. If the charge fails, we will send you an email about the failure and will keep trying until the 15th. If we cannot charge by the 15th, and a free plan is available, we will downgrade the Apps to the free plan. If a free plan is not available, we will disable your Apps. As soon as you enter a valid payment method, you can enable your Apps without losing any data. If your App was downgraded to a free plan with limited features and data retention, your older data will get deleted according to the free plan’s features and data limits.
 - If you are on an annual payment plan, we will email the account owner, billing admins, and the billing email when the prepaid balance is low and it's time to top-up.
