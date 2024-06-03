@@ -66,16 +66,10 @@ To see the details of your estimated cost for a specific App, go to the App, cli
 
 ![Sematext Cloud App Settings - Cost Estimations](../images/guide/pricing/app-settings-cost-estimations.png) 
 
-- **Last Month**: Amount charged for the App for the previous month.
+- **Last month**: Amount charged for the App for the previous month.
 - **Month to date**: Costs for your App made in the current month so far.
 - **Full month estimate**: Estimate for future months based on the current usage and plan. For the purpose of this calculation, the trial period is ignored.
-- **Current month estimate**: Sum of costs for the current month so far and estimate for the rest oıf the month based on current usage and plan. This estimate takes into account any trial period but you won’t be charged for the usages during the trial period.
-
-- Last month: Amount charged for the App for the previous month.
-Month to date: Costs for your App made in the current month so far.
-Full month estimate: Estimate for future months based on the current usage and plan. For the purpose of this calculation, the trial period is ignored.
-Current month estimate: Sum of costs for the current month so far and estimate for the rest of the month based on current usage and plan. This estimate takes into account any trial period but you won’t be charged for the usage during the trial period.
-
+- **Current month estimate**: Sum of costs for the current month so far and estimate for the rest of the month based on current usage and plan. This estimate takes into account any trial period but you won’t be charged for the usage during the trial period.
 
 ### Account-Level Cost Estimation
 
@@ -85,18 +79,15 @@ For a general overview of your estimated monthly costs across all Apps, visit th
 
 ### Trial Period
 
-We offer a 14-day trial period with all pro features enabled. During this period, you won't be charged. Estimated costs for trial Apps will show as $0 in the Plans & Billing section. However, if you're curious about post-trial costs, you can toggle on the Show Estimations for Trial Apps button.
+We offer a 14-day trial period with all Pro features enabled. During this period, you won't be charged. Estimated costs for trial Apps will show as $0 in the Plans & Billing section. However, if you're curious about post-trial costs, you can toggle on the Show Estimations for Trial Apps button.
 
 ## Billing Flexibility
 
 ### No Commitment
 
-You can downgrade or update an App at any time without any commitment, providing full control over your expenses.
+Unless you choose to switch to an annual payment plan, which you can do at any time, there is no commitment and no contract with Sematext. When/if you want to stop using Sematext you simply stop sending us your metrics and/or switch to the Free plan. You can also upgrade/downgrade your plans at any given time, as well as change the data retention, number of hosts, volume of logs, etc. Usage is metered hourly, so any changes made will take effect immediately.
 
-### Annual Payment Discount
+Our goal is to provide a flexible and transparent pricing model, ensuring there are no surprises at the end of the month by offering customizable plans and clear cost estimations. If you have any questions or need further assistance, reach out to us at support@sematext.com.
 
-You can switch to an annual payment method from the Plans & Billings screen which gives you a 10% discount on your account level.
+## FAQ
 
-Our goal is to provide a flexible and transparent pricing model, ensuring there are no surprises at the end of the month. By offering customizable plans and clear cost estimations.
-
-If you have any questions or need further assistance, reach out to us from support@sematext.com.
