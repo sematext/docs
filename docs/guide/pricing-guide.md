@@ -14,23 +14,22 @@ We offer flexible and transparent pricing for all of our four solutions: [Monito
 
 For each of the four solutions, you can create multiple [Apps](https://sematext.com/docs/guide/app-guide/). Apps act as containers for your data. Every App is isolated and standalone, each App can have a different plan and other attributes that affect cost. This allows you to customize costs for each App individually and control the overall spend. For each App you can change the following:
 
-
 - [Logs](https://sematext.com/pricing/#logs) Apps: 
-  - Plan
-  - Daily log volume
-  - Data retention
-- [Monitoring](https://sematext.com/pricing/#infrastructure) Apps: 
-  - Plan
-  - Number of hosts and containers
-  - Data retention 
-- [Experience](https://sematext.com/pricing/#experience) Apps: 
-  - Plan
-  - Page views
-  - Data retention
-- [Synthetics](https://sematext.com/pricing/#synthetics) Apps: 
-  - Plan
-  - Number of [Browser](https://sematext.com/docs/synthetics/browser-monitor/) and [HTTP](https://sematext.com/docs/synthetics/http-monitor/) monitors
-  - Data retention
+    - Plan
+    - Daily log volume
+    - Data retention
+- [Monitoring](https://sematext.com/pricing/#infrastructure) Apps:
+    - Plan
+    - Number of hosts and containers
+    - Data retention
+- [Experience](https://sematext.com/pricing/#experience) Apps:
+    - Plan
+    - Page views
+    - Data retention
+- [Synthetics](https://sematext.com/pricing/#synthetics) Apps:
+    - Plan
+    - Number of [Browser](https://sematext.com/docs/synthetics/browser-monitor/) and [HTTP](https://sematext.com/docs/synthetics/http-monitor/) monitors
+    - Data retention
   
 This flexibility ensures you only pay for what you use. For example, you might create multiple Apps and choose a minimal retention plan for test hosts and a higher retention plan for production hosts.
 
