@@ -91,3 +91,41 @@ Our goal is to provide a flexible and transparent pricing model, ensuring there 
 
 ## FAQ
 
+### Where and how often can I change plans? 
+
+You can downgrade or upgrade an [App](https://sematext.com/docs/guide/app-guide/) anytime you want and any number of times. To do this, click on the App you want to downgrade/upgrade, navigate to 'App Settings' from the left menu panel, and click on the 'Manage Plan' option. From the flyout, you can select the plan that best fits your needs.
+
+### Where and how often can I change data retention?  
+
+You can change data retention of an [App](https://sematext.com/docs/guide/app-guide/) anytime you want and any number of times. To do this, click on the App you want to change the retention, navigate to 'App Settings' from the left menu panel, and click on the 'Manage Plan' option. From the flyout, you can select the retention that best fits your needs.
+
+### Can I ship logs from different hosts to the same App without additional charges?
+
+The easiest way to ship logs to Sematext Cloud is by using [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/). Our Logs Apps don’t charge based on the number of hosts you are shipping data from. Our pricing is based on the daily log volumes you are shipping to Sematext Cloud. Therefore, you can install [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) on multiple hosts or use our [custom integrations](https://sematext.com/docs/logs/sending-log-events/#custom-integration-options) to ship logs to the same App without additional charges. We also recommend using [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) to drop redundant and noisy log events to save on costs. Refer to [Reduce Log Monitoring Costs](https://sematext.com/docs/logs/reduce-costs-with-pipelines/) for more information. 
+
+[Sematext Logs](https://sematext.com/docs/logs/) also offers plan recommendations based on the daily log volume you shipped during the last 7 days. 
+
+Refer to [Plan Recommendations](https://sematext.com/docs/logs/plan-recommendations/) for more information.
+
+### How can I handle sudden log volume spikes?
+
+[Sematext Logs](https://sematext.com/docs/logs/) provides an option to put a hard limit to reject data once the specified GB/day limit is reached, to avoid surprises at the end of the month. It also allows you to change set that limit so high as to virtually eliminate it. The choice is yours.
+
+Refer to [Going over the selected daily volume](https://sematext.com/docs/logs/logs-usage-screen/#going-over-the-selected-daily-log-volume) for more information.
+
+### What is Received vs. Stored pricing for Logs
+
+The costs for Logs Apps are affected by the volume of data you send to a Logs App. When you transmit raw log messages, a fixed rate of $0.10 per GB applies (received price), regardless of your plan, daily volume, or retention. Storage prices vary across plans, daily log volumes, and retention periods. Before Sematext stores logs, based on your specified [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) conditions, you can discard logs or portions of logs to filter out noise and minimize storage expenses, thereby reducing your costs.
+
+The unit price ($/GB) goes down as the daily log volume increases.
+
+Refer to [Reduce Log Monitoring Costs](https://sematext.com/docs/logs/reduce-costs-with-pipelines/) for more information. 
+
+Refer to [Logs pricing](https://sematext.com/pricing/#logs) for more information on stored pricing based on selected plan and retention.
+
+### How do you bill for container monitoring?
+
+Container monitoring is based on the base price and per-container price. The base price includes monitoring of a container host and free monitoring of up to N containers. Per-container price is applied only if you run more than N containers per host. The number of containers per host is averaged for the whole App. The base price and the number of containers included in it depends on the plan. Note that monitoring of container host and containers is independent of monitoring of applications you run in those containers. Containerized applications monitored by Sematext are metered as separate hosts. In other words, whether the monitored application is running in a container or in a VM or directly on a server or in a public cloud instance is the same as far as metering and billing is concerned. For plans and price details see https://sematext.com/pricing/.
+
+Containers are monitored and charged through Infra Apps which can also monitor your bare-metal servers and virtual machines.
+
