@@ -4,6 +4,7 @@ description: This guide explains how Sematext Cloud's flexible and transparent p
 We offer flexible and transparent pricing for all of our four solutions: [Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/), [Experience](https://sematext.com/docs/experience/), and [Synthetics](https://sematext.com/docs/synthetics/). This guide explains how our pricing works, helping you manage costs effectively based on your needs.
 
 **Useful Links:**
+
 - [Cost Calculator](https://sematext.com/cost-calculator/)
 - [Pricing](https://sematext.com/pricing/)
 - Reach out to our [Customer Success Manager](https://meetings.hubspot.com/sean-monahan) to discuss pricing, custom plans, volume discounts, cost optimizations, or anything else.
