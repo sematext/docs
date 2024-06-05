@@ -46,7 +46,7 @@ In addition, an overview of all the installed packages on a given system is avai
 
 ### Comparing Different Hosts
 
-The Inventory UI enables you to compare various hosts within your infrastructure. By examining key attributes such as kernel versions, operating systems, memory, disk space, and virtualization settings, you can easily pinpoint compatibility issues across your hosts. This comparison helps in:
+The Inventory UI enables you to compare various hosts within your infrastructure. By examining key attributes such as kernel versions, operating systems, memory, disk space, and virtualization settings, you can easily pinpoint inconsistencies across your hosts. This comparison helps in:
 
 - Detect changes in configurations between hosts
 - Verify that all hosts are compliant to required specifications
