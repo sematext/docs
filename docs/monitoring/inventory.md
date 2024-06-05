@@ -44,11 +44,26 @@ In addition, an overview of all the installed packages on a given system is avai
 - Package name
 - Package version
 
-### Comparing Hosts
+### Comparing Different Hosts
 
-The Inventory UI let's you compare different systems to quickly see the differences between them and use filtering to see differences between specific packages.
+The Inventory UI enables you to compare various hosts within your infrastructure. By examining key attributes such as kernel versions, operating systems, memory, disk space, and virtualization settings, you can easily pinpoint compatibility issues across your hosts. This comparison helps in:
 
-![compare hosts](../images/monitoring/infra-inventory-compare.gif)
+- Detect changes in configurations between hosts
+- Verify that all hosts are compliant to required specifications
+- Quickly find differences that may be causing performance or compatibility issues
+
+
+![compare hosts](../images/monitoring/inventory-compare-servers.gif)
+
+### Comparing Packages
+
+The Inventory UI also allows you to compare software packages installed on different hosts. This is important to:
+
+- Ensure that all hosts have the required software versions installed
+- Verify that all hosts have the latest security updates and patches
+- Identify and resolve dependency issues that might arise due to different package versions
+
+![compare hosts](../images/monitoring/inventory-compare-packages.gif)
 
 ### Grouping Hosts By Installed Packages
 
