@@ -1,9 +1,9 @@
-title: How to handle too many fields in the index error
+title: Too many fields in the index
 description: How to handle too many fields in the index error with Sematext Logs Pipelines
 
 If you are ship log events with a large number of distinct fields you might see the "Too Many Fields Present in the Index" warning in a Logs App:
 
-![Logsene Error](../images/logs/pipelines/logsene_error.png)
+![Failed Logs Message](../images/logs/pipelines/failed_logs_message.png)
 
 The "Too Many Fields Present in the Index" error occurs when the number of fields in a Logs App  exceeds **1000**. This error is typically not caused by new log events but by a large number of the pre-existing distinct fields. The error happens when a new event with yet another new field arrives and that, if indexed, would push the total number of distinct fields over the limit.
 
@@ -11,7 +11,7 @@ When this error occurs, you will see a warning message at the top of your logs A
 
 If you check the `logsene_error` field in your failed logs, you will see the "Too many fields present in the index" error.
 
-![Failed Logs Message](../images/logs/pipelines/failed_logs_message.png)
+![Logsene Error](../images/logs/pipelines/logsene_error.png)
 
 ## Solution
 
