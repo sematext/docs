@@ -68,7 +68,7 @@ pages:
           - Script Field Processor: logs/script-field-processor.md
           - Sampling Processor: logs/sampling-processor.md
       - Handling Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
-      - Too many fields in th index: logs/too-many-fields-in-index.md
+      - Too many fields in the index: logs/too-many-fields-in-index.md
       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
