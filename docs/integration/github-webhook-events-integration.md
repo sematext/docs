@@ -1,15 +1,23 @@
 title: GitHub Webhook Events Integration
 description: GitHub Webhooks allow you to build or set up integrations, such as GitHub Apps or OAuth Apps, which subscribe to certain events on GitHub.com.
 
-By configuring the Webhook to point to Sematext, you can store all data about the triggered events in one place. Gain insight into the entire GitHub workflow in your Organization.
+By configuring the GitHub Webhooks to point to Sematext you can store information about commits, opened or closed PRs, PR comments, etc. in your Github repositories in one place. This provides insight into the entire GitHub workflow for your team(s). By configuring the Github Webhooks at the Organization level you can quickly and easily have all these events for all repositories sent to Sematext. Here is just one of several our of the box Sematext dashboards this integration provides:
+
+<img
+  class="content-modal-image"
+  alt="Github Team Pulse Dashboard"
+  src="../../images/logs/github-webhooks-team-pulse.png"
+  title="Github Team Pulse Dashboard"
+/>
+
+The Github integration comes with several pre-built dashboards that, you will find, provide valuable insight about your team's development speed.  As you can see on the left side of this screenshot, there are other dashboards that this integration provides out of the box.
+
+This integration provides insights into your Organization's team pulse, development patterns, metrics, development velocity, progress, trends, etc. It lets you spot opportunities for improvement in the daily workflow of your team(s).
+
 
 ## GitHub Webhook Events Quick Start
 
-When an event is triggered, GitHub sends an HTTP POST payload to the Webhook's configured URL. Webhooks can be used to update an external issue tracker, trigger CI builds, update a backup mirror, or even deploy to your production server. You're only limited by your imagination. 
-
-Gain insights into your Organization's team pulse, patterns, metrics, development velocity, progress, trends, to spot opportunities for improvement in the daily workflow. Keep your team happy and enable them to be more productive and fulfilled.
-
-The Sematext GitHub Webhook Events Integration supports these events:
+The Sematext GitHub Webhook Events Integration supports the following events:
 
 - Commit comments
 - Branch or tag creation
@@ -22,7 +30,7 @@ The Sematext GitHub Webhook Events Integration supports these events:
 - Pushes
 - Releases
 
-You can configure a Webhook to send events to Sematext either through the Github UI or with their API.
+When one of these events is triggered, GitHub sends an HTTP POST payload to the Webhook's configured URL. You can configure a Webhook to send events to Sematext either through the Github UI or with their API.
 
 ## Set Up A GitHub Webhook In The GitHub UI
 
@@ -110,13 +118,3 @@ curl -X POST \
   ] 
 }'
 ```
-
-## Exploring logs
-The Github integration comes with several pre-built dashboards that, you will find, provide valuable insight about your team's development speed.  Below is an example of one such dashboards, but as you can see on the left side of this screenshot, there are other reports reports that this integration provides out of the box.
-
-<img
-  class="content-modal-image"
-  alt="Github Team Pulse Dashboard"
-  src="../../images/logs/github-webhooks-team-pulse.png"
-  title="Github Team Pulse Dashboard"
-/>
