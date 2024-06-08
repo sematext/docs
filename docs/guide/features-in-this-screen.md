@@ -11,7 +11,7 @@ frameborder="0" allow="autoplay; encrypted-media"
 allowfullscreen class="video"></iframe>
 </div>
 
-If the icon is pink, it means there are features on this screen that we want to highlight for you.
+If the icon is purple, it means there are features on this screen that we want to highlight for you.
 
 Once you open the flyout, you will see a list of features available on the current screen. Each feature entry includes:
 
