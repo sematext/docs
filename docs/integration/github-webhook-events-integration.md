@@ -1,7 +1,9 @@
 title: GitHub Webhook Events Integration
 description: GitHub Webhooks allow you to build or set up integrations, such as GitHub Apps or OAuth Apps, which subscribe to certain events on GitHub.com.
 
-By configuring the GitHub Webhooks to point to Sematext you can store information about commits, opened or closed PRs, PR comments, etc. in your Github repositories in one place. This provides insight into the entire GitHub workflow for your team(s). By configuring the Github Webhooks at the Organization level you can quickly and easily have all these events for all repositories sent to Sematext. Here is just one of several our of the box Sematext dashboards this integration provides:
+By configuring the GitHub Webhooks to point to Sematext you can store information about Github repository commits, opened or closed PRs, PR comments, etc. in one place. This provides insight into the entire GitHub workflow for your team. Github Webooks can be configured at the level of individual repositories and/or organization. By configuring the Github Webhooks at the organization level you can quickly and easily have events for all repositories sent to Sematext. 
+
+Here is just one of several our of the box Sematext dashboards this integration provides:
 
 <img
   class="content-modal-image"
@@ -10,10 +12,9 @@ By configuring the GitHub Webhooks to point to Sematext you can store informatio
   title="Github Team Pulse Dashboard"
 />
 
-The Github integration comes with several pre-built dashboards that, you will find, provide valuable insight about your team's development speed.  As you can see on the left side of this screenshot, there are other dashboards that this integration provides out of the box.
+The Github integration comes with several pre-built dashboards that provide valuable insight about your team's development velocity, as we as information about individual contributors. As you can see on the left side of this screenshot, there are other dashboards that this integration provides out of the box.
 
-This integration provides insights into your Organization's team pulse, development patterns, metrics, development velocity, progress, trends, etc. It lets you spot opportunities for improvement in the daily workflow of your team(s).
-
+This integration provides insights into your organization's team pulse, development patterns, metrics, development velocity, progress, trends, etc. It lets you spot opportunities for improvement in the daily workflow of your team.
 
 ## GitHub Webhook Events Quick Start
 
