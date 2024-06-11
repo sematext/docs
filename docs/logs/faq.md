@@ -60,9 +60,6 @@ The number of logs will be also displayed in the right corner of the Log Counts 
 
 <img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
-You can also do that from Kibana by searching for all your logs without adding any time filters. The
-number of hits represents the number of all your logs.
-
 ### How long are my logs stored?
 
 How long your logs are stored depends on what Data Retention you
@@ -490,77 +487,6 @@ your API calls using `apiKey`. You can read more about this [here](search-throug
 ### Where is my data stored?
 
 Logs App runs and stores data in Amazon AWS in the US and the EU.  You can choose if you want your account and your data in the US or in the EU.
-
-## Kibana
-
-### How can I get a nice map of the world in Kibana?
-
-Ensure you have a country field in your logs.  If you only have IP you
-can use Logstash [geoip filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html). For example, a
-configuration like this:
-
-``` bash
-input {
-  stdin {
-    type => "human"
-  }
-}
-filter {
-  geoip {
-    source => "message"
-  }
-}
-output {
-  elasticsearch_http {
-          host => "logsene-receiver.sematext.com"
-          port => 80
-          index => "YOUR-APPLICATION-TOKEN-GOES-HERE"
-  }
-}
-```
-
-If you then start Logstash and type in an IP, you'll see in Kibana an
-object called **geo**, which contains lots of information, including
-country codes. You can then use `geo.country_iso_code` as your field in
-Kibana.
-
-You can use this field both in Kibana and in the Sematext GeoMap component.
-
-### Why are new fields not visible in Kibana and how do I fix it?
-
-Kibana doesn't update field lists automatically. This problem is not
-specific to our Logs App, but is a general Kibana issue. If you add new
-fields to an index you must refresh the fields in Kibana. New fields
-will appear and will be ready to use in your visualizations and
-searches.
-
-### How do I create a dashboard in Kibana?
-
-Kibana requires the following high level steps to create a dashboard:
-
-1.  Create a visualization - click to 'Visualize' and save it when
-    finished. See
-    also: <https://www.elastic.co/guide/en/kibana/current/visualize.html>
-2.  Create a "Search" in the Discover view and save it.  Once you do
-    that you can add it as table to your Dashboard later (See screenshot
-    "Log View").  See
-    also: <https://www.elastic.co/guide/en/kibana/current/discover.html>
-3.  Go to the Dashboard view and add the saved visualizations to it.
-     See
-    also: <https://www.elastic.co/guide/en/kibana/current/dashboard.html>
-4.  Save the Dashboard
-
-### Why can't I draw charts (dashboards) using a given field?
-
-By default all string values sent to Logs App are analyzed. For each
-analyzed fields we also create .raw field which is not analyzed. If you
-want to use string field for drawing charts you should either use .raw
-field or change index templates to use not_analyzed type
-(<https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/>).
- Let's consider an example. We have a field called 'title'. Our logging management solution
-uses this field as analyzed one so it is not possible to use it in
-dashboards. It also creates automatically a field called
-'title.raw' and this one can be used for charts.
 
 ## Timestamps
 
