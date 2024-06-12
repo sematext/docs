@@ -6,7 +6,7 @@ We offer flexible and transparent pricing for all of our four solutions: [Monito
 **Useful Links:**
 
 - [Cost Calculator](https://sematext.com/cost-calculator/)
-- [Pricing](https://sematext.com/pricing/)
+- [Plans and Prices](https://sematext.com/pricing/)
 - Reach out to our [Customer Success Manager](https://meetings.hubspot.com/sean-monahan) to discuss pricing, custom plans, volume discounts, cost optimizations, or anything else.
 
 
