@@ -17,19 +17,19 @@ For each of the four solutions, you can create multiple [Apps](https://sematext.
 - [Logs](https://sematext.com/pricing/#logs) Apps: 
     - Plan
     - Daily log volume
-    - Data retention
+    - Data retention duration
 - [Monitoring](https://sematext.com/pricing/#infrastructure) Apps:
     - Plan
     - Number of hosts and containers
-    - Data retention
+    - Data retention duration
 - [Experience](https://sematext.com/pricing/#experience) Apps:
     - Plan
-    - Page views
-    - Data retention
+    - Number of page views
+    - Data retention duration
 - [Synthetics](https://sematext.com/pricing/#synthetics) Apps:
     - Plan
     - Number of [Browser](https://sematext.com/docs/synthetics/browser-monitor/) and [HTTP](https://sematext.com/docs/synthetics/http-monitor/) monitors
-    - Data retention
+    - Data retention duration
   
 This flexibility ensures you only pay for what you use. For example, you might create multiple Apps and choose a minimal retention plan for test hosts and a higher retention plan for production hosts.
 
@@ -113,7 +113,7 @@ Refer to [Plan Recommendations](https://sematext.com/docs/logs/plan-recommendati
 
 Refer to [Going over the selected daily volume](https://sematext.com/docs/logs/logs-usage-screen/#going-over-the-selected-daily-log-volume) for more information.
 
-### What is Received vs. Stored pricing for Logs
+### What is Received vs. Stored pricing for Logs?
 
 The costs for Logs Apps are affected by the volume of data you send to a Logs App. When you transmit raw log messages, a fixed rate of $0.10 per GB applies (received price), regardless of your plan, daily volume, or retention. Storage prices vary across plans, daily log volumes, and retention periods. Before Sematext stores logs, based on your specified [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) conditions, you can discard logs or portions of logs to filter out noise and minimize storage expenses, thereby reducing your costs.
 
