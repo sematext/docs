@@ -83,15 +83,22 @@ Note: These instructions have been tested only on Windows Server 2022. Other Win
 - Name the group (e.g., `SematextAgentDeployment`).
 - Make sure the **Group scope** is set to **Global** and **Group type** is set to **Security**.
 
+  ![Sematext Agent service](images/windows-agent-group-properties.png)
+
 ##### Add Computers to the Group
 - Right-click the newly created group, select **Properties**.
 - Go to the **Members** tab and click **Add**.
 - Enter the names of the computers you want to deploy the MSI file to. Click **Check Names** to validate they are recognized by Active Directory, then click **OK**.
 
+  ![Sematext Agent service](images/windows-agent-add-computers-to-group.png)
+  ![Sematext Agent service](images/windows-agent-security-group.png)
+
 #### 2. Create a Shared Network Folder
 - Create a shared folder on your server, for example, `\\ServerName\Sematext_Distribution`.
 - Copy the `sematext-agent-latest.msi` file into this shared folder.
 - Set permissions on the shared folder and add the group `SematextAgentDeployment` so that all computers in the network have read access.
+
+  ![Sematext Agent service](images/windows-agent-shared-folder.png)
 
 #### 3. Open Group Policy Management
 - On your server, open the **Group Policy Management Console (GPMC)**. You can do this by typing `gpmc.msc` in the Run dialog (Win + R).
@@ -100,10 +107,14 @@ Note: These instructions have been tested only on Windows Server 2022. Other Win
 - In the Group Policy Management Console, right-click on the domain where your client computers reside and select **Create a GPO in this domain, and Link it here…**.
 - Name the GPO something descriptive like `Deploy Sematext Agent`.
 
+  ![Sematext Agent service](images/windows-agent-create-gpo.png)
+
 #### 5. Scope the GPO to the Group
 - Select the newly created GPO in the tree.
 - Under the **Security Filtering** section, click **Add**.
 - Enter the name of the group you created (e.g., `SematextAgentDeployment`), click **Check Names**, and then click **OK**.
+
+  ![Sematext Agent service](images/windows-agent-new-gpo.png)
 
 #### 6. Edit the GPO
 - Right-click the newly created GPO and select **Edit**.
@@ -113,6 +124,8 @@ Note: These instructions have been tested only on Windows Server 2022. Other Win
 - Right-click **Software Installation**, select **New** > **Package**.
 - In the **Open** dialog, enter the network path to the `sematext-agent-latest.msi` file (e.g., `\\ServerName\Sematext_Distribution\sematext-agent-latest.msi`) and click **Open**.
 - Select the **Assigned** deployment method and click **OK**.
+
+  ![Sematext Agent service](images/windows-agent-software-installation.png)
 
 ### Client-Side Configuration
 
