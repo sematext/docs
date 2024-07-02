@@ -69,8 +69,6 @@ After completing these steps, Sematext Agent will be automatically started as a 
 
 These steps will walk you through deploying the Sematext Agent using Group Policy on a Windows Server environment. It covers both server and client-side configurations and includes steps for creating a new security group for targeted deployment. Deploying software via Group Policy allows for automated, consistent, and scalable deployments across multiple machines, ensuring that all systems are up-to-date with the latest version of Sematext Agent.
 
-Note: These instructions have been tested only on Windows Server 2022. Other Windows Server versions may also be supported but have not been verified.
-
 ### Server-Side Configuration
 
 #### 1. Create a New Security Group
