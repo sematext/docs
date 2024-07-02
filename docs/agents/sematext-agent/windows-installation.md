@@ -94,6 +94,7 @@ Note: These instructions have been tested only on Windows Server 2022. Other Win
   ![Sematext Agent service](images/windows-agent-security-group.png)
 
 #### 2. Create a Shared Network Folder
+- Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/pool/main/s/sematext-agent/sematext-agent-latest.msi).
 - Create a shared folder on your server, for example, `\\ServerName\Sematext_Distribution`.
 - Copy the `sematext-agent-latest.msi` file into this shared folder.
 - Set permissions on the shared folder and add the group `SematextAgentDeployment` so that all computers in the network have read access.
