@@ -132,7 +132,9 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
 #### 7. Verify that PowerShell execution policy is set
 Make sure the PowerShell execution policy on target machines allows the script to run:
 - In the Group Policy Management Editor, navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows PowerShell**.
-  ![Sematext Agent service](images/windows-agent-ps-policy-settings.png)
+
+  ![Sematext Agent service](images/windows-agent-ps-policy.png)
+  
 - Enable the policy **Turn on Script Execution** and set it to **Allow all scripts**.
 
   ![Sematext Agent service](images/windows-agent-ps-policy-settings.png)
