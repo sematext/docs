@@ -54,15 +54,19 @@ Use them together with out-of-the-box metrics, from a Monitoring App, and you wi
 
 ### Logs Component Settings
 
-Here's an image of the **Log Table Component** dropdown menu with log specific export and field editor features.
+Here's an image of the **Log Table Component** dropdown menu with options to add/remove columns, add to [dashboard](https://sematext.com/docs/dashboards/), go to the [field editor](https://sematext.com/docs/logs/fields/#field-editor), and export logs.
 
-![Sematext Cloud Monitoring Guide - Component Settings](https://sematext.com/docs/images/guide/logs/logs-component-settings-dropdown.png)
+![Sematext Cloud Monitoring Guide - Component Settings](../images/guide/logs/lt-menu.png)
 
-From the Log Table Component, you can quickly add or remove columns, highlight values, create charts, and apply filters. See [Logs Table Quick Actions](https://sematext.com/docs/logs/logs-table-quick-actions/) for more details. 
+From the Log Table Component, you can quickly add or remove columns, highlight values, create charts, and apply filters. See [Logs Table Quick Actions](https://sematext.com/docs/logs/logs-table-quick-actions/) for more details.
 
-Additionally, you can expand each log to view its details in either Table or JSON format, providing you with easy access to the full log event payload, ability to add additional field value-based filters, copy field values, etc.
+Additionally, you can open each log in a side panel to view its details in either Table or JSON format, providing you with easy access to the full log event payload, the ability to add additional field value-based filters, copy field values, etc.
 
-![Sematext Cloud Logs Guide - Logs Table Details Format](../images/guide/logs/logs-table-details-format.gif) 
+You can adjust the side panel width by clicking and holding the vertical bar located in the middle of the left side of the panel, then dragging it to your desired width. This width will be saved in your local storage and will be remembered the next time you open it.
+
+![Sematext Cloud Logs Guide - Logs Table Details Format](../images/guide/logs/lt-side-panel-actions.gif) 
+
+You can open the side panel by clicking on the icon located on the top left of each log or by double-clicking the log. While the side panel is open, you can switch between logs with the up and down arrow keys and close the side panel with the escape key or by clicking on the "x" in the side panel.
 
 Furthermore, you have the option to switch to **Terminal View**, which allows you to view your logs in a more condensed and compact format.
 

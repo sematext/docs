@@ -5,6 +5,8 @@ pages:
     - Getting Started: index.md
     - User Guide:
       - What is an App?: guide/app-guide.md
+      - Pricing Guide: guide/pricing-guide.md
+      - Features in This Screen Flyout: guide/features-in-this-screen.md
       - Integrations Guide: guide/integrations-guide.md
       # - Logs Guide: guide/logs-guide.md
       # - Monitoring Guide: guide/monitoring-guide.md
@@ -48,7 +50,6 @@ pages:
         - How to Forward Logs from Datadog: logs/datadog-log-forwarding.md
       - Searching Logs:
         - Overview: logs/searching-log-events.md
-        - Logsene CLI: logs/logsene-cli.md
         - Search Syntax: logs/search-syntax.md
         - Using Elasticsearch API: logs/search-through-the-elasticsearch-api.md
       - Context View: logs/context-view.md
@@ -68,6 +69,7 @@ pages:
           - Script Field Processor: logs/script-field-processor.md
           - Sampling Processor: logs/sampling-processor.md
       - Handling Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
+      - Too many fields in the index: logs/too-many-fields-in-index.md
       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
@@ -112,6 +114,7 @@ pages:
       - Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Sampling: experience/sampling.md
+      - Weekly Health Reports: experience/weekly-health-reports.md
       - Correlating User Experience: experience/correlation.md
       - Changelog: changelog.md
       - FAQ: experience/faq.md
@@ -299,6 +302,7 @@ pages:
         - Platform Support Policy: agents/sematext-agent/platform-support-policy.md
         - Installation:
           - Linux: agents/sematext-agent/installation.md
+          - Windows: agents/sematext-agent/windows-installation.md
           - Docker: agents/sematext-agent/containers/installation.md
           - Kubernetes:
             - Installation: agents/sematext-agent/kubernetes/installation.md

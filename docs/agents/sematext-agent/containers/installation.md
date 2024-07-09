@@ -97,29 +97,14 @@ services:
 
 ## Docker Swarm / Enterprise
 
-Create an Infra Monitoring App in Sematext and follow the instructions in the UI.
+Create an Infra Monitoring App in Sematext and follow the Docker Swarm instructions in the UI.
 
-After that, Sematext Agent can be activated with a single command, but has to be run manually on each node:
+The following `docker-compose.yml` file provides a working configuration that can be used with `docker stack`. However, for convenience, a version pre-filled with `INFRA_TOKEN` and `REGION` can be found in the installation instructions in the UI.
 
-```bash
-docker run -d --restart always --privileged  -P --name st-agent --memory 512MB \
--v /:/hostfs:ro \
--v /sys/:/hostfs/sys:ro \
--v /var/run/:/var/run/ \
--v /sys/kernel/debug:/sys/kernel/debug \
--v /etc/passwd:/etc/passwd:ro \
--v /etc/group:/etc/group:ro \
--v /dev:/hostfs/dev:ro \
--v /var/run/docker.sock:/var/run/docker.sock:ro \
--e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
--e REGION=<US or EU> \
-sematext/agent:latest
-```
-
-If you like using `docker stack`, the following `docker-compose.yml` provides a working configuration:
 
 ```yaml
 # docker-compose.yml
+version: '3'
 services:
   sematext-agent:
     image: 'sematext/agent:latest'
@@ -138,13 +123,18 @@ services:
       - '/sys:/host/sys:ro'
       - '/dev:/hostfs/dev:ro'
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
+    networks:
+      - st-agent-net
+networks:
+  st-agent-net:
+    driver: overlay
+    attachable: true
 ```
 
 Then you run:
 
 ```bash
-docker stack deploy -c docker-compose.yml <name>
+docker stack deploy -c docker-compose.yml <my_app>
 ```
-
 
 _[Read more](../permission-requirements.md#bind-mounts) about why Sematext Agent needs access to host files and directories._
