@@ -73,17 +73,17 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
 
 #### 1. Create a new security group
 
-##### Open Active Directory Users and Computers
+##### 1.a. Open Active Directory Users and Computers
 - Open the **Active Directory Users and Computers** console on your server.
 
-##### Create a new group
+##### 1.b. Create a new group
 - Under the domain, right-click on the **Computers**, select **New** > **Group**.
 - Name the group (e.g., `SematextAgentDeployment`).
 - Make sure the **Group scope** is set to **Global** and **Group type** is set to **Security**.
 
   ![Sematext Agent service](images/windows-agent-group-properties.png)
 
-##### Add computers to the group
+##### 1.c. Add computers to the group
 - Right-click the newly created group, select **Properties**.
 - Go to the **Members** tab and click **Add**.
 - Enter the names of the computers you want to deploy the Sematext Agent. Click **Check Names** to validate they are recognized by Active Directory, then click **OK**.
