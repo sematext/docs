@@ -69,21 +69,21 @@ After completing these steps, Sematext Agent will be automatically started as a 
 
 These steps will walk you through deploying the Sematext Agent using Group Policy on a Windows Server environment. It covers both server and client-side configurations and includes steps for creating a new security group for targeted deployment. Deploying software via Group Policy allows for automated, consistent, and scalable deployments across multiple machines, ensuring that all systems are up-to-date with the latest version of Sematext Agent.
 
-### Server-Side Configuration
+### Server-Side configuration
 
-#### 1. Create a New Security Group
+#### 1. Create a new security group
 
 ##### Open Active Directory Users and Computers
 - Open the **Active Directory Users and Computers** console on your server.
 
-##### Create a New Group
+##### Create a new group
 - Under the domain, right-click on the **Computers**, select **New** > **Group**.
 - Name the group (e.g., `SematextAgentDeployment`).
 - Make sure the **Group scope** is set to **Global** and **Group type** is set to **Security**.
 
   ![Sematext Agent service](images/windows-agent-group-properties.png)
 
-##### Add Computers to the Group
+##### Add computers to the group
 - Right-click the newly created group, select **Properties**.
 - Go to the **Members** tab and click **Add**.
 - Enter the names of the computers you want to deploy the MSI file to. Click **Check Names** to validate they are recognized by Active Directory, then click **OK**.
@@ -91,48 +91,60 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
   ![Sematext Agent service](images/windows-agent-add-computers-to-group.png)
   ![Sematext Agent service](images/windows-agent-security-group.png)
 
-#### 2. Create a Shared Network Folder
+
+#### 2. Prepare the Sematext Agent installer
 - Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/pool/main/s/sematext-agent/sematext-agent-latest.msi).
+- Create a PowerShell script that will be used to run the MSI installer and save it with a .ps1 extension, for example, install_sematext_agent.ps1:
+
+  ```
+  Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
+  ```
+
+#### 3. Create a shared network folder
 - Create a shared folder on your server, for example, `\\ServerName\Sematext_Distribution`.
-- Copy the `sematext-agent-latest.msi` file into this shared folder.
+- Place both install_agent.ps1 and sematext-agent-latest.msi into this shared folder.
 - Set permissions on the shared folder and add the group `SematextAgentDeployment` so that all computers in the network have read access.
 
   ![Sematext Agent service](images/windows-agent-shared-folder.png)
 
-#### 3. Open Group Policy Management
+#### 4. Open Group Policy Management
 - On your server, open the **Group Policy Management Console (GPMC)**. You can do this by typing `gpmc.msc` in the Run dialog (Win + R).
 
-#### 4. Create a New Group Policy Object (GPO)
+#### 5. Create a new Group Policy Object (GPO)
 - In the Group Policy Management Console, right-click on the domain where your client computers reside and select **Create a GPO in this domain, and Link it here…**.
 - Name the GPO something descriptive like `Deploy Sematext Agent`.
 
   ![Sematext Agent service](images/windows-agent-create-gpo.png)
 
-#### 5. Scope the GPO to the Group
+#### 6. Scope the GPO to the group
 - Select the newly created GPO in the tree.
 - Under the **Security Filtering** section, click **Add**.
 - Enter the name of the group you created (e.g., `SematextAgentDeployment`), click **Check Names**, and then click **OK**.
 
   ![Sematext Agent service](images/windows-agent-new-gpo.png)
 
-#### 6. Edit the GPO
+#### 7. Configure the GPO to run the script
 - Right-click the newly created GPO and select **Edit**.
-- In the Group Policy Management Editor, navigate to **Computer Configuration** > **Policies** > **Software Settings** > **Software Installation**.
+- In the Group Policy Management Editor, navigate to **Computer Configuration** > **Policies** > **Windows Settings** > **Scripts (Startup/Shutdown)**.
+- Double-click on Startup, select the **PowerShell Scripts** tab and then click **Add...**.
+- In the Add a Script dialog, click **Browse...** and navigate to the shared folder and select `install_sematext_agent.ps1`.
 
-#### 7. Deploy the MSI File
-- Right-click **Software Installation**, select **New** > **Package**.
-- In the **Open** dialog, enter the network path to the `sematext-agent-latest.msi` file (e.g., `\\ServerName\Sematext_Distribution\sematext-agent-latest.msi`) and click **Open**.
-- Select the **Assigned** deployment method and click **OK**.
+  ![Sematext Agent service](images/windows-agent-ps-script.png)
 
-  ![Sematext Agent service](images/windows-agent-software-installation.png)
+#### 8. Verify that PowerShell execution policy is set
+Make sure the PowerShell execution policy on target machines allows the script to run:
+- In the Group Policy Management Editor, navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows PowerShell**.
+- Enable the policy **Turn on Script Execution** and set it to **Allow all scripts**.
 
-### Client-Side Configuration
+  ![Sematext Agent service](images/windows-agent-ps-policy.png)
 
-#### 1. Client Machine Requirements
+### Client-Side configuration
+
+#### 1. Client machine requirements
 - Confirm all client machines are joined to the domain and are members of the group you created.
-- Verify client machines have network access to the shared folder containing the MSI file.
+- Verify client machines have network access to the shared folder containing the installer files.
 
-#### 2. Force Group Policy Update
+#### 2. Force Group Policy update
 - On a client machine, open Command Prompt with administrative privileges.
 - Run the following command to force a Group Policy update:
 
@@ -140,11 +152,11 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
   gpupdate /force
   ```
 
-#### 3. Verify Installation
+#### 3. Verify installation
 - After the Group Policy update, restart the client machine.
 - Log in and verify that the Sematext Agent has been installed and started as a Windows Service.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 1. **Check Network Access**
    - Verify the client machines can access the shared folder by browsing to the network path (e.g., `\\ServerName\Sematext_Distribution`) from a client machine.
@@ -156,7 +168,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
    - Confirm the GPO is correctly applied to the client machine by running `gpresult /r` in the Command Prompt on the client machine.
 
 4. **Review GPO Settings**
-   - Validate the GPO settings in the Group Policy Management Editor to verify the MSI deployment is configured correctly.
+   - Validate the GPO settings in the Group Policy Management Editor to verify the deployment is configured correctly.
 
 
 ## How to check the Sematext Agent service status
