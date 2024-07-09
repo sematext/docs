@@ -100,6 +100,8 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
   Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
   ```
 
+  Make sure to update `INFRA_APP_TOKEN` with your Infra App token and `REGION` with `US` or `EU` depending on your Sematext Cloud region. Also validate that the file name of the MSI installer is correct.
+
 #### 3. Create a shared network folder
 - Create a shared folder on your server, for example, `\\ServerName\Sematext_Distribution`.
 - Place both install_agent.ps1 and sematext-agent-latest.msi into this shared folder.
