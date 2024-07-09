@@ -23,6 +23,8 @@ If a specific version is not listed below, Sematext Agent is still very likely t
 ## Windows
 
 - Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
 - Windows 11
 - Windows 10 (64-bit only)
 
