@@ -96,9 +96,9 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
 - Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/pool/main/s/sematext-agent/sematext-agent-latest.msi).
 - Create a PowerShell script that will be used to run the MSI installer and save it with a .ps1 extension, for example, install_sematext_agent.ps1:
 
-  ```
+```
   Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
-  ```
+```
 
   Make sure to update `INFRA_APP_TOKEN` with your Infra App token and `REGION` with `US` or `EU` depending on your Sematext Cloud region. Also validate that the file name of the MSI installer is correct.
 
@@ -133,6 +133,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
 
 #### 7. Verify that PowerShell execution policy is set
 Make sure the PowerShell execution policy on target machines allows the script to run:
+
 - In the Group Policy Management Editor, navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows PowerShell**.
 
   ![Sematext Agent service](images/windows-agent-ps-policy.png)
