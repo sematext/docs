@@ -86,7 +86,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
 ##### Add computers to the group
 - Right-click the newly created group, select **Properties**.
 - Go to the **Members** tab and click **Add**.
-- Enter the names of the computers you want to deploy the MSI file to. Click **Check Names** to validate they are recognized by Active Directory, then click **OK**.
+- Enter the names of the computers you want to deploy the Sematext Agent. Click **Check Names** to validate they are recognized by Active Directory, then click **OK**.
 
   ![Sematext Agent service](images/windows-agent-add-computers-to-group.png)
   ![Sematext Agent service](images/windows-agent-security-group.png)
