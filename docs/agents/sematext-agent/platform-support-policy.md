@@ -1,7 +1,7 @@
 title: Platform Support Policy
 description: Supported distributions and platforms for the Sematext Agent
 
-The Sematext Agent is designed for compatibility across all major GNU/Linux distributions and platforms. Our commitment extends to providing support throughout the entire lifecycle of distros and platforms.  
+The Sematext Agent is designed for compatibility across all major GNU/Linux distributions, Windows platforms, and more. Our commitment extends to providing support throughout the entire lifecycle of these distros and platforms. Additionally, we offer support for Kubernetes environments and containerized installations.
 
 If a specific version is not listed below, Sematext Agent is still very likely to run, and we encourage you to explore its functionality on those versions.
 
@@ -28,20 +28,22 @@ If a specific version is not listed below, Sematext Agent is still very likely t
 - Windows 11
 - Windows 10 (64-bit only)
 
-## Container Orchestrators
+## Containers
 
 | Platform | Supported Versions |
 |:-:|:-:|
-| **Kubernetes** | 1.26<br>1.27<br>1.28 |
 | **Docker** | 23.0<br>24.0<br>25.0 | 
+| **Docker Swarm** | Docker v1.12 or newer | 
 | **Portainer** | 2.x |
 | **Red Hat OpenShift** | 4.12<br>4.13<br>4.14 | 
 | **Nomad** | 1.5<br>1.6<br>1.7 | 
+| **Amazon ECS** | |
 
-## Cloud Managed Kubernetes Services
+## Kubernetes
 
 | Provider | Service |
 |:-:|:-:|
+| Self-hosted Kubernetes | 1.26<br>1.27<br>1.28 |
 | Microsoft | **Azure Kubernetes Service (AKS)** |
 | Amazon | **Elastic Kubernetes Service (EKS)** |
 | Google | **Google Kubernetes Engine (GKE)** |
