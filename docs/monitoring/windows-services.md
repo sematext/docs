@@ -38,9 +38,9 @@ Below is a list of available [tags](https://sematext.com/docs/tags/) for the `wi
 
 |Tag name | Description  |
 |---------|--------------|
-|service.name   | name of the Windows service       |
-|service.type   | type of the Windows service       |
-|service.pid    | process ID of the Windows service |
+|windows.service.name   | name of the Windows service       |
+|windows.service.type   | type of the Windows service       |
+|windows.service.pid    | process ID of the Windows service |
 
 For more information about the status of Windows Services and the available service types, please refer to the [official documentation](https://learn.microsoft.com/en-us/windows/win32/api/winsvc/ns-winsvc-service_status).
 
