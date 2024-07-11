@@ -39,9 +39,26 @@ NULL
 
 -->
 
+## Version 3.5.0
+
+Date: July 9, 2024
+
+### New Features
+
+- **Windows Services**: We introduce metrics collection for Windows Services. The agent can now ship the status of your Windows Services. Stay tuned for the upcoming release of Windows Services monitoring integration in Sematext Cloud.
+
+### Bug Fixes
+
+- Fixed broken system-generators usage for Ubuntu-24.04 and Fedora-40.
+- Fixed a string escaping issue that may affect defining passwords for the MySQL integration.
+
 ## Version 3.4.1
 
 Date: May 15, 2024
+
+### New Features
+
+- [**Windows Support**](https://sematext.com/docs/agents/sematext-agent/windows-installation/): We are excited to announce that Sematext Agent now supports monitoring Windows hosts. The Sematext Agent can collect a wide range of metrics about your Windows host, including CPU, memory, disk, network, and processes.
 
 ### Improvements
 
