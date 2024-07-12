@@ -86,6 +86,7 @@ pages:
         - Kubernetes: monitoring/kubernetes.md
         - Inventory: monitoring/inventory.md
         - Processes: monitoring/processes.md
+        - Windows Services: monitoring/windows-services.md
       - Service Monitoring:
         - Overview: monitoring/service-monitoring.md
         - Service Discovery: monitoring/autodiscovery.md
