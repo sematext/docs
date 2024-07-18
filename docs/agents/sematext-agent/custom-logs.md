@@ -109,7 +109,7 @@ or
 
 ### `regexPatterns`
 
-- **Description**: Defines the regex patterns to parse logs. If defined, pre-defined types won't be used. Regular expressions are wrapped with single quotes (r'...'). The value between the quotes uses the [Rust regex syntax](https://docs.rs/regex/latest/regex/#syntax).
+- **Description**: Defines the regex patterns to parse logs. If defined, pre-defined types won't be used. Regular expressions are wrapped with single quotes (r'...'). The value between the quotes uses the [Rust regex syntax](https://docs.rs/regex/latest/regex/#syntax). To verify your regex patterns, you can use tools like [Rustexp](https://rustexp.lpil.uk/) and [Regex101](https://regex101.com/).
 - **Required**: No
 - **Example**:
 
