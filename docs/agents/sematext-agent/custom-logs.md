@@ -5,7 +5,7 @@ Sematext Agent supports configuring log shipping through a YAML file, `custom-lo
 
 ## How it works
 
-The Sematext Agent periodically checks the `custom-logs.yml` file. If valid log shipping rules are found, the agent starts collecting, parsing, and shipping logs from the specified files to the Sematext Cloud Logs App that matches the provided App token. To stop log shipping, remove the rule from the file.
+The Sematext Agent periodically checks the `custom-logs.yml` file. If valid log shipping rules are found, the agent starts collecting, parsing, and shipping logs from the specified files to the Sematext Cloud Logs App that matches the provided App token. You can configure multiple log files, multiple parsing rules, and multiple destination Logs Apps. To stop log shipping, remove the rule(s) from the file.
 
 ## Requirements
 
@@ -19,13 +19,13 @@ As soon as the Sematext Agent is installed, ignore the Discovery screen and keep
 
 ![Sematext Agent service](images/logs-app-token.png)
 
-The next step is to create the `custom-logs.yml` file and place it in the appropriate directory (see below) in the agent configuration.
+The next step is to edit the `custom-logs.yml` file (see below) with your own log rules.
 
 Once this is done, the logs will start shipping to your Logs App.
 
 ## File location
 
-Place the `custom-logs.yml` file in the configuration directory of your Sematext Agent. For baremetal environemnts it's under the `/opt/spm/properties/` directory.
+Edit the `custom-logs.yml` file in the configuration directory of your Sematext Agent. For baremetal environemnts it's under the `/opt/spm/properties/` directory.
 
 ## File structure
 
@@ -43,7 +43,7 @@ myapp-logs:                                                                     
 
 ## Configuration Details
 
-Each section in the `custom-logs.yml` file defines a log shipping rule. There are also several variables to configure how the Sematext Agent collects and parses your log files.
+Each section in the `custom-logs.yml` file defines a log shipping rule. There are also several variables to configure how the Sematext Agent collects and parses your log files. You can configure multiple log shipping rules in the file.
 
 ### Log type
 
@@ -156,7 +156,7 @@ a-json-logs-app:
 
 ### Custom Log Format
 
-Let's say we have two log files named `myapp.log` and `errors.log` in the `/var/log/myapp/`` folder that contain log events like the ones below:
+Let's say we have two log files named `myapp.log` and `errors.log` in the `/var/log/myapp/` folder that contain log events like the ones below:
 
 ```
 2024/07/16 12:07:16 [WARN] 6423#3847: User account deleted
