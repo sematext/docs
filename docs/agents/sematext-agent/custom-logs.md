@@ -70,7 +70,7 @@ The log type can be a custom type defined by the user or a pre-defined type that
 
 ### `files`
 
-- **Description**: Specifies the paths to the log files. You can use either block sequence format (e.g., files: followed by a list of paths each on a new line with a dash) or inline sequence format (e.g., files: ["/path/to/file1", "/path/to/file2"]). Glob patterns are not supported.
+- **Description**: Specifies the paths to the log files. You can use either block sequence format (e.g., `files:` followed by a list of paths each on a new line with a dash) or inline sequence format (e.g., `files: ["/path/to/file1", "/path/to/file2"]`). Glob patterns are not supported.
 - **Required**: Yes
 - **Example**:
 
