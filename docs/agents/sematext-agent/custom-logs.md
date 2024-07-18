@@ -177,7 +177,7 @@ myapp-logs:
     - '^(?P<timestamp>\d{4}/\d{2}/\d{2}\s[\d|:]+)\s\[(?P<level>.+?)]\s(?P<pid>\d+)#(?P<tid>\d+):\s(?P<message>.*)'
   patternTypes:
     timestamp: "string"
-    severity: "string"
+    level: "string"
     pid: "int"
     tid: "int"
     message: "string"
