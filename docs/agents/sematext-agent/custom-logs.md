@@ -47,7 +47,7 @@ Each section in the `custom-logs.yml` file defines a log shipping rule. There ar
 
 ### Log type
 
-- **Description**: The type of your logs. You can define your own type or use a pre-defined type.
+- **Description**: The type of your logs. You can define your own type or use a pre-defined type. The type name should be in lowercase kebab case, meaning it should use lowercase letters with words separated by dashes (e.g., `myapp-logs` or `my-other-app-logs`).
 - **Required**: Yes
 - **Example**: `myapp-logs` which is a custom type, `nginx` which is pre-defined
 
@@ -70,12 +70,20 @@ The log type can be a custom type defined by the user or a pre-defined type that
 
 ### `files`
 
-- **Description**: Specifies the paths to the log files. Glob patterns are not supported.
+- **Description**: Specifies the paths to the log files. You can use either block sequence format (e.g., files: followed by a list of paths each on a new line with a dash) or inline sequence format (e.g., files: ["/path/to/file1", "/path/to/file2"]). Glob patterns are not supported.
 - **Required**: Yes
 - **Example**:
 
 ```yaml
-  files: ["/path/to/myapp.log"]
+  files: ["/path/to/file1", "/path/to/file2"]
+```
+
+or
+
+```yaml
+  files:
+    - "/path/to/file1"
+    - "/path/to/file2"
 ```
 
 ### `token`
@@ -90,7 +98,7 @@ The log type can be a custom type defined by the user or a pre-defined type that
 
 ### `isJSON`
 
-- **Description**: Set to `true` if your log files are JSON formatted. If `true`, `regexPatterns` and `patternTypes` are not needed.
+- **Description**: Set to `true` if your log files are JSON formatted. If `true`, `regexPatterns` and `patternTypes` are not needed and if specified will be ignored.
 - **Required**: No
 - **Default**: `false`
 - **Example**:
