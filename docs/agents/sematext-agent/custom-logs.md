@@ -120,7 +120,7 @@ or
 
 ### `patternTypes`
 
-- **Description**: Defines the data types for each regex pattern parser group.
+- **Description**: Defines the data types for each regex pattern parser group. Supported types include `string`, `int` and `float`.
 - **Required**: No
 - **Example**:
 
