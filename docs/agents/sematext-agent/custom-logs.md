@@ -17,6 +17,8 @@ Sematext Agent [version 3.6.0](https://sematext.com/docs/agents/sematext-agent/r
 
 As soon as the Sematext Agent is installed, ignore the Discovery screen and keep a copy of the App token. To retrieve this token, navigate to the **Ship Logs** screen from the left Menu panel and select **Custom Integrations**.
 
+![Sematext Agent service](images/logs-app-token.png)
+
 The next step is to create the `custom-logs.yml` file and place it in the appropriate directory (see below) in the agent configuration.
 
 Once this is done, the logs will start shipping to your Logs App.
