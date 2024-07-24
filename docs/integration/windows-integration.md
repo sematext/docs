@@ -4,7 +4,7 @@ description: Monitor Windows bare metal servers and VMs using a lightweight agen
 
 ## Windows Services
 
-Sematext Monitoring now includes support for Windows Services. Starting from Sematext Agent [version 3.5.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-350), you can collect and monitor the status of any Windows Service available in your system.
+Sematext Monitoring includes support for Windows Services. Starting from Sematext Agent [version 3.5.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-350), you can collect and monitor the status of any Windows Service available in your system.
 
 ### Metrics
 
@@ -37,7 +37,7 @@ Below is a list of all the possible values (statuses) of the `windows.service.st
 
 #### Available Tags
 
-Below is a list of available [tags](https://sematext.com/docs/tags/) for the `windows.service.status` metric. Tags can be used to retrieve individual service names or process IDs related with a specific service. Edit any chart in the Infrastructure > Windows > Top Services report to understand how you can use a the `windows.service.status`, grouped by a tag.
+Below is a list of available [tags](https://sematext.com/docs/tags/) related to Windows Services. Tags can be used in conjuction with the `windows.service.status` metric to get information  about a specific Windows service, such as the name or type of the service. For example, you can edit any chart in the Infrastructure > Windows > Top Services report to see how Windows Service metrics and tags can be used to retrieve this information.
 
 |Tag name | Description  |
 |---------|--------------|
