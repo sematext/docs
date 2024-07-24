@@ -52,7 +52,7 @@ For more information about the status of Windows Services and the available serv
 
 Coming Soon!
 
-## Default Alerts
+## Out of the box alerts
 
 A set of pre-defined [alerts](https://sematext.com/docs/alerts/) is supported for the status of several important Windows services. These alerts are triggered when the status of any monitored service is not running. The following services are monitored out-of-the-box:
 
@@ -72,4 +72,4 @@ A set of pre-defined [alerts](https://sematext.com/docs/alerts/) is supported fo
 - Network Store Interface Service (nsi)
 - Network List Service (NlaSvc)
 
-In addition to having alerts for these services, you can [create alerts](https://sematext.com/docs/alerts/creating-metrics-alerts/) for any other Windows Service you like, as long as they are available on your Windows machines.
+In addition to having alerts for these services, you can [create alerts](https://sematext.com/docs/alerts/creating-metrics-alerts/) for any other Windows Service you like, as long as it is available on your Windows machines.
