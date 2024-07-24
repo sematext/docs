@@ -15,6 +15,8 @@ Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, ne
 
 ![Infra server metrics](../images/monitoring/infra-server-metrics.gif)
 
+Metrics from both Linux and Windows servers can be collected. Learn more about [Linux Monitoring](https://sematext.com/docs/integration/linux/) and [Windows Monitoring](https://sematext.com/docs/integration/windows/) at Sematext.
+
 Check also how you can monitor [containerized](https://sematext.com/docs/monitoring/containers/) and [Kubernetes](https://sematext.com/docs/monitoring/kubernetes/) environments.
 
 ## Core Infrastructure Alerting
