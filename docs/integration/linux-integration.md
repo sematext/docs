@@ -1,7 +1,6 @@
 title: Sematext Linux Monitoring
 description: Monitor Linux bare metal servers and VMs using a lightweight agent and visualize your full infrastructure in Sematext Cloud
 
-
 Sematext Linux Monitoring provides insights into your Linux infrastructure, automatically monitoring servers, processes, packages and more across various Linux distributions. Check the following areas for more information:
 
 - [Linux Servers](https://sematext.com/docs/monitoring/servers/)
@@ -14,7 +13,6 @@ Sematext Linux Monitoring provides insights into your Linux infrastructure, auto
 A lightweight agent, called [Sematext Agent](../agents/sematext-agent), will be installed on your Linux machine. This agent sends all infrastructure data to an Infra App in Sematext Cloud, whose token is configured during the agent's installation.
 
 The agent itself can be installed either using a [native package manager](https://sematext.com/docs/agents/sematext-agent/installation/) for each distribution or using configuration automation tools like Ansible. Every option is available together with instructions during the [creation of an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app).
-
 
 ## Supported Linux distributions
 
@@ -42,7 +40,7 @@ Moreover, some reports contain useful information about the [processes](https://
 
 ![Infrastructure Processes](../images/monitoring/infra-processes.gif)
 
-Other reports give you insights about the currently installed [packages](https://sematext.com/docs/monitoring/inventory/).
+Other reports give you insights about machine-related information such as host, VM, or container properties, kernel versions, and installed packages. All these are part of [Inventory Monitoring](https://sematext.com/docs/monitoring/inventory/).
 
 ![Infrastructure Inventory](../images/monitoring/infra-inventory.gif)
 
