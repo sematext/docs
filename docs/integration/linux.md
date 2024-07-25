@@ -50,4 +50,4 @@ Each time you create a new Infra App in Sematext Cloud to monitor your Linux ser
 
 Refer to our [infrastructure default alerts](https://sematext.com/docs/monitoring/servers/#core-infrastructure-alerting) to learn more information.
 
-On top of those alerts, you are free to [create your own alerts](https://sematext.com/docs/alerts) for your Linux infrastructure based on your specific needs.
+
