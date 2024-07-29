@@ -86,7 +86,6 @@ pages:
         - Kubernetes: monitoring/kubernetes.md
         - Inventory: monitoring/inventory.md
         - Processes: monitoring/processes.md
-        - Windows Services: monitoring/windows-services.md
       - Service Monitoring:
         - Overview: monitoring/service-monitoring.md
         - Service Discovery: monitoring/autodiscovery.md
@@ -160,6 +159,7 @@ pages:
       - Elasticsearch: integration/elasticsearch-integration.md
       - JVM: integration/jvm-integration.md
       - Kubernetes: integration/kubernetes.md
+      - Linux: integration/linux.md
       - MySQL: integration/mysql-integration.md
       - Nginx: integration/nginx-integration.md
       - Opensearch: integration/opensearch-integration.md
@@ -167,6 +167,7 @@ pages:
       - RabbitMQ: integration/rabbitmq-integration.md
       - Solr: integration/solr-integration.md
       - Varnish Cache: integration/varnishcache-integration.md
+      - Windows: integration/windows.md
       - Monitoring:
         - Akka: integration/akka.md
         - Apache: integration/apache.md
