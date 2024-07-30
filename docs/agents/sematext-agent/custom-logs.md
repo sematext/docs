@@ -25,7 +25,7 @@ Once this is done, the logs will start shipping to your Logs App.
 
 ## File location
 
-Edit the `custom-logs.yml` file in the configuration directory of your Sematext Agent. For baremetal environemnts it's under the `/opt/spm/properties/` directory.
+Edit the `custom-logs.yml` file in the configuration directory of your Sematext Agent. For baremetal environments it's under the `/opt/spm/properties/` directory.
 
 ## File structure
 
