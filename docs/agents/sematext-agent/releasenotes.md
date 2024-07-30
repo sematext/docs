@@ -39,6 +39,14 @@ NULL
 
 -->
 
+## Version 3.6.0
+
+Date: July 30, 2024
+
+### New Features
+
+- **Custom Logs Support**: Sematext Agent now supports configuring log shipping through a YAML file, `custom-logs.yml`. This feature allows users to specify log file locations and custom parsing rules, which is useful for log files not discovered automatically or when custom log parsing rules are needed. This release only includes support for Linux (baremetal). Support for Windows, Kubernetes, and Docker is coming soon. For more information, please refer to [Custom Logs Shipping](https://sematext.com/docs/agents/sematext-agent/custom-logs) docs.
+
 ## Version 3.5.0
 
 Date: July 9, 2024
