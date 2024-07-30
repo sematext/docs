@@ -188,7 +188,8 @@ Open Windows Services and find the Sematext Agent service:
 Run the following command:
 
 ```
-cd  'C:\Program Files\Sematext Agent\' .\st-agent-amd64.exe windows-service status
+cd  'C:\Program Files\Sematext Agent\'
+.\st-agent-amd64.exe windows-service status
 ```
 
 ## How to start / stop / restart Sematext Agent
