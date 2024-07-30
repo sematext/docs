@@ -185,5 +185,5 @@ myapp-logs:
 
 ## Troubleshooting tips and known issues
 
-- Support for Sematext Agent for Windows is coming soon
+- Support for Windows is coming soon
 - Support for Kubernetes and containerized environments is coming soon
