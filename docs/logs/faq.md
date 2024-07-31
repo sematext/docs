@@ -457,7 +457,7 @@ What could be done in this situation?  There are basically two options:
 
 The renaming could take place in your Apps logging code, or in a log shipper configuration. Some log shippers have support to rename fields before logs get shipped.  
 
-3) You could ship the logs of "Service B" to a separate Logs App (different App token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
+2) You could ship the logs of "Service B" to a separate Logs App (different App token).  Create a new Logs App in Sematext UI and configure your log shipper to ship logs from "Service B" to the new Logs App. 
 
 Option #2 is probably the simplest way to resolve the issue. 
 
