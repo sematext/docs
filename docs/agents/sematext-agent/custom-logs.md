@@ -103,9 +103,9 @@ or
 - **Default**: `false`
 - **Example**:
 
-  ```yaml
+```yaml
   isJSON: true
-  ```
+```
 
 ### `regexPatterns`
 
