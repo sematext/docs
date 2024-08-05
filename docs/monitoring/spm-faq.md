@@ -501,18 +501,117 @@ helm upgrade st-agent --set infraToken=<YOUR-INFRA-TOKEN> sematext/sematext-agen
 
 ## Agent Uninstalling
 
-### How do I uninstall the Sematext Agent?
+### How do I uninstall the Sematext Agent from my Linux System?
 
-On servers where you want to uninstall the client do the
-following:
+If you need to uninstall and remove the `sematext-agent` package from your Linux system, follow the steps below for a clean and complete removal. The instructions cover various package managers commonly used in different Linux distributions.
 
-1.  remove sematext-agent, for instance: `sudo apt-get purge sematext-agent`
-    OR   `sudo yum remove sematext-agent`
-2.  after that, ensure there are no old logs, configs, etc. by running
-    the following command: `sudo rm -R /opt/spm`
-3.  if you used Embedded version of monitor, remove
-    "-javaagent" definition from startup parameters of process which was
-    monitored
+#### 1. Stop the sematext-agent Service (if running)
+First, make sure the `sematext-agent` service is stopped to avoid any running processes during the removal. Use the following command:
+
+```bash
+sudo systemctl stop sematext-agent
+```
+
+#### 2. Remove the installation directory
+To make sure all configuration files and logs are removed, delete the main installation directory:
+
+```bash
+sudo rm -rf /opt/spm
+```
+
+**Note**: Be careful with the `rm -rf` command as it forcefully deletes files and directories without prompting for confirmation.
+
+#### 3. Remove the Package
+Depending on your package manager, use one of the following commands to remove the package:
+
+##### For Debian-based systems (Ubuntu, Debian)
+Purge the package along with its configuration files:
+
+```bash
+sudo apt-get purge sematext-agent
+```
+
+Remove any remaining package files:
+
+```bash
+sudo apt remove sematext-agent
+```
+
+##### For Red Hat-based systems (Fedora, CentOS, RHEL)
+Remove the package:
+
+```bash
+sudo yum remove sematext-agent
+```
+
+or
+
+```bash
+sudo dnf remove sematext-agent
+```
+
+##### For SUSE-based systems (openSUSE, SLES)
+Remove the package:
+
+```bash
+sudo zypper remove sematext-agent
+```
+
+#### 4. Clean the package cache
+To free up disk space and remove package files that are no longer needed, use the appropriate command for your package manager:
+
+##### For Debian-based systems
+
+```bash
+sudo apt-get clean
+```
+
+##### For Red Hat-based systems
+
+```bash
+sudo yum clean all
+```
+
+or
+
+```bash
+sudo dnf clean all
+```
+
+##### For SUSE-based systems
+
+```bash
+sudo zypper clean
+```
+
+#### 5. Autoclean unnecessary packages
+This command removes package files that can no longer be downloaded and are largely useless. Use the appropriate command for your package manager:
+
+##### For Debian-based systems
+
+```bash
+sudo apt-get autoclean
+```
+
+##### For Red Hat-based systems
+Clean the metadata cache:
+
+```bash
+sudo yum clean metadata
+```
+
+or
+
+```bash
+sudo dnf clean metadata
+```
+
+##### For SUSE-based systems
+Clean the cache:
+
+```bash
+sudo zypper clean --all
+```
 
 **Note**: in case you used installer described on "Other" tab (found on
 <https://apps.sematext.com/ui/monitoring>, click Actions \> Install
