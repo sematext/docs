@@ -37,19 +37,19 @@ View [Alert Rules](https://sematext.com/docs/alerts/) created by Others | ✔️
 Edit/Delete/Disable [Alert Rule](https://sematext.com/docs/alerts/) created by them | ✔️ | ✔️ | ✔️
 Edit/Delete/Disable [Alert Rule](https://sematext.com/docs/alerts/) created by other users  | ✔️ | ✔️ | ✖️
 Ship Logs to an existing [Logs App](https://sematext.com/docs/logs/)| ✔️ | ✔️ | ✔️
-Create/Edit [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) <a href="#footnote-1">[1]</a> | ✔️ | ✔️ | ✔️
+Create/Edit [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) <a href="#1">[1]</a> | ✔️ | ✔️ | ✔️
 Ship Metrics to an existing [Monitoring/Infra App](https://sematext.com/docs/monitoring/) | ✔️ | ✔️ | ✔️
 Ship RUM data to an existing [Experience App](https://sematext.com/docs/experience/) | ✔️ | ✔️ | ✔️
 Create/Edit/Disable [Synthetics](https://sematext.com/docs/synthetics/getting-started/) Monitors | ✔️ | ✔️ | ✖️
 View [App](https://sematext.com/docs/guide/app-guide/) Usage Screen | ✔️ | ✔️ | ✖️
 Disable [Apps](https://sematext.com/docs/guide/app-guide/)  | ✔️ | ✔️ | ✖️
 Invite Others | ✔️ | ✔️ | ✖️
-Upgrade/downgrade Apps <a href="#footnote-2">[2]</a>  | ✔️ | ✔️ | ✖️
+Upgrade/downgrade Apps <a href="#2">[2]</a>  | ✔️ | ✔️ | ✖️
 
 ### Account Level Actions
 Action | Billing Admin | Admin | User 
 --- | :---:  | :---: | :---:
-Create [App](https://sematext.com/docs/guide/app-guide/) <a href="#footnote-3">[3]</a>  | ✔️ | ✔️ | ✖️
+Create [App](https://sematext.com/docs/guide/app-guide/) <a href="#3">[3]</a>  | ✔️ | ✔️ | ✖️
 [Invite Others](https://sematext.com/docs/team/account-members/) to the account | ✔️ | ✔️ | ✖️
 See discovered [log sources](https://sematext.com/docs/logs/discovery/intro/) & [services](https://sematext.com/docs/monitoring/autodiscovery/)  | ✔️ | ✔️ | ✔️
 Ship logs & metrics from discovered log sources & services | ✔️ | ✔️ | ✖️
@@ -58,9 +58,9 @@ Close the account | ✔️ | ✔️ | ✖️
 Close the team account | ✔️ | ✖️ | ✖️
 Update payment info  | ✔️ | ✖️ | ✖️
 
-<li id="footnote-1">App guests with ADMIN or USER role cannot access and create/edit Logs Pipelines but account members with ADMIN or USER role can.</li>
-<li id="footnote-2">App guests with ADMIN role cannot upgrade/downgrade the Apps but account members with ADMIN role can.</li>
-<li id="footnote-3">Account members with USER role can create Logs & Monitoring Apps with free plan but they cannot create Synthetics & Experience Apps because these solutions don't have free plans.</li>
+<li id="1">App guests with ADMIN or USER role cannot access and create/edit Logs Pipelines but account members with ADMIN or USER role can.</li>
+<li id="2">App guests with ADMIN role cannot upgrade/downgrade the Apps but account members with ADMIN role can.</li>
+<li id="3">Account members with USER role can create Logs & Monitoring Apps with free plan but they cannot create Synthetics & Experience Apps because these solutions don't have free plans.</li>
 
 
 See [Sematext pricing](https://sematext.com/pricing/) page for more info.
