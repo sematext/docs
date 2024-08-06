@@ -47,6 +47,7 @@ Invite Others | ✔️ | ✔️ | ✖️
 Upgrade/downgrade Apps [^2] | ✔️ | ✔️ | ✖️
 
 [^1]: App guests with ADMIN or USER role cannot access and create/edit Logs Pipelines but account members with ADMIN or USER role can.
+
 [^2]: App guests with ADMIN role cannot upgrade/downgrade the Apps but account members with ADMIN role can.
 
 ### Account Level Actions
@@ -62,6 +63,7 @@ Close the team account | ✔️ | ✖️ | ✖️
 Update payment info  | ✔️ | ✖️ | ✖️
 
 [^3]: Account members with USER role can create Logs & Monitoring Apps with free plan but they cannot create Synthetics & Experience Apps because these solutions don't have free plans.
+
 See [Sematext pricing](https://sematext.com/pricing/) page for more info.
 
 
