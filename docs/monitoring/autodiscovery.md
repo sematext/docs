@@ -46,13 +46,13 @@ Sematext Agent can automatically discover and start monitoring the following ser
 
 Additionally, Sematext Agent will also discover the following services, but at the moment it can't automatically start monitoring them:
 
-- Node.js [^1]
+- Node.js <a href="#1">[1]</a>
 - Flink
 - NATS
 - PostgreSQL
 - RabbitMQ
 
-[^1]: For Node.js services it is possible to install a Sematext-supported monitoring agent manually by following the instructions in the UI 
+<li id="1">For Node.js services it is possible to install a Sematext-supported monitoring agent manually by following the instructions in the UI.</li>
 
 ### How do I start using Service Discovery?
 
