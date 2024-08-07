@@ -14,7 +14,7 @@ For application and service monitoring, make sure to check our [dedicated guide]
 
 The centerpiece is an Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish.
 
-![Infra App screen](../images/monitoring/infra-app.png)
+![Infra App screen](../images/monitoring/infra-app.gif)
 
 Each Infra App is typically used to gather data from one environment. For example, one Infra App for production environment, one for test environment and one for development environment.
 
