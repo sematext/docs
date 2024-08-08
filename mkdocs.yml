@@ -304,7 +304,8 @@ pages:
         - Release Notes: agents/sematext-agent/releasenotes.md
         - Platform Support Policy: agents/sematext-agent/platform-support-policy.md
         - Installation:
-          - Linux: agents/sematext-agent/installation.md
+          - Overview: agents/sematext-agent/installation.md
+          - Linux: agents/sematext-agent/linux-installation.md
           - Windows: agents/sematext-agent/windows-installation.md
           - Docker: agents/sematext-agent/containers/installation.md
           - Kubernetes:
