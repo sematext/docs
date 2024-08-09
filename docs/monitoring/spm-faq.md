@@ -413,139 +413,13 @@ Yes, see the [Ansible instructions](../agents/sematext-agent/ansible) for instal
 
 ### How do I upgrade the Sematext Agent?
 
-If you have previously installed the Sematext Agent package (RPM,
-Deb, etc.), simply upgrade via apt-get (Debian, Ubuntu, etc.), or yum
-(RedHat, CentOS, etc.), or zypper (SuSE).
-
-* #### Debian/Ubuntu
-
-``` bash
-# NOTE: this will update the sematext gpg key
-wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
-# NOTE: this does not update the whole server, just sematext-agent
-sudo apt-get update && sudo apt-get install sematext-agent
-```
-
-* #### RedHat/CentOS
-
-``` bash
-# NOTE: this will update sematext repo file
-sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
-# NOTE: this does not update the whole server, just sematext-agent
-sudo yum clean all && sudo yum update sematext-agent
-```
-
-* #### SuSE
-
-``` bash
-sudo zypper up sematext-agent
-```
-
-After that is done, also do:
-
-  - if you are using App Agent in Embedded mode - restart
-    monitored server (restart your Solr, Elasticsearch, Hadoop node,
-    HBase node... **Exceptions**: In case of Memcached, Apache and plain
-    Nginx - no need to restart anything; in case of Redis only
-    standalone App Agent exists so check below how to restart it)
-  - if you are using standalone App Agent, restart it with:
-
-``` bash
-sudo service sematext-agent restart
-```
-
-**Note**: In case of **Memcached**, **Apache** and plain **Nginx** -
-after completing upgrade steps described above, you must also run
-commands described in "Agent Setup" (which is
-accessible from <https://apps.sematext.com/ui/monitoring>, click
-Actions \> Install Monitor for app you have installed)
-
-* #### Docker
-
-Remove previous Sematext Agent container instances and pull the latest image:
-
-```bash
-docker ps -a --format '{{.Names}}' | grep -E "sematext-agent|st-agent" | xargs -r docker rm -f
-docker pull sematext/agent:latest
-```
-
-Once ready, head to the [Docker](../agents/sematext-agent/containers/installation/#docker) installation instructions.
-
-* #### Swarm
-
-Remove previous Sematext Agent service and pull the latest image:
-
-```bash
-docker service rm sematext-agent-docker sematext-agent st-agent
-docker pull sematext/agent:latest
-```
-
-Once ready, head to the [Swarm](../agents/sematext-agent/containers/installation/#docker-swarm-enterprise) installation instructions.
-
-* #### Kubernetes
-
-Remove previous Sematext Agent DaemonSet resource:
-
-```bash
-kubectl delete ds sematext-agent --ignore-not-found=true
-```
-
-Once ready, head to the [Kubernetes](../agents/sematext-agent/kubernetes/installation/) installation instructions.
-
-* Helm
-
-```bash
-helm repo update 
-helm upgrade st-agent --set infraToken=<YOUR-INFRA-TOKEN> sematext/sematext-agent
-```
+For detailed instructions on how to update or upgrade the Sematext Agent in one of the supported environments, see the [Agent Installation](https://sematext.com/docs/agents/sematext-agent/installation/) documentation.
 
 ## Agent Uninstalling
 
 ### How do I uninstall the Sematext Agent?
 
-On servers where you want to uninstall the client do the
-following:
-
-1.  remove sematext-agent, for instance: `sudo apt-get purge sematext-agent`
-    OR   `sudo yum remove sematext-agent`
-2.  after that, ensure there are no old logs, configs, etc. by running
-    the following command: `sudo rm -R /opt/spm`
-3.  if you used Embedded version of monitor, remove
-    "-javaagent" definition from startup parameters of process which was
-    monitored
-
-**Note**: in case you used installer described on "Other" tab (found on
-<https://apps.sematext.com/ui/monitoring>, click Actions \> Install
-Monitor for app your are installing), instead of commands from step 1
-run: `sudo bash /opt/spm/bin/spm-client-uninstall.sh` . After that
-proceed with steps 2 and 3 described above.
-
-For container setups:
-
-- Docker
-
-```bash
-docker ps -a --format '{{.Names}}' | grep -E "sematext-agent|st-agent" | xargs -r docker rm -f
-```
-
-- Swarm
-
-```bash
-docker service rm sematext-agent-docker sematext-agent st-agent
-docker network rm st-agent-net
-```
-
-- Kubernetes
-
-```bash
-kubectl delete ds sematext-agent
-```
-
-- Helm
-
-```bash
-helm delete st-agent
-```
+For detailed instructions on how to uninstall the Sematext Agent in one of the supported environments, see the [Agent Installation](https://sematext.com/docs/agents/sematext-agent/installation/) documentation.
 
 ## Agent Overhead
 
@@ -577,34 +451,9 @@ Generally under 1%.
 
 ## Agent installation
 
-### How can I get the Agent running when SELinux is enabled?
-With SELinux enabled, starting the agent with `sudo service sematext-agent restart` may result in an error message like:
+### How do I install the Sematext Agent?
 
-`Job for sematext-agent.service failed because the control process exited with error code.`
-
-Some of the Agent processes may not be started as a consequence. Exact error can depend on your SELinux settings and it can
-be found in `/var/log/audit/audit.log`. Using `audit2allow` utility, it is possible to generate policy package file that can
-be activated to remove restrictions that caused the error. For example:
-
-`sudo grep -a AVC /var/log/audit/audit.log | grep spm-monitor | audit2allow -M sematext-systemd-selinux`
-
-You can review the policy stored in type enforcement file (in this case named `sematext-systemd-selinux.te`) to see whether it suits your security guidelines. To activate this policy,
-run:
-
-`semodule -i sematext-systemd-selinux.pp`
-
-If you decide to make adjustments in the type enforcement file, it should first be compiled into policy module:
-
-`checkmodule -M -m -o sematext-systemd-selinux.mod sematext-systemd-selinux.te`
-
-and then compile into policy package:
-
-`semodule_package -o sematext-systemd-selinux.pp -m sematext-systemd-selinux.mod`
-
-which can be activated using previously mentioned `semodule -i` command.
-
-Note: if SELinux is deliberately enabled on your machines, make sure that policy package being imported is in line with your security guidelines.
-
+For detailed instructions on how to install the Sematext Agent in one of the supported environments, see the [Agent Installation](https://sematext.com/docs/agents/sematext-agent/installation/) documentation.
 
 ## Alerts
 

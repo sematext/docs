@@ -224,9 +224,6 @@ sudo rm -rf /opt/spm
 
 ---
 
-**Note:** If you have SELinux enabled, see [How can I get the Agent running when SELinux is enabled](/monitoring/spm-faq/#how-can-i-get-the-agent-running-when-selinux-is-enabled).
-
-
 ## Configure communication with Sematext Cloud using your Infra App Token
 
 Once the Sematext Agent is installed, you need to configure it to communicate with Sematext Cloud. This is done by setting your Infra App token using the following command:
@@ -277,3 +274,32 @@ The integrations that require this extra configuration include:
 - RabbitMQ
 
 Follow the specific setup instructions for each integration to ship metrics and logs from the agent to Sematext Cloud.
+
+## Running Sematext Agent with SELinux enabled
+
+With SELinux enabled, starting the agent with `sudo service sematext-agent restart` may result in an error message like:
+
+`Job for sematext-agent.service failed because the control process exited with error code.`
+
+Some of the Agent processes may not be started as a consequence. Exact error can depend on your SELinux settings and it can
+be found in `/var/log/audit/audit.log`. Using `audit2allow` utility, it is possible to generate policy package file that can
+be activated to remove restrictions that caused the error. For example:
+
+`sudo grep -a AVC /var/log/audit/audit.log | grep spm-monitor | audit2allow -M sematext-systemd-selinux`
+
+You can review the policy stored in type enforcement file (in this case named `sematext-systemd-selinux.te`) to see whether it suits your security guidelines. To activate this policy,
+run:
+
+`semodule -i sematext-systemd-selinux.pp`
+
+If you decide to make adjustments in the type enforcement file, it should first be compiled into policy module:
+
+`checkmodule -M -m -o sematext-systemd-selinux.mod sematext-systemd-selinux.te`
+
+and then compile into policy package:
+
+`semodule_package -o sematext-systemd-selinux.pp -m sematext-systemd-selinux.mod`
+
+which can be activated using previously mentioned `semodule -i` command.
+
+Note: if SELinux is deliberately enabled on your machines, make sure that policy package being imported is in line with your security guidelines.
