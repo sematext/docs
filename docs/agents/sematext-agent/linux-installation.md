@@ -226,7 +226,10 @@ sudo rm -rf /opt/spm
 
 **Note:** If you have SELinux enabled, see [How can I get the Agent running when SELinux is enabled](/monitoring/spm-faq/#how-can-i-get-the-agent-running-when-selinux-is-enabled).
 
-After the installation completes, set your Infra App token by running the command below:
+
+## Configure communication with Sematext Cloud using your Infra App Token
+
+Once the Sematext Agent is installed, you need to configure it to communicate with Sematext Cloud. This is done by setting your Infra App token using the following command:
 
 ```
 sudo bash /opt/spm/bin/setup-infra --infra-token <YOUR_INFRA_APP_TOKEN_HERE>
@@ -238,6 +241,39 @@ If you're setting up the agent in the EU region, you'll have to provide the `reg
 sudo bash /opt/spm/bin/setup-infra --infra-token <YOUR_INFRA_APP_TOKEN_HERE> --region eu
 ```
 
-To obtain the Infra App token, navigate to `Fleet and Discovery > Agents > Install Agent` and pick your target Linux distribution.
+You can find your Infra App token by navigating to `Fleet and Discovery > Agents > Install Agent` and selecting your Linux distribution.
 
 ![Infra App Instructions](images/infra-app-instructions.png)
+
+## Extra configuration for Monitoring and Logs Integrations
+
+To fully enable monitoring and logging for specific integrations, additional configuration steps are required after the Sematext Agent installation or upgrade. These steps are provided directly after the installation instructions for each integration in Sematext Cloud:
+
+![Agent Access Settings](images/agent-access-settings)
+
+The integrations that require this extra configuration include:
+
+- Cassandra
+- Couchbase
+- Hadoop
+- HBase
+- Kafka
+- Solr
+- Solr Cloud
+- Spark
+- Storm
+- Tomcat
+- Zookeeper
+- Jenkins
+- JVM
+- Elasticsearch
+- OpenSearch
+- Redis
+- HAProxy
+- MySQL
+- Nginx Plus
+- ClickHouse
+- PostgreSQL
+- RabbitMQ
+
+Follow the specific setup instructions for each integration to ship metrics and logs from the agent to Sematext Cloud.
