@@ -249,7 +249,7 @@ You can find your Infra App token by navigating to `Fleet and Discovery > Agents
 
 To fully enable monitoring and logging for specific integrations, additional configuration steps are required after the Sematext Agent installation or upgrade. These steps are provided directly after the installation instructions for each integration in Sematext Cloud:
 
-![Agent Access Settings](images/agent-access-settings)
+![Agent Access Settings](images/agent-access-settings.gif)
 
 The integrations that require this extra configuration include:
 
