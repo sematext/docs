@@ -70,15 +70,15 @@ To update the Sematext Agent when using the Sematext Operator, you can apply an 
 
 1. **Updating the Operator:** If there's a new version of the operator, apply the new bundle:
 
-    ```sh
+```sh
     kubectl apply -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
-    ```
+```
 
 2. **Updating the SematextAgent Resource:** If you need to change the configuration (e.g., new token or region), edit the `SematextAgent` resource and apply the changes:
 
-    ```sh
+```sh
     kubectl apply -f your-updated-sematextagent.yaml
-    ```
+```
 
 ### Uninstalling Sematext Agent using Sematext Operator
 
@@ -86,15 +86,15 @@ To uninstall the Sematext Agent when using the Sematext Operator:
 
 1. **Remove the SematextAgent Resource:**
 
-    ```sh
+```sh
     kubectl delete sematextagent test-sematextagent
-    ```
+```
 
 2. **Uninstall the Sematext Operator:**
 
-    ```sh
+```sh
     kubectl delete -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
-    ```
+```
 
 ---
 
@@ -298,16 +298,16 @@ To update the Sematext Agent when installed manually, you need to modify the Dae
 
 1. **Edit the DaemonSet YAML file:** Update the image to the latest version or change any configuration.
 
-    ```yaml
+```yaml
     - name: agent
       image: sematext/agent:latest
-    ```
+```
 
 2. **Apply the updated DaemonSet:**
 
-    ```sh
+```sh
     kubectl apply -f st-agent-ds.yml
-    ```
+```
 
 ### Uninstalling Sematext Agent using Manual Installation
 
