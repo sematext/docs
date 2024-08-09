@@ -3,24 +3,22 @@ async function testPage(page) {
     await page.setViewport({
         width: 1200,
         height: 800,
-    })
+    });
 
-    // Go to the URL which switches into the demo account and wait for domcontentloaded
-    await page.goto('https://apps.sematext.com/demo', { waitUntil: 'domcontentloaded' });
+    await page.goto('https://www.airbnb.com/');
+    const SEARCH_INPUT_SELECTOR = 'input[id="bigsearch-query-location-input"]';
+    await page.waitForSelector(SEARCH_INPUT_SELECTOR);
+    await page.screenshot({ path: '1_home.png' });
+    await page.type(SEARCH_INPUT_SELECTOR, 'Reykjavik');
+    const SEARCH_BUTTON_SELECTOR = 'button[data-testid="structured-search-input-search-button"]';
+    await page.waitForSelector(SEARCH_BUTTON_SELECTOR);
+    await page.click(SEARCH_BUTTON_SELECTOR);
 
-    const SYNTHETICS_APP_SELECTOR = 'a[href="/ui/synthetics/monitors"]';
-    await page.waitForSelector(SYNTHETICS_APP_SELECTOR);
-    await page.click(SYNTHETICS_APP_SELECTOR);
-
-    // Wait for the locations map to show up, then take a screenshot
-    await page.waitForSelector('[id="locationsMap"]');
-    await page.screenshot({ path: 'synthetics.png' });
-
-    // Ensure the sidebar element for navigating to the Infra page exists, then click it
-    const INFRA_APP_SELECTOR = 'a[href="/ui/infrastructure"]';
-    await page.waitForSelector(INFRA_APP_SELECTOR);
-    await page.click(INFRA_APP_SELECTOR);
-    await page.screenshot({ path: '3_synthetics.png' });
+    // Look for some elements on a page and wait for a second, to load the page before taking a screenshot
+    const CARD_CONTAINER_SELECTOR = '[data-testid="card-container"]';
+    await page.waitForSelector(CARD_CONTAINER_SELECTOR);
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: '2_search.png' });
 }
 
 module.exports = testPage

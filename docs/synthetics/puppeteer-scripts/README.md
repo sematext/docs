@@ -56,7 +56,7 @@ This script navigates to a Shopify based e-commerce website, adds a book to the 
 
 In single-page apps, the page load event happens only during the initial launch. Any navigation across the app does not trigger a new page load/navigation event. The script has to rely on the visibility/availability of elements for the navigation. 
 
-This script launches a single-page app. The elements are loaded asynchronously, so we cannot rely on the navigation event. It waits for a specific element (sign up link) to appear, clicks the element, then waits for sign up form to load and then goes back to the login page. In the whole script, there is only a single page load during the initial launch of the web page. No instances of navigation after the initial launch trigger any page loads.
+This script launches a single-page app. The elements are loaded asynchronously, so we cannot rely on the navigation event. It waits for a specific elements to appear, fills out a search bar, clicks the search button, then waits for the results to appear before taking a screenshot. In the whole script, there is only a single page load during the initial launch of the web page. No instances of navigation after the initial launch trigger any page loads.
 
 
 
@@ -106,6 +106,11 @@ Additionally, it interacts with platform-specific buttons (Phone, Tablet, Watch,
 
 This script will scrape and extract various metrics related to an App listed on the Apple Store.
 The script waits for the reviews elements to appear, and then extracts the App's rating, total reviews, and percentages of 5-star, 4-star, 3-star, 2-star, and 1-star ratings. The extracted values are then defined as custom metrics using the Sematext context.
+
+
+
+### [Track Multiple Page Load Times](./multiple-page-load-times.js)
+This script visits multiple pages and records their individual load times as [custom metrics](../metrics#custom-metrics), which can then be charted using our [dashboards](../../dashboards/index.md). It also uses some custom helper functions which facilitate finding elements on the page using their selectors.
 
 
 

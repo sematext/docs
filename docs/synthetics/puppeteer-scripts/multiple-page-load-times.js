@@ -14,24 +14,26 @@ async function testPage(page, context) {
   context.setMetric('sematextHomePageLoadTime', sematextHomePageLoadTime);
 
   // Hover over dropdown to expand it
-  const DEMO_DROPDOWN_SELECTOR = '[title="See Demos"]';
-  await findAndClickButton(page, DEMO_DROPDOWN_SELECTOR, 'Demo dropdown');
+  const RESOURCES_DROPDOWN_SELECTOR = '[title="Resources"]';
+  await findSelector(page, RESOURCES_DROPDOWN_SELECTOR, 'Resources dropdown');
+  await page.hover(RESOURCES_DROPDOWN_SELECTOR);
+  await page.waitForTimeout(500); // Wait for the dropdown to expand
 
   // Simulate clicking the demo button, but don't actually click because it opens a new tab, copy the link instead
-  const DEMO_SELECTOR = '[title="Interactive Demo"]';
-  await findSelector(page, DEMO_SELECTOR, 'Demo button');
-  const demoUrl = await page.$eval(DEMO_SELECTOR, element => element.getAttribute('href'));
-  console.log('Demo URL:', demoUrl); // https://apps.sematext.com/demo
+  const SYNTHETICS_DOCS_SELECTOR = '[title="Synthetics"]';
+  await findSelector(page, SYNTHETICS_DOCS_SELECTOR, 'Synthetics docs button');
+  const docsUrl = await page.$eval(SYNTHETICS_DOCS_SELECTOR, element => element.getAttribute('href'));
+  console.log('Synthetics docs URL:', docsUrl); // https://sematext.com/docs/synthetics/
   await page.screenshot({ path: '1_homePage.png' });
   
-  // Navigate to the Sematext Cloud demo page and record the page load time
+  // Navigate to the Sematext Cloud docs page and record the page load time
   startTime = new Date();
-  await page.goto(demoUrl, { waitUntil: 'networkidle2' }); // Using networkidle2 to load all the SPA content
+  await page.goto(docsUrl, { waitUntil: 'networkidle2' }); // Using networkidle2 to load all the content
   endTime = new Date();
-  let sematextDemoPageLoadTime = calculateLoadTimeInSeconds(startTime, endTime);
-  console.log('Demo Page Load Time:', sematextDemoPageLoadTime);
-  context.setMetric('sematextDemoPageLoadTime', sematextDemoPageLoadTime);
-  await page.screenshot({ path: '2_demoPage.png' });
+  let sematextDocsPageLoadTime = calculateLoadTimeInSeconds(startTime, endTime);
+  console.log('Docs Page Load Time:', sematextDocsPageLoadTime);
+  context.setMetric('sematextDocsPageLoadTime', sematextDocsPageLoadTime);
+  await page.screenshot({ path: '2_docsPage.png' });
 }
 module.exports = testPage;
 
