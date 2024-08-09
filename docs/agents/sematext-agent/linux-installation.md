@@ -21,6 +21,17 @@ sudo yum clean all
 sudo yum install sematext-agent
    </pre>
 
+   <h3>Upgrading/Updating on Red Hat</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+sudo wget https://pub-repo.sematext.com/redhat/sematext.repo -O /etc/yum.repos.d/sematext.repo
+sudo rpm --import https://pub-repo.sematext.com/redhat/sematext.gpg.key
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo yum update sematext-agent
+   </pre>
+
    <h3>Uninstalling on Red Hat</h3>
    <pre>
 sudo yum remove sematext-agent
@@ -37,6 +48,17 @@ sudo rm -rf /opt/spm
 sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
 sudo yum clean all
 sudo yum install sematext-agent
+   </pre>
+
+   <h3>Upgrading/Updating on CentOS</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
+sudo rpm --import https://pub-repo.sematext.com/centos/sematext.gpg.key
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo yum update sematext-agent
    </pre>
 
    <h3>Uninstalling on CentOS</h3>
@@ -58,6 +80,18 @@ sudo apt-get update
 sudo apt-get install sematext-agent
    </pre>
 
+   <h3>Upgrading/Updating on Debian</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+echo "deb http://pub-repo.sematext.com/debian sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
+wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
+sudo apt-get update
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo apt-get upgrade sematext-agent
+   </pre>
+
    <h3>Uninstalling on Debian</h3>
    <pre>
 sudo apt-get remove --purge sematext-agent
@@ -75,6 +109,18 @@ echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt
 wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install sematext-agent
+   </pre>
+
+   <h3>Upgrading/Updating on Ubuntu</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null
+wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add -
+sudo apt-get update
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo apt-get upgrade sematext-agent
    </pre>
 
    <h3>Uninstalling on Ubuntu</h3>
@@ -95,6 +141,17 @@ sudo yum clean all
 sudo yum install sematext-agent
    </pre>
 
+   <h3>Upgrading/Updating on Amazon Linux</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+sudo wget https://pub-repo.sematext.com/centos/sematext.repo -O /etc/yum.repos.d/sematext.repo
+sudo rpm --import https://pub-repo.sematext.com/centos/sematext.gpg.key
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo yum update sematext-agent
+   </pre>
+
    <h3>Uninstalling on Amazon Linux</h3>
    <pre>
 sudo yum remove sematext-agent
@@ -113,6 +170,17 @@ sudo dnf clean all
 sudo dnf install sematext-agent
    </pre>
 
+   <h3>Upgrading/Updating on Fedora</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+sudo wget https://pub-repo.sematext.com/fedora/sematext.repo -O /etc/yum.repos.d/sematext.repo
+sudo rpm --import https://pub-repo.sematext.com/fedora/sematext.gpg.key
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo dnf update sematext-agent
+   </pre>
+
    <h3>Uninstalling on Fedora</h3>
    <pre>
 sudo dnf remove sematext-agent
@@ -129,6 +197,18 @@ sudo rm -rf /opt/spm
 sudo zypper ar -r https://pub-repo.sematext.com/suse/11/sematext.repo
 sudo zypper up
 sudo zypper in sematext-agent
+   </pre>
+
+   <h3>Upgrading/Updating on SuSE</h3>
+   1. Update the repository file and GPG key:
+   <pre>
+sudo zypper rr sematext
+sudo zypper ar -r https://pub-repo.sematext.com/suse/11/sematext.repo
+sudo rpm --import https://pub-repo.sematext.com/suse/sematext.gpg.key
+   </pre>
+   2. Upgrade the Sematext Agent:
+   <pre>
+sudo zypper update sematext-agent
    </pre>
 
    <h3>Uninstalling on SuSE</h3>
