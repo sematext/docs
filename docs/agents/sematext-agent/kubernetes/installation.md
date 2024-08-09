@@ -7,18 +7,42 @@ The preferred way to install Sematext Agent is via a Helm chart. [Sematext Agent
 To install it, run the following command:
 
 ```sh
-helm install --name sematext-agent \
-  --set infraToken=<YOUR_INFRA_TOKEN> \
+helm install sematext-agent \
+  --set infraToken=<YOUR_INFRA_APP_TOKEN> \
   --set region=<"US" or "EU"> \
   stable/sematext-agent
 ```
 
 For more details, refer to our [helm chart docs](helm.md).
 
+### Updating/Upgrading Sematext Agent using Helm
+
+To update or upgrade the Sematext Agent to the latest version using Helm, run the following commands:
+
+```sh
+helm repo update
+helm upgrade sematext-agent stable/sematext-agent \
+  --set infraToken=<YOUR_INFRA_APP_TOKEN> \
+  --set region=<"US" or "EU">
+```
+
+This will fetch the latest chart version and apply the changes to the existing installation.
+
+### Uninstalling Sematext Agent using Helm
+
+To uninstall Sematext Agent installed via Helm, run:
+
+```sh
+helm uninstall sematext-agent
+```
+
+This command will remove the Sematext Agent DaemonSet and all related Kubernetes resources.
+
+---
+
 ## Sematext Operator
 
-The Sematext Operator for Kubernetes provides an easy way to deploy Sematext Agent.
-Sematext Operator is available in [OperatorHub.io](https://operatorhub.io/?keyword=sematext), and in RedHat's OpenShift Container Platform.
+The Sematext Operator for Kubernetes provides an easy way to deploy Sematext Agent. Sematext Operator is available in [OperatorHub.io](https://operatorhub.io/?keyword=sematext), and in RedHat's OpenShift Container Platform.
 
 To install the operator, run the following command:
 
@@ -26,7 +50,7 @@ To install the operator, run the following command:
 kubectl apply -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
 ```
 
-Once installed, you can create `SematextAgent` resource that deploys Sematext Agent to all nodes in your cluster via `DaemonSet` resource:
+Once installed, you can create a `SematextAgent` resource that deploys Sematext Agent to all nodes in your cluster via a `DaemonSet` resource:
 
 ```yaml
 apiVersion: sematext.com/v1alpha1
@@ -35,19 +59,52 @@ metadata:
   name: test-sematextagent
 spec:
   region: <"US" or "EU">
-  infraToken: YOUR_INFRA_TOKEN
+  infraToken: <YOUR_INFRA_APP_TOKEN>
 ```
 
-This operator uses all the same options as the Sematext Agent helm chart.
-For more details refer to [operator docs](operator.md).
+This operator uses all the same options as the Sematext Agent helm chart. For more details, refer to the [operator docs](operator.md).
+
+### Updating/Upgrading Sematext Agent using Sematext Operator
+
+To update the Sematext Agent when using the Sematext Operator, you can apply an updated `SematextAgent` manifest with new configuration values or update the operator itself:
+
+1. **Updating the Operator:** If there's a new version of the operator, apply the new bundle:
+
+    ```sh
+    kubectl apply -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
+    ```
+
+2. **Updating the SematextAgent Resource:** If you need to change the configuration (e.g., new token or region), edit the `SematextAgent` resource and apply the changes:
+
+    ```sh
+    kubectl apply -f your-updated-sematextagent.yaml
+    ```
+
+### Uninstalling Sematext Agent using Sematext Operator
+
+To uninstall the Sematext Agent when using the Sematext Operator:
+
+1. **Remove the SematextAgent Resource:**
+
+    ```sh
+    kubectl delete sematextagent test-sematextagent
+    ```
+
+2. **Uninstall the Sematext Operator:**
+
+    ```sh
+    kubectl delete -f https://raw.githubusercontent.com/sematext/sematext-operator/master/bundle.yaml
+    ```
+
+---
 
 ## Manual Installation
 
 ### Configure RBAC
 
-If your cluster has RBAC enabled add `ClusterRole` and `ClusterRoleBindings` resources.
+If your cluster has RBAC enabled, add `ClusterRole` and `ClusterRoleBindings` resources.
 
-Create a `st-agent-crb.yml` file for the `ClusterRole` and the `ClusterRoleBinding`. For `ClusterRoleBindings` you should also update `REPLACE_WITH_NAMESPACE` value to match with namespace where the Sematext Agent will be installed:
+Create a `st-agent-crb.yml` file for the `ClusterRole` and the `ClusterRoleBinding`. Update the `REPLACE_WITH_NAMESPACE` value to match the namespace where the Sematext Agent will be installed:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -117,7 +174,7 @@ rules:
   - list
 ```
 
-Deploy the ClusterRoleBinding and ClusterRole:
+Deploy the `ClusterRoleBinding` and `ClusterRole`:
 
 ```sh
 kubectl apply -f st-agent-crb.yml
@@ -161,7 +218,7 @@ spec:
         - name: AUTODISCO_VECTOR_SERVICE_ACCOUNT
           value: sematext-agent-vector
         - name: INFRA_TOKEN
-          value: <YOUR_INFRA_TOKEN>
+          value: <YOUR_INFRA_APP_TOKEN>
         - name: REGION
           value: <"US" or "EU">
         - name: KUBERNETES_CLUSTER_ID
@@ -234,3 +291,31 @@ Deploy the DaemonSet:
 ```sh
 kubectl apply -f st-agent-ds.yml
 ```
+
+### Updating/Upgrading Sematext Agent using Manual Installation
+
+To update the Sematext Agent when installed manually, you need to modify the DaemonSet configuration and apply it:
+
+1. **Edit the DaemonSet YAML file:** Update the image to the latest version or change any configuration.
+
+    ```yaml
+    - name: agent
+      image: sematext/agent:latest
+    ```
+
+2. **Apply the updated DaemonSet:**
+
+    ```sh
+    kubectl apply -f st-agent-ds.yml
+    ```
+
+### Uninstalling Sematext Agent using Manual Installation
+
+To uninstall the Sematext Agent when installed manually, delete the DaemonSet and related resources:
+
+```sh
+kubectl delete -f st-agent-ds.yml
+kubectl delete -f st-agent-crb.yml
+```
+
+This will remove the Sematext Agent DaemonSet, ServiceAccount, ClusterRole, and ClusterRoleBinding from your Kubernetes cluster.
