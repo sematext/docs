@@ -122,8 +122,7 @@ application is using the *Basic* plan, our logging management platform will acce
 KB in size. If your application is using the *Standard* plan, it
 will allow logs up to 128 KB. If your application is using the *Pro*
 plan, it will accept logs up to 256 KB in size. If your logs are
-larger than the mentioned limits, please consider using the *Pro*
-plan.
+larger than the mentioned limits, please reach out to us for a custom plan.
 
 ### My logs have special structure.  Can Logs App handle that?
 
