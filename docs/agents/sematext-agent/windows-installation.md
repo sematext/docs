@@ -255,6 +255,19 @@ After the changes, you need to restart the agent:
 
 You can uninstall Sematext Agent using the GUI installer or from Windows Settings > Apps.
 
+To completely remove all configuration files and logs, execute the following commands to delete the specified directories:
+
+1. Delete logs and journals:
+
+```cmd
+   rmdir /s /q "C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent"
+```
+
+2. Delete properties and helper files:
+```cmd
+   rmdir /s /q "C:\Program Files\Sematext Agent"
+```
+
 ## Limitations / Known Issues
 
 The Sematext Agent for Windows is still a work in progress and has some limitations:
