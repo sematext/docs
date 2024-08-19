@@ -311,11 +311,18 @@ To update the Sematext Agent when installed manually, you need to modify the Dae
 
 ### Uninstalling Sematext Agent using Manual Installation
 
-To uninstall the Sematext Agent when installed manually, delete the DaemonSet and related resources:
+To uninstall the Sematext Agent when installed manually, remove previous Sematext Agent DaemonSet resource and service accounts. If the installation has been done inside the Sematext namespace you can just delete the namespace:
+
 
 ```sh
-kubectl delete -f st-agent-ds.yml
-kubectl delete -f st-agent-crb.yml
+kubectl delete namespace sematext
+```
+
+Otherwise you can delete the DaemonSets manually:
+
+```sh
+kubectl delete daemonset sematext-agent --ignore-not-found=true
+kubectl delete daemonset sematext-agent-vector --ignore-not-found=true
 ```
 
 This will remove the Sematext Agent DaemonSet, ServiceAccount, ClusterRole, and ClusterRoleBinding from your Kubernetes cluster.
