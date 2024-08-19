@@ -7,7 +7,7 @@ The preferred way to install Sematext Agent is via a Helm chart. [Sematext Agent
 To install it, run the following command:
 
 ```sh
-helm install sematext-agent \
+helm install st-agent \
   --set infraToken=<YOUR_INFRA_APP_TOKEN> \
   --set region=<"US" or "EU"> \
   stable/sematext-agent
@@ -21,7 +21,7 @@ To update or upgrade the Sematext Agent to the latest version using Helm, run th
 
 ```sh
 helm repo update
-helm upgrade sematext-agent stable/sematext-agent \
+helm upgrade st-agent stable/sematext-agent \
   --set infraToken=<YOUR_INFRA_APP_TOKEN> \
   --set region=<"US" or "EU">
 ```
@@ -33,7 +33,7 @@ This will fetch the latest chart version and apply the changes to the existing i
 To uninstall Sematext Agent installed via Helm, run:
 
 ```sh
-helm uninstall sematext-agent
+helm uninstall st-agent
 ```
 
 This command will remove the Sematext Agent DaemonSet and all related Kubernetes resources.
