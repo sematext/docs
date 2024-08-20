@@ -4,9 +4,9 @@ The Sematext Agent can be installed across a wide range of environments, includi
 
 For automated deployments, the Sematext Agent supports configuration automation tools, allowing you to easily deploy and manage the agent across multiple systems. Supported tools include Ansible for Linux environments and Windows Group Policy for Windows systems.
 
-To get started, select the appropriate environment or deployment method from the sections below:
+To get started, select the appropriate environment or deployment method from the sections below.
 
-Installation by environment:
+Installation, upgrades and uninstalling by environment:
 
 - [Linux](https://sematext.com/docs/agents/sematext-agent/linux-installation/)
 - [Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation)
