@@ -8,8 +8,8 @@ To get started, select the appropriate environment or deployment method from the
 
 Installation by environment:
 
-- [Linux](https://sematext.com/docs/agents/sematext-agent/installation/linux-installation)
-- [Windows](https://sematext.com/docs/agents/sematext-agent/installation/windows-installation)
+- [Linux](https://sematext.com/docs/agents/sematext-agent/linux-installation/)
+- [Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation)
 - [Docker](https://sematext.com/docs/agents/sematext-agent/containers/installation/)
 - [Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/installation/)
 
