@@ -7,11 +7,13 @@ For automated deployments, the Sematext Agent supports configuration automation 
 To get started, select the appropriate environment or deployment method from the sections below:
 
 Installation by environment:
+
 - [Linux](https://sematext.com/docs/agents/sematext-agent/installation/linux-installation)
 - [Windows](https://sematext.com/docs/agents/sematext-agent/installation/windows-installation)
 - [Docker](https://sematext.com/docs/agents/sematext-agent/containers/installation/)
 - [Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/installation/)
 
 Automated deployment:
+
 - [Ansible](https://sematext.com/docs/agents/sematext-agent/ansible/)
 - [Windows Group Policy](https://sematext.com/docs/agents/sematext-agent/windows-installation/#deploying-using-group-policy)
