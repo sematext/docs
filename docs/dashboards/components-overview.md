@@ -10,6 +10,7 @@ Each of these components is extensively detailed on their dedicated page. For fu
 
 - [Time Series Chart](./time-series-chart)
 - [Bar chart](./bar-pie-donut-chart)
+- [Data Table](./data-table-component)
 - [Geo map](./geomap)
 - [24x7 Heatmap](./heatmap)
 - [Heatbar](./heatbar)
