@@ -19,7 +19,7 @@ You can configure Data Table component either during its initial creation or aft
   - [Filter By](https://sematext.com/docs/dashboards/chart-builder/#filter-by)
   - [Rollup By](https://sematext.com/docs/dashboards/chart-builder/#rollup-by)
     
-While building the chart, a preview is available in left. 
+While building the chart, a preview is available in top left. 
 
 ![Data Table Configuration](../images/dashboards/data-table-edit-configuration.gif)
 
