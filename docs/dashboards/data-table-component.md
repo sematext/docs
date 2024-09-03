@@ -5,7 +5,7 @@ The Data Table Component displays your data in a clear, easy-to-read table with 
 
 The displayed values depend on the selected data time picker located at the top right of the dashboard.
 
-![Data Table](../images/dashboards/data-table.png)
+![Data Table](../images/dashboards/datatable.png)
 
 ## Configuration
 
