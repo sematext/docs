@@ -124,7 +124,7 @@ Member Added to Security Group: When a user is added to a security group, which 
 - **Logons (Successful, Failed, Logon with Explicit Credentials)**: These logs capture user logon attempts, including successful logins, failed attempts, and those using specific credentials. They help monitor user access and detect potential login issues or unauthorized access attempts.
 - **Remote Desktop Connections**: This log shows when a user connects to the system using Remote Desktop. It helps track remote access and ensure that connections are authorized and secure.
 
-By default, certain critical security events, such as file auditing, audit policy changes and registry changes, are not logged by Windows Servers.To make sure all necessary security events are tracked, these need to be manually enabled in the server’s auditing settings. See [How to Enable Security Logs](https://sematext.com/docs/integration/how-to-enable-windows-security-logs/) for more information.
+By default, certain critical security events, such as file auditing, audit policy changes and registry changes, are not logged by Windows Servers. To make sure all necessary security events are tracked, these need to be manually enabled in the server’s auditing settings. See [How to Enable Security Logs](https://sematext.com/docs/integration/how-to-enable-windows-security-logs/) for more information.
 
 #### System Logs
 
