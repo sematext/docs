@@ -85,7 +85,7 @@ Starting from [version 3.7.0](https://sematext.com/docs/agents/sematext-agent/re
 ### Install Sematext Agent
 
 1. Create a Windows Logs [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your logs data.
-2. Install [Sematext Agent for Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/) on each host you want according to the instructions displayed in the UI
+2. Install [Sematext Agent for Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/) on each host you want to monitor according to the instructions displayed in the UI
 3. Once you install the agent, you will start seeing logs from your Windows operating system in your [App](https://sematext.com/docs/guide/app-guide/) within a few minutes.
 4. The agent comes with additional configuration options. See [Configuring the Sematext Windows Agent](https://sematext.com/docs/integration/configuring-windows-agent/) for more details.
 
