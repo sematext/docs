@@ -3,7 +3,7 @@
 export default async function testPage(page, context) {
 
 
-  // Goto the WhatsappURL
+  // Navigate to the Whatsapp URL
   await page.goto('https://play.google.com/store/apps/details?id=com.whatsapp');
   
   // Create a function in the page context to extract numerical values

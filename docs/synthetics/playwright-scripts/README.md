@@ -61,7 +61,7 @@ We can also use the `waitForURL` function to wait for a specific URL to appear i
 
 ### [Using custom metrics](./custom-metric.js)
 
-Browser monitors allow you to define and collect custom metrics in the script. Custom metrics can be a value from a web page element, any performance metric that is not supported out of the box in Sematext Browser monitor, or any custom measurement (e.g. time to display suggestions in autocomplete) that needs custom logic. Once the measurement is added in the script, you can see its value in run results and chart it in your Dashboards.
+Browser monitors allow you to define and collect custom metrics in the script. Custom metrics can be a value from a web page element, any performance metric that is not supported out of the box in Sematext Browser monitors, or any custom measurement (e.g. time to display suggestions in autocomplete) that needs custom logic. Once the measurement is added in the script, you can see its value in the run results and chart it in your Dashboards.
 
 The script uses the Performance API of the Chrome browser to fetch the JavaScript script duration and heap size metrics, then adds those values as custom metrics using the `context.setMetric(name, value)` API. Note that `context` is defined as the second parameter of the `testPage()` function, so remember to include it in your script.
 
