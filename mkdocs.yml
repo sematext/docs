@@ -168,7 +168,7 @@ pages:
       - Solr: integration/solr-integration.md
       - Varnish Cache: integration/varnishcache-integration.md
       - Windows: integration/windows.md
-        - Configuring Windows Agent: integration/configuring-windows-agent.md
+        - Configuring Logs Collection: integration/configuring-windows-agent.md
         - How to Enable Security Logs: integration/how-to-enable-windows-security-logs.md
       - Monitoring:
         - Akka: integration/akka.md
