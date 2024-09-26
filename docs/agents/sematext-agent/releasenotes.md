@@ -39,6 +39,22 @@ NULL
 
 -->
 
+## Version 3.7.0
+
+Date: September 23, 2024
+
+### New Features
+- **Windows Events**: Sematext Agent now supports collecting Windows Events. Stay tuned for the upcoming release of Windows Event Logs monitoring integration in Sematext Cloud.
+
+### Improvements
+
+- The agent owner reference has been added to the Log-shipper DaemonSet, ensuring automatic deletion of the Log-shipper DaemonSet when the Sematext Agent DaemonSet is deleted.
+- A new error message has been added to notify users when Java is not present. This is a case for using AppAgent without Java.
+
+### Bug Fixes
+
+- Fixed an issue that caused Kubernetes events to be duplicated by an edge-case.
+
 ## Version 3.6.0
 
 Date: July 30, 2024
