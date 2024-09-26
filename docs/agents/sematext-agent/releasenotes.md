@@ -44,7 +44,7 @@ NULL
 Date: September 23, 2024
 
 ### New Features
-- **Windows Events**: We are happy to share that Sematext Agent now supports collecting Windows Events. You can define which event logs to collect and send to Sematext Cloud, refer to the [configuration documentation](https://sematext.com/docs/integration/configuring-windows-agent/).
+- **Windows Events**: Sematext Agent now supports collecting Windows Events. Stay tuned for the upcoming release of Windows Event Logs monitoring integration in Sematext Cloud.
 
 ### Improvements
 
