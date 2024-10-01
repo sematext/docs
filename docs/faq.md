@@ -28,7 +28,7 @@ The easiest way is to have different [Infra Apps](/monitoring/infrastructure) fo
 
 ### Can you give me an example?
 
-Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/monitoring/infrastructure), you'll need to have those Infra Apps.  You can have them on the [Basic (free) plan](https://sematext.com/pricing/#spm) to avoid any costs. Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/monitoring/quick-start).
+Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/monitoring/infrastructure), you'll need to have those Infra Apps.  You can have them on the [Basic plan](https://sematext.com/pricing/#spm) to keep your costs at minimum. Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/monitoring/quick-start).
 
 Then you'd set up [Solr Monitoring](/integration/solr) Apps: one per environment. At this point, you shouldn't need to touch the hosts: when it comes to shipping Solr metrics, simply select the corresponding Infra App and use [Autodiscovery](/monitoring/autodiscovery) to set up monitoring.
 
