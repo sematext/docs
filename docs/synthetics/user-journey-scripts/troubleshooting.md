@@ -33,7 +33,7 @@ Also, keep in mind that Browser monitors will try to capture a screenshot titled
 
 ### Note the dynamic parts of the page
 
-Watch for dynamically changing parts of the website such as popups or forms which change depending on which options are selected. These elements might not appear immediately after the event that triggers them (such as clicking a button). To avoid potential issues with these elements, consider using a combination of manual waits (`page.waitForTimeout`) and waiting for specific selectors of those dynamic elements (`page.waitForSelector`).
+Watch for dynamically changing parts of the website such as popups or forms which change depending on which options are selected. These elements might not appear immediately after the event that triggers them (such as clicking a button). To avoid potential issues with these elements, consider waiting for specific locators of those dynamic elements. More information about locators can be seen [here](https://playwright.dev/docs/locators).
 
 
 ### User location may matter
@@ -41,23 +41,19 @@ Watch for dynamically changing parts of the website such as popups or forms whic
 When viewing the website locally or testing from your own machine, check how the website renders based on the location. Things like cookie warnings and other legal notices may pop up, banners featuring special offers or some other location-based promotions could be shown, the main content could be modified due to different languages or cultural preferences etc. To ensure that the monitor will behave the way you want it to, consider using a VPN and select the same location as the one you'll use for that monitor.
 
 
-### Ensure that the page elements have time to load
-
-If the monitor behavior is inconsistent and runs fail because some elements couldn't be found, consider using `page.waitForTimeout(timeout)` to make sure that the elements on the page have time to load before the script attempts to interact with them. Alternatively, you can use the `{ waitUntil: 'networkidle2' }` option in `page.goto` or `page.waitForNavigation` to wait until there are no more than 2 network connections for at least 500 ms. However, keep in mind that this can lead to a timeout for pages which have a lot of network activity.
-
 
 ### Be mindful of resource load times
 
 If there's a lot of traffic on the page, you could run into an issue where certain resources take much longer to load than others, thus potentially causing the script to time out while waiting for them. Be mindful of resource load times and check the ***Waterfall*** section of the run results for the failed runs. If there are any resources that stand out in terms of how long they took to load, consider blocking them, as seen in the next tip.
 
-It's also possible for the website to have a lot of network activity, which prevents it from registering as fully loaded. Busy websites may cause the scripts to time out, even though the page itself looks completely fine, so try out [different lifecycle event options](https://pptr.dev/api/puppeteer.puppeteerlifecycleevent) and see how they affect your User Journey scripts.
+It's also possible for the website to have a lot of network activity, which prevents it from registering as fully loaded. Busy websites may cause the scripts to time out, even though the page itself looks completely fine, so try out [different lifecycle event options](https://playwright.dev/docs/api/class-page#page-wait-for-load-state) with the `page.waitForLoadState()` function and see how they affect your User Journey scripts.
 
 
 ### Block irrelevant domains
 
 The pages you are monitoring may send network requests to other domains, such as those for third party plugins, ads, or social media. Connections to these domains might simply be unnecessary overhead for your script, and by blocking them you can speed up page load times and prevent timeouts. You may also want to block domains for your internal user tracking tools to avoid polluting their data with behavior from Synthetics monitors.
 
-You can use `page.setRequestInterception(true)` and then listen for the `request` event to block requests to certain domains. An example of how to block domains can be seen [here](../puppeteer-scripts/request-interception.js).
+You can use `page.route()` function to to block requests to certain domains with a matching pattern. An example of how to block domains can be seen [here](../playwright-scripts/request-interception.js).
 
 
 ### Use AI to help you write scripts

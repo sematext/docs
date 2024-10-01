@@ -24,7 +24,7 @@ Use an [HTTP monitor](./http-monitor.md) when you want to:
 ### Can I monitor the endpoints and web pages behind the firewall?
 Yes. You can use [private agents](./private-locations.md) to monitor the endpoints and web pages behind the firewall. 
 
-If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.setrequestinterception.md) the script to include a custom header for all requests.
+If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://playwright.dev/docs/network#modify-requests) the script to include a custom header for all requests.
 
 ### Can I monitor API endpoints protected by OAuth authentication?
 Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
@@ -72,13 +72,13 @@ Browser monitors follow redirects by default and collect metrics from the page t
 * [HTTP Monitor](./http-monitor/#run-environment)
 * [Browser Monitor](./browser-monitor/#run-environment)
 
-Currently, it is not possible to change the default settings, except for the default navigation timeout in the Browser monitor scripts. It can be changed using the [page.setDefaultNavigationTimeout(timeout)](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.setdefaultnavigationtimeout.md) API.
+Currently, it is not possible to change the default settings, except for the default navigation timeout in the Browser monitor scripts. It can be changed using the [page.setDefaultNavigationTimeout(timeout)](https://playwright.dev/docs/api/class-page#page-set-default-navigation-timeout) API.
 
 ### How can I filter requests from HTTP & Browser monitors?
 Both HTTP and Browser monitor requests will have the string `SematextSyntheticsRobot` in the `User-Agent` header. If your analytics software doesn't already filter out requests from Synthetics, you can use the `User-Agent` header to filter requests from Synthetics.
 
 ### Where can I find User Journey scripts that I can customize for my own needs?
-You can find Browser monitor scripts for common use cases by selecting the **Browse Examples** button on the **Configure URL/Script** page while creating or editing a monitor. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/transitive-bullshit/awesome-puppeteer#examples).
+You can find Browser monitor scripts for common use cases by selecting the **Browse Examples** button on the **Configure URL/Script** page while creating or editing a monitor. You can directly import a script from the example and change it to suit your needs. You can also find more examples [here](https://github.com/mxschmitt/awesome-playwright?tab=readme-ov-file#showcases).
 
 ### How can I securely store the credentials I supply to User Journey scripts?
 By adding them as Sensitive Data, on which you can find more information [here](./user-journey-scripts/sensitive-data.md)
@@ -101,45 +101,53 @@ The HTTP monitor measures how long it takes to execute a single HTTP request and
 | **Sao Paulo** (sa-east-1)      | 54.207.1.35    |
 
 ### Where can I see if a certain device is supported for Browser monitors?
-You can simply type the name of your desired device into the _Device type_ dropdown while creating a monitor and see if a matching option will be displayed. You can also find the list of devices we support, as well as their specific properties, in the official [Puppeteer docs](https://github.com/puppeteer/puppeteer/blob/v13.6.0/src/common/DeviceDescriptors.ts).
+You can simply type the name of your desired device into the _Device type_ dropdown while creating a monitor and see if a matching option will be displayed. You can also find the list of devices we support, as well as their specific properties, in the [Playwright code](https://github.com/microsoft/playwright/blob/main/packages/playwright-core/src/server/deviceDescriptorsSource.json).
 
 ### Can I extract a token from a request and use it for another request?
-Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select **Monitor a User Journey** in the **Configure URL/Script** step. Within the script you can send a POST request to your token provider API with Puppeteer's [page.setRequestInterception()](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.setrequestinterception.md) method.
+Yes. Create a [Browser Monitor](https://sematext.com/docs/synthetics/browser-monitor/) and select **Monitor a User Journey** in the **Configure URL/Script** step. Within the script you can send a POST request to your token provider API with Playwright's [page.route()](https://playwright.dev/docs/api/class-page#page-route) method.
 After grabbing the token from the response, you can intercept the next request and add your credentials to the request body with the following code.
 
 ```javascript
- await page.setRequestInterception(true);
-  // Intercept the next request, change its method to POST and add the request body
-  page.once("request", async interceptedRequest => {
-    interceptedRequest.continue({
-      method: "POST",
-      postData: '{"username": "exampleUser","password": "examplePassword"}',
-      headers: { ...interceptedRequest.headers(), "content-type": "application/json" }
-    });
-  });
+  // Get the api request API to make our post call
+  const apiRequest = page.request;
 
-  console.log("Sending request to get token");
-  const response = await page.goto("https://private-xxxxx.apiary-mock.com/authenticate");
+  // Make a POST request to the authentication endpoint
+  const response = await apiRequest.post("$YOUR_URL_TO_AUTHENTICATE", {
+      data: {
+          username: "exampleUser",
+          password: "examplePassword"
+      }
+  });
 ```
  Extract token from the response
 ```javascript
   // response.text() prints out the response body as a string, useful if you're not using JSON
   // response.json() parses the response body JSON and throws an error if it isn't valid JSON
-  bodyJSON = await response.json();
+  const responseJSON = await response.json();
  ```
 Pass the extracted token to the next request in the request body
 ```javascript
- // Intercept the next request, change its method to POST and add the request body using the response we got from the first request
-  page.once("request", async interceptedRequest => {
-    interceptedRequest.continue({
-      method: "POST",
-      postData: `{"token": "${bodyJSON.token}"}`,
-      headers: { ...interceptedRequest.headers(), "content-type": "application/json" }
-    });
+ // Intercept the next request, change its method to POST and add the request header using the response we got from the first request
+  const additionalHeaders = {
+        "content-type": "application/json",
+        "Authorization": `Bearer ${responseJSON.token}`
+  };
+
+
+  const secureURL = '$YOUR_SECURE_ENDPOINT';
+
+  await page.route(secureURL, route => {
+      route.continue({
+          method: 'POST',
+          headers: {
+              ...route.request().headers(),
+              ...additionalHeaders
+          }
+      });
   });
 
   console.log("Sending second request using info from the first response");
-  const result = await page.goto(`https://private-xxxxx.apiary-mock.com/exampleSecureEndpoint`);
+  const result = await page.goto(secureURL);
   console.log({
     url: result.url(),
     statusCode: result.status(),

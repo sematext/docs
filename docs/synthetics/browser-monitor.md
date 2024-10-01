@@ -1,7 +1,7 @@
 title: Browser Monitor
 description: Browser monitor can monitor website performance and user journeys.
 
-The Browser monitor can be used to monitor a single web page or a user journey across multiple pages. The Browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using the `assert` API during the execution. It can optionally collect screenshots.
+The Browser monitor can be used to monitor a single web page or a user journey across multiple pages. The Browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using the `assert` API by `Node.js` or `expect` function by `@playwright/test` library during the execution. It can optionally collect screenshots.
 
 ## Configuration
 
@@ -36,7 +36,7 @@ By default, the UI adds the below conditions while creating a Browser monitor. Y
 
 ## Screenshots
 
-Browser monitor scripts allow for the collection of page screenshots at any point during the execution. These screenshots can be taken using the [page.screenshot()](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.screenshot.md) Puppeteer method, the options for which can be found [here](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.screenshotoptions.md). The default resolution of a screenshot corresponds to the selected **Device type** (**Desktop** defaults to **1920&times;1080**). JPEG and PNG image types are supported. The number of screenshots per run varies depending on [the plan](https://sematext.com/pricing/#synthetics) you're using. On failure of the script due to errors (like navigation timeout, assertion failed, etc.), a screenshot `error.png` will be collected for analysis.
+Browser monitor scripts allow for the collection of page screenshots at any point during the execution. These screenshots can be taken using the [page.screenshot()](https://playwright.dev/docs/screenshots) Playwright method. The default resolution of a screenshot corresponds to the selected **Device type** (**Desktop** defaults to **1920&times;1080**). JPEG and PNG image types are supported. The number of screenshots per run varies depending on [the plan](https://sematext.com/pricing/#synthetics) you're using. On failure of the script due to errors (like navigation timeout, assertion failed, etc.), a screenshot `error.png` will be collected for analysis.
 
 ## Console Errors
 
@@ -102,8 +102,8 @@ For every run, the Browser monitor collects all the resources fetched during the
 Each Browser monitor run is executed in an isolated environment using a fresh instance of a headless Google Chrome browser in a Node.js environment. Versions of various dependencies are:
 
 * **Node.js** - 20.x
-* **Google Chrome** - 123
-* **Puppeteer** - 22.6.4
+* **Google Chrome** - 125
+* **Playwright** - 1.44.1
 
 Default runtime configuration values are:
 
@@ -111,7 +111,6 @@ Default runtime configuration values are:
 * **Resolution** - `1920x1080`
 * **Default Navigation timeout** - 30 seconds
 * **Chrome web security flag (same-origin, CORS)** - Disabled (to facilitate testing, can be enabled in the UI)
-* **Memory** - 2048 MB
-* **CPU** - 1 vCPU
-* **Network** - Throttled using Chrome settings. Download speed - 20 Mbps, Upload speed - 5 Mbps, Latency - 4ms.
-* **User Agent** - `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/93.0.4577.0 Safari/537.36 +SematextSyntheticsRobot`
+* **Memory** - 4096 MB
+* **CPU** - 2 vCPU
+* **User Agent** - `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.26 Safari/537.36 +SematextSyntheticsRobot`
