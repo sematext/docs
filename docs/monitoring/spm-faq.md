@@ -929,26 +929,26 @@ Check the [Infra Monitoring and Service Monitoring Pricing](https://sematext.com
 
 Usage is metered hourly on a per-agent basis. There are two types of Monitoring Apps, and they are priced differently:
 
--  Infra Monitoring Apps, starting at $0.005/hour per host for the Standard plan and 7 days of data retention.
--  Monitoring Apps for our supported Integrations, starting at $0.014/hour per agent for the Standard plan and 7 days of data retention.
+-  Infra Monitoring Apps, starting at $0.004/hour per host for the Basic plan and 1 day of data retention.
+-  Monitoring Apps for our supported Integrations, starting at $0.012/hour per agent for the Basic plan and 1 day of data retention.
 
 For example:
 
 If you send metrics from a server A to Infra Monitoring App Foo between 01:00 and
-02:00 that's $0.005 for the Standard plan and 7 days of data retention.
+02:00 that's $0.004 for the Standard plan and 7 days of data retention.
 
 If another agent is monitoring something else, even if that is running on the same
-server A, and sending metrics to a different Infra Monitoring App Bar, that's another $0.005.
+server A, and sending metrics to a different Infra Monitoring App Bar, that's another $0.004.
 
 If you are not sending metrics from a server A for a Infra Monitoring App Foo between
 02:00 and 03:00 then you pay $0 for that hour.
 
 If you send metrics from a server A to Integration Monitoring App Baz between 01:00 and
-02:00 that's $0.014 for the Standard plan and 7 days of data retention.
+02:00 that's $0.012 for the Basic plan and 1 day of data retention.
 
-A single agent monitoring 24/7 will end up being $3.6/month. If you
-run another agent on another server it will be 2 x $3.6/month. And 
-for each integration, it will be an extra $10.08/month.
+A single agent monitoring 24/7 will end up being $2.8/month. If you
+run another agent on another server it will be 2 x $2.8/month. And 
+for each integration, it will be an extra $8.64/month.
 
 Note:
 

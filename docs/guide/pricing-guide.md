@@ -55,7 +55,7 @@ All of our plans include support via live chat and email. For Standard and Pro P
 - Users can have [different roles such as user, admin, and billing admin](https://sematext.com/docs/team/).
     - Account owners and billing admins can add or remove credit cards and have full control over the Apps within the account.
 - You can set a billing email within the Settings screen. This email, along with the account owner's and billing admin’s emails, will receive invoices.
-- We charge credit cards on the 1st of the month. If the charge fails, we will send you an email about the failure and will keep trying until the 15th. If we cannot charge by the 15th, and a free plan is available, we will downgrade the Apps to the free plan. If a free plan is not available, we will disable your Apps. As soon as you enter a valid payment method, you can enable your Apps without losing any data. If your App was downgraded to a free plan with limited features and data retention, your older data will get deleted according to the free plan’s features and data limits.
+- We charge credit cards on the 1st of the month. If the charge fails, we will send you an email about the failure and will keep trying until the 15th. If we cannot charge by the 15th, we will disable your Apps. As soon as you enter a valid payment method, you can enable your Apps without losing any data.
 - If you are on an annual payment plan, we will email the account owner, billing admins, and the billing email when the prepaid balance is low and it's time to top-up.
 
 ## Cost Estimation
@@ -85,7 +85,7 @@ We offer a 14-day trial period with all Pro features enabled. During this period
 
 ### No Commitment
 
-Unless you choose to switch to an annual payment plan, which you can do at any time, there is no commitment and no contract with Sematext. When/if you want to stop using Sematext you simply stop sending us your metrics and/or switch to the Free plan. You can also upgrade/downgrade your plans at any given time, as well as change the data retention, number of hosts, volume of logs, etc. Usage is metered hourly, so any changes made will take effect immediately.
+Unless you choose to switch to an annual payment plan, which you can do at any time, there is no commitment and no contract with Sematext. When/if you want to stop using Sematext you simply disable your Apps. You can also fully delete any App at any time and even close your whole account all by yourself. You can also upgrade/downgrade your plans at any given time, as well as change the data retention, number of hosts, volume of logs, etc. Usage is metered hourly, so any changes made will take effect immediately.
 
 Our goal is to provide a flexible and transparent pricing model, ensuring there are no surprises at the end of the month by offering customizable plans and clear cost estimations. If you have any questions or need further assistance, reach out to us at support@sematext.com.
 

@@ -87,8 +87,6 @@ Use [Logagent](/logagent).  With Logagent you can then do: ```cat
 
 Data retention mechanism is responsible for removing old log events.
 If you have retention set to 7 days, all log events that are received more than 7 days ago will be removed. 
-For paid plans we remove whole 24-hour periods once a day. For free plans we
-remove old data every 30 minutes.
 
 ### How long is my data stored?
 
@@ -274,14 +272,11 @@ Please see [Handling Stack Traces with Logstash](https://sematext.com/blog/handl
 
 Check the [Logs App Plans & Prices](https://www.sematext.com/pricing#logsene).
 
-### What happens with my logs when I change from the free to a paid plan or vice versa?
+### What happens with my logs when I downgrade an App?
 
-You don't have to worry about your data when you switch from the free
-plan to a paid one. Your logs will remain safe and you can still be able
+You don't have to worry about your data when you downgrade an App. Your logs will remain safe and you can still be able
 to search them. Your data will remain accessible based on your data
-retention settings.  However, when you move from a paid plan to a free
-plan, free plan restrictions will be applied to your data, which
-including data retention, too.
+retention settings.  However, when you downgrade an App data retention restrictions will be applied to your data based on the selected plan.
 
 ### What happens if I go over the selected daily log volume and how much does that cost?
 

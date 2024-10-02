@@ -35,7 +35,6 @@ Once you have data flowing you can **analyze metrics** by a number of context-aw
 
 You can have any number of Monitoring Apps and each App [can be shared](https://sematext.com/docs/team/)
 with different people, giving them different access roles. Each App has its own plan.
-Some Apps can use the free plan, while others can use paid plans, thus enabling a lot of flexibility around cost management.
 
 ## Setting up Monitoring Agents
 
