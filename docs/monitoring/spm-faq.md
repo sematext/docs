@@ -944,7 +944,7 @@ If you are not sending metrics from a server A for a Infra Monitoring App Foo be
 02:00 and 03:00 then you pay $0 for that hour.
 
 If you send metrics from a server A to Integration Monitoring App Baz between 01:00 and
-02:00 that's $0.012 for the Basic plan and 7 days of data retention.
+02:00 that's $0.012 for the Basic plan and 1 day of data retention.
 
 A single agent monitoring 24/7 will end up being $2.8/month. If you
 run another agent on another server it will be 2 x $2.8/month. And 
