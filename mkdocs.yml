@@ -167,7 +167,10 @@ pages:
       - RabbitMQ: integration/rabbitmq-integration.md
       - Solr: integration/solr-integration.md
       - Varnish Cache: integration/varnishcache-integration.md
-      - Windows: integration/windows.md
+      - Windows:
+        - Overview: integration/windows.md
+        - Configuring Logs Collection: integration/configuring-windows-agent.md
+        - How to Enable Security Logs: integration/how-to-enable-windows-security-logs.md
       - Monitoring:
         - Akka: integration/akka.md
         - Apache: integration/apache.md
