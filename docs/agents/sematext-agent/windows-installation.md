@@ -1,6 +1,6 @@
 title: Installing Sematext Agent on Windows
 
-Sematext Agent collects a plethora of metrics about Windows hosts (CPU, memory, disk, network, processes) as well as [Windows Events](../../integration/configuring-windows-agent/). The installer is responsible for installing the Sematext Agent, configuring it, and starting it as a Windows Service.
+Sematext Agent collects a plethora of metrics about Windows hosts (CPU, memory, disk, network, processes) as well as [Windows Events](../../integration/windows/#logs). The installer is responsible for installing the Sematext Agent, configuring it, and starting it as a Windows Service.
 
 Installation can be done either by using the GUI installer or through the command line.
 
