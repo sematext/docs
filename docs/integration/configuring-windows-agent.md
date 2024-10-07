@@ -1,4 +1,4 @@
-title: Configuring the Sematext Windows Agent
+title: Configuring Sematext Agent to Ship Windows Events
 description: Tailor Sematext Windows Agent based on your needs to add/remove channels or to give friendly names to windows logs.
 
 The [Sematext Agent for Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/) collects logs from your Windows system and sends them to your [Windows Logs App](https://sematext.com/docs/integration/windows/#logs) for monitoring and analysis. After installing the agent, you can make additional configurations to tailor it to your preferences.
