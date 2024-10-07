@@ -24,7 +24,7 @@ Use an [HTTP monitor](./http-monitor.md) when you want to:
 ### Can I monitor the endpoints and web pages behind the firewall?
 Yes. You can use [private agents](./private-locations.md) to monitor the endpoints and web pages behind the firewall. 
 
-If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://playwright.dev/docs/network#modify-requests) the script to include a custom header for all requests.
+If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://playwright.dev/docs/network#modify-requests) the script to include a custom header for all requests. Please refer to [fetch-use-token](./playwright-scripts/fetch-use-token.js) for an example of how to modify the request body or headers.
 
 ### Can I monitor API endpoints protected by OAuth authentication?
 Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.

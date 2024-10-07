@@ -1,7 +1,7 @@
 title: Browser Monitor
 description: Browser monitor can monitor website performance and user journeys.
 
-The Browser monitor can be used to monitor a single web page or a user journey across multiple pages. The Browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using the `assert` API by `Node.js` or `expect` function by `@playwright/test` library during the execution. It can optionally collect screenshots.
+The Browser monitor can be used to monitor a single web page or a user journey across multiple pages. The Browser monitor loads the URL or executes the configured script in a Chrome browser. It records various performance metrics during the execution. The script can extract & verify the page content using the `assert` API from `Node.js` or the `expect` function from the `@playwright/test` library during the execution. It can optionally collect screenshots.
 
 ## Configuration
 
