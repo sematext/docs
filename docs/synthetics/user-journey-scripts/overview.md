@@ -3,7 +3,7 @@ description: User Journey scripts for monitoring multi-page and multi-step user 
 
 ___
 
-<b>Notice</b>: Puppeteer scripts are now deprecated and will be fully discontinued by the end of 2024. All examples in this documentation have been updated to use Playwright. For details on migrating from Puppeteer to Playwright, please refer to official documentation by Playwright team: [Migrating from Puppeteer](https://playwright.dev/docs/puppeteer).
+<b>Notice</b>: Puppeteer scripts are now deprecated and will be fully discontinued by the end of 2024. All examples in this documentation have been updated to use Playwright. For details on migrating from Puppeteer to Playwright, please refer to the official documentation by the Playwright team: [Migrating from Puppeteer](https://playwright.dev/docs/puppeteer).
 
 ___
 
