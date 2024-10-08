@@ -1,8 +1,12 @@
 title: User Journey Scripts
 description: User Journey scripts for monitoring multi-page and multi-step user journeys
 
-<b>Notice</b>: Puppeteer scripts are now deprecated and will be fully discontinued by the end of 2024. All examples in this documentation have been updated to use Playwright. For details on migrating from Puppeteer to Playwright, please refer to official documentation by Playwright team: [Migrating from Puppeteer
-](https://playwright.dev/docs/puppeteer).
+___
+
+<b>Notice</b>: Puppeteer scripts are now deprecated and will be fully discontinued by the end of 2024. All examples in this documentation have been updated to use Playwright. For details on migrating from Puppeteer to Playwright, please refer to official documentation by Playwright team: [Migrating from Puppeteer](https://playwright.dev/docs/puppeteer).
+
+___
+
 
 To monitor a single website, you can directly configure the URL of the website to be monitored. This can be accomplished with either [HTTP Monitor](../http-monitor.md) or [Browser Monitor](../browser-monitor.md). To monitor a user journey across multiple pages or perform actions on your website, you use a Browser monitor configured with a User Journey script that simulates user actions.
 
