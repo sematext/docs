@@ -90,7 +90,7 @@ Todo: screenshot with events stacked chart
 A table follows the stacked view chart, listing alert events for both the current App and any connected Apps. Each row displays key details such as the alert type, alert rule name, triggered time, and priority. Two actions are available on each row:
 
 - A split screen icon that opens the Split Screen feature, allowing you to compare side-by-side reports from the current alert's App with those from the selected alert's App. This way you can easily identify relationships between different Apps, helping determine if a broader issue is affecting multiple components of your system.
-- A `NN+` logs icon that opens the Logs App connected to the selected alert and filters all logs by warning and/or error level.
+- A `NN+` logs icon that opens the Logs App connected to the selected alert and filters all logs by warning and/or error severity.
 
 Todo: screenshot
 
@@ -99,4 +99,7 @@ Todo: screenshot
 This section gives you insights into the parameters and configurations of the alert rule that triggered the alert event.
 
 You can configure an alert rule by clicking the three vertical dots in the top right corner and selecting **Edit Alert Rule**.
+
+Todo: add screenshot
+
 
