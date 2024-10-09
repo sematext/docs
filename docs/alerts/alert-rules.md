@@ -156,5 +156,5 @@ Below are some additional resources to alert rules, each providing specific guid
 - **[Creating Experience Alerts](https://sematext.com/docs/alerts/creating-experience-alerts/):** Guidelines for creating alerts focused on user experience metrics.
 - **[Creating Synthetics Alerts](https://sematext.com/docs/alerts/creating-synthetics-alerts/):** Instructions on setting up alerts based on synthetic monitoring.
 - **[Alert Scheduling](https://sematext.com/docs/alerts/alert-scheduling/):** Details on establishing a schedule for when alert notifications will be active.
-- **[Default Alert Rules](https://sematext.com/docs/alerts/default-alerts/)**: A list of predefined and fine-tuned alert rules that can be used for monitoring your applications.
+- **[Default Alert Rules](https://sematext.com/docs/alerts/default-alerts/):** A list of predefined and fine-tuned alert rules that can be used for monitoring your applications.
 
