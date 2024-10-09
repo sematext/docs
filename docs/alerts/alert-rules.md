@@ -146,3 +146,15 @@ The **Notifications** tab enables you to designate recipients for alert notifica
 
 The **Schedule** tab is used to establish a detailed weekly schedule for when notifications will be active. By default, notifications are always active. For instance, if you specify an interval of Monday from 09:00 to 17:00, notifications for any triggered alerts will be sent only during this timeframe. For details, see [Alert Scheduling](https://sematext.com/docs/alerts/alert-scheduling/).
 
+## Additional Resources on Alert Rules
+
+Below are some additional resources to alert rules, each providing specific guidance on different types of alerts:
+
+- **[Creating Logs Alerts](https://sematext.com/docs/alerts/creating-logs-alerts/):** A guide on how to create alerts for logs to monitor specific events or patterns in your application logs.
+- **[Creating Metrics Alerts](https://sematext.com/docs/alerts/creating-metrics-alerts/):** Instructions for setting up alerts based on various metrics to keep track of performance and resource usage.
+- **[Creating Heartbeat Alerts](https://sematext.com/docs/alerts/creating-heartbeat-alerts/):** Information on configuring heartbeat alerts.
+- **[Creating Experience Alerts](https://sematext.com/docs/alerts/creating-experience-alerts/):** Guidelines for creating alerts focused on user experience metrics.
+- **[Creating Synthetics Alerts](https://sematext.com/docs/alerts/creating-synthetics-alerts/):** Instructions on setting up alerts based on synthetic monitoring.
+- **[Alert Scheduling](https://sematext.com/docs/alerts/alert-scheduling/):** Details on establishing a schedule for when alert notifications will be active.
+- **[Default Alert Rules](https://sematext.com/docs/alerts/default-alerts/)**: A list of predefined and fine-tuned alert rules that can be used for monitoring your applications.
+
