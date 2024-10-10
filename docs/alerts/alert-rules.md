@@ -25,7 +25,7 @@ Fields available:
 
 When clicking on a specific alert rule, detailed information about that rule is displayed. It contains important information that helps you better understand and manage the alert rule. 
 
-![Alert Rules](../images/alerts/alert-rule.png)
+![Alert Rule](../images/alerts/alert-rule.png)
 
 The information is organized into the following subsections:
 
@@ -33,7 +33,7 @@ The information is organized into the following subsections:
 
 The alert rule summary gives you a quick overview of the rule’s key configuration details.
 
-![Alert Rules](../images/alerts/alert-rule-summary.png)
+![Alert Rule Summary](../images/alerts/alert-rule-summary.png)
 
 Fields available:
 
@@ -49,7 +49,7 @@ Fields available:
 
 The **Rule Preview** chart visualizes the performance of the metric(s) that the alert rule monitors. This chart provides a live or recent historical view of the metric and shows when the conditions defined by the alert rule have been met.
 
-![Alert Rules](../images/alerts/alert-rule-preview-chart.png)
+![Alert Rule Preview Chart](../images/alerts/alert-rule-preview-chart.png)
 
 It displays the relevant metric over time along with the threshold set by the alert rule. Hovering over specific points on the chart reveals detailed information.
 
@@ -57,7 +57,7 @@ It displays the relevant metric over time along with the threshold set by the al
 
 This section lists all triggered alert events that have occurred based on this alert rule.
 
-![Alert Rules](../images/alerts/alert-rule-events.png)
+![Alert Rule Events](../images/alerts/alert-rule-events.png)
 
 The table includes:
 
@@ -70,7 +70,7 @@ This section helps you track historical alert events.
 
 The **Rule Details** section provides an quick view of the alert rule’s configuration.
 
-![Alert Rules](../images/alerts/alert-rule-details.png)
+![Alert Rule Details](../images/alerts/alert-rule-details.png)
 
 Fields included:
 
@@ -83,7 +83,7 @@ Fields included:
 
 You can configure the alert rule by clicking the three vertical dots in the top right corner and selecting **Edit Alert Rule**.
 
-![Alert Rules](../images/alerts/alert-rule-edit.png)
+![Edit Alert Rule](../images/alerts/alert-rule-edit.png)
 
 ## Creating an Alert Rule
 

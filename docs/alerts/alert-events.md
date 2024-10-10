@@ -5,7 +5,7 @@ Alert events are critical indicators that inform you when certain conditions wit
 
 ## Viewing Alert Events
 
-In the **Alerts** screen, you can easily observe and analyze triggered alerts. This view includes a 24/7 heatmap, histogram, and a detailed table displaying alerts triggered within the selected time period.
+In the **Alerts** page ([US](https://apps.sematext.com/ui/alerts/events) or [EU](https://apps.eu.sematext.com/ui/alerts/events)), you can easily observe and analyze triggered alerts. This view includes a 24/7 heatmap, histogram, and a detailed table displaying alerts triggered within the selected time period.
 
 ### Visualizations
 
@@ -22,8 +22,7 @@ By default, alerts for all Apps are displayed. However, you can filter alerts to
 - **Time range:** Adjust the time range using the date picker to view alerts for specific periods.
 - **Alerts Stream search bar:** Use the search bar at the top of the **Alerts Stream** table to search for a specific text string.
 
-
-TODO: Screenshot showing the Alerts Overview with heatmap, histogram, and alerts table.
+![Alert Events](../images/alerts/alert-events.png)
 
 ### User Actions
 
@@ -36,7 +35,11 @@ TODO: Screenshot showing the Alerts Overview with heatmap, histogram, and alerts
 
 Upon clicking an alert in the alerts table, you will be taken to a detailed view that provides comprehensive information about the selected alert event.
 
+![Alert Event](../images/alerts/alert-event.png)
+
 ### Alert Event Summary
+
+![Alert Event Summary](../images/alerts/alert-event-summary.png)
 
 At the top of the alert event detail view, you'll find key information that varies based on the alert type, including:
 
@@ -46,9 +49,9 @@ At the top of the alert event detail view, you'll find key information that vari
 - **Threshold:** The threshold value that was crossed.
 - **Current Value:** The current value of the metric associated with the alert.
 - **App Name:** The name of the App for which the alert was created.
-- **Tags:** A list of tags based on the alert rule configuration. Clickable tags, such as `os.host`, provide more detailed insights about the host, including metrics, processes, logs, and events.
+- **Tags:** A list of [tags](https://sematext.com/docs/tags/) based on the alert rule configuration. Clickable tags, such as `os.host`, provide more detailed insights about the host, including metrics, processes, logs, and events.
 
-Todo: Screenshot showing the alert event summary
+![Alert Event Host Quick Menu](../images/alerts/alert-event-oshost-quick-menu.gif)
 
 ### Alert Chart
 
@@ -58,7 +61,7 @@ Past triggered alerts are marked with annotations directly on the chart, so you 
 
 Hovering over specific points on the chart will display detailed information, such as the metric value at a particular time. You can zoom in and out on the chart to focus on specific time intervals, helping you analyze short-term or long-term trends.
 
-Todo: Screenshot of an Alert Chart showing metric values over time with annotations on triggered alerts.
+![Alert Event Chart](../images/alerts/alert-event-chart.png)
 
 ### Direct Access to App Reports
 
@@ -66,8 +69,7 @@ In the alert event detail view, a highly visible “Go to Troubleshooting” lin
 
 In the same section, you may also find the last log events that occurred immediately before the alert was triggered, offering immediate and relevant context for quick troubleshooting.
 
-
-Todo: screenshot
+![Alert Event Troubleshooting](../images/alerts/alert-event-troubleshooting.png)
 
 ### Built-in Correlation for Troubleshooting
 
@@ -75,24 +77,24 @@ The next sections provide the means to correlate alert events with other relevan
 
 #### Sematext Events
 
-A tile map of Sematext Events that occurred around the time the alert was triggered. This map provides a visual representation of significant events reported by the agent and other sources that may correlate with the alert, helping to identify potential issues. You can click on specific tiles to switch to the events view and access detailed information about each event.
+A tile map of [Sematext Events](https://sematext.com/docs/events/) that occurred around the time the alert was triggered. This map provides a visual representation of significant events reported by the agent and other sources that may correlate with the alert, helping to identify potential issues. You can click on specific tiles to switch to the events view and access detailed information about each event.
 
-Todo: screenshot with events
+![Sematext Events](../images/alerts/alert-event-sematext-events.png)
 
 #### Alert Events from this App and Connected Apps
 
-Below the Sematext Events, a chart provides a stacked view of alert events from the current App and any Connected Apps. This chart visually represents how multiple alerts are interacting over time, helping you understand if other Apps are experiencing similar issues.
+Below the Sematext Events, a chart provides a stacked view of alert events from the current App and any [Connected Apps](https://sematext.com/docs/guide/connected-apps/). This chart visually represents how multiple alerts are interacting over time, helping you understand if other Apps are experiencing similar issues.
 
-Todo: screenshot with events stacked chart
+![Alert Events Chart From Connected Apps](../images/alerts/alert-event-events-chart.png)
 
 ##### Alert Events Table
 
 A table follows the stacked view chart, listing alert events for both the current App and any connected Apps. Each row displays key details such as the alert type, alert rule name, triggered time, and priority. Two actions are available on each row:
 
-- A split screen icon that opens the Split Screen feature, allowing you to compare side-by-side reports from the current alert's App with those from the selected alert's App. This way you can easily identify relationships between different Apps, helping determine if a broader issue is affecting multiple components of your system.
+- A split screen icon that opens the [Split Screen](https://sematext.com/docs/guide/split-screen/) feature, allowing you to compare side-by-side reports from the current alert's App with those from the selected alert's App. This way you can easily identify relationships between different Apps, helping determine if a broader issue is affecting multiple components of your system.
 - A `NN+` logs icon that opens the Logs App connected to the selected alert and filters all logs by warning and/or error severity.
 
-Todo: screenshot
+![Alert Events From Connected Apps](../images/alerts/alert-events-other-events.png)
 
 ### Alert Rule Details
 
@@ -100,6 +102,4 @@ This section gives you insights into the parameters and configurations of the al
 
 You can configure an alert rule by clicking the three vertical dots in the top right corner and selecting **Edit Alert Rule**.
 
-Todo: add screenshot
-
-
+![Edit Alert Rule](../images/alerts/alert-event-edit-rule.png)
