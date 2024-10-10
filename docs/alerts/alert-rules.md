@@ -89,14 +89,11 @@ You can configure the alert rule by clicking the three vertical dots in the top 
 
 There are multiple methods to create an alert rule:
 
-1. **From a Chart:**
-   - Hover over any chart within an App report and click the small alert icon that appears at the top. This action opens the **'Create Alert Rule'** dialog, automatically populating properties such as filtering and grouping based on the settings applied within that specific chart.
+1. **From a Chart:** Hover over any chart within an App report and click the small alert icon that appears at the top. This action opens the **'Create Alert Rule'** dialog, automatically populating properties such as filtering and grouping based on the settings applied within that specific chart.
 
-2. **From the App Report:**
-   - Navigate to any App report and click on the alert icon in the actions menu at the top of the report.
+2. **From the App Report:** Navigate to any App report and click on the alert icon in the actions menu at the top of the report.
 
-3. **From the Alerts Page:**
-   - Access the Alerts page through the left menu panel and select **'+ New Alert Rule'** from the dropdown menu located at the top right of the screen.
+3. **From the Alerts Page:** Access the Alerts page through the left menu panel and select **'+ New Alert Rule'** from the dropdown menu located at the top right of the screen.
 
 ![Create Alert Rules](../images/alerts/create-alert-rules.gif)
 
