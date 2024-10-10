@@ -5,17 +5,17 @@ Alert rules are critical for maintaining the health and performance of your appl
 
 ## Viewing Alert Rules
 
-The **Alert Rules** page provides an organized list of all defined alert rules within your Apps and offers a clear overview of their current status and configuration. 
+The **Alert Rules** page ([US](https://apps.sematext.com/ui/alerts/rules) or [EU](https://apps.eu.sematext.com/ui/alerts/rules)) provides an organized list of all defined alert rules within your Apps and offers a clear overview of their current status and configuration. 
 
-Todo: screenshot
+![Alert Rules](../images/alerts/alert-rules.png)
 
 Fields available:
 
 - **Priority:** Specifies the importance of the alert rule.
-- **Integrations:** Lists the notification methods (e.g., Email, Slack, Webhook) tied to the alert.
+- **Integrations:** Lists the [notification methods](https://sematext.com/docs/alerts/alert-notifications/) (e.g., Email, Slack, Webhook) tied to the alert.
 - **Alert Rule Name:** The name of the alert rule.
 - **App:** The App to which this alert rule is applied.
-- **Last Notification:** Shows the time of the last alert notification. Clicking on this leads to the specific alert event details.
+- **Last Notification:** Shows the time of the last alert notification. Clicking on this leads to the specific [alert event](https://sematext.com/docs/alerts/alert-events/) details.
 - **App State:** Indicates whether the app is receiving data.
 - **Description:** A short description of the alert rule.
 - **Enabled:** A toggle switch to enable or disable the alert rule.
@@ -23,13 +23,17 @@ Fields available:
 
 ## Alert Rule Details
 
-When clicking on a specific alert rule, detailed information about that rule is displayed. It contains important information that helps you better understand and manage the alert rule. The information is organized into the following subsections:
+When clicking on a specific alert rule, detailed information about that rule is displayed. It contains important information that helps you better understand and manage the alert rule. 
+
+![Alert Rules](../images/alerts/alert-rule.png)
+
+The information is organized into the following subsections:
 
 ### Alert Rule Summary
 
 The alert rule summary gives you a quick overview of the rule’s key configuration details.
 
-Todo: Screenshot
+![Alert Rules](../images/alerts/alert-rule-summary.png)
 
 Fields available:
 
@@ -37,7 +41,7 @@ Fields available:
 - **Threshold:** The condition that triggers the alert (e.g., CPU usage > 80%).
 - **Interval:** The time interval for which the threshold must be crossed before triggering the alert.
 - **Notifications:** Whether notifications for this rule are enabled or disabled.
-- **Filters:** Any filtering conditions applied to limit when and where the alert rule applies (e.g., specific hosts).
+- **Filters:** Any filtering conditions to limit when and where the alert rule applies (e.g., specific hosts).
 - **Grouping Method:** The method used to group the data series (e.g., by host).
 - **Condition:** A detailed description of what will trigger the alert and under what conditions.
 
@@ -45,7 +49,7 @@ Fields available:
 
 The **Rule Preview** chart visualizes the performance of the metric(s) that the alert rule monitors. This chart provides a live or recent historical view of the metric and shows when the conditions defined by the alert rule have been met.
 
-Todo: screenshot
+![Alert Rules](../images/alerts/alert-rule-preview-chart.png)
 
 It displays the relevant metric over time along with the threshold set by the alert rule. Hovering over specific points on the chart reveals detailed information.
 
@@ -53,7 +57,7 @@ It displays the relevant metric over time along with the threshold set by the al
 
 This section lists all triggered alert events that have occurred based on this alert rule.
 
-Todo: screenshot
+![Alert Rules](../images/alerts/alert-rule-events.png)
 
 The table includes:
 
@@ -66,7 +70,7 @@ This section helps you track historical alert events.
 
 The **Rule Details** section provides an quick view of the alert rule’s configuration.
 
-Todo: screenshot
+![Alert Rules](../images/alerts/alert-rule-details.png)
 
 Fields included:
 
@@ -78,6 +82,8 @@ Fields included:
 - **Creator:** The creator of the alert rule.
 
 You can configure the alert rule by clicking the three vertical dots in the top right corner and selecting **Edit Alert Rule**.
+
+![Alert Rules](../images/alerts/alert-rule-edit.png)
 
 ## Creating an Alert Rule
 
@@ -112,11 +118,11 @@ You can then create an alert based on this new data series. For more information
 
 #### Filter by
 
-The **Filter** section defines criteria that will trigger an alert only under specific conditions. For example, if you collect data from multiple hosts and want to create an alert for a specific host, choose the tag name `os.host` and set the value to `host-x`.
+The **Filter** section [defines criteria](https://sematext.com/docs/dashboards/chart-builder/#filter-by) that will trigger an alert only under specific conditions. For example, if you collect data from multiple hosts and want to create an alert for a specific host, choose the tag name `os.host` and set the value to `host-x`.
 
 #### Group by
 
-In the **Group by** section, select what data series to group on. For example, choosing the `os.host` tag and setting the aggregation in the **Aggregation** field to `all separately` means the alert will trigger for each host individually.
+In the **Group by** section, select what [data series to group on](https://sematext.com/docs/dashboards/chart-builder/#group-by). For example, choosing the `os.host` tag and setting the aggregation in the **Aggregation** field to `all separately` means the alert will trigger for each host individually.
 
 #### Rollup by
 
