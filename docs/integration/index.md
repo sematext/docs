@@ -80,6 +80,7 @@ Integrations for continuous integration and continuous deployment tools.
 |---------------------------|---------------------------------------------------------|-------------------------------|
 | [Jenkins](https://sematext.com/docs/integration/jenkins-integration/)               | Monitor CI/CD pipelines | Monitoring |
 | [GitHub Webhook Events](https://sematext.com/docs/integration/github-webhooks-integration/) | Capture GitHub events and track related logs | Logs |
+| [Synthetics for CI/CD](https://sematext.com/docs/synthetics/ci-cd/overview/) | Monitor and test APIs and web performance during CI/CD processes | Synthetics |
 
 ## Cloud Services
 Integrations for cloud service monitoring.
