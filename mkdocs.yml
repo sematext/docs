@@ -201,6 +201,7 @@ pages:
       - CI/CD Tools:
         - GitHub Webhook Events: integration/github-webhook-events-integration.md
         - Jenkins: integration/jenkins.md
+        - Terraform: integration/terraform.md
         - Synthetics for CI/CD:
           - Overview: synthetics/ci-cd/overview.md
           - Jenkins: synthetics/ci-cd/jenkins.md
@@ -258,10 +259,6 @@ pages:
         - VictorOps: integration/alerts-victorops-integration.md
         - Zapier: integration/alerts-zapier-integration.md
         - Custom Params: integration/alerts-webhooks-custom-params.md
-      - Orchestration:
-        - Terraform: integration/terraform.md
-      - Synthetics:
-        - Vercel: integration/vercel-synthetics-integration.md
     - Alerts:
       - Overview: alerts/index.md
       - Alert Events: alerts/alert-events.md
