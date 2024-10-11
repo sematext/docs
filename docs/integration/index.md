@@ -24,6 +24,7 @@ Integrations for popular web and application servers.
 | Integration          | Description                                                   | Solution           |
 |----------------------|---------------------------------------------------------------|--------------------|
 | [Apache Web Server](https://sematext.com/docs/integration/apache-integration/) | Monitor performance and logs from Apache web servers | Monitoring & Logs |
+| [HAProxy](https://sematext.com/docs/integration/haproxy/) | Monitor HAProxy load balancer performance | Monitoring & Logs |
 | [NGINX](https://sematext.com/docs/integration/nginx/) | Collect metrics and logs from NGINX web servers | Monitoring & Logs |
 | [NGINX Plus](https://sematext.com/docs/integration/nginxplus/) | Monitor advanced features and logs from NGINX Plus | Monitoring & Logs |
 | [Tomcat](https://sematext.com/docs/integration/tomcat/) | Monitor application performance and logs from Tomcat servers | Monitoring & Logs |
@@ -97,18 +98,22 @@ Integrations for managing and analyzing generic and system logs.
 ## Frontend & User Experience
 Integrations for monitoring the performance and responsiveness of frontend applications.
 
---- FIXME: move these integrations to dedicated pages --- 
-
 | Integration                       | Description                                           | Solution                       |
 |-----------------------------------|-------------------------------------------------------|-------------------------------|
-| [Angular](https://sematext.com/docs/integration/angular-integration/) | Monitor Angular applications for performance and experience.| Experience |
-| [React](https://sematext.com/docs/integration/react-integration/) | Track performance metrics and logs from React applications.| Experience |
-| [Vue.js](https://sematext.com/docs/integration/vuejs-integration/) | Monitor Vue.js applications and manage their performance.| Experience |
-| [Ember](https://sematext.com/docs/integration/ember-integration/) | Monitor Ember applications for responsiveness| Experience  |
-| [Mobile Apps](https://sematext.com/docs/integration/mobile-integration/) | Monitor logs from mobile applications | Logs   |
-| [Static Websites](https://sematext.com/docs/integration/static-websites-integration/) | Track experience for static web pages | Experience |
-| [Server-side Rendered Websites](https://sematext.com/docs/integration/ssr-integration/) | Monitor server-rendered websites | Experience    |
-| [Vercel](https://sematext.com/docs/integration/vercel-integration/) | Track Vercel-hosted applications | Logs & Experience |  
+| [Angular](https://sematext.com/docs/experience/integrations/#angular) | Monitor Angular applications for performance and experience | Experience |
+| [Google Tag Manager](https://sematext.com/docs/experience/integrations/#google-tag-manager) | Integrate Experience using Google Tag Manager | Experience |
+| [React](https://sematext.com/docs/experience/integrations/#react) | Track performance metrics and logs from React applications | Experience |
+| [Vue.js](https://sematext.com/docs/experience/integrations/#vuejs) | Monitor Vue.js applications and manage their performance | Experience |
+| [Next.js](https://sematext.com/docs/experience/integrations/#nextjs) | Monitor Next.js applications and manage their performance | Experience |
+| [Ember](https://sematext.com/docs/experience/integrations/#ember) | Monitor Ember applications for responsiveness| Experience  |
+| [Mobile Apps](https://sematext.com/docs/integration/mobile-apps-logs/) | Monitor logs from mobile applications | Logs   |
+| [Static Websites](https://sematext.com/docs/experience/integrations/#static-websites) | Track experience for static web pages | Experience |
+| [Server-side Rendered Websites](https://sematext.com/docs/experience/integrations/#server-side-rendered-websites) | Monitor server-rendered websites | Experience |
+| [Wordpress](https://sematext.com/docs/experience/integrations/#wordpress) | Track experience for Wordpress web pages | Experience |
+| [Micro Frontend](https://sematext.com/docs/experience/integrations/#micro-frontend) | Monitor your micro frontend based web applications | Experience |
+| [Vercel Experience](https://sematext.com/docs/experience/integrations/#vercel) | Track Vercel-hosted applications | Experience |
+| [Vercel Synthetics](https://sematext.com/docs/integration/vercel-synthetics-integration/) | Track Vercel-hosted applications | Synthetics |
+| [Vercel Logs](https://sematext.com/docs/integration/vercel-logs-integration/) | Track Vercel-hosted applications | Logs |
 
 ## Notification Hooks
 Integrations that provide instant alerts across your preferred communication platforms.
@@ -135,7 +140,6 @@ Integrations that provide instant alerts across your preferred communication pla
 | [Zapier](/integration/alerts-zapier-integration/) | Automate alerts through Zapier integration | Alerts |
 | [AlertOps](/integration/alerts-alertops-integration/) | Integrate with AlertOps for incident management | Alerts |
 
-
 ## Setup Instructions
-Each integration comes with detailed setup instructions to help you easily configure it for your environment. You can find specific instructions for each integration on the respective documentation page of each integration.
+Each integration comes with detailed setup instructions to help you easily configure it for your environment. You can find specific instructions for each integration on their respective documentation page.
 
