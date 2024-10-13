@@ -176,8 +176,6 @@ Other built-in reports include:
 
 ## Correlating Metrics & Logs
 
-Be sure to check out the [Solr Logs integration](./solr-logs.md) as well, to get a complete view on Solr: what kind of errors or warnings are happening, how fast is each request, when Solr was restarted and so on.
-
 You can also correlate logs with metrics using [Split Screen](../guide/split-screen.md). For example, if you have a slow query in the logs, you can bring your Solr Monitoring App on the same screen and dig deeper in four steps:
 
 ![](https://sematext.com/wp-content/uploads/2021/01/solr-performance-01.png)
