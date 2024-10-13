@@ -230,19 +230,19 @@ pages:
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
       - Frontend & User Experience:
-        - Angular: experience/integrations/
-        - Ember: experience/integrations/
-        - Google Tag Manager: experience/integrations/
-        - Micro Frontend: experience/integrations/
-        - Next.js: experience/integrations/
-        - React: experience/integrations/
-        - Server-side Rendered Websites: experience/integrations/
-        - Static Websites: experience/integrations/
-        - Vercel Experience: experience/integrations/
+        - Angular: experience/integrations.md
+        - Ember: experience/integrations.md
+        - Google Tag Manager: experience/integrations.md
+        - Micro Frontend: experience/integrations.md
+        - Next.js: experience/integrations.md
+        - React: experience/integrations.md
+        - Server-side Rendered Websites: experience/integrations.md
+        - Static Websites: experience/integrations.md
+        - Vercel Experience: experience/integrations.md
         - Vercel Synthetics: integration/vercel-synthetics-integration/
         - Vercel Logs: integration/vercel-logs-integration.md
-        - Vue.js: experience/integrations/
-        - Wordpress: experience/integrations/
+        - Vue.js: experience/integrations.md
+        - Wordpress: experience/integrations.md
       - Mobile Apps:
         - Mobile Apps Logs: integration/mobile-apps-logs.md
       - Notification Hooks:
