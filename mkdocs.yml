@@ -239,7 +239,7 @@ pages:
         - Server-side Rendered Websites: experience/integrations.md
         - Static Websites: experience/integrations.md
         - Vercel Experience: experience/integrations.md
-        - Vercel Synthetics: integration/vercel-synthetics-integration/
+        - Vercel Synthetics: integration/vercel-synthetics-integration.md
         - Vercel Logs: integration/vercel-logs-integration.md
         - Vue.js: experience/integrations.md
         - Wordpress: experience/integrations.md
