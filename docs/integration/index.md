@@ -40,7 +40,7 @@ Integrations to monitor various databases and data storage solutions.
 | [Elasticsearch](https://sematext.com/docs/integration/elasticsearch-integration/) | Monitor Elasticsearch clusters and manage log data | Monitoring & Logs |
 | [OpenSearch](https://sematext.com/docs/integration/opensearch-integration/) | Track performance and logs in OpenSearch clusters | Monitoring & Logs |
 | [Solr](https://sematext.com/docs/integration/solr-integration/) | Monitor Solr search platform performance and logs | Monitoring & Logs  |
-| [Solr Cloud](https://sematext.com/docs/integration/solr-integration/) | Monitor distributed Solr Cloud installations and logs  | Monitoring & Logs |
+| [SolrCloud](https://sematext.com/docs/integration/solr-integration/) | Monitor distributed Solr Cloud installations and logs  | Monitoring & Logs |
 | [MySQL](https://sematext.com/docs/integration/mysql-integration/)          | Monitor MySQL databases and log queries | Monitoring & Logs  |
 | [PostgreSQL](https://sematext.com/docs/integration/postgresql/) | Monitor PostgreSQL databases and manage log data | Monitoring & Logs  |
 | [Redis](https://sematext.com/docs/integration/redis/)       | Track performance metrics and logs from Redis instances    | Monitoring & Logs  |
