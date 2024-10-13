@@ -15,8 +15,8 @@ Fields available:
 - **Integrations:** Lists the [notification methods](https://sematext.com/docs/alerts/alert-notifications/) (e.g., Email, Slack, Webhook) tied to the alert.
 - **Alert Rule Name:** The name of the alert rule.
 - **App:** The App to which this alert rule is applied.
-- **Last Notification:** Shows the time of the last alert notification. Clicking on this leads to the specific [alert event](https://sematext.com/docs/alerts/alert-events/) details.
-- **App State:** Indicates whether the app is receiving data.
+- **Last Notification:** Shows the time the last alert was triggered. Clicking on this leads to the specific [alert event](https://sematext.com/docs/alerts/alert-events/) details.
+- **App State:** Indicates whether the App is currently receiving data.
 - **Description:** A short description of the alert rule.
 - **Enabled:** A toggle switch to enable or disable the alert rule.
 - **Actions:** Available actions for each alert rule (Edit, Clone, Delete).
@@ -68,14 +68,14 @@ This section helps you track historical alert events.
 
 ### Rule Details
 
-The **Rule Details** section provides an quick view of the alert rule’s configuration.
+The **Rule Details** section provides a quick view of the alert rule’s configuration.
 
 ![Alert Rule Details](../images/alerts/alert-rule-details.png)
 
 Fields included:
 
 - **Metrics:** The specific metric(s) being monitored.
-- **Priority:** The priority of the alert rule
+- **Priority:** The priority of the alert rule.
 - **Groups:** How data is grouped (e.g., by host).
 - **Interval:** The time interval before the alert triggers.
 - **Threshold:** The conditions that trigger the alert.
@@ -139,7 +139,7 @@ The **Meta Data** tab allows you to enter details about the alert, such as the a
 
 #### Runbook
 
-The runbook serves as a detailed guide outlining procedures, recommended actions, and best practices to follow when an alert is triggered. It ensures a standardized and efficient approach to managing routine operations, handling system updates, addressing issues, and promptly restoring services upon alert activation.
+The [runbook](https://sematext.com/glossary/runbook/) serves as a detailed guide outlining procedures, recommended actions, and best practices to follow when an alert is triggered. It ensures a standardized and efficient approach to managing routine operations, handling system updates, addressing issues, and promptly restoring services upon alert activation.
 
 ### Notifications
 

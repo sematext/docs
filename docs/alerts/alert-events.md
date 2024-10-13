@@ -73,7 +73,7 @@ In the same section, you may also find the last log events that occurred immedia
 
 ### Built-in Correlation for Troubleshooting
 
-The next sections provide the means to correlate alert events with other relevant information from Sematext.
+The next sections provide the means to correlate alert events with other relevant observability data.
 
 #### Sematext Events
 
@@ -91,7 +91,7 @@ Below the Sematext Events, a chart provides a stacked view of alert events from 
 
 A table follows the stacked view chart, listing alert events for both the current App and any connected Apps. Each row displays key details such as the alert type, alert rule name, triggered time, and priority. Two actions are available on each row:
 
-- A split screen icon that opens the [Split Screen](https://sematext.com/docs/guide/split-screen/) feature, allowing you to compare side-by-side reports from the current alert's App with those from the selected alert's App. This way you can easily identify relationships between different Apps, helping determine if a broader issue is affecting multiple components of your system.
+- The split screen icon opens the [Split Screen](https://sematext.com/docs/guide/split-screen/) feature, allowing you to compare side-by-side reports from the current alert's App with those from the selected alert's App. This way you can easily identify relationships between different Apps, helping determine if a broader issue is affecting multiple components of your system.
 - A `NN+` logs icon that opens the Logs App connected to the selected alert and filters all logs by warning and/or error severity.
 
 ![Alert Events From Connected Apps](../images/alerts/alert-events-other-events.png)
