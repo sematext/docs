@@ -26,7 +26,7 @@ Integrations for popular web and application servers.
 |----------------------|---------------------------------------------------------------|--------------------|
 | [Apache Web Server](https://sematext.com/docs/integration/apache-integration/) | Monitor performance and logs from Apache web servers | Monitoring & Logs |
 | [HAProxy](https://sematext.com/docs/integration/haproxy/) | Monitor HAProxy load balancer performance | Monitoring & Logs |
-| [NGINX](https://sematext.com/docs/integration/nginx/) | Collect metrics and logs from NGINX web servers | Monitoring & Logs |
+| [NGINX](https://sematext.com/docs/integration/nginx-integration/) | Collect metrics and logs from NGINX web servers | Monitoring & Logs |
 | [NGINX Plus](https://sematext.com/docs/integration/nginxplus/) | Monitor advanced features and logs from NGINX Plus | Monitoring & Logs |
 | [Tomcat](https://sematext.com/docs/integration/tomcat/) | Monitor application performance and logs from Tomcat servers | Monitoring & Logs |
 | [Varnish Cache](https://sematext.com/docs/integration/varnishcache-integration/) | Analyze caching performance and logs from Varnish | Monitoring & Logs |
@@ -42,7 +42,7 @@ Integrations to monitor various databases and data storage solutions.
 | [Solr](https://sematext.com/docs/integration/solr-integration/) | Monitor Solr search platform performance and logs | Monitoring & Logs  |
 | [SolrCloud](https://sematext.com/docs/integration/solr-integration/) | Monitor distributed Solr Cloud installations and logs  | Monitoring & Logs |
 | [MySQL](https://sematext.com/docs/integration/mysql-integration/)          | Monitor MySQL databases and log queries | Monitoring & Logs  |
-| [PostgreSQL](https://sematext.com/docs/integration/postgresql/) | Monitor PostgreSQL databases and manage log data | Monitoring & Logs  |
+| [PostgreSQL](https://sematext.com/docs/integration/postgresql-integration/) | Monitor PostgreSQL databases and manage log data | Monitoring & Logs  |
 | [Redis](https://sematext.com/docs/integration/redis/)       | Track performance metrics and logs from Redis instances    | Monitoring & Logs  |
 | [MongoDB](https://sematext.com/docs/integration/mongodb/)      | Monitor MongoDB databases and collect log data.  | Monitoring & Logs  |
 | [Cassandra](https://sematext.com/docs/integration/cassandra/)  | Monitor Cassandra clusters and analyze log information  | Monitoring |
@@ -69,7 +69,7 @@ Integrations that support a variety of programming languages and frameworks.
 
 | Integration | Description                                              | Solution                      |
 |-------------|----------------------------------------------------------|-------------------------------|
-| [JVM](https://sematext.com/docs/integration/jvm/)         | Monitor Java Virtual Machine performance and logs      | Monitoring & Logs |
+| [JVM](https://sematext.com/docs/integration/jvm-integration/)         | Monitor Java Virtual Machine performance and logs      | Monitoring & Logs |
 | [Node.js](https://sematext.com/docs/integration/node.js/)     | Track performance metrics for Node.js applications     | Monitoring    |
 | [Express.js](https://sematext.com/docs/integration/express.js/)  | Monitor Express.js applications and manage logs        | Monitoring |
 | [PHP](https://sematext.com/docs/integration/php/)         | Track performance for PHP applications                 | Monitoring        |

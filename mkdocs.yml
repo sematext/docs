@@ -195,7 +195,7 @@ pages:
       - Programming Languages & Frameworks:
         - Akka: integration/akka.md
         - Express.js: integration/express.js.md
-        - JVM: integration/jvm.md
+        - JVM: integration/jvm-integration.md
         - Node.js: integration/node.js.md
         - PHP: integration/php.md
       - CI/CD Tools:
