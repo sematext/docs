@@ -1,5 +1,5 @@
 title: Alert Rules
-description: Alert rules are essential for monitoring your applications and infrastructure. They allow you to set specific conditions under which you will be notified of changes in metrics or events
+description: Alert rules are essential for monitoring your applications and infrastructure. They allow you to set specific conditions under which you will be notified of changes in metrics or log events
 
 Alert rules are critical for maintaining the health and performance of your applications and infrastructure. By setting specific conditions, you can get notified on unexpected changes, helping you respond quickly to issues like outages or performance drops.
 
