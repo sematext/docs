@@ -183,7 +183,7 @@ pages:
         - Opensearch: integration/opensearch-integration.md
         - PostgreSQL: integration/postgresql-integration.md
         - Redis: integration/redis.md
-        - Solr: integration/solr.md
+        - Solr: integration/solr-integration.md
         - Solr Cloud: integration/solrcloud.md
       - Big Data & Messaging:
         - Hadoop: integration/hadoop.md
