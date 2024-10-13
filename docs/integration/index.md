@@ -18,6 +18,7 @@ Monitoring server infrastructures, containerized applications, and orchestration
 | [Linux](https://sematext.com/docs/integration/linux/)  | Monitor and analyze log data from Linux systems     | Monitoring & Logs |
 | [Windows](https://sematext.com/docs/integration/windows/) | Monitor performance and logs from Windows Servers | Monitoring & Logs |
 
+
 ## Web & Application Servers
 Integrations for popular web and application servers.
 
@@ -29,6 +30,7 @@ Integrations for popular web and application servers.
 | [NGINX Plus](https://sematext.com/docs/integration/nginxplus/) | Monitor advanced features and logs from NGINX Plus | Monitoring & Logs |
 | [Tomcat](https://sematext.com/docs/integration/tomcat/) | Monitor application performance and logs from Tomcat servers | Monitoring & Logs |
 | [Varnish Cache](https://sematext.com/docs/integration/varnishcache-integration/) | Analyze caching performance and logs from Varnish | Monitoring & Logs |
+
 
 ## Databases & Data Stores
 Integrations to monitor various databases and data storage solutions.
@@ -73,6 +75,7 @@ Integrations that support a variety of programming languages and frameworks.
 | [PHP](https://sematext.com/docs/integration/php/)         | Track performance for PHP applications                 | Monitoring        |
 | [Akka](https://sematext.com/docs/integration/akka/)        | Monitor Akka applications for distributed computing    | Monitoring   |
 
+
 ## CI/CD Tools
 Integrations for continuous integration and continuous deployment tools.
 
@@ -83,39 +86,55 @@ Integrations for continuous integration and continuous deployment tools.
 | [Terraform](https://sematext.com/docs/integration/terraform/) | Monitor and track Terraform execution and infrastructure changes | Generic |
 | [Synthetics for CI/CD](https://sematext.com/docs/synthetics/ci-cd/overview/) | Monitor and test APIs and web performance during CI/CD processes | Synthetics |
 
+
 ## Cloud Services
 Integrations for cloud service monitoring.
 
 | Integration                | Description                                              | Solution                      |
 |----------------------------|----------------------------------------------------------|-------------------------------|
 | [Amazon Web Services (AWS)](https://sematext.com/docs/integration/aws/)  | Monitor various AWS services and resources | Monitoring |
+| [AWS ECS](https://sematext.com/docs/integration/aws-ecs-logs/) | Collect and analyze logs from AWS ECS for containerized apps | Logs |
+| [AWS CloudWatch](https://sematext.com/docs/integration/aws-cw/) | Analyze logs from AWS CloudWatch for infrastructure and apps | Logs |
+| [AWS Lambda](https://sematext.com/docs/integration/aws-lambda/) | Subscribe to AWS Lambda log streams | Logs |
+| [AWS S3](https://sematext.com/docs/integration/aws-s3/) | Collect various logs from AWS S3, including CloudTrail, Flow logs and ELB access logs | Logs |
+
 
 ## Generic & System Logs
 Integrations for managing and analyzing generic and system logs.
 
-| Integration  | Description                                               | Solution                       |
+| Integration  | Description                                               | Solution                      |
 |--------------|-----------------------------------------------------------|-------------------------------|
 | [Generic Logs](https://sematext.com/docs/integration/generic-logs-integration/) | Manage and analyze various log data types |Logs |
+| [Syslog](https://sematext.com/docs/logs/syslog/) | Centralized logging for any syslog-compliant application |Logs |
+
 
 ## Frontend & User Experience
 Integrations for monitoring the performance and responsiveness of frontend applications.
 
-| Integration                       | Description                                           | Solution                       |
+| Integration                       | Description                                           | Solution                      |
 |-----------------------------------|-------------------------------------------------------|-------------------------------|
 | [Angular](https://sematext.com/docs/experience/integrations/#angular) | Monitor Angular applications for performance and experience | Experience |
-| [Google Tag Manager](https://sematext.com/docs/experience/integrations/#google-tag-manager) | Integrate Experience using Google Tag Manager | Experience |
-| [React](https://sematext.com/docs/experience/integrations/#react) | Track performance metrics and logs from React applications | Experience |
-| [Vue.js](https://sematext.com/docs/experience/integrations/#vuejs) | Monitor Vue.js applications and manage their performance | Experience |
-| [Next.js](https://sematext.com/docs/experience/integrations/#nextjs) | Monitor Next.js applications and manage their performance | Experience |
 | [Ember](https://sematext.com/docs/experience/integrations/#ember) | Monitor Ember applications for responsiveness| Experience  |
-| [Mobile Apps](https://sematext.com/docs/integration/mobile-apps-logs/) | Monitor logs from mobile applications | Logs   |
-| [Static Websites](https://sematext.com/docs/experience/integrations/#static-websites) | Track experience for static web pages | Experience |
-| [Server-side Rendered Websites](https://sematext.com/docs/experience/integrations/#server-side-rendered-websites) | Monitor server-rendered websites | Experience |
-| [Wordpress](https://sematext.com/docs/experience/integrations/#wordpress) | Track experience for Wordpress web pages | Experience |
+| [Google Tag Manager](https://sematext.com/docs/experience/integrations/#google-tag-manager) | Integrate Experience using Google Tag Manager | Experience |
 | [Micro Frontend](https://sematext.com/docs/experience/integrations/#micro-frontend) | Monitor your micro frontend based web applications | Experience |
+| [Next.js](https://sematext.com/docs/experience/integrations/#nextjs) | Monitor Next.js applications and manage their performance | Experience |
+| [React](https://sematext.com/docs/experience/integrations/#react) | Track performance metrics and logs from React applications | Experience |
+| [Server-side Rendered Websites](https://sematext.com/docs/experience/integrations/#server-side-rendered-websites) | Monitor server-rendered websites | Experience |
+| [Static Websites](https://sematext.com/docs/experience/integrations/#static-websites) | Track experience for static web pages | Experience |
 | [Vercel Experience](https://sematext.com/docs/experience/integrations/#vercel) | Track Vercel-hosted applications | Experience |
 | [Vercel Synthetics](https://sematext.com/docs/integration/vercel-synthetics-integration/) | Track Vercel-hosted applications | Synthetics |
 | [Vercel Logs](https://sematext.com/docs/integration/vercel-logs-integration/) | Track Vercel-hosted applications | Logs |
+| [Vue.js](https://sematext.com/docs/experience/integrations/#vuejs) | Monitor Vue.js applications and manage their performance | Experience |
+| [Wordpress](https://sematext.com/docs/experience/integrations/#wordpress) | Track experience for Wordpress web pages | Experience |
+
+
+## Mobile Apps
+Integrations for monitoring the performance and responsiveness of mobile applications across various platforms.
+
+| Integration                       | Description                                           | Solution                    |
+|-----------------------------------|-------------------------------------------------------|-----------------------------|
+| [Mobile Apps](https://sematext.com/docs/integration/mobile-apps-logs/) | Monitor logs from mobile applications | Logs   |
+
 
 ## Notification Hooks
 Integrations that provide instant alerts across your preferred communication platforms.
@@ -141,6 +160,7 @@ Integrations that provide instant alerts across your preferred communication pla
 | [Hipchat](/integration/alerts-hipchat-integration/) | Send notifications through Hipchat | Alerts |
 | [Zapier](/integration/alerts-zapier-integration/) | Automate alerts through Zapier integration | Alerts |
 | [AlertOps](/integration/alerts-alertops-integration/) | Integrate with AlertOps for incident management | Alerts |
+
 
 ## Setup Instructions
 Each integration comes with detailed setup instructions to help you easily configure it for your environment. You can find specific instructions for each integration on their respective documentation page.
