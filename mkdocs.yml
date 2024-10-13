@@ -183,9 +183,9 @@ pages:
         - Opensearch: integration/opensearch-integration.md
         - PostgreSQL: integration/postgresql-integration.md
         - Redis: integration/redis.md
-        - Solr: integration/solr-integration.md
-        - SolrCloud: integration/solrcloud.md
-      - Big Data & Messaging Systems:
+        - Solr: integration/solr.md
+        - Solr Cloud: integration/solrcloud.md
+      - Big Data & Messaging:
         - Hadoop: integration/hadoop.md
         - Kafka: integration/kafka.md
         - RabbitMQ: integration/rabbitmq-integration.md
