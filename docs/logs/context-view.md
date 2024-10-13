@@ -9,6 +9,10 @@ You can access the Log Context directly from the Logs Table by clicking on the t
 
 ![Logs Context View Menu](../images/logs/logs-context-view-menu.png)
 
+You can also access it when viewing a specific log from the side panel.
+
+![Logs Context View Menu](../images/logs/logs-context-view-side-panel.png)
+
 Once in the Context View, the selected log entry is marked, making it easy to identify and analyze it within the context of surrounding logs.
 
 ![Logs Context View](../images/logs/logs-context-view.png)

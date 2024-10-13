@@ -39,7 +39,7 @@ Once data is in, you can explore it via the built-in reports:
 
 ![JVM Overview Report](../images/agents/jvm_logs_overview.png)
 
-Sematext can also collect JVM performance metrics in addition to extracting valuable data about garbage collection from the JVM logs. For monitoring JVM performance check out the [JVM Monitoring integration](./jvm.md).  These two integrations will give you a complete insight about your JVM-based applications. 
+Sematext can collect JVM performance metrics and extract valuable data about garbage collection from JVM logs, providing complete insights into your JVM-based applications.
 
 ## Exploring Logs
 

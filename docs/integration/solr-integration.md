@@ -159,7 +159,7 @@ Once data is in, you can explore it via the built-in reports:
 
 ![Solr Logs Overview](../images/agents/solr_logs_overview.png)
 
-Be sure to check out the [Solr Monitoring integration](./solr.md) as well, to get a complete view on Solr. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect logs from [all] queries.
+Be sure to check out the Solr metrics as well, to get a complete view on Solr. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect logs from [all] queries.
 
 ## Exploring logs
 
@@ -175,8 +175,6 @@ Other built-in reports include:
 - **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
 
 ## Correlating Metrics & Logs
-
-Be sure to check out the [Solr Logs integration](./solr-logs.md) as well, to get a complete view on Solr: what kind of errors or warnings are happening, how fast is each request, when Solr was restarted and so on.
 
 You can also correlate logs with metrics using [Split Screen](../guide/split-screen.md). For example, if you have a slow query in the logs, you can bring your Solr Monitoring App on the same screen and dig deeper in four steps:
 
