@@ -159,7 +159,7 @@ Once data is in, you can explore it via the built-in reports:
 
 ![Solr Logs Overview](../images/agents/solr_logs_overview.png)
 
-Be sure to check out the [Solr Monitoring integration](./solr.md) as well, to get a complete view on Solr. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect logs from [all] queries.
+Be sure to check out the Solr metrics as well, to get a complete view on Solr. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect logs from [all] queries.
 
 ## Exploring logs
 
