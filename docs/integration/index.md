@@ -81,8 +81,8 @@ Integrations for continuous integration and continuous deployment tools.
 
 | Integration               | Description                                             | Solution                      |
 |---------------------------|---------------------------------------------------------|-------------------------------|
-| [Jenkins](https://sematext.com/docs/integration/jenkins-integration/)               | Monitor CI/CD pipelines | Monitoring |
-| [GitHub Webhook Events](https://sematext.com/docs/integration/github-webhooks-integration/) | Capture GitHub events and track related logs | Logs |
+| [Jenkins](https://sematext.com/docs/integration/jenkins/) | Monitor CI/CD pipelines | Monitoring |
+| [GitHub Webhook Events](https://sematext.com/docs/integration/github-webhook-events-integration/) | Capture GitHub events and track related logs | Logs |
 | [Terraform](https://sematext.com/docs/integration/terraform/) | Monitor and track Terraform execution and infrastructure changes | Generic |
 | [Synthetics for CI/CD](https://sematext.com/docs/synthetics/ci-cd/overview/) | Monitor and test APIs and web performance during CI/CD processes | Synthetics |
 
@@ -141,25 +141,27 @@ Integrations that provide instant alerts across your preferred communication pla
 
 | Integration                              | Description                                           | Solution                            |
 |------------------------------------------|-------------------------------------------------------|-------------------------------------|
+| [AlertOps](/integration/alerts-alertops-integration/) | Integrate with AlertOps for incident management | Alerts |
+| [Big Panda](/integration/alerts-bigpanda-integration/) | Monitor events with Big Panda notifications | Alerts |
 | [Email as default system notification hook](/integration/alerts-email-integration/) | Send email alerts for monitoring events | Alerts |
 | [Custom user defined WebHook](/integration/alerts-webhooks-integration/) | Configure custom webhooks for alerts | Alerts |
-| [PagerDuty](/integration/alerts-pagerduty-integration/) | Integrate with PagerDuty | Alerts |
-| [Slack](/integration/alerts-slack-integration/) | Receive alerts in your Slack channels | Alerts |
-| [OpsGenie](/integration/alerts-opsgenie-integration/) | Get notifications through OpsGenie | Alerts |
-| [Big Panda](/integration/alerts-bigpanda-integration/) | Monitor events with Big Panda notifications | Alerts |
-| [VictorOps](/integration/alerts-victorops-integration/) | Integrate with VictorOps for alerting  | Alerts |
-| [Pushover](/integration/alerts-pushover-integration/) | Get instant alerts via Pushover | Alerts |
-| [Telegram](/integration/alerts-telegram-integration/) | Receive notifications through Telegram | Alerts |
+| [Google Chat](/integration//alerts-googlechat-integration/) | Send notifications to Google Chat rooms | Alerts |
+| [Hipchat](/integration/alerts-hipchat-integration/) | Send notifications through Hipchat | Alerts |
 | [Microsoft Teams](/integration/alerts-microsoft-teams-integration/) | Get alerts in Microsoft Teams channels | Alerts |
+| [Nagios](/integration/alerts-nagios-integration/) | Monitor and integrate Nagios alerts | Alerts |
+| [OpsGenie](/integration/alerts-opsgenie-integration/) | Get notifications through OpsGenie | Alerts |
+| [PagerDuty](/integration/alerts-pagerduty-integration/) | Integrate with PagerDuty | Alerts |
+| [Pushover](/integration/alerts-pushover-integration/) | Get instant alerts via Pushover | Alerts |
+| [ServiceNow](/integration/alerts-servicenow-integration/) | Integrate with ServiceNow  | Alerts |
+| [Signl4](/integration/alerts-signl4-integration/) | Receive alerts on mobile with Signl4 | Alerts |
+| [Slack](/integration/alerts-slack-integration/) | Receive alerts in your Slack channels | Alerts |
 | [SMS / text](/integration/alerts-sms-integration/) | Send alerts via SMS | Alerts |
 | [Spike.sh](/integration/alerts-spikesh-integration/) | Integrate with Spike.sh | Alerts |
 | [Squadcast](/integration/alerts-squadcast-integration/) | Get alerts through Squadcast incident management | Alerts |
+| [Telegram](/integration/alerts-telegram-integration/) | Receive notifications through Telegram | Alerts |
 | [Twilio](/integration/alerts-twilio-integration/) | Send SMS alerts using Twilio integration | Alerts |
-| [Signl4](/integration/alerts-signl4-integration/) | Receive alerts on mobile with Signl4 | Alerts |
-| [Nagios](/integration/alerts-nagios-integration/) | Monitor and integrate Nagios alerts | Alerts |
-| [Hipchat](/integration/alerts-hipchat-integration/) | Send notifications through Hipchat | Alerts |
+| [VictorOps](/integration/alerts-victorops-integration/) | Integrate with VictorOps for alerting  | Alerts |
 | [Zapier](/integration/alerts-zapier-integration/) | Automate alerts through Zapier integration | Alerts |
-| [AlertOps](/integration/alerts-alertops-integration/) | Integrate with AlertOps for incident management | Alerts |
 
 
 ## Setup Instructions
