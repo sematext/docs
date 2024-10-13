@@ -230,19 +230,19 @@ pages:
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
       - Frontend & User Experience:
-        - Angular: https://sematext.com/docs/experience/integrations/#angular
-        - Ember: experience/integrations/#ember
-        - Google Tag Manager: experience/integrations/#google-tag-manager
-        - Micro Frontend: experience/integrations/#micro-frontend
-        - Next.js: experience/integrations/#nextjs
-        - React: experience/integrations/#react
-        - Server-side Rendered Websites: experience/integrations/#server-side-rendered-websites
-        - Static Websites: experience/integrations/#static-websites
-        - Vercel Experience: experience/integrations/#vercel
+        - Angular: experience/integrations/
+        - Ember: experience/integrations/
+        - Google Tag Manager: experience/integrations/
+        - Micro Frontend: experience/integrations/
+        - Next.js: experience/integrations/
+        - React: experience/integrations/
+        - Server-side Rendered Websites: experience/integrations/
+        - Static Websites: experience/integrations/
+        - Vercel Experience: experience/integrations/
         - Vercel Synthetics: integration/vercel-synthetics-integration/
         - Vercel Logs: integration/vercel-logs-integration.md
-        - Vue.js: experience/integrations/#vuejs
-        - Wordpress: experience/integrations/#wordpress
+        - Vue.js: experience/integrations/
+        - Wordpress: experience/integrations/
       - Mobile Apps:
         - Mobile Apps Logs: integration/mobile-apps-logs.md
       - Notification Hooks:
