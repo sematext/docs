@@ -230,7 +230,7 @@ pages:
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
       - Frontend & User Experience:
-        - Angular: experience/integrations/#angular
+        - Angular: https://sematext.com/docs/experience/integrations/#angular
         - Ember: experience/integrations/#ember
         - Google Tag Manager: experience/integrations/#google-tag-manager
         - Micro Frontend: experience/integrations/#micro-frontend
