@@ -39,15 +39,20 @@ Sematext lets you manage Alert Rules across your whole stack. You can use variou
 
 For [Logs](../logs), [Monitoring](../monitoring), or [Synthetics](../synthetics), as soon as an [App](./app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
 
-Default Alerts for a Logs App:
+Default Alerts for an Infrastructure App:
 
-- **Anomaly Alerts** for **Error and Warning** search queries
+- [Alerts for Server Monitoring](https://sematext.com/docs/monitoring/servers/#core-infrastructure-alerting)
+- [Alerts for Kubernetes Monitoring](https://sematext.com/docs/integration/kubernetes/#kubernetes-alerts)
 
-Default Alerts for a Monitoring App: 
+Default Alerts for a Monitoring App:
 
 - **Metric Alert for Disk Usage**
 - **Heartbeat Alert** if the **Agent stops sending data to the Monitoring App**
 - **Metric Anomaly Alert** for misbehaving Nodes
+
+Default Alerts for a Logs App:
+
+- **Anomaly Alerts** for **Error and Warning** search queries
 
 For [Logs](../logs) or [Monitoring](../monitoring), there are also default alerts for [integrations](https://sematext.com/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
 
@@ -59,4 +64,4 @@ You can view all the default and custom Alerts on the [Alert Rules](https://apps
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Alerts Rules Window")
 
-More detailed instructions are provided in [Alerts Overview](https://sematext.com/docs/alerts/#creating-an-alert-rule).
+More detailed instructions are provided in [Alerts Rules Overview](https://sematext.com/docs/alerts/alert-rules).
