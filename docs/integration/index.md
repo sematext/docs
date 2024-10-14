@@ -10,8 +10,8 @@ The integrations are categorized to help you easily find solutions that suit you
 ## Servers, Containers & Orchestration
 Monitoring server infrastructures, containerized applications, and orchestration platforms.
 
-| Integration | Description                                                                        | Solution   |
-|-------------|------------------------------------------------------------------------------------|------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Infra](https://sematext.com/docs/integration/infra/) | Monitor bare-metal servers and containerized environments | Monitoring |
 | [Kubernetes](https://sematext.com/docs/integration/kubernetes/)  | Monitor the performance and health of Kubernetes clusters | Monitoring |
 | [Kubernetes Audit Logs](https://sematext.com/docs/integration/kubernetes-audit-integration/)  | Monitor and analyze audit logs from your Kubernetes environment | Logs |
@@ -22,8 +22,8 @@ Monitoring server infrastructures, containerized applications, and orchestration
 ## Web & Application Servers
 Integrations for popular web and application servers.
 
-| Integration          | Description                                                   | Solution           |
-|----------------------|---------------------------------------------------------------|--------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Apache Web Server](https://sematext.com/docs/integration/apache-integration/) | Monitor performance and logs from Apache web servers | Monitoring & Logs |
 | [HAProxy](https://sematext.com/docs/integration/haproxy/) | Monitor HAProxy load balancer performance | Monitoring & Logs |
 | [NGINX](https://sematext.com/docs/integration/nginx-integration/) | Collect metrics and logs from NGINX web servers | Monitoring & Logs |
@@ -35,8 +35,8 @@ Integrations for popular web and application servers.
 ## Databases & Data Stores
 Integrations to monitor various databases and data storage solutions.
 
-| Integration      | Description                                                  | Solution         |
-|------------------|--------------------------------------------------------------|------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Elasticsearch](https://sematext.com/docs/integration/elasticsearch-integration/) | Monitor Elasticsearch clusters and manage log data | Monitoring & Logs |
 | [OpenSearch](https://sematext.com/docs/integration/opensearch-integration/) | Track performance and logs in OpenSearch clusters | Monitoring & Logs |
 | [Solr](https://sematext.com/docs/integration/solr-integration/) | Monitor Solr search platform performance and logs | Monitoring & Logs  |
@@ -54,8 +54,8 @@ Integrations to monitor various databases and data storage solutions.
 ## Big Data & Messaging Systems
 Integrations that ease monitoring of big data platforms and messaging systems.
 
-| Integration       | Description                                            | Solution               |
-|-------------------|--------------------------------------------------------|------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Apache Kafka](https://sematext.com/docs/integration/kafka/)   | Monitor Kafka brokers and track message flow   | Monitoring  |
 | [Apache Hadoop](https://sematext.com/docs/integration/hadoop/) | Monitor Hadoop clusters | Monitoring               |
 | [Apache Spark](https://sematext.com/docs/integration/spark/)   | Track performance metrics from Apache Spark jobs | Monitoring |
@@ -67,8 +67,8 @@ Integrations that ease monitoring of big data platforms and messaging systems.
 ## Programming Languages & Frameworks
 Integrations that support a variety of programming languages and frameworks.
 
-| Integration | Description                                              | Solution                      |
-|-------------|----------------------------------------------------------|-------------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [JVM](https://sematext.com/docs/integration/jvm-integration/)         | Monitor Java Virtual Machine performance and logs      | Monitoring & Logs |
 | [Node.js](https://sematext.com/docs/integration/node.js/)     | Track performance metrics for Node.js applications     | Monitoring    |
 | [Express.js](https://sematext.com/docs/integration/express.js/)  | Monitor Express.js applications and manage logs        | Monitoring |
@@ -79,8 +79,8 @@ Integrations that support a variety of programming languages and frameworks.
 ## CI/CD Tools
 Integrations for continuous integration and continuous deployment tools.
 
-| Integration               | Description                                             | Solution                      |
-|---------------------------|---------------------------------------------------------|-------------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Jenkins](https://sematext.com/docs/integration/jenkins/) | Monitor CI/CD pipelines | Monitoring |
 | [GitHub Webhook Events](https://sematext.com/docs/integration/github-webhook-events-integration/) | Capture GitHub events and track related logs | Logs |
 | [Terraform](https://sematext.com/docs/integration/terraform/) | Monitor and track Terraform execution and infrastructure changes | Generic |
@@ -90,8 +90,8 @@ Integrations for continuous integration and continuous deployment tools.
 ## Cloud Services
 Integrations for cloud service monitoring.
 
-| Integration                | Description                                              | Solution                      |
-|----------------------------|----------------------------------------------------------|-------------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Amazon Web Services (AWS)](https://sematext.com/docs/integration/aws/)  | Monitor various AWS services and resources | Monitoring |
 | [AWS ECS](https://sematext.com/docs/integration/aws-ecs-logs/) | Collect and analyze logs from AWS ECS for containerized apps | Logs |
 | [AWS CloudWatch](https://sematext.com/docs/integration/aws-cw/) | Analyze logs from AWS CloudWatch for infrastructure and apps | Logs |
@@ -102,8 +102,8 @@ Integrations for cloud service monitoring.
 ## Generic & System Logs
 Integrations for managing and analyzing generic and system logs.
 
-| Integration  | Description                                               | Solution                      |
-|--------------|-----------------------------------------------------------|-------------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Generic Logs](https://sematext.com/docs/integration/generic-logs-integration/) | Manage and analyze various log data types |Logs |
 | [Syslog](https://sematext.com/docs/logs/syslog/) | Centralized logging for any syslog-compliant application |Logs |
 
@@ -111,8 +111,8 @@ Integrations for managing and analyzing generic and system logs.
 ## Frontend & User Experience
 Integrations for monitoring the performance and responsiveness of frontend applications.
 
-| Integration                       | Description                                           | Solution                      |
-|-----------------------------------|-------------------------------------------------------|-------------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Angular](https://sematext.com/docs/experience/integrations/#angular) | Monitor Angular applications for performance and experience | Experience |
 | [Ember](https://sematext.com/docs/experience/integrations/#ember) | Monitor Ember applications for responsiveness| Experience  |
 | [Google Tag Manager](https://sematext.com/docs/experience/integrations/#google-tag-manager) | Integrate Experience using Google Tag Manager | Experience |
@@ -131,16 +131,16 @@ Integrations for monitoring the performance and responsiveness of frontend appli
 ## Mobile Apps
 Integrations for monitoring the performance and responsiveness of mobile applications across various platforms.
 
-| Integration                       | Description                                           | Solution                    |
-|-----------------------------------|-------------------------------------------------------|-----------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [Mobile Apps](https://sematext.com/docs/integration/mobile-apps-logs/) | Monitor logs from mobile applications | Logs   |
 
 
 ## Notification Hooks
 Integrations that provide instant alerts across your preferred communication platforms.
 
-| Integration                              | Description                                           | Solution                            |
-|------------------------------------------|-------------------------------------------------------|-------------------------------------|
+| Integration | Description | Solution   |
+|-------------|-------------|------------|
 | [AlertOps](/integration/alerts-alertops-integration/) | Integrate with AlertOps for incident management | Alerts |
 | [Big Panda](/integration/alerts-bigpanda-integration/) | Monitor events with Big Panda notifications | Alerts |
 | [Email as default system notification hook](/integration/alerts-email-integration/) | Send email alerts for monitoring events | Alerts |
