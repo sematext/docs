@@ -42,7 +42,7 @@ Alerts can operate on three different **sources** of data:
 Alert type | Metrics | Logs | Experience | Synthetics
 --- | --- | --- | --- | ---
 Threshold | yes | yes | yes | yes
-Anomaly | yes | yes | yes | no
+Anomaly | yes | yes | yes | yes
 Heartbeat | yes | no | no | no
 
 You can manage Alert rules interactively via the UI, or you can [manage alerts via the API](../api).
