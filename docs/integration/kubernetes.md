@@ -273,6 +273,8 @@ As soon as you create an Infra App, Sematext automatically creates a set of defa
 - Pod restart amount reached: Detect when pods are restarted beyond a specified threshold
 - Pod status is “CrashLoopBackOff”: Be alerted to pods in a "CrashLoopBackOff" state in Kubernetes
 - Pod status is “ImagePullBackOff”: Receive notifications when pods are in an "ImagePullBackOff" state in Kubernetes
+- Pod state is waiting: Triggered when a pod remains in a waiting state for an extended period
+- High Pod waiting state: Triggered when a pod remains in a waiting state for an unusually long time
 
 You can [create additional alerts](../alerts) on any metric.
 
