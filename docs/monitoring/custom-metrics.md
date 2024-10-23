@@ -5,7 +5,7 @@ You can send custom metrics to any of your Monitoring Apps. These metrics will b
 daily data points quota which may trigger rejection in case of a huge amount of data points.
 The limits are set very high, though, and under the normal operation it is hard to reach them.
 
-Once you send custom metrics to any of your Monitoring Apps, you can navigate to the App and click to create a [Custom Report](https://sematext.com/docs/guide/reports-guide/) where you can visualize the data based on your needs.
+Once you send custom metrics to any of your Monitoring Apps, you can navigate to the App and create a [Custom Report](https://sematext.com/docs/guide/reports-guide/) where you can visualize the data based on your needs.
 
 Metrics are sent to metrics receivers (in the US region to `spm-receiver.sematext.com`, in the EU region
 to `spm-receiver.eu.sematext.com`). Expected format is based on 
