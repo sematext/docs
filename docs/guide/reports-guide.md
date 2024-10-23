@@ -18,9 +18,9 @@ While the default reports are a great starting point, you might want to focus on
 
 ### How to Create a Custom Report
 
-1. Go to your App where you want to create the report.
-2. Click on "Add Report" that is available in the left menu panel.
+-  Go to your App where you want to create the report.
+-  Click on "Add Report" that is available in the left menu panel.
 
 ![Apache Logs Report](../images/guide/reports/reports-add-report.png)
 
-3. Add visualization components. You can choose from charts (like line, bar, or pie charts) or tables to display your data using [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/). You can also decide which metrics or logs to show, based on what you want to monitor.
+- Add visualization components. You can choose from charts (like line, bar, or pie charts) or tables to display your data using [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/). You can also decide which metrics or logs to show, based on what you want to monitor.
