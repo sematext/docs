@@ -294,7 +294,7 @@ pages:
       - API: events/event-api.md
     - Data Visualization:
       - Overview: dashboards/overview.md
-      - Reports: dashboards/reports.md
+      - Reports: dashboards/reports-guide.md
       - Dashboards: 
         - Overview: dashboards/index.md
         - Quick Start: dashboards/quick-start.md
