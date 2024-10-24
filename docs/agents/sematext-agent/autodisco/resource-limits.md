@@ -20,21 +20,19 @@ You can override these default settings by adhering to the Kubernetes [resource 
 
 ## Non-Kubernetes Container Resource Limits
 
-In addition to configuring Pod-level resource limits, you can also set specific limits for non-Kubernetes containers running within the App Agent. Use the following flags for setting container CPU and memory constraints:
-
-- `autodisco.agent.container-cpu-set` – Defines the CPU cores allocated to the container. Default: 0-1
-- `autodisco.agent.container-mem-limit` – Sets the maximum memory for the container. Default: 768Mi
-
-These flags can be overridden by using the following environment variables:
+In addition to configuring Pod-level resource limits, you can also set specific limits for non-Kubernetes containers (e.g., Docker) running within the App Agent, by using the following environment variables:
 
 - `AUTODISCO_AGENT_CONTAINER_CPU_SET` – Overrides the default CPU core allocation
 - `AUTODISCO_AGENT_CONTAINER_MEM_LIMIT` – Overrides the default memory limit
 
-### Example Usage
+### Example Usage (Docker)
 
 ```
--e AUTODISCO_AGENT_CONTAINER_MEM_LIMIT=1024 # Override default memory limit to 1024Mi
--e AUTODISCO_AGENT_CONTAINER_CPU_SET=0-3    # Assign CPU cores 0-3 to the container
+docker run ... \
+... \
+-e AUTODISCO_AGENT_CONTAINER_MEM_LIMIT=1024 \ # Override default memory limit to 1024Mi
+-e AUTODISCO_AGENT_CONTAINER_CPU_SET=0-3 \ # Assign CPU cores 0-3 to the container
+sematext/agent:latest
 ```
 
 By using these environment variables, you can fine-tune the resource allocation for both the Pod and the non-Kubernetes containers based on your specific requirements.
