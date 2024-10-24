@@ -293,9 +293,12 @@ pages:
       - Correlating Events: events/correlation.md
       - API: events/event-api.md
     - Data Visualization:
-      - Overview: dashboards/index.md
-      - Quick Start: dashboards/quick-start.md
-      - Reports and Components: dashboards/reports-and-components.md
+      - Overview: dashboards/overview.md
+      - Reports: dashboards/reports.md
+      - Dashboards: 
+        - Overview: dashboards/index.md
+        - Quick Start: dashboards/quick-start.md
+        - Reports and components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
       - Components:
         - Overview: dashboards/components-overview.md
