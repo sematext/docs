@@ -292,7 +292,7 @@ pages:
       - Viewing Events: events/timeline.md
       - Correlating Events: events/correlation.md
       - API: events/event-api.md
-    - Dashboards:
+    - Data Visualization:
       - Overview: dashboards/index.md
       - Quick Start: dashboards/quick-start.md
       - Reports and Components: dashboards/reports-and-components.md
