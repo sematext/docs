@@ -35,4 +35,4 @@ docker run ... \
 sematext/agent:latest
 ```
 
-By using these environment variables, you can fine-tune the resource allocation for both the Pod and the non-Kubernetes containers based on your specific requirements.
+By using these environment variables, you can fine-tune the resource allocation for non-Kubernetes containers based on your specific requirements.
