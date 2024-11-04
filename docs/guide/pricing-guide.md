@@ -7,7 +7,7 @@ We offer flexible and transparent pricing for all of our four solutions: [Monito
 
 - [Cost Calculator](https://sematext.com/cost-calculator/)
 - [Plans and Prices](https://sematext.com/pricing/)
-- Reach out to our [Customer Success Manager](https://meetings.hubspot.com/sean-monahan) to discuss pricing, custom plans, volume discounts, cost optimizations, or anything else.
+- Reach out to our [Customer Success Manager](https://calendly.com/sean-monahan-sematext/meeting) to discuss pricing, custom plans, volume discounts, cost optimizations, or anything else.
 
 
 ## Apps and Plans
@@ -37,7 +37,7 @@ All App attributes, like plan, data retention, etc. can be changed up or down at
 
 Refer to our [cost calculator](https://sematext.com/cost-calculator/) to estimate costs for each solution based on your needs. The calculator sums up the total based on your selections and shows your estimated monthly charge. You can also explore detailed plans on the [pricing page](https://sematext.com/pricing/).
 
-Custom plans and pricing is available. Contact our [Customer Success Manager](https://meetings.hubspot.com/sean-monahan?uuid=4265218b-524a-4ca7-8ec7-2ba4ea120a0f) to discuss anything Sematext related and for custom plans.
+Custom plans and pricing is available. Contact our [Customer Success Manager](https://calendly.com/sean-monahan-sematext/meeting) to discuss anything Sematext related and for custom plans.
 
 All of our plans include support via live chat and email. For Standard and Pro Plans, we also provide phone support and a dedicated account manager for any questions about Sematext, such as pricing, best practices, and demos.
 
