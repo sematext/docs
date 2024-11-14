@@ -121,17 +121,17 @@ output:
       security_logs: 
         - auth\.log
    logsene-saas:
-        module: elasticsearch
-        url: https://logsene-receiver.sematext.com
-        indices:
-          bb308f80-0000-0000-894c-f80c054a0f10:
-              - [nginx|httpd]\.log
-          a0ca5032-0000-467d-b6d5-e465a7ce45bb
-              - mysql|postgres|oracle
-          969020b4-0000-0000-86e4-24e67759cdb3
-              - mongo.*\.log
-              - myapp1\/app.log
-              - myapp2\/app.log
+     module: elasticsearch
+     url: https://logsene-receiver.sematext.com
+     indices:
+       bb308f80-0000-0000-894c-f80c054a0f10:
+         - [nginx|httpd]\.log
+       a0ca5032-0000-467d-b6d5-e465a7ce45bb
+         - mysql|postgres|oracle
+       969020b4-0000-0000-86e4-24e67759cdb3
+         - mongo.*\.log
+         - myapp1\/app.log
+         - myapp2\/app.log
 ```
 
 ### How do I ship only error logs?
