@@ -28,7 +28,7 @@ This report helps you identify when the monitored endpoint fails at specific tim
 
 **Response codes over time** for each selected location, helping you identify regular occurrences of failed responses at similar times.
 
-![Response Codes TimeSeries](../images/synthetics/response-codes-timeseries.png)
+![Response Codes TimeSeries](../images/synthetics/response-codes-locations-timeseries.png)
 
 **Average response times by location,** allowing you to compare response codes against response times within the same time range.
 
