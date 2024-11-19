@@ -145,6 +145,7 @@ pages:
       - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
       - Scheduled Monitor Pauses: synthetics/scheduled-pauses.md
+      - Response Codes: synthetics/response-codes.md
       - Metrics: synthetics/metrics.md
       - Correlating: synthetics/correlation.md
       - Root Cause Discovery:
