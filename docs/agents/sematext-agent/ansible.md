@@ -118,13 +118,15 @@ You can integrate the Sematext Ansible role in your existing playbooks or create
   gather_facts: yes
   become: yes
   vars:
+    region: REGION
     infra_token: INFRA_TOKEN
   roles:
     - { role: sematext.spm-monitor-install }
 
 ```
 
-`INFRA_TOKEN` is your infra token that you copied earlier from Sematext Cloud.
+- `REGION` should be either `EU` or `US`, depending on where you created your account in Sematext Cloud.
+- `INFRA_TOKEN` is your infra token that you copied earlier from Sematext Cloud.
 
 Run your playbook using the following command:
 
