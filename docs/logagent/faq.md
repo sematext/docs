@@ -134,6 +134,35 @@ output:
          - myapp2\/app.log
 ```
 
+### How do I ship Kubernetes logs to multiple destinations / Sematext Logs Apps?
+
+You can follow the steps below and ship Kubernetes logs to two different Logs [Apps](https://sematext.com/docs/guide/app-guide/) and then use [Pipelines](https://sematext.com/docs/logs/pipelines/) to filter out any unwanted data for each [App](https://sematext.com/docs/guide/app-guide/).
+
+Create two separate daemonset.yaml files by following the instructions [here](https://apps.sematext.com/ui/howto/Logsene/overview?appTypeName=Logsene&activeSection=logagent-log-shippers) and activate them 
+individually in your Kubernetes cluster. Make sure to replace **Logsene-monitoring-token** with the tokens from your Logs Apps.
+
+Also, make sure that you set a different name in metadata sections.
+
+For example:
+   
+```
+# Cluster Role bindings for Logagent
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: sematext-logagent2
+  labels:
+     app: sematext-logagent2
+```
+After creating the files, apply them by running the following commands:
+   
+```
+kubectl apply -f logagent2-daemonset.yaml
+kubectl apply -f logagent-daemonset.yaml
+```
+Within a few minutes, you should start seeing the logs in both Logs Apps.
+Next, navigate to [Pipelines](https://sematext.com/docs/logs/pipelines/) and create a [Drop Processor](https://sematext.com/docs/logs/processors-overview/) in each App to filter out any unwanted data.
+
 ### How do I ship only error logs?
 
 Use the ["grep" input filter](https://sematext.com/docs/logagent/input-filter-grep/): 
