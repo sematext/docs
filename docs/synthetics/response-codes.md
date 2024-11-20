@@ -40,7 +40,7 @@ This report helps you identify when the monitored endpoint fails at specific tim
 
 ## Browser Monitors
 
-In Browser Monitors, each monitor run includes multiple URL requests, and each URL can return different response codes. In the **Waterfall** tab, you will now see a filter option to filter out non-2xx response codes. When applied, this filter will only show URLs that returned a response code **other than 2xx.**
+In Browser Monitors, each monitor run includes multiple URL requests (e.g., to resources like images, JavaScript libraries, etc.), and each URL can return different response codes. In the [**Waterfall**](https://sematext.com/docs/synthetics/browser-monitor/#waterfall-chart) tab, you will now see a filter option to filter out non-2xx response codes. When applied, this filter will only show URLs that returned a response code **other than 2xx.**
 
 ![Response Codes Browser Monitor](../images/synthetics/response-codes-bm-waterfall.png)
 
