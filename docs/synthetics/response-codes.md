@@ -5,14 +5,10 @@ Sematext Synthetics monitors the availability and performance of your endpoints 
 
 When you make a request to a website or API, the server sends back a response code that tells you whether the request was successful or if there was an issue.
 
-- **2xx: Successful Responses**
-These codes indicate that the request was successfully processed by the server.
-- **3xx: Redirection Responses**
-These codes indicate that the requested resource has been moved, and the client (e.g., a browser) needs to take additional action, such as following a redirect.
-- **4xx: Client Errors**
-These codes indicate that there was an issue with the request made by the client (the user or application making the request).
-- **5xx: Server Errors**
-These codes indicate that the server failed to process a valid request, usually due to an issue on the server side.
+- **2xx: Successful Responses** - These codes indicate that the request was successfully processed by the server.
+- **3xx: Redirection Responses** - These codes indicate that the requested resource has been moved, and the client (e.g., a browser) needs to take additional action, such as following a redirect.
+- **4xx: Client Errors** - These codes indicate that there was an issue with the request made by the client (the user or application making the request).
+- **5xx: Server Errors** - These codes indicate that the server failed to process a valid request, usually due to an issue on the server side.
 
 ## HTTP Monitors
 
