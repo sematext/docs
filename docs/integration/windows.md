@@ -11,29 +11,29 @@ Sematext Monitoring includes support for Windows Services. Starting from Sematex
 The [Sematext Agent for Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/), starting from version 3.5.0, is capable of collecting metrics related with the status of Windows services. At present, the primary metric supported is the status of each service including a number of statistics, which allows users to determine whether a service is running, stopped, or experiencing issues.
 
 
-#### List of available metrics
+#### Available Metrics
 
-|Name| Type  | Description |
-|----|-------|-------------|
-|windows.service.status            | number |status of a Windows service|
-|windows.service.total             | gauge  |total number of Windows services|
-|windows.service.total.running     | gauge  |total number of running Windows services|
-|windows.service.total.not_running | gauge  |total number of non running Windows services|
+| Name                                | Type   | Description                                         |
+|-------------------------------------|--------|-----------------------------------------------------|
+| `windows.service.status`            | number | The current status of a Windows service. See [Service Statuses](#service-statuses) for details. |
+| `windows.service.total`             | gauge  | The total number of Windows services.              |
+| `windows.service.total.running`     | gauge  | The total number of running Windows services.      |
+| `windows.service.total.not_running` | gauge  | The total number of non-running Windows services.  |
 
 
-#### Available Windows Services statuses 
+#### Service Statuses
 
-Below is a list of all the possible values (statuses) of the `windows.service.status` metric.
+The `windows.service.status` metric can have the following values, representing the different operational states of a Windows service:
 
-|Value | Service Status  |
-|------|-----------------|
-|1     | stopped         |
-|2     | start pending   |
-|3     | stop pending    |
-|4     | running         |
-|5     | continue pending|
-|6     | pause pending   |
-|7     | paused          |
+| Value | Status             | Description                                                   |
+|-------|--------------------|---------------------------------------------------------------|
+| 1     | Stopped            | The service is not running.                                   |
+| 2     | Start Pending      | The service is in the process of starting.                   |
+| 3     | Stop Pending       | The service is in the process of stopping.                   |
+| 4     | Running            | The service is currently running.                            |
+| 5     | Continue Pending   | The service is resuming from a paused state.                 |
+| 6     | Pause Pending      | The service is in the process of pausing.                    |
+| 7     | Paused             | The service is paused and not performing its tasks.          |
 
 #### Available Tags
 
@@ -50,7 +50,46 @@ For more information about the status of Windows Services and the available serv
 
 ### Windows Services Reports
 
-Coming Soon!
+Two reports are available for tracking and analyzing Windows Services, starting from Sematext Agent [version 3.5.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-350). With the new Windows Services Reports, you can monitor service statuses, resource usage and more across your infrastructure. Both reports are accessible under the Infrastructure > Windows section of Sematext Cloud.
+
+#### Services Overview
+
+![Windows Services Overview](../images/integrations/windows-services-overview.png)
+
+The **Services Overview** report gives you an aggregated and detailed view of all Windows services across your infrastructure, with four components:
+
+1. Windows Services Info
+   Displays the total number of services, those running and those not running across all monitored hosts. This component gives a quick status summary of your services.
+
+2. Top Services by CPU Usage | RSS Memory
+   A chart highlighting services with the highest resource usage (CPU or RSS memory) for the selected time range. Hovering over a point provides a detailed list of services with their PIDs, CPU usage, and memory usage at that moment.
+
+3. Top Running Services by CPU Usage | RSS Memory (Tile Map)
+   Visualizes top-running services in a tile map format, with each tile representing a Windows service.
+   
+   - Hover: See the CPU and memory usage of the service.
+   - Click: Opens a flyout containing detailed service information such as hostname, PID, service type and status.
+
+4. Windows Services Overview Table
+   A table listing all Windows services across your hosts, including:
+   
+   - Service Name: The name of the Windows service
+   - Hostname: The name of the host machine where the service is running
+   - PID: The Process ID of the service 
+   - Type: The type of the Windows service, with the following possible values:
+       - `win32_share_process`: Services that share a single process with other services, running under the same executable.
+       - `win32_own_process`: Services that run independently in their own dedicated process.
+       - `unknown`: Services with an undetermined or unrecognized type.
+   - Status: The current operational state of the service. This can include values such as `running`, `stopped`, `paused` or transitional states like `start pending` and `stop pending`. For a full list of statuses and their descriptions, see the [Service Statuses](#service-statuses) section.
+
+   Clicking a specific service in the table opens a flyout containing detailed information for the service.
+
+
+#### Top Services
+
+![Windows Top Services](../images/integrations/windows-top-services.png)
+
+The **Top Services** report focuses on 20 of the most popular Windows services, showcasing their statuses across different hosts during the selected time range. The service statuses displayed in this report correspond to those defined in the [Service Statuses](#service-statuses) section above. This report provides an at-a-glance view of key services to help identify potential issues.
 
 ## Out of the box alerts
 
