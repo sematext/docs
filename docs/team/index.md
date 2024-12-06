@@ -66,7 +66,7 @@ button to open the side modal, select an App, click **Transfer to...** to procee
 user you want to transfer the App to, and hit **Transfer Ownership**.
 
 ## Team Account
-If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email.  Instead, if you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone else who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that account.  
+If you want to share Apps, Dashboards, etc. with others, or use Sematext as a team or company, we recommend creating one account that is not tied to any individual's email. This doesn't carry any additional cost for you. If you have a group/team email such as dev@... or engineering@... or monitoring@... or even sematext@... at your organization, we suggest you sign up with that email and then invite to that account everyone who needs to be able to access Apps, Dashboards, Alert Rules, etc. in that team account.
 
 ### Team Account Benefits
 Team account doesn't cost any money. It's completely free. The benefits of a Team account:
