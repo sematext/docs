@@ -165,7 +165,7 @@ See info about user roles in [sharing FAQ](/faq/#sharing).
 
 ## Alerts
 
-### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
+### Can I send alerts to PagerDuty, Slack, Nagios, or other WebHooks?
 
 See [alerts FAQ](/faq/#alerts).
 
