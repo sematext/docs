@@ -58,19 +58,19 @@ Two reports are available for tracking and analyzing Windows Services, starting 
 
 The **Services Overview** report gives you an aggregated and detailed view of all Windows services across your infrastructure, with four components:
 
-1. Windows Services Info
-   Displays the total number of services, those running and those not running across all monitored hosts. This component gives a quick status summary of your services.
+##### Windows Services Info
+    Displays the total number of services, those running and those not running across all monitored hosts. This component gives a quick status summary of your services.
 
-2. Top Services by CPU Usage | RSS Memory
+##### Top Services by CPU Usage | RSS Memory
    A chart highlighting services with the highest resource usage (CPU or RSS memory) for the selected time range. Hovering over a point provides a detailed list of services with their PIDs, CPU usage, and memory usage at that moment.
 
-3. Top Running Services by CPU Usage | RSS Memory (Tile Map)
+##### Top Running Services by CPU Usage | RSS Memory (Tile Map)
    Visualizes top-running services in a tile map format, with each tile representing a Windows service.
    
    - Hover: See the CPU and memory usage of the service.
    - Click: Opens a flyout containing detailed service information such as hostname, PID, service type and status.
 
-4. Windows Services Overview Table
+##### Windows Services Overview Table
    A table listing all Windows services across your hosts, including:
    
    - Service Name: The name of the Windows service
