@@ -17,7 +17,7 @@ names:
   "1033:MsiInstaller": "MSI_INSTALLATION_STARTED"
   "6005:EventLog": "EVENT_LOG_SERVICE_STARTED"
 ```
-4. Save changes and restart the Sematext Agent Service
+4. Save changes and [restart the Sematext Agent Service](https://sematext.com/docs/agents/sematext-agent/windows-installation/#how-to-start-stop-restart-sematext-agent)
 
 ## Customizing Log Channels
 
