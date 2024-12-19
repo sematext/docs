@@ -24,3 +24,29 @@ While the default reports are a great starting point, you might want to focus on
 ![Apache Logs Report](../images/guide/reports/reports-add-report.png)
 
 - Add visualization components. You can choose from charts (like line, bar, or pie charts) or tables to display your data using [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/). You can also decide which metrics or logs to show, based on what you want to monitor.
+
+### Managing Report Updates
+
+**Stay notified and stay updated**  
+Customized reports are a powerful way to adjust your data visualization to your specific needs. To ensure you always have the latest and most relevant data, Sematext Cloud supports **Report Updates**. Imagine you've customized on of your **Apache Monitoring Reports** to include specific metrics unique to your environment. With Report Updates you'll be notified and can decide whether to keep your custom report as is or not.
+
+With **Report Updates**, you have complete control over how new features to out-of-the-box reports affect your customized versions.
+
+![Report Updates](../images/guide/reports/reports-updates.png)
+
+#### How It Works
+
+1. **Out-of-the-Box Reports:**
+   - For users who haven't customized their reports, all updates to out-of-the-box reports are applied automatically. No action is needed, you're always up-to-date with the latest features and improvements.
+
+2. **Customized Reports:**
+   - If you've customized any reports, you'll get a notification info box when updates are available for those reports. You can:
+     - **Fetch new updates**: Bring the latest updates into your customized report while keeping your existing customizations intact.
+     - **Overwrite existing reports**: Replace your current customizations entirely with the updated out-of-the-box report.
+     - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. The notification info box will not be shown again for the next 30 days. After that a reminder will be sent. At any time you can update the report through the Report Settings menu.
+
+#### Why Use Report Updates?
+
+- Stay informed about new features and improvements to out-of-the-box reports.
+- Keep your Monitoring and Logs Apps up to date with the latest features.
+- Maintain control over your customized reports without unexpected changes.
