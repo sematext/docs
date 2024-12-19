@@ -6,4 +6,4 @@ Use the following two libraries for shipping logs from mobile applications and d
 - [Sematext for Android Applications](https://github.com/sematext/sematext-logsene-android)
 - [Sematext for iOS Applications](https://github.com/sematext/sematext-logsene-ios)
 
-Learn more about [Sematext Mobile Apps Logs](/integration/mobile-apps-logs/) integration. 
+Learn more about [Sematext Mobile Apps Logs](https://sematext.com/docs/integration/mobile-apps-logs/) integration.
