@@ -32,7 +32,7 @@ Customized reports are a powerful way to adjust your data visualization to your 
 
 With **Report Updates**, you have complete control over how new features to out-of-the-box reports affect your customized versions.
 
-![Report Updates](../images/guide/reports/reports-updates.png)
+![Report Updates](../images/guide/reports/report-updates.png)
 
 #### How It Works
 
@@ -41,11 +41,14 @@ With **Report Updates**, you have complete control over how new features to out-
 
 2. **Customized Reports:**
    - If you've customized any reports, you'll get a notification info box when updates are available for those reports. You can:
-     - **Fetch new updates**: Bring the latest updates into your customized report while keeping your existing customizations intact.
      - **Overwrite existing reports**: Replace your current customizations entirely with the updated out-of-the-box report.
+       ![Report Updates Overwrite](../images/guide/reports/report-updates-overwrite.gif)
+     - **Keep a copy and fetch new updates**: Bring the latest updates into your customized report while keeping your existing customizations intact.
+       ![Report Updates Duplicate](../images/guide/reports/report-updates-duplicate.gif)
      - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. 
 
-   The notification info box can be hidden at any time by clicking the 'Hide' button. It will reappear as a reminder after 30 days. You can update the report at any time through the Report Settings menu.
+   The notification info box can be hidden by clicking the 'Hide' button. It will reappear as a reminder after 30 days. At any time, a menu item labeled 'Updates Available' can be accessed via the three-dot (more options) menu of each report, allowing you to update your reports as needed.
+   ![Report Updates Duplicate](../images/guide/reports/report-updates-menu.png)
 
 #### Why Use Report Updates?
 
