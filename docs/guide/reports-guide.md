@@ -30,8 +30,6 @@ While the default reports are a great starting point, you might want to focus on
 **Stay notified and stay updated**  
 Customized reports are a powerful way to adjust your data visualization to your specific needs. To ensure you always have the latest and most relevant data, Sematext Cloud supports **Report Updates**. Imagine you've customized on of your **Apache Monitoring Reports** to include specific metrics unique to your environment. With Report Updates you'll be notified and can decide whether to keep your custom report as is or not.
 
-With **Report Updates**, you have complete control over how new features to out-of-the-box reports affect your customized versions.
-
 ![Report Updates](../images/guide/reports/report-updates.png)
 
 #### How It Works
