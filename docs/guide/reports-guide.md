@@ -45,7 +45,7 @@ With **Report Updates**, you have complete control over how new features to out-
      - **Overwrite existing reports**: Replace your current customizations entirely with the updated out-of-the-box report.
      - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. 
 
-   The notification info box can be hidden anytime by clicking the 'hide' button. At any time you can update the report through the Report Settings menu.
+   The notification info box can be hidden at any time by clicking the 'Hide' button. It will reappear as a reminder after 30 days. You can update the report at any time through the Report Settings menu.
 
 #### Why Use Report Updates?
 
