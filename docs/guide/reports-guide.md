@@ -43,7 +43,7 @@ Customized reports are a powerful way to adjust your data visualization to your 
 
        ![Report Updates Overwrite](../images/guide/reports/report-updates-overwrite.gif)
        
-     - **Keep a copy and fetch new updates**: Bring the latest updates into your customized report while keeping your existing customizations intact.
+     - **Keep a copy and fetch new updates**: Bring the latest reports while keeping your existing customizations intact. The newly fetched reports will be saved under the same group as the existing ones, with a name format like "Report-Name Date" (e.g., Overview 19-12-2024).
 
        ![Report Updates Duplicate](../images/guide/reports/report-updates-duplicate.gif)
        
