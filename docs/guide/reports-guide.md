@@ -48,7 +48,8 @@ With **Report Updates**, you have complete control over how new features to out-
      - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. 
 
    The notification info box can be hidden by clicking the 'Hide' button. It will reappear as a reminder after 30 days. At any time, a menu item labeled 'Updates Available' can be accessed via the three-dot (more options) menu of each report, allowing you to update your reports as needed.
-   ![Report Updates Duplicate](../images/guide/reports/report-updates-menu.png)
+   
+   ![New Updates Menu Item](../images/guide/reports/report-updates-menu.png)
 
 #### Why Use Report Updates?
 
