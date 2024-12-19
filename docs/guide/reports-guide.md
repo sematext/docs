@@ -43,7 +43,9 @@ With **Report Updates**, you have complete control over how new features to out-
    - If you've customized any reports, you'll get a notification info box when updates are available for those reports. You can:
      - **Fetch new updates**: Bring the latest updates into your customized report while keeping your existing customizations intact.
      - **Overwrite existing reports**: Replace your current customizations entirely with the updated out-of-the-box report.
-     - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. The notification info box will not be shown again for the next 30 days. After that a reminder will be sent. At any time you can update the report through the Report Settings menu.
+     - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. 
+
+   The notification info box can be hidden anytime by clicking the 'hide' button. At any time you can update the report through the Report Settings menu.
 
 #### Why Use Report Updates?
 
