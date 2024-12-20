@@ -24,3 +24,37 @@ While the default reports are a great starting point, you might want to focus on
 ![Apache Logs Report](../images/guide/reports/reports-add-report.png)
 
 - Add visualization components. You can choose from charts (like line, bar, or pie charts) or tables to display your data using [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/). You can also decide which metrics or logs to show, based on what you want to monitor.
+
+### Managing Report Updates
+
+**Stay notified and stay updated**  
+Customized reports are a powerful way to adjust your data visualization to your specific needs. To ensure you always have the latest and most relevant data, Sematext Cloud supports **Report Updates**. Imagine you've customized one of your **Apache Monitoring Reports** to include specific metrics unique to your environment. With Report Updates you'll be notified and can decide whether to keep your custom report as is or not.
+
+![Report Updates](../images/guide/reports/report-updates.png)
+
+#### How It Works
+
+1. **Out-of-the-Box Reports:**
+   - For users who haven't customized their reports, all updates to out-of-the-box reports are applied automatically. No action is needed, you're always up-to-date with the latest features and improvements.
+
+2. **Customized Reports:**
+   - If you've customized any reports, you'll get a notification info box when updates are available for those reports. You can:
+     - **Overwrite existing reports**: Replace your current customizations entirely with the updated out-of-the-box report.
+
+       ![Report Updates Overwrite](../images/guide/reports/report-updates-overwrite.gif)
+       
+     - **Keep a copy and fetch new updates**: Bring the latest reports while keeping your existing customizations intact. The newly fetched reports will be saved under the same group as the existing ones, with a name format like "Report-Name Date" (e.g., Overview 19-12-2024). In multi-level menus, the group name may be added as a prefix to help organize and identify the reports.
+
+       ![Report Updates Duplicate](../images/guide/reports/report-updates-duplicate.gif)
+       
+     - **Ignore and keep your existing report**: Continue using your customized report without fetching the updates. 
+
+   The notification info box can be hidden by clicking the 'Hide' button. It will reappear as a reminder after 30 days. At any time, a menu item labeled 'Updates Available' can be accessed via the three-dot (more options) menu of each report, allowing you to update your reports as needed.
+   
+   ![New Updates Menu Item](../images/guide/reports/report-updates-menu.png)
+
+#### Why Use Report Updates?
+
+- Stay informed about new features and improvements to out-of-the-box reports.
+- Keep your Monitoring and Logs Apps up to date with the latest features.
+- Maintain control over your customized reports without unexpected changes.

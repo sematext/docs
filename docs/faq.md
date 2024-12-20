@@ -154,6 +154,12 @@ not hear from any one of your application's instances for more than N
 minutes, it will alert you.  N can be as low as 2 minutes and you
 choose it yourself when you create a Heartbeat Alert.
 
+## Managing Report Updates
+### What are my options when a report is updated?
+When a report is updated, you can choose to fetch the updates, overwrite your existing report or keep your current customized version. Learn more in the [Managing Report Updates](https://sematext.com/docs/guide/reports-guide/#managing-report-updates) section.
+
+### Will my customized reports be automatically overwritten?
+No, customized reports are not automatically overwritten. You can decide whether to apply the updates, overwrite the report, or keep your existing version. See details in the [Managing Report Updates](https://sematext.com/docs/guide/reports-guide/#managing-report-updates) section.
 
 ## Security
 
