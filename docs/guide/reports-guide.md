@@ -25,10 +25,12 @@ While the default reports are a great starting point, you might want to focus on
 
 - Add visualization components. You can choose from charts (like line, bar, or pie charts) or tables to display your data using [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/). You can also decide which metrics or logs to show, based on what you want to monitor.
 
-### Managing Report Updates
+## Report Updates
+
+When you create a Monitoring and Logs App in Sematext you get out of the box reports. From time to time we update and improve those reports. For example, as monitored metrics and logs change we improve the metrics charts, we update log parsing and charting, etc.
 
 **Stay notified and stay updated**  
-Customized reports are a powerful way to adjust your data visualization to your specific needs. To ensure you always have the latest and most relevant data, Sematext Cloud supports **Report Updates**. Imagine you've customized one of your **Apache Monitoring Reports** to include specific metrics unique to your environment. With Report Updates you'll be notified and can decide whether to keep your custom report as is or not.
+Customized reports are a powerful way to adjust your data visualization to your specific needs. To ensure you always have the latest and most relevant data, Sematext provides **Report Updates** functionality. Imagine you've customized one of the out of the box **Apache Monitoring Reports** to include specific metrics unique to your environment and that, at some point later, Sematext has made improvements to those same reports. When that happens, you will be be notified and can decide whether to keep your custom report as is or not.
 
 ![Report Updates](../images/guide/reports/report-updates.png)
 
