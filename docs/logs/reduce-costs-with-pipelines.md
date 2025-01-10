@@ -7,6 +7,8 @@ Log [pipelines](../logs/pipelines) offer a range of [processors](../logs/process
 
 Let's consider a scenario where we have a Logs App that is receiving query response logs from a database, resulting in a lengthy message field.
 
+> **Note:** Check out [Identify Large Logs to Cut Logging Costs](../logs/identify-log-volume-spikes) to learn how to use the **Size Processor** to identify large logs.
+
 ![Lenghty Message Field Log](../images/logs/pipelines/log-with-lenghty-message-field.png)
 
 Let's zoom in on that chunky message field:
