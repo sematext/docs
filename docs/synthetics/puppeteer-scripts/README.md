@@ -59,13 +59,6 @@ In single-page apps, the page load event happens only during the initial launch.
 This script launches a single-page app. The elements are loaded asynchronously, so we cannot rely on the navigation event. It waits for a specific elements to appear, fills out a search bar, clicks the search button, then waits for the results to appear before taking a screenshot. In the whole script, there is only a single page load during the initial launch of the web page. No instances of navigation after the initial launch trigger any page loads.
 
 
-
-### [Booking](./booking.js)
-
-This script launches a booking website (AirBnB) and searches for properties in a specific location and date by filling out a form. It submits the form and waits for listings to load, after which it fetches the name of the first listing and prints it.
-
-
-
 ### [Using custom metrics](./custom-metric.js)
 
 Browser monitors allow you to define and collect custom metrics in the script. Custom metrics can be a value from a web page element, any performance metric that is not supported out of the box in Sematext Browser monitor, or any custom measurement (e.g. time to display suggestions in autocomplete) that needs custom logic. Once the measurement is added in the script, you can see its value in run results and chart it in your Dashboards.
