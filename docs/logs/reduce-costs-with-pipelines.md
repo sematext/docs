@@ -3,11 +3,11 @@ description: Use Logs Pipeline processor to drop noise events and extract vital 
 
 Log [pipelines](../logs/pipelines) offer a range of [processors](../logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
 
-> **Note:** Be sure to check out [Plan Recommendations](../logs/plan-recommendations) to ensure you’re using the most cost-effective plan for your logs in Sematext.
+> **Note:** Be sure to check out [Plan Recommendations](https://sematext.com/docs/logs/plan-recommendations/) to ensure you’re using the most cost-effective plan for your logs in Sematext.
 
 Let's consider a scenario where we have a Logs App that is receiving query response logs from a database, resulting in a lengthy message field.
 
-> **Note:** Check out [Identify Large Logs to Cut Logging Costs](../logs/identify-log-volume-spikes) to learn how to use the **Size Processor** to identify large logs.
+> **Note:** Check out [Identify Large Logs to Cut Logging Costs](https://sematext.com/docs/logs/identify-log-volume-spikes/) to learn how to use the **Size Processor** to identify large logs.
 
 ![Lenghty Message Field Log](../images/logs/pipelines/log-with-lenghty-message-field.png)
 
