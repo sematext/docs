@@ -9,7 +9,7 @@ appropriate Sematext monitoring agent. You can choose from:
     infrastructure and containers. It also collects metrics for various
     [integrations](../integration) using integration-specific App Agents.
     
-  - [Node.js-based App Agent](./node-agent) for monitoring [Express.js](../integration/express.js), and [Node.js](../integration/node.js).
+  - [Node.js-based App Agent](./node-agent) for monitoring [Express.js](../integration/express.js.md), and [Node.js](../integration/node.js.md).
 
   - [Browser SDK Agent](./browser), an open source agent that is 
   	able to ship web application related metrics related to user

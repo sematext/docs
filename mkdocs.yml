@@ -1,7 +1,7 @@
 strict: true
 site_name: Sematext Documentation
 site_url: https://sematext.com/docs/
-pages:
+nav:
     - Getting Started: index.md
     - User Guide:
       - What is an App?: guide/app-guide.md
@@ -481,17 +481,17 @@ extra:
   font:
     text: 'Roboto,sans-serif'
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/github'
       link: 'https://github.com/sematext'
-    - type: 'twitter'
+    - icon: 'fontawesome/brands/twitter'
       link: 'https://twitter.com/sematext'
-    - type: 'linkedin'
+    - icon: 'fontawesome/brands/linkedin'
       link: 'https://www.linkedin.com/company/sematext-international-llc'
-    - type: 'facebook'
+    - icon: 'fontawesome/brands/facebook'
       link: 'https://www.facebook.com/Sematext'
-    - type: 'slideshare'
+    - icon: 'fontawesome/brands/slideshare'
       link: 'https://www.slideshare.net/sematext'
-    - type: 'feed'
+    - icon: 'fontawesome/solid/rss'
       link: 'https://feeds.feedburner.com/SematextBlog'
 
 extra_css:
@@ -508,8 +508,6 @@ markdown_extensions:
   - meta
   - admonition
   - pymdownx.superfences:
-# upgrade to pymdownx 4.10... first      preserve_tabs: true
+      preserve_tabs: true
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_png
-  - markdown_fenced_code_tabs:
-      single_block_as_tab: False

@@ -50,7 +50,7 @@
     {% block styles %}
       <!-- <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.78aab2dc.css"> -->
       {% include "partials/inline-style.html" %}
-      {% if palette.primary or palette.accent %}
+      {% if config.theme.color %}
         <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-palette.6079476c.css" media="none" onload="if(media!='all')media='all'">
       {% endif %}
     {% endblock %}
@@ -82,7 +82,7 @@
     {% endfor %}
     {% block extrahead %}{% endblock %}
   </head>
-  {% if palette.primary or palette.accent %}
+  {% if config.theme.color %}
     {% set primary = palette.primary | replace(" ", "-") | lower %}
     {% set accent  = palette.accent  | replace(" ", "-") | lower %}
     <body dir="{{ lang.t('direction') }}" data-md-color-primary="{{ primary }}" data-md-color-accent="{{ accent }}">
@@ -124,7 +124,7 @@
           {% include "partials/hero.html" with context %}
         {% endif %}
       {% endblock %}
-      {% if feature.tabs %}
+      {% if config.theme.features and "tabs" in config.theme.features %}
         {% include "partials/tabs.html" %}
       {% endif %}
       <main class="md-main">

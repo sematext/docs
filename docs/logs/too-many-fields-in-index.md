@@ -50,6 +50,6 @@ Use the [Remove Fields Processor](https://sematext.com/docs/logs/processors-over
 
 ![Remove Fields Processor](../images/logs/pipelines/remove_fields_processor.png)
 
-However, you will still see the error because the index will retain the 1000 fields from the old data. In this case, contact us at [support@sematext.com](support@sematext.com) to manually rotate the index for you.
+However, you will still see the error because the index will retain the 1000 fields from the old data. In this case, contact us at [support@sematext.com](mailto:support@sematext.com) to manually rotate the index for you.
 
 Alternatively, you can go to the [Field Editor](https://sematext.com/docs/logs/fields/#field-editor) and select "Restore Default Fields." This action will automatically rotate the index, and your new logs will be written to a new index without the object fields that were dropped using pipelines.

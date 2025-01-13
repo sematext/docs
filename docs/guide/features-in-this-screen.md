@@ -26,6 +26,6 @@ From the flyout, you can also:
 
 ![FITS-add-chart](https://sematext.com/wp-content/uploads/2024/06/fits-add-chart.png)
 
-If you have any questions or need further assistance, don't hesitate to contact us at [support@sematext.com](support@sematext.com).
+If you have any questions or need further assistance, don't hesitate to contact us at [support@sematext.com](mailto:support@sematext.com).
 
 We hope this feature helps you get the most out of [Sematext Cloud](https://sematext.com/cloud/) and makes your experience smoother and more intuitive.
