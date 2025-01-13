@@ -1,4 +1,4 @@
-title: Identify Large Logs to Cut Logging Costs
+title: Trim Big Logs to Cut Costs
 description: Use Logs Pipeline's size processor to identify large logs and extract vital information from long text fields to reduce your costs.
 
 By leveraging the **Size Processor**, you can identify large logs, analyze their content, and optimize your log storage. By removing or optimizing unnecessary fields, the overall **log volume decreases**, leading to **lower costs**.
