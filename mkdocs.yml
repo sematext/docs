@@ -71,6 +71,7 @@ pages:
           - Sampling Processor: logs/sampling-processor.md
       - Handling Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
       - Too many fields in the index: logs/too-many-fields-in-index.md
+      - Trim Big Logs to Cut Costs: logs/identify-log-volume-spikes.md
       - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
