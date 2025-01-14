@@ -93,3 +93,41 @@ If a **new component is added** or any existing **component is edited or removed
 
 If your browser is suddenly closed, and no changes were saved or reset, the App will preserve its initial state.
 
+## Infrastructure Group
+
+Each Monitoring App (except the Infra App) includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the metrics received within each App. Currently, the Infrastructure group contains the following reports:
+
+### Hosts Report
+
+The **Hosts** report displays a list of hosts sending metrics to the Monitoring App. Selecting a host opens a detailed flyout menu containing information such as:
+
+- General Host Information: Basic details about the host.
+- Performance Metrics: Key performance metrics, including CPU, memory and disk usage.
+- Container Information: Details about containers running on the host.
+- Running Processes: A list of processes currently active on the host.
+- Software Packages: Information about available software packages on Linux-based hosts.
+- Host System Logs: Access to system-wide logs of the host.
+- Sematext Agent Details: Diagnostic information, including details about installed Sematext agents, errors and troubleshooting insights.
+
+### CPU and Memory Report
+This report provides historical charts for key metrics such as CPU usage, memory usage, system load, and swap activity.
+
+### Disk Reports
+The **Disk** report offer insights into disk space usage and I/O read/write operations over time.
+
+### Processes Report
+
+The **Processes** report provides an in-depth view of the most active processes running on a selected host. It includes:
+
+- Process Information: Details such as process name, PID, PPID, host, user, and group.
+- Performance Metrics: Insights into CPU and memory usage for each process.
+- Command Line Arguments: The exact command-line arguments used to execute the process.
+
+### Network Report
+The **Network* report provides details about transmitted and received network traffic over time, offering insights into network performance.
+
+### Key Features of Infrastructure group
+
+- Advanced Filtering: Both reports allow filtering using a wide range of tags, including process name, hostname, container name/ID, Kubernetes tags, and more.
+- Easy Troubleshooting: Designed to help you quickly identify potential issues and gain a deeper understanding of the underlying infrastructure (hosts, agents, etc.) shipping logs and metrics to your App.
+
