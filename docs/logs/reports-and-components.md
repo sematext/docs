@@ -104,7 +104,7 @@ You can also override account preference and set the default table density level
 
 ## Infrastructure Group
 
-Each Logs App includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the log sources within each App. 
+Each Logs App includes an **Infrastructure group** in the left navigation menu. This group provides detailed reports that offer insights into the environment of the log sources within each App. 
 
 ![Sematext Logs - Infrastructure group](../images/guide/logs/infra-group-logs-hosts-list.png) 
 

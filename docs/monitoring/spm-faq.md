@@ -475,6 +475,20 @@ See [alerts FAQ](../faq/#alerts).
 
 ## Troubleshooting
 
+### How can I find which hosts are running specific services, like MySQL or Elasticsearch?
+
+Use the Hosts report in the Infrastructure group of your Monitoring App created for that service:
+   - Open the Infrastructure group in the left navigation menu.
+   - Access the Hosts report and check the list of hosts sending metrics to the specified App.
+   - Click on a host to view detailed information, including running processes, logs, processes, etc.
+
+### How can I identify processes impacting my service performance?
+
+Use the Processes report under Infrastructure group of the Monitoring App that monitors your service. 
+   - Filter by the service name, process name, or associated tags.
+   - Examine CPU and memory usage metrics for each process.
+   - Review command-line arguments to confirm the process belongs to the service.
+
 ### Can I enable debugging in the Sematext Agent?
 
 Yes. For Sematext Agent, edit `logging.level` property in `/opt/spm/properties/st-agent.yml` file.

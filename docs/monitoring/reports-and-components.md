@@ -95,7 +95,7 @@ If your browser is suddenly closed, and no changes were saved or reset, the App 
 
 ## Infrastructure Group
 
-Each Monitoring App (except the Infra App) includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the metrics received within each App. 
+Each Monitoring App (except the Infra App) includes an **Infrastructure group** in the left navigation menu. This group provides detailed reports that offer insights into the environment of the metrics received within each App. 
 
 ![Sematext Monitoring - Infrastructure group](../images/monitoring/infra-group-monitoring-hosts-list.png)
 
