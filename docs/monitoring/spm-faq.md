@@ -484,7 +484,7 @@ Use the Hosts report in the Infrastructure group of your Monitoring App created 
 
 ### How can I identify processes impacting my service performance?
 
-Use the Processes report under Infrastructure group of the Monitoring App that monitors your service. 
+Use the Processes report under Infrastructure group of the Monitoring App monitoring your service. 
    - Filter by the service name, process name, or associated tags.
    - Examine CPU and memory usage metrics for each process.
    - Review command-line arguments to confirm the process belongs to the service.
