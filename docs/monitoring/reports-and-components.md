@@ -95,7 +95,11 @@ If your browser is suddenly closed, and no changes were saved or reset, the App 
 
 ## Infrastructure Group
 
-Each Monitoring App (except the Infra App) includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the metrics received within each App. Currently, the Infrastructure group contains the following reports:
+Each Monitoring App (except the Infra App) includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the metrics received within each App. 
+
+![Sematext Monitoring - Infrastructure group](../images/monitoring/infra-group-monitoring-hosts-list.png)
+
+Currently, the Infrastructure group contains the following reports:
 
 ### Hosts Report
 
@@ -109,11 +113,19 @@ The **Hosts** report displays a list of hosts sending metrics to the Monitoring 
 - Host System Logs: Access to system-wide logs of the host.
 - Sematext Agent Details: Diagnostic information, including details about installed Sematext agents, errors and troubleshooting insights.
 
+![Sematext Monitoring - Infrastructure group - Containers](../images/monitoring/infra-group-monitoring-hosts-containers.png)
+
+![Sematext Monitoring - Infrastructure group - Agents](../images/monitoring/infra-group-monitoring-hosts-agents.png)
+
 ### CPU and Memory Report
 This report provides historical charts for key metrics such as CPU usage, memory usage, system load, and swap activity.
 
+![Sematext Monitoring - Infrastructure group - CPU and Memory](../images/monitoring/infra-group-monitoring-cpumemory.png)
+
 ### Disk Reports
 The **Disk** report offer insights into disk space usage and I/O read/write operations over time.
+
+![Sematext Monitoring - Infrastructure group - Disk](../images/monitoring/infra-group-monitoring-disk.png)
 
 ### Processes Report
 
@@ -123,8 +135,12 @@ The **Processes** report provides an in-depth view of the most active processes 
 - Performance Metrics: Insights into CPU and memory usage for each process.
 - Command Line Arguments: The exact command-line arguments used to execute the process.
 
+![Sematext Monitoring - Infrastructure group - Processes](../images/monitoring/infra-group-monitoring-processes.png)
+
 ### Network Report
 The **Network* report provides details about transmitted and received network traffic over time, offering insights into network performance.
+
+![Sematext Monitoring - Infrastructure group - Network](../images/monitoring/infra-group-monitoring-network.png)
 
 ### Key Features of Infrastructure group
 

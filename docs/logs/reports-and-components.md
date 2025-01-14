@@ -104,7 +104,11 @@ You can also override account preference and set the default table density level
 
 ## Infrastructure Group
 
-Each Logs App includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the log sources within each App. Currently, the Infrastructure group contains the following two reports:
+Each Logs App includes an **Infrastructure** group in the left navigation menu. This group provides detailed reports that offer insights into the environment of the log sources within each App. 
+
+![Sematext Logs - Infrastructure group](../images/guide/logs/infra-group-logs-hosts-list.png) 
+
+Currently, the Infrastructure group contains the following two reports:
 
 ### Hosts Report
 
@@ -118,6 +122,8 @@ The **Hosts** report displays a list of hosts sending logs to the Logs App. Sele
 - Host System Logs: Access to system-wide logs of the host.
 - Sematext Agent Details: Diagnostic information, including details about installed Sematext agents, errors and troubleshooting insights.
 
+![Sematext Logs - Infrastructure group - Agents](../images/guide/logs/infra-group-logs-hosts-agent.png) 
+
 ### Processes Report
 
 The **Processes** report provides an in-depth view of the most active processes running on a selected host. It includes:
@@ -125,6 +131,8 @@ The **Processes** report provides an in-depth view of the most active processes 
 - Process Information: Details such as process name, PID, PPID, host, user, and group.
 - Performance Metrics: Insights into CPU and memory usage for each process.
 - Command Line Arguments: The exact command-line arguments used to execute the process.
+
+![Sematext Logs - Infrastructure group - Processes](../images/guide/logs/infra-group-logs-processes.png) 
 
 ### Key Features of Infrastructure group
 
