@@ -16,6 +16,8 @@ To see your Windows host metrics in Sematext Cloud, you need to [create an Infra
 2. Follow the installation steps and accept the license agreement 
 3. Set the Infra App token
 4. Select a region (EU or US) based on where you created your account in Sematext Cloud
+5. Set the Logs App token
+   - This is optional. If you want to ship your Windows Logs, set your Logs App token. You can find this token under your Windows Logs App's Agent Installation page. If left blank, Windows Logs collection won't be activated.
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
 
@@ -28,19 +30,26 @@ Download the [Sematext Agent installer](https://pub-repo.sematext.com/windows/po
 Run the following command as Administrator from the folder where you downloaded the installer:
 
 ```
-Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_INSTALLER'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_TOKEN REGION=YOUR_REGION_EU_or_US"
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_INSTALLER'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US"
+```
+
+If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page.
+
+```
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US LOGS_TOKEN=YOUR_LOGS_APP_TOKEN"
 ```
 
 Where:
 
 - `YOUR_INFRA_APP_TOKEN`: the Infra App token
+- `YOUR_LOGS_APP_TOKEN`: the Logs App token
 - `YOUR_REGION_EU_or_US`: your Sematext Cloud region - EU or US
 - `AGENT_MSI_INSTALLER`: the filename of the Sematext Agent Windows installer
 
 For example:
 
 ```
-Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU"
+Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU LOGS_TOKEN=7611db7f-c060-4e10-b667-5f2653d4966b"
 ```
 
 ### Using Windows CMD:
@@ -51,16 +60,23 @@ Run the following command as Administrator from the folder where you downloaded 
 start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
 ```
 
+If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page.
+
+```
+start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US LOGS_TOKEN=YOUR_LOGS_APP_TOKEN
+```
+
 Where:
 
 - `YOUR_INFRA_APP_TOKEN`: the Infra App token
+- `YOUR_LOGS_APP_TOKEN`: the Logs App token
 - `YOUR_REGION_EU_or_US`: your Sematext Cloud region - EU or US
 - `AGENT_MSI_INSTALLER`: the filename of the Sematext Agent Windows installer
 
 For example:
 
 ```
-start /wait msiexec /qn /i "sematext-agent-latest.msi" /L*V "sematext-agent-latest.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU
+start /wait msiexec /qn /i "sematext-agent-latest.msi" /L*V "sematext-agent-latest.msi.log" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU LOGS_TOKEN=7611db7f-c060-4e10-b667-5f2653d4966b
 ```
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
@@ -101,6 +117,12 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
 ```
 
   Make sure to update `INFRA_APP_TOKEN` with your Infra App token and `REGION` with `US` or `EU` depending on your Sematext Cloud region. Also validate that the file name of the MSI installer is correct.
+
+  If you want to ship your Windows logs, be sure to also set your Logs App token.
+
+  ```
+  Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=7511db7f-c060-4e10-b667-5f2653d4933e REGION=EU LOGS_TOKEN=7611db7f-c060-4e10-b667-5f2653d4966b"
+```
 
 #### 3. Create a shared network folder
 - Create a shared folder on your server, for example, `\\ServerName\Sematext_Distribution`.
@@ -235,14 +257,15 @@ cd C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent
 notepad.exe .\logs\st-agent.log
 ```
 
-## How to change Infra App token or region
+## How to change App tokens or region
 
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
 ```
 cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-config set-token -t "YOUR_INFRA_TOKEN"
-.\st-agent-amd64.exe windows-config set-region -r "YOUR_REGION_EU_or_US"
+st-agent-amd64.exe windows-config set-token -t "YOUR_INFRA_TOKEN"
+st-agent-amd64.exe windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
+st-agent-amd64.exe windows-config set-region -r "EU/US"
 ```
 
 After the changes, you need to restart the agent:
