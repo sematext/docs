@@ -39,6 +39,29 @@ NULL
 
 -->
 
+## Version 3.8.0
+
+Date: January 15, 2025
+
+### New Features
+
+- **Linux Logpack Support**: Introducing native Linux log collection capabilities, eliminating the need for the legacy log shipper. Configure using the new `include-linux-matches` setting in st-agent.yml.
+- **Kubernetes Node Conditions**: Added support for monitoring Kubernetes node conditions, providing better visibility into node health and status.
+
+### Improvements
+
+- **Resource Management Settings**: Added fine-grained control over resource utilization:
+  - Docker environments: New `container-cpu-set` and `container-mem-limit` settings for container resource management.
+  - Baremetal environments: New `autodisco.agent.baremetal-memory-options` for memory optimization.
+- **Windows Services Enhancements**:
+  - Added DisplayName support for better service identification.
+  - Introduced capability to consistently monitor top processes.
+  
+### Bug Fixes
+
+- Enhanced text file detection algorithm during log discovery to capture previously missed log files.
+- Fixed container CPU metrics collection by improving previous CPU delta calculations.
+
 ## Version 3.7.0
 
 Date: September 23, 2024
