@@ -23,3 +23,10 @@ While building the chart, a preview is available in top left.
 
 ![Data Table Configuration](../images/dashboards/data-table-edit-configuration.gif)
 
+You can sort data table columns by going into Edit Configuration, which will save this setting. 
+
+![Data Table Sort](../images/dashboards/data-table-edit-sort.png)
+
+You can also export the data table to a CSV file by hovering over the header and clicking on the export icon.
+
+![Data Table Sort](../images/dashboards/data-table-export.png)
