@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 
 export default async function testPage(page) {
-    await page.goto('https://sematext.com/');
-    await expect(page.getByText('Sematext provides Monitoring & Alerting')).toBeVisible();
-    await page.screenshot({ path: 'screenshot.jpg' });
+  await page.goto('https://sematext.com/');
+  await expect(page.getByText('End-to-end visibility')).toBeVisible();
+  await page.screenshot({ path: 'screenshot.jpg' });
 }
