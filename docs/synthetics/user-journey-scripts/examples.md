@@ -28,6 +28,12 @@ This script loads the DuckDuckGo search page, enters a search term, submits the 
 
 
 
+### [Text Search](https://github.com/sematext/docs/blob/master/docs/synthetics/playwright-scripts/text-search.js)
+
+This script visits a web page and ensures that the text *"End-to-end visibility"* is present on the page, then takes a screenshot.
+
+
+
 ### [Login](https://github.com/sematext/docs/tree/master/docs/synthetics/playwright-scripts/login-wiki.js)
 
 This script loads the web page, navigates to the login page, fills in the login details and submits the form. After logging in it navigates to the user profile page and verifies the logged-in user name by extracting the value from the page content.
