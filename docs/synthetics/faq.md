@@ -93,6 +93,7 @@ The HTTP monitor measures how long it takes to execute a single HTTP request and
 |--------------------------------|----------------|
 | **N. Virginia** (us-east-1)    | 52.202.60.97   |
 | **N. California** (us-west-1)  | 184.72.63.129  |
+| **Montreal** (ca-central-1)    | 15.157.18.14   |
 | **Mumbai** (ap-south-1)        | 15.207.239.77  |
 | **Singapore** (ap-southeast-1) | 3.0.44.28      |
 | **Sydney** (ap-southeast-2)    | 54.153.196.213 |
