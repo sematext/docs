@@ -27,6 +27,9 @@ Synthetics monitors can be scheduled to run from the following public locations:
 |---|---|---|
 | N. Virginia, USA  |  Ireland, Europe | Mumbai, India  |
 | N. California, USA  |  Frankfurt, Germany | Singapore  |
-| São Paulo, Brazil  |   | Sydney, Australia  |
+| Montreal, Canada  |   | Sydney, Australia  |
+| São Paulo, Brazil  |   |   |
+
+
 
 You can also install and run the [agents](./private-locations.md) in your private network to monitor your internal applications that are not accessible from the Internet.
