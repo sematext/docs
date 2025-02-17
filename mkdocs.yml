@@ -131,6 +131,7 @@ nav:
         - Handling Sensitive Data: synthetics/user-journey-scripts/sensitive-data.md
         - Track individual URL timings: synthetics/user-journey-scripts/track-individual-url-timings.md
         - Examples: synthetics/user-journey-scripts/examples.md
+        - Using GenAI to write Playwright scripts: synthetics/user-journey-scripts/generating-playwright-scripts.md
         - Tips & Tricks: synthetics/user-journey-scripts/tips-and-tricks.md
         - Troubleshooting: synthetics/user-journey-scripts/troubleshooting.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md

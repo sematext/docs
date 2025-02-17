@@ -19,25 +19,7 @@ and many more! By emulating what we do in those examples, you should be able to 
 
 ## Using generative AI to help you create your script
 
-Generative AI tools such as ChatGPT and Claude are getting better and better at writing code, including Playwright scripts. They can help you generate a general outline for your script which you may have to fix up a little depending on how descriptive you are with the requirements and how complex your flow is. If the flow you're looking to implement is very simple, then these AI models might even generate a working script outright.
-
-Take a look at the following example that uses ChatGPT.
-
-![ChatGPT Playwright Example](../../images/synthetics/chatgpt-playwright-example.png)
-
-The first paragraph of the prompt is what we actually want the script to do - i.e. the User Journey which you're trying to emulate - while the second part is there just to let the AI know about the format used by Sematext Cloud Synthetics Monitors, making it easy for us to copy-paste the generated script right into Sematext Cloud.
-
-Here's that second part so that you can easily use it in your own prompts:
-```
-Assume the `browser` and `page` objects are already created and are passed to a function with this prototype: `export default async function testPage(page)`, so only write the actual steps I asked about in that function and don't perform any setup or teardown steps.
-```
-
-
-In this case, we managed to get a fully working script right off the bat.
-
-![ChatGPT Playwright Result](../../images/synthetics/chatgpt-playwright-result.png)
-
-This script could definitely be improved upon, but it's a good start that you can work on and refine. Keep in mind that you also might have to look into your page a bit to find the exact selectors you want (especially if you're using a page that isn't public), but this shouldn't take long and it should be easy to iterate over the initial output you get from the AI.
+You can also use GenAI to write Playwright scripts. Check out [the dedicated page for this topic](./generating-playwright-scripts.md) to learn more.
 
 
 
