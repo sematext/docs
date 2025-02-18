@@ -60,7 +60,7 @@ Refer to our [infrastructure default alerts](https://sematext.com/docs/monitorin
 2. Install [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/releasenotes/) on each host you want to monitor according to the instructions displayed in the UI
 3. Once you install the agent, you will see discovered file and journaId logs from your Linux operating system in your [App](https://sematext.com/docs/guide/app-guide/) within a few minutes.
 
-When you configure log shipping from systemd service units via Fleet & Discovery, the following values will be automatically set in the agent, and the agent will ship service start-stop logs, audit logs, kernel logs, etc.
+When you configure log shipping from systemd service units via [Fleet & Discovery](https://sematext.com/docs/logs/discovery/intro/), the following values will be automatically set in the agent, and the agent will ship service start-stop logs, audit logs, kernel logs, etc.
 
 ```
 include-linux-matches:
@@ -84,3 +84,33 @@ Additionally, you can define inclusion and exclusion policies for `systemd` serv
 
 ### Reports
 
+The reports are divided into two categories: **File** and **Journald**. Additionally, there is an Explore report that includes all log data shipped from Linux machines.
+
+### Journald Reports (logs collected from systemd's journald):
+
+The **Overview** report provides a high-level summary of Journald logs, showing key trends and important system events at a glance.
+
+![Linux Logs Overview](../images/integrations/linux-logs-overview.png)
+
+In addition to the Overview report, the following built-in reports are available:
+
+- **Auth** – Tracks user logins, authentication attempts, and security events.
+- **Kernel** – Captures messages from the Linux kernel, including system errors and warnings.
+- **SSH** – Monitors SSH login attempts and connections.
+- **Services** – Logs service start, stop, and failure events.
+- **Startup & Shutdown** – Records system boot and shutdown activities.
+- **Audit** – Includes security and compliance-related logs.
+- **Cron** – Tracks scheduled tasks run via cron jobs.
+- **YUM/Snap** – Logs package installations and updates from YUM and Snap.
+- **Mail** – Captures logs related to email services.
+- **DNS** – Records DNS queries and responses.
+
+### File Reports (logs collected from traditional log files):
+
+- **Auth** – Similar to Journald Auth, tracking authentication events.
+- **Audit** – Security logs stored in audit.log.
+- **Access** – Logs web server access events (e.g., Nginx, Apache).
+- **Kernel** – Kernel-related logs from log files.
+- **Syslog** – General system logs, including messages from various services.
+- **Fail2Ban** – Tracks IP bans due to failed login attempts.
+- **Mail** – Logs email server activity.
