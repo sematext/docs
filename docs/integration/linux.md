@@ -114,3 +114,8 @@ In addition to the Overview report, the following built-in reports are available
 - **Syslog** – General system logs, including messages from various services.
 - **Fail2Ban** – Tracks IP bans due to failed login attempts.
 - **Mail** – Logs email server activity.
+
+## Troubleshooting
+
+If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Logs App. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+
