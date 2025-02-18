@@ -50,4 +50,6 @@ Each time you create a new Infra App in Sematext Cloud to monitor your Linux ser
 
 Refer to our [infrastructure default alerts](https://sematext.com/docs/monitoring/servers/#core-infrastructure-alerting) to learn more information.
 
+## Logs
+
 
