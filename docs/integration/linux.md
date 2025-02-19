@@ -115,6 +115,17 @@ In addition to the Overview report, the following built-in reports are available
 - **Fail2Ban** – Tracks IP bans due to failed login attempts.
 - **Mail** – Logs email server activity.
 
+## Out of the box alerts
+
+Each time you create a new Infra Logs App in Sematext Cloud, a number of pre-configured alerts are automatically created. These alerts are fine-tuned to detect various issues and help prevent system downtime.
+
+- Anomaly alerts triggered when an unexpectedly high number of error or warning logs are detected
+- Service failure alerts
+- Alerts for unexpected system reboots or shutdowns
+- Failed cron job alerts
+- Alerts for unusual outbound network traffic
+- Alerts for unusual inbound network traffic
+
 ## Troubleshooting
 
 If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Logs App. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
