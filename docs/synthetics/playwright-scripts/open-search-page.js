@@ -1,9 +1,19 @@
 import { expect } from '@playwright/test';
 
 export default async function testPage(page) {
-    await page.goto('https://duckduckgo.com/');
-    await page.getByLabel('Search with DuckDuckGo').fill('google');
-    await page.getByLabel('Search', { exact: true }).click();
-    await page.waitForLoadState('networkidle');
-    await expect(page.locator('a[href="https://www.google.com/"]').first()).toBeAttached();
+    await page.goto('https://github.com');
+
+    // Click on search button
+    await page.getByLabel('Search or jump to').click();
+  
+    // Fill in search input
+    await page.getByRole('combobox').fill('playwright');
+  
+    // Press Enter
+    await page.getByRole('combobox').press('Enter');
+  
+    // Confirm search results
+    await expect(page.getByRole('link', { name: 'playwright' }).first()).toBeVisible();
+  
+    await page.screenshot({ path: 'screenshot.png' });
 }
