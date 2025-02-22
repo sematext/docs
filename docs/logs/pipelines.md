@@ -91,11 +91,11 @@ To view the impact of processors up to a specific point in the Preview section, 
 
 ### Not Applied Behavior
 
-**Not Applied!** means that due to filters or patterns within that processor, it hasn't affected the log displayed on the input side. When calculating the **Not Applied!** status, we check if there is any difference between the log shown on the input side and the log shown on the preview side.
+**Not Applied** means that due to filters or patterns within that processor, it hasn't affected the log displayed on the input side. When calculating the **Not Applied** status, we check if there is any difference between the log shown on the Input side and the log shown on the Preview side.
  
-However **Not Applied!** doesn't always indicate that the operations defined in the processor won't be applied to the newly arrived records. The processors defined in pipelines are processed just before being inserted into the Elasticsearch database. So only the processed version of the log is stored in the database. We do not store raw logs.
+However, **Not Applied** doesn't always mean that operations defined in the processor won't be applied to the new log events. The processors defined in a Pipeline are executed just before data is actually stored into Sematext. So only the processed version of the log is stored. We do not store raw logs.
 
-If the log has been received after the processors were saved, the displayed version on the input side already reflects the applied state of the saved processors. In this case, there's no difference between the Input and Preview sections, so it's normal for that processor to appear as **Not Applied!**.
+If the log has been received after the processors were saved, the displayed version on the Input side already reflects the state of the saved processors. In this case, there's no difference between the Input and Preview sections, so it's normal for that processor to appear as **Not Applied**.
 
 
 ## Saving Pipeline
