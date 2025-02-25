@@ -48,7 +48,9 @@ frameborder="0" allow="autoplay; encrypted-media"
 allowfullscreen class="video"></iframe>
 </div>
 
-To use the Playwright Test Generator, you'll need to have Visual Studio Code installed on your machine, which you can download for free [here](https://code.visualstudio.com/download). You can then follow [this guide](https://playwright.dev/docs/codegen) to set everything up and start recording scripts.
+You can use the Playwright Test Generator with or without Visual Studio Code.
+* If you want to use it with [Visual Studio Code](https://code.visualstudio.com/download), you can follow [this guide](https://playwright.dev/docs/codegen) to set everything up and start recording scripts.
+* If you'd like to run it without Visual Studio Code, you first have to [download and install Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your computer, after which you can follow [this guide](https://playwright.dev/docs/codegen#generate-tests-with-the-playwright-inspector) to get started
 
 Once you've recorded a script and ensured it works the way you'd like, copy everything from the generated `test` function over to the `testPage` function we use in Sematext Cloud and try the monitor out. For simple actions these scripts can work out of the box, but there are cases where the script recorder doesn't have the full context needed to get everything running smoothly (such as dynamic elements that only appear when you hover over others, or geolocation-dependent elements). If there are certain issues, you can see where the script gets stuck when you run it locally, then you can make the necessary modifications to get everything up and running again.
 
