@@ -79,8 +79,13 @@ patterns:
     # Common Log Format
     - regex:        !!js/regexp /([0-9a-f.:]+)\s+(-|.+?)\s+(-|.+?)\s+\[([0-9]{2}\/[a-z]{3}\/[0-9]{4}\:[0-9]{2}:[0-9]{2}:[0-9]{2}[^\]]*)\] \"(\S+?)\s(\S*?)\s{0,1}(\S+?)\" ([0-9|\-]+) ([0-9|\-]+)/i
       type: apache_access_common
+      # map each match above to a field in `fields`
+      # the `ts` field is special that gets renamed to the @timestamp field
       fields:       [client_ip,remote_id,user,ts,method,path,http_version,status_code,size]
+      # the casing of DD, MMM, YYYY, etc. matters
       dateFormat: DD/MMM/YYYY:HH:mm:ss ZZ
+      # another example - note that here a different casing needs to be used
+      # dateFormat: yyyy-MM-dd HH:mm:ss,SSS
       # lookup geoip info for the field client_ip
       geoIP: client_ip
       # parse only messages that match this regex
