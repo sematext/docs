@@ -468,20 +468,40 @@ nav:
     - API: api/index.md
     - FAQ: faq.md
 
-
 theme:
   name: material
-  custom_dir: 'mkdocs-material-custom'
-repo_url: https://github.com/sematext/docs/
-edit_uri: edit/master/docs/
-# Options
-extra:
-  logo: 'images/logo.svg'
+    #:custom_dir: 'mkdocs-material-custom'
   palette:
-    primary: 'Indigo'
-    accent: 'Indigo'
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
   font:
     text: 'Roboto,sans-serif'
+    code: Red Hat Mono
+
+  logo: 'images/logo.svg'
+    #logo: 'images/logo-full.svg'
+  features:
+    - navigation.footer
+
+  # OTIS - GET THIS FROM SOMEWHERE
+  #favicon: assets/favicon.ico
+  #favicon: mkdocs-material-custom.ORIG/assets/images/favicon.png
+
+extra:
   social:
     - icon: 'fontawesome/brands/github'
       link: 'https://github.com/sematext'
@@ -496,20 +516,58 @@ extra:
     - icon: 'fontawesome/solid/rss'
       link: 'https://feeds.feedburner.com/SematextBlog'
 
+# OTIS - THIS WAS IN OLD mkdocs.yml. SOMETHING IN THERE OVERRIDES header COLOUR AND WHO KNOWS WHAT ELSE
 extra_css:
-  - 'stylesheets/extra.css'
-  - 'stylesheets/code-tabs.css'
+  # OTIS - NEEDED FOR tabs like https://sematext.com/new-docs/agents/sematext-agent/linux-installation/
+  # BUT WHY IS EXTRA STUFF NEEDED FOR THIS?
+  # AH, MAYBE BECAUSE WE USE THIS: https://github.com/sematext/docs/edit/master/docs/agents/sematext-agent/linux-installation.md
+  # INSTEAD OF USING THIS APPROACH: https://jameswillett.dev/getting-started-with-material-for-mkdocs/#content-tabs
 
-extra_javascript:
-  - 'javascripts/extra.js'
+  # OH, BUT SOMETHING IN THIS EXTRA CSS OVERRIDES STYLE FOR THE HEADER
+  - 'stylesheets/extra.css'
+    #  - 'stylesheets/code-tabs.css'
+
+    #extra_javascript:
+    #- 'javascripts/extra.js'
+
+repo_url: https://github.com/sematext/docs/
+edit_uri: edit/master/docs/
+
+copyright: Copyright &copy; Sematext Group, Inc.
 
 markdown_extensions:
   - toc:
       permalink: true
-  - codehilite
+  # OTIS - MAYBE NOT NEEDED? MAYBE THAT NEW highlight STUFF BELOW IS THE WAY TO GO
+  #- codehilite
   - meta
   - admonition
+  - pymdownx.details
   - pymdownx.superfences:
       preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+    #OLD emoji_generator: !!python/name:pymdownx.emoji.to_png
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+validation:
+  links:
+    absolute_links: relative_to_docs
+    absolute_links: ignore
+    unrecognized_links: ignore
+
+    #  anchors: warn
+    #  unrecognized_links: ignore
