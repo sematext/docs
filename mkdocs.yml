@@ -165,7 +165,6 @@ nav:
         - Kubernetes: integration/kubernetes.md
         - Kubernetes Audit: integration/kubernetes-audit-integration.md
         - Linux: integration/linux.md
-        - Linux Journald: integration/journald-integration.md
         - Windows:
           - Overview: integration/windows.md
           - Configuring Logs Collection: integration/configuring-windows-agent.md
