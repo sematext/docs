@@ -73,7 +73,7 @@ Team account doesn't cost any money. It's completely free. The benefits of a Tea
 
 * Single, centralized place for all your team's Sematext assets (e.g. Apps, Dashboards, Alert Rules, payment information, plan management, access roles, etc.)
 * It is easy to invite teammates and, more importantly, remove them from the team account when they leave the organization
-* Longer lifetime.  When an invidual leaves an organization their email typically stops working after a while.  If your team has their Sematext assets in that individual's Sematext account you can imagine that's not really ideal.
+* Longer lifetime.  When an individual leaves an organization their email typically stops working after a while.  If your team has their Sematext assets in that individual's Sematext account you can imagine that's not really ideal.
 
 If you are using an internal group email, you need to allow posting by non-members or from an email that's not your organization's email in order to be able to receive emails from Sematext. In Google Suite, you can enable this from Groups --> Settings page.
 
