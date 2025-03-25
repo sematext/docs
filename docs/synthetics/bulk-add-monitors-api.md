@@ -304,10 +304,7 @@ for (var i = 2; i <= sheet.getLastRow(); i++) {
       "locations": locationArray,
       "url": url,
       "method": "GET",
-.
-.
-.
-
+...
 ```
 
 ### Run Apps Script
@@ -364,9 +361,7 @@ for (var i = 2; i <= sheet.getLastRow(); i++) {
       Logger.log("Skipping row " + i + " due to missing data.");
       continue;
     }
-.
-.
-.
+...
 ```
 
 - Locate the ```locations``` array within your payload, add the new location.
@@ -421,9 +416,7 @@ And, you must add ```"isPlaywright": true``` within your payload.
       "url": url,
       "method": method,
       "isPlaywright": true,
-.
-.
-.
+...
 ```
 
 Adjust the payload based on your needs to configure your Browser Monitors and then Run the Apps Script.
