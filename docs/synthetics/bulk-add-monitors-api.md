@@ -94,4 +94,230 @@ var apiKey = "YOUR_API_KEY";
 ```
 Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get your App ID and API key.
 
+- Set the endpoint with `appId` parameter:
+
+EU region:
+
+```javascript
+ var endpoint = "https://apps.eu.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/http";
+```
+
+US region:
+
+```javascript
+var endpoint = "https://apps.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/http";
+```
+- Iterate through all rows in the Google Sheet and send a create HTTP monitor request for each monitor:
+
+```javascript
+for (var i = 2; i <= sheet.getLastRow(); i++) {
+    var name = String(sheet.getRange(i, 1).getValue()).trim();
+    var url = String(sheet.getRange(i, 2).getValue()).trim();  
+
+    // Validate the monitor name and URL; skip if invalid.
+    if (!name || !url) {
+      Logger.log("Skipping row " + i + " due to missing data.");
+      continue;
+    }
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      Logger.log("ERROR at row " + i + ": Invalid URL format.");
+      continue;
+    }
+
+   // Define the configuration parameters for creating an HTTP monitor.
+    var payload = {
+      "name": name,
+      "interval": "5m",
+      "enabled": true,
+      "locations": [1, 2],
+      "url": url,
+      "method": "GET",
+      "maxRetries": 2,
+      "headers": [
+            {
+                "name": "Authorization",
+                "value": "pr-env-key"
+            }
+      ],
+      "conditions": [
+        { "id": 1, "type": "ERROR", "operator": "=", "value": "", "enabled": true },
+        { "id": 2, "type": "RESPONSE_CODE", "operator": "=", "value": "200", "enabled": true },
+        { "id": 3, "type": "METRIC", "key": "synthetics.time.response", "operator": "<", "value": "20000", "enabled": true }
+      ],
+      "monitorSSLExpiry": true,
+      "monitorSSLChange": true,
+      "allowInsecureSSL": false,
+       "alertRule": {
+        "schedule": [
+            {
+                "day": "Monday",
+                "index": 2,
+                "label": "MON",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Tuesday",
+                "index": 3,
+                "label": "TUE",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Wednesday",
+                "index": 4,
+                "label": "WED",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Thursday",
+                "index": 5,
+                "label": "THU",
+                "intervals": [
+                  {
+                     "start": "14:30",
+                     "end": "15:00"
+                   }
+                ],
+                "type": "CUSTOM"
+            },
+            {
+                "day": "Friday",
+                "index": 6,
+                "label": "FRI",
+                "intervals": [],
+                "type": "INACTIVE"
+            },
+            {
+                "day": "Saturday",
+                "index": 7,
+                "label": "SAT",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Sunday",
+                "index": 1,
+                "label": "SUN",
+                "intervals": [],
+                "type": "ACTIVE"
+            }
+        ],
+        "priority": "ERROR",
+        "minDelayBetweenNotificationsInMinutes": "2",
+        "backToNormalNeeded": true,
+        "failedRunCountToAlert": 1,
+        "notificationsEnabled": true,
+        "useOnlyAlertRuleIntegrations": false
+      }
+    };
+
+    var options = {
+      "method": "post",
+      "headers": {
+        "Authorization": "apiKey " + apiKey,
+        "Content-Type": "application/json"
+      },
+      "payload": JSON.stringify(payload),
+      "muteHttpExceptions": true
+    };
+
+    var response = UrlFetchApp.fetch(endpoint, options);
+    Logger.log("Response for row " + i + ": " + response.getContentText());
+   }
+
+```
+Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-locationid) to learn how to get location IDs.
+
+#### Example Only with Required Parameters
+
+The full example above includes all possible parameters, but some are optional. If not sent, default values will be configured. The required parameters are:
+
+- Monitor name
+- Interval
+- Enabled status
+- Locations
+- URL
+- Method
+- Conditions
+
+The payload with only the required parameters will look like this:
+
+```javascript
+var payload = {
+      "name": name,
+      "interval": "5m",
+      "enabled": true,
+      "locations": [1, 2],
+      "url": url,
+      "method": "GET",
+      "conditions": [
+        { "id": 1, "type": "ERROR", "operator": "=", "value": "", "enabled": true },
+        { "id": 2, "type": "RESPONSE_CODE", "operator": "=", "value": "200", "enabled": true },
+        { "id": 3, "type": "METRIC", "key": "synthetics.time.response", "operator": "<", "value": "20000", "enabled": true }
+      ]
+    };
+```
+
+For more details on all available parameters for HTTP and Browser monitors, refer to the [Sematext Synthetics API documentation](https://sematext.com/docs/synthetics/using-the-api/#create-monitor-api).
+
+#### Adding more dynamic parameters
+
+In the example above, all configuration parameters were the same for each monitor, except for the URL and monitor name, which we fetched from the Google Sheet. If you want to specify different parameters for each monitor, you should add a column for each setting in the Google Sheet. In the example below, we've configured the location and interval settings differently for each monitor.
+
+| Monitor Name | URL | Locations | Interval
+| --- | --- | --- | --- |
+| bulk add 1 | https://example_1.com | 1, 2 | 5 |
+| bulk add 3 | https://example_3.com | 3, 4 | 10 |
+
+When iterating through each monitor, extract the location and interval settings for that specific monitor and add them as parameters in the payload.
+
+```javascript
+for (var i = 2; i <= sheet.getLastRow(); i++) {
+    var name = String(sheet.getRange(i, 1).getValue()).trim();
+    var url = String(sheet.getRange(i, 2).getValue()).trim();  
+    var locations = String(sheet.getRange(i, 3).getValue()).trim();
+    var intervalValue = String(sheet.getRange(i, 4).getValue()).trim();
+    var interval = intervalValue + "m"; // Add "m" to interval
+
+    // Convert locations from "1, 2, 3" to [1, 2, 3]
+    var locationArray = locations.split(",").map(function(loc) {
+      return parseInt(loc.trim(), 10);
+    }).filter(function(num) {
+      return !isNaN(num);
+    });
+
+    if (!name || !url) {
+      Logger.log("Skipping row " + i + " due to missing data.");
+      continue;
+    }
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      Logger.log("ERROR at row " + i + ": Invalid URL format.");
+      continue;
+    }
+    // Define the configuration parameters for creating an HTTP monitor.
+    var payload = {
+      "name": name,
+      "interval": interval,
+      "enabled": true,
+      "locations": locationArray,
+      "url": url,
+      "method": "GET",
+.
+.
+.
+
+```
+
+### Run Apps Script
+
+After creating your Google Sheet and writing the Apps Script based on your requirements, click **Run** to create the monitors. You will see the execution log below. 
+
+![Synthetics Apps Script](../images/synthetics/synthetics-api-apps-script.png)
+
+Then, go to your **Sematext → Synthetics App**, where you should see the HTTP monitors created in your Sematext account.
+
+![Synthetics API Bulk Add Monitors](../images/synthetics/synthetics-api-bulk-monitors.png)
+
 
