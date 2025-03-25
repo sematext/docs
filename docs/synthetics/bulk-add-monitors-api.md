@@ -456,7 +456,7 @@ Then, within your payload, remove the ```url``` parameter and add two new config
 
 ## Bulk Edit Browser Monitors
 
-You can follow the same [Bulk Edit Monitors](bulk-edit-monitors)  steps to edit Browser monitors. The only changes are to update the endpoint to edit Browser monitors instead of HTTP and add ```"isPlaywright": true``` within your payload.
+You can follow the same [Bulk Edit Monitors](#bulk-edit-monitors)  steps to edit Browser monitors. The only changes are to update the endpoint to edit Browser monitors instead of HTTP and add ```"isPlaywright": true``` within your payload.
 
 **Bulk Edit Browser Monitors endpoint:**
 
