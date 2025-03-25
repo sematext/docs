@@ -323,8 +323,8 @@ Then, go to your **Sematext → Synthetics App**, where you should see the HTTP 
 ## Bulk Edit Monitors
 
 After bulk adding monitors, if you want to change the configuration for each one, you can use the bulk edit API. Note that you need to pass each parameter again because the edit API overrides the existing configuration. To bulk edit all the monitors, you can clone the spreadsheet and make the necessary changes.
-
-> If you want to bulk edit Browser monitors, follow these steps first, but refer to the [Bulk Edit Browser Monitors](bulk-edit-browser-monitors) section below for the minor changes needed to edit Browser monitors.
+                                                                                                                  
+> If you want to bulk edit Browser monitors, follow these steps first, but refer to the [Bulk Edit Browser Monitors](#bulk-edit-browser-monitors) section below for the minor changes needed to edit Browser monitors.
 
 For example, to add one more location to all the monitors created by [this script](setting-up-the-google-sheet-to-bulk-add-monitors).  Clone the sheet and change the App Script and the Google Sheet according to the instructions below:
 
