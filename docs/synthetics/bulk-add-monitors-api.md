@@ -392,7 +392,7 @@ After bulk adding monitors, if you want to change the configuration for each one
                                                                                                                   
 > If you want to bulk edit Browser monitors, follow these steps first, but refer to the [Bulk Edit Browser Monitors](#bulk-edit-browser-monitors) section below for the minor changes needed to edit Browser monitors.
 
-For example, to add one more location to all the monitors created by [this script](#setting-up-the-google-sheet-to-bulk-add-monitors).  Clone the sheet and change the App Script and the Google Sheet according to the instructions below:
+For example, to add one more location to all the monitors created by [this script](#setting-up-the-google-sheet-to-bulk-add-monitors), clone the sheet and change the App Script and the Google Sheet according to the instructions below:
 
 - First, add a new column in your spreadsheet for the monitor ID and enter the monitor IDs for each monitor.
 
