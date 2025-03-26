@@ -401,7 +401,7 @@ For example, to add one more location to all the monitors created by [this scrip
 | bulk add 1 | https://example_1.com | 12345 |
 | bulk add 3 | https://example_3.com | 67891 | 
 
-Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get monitor IDs, or you can use the Synthetics API to get all the available monitors for an app: [Get all monitors for an App](https://sematext.com/docs/synthetics/using-the-api/#get-all-monitors-for-an-app).
+Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get monitor IDs, or you can use the Synthetics API to get all the available monitors for an App: [Get all monitors for an App](https://sematext.com/docs/synthetics/using-the-api/#get-all-monitors-for-an-app).
 
 - Then, you need to specify the monitor ID within the endpoint URL.
 
