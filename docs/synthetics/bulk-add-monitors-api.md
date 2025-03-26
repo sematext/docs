@@ -334,7 +334,7 @@ For example, to add one more location to all the monitors created by [this scrip
 
 Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get monitor IDs, or you can use the Synthetics API to get all the available monitors for an app: [Get all monitors for an App](https://sematext.com/docs/synthetics/using-the-api/#get-all-monitors-for-an-app).
 
-- Then, you need to specify the monitor id within the endpoint URL.
+- Then, you need to specify the monitor ID within the endpoint URL.
 
 EU region:
 
