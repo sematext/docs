@@ -154,8 +154,10 @@ nav:
       - Root Cause Discovery:
         - Overview: synthetics/root-cause-discovery/overview.md
         - Request ID for Troubleshooting: synthetics/root-cause-discovery/root-cause-discovery-with-request-id.md
-      - Using the API: synthetics/using-the-api.md
-      - Bulk Add Monitors via Apps Script: synthetics/bulk-add-monitors-api.md
+      - API:
+        - Using the API: synthetics/using-the-api.md
+        - Bulk Add Monitors via Apps Script: synthetics/bulk-add-monitors-api.md
+        - Bulk Edit Monitors via Apps Script: synthetics/bulk-edit-monitors-api.md
       - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
