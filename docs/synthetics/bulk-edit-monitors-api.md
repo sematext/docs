@@ -3,8 +3,6 @@ description: Bulk edit HTTP and Browser Monitors using Google Sheets and Apps Sc
 
 This guide explains how to use Google Sheets and [Apps Script](https://developers.google.com/apps-script) to bulk edit [HTTP](https://sematext.com/docs/synthetics/http-monitor/) and [Browser](https://sematext.com/docs/synthetics/browser-monitor/) Monitors. You can enter monitor details in a structured spreadsheet and use a script to send API requests for each monitor.
 
-## Bulk Edit Monitors
-
 After adding monitors, if you want to change the configuration for each one, you can use the bulk edit API. Note that you need to pass each parameter again because the edit API overrides the existing configuration. To bulk edit all the monitors, you can clone the spreadsheet used in bulk adding monitors and make the necessary changes.
                                                                                                                   
 > If you want to bulk edit Browser monitors, follow these steps first, but refer to the [Bulk Edit Browser Monitors](#bulk-edit-browser-monitors) section below for the minor changes needed to edit Browser monitors.
