@@ -1,4 +1,4 @@
-title: Bulk Add/Edit Monitors via Apps Script
+title: Bulk Add/Edit Monitors via Google Apps Script
 description: Bulk add and edit HTTP and Browser Monitors using Google Sheets and Apps Script via the Sematext Synthetics API.
 
 This guide explains how to use Google Sheets and [Apps Script](https://developers.google.com/apps-script) to bulk add or edit [HTTP](https://sematext.com/docs/synthetics/http-monitor/) and [Browser](https://sematext.com/docs/synthetics/browser-monitor/) Monitors. You can enter monitor details in a structured spreadsheet and use a script to send API requests for each monitor.
@@ -21,9 +21,9 @@ This guide explains how to use Google Sheets and [Apps Script](https://developer
 | bulk add 1 | https://example_1.com |
 | bulk add 3 | https://example_3.com | 
 
-> You can add as many monitors as your selected plan allows. For more details, refer to the [pricing](https://sematext.com/pricing/) page. To keep this example simple, we'll demonstrate bulk adding two monitors.
+> You can add as many monitors as your selected plan allows. For more details, refer to the [pricing](https://sematext.com/pricing/) page. To keep this example simple, we'll demonstrate bulk adding of only two monitors.
 
-- Proceed to **Extensions → Apps Script** to write the script that will bulk add monitors.
+- Proceed to **Extensions → Apps Script** to paste the script that will bulk add monitors.
 
 In the Apps Script, we'll write a function called `sendMultipleMonitorRequests` to iterate through all the monitors in the Google Sheet and bulk add HTTP monitors. 
 
