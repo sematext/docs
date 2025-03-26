@@ -3,7 +3,7 @@ description: Bulk add HTTP and Browser Monitors using Google Sheets and Apps Scr
 
 This guide explains how to use Google Sheets and [Apps Script](https://developers.google.com/apps-script) to bulk add [HTTP](https://sematext.com/docs/synthetics/http-monitor/) and [Browser](https://sematext.com/docs/synthetics/browser-monitor/) Monitors. You can enter monitor details in a structured spreadsheet and use a script to send API requests for each monitor.
 
-You can find an example spreadsheet and Google Apps Script here and try it out right away. Note that you'll need to set the API Key and App ID within the spreadsheet using your SC account. 
+You can find an example spreadsheet and Google Apps Script [here](https://docs.google.com/spreadsheets/d/1uiX3Ek2NRzRaCkWR_pWh5ZgA8vvBdPjfJHC6hg4N3hI/edit?gid=0#gid=0) and try it out right away. Note that you'll need to set the API Key and App ID within the spreadsheet using your SC account. 
 
 Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get your App ID and API key.
 
