@@ -260,7 +260,7 @@ var payload = {
     };
 ```
 
-For more details on all available parameters for HTTP and Browser monitors, refer to the [Sematext Synthetics API documentation](https://sematext.com/docs/synthetics/using-the-api/#create-monitor-api).
+For more details on all available parameters for HTTP monitors, refer to the [Sematext Synthetics API documentation](https://sematext.com/docs/synthetics/using-the-api/#create-monitor-api).
 
 #### Adding more dynamic parameters
 
@@ -339,13 +339,13 @@ Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting
 EU region:
 
 ```javascript
-var endpoint = "https://apps.eu.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/browser/" + id;
+var endpoint = "https://apps.eu.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/http/" + id;
 ```
 
 US region:
 
 ```javascript
-var endpoint = "https://apps.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/browser/" + id;
+var endpoint = "https://apps.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/http/" + id;
 ```
 To do this, you need to extract the monitor ID from the new column you've added. Cut the line where we set the endpoint from outside the for loop and paste it inside to change the URL for each monitor.
 
@@ -355,7 +355,7 @@ for (var i = 2; i <= sheet.getLastRow(); i++) {
     var url = String(sheet.getRange(i, 2).getValue()).trim();  
     var id = String(sheet.getRange(i, 3).getValue()).trim();
 
-    var endpoint = "https://apps.eu.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/browser/" + id;
+    var endpoint = "https://apps.eu.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/http/" + id;
    
     if (!name || !url || !id) {
       Logger.log("Skipping row " + i + " due to missing data.");
