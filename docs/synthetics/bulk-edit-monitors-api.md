@@ -71,68 +71,6 @@ Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting
     };
   ```
 
-  ## Bulk Add Browser Monitors
-
-In the examples above, we bulk added HTTP monitors. You can follow the same steps to bulk add Browser monitors with minor changes in the Apps Script.
-
-The endpoint must be changed from **HTTP** to **Browser**.
-
-**Bulk Add Browser Monitors endpoint:**
-
-EU region:
-
-```javascript
-var endpoint = "https://apps.eu.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/browser";
-```
-
-US region:
-
-```javascript
-var endpoint = "https://apps.sematext.com/synthetics-api/api/apps/" + appId + "/monitors/browser";
-```
-
-And, you must add ```"isPlaywright": true``` within your payload.
-
-```javascript
- var payload = {
-      "name": name,
-      "interval": "5m",
-      "enabled": true,
-      "locations": [1, 2],
-      "url": url,
-      "method": method,
-      "isPlaywright": true,
-...
-```
-
-Adjust the payload based on your needs to configure your Browser Monitors and then Run the Apps Script.
-For more details on all available parameters for Browser monitors, refer to the [Sematext Synthetics API](https://sematext.com/docs/synthetics/using-the-api/#create-monitor-api) documentation.
-
-### Bulk Add Script Based Browser Monitors
-
-If you want to create script-based Browser monitors, replace the URL column in your spreadsheet with the Script column. Paste your [user journey script](https://sematext.com/docs/synthetics/user-journey-scripts/overview/) written in Playwright into that new column for each monitor.
-
-| Monitor Name | Script |
-| --- | --- |
-| bulk add 1 |``` async function testPage(page) { await page.goto("www.google.com"); await page.screenshot({ path: 'screenshot.jpg' }); } export default testPage; ``` |
-| bulk add 3 |``` async function testPage(page) { await page.goto("www.google.com"); await page.screenshot({ path: 'screenshot.jpg' }); } export default testPage; ``` |
-
-Then instead of extracting a URL within the App Script extract [user journey scripts](https://sematext.com/docs/synthetics/user-journey-scripts/overview/)
-
-```javascript
-  for (var i = 2; i <= sheet.getLastRow(); i++) {
-    var name = String(sheet.getRange(i, 1).getValue()).trim();
-    var script = String(sheet.getRange(i, 2).getValue()).trim(); 
-```
-
-Then, within your payload, remove the ```url``` parameter and add two new configuration parameters: ```scriptBased: true``` and ```script```.
-
-```javascript
-
-  "script": script,
-  "scriptBased": true,
-```
-
 ## Bulk Edit Browser Monitors
 
 You can follow the same [Bulk Edit Monitors](#bulk-edit-monitors)  steps to edit Browser monitors. The only changes are to update the endpoint to edit Browser monitors instead of HTTP and add ```"isPlaywright": true``` within your payload.
