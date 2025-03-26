@@ -230,6 +230,75 @@ for (var i = 2; i <= sheet.getLastRow(); i++) {
 ```
 Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-locationid) to learn how to get location IDs.
 
+You can also bulk add monitors with private locations. Refer to the [Private Locations](https://sematext.com/docs/synthetics/private-locations/) page to learn how to set up a private location.
+
+#### Getting the Private Location ID
+
+After adding a private location, you need to retrieve its ID to include it in the bulk add monitors request payload.
+
+To get the private location ID:
+
+- **Create a sample monitor** that runs in the private location.
+- **Retrieve the list of monitors** for that App using the API by following [these instructions](https://sematext.com/docs/synthetics/using-the-api/#get-all-monitors-for-an-app).
+- In the API response, locate the locations field. The private location ID will be listed alongside its name.
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 11281,
+      "name": "test",
+      "appName": "",
+      "interval": "15m",
+      "intervalInSeconds": 900,
+      "enabled": true,
+      "createdAt": 1742978286000,
+      "locations": {
+        "1": "N. Virginia, USA",
+        "102": "My Private Location"
+      },
+      "lastScheduledAt": 1742978289000,
+      "status": "NOT_AVAILABLE",
+      "appId": 32992,
+      "type": "HTTP",
+      "conditions": [
+        {
+          "id": 28682,
+          "type": "ERROR",
+          "value": "",
+          "operator": "=",
+          "enabled": true
+        },
+        {
+          "id": 28683,
+          "type": "RESPONSE_CODE",
+          "value": "200",
+          "operator": "=",
+          "enabled": true
+        },
+        {
+          "id": 28684,
+          "type": "METRIC",
+          "key": "synthetics.time.response",
+          "value": "20000",
+          "operator": "<",
+          "enabled": true
+        }
+      ],
+      "maxRetries": 1,
+      "vercelProjectId": "",
+      "scheduledPauses": null,
+      "isCICD": false
+    }
+  ]
+}
+```
+
+In this response, ```"102": "My Private Location"``` indicates that ```102``` is the private location ID.
+
+Copy the private location ID and include it in the ```locations``` array of your bulk add monitors request payload. You can delete the sample monitor after retrieving the location ID if needed.
+
 #### Example Only with Required Parameters
 
 The full example above includes all possible parameters, but some are optional. If not sent, default values will be configured. The required parameters are:
