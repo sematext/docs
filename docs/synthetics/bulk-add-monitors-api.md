@@ -431,7 +431,7 @@ If you want to create script-based Browser monitors, replace the URL column in y
 | bulk add 1 |``` async function testPage(page) { await page.goto("www.google.com"); await page.screenshot({ path: 'screenshot.jpg' }); } export default testPage; ``` |
 | bulk add 3 |``` async function testPage(page) { await page.goto("www.google.com"); await page.screenshot({ path: 'screenshot.jpg' }); } export default testPage; ``` |
 
-Then instead of extracting URL within  the App Script extract [user journey scripts](https://sematext.com/docs/synthetics/user-journey-scripts/overview/)
+Then instead of extracting a URL within the App Script extract [user journey scripts](https://sematext.com/docs/synthetics/user-journey-scripts/overview/)
 
 ```javascript
   for (var i = 2; i <= sheet.getLastRow(); i++) {
