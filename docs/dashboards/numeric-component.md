@@ -32,3 +32,5 @@ The conditional coloring feature enables you to assign colors based on specific 
 ![Conditional Coloring](../images/dashboards/numeric-component-conditional-coloring.gif)
 
 The conditions are applied based on the order they are set. If a rule overrides a previous one, the latter one will be valid for the visualization.
+
+> You can also click on a data series to instantly apply its associated filter, query, and grouped field's value to the report, making it easier to drill down into specific logs or metrics.
