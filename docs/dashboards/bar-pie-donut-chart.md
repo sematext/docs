@@ -25,3 +25,4 @@ While building the chart, a preview is available on the top left. Additionally, 
 
 ![Bar Chart Configuration](../images/dashboards/bar-chart-configuration.gif)
 
+> You can also click on a data series to instantly apply its associated filter, query, and grouped field's value to the report, making it easier to drill down into specific logs or metrics.
