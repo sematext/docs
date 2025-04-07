@@ -498,6 +498,8 @@ theme:
     #logo: 'images/logo-full.svg'
   features:
     - navigation.footer
+    #- navigation.sections
+    - content.tabs.link
 
   # OTIS - GET THIS FROM SOMEWHERE
   #favicon: assets/favicon.ico
@@ -538,6 +540,8 @@ edit_uri: edit/master/docs/
 copyright: Copyright &copy; Sematext Group, Inc.
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   # OTIS - MAYBE NOT NEEDED? MAYBE THAT NEW highlight STUFF BELOW IS THE WAY TO GO
