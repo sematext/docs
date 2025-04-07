@@ -472,7 +472,7 @@ nav:
 
 theme:
   name: material
-    #:custom_dir: 'mkdocs-material-custom'
+  custom_dir: 'mkdocs-material-overrides'
   palette:
     # Dark Mode
     - scheme: slate
@@ -522,17 +522,13 @@ extra:
 
 # OTIS - THIS WAS IN OLD mkdocs.yml. SOMETHING IN THERE OVERRIDES header COLOUR AND WHO KNOWS WHAT ELSE
 extra_css:
-  # OTIS - NEEDED FOR tabs like https://sematext.com/new-docs/agents/sematext-agent/linux-installation/
-  # BUT WHY IS EXTRA STUFF NEEDED FOR THIS?
-  # AH, MAYBE BECAUSE WE USE THIS: https://github.com/sematext/docs/edit/master/docs/agents/sematext-agent/linux-installation.md
-  # INSTEAD OF USING THIS APPROACH: https://jameswillett.dev/getting-started-with-material-for-mkdocs/#content-tabs
-
-  # OH, BUT SOMETHING IN THIS EXTRA CSS OVERRIDES STYLE FOR THE HEADER
   - 'stylesheets/extra.css'
-    #  - 'stylesheets/code-tabs.css'
 
-    #extra_javascript:
-    #- 'javascripts/extra.js'
+#extra_javascript:
+#  - 'javascripts/extra.js'
+
+plugins:
+  - search
 
 repo_url: https://github.com/sematext/docs/
 edit_uri: edit/master/docs/

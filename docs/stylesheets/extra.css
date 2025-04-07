@@ -846,3 +846,56 @@ pre {
   background-color: #00A3EF;
   color: white !important;
 }
+
+
+
+/* Custom header buttons */
+.custom-header-buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.custom-button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.account-button {
+  background-color: #00A3EF;
+  color: white !important;
+}
+
+.account-button:hover {
+  background-color: #0088cc;
+  text-decoration: none !important;
+}
+
+.login-button {
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.login-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none !important;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .login-button {
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Hide on mobile */
+@media screen and (max-width: 76.1875em) {
+  .custom-header-buttons {
+    display: none;
+  }
+}
+

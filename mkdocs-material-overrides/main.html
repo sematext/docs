@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <!-- Script to add the custom buttons -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Create custom buttons
+      const buttonContainer = document.createElement('div');
+      buttonContainer.className = 'custom-header-buttons';
+      
+      const accountButton = document.createElement('a');
+      accountButton.href = 'https://apps.sematext.com/ui/registration';
+      accountButton.className = 'custom-button account-button';
+      accountButton.textContent = 'GET FREE ACCOUNT';
+      
+      const loginButton = document.createElement('a');
+      loginButton.href = 'https://apps.sematext.com/ui/login';
+      loginButton.className = 'custom-button login-button';
+      loginButton.textContent = 'LOGIN';
+      
+      buttonContainer.appendChild(accountButton);
+      buttonContainer.appendChild(loginButton);
+      
+      // Find the palette switcher or search to insert before
+      const header = document.querySelector('.md-header__inner');
+      if (!header) return;
+      
+      const palette = header.querySelector('.md-header__option, .md-header__palette');
+      if (palette) {
+        // Insert before palette switcher
+        header.insertBefore(buttonContainer, palette);
+      } else {
+        // If no palette, try to insert before search
+        const search = header.querySelector('.md-search');
+        if (search) {
+          header.insertBefore(buttonContainer, search);
+        } else {
+          // Last resort - add at the end of the header
+          header.appendChild(buttonContainer);
+        }
+      }
+    });
+  </script>
+{% endblock %}
