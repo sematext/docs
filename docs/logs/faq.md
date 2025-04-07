@@ -329,6 +329,21 @@ field will fail.  Note that you *can* change the underlying field
 If none of the above turns out to be a problem in your case, please let
 us know via <support@sematext.com> or via our live chat!
 
+### Why are logs from some hosts missing for my Logs App?
+Missing logs might be caused by:
+
+   - The Sematext Agent not monitoring the log files for the service on specific hosts.
+   - Connectivity issues between the host and Sematext Cloud
+
+Open the Infrastructure group in your Logs App and access the Hosts report to identify all hosts running the service. Click on a specific host and review the Agent tab to verify that all the agents are running without issues.
+
+### How can I use the Infrastructure group to improve troubleshooting for my services?
+
+The Infrastructure group inside each Logs App provides a holistic view of your environment:
+
+   - The Hosts report helps identify which hosts are involved with a service.
+   - The Processes report offers detailed insights into the processes running in the above hosts.
+
 ### I've deleted all my Apps and created new ones, but now I'm not seeing my logs
 
 If you've deleted all your Logs and Infra Apps, created new ones, and you can't see your logs,

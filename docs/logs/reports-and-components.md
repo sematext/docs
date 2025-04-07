@@ -101,3 +101,40 @@ Choose between **3 density options** for your table rows and control how many ro
 ![Sematext Cloud Logs Guide - Compact Density](../images/guide/logs/logs-table-compact.png) 
 
 You can also override account preference and set the default table density level. Account level density preference will be applied to all of your data tables. See  [Control density in other tables](https://sematext.com/product-updates/#/2022/control-table-rows-density-in-account-settings).
+
+## Infrastructure Group
+
+Each Logs App includes an **Infrastructure group** in the left navigation menu. This group provides detailed reports that offer insights into the environment of the log sources within each App. 
+
+![Sematext Logs - Infrastructure group](../images/guide/logs/infra-group-logs-hosts-list.png) 
+
+Currently, the Infrastructure group contains the following two reports:
+
+### Hosts Report
+
+The **Hosts** report displays a list of hosts sending logs to the Logs App. Selecting a host opens a detailed flyout menu containing information such as:
+
+- General Host Information: Basic details about the host.
+- Performance Metrics: Key performance metrics, including CPU, memory and disk usage.
+- Container Information: Details about containers running on the host.
+- Running Processes: A list of processes currently active on the host.
+- Software Packages: Information about available software packages on Linux-based hosts.
+- Host System Logs: Access to system-wide logs of the host.
+- Sematext Agent Details: Diagnostic information, including details about installed Sematext agents, errors and troubleshooting insights.
+
+![Sematext Logs - Infrastructure group - Agents](../images/guide/logs/infra-group-logs-hosts-agent.png) 
+
+### Processes Report
+
+The **Processes** report provides an in-depth view of the most active processes running on a selected host. It includes:
+
+- Process Information: Details such as process name, PID, PPID, host, user, and group.
+- Performance Metrics: Insights into CPU and memory usage for each process.
+- Command Line Arguments: The exact command-line arguments used to execute the process.
+
+![Sematext Logs - Infrastructure group - Processes](../images/guide/logs/infra-group-logs-processes.png) 
+
+### Key Features of Infrastructure group
+
+- Advanced Filtering: Both reports allow filtering using a wide range of tags, including process name, hostname, container name/ID, Kubernetes tags, and more.
+- Easy Troubleshooting: Designed to help you quickly identify potential issues and gain a deeper understanding of the underlying infrastructure (hosts, agents, etc.) shipping logs and metrics to your App.
