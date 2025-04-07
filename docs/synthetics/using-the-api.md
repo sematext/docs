@@ -860,6 +860,8 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 }'
 ```
 
+Refer to the [Bulk Add Monitors via Apps Script](https://sematext.com/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit Browser monitors using Google Sheets and Apps Script.
+
 ### Create an HTTP Monitor
 To create an HTTP Monitor, we would send an HTTP request as follows:
 ```
@@ -963,6 +965,9 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
     "allowInsecureSSL": false
 }'
 ```
+
+Refer to the [Bulk Add Monitors via Apps Script](https://sematext.com/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit HTTP monitors using Google Sheets and Apps Script.
+
 ## Get all Monitors for an App
 
 To get all the available monitors for an App, the API can be triggered by sending an HTTP request with the below configuration:
