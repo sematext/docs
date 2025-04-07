@@ -450,83 +450,6 @@ pre {
 .mdl-data-table th {
     text-align: left;
 }
-.logs-card{
-  /* background: #00A3EF; */
-  background: #1C2871;
-}
-.monitoring-card{
-  /* background: #09C177; */
-  background: #165088;
-}
-.browser-sdk-card{
-  background: #32a852;
-}
-.mobile-sdk-card{
-  background: #2ebfb6;
-}
-.experience-card{
-  background: #16716d;
-}
-.synthetics-card{
-  background: #e67e22;
-}
-.alerts-card{
-  background: #ff404a;
-}
-.events-card{
-  /* background: #FF9325; */
-  background: #63b567;
-}
-.dashboards-card{
-  background: #2196f3;
-}
-.tags-card{
-  background: #7d21f3;
-}
-.team-card{
-  background: #21f3ed;
-}
-.fleetdisco-card{
-  background: #2ebfb6;
-}
-.tracing-card{
-  background: #bd5666;
-  margin-left: calc(100% + 16px);
-}
-.logagent-card{
-    background: #7E72DA;
-}
-.docker-card{
-    background: #E6374C;
-}
-.kubernetes-card{
-    background: #00202F;
-}
-.logagent-card .mdl-card__title, .docker-card .mdl-card__title, .kubernetes-card .mdl-card__title, .logs-card .mdl-card__title, .monitoring-card .mdl-card__title, .browser-sdk-card .mdl-card__title, .mobile-sdk-card .mdl-card__title, .tracing-card .mdl-card__title, .experience-card .mdl-card__title, .alerts-card .mdl-card__title, .events-card .mdl-card__title, .synthetics-card .mdl-card__title, .whats-new-card .mdl-card__title, .release-notes-card .mdl-card__title, .fleetdisco-card .mdl-card__title, .dashboards-card .mdl-card__title, .tags-card .mdl-card__title, .team-card .mdl-card__title {
-    color: #fff;
-}
-.custom-mdl-card {
-  flex-direction: column;
-}
-.custom-mdl-card h4 {
-  margin-bottom:0;
-  text-align: center;
-}
-.custom-mdl-card p {
-  margin-top:5px;
-  text-align: center;
-}
-.whats-new-card{
-  background: #ff404a;
-}
-.release-notes-card{
-  background: #165088;
-}
-.integrations-card-list img{
-    width: 64px;
-    min-width: 64px;
-    min-height: 48px;
-}
 .md-footer-nav {
     background-color: #011a27;
 }
@@ -653,3 +576,239 @@ pre {
   color: black;
 } */
 
+
+
+
+
+
+/* Customize the grid cards to look like tiles */
+.grid.cards {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+}
+
+.grid.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+}
+
+.grid.cards > ul > li {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 0.6rem !important;  /* Reduce padding even more */
+}
+
+.grid.cards > ul > li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Reduce font sizes even more */
+.grid.cards > ul > li h2 {
+  font-size: 0.9rem !important;
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+  line-height: 1.1 !important;
+}
+
+.grid.cards > ul > li p {
+  font-size: 0.75rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+/* Make icons much smaller */
+.grid.cards > ul > li .lg {
+  font-size: 1.2rem !important; 
+  margin-top: 0.1rem !important;
+  margin-bottom: 0.1rem !important;
+}
+
+/* Default color for cards */
+.grid.cards > ul > li {
+  background-color: #1C2871;
+  color: white;
+}
+
+/* Card icon colors */
+.logs-icon { color: white; }
+.monitoring-icon { color: white; }
+.experience-icon { color: white; }
+.synthetics-icon { color: white; }
+.alerts-icon { color: white; }
+.events-icon { color: white; }
+.dashboards-icon { color: white; }
+.tags-icon { color: white; }
+.team-icon { color: white; }
+.fleet-icon { color: white; }
+.whatsnew-icon { color: white; }
+.releases-icon { color: white; }
+.agent-icon { color: white; }
+.node-icon { color: white; }
+.browser-icon { color: white; }
+.mobile-icon { color: white; }
+
+/* Card type colors - apply the original colors from your design */
+.grid.cards > ul > li:nth-child(1) { background-color: #1C2871; } /* Logs */
+.grid.cards > ul > li:nth-child(2) { background-color: #165088; } /* Monitoring */
+.grid.cards > ul > li:nth-child(3) { background-color: #16716d; } /* Experience */
+.grid.cards > ul > li:nth-child(4) { background-color: #e67e22; } /* Synthetics */
+.grid.cards > ul > li:nth-child(5) { background-color: #ff404a; } /* Alerts */
+.grid.cards > ul > li:nth-child(6) { background-color: #63b567; } /* Events */
+.grid.cards > ul > li:nth-child(7) { background-color: #2196f3; } /* Dashboards */
+.grid.cards > ul > li:nth-child(8) { background-color: #7d21f3; } /* Tags */
+.grid.cards > ul > li:nth-child(9) { background-color: #21f3ed; } /* Team */
+.grid.cards > ul > li:nth-child(10) { background-color: #2ebfb6; } /* Fleet */
+
+/* Latest updates card colors */
+.grid.cards:nth-of-type(2) > ul > li:nth-child(1) { background-color: #ff404a; } /* What's New */
+.grid.cards:nth-of-type(2) > ul > li:nth-child(2) { background-color: #165088; } /* Agent Releases */
+
+/* Agents card colors */
+.grid.cards:nth-of-type(3) > ul > li:nth-child(1) { background-color: #00202F; } /* Sematext Agent */
+.grid.cards:nth-of-type(3) > ul > li:nth-child(2) { background-color: #165088; } /* Node.js Agent */
+.grid.cards:nth-of-type(3) > ul > li:nth-child(3) { background-color: #32a852; } /* Browser SDK */
+.grid.cards:nth-of-type(3) > ul > li:nth-child(4) { background-color: #2ebfb6; } /* Mobile SDK */
+
+/* Style for card links and text */
+.grid.cards > ul > li a {
+  color: white !important;
+  opacity: 0.9;
+}
+
+.grid.cards > ul > li a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.grid.cards > ul > li hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 0.3rem 0 !important;
+}
+
+.grid.cards > ul > li p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.3rem 0 !important;
+}
+
+/* Make "Learn more" links smaller and more compact */
+.grid.cards > ul > li a[href] {
+  font-size: 0.7rem !important;
+  padding: 0.1rem 0 !important;
+}
+
+/* Make icon and title on the same line for even more compact look */
+.grid.cards > ul > li .md-typeset h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid.cards > ul > li .md-typeset h2 .twemoji {
+  margin-right: 0.3rem;
+}
+
+/* Integrations grid styling - 3 rows of 5 columns */
+/* Integrations grid styling - 3 rows of 5 columns */
+.integrations-container {
+  background-color: #f5f5f5;
+  padding: 25px;  /* Increased padding */
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 18px;  /* Increased gap between tiles */
+}
+
+.integrations-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;  /* Increased padding inside tiles */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 65px;  /* Set minimum height */
+}
+
+.integrations-grid a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.integrations-grid img {
+  width: 48px;  /* Increased image size */
+  height: 48px;  /* Increased image size */
+  object-fit: contain;
+}
+
+/* Make sure the grid maintains 5 columns on desktop */
+@media (min-width: 768px) {
+  .integrations-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 3 columns on tablets */
+@media (max-width: 767px) and (min-width: 481px) {
+  .integrations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 columns on mobile */
+@media (max-width: 480px) {
+  .integrations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* See all link styling */
+.see-all-link {
+  text-align: right;
+  margin: 8px 16px 24px 0;
+}
+
+.see-all-link .md-button {
+  background-color: #00A3EF;
+  color: white !important;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.see-all-link .md-button:hover {
+  background-color: #0088cc;
+  text-decoration: none;
+}
+
+/* Force three tiles per row on desktop */
+@media (min-width: 768px) {
+  .grid.cards > ul {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Two tiles per row on tablets */
+@media (max-width: 767px) and (min-width: 481px) {
+  .grid.cards > ul {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* One tile per row on mobile */
+@media (max-width: 480px) {
+  .grid.cards > ul {
+    grid-template-columns: 1fr !important;
+  }
+}
