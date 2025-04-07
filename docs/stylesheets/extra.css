@@ -812,3 +812,37 @@ pre {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Dark mode text color fixes */
+[data-md-color-scheme="slate"] .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav__item,
+[data-md-color-scheme="slate"] .md-nav__title,
+[data-md-color-scheme="slate"] .md-typeset {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-nav__link:focus {
+  color: #00A3EF !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #00A3EF !important;
+}
+
+/* Table of contents text in dark mode */
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
+  color: #00A3EF !important;
+}
+
+/* Fix for active item in left nav in dark mode */
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
+  background-color: #00A3EF;
+  color: white !important;
+}
