@@ -5,7 +5,7 @@
   <!-- Script to add the custom buttons -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Create custom buttons
+      // Create header buttons
       const buttonContainer = document.createElement('div');
       buttonContainer.className = 'custom-header-buttons';
       
@@ -24,22 +24,93 @@
       
       // Find the palette switcher or search to insert before
       const header = document.querySelector('.md-header__inner');
-      if (!header) return;
-      
-      const palette = header.querySelector('.md-header__option, .md-header__palette');
-      if (palette) {
-        // Insert before palette switcher
-        header.insertBefore(buttonContainer, palette);
-      } else {
-        // If no palette, try to insert before search
-        const search = header.querySelector('.md-search');
-        if (search) {
-          header.insertBefore(buttonContainer, search);
+      if (header) {
+        const palette = header.querySelector('.md-header__option, .md-header__palette');
+        if (palette) {
+          header.insertBefore(buttonContainer, palette);
         } else {
-          // Last resort - add at the end of the header
-          header.appendChild(buttonContainer);
+          const search = header.querySelector('.md-search');
+          if (search) {
+            header.insertBefore(buttonContainer, search);
+          } else {
+            header.appendChild(buttonContainer);
+          }
         }
+      }
+
+      // Add edit button to each page
+      const contentArea = document.querySelector('.md-content__inner');
+      if (contentArea) {
+        // Get current page path and adjust for GitHub
+        let pagePath = window.location.pathname;
+        
+        // Remove /docs/ prefix if it exists
+        pagePath = pagePath.replace(/^\/docs\//, '');
+        
+        // Remove trailing slash if it exists
+        pagePath = pagePath.replace(/\/$/, '');
+        
+        // Handle index pages
+        if (pagePath === '' || pagePath.endsWith('/')) {
+          pagePath = `${pagePath}index.md`;
+        } else {
+          // For regular pages, add .md extension
+          pagePath = `${pagePath}.md`;
+        }
+        
+        // Create edit button
+        const editContainer = document.createElement('div');
+        editContainer.className = 'md-content__edit';
+        editContainer.style.textAlign = 'right';
+        editContainer.style.marginBottom = '1rem';
+        
+        const editLink = document.createElement('a');
+        editLink.href = `https://github.com/sematext/docs/edit/master/docs/${pagePath}`;
+        editLink.className = 'md-content__button md-icon';
+        editLink.title = 'Edit this page';
+        editLink.target = '_blank';
+        editLink.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/>
+          </svg>
+          <span>Edit this page</span>
+        `;
+        
+        editContainer.appendChild(editLink);
+        
+        // Insert at the top of the content area
+        if (contentArea.firstChild) {
+          contentArea.insertBefore(editContainer, contentArea.firstChild);
+        } else {
+          contentArea.appendChild(editContainer);
+        }
+        
+        // For debugging
+        console.log('Generated edit URL:', editLink.href);
       }
     });
   </script>
+  <style>
+    .md-content__edit {
+      margin-top: 1rem;
+    }
+    
+    .md-content__edit a {
+      display: inline-flex;
+      align-items: center;
+      color: var(--md-default-fg-color--light);
+      font-size: 0.8rem;
+    }
+    
+    .md-content__edit a:hover {
+      color: var(--md-accent-fg-color);
+    }
+    
+    .md-content__edit svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.3rem;
+      fill: currentColor;
+    }
+  </style>
 {% endblock %}
