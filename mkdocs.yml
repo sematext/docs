@@ -489,9 +489,7 @@ theme:
     #- navigation.sections
     - content.tabs.link
 
-  # OTIS - GET THIS FROM SOMEWHERE
-  #favicon: assets/favicon.ico
-  #favicon: mkdocs-material-custom.ORIG/assets/images/favicon.png
+  favicon: img/favicon.ico
 
 extra:
   social:
