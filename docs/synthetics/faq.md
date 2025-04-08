@@ -4,7 +4,7 @@ description: FAQ about Sematext Synthetics, a synthetics monitoring solution for
 ## General 
 
 ### What should I do if I can't find the answer to my question in this FAQ?
-Check the [general FAQ](/faq) for questions that are not strictly
+Check the [general FAQ](/docs/faq) for questions that are not strictly
 about Sematext Synthetics. If you can't find the answer to your
 question please email <support@sematext.com> or use our live chat in the bottom right corner of the page.
 
@@ -27,13 +27,13 @@ Yes. You can use [private agents](/docs/synthetics/private-locations) to monitor
 If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://playwright.dev/docs/network#modify-requests) the script to include a custom header for all requests. Please refer to [fetch-use-token](/docs/synthetics/playwright-scripts/fetch-use-token.js) for an example of how to modify the request body or headers.
 
 ### Can I monitor API endpoints protected by OAuth authentication?
-Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples.
+Yes. This can be done using an HTTP Monitor, please see [authentication](/docs/synthetics/http-monitor/#authentication). For Browser monitors, refer to the examples.
 
 ### Can I monitor API endpoints protected by Basic authentication?
-Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
+Yes. This can be done using an HTTP Monitor, please see [authentication](/docs/synthetics/http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
 
 ### Can I monitor API endpoints protected by NTLM authentication?
-Yes. This can be done using an HTTP Monitor, please see [authentication](./http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
+Yes. This can be done using an HTTP Monitor, please see [authentication](/docs/synthetics/http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
 
 ### Can I stop Synthetics Alerts during scheduled maintenance?
 Yes. You can temporarily disable the notifications from **Edit Configuration** -> **Configure Alerts** -> **Notifications**. Once the maintenance window is over, you can re-enable the notifications.

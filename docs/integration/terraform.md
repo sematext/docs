@@ -187,7 +187,7 @@ Refer to our [examples repo](https://github.com/sematext/terraform-examples) for
 
 ## Recommendations for learning more about Sematext products and services:
 
-- Infrastructure [integrations documentation](/integration/)
+- Infrastructure [integrations documentation](/docs/integration/)
 - Our [website](https://sematext.com/)
 - For open-source integrations and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
 - or just talk to us using chat located in right bottom corner of any page, and one of our engineers will help you navigate Sematext waters.

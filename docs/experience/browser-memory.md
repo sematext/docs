@@ -7,7 +7,7 @@ Browsers manage the memory used by web pages automatically without user interact
   class="content-modal-image"
   alt="Memory Usage Overview"
   title="Memory Usage Overview"
-  src="../../images/experience/memory/overview.png"
+  src="/docs/images/experience/memory/overview.png"
 />
 
 ## Limitations
@@ -38,7 +38,7 @@ There are many use cases where having insight into the browser's memory usage ca
   class="content-modal-image"
   alt="Memory Usage Top Sessions"
   title="Memory Usage Top Sessions"
-  src="../../images/experience/memory/topsessions.png"
+  src="/docs/images/experience/memory/topsessions.png"
 />
 
 ## Measurements
@@ -48,7 +48,7 @@ Sematext Experience [Browser SDK](/docs/agents/browser/) uses the [Memory Measur
   class="content-modal-image"
   alt="Memory Usage Top Pages"
   title="Memory Usage Top Pages"
-  src="../../images/experience/memory/toppages.png"
+  src="/docs/images/experience/memory/toppages.png"
 />
 
 ## Supported Browsers
@@ -70,7 +70,7 @@ You can either configure your webserver to save the reports or open Chrome and i
   class="content-modal-image"
   alt="External Resources"
   title="External Resources"
-  src="../../images/experience/memory/external_resources.png"
+  src="/docs/images/experience/memory/external_resources.png"
 />
 
 ### Mitigating the Impact of Cross-Origin Isolation For Resources

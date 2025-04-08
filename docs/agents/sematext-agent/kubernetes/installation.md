@@ -284,7 +284,7 @@ spec:
         key: node-role.kubernetes.io/master
 ```
 
-_[Read more](../permission-requirements.md#bind-mounts) about why Sematext Agent needs access to host files and directories._
+_[Read more](/docs/agents/sematext-agent/permission-requirements/#bind-mounts) about why Sematext Agent needs access to host files and directories._
 
 Deploy the DaemonSet:
 

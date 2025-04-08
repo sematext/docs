@@ -18,7 +18,7 @@ The aggregated data about long tasks are visible on the page loads overview of y
 <img
   class="content-modal-image"
   alt="Page Loads Overview"
-  src="../../images/experience/longtasks/overview.png"
+  src="/docs/images/experience/longtasks/overview.png"
   title="Page Loads Overview"
   width=778
 />
@@ -30,7 +30,7 @@ In addition to the charts showing long tasks on the page-loads overview, each in
 <img
   class="content-modal-image"
   alt="Page Load Details"
-  src="../../images/experience/longtasks/details.png"
+  src="/docs/images/experience/longtasks/details.png"
   title="Page Load Details"
   width=778
 />

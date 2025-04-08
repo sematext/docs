@@ -11,7 +11,7 @@ The Sematext Experience integrations cover all types of websites and all major S
 
 <div class="notification-grid">
   <a href="#angular" class="notification-card">
-    <img src="../../images/integrations/angular.png" alt="Angular">
+    <img src="/docs/images/integrations/angular.png" alt="Angular">
     <div class="notification-content">
       <h3>Angular</h3>
       <p>Full support for single-page applications built with the Angular framework.</p>
@@ -19,7 +19,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#react" class="notification-card">
-    <img src="../../images/integrations/react.png" alt="React">
+    <img src="/docs/images/integrations/react.png" alt="React">
     <div class="notification-content">
       <h3>React</h3>
       <p>Full support for single-page applications built with the React library.</p>
@@ -27,7 +27,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#vuejs" class="notification-card">
-    <img src="../../images/integrations/vuejs.png" alt="Vue.js">
+    <img src="/docs/images/integrations/vuejs.png" alt="Vue.js">
     <div class="notification-content">
       <h3>Vue.js</h3>
       <p>Full support for single-page applications built with Vue.js.</p>
@@ -35,7 +35,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#ember" class="notification-card">
-    <img src="../../images/integrations/ember.png" alt="Ember">
+    <img src="/docs/images/integrations/ember.png" alt="Ember">
     <div class="notification-content">
       <h3>Ember</h3>
       <p>Full support for single-page applications built with the Ember framework.</p>
@@ -43,7 +43,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#static-websites" class="notification-card">
-    <img src="../../images/integrations/static.png" alt="Static Websites">
+    <img src="/docs/images/integrations/static.png" alt="Static Websites">
     <div class="notification-content">
       <h3>Static Websites</h3>
       <p>Full support for all types of static websites.</p>
@@ -51,7 +51,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#server-side-rendered-websites" class="notification-card">
-    <img src="../../images/integrations/server.png" alt="Server-side rendered websites">
+    <img src="/docs/images/integrations/server.png" alt="Server-side rendered websites">
     <div class="notification-content">
       <h3>Server-side Rendering</h3>
       <p>Full support for all types of SSR websites and applications.</p>
@@ -59,7 +59,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#vercel" class="notification-card">
-    <img src="../../images/integrations/vercel.png" alt="Vercel">
+    <img src="/docs/images/integrations/vercel.png" alt="Vercel">
     <div class="notification-content">
       <h3>Vercel</h3>
       <p>RUM metrics for all websites hosted on Vercel.</p>
@@ -67,7 +67,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#nextjs" class="notification-card">
-    <img src="../../images/integrations/nextjs.png" alt="Next.js">
+    <img src="/docs/images/integrations/nextjs.png" alt="Next.js">
     <div class="notification-content">
       <h3>Next.js</h3>
       <p>Support for websites built using the Next.js React framework.</p>
@@ -75,7 +75,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#google-tag-manager" class="notification-card">
-    <img src="../../images/integrations/google-tag-manager.svg" alt="Google Tag Manager">
+    <img src="/docs/images/integrations/google-tag-manager.svg" alt="Google Tag Manager">
     <div class="notification-content">
       <h3>Google Tag Manager</h3>
       <p>Integrate Experience using Google Tag Manager.</p>
@@ -83,7 +83,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#wordpress" class="notification-card">
-    <img src="../../images/integrations/wordpress-logo.svg" alt="WordPress">
+    <img src="/docs/images/integrations/wordpress-logo.svg" alt="WordPress">
     <div class="notification-content">
       <h3>WordPress</h3>
       <p>Add Experience to a WordPress site.</p>
@@ -91,7 +91,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 
   <a href="#micro-frontend" class="notification-card">
-    <img src="../../images/integrations/micro-frontend.png" alt="Micro Frontend">
+    <img src="/docs/images/integrations/micro-frontend.png" alt="Micro Frontend">
     <div class="notification-content">
       <h3>Micro Frontend</h3>
       <p>Add Experience to micro frontend based web applications.</p>
@@ -294,7 +294,7 @@ After you create an Experience App, the script installation page will be display
   class="content-modal-image"
   alt="Experience Instructions"
   title="Experience Instructions"
-  src="../../images/integrations/experience-instructions.png"
+  src="/docs/images/integrations/experience-instructions.png"
 />
 
 Follow the instructions from the first two steps and add the scripts to each of your individual applications' `index.html` file just before the `<head>` section ends.

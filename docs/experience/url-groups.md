@@ -27,7 +27,7 @@ To create a new URL Group open your Experience App and do the following:
 <img
   class="content-modal-image"
   alt="Create Experience URL Group Form"
-  src="../../images/experience/urlgroup-1.png"
+  src="/docs/images/experience/urlgroup-1.png"
   title="Create Experience URL Group Form"
   width=850
   height=594

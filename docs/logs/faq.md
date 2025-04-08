@@ -46,11 +46,11 @@ From the application, click the `App Actions` button and select
 `Usage`. There's also `Settings` button next to [any of your Logs apps](https://apps.sematext.com/ui/logs) in
 the `Logs > All Logs Apps` section in our centralized logging and monitoring management solution.
 
-<img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
+<img alt="Logs App Usage Menu" src="/docs/images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
 
 On click, `App Settings > Usage` page will present both Total Volume in Gb and Total Count of indexed logs for that particular Logs App.
 
-<img alt="Logs App Log Count" src="../../images/logs/logging-app-usage-page.png" title="Logs App usage page">
+<img alt="Logs App Log Count" src="/docs/images/logs/logging-app-usage-page.png" title="Logs App usage page">
 
 ### How can I check the number of logs I currently have in a Logs App?
 
@@ -58,7 +58,7 @@ Total Count of indexed logs is displayed in `App Settings > Usage` page.
 
 The number of logs will be also displayed in the right corner of the Log Counts panel just below the App's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
 
-<img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
+<img alt="Logs App Log Count" src="/docs/images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
 ### How long are my logs stored?
 
@@ -69,7 +69,7 @@ retention, volume, and plan at any time.
 
 Click the `App Actions` button and select `App Settings`. App Info page will open where you can see and change Daily Retention, Daily Volume, and Plan for that particular Logs App.
 
-<img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="../../images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
+<img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="/docs/images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
 
 ### Can I send old logs?
 
@@ -168,7 +168,7 @@ App or make sure there are no conflicting fields.
 Yes, when you change your index structure using Field Editor you will
 be given the opportunity to reindex your data.
 
-<img alt="Logs App Log Count" src="../../images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
+<img alt="Logs App Log Count" src="/docs/images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
           
 Please keep in mind that the speed of reindexing depends on how much
 data needs to be reindexed and that reindexing is treated like original
@@ -182,7 +182,7 @@ the normal plan charges apply. Because reindexing counts just like
 the original data ingestion, before reindexing the estimated cost of
 reindexing is shown in the UI.
 
-![](../images/logs/reindex-estimate.png?width=300)
+![](/docs/images/logs/reindex-estimate.png?width=300)
 
 If the amount of data ingested for the day, plus data to be reindexed
 is smaller than your Max Daily Log Volume Limit then no additional charges
@@ -192,7 +192,7 @@ will be applied.
 
 Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Elasticsearch API](/docs/logs/search-through-the-elasticsearch-api/) or using the UI:
 
-<img alt="Logs JSON View" src="../../images/logs/logs_source.png" title="Logs JSON View">
+<img alt="Logs JSON View" src="/docs/images/logs/logs_source.png" title="Logs JSON View">
 
 It is also possible to store the log events in external, S3 compatible storage via the [logs archiving](/docs/logs/archiving/) functionality.
 
@@ -491,7 +491,7 @@ security and compliance certifications see:
 <http://aws.amazon.com/security> and <https://aws.amazon.com/compliance/>.
 
 Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
-your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-elasticsearch-api) and [here](/api).
+your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-elasticsearch-api) and [here](/docs/api).
 
 ### Where is my data stored?
 
@@ -588,7 +588,7 @@ will expand and allow you to customize alert specific to that particular search 
 
 Click on the Alert Icon located in the left navigation and then select Alert Rules.
 
-<img alt="Alert Rules" src="../../images/logs/alert-rules.png" title="Alert Rules">
+<img alt="Alert Rules" src="/docs/images/logs/alert-rules.png" title="Alert Rules">
 
 ### What is the difference between threshold-based Alerts and Anomaly Detection (aka Algolerts)?
 
@@ -619,6 +619,6 @@ logs).
 ### Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?
 
 Yes. Our centralized logging management solution lets one configure arbitrary WebHooks to call with Alert
-event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
+event information when Alert events are triggered. See [alerts FAQ](/docs/faq#alerts) for more info.
 
 

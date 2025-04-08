@@ -1,7 +1,7 @@
 title: Configure Apdex
 description: A guide on how to configure Sematext Experience with custom time thresholds for page loads and HTTP requests. Easily configure On-Page Transactions and URL Groups as well.
 
-Experience gives you a high-level overview of [User Satisfaction](/experience/user-satisfaction) using Apdex scores. These scores are based on a time threshold that can be configured to reflect your performance requirements. For example, if you or your visitors expect your website to load in under 5 seconds then you can set that as the Page Load Time Threshold in the Configure Apdex screen. The default for page loads and HTTP requests is 2 seconds.
+Experience gives you a high-level overview of [User Satisfaction](/docs/experience/user-satisfaction) using Apdex scores. These scores are based on a time threshold that can be configured to reflect your performance requirements. For example, if you or your visitors expect your website to load in under 5 seconds then you can set that as the Page Load Time Threshold in the Configure Apdex screen. The default for page loads and HTTP requests is 2 seconds.
 
 ### Page Loads and HTTP requests
 
@@ -10,7 +10,7 @@ To configure time thresholds for page loads and requests, click on Configure Apd
 <img
   class="content-modal-image"
   alt="Experience Configure Apdex Form"
-  src="../../images/experience/configure-1.png"
+  src="/docs/images/experience/configure-1.png"
   title="Experience Configure Apdex Form"
   width=657
   height=612
@@ -23,7 +23,7 @@ To configure time thresholds for specific URL group, click on Configure Apdex in
 <img
   class="content-modal-image"
   alt="Experience Configure Apdex Form"
-  src="../../images/experience/configure-2.png"
+  src="/docs/images/experience/configure-2.png"
   title="Experience Configure Apdex Form"
   width=657
   height=612

@@ -67,11 +67,11 @@ Due to its nature, Kubernetes can be difficult to debug and without proper tooli
 
 All you need to do is use [Discovery](/docs/logs/discovery/setup) to Set Up log shipping:
 
-<img class="content-modal-image" alt="Kubernetes logs - Discovery" src="../../images/integrations/kubernetes-logs-disco.png" title="Kubernetes logs - Discovery">
+<img class="content-modal-image" alt="Kubernetes logs - Discovery" src="/docs/images/integrations/kubernetes-logs-disco.png" title="Kubernetes logs - Discovery">
 
 Once data is in, you can explore it via the built-in reports:
 
-<img class="content-modal-image" alt="Kubernetes logs" src="../../images/integrations/kubernetes-logs.png" title="Kubernetes logs">
+<img class="content-modal-image" alt="Kubernetes logs" src="/docs/images/integrations/kubernetes-logs.png" title="Kubernetes logs">
 
 If you are looking to use a different type of integration you can check out this [page](/docs/logagent/installation-docker/#kubernetes-and-openshift).
 
@@ -83,11 +83,11 @@ Kubernetes events track a wide range of activities within a Kubernetes cluster, 
 
 In the top-right corner of the Kubernetes overview, you’ll find a chart with the distribution of all Kubernetes events, coloured by severity, within your selected time range. This is really useful to quickly pinpoint when an incident happened.
 
-<img class="content-modal-image" alt="Kubernetes Events Overview" src="../../images/integrations/k8s-overview-events.png" title="Kubernetes Events Overview">
+<img class="content-modal-image" alt="Kubernetes Events Overview" src="/docs/images/integrations/k8s-overview-events.png" title="Kubernetes Events Overview">
 
 In Kubernetes Events you can explore and filter all the events received within the selecting time range. They are also color-coded by severity and you can quickly see the event message, the available event tags (fields) and the Infra App name to which they belong. Each event can be expanded to get all the details, nicely structured based on all available event tags and their respective values. 
 
-<img class="content-modal-image" alt="Kubernetes Events" src="../../images/integrations/k8s-events-screen.png" title="Kubernetes Events">
+<img class="content-modal-image" alt="Kubernetes Events" src="/docs/images/integrations/k8s-events-screen.png" title="Kubernetes Events">
 
 In the expanded view, you can filter the events by each individual tag value, whether to include or exclude it.
 
@@ -107,9 +107,9 @@ Below you can find a list of the most important Kubernetes metrics to monitor. F
 * Request Throughput - Tracks the number of API server requests processed per unit of time
 * Error Rate - Monitors the rate of API server errors
 
-<img class="content-modal-image" alt="API Server Requests" src="../../images/integrations/kubernetes-apiserver-requests.png" title="API Server Requests">
+<img class="content-modal-image" alt="API Server Requests" src="/docs/images/integrations/kubernetes-apiserver-requests.png" title="API Server Requests">
 
-<img class="content-modal-image" alt="API Server Auth" src="../../images/integrations/kubernetes-apiserver-auth.png" title="API Server Auth">
+<img class="content-modal-image" alt="API Server Auth" src="/docs/images/integrations/kubernetes-apiserver-auth.png" title="API Server Auth">
 
 #### CoreDNS
 
@@ -117,9 +117,9 @@ Below you can find a list of the most important Kubernetes metrics to monitor. F
 * DNS Local and Remote Cache Misses - Counts the number of cache misses for DNS queries in CoreDNS's local or remote cache.
 * Error Rate - Monitors the rate of DNS errors encountered by CoreDNS
 
-<img class="content-modal-image" alt="CoreDNS Overview" src="../../images/integrations/kubernetes-coredns-overview.png" title="CoreDNS Overview">
+<img class="content-modal-image" alt="CoreDNS Overview" src="/docs/images/integrations/kubernetes-coredns-overview.png" title="CoreDNS Overview">
 
-<img class="content-modal-image" alt="CoreDNS Cache" src="../../images/integrations/kubernetes-coredns-cache.png" title="CoreDNS Cache">
+<img class="content-modal-image" alt="CoreDNS Cache" src="/docs/images/integrations/kubernetes-coredns-cache.png" title="CoreDNS Cache">
 
 #### etcd
 
@@ -129,9 +129,9 @@ Below you can find a list of the most important Kubernetes metrics to monitor. F
 * WAL Snapshot Latency - Measures the latency of taking snapshots of the etcd Write-Ahead Log (WAL)
 * WAL Commit Latency - Measures the latency of committing changes from the etcd Write-Ahead Log (WAL) to the database
 
-<img class="content-modal-image" alt="etcd overview" src="../../images/integrations/kubernetes-etcd-overview.png" title="etcd overview">
+<img class="content-modal-image" alt="etcd overview" src="/docs/images/integrations/kubernetes-etcd-overview.png" title="etcd overview">
 
-<img class="content-modal-image" alt="etcd mvcc" src="../../images/integrations/kubernetes-etcd-mvcc.png" title="etcd mvcc">
+<img class="content-modal-image" alt="etcd mvcc" src="/docs/images/integrations/kubernetes-etcd-mvcc.png" title="etcd mvcc">
 
 #### kube-proxy
 
@@ -140,9 +140,9 @@ Below you can find a list of the most important Kubernetes metrics to monitor. F
 * Synchronization of Proxy Rules - Measures the time taken to synchronize proxy rules for services
 * Request Latency by Host, HTTP Method, Path - Measures the latency of requests proxied by kube-proxy, categorized by host, HTTP method or Path
 
-<img class="content-modal-image" alt="kube-proxy overview" src="../../images/integrations/kubernetes-kubeproxy-overview.png" title="kube-proxy overview">
+<img class="content-modal-image" alt="kube-proxy overview" src="/docs/images/integrations/kubernetes-kubeproxy-overview.png" title="kube-proxy overview">
 
-<img class="content-modal-image" alt="kube-proxy sync proxy rules" src="../../images/integrations/kubernetes-kubeproxy-syncproxyrules.png" title="kube-proxy sync proxy rules">
+<img class="content-modal-image" alt="kube-proxy sync proxy rules" src="/docs/images/integrations/kubernetes-kubeproxy-syncproxyrules.png" title="kube-proxy sync proxy rules">
 
 #### Scheduler
 
@@ -151,9 +151,9 @@ Below you can find a list of the most important Kubernetes metrics to monitor. F
 * Queued Pods by Queue - Tracks the number of pods currently in the scheduler's queue, categorized by the queue name
 * Unschedulable Pods - Tracks the number of pods that cannot be scheduled due to resource constraints
 
-<img class="content-modal-image" alt="scheduler overview" src="../../images/integrations/kubernetes-schedulers-overview.png" title="scheduler overview">
+<img class="content-modal-image" alt="scheduler overview" src="/docs/images/integrations/kubernetes-schedulers-overview.png" title="scheduler overview">
 
-<img class="content-modal-image" alt="scheduler latency" src="../../images/integrations/kubernetes-schedulers-latency.png" title="scheduler latency">
+<img class="content-modal-image" alt="scheduler latency" src="/docs/images/integrations/kubernetes-schedulers-latency.png" title="scheduler latency">
 
 
 ### Workload Metrics

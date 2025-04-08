@@ -23,7 +23,7 @@ Process Monitoring is enabled by default in the [Sematext Agent configuration](/
  </div>
 </div>
 
-After that the [Sematext Agent](../) needs to be restarted by running the following command:
+After that the [Sematext Agent](/docs/agents/sematext-agent) needs to be restarted by running the following command:
 
 ```
 sudo service/systemctl spm-monitor-st-agent restart

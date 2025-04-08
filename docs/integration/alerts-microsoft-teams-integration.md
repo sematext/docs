@@ -19,7 +19,7 @@ We can now use the **URL** to configure the Microsoft Teams notification hook in
 
 **2.** Add your Microsoft Teams **webhook URL**. 
 
-<img class="content-modal-image" alt="Create Microsoft Teams Integration" src="../../images/integrations/create-teams-integration.png" title="Create Microsoft Teams Integration">
+<img class="content-modal-image" alt="Create Microsoft Teams Integration" src="/docs/images/integrations/create-teams-integration.png" title="Create Microsoft Teams Integration">
 
 Next, click the **Send Test Notification** button. Microsoft Teams should return **1** indicating everything is configured correctly. Check your Microsoft Teams channel for the test message from Sematext. 
 

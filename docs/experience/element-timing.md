@@ -20,7 +20,7 @@ It would result in the name taking the value of the `elementtiming` attribute:
 <img
   class="content-modal-image"
   alt="Element Timing Element Name"
-  src="../../images/experience/elementtiming/element_timing_name.png"
+  src="/docs/images/experience/elementtiming/element_timing_name.png"
   title="Element Timing Element Name"
 />
 
@@ -48,7 +48,7 @@ When accessing the Element Timing from the left menu of your Experience App you 
 <img
   class="content-modal-image"
   alt="Element Timing Overview"
-  src="../../images/experience/elementtiming/element_timing_overview.png"
+  src="/docs/images/experience/elementtiming/element_timing_overview.png"
   title="Element Timing Overview"
 />
 
@@ -68,6 +68,6 @@ The Element Timing Overview includes timing information for each type of annotat
 <img
   class="content-modal-image"
   alt="Element Timing Details"
-  src="../../images/experience/elementtiming/element_timing_details.png"
+  src="/docs/images/experience/elementtiming/element_timing_details.png"
   title="Element Timing Details"
 />

@@ -73,14 +73,14 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 ## Default Log Index Mapping
 
 A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html)
-is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the fields editor or by using the [mappings and templates](/logs/mappings-templates) functionality. There are some [special fields](/tags/common-schema) though.
+is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/docs/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the fields editor or by using the [mappings and templates](/docs/logs/mappings-templates) functionality. There are some [special fields](/docs/tags/common-schema) though.
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date.  See [Supported Date Formats](/docs/logs/supported-date-formats).
   - the **geoip** field is an object that contains a **location** [geo point](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html)
     field (this works well if you're using Logstash)
   - **host**, **facility**, **severity**, **syslog-tag**, **source**, and **tags** are
-    [Special Fields](/tags/common-schema) that are not analyzed, which enables only exact matches (you can still use wildcards, for example
+    [Special Fields](/docs/tags/common-schema) that are not analyzed, which enables only exact matches (you can still use wildcards, for example
     to search for **web-server\*** and get **web-server01**)
   - all string fields are analyzed by whitespace and lowercased by
     default, thus makign it possible to search for **message:hello** and match events
@@ -89,7 +89,7 @@ is a way to define how your logs are indexed - which fields are in each log even
 ## Custom Log Index Mapping
 
 If the default log index fields (also known as index mapping) don't fit
-your needs you can create completely custom index mapping. See [Mappings and Templates](/logs/mappings-templates) section.
+your needs you can create completely custom index mapping. See [Mappings and Templates](/docs/logs/mappings-templates) section.
 
 Note that if you have N different log structures, the best way to
 handle that is by creating N Logs Apps, each with its own index

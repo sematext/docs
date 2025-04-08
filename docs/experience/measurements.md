@@ -8,7 +8,7 @@ Experience collects these measurements automatically and also allows you to set 
 <img
   class="content-modal-image"
   alt="Measurements Page"
-  src="../../images/experience/measurements/measurements.png"
+  src="/docs/images/experience/measurements/measurements.png"
   title="Measurements Page"
 />
 
@@ -28,7 +28,7 @@ performance.measure('custom-metric', 'custom-metric-start', 'custom-metric-end')
 
 This will record a measurement with name `custom-metric` and the duration will be equal to the time it took for `doSomePotentiallyLongWork()` function to return.
 
-This measurement will be reported back to Experience every time this code runs, where you will be able to see the average duration for all users, compute the [user satisfaction](/experience/user-satisfaction) score, filter the data and more.
+This measurement will be reported back to Experience every time this code runs, where you will be able to see the average duration for all users, compute the [user satisfaction](/docs/experience/user-satisfaction) score, filter the data and more.
 
 ### Setting a Time Threshold
 
@@ -39,7 +39,7 @@ To define the time threshold go to the Measurements page and click the "New Meas
 <img
   class="content-modal-image"
   alt="New Measurement button pointer"
-  src="../../images/experience/measurements/new-min.png"
+  src="/docs/images/experience/measurements/new-min.png"
   title="New Measurement button pointer"
 />
 
@@ -56,21 +56,21 @@ Click on a measurement in the table to see data related to that measurement only
 <img
   class="content-modal-image"
   alt="Measurements Table"
-  src="../../images/experience/measurements/measurements-table-min.jpg"
+  src="/docs/images/experience/measurements/measurements-table-min.jpg"
   title="Measurements Table"
 />
 
 <img
   class="content-modal-image"
   alt="Measurements Events Table"
-  src="../../images/experience/measurements/measurements-events.png"
+  src="/docs/images/experience/measurements/measurements-events.png"
   title="Measurement Events Table"
 />
 
 
 ## Custom Tags
 
-By default Experience allows you to filter by browser, country, operating system and other attributes that we automatically capture for each measurement. If you would like to be able to filter by some additional attributes you can use [Custom Tags](/experience/tags).
+By default Experience allows you to filter by browser, country, operating system and other attributes that we automatically capture for each measurement. If you would like to be able to filter by some additional attributes you can use [Custom Tags](/docs/experience/tags).
 
 ### Overriding Tag Values
 

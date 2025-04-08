@@ -12,7 +12,7 @@ To better understand which part of the loading process is slow, we've added a de
 <img
   class="content-modal-image"
   alt="Experience Timing Breakdown"
-  src="../../images/experience/breakdown.png"
+  src="/docs/images/experience/breakdown.png"
   title="Experience Timing Breakdown"
   width=800
   height=86

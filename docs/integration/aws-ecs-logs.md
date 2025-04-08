@@ -10,7 +10,7 @@ The ECS Logs integration collects logs from ECS Tasks and Services running in:
 - EC2 Container Instances
 - Fargate 
 
-To collect logs from EKS, see the [Kubernetes integration](./kubernetes/#shipping-kubernetes-logs-to-sematext).
+To collect logs from EKS, see the [Kubernetes integration](/docs/integration/kubernetes/#shipping-kubernetes-logs-to-sematext).
 
 First of all create an AWS ECS Logs App.
 

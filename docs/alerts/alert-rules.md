@@ -123,7 +123,7 @@ In the **Group by** section, select what [data series to group on](/docs/dashboa
 
 #### Rollup by
 
-Data points sent to Sematext Cloud have a time label. If a metric is updated every 10 seconds and you’re looking at a 24-hour time range, you need 14,400 points to display all data points. The **Rollup by** function groups data points into time buckets. Metrics coming in within the alert's specified time window will be aggregated by the selected function in this section. Refer to [Rollup By](../dashboards/chart-builder/#rollup-by) for more details.
+Data points sent to Sematext Cloud have a time label. If a metric is updated every 10 seconds and you’re looking at a 24-hour time range, you need 14,400 points to display all data points. The **Rollup by** function groups data points into time buckets. Metrics coming in within the alert's specified time window will be aggregated by the selected function in this section. Refer to [Rollup By](/docs/dashboards/chart-builder/#rollup-by) for more details.
 
 ### Alert Condition
 

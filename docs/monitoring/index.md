@@ -34,7 +34,7 @@ The first step to monitoring with Sematext is to create a Monitoring App. Go to 
 
 Follow along the [Quick Start](/docs/monitoring/quick-start) guide to learn how.
 
-<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/create-new-monitoring-app.gif" title="New Monitoring App">
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="/docs/images/monitoring/create-new-monitoring-app.gif" title="New Monitoring App">
 
 ## App Settings
 
@@ -49,9 +49,9 @@ App settings and actions include, but are not limited to:
   - [setting up a Sematext Monitoring Agent to ship metrics](/docs/monitoring/quick-start/#setting-up-monitoring-agents)
   - [scheduled report emails](/docs/guide/scheduled-reports)
 
-<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-actions.png" title="Sematext Monitoring App Actions">
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="/docs/images/monitoring/monitoring-app-actions.png" title="Sematext Monitoring App Actions">
 
-<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="../images/monitoring/monitoring-app-options.png" title="Sematext Monitoring App Options">
+<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="/docs/images/monitoring/monitoring-app-options.png" title="Sematext Monitoring App Options">
 
 Check out the [Settings](/docs/monitoring/settings) guide to learn more.
 
@@ -61,7 +61,7 @@ Every Monitoring App can have multiple Reports that act as buckets for your metr
 
 Read more in the [Reports and Components](/docs/monitoring/reports-and-components) guide.
 
-<img class="content-modal-image" alt="Sematext Monitoring App Options UI screen" src="../images/monitoring/monitoring-app-reports.png" title="Sematext Monitoring App Options">
+<img class="content-modal-image" alt="Sematext Monitoring App Options UI screen" src="/docs/images/monitoring/monitoring-app-reports.png" title="Sematext Monitoring App Options">
 
 
 ## Additional Features

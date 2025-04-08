@@ -6,7 +6,7 @@ Supported by Chrome, the [Web Vitals](https://web.dev/vitals/) is a Google initi
 <img
   class="content-modal-image"
   alt="Web Vitals Overview"
-  src="../../images/experience/webvitals/webvitals.png"
+  src="/docs/images/experience/webvitals/webvitals.png"
   title="Web Vitals Overview"
 />
 
@@ -53,7 +53,7 @@ The main Web Vitals panel shows the 75th percentile for both the Core and Other 
 <img
   class="content-modal-image"
   alt="Core Web Vitals Panel"
-  src="../../images/experience/webvitals/webvitals_corepanel.png"
+  src="/docs/images/experience/webvitals/webvitals_corepanel.png"
   title="Core Web Vitals Panel"
 />
 
@@ -62,13 +62,13 @@ In addition to the panel showing the 75th percentile, the information is present
 <img
   class="content-modal-image"
   alt="Core Web Vitals Graphs"
-  src="../../images/experience/webvitals/webvitals_coregraphs.png"
+  src="/docs/images/experience/webvitals/webvitals_coregraphs.png"
   title="Core Web Vitals Graphs"
 />
 
 <img
   class="content-modal-image"
   alt="Other Web Vitals"
-  src="../../images/experience/webvitals/webvitals_other.png"
+  src="/docs/images/experience/webvitals/webvitals_other.png"
   title="Other Web Vitals"
 />

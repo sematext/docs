@@ -102,7 +102,7 @@ The script waits for the reviews elements to appear, and then extracts the App's
 
 
 ### [Track Multiple Page Load Times](/docs/synthetics/playwright-scripts/multiple-page-load-times.js)
-This script visits multiple pages and records their individual load times as [custom metrics](../metrics#custom-metrics), which can then be charted using our [dashboards](/docs/dashboards/index). 
+This script visits multiple pages and records their individual load times as [custom metrics](/docs/synthetics/metrics/#custom-metrics), which can then be charted using our [dashboards](/docs/dashboards/index). 
 
 
 

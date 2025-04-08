@@ -103,7 +103,7 @@ The script waits for the reviews elements to appear, and then extracts the App's
 
 
 ### [Track Multiple Page Load Times](/docs/synthetics/puppeteer-scripts/multiple-page-load-times.js)
-This script visits multiple pages and records their individual load times as [custom metrics](../metrics#custom-metrics), which can then be charted using our [dashboards](/docs/dashboards/index). It also uses some custom helper functions which facilitate finding elements on the page using their selectors.
+This script visits multiple pages and records their individual load times as [custom metrics](/docs/synthetics/metrics/#custom-metrics), which can then be charted using our [dashboards](/docs/dashboards/index). It also uses some custom helper functions which facilitate finding elements on the page using their selectors.
 
 
 

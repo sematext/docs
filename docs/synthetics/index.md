@@ -1,12 +1,12 @@
 title: Sematext Synthetics Overview
 description: Overview of Synthetics for API, Web URL, website and user journey monitoring
 
-Sematext Synthetics provides the ability to actively monitor APIs, Web URLs, websites and user journeys/click flows from multiple locations around the globe. Synthetic monitoring helps you ensure the availability and performance of your APIs and websites. While [Experience](/experience) helps you track real user performance of your websites, Synthetics will help you identify downtime and performance by simulating user requests and interactions with your web page. 
+Sematext Synthetics provides the ability to actively monitor APIs, Web URLs, websites and user journeys/click flows from multiple locations around the globe. Synthetic monitoring helps you ensure the availability and performance of your APIs and websites. While [Experience](/docs/experience) helps you track real user performance of your websites, Synthetics will help you identify downtime and performance by simulating user requests and interactions with your web page. 
 
 <img
   class="content-modal-image"
   alt="Monitors Overview"
-  src="../images/synthetics/monitors-overview.png"
+  src="/docs/images/synthetics/monitors-overview.png"
   title="Monitors Overview"
 />
 
@@ -32,4 +32,4 @@ Synthetics monitors can be scheduled to run from the following public locations:
 
 
 
-You can also install and run the [agents](/docs/synthetics/private-locations) in your private network to monitor your internal applications that are not accessible from the Internet.
+You can also install and run the [agents](/docs/docs/synthetics/private-locations) in your private network to monitor your internal applications that are not accessible from the Internet.

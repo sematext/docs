@@ -9,7 +9,7 @@ In the example below, we demonstrate the process of adding components from diffe
 
 ![Add Components to Dashboard](/docs/images/dashboards/dashboards-add-components.gif)
 
-With the custom reports features you can first create specific logging, events or metric component, and add it to your Dashboard just as you can with out-of-the-box [integration](/integration/) specific components that come included when you first create an App.
+With the custom reports features you can first create specific logging, events or metric component, and add it to your Dashboard just as you can with out-of-the-box [integration](/docs/integration/) specific components that come included when you first create an App.
 
 The image below displays a sample of a customized Infrastructure component designed to automatically retrieve top data based on CPU, Disk, and Memory usage. To add this component, navigate to the 'Infrastructure' tab on the left and select the 'Top N Hosts' option.
 

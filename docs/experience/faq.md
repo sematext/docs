@@ -5,7 +5,7 @@ description: FAQ about Sematext Experience, real user monitoring for websites an
 
 ### What should I do if I can't find the answer to my question in this FAQ?
 
-Check the [general FAQ](/faq) for questions that are not strictly
+Check the [general FAQ](/docs/faq) for questions that are not strictly
 about Sematext Experience.  If you can't find the answer to your
 question please email <support@sematext.com> or use our live chat.
 
@@ -58,7 +58,7 @@ small effect on website performance.
 
 ### Is the Experience script open-source?
 
-Yes, the Experience script is open-source. Look at the [Browser SDK](/agents/browser/)
+Yes, the Experience script is open-source. Look at the [Browser SDK](/docs/agents/browser/)
 to learn more. 
 
 ### Can I send data from a different domain?
@@ -78,12 +78,12 @@ bar.example.com are counted as two domains.
 ### What are the user satisfaction scores shown in Experience based on?
 
 The scores are based on the time threshold defined in the [Configure
-Requirements](/experience/configure-requirements) screen. By default these time
+Requirements](/docs/experience/configure-requirements) screen. By default these time
 thresholds are 2 seconds. You can adjust these time thresholds if you have a
 different performance target for your website or webapp. You can read
-[Configure Requirements](/experience/configure-requirements) to learn how to
+[Configure Requirements](/docs/experience/configure-requirements) to learn how to
 adjust the time thresholds or [User
-Satisfaction](/experience/user-satisfaction) to learn more about Apdex scores
+Satisfaction](/docs/experience/user-satisfaction) to learn more about Apdex scores
 in general.
 
 ### Can I see a single visitor's full session?

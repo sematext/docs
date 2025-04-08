@@ -10,7 +10,7 @@ To make use of On-Page Transactions functionality you need to first add transact
 <img
   class="content-modal-image"
   alt="Add Transaction"
-  src="../../images/experience/onPageTransactions/screen0.png"
+  src="/docs/images/experience/onPageTransactions/screen0.png"
   title="Add Transaction"
 />
 
@@ -19,7 +19,7 @@ Specify a Transaction `name`. Have in mind the name is important - it has to mat
 <img
   class="content-modal-image"
   alt="Specify Transaction"
-  src="../../images/experience/onPageTransactions/screen1.png"
+  src="/docs/images/experience/onPageTransactions/screen1.png"
   title="Specify Transaction"
 />
 
@@ -28,7 +28,7 @@ The Transaction was added, but there is no RUM data related to it. Let's improve
 <img
   class="content-modal-image"
   alt="Transaction was added"
-  src="../../images/experience/onPageTransactions/screen2.png"
+  src="/docs/images/experience/onPageTransactions/screen2.png"
   title="Transaction was added"
 />
 
@@ -49,7 +49,7 @@ Finally, this is what you will see after the transactions start sending data to 
 <img
   class="content-modal-image"
   alt="Transactions in action"
-  src="../../images/experience/onPageTransactions/screen3.png"
+  src="/docs/images/experience/onPageTransactions/screen3.png"
   title="Transactions in action"
 />
 
@@ -61,7 +61,7 @@ You can attach custom tags to transactions by providing them as another argument
  strum('startTransaction', 'ExampleTransaction', { someTag: 'value' });
 ```
 
-This tag will be applied to this single event only. If you wish to apply custom tags to all events, then please check out [Tags](/experience/tags).
+This tag will be applied to this single event only. If you wish to apply custom tags to all events, then please check out [Tags](/docs/experience/tags).
 
 
 That's everything you need to use On-Page Transaction. Enjoy!

@@ -49,7 +49,7 @@ You need to provide the query using the *q* parameter. For example, to search fo
 
     curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
 
-**Note:** Please check [logs search syntax](/logs/search-syntax/) for reference.
+**Note:** Please check [logs search syntax](/docs/logs/search-syntax/) for reference.
 
 ### Request body based search
 

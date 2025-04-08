@@ -6,7 +6,7 @@ The settings include:
   - inviting new users to your App
   - [authorizing public IPs to send data to your app via syslog](/docs/logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
-  - [changing your App's plan](../logs/faq/#plans-prices)
+  - [changing your App's plan](/docs/logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
   ![Sematext Logs App Settings](/docs/images/guide/logs/logs-app-settings.png)

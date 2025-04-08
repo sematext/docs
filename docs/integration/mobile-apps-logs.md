@@ -23,7 +23,7 @@ Get an overview of your mobile apps with information like:
 <img
   class="content-modal-image"
   alt="Mobile Logs Overview"
-  src="../../images/agents/mobile_overview.png"
+  src="/docs/images/agents/mobile_overview.png"
   title="Mobile Logs Overview"
 />
 
@@ -36,7 +36,7 @@ Explore the common errors associated with your mobile applications and see an ag
 <img
   class="content-modal-image"
   alt="Mobile Logs Errors"
-  src="../../images/agents/mobile_errors.png"
+  src="/docs/images/agents/mobile_errors.png"
   title="Mobile Logs Errors"
 /> 
 
@@ -49,7 +49,7 @@ Get insights from dedicated Android and iOS or WatchOS reports that include:
 <img
   class="content-modal-image"
   alt="Mobile Logs Android"
-  src="../../images/agents/mobile_android.png"
+  src="/docs/images/agents/mobile_android.png"
   title="Mobile Logs Android"
 />
 

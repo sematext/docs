@@ -28,7 +28,7 @@ Every query can be use as an **alert query**. The ability to save alerts is part
 
 ### Scheduled Reports
 
-There are one time E-mail and Scheduled Reports available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health. Learn more about **[Scheduled Reports](/guide/scheduled-reports)**.
+There are one time E-mail and Scheduled Reports available with time, frequency, and time range defined so your team can get automatated reports about your logs and system health. Learn more about **[Scheduled Reports](/docs/guide/scheduled-reports)**.
 
 ### Connected Apps
 
@@ -61,7 +61,7 @@ Refresh data and Live Tail options are located next to the time picker. The **Li
 
 ![Sematext Cloud Monitoring - Monitoring Split Screen](/docs/images/guide/monitoring/monitoring-split-screen.png)
 
-Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[Split Screen](/guide/split-screen)**.
+Combined with the **Metric Reports**, and with the help of a **charting hairline**, zoom and chart navigation tools, it is easy to see how using our **Monitoring and Logging tools in a single page** is a must-have for any DevOps team! Learn more about **[Split Screen](/docs/guide/split-screen)**.
 
 ## Components
 

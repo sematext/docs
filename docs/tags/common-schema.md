@@ -286,4 +286,4 @@ An example below. Notice message field which contains a text formatted with Mark
 }
 ```
 
-![Markdown](../images/events/markdown.png "Markdown")
+![Markdown](/docs/images/events/markdown.png "Markdown")

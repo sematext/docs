@@ -26,7 +26,7 @@ Let's explain what each of these mean:
 <img
   class="content-modal-image"
   alt="Resource Waterfall Screenshot"
-  src="../../images/experience/waterfall.png"
+  src="/docs/images/experience/waterfall.png"
   title="Resource Waterfall"
 />
 
@@ -46,7 +46,7 @@ The Top Resources table on the Overview page shows the site-wide performance for
 <img
   class="content-modal-image"
   alt="Resources Overview Table Screenshot"
-  src="../../images/experience/resources.png"
+  src="/docs/images/experience/resources.png"
   title="Resources Overview"
 />
 

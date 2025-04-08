@@ -15,6 +15,6 @@ To configure sampling for your App:
 <img
   class="content-modal-image"
   alt="Resource Waterfall Screenshot"
-  src="../../images/experience/sampling.png"
+  src="/docs/images/experience/sampling.png"
   title="Resource Waterfall"
 />

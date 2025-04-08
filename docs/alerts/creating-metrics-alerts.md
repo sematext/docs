@@ -8,7 +8,7 @@ Each metric chart has a bell icon which, when clicked, shows a dropdown menu of 
     <img
       class="content-modal-image"
       alt="Experience Configure Apdex Form"
-      src="../../images/alerts/image_20.png"
+      src="/docs/images/alerts/image_20.png"
       title="Create Alert"
     />
   </div>
@@ -16,7 +16,7 @@ Each metric chart has a bell icon which, when clicked, shows a dropdown menu of 
     <img
       class="content-modal-image"
       alt="Experience Configure Apdex Form"
-      src="../../images/alerts/image_21.png"
+      src="/docs/images/alerts/image_21.png"
       title="Create Alert from Context Menu"
     />
   </div>
