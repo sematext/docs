@@ -113,7 +113,7 @@ nav:
       - Element Timing: experience/element-timing.md
       - Web Vitals: experience/webvitals.md
       - Browser Memory: experience/browser-memory.md
-      - Integrations: experience/integrations.md
+      - Framework Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Sampling: experience/sampling.md
       - Weekly Health Reports: experience/weekly-health-reports.md
@@ -237,19 +237,7 @@ nav:
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
       - Frontend & User Experience:
-        - Angular: experience/integrations.md
-        - Ember: experience/integrations.md
-        - Google Tag Manager: experience/integrations.md
-        - Micro Frontend: experience/integrations.md
-        - Next.js: experience/integrations.md
-        - React: experience/integrations.md
-        - Server-side Rendered Websites: experience/integrations.md
-        - Static Websites: experience/integrations.md
-        - Vercel Experience: experience/integrations.md
-        - Vercel Synthetics: integration/vercel-synthetics-integration.md
-        - Vercel Logs: integration/vercel-logs-integration.md
-        - Vue.js: experience/integrations.md
-        - Wordpress: experience/integrations.md
+        - Framework Integrations: experience/integrations.md
       - Mobile Apps:
         - Mobile Apps Logs: integration/mobile-apps-logs.md
       - Notification Hooks:

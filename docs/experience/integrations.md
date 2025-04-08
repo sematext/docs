@@ -101,10 +101,11 @@ The Sematext Experience integrations cover all types of websites and all major S
 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
 
-## Angular
+## Angular {: #angular }
+
 The Angular SPA integration supports both Angular.js and Angular 2+. 
 
-### Angular 2+
+### Angular 2+ {: #angular-2 }
 If your webapp uses the newer Angular you should add a call to `routeChange` whenever the route changes in your webapp. This can be done in your top-level component where `Router` is defined by adding the `ngOnInit` function and subscribing to the `Router` events as shown in the following example.
 
 If you use TypeScript, you need to declare the global function:
@@ -136,7 +137,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-### Angular.js
+### Angular.js {: #angularjs }
 If your webapp uses Angular.js 1.x you should add a call to `routeChange` whenever the route changes in your webapp. To do this you'll need to adjust your client side view inside Angular.js:
 
 ```js
@@ -145,7 +146,7 @@ $scope.$on('$routeChangeStart', function () {
 });
 ```
 
-## React 
+## React {: #react }
 The React integration ties into React Router and tracks calls to `routeChange`. You should add a call to `routeChange` whenever the route changes in your webapp. This can be done in your top-level component where `Router` is defined.
 
 If you use TypeScript, you need to declare the global function:
@@ -179,7 +180,7 @@ export default function App() {
 }
 ```
 
-## Vue.js 
+## Vue.js {: #vuejs }
 The Vue.js integration works by watching for calls to the `routeChange` function where you have the `router-view` defined.
 
 If you use TypeScript, you need to declare the global function:
@@ -210,7 +211,7 @@ Add this to your code.
 </script>
 ```
 
-## Ember
+## Ember {: #ember }
 The Ember integrations uses the `reopen` function to configure a function to trigger every time your application changes routes. This event is called `didTransition`.
 
 If you use TypeScript, you need to declare the global function:
@@ -237,23 +238,23 @@ EmberRouter.reopen({
 export default Router;
 ```
 
-## Static websites 
+## Static websites {: #static-websites }
 Static websites don't require any additional configuration, just add the Experience script to the `<head>` of your site and you're ready to go!
 
-## Server-side rendered websites 
+## Server-side rendered websites {: #server-side-rendered-websites }
 Server-side rendered websites don't require any additional configuration either. Add the Experience script to the `<head>` of your site and you're ready to go!
 
-## Vercel
+## Vercel {: #vercel }
 
 Head over to the Vercel marketplace and add the [Sematext Experience integration](https://vercel.com/integrations/sematext-experience) to get started. Next, add the Experience Script to your front-end app or website and you're good to go!
 
-## Next.js
+## Next.js {: #nextjs }
 
 Adding Experience to Next.js web sites is slightly different since there is no index.html file that you can easily edit to include the script in the `<head>` tags.
 
 Instead, you should use the `<Head>` Next.js component on all pages where Experience should be added. When you create an Experience App select Next.js on the instructions screen to get the exact code snippet that you should add to the `<Head>` component.
 
-## Google Tag Manager 
+## Google Tag Manager {: #google-tag-manager }
 
 Integrating Experience using Google Tag Manager is as simple as copy and pasting the code.
 
