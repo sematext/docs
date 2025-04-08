@@ -41,22 +41,14 @@
       // Add edit button to each page
       const contentArea = document.querySelector('.md-content__inner');
       if (contentArea) {
-        // Get current page path and adjust for GitHub
-        let pagePath = window.location.pathname;
+        // Get current page path
+        let url = window.location.pathname;
         
         // Remove /docs/ prefix if it exists
-        pagePath = pagePath.replace(/^\/docs\//, '');
+        url = url.replace(/^\/docs\//, '');
         
-        // Remove trailing slash if it exists
-        pagePath = pagePath.replace(/\/$/, '');
-        
-        // Handle index pages
-        if (pagePath === '' || pagePath.endsWith('/')) {
-          pagePath = `${pagePath}index.md`;
-        } else {
-          // For regular pages, add .md extension
-          pagePath = `${pagePath}.md`;
-        }
+        // Find the actual file path based on URL pattern
+        let filePath = mapUrlToFilePath(url);
         
         // Create edit button
         const editContainer = document.createElement('div');
@@ -65,7 +57,7 @@
         editContainer.style.marginBottom = '1rem';
         
         const editLink = document.createElement('a');
-        editLink.href = `https://github.com/sematext/docs/edit/master/docs/${pagePath}`;
+        editLink.href = `https://github.com/sematext/docs/edit/master/docs/${filePath}`;
         editLink.className = 'md-content__button md-icon';
         editLink.title = 'Edit this page';
         editLink.target = '_blank';
@@ -86,9 +78,88 @@
         }
         
         // For debugging
+        console.log('Current URL:', window.location.pathname);
+        console.log('Mapped file path:', filePath);
         console.log('Generated edit URL:', editLink.href);
       }
     });
+
+    // Map URL to actual file path based on MkDocs rules
+    function mapUrlToFilePath(url) {
+      // Special case for root
+      if (url === '' || url === '/') {
+        return 'index.md';
+      }
+      
+      // Remove trailing slash if it exists
+      if (url.endsWith('/')) {
+        url = url.slice(0, -1);
+      }
+      
+      // Special cases for known URL patterns
+      const specialCases = {
+        // Logs section
+        'logs': 'logs/index.md',
+        'logs/discovery': 'logs/discovery/intro.md',
+        
+        // Monitoring section
+        'monitoring': 'monitoring/index.md',
+        
+        // Fleet section
+        'fleet': 'fleet/index.md',
+        
+        // Experience section
+        'experience': 'experience/index.md',
+        
+        // Synthetics section
+        'synthetics': 'synthetics/index.md',
+        
+        // Integrations section
+        'integration': 'integration/index.md',
+        
+        // Alerts section
+        'alerts': 'alerts/index.md',
+        
+        // Events section
+        'events': 'events/index.md',
+        
+        // Dashboards section
+        'dashboards': 'dashboards/index.md',
+        
+        // Tags section
+        'tags': 'tags/index.md',
+        
+        // Team section
+        'team': 'team/index.md',
+        
+        // Agents section
+        'agents': 'agents/index.md',
+        
+        // API section
+        'api': 'api/index.md',
+        
+        // FAQ
+        'faq': 'faq.md'
+      };
+      
+      // Check for special case mappings
+      if (specialCases[url]) {
+        return specialCases[url];
+      }
+      
+      // For URLs that end with a path segment (like /logs/settings), we need to check
+      // if it's supposed to be a direct .md file or an index.md in a folder
+      
+      // First check if this looks like a section index (for example /logs/settings/)
+      // The general rule seems to be: if the last path component is the same as its parent's,
+      // then it's an index.md file
+      const pathParts = url.split('/');
+      const lastComponent = pathParts[pathParts.length - 1];
+      
+      // This default works for most URLs 
+      // - Add .md to the URL path
+      return `${url}.md`;
+    }
   </script>
   <style>
     .md-content__edit {
