@@ -530,8 +530,13 @@ extra_css:
 plugins:
   - search
 
-repo_url: https://github.com/sematext/docs/
-edit_uri: edit/master/docs/
+# Enabling the following fields will add a GitHub icon to the header. 
+# It's also supposed to enable the "Edit this page" link but it doesn't seem to work. 
+# That's why we implemented it in the template (mkdocs-material-overrides/main.html).
+#
+#repo_name: sematext/docs
+#repo_url: https://github.com/sematext/docs/
+#edit_uri: edit/master/docs/
 
 copyright: Copyright &copy; Sematext Group, Inc.
 
