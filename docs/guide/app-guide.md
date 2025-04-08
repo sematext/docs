@@ -38,13 +38,13 @@ This gives you, the user, more fine grained control over your costs,
 as you can see on [the pricing page](https://sematext.com/pricing/).
 
 
-After learning what an App is, you can check out the guides for our main features.
+After learning what an App is, you can check out our main features and solutions:
 
-- [Integrations](./integrations-guide/)
-- [Logs](../logs)
-- [Monitoring](../monitoring)
-- [Experience](../experience)
-- [Synthetics](../synthetics)
-- [Dashboards](../dashboards)
-- [Alerts](./alerts-guide)
-- [Events](./events-guide)
+- [Integrations](../integrations-guide/)
+- [Logs](../../logs/)
+- [Monitoring](../../monitoring/)
+- [Experience](../../experience/)
+- [Synthetics](../../synthetics/)
+- [Dashboards](../../dashboards/)
+- [Alerts](../alerts-guide/)
+- [Events](../events-guide/)
