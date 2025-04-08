@@ -3,7 +3,7 @@ description: Sematext Cloud exposes APIs and provides libraries that let you sen
 
 The Chart Builder lets you create visualizations of the data sent to Sematext. It lets
 you build charts for metrics and logs. Charts created through the builder
-are added to your [dashboards and reports](https://sematext.com/docs/dashboards/) as
+are added to your [dashboards and reports](/docs/dashboards/) as
 dashboard components. Configuring
 a chart requires specifying a list of
 series with metrics, optional filters, and groupings. Charts built through the
@@ -31,17 +31,17 @@ Each series should be configured in a series configuration panel. The panel wher
 
 With Chart Builder you can create charts and other visual components for all App types
 available in Sematext. We support
-[Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/),
-[Experience](https://sematext.com/docs/experience/) and
-[Synthetics](https://sematext.com/docs/synthetics/). This gives you huge flexibility
-when building your own [dashboards](https://sematext.com/docs/dashboards/). It is possible
+[Monitoring](/docs/monitoring/), [Logs](/docs/logs/),
+[Experience](/docs/experience/) and
+[Synthetics](/docs/synthetics/). This gives you huge flexibility
+when building your own [dashboards](/docs/dashboards/). It is possible
 to build a single chart which contains data series
 from Apps of different types, making it possible to visualize for example a correlation
-of CPU usage on a host with Error [logs](https://sematext.com/docs/logs/) or
-[user satisfaction](https://sematext.com/docs/experience/user-satisfaction/#apdex-level). You
-can place such a chart on a [dashboard](https://sematext.com/docs/dashboards/).
+of CPU usage on a host with Error [logs](/docs/logs/) or
+[user satisfaction](/docs/experience/user-satisfaction/#apdex-level). You
+can place such a chart on a [dashboard](/docs/dashboards/).
 
-![Chart builder data source](../images/dashboards/chart-builder-sources.png)
+![Chart builder data source](/docs/images/dashboards/chart-builder-sources.png)
 
 
 ## Metric names
@@ -52,19 +52,19 @@ the relationship between the metrics. If you don't write your own
 transformation expression then all metrics are added to each other producing
 a single series.
 
-![Chart builder metrics](../images/dashboards/chart-builder-metrics.png)
+![Chart builder metrics](/docs/images/dashboards/chart-builder-metrics.png)
 
 On the list of metrics you can find a special metric `count()`. This
-metric is available for [Logs](https://sematext.com/docs/logs/) and represents the number
+metric is available for [Logs](/docs/logs/) and represents the number
 of matching logs.
 
 ### Only latest interval
 
-Only Latest Interval toggle is available in [bar](./bar-pie-donut-chart), [pie & donut](./bar-pie-donut-chart), [geomap](./geomap), and [numeric](./numeric-component) components. When it is toggled on, only the latest value of the selected metric is displayed within the specified time range.
+Only Latest Interval toggle is available in [bar](/docs/dashboards/bar-pie-donut-chart), [pie & donut](/docs/dashboards/bar-pie-donut-chart), [geomap](/docs/dashboards/geomap), and [numeric](/docs/dashboards/numeric-component) components. When it is toggled on, only the latest value of the selected metric is displayed within the specified time range.
 
-![Chart builder metrics](../images/dashboards/chart-builder-latest-interval.png)
+![Chart builder metrics](/docs/images/dashboards/chart-builder-latest-interval.png)
 
-If the  [Group By](https://sematext.com/docs/dashboards/chart-builder/#group-by) option is selected when only latest interval toggle is on, the displayed value will depend on the selected group by action.
+If the  [Group By](/docs/dashboards/chart-builder/#group-by) option is selected when only latest interval toggle is on, the displayed value will depend on the selected group by action.
 
 - **Separately:** Shows the latest value of the selected metric for each group. For instance, if you choose to group data by `os.host` and there are multiple `os.host` values, the latest value of the selected metric for each distinct `os.host` will be displayed.
 - **Avg:** Shows the average of all latest values of the selected metric for each group.
@@ -82,7 +82,7 @@ If you want to chart all of them as a single series you can added them up using 
 os.cpu.user + os.cpu.system + os.cpu.wait
 ```
 
-![Chart builder transformations](../images/dashboards/chart-builder-transformations.png)
+![Chart builder transformations](/docs/images/dashboards/chart-builder-transformations.png)
 
 Another example is ratio. Imagine that you are interested in the ratio of the network input
 traffic and output traffic so you can easily spot suspicious behavior in the system,
@@ -155,7 +155,7 @@ in the [Filter by](#filter-by) section. You would choose tag name `os.host` and 
 You can use [variables](#variables) as tag values so they can be configured dynamically
 from the report level.
 
-![Chart builder filters](../images/dashboards/chart-builder-filters.png)
+![Chart builder filters](/docs/images/dashboards/chart-builder-filters.png)
 
 ## Group by
 
@@ -167,7 +167,7 @@ the selected metric on a particular host.
 You can use [variables](#variables) as tag values so they can be configured dynamically
 from the report level.
 
-![Chart builder group by](../images/dashboards/chart-builder-group.png)
+![Chart builder group by](/docs/images/dashboards/chart-builder-group.png)
 
 ### Aggregation functions
 
@@ -194,12 +194,12 @@ use `sum` rollup function. In some cases it makes sense to customize the setting
 
 _NOTE: Recommended for expert users._
 
-![Chart builder rollup by](../images/dashboards/chart-builder-rollup.png)
+![Chart builder rollup by](/docs/images/dashboards/chart-builder-rollup.png)
 
 
 ## Variables
 
-[Variables](./report-variables/) are used to dynamically filter and group components by tags.
+[Variables](/docs/dashboards/report-variables) are used to dynamically filter and group components by tags.
 
 Filters from the `Filter by` section don't have to be configured statically when a chart
 is created. Sometimes you need charts on the dashboard to react to a global filter
@@ -211,10 +211,10 @@ of course, reconfigure all dashboard charts (aka components) so they show data o
 As you might expect this is not a very efficient way to troubleshoot. This is where Variables
 come into play. 
 
-Variables can be created by selecting the "Manage variables" option in [Report](./reports-and-components/) settings.
+Variables can be created by selecting the "Manage variables" option in [Report](/docs/dashboards/reports-and-components) settings.
 You can create a tag variable that points to the `os.host` field.
 
-![Manage Variables](../images/dashboards/variables.png)
+![Manage Variables](/docs/images/dashboards/variables.png)
 
 A variable is automatically added on top of the dashboard. A variable becomes a drop-down component
 from which you can select tag values and charts automatically react on the change.
@@ -236,20 +236,20 @@ charts. In addition to the chart type, you can choose a color from the palette a
 goal of a group color scheme is to determine the colors of the series from the same group. When you group a metric by
 `os.host` as a result you get a couple of series. Each series can get a different color.
 
-![Chart builder styles](../images/dashboards/chart-builder-styles_2.png)
+![Chart builder styles](/docs/images/dashboards/chart-builder-styles_2.png)
 
 A very important feature in the styles tab is the "Stacked" option. When you select the checkbox data
 of a given series is stacked. This is very useful for area and bar charts. Below you can see
 a comparison of stacked and non-stacked bar charts.
 
-![Chart builder styles](../images/dashboards/chart-builder-stacked.png)
+![Chart builder styles](/docs/images/dashboards/chart-builder-stacked.png)
 
 ## Component Switch
 
 You can switch between different kinds of component visualization types.
 
-![Chart builder component switch list](../images/dashboards/component_switch_list.png)
+![Chart builder component switch list](/docs/images/dashboards/component_switch_list.png)
 
 E.g.: You can switch Timeseries to Pie Chart directly from the Chart Builder to see how the data series will be represented in each of them.
 
-![Chart builder component switch](../images/dashboards/component_switch.png)
+![Chart builder component switch](/docs/images/dashboards/component_switch.png)

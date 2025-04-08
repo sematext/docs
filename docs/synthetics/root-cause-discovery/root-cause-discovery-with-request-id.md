@@ -15,7 +15,7 @@ Let’s see how to set up and use this integration.
 
 The Synthetic monitoring run ID is included in each request the monitor makes to your API, URL, or whatever you are monitoring.  It is included as an HTTP request header called X-Sematext-Synthetics-id. The request ID for each monitor run can be found in the run result flyout under the request tab:
 
-![Synthetics Request ID](../../images/synthetics/troubleshoot/synthetics-request-id.png)
+![Synthetics Request ID](/docs/images/synthetics/troubleshoot/synthetics-request-id.png)
 
 ## Including Request ID to Application Logs
 
@@ -50,27 +50,27 @@ In addition to capturing the individual request IDs in your own application code
 
 ## Shipping Logs
 
-To be able to dig into your logs from a failed Synthetic monitor run your logs should be shipped to one or more Logs Apps in Sematext.  If your logs are not already in Sematext, the easiest way to ship logs is via [Logs Discovery](https://sematext.com/docs/logs/discovery/intro/) or one of the [alternative log shipping methods](https://sematext.com/docs/logs/sending-log-events/). 
+To be able to dig into your logs from a failed Synthetic monitor run your logs should be shipped to one or more Logs Apps in Sematext.  If your logs are not already in Sematext, the easiest way to ship logs is via [Logs Discovery](/docs/logs/discovery/intro/) or one of the [alternative log shipping methods](/docs/logs/sending-log-events/). 
 
 ## Connecting Synthetics with Logs App
 
-After forwarding your logs to your Logs App, [connect](https://sematext.com/docs/guide/connected-apps/) your Synthetics App with your Logs App.  This will let you dig into your logs from the  failed runs screen . To connect Apps, open the connect Apps modal from one of your Apps and then choose the App to connect.
+After forwarding your logs to your Logs App, [connect](/docs/guide/connected-apps/) your Synthetics App with your Logs App.  This will let you dig into your logs from the  failed runs screen . To connect Apps, open the connect Apps modal from one of your Apps and then choose the App to connect.
 
-![Connect Apps](../../images/synthetics/troubleshoot/connect-apps.gif)
+![Connect Apps](/docs/images/synthetics/troubleshoot/connect-apps.gif)
 
 ## Setting the Correct Field
 
 Keep in mind that correlating individual monitor runs with logs requires a specific field name called request.id. So when you are shipping logs to your logs App, make sure you send the Synthetics request ID that you’ve captured under the field called request.id, as shown earlier.
 
-If you are not able to do this in your application code, you can use [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) to extract this information into the request.id field. For instance, perhaps you added the request ID to your log messages as in our earlier example:
+If you are not able to do this in your application code, you can use [Logs Pipelines](/docs/logs/pipelines/) to extract this information into the request.id field. For instance, perhaps you added the request ID to your log messages as in our earlier example:
 
 `logger.log(error', 'Data could not be stored. Connection to the database failed. X-Sematext-Synthetics-Id: ${headerValue}');`
 
 In this case, this whole log message will likely end up in a field called `message` in your Logs App.  You’ll want to extract this request ID value and store it in a new field called request.id. Why? Because this is the log event field that is used for filtering your logs for a given monitor run.
 
-Below is an example of shipped logs that have request ID within the message field. By using the [Field Extractor processor](https://sematext.com/docs/logs/field-extractor-processor/), you can extract the request ID from the text message and assign it to a new field called request.id.
+Below is an example of shipped logs that have request ID within the message field. By using the [Field Extractor processor](/docs/logs/field-extractor-processor/), you can extract the request ID from the text message and assign it to a new field called request.id.
 
-![Request ID GROK](../../images/synthetics/troubleshoot/request-id-grok.png)
+![Request ID GROK](/docs/images/synthetics/troubleshoot/request-id-grok.png)
 
 ## Dig Into Logs to Troubleshoot
 
@@ -80,20 +80,20 @@ Once both Apps are connected and the request.id is captured and shipped to the L
 - Click on the "Trace Request" option.
 - You can see how many logs are associated with that specific monitor run within this tab.
 
-![Request Tab](../../images/synthetics/troubleshoot/trace-request-tab.png)
+![Request Tab](/docs/images/synthetics/troubleshoot/trace-request-tab.png)
 
-To see the logs, you can open the Logs App in a new tab by clicking on the new tab icon next to the App name. Or you can click to see them in [Split Screen](https://sematext.com/docs/guide/split-screen/) to correlate logs within a single page while viewing the failed run details.
+To see the logs, you can open the Logs App in a new tab by clicking on the new tab icon next to the App name. Or you can click to see them in [Split Screen](/docs/guide/split-screen/) to correlate logs within a single page while viewing the failed run details.
 
-![Request ID Logs](../../images/synthetics/troubleshoot/request-id-logs.png)
+![Request ID Logs](/docs/images/synthetics/troubleshoot/request-id-logs.png)
 
 The request ID is filtered automatically, and the time range for logs is set to the time your monitor has failed. You will only see the logs that are directly associated with that monitor run. This gives you the ability to explore what is going on in your application that might have caused the failed run and get to the bottom of the root cause of the problem.
 
 ## Context View for Logs
 
-The [Context View](https://sematext.com/docs/logs/context-view/) might come in handy when troubleshooting your failed monitor runs' application logs. When you are navigated to the Logs App associate with your Synthetics App, the request ID for that individual monitor run is already set as a filter automatically in your logs.
+The [Context View](/docs/logs/context-view/) might come in handy when troubleshooting your failed monitor runs' application logs. When you are navigated to the Logs App associate with your Synthetics App, the request ID for that individual monitor run is already set as a filter automatically in your logs.
 
-![Request ID Logs 2](../../images/synthetics/troubleshoot/request-id-logs2.png)
+![Request ID Logs 2](/docs/images/synthetics/troubleshoot/request-id-logs2.png)
 
 To dig deeper into the root cause, you might want to see what happened in your application before and after this request was made and captured. The Context View lets you see the logs coming before and after an individual log, which helps you analyze logs to understand the sequence of events leading up to and following the failed endpoint request.
 
-![Context View](../../images/synthetics/troubleshoot/context-view.gif)
+![Context View](/docs/images/synthetics/troubleshoot/context-view.gif)

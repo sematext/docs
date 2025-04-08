@@ -228,13 +228,13 @@ sudo bash /opt/spm/bin/setup-infra --infra-token <YOUR_INFRA_APP_TOKEN_HERE> --r
 
 You can find your Infra App token by navigating to `Fleet and Discovery > Agents > Install Agent` and selecting your Linux distribution.
 
-![Infra App Instructions](images/infra-app-instructions.png)
+![Infra App Instructions](/docs/agents/sematext-agent/images/infra-app-instructions.png)
 
 ## Extra configuration for Monitoring and Logs Integrations
 
 To fully enable monitoring and logging for specific integrations, additional configuration steps are required after the Sematext Agent installation or upgrade. These steps are provided directly after the installation instructions for each integration in Sematext Cloud:
 
-![Agent Access Settings](images/agent-access-settings.gif)
+![Agent Access Settings](/docs/agents/sematext-agent/images/agent-access-settings.gif)
 
 The integrations that require this extra configuration include:
 

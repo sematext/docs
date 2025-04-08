@@ -18,14 +18,14 @@ Unlike rsyslog, journald has no option to forward logs directly to Elasticsearch
 
 Cool, it works! However, the running processes would not catch logs at boot time or recover gracefully after a restart - we might lose some logs - a nogo!
 
-Luckily, Logagent has got a [plugin](https://sematext.com/docs/logagent/input-plugin-journald-upload/) that receives logs from the `systemd-journal-upload` service. Let’s start from scratch and set up Logagent to receive journald logs and store them in Elasticsearch or Sematext Cloud.  
+Luckily, Logagent has got a [plugin](/docs/logagent/input-plugin-journald-upload/) that receives logs from the `systemd-journal-upload` service. Let’s start from scratch and set up Logagent to receive journald logs and store them in Elasticsearch or Sematext Cloud.  
 
-![](systemd-journal-upload.png)
+![](/docs/logagent/systemd-journal-upload.png)
 
 ## Setup Logagent as a local logging hub
 
 To run Logagent you will need a Logs App Token first. If you don't have Sematext Logs Apps yet, you can [create Logs Apps now](https://apps.sematext.com/ui/logs-create/app/logsene).
-Then you can [install Logagent](https://sematext.com/docs/logagent/installation/). The default setup ships log files from /var/log to Sematext Cloud. To run Logagent you will need a Logs App Token. 
+Then you can [install Logagent](/docs/logagent/installation/). The default setup ships log files from /var/log to Sematext Cloud. To run Logagent you will need a Logs App Token. 
 
 To receive logs from the `journal-upload` service, activate the plugin in `/etc/sematext/logagent.conf`. 
 

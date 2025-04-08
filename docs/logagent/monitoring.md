@@ -4,8 +4,8 @@ description: How to monitor Logagent runtime performance metrics
 ## Node.js runtime performance
 
 ### Containerized environment
-If you are running Logagent in containers you should be running [sematext/logagent](./installation-docker/).
-Set the MONITORING_TOKEN environmental variable to ship Logagent's Node.js runtime metrics to Sematext.  Just make sure the token is for the [Node.js Monitoring](../integration/node.js/) App.
+If you are running Logagent in containers you should be running [sematext/logagent](/docs/logagent/installation-docker).
+Set the MONITORING_TOKEN environmental variable to ship Logagent's Node.js runtime metrics to Sematext.  Just make sure the token is for the [Node.js Monitoring](/docs/integration/node.js/) App.
 
 Example:
 ```
@@ -64,7 +64,7 @@ options:
   printStats: 60
 ```
 
-Using the [Chart Builder](../dashboards/chart-builder/) you can create a set of charts for Logagent monitoring.  Logagent metrics have the `logagent` prefix. The following metrics are available: 
+Using the [Chart Builder](/docs/dashboards/chart-builder/) you can create a set of charts for Logagent monitoring.  Logagent metrics have the `logagent` prefix. The following metrics are available: 
 
 - `logagent.tokens.used` - number of logs tokens used
 - `logagent.logs.shipped` - number of shipped logs (multi-line)

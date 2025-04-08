@@ -6,7 +6,7 @@ adding your application token as part of your CEE-formatted JSON over
 syslog.
 
 If this is not possible for some reason - for example, if you're using
-the [traditional syslogd](syslogd) - then you can authorize
+the [traditional syslogd](/docs/logs/syslogd) - then you can authorize
 your public IP (or IPs) and send logs to Logs Management App as if it's your local
 log collector.  Authorizing an IP lets us determine to which app
 logs originating from some IP should be routed.  As such, a given IP

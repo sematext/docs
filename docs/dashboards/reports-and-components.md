@@ -7,15 +7,15 @@ The **Report Menu** is where the true power of Sematext's Dashboards lies. This 
 
 Here's how you can **correlate Metrics with Events and Logs**, and view it all in a single view.
 
-![Dashboard Reports](../images/dashboards/elasticsearch-dashboard.png)
+![Dashboard Reports](/docs/images/dashboards/elasticsearch-dashboard.png)
 
 ## Dashboard Components
 
 The image below shows a common Monitoring App component. Using the component settings dropdown menu, you can easily add any metrics components from one or more Apps to the Dashboard. Create correlations reports, observe and analyze how multiple technologies coexist in your system. Zoom and time shift through charts, display a single component in full view, create alerts, and effortlessly share reports across your organization. 
 
-![Metrics Dashboards Component](../images/dashboards/metrics-dashboard-component-2.png)
+![Metrics Dashboards Component](/docs/images/dashboards/metrics-dashboard-component-2.png)
 
-Just like a Monitoring App component, a Logs App components have interactive elements as well. Here you can choose from Log Tables, Logs counts, and much more. Use the **+ Add New Component** button to add a Logs App component to your Dashboard, and combine them with Monitoring App components for full observability of your stack. Refer to [Logs Component Settings](https://sematext.com/docs/logs/reports-and-components/#logs-component-settings) for detailed information.
+Just like a Monitoring App component, a Logs App components have interactive elements as well. Here you can choose from Log Tables, Logs counts, and much more. Use the **+ Add New Component** button to add a Logs App component to your Dashboard, and combine them with Monitoring App components for full observability of your stack. Refer to [Logs Component Settings](/docs/logs/reports-and-components/#logs-component-settings) for detailed information.
 
 Our tools will help your DevOps team find common exceptions, detect patterns in behaviours, and solve performance issues and availability problems.
 
@@ -27,4 +27,4 @@ With [Saved Views](/guide/saved-views) you can save your filters and groups for 
 
 Report Variables are user-defined variables that are used to dynamically filter and group data in reports. These variables can be used to filter data based on certain conditions, and add dynamic values to the reports. Report Variables allow users to make reports more flexible and reusable, as they can be updated and reused across multiple reports without having to manually change the data in each report.
 
-Refer to [report variables](https://sematext.com/docs/dashboards/report-variables/) for more information.
+Refer to [report variables](/docs/dashboards/report-variables/) for more information.

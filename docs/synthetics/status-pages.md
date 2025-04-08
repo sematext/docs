@@ -12,11 +12,11 @@ Using Sematext Synthetics you can create public and private status pages to shar
 You can create multiple status pages under your account. To create a status page, simply go to **Synthetics** and press the **Add Status Page** button on the sidebar.
 
 
-![Create Status Page](../images/synthetics/status-page-new.png)
+![Create Status Page](/docs/images/synthetics/status-page-new.png)
 
 Doing so will show the form where you can customize the status page. 
 
-![Create Status Page](../images/synthetics/status-page-create-2.png)
+![Create Status Page](/docs/images/synthetics/status-page-create-2.png)
 
 The following fields are required to create a status page:
 
@@ -37,11 +37,11 @@ You can use this URL to preview the status page before opening to the public. Di
 
 If you want to **restrict access** to the status page, enable **password protection** in the "Create New Status Page", which is located below the Header settings. 
 
-![Status Page Set Password](../images/synthetics/status-page-set-password.png)
+![Status Page Set Password](/docs/images/synthetics/status-page-set-password.png)
 
 If the password protection is enabled, users will be prompted to enter password when they try to access the status page.
 
-![Password Protected Status Page](../images/synthetics/status-page-password-protected.png)
+![Password Protected Status Page](/docs/images/synthetics/status-page-password-protected.png)
 
 ## Edit Status Pages
 
@@ -49,7 +49,7 @@ To edit a status page simply click on the **“...”** that appears when you ho
 All the monitors that are already added to the status page will be pre-selected. 
 You can **filter included/not included** monitors by clicking on the buttons next to the search bar.
 
-![Edit Status Page](../images/synthetics/status-page-edit.png)
+![Edit Status Page](/docs/images/synthetics/status-page-edit.png)
 
 ## Incidents
 
@@ -57,7 +57,7 @@ Incidents let you inform your users of planned maintenance, downtime, or any oth
 
 To create an incident simply click on a status page and then click on the **“+ New Incident”** button on the top right corner of the page.
 
-![New Incident](../images/synthetics/incident-new.png)
+![New Incident](/docs/images/synthetics/incident-new.png)
 
 You have the option to select between 3 different incident types:
 
@@ -67,16 +67,16 @@ You have the option to select between 3 different incident types:
 
 Set the start and end date for an incident and enter title and description.
 
-![Incident Timeline](../images/synthetics/incident-create.png)
+![Incident Timeline](/docs/images/synthetics/incident-create.png)
 
 After you create an incident, when the current date and time falls between the incident start and end dates, the incident title and description will appear in your public status pages to inform your users. Thus allows you to pre-create and schedule incidents ahead of time, have them show up on the status page at a pre-determined time in the future, and have them automatically disappear.
 
-![Incident Window](../images/synthetics/incident-window.png)
+![Incident Window](/docs/images/synthetics/incident-window.png)
 
 You can resolve an incident at any time by navigating to the status page in Sematext Cloud, clicking on New Update and selecting the new status of the incident.
 
-![Incident Update](../images/synthetics/incident-update.png)
-![Incident Resolve](../images/synthetics/incident-resolve.png)
+![Incident Update](/docs/images/synthetics/incident-update.png)
+![Incident Resolve](/docs/images/synthetics/incident-resolve.png)
 
 ## Custom Domain Setup
 
@@ -94,7 +94,7 @@ The status page should now be available at  `https://status.company.com`.
 
 ## Status Page UI
 
-![Status Page UI](../images/synthetics/status-page-ui.png)
+![Status Page UI](/docs/images/synthetics/status-page-ui.png)
 
 1. **Header Logo**
 2. **Header Title**

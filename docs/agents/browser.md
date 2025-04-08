@@ -6,14 +6,14 @@ Sematext [Browser SDK](https://github.com/sematext/browser-sdk) is an open-sourc
  - Hard page loads for traditional web applications as well as single-page applications
  - Soft page loads generated via the `routeChange` command for single-page applications
  - HTTP requests
- - [Web application resources, such as images, CSS files, etc.](/experience/resources/)
- - [Web vitals](/experience/webvitals/)
- - [Element timing](/experience/element-timing/)
- - [Long tasks](/experience/longtasks/)
- - [User sessions](/experience/user-identification/)
- - [On-page transactions](/experience/measurements/)
+ - [Web application resources, such as images, CSS files, etc.](/docs/experience/resources/)
+ - [Web vitals](/docs/experience/webvitals/)
+ - [Element timing](/docs/experience/element-timing/)
+ - [Long tasks](/docs/experience/longtasks/)
+ - [User sessions](/docs/experience/user-identification/)
+ - [On-page transactions](/docs/experience/measurements/)
 
-![Sematext Experience Overview](../images/experience/overview.png)
+![Sematext Experience Overview](/docs/images/experience/overview.png)
 
 ## Development
 
@@ -35,9 +35,9 @@ The following commands are currently supported by the Experience script:
  - `endTransaction` - Informs the metrics gathering script about transaction end. It accepts a single parameter that should take the value of the name of the transaction that we want to end.
  - `pageLoad` - Provides metrics related to page load.
  - `ajax` - Provides metrics related to HTTP requests.
- - `longTask` - Provides metrics related to [long tasks](/experience/longtasks/).
- - `elementTiming` - Provides metrics related to [element timing](/experience/element-timing/).
- - `vitalMetric` - Provides metrics related to [web vitals](/experience/webvitals/).
+ - `longTask` - Provides metrics related to [long tasks](/docs/experience/longtasks/).
+ - `elementTiming` - Provides metrics related to [element timing](/docs/experience/element-timing/).
+ - `vitalMetric` - Provides metrics related to [web vitals](/docs/experience/webvitals/).
 
 ### Global Constants
 
@@ -81,7 +81,7 @@ strum('config', { token: '8763d12d-1j3t-932v-b498-544290z98k43', receiverUrl: 'h
 
 ### Integrating the Experience Script
 
-For some web technologies, especially those used in single-page applications additional integration may be needed. Have a look at the [Sematext Experience Integrations](/experience/integrations/) to learn more.
+For some web technologies, especially those used in single-page applications additional integration may be needed. Have a look at the [Sematext Experience Integrations](/docs/experience/integrations/) to learn more.
 
 ### Customizing Browser SDK
 

@@ -7,16 +7,16 @@ The Log Context feature operates similarly. Once you've pinpointed a log event o
 
 You can access the Log Context directly from the Logs Table by clicking on the three dots located at the beginning of the log row. 
 
-![Logs Context View Menu](../images/logs/logs-context-view-menu.png)
+![Logs Context View Menu](/docs/images/logs/logs-context-view-menu.png)
 
 You can also access it when viewing a specific log from the side panel.
 
-![Logs Context View Menu](../images/logs/logs-context-view-side-panel.png)
+![Logs Context View Menu](/docs/images/logs/logs-context-view-side-panel.png)
 
 Once in the Context View, the selected log entry is marked, making it easy to identify and analyze it within the context of surrounding logs.
 
-![Logs Context View](../images/logs/logs-context-view.png)
+![Logs Context View](/docs/images/logs/logs-context-view.png)
 
 You can then filter logs within the context view, focusing on specific types of logs. In the example below, we filtered to view only logs with the status code 400 coming before and after a particular log entry.
 
-![Logs Context View 400](../images/logs/logs-context-view-400.png)
+![Logs Context View 400](/docs/images/logs/logs-context-view-400.png)

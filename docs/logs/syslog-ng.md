@@ -69,7 +69,7 @@ all cases, your endpoint will be
 To enable token authentication, get the token of your Logs Management
 application from the [list of Logs Maangement applications](https://apps.sematext.com/ui/logs).
 Then, put it in the template() statement of your Logs Management App destination.
-See working examples below. The end result is a [CEE-formatted JSON syslog](json-messages-over-syslog)
+See working examples below. The end result is a [CEE-formatted JSON syslog](/docs/logs/json-messages-over-syslog)
 message that contains your token in the **logsene-app-token** field.
 
 IMPORTANT: For JSON formatting that enables token authentication to work
@@ -80,7 +80,7 @@ plugin. The libjson plugin is typically provided by the
 ### IP-based Authentication
 
 The alternate method for authentication is by pre-authorizing your
-public IP in Logs Management App's UI. [Here is a complete guide](authorizing-ips-for-syslog) on how to do that. If
+public IP in Logs Management App's UI. [Here is a complete guide](/docs/logs/authorizing-ips-for-syslog) on how to do that. If
 you choose this path, you don't need the template() statement from the
 code snippets below.
 
@@ -178,7 +178,7 @@ Then, restart syslog-ng and you should see your logs in the [Logs Management App
 
 ## Logs Tagging
 
-From your syslog messages, Logs Management App will populate a number of [special fields](special-fields), such as the **source** and
+From your syslog messages, Logs Management App will populate a number of [special fields](/docs/logs/special-fields), such as the **source** and
 **host**. You can also configure syslog-ng to add a tag to logs matching
 certain criteria. This is useful when you want to quickly identify a
 special kind of logs. For example, you could tag events that come to the

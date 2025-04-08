@@ -110,5 +110,5 @@ curl -XPOST -H "Content-type: application/json" https://your_marathon_server:808
 
 To see detailed configuration params and manuals, see:
 
-- [Container Configuration Parameters](./container-config-parameters)
-- [Container Configuration Manual](./container-config-manual)
+- [Container Configuration Parameters](/docs/logagent/container-config-parameters)
+- [Container Configuration Manual](/docs/logagent/container-config-manual)

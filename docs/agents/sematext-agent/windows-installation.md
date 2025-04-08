@@ -1,14 +1,14 @@
 title: Installing Sematext Agent on Windows
 
-Sematext Agent collects a plethora of metrics about Windows hosts (CPU, memory, disk, network, processes) as well as [Windows Events](../../integration/windows/#logs). The installer is responsible for installing the Sematext Agent, configuring it, and starting it as a Windows Service.
+Sematext Agent collects a plethora of metrics about Windows hosts (CPU, memory, disk, network, processes) as well as [Windows Events](/docs/integration/windows/#logs). The installer is responsible for installing the Sematext Agent, configuring it, and starting it as a Windows Service.
 
 Installation can be done either by using the GUI installer or through the command line.
 
 ## Preconditions
 
-Before starting, please check the [platform support policy](https://sematext.com/docs/agents/sematext-agent/platform-support-policy/) page to make sure your Windows platform is supported.
+Before starting, please check the [platform support policy](/docs/agents/sematext-agent/platform-support-policy/) page to make sure your Windows platform is supported.
 
-To see your Windows host metrics in Sematext Cloud, you need to [create an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app) and select the Windows environment. This will provide you with an Infra App token, which is essential for establishing a secure link between Sematext Cloud and Sematext Agent.
+To see your Windows host metrics in Sematext Cloud, you need to [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app) and select the Windows environment. This will provide you with an Infra App token, which is essential for establishing a secure link between Sematext Cloud and Sematext Agent.
 
 ## Install from GUI
 
@@ -113,7 +113,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
     - Place both the PowerShell script and MSI installer in this shared folder
     - Set permissions on the shared folder to ensure all target computers have read access
 
-    ![Sematext Agent shared folder](images/windows-agent-shared-folder.png)
+    ![Sematext Agent shared folder](/docs/agents/sematext-agent/images/windows-agent-shared-folder.png)
 
 ### Active Directory Configuration
 
@@ -124,7 +124,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
     - Name the group (e.g., `SematextAgentDeployment`)
     - Make sure the **Group scope** is set to **Global** and **Group type** is set to **Security**
 
-    ![Sematext Agent group properties](images/windows-agent-group-properties.png)
+    ![Sematext Agent group properties](/docs/agents/sematext-agent/images/windows-agent-group-properties.png)
 
     - Add computers to the group:
       - Right-click the newly created group, select **Properties**
@@ -133,8 +133,8 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
       - Click **Check Names** to validate they are recognized by Active Directory
       - Click **OK**
 
-    ![Add computers to group](images/windows-agent-add-computers-to-group.png)
-    ![Security group](images/windows-agent-security-group.png)
+    ![Add computers to group](/docs/agents/sematext-agent/images/windows-agent-add-computers-to-group.png)
+    ![Security group](/docs/agents/sematext-agent/images/windows-agent-security-group.png)
 
 2. **Create a new Group Policy Object (GPO)**
    
@@ -143,7 +143,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
     - Select **Create a GPO in this domain, and Link it here…**
     - Name the GPO something descriptive like `Deploy Sematext Agent`
 
-    ![Create GPO](images/windows-agent-create-gpo.png)
+    ![Create GPO](/docs/agents/sematext-agent/images/windows-agent-create-gpo.png)
 
 3. **Configure GPO security filtering**
    
@@ -152,7 +152,7 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
     - Enter the name of the group you created (e.g., `SematextAgentDeployment`)
     - Click **Check Names**, and then click **OK**
 
-    ![New GPO](images/windows-agent-new-gpo.png)
+    ![New GPO](/docs/agents/sematext-agent/images/windows-agent-new-gpo.png)
 
 4. **Configure the GPO to run the script**
    
@@ -164,18 +164,18 @@ These steps will walk you through deploying the Sematext Agent using Group Polic
     - In the Add a Script dialog, click **Browse...** and navigate to the shared folder
     - Select `install_sematext_agent.ps1`
 
-    ![PowerShell Script](images/windows-agent-ps-script.png)
+    ![PowerShell Script](/docs/agents/sematext-agent/images/windows-agent-ps-script.png)
 
 5. **Configure PowerShell execution policy**
    
     - In the Group Policy Management Editor, navigate to:
       **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows PowerShell**
 
-    ![PowerShell Policy](images/windows-agent-ps-policy.png)
+    ![PowerShell Policy](/docs/agents/sematext-agent/images/windows-agent-ps-policy.png)
 
     - Enable the policy **Turn on Script Execution** and set it to **Allow all scripts**
 
-    ![PowerShell Policy Settings](images/windows-agent-ps-policy-settings.png)
+    ![PowerShell Policy Settings](/docs/agents/sematext-agent/images/windows-agent-ps-policy-settings.png)
 
 ### Client-Side Configuration and Verification
 
@@ -227,7 +227,7 @@ If the deployment is unsuccessful, check the following:
 
 Open Windows Services and find the Sematext Agent service:
 
-![Sematext Agent service](images/sematext-agent-service.png)
+![Sematext Agent service](/docs/agents/sematext-agent/images/sematext-agent-service.png)
 
 ### Command line
 

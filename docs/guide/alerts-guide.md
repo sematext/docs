@@ -13,36 +13,36 @@ Receiving Alerts when your software is misbehaving or underperforming is crucial
 - **Alert Rules** that **detect Anomalies** and notify when key **performance indicators spike or drop**
 - **Criteria** that trigger **Alerts for monitored resources**
 - **Thresholds** defined for **Alerts** when selected **metrics reach certain severity levels**
-- [**Notification channels**](https://sematext.com/docs/alerts/alert-notifications/) through which the responsible team will be notified about the incident
+- [**Notification channels**](/docs/alerts/alert-notifications/) through which the responsible team will be notified about the incident
 
-[Sematext Alerts](../alerts) help you address underlying issues before they affect user experience. There are three types of Alerts. 
+[Sematext Alerts](/docs/alerts) help you address underlying issues before they affect user experience. There are three types of Alerts. 
 
 - **Threshold** - Alerts that are based on classic thresholds. They are **triggered** when something **crosses a pre-defined threshold**.
 - **Heartbeat** - Alerts **triggered** when **something you are monitoring**, like your servers, containers, or your applications, **stops sending data** to Sematext Cloud.
 - **Anomaly** - Alerts based on statistical anomaly detection. They are **triggered** when **values** suddenly **change and deviate from the baseline**. 
 
-![Sematext Anomaly Alerts](../images/guide/alerts-and-events/anomaly-alerts.png)
+![Sematext Anomaly Alerts](/docs/images/guide/alerts-and-events/anomaly-alerts.png)
 
-When an anomaly alert is triggered, you'll be able to observe spikes and dips within the alert details flyout upon clicking on the [alert event](https://sematext.com/docs/alerts/alert-events/). The chart also features a confidence band that illustrates the range of certainty around the expected values.
+When an anomaly alert is triggered, you'll be able to observe spikes and dips within the alert details flyout upon clicking on the [alert event](/docs/alerts/alert-events/). The chart also features a confidence band that illustrates the range of certainty around the expected values.
 
-![Sematext Anomaly Alert Confidence Band](../images/guide/alerts-and-events/anomaly-alert-confidence-band.png)
+![Sematext Anomaly Alert Confidence Band](/docs/images/guide/alerts-and-events/anomaly-alert-confidence-band.png)
 
-**Threshold** and **Anomaly** Alerts can be triggered for [Monitoring](https://sematext.com/docs/alerts/creating-metrics-alerts/), [Logs](https://sematext.com/docs/alerts/creating-logs-alerts/), [Synthetics](https://sematext.com/docs/alerts/creating-synthetics-alerts/) and [Experience](https://sematext.com/docs/alerts/creating-experience-alerts/) Apps, while [**Heartbeat**](https://sematext.com/docs/alerts/creating-heartbeat-alerts/) Alerts are only available for Monitoring Apps.
+**Threshold** and **Anomaly** Alerts can be triggered for [Monitoring](/docs/alerts/creating-metrics-alerts/), [Logs](/docs/alerts/creating-logs-alerts/), [Synthetics](/docs/alerts/creating-synthetics-alerts/) and [Experience](/docs/alerts/creating-experience-alerts/) Apps, while [**Heartbeat**](/docs/alerts/creating-heartbeat-alerts/) Alerts are only available for Monitoring Apps.
 
-Sematext lets you manage Alert Rules across your whole stack. You can use various [notification channels](https://sematext.com/docs/alerts/alert-notifications/) to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
+Sematext lets you manage Alert Rules across your whole stack. You can use various [notification channels](/docs/alerts/alert-notifications/) to get alerted when critical issues occur so you can take action and resolve them. Our Alerts easily integrate with notification and chat software. 
 
-- [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/)
-- [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/)
-- [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), and [many more](https://sematext.com/docs/alerts/alert-notifications/). 
+- [PagerDuty](/docs/integration/alerts-pagerduty-integration/)
+- [OpsGenie](/docs/integration/alerts-opsgenie-integration/)
+- [Slack](/docs/integration/alerts-slack-integration/), and [many more](/docs/alerts/alert-notifications/). 
 
 ## Default Alerts
 
-For [Logs](../logs), [Monitoring](../monitoring), or [Synthetics](../synthetics), as soon as an [App](./app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
+For [Logs](/docs/logs), [Monitoring](/docs/monitoring), or [Synthetics](/docs/synthetics), as soon as an [App](/docs/guide/app-guide) is created, you will see several app-specific Alerts Rules created for you by default. 
 
 Default Alerts for an Infrastructure App:
 
-- [Alerts for Server Monitoring](https://sematext.com/docs/monitoring/servers/#core-infrastructure-alerting)
-- [Alerts for Kubernetes Monitoring](https://sematext.com/docs/integration/kubernetes/#kubernetes-alerts)
+- [Alerts for Server Monitoring](/docs/monitoring/servers/#core-infrastructure-alerting)
+- [Alerts for Kubernetes Monitoring](/docs/integration/kubernetes/#kubernetes-alerts)
 
 Default Alerts for a Monitoring App:
 
@@ -54,14 +54,14 @@ Default Alerts for a Logs App:
 
 - **Anomaly Alerts** for **Error and Warning** search queries
 
-For [Logs](../logs) or [Monitoring](../monitoring), there are also default alerts for [integrations](https://sematext.com/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
+For [Logs](/docs/logs) or [Monitoring](/docs/monitoring), there are also default alerts for [integrations](/docs/integration/) which are designed based on crucial metrics and logs essential for monitoring and taking action within that specific service type.
 
 In this example which is an Elasticsearch Monitoring App, the Java usage threshold and Elasticsearch Node Anomalies are integration-specific default Alerts.
 
-![Sematext Cloud System Generated Alerts](../images/guide/alerts-and-events/system-generated-alerts.png)
+![Sematext Cloud System Generated Alerts](/docs/images/guide/alerts-and-events/system-generated-alerts.png)
 
 You can view all the default and custom Alerts on the [Alert Rules](https://apps.sematext.com/ui/alerts/rules) page. This is where you can toggle, edit or delete any existing Alerts.
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Alerts Rules Window")
 
-More detailed instructions are provided in [Alerts Rules Overview](https://sematext.com/docs/alerts/alert-rules).
+More detailed instructions are provided in [Alerts Rules Overview](/docs/alerts/alert-rules).

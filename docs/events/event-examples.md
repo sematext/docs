@@ -7,11 +7,11 @@ Events originate from internal and external sources.
 
 Internal events come from sources such as:
 
-* [Kubernetes events](https://sematext.com/docs/agents/sematext-agent/events/#kubernetes-events) collected by Sematext Agent
-* [Container events](https://sematext.com/docs/agents/sematext-agent/events/#container-events) collected by Sematext Agent
-* [Linux events](https://sematext.com/docs/agents/sematext-agent/events/#linux-events) like OOM Killer events
-* [Sematext Agent events](https://sematext.com/docs/agents/sematext-agent/events/#internal-events-from-sematext-agent), such as agent starting and stopping
-* [Alert events](https://sematext.com/docs/alerts/alert-events/) generated when an alert is triggered
+* [Kubernetes events](/docs/agents/sematext-agent/events/#kubernetes-events) collected by Sematext Agent
+* [Container events](/docs/agents/sematext-agent/events/#container-events) collected by Sematext Agent
+* [Linux events](/docs/agents/sematext-agent/events/#linux-events) like OOM Killer events
+* [Sematext Agent events](/docs/agents/sematext-agent/events/#internal-events-from-sematext-agent), such as agent starting and stopping
+* [Alert events](/docs/alerts/alert-events/) generated when an alert is triggered
 
 ## External Events
 

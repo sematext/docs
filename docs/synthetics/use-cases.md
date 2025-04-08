@@ -17,7 +17,7 @@ or alert when it goes over or below some threshold, you can use Sematext Synthet
 * Mortgage rates, currency exchange rates, the number of matches for a query in a search engine, etc.
 * ...
 
-Have a look at [Browser Monitor Custom Metrics](https://sematext.com/docs/synthetics/metrics/#browser-monitors) docs, the 
+Have a look at [Browser Monitor Custom Metrics](/docs/synthetics/metrics/#browser-monitors) docs, the 
 [How to Track Your Company’s Rating on a Website](https://sematext.com/blog/how-to-track-your-companys-rating-on-a-website/) article, or [How to monitor a mobile App’s store ratings with Sematext](https://sematext.com/blog/how-to-monitor-mobile-app-store-ratings-with-sematext/).
 
 ## Extraction of Numerical Data from an API
@@ -41,7 +41,7 @@ See [How to Periodically Extract Webpage Performance Metrics from Browser API](h
 
 ## Track Your Position in a List on a Web Page
 
-Do you want to track your position on any sort of list?  For example, maybe something you care about is listed in some Top N list. Maybe your want to track your product’s placement in one or more categories on a review site.  Or maybe you just want to track your position in Google’s search results.  Or your competitors’ positions.  You can do that with [User Journey scripts](./user-journey-scripts/overview.md). Have a look at the [examples](./user-journey-scripts/examples.md) to get started.
+Do you want to track your position on any sort of list?  For example, maybe something you care about is listed in some Top N list. Maybe your want to track your product’s placement in one or more categories on a review site.  Or maybe you just want to track your position in Google’s search results.  Or your competitors’ positions.  You can do that with [User Journey scripts](/docs/synthetics/user-journey-scripts/overview). Have a look at the [examples](/docs/synthetics/user-journey-scripts/examples) to get started.
 
 ## Competitor’s Website or API Performance
 

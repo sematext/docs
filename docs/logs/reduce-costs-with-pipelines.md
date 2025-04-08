@@ -1,15 +1,15 @@
 title: How Logs Pipelines Can Reduce Your Log Monitoring Costs
 description: Use Logs Pipeline processor to drop noise events and extract vital information from long text fields to reduce your costs.
 
-Log [pipelines](../logs/pipelines) offer a range of [processors](../logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
+Log [pipelines](/docs/logs/pipelines) offer a range of [processors](/docs/logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
 
-> **Note:** Be sure to check out [Plan Recommendations](https://sematext.com/docs/logs/plan-recommendations/) to ensure you’re using the most cost-effective plan for your logs in Sematext.
+> **Note:** Be sure to check out [Plan Recommendations](/docs/logs/plan-recommendations/) to ensure you’re using the most cost-effective plan for your logs in Sematext.
 
 Let's consider a scenario where we have a Logs App that is receiving query response logs from a database, resulting in a lengthy message field.
 
-> **Note:** Check out [Identify Large Logs to Cut Logging Costs](https://sematext.com/docs/logs/identify-log-volume-spikes/) to learn how to use the **Size Processor** to identify large logs.
+> **Note:** Check out [Identify Large Logs to Cut Logging Costs](/docs/logs/identify-log-volume-spikes/) to learn how to use the **Size Processor** to identify large logs.
 
-![Lenghty Message Field Log](../images/logs/pipelines/log-with-lenghty-message-field.png)
+![Lenghty Message Field Log](/docs/images/logs/pipelines/log-with-lenghty-message-field.png)
 
 Let's zoom in on that chunky message field:
 
@@ -23,33 +23,33 @@ Instructions on achieving this goal with various pipeline processors are detaile
 
 ## Field Extractor Processor - Extract Metrics
 
-[Field Extractor processor](field-extractor-processor) enables you to extract metrics and numerical data from logs. This extraction ensures that essential information is retained while reducing log sizes, leading to cost savings.
+[Field Extractor processor](/docs/logs/field-extractor-processor) enables you to extract metrics and numerical data from logs. This extraction ensures that essential information is retained while reducing log sizes, leading to cost savings.
 
 **Step 1:** Use the Field Extractor processor to extract response status as a metric from the message field above into a separate field.
 
-![Extract Status Field](../images/logs/pipelines/extract-status-field.png)
+![Extract Status Field](/docs/images/logs/pipelines/extract-status-field.png)
 
-Once you have this new `status` field you will be able to create status reports using the [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).  This is a simple example of being able to get more value/insights from your logs.
+Once you have this new `status` field you will be able to create status reports using the [Chart Builder](/docs/dashboards/chart-builder/).  This is a simple example of being able to get more value/insights from your logs.
 
 ## Field Extractor Processor - Trimming Verbose Text
 
 Verbose log messages that contain pertinent information often contain a lot of text that we simply don’t need.  They increase the costs and make it harder to spot the information that is actually valuable.. With log pipelines, users can extract necessary data while discarding verbose content, effectively minimizing log sizes and optimizing storage.
 
-**Step 2:** Use the [Field Extractor processor](field-extractor-processor) to extract the type of exception from the message field above.
+**Step 2:** Use the [Field Extractor processor](/docs/logs/field-extractor-processor) to extract the type of exception from the message field above.
 
-![Extract Exception Type](../images/logs/pipelines/extract-exception-type.png)
+![Extract Exception Type](/docs/images/logs/pipelines/extract-exception-type.png)
 
 ## Remove Fields Processor - Dropping Redundant Fields
 
-Log pipelines enable complete removal of unwanted fields within log data. By eliminating duplicate or unnecessary information, you can significantly reduce daily log volume without compromising critical insights.  You can also use this to remove fields with {sensitive data](../logs/handle-sensitive-data-with-pipeline).
+Log pipelines enable complete removal of unwanted fields within log data. By eliminating duplicate or unnecessary information, you can significantly reduce daily log volume without compromising critical insights.  You can also use this to remove fields with {sensitive data](/docs/logs/handle-sensitive-data-with-pipeline).
 
 **Step 3:**  Now that we’ve extracted all the vital information we need from the message field, we can completely remove the message field from our logs and dramatically reduce the log size.
 
-![Remove Message Field](../images/logs/pipelines/remove-message-field.png)
+![Remove Message Field](/docs/images/logs/pipelines/remove-message-field.png)
 
 We have extracted all the information that is vital to us from the message field. Let’s dive into the second step where we want to drop some unwanted events.
 
-> **Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](../logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Plan Recommendations](../logs/plan-recommendations).
+> **Note:** At this point, if you have made similar changes in your own Logs Apps, give it 24-48 hours and you should be able to see a drop in your daily log volume on the [Logs Usage Screen](/docs/logs/logs-usage-screen).  And in a few days, if you’ve trimmed aggressively enough, you may be able to select a cheaper daily log volume tier.  Sematext will suggest that automatically for you - see [Plan Recommendations](/docs/logs/plan-recommendations).
 
 Everything above was aimed at eventually removing a field after extracting valuable bits worth keeping.  You can, of course, do that with multiple fields in your logs, not just one field like in our example.  But there is an even more radical thing you can do – you can drop complete log events.  See below.
 
@@ -66,11 +66,11 @@ Why and when might you want to remove complete log events?
 
 Let's consider a real-life Log App. In this App, INFO severity logs make up approximately 30% of the logs, as shown below. These INFO logs are not really valuable most of the time.  In fact, they just make WARN and ERROR logs harder to see in addition to making things more expensive.
 
-![Logs With Severity Info](../images/logs/pipelines/logs-with-severity-info.png)
+![Logs With Severity Info](/docs/images/logs/pipelines/logs-with-severity-info.png)
 
 **Step 4:** Using Drop processor, you can discard INFO severity logs.
 
-![Drop Info Logs](../images/logs/pipelines/drop-info-logs.png)
+![Drop Info Logs](/docs/images/logs/pipelines/drop-info-logs.png)
 
 
 This should reduce your costs considerably!  And if you need to see those INFO logs again, say because you are troubleshooting, all you have to do is come back to the above Pipelines screen and disable the Processor.
@@ -83,7 +83,7 @@ Now, let’s consider the overall log size, initially at 4 KBs for this case. By
 
 On top of that, we’ve effectively filtered out a ton of noisy events based on specific conditions, leading to an additional 30% decrease in daily log volume.
 
-See [Logs Usage Screen](../logs/logs-usage-screen) and [Plan Recommendations](../logs/plan-recommendations) for more information.
+See [Logs Usage Screen](/docs/logs/logs-usage-screen) and [Plan Recommendations](/docs/logs/plan-recommendations) for more information.
 
 ## How Our Team Can Support You
 

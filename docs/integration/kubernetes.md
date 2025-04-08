@@ -13,7 +13,7 @@ allowfullscreen class="video"></iframe>
 
 ## Monitoring Kubernetes with Sematext
 
-Sematext Monitoring will provide you with detailed insights into your cluster's control plane components and their health, performance metrics, and resource counts, among other important metrics. Speaking of metrics, you can check out [this page](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/) for a summarized list of key metrics that you can track using Sematext. It also includes a short explanation for each metric.
+Sematext Monitoring will provide you with detailed insights into your cluster's control plane components and their health, performance metrics, and resource counts, among other important metrics. Speaking of metrics, you can check out [this page](/docs/agents/sematext-agent/kubernetes/metrics/) for a summarized list of key metrics that you can track using Sematext. It also includes a short explanation for each metric.
 
 ![alt_text](https://sematext.com/wp-content/uploads/2023/10/k8s-overview.png "Sematext Kubernetes Monitoring")
 
@@ -25,7 +25,7 @@ To start monitoring Kubernetes with Sematext install the Sematext Agent. Setting
 
 ### Agent Configuration
 
-The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer to our [Agent Configuration for Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/).
+The Sematext Agent offers a versatile container engine monitoring and visibility solution that is easy to customize. For more information, please refer to our [Agent Configuration for Kubernetes](/docs/agents/sematext-agent/kubernetes/configuration/).
 
 ## Kubernetes Distributions
 
@@ -65,7 +65,7 @@ Most of the reports function as expected, with some limitations or missing metri
 
 Due to its nature, Kubernetes can be difficult to debug and without proper tooling this process will take a lot longer than it has to. Sematext helps you shed light on what caused issues with your Kubernetes cluster by collecting Kubernetes logs and events.
 
-All you need to do is use [Discovery](../logs/discovery/setup) to Set Up log shipping:
+All you need to do is use [Discovery](/docs/logs/discovery/setup) to Set Up log shipping:
 
 <img class="content-modal-image" alt="Kubernetes logs - Discovery" src="../../images/integrations/kubernetes-logs-disco.png" title="Kubernetes logs - Discovery">
 
@@ -73,9 +73,9 @@ Once data is in, you can explore it via the built-in reports:
 
 <img class="content-modal-image" alt="Kubernetes logs" src="../../images/integrations/kubernetes-logs.png" title="Kubernetes logs">
 
-If you are looking to use a different type of integration you can check out this [page](https://sematext.com/docs/logagent/installation-docker/#kubernetes-and-openshift).
+If you are looking to use a different type of integration you can check out this [page](/docs/logagent/installation-docker/#kubernetes-and-openshift).
 
-Sematext also provides a Kubernetes Audit logs receiver endpoint. Check out [Kubernetes Audit Logs Integration](https://sematext.com/docs/integration/kubernetes-audit-integration/) for detailed instructions on shipping Kubernetes audit logs.
+Sematext also provides a Kubernetes Audit logs receiver endpoint. Check out [Kubernetes Audit Logs Integration](/docs/integration/kubernetes-audit-integration/) for detailed instructions on shipping Kubernetes audit logs.
 
 ## Kubernetes Events
 
@@ -91,12 +91,12 @@ In Kubernetes Events you can explore and filter all the events received within t
 
 In the expanded view, you can filter the events by each individual tag value, whether to include or exclude it.
 
-For additional information about Kubernetes events, please refer to the [Agent Kubernetes events](https://sematext.com/docs/agents/sematext-agent/events/#kubernetes-events) page.
+For additional information about Kubernetes events, please refer to the [Agent Kubernetes events](/docs/agents/sematext-agent/events/#kubernetes-events) page.
 
 
 ## Important Kubernetes Metrics
 
-Below you can find a list of the most important Kubernetes metrics to monitor. For a complete list of all the supported metrics, please refer to our dedicated [Kubernetes Metrics](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/) page.
+Below you can find a list of the most important Kubernetes metrics to monitor. For a complete list of all the supported metrics, please refer to our dedicated [Kubernetes Metrics](/docs/agents/sematext-agent/kubernetes/metrics/) page.
 
 
 ### Control Plane Metrics
@@ -276,11 +276,11 @@ As soon as you create an Infra App, Sematext automatically creates a set of defa
 - Pod state is waiting: Triggered when a pod remains in a waiting state for an extended period
 - High Pod waiting state: Triggered when a pod remains in a waiting state for an unusually long time
 
-You can [create additional alerts](../alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 ## Troubleshooting
 
-If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
+If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](/docs/agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](/docs/monitoring/spm-faq/) for useful tips.
 
 ### Cluster Roles / RBAC Rules
 
@@ -299,10 +299,10 @@ helm repo add sematext https://cdn.sematext.com/helm-charts
 helm repo update
 ```
 
-Also, please make sure that your agent is [up to date](https://sematext.com/docs/monitoring/spm-faq/#agent-updating).
+Also, please make sure that your agent is [up to date](/docs/monitoring/spm-faq/#agent-updating).
 
 ### Why we need hostNetwork access and how to turn it off if desired
-Check out [our page about hostnetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+Check out [our page about hostnetwork](/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
 ### Setting TLS Certificate Paths
 While monitoring Kubernetes master components, the Sematext Agent will automatically retrieve certificates from the host machine. 
@@ -310,7 +310,7 @@ While monitoring Kubernetes master components, the Sematext Agent will automatic
 However, if the necessary paths are not present within the [common paths](https://kubernetes.io/docs/setup/best-practices/certificates/#certificate-paths), 
 some additional configuration will be needed to enable querying of the metrics endpoints.
 
-If the default TLS paths are not applicable, you can specify the correct paths using the [Kubernetes environment variables](https://sematext.com/docs/agents/sematext-agent/kubernetes/configuration/). 
+If the default TLS paths are not applicable, you can specify the correct paths using the [Kubernetes environment variables](/docs/agents/sematext-agent/kubernetes/configuration/). 
 These configurations can be directly placed within the DaemonSet configuration as shown below:
 ```yaml 
           env:

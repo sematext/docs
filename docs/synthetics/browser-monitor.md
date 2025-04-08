@@ -12,13 +12,13 @@ The Browser monitor can be used to monitor a single web page or a user journey a
 * **Device type** - Determines which device will be emulated during monitor execution by setting the appropriate User-Agent and Viewport/Resolution.
 * **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations the monitor will be run from.
-* **[Scheduled Monitor Pauses](https://sematext.com/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
+* **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 
 Note that multiple monitors created in the same **Create Browser Monitor** flow will have different names, intervals and devices, but share the same locations, **User Journey** settings and **Alert Conditions**, which lets you quickly set up multiple monitors with different devices for the same use case.
 
 ### User Journeys / Transactions
 
-To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a [User Journey script](./user-journey-scripts/overview.md) to simulate user actions.
+To monitor a single website, you can directly configure the URL of the website to be monitored. To monitor a user journey across multiple pages or perform actions on your website, you configure a [User Journey script](/docs/synthetics/user-journey-scripts/overview) to simulate user actions.
 
 ## Conditions
 
@@ -42,11 +42,11 @@ Browser monitor scripts allow for the collection of page screenshots at any poin
 
 The browser, which executes the Browser monitor's script, logs any errors while loading the web pages (such as JavaScript errors, network errors, etc.) in the browser console. The Browser monitor collects such errors. These errors can be used to gain some additional insight into the issues with the website, or to debug run failures. If the Browser monitor's script could successfully complete its execution, then these errors will be shown in the **Logs** section of run details. If your Browser monitor doesn't have a script defined, but is instead set to monitor a fixed URL, then any errors found there will also be shown in this section.
 
-![Browser monitor console logs](../images/synthetics/browser-monitor-logs.png)
+![Browser monitor console logs](/docs/images/synthetics/browser-monitor-logs.png)
 
 However, if the errors are such that the script can't properly execute, then the **Script Error** section will be displayed instead. If possible, the line in the script where the issue occurred will be highlighted and the stack trace will be displayed to aid you in diagnosing the issue.
 
-![Browser monitor script error](../images/synthetics/browser-monitor-script-error.png)
+![Browser monitor script error](/docs/images/synthetics/browser-monitor-script-error.png)
 
 ## Web Vitals
 
@@ -72,7 +72,7 @@ Our Synthetics Browser monitor collects all the above metrics except Total Block
 
 You can filter the metrics based on locations and aggregate the results by average (default), percentile (99th, 95th, and 75th), min, and max.
 
-![Synthetics Web Vitals](../images/synthetics/web-vitals.png)
+![Synthetics Web Vitals](/docs/images/synthetics/web-vitals.png)
 
 ## Waterfall chart
 

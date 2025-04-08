@@ -1,7 +1,7 @@
 title: Alerts SMS / text Integration
 description: Sending SMS / text for threshold, anomaly and / or heartbeat alerts with Sematext infrastructure and application monitoring platform.
 
-You can use Sematext's [email Notification Hook](https://sematext.com/docs/integration/alerts-email-integration/) to receive alert notifications via SMS / text. Please note that this feature is currently available to US cell phone numbers only.
+You can use Sematext's [email Notification Hook](/docs/integration/alerts-email-integration/) to receive alert notifications via SMS / text. Please note that this feature is currently available to US cell phone numbers only.
 
 ## Add New SMS / text Notification Hook
 
@@ -27,4 +27,4 @@ Almost every single carrier has its own address for this specific purpose. Here 
 - Metro PCS – number@mymetropcs.com
 
 ## Third-Party Services
-SMS / text notifications can also be enabled by integrating Sematext Notification Hooks with the third-party service Twilio. For further information, please see [Twilio Alerts Integration](https://sematext.com/docs/integration/alerts-twilio-integration).
+SMS / text notifications can also be enabled by integrating Sematext Notification Hooks with the third-party service Twilio. For further information, please see [Twilio Alerts Integration](/docs/integration/alerts-twilio-integration).

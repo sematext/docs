@@ -24,25 +24,25 @@ from JMX, REST APIs, and from databases that support JDBC.
 
 ### Embedded
 
-The [Embedded](spm-monitor-javaagent) mode can be used only for
+The [Embedded](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent) mode can be used only for
 monitoring JVM-based applications since it runs as a Java Agent
 inside the Java process.  With the Embedded monitor, when setting it
 up for the first time or when upgrading the monitor, one needs to
 change the command-line and restart the process in which the monitor
 is running (i.e., the process of the application being monitored), but
 once that is done, the monitor runs seamlessly in-process. See [Embedded
-Mode](spm-monitor-javaagent) for more info.
+Mode](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent) for more info.
 
 ### Standalone
 
-In the [Standalone](spm-monitor-standalone) mode the agent runs in a
+In the [Standalone](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone) mode the agent runs in a
 separate process and can thus be used for monitoring both Java and
 non-JVM-based applications. If access to JMX is required and the
 application to monitor does not have JMX enabled, one will have to
 adjust application's command-line parameters to enable JMX and that
 will require application process restart.  However, once that is set
 up, subsequent agent updates will not require the application
-restart. See [Standalone Mode](spm-monitor-standalone) for
+restart. See [Standalone Mode](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone) for
 more info.
 
 ## Requirements

@@ -7,7 +7,7 @@ Kibana is fully intergrated with Sematext's cloud and on-premises service used t
 
 Open the App Settings dropdown by clicking on the App name in the left menu panel, and then click on the **Open in Kibana** button.
 
-![Kibana Integration](../images/logs/kibana-integration.gif)
+![Kibana Integration](/docs/images/logs/kibana-integration.gif)
 
 Once you're there, you can customize your dashboard to do all kinds of searches and visualizations to your data.
 

@@ -25,14 +25,14 @@ If you exceed your selected daily volume, we'll estimate your end-of-month bill,
 
 When you log in to your Sematext Logs App, keep an eye on the left menu panel. If we find a better plan for you, you'll notice a '$' symbol next to "App Settings."
 
-![Plan Recommendations Left Menu](../images/logs/plan-recommendations-left-menu.png)
+![Plan Recommendations Left Menu](/docs/images/logs/plan-recommendations-left-menu.png)
 
 Click on "App Settings" to access your current plan selection. In this example, the Daily Log Volume is set to 5 GB/day. You can also see the average daily log volume shipped in the last 7 and 30 days, which, in this instance, is 400 MB/day.
 
-![Plan Recommendations 2](../images/logs/plan-recommendations-2.png)
+![Plan Recommendations 2](/docs/images/logs/plan-recommendations-2.png)
 
 Based on your recent daily log volumes, we recommend a better Daily Log Volume selection for you. In this case, the 1 GB/day is cheaper and will more than suffice. By making this switch, the monthly bill will go from $250 down to just $60. That's a massive 76% decrease in cost!
 
-![Plan Recommendations](../images/logs/plan-recommendations-1.png)
+![Plan Recommendations](/docs/images/logs/plan-recommendations-1.png)
 
-Beyond plan recommendations, you have the opportunity to lower your expenses through [Logs Pipelines](../logs/pipelines). Logs Pipelines allow you to filter out irrelevant events based on your criteria, remove unnecessary fields to reduce storage costs, and serve as a significant money-saving tool.  This is described in [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/).  Following steps described there will result in the reduction of your daily log volume and, if the log volume was sufficiently reduced, in a few days you may see a recommendation for a more optimal Daily Log Volume selection.
+Beyond plan recommendations, you have the opportunity to lower your expenses through [Logs Pipelines](/docs/logs/pipelines). Logs Pipelines allow you to filter out irrelevant events based on your criteria, remove unnecessary fields to reduce storage costs, and serve as a significant money-saving tool.  This is described in [How Logs Pipelines Can Reduce Your Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines).  Following steps described there will result in the reduction of your daily log volume and, if the log volume was sufficiently reduced, in a few days you may see a recommendation for a more optimal Daily Log Volume selection.

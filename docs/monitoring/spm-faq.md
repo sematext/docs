@@ -5,7 +5,7 @@ description: FAQ about Sematext server, application, and container monitoring pl
 
 ### What should I do if I can't find the answer to my question in this FAQ?
 
-Check the [general FAQ](../faq) for questions that are not strictly
+Check the [general FAQ](/docs/faq) for questions that are not strictly
 about Sematext Monitoring.  If you can't find the answer to your
 question please email <support@sematext.com> or use our live chat.
 
@@ -18,7 +18,7 @@ There are no limits on the number of servers, nodes, or
 
 ### What types of applications and infrastructure can Sematext monitor?
 
-See [integrations](../integration).
+See [integrations](/docs/integration).
 
 ### What are the various configuration files present in sematext-agent package?
 
@@ -184,8 +184,8 @@ traffic, etc) .
 
 When monitoring Solr, Elasticsearch, HBase, Hadoop and other JVM-based
 services, you will have an option to choose between using
-[Embedded](../agents/sematext-agent/app-agent/spm-monitor-javaagent/) App Agent or
-[Standalone](../agents/sematext-agent/app-agent/spm-monitor-standalone) App Agent. The
+[Embedded](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/) App Agent or
+[Standalone](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone) App Agent. The
 workaround described here requires the use of standalone App Agent
 variant. Here's what you'd need to do to see your metrics in Sematext Cloud:
 
@@ -202,8 +202,8 @@ variant. Here's what you'd need to do to see your metrics in Sematext Cloud:
     instructions from some other tab, keep in mind OS metrics displayed
     in Sematext UI will not be OS metrics of your Windows/Mac machine.
 2.  In step 2, if you are given a choice between
-    [Embedded](../agents/sematext-agent/app-agent/spm-monitor-javaagent/) and
-    [Standalone](../agents/sematext-agent/app-agent/spm-monitor-standalone) App Agent,
+    [Embedded](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/) and
+    [Standalone](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone) App Agent,
     **choose Standalone monitor**. It will use remote JMX to collect
     metrics from your Windows/Mac machine. Just follow instructions
     given on Standalone tab.  The only difference you will want to make
@@ -301,13 +301,13 @@ This approach is not encouraged because of the obvious security
 
 ### When should I run Standalone and when Embedded App Agent?
 
-[Standalone App Agent](../agents/sematext-agent/app-agent/spm-monitor-standalone/)
-runs as a separate process, while the [Embedded monitor](../agents/sematext-agent/app-agent/spm-monitor-javaagent/) runs embedded in the
+[Standalone App Agent](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone/)
+runs as a separate process, while the [Embedded monitor](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/) runs embedded in the
 Java/JVM process. Thus, if you are monitoring a non-Java application,
 Standalone monitor is the only option. Standalone monitor is a bit more
 complex to set up when one uses it to monitor Java applications because
 it typically requires one to enable out-of-process JMX access, as
-described on [Standalone App Agent page](../agents/sematext-agent/app-agent/spm-monitor-standalone/). With Embedded monitor
+described on [Standalone App Agent page](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone/). With Embedded monitor
 this is not needed, but one needs to add the Sematext Agent to the Java
 command-line and restart the process of the monitored application. When
 running Standalone monitor one can update the App Agent without
@@ -334,7 +334,7 @@ And that is it.
 
 ### Is there an HTTP API?
 
-Yes, see [API Reference](../api).
+Yes, see [API Reference](/docs/api).
 
 ### I have multiple Monitoring Apps installed on my machine, can I uninstall just one of them?
 
@@ -371,12 +371,12 @@ bootstrap the JMX connector:
 
 `javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial`
 
-See [enabling Security Manager permissions](../agents/sematext-agent/jmx-attaching/#security-manager-permissions) to allow automatic JMX connector exposure.
+See [enabling Security Manager permissions](/docs/agents/sematext-agent/jmx-attaching/#security-manager-permissions) to allow automatic JMX connector exposure.
 
 ### Can I reconfigure the agent to send metrics to a different Monitoring App?
 Yes, this is how:
 
-- If you are using automonitoring via [autodiscovery](../monitoring/autodiscovery/) just change the App in the UI
+- If you are using automonitoring via [autodiscovery](/docs/monitoring/autodiscovery/) just change the App in the UI
 
 Otherwise:
 
@@ -397,29 +397,29 @@ Yes, switching a host to another Infra App is possible by reconfiguring the Sema
 
 ### How can I share my Sematext Apps with other users?
 
-See [sharing FAQ](../faq/#sharing).
+See [sharing FAQ](/docs/faq/#sharing).
 
 ### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
-See info about user roles in [sharing FAQ](../faq/#sharing).
+See info about user roles in [sharing FAQ](/docs/faq/#sharing).
 
 ## Agent Automation
 
 ### Is there an Ansible Playbook for the Sematext Agent?
 
-Yes, see the [Ansible instructions](../agents/sematext-agent/ansible) for installing Sematext Agent in multiple hosts.
+Yes, see the [Ansible instructions](/docs/agents/sematext-agent/ansible) for installing Sematext Agent in multiple hosts.
 
 ## Agent Updating
 
 ### How do I upgrade the Sematext Agent?
 
-For detailed instructions on how to update or upgrade the Sematext Agent in one of the supported environments, see the [Agent Installation](https://sematext.com/docs/agents/sematext-agent/installation/) documentation.
+For detailed instructions on how to update or upgrade the Sematext Agent in one of the supported environments, see the [Agent Installation](/docs/agents/sematext-agent/installation/) documentation.
 
 ## Agent Uninstalling
 
 ### How do I uninstall the Sematext Agent?
 
-For detailed instructions on how to uninstall the Sematext Agent in one of the supported environments, see the [Agent Installation](https://sematext.com/docs/agents/sematext-agent/installation/) documentation.
+For detailed instructions on how to uninstall the Sematext Agent in one of the supported environments, see the [Agent Installation](/docs/agents/sematext-agent/installation/) documentation.
 
 ## Agent Overhead
 
@@ -453,25 +453,25 @@ Generally under 1%.
 
 ### How do I install the Sematext Agent?
 
-For detailed instructions on how to install the Sematext Agent in one of the supported environments, see the [Agent Installation](https://sematext.com/docs/agents/sematext-agent/installation/) documentation.
+For detailed instructions on how to install the Sematext Agent in one of the supported environments, see the [Agent Installation](/docs/agents/sematext-agent/installation/) documentation.
 
 ## Alerts
 
 ### Can I send alerts to PagerDuty, Slack, Nagios, or other WebHooks?
 
-See [alerts FAQ](../faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What are Threshold-based Alerts?
 
-See [alerts FAQ](../faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What is Anomaly Detection?
 
-See [alerts FAQ](../faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What are Heartbeat Alerts?
 
-See [alerts FAQ](../faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ## Troubleshooting
 
@@ -579,7 +579,7 @@ If you notice that the pods for Sematext Agent are stuck in a "Pending" status w
 
 Sematext Agent requires `hostNetwork` access in order to access and monitor the Kubernetes control plane components. However, if you enable `hostNetwork` and the default port (8675) is already being used on your host, it can result in the Sematext Agent pods remaining in a "Pending" state. To resolve this problem, you need to modify the port being used.
 
-If you have concerns about `hostNetwork` usage or you don't want to use it in your system, please refer to [this page](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+If you have concerns about `hostNetwork` usage or you don't want to use it in your system, please refer to [this page](/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
 If you want to proceed with `hostNetwork` (which is required for fully featured Kubernetes monitoring), please follow the steps below, depending on the installation method you are using:
 
@@ -989,24 +989,24 @@ your bare-metal servers and virtual machines.
 
 ### Which credit cards are accepted?
 
-See [billing FAQ](../faq/#billing).
+See [billing FAQ](/docs/faq/#billing).
 
 ### Can I be invoiced instead of paying with a credit card?
 
-See [billing FAQ](../faq/#billing).
+See [billing FAQ](/docs/faq/#billing).
 
 ### How often will I get billed?
 
-See [billing FAQ](../faq/#billing).
+See [billing FAQ](/docs/faq/#billing).
 
 ### Can the billing email be sent to our Accounts Payable/Accounting instead of me?
 
-See [billing FAQ](../faq/#billing).
+See [billing FAQ](/docs/faq/#billing).
 
 ### Do I have to commit or can I stop using Sematext at any time?
 
-See [billing FAQ](../faq/#billing).
+See [billing FAQ](/docs/faq/#billing).
 
 ### Can I get invoices?
 
-See [billing FAQ](../faq/#billing).
+See [billing FAQ](/docs/faq/#billing).

@@ -1,18 +1,18 @@
 title: MySQL
 description: Comprehensive view of your database's health and performance using Sematext's MySQL monitoring integration, offering real-time visibility into various MySQL database metrics alongside built-in reports and dashboards to proactively identify and address server issues. Additionally, MySQL Logs Integration provides insight into your entire MySQL account, presenting general logs, connection events, disconnections, and SQL statements from clients for thorough analysis and troubleshooting.
 
-MySQL is an open-source relational database management system (RDBMS) that enables efficient organization, storage, and retrieval of data using SQL (Structured Query Language). The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects MySQL metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+MySQL is an open-source relational database management system (RDBMS) that enables efficient organization, storage, and retrieval of data using SQL (Structured Query Language). The [Sematext Agent](/docs/agents/sematext-agent/) collects MySQL metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an MySQL Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an MySQL Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/MySQL/overview](https://apps.sematext.com/ui/howto/MySQL/overview) displayed in the UI.
 3. After installing the agent, the Discovery tab shows all the MySQL services identified on the host and you will start receiving metrics or logs from MySQL services.
 4. If you've created an MySQL Monitoring App and want to collect MySQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from MySQL services and manage log and metric shipping effortlessly.
 
-Having both MySQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as query execution time, throughput, and resource utilization) with logs (query execution logs, error logs) helps in identifying slow queries, inefficient indexing, or resource bottlenecks. This correlation aids in optimizing queries, refining indexing strategies, and fine-tuning resource allocation for better MySQL performance.
+Having both MySQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as query execution time, throughput, and resource utilization) with logs (query execution logs, error logs) helps in identifying slow queries, inefficient indexing, or resource bottlenecks. This correlation aids in optimizing queries, refining indexing strategies, and fine-tuning resource allocation for better MySQL performance.
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Metrics
 
@@ -210,7 +210,7 @@ thread stack<br>**mysql.threads.stack.size** <br>*(long gauge)* *(bytes)*       
 
 Once data is in, you can explore it via the built-in reports: 
 
-![MySQL Explore Report](../images/integrations/mysql-logs-explore.png)
+![MySQL Explore Report](/docs/images/integrations/mysql-logs-explore.png)
 
 Moreover, the pre-configured anomaly alert rules will notify you about:
 
@@ -229,15 +229,15 @@ SET GLOBAL general_log = 'ON';
 ```
 See [The General Query Log](https://dev.mysql.com/doc/refman/8.0/en/query-log.html) for more details.
 
-![MySQL General Logs Report](../images/integrations/mysql-logs-general.png)
+![MySQL General Logs Report](/docs/images/integrations/mysql-logs-general.png)
 
 ### Statements Report
 
 The statement report contains data from audit logs, which can be collected using MySQL Enterprise Audit. This report includes information on the top database operations, users, hosts, insufficient privilege errors, and detailed statement events.
 
-[Sematext Agent](../agents/sematext-agent/index.md) accepts log files in JSON format. See [Audit Logs Format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-file-formats.html#:~:text=By%20default%2C%20audit%20log%20file,JSON%20%2C%20set%20audit_log_file%20to%20audit) for more details. 
+[Sematext Agent](/docs/agents/sematext-agent/index) accepts log files in JSON format. See [Audit Logs Format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-file-formats.html#:~:text=By%20default%2C%20audit%20log%20file,JSON%20%2C%20set%20audit_log_file%20to%20audit) for more details. 
 
-![MySQL Statements Report](../images/integrations/mysql-logs-statements.png)
+![MySQL Statements Report](/docs/images/integrations/mysql-logs-statements.png)
 
 ### Slow Queries Report
 
@@ -251,33 +251,33 @@ SET GLOBAL general_log = 'ON';
 
 See [The Slow Query Log](https://dev.mysql.com/doc/refman/8.0/en/slow-query-log.html#:~:text=The%20slow%20query%20log%20consists,are%20therefore%20candidates%20for%20optimization.) for more details.
 
-![MySQL Slow Queries Report](../images/integrations/mysql-logs-slowqueries.png)
+![MySQL Slow Queries Report](/docs/images/integrations/mysql-logs-slowqueries.png)
 
 ### Connections Report
 
 Connections report displays each connection made to MySQL servers, providing user, IP address, connection type, and status information. Additionally, it highlights failed login attempts, allowing you to identify potential security threats. Please note that connection logs can only be collected when using MySQL Enterprise Audit.
 
-[Sematext Agent](../agents/sematext-agent/index.md) accepts log files in JSON format. See [Audit Logs Format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-file-formats.html#:~:text=By%20default%2C%20audit%20log%20file,JSON%20%2C%20set%20audit_log_file%20to%20audit) for more details. 
+[Sematext Agent](/docs/agents/sematext-agent/index) accepts log files in JSON format. See [Audit Logs Format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-file-formats.html#:~:text=By%20default%2C%20audit%20log%20file,JSON%20%2C%20set%20audit_log_file%20to%20audit) for more details. 
 
-![MySQL Connections Report](../images/integrations/mysql-logs-connections.png)
+![MySQL Connections Report](/docs/images/integrations/mysql-logs-connections.png)
 
 ### Server Logs Report
 
 Server Logs report helps you detect and troubleshoot critical errors to ensure uninterrupted and optimal system operations.
 
-![MySQL Server Logs Report](../images/integrations/mysql-logs-serverlogs.png)
+![MySQL Server Logs Report](/docs/images/integrations/mysql-logs-serverlogs.png)
 
 ### InnoDB Logs Report
 
 InnoDB is a general-purpose storage engine that balances high reliability and high performance. It is the default MySQL storage engine. While MySQL determines the way in which data is saved to a database, the InnoDB storage engine stores the data on a disk or keeps it in the main memory for quick access. InnoDB storage engine logs give you insights into your storage engine's behavior to ensure optimal usage of resources.
 
-![MySQL InnoDB Logs Report](../images/integrations/mysql-logs-innodblogs.png)
+![MySQL InnoDB Logs Report](/docs/images/integrations/mysql-logs-innodblogs.png)
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your MySQL Logs App. Lastly, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your MySQL Logs App. Lastly, check the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
 If you are having issues with Sematext Monitoring, i.e. not seeing MySQL metrics, see
-[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information please look at [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.

@@ -1,7 +1,7 @@
 title: Sematext Agent Custom Logs Configuration
 description: Custom Logs Configuration for Sematext Agent
 
-Sematext Agent supports configuring log shipping through a YAML file, `custom-logs.yml`. This feature allows users to specify log file locations and custom parsing rules, which is useful for log files not [discovered automatically](https://sematext.com/docs/fleet/discovery/) or when custom log parsing rules are needed.
+Sematext Agent supports configuring log shipping through a YAML file, `custom-logs.yml`. This feature allows users to specify log file locations and custom parsing rules, which is useful for log files not [discovered automatically](/docs/fleet/discovery/) or when custom log parsing rules are needed.
 
 ## How it works
 
@@ -9,15 +9,15 @@ The Sematext Agent periodically checks the `custom-logs.yml` file. If valid log 
 
 ## Requirements
 
-Sematext Agent [version 3.6.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-360) and newer.
+Sematext Agent [version 3.6.0](/docs/agents/sematext-agent/releasenotes/#version-360) and newer.
 
 ## How to start
 
-[Create a new Logs App](https://sematext.com/docs/logs/quick-start/) in Sematext Cloud. If you have custom log files, create a [Generic Logs App](https://sematext.com/docs/integration/generic-logs-integration/). For log files generated from one of our [supported integrations](https://sematext.com/docs/integration/), create a Logs App of the relevant type.
+[Create a new Logs App](/docs/logs/quick-start/) in Sematext Cloud. If you have custom log files, create a [Generic Logs App](/docs/integration/generic-logs-integration/). For log files generated from one of our [supported integrations](/docs/integration/), create a Logs App of the relevant type.
 
 As soon as the Sematext Agent is installed, ignore the Discovery screen and keep a copy of the App token. To retrieve this token, navigate to the **Ship Logs** screen from the left Menu panel and select **Custom Integrations**.
 
-![Sematext Agent service](images/logs-app-token.png)
+![Sematext Agent service](/docs/agents/sematext-agent/images/logs-app-token.png)
 
 The next step is to edit the `custom-logs.yml` file (see below) with your own log rules.
 

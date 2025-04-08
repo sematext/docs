@@ -84,7 +84,7 @@ This example shows a few very interesting features:
 - Automatic Geo-IP lookups including automatic updates for Maxmind Geo-IP lite database
 - Post-processing of parsed logs with JavaScript functions
 
-The component for detecting and parsing log messages — [logagent-js](https://sematext.com/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
+The component for detecting and parsing log messages — [logagent-js](/docs/logagent/parser/) — is open source and contributions for even more log formats are welcome.
 
 
 ## Log Routing

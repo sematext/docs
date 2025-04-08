@@ -99,7 +99,7 @@ The Sematext Experience integrations cover all types of websites and all major S
   </a>
 </div>
 
-All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
+All of the integrations require adding and [configuring the Experience script](/docs/experience/getting-started). However, single-page applications require one more configuration step to register route changes.
 
 ## Angular {: #angular }
 

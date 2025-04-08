@@ -1,7 +1,7 @@
 title: Automatic attaching to JVM processes via JMX
 description: Sematext Agent can automatically attach to JVM processes such as Solr, Kafka, and Zookeeper, and expose the JMX port required for monitoring from within the service itself.
 
-When you assign a `MONITORING_TOKEN` to a service running in the JVM via an environment variable or when you enable [automatic monitoring of discovered services](../../monitoring/autodiscovery) for a particular service type, Sematext Agent will examine the process to see whether it can be
+When you assign a `MONITORING_TOKEN` to a service running in the JVM via an environment variable or when you enable [automatic monitoring of discovered services](/docs/monitoring/autodiscovery) for a particular service type, Sematext Agent will examine the process to see whether it can be
 monitored right away by checking if JMX ports are already exposed. If it can, Sematext Agent will start monitoring it. However, if it can't, Sematext Agent
 will try to add a special and secure agent for the monitored process, whose sole purpose is exposing JMX. Exposed JMX is protected by authentication based on a temporary username and password known only to Sematext Agent.
 
@@ -15,7 +15,7 @@ There are cases where automatic attaching may not be desirable:
 ### How to disable or configure custom JMX authentication settings?
 
 If you don't want the service monitored at all just remove `MONITORING_TOKEN` env variable from its container. If you want it to be monitored, but using your
-own JMX authentication definition (either existing one or the one you will define just for this), [define container jmx settings manually](../../monitoring/manually-setting-jmx-containers).
+own JMX authentication definition (either existing one or the one you will define just for this), [define container jmx settings manually](/docs/monitoring/manually-setting-jmx-containers).
 
 ### Security manager permissions
 

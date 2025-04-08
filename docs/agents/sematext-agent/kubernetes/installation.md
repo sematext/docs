@@ -13,7 +13,7 @@ helm install st-agent \
   stable/sematext-agent
 ```
 
-For more details, refer to our [helm chart docs](helm.md).
+For more details, refer to our [helm chart docs](/docs/agents/sematext-agent/kubernetes/helm).
 
 ### Updating/Upgrading Sematext Agent using Helm
 
@@ -62,7 +62,7 @@ spec:
   infraToken: <YOUR_INFRA_APP_TOKEN>
 ```
 
-This operator uses all the same options as the Sematext Agent helm chart. For more details, refer to the [operator docs](operator.md).
+This operator uses all the same options as the Sematext Agent helm chart. For more details, refer to the [operator docs](/docs/agents/sematext-agent/kubernetes/operator).
 
 ### Updating/Upgrading Sematext Agent using Sematext Operator
 

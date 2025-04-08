@@ -1,7 +1,7 @@
 title: Nginx
 description: The Sematext monitoring agent can collect many metrics from NGINX instances, including requests, reading, writing, waiting, active and more. Utilize built-in anomaly detection, threshold, and heartbeat alerting and send notifications to email and various chatops messaging services. dditionally, with event correlation, log filtering, and customizable visualizations, monitor cluster health seamlessly. With the Nginx Logs Integration, troubleshoot connection, access, and various NGINX issues.
 
-Nginx is a high-performance, open-source web server and reverse proxy that handles HTTP, HTTPS, and other network protocols, renowned for its scalability and efficient handling of concurrent connections. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects Nginx metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+Nginx is a high-performance, open-source web server and reverse proxy that handles HTTP, HTTPS, and other network protocols, renowned for its scalability and efficient handling of concurrent connections. The [Sematext Agent](/docs/agents/sematext-agent/) collects Nginx metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
@@ -12,17 +12,17 @@ Nginx is a high-performance, open-source web server and reverse proxy that handl
           access_log off;
         }
 
-2. Create an Nginx Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+2. Create an Nginx Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Nginx/overview](https://apps.sematext.com/ui/howto/Nginx/overview) displayed in the UI.
 4. After installing the agent, the Discovery tab shows all the Nginx services identified on the host and you will start receiving metrics or logs from Nginx services.
 5. If you've created an Nginx Monitoring App and want to collect Nginx logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Nginx services and manage log and metric shipping effortlessly.
 
-![Nginx Counterpart](../images/integrations/nginx-counterpart.gif)
+![Nginx Counterpart](/docs/images/integrations/nginx-counterpart.gif)
 
-Having both Nginx Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as request rate, response times, error rates) with logs (access logs, error logs) helps identify performance bottlenecks, anomalies, or errors. For instance, by linking high request rates in metrics with specific errors or slow response times in logs, you can efficiently optimize configurations, fine-tune caching strategies, or address code-level issues to enhance NGINX performance. Or if you see an increase in 4XX errors in Nginx logs, monitoring can tell what's the impact on Nginx's response times and CPU usage.
+Having both Nginx Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as request rate, response times, error rates) with logs (access logs, error logs) helps identify performance bottlenecks, anomalies, or errors. For instance, by linking high request rates in metrics with specific errors or slow response times in logs, you can efficiently optimize configurations, fine-tune caching strategies, or address code-level issues to enhance NGINX performance. Or if you see an increase in 4XX errors in Nginx logs, monitoring can tell what's the impact on Nginx's response times and CPU usage.
 
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Nginx Metrics
 
@@ -36,7 +36,7 @@ active | nginx.requests.connections.active | Avg | Double | <b>active</b>: numbe
 
 ## PHP-FPM Monitoring
 
-PHP-FPM monitoring can be enabled along with Nginx monitoring. See [PHP-FPM](./php) for more details.
+PHP-FPM monitoring can be enabled along with Nginx monitoring. See [PHP-FPM](/docs/integration/php) for more details.
 
 ## NginxPlus Metrics
 
@@ -112,13 +112,13 @@ zombie connections<br>**nginxp.upstream.connections.zombies** <br>*(long gauge)*
 
 Once data is in, you can explore it via the built-in reports: 
 
-![Nginx Logs Overview](../images/logs/nginx-logpack.png)
+![Nginx Logs Overview](/docs/images/logs/nginx-logpack.png)
 
 ### Exploring logs
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Users report to check on where the requests are coming from:
 
-![Nginx Users Report](../images/logs/nginx-logpack-2.png)
+![Nginx Users Report](/docs/images/logs/nginx-logpack-2.png)
 
 Other built-in reports include:
 
@@ -128,9 +128,9 @@ Other built-in reports include:
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Nginx Logs App. If you're using Nginx in a container, make sure to configure it to output logs to the stdout/stderr streams. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Nginx Logs App. If you're using Nginx in a container, make sure to configure it to output logs to the stdout/stderr streams. Last, check the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
 If you are having issues with Sematext Monitoring, i.e. not seeing Nginx metrics, see
-[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information please look at [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.

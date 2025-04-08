@@ -3,7 +3,7 @@ description: Reduce log volume to save storage or money for volume based license
 
 Centralized Logs can often be very noisy. Developers love verbose log output for potential troubleshooting. Do you want to collect all logs, all the time, and pay for processing and storage? Probably not! A good practice is to reduce the log volume and focus on relevant log messages until a problem arrives. Log shipper settings can be adjusted to fetch all logs for troubleshooting and debugging if needed. Let’s have a look at the available Logagent filters for adjusting the log volume for operational needs. 
 
-Here are a few examples that show how you can configure [Logagent plugins](https://sematext.com/docs/logagent/plugins/) to reduce log volume. 
+Here are a few examples that show how you can configure [Logagent plugins](/docs/logagent/plugins/) to reduce log volume. 
 
 First of all, it’s essential to understand the performance impact of filters in various processing stages to know how Logagent works internally. 
 
@@ -67,7 +67,7 @@ when you set up a Logagent container.
 ### Remove fields before shipping to Sematext Cloud 
 
 Logagent supports the environment variable `REMOVE_FIELDS` for the Elasticsearch output plugin. You can specify a list of fields  for removal with 
-`REMOVE_FIELDS='logSource,labels"` when you set up Logagent in a container. For more information see the complete [Docker setup instructions](https://sematext.com/docs/logagent/installation-docker/)
+`REMOVE_FIELDS='logSource,labels"` when you set up Logagent in a container. For more information see the complete [Docker setup instructions](/docs/logagent/installation-docker/)
  
 ### Logagent Input Filters
 

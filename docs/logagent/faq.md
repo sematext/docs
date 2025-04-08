@@ -136,7 +136,7 @@ output:
 
 ### How do I ship Kubernetes logs to multiple destinations / Sematext Logs Apps?
 
-You can follow the steps below and ship Kubernetes logs to two different Logs [Apps](https://sematext.com/docs/guide/app-guide/) and then use [Pipelines](https://sematext.com/docs/logs/pipelines/) to filter out any unwanted data for each [App](https://sematext.com/docs/guide/app-guide/).
+You can follow the steps below and ship Kubernetes logs to two different Logs [Apps](/docs/guide/app-guide/) and then use [Pipelines](/docs/logs/pipelines/) to filter out any unwanted data for each [App](/docs/guide/app-guide/).
 
 Create two separate daemonset.yaml files by following the instructions [here](https://apps.sematext.com/ui/howto/Logsene/overview?appTypeName=Logsene&activeSection=logagent-log-shippers) and activate them 
 individually in your Kubernetes cluster. Make sure to replace **Logsene-monitoring-token** with the tokens from your Logs Apps.
@@ -161,11 +161,11 @@ kubectl apply -f logagent2-daemonset.yaml
 kubectl apply -f logagent-daemonset.yaml
 ```
 Within a few minutes, you should start seeing the logs in both Logs Apps.
-Next, navigate to [Pipelines](https://sematext.com/docs/logs/pipelines/) and create a [Drop Processor](https://sematext.com/docs/logs/processors-overview/) in each App to filter out any unwanted data.
+Next, navigate to [Pipelines](/docs/logs/pipelines/) and create a [Drop Processor](/docs/logs/processors-overview/) in each App to filter out any unwanted data.
 
 ### How do I ship only error logs?
 
-Use the ["grep" input filter](https://sematext.com/docs/logagent/input-filter-grep/): 
+Use the ["grep" input filter](/docs/logagent/input-filter-grep/): 
 
 ```
 input: 
@@ -191,7 +191,7 @@ output:
 
 ### How do I drop logs that match a certain pattern?
 
-Use the ["grep" input filter](https://sematext.com/docs/logagent/input-filter-grep/): 
+Use the ["grep" input filter](/docs/logagent/input-filter-grep/): 
 
 ```
 input: 
@@ -246,7 +246,7 @@ parser:
 
 ### How do I rename log fields?
 
-You can use the [rename-fields](./output-filter-renamefields/) output filter.
+You can use the [rename-fields](/docs/logagent/output-filter-renamefields) output filter.
 
 
 ### Logagent uses a lot of memory.  What should I do?

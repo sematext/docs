@@ -5,7 +5,7 @@ One way to add User Journey scripts to Sematext is to do so directly, via the Se
 
 ### Setup GitHub Actions
 
-To sync User Journey scripts, you will need to set up GitHub Actions in your GitHub repository. There are two available synchronization workflows. You can choose to use only one of them or you can use them both - they complement each other. The [sync_updated_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_updated_scripts.yml) workflow detects updated script files and updates the scripts of the appropriate [Browser Monitors](../browser-monitor.md) in Sematext Cloud. The  [sync_added_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_added_scripts.yml) workflow detects any added scripts and creates a new Browser Monitor for each script added to your repository. The workflows will be executed every time you push new commits or merge a PR to your default branch. 
+To sync User Journey scripts, you will need to set up GitHub Actions in your GitHub repository. There are two available synchronization workflows. You can choose to use only one of them or you can use them both - they complement each other. The [sync_updated_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_updated_scripts.yml) workflow detects updated script files and updates the scripts of the appropriate [Browser Monitors](/docs/browser-monitor) in Sematext Cloud. The  [sync_added_scripts.yml](https://cdn.sematext.com/github-sync-scripts/sync_added_scripts.yml) workflow detects any added scripts and creates a new Browser Monitor for each script added to your repository. The workflows will be executed every time you push new commits or merge a PR to your default branch. 
 
 Keep in mind that:
 
@@ -19,7 +19,7 @@ To enable syncing of your User Journey scripts, you need to do the following:
 
 1. Go to `https://github.com/{ORGANIZATION}/{YOUR_REPO_NAME}/settings/secrets/actions` and create two repository secrets: `SC_API_KEY` and `SC_API_BASE_URL`, as shown in the image below.
 
-    ![Add Repo secrets](../../images/synthetics/sync-browser-scripts-adding-repo-secrets.png)
+    ![Add Repo secrets](/docs/images/synthetics/sync-browser-scripts-adding-repo-secrets.png)
 
       - You should set your Sematext Cloud API key as the value for the `SC_API_KEY`. Your API key can be found [here](https://apps.sematext.com/ui/account/api) for the US region, or alternatively [here](https://apps.eu.sematext.com/ui/account/api) for the EU region. 
   
@@ -63,7 +63,7 @@ The monitor will be created with the following values:
 
 Note that after the new monitor gets automatically created from such a script the `monitorID` will be automatically added to the comment in the script. When that happens the author name displayed in the GitHub commit will be `SematextSyncBot`. In order for this to work, you will have to give the workflows permissions to edit files in the repository, which you can do by clicking on **Settings** in your repository, then clicking **Actions -> General** in the sidebar, which will take you to `https://github.com/{ORGANIZATION}/{YOUR_REPO_NAME}/settings/actions`. Scroll to the bottom of the page where the **Workflow permissions** section is located and make sure that the `Read and write permissions` option is checked, like in the screenshot below, then save your changes.
 
-![Setting Workflow permissions for your repository](../../images/synthetics/sync-browser-scripts-workflow-permissions.png)
+![Setting Workflow permissions for your repository](/docs/images/synthetics/sync-browser-scripts-workflow-permissions.png)
  
 You also have the option to replace the default location for monitors which will be created through newly added scripts in your repository. This can be done by editing the `sync_added_scripts.yml` workflow file. Simply look for this line:
 
@@ -87,7 +87,7 @@ This is also where you may replace `1h` with another value you want to be used a
 
 If your sync workflow run fails, you can see which step caused the failure and review the logs to troubleshoot. In the example below we can see which scripts weren't synced and why the sync failed (the API key was not provided).
 
- ![Troubleshooting syncing issues - invalid API key](../../images/synthetics/sync-browser-scripts-troubleshooting-1.png)
+ ![Troubleshooting syncing issues - invalid API key](/docs/images/synthetics/sync-browser-scripts-troubleshooting-1.png)
 
  You can learn more about monitoring and troubleshooting GitHub workflows [here](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows).
 
@@ -96,7 +96,7 @@ If your sync workflow run fails, you can see which step caused the failure and r
 If either `AppID` or `MonitorIDs` is invalid the synchronization of the script with invalid IDs will fail.
 When syncing multiple scripts only the script that contains invalid IDs will fail. The workflow run will be marked as failed even though some scripts were successfully synced, to raise awareness that some scripts weren't synced.
 
- ![Troubleshooting syncing issues - invalid Monitor ID](../../images/synthetics/sync-browser-scripts-troubleshooting-2.png)
+ ![Troubleshooting syncing issues - invalid Monitor ID](/docs/images/synthetics/sync-browser-scripts-troubleshooting-2.png)
 
 In the logs for that run there will be messages such as:
 

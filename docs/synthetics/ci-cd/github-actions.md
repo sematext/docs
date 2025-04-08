@@ -8,7 +8,7 @@ The GitHub Actions integration works by running a Synthetics monitor of your cho
 
 The first step is to create a secret from the repository's **Settings** page for the Sematext API Key, which is needed to authenticate the request to run your desired Synthetics monitor. Go to your repository's **Settings**, and then in the sidebar under **Security** click **Secrets and variables** and then **Actions**. Create a new repository secret and name it `SEMATEXT_API_KEY`, then paste in the [API key for your account](./overview.md#finding-your-sematext-cloud-accounts-api-key).
 
-![CI/CD GitHub Secret](./images/ci-cd-github-secret.png)
+![CI/CD GitHub Secret](/docs/synthetics/ci-cd/images/ci-cd-github-secret.png)
 
 
 ### Create Repository Variables for Synthetics Monitor information
@@ -21,7 +21,7 @@ Once you've set up the repository secret for the API key, you then need to confi
 
 A quick guide on how to find this information can be found [here](./overview.md#finding-your-monitor-information). Make sure that these are configured as *repository variables* and not *repository secrets*.
 
-![CI/CD GitHub Variables](./images/ci-cd-github-repo-variables.png)
+![CI/CD GitHub Variables](/docs/synthetics/ci-cd/images/ci-cd-github-repo-variables.png)
 
 
 
@@ -82,4 +82,4 @@ jobs:
 
 On every deployment event, the action will be invoked and the action logs will contain the results.
 
-![CI/CD GitHub Actions Logs](./images/ci-cd-github-actions-log.png)
+![CI/CD GitHub Actions Logs](/docs/synthetics/ci-cd/images/ci-cd-github-actions-log.png)

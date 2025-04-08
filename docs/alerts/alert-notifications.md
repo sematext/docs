@@ -173,7 +173,7 @@ The primary purpose of alert rules is to send notifications when triggered. This
 
 For most of these notification hooks, you will first need to create that third party service and obtain the required API keys and/or other tokens in order to establish communication between that service and Sematext Cloud. The image below shows a third party notification hook integration being created, Slack in this example.
 
-![Sematext Cloud - Slack Notification Hook](../images/guide/integrations/slack-notification-hook.png)
+![Sematext Cloud - Slack Notification Hook](/docs/images/guide/integrations/slack-notification-hook.png)
 
 ## SMS Notification Hooks
 

@@ -7,7 +7,7 @@ Saved Views feauture is available in Monitoring, Logs, Synthetics, and Experienc
 
 ## When are Saved Views Useful
 
-Sematext has a concept of [Apps](../guide/app-guide/), which act as distinct buckets of data and additionally allow you to:
+Sematext has a concept of [Apps](/docs/guide/app-guide/), which act as distinct buckets of data and additionally allow you to:
 
 - apply different plans or different data retentions to different Apps and thus have flexibility around costs
 - invite others to individual Apps and thus control who can see which data
@@ -28,14 +28,14 @@ Q: But how do you select only your database servers?  How do you select only you
 
 A: By using tags!  
 
-Saved Views let you save your filters and groups for faster access later.  Values you see in filters and groups in Sematext are [tags](../tags/).  
+Saved Views let you save your filters and groups for faster access later.  Values you see in filters and groups in Sematext are [tags](/docs/tags/).  
 
 Q: But where do these tags come from?
 
 A: They come from the Sematext Agent.  There are 2 types of tags:
 
-1. Default tags that Sematext Agent collects and ships.  For example, the hostname is shipped in a tag called `os.host`, as can be seen in the [Sematext Common Schema](../tags/common-schema/).
-2. [Custom tags](../tags/custom-tags/) that you define in the Sematext Agent's configuration file.
+1. Default tags that Sematext Agent collects and ships.  For example, the hostname is shipped in a tag called `os.host`, as can be seen in the [Sematext Common Schema](/docs/tags/common-schema/).
+2. [Custom tags](/docs/tags/custom-tags/) that you define in the Sematext Agent's configuration file.
 
 This second option is what you want to use -- even if you don't use Saved Views --  to be able to filter and group better.  
 
@@ -45,7 +45,7 @@ Once configured like this, tags are sent by the Sematext Agent as part of every 
 
 While we used monitoring and performance metrics in the above example, the same logic applies to all other data in Sematext where filtering is available.
 
-Read [tags docs](../tags/) to undertand why tags are useful, their benefits beyond filtering, [common ways to use tags](../tags/#common-ways-to-use-tags), and [how to define your own tags](../tags/#defining-you-own-tags) that make sense for your monitoring.
+Read [tags docs](/docs/tags/) to undertand why tags are useful, their benefits beyond filtering, [common ways to use tags](/docs/tags/#common-ways-to-use-tags), and [how to define your own tags](/docs/tags/#defining-you-own-tags) that make sense for your monitoring.
 
 ## Saving Views
 
@@ -57,7 +57,7 @@ To save a view for later, follow the steps below:
 2. Click on the highlighted Saved Views button
 3. Click on "Save As" and enter a descriptive name for the filter
 
-![Creating the saved view](../images/guide/savedviews/SavedViewCreate.gif)
+![Creating the saved view](/docs/images/guide/savedviews/SavedViewCreate.gif)
 
 ## Using Saved Views
 
@@ -66,5 +66,5 @@ Later, when you come back to this screen:
 1. Click the Saved Views button
 2. Select the previously saved view
 
-![Selecting the saved view](../images/guide/savedviews/SavedViewSelect.gif)
+![Selecting the saved view](/docs/images/guide/savedviews/SavedViewSelect.gif)
 

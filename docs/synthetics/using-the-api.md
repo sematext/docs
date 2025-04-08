@@ -1,13 +1,13 @@
 title: Using the Synthetics API for fetching and creating monitors
 description: How to use the Synthetics API for fetching and creating monitors.
 
-In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your [CI/CD pipeline](./ci-cd/overview.md) and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](../alerts/alert-notifications.md). The run monitor API can be used to:
+In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your [CI/CD pipeline](/docs/synthetics/ci-cd/overview) and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](/docs/alerts/alert-notifications). The run monitor API can be used to:
 
 * Test the APIs, websites, and the user journeys in your PR and staging environments and annotate the pull requests with the results. 
 * Test the APIs, websites, and the user journeys in production immediately after deployment and alert when it fails.
 * Track and catch major changes in website metrics like page load time, page size, request count, 3rd Party API performance, etc introduced as part of code changes.
 
-Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a [User Journey script](./user-journey-scripts/overview.md). The create monitor API can be used to add multiple monitors in bulk using a script. The create monitor API can be used to:
+Together with scheduled monitor runs, the API can also be used in the creation of HTTP and Browser monitors, both with and without a [User Journey script](/docs/synthetics/user-journey-scripts/overview). The create monitor API can be used to add multiple monitors in bulk using a script. The create monitor API can be used to:
 
 * Create single HTTP and Browser monitors, with and without a User Journey script. 
 * Create multiple HTTP and Browser monitors at once.
@@ -92,7 +92,7 @@ curl --request POST \
 
 There are cases where you might want to customize request parameters depending on the environment. For example, the deployment URL for running the monitor in a PR environment or a different HTTP header for the staging environment. You can pass these custom configurations as part of run monitor API data. When the custom values are passed the configured values for scheduled runs will be overridden with the custom values.
 
-For [HTTP monitors](./http-monitor.md), the following fields can be customized:
+For [HTTP monitors](/docs/synthetics/http-monitor), the following fields can be customized:
 
 * **URL**
 * **Request Headers**
@@ -121,7 +121,7 @@ curl --request POST \
 ]'
 ```
 
-For [Browser monitors](./browser-monitor.md), the URL of the website can be customized.
+For [Browser monitors](/docs/synthetics/browser-monitor), the URL of the website can be customized.
 
 For Browser monitors with a script, you can pass custom parameters as variables, that could be referenced in the script.
 <!-- TODO: Expand this and explain how it's done -->
@@ -860,7 +860,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 }'
 ```
 
-Refer to the [Bulk Add Monitors via Apps Script](https://sematext.com/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit Browser monitors using Google Sheets and Apps Script.
+Refer to the [Bulk Add Monitors via Apps Script](/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit Browser monitors using Google Sheets and Apps Script.
 
 ### Create an HTTP Monitor
 To create an HTTP Monitor, we would send an HTTP request as follows:
@@ -966,7 +966,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 }'
 ```
 
-Refer to the [Bulk Add Monitors via Apps Script](https://sematext.com/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit HTTP monitors using Google Sheets and Apps Script.
+Refer to the [Bulk Add Monitors via Apps Script](/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit HTTP monitors using Google Sheets and Apps Script.
 
 ## Get all Monitors for an App
 

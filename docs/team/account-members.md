@@ -17,7 +17,7 @@ To share your Account with other users, go to the
 
 To see the list of all the accounts you can access click on the **Accounts** section. 
 
-![Accounts You Can Access](../images/team/accounts_you_can_access.png)
+![Accounts You Can Access](/docs/images/team/accounts_you_can_access.png)
 
 If you have a pending invite, a red circle is displayed next to the **Team** menu item in the main navigation 
 as well as next to the **Accounts** section. 
@@ -30,4 +30,4 @@ will open the action menu that will give you an option to **Leave** that account
 
 You can switch between accounts from the menu in the bottom left corner of the screen.
 
-![Switch To Team Account Form](../images/team/switch-to-team-account.png)
+![Switch To Team Account Form](/docs/images/team/switch-to-team-account.png)

@@ -7,7 +7,7 @@ description: Sematext HBase monitoring captures all key HBase metrics with out o
 
 ## HBase Alerts
 
-As soon as you create an HBase App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+As soon as you create an HBase App, you will receive a set of default [alert rules](/docs/guide/alerts-guide/). These pre-configured rules will [notify](/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Node count anomaly
 
@@ -20,7 +20,7 @@ Suppose a system typically maintains a consistent number of servers running HBas
 - Investigate the reasons behind the observed changes in the node count, such as hardware failures, scaling events, or maintenance activities
 - If the node count decrease is due to hardware failures, replace or repair the failed hardware components
 
-You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 ## Metrics
 
@@ -337,7 +337,7 @@ page for instructions.
 No, one App is enough. To monitor N HBase servers that belong to the
 same cluster create just a single Monitoring App and use its
 Token in the agent configuration file on all HBase servers that are a part of
-the same cluster. See [App Guide](https://sematext.com/docs/guide/app-guide/) for more info.
+the same cluster. See [App Guide](/docs/guide/app-guide/) for more info.
 
 ** Why don't some HBase metrics graphs have any data **
 

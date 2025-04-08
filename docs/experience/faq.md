@@ -90,13 +90,13 @@ in general.
 
 Yes, with a few caveats:
 
- * Ensure your Experience App doesn't have [sampling](/experience/faq/#when-should-i-use-sampling) enabled
- * Ensure you select the appropriate views/month to accomodate all your monthly page views and [avoid staggering](/experience/faq/#can-i-receive-more-data-than-my-monthly-plan-limit-allows).  You can see your daily page views and change the views/month for each Experience App under App Settings.
- * See also [Why are some page loads not shown in Experience?](/experience/faq/#why-are-some-page-loads-not-shown-in-experience)
+ * Ensure your Experience App doesn't have [sampling](/docs/experience/faq/#when-should-i-use-sampling) enabled
+ * Ensure you select the appropriate views/month to accomodate all your monthly page views and [avoid staggering](/docs/experience/faq/#can-i-receive-more-data-than-my-monthly-plan-limit-allows).  You can see your daily page views and change the views/month for each Experience App under App Settings.
+ * See also [Why are some page loads not shown in Experience?](/docs/experience/faq/#why-are-some-page-loads-not-shown-in-experience)
 
 ### How are memory measurements performed?
 
-Memory measurements requested by the [Browser SDK](/agents/browser/) are requested 
+Memory measurements requested by the [Browser SDK](/docs/agents/browser/) are requested 
 with every page load. In addition to that, the measurements are taken periodically 
 so that you can see the memory usage over time.
 
@@ -157,22 +157,22 @@ load may be outside of it.
 
 ### How can I share my Sematext Apps with other users?
 
-See [sharing FAQ](/faq/#sharing).
+See [sharing FAQ](/docs/faq/#sharing).
 
 ### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
-See info about user roles in [sharing FAQ](/faq/#sharing).
+See info about user roles in [sharing FAQ](/docs/faq/#sharing).
 
 ## Alerts
 
 ### Can I send alerts to PagerDuty, Slack, Nagios, or other WebHooks?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What are Threshold-based Alerts?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What is Anomaly Detection?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).

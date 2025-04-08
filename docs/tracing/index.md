@@ -4,7 +4,7 @@ description: Trace code execution from beginning to end, see insights into opera
 ## What is Transaction Tracing
 
 Transaction tracing lets one trace code execution from beginning to end.
-It also enables [Database Operations](database-operations) reporting. In case of
+It also enables [Database Operations](/docs/tracing/database-operations) reporting. In case of
 Sematext Monitoring, transaction tracing can also cross applications, networks, and
 servers.
 

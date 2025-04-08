@@ -2,7 +2,7 @@ title: Sematext User Roles
 description: Inviting team members to your account means they get access to all your Apps, dashboards, notification hooks, alert rules, and everything else!
 
 Typically you might have one person create an account by [signing up](https://apps.sematext.com/ui/registration). 
-When using Sematext as a team we recommend creating a [team account](../team/#team-account).  Such an account can then serve as a _parent_ account for your whole organization or team.  
+When using Sematext as a team we recommend creating a [team account](/docs/team/#team-account).  Such an account can then serve as a _parent_ account for your whole organization or team.  
 
 ### Owner
 Since the person who created the account would be its `OWNER`, this person
@@ -32,28 +32,28 @@ account.
 ### App Level Actions
 Action | App Owner | Admin | User
 --- | :---: | :---: | :---:
-Create [Alert Rule](https://sematext.com/docs/alerts/) | ✔️ | ✔️ | ✔️
-View [Alert Rules](https://sematext.com/docs/alerts/) created by Others | ✔️ | ✔️ | ✔️
-Edit/Delete/Disable [Alert Rule](https://sematext.com/docs/alerts/) created by them | ✔️ | ✔️ | ✔️
-Edit/Delete/Disable [Alert Rule](https://sematext.com/docs/alerts/) created by other users  | ✔️ | ✔️ | ✖️
-Ship Logs to an existing [Logs App](https://sematext.com/docs/logs/)| ✔️ | ✔️ | ✔️
-Create/Edit [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) <a href="#1">[1]</a> | ✔️ | ✔️ | ✔️
-Ship Metrics to an existing [Monitoring/Infra App](https://sematext.com/docs/monitoring/) | ✔️ | ✔️ | ✔️
-Ship RUM data to an existing [Experience App](https://sematext.com/docs/experience/) | ✔️ | ✔️ | ✔️
-Create/Edit/Disable [Synthetics](https://sematext.com/docs/synthetics/getting-started/) Monitors | ✔️ | ✔️ | ✖️
-View [App](https://sematext.com/docs/guide/app-guide/) Usage Screen | ✔️ | ✔️ | ✖️
-Disable [Apps](https://sematext.com/docs/guide/app-guide/)  | ✔️ | ✔️ | ✖️
+Create [Alert Rule](/docs/alerts/) | ✔️ | ✔️ | ✔️
+View [Alert Rules](/docs/alerts/) created by Others | ✔️ | ✔️ | ✔️
+Edit/Delete/Disable [Alert Rule](/docs/alerts/) created by them | ✔️ | ✔️ | ✔️
+Edit/Delete/Disable [Alert Rule](/docs/alerts/) created by other users  | ✔️ | ✔️ | ✖️
+Ship Logs to an existing [Logs App](/docs/logs/)| ✔️ | ✔️ | ✔️
+Create/Edit [Logs Pipelines](/docs/logs/pipelines/) <a href="#1">[1]</a> | ✔️ | ✔️ | ✔️
+Ship Metrics to an existing [Monitoring/Infra App](/docs/monitoring/) | ✔️ | ✔️ | ✔️
+Ship RUM data to an existing [Experience App](/docs/experience/) | ✔️ | ✔️ | ✔️
+Create/Edit/Disable [Synthetics](/docs/synthetics/getting-started/) Monitors | ✔️ | ✔️ | ✖️
+View [App](/docs/guide/app-guide/) Usage Screen | ✔️ | ✔️ | ✖️
+Disable [Apps](/docs/guide/app-guide/)  | ✔️ | ✔️ | ✖️
 Invite Others | ✔️ | ✔️ | ✖️
 Upgrade/downgrade Apps <a href="#2">[2]</a>  | ✔️ | ✔️ | ✖️
 
 ### Account Level Actions
 Action | Billing Admin | Admin | User 
 --- | :---:  | :---: | :---:
-Create [App](https://sematext.com/docs/guide/app-guide/) <a href="#3">[3]</a>  | ✔️ | ✔️ | ✖️
-[Invite Others](https://sematext.com/docs/team/account-members/) to the account | ✔️ | ✔️ | ✖️
-See discovered [log sources](https://sematext.com/docs/logs/discovery/intro/) & [services](https://sematext.com/docs/monitoring/autodiscovery/)  | ✔️ | ✔️ | ✔️
+Create [App](/docs/guide/app-guide/) <a href="#3">[3]</a>  | ✔️ | ✔️ | ✖️
+[Invite Others](/docs/team/account-members/) to the account | ✔️ | ✔️ | ✖️
+See discovered [log sources](/docs/logs/discovery/intro/) & [services](/docs/monitoring/autodiscovery/)  | ✔️ | ✔️ | ✔️
 Ship logs & metrics from discovered log sources & services | ✔️ | ✔️ | ✖️
-Convert to [team account](https://sematext.com/docs/team/#team-account) | ✔️ | ✔️ | ✖️
+Convert to [team account](/docs/team/#team-account) | ✔️ | ✔️ | ✖️
 Close the account | ✔️ | ✔️ | ✖️
 Close the team account | ✔️ | ✖️ | ✖️
 Update payment info  | ✔️ | ✖️ | ✖️

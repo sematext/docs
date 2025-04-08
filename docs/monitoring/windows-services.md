@@ -1,11 +1,11 @@
 title: Sematext Windows Services Monitoring
 description: Monitoring of Windows Services provides real-time insights into their status, performance, and potential issues
 
-Sematext Monitoring now includes support for Windows Services. Starting from Sematext Agent [version 3.5.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-350), you can collect and monitor the status of any Windows Service available in your system.
+Sematext Monitoring now includes support for Windows Services. Starting from Sematext Agent [version 3.5.0](/docs/agents/sematext-agent/releasenotes/#version-350), you can collect and monitor the status of any Windows Service available in your system.
 
 ## Metrics
 
-The [Sematext Agent for Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/), starting from version 3.5.0, is capable of collecting metrics related with the status of Windows services. At present, the primary metric supported is the status of each service including a number of statistics, which allows users to determine whether a service is running, stopped, or experiencing issues.
+The [Sematext Agent for Windows](/docs/agents/sematext-agent/windows-installation/), starting from version 3.5.0, is capable of collecting metrics related with the status of Windows services. At present, the primary metric supported is the status of each service including a number of statistics, which allows users to determine whether a service is running, stopped, or experiencing issues.
 
 
 ### List of available metrics
@@ -34,7 +34,7 @@ Below is a list of all the possible values (statuses) of the `windows.service.st
 
 ### Available Tags
 
-Below is a list of available [tags](https://sematext.com/docs/tags/) for the `windows.service.status` metric. Tags can be used to retrieve individual service names or process IDs related with a specific service. Edit any chart in the Infrastructure > Windows > Top Services report to understand how you can use a the `windows.service.status`, grouped by a tag.
+Below is a list of available [tags](/docs/tags/) for the `windows.service.status` metric. Tags can be used to retrieve individual service names or process IDs related with a specific service. Edit any chart in the Infrastructure > Windows > Top Services report to understand how you can use a the `windows.service.status`, grouped by a tag.
 
 |Tag name | Description  |
 |---------|--------------|
@@ -54,9 +54,9 @@ Coming Soon!
 
 Each time you create a new Infra App in Sematext Cloud to monitor your Windows servers, a number of pre-configured alerts are created as well, fine tuned to catch various issues and help you prevent your systems from going down.
 
-Refer to our [infrastructure default alerts](https://sematext.com/docs/monitoring/servers/#core-infrastructure-alerting) to learn more.
+Refer to our [infrastructure default alerts](/docs/monitoring/servers/#core-infrastructure-alerting) to learn more.
 
-Moreover, a set of pre-defined [alerts](https://sematext.com/docs/alerts/) is supported for the status of several important Windows services. These alerts are triggered when the status of any monitored service is not running. The following services are monitored out-of-the-box:
+Moreover, a set of pre-defined [alerts](/docs/alerts/) is supported for the status of several important Windows services. These alerts are triggered when the status of any monitored service is not running. The following services are monitored out-of-the-box:
 
 - Windows Time (W32Time)
 - Security Accounts Manager (SamSs)
@@ -74,6 +74,6 @@ Moreover, a set of pre-defined [alerts](https://sematext.com/docs/alerts/) is su
 - Network Store Interface Service (nsi)
 - Network List Service (NlaSvc)
 
-In addition to having alerts for these services, you can [create alerts](https://sematext.com/docs/alerts/creating-metrics-alerts/) for any other Windows Service you like, as long as they are available on your Windows machines.
+In addition to having alerts for these services, you can [create alerts](/docs/alerts/creating-metrics-alerts/) for any other Windows Service you like, as long as they are available on your Windows machines.
 
-For more information, please refer to our [Windows Monitoring](https://sematext.com/docs/integration/windows/) integration.
+For more information, please refer to our [Windows Monitoring](/docs/integration/windows/) integration.

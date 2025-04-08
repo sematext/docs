@@ -11,7 +11,7 @@ Use cases:
 - Filter by SYSTEMD_UNIT, remove fields, and add tags to each log
 - Receive system journal events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka, or MQTT
 
-![](systemd-journal-upload.png)
+![](/docs/logagent/systemd-journal-upload.png)
 
 ### Configuration
 

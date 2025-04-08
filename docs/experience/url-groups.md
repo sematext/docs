@@ -37,4 +37,4 @@ To create a new URL Group open your Experience App and do the following:
 
 You can assign a different time threshold for each URL Group. For example, you might have more strict requirements for your sales page so you want to aim for 1 second instead of your website's default of 2 seconds.
 
-You can read more about setting time thresholds in [Configuring Requirements](./configure-requirements).
+You can read more about setting time thresholds in [Configuring Requirements](/docs/experience/configure-requirements).

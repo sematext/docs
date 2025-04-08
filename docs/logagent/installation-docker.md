@@ -11,8 +11,8 @@ If you want to use certified images please pull the image from Red Hat and Docke
 
 For Kubernetes or Helm installation instructions, see:
 
-- [Kubernetes Installation](./installation-kubernetes)
-- [Helm Installation](./installation-helm)
+- [Kubernetes Installation](/docs/logagent/installation-kubernetes)
+- [Helm Installation](/docs/logagent/installation-helm)
 
 ## Installation for Docker
 
@@ -76,8 +76,8 @@ sematext/logagent:latest
 
 To see detailed configuration params and manuals, see:
 
-- [Container Configuration Parameters](./container-config-parameters)
-- [Container Configuration Manual](./container-config-manual)
+- [Container Configuration Parameters](/docs/logagent/container-config-parameters)
+- [Container Configuration Manual](/docs/logagent/container-config-manual)
 
 ## Known Issues
 

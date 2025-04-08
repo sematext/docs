@@ -13,7 +13,7 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 * **Interval** - Monitor execution interval.
 * **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations to run the monitor.
-* **[Scheduled Monitor Pauses](https://sematext.com/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
+* **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 
 ### Request Settings
 
@@ -41,17 +41,17 @@ By default, the HTTP monitor adds the headers below for all requests sent from t
 
 If you disable this option, we **won’t save the response body** hence it **will not be shown** on the Run details screen.
 
-![Save Response Body Disabled](../images/synthetics/response-body-disabled.png)
+![Save Response Body Disabled](/docs/images/synthetics/response-body-disabled.png)
 
 ## Bulk Adding HTTP Monitors
 
 When creating an HTTP Monitor, you can add multiple URLs at once. All configuration settings specified during the creation process will be applied to URLs added in bulk. To add URLs individually, click the '+ New Monitor' button for each one.
 
-![HTTP Add New Monitor](../images/synthetics/http-add-new-monitor.png)
+![HTTP Add New Monitor](/docs/images/synthetics/http-add-new-monitor.png)
 
 Alternatively, click the '+ Bulk Add' button. A pop-up will appear, allowing you to paste the list of URLs. Ensure each URL is separated by a new line within the pop-up. This enables you to add numerous endpoints for monitoring without the need to input each one individually.
 
-![HTTP Bulk Add Monitors](../images/synthetics/http-bulk-add-monitors.gif)
+![HTTP Bulk Add Monitors](/docs/images/synthetics/http-bulk-add-monitors.gif)
 
 
 ## Authentication
@@ -64,7 +64,7 @@ You can **dynamically fetch a token** for each run with token support and pass t
 
 When creating an HTTP monitor, navigate to the Authentication tab and select **Bearer/Access Token** authentication option.
 
-![Access Token Authentication](../images/synthetics/authentication-token.png)
+![Access Token Authentication](/docs/images/synthetics/authentication-token.png)
 
 Enter the access token URL and the source field to get the token from the response. Enter headers and body parameters to fetch the token such as `grant_type`, `username` and `password`. We currently support encoding the authentication request's body as `application/json` and `application/x-www-form-urlencoded`. 
 
@@ -74,14 +74,14 @@ Before Sematext calls the endpoint, an access token will be fetched based on the
 
 You can select the **Basic Authentication** option within the Authentication tab and add the username and password needed to connect to your **protected APIs**. 
 
-![Basic Authentication](../images/synthetics/authentication-basic.png)
+![Basic Authentication](/docs/images/synthetics/authentication-basic.png)
 
 ### NTLM Authentication
 
 You can select the **NTLM Authentication** option within the Authentication tab and enter your credentials. Both NTLMv2 and NTLMv1 are supported.
 
 
-![NTLM Authentication](../images/synthetics/authentication-ntlm.png)
+![NTLM Authentication](/docs/images/synthetics/authentication-ntlm.png)
 
 You can also fill in the optional **Domain** and **Workstation** fields in the **Advanced Configuration** section, if those are required for your setup. If no advanced configuration is specified, default empty values will be auto-generated.
 
@@ -187,11 +187,11 @@ In the event where one of the services encounters issues, its status will change
 
 With this JSON structure in mind, you can define a **Response Body JSON** alert condition like in the image below.
 
-![Custom Alert Condition](../images/synthetics/custom-alert-condition.png)
+![Custom Alert Condition](/docs/images/synthetics/custom-alert-condition.png)
 
 The field is defined as `$.results[:].status`, meaning that all the `status` fields inside of `results` will be checked, and the monitor run will fail if any of them are equal to `Error`. Here's an example of a run failing upon one of these services reporting an error.
 
-![Custom Condition Failing](../images/synthetics/custom-alert-condition-fail.png)
+![Custom Condition Failing](/docs/images/synthetics/custom-alert-condition-fail.png)
 
 
 ## Run environment

@@ -1,8 +1,8 @@
 title: Sematext Service Discovery
 description: Sematext Autodiscovery Monitoring automatically scans for services that can be monitored using Sematext Agent and, depending on your configuration, automatically sets up monitoring agents. 
 
-The centerpiece of Service Discovery is [Sematext Agent](../agents/sematext-agent). When Sematext Agent is installed and running on a server/node/instance it scans for services that can be monitored by Sematext
-[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It also [discovers logs](https://sematext.com/docs/logs/discovery/intro/) you can ship to Sematext and monitor.
+The centerpiece of Service Discovery is [Sematext Agent](/docs/agents/sematext-agent). When Sematext Agent is installed and running on a server/node/instance it scans for services that can be monitored by Sematext
+[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It also [discovers logs](/docs/logs/discovery/intro/) you can ship to Sematext and monitor.
 
 The discovered services and logs are displayed under `Fleet & Discovery > Discovery > Services`.  From there, one can set up both monitoring and log shipping via the UI without any additional installation or configuration.  Moreover, this is where auto-monitoring of supported integrations can be enabled, allowing Sematext Agent to automatically start monitoring newly discovered instances of the service for which you've set up monitoring. For example, if you have set up monitoring for Elasticsearch and enabled automatic monitoring then any new Elasticsearch nodes that are added to the cluster will automatically get monitored.
 
@@ -80,7 +80,7 @@ Manual Monitoring is also available by following the Agent installation instruct
 
 <img class="content-modal-image" alt="Sematext Discovery Manual Monitoring" src="../../images/fleet/fnd-discovery-services-manual-monitoring.png" title="Sematext Discovery Manual Monitoring">
 
-This will also enable the automatic connection of those Apps which will enable you to correlate their data via [Split Screen](https://sematext.com/docs/guide/split-screen/).
+This will also enable the automatic connection of those Apps which will enable you to correlate their data via [Split Screen](/docs/guide/split-screen/).
 
 <img class="content-modal-image" alt="Sematext Discovery Connected Apps" src="../../images/fleet/fnd-discovery-services-connected-apps.png" title="Sematext Discovery Connected Apps">
 
@@ -116,7 +116,7 @@ As soon as Sematext Agent discovers the Elasticsearch container with a `MONITORI
 
 ### Which Sematext Agent version do I need?
 
-Ensure you are using the latest available agent version. For more information, please visit our [release notes](https://sematext.com/docs/agents/sematext-agent/releasenotes/).
+Ensure you are using the latest available agent version. For more information, please visit our [release notes](/docs/agents/sematext-agent/releasenotes/).
 
 ### Can I have a mix of manually and automatically monitored services?
 
@@ -156,7 +156,7 @@ Sematext Agent will notice the change in few minutes and, if you enabled automat
 ### Additional Configuration for Sematext Agent
 For special cases, such as defining different sets of credentials in Kubernetes, additional steps are required to properly configure service discovery. 
 
-- Defining monitoring agent [credential sets](../agents/sematext-agent/autodisco/credential-sets) in Kubernetes
-- Providing [MySQL JDBC driver](../agents/sematext-agent/autodisco/mysql-driver) in container environments
-- [JMX Attaching](../agents/sematext-agent/jmx-attaching/)
-- [Removing stale](../agents/sematext-agent/autodisco/removing-stale-resources) Sematext Agent resources after deinstallation
+- Defining monitoring agent [credential sets](/docs/agents/sematext-agent/autodisco/credential-sets) in Kubernetes
+- Providing [MySQL JDBC driver](/docs/agents/sematext-agent/autodisco/mysql-driver) in container environments
+- [JMX Attaching](/docs/agents/sematext-agent/jmx-attaching/)
+- [Removing stale](/docs/agents/sematext-agent/autodisco/removing-stale-resources) Sematext Agent resources after deinstallation

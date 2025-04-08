@@ -1,7 +1,7 @@
 title: Embedded Agent Mode
 description: Sematext embedded monitoring App Agent is started in the process of the application it monitors, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
 
-Unlike the [Standalone monitor](spm-monitor-standalone),
+Unlike the [Standalone monitor](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone),
 the Embedded App Agent is started embedded in the
 process of the application it monitors. To use the Embedded App Agent follow these steps:
 

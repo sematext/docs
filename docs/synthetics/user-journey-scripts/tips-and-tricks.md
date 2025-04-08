@@ -7,7 +7,7 @@ Even though it might seem daunting at first to dive right in and start writing y
 
 ## Make use of the various examples we provide
 
-If you haven't already, then check out our [various examples](examples.md) on tackling various use-cases with Playwright, such as:
+If you haven't already, then check out our [various examples](/docs/synthetics/user-journey-scripts/examples) on tackling various use-cases with Playwright, such as:
 * Logging in
 * Searching for text on a page
 * Adding an item to a shopping cart
@@ -19,7 +19,7 @@ and many more! By emulating what we do in those examples, you should be able to 
 
 ## Using generative AI to help you create your script
 
-You can also use GenAI to write Playwright scripts. Check out [the dedicated page for this topic](./generating-playwright-scripts.md) to learn more.
+You can also use GenAI to write Playwright scripts. Check out [the dedicated page for this topic](/docs/synthetics/user-journey-scripts/generating-playwright-scripts) to learn more.
 
 
 

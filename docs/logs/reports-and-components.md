@@ -5,7 +5,7 @@ Each Logs App has one default Report called **Explore**. You can create as many 
 
 ## Logs Search and Report Menu
 
-![Sematext Cloud Logs Guide - Logs Report Menu](../images/guide/logs/sematext-logs-search-and-report-menu_2.png) 
+![Sematext Cloud Logs Guide - Logs Report Menu](/docs/images/guide/logs/sematext-logs-search-and-report-menu_2.png) 
 
 ### App State
 
@@ -25,9 +25,9 @@ Each alert query is visible in the Alert Rules list.
 
 - **Connected Apps** - Connecting a Logs App to a Monitoring App will **pre-select that Logs App when you decide to correlate metrics from the connected Monitoring App**. When you receive an alert notification for an App, the **alert notification will automatically include information and charts from connected Apps**, and thus provide more information and context for you. You can connect any two Apps you have access to, regardless of their type. **Any App can be connected to any number of other Apps**.
 
-![Sematext Cloud Logs Guide - Connect Apps](../images/guide/logs/connect-apps_2.png) 
+![Sematext Cloud Logs Guide - Connect Apps](/docs/images/guide/logs/connect-apps_2.png) 
 
-- **Split Screen** - [Split Screen](../guide/split-screen) is a product-wide correlation and data-pivoting feature. With [Split Screen](../guide/split-screen) you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
+- **Split Screen** - [Split Screen](/docs/guide/split-screen) is a product-wide correlation and data-pivoting feature. With [Split Screen](/docs/guide/split-screen) you can compare any two reports or dashboards, even the same report or dashboard but with different filters and groups in the two different screens.
 
 - **Time Picker** - The Time Picker is available whenever an App is selected as well as when any custom dashboards are being used. **One minute is the shortest time increment** you can select. **Thirty minutes, one and two hours, and one, two, seven, and thirty days time-span shortcuts** are exposed as well.
 **A custom time range can be selected using the time picker dropdown menu.** The Logs App will automatically refresh upon selection and update all the reports accordingly.
@@ -46,59 +46,59 @@ The Logs and Logs Count Time Series components are added by default to your Logs
 
 These can be configured by whichever search query you want in any way you want. Making it easy to set up your Logs Report just the way you want.
 
-![Sematext Cloud Logs Guide - Add Logs Component](../images/guide/logs/add-logs-component.png) 
+![Sematext Cloud Logs Guide - Add Logs Component](/docs/images/guide/logs/add-logs-component.png) 
 
 Use them together with out-of-the-box metrics, from a Monitoring App, and you will go from metric spikes to Logs in seconds, and get to the root cause in minutes. Forget about ssh-ing to servers and grepping logs and find similar metric patterns with built-in metric correlations.
 
-![Sematext Logs Custom Components](../images/guide/logs/logs-custom-components_2.png)
+![Sematext Logs Custom Components](/docs/images/guide/logs/logs-custom-components_2.png)
 
 ### Logs Component Settings
 
-Here's an image of the **Log Table Component** dropdown menu with options to add/remove columns, add to [dashboard](https://sematext.com/docs/dashboards/), go to the [field editor](https://sematext.com/docs/logs/fields/#field-editor), and export logs.
+Here's an image of the **Log Table Component** dropdown menu with options to add/remove columns, add to [dashboard](/docs/dashboards/), go to the [field editor](/docs/logs/fields/#field-editor), and export logs.
 
-![Sematext Cloud Monitoring Guide - Component Settings](../images/guide/logs/lt-menu.png)
+![Sematext Cloud Monitoring Guide - Component Settings](/docs/images/guide/logs/lt-menu.png)
 
-From the Log Table Component, you can quickly add or remove columns, highlight values, create charts, and apply filters. See [Logs Table Quick Actions](https://sematext.com/docs/logs/logs-table-quick-actions/) for more details.
+From the Log Table Component, you can quickly add or remove columns, highlight values, create charts, and apply filters. See [Logs Table Quick Actions](/docs/logs/logs-table-quick-actions/) for more details.
 
 Additionally, you can open each log in a side panel to view its details in either Table or JSON format, providing you with easy access to the full log event payload, the ability to add additional field value-based filters, copy field values, etc.
 
 You can adjust the side panel width by clicking and holding the vertical bar located in the middle of the left side of the panel, then dragging it to your desired width. This width will be saved in your local storage and will be remembered the next time you open it.
 
-![Sematext Cloud Logs Guide - Logs Table Details Format](../images/guide/logs/lt-side-panel-actions.gif) 
+![Sematext Cloud Logs Guide - Logs Table Details Format](/docs/images/guide/logs/lt-side-panel-actions.gif) 
 
 You can open the side panel by clicking on the icon located on the top left of each log or by double-clicking the log. While the side panel is open, you can switch between logs with the up and down arrow keys and close the side panel with the escape key or by clicking on the "x" in the side panel.
 
 Furthermore, you have the option to switch to **Terminal View**, which allows you to view your logs in a more condensed and compact format.
 
-![Sematext Cloud Logs Guide - Logs Terminal View](../images/guide/logs/logs-table-terminal-view.png) 
+![Sematext Cloud Logs Guide - Logs Terminal View](/docs/images/guide/logs/logs-table-terminal-view.png) 
 
-See [Logs Terminal View](https://sematext.com/docs/logs/logs-terminal-view/) for more details.
+See [Logs Terminal View](/docs/logs/logs-terminal-view/) for more details.
 
-Each component can be added to a [Custom Dashboard](https://sematext.com/docs/dashboards/) by clicking on the three dots in the top-right corner of the component.
+Each component can be added to a [Custom Dashboard](/docs/dashboards/) by clicking on the three dots in the top-right corner of the component.
 
-![Sematext Cloud Logs Guide - Logs Table Add To Dashboard](../images/guide/logs/logs-table-add-to-dashboard.png) 
+![Sematext Cloud Logs Guide - Logs Table Add To Dashboard](/docs/images/guide/logs/logs-table-add-to-dashboard.png) 
 
-You can organize reports from one or several Apps, both Logs Apps as well as [Monitoring](https://sematext.com/docs/monitoring/), [Synthetics](https://sematext.com/docs/synthetics/) and [Experience](https://sematext.com/docs/experience/) Apps. 
+You can organize reports from one or several Apps, both Logs Apps as well as [Monitoring](/docs/monitoring/), [Synthetics](/docs/synthetics/) and [Experience](/docs/experience/) Apps. 
 
 ### Table Density Modes
 
 You can set different table density for each Logs Table from **Edit Component > Styles** tab.
 
-![Sematext Cloud Logs Guide - Edit Logs Component](../images/guide/logs/logs-edit-component.png) 
+![Sematext Cloud Logs Guide - Edit Logs Component](/docs/images/guide/logs/logs-edit-component.png) 
 
 Choose between **3 density options** for your table rows and control how many rows fit on a single page.
 
  - **Comfortable** - Your rows are less dense and easier on the eyes.
 
-![Sematext Cloud Logs Guide - Comfortable Density](../images/guide/logs/logs-table-comfortable.png) 
+![Sematext Cloud Logs Guide - Comfortable Density](/docs/images/guide/logs/logs-table-comfortable.png) 
 
  - **Cozy** - Your tables will remain just as they have been so far.
 
-![Sematext Cloud Logs Guide - Cozy Density](../images/guide/logs/logs-table-cozy.png) 
+![Sematext Cloud Logs Guide - Cozy Density](/docs/images/guide/logs/logs-table-cozy.png) 
 
  - **Compact** - Your tables will fit more rows in the same space.
 
-![Sematext Cloud Logs Guide - Compact Density](../images/guide/logs/logs-table-compact.png) 
+![Sematext Cloud Logs Guide - Compact Density](/docs/images/guide/logs/logs-table-compact.png) 
 
 You can also override account preference and set the default table density level. Account level density preference will be applied to all of your data tables. See  [Control density in other tables](https://sematext.com/product-updates/#/2022/control-table-rows-density-in-account-settings).
 
@@ -106,7 +106,7 @@ You can also override account preference and set the default table density level
 
 Each Logs App includes an **Infrastructure group** in the left navigation menu. This group provides detailed reports that offer insights into the environment of the log sources within each App. 
 
-![Sematext Logs - Infrastructure group](../images/guide/logs/infra-group-logs-hosts-list.png) 
+![Sematext Logs - Infrastructure group](/docs/images/guide/logs/infra-group-logs-hosts-list.png) 
 
 Currently, the Infrastructure group contains the following two reports:
 
@@ -122,7 +122,7 @@ The **Hosts** report displays a list of hosts sending logs to the Logs App. Sele
 - Host System Logs: Access to system-wide logs of the host.
 - Sematext Agent Details: Diagnostic information, including details about installed Sematext agents, errors and troubleshooting insights.
 
-![Sematext Logs - Infrastructure group - Agents](../images/guide/logs/infra-group-logs-hosts-agent.png) 
+![Sematext Logs - Infrastructure group - Agents](/docs/images/guide/logs/infra-group-logs-hosts-agent.png) 
 
 ### Processes Report
 
@@ -132,7 +132,7 @@ The **Processes** report provides an in-depth view of the most active processes 
 - Performance Metrics: Insights into CPU and memory usage for each process.
 - Command Line Arguments: The exact command-line arguments used to execute the process.
 
-![Sematext Logs - Infrastructure group - Processes](../images/guide/logs/infra-group-logs-processes.png) 
+![Sematext Logs - Infrastructure group - Processes](/docs/images/guide/logs/infra-group-logs-processes.png) 
 
 ### Key Features of Infrastructure group
 

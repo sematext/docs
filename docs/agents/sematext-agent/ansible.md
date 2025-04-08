@@ -1,7 +1,7 @@
 title: Sematext Agent Ansible Installation
 description: Automated configuration management using Ansible playbooks for Sematext infrastructure and services monitoring
 
-Ansible can be used for automating the deployment of [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) in multiple hosts across your infrastructure. Using the Sematext Agent Ansible role you can easily extend your existing playbooks and [start monitoring](https://sematext.com/docs/monitoring/) thousands of servers within minutes.
+Ansible can be used for automating the deployment of [Sematext Agent](/docs/agents/sematext-agent/) in multiple hosts across your infrastructure. Using the Sematext Agent Ansible role you can easily extend your existing playbooks and [start monitoring](/docs/monitoring/) thousands of servers within minutes.
 
 ## Ansible Introduction
 [Ansible](https://docs.ansible.com) is an open-source automation tool designed for configuration management, application deployment, and task automation. 
@@ -108,7 +108,7 @@ Linux distributions:
 ## Deploying Sematext Agent
 
 ### Create an Infra App in Sematext Cloud
-After you get logged into Sematext Cloud at [https://apps.sematext.com](https://apps.sematext.com) (or [https://apps.eu.sematext.com](https://apps.eu.sematext.com) if using Sematext Cloud Europe), the first step is to [create an Infra App](https://sematext.com/docs/monitoring/infrastructure/#create-an-infra-app) to start monitor your infrastructure. After entering the App name, select Ansible from the list of the environments. Make sure to copy the provided infra token, it will be needed later to pass it as a var in your Ansible playbook.
+After you get logged into Sematext Cloud at [https://apps.sematext.com](https://apps.sematext.com) (or [https://apps.eu.sematext.com](https://apps.eu.sematext.com) if using Sematext Cloud Europe), the first step is to [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app) to start monitor your infrastructure. After entering the App name, select Ansible from the list of the environments. Make sure to copy the provided infra token, it will be needed later to pass it as a var in your Ansible playbook.
 
 ### Install the agent using an Ansible playbook
 You can integrate the Sematext Ansible role in your existing playbooks or create a new one. Here is an example playbook:
@@ -139,7 +139,7 @@ where `hosts` is your Ansible inventory and `sematext-agent-playbook.yaml` is th
 This command will deploy Sematext agent in all hosts defined in your playbook. As soon as the command completes successfully, you can visit Sematext Cloud and see all your hosts online under Infrastructure.
 
 ## Configuring Custom Tags
-It is also possible to define [custom tags](https://sematext.com/docs/tags/custom-tags/) in your playbook, by adding the following tasks defining the tags:
+It is also possible to define [custom tags](/docs/tags/custom-tags/) in your playbook, by adding the following tasks defining the tags:
 
 ```
   tasks:
@@ -155,4 +155,4 @@ It is also possible to define [custom tags](https://sematext.com/docs/tags/custo
         state: restarted
 ```
 
-Check out [Sematext Tags](https://sematext.com/docs/tags/#why-tags-matter) to learn more about why Tags matter and the benefits using them.
+Check out [Sematext Tags](/docs/tags/#why-tags-matter) to learn more about why Tags matter and the benefits using them.

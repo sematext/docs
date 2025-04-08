@@ -3,22 +3,22 @@ description: Sematext Infrastructure Monitoring gives you insight into your whol
 
 Sematext Infrastructure Monitoring provides complete insight into your infrastructure:
 
-- [servers](https://sematext.com/docs/monitoring/servers/)
-- [Kubernetes clusters](https://sematext.com/docs/integration/kubernetes/)
-- [containers](https://sematext.com/docs/monitoring/containers/)
-- [processes](https://sematext.com/docs/monitoring/processes/)
-- [inventory](https://sematext.com/docs/monitoring/inventory/)
-- [events](https://sematext.com/docs/events/), etc.
+- [servers](/docs/monitoring/servers/)
+- [Kubernetes clusters](/docs/integration/kubernetes/)
+- [containers](/docs/monitoring/containers/)
+- [processes](/docs/monitoring/processes/)
+- [inventory](/docs/monitoring/inventory/)
+- [events](/docs/events/), etc.
 
-For application and service monitoring, make sure to check our [dedicated guide](https://sematext.com/docs/monitoring/service-monitoring/).
+For application and service monitoring, make sure to check our [dedicated guide](/docs/monitoring/service-monitoring/).
 
 The centerpiece is an Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish.
 
-![Infra App screen](../images/monitoring/infra-app.gif)
+![Infra App screen](/docs/images/monitoring/infra-app.gif)
 
 Each Infra App is typically used to gather data from one environment. For example, one Infra App for production environment, one for test environment and one for development environment.
 
-![Infra Env](../images/monitoring/infra-env.png)
+![Infra Env](/docs/images/monitoring/infra-env.png)
 
 Sematext Cloud will automatically create one Infra App named "Default Infra App" the first time you might need it. 
 
@@ -26,7 +26,7 @@ You can also create Infra App on your own under Apps > New App > Monitoring. Che
 
 ## How it works
 
-A Golang-based [Sematext Agent](../agents/sematext-agent) will be installed on your machine. This Agent sends all infrastructure data to an Infra App whose token is configured during the Agent's installation.
+A Golang-based [Sematext Agent](/docs/agents/sematext-agent) will be installed on your machine. This Agent sends all infrastructure data to an Infra App whose token is configured during the Agent's installation.
 
 The Infra App also includes data about your containerized environments. Installation instructions for container monitoring include an Infra App token. That way when installing Sematext Agent, an Infra App will be installed as well.
 
@@ -34,7 +34,7 @@ The Infra App also includes data about your containerized environments. Installa
 
 Creating a new Infra App is the same process as with any App in Sematext. In the Apps screen you choose New App > Monitoring > Infra App. Give it a name and click 'Create App'.
 
-![New Infra App](../images/monitoring/new-infra-app-env.gif)
+![New Infra App](/docs/images/monitoring/new-infra-app-env.gif)
 
 During the Infra App creation process, you will get a screen displaying Sematext Agent installation instructions for various supported environments. You will need to follow these instructions to use of the Infra App.
 
@@ -42,7 +42,7 @@ During the Infra App creation process, you will get a screen displaying Sematext
 
 Metrics will start shipping to your new Infra App in a few moments. You can see metrics from all your servers, Kubernetes clusters, containers, etc.
 
-![Infra App metrics](../images/monitoring/infra-metrics.gif)
+![Infra App metrics](/docs/images/monitoring/infra-metrics.gif)
 
 ## Enabling Infra Monitoring
 
@@ -50,7 +50,7 @@ Infra Monitoring is enabled by default as soon as you install Sematext Agent.
 
 If you've set up Sematext Monitoring at some point in the past, you can easily enable Infra Monitoring by:
 
-- [Upgrading](./spm-faq/#agent-updating) your Sematext Agent to the [latest version](https://sematext.com/docs/agents/sematext-agent/releasenotes/)
+- [Upgrading](/docs/monitoring/spm-faq/#agent-updating) your Sematext Agent to the [latest version](/docs/agents/sematext-agent/releasenotes/)
 - Setting up Infra App token on each of your machines by running the `setup-infra` command
 
 When doing a clean installation, regardless of whether you're installing in containerized environment or not, follow monitor installation instructions displayed in Sematext Cloud. Those instructions will always include everything needed to set up an Infra App, either on its own or alongside some other App Agent.
@@ -71,8 +71,8 @@ Once you do that you'll have the token of that particular App. To set up the tok
 
 Infrastructure Monitoring provides:
 
-- [OS](../agents/sematext-agent/os-metrics/) metrics and details
-- [Container](../agents/sematext-agent/containers/metrics/) metrics and details
-- [Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/metrics/) metrics and details
-- [Inventory](./inventory)
-- [Processes details and metrics](./processes)
+- [OS](/docs/agents/sematext-agent/os-metrics/) metrics and details
+- [Container](/docs/agents/sematext-agent/containers/metrics/) metrics and details
+- [Kubernetes](/docs/agents/sematext-agent/kubernetes/metrics/) metrics and details
+- [Inventory](/docs/monitoring/inventory)
+- [Processes details and metrics](/docs/monitoring/processes)

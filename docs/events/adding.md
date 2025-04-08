@@ -5,7 +5,7 @@ Events can be added interactively via the UI as well as via the API.
 
 ## Event Fields
 
-Each field has a few required and several optional fields.  See [Sematext Common Schema](../tags/common-schema/) for required and optional [event fields](../tags/common-schema/#events-tags).
+Each field has a few required and several optional fields.  See [Sematext Common Schema](/docs/tags/common-schema/) for required and optional [event fields](/docs/tags/common-schema/#events-tags).
 
 ## Event Types
 
@@ -72,4 +72,4 @@ system or application metrics.  Or if you simply want to leave "a note".
 
 Adding events via the UI supports markdown format.
 
-[![Create a custom event](../images/events/custom-event.gif "Create a custom event")](../images/events/custom-event.gif)
+[![Create a custom event](../images/events/custom-event.gif "Create a custom event")](/docs/images/events/custom-event.gif)

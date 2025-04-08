@@ -5,7 +5,7 @@ description: Guide on how to integrate Sematext Synthetics with your Jenkins pip
 
 Create a secret credential for Sematext API Key to be used in the run monitor API request.
 
-![CI/CD Jenkins Credentials](./images/ci-cd-jenkins-secret.png)
+![CI/CD Jenkins Credentials](/docs/synthetics/ci-cd/images/ci-cd-jenkins-secret.png)
 
 **Add Run Monitor stage to the pipeline in Jenkinsfile**
 

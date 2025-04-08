@@ -21,8 +21,8 @@ Enter required parameters and additional parameters and headers can be added as 
 
 ![Custom Webhooks Integration](../images/integrations/custom-webhook.png "Create Custom Webhooks Integration")
 
-**Done.** Use as many generic Webhooks-based integration as you wish.  Besides custom Webhooks there are also numerous other third party integrations services like PagerDuty, Slack, MS Teams, OpsGenie, Telegram, etc. Check [Integrations](../integration/) for more details.
+**Done.** Use as many generic Webhooks-based integration as you wish.  Besides custom Webhooks there are also numerous other third party integrations services like PagerDuty, Slack, MS Teams, OpsGenie, Telegram, etc. Check [Integrations](/docs/integration/) for more details.
 
 ## Custom Parameters
 
-Sematext Notification Hooks support a set of variables exposed as [Custom Notification Hooks Parameters](../integration/alerts-webhooks-custom-params/) that you can use to customize which data is included in the request sent to your webhook.
+Sematext Notification Hooks support a set of variables exposed as [Custom Notification Hooks Parameters](/docs/integration/alerts-webhooks-custom-params/) that you can use to customize which data is included in the request sent to your webhook.

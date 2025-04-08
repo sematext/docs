@@ -1,7 +1,7 @@
 title: Synthetics Metrics
 description: List of metrics collected as part of HTTP and Browser monitor
 
-Synthetics monitors collect the following metrics as part of every run. You can create custom charts using [Chart Builder](../dashboards/chart-builder/) for Synthetics metrics. The custom charts can be used to compare Synthetics metrics across multiple monitors.
+Synthetics monitors collect the following metrics as part of every run. You can create custom charts using [Chart Builder](/docs/dashboards/chart-builder/) for Synthetics metrics. The custom charts can be used to compare Synthetics metrics across multiple monitors.
 
 ## HTTP Monitor Metrics
 
@@ -64,7 +64,7 @@ Aside from the predefined metrics which are collected with each monitor run, you
 
 To extract custom metrics from HTTP monitors, navigate to the **Configure Response** tab and enable **Save Response Body**. Select either JSON or XML, depending on the format of the HTTP response body. Fetch a sample response from the specified HTTP URL or manually provide the response body, then enter the path to extract the metric. You will see the output within the **Extracted Value** box, and you will need to specify a name for the extracted metric.
 
-![Custom Metrics HTTP Monitor](../images/synthetics/custom-metrics-http-monitor.png)
+![Custom Metrics HTTP Monitor](/docs/images/synthetics/custom-metrics-http-monitor.png)
 
 Note that **+ New JSON Path** in the screenshot above.  This lets you extract multiple different metrics.
 
@@ -97,27 +97,27 @@ module.exports = testPage;
 
 Once you have defined your chosen custom metrics either with HTTP or Browser monitor, wait for the monitor to run a few times for the metrics to be recorded and taken into account (you can speed up this process by manually scheduling an on-demand run). Extracted metrics are visible for each run in the run flyout.
 
-![Custom Metrics Flyout](../images/synthetics/custom-metrics-flyout.png)
+![Custom Metrics Flyout](/docs/images/synthetics/custom-metrics-flyout.png)
 
-You can then proceed to chart them using [Chart Builder](../dashboards/chart-builder/) by hovering over the metric and clicking on the **Add to Dashboard** icon. In this example, we'll create a **Time Series Chart** to chart `synthetics.browser.custom.heap.time` metric that we extracted from the Browser Monitor user jurney script sample above. 
+You can then proceed to chart them using [Chart Builder](/docs/dashboards/chart-builder/) by hovering over the metric and clicking on the **Add to Dashboard** icon. In this example, we'll create a **Time Series Chart** to chart `synthetics.browser.custom.heap.time` metric that we extracted from the Browser Monitor user jurney script sample above. 
 
-![Custom Metrics Add to Dashboard](../images/synthetics/custom-metrics-add-to-dashboard.gif)
+![Custom Metrics Add to Dashboard](/docs/images/synthetics/custom-metrics-add-to-dashboard.gif)
 
 After configuring and saving your chart, navigate to the **Dashboards** using the left menu panel, and then select the specific **Dashboard** you chose when creating the chart. 
 
-![Custom Metrics Dashboard](../images/synthetics/custom-metrics-dashboard.gif)
+![Custom Metrics Dashboard](/docs/images/synthetics/custom-metrics-dashboard.gif)
 
 Because monitors run once every several minutes, you might want to navigate to the **Axes** tab on the left side, under the preview of the chart, and then set the **Granularity** to a value which will fit the interval you selected for the monitor in order to produce a nice looking chart.
 
-![Custom Metrics Dashboard](../images/synthetics/custom-metrics-chart-granularity.png)
+![Custom Metrics Dashboard](/docs/images/synthetics/custom-metrics-chart-granularity.png)
 
 You can also create a threshold or anomaly alert on this metric. Let's say that you want to be alerted if the script duration is over two seconds. The first thing you need to do is click on the alert bell icon in the top right corner of the chart.
 
-![Custom Metrics Chart Alert](../images/synthetics/custom-metrics-chart-alert.png)
+![Custom Metrics Chart Alert](/docs/images/synthetics/custom-metrics-chart-alert.png)
 
 After that, set the **Rollup by** field to **max** and set the alert condition to alert you if the metric value is greater than two and you're good to go.
 
-![Custom Metrics New Alert](../images/synthetics/custom-metrics-new-alert.png)
+![Custom Metrics New Alert](/docs/images/synthetics/custom-metrics-new-alert.png)
 
 ___
 
@@ -142,27 +142,27 @@ module.exports = testPage;
 
 The charting and alerting process is identical as in the previous example, and once again you will be able to see the custom metrics you've defined in the **Metrics** dropdown.
 
-![Custom Metrics JSON](../images/synthetics/custom-metrics-json.png)
+![Custom Metrics JSON](/docs/images/synthetics/custom-metrics-json.png)
 
 ## How to add availability as metric in Dashboards
 
-[Dashboards](https://sematext.com/docs/dashboards/) are your central location where you put everything together. Logs, service metrics, infrastructure inventory and processes. They let you see everything in one place. If you want to see any of your monitor’s availability within a Dashboard and compare it with performance metrics that are shipped from services hosting your websites and APIs. Here is how to do it.
+[Dashboards](/docs/dashboards/) are your central location where you put everything together. Logs, service metrics, infrastructure inventory and processes. They let you see everything in one place. If you want to see any of your monitor’s availability within a Dashboard and compare it with performance metrics that are shipped from services hosting your websites and APIs. Here is how to do it.
 
 Availability is shown for each HTTP and Browser monitor within the All Monitors page and Overview pages of monitors.
 
-![All Monitors Availability](../images/synthetics/availability-all-monitors-page.png)
+![All Monitors Availability](/docs/images/synthetics/availability-all-monitors-page.png)
 
-When you want to add monitor availability as a metric to any of your [Dashboards](https://sematext.com/docs/dashboards/), you can use [Chart Builder](../dashboards/chart-builder/)’s  transformation feature to do it. 
+When you want to add monitor availability as a metric to any of your [Dashboards](/docs/dashboards/), you can use [Chart Builder](/docs/dashboards/chart-builder/)’s  transformation feature to do it. 
 
 To do this, navigate to the Dashboards page and click on any of your existing Dashboards or create a new one. Then click on “add component” in the top right corner of the report.
 
-![Add Availability as Component](../images/synthetics/availability-add-component.png)
+![Add Availability as Component](/docs/images/synthetics/availability-add-component.png)
 
-Select the component type you want to add. We will use the Timeseries chart in this example. This will open the [Chart Builder](../dashboards/chart-builder/). 
+Select the component type you want to add. We will use the Timeseries chart in this example. This will open the [Chart Builder](/docs/dashboards/chart-builder/). 
 
 Select a Synthetic App and a monitor, pick ```synthetics.run.passed``` and ```synthetics.run.failed``` as metrics.
 
-![Edit Component](../images/synthetics/availability-edit-component.png)
+![Edit Component](/docs/images/synthetics/availability-edit-component.png)
 
 Within Transformation box enter the expression below:
 
@@ -172,7 +172,7 @@ ifNull(synthetics.run.passed, 1) / (synthetics.run.failed + ifNull(synthetics.ru
 
 Click on save and the time series chart showing availability for the selected monitor will be added to the Dashboard.
 
-![Availability Dashboard](../images/synthetics/availability-added-to-dashboard.png)
+![Availability Dashboard](/docs/images/synthetics/availability-added-to-dashboard.png)
 
 
 

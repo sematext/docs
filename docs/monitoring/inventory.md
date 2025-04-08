@@ -1,15 +1,15 @@
 title: Sematext Inventory Monitoring
 description: Sematext Inventory Monitoring gives you insight into your whole infrastructure automatically based on the applications, containers, servers and general infrastructure you are monitoring.
 
-The [Sematext Agent](../agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host, per-package or per-container-image basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically and effortlessly, without any operational overhead.
+The [Sematext Agent](/docs/agents/sematext-agent) provides a simple and versatile way of gathering machine-related information such as host, VM, or container properties, kernel versions, and installed packages. It presents them on a per-host, per-package or per-container-image basis allowing you not only to view the data but also search and compare different hosts. All of this, in the same place, shipped automatically and effortlessly, without any operational overhead.
 
 The Inventory information is available in the *Inventory* section of the *Infrastructure* tab of your Sematext Cloud account - your main place for servers, packages and container images information.
 
-![Infrastructure Inventory](../images/monitoring/infra-inventory.gif)
+![Infrastructure Inventory](/docs/images/monitoring/infra-inventory.gif)
 
 ## Enabling Inventory Monitoring
 
-Inventory Monitoring is enabled by default in the Sematext Agent. Check out enabling and disabling Inventory Monitoring [here](../agents/sematext-agent/packages/configuration/). 
+Inventory Monitoring is enabled by default in the Sematext Agent. Check out enabling and disabling Inventory Monitoring [here](/docs/agents/sematext-agent/packages/configuration/). 
 
 Make sure to select the [appropriate plan](https://sematext.com/pricing/#infrastructure) to access the Inventory Reports.
 
@@ -53,7 +53,7 @@ The Inventory UI enables you to compare various hosts within your infrastructure
 - Quickly find differences that may be causing performance or compatibility issues
 
 
-![compare hosts](../images/monitoring/inventory-compare-servers.gif)
+![compare hosts](/docs/images/monitoring/inventory-compare-servers.gif)
 
 ### Comparing Packages
 
@@ -63,7 +63,7 @@ The Inventory UI also allows you to compare software packages installed on diffe
 - Verify that all hosts have the latest security updates and patches
 - Identify and resolve dependency issues that might arise due to different package versions
 
-![compare hosts](../images/monitoring/inventory-compare-packages.gif)
+![compare hosts](/docs/images/monitoring/inventory-compare-packages.gif)
 
 ### Grouping Hosts By Installed Packages
 
@@ -89,7 +89,7 @@ Provides quick insight into how unified your container images are by showing:
 - Number of different container image versions
 - Total number of container images
 
-![container images](../images/monitoring/infra-inventory-containers.gif)
+![container images](/docs/images/monitoring/infra-inventory-containers.gif)
 
 ### Overview
 
@@ -97,7 +97,7 @@ The Container Images overview provides a view of all container images across hos
 
 ## How does it Work?
 
-The [Sematext Agent](../agents/sematext-agent) tracks all changes done on the file system. Such changes are displayed in the Inventory Monitoring UI. Package installs, upgrades and removals are also captured. They are displayed as Events. The following types of packages are supported:
+The [Sematext Agent](/docs/agents/sematext-agent) tracks all changes done on the file system. Such changes are displayed in the Inventory Monitoring UI. Package installs, upgrades and removals are also captured. They are displayed as Events. The following types of packages are supported:
 
 - Node.js (e.g. when using NPM package manager)
 - Python (e.g. when using PIP package manager)
@@ -108,7 +108,7 @@ The Agent checks the state of packages on machines and containers where it's run
 
 ## Gathered Data
 
-The [Sematext Agent](../agents/sematext-agent) gathers the following data about the system:
+The [Sematext Agent](/docs/agents/sematext-agent) gathers the following data about the system:
 
 - OS version
 - Kernel version

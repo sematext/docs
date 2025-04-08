@@ -10,7 +10,7 @@ The Logagent container can be configured through the following environment varia
     * For Elasticsearch `https://elasticserch-server-name:9200`.
 
 * **LOGS_TOKEN**: The index to ship logs to. For [Sematext](https://sematext.com/) use the Logs App Token.
-* **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](https://sematext.com/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre> to specify a log source name or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. Please refer to Logagent command line arguments in the [Logagent Documentation](https://sematext.com/docs/logagent/cli-parameters/)
+* **LOGAGENT_ARGS**: Additional [command line arguments for Logagent](/docs/logagent/cli-parameters/) <pre>LOGAGENT_ARGS="-n httpd"</pre> to specify a log source name or <pre>LOGAGENT_ARGS="-u 514"</pre> to act as syslog server. Please refer to Logagent command line arguments in the [Logagent Documentation](/docs/logagent/cli-parameters/)
 
 * **LOG_GLOB**: Semicolon-separated list of file globs 
     
@@ -20,7 +20,7 @@ The Logagent container can be configured through the following environment varia
     
         -v /var/log:/mylogs
     
-    This feature is developed with the Glob module. [Here's a guide](./how-to-use-glob-patterns-to-exclude-logs/) on how to use Glob patterns.
+    This feature is developed with the Glob module. [Here's a guide](/docs/logagent/how-to-use-glob-patterns-to-exclude-logs) on how to use Glob patterns.
 
 * **-v /var/run/docker.sock:/var/run/docker.sock** - Collect container logs by mounting the docker socket (mandatory)
 
@@ -178,7 +178,7 @@ The Logagent container can be configured through the following environment varia
 #### Set Log Patterns
 
 Logagent supports various log formats defined in [patterns.yml](https://github.com/sematext/logagent-js/blob/master/patterns.yml) file.
-The [Log Parser Patterns](https://sematext.com/docs/logagent/parser/) can be customized by proving your YAML file.
+The [Log Parser Patterns](/docs/logagent/parser/) can be customized by proving your YAML file.
 
 <table>
 <thead>

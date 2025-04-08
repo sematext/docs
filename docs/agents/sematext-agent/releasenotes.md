@@ -1,7 +1,7 @@
 title: Sematext Agent Release Notes
 description: Features and improvements releases for the Sematext Agent
 
-Sematext Agent is a dynamic project with frequent releases. This Changelog contains only important changes, new features, and critical bug fixes. To install or upgrade the Sematext Agent, make sure to follow the Sematext Agent Installation instructions provided in Sematext Cloud and refer to our [FAQ section](https://sematext.com/docs/monitoring/spm-faq/#agent-updating) for further assistance on agent updating.
+Sematext Agent is a dynamic project with frequent releases. This Changelog contains only important changes, new features, and critical bug fixes. To install or upgrade the Sematext Agent, make sure to follow the Sematext Agent Installation instructions provided in Sematext Cloud and refer to our [FAQ section](/docs/monitoring/spm-faq/#agent-updating) for further assistance on agent updating.
 
 <!-- Template:
 
@@ -84,7 +84,7 @@ Date: July 30, 2024
 
 ### New Features
 
-- **Custom Logs Support**: Sematext Agent now supports configuring log shipping through a YAML file, `custom-logs.yml`. This feature allows users to specify log file locations and custom parsing rules, which is useful for log files not discovered automatically or when custom log parsing rules are needed. This release only includes support for Linux (baremetal). Support for Windows, Kubernetes, and Docker is coming soon. For more information, please refer to [Custom Logs Shipping](https://sematext.com/docs/agents/sematext-agent/custom-logs) docs.
+- **Custom Logs Support**: Sematext Agent now supports configuring log shipping through a YAML file, `custom-logs.yml`. This feature allows users to specify log file locations and custom parsing rules, which is useful for log files not discovered automatically or when custom log parsing rules are needed. This release only includes support for Linux (baremetal). Support for Windows, Kubernetes, and Docker is coming soon. For more information, please refer to [Custom Logs Shipping](/docs/agents/sematext-agent/custom-logs) docs.
 
 ## Version 3.5.0
 
@@ -105,7 +105,7 @@ Date: May 15, 2024
 
 ### New Features
 
-- [**Windows Support**](https://sematext.com/docs/agents/sematext-agent/windows-installation/): We are excited to announce that Sematext Agent now supports monitoring Windows hosts. The Sematext Agent can collect a wide range of metrics about your Windows host, including CPU, memory, disk, network, and processes.
+- [**Windows Support**](/docs/agents/sematext-agent/windows-installation/): We are excited to announce that Sematext Agent now supports monitoring Windows hosts. The Sematext Agent can collect a wide range of metrics about your Windows host, including CPU, memory, disk, network, and processes.
 
 ### Improvements
 
@@ -159,7 +159,7 @@ Date: January 8, 2024
 
 ### Bug Fixes
 
-- Addressed a bug that was preventing the Sematext Agent from spawning monitoring [App Agent](https://sematext.com/docs/agents/sematext-agent/app-agent/) pods in Google Kubernetes Engine (GKE) environments.
+- Addressed a bug that was preventing the Sematext Agent from spawning monitoring [App Agent](/docs/agents/sematext-agent/app-agent/) pods in Google Kubernetes Engine (GKE) environments.
 
 ## Version 3.2.1
 
@@ -182,8 +182,8 @@ Date: October 19, 2023
 
 ### New Features
 
-- Kubernetes Jobs and CronJobs monitoring: We introduce metrics collection for Kubernetes Jobs and CronJobs. You can check all supported Job and CronJob metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#cronjob-overview-metrics).
-- Kubernetes Controller Manager monitoring: We now support the collection of metrics from kube-controller. You can check all supported kube-controller metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#kube-controller-metrics).
+- Kubernetes Jobs and CronJobs monitoring: We introduce metrics collection for Kubernetes Jobs and CronJobs. You can check all supported Job and CronJob metrics in [this wiki](/docs/integration/kubernetes/#cronjob-overview-metrics).
+- Kubernetes Controller Manager monitoring: We now support the collection of metrics from kube-controller. You can check all supported kube-controller metrics in [this wiki](/docs/integration/kubernetes/#kube-controller-metrics).
 - Kubernetes Pod labels: We have added support for collecting metrics related to Kubernetes Pod Labels, allowing for more in-depth monitoring of your pods.
 - MySQL General Logs support: In this update, we introduce support for parsing MySQL General Logs.
 
@@ -244,7 +244,7 @@ Date: August 24, 2023
 - We've fine-tuned data collection in the Kubernetes monitoring integration, resulting in improved performance and efficiency.
 - Improved discovery for ElasticSearch integration: We have enhanced the ElasticSearch integration by excluding the unsupported `.log` files. Now, Sematext Agent will only discover and support `.json` files for ElasticSearch integration.
 - Enriched Vector diagnostics information for baremetal, Kubernetes, and Docker setups.
-- Introducing unified runtime metrics to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You can check all supported runtime metrics in [this wiki](https://sematext.com/docs/integration/kubernetes/#runtime-metrics).
+- Introducing unified runtime metrics to provide a comprehensive view of system performance in the Kubernetes monitoring integration. You can check all supported runtime metrics in [this wiki](/docs/integration/kubernetes/#runtime-metrics).
 
 ### Bug Fixes
 
@@ -258,7 +258,7 @@ Date: July 25, 2023
 
 ### New Features
 
-- [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](https://sematext.com/docs/integration/kubernetes/) for details.
+- [**Kubernetes Components**](https://kubernetes.io/docs/concepts/overview/components/) monitoring integration: We are excited to announce that Sematext Agent now supports monitoring of critical Kubernetes components, including **API Server**, **CoreDNS**, **kube-proxy**, **kubelet**, **Scheduler**, and **Etcd**. Gain deeper insights into your Kubernetes cluster's performance with this powerful integration. Check out [Kubernetes Monitoring Integration](/docs/integration/kubernetes/) for details.
 - Varnish Cache logs parsing support: With this update, Sematext Agent can now parse fields from your Varnish Cache log messages. Stay tuned for the upcoming release of Varnish Cache logs integration in Sematext Cloud, enhancing your logging experience further.
 
 ### Improvements
@@ -305,11 +305,11 @@ After updating the Helm chart, follow the agent upgrade steps from Sematext Clou
 
 In Kubernetes, the `hostNetwork` is a configuration option that allows a container to share the network namespace of its host node. Sematext Agent requires `hostNetwork: true` setting to monitor the control plane components. By default, the `hostNetwork` setting is set to `true` starting from version 3.0.0 of Sematext Agent.
 
-If you want to turn off `hostNetwork` access, check [our docs about hostNetwork](https://sematext.com/docs/agents/sematext-agent/kubernetes/hostnetwork/).
+If you want to turn off `hostNetwork` access, check [our docs about hostNetwork](/docs/agents/sematext-agent/kubernetes/hostnetwork/).
 
 #### Troubleshooting
 
-For any errors, check our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/).
+For any errors, check our [Sematext Monitoring FAQ](/docs/monitoring/spm-faq/).
 
 ## Version 2.3.0
 
@@ -321,7 +321,7 @@ Date: June 6, 2023
 
 ### Improvements
 
-- Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification. For details, check [our docs about tags](https://sematext.com/docs/tags/common-schema/#container-tags).
+- Improved container fields: Sematext Agent now provides more comprehensive fields for containers in Kubernetes. We have introduced the missing `container.type` field, allowing for better categorization of containers. Additionally, we have added the new `container.image.tag` field, providing valuable information about container images for improved management and identification. For details, check [our docs about tags](/docs/tags/common-schema/#container-tags).
 
 ### Bug Fixes
 

@@ -1,7 +1,7 @@
 title: Restarting/stopping the Sematext Agent
 description: Info about how to restart/stop the Sematext Agent
 
-Since Sematext Agent can be [installed](installation) in different environments, there are different ways in which it can be restarted
+Since Sematext Agent can be [installed](/docs/agents/sematext-agent/installation) in different environments, there are different ways in which it can be restarted
 or stopped.
 
 ## Linux
@@ -22,7 +22,7 @@ To remove the agent, run distribution-specific command to remove the sematext-ag
 
 ## Windows
 
-Check the Windows installation page [for starting, stoping or restarting Sematext Agent in Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/#how-to-start-stop-restart-sematext-agent).
+Check the Windows installation page [for starting, stoping or restarting Sematext Agent in Windows](/docs/agents/sematext-agent/windows-installation/#how-to-start-stop-restart-sematext-agent).
 
 ## Docker
 

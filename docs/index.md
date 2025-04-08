@@ -15,7 +15,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     Hassle-free log monitoring & analysis
     
-    [:octicons-arrow-right-24: Learn more](logs/)
+    [:octicons-arrow-right-24: Learn more](/docs/logs)
 
 -   :fontawesome-solid-chart-line:{ .lg .middle .monitoring-icon } __Monitoring__
 
@@ -23,7 +23,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     Map and monitor your whole infrastructure in real-time
     
-    [:octicons-arrow-right-24: Learn more](monitoring/)
+    [:octicons-arrow-right-24: Learn more](/docs/monitoring)
 
 -   :fontawesome-solid-gauge-high:{ .lg .middle .experience-icon } __Experience__
 
@@ -31,7 +31,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     Frontend performance and user experience monitoring
     
-    [:octicons-arrow-right-24: Learn more](experience/)
+    [:octicons-arrow-right-24: Learn more](/docs/experience)
 
 -   :fontawesome-solid-vial:{ .lg .middle .synthetics-icon } __Synthetics__
 
@@ -39,7 +39,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     Monitor APIs, websites and user journeys
     
-    [:octicons-arrow-right-24: Learn more](synthetics/)
+    [:octicons-arrow-right-24: Learn more](/docs/synthetics)
 
 -   :fontawesome-solid-bell:{ .lg .middle .alerts-icon } __Alerts__
 
@@ -47,7 +47,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     Get notified via Slack, PagerDuty, WebHooks, email, etc.
     
-    [:octicons-arrow-right-24: Learn more](alerts/)
+    [:octicons-arrow-right-24: Learn more](/docs/alerts)
 
 -   :fontawesome-solid-calendar-check:{ .lg .middle .events-icon } __Events__
 
@@ -55,7 +55,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     Capture builds, deployments, restarts, failures & other events
     
-    [:octicons-arrow-right-24: Learn more](events/)
+    [:octicons-arrow-right-24: Learn more](/docs/events)
 
 -   :fontawesome-solid-gauge:{ .lg .middle .dashboards-icon } __Dashboards__
 
@@ -63,7 +63,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     Add new reports or customize pre-built dashboards
     
-    [:octicons-arrow-right-24: Learn more](dashboards/)
+    [:octicons-arrow-right-24: Learn more](/docs/dashboards)
 
 -   :fontawesome-solid-tags:{ .lg .middle .tags-icon } __Tags__
 
@@ -71,7 +71,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     Better filtering and grouping in dynamic infrastructures
     
-    [:octicons-arrow-right-24: Learn more](tags/)
+    [:octicons-arrow-right-24: Learn more](/docs/tags)
 
 -   :fontawesome-solid-users:{ .lg .middle .team-icon } __Team__
 
@@ -79,7 +79,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     App vs. Account access, team account, inviting others, setting roles
     
-    [:octicons-arrow-right-24: Learn more](team/)
+    [:octicons-arrow-right-24: Learn more](/docs/team)
 
 -   :fontawesome-solid-server:{ .lg .middle .fleet-icon } __Fleet & Discovery__
 
@@ -87,7 +87,7 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     Agent fleet, discovery & automatic setup of services and logs
     
-    [:octicons-arrow-right-24: Learn more](fleet/)
+    [:octicons-arrow-right-24: Learn more](/docs/fleet)
 
 </div>
 
@@ -111,7 +111,7 @@ Stay informed about the most recent developments in our product and agent releas
     
     Learn about the latest Sematext Agent features
     
-    [:octicons-arrow-right-24: Learn more](agents/sematext-agent/releasenotes/)
+    [:octicons-arrow-right-24: Learn more](/docs/agents/sematext-agent/releasenotes)
 
 </div>
 
@@ -127,7 +127,7 @@ With Synthetics you can monitor your website uptime, API performance and availab
 
 Sematext Cloud is a SaaS available in multiple locations, so you can choose where your data is stored. Sematext Enterprise is a non-SaaS version you can deploy on your own infrastructure.
 
-Data shipped to Sematext is grouped into [Apps](guide/app-guide/). [Integrations](integration/) are ways to monitor, collect logs, and other data from numerous different types of software and tools, as well as deliver data to external systems, such as alert notifications.
+Data shipped to Sematext is grouped into [Apps](/docs/guide/app-guide). [Integrations](/docs/integration) are ways to monitor, collect logs, and other data from numerous different types of software and tools, as well as deliver data to external systems, such as alert notifications.
 
 ## Integrations
 
@@ -169,7 +169,7 @@ We also provide you with easy to install Agents that collect data about your sof
     
     Our main agent for collecting infrastructure and application metrics
     
-    [:octicons-arrow-right-24: Learn more](agents/sematext-agent/)
+    [:octicons-arrow-right-24: Learn more](/docs/agents/sematext-agent)
 
 -   :fontawesome-brands-node-js:{ .lg .middle .node-icon } __Node.js Agent__
 
@@ -177,7 +177,7 @@ We also provide you with easy to install Agents that collect data about your sof
     
     Monitoring for Node.js applications
     
-    [:octicons-arrow-right-24: Learn more](agents/node-agent/)
+    [:octicons-arrow-right-24: Learn more](/docs/agents/node-agent)
 
 -   :fontawesome-solid-window-maximize:{ .lg .middle .browser-icon } __Browser SDK__
 
@@ -185,7 +185,7 @@ We also provide you with easy to install Agents that collect data about your sof
     
     Real user monitoring for web applications
     
-    [:octicons-arrow-right-24: Learn more](agents/browser/)
+    [:octicons-arrow-right-24: Learn more](/docs/agents/browser)
 
 -   :fontawesome-solid-mobile-screen:{ .lg .middle .mobile-icon } __Mobile SDK__
 
@@ -193,11 +193,11 @@ We also provide you with easy to install Agents that collect data about your sof
     
     Real user monitoring for mobile applications
     
-    [:octicons-arrow-right-24: Learn more](agents/mobile/)
+    [:octicons-arrow-right-24: Learn more](/docs/agents/mobile)
 
 </div>
 
-But, also an open [API](api/) you can use.
+But, also an open [API](/docs/api) you can use.
 
 ---
 

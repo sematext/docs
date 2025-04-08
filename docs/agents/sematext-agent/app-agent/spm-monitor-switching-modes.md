@@ -4,7 +4,7 @@ description: Switching modes feature allows App Agent to be switched from In-Pro
 ## From In-Process to Standalone
 
 1. Adjust your service startup scripts by removing the javaagent
-definition and adding parameters described in [standalone mode](spm-monitor-standalone)
+definition and adding parameters described in [standalone mode](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone)
 
 2. Edit **properties** file of your system found in
 /spm/spm-monitor/conf/ directory (in case you are using Hadoop or HBase
@@ -13,7 +13,7 @@ which you want to change the mode). Set:
 
     - **SPM\_MONITOR\_IN\_PROCESS**="false"
     - **SPM\_MONITOR\_JMX\_PARAMS** should be adjusted according to
-      instructions in [Java App Agent Standalone](spm-monitor-standalone)
+      instructions in [Java App Agent Standalone](/docs/agents/sematext-agent/app-agent/spm-monitor-standalone)
 
 3.  Restart Sematext Agent:
 

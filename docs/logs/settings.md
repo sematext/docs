@@ -4,12 +4,12 @@ description: Learn more about how Sematext Logs works, all settings and configur
 The settings include:
 
   - inviting new users to your App
-  - [authorizing public IPs to send data to your app via syslog](../logs/authorizing-ips-for-syslog)
+  - [authorizing public IPs to send data to your app via syslog](/docs/logs/authorizing-ips-for-syslog)
   - adjusting data retention time, daily volume, and limits
   - [changing your App's plan](../logs/faq/#plans-prices)
   - checking how much data is, or has been shipped to your App
 
-  ![Sematext Logs App Settings](../images/guide/logs/logs-app-settings.png)
+  ![Sematext Logs App Settings](/docs/images/guide/logs/logs-app-settings.png)
 
 
 ## Side Navigation
@@ -18,35 +18,35 @@ The persistent region on the left that can be collapsed, is used to easily switc
 
 Side navigation top level sections for infrastructure and application performance monitoring, log management, and real user monitoring:
 
-- [Discovery](https://sematext.com/docs/logs/discovery/intro/)
-- [Infrastructure](https://sematext.com/docs/monitoring/infrastructure/)
-- [Monitoring](https://sematext.com/docs/monitoring/)
-- [Logs](https://sematext.com/docs/logs/)
-- [Synthetics](https://sematext.com/docs/synthetics/)
-- [Experience](https://sematext.com/docs/experience/)
-- [Alerts](https://sematext.com/docs/experience/)
-- [Events](https://sematext.com/docs/events/)
-- [Dashboards](https://sematext.com/docs/dashboards/)
+- [Discovery](/docs/logs/discovery/intro/)
+- [Infrastructure](/docs/monitoring/infrastructure/)
+- [Monitoring](/docs/monitoring/)
+- [Logs](/docs/logs/)
+- [Synthetics](/docs/synthetics/)
+- [Experience](/docs/experience/)
+- [Alerts](/docs/experience/)
+- [Events](/docs/events/)
+- [Dashboards](/docs/dashboards/)
 
 Side navigation sections for team features and settings:
 
-- [Team](https://sematext.com/docs/team/)
+- [Team](/docs/team/)
 - Settings
 
-![](../images/guide/logs/side-navigation_2.png)
+![](/docs/images/guide/logs/side-navigation_2.png)
 
 ## App Actions
 
 The Logs App view allows for easy interaction between various App settings.
 From the App Actions drop down menu, the horizontal elipsis icon shows your App options and lets you open various App-specific function, like, **App Settings, alert rules, connect App, invite team members, ship logs, whitelist IPs, archive logs, see usage, and transfer App ownership.**
 
-![](../images/guide/logs/logs-app-actions.png)
+![](/docs/images/guide/logs/logs-app-actions.png)
 
 ## Report Selector
 
 Once you create a Logs App, and start shipping data, you will get a **default Report created for you named Explore**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
 
-![](../images/guide/logs/report-selector.png)
+![](/docs/images/guide/logs/report-selector.png)
 
 ### Report Settings
  - **Report Actions** - Your customized logs report can be better described using meta name and description, and you can assign a unique URL Alias to identify that report.
@@ -56,14 +56,14 @@ Once you create a Logs App, and start shipping data, you will get a **default Re
 
 Alerts and Logs are integrated into a single reports pane, and used to search logs, create alerts for anomalies, and much more. 
 
-Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](https://sematext.com/docs/logs/search-syntax/) used by Google.
+Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google.
 
-You can also create and integrate [alerts](https://sematext.com/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](https://sematext.com/docs/integration/alerts-hipchat-integration/), [Slack](https://sematext.com/docs/integration/alerts-slack-integration/), [Big Panda](https://sematext.com/docs/integration/alerts-bigpanda-integration/), [PagerDuty](https://sematext.com/docs/integration/alerts-pagerduty-integration/), [VictorOps](https://sematext.com/docs/integration/alerts-victorops-integration/), [OpsGenie](https://sematext.com/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
+You can also create and integrate [alerts](/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](/docs/integration/alerts-hipchat-integration/), [Slack](/docs/integration/alerts-slack-integration/), [Big Panda](/docs/integration/alerts-bigpanda-integration/), [PagerDuty](/docs/integration/alerts-pagerduty-integration/), [VictorOps](/docs/integration/alerts-victorops-integration/), [OpsGenie](/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
 
 ## Integrations
 
 You will need to install **a Log Shipper or Library** so data can be shipped to your Logs App. This section will guide you through installing and running a Log Shipper.
 	
-Please refer to the [Integrations](https://sematext.com/docs/integration/) documentation pages for particular tech you wish to monitor. Learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS s3, and how to integrate log management with log shippers. You'll find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud there.
+Please refer to the [Integrations](/docs/integration/) documentation pages for particular tech you wish to monitor. Learn more about how to monitor various programming languages, operating systems, containers (Docker, Kubernetes, Mesos), Cloud IaaS / PaaS services, iOS, Android, AWS EC2, AWS s3, and how to integrate log management with log shippers. You'll find detailed information on how to install and configure different agents required to start sending your logs and metrics data to Sematext Cloud there.
 
 The next section describes the Logs reports & components and help you discover how to add new components, correlate your logs and events with your Logs App, do report specific actions, connect your Apps and more.

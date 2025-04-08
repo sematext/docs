@@ -218,7 +218,7 @@ Then you run:
 docker stack deploy -c docker-compose.yml <my_app>
 ```
 
-_[Read more](../permission-requirements.md#bind-mounts) about why Sematext Agent needs access to host files and directories._
+_[Read more](/docs/agents/sematext-agent/permission-requirements/#bind-mounts) about why Sematext Agent needs access to host files and directories._
 
 ### Updating/Upgrading Sematext Agent on Docker Swarm / Enterprise
 
