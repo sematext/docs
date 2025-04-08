@@ -1,183 +1,102 @@
+---
 title: Sematext Experience Integrations
-descriptions: The Sematext Experience integrations cover all types of websites and all major SPA frameworks. 
+description: The Sematext Experience integrations cover all types of websites and all major SPA frameworks.
+---
 
-<div class="mdl-grid integrations">
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#angular">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/angular.png" alt="Angular" title="Angular" style="padding-top:30px;height:115px;">
-						</div>
-						<div class="side back">
-							<h5>Angular</h5>Full support for single-page applications built with the Angular framework.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#react">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/react.png" alt="React" title="React" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>React</h5>Full support for single-page applications built with the React library.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#vuejs">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/vuejs.png" alt="Vue.js" title="Vue.js" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Vue.js</h5>Full support for single-page applications built with Vue.js.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#ember">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/ember.png" alt="Ember" title="Ember" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Ember</h5>Full support for single-page applications built with the Ember framework.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-  <div class="mdl-cell mdl-cell--4-col">
-		<a href="#static-websites">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/static.png" alt="Static Websites" title="Static Websites" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Static Websites</h5>Full support for all types of static websites.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-  <div class="mdl-cell mdl-cell--4-col">
-		<a href="#server-side-rendered-websites">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/server.png" alt="Server-side rendered websites" title="Server-side rendered websites" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Server-side rendered websites</h5>Full support for all types of SSR websites and applications.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#vercel">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/vercel.png" alt="Vercel" title="Vercel" style="padding-top:12px;height:145px;width:300px;">
-						</div>
-						<div class="side back">
-							<h5>Vercel</h5>Full support for real user monitoring metrics for all types of websites hosted on Vercel.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#nextjs">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side center">
-              <svg width="164" height="80" viewBox="0 0 148 90" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" style="transform:translateX(4%);shape-rendering:auto"><path d="M34.992 23.495h27.855v2.219H37.546v16.699h23.792v2.219H37.546v18.334h25.591v2.219H34.992v-41.69zm30.35 0h2.96l13.115 18.334 13.405-18.334L113.055.207 83.1 43.756l15.436 21.429H95.46L81.417 45.683 67.316 65.185h-3.018L79.85 43.756 65.343 23.495zm34.297 2.219v-2.219h31.742v2.219h-14.623v39.47h-2.554v-39.47H99.64zM.145 23.495h3.192l44.011 66.003L29.16 65.185 2.814 26.648l-.116 38.537H.145v-41.69zm130.98 38.801c-.523 0-.914-.405-.914-.928 0-.524.391-.929.913-.929.528 0 .913.405.913.929 0 .523-.385.928-.913.928zm2.508-2.443H135c.019.742.56 1.24 1.354 1.24.888 0 1.391-.535 1.391-1.539v-6.356h1.391v6.362c0 1.808-1.043 2.849-2.77 2.849-1.62 0-2.732-1.01-2.732-2.556zm7.322-.08h1.379c.118.853.95 1.395 2.149 1.395 1.117 0 1.937-.58 1.937-1.377 0-.685-.521-1.097-1.708-1.377l-1.155-.28c-1.62-.38-2.36-1.166-2.36-2.487 0-1.602 1.304-2.668 3.26-2.668 1.82 0 3.15 1.066 3.23 2.58h-1.354c-.13-.828-.85-1.346-1.894-1.346-1.1 0-1.832.53-1.832 1.34 0 .642.472 1.01 1.64 1.284l.987.243c1.838.43 2.596 1.178 2.596 2.53 0 1.72-1.33 2.799-3.453 2.799-1.987 0-3.323-1.029-3.422-2.637z" fill="#000" fill-rule="nonzero"></path></svg>
-						</div>
-						<div class="side back">
-							<h5>Next.js</h5>Full support for real user monitoring metrics for all websites built using the Next.js React framework.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#google-tag-manager">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/google-tag-manager.svg" alt="Google Tag Manager" title="Google Tag Manager" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Google Tag Manager</h5>Integrate Experience using Google Tag Manager.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#wordpress">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/wordpress-logo.svg" alt="WordPress" title="WordPress" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>WordPress</h5>Add Experience to a WordPress site.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="mdl-cell mdl-cell--4-col">
-		<a href="#micro-frontend">
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="flip-card-container">
-					<div class="flip-card">
-						<div class="side">
-							<img src="../../images/integrations/micro-frontend.png" alt="microfrontend" title="Micro Frontend" style="padding-top:40px;height:110px;">
-						</div>
-						<div class="side back">
-							<h5>Micro Frontend</h5>Add Experience to micro frontend based web applications.
-						</div>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
+# Sematext Experience Integrations
+
+The Sematext Experience integrations cover all types of websites and all major SPA frameworks.
+
+## Supported Frameworks & Platforms
+
+<div class="notification-grid">
+  <a href="#angular" class="notification-card">
+    <img src="../../images/integrations/angular.png" alt="Angular">
+    <div class="notification-content">
+      <h3>Angular</h3>
+      <p>Full support for single-page applications built with the Angular framework.</p>
+    </div>
+  </a>
+
+  <a href="#react" class="notification-card">
+    <img src="../../images/integrations/react.png" alt="React">
+    <div class="notification-content">
+      <h3>React</h3>
+      <p>Full support for single-page applications built with the React library.</p>
+    </div>
+  </a>
+
+  <a href="#vuejs" class="notification-card">
+    <img src="../../images/integrations/vuejs.png" alt="Vue.js">
+    <div class="notification-content">
+      <h3>Vue.js</h3>
+      <p>Full support for single-page applications built with Vue.js.</p>
+    </div>
+  </a>
+
+  <a href="#ember" class="notification-card">
+    <img src="../../images/integrations/ember.png" alt="Ember">
+    <div class="notification-content">
+      <h3>Ember</h3>
+      <p>Full support for single-page applications built with the Ember framework.</p>
+    </div>
+  </a>
+
+  <a href="#static-websites" class="notification-card">
+    <img src="../../images/integrations/static.png" alt="Static Websites">
+    <div class="notification-content">
+      <h3>Static Websites</h3>
+      <p>Full support for all types of static websites.</p>
+    </div>
+  </a>
+
+  <a href="#server-side-rendered-websites" class="notification-card">
+    <img src="../../images/integrations/server.png" alt="Server-side rendered websites">
+    <div class="notification-content">
+      <h3>Server-side Rendering</h3>
+      <p>Full support for all types of SSR websites and applications.</p>
+    </div>
+  </a>
+
+  <a href="#vercel" class="notification-card">
+    <img src="../../images/integrations/vercel.png" alt="Vercel">
+    <div class="notification-content">
+      <h3>Vercel</h3>
+      <p>RUM metrics for all websites hosted on Vercel.</p>
+    </div>
+  </a>
+
+  <a href="#nextjs" class="notification-card">
+    <img src="../../images/integrations/nextjs.png" alt="Next.js">
+    <div class="notification-content">
+      <h3>Next.js</h3>
+      <p>Support for websites built using the Next.js React framework.</p>
+    </div>
+  </a>
+
+  <a href="#google-tag-manager" class="notification-card">
+    <img src="../../images/integrations/google-tag-manager.svg" alt="Google Tag Manager">
+    <div class="notification-content">
+      <h3>Google Tag Manager</h3>
+      <p>Integrate Experience using Google Tag Manager.</p>
+    </div>
+  </a>
+
+  <a href="#wordpress" class="notification-card">
+    <img src="../../images/integrations/wordpress-logo.svg" alt="WordPress">
+    <div class="notification-content">
+      <h3>WordPress</h3>
+      <p>Add Experience to a WordPress site.</p>
+    </div>
+  </a>
+
+  <a href="#micro-frontend" class="notification-card">
+    <img src="../../images/integrations/micro-frontend.png" alt="Micro Frontend">
+    <div class="notification-content">
+      <h3>Micro Frontend</h3>
+      <p>Add Experience to micro frontend based web applications.</p>
+    </div>
+  </a>
 </div>
 
 All of the integrations require adding and [configuring the Experience script](./getting-started). However, single-page applications require one more configuration step to register route changes.
@@ -377,7 +296,7 @@ After you create an Experience App, the script installation page will be display
   src="../../images/integrations/experience-instructions.png"
 />
 
-Follow the instructions from the first two steps and add the scripts to each of your individual applications’ `index.html` file just before the `<head>` section ends.
+Follow the instructions from the first two steps and add the scripts to each of your individual applications' `index.html` file just before the `<head>` section ends.
 
 The next step involves adding history tracking to your main component where the routing of your application happens.
 Open the file where you have the route object and add `import { createBrowserHistory as createHistory } from 'history';` as the last line of the import section.
@@ -438,4 +357,3 @@ export default function MainLayout() {
 }
 ```
 You are all set! In a few minutes you should be able to see the load routes in your Experience App, get results for the remotely loaded components and track the metrics of individual application parts.
-
