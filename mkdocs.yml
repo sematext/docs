@@ -113,7 +113,7 @@ nav:
       - Element Timing: experience/element-timing.md
       - Web Vitals: experience/webvitals.md
       - Browser Memory: experience/browser-memory.md
-      - Integrations: experience/integrations.md
+      - Framework Integrations: experience/integrations.md
       - Browser SDK: agents/browser.md
       - Sampling: experience/sampling.md
       - Weekly Health Reports: experience/weekly-health-reports.md
@@ -237,19 +237,7 @@ nav:
           - Authorizing IPs for Syslog: logs/authorizing-ips-for-syslog.md
           - JSON: logs/json.md
       - Frontend & User Experience:
-        - Angular: experience/integrations.md
-        - Ember: experience/integrations.md
-        - Google Tag Manager: experience/integrations.md
-        - Micro Frontend: experience/integrations.md
-        - Next.js: experience/integrations.md
-        - React: experience/integrations.md
-        - Server-side Rendered Websites: experience/integrations.md
-        - Static Websites: experience/integrations.md
-        - Vercel Experience: experience/integrations.md
-        - Vercel Synthetics: integration/vercel-synthetics-integration.md
-        - Vercel Logs: integration/vercel-logs-integration.md
-        - Vue.js: experience/integrations.md
-        - Wordpress: experience/integrations.md
+        - Framework Integrations: experience/integrations.md
       - Mobile Apps:
         - Mobile Apps Logs: integration/mobile-apps-logs.md
       - Notification Hooks:
@@ -472,7 +460,7 @@ nav:
 
 theme:
   name: material
-    #:custom_dir: 'mkdocs-material-custom'
+  custom_dir: 'mkdocs-material-overrides'
   palette:
     # Dark Mode
     - scheme: slate
@@ -498,10 +486,10 @@ theme:
     #logo: 'images/logo-full.svg'
   features:
     - navigation.footer
+    #- navigation.sections
+    - content.tabs.link
 
-  # OTIS - GET THIS FROM SOMEWHERE
-  #favicon: assets/favicon.ico
-  #favicon: mkdocs-material-custom.ORIG/assets/images/favicon.png
+  favicon: img/favicon.ico
 
 extra:
   social:
@@ -518,26 +506,28 @@ extra:
     - icon: 'fontawesome/solid/rss'
       link: 'https://feeds.feedburner.com/SematextBlog'
 
-# OTIS - THIS WAS IN OLD mkdocs.yml. SOMETHING IN THERE OVERRIDES header COLOUR AND WHO KNOWS WHAT ELSE
 extra_css:
-  # OTIS - NEEDED FOR tabs like https://sematext.com/new-docs/agents/sematext-agent/linux-installation/
-  # BUT WHY IS EXTRA STUFF NEEDED FOR THIS?
-  # AH, MAYBE BECAUSE WE USE THIS: https://github.com/sematext/docs/edit/master/docs/agents/sematext-agent/linux-installation.md
-  # INSTEAD OF USING THIS APPROACH: https://jameswillett.dev/getting-started-with-material-for-mkdocs/#content-tabs
-
-  # OH, BUT SOMETHING IN THIS EXTRA CSS OVERRIDES STYLE FOR THE HEADER
   - 'stylesheets/extra.css'
-    #  - 'stylesheets/code-tabs.css'
 
-    #extra_javascript:
-    #- 'javascripts/extra.js'
+#extra_javascript:
+#  - 'javascripts/extra.js'
 
-repo_url: https://github.com/sematext/docs/
-edit_uri: edit/master/docs/
+plugins:
+  - search
+
+# Enabling the following fields will add a GitHub icon to the header. 
+# It's also supposed to enable the "Edit this page" link but it doesn't seem to work. 
+# That's why we implemented it in the template (mkdocs-material-overrides/main.html).
+#
+#repo_name: sematext/docs
+#repo_url: https://github.com/sematext/docs/
+#edit_uri: edit/master/docs/
 
 copyright: Copyright &copy; Sematext Group, Inc.
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   # OTIS - MAYBE NOT NEEDED? MAYBE THAT NEW highlight STUFF BELOW IS THE WAY TO GO
