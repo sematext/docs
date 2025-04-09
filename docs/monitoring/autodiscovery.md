@@ -2,7 +2,7 @@ title: Sematext Service Discovery
 description: Sematext Autodiscovery Monitoring automatically scans for services that can be monitored using Sematext Agent and, depending on your configuration, automatically sets up monitoring agents. 
 
 The centerpiece of Service Discovery is [Sematext Agent](/docs/agents/sematext-agent). When Sematext Agent is installed and running on a server/node/instance it scans for services that can be monitored by Sematext
-[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It also [discovers logs](/docs/logs/discovery/intro/) you can ship to Sematext and monitor.
+[supported integrations](/docs/monitoring/autodiscovery/#which-integrations-allow-autodiscovery). It also [discovers logs](/docs/logs/discovery/intro/) you can ship to Sematext and monitor.
 
 The discovered services and logs are displayed under `Fleet & Discovery > Discovery > Services`.  From there, one can set up both monitoring and log shipping via the UI without any additional installation or configuration.  Moreover, this is where auto-monitoring of supported integrations can be enabled, allowing Sematext Agent to automatically start monitoring newly discovered instances of the service for which you've set up monitoring. For example, if you have set up monitoring for Elasticsearch and enabled automatic monitoring then any new Elasticsearch nodes that are added to the cluster will automatically get monitored.
 

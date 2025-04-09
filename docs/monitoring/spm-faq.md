@@ -674,14 +674,14 @@ Make sure you have followed all steps listed on [installation instructions page]
 **Agent Installation** steps should be done first, followed by
 **Agent Setup**. If you have done that and you still
 don't see application metrics, see
-[How do I create the diagnostics package](spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 ### I do not see any system metrics (e.g. CPU, Memory, Network, Disk), what could be the problem?
 
 Make sure you have followed all steps listed on [installation instructions page](https://apps.sematext.com/ui/monitoring). It
 is possible you missed **Agent Setup** step. If you have
 done that and you still don't see application metrics, see
-[How do I create the diagnostics package](spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 ### I am using trying to monitor Solr / Elasticsearch. My Request Rate and Latency charts are empty?
 
@@ -812,7 +812,7 @@ Here are a few things to check and do:
     make sure -D and -javaagent definitions occur
     before "-jar start.jar" part in your command
 
-8.  If none of the suggestions helped, see [How do I create the diagnostics package](spm-faq/#how-do-i-create-the-diagnostics-package).
+8.  If none of the suggestions helped, see [How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
 ### My server stopped sending metrics, so why do I still see it under Hosts Filter?
 

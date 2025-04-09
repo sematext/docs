@@ -7,7 +7,7 @@ We also have a [command line tool](https://sematext.com/blog/logsene-cli/) used 
 
 Logs are aggregated by time and shown in the logging management web application, where you have the ability to search for specific terms, narrow down time ranges, filter fields, setup alerts and more. The supported Search API's are URI based search, Request body based search, Real time GET operation, and Multiple GET and Multiple Search operations in a single request.
 
-Also check related [Field Types](/docs/logs/field-types/), [Supported Date Formats](/docs/logs/supported-date-formats/), [Special Fields](/docs/logs/special-fields/),
+Also check related [Field Types](/docs/logs/field-types/), [Supported Date Formats](/docs/logs/supported-date-formats/), special fields,
 and [FAQ](/docs/logs/faq/) about our log management platform features.
 
 Upload your logs from all your servers to our centralized log management solution with Elasticsearch API, and experience the first true Hosted ELK Stack.

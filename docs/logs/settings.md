@@ -44,7 +44,7 @@ From the App Actions drop down menu, the horizontal elipsis icon shows your App 
 
 ## Report Selector
 
-Once you create a Logs App, and start shipping data, you will get a **default Report created for you named Explore**. It will have the default data and default [component](#components) configuration. You can edit this Report, clone it, or create new ones. 
+Once you create a Logs App, and start shipping data, you will get a **default Report created for you named Explore**. It will have the default data and default component configuration. You can edit this Report, clone it, or create new ones. 
 
 ![](/docs/images/guide/logs/report-selector.png)
 

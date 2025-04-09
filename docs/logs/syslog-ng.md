@@ -8,14 +8,14 @@ syslog-ng is a modern syslog daemon that's focused on flexibility and
 portability. It also has an easy to use configuration format that helps
 you ship your logs to a Logs App in 3 steps:
 
-1.  **sources**. syslog-ng can listen to local [syslog traffic](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-source-system.html),
-    can [tail files](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-file.html) and
+1.  **sources**. syslog-ng can listen to local [syslog traffic](https://syslog-ng.github.io/admin-guide/README),
+    can [tail files](https://syslog-ng.github.io/admin-guide/README) and
     more
 2.  **destinations**. You can send your logs to Logs Management App via UDP, TCP or
     [RFC-5425 TLS Syslog](https://tools.ietf.org/html/rfc5425)
 3.  **bind sources to destinations**. Once you have your sources and
     destinations defined, you have to define paths by linking sources
-    and destinations with the [log statement](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/logpath.html)
+    and destinations with the [log statement](https://syslog-ng.github.io/admin-guide/README)
 
 ## Configure Sources
 
@@ -39,8 +39,7 @@ system, take a look at the [download page of syslog-ng](https://syslog-ng.com/3r
 ### Tailing Files
 
 syslog-ng can also listen to other inputs, such as
-[files](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-file.html),
-[TCP or UDP](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/reference-source-tcpudp.html).
+files,TCP or UDP.
 
 To tail a file, you'll use the file() source and point it to the right
 file. If that file doesn't contain syslog-formatted messages, you'll
@@ -178,15 +177,14 @@ Then, restart syslog-ng and you should see your logs in the [Logs Management App
 
 ## Logs Tagging
 
-From your syslog messages, Logs Management App will populate a number of [special fields](/docs/logs/special-fields), such as the **source** and
+From your syslog messages, Logs Management App will populate a number of special fields, such as the **source** and
 **host**. You can also configure syslog-ng to add a tag to logs matching
 certain criteria. This is useful when you want to quickly identify a
 special kind of logs. For example, you could tag events that come to the
 "kern" facility with a severity/level of "err" as "kernel errors".
 
 To achieve this, you can define a
-[filter](https://syslog-ng.com/documents/html/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/configuring-filters.html)
-that matches such events. Then, you'd define a destination similar to
+filter that matches such events. Then, you'd define a destination similar to
 the ones [described above](syslog-ng/#configure-destinations),
 where you'd add a **tags** field. Finally, you'd define a **log**
 statement where you bind your source, the newly defined filter and the

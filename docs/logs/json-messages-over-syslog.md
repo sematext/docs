@@ -364,7 +364,7 @@ $ModLoad omrelp
 
 ## Logs Tagging
 
-From your syslog messages, Logs Management App will populate a number of [special fields](/docs/logs/special-fields), such as the **source** and
+From your syslog messages, Logs Management App will populate a number of special fields, such as the **source** and
 **host**. You can also configure rsyslog to add one or more tags to logs
 matching certain criteria. This is useful when you want to quickly
 identify a special kind of logs. For example, you could tag events that
@@ -373,7 +373,7 @@ come to the "kernel" facility with a severity/level of "error" as both
 in the Logs Management web application, which you can then use for filtering,
 sorting, ...
 
-To achieve this, define a template similar to the ones [described above](rsyslog/#configuring-outputs),
+To achieve this, define a template similar to the ones [described above](/docs/logs/rsyslog/#configuring-outputs),
 where you'd add a **tags** field. Then, you'd use a
 [conditional](http://www.rsyslog.com/doc/rsyslog_conf_filter.html) to
 match those messages and send them to Logs Management App using the newly defined

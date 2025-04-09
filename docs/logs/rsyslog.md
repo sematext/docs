@@ -365,7 +365,7 @@ $ModLoad omrelp
 
 ## Tag Your Logs
 
-From your syslog messages, Sematext will populate a number of [special fields](/docs/logs/special-fields), such as the **source** and
+From your syslog messages, Sematext will populate a number of special fields, such as the **source** and
 **host**. You can also configure rsyslog to add one or more tags to logs
 matching certain criteria. This is useful when you want to quickly
 identify a special kind of logs. For example, you could tag events that

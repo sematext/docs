@@ -75,6 +75,6 @@ The solution? Logs [Pipelines](/docs/logs/pipelines).
 
 In [Uncovering Business Insights from Logs](https://sematext.com/blog/uncovering-business-insights-from-logs/) you will learn how to extract both numerical and non-numerical data from logs using Pipelines, resulting in a dashboard that reveals insights that one could not otherwise see in the logs.
 
-In [How to Create Log-Based Metrics to Improve Application Observability](https://sematext.com/blog/how-to-create-log-based-metrics/) you will see how to use [Quick Chart](logs-table-quick-actions/#quick-chart) functionality to chart both numeric and non-numeric fields, as well as how to use Pipelines to extract metrics from logs and then dashboard them.
+In [How to Create Log-Based Metrics to Improve Application Observability](https://sematext.com/blog/how-to-create-log-based-metrics/) you will see how to use [Quick Chart](/docs/logs/logs-table-quick-actions/#quick-chart) functionality to chart both numeric and non-numeric fields, as well as how to use Pipelines to extract metrics from logs and then dashboard them.
 
-In [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/#field-extractor-processor-extract-metrics) you will learn how to use [Field Extractor Processor](/docs/logs/field-extractor-processor) to extract metrics from large fields and then drop original fields in order to reduce your costs.
+In [How Logs Pipelines Can Reduce Your Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines/#field-extractor-processor-extract-metrics) you will learn how to use [Field Extractor Processor](/docs/logs/field-extractor-processor) to extract metrics from large fields and then drop original fields in order to reduce your costs.
