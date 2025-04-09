@@ -1,19 +1,19 @@
 title: Opensearch
 description: Covers critical metrics—Cluster States, Pending Tasks, shard memory, search latency, request and cache stats—with anomaly detection and diverse alerting options. Correlate events, logs, filter metrics, and visualize cluster health using standard graphs and custom dashboards. Additionally, the OpenSearch Logs integration offers insights into query distribution, error analysis, deprecations, and cluster manager logs for troubleshooting and analysis.
 
-OpenSearch is a powerful, open-source search and analytics engine built for scalability, flexibility, and advanced data exploration capabilities. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects Opensearch metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+OpenSearch is a powerful, open-source search and analytics engine built for scalability, flexibility, and advanced data exploration capabilities. The [Sematext Agent](/docs/agents/sematext-agent/) collects Opensearch metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an Opensearch Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an Opensearch Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Opensearch/overview](https://apps.sematext.com/ui/howto/Opensearch/overview) displayed in the UI.
 4. After installing the agent, the Discovery tab shows all the Opensearch services identified on the host and you will start receiving metrics or logs from Opensearch services.
 5. If you've created an Opensearch Monitoring App and want to collect Opensearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Opensearch services and manage log and metric shipping effortlessly.
 
-Having both Opensearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
+Having both Opensearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Important Metrics to Watch and Alert on
 
@@ -22,28 +22,28 @@ To [explore logs and services](https://sematext.com/docs/monitoring/autodiscover
 #### Search Query performance metrics: Request Rate and Latency
 When the cluster receives a request, it may need to access data from multiple shards, across multiple nodes. Knowing the rate at which the system is processing and returning requests, how many requests are currently in progress, and how long requests are taking can provide valuable insights into the health and performance of the OpenSearch cluster.
 
-![Request Rate](../images/integrations/opensearch-request-rate.png)
+![Request Rate](/docs/images/integrations/opensearch-request-rate.png)
 
-![Latency](../images/integrations/opensearch-latency.png)
+![Latency](/docs/images/integrations/opensearch-latency.png)
 
 #### Indexing Rate and Merge Times
 Monitoring the OpenSearch document indexing rate and merge time can help detect anomalies and related problems before they begin to affect the performance of the cluster. Considering these metrics in parallel with the health of each node can provide essential clues to potential problems within the system, or opportunities to optimize performance.
 
-![Merged Documents](../images/integrations/opensearch-merged-documents.png)
+![Merged Documents](/docs/images/integrations/opensearch-merged-documents.png)
 
-![Refresh, Flush, Merge](../images/integrations/opensearch-indexing-merge.png)
+![Refresh, Flush, Merge](/docs/images/integrations/opensearch-indexing-merge.png)
 
 ### System and JVM Metrics
 OS metrics like CPU, memory, disk I/O, and network play an essential role in OpenSearch monitoring.
 
-OpenSearch runs within a Java Virtual Machine (JVM) and [monitoring JVM](https://sematext.com/docs/integration/jvm/) heap usage is critical to ensure cluster performance. Moreover, JVM supports [garbage collection](https://sematext.com/docs/integration/jvm-gc-logs/), which means that garbage collection frequency and duration are just as important to measure.
+OpenSearch runs within a Java Virtual Machine (JVM) and [monitoring JVM](/docs/integration/jvm/) heap usage is critical to ensure cluster performance. Moreover, JVM supports [garbage collection](/docs/integration/jvm-gc-logs/), which means that garbage collection frequency and duration are just as important to measure.
 
 Finally, high disk reads and writes can indicate a poorly tuned system. Since accessing the disk is an expensive process in terms of time, a well-tuned system should reduce disk I/O wherever possible.
 
 
 ## OpenSearch Default Alerts
 
-As soon as you create an OpenSearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+As soon as you create an OpenSearch App, you will receive a set of default [alert rules](/docs/guide/alerts-guide/). These pre-configured rules will [notify](/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Node count anomaly
 
@@ -169,7 +169,7 @@ Suppose the average load on the OpenSearch cluster typically remains below 2, bu
 - If the increased load is due to resource limitations, consider scaling up resources such as CPU or memory
 
 
-You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 ## Metrics
 
@@ -272,38 +272,38 @@ thread pool max<br>**thread.pool.max** <br>*(long gauge)*                       
 
 Once data is in, you can explore it via the built-in reports or create your own:
 
-![OpenSearch Logs Overview Report](../images/integrations/opensearch-logs-overview.png)
+![OpenSearch Logs Overview Report](/docs/images/integrations/opensearch-logs-overview.png)
 
 ### Queries Report
 
 You can use the Queries report to see a breakdown of your queries and "zoom in" to the ones you're interested in:
 
-![OpenSearch Queries Report](../images/integrations/opensearch-logs-queries.png)
+![OpenSearch Queries Report](/docs/images/integrations/opensearch-logs-queries.png)
 
 ### Errors Report
 
 You can use the Errors report to see breakdown of what's wrong, for example, which nodes or components generate errors:
 
-![OpenSearch Errors Report](../images/integrations/opensearch-logs-errors.png)
+![OpenSearch Errors Report](/docs/images/integrations/opensearch-logs-errors.png)
 
 ### Clustering Report
 
 You can use the Clustering report to see logs produced by components that have to do with cluster coordination. Cluster coordinator logs, logs related to a node joining/leaving a cluster and shard allocation:
 
-![OpenSearch Clustering Report](../images/integrations/opensearch-logs-clustering.png)
+![OpenSearch Clustering Report](/docs/images/integrations/opensearch-logs-clustering.png)
 
 ### Deprecation Report
 
 You can use the Deprecation report to see a breakdown of deprecation logs by node and component:
 
-![OpenSearch Deprecation Report](../images/integrations/opensearch-logs-deprecation.png)
+![OpenSearch Deprecation Report](/docs/images/integrations/opensearch-logs-deprecation.png)
 
 ### Start & Stop Report
 
 You can use the Start & Stop report to see startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started:
 
-![OpenSearch Start & Stop Report](../images/integrations/opensearch-logs-startstop.png)
+![OpenSearch Start & Stop Report](/docs/images/integrations/opensearch-logs-startstop.png)
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your OpenSearch Logs App. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your OpenSearch Logs App. Last, check the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.

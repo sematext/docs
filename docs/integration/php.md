@@ -40,9 +40,9 @@ sudo systemctl restart php-fpm.service
 
 ## Integration with Apache
 
-Sematext Agent can be installed to monitor [Apache](./apache).
+Sematext Agent can be installed to monitor [Apache](/docs/integration/apache).
 
-When using [Autodiscovery](../monitoring/autodiscovery), Sematext Agent will automatically discover PHP-FPM status
+When using [Autodiscovery](/docs/monitoring/autodiscovery), Sematext Agent will automatically discover PHP-FPM status
 URL and will gather additional metrics from it.
 
 Otherwise, when using manual installation instruction, additional parameter `ST_MONITOR_PHPFPM_STATUS_URL` can be passed
@@ -85,9 +85,9 @@ In this case, parameter `ST_MONITOR_PHPFPM_STATUS_URL` should have a value `http
 
 ## Integration with Nginx
 
-Sematext Agent can be installed to monitor [Nginx](./nginx).
+Sematext Agent can be installed to monitor [Nginx](/docs/integration/nginx).
 
-When using [Autodiscovery](../monitoring/autodiscovery), Sematext Agent will automatically discover PHP-FPM status
+When using [Autodiscovery](/docs/monitoring/autodiscovery), Sematext Agent will automatically discover PHP-FPM status
 URL and will gather additional metrics from it.
 
 Otherwise, when using manual installation instruction, additional parameter `ST_MONITOR_PHPFPM_STATUS_URL` can be passed

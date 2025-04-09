@@ -1,7 +1,7 @@
 title: Configuring Sematext Agent to Ship Windows Events
 description: Tailor Sematext Windows Agent based on your needs to add/remove channels or to give friendly names to windows logs.
 
-The [Sematext Agent for Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation/) collects logs from your Windows system and sends them to your [Windows Logs App](https://sematext.com/docs/integration/windows/#logs) for monitoring and analysis. After installing the agent, you can make additional configurations to tailor it to your preferences.
+The [Sematext Agent for Windows](/docs/agents/sematext-agent/windows-installation/) collects logs from your Windows system and sends them to your [Windows Logs App](/docs/integration/windows/#logs) for monitoring and analysis. After installing the agent, you can make additional configurations to tailor it to your preferences.
 
 ## Configuring Event Names
 
@@ -17,7 +17,7 @@ names:
   "1033:MsiInstaller": "MSI_INSTALLATION_STARTED"
   "6005:EventLog": "EVENT_LOG_SERVICE_STARTED"
 ```
-4. Save changes and [restart the Sematext Agent Service](https://sematext.com/docs/agents/sematext-agent/windows-installation/#how-to-start-stop-restart-sematext-agent)
+4. Save changes and [restart the Sematext Agent Service](/docs/agents/sematext-agent/windows-installation/#how-to-start-stop-restart-sematext-agent)
 
 ## Customizing Log Channels
 

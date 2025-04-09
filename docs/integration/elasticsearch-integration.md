@@ -1,21 +1,21 @@
 title: Elasticsearch
 description: Collect and monitor key Elasticsearch metrics such as request latency, indexing rate, and segment merges with built-in anomaly detection, threshold, and heartbeat alerts. Send notifications to email and various chatops messaging services, correlate events & logs, filter metrics by server, node, time or index, and visualize your cluster's health with out of the box graphs and custom dashboards
 
-Elasticsearch is a distributed, RESTful search and analytics engine designed for scalability and high-performance search functionalities across varied data types and sources. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects Elasticsearch metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+Elasticsearch is a distributed, RESTful search and analytics engine designed for scalability and high-performance search functionalities across varied data types and sources. The [Sematext Agent](/docs/agents/sematext-agent/) collects Elasticsearch metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an Elasticsearch Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an Elasticsearch Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Elasticsearch/overview](https://apps.sematext.com/ui/howto/Elasticsearch/overview) displayed in the UI.
 3. After installing the agent, the Discovery tab shows all the Elasticsearch services identified on the host and you will start receiving metrics or logs from Elasticsearch services.
 4. Make sure that HTTP metrics are enabled by setting `http.enabled: true` in `elasticsearch.yaml`. Also set the `node.name` value in the same file. Elasticsearch will otherwise generate a random node name each time an instance starts, making tracking node stats over time impossible. The `elasticsearch.yml` file can be found in `/etc/elasticsearch/elasticsearch.yml` or `$ES_HOME/config/elasticsearch.yml`.
 5. If you've created an Elasticsearch Monitoring App and want to collect Elasticsearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Elasticsearch services and manage log and metric shipping effortlessly.
 
-![Elasticsearch Counterpart](../images/integrations/elasticsearch-counterpart.gif)
+![Elasticsearch Counterpart](/docs/images/integrations/elasticsearch-counterpart.gif)
 
-Having both Elasticsearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as CPU, memory usage, disk I/O) with logs (search queries, indexing operations), you can identify if a sudden spike in resource usage aligns with a specific type of query or indexing operation. This correlation helps in optimizing queries, indexing strategies, or scaling resources to maintain optimal performance. Or if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
+Having both Elasticsearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as CPU, memory usage, disk I/O) with logs (search queries, indexing operations), you can identify if a sudden spike in resource usage aligns with a specific type of query or indexing operation. This correlation helps in optimizing queries, indexing strategies, or scaling resources to maintain optimal performance. Or if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Important Metrics to Watch and Alert on
 
@@ -58,7 +58,7 @@ Last, but certainly not least, you may want to get an alert if a node leaves the
 
 ## Elasticsearch Default Alerts
 
-As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](/docs/guide/alerts-guide/). These pre-configured rules will [notify](/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Node count anomaly
 
@@ -180,7 +180,7 @@ Suppose the average load on the Elasticsearch cluster typically remains below 2,
 - Review and optimize queries or indexing processes that may be contributing to the increased load on the cluster
 - If the increased load is due to resource limitations, consider scaling up resources such as CPU or memory
 
-You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 
 ## Metrics
@@ -367,13 +367,13 @@ thread pool max<br>**es.thread.pool.max** <br>*(long gauge)*                    
 
 Once data is in, you can explore it via the built-in reports: 
 
-![Elasticsearch Logs Overview Report](../images/agents/elasticsearch_logs_overview.png)
+![Elasticsearch Logs Overview Report](/docs/images/agents/elasticsearch_logs_overview.png)
 
 ## Exploring logs
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Queries report to see a breakdown of your queries and "zoom in" to the ones you're interested in:
 
-![Elasticsearch Queries Report](../images/agents/elasticsearch_logs_queries.png)
+![Elasticsearch Queries Report](/docs/images/agents/elasticsearch_logs_queries.png)
 
 Other built-in reports include:
 
@@ -389,9 +389,9 @@ There are 3 types of alerts in Sematext:
  - Classic **threshold-based alerts** that notify you when a metric value crosses a predefined threshold
  - Alerts based on statistical **anomaly detection** that notify you when metric values suddenly change and deviate from the baseline
 
-Let’s see how to actually create some alert rules for Elasticsearch metrics in the animation below. The request query count chart shows a spike. We normally have up to 100 requests, but we see it can jump to over 600 requests. To create an alert rule on a metric we’d go to the pulldown in the top right corner of a chart and choose “Create alert”. The alert rule applies the filters from the current view and you can choose various notification options such as email or configured [notification hooks](https://sematext.com/docs/alerts/#alert-integrations) (PagerDuty, Slack, VictorOps, BigPanda, OpsGenie, Pusher, generic webhooks etc.)
+Let’s see how to actually create some alert rules for Elasticsearch metrics in the animation below. The request query count chart shows a spike. We normally have up to 100 requests, but we see it can jump to over 600 requests. To create an alert rule on a metric we’d go to the pulldown in the top right corner of a chart and choose “Create alert”. The alert rule applies the filters from the current view and you can choose various notification options such as email or configured [notification hooks](/docs/alerts/#alert-integrations) (PagerDuty, Slack, VictorOps, BigPanda, OpsGenie, Pusher, generic webhooks etc.)
 
-![Alert creation for Elasticsearch request query count metric](../images/integrations/elasticsearch-create-alert.gif)
+![Alert creation for Elasticsearch request query count metric](/docs/images/integrations/elasticsearch-create-alert.gif)
 
 ## More about Elasticsearch Monitoring
 
@@ -402,7 +402,7 @@ Let’s see how to actually create some alert rules for Elasticsearch metrics in
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Elasticsearch Logs App. Last, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Elasticsearch Logs App. Last, check the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
 ### FAQ
 

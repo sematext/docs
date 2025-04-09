@@ -48,5 +48,5 @@ Changing the Elasticsearch `index` and `endpoint` lets you ship logs to any Elas
 - Launchd: ```launchctl start/stop com.sematext.logagent```
 
 #### 4. Configure Logagent settings
-The setup script generates the configuration file in `/etc/sematext/logagent.conf`. The default settings will ship all log files from the `/var/log` directory to Sematext Cloud. [Here's the configuration guide](./config-file).
+The setup script generates the configuration file in `/etc/sematext/logagent.conf`. The default settings will ship all log files from the `/var/log` directory to Sematext Cloud. [Here's the configuration guide](/docs/logagent/config-file).
 

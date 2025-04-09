@@ -19,9 +19,9 @@ In the context of data protection regulations like GDPR, you might need to mask 
 
 For a stronger protection check other output plugins: 
 
-- [aes-encrypt-fields](output-filter-aesencryptfields) 
-- [hash-fields](output-filter-hashfields) 
-- [remove-fields](output-filter-removefields) 
+- [aes-encrypt-fields](/docs/logagent/output-filter-aesencryptfields) 
+- [hash-fields](/docs/logagent/output-filter-hashfields) 
+- [remove-fields](/docs/logagent/output-filter-removefields) 
 
 ### Configuration 
 

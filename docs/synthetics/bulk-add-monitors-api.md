@@ -1,17 +1,17 @@
 title: Bulk Add Monitors via Google Apps Script
 description: Bulk add HTTP and Browser Monitors using Google Sheets and Apps Script via the Sematext Synthetics API.
 
-This guide explains how to use Google Sheets and [Apps Script](https://developers.google.com/apps-script) to bulk add [HTTP](https://sematext.com/docs/synthetics/http-monitor/) and [Browser](https://sematext.com/docs/synthetics/browser-monitor/) Monitors. You can enter monitor details in a structured spreadsheet and use a script to send API requests for each monitor.
+This guide explains how to use Google Sheets and [Apps Script](https://developers.google.com/apps-script) to bulk add [HTTP](/docs/synthetics/http-monitor/) and [Browser](/docs/synthetics/browser-monitor/) Monitors. You can enter monitor details in a structured spreadsheet and use a script to send API requests for each monitor.
 
 You can find an example spreadsheet and Google Apps Script [here](https://docs.google.com/spreadsheets/d/1uiX3Ek2NRzRaCkWR_pWh5ZgA8vvBdPjfJHC6hg4N3hI/edit?gid=0#gid=0) and try it out right away. Note that you'll need to set the API Key and App ID within the spreadsheet using your SC account. 
 
-Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get your App ID and API key.
+Refer to [this link](/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get your App ID and API key.
 
 ## Prerequisites 
 
 - A Google account
 - A Sematext account with API access
-- Sematext [Synthetics App](https://sematext.com/docs/synthetics/) must be created within your Sematext Account
+- Sematext [Synthetics App](/docs/synthetics/) must be created within your Sematext Account
 - A Google Sheet to store monitor details
 - Google Apps Script extension
 
@@ -31,7 +31,7 @@ Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting
 
 In the Apps Script, we'll write a function called `sendMultipleMonitorRequests` to iterate through all the monitors in the Google Sheet and bulk add HTTP monitors. 
 
-> If you want to bulk add [Browser](https://sematext.com/docs/synthetics/browser-monitor/) monitors, follow these steps first, but refer to the [Bulk Add Browser Monitors](#bulk-add-browser-monitors) section for the minor changes needed to create Browser monitors.
+> If you want to bulk add [Browser](/docs/synthetics/browser-monitor/) monitors, follow these steps first, but refer to the [Bulk Add Browser Monitors](#bulk-add-browser-monitors) section for the minor changes needed to create Browser monitors.
 
 We’ll explain each line in this guide, but in the end, your function will look like this:
 
@@ -96,7 +96,7 @@ var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 var appId = YOUR_APP_ID;
 var apiKey = "YOUR_API_KEY";
 ```
-Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get your App ID and API key.
+Refer to [this link](/docs/synthetics/using-the-api/#getting-the-apikey) to learn how to get your App ID and API key.
 
 - Set the endpoint with `appId` parameter:
 
@@ -232,9 +232,9 @@ for (var i = 2; i <= sheet.getLastRow(); i++) {
    }
 
 ```
-Refer to [this link](https://sematext.com/docs/synthetics/using-the-api/#getting-the-locationid) to learn how to get location IDs.
+Refer to [this link](/docs/synthetics/using-the-api/#getting-the-locationid) to learn how to get location IDs.
 
-You can also bulk add monitors with private locations. Refer to the [Private Locations](https://sematext.com/docs/synthetics/private-locations/) page to learn how to set up a private location.
+You can also bulk add monitors with private locations. Refer to the [Private Locations](/docs/synthetics/private-locations/) page to learn how to set up a private location.
 
 #### Getting the Private Location ID
 
@@ -243,7 +243,7 @@ After adding a private location, you need to retrieve its ID to include it in th
 To get the private location ID:
 
 - **Create a sample monitor** that runs in the private location.
-- **Retrieve the list of monitors** for that App using the API by following [these instructions](https://sematext.com/docs/synthetics/using-the-api/#get-all-monitors-for-an-app).
+- **Retrieve the list of monitors** for that App using the API by following [these instructions](/docs/synthetics/using-the-api/#get-all-monitors-for-an-app).
 - In the API response, locate the locations field. The private location ID will be listed alongside its name.
 
 ```json
@@ -333,7 +333,7 @@ var payload = {
     };
 ```
 
-For more details on all available parameters for HTTP monitors, refer to the [Sematext Synthetics API documentation](https://sematext.com/docs/synthetics/using-the-api/#create-monitor-api).
+For more details on all available parameters for HTTP monitors, refer to the [Sematext Synthetics API documentation](/docs/synthetics/using-the-api/#create-monitor-api).
 
 #### Adding more dynamic parameters
 
@@ -384,11 +384,11 @@ for (var i = 2; i <= sheet.getLastRow(); i++) {
 
 After creating your Google Sheet and writing the Apps Script based on your requirements, click **Run** to create the monitors. You will see the execution log below. 
 
-![Synthetics Apps Script](../images/synthetics/synthetics-api-apps-script.png)
+![Synthetics Apps Script](/docs/images/synthetics/synthetics-api-apps-script.png)
 
 Then, go to your **Sematext → Synthetics App**, where you should see the HTTP monitors created in your Sematext account.
 
-![Synthetics API Bulk Add Monitors](../images/synthetics/synthetics-api-bulk-monitors.png)
+![Synthetics API Bulk Add Monitors](/docs/images/synthetics/synthetics-api-bulk-monitors.png)
 
 ## Bulk Add Browser Monitors
 
@@ -425,18 +425,18 @@ And, you must add ```"isPlaywright": true``` within your payload.
 ```
 
 Adjust the payload based on your needs to configure your Browser Monitors and then Run the Apps Script.
-For more details on all available parameters for Browser monitors, refer to the [Sematext Synthetics API](https://sematext.com/docs/synthetics/using-the-api/#create-monitor-api) documentation.
+For more details on all available parameters for Browser monitors, refer to the [Sematext Synthetics API](/docs/synthetics/using-the-api/#create-monitor-api) documentation.
 
 ### Bulk Add Script Based Browser Monitors
 
-If you want to create script-based Browser monitors, replace the URL column in your spreadsheet with the Script column. Paste your [user journey script](https://sematext.com/docs/synthetics/user-journey-scripts/overview/) written in Playwright into that new column for each monitor.
+If you want to create script-based Browser monitors, replace the URL column in your spreadsheet with the Script column. Paste your [user journey script](/docs/synthetics/user-journey-scripts/overview/) written in Playwright into that new column for each monitor.
 
 | Monitor Name | Script |
 | --- | --- |
 | bulk add 1 |``` async function testPage(page) { await page.goto("www.google.com"); await page.screenshot({ path: 'screenshot.jpg' }); } export default testPage; ``` |
 | bulk add 3 |``` async function testPage(page) { await page.goto("www.google.com"); await page.screenshot({ path: 'screenshot.jpg' }); } export default testPage; ``` |
 
-Then instead of extracting a URL within the App Script extract [user journey scripts](https://sematext.com/docs/synthetics/user-journey-scripts/overview/)
+Then instead of extracting a URL within the App Script extract [user journey scripts](/docs/synthetics/user-journey-scripts/overview/)
 
 ```javascript
   for (var i = 2; i <= sheet.getLastRow(); i++) {

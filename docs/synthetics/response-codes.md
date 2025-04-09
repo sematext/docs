@@ -1,7 +1,7 @@
 title: Response Codes
 description: Response Codes report and filtering features help identify and analyze HTTP and Browser Monitor response codes for better endpoint performance monitoring.
 
-Sematext Synthetics monitors the availability and performance of your endpoints by calling them at specified intervals using [HTTP](https://sematext.com/docs/synthetics/http-monitor/) and [Browser](https://sematext.com/docs/synthetics/browser-monitor/) Monitors. Each endpoint call returns a single response code (for HTTP Monitors) or multiple response codes (for Browser Monitors). We have introduced a new **Response Codes report** for HTTP Monitors that shows the response codes returned from the endpoint calls during the selected time range. Additionally, for Browser Monitors, we've introduced quick filtering in individual monitor runs to easily identify which URLs returned non-2xx responses.
+Sematext Synthetics monitors the availability and performance of your endpoints by calling them at specified intervals using [HTTP](/docs/synthetics/http-monitor/) and [Browser](/docs/synthetics/browser-monitor/) Monitors. Each endpoint call returns a single response code (for HTTP Monitors) or multiple response codes (for Browser Monitors). We have introduced a new **Response Codes report** for HTTP Monitors that shows the response codes returned from the endpoint calls during the selected time range. Additionally, for Browser Monitors, we've introduced quick filtering in individual monitor runs to easily identify which URLs returned non-2xx responses.
 
 When you make a request to a website or API, the server sends back a response code that tells you whether the request was successful or if there was an issue.
 
@@ -20,24 +20,24 @@ This report helps you identify when the monitored endpoint fails at specific tim
 
 **Total number of response codes** within the selected time range.
 
-![Response Codes Numeric Component](../images/synthetics/response-codes-nc.png)
+![Response Codes Numeric Component](/docs/images/synthetics/response-codes-nc.png)
 
 **Response codes over time** for each selected location, helping you identify regular occurrences of failed responses at similar times.
 
-![Response Codes TimeSeries](../images/synthetics/response-codes-locations-timeseries.png)
+![Response Codes TimeSeries](/docs/images/synthetics/response-codes-locations-timeseries.png)
 
 **Average response times by location,** allowing you to compare response codes against response times within the same time range.
 
-![Response Codes Response Times](../images/synthetics/response-codes-response-times.png)
+![Response Codes Response Times](/docs/images/synthetics/response-codes-response-times.png)
 
 **Failed runs table** to help you dig deeper into the issues.
 
-![Response Codes Failed Runs](../images/synthetics/response-codes-failed-runs.png)
+![Response Codes Failed Runs](/docs/images/synthetics/response-codes-failed-runs.png)
 
 ## Browser Monitors
 
-In Browser Monitors, each monitor run includes multiple URL requests (e.g., to resources like images, JavaScript libraries, etc.), and each URL can return different response codes. In the [**Waterfall**](https://sematext.com/docs/synthetics/browser-monitor/#waterfall-chart) tab, you will now see a filter option to filter out non-2xx response codes. When applied, this filter will only show URLs that returned a response code **other than 2xx.**
+In Browser Monitors, each monitor run includes multiple URL requests (e.g., to resources like images, JavaScript libraries, etc.), and each URL can return different response codes. In the [**Waterfall**](/docs/synthetics/browser-monitor/#waterfall-chart) tab, you will now see a filter option to filter out non-2xx response codes. When applied, this filter will only show URLs that returned a response code **other than 2xx.**
 
-![Response Codes Browser Monitor](../images/synthetics/response-codes-bm-waterfall.png)
+![Response Codes Browser Monitor](/docs/images/synthetics/response-codes-bm-waterfall.png)
 
 This filtering feature helps you identify issues with specific URLs in a browser monitor, such as broken links or server errors, without having to sift through successful responses.

@@ -5,9 +5,9 @@ Apps act as containers for your data. You can store performance
 metrics or logs about servers, containers, software, programming
 languages and databases. Our Apps have dozens of monitoring
 integrations with software like Docker, AWS, Solr, Elasticsearch, [and
-many more](https://sematext.com/docs/integration/), while our log
+many more](/docs/integration/), while our log
 integration works with several different [log
-shippers](https://sematext.com/docs/integration/#log-shippers). Every
+shippers](/docs/integration/#log-shippers). Every
 App is isolated and standalone.
 
 <div class="video_container">
@@ -40,11 +40,11 @@ as you can see on [the pricing page](https://sematext.com/pricing/).
 
 After learning what an App is, you can check out our main features and solutions:
 
-- [Integrations](../integrations-guide/)
-- [Logs](../../logs/)
-- [Monitoring](../../monitoring/)
-- [Experience](../../experience/)
-- [Synthetics](../../synthetics/)
-- [Dashboards](../../dashboards/)
-- [Alerts](../alerts-guide/)
-- [Events](../events-guide/)
+- [Integrations](/docs/guide/integrations-guide/)
+- [Logs](/docs/logs/)
+- [Monitoring](/docs/monitoring/)
+- [Experience](/docs/experience/)
+- [Synthetics](/docs/synthetics/)
+- [Dashboards](/docs/dashboards/)
+- [Alerts](/docs/guide/alerts-guide/)
+- [Events](/docs/guide/events-guide/)

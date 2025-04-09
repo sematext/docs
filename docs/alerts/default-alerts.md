@@ -7,6 +7,6 @@ It is important to note that, just like the out-of-the-box reports are specific 
 
 The names of all default rules start with `Automatic - `.  For example, here's a set of alert rules that gets created with a new Elasticsearch monitoring App:
 
-![Sematext Cloud System Generated Alerts](../images/guide/alerts-and-events/system-generated-alerts.png)
+![Sematext Cloud System Generated Alerts](/docs/images/guide/alerts-and-events/system-generated-alerts.png)
 
-Default alert rules are created for [Monitoring](../monitoring), [Logs](../logs), [Experience](../experience) Apps, and for [Synthetics](../synthetics) Monitors.
+Default alert rules are created for [Monitoring](/docs/monitoring), [Logs](/docs/logs), [Experience](/docs/experience) Apps, and for [Synthetics](/docs/synthetics) Monitors.

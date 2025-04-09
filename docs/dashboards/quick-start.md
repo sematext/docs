@@ -7,13 +7,13 @@ Once you have a dashboard created, you can start adding components to it. Howeve
 
 In the example below, we demonstrate the process of adding components from different solutions, selecting the preferred App to fetch data for each component, adding them to the Dashboard, and organizing the layout for improved visualization.
 
-![Add Components to Dashboard](../images/dashboards/dashboards-add-components.gif)
+![Add Components to Dashboard](/docs/images/dashboards/dashboards-add-components.gif)
 
-With the custom reports features you can first create specific logging, events or metric component, and add it to your Dashboard just as you can with out-of-the-box [integration](/integration/) specific components that come included when you first create an App.
+With the custom reports features you can first create specific logging, events or metric component, and add it to your Dashboard just as you can with out-of-the-box [integration](/docs/integration/) specific components that come included when you first create an App.
 
 The image below displays a sample of a customized Infrastructure component designed to automatically retrieve top data based on CPU, Disk, and Memory usage. To add this component, navigate to the 'Infrastructure' tab on the left and select the 'Top N Hosts' option.
 
-![Custom Infra Component](../images/dashboards/custom-infra-component.gif)
+![Custom Infra Component](/docs/images/dashboards/custom-infra-component.gif)
 
 ## Built-in Components
 
@@ -83,4 +83,4 @@ We provide pre-configured built-in components with predefined metrics and styles
  
 ## Custom Components
 
-In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Once you select a component from this category, you'll begin by choosing the solution type from which you wish to retrieve data. Next, you'll complete the necessary and optional parameters to start building your custom component. The [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/) section explains the common functionalities offered in all the components. To explore all the component types and learn how to create each one, refer to the [Components Overview](./components-overview).
+In the 'Other' tab within the left panel for component selection, you'll find a range of generic components. Once you select a component from this category, you'll begin by choosing the solution type from which you wish to retrieve data. Next, you'll complete the necessary and optional parameters to start building your custom component. The [Chart Builder](/docs/dashboards/chart-builder/) section explains the common functionalities offered in all the components. To explore all the component types and learn how to create each one, refer to the [Components Overview](/docs/dashboards/components-overview).

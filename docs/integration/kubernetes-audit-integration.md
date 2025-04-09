@@ -207,7 +207,7 @@ spec:
 
 Once you’ve configured logging the Audit logs to stdout you can use cluster-level logging to store these logs in a central location.
 
-Install the [Sematext Agent Helm chart](../agents/sematext-agent/kubernetes/installation/#helm-chart):
+Install the [Sematext Agent Helm chart](/docs/agents/sematext-agent/kubernetes/installation/#helm-chart):
 
 ```bash
 helm install --name st-agent \
@@ -253,7 +253,7 @@ sudo systemctl restart kubelet
 
 Once you’ve configured logging the Audit logs to stdout you can use cluster-level logging to store these logs in a central location.
 
-Install the [Sematext Agent Helm chart](../agents/sematext-agent/kubernetes/installation/#helm-chart):
+Install the [Sematext Agent Helm chart](/docs/agents/sematext-agent/kubernetes/installation/#helm-chart):
 
 ```bash
 helm install --name st-agent \
@@ -266,4 +266,4 @@ helm install --name st-agent \
 
 This will start both a log agent, and optionally a monitoring agent if you so wish. The agent will collect logs all logs from stdout, including the audit logs and send them to Sematext Logs.
 
-If you prefer, you can set up Logagent with `kubectl` as well if [you go here](../logagent/installation-docker/#kubernetes-and-openshift).
+If you prefer, you can set up Logagent with `kubectl` as well if [you go here](/docs/agents/logagent/installation-docker/#kubernetes-and-openshift).

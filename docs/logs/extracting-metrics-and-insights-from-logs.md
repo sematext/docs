@@ -69,7 +69,7 @@ Having these in separate fields would let one easily identify most problematic o
 
 The examples above are just that - examples.  The common problem is that logs are "messy" and unstructured. They often are "messy" like our examples.  Such logs cannot be easily charted, you cannot create nice dashboards based on this data, and you cannot create alerts. Result? You are unable to leverage the valuable data that's embedded in the logs to improve your business, to discover new insights, to spot trends, to troubleshoot product issues, etc. etc.
 
-The solution? Logs [Pipelines](pipelines).
+The solution? Logs [Pipelines](/docs/logs/pipelines).
 
 ### How to Structure Logs, Extract Metrics and More with Logs Pipelines
 
@@ -77,4 +77,4 @@ In [Uncovering Business Insights from Logs](https://sematext.com/blog/uncovering
 
 In [How to Create Log-Based Metrics to Improve Application Observability](https://sematext.com/blog/how-to-create-log-based-metrics/) you will see how to use [Quick Chart](logs-table-quick-actions/#quick-chart) functionality to chart both numeric and non-numeric fields, as well as how to use Pipelines to extract metrics from logs and then dashboard them.
 
-In [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/#field-extractor-processor-extract-metrics) you will learn how to use [Field Extractor Processor](field-extractor-processor/) to extract metrics from large fields and then drop original fields in order to reduce your costs.
+In [How Logs Pipelines Can Reduce Your Log Monitoring Costs](reduce-costs-with-pipelines/#field-extractor-processor-extract-metrics) you will learn how to use [Field Extractor Processor](/docs/logs/field-extractor-processor) to extract metrics from large fields and then drop original fields in order to reduce your costs.

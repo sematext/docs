@@ -23,4 +23,4 @@ supported.
   - JAX-RS
 
 Support for tracing your own JVM applications and other JVM-based
-technologies can be added via [Custom Pointcuts](custom-pointcuts).
+technologies can be added via [Custom Pointcuts](/docs/tracing/custom-pointcuts).

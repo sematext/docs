@@ -1,7 +1,7 @@
 title: Pricing Guide
 description: This guide explains how Sematext Cloud's flexible and transparent pricing works, helping you manage costs effectively based on your needs.
 
-We offer flexible and transparent pricing for all of our four solutions: [Monitoring](https://sematext.com/docs/monitoring/), [Logs](https://sematext.com/docs/logs/), [Experience](https://sematext.com/docs/experience/), and [Synthetics](https://sematext.com/docs/synthetics/). This guide explains how our pricing works, helping you manage costs effectively based on your needs.
+We offer flexible and transparent pricing for all of our four solutions: [Monitoring](/docs/monitoring/), [Logs](/docs/logs/), [Experience](/docs/experience/), and [Synthetics](/docs/synthetics/). This guide explains how our pricing works, helping you manage costs effectively based on your needs.
 
 **Useful Links:**
 
@@ -12,7 +12,7 @@ We offer flexible and transparent pricing for all of our four solutions: [Monito
 
 ## Apps and Plans
 
-For each of the four solutions, you can create multiple [Apps](https://sematext.com/docs/guide/app-guide/). Apps act as containers for your data. Every App is isolated and standalone, each App can have a different plan and other attributes that affect cost. This allows you to customize costs for each App individually and control the overall spend. For each App you can change the following:
+For each of the four solutions, you can create multiple [Apps](/docs/guide/app-guide/). Apps act as containers for your data. Every App is isolated and standalone, each App can have a different plan and other attributes that affect cost. This allows you to customize costs for each App individually and control the overall spend. For each App you can change the following:
 
 - [Logs](https://sematext.com/pricing/#logs) Apps: 
     - Plan
@@ -28,7 +28,7 @@ For each of the four solutions, you can create multiple [Apps](https://sematext.
     - Data retention duration
 - [Synthetics](https://sematext.com/pricing/#synthetics) Apps:
     - Plan
-    - Number of [Browser](https://sematext.com/docs/synthetics/browser-monitor/) and [HTTP](https://sematext.com/docs/synthetics/http-monitor/) monitors
+    - Number of [Browser](/docs/synthetics/browser-monitor/) and [HTTP](/docs/synthetics/http-monitor/) monitors
     - Data retention duration
   
 This flexibility ensures you only pay for what you use. For example, you might create multiple Apps and choose a minimal retention plan for test hosts and a higher retention plan for production hosts.
@@ -52,7 +52,7 @@ All of our plans include support via live chat and email. For Standard and Pro P
 
 - You can invite as many team members as you want at no additional cost.
 - If you use Sematext as a team or company, we recommend creating an account that is not tied to any individual's email and converting it to a [team account](https://sematext.com/docs/team/#team-account). There are no additional costs for using a team account. Others can then be invited to and removed from that account and be assigned roles.
-- Users can have [different roles such as user, admin, and billing admin](https://sematext.com/docs/team/).
+- Users can have [different roles such as user, admin, and billing admin](/docs/team/).
     - Account owners and billing admins can add or remove credit cards and have full control over the Apps within the account.
 - You can set a billing email within the Settings screen. This email, along with the account owner's and billing admin’s emails, will receive invoices.
 - We charge credit cards on the 1st of the month. If the charge fails, we will send you an email about the failure and will keep trying until the 15th. If we cannot charge by the 15th, we will disable your Apps. As soon as you enter a valid payment method, you can enable your Apps without losing any data.
@@ -64,7 +64,7 @@ All of our plans include support via live chat and email. For Standard and Pro P
 
 To see the details of your estimated cost for a specific App, go to the App, click on App Settings from the left menu panel. 
 
-![Sematext Cloud App Settings - Cost Estimations](../images/guide/pricing/app-settings-cost-estimations.png) 
+![Sematext Cloud App Settings - Cost Estimations](/docs/images/guide/pricing/app-settings-cost-estimations.png) 
 
 - **Last month**: Amount charged for the App for the previous month.
 - **Month to date**: Costs for your App made in the current month so far.
@@ -75,7 +75,7 @@ To see the details of your estimated cost for a specific App, go to the App, cli
 
 For a general overview of your estimated monthly costs across all Apps, visit the Settings → Plans & Billing screen. There, you can see a detailed breakdown of costs by each App in the data table at the bottom of the screen.
 
-![Plans & Billing](../images/guide/pricing/plans-billing.png) 
+![Plans & Billing](/docs/images/guide/pricing/plans-billing.png) 
 
 ### Trial Period
 
@@ -93,33 +93,33 @@ Our goal is to provide a flexible and transparent pricing model, ensuring there 
 
 ### Where and how often can I change plans? 
 
-You can downgrade or upgrade an [App](https://sematext.com/docs/guide/app-guide/) anytime you want and any number of times. To do this, click on the App you want to downgrade/upgrade, navigate to 'App Settings' from the left menu panel, and click on the 'Manage Plan' option. From the flyout, you can select the plan that best fits your needs.
+You can downgrade or upgrade an [App](/docs/guide/app-guide/) anytime you want and any number of times. To do this, click on the App you want to downgrade/upgrade, navigate to 'App Settings' from the left menu panel, and click on the 'Manage Plan' option. From the flyout, you can select the plan that best fits your needs.
 
 ### Where and how often can I change data retention?  
 
-You can change data retention of an [App](https://sematext.com/docs/guide/app-guide/) anytime you want and any number of times. To do this, click on the App you want to change the retention, navigate to 'App Settings' from the left menu panel, and click on the 'Manage Plan' option. From the flyout, you can select the retention that best fits your needs.
+You can change data retention of an [App](/docs/guide/app-guide/) anytime you want and any number of times. To do this, click on the App you want to change the retention, navigate to 'App Settings' from the left menu panel, and click on the 'Manage Plan' option. From the flyout, you can select the retention that best fits your needs.
 
 ### Can I ship logs from different hosts to the same App without additional charges?
 
-The easiest way to ship logs to Sematext Cloud is by using [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/). Our Logs Apps don’t charge based on the number of hosts you are shipping data from. Our pricing is based on the daily log volumes you are shipping to Sematext Cloud. Therefore, you can install [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) on multiple hosts or use our [custom integrations](https://sematext.com/docs/logs/sending-log-events/#custom-integration-options) to ship logs to the same App without additional charges. We also recommend using [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) to drop redundant and noisy log events to save on costs. Refer to [Reduce Log Monitoring Costs](https://sematext.com/docs/logs/reduce-costs-with-pipelines/) for more information. 
+The easiest way to ship logs to Sematext Cloud is by using [Sematext Agent](/docs/agents/sematext-agent/). Our Logs Apps don’t charge based on the number of hosts you are shipping data from. Our pricing is based on the daily log volumes you are shipping to Sematext Cloud. Therefore, you can install [Sematext Agent](/docs/agents/sematext-agent/) on multiple hosts or use our [custom integrations](https://sematext.com/docs/logs/sending-log-events/#custom-integration-options) to ship logs to the same App without additional charges. We also recommend using [Logs Pipelines](/docs/logs/pipelines/) to drop redundant and noisy log events to save on costs. Refer to [Reduce Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines/) for more information. 
 
-[Sematext Logs](https://sematext.com/docs/logs/) also offers plan recommendations based on the daily log volume you shipped during the last 7 days. 
+[Sematext Logs](/docs/logs/) also offers plan recommendations based on the daily log volume you shipped during the last 7 days. 
 
-Refer to [Plan Recommendations](https://sematext.com/docs/logs/plan-recommendations/) for more information.
+Refer to [Plan Recommendations](/docs/logs/plan-recommendations/) for more information.
 
 ### How can I handle sudden log volume spikes?
 
-[Sematext Logs](https://sematext.com/docs/logs/) provides an option to put a hard limit to reject data once the specified GB/day limit is reached, to avoid surprises at the end of the month. It also allows you to change set that limit so high as to virtually eliminate it. The choice is yours.
+[Sematext Logs](/docs/logs/) provides an option to put a hard limit to reject data once the specified GB/day limit is reached, to avoid surprises at the end of the month. It also allows you to change set that limit so high as to virtually eliminate it. The choice is yours.
 
 Refer to [Going over the selected daily volume](https://sematext.com/docs/logs/logs-usage-screen/#going-over-the-selected-daily-log-volume) for more information.
 
 ### What is Received vs. Stored pricing for Logs?
 
-The costs for Logs Apps are affected by the volume of data you send to a Logs App. When you transmit raw log messages, a fixed rate of $0.10 per GB applies (received price), regardless of your plan, daily volume, or retention. Storage prices vary across plans, daily log volumes, and retention periods. Before Sematext stores logs, based on your specified [Logs Pipelines](https://sematext.com/docs/logs/pipelines/) conditions, you can discard logs or portions of logs to filter out noise and minimize storage expenses, thereby reducing your costs.
+The costs for Logs Apps are affected by the volume of data you send to a Logs App. When you transmit raw log messages, a fixed rate of $0.10 per GB applies (received price), regardless of your plan, daily volume, or retention. Storage prices vary across plans, daily log volumes, and retention periods. Before Sematext stores logs, based on your specified [Logs Pipelines](/docs/logs/pipelines/) conditions, you can discard logs or portions of logs to filter out noise and minimize storage expenses, thereby reducing your costs.
 
 The unit price ($/GB) goes down as the daily log volume increases.
 
-Refer to [Reduce Log Monitoring Costs](https://sematext.com/docs/logs/reduce-costs-with-pipelines/) for more information. 
+Refer to [Reduce Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines/) for more information. 
 
 Refer to [Logs pricing](https://sematext.com/pricing/#logs) for more information on stored pricing based on selected plan and retention.
 

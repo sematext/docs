@@ -4,13 +4,13 @@ description: Sematext has several different Agents available for you to monitor 
 To start monitoring your infrastructure you need to set up the
 appropriate Sematext monitoring agent. You can choose from:
 
-  - [Sematext Agent](./sematext-agent/), a lightweight, blazing
+  - [Sematext Agent](/docs/agents/sematext-agent), a lightweight, blazing
     fast Go-based Monitoring Agent with a tiny footprint for both
     infrastructure and containers. It also collects metrics for various
-    [integrations](../integration) using integration-specific App Agents.
+    [integrations](/docs/integration) using integration-specific App Agents.
     
-  - [Node.js-based App Agent](./node-agent) for monitoring [Express.js](../integration/express.js.md), and [Node.js](../integration/node.js.md).
+  - [Node.js-based App Agent](/docs/agents/node-agent) for monitoring [Express.js](/docs/integration/express.js), and [Node.js](/docs/integration/node.js).
 
-  - [Browser SDK Agent](./browser), an open source agent that is 
+  - [Browser SDK Agent](/docs/agents/browser), an open source agent that is 
   	able to ship web application related metrics related to user
   	interaction.

@@ -10,11 +10,11 @@ The ECS Logs integration collects logs from ECS Tasks and Services running in:
 - EC2 Container Instances
 - Fargate 
 
-To collect logs from EKS, see the [Kubernetes integration](./kubernetes/#shipping-kubernetes-logs-to-sematext).
+To collect logs from EKS, see the [Kubernetes integration](/docs/integration/kubernetes/#shipping-kubernetes-logs-to-sematext).
 
 First of all create an AWS ECS Logs App.
 
-![](../images/integrations/aws-ecs-logs-integration-create-1.png)
+![](/docs/images/integrations/aws-ecs-logs-integration-create-1.png)
 
 ### AWS ECS on AWS Fargate/EC2 With FireLens 
 
@@ -34,7 +34,7 @@ With Firelens you can route logs to another AWS service, like Firehose, or use F
 #### 1. Enable FireLens
 In the ECS Task Definition, check a checkbox called Enable FireLens integration. Choose Fluent Bit and AWS will populate the image name for you.
 
-![aws-ecs-firelens-1](../images/integrations/aws-ecs-firelens-1.png)
+![aws-ecs-firelens-1](/docs/images/integrations/aws-ecs-firelens-1.png)
 
 AWS will add an additional container called `log_router` to the list of containers in your Task Definition.
 
@@ -214,6 +214,6 @@ When creating the Logagent service make sure to set the `Launch type` as **EC2**
 
 ## Next Steps
 
-- [Set up custom alerts](../alerts/creating-logs-alerts/)
-- [Set up custom reports and components](../logs/reports-and-components/)
-- [Tagging best practices](../tags/)
+- [Set up custom alerts](/docs/alerts/creating-logs-alerts/)
+- [Set up custom reports and components](/docs/logs/reports-and-components/)
+- [Tagging best practices](/docs/tags/)

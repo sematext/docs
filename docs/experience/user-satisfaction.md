@@ -6,7 +6,7 @@ On the Overview page of your Experience App you will notice several scores that 
 <img
   class="content-modal-image"
   alt="Sematext Experience Satisfaction Scores"
-  src="../../images/experience/satisfaction.png"
+  src="/docs/images/experience/satisfaction.png"
   title="Satisfaction Scores"
   width=470
   height=130
@@ -19,11 +19,11 @@ You can hover over each of these scores to get additional information such as th
 
 Different websites have different performance goals which is why the first step in getting good results in measuring your website's performance is to define the different time thresholds based on your requirements. These time thresholds are the key component in measuring users' satisfaction as the Apdex score is based on a set of response time measurements against the time threshold.
 
-Page loads, ajax requests, and measurements have different performance characteristics so we separate these into different user satisfaction scores and allow website owners to set different time thresholds for each. You can configure each of these time thresholds by opening your App and clicking on [Configure Apdex](/experience/configure-requirements) in the left menu.
+Page loads, ajax requests, and measurements have different performance characteristics so we separate these into different user satisfaction scores and allow website owners to set different time thresholds for each. You can configure each of these time thresholds by opening your App and clicking on [Configure Apdex](/docs/experience/configure-requirements) in the left menu.
 
 <!-- Todo: add link to a more detailed page about configuring requirements -->
 
-You can also define different URL groups and assign different time thresholds for each group by opening your App and clicking on [URL Groups](/experience/url-groups) in the left menu.
+You can also define different URL groups and assign different time thresholds for each group by opening your App and clicking on [URL Groups](/docs/experience/url-groups) in the left menu.
 
 #### Apdex Level
 
@@ -47,7 +47,7 @@ The exact formula used is:
 <img
   class="content-modal-image"
   alt="Sematext Experience Satisfaction Scores"
-  src="../../images/experience/apdex.gif"
+  src="/docs/images/experience/apdex.gif"
   title="Satisfaction Scores"
   width=551
   height=47

@@ -1,7 +1,7 @@
 title: Solr / SolrCloud
 description: Comprehensive monitoring and logging integration for Solr and SolrCloud, providing robust capabilities to monitor and manage critical issues across your Solr infrastructure. Leverage predefined key metric reports and advanced data visualization tools to oversee Solr performance, including memory usage, uptime, load averages, index stats, document and filter caches, latency, query distribution, errors analysis, Zookeeper and Overseer logs, and more. Receive timely alerts to address potential concerns and optimize the efficiency of your Solr and SolrCloud environments.
 
-Solr is an open-source search platform used for building and managing powerful search and data retrieval capabilities in applications. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects Solr metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes and require no changes in Solr source code or your application source code.
+Solr is an open-source search platform used for building and managing powerful search and data retrieval capabilities in applications. The [Sematext Agent](/docs/agents/sematext-agent/) collects Solr metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes and require no changes in Solr source code or your application source code.
 
 ## Install Sematext Agent
 
@@ -9,7 +9,7 @@ This lightweight, open-source [Monitoring Agent](https://github.com/sematext/sem
 
 The Sematext Solr Monitoring Agent can be run in two different modes - *in-process* and *standalone*. The *in-process* one is run as a Java agent, it is simpler to initially set up, but will require restarting your Solr node when you will want to upgrade your monitoring Agent, i.e. to get new features. The benefit of the *standalone* agent mode is that it runs as a separate process and doesn't require a Solr restart when it is installed or upgraded.
 
-1. Create an Solr Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an Solr Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 2. Install the Sematext Agent on each host running your Solr/SolrCloud nodes to have the full visibility over the metrics from each host. The full installation instructions can be found in the [setup instructions](https://apps.sematext.com/ui/howto/SolrCloud/overview) displayed in the UI.
 
 The last step to install Sematext Agent is by running a command like this:
@@ -53,9 +53,9 @@ Make sure that tag ```<jmx />``` is enabled in your ```solrconfig.xml``` file.
 4. After installing the agent, the Discovery tab shows all the Solr services identified on the host and you will start receiving metrics or logs from Solr services.
 5. If you've created an Solr Monitoring App and want to collect Solr logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Solr services and manage log and metric shipping effortlessly.
 
-Having both Solr Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, your metrics might indicate a sudden spike in query latency or a rise in memory consumption. By correlating this with the logs, you might discover that during this period of high latency, there were specific queries generating errors or that certain indexing tasks were failing due to insufficient resources.
+Having both Solr Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, your metrics might indicate a sudden spike in query latency or a rise in memory consumption. By correlating this with the logs, you might discover that during this period of high latency, there were specific queries generating errors or that certain indexing tasks were failing due to insufficient resources.
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Collected Metrics
 
@@ -99,7 +99,7 @@ The Sematext Solr monitoring agent collects the following metrics.
 
 ## Solr Default Alerts
 
-As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+As soon as you create an Elasticsearch App, you will receive a set of default [alert rules](/docs/guide/alerts-guide/). These pre-configured rules will [notify](/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Warmup time > 5m
 
@@ -115,7 +115,7 @@ Suppose a Solr cache is configured to warm up before serving requests, and the t
     - Verifying the frequency of soft commits (either autoSoftCommit or from the application) to check if they happening too often
     - Optimizing queries used during warmup or adjusting cache configuration settings to reduce warmup time. This may involve tuning the newSearcher queries
 
-You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 
 ## Metrics
@@ -157,7 +157,7 @@ autocommit max time<br>**solr.indexing.commits.auto.time.max** <br>*(long gauge)
 
 Once data is in, you can explore it via the built-in reports: 
 
-![Solr Logs Overview](../images/agents/solr_logs_overview.png)
+![Solr Logs Overview](/docs/images/agents/solr_logs_overview.png)
 
 Be sure to check out the Solr metrics as well, to get a complete view on Solr. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect logs from [all] queries.
 
@@ -165,18 +165,18 @@ Be sure to check out the Solr metrics as well, to get a complete view on Solr. F
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Queries report to see a breakdown of your queries and "zoom in" to the ones you're interested in:
 
-![Solr Queries Report](../images/agents/solr_logs_hits.png)
+![Solr Queries Report](/docs/images/agents/solr_logs_hits.png)
 
 Other built-in reports include:
 
 - **Errors**: breakdown of what's wrong: which nodes/classes/collections/etc generate errors
-- **Zookeeper**: logs produced by Solr's [Zookeeper](https://zookeeper.apache.org) client and other Zookeeper-related classes and threads. Look here for insights on SolrCloud's stability. For the Zookeeper ensemble itself, check out our [Zookeeper monitoring integration](./zookeeper.md)
+- **Zookeeper**: logs produced by Solr's [Zookeeper](https://zookeeper.apache.org) client and other Zookeeper-related classes and threads. Look here for insights on SolrCloud's stability. For the Zookeeper ensemble itself, check out our [Zookeeper monitoring integration](/docs/integration/zookeeper)
 - **Overseer**: logs produced by SolrCloud's [Overseer](https://lucene.apache.org/solr/8_6_0/solr-core/org/apache/solr/cloud/Overseer.html) thread and other Overseer activities (e.g. shard leader election)
 - **Start & Stop**: startup-related and shutdown-related logs. Look here if a node went down unexpectedly or doesn't show up in the cluster when started
 
 ## Correlating Metrics & Logs
 
-You can also correlate logs with metrics using [Split Screen](../guide/split-screen.md). For example, if you have a slow query in the logs, you can bring your Solr Monitoring App on the same screen and dig deeper in four steps:
+You can also correlate logs with metrics using [Split Screen](/docs/guide/split-screen). For example, if you have a slow query in the logs, you can bring your Solr Monitoring App on the same screen and dig deeper in four steps:
 
 ![](https://sematext.com/wp-content/uploads/2021/01/solr-performance-01.png)
 
@@ -195,12 +195,12 @@ A full example of Solr metrics and logs correlation can be found in [this articl
 
 ## Troubleshooting
 
-If you are having trouble sending logs, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you are having trouble sending logs, try out the latest version of the [Sematext Agent](/docs/agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
 If you are having issues with Sematext Monitoring, i.e. not seeing Solr metrics, see
-[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-For more troubleshooting information please look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information please look at [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.
 
 ## FAQ
 

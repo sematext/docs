@@ -5,7 +5,7 @@ You can send custom metrics to any of your Monitoring Apps. These metrics will b
 daily data points quota which may trigger rejection in case of a huge amount of data points.
 The limits are set very high, though, and under the normal operation it is hard to reach them.
 
-Once you send custom metrics to any of your Monitoring Apps, you can navigate to the App and create a [Custom Report](https://sematext.com/docs/guide/reports-guide/#why-create-custom-reports) where you can visualize the data based on your needs.
+Once you send custom metrics to any of your Monitoring Apps, you can navigate to the App and create a [Custom Report](/docs/guide/reports-guide/#why-create-custom-reports) where you can visualize the data based on your needs.
 
 Metrics are sent to metrics receivers (in the US region to `spm-receiver.sematext.com`, in the EU region
 to `spm-receiver.eu.sematext.com`). Expected format is based on 
@@ -22,7 +22,7 @@ name `token` and value equal to the token of Sematext Monitoring App to which yo
 Additionally, it is strongly encouraged, where applicable, to add `os.host` tag with value equal to the name of the
 monitored host. This tag is deeply integrated into Sematext backend and lack of it may cause some features to not work.
 
-Sematext backend uses a catalogue of [common tags](https://sematext.com/docs/tags/). Depending on the nature of your
+Sematext backend uses a catalogue of [common tags](/docs/tags/). Depending on the nature of your
 custom metrics, adding some of the tags from this catalogue can make your metrics better integrated into Sematext
 ecosystem.
 
@@ -95,7 +95,7 @@ If the metainfo for some metric is missing, the following values will be used:
 - type - gauge
 - unit - it will be empty
 
-One of these attributes can be adjusted directly in the charts - `type`. There is a [rollup](https://sematext.com/docs/dashboards/chart-builder/#rollup-by) function which is a SUM in case of a counter and an AVG in case of gauge metric.
+One of these attributes can be adjusted directly in the charts - `type`. There is a [rollup](/docs/dashboards/chart-builder/#rollup-by) function which is a SUM in case of a counter and an AVG in case of gauge metric.
 
 ### Libraries and tools
 

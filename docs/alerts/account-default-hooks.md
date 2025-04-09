@@ -7,25 +7,25 @@ To make it easy to change where alert notifications are sent for the whole Semat
 
 Notification hooks can be marked as "account default hook" in the Notification Hooks view. 
 
-![image alt text](../images/alerts/image_12.png)
+![image alt text](/docs/images/alerts/image_12.png)
 
 While creating or modifying an alert rule one can choose whether to send notifications to whichever hook, or hooks, defined as default. This setting is turned on by default when a new alert rule is created. 
 
-![image alt text](../images/alerts/image_13.png)
+![image alt text](/docs/images/alerts/image_13.png)
 
 *Send to* section is read-only, because it merely shows the current state of *account-default* notification hooks. 
 
 Besides *account-default notification hooks*, you can specify additional hooks that pertain only to this particular alert rule. The following alert would send notifications to 4 different destinations when triggered.
 
-![image alt text](../images/alerts/image_14.png)
+![image alt text](/docs/images/alerts/image_14.png)
 
 Each alert gives you the option to opt-out from **"Using account-default hooks for that alert"**, by simply turning off that toggle.
 
-![image alt text](../images/alerts/image_15.png)
+![image alt text](/docs/images/alerts/image_15.png)
 
-If you turn off notifications for an *alert rule* the only consequence of that alert being triggered will be to generate events in the [Events view](./alert-events).
+If you turn off notifications for an *alert rule* the only consequence of that alert being triggered will be to generate events in the [Events view](/docs/alerts/alert-events).
 
-![image alt text](../images/alerts/image_16.png)
+![image alt text](/docs/images/alerts/image_16.png)
 
 When alerts are defined to use default notification hooks then where they send notifications can be changed by simply changing which notification hooks are marked as default!
 

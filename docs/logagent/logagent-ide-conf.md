@@ -35,15 +35,15 @@ below, obviously:
 ### Example :
 Say we are trying to pinpoint a problem in GELF Input Plugin. We can add a **breakpoint** in GELF Input Plugin on the event message:
 
-s![img1](./img/img1.png)
+s![img1](/docs/logagent/img/img1.png)
 
 Next, we need to produce a message from a GELF client.  We could do that by typing in the terminal:
 
-![img2](./img/img2.png)
+![img2](/docs/logagent/img/img2.png)
 
 Logagent will stop at our breakpoint and we can then start to debug:
 
-![img3](./img/img3.png)
+![img3](/docs/logagent/img/img3.png)
 
 ### Useful Plugins to install:
 

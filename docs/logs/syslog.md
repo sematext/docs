@@ -14,11 +14,11 @@ destination host is **logsene-syslog-receiver.sematext.com** / **logsene-syslog-
 
 ## Authorization
 
-Authorizing syslog essentially means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](json-messages-over-syslog). Step-by-step instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng), and a raw example are below.
+Authorizing syslog essentially means telling Sematext Platform which Logs Management App to send logs to. We recommend you embed your Logs Management App token in your syslog daemon's config in a [CEE-formatted JSON message](/docs/logs/json-messages-over-syslog). Step-by-step instructions for [rsyslog](/docs/logs/rsyslog), [syslog-ng](/docs/logs/syslog-ng), and a raw example are below.
 
 You can also put the Logs Management App token in the [tag](https://datatracker.ietf.org/doc/html/rfc3164#section-4.1.3) or the [APP-NAME](https://datatracker.ietf.org/doc/html/rfc5424#section-6.2.5) part of your syslog message. You'll see an example below as well.
 
-Alternatively, [authorize your public IPs](authorizing-ips-for-syslog) and then send messages directly. Note that configuring your log shipper to send your Logs Management App token is preferred to authorizing source IPs. You can see specific instructions for [rsyslog](rsyslog), [syslog-ng](syslog-ng) and [syslogd](syslogd) for how to forward messages in this case.  
+Alternatively, [authorize your public IPs](/docs/logs/authorizing-ips-for-syslog) and then send messages directly. Note that configuring your log shipper to send your Logs Management App token is preferred to authorizing source IPs. You can see specific instructions for [rsyslog](/docs/logs/rsyslog), [syslog-ng](/docs/logs/syslog-ng) and [syslogd](/docs/logs/syslogd) for how to forward messages in this case.  
 
 ## Examples
 
@@ -40,21 +40,21 @@ To upload each line of `file.txt`:
 cat file.txt | while read -r LINE; do echo "my-host LOGS_APP_TOKEN_GOES_HERE:$LINE"; done | nc logsene-syslog-receiver.sematext.com 514
 ```
 
-Note that the above will ship every line in the file as the `message` field. It will not parse the lines, for example if you have a timestamp (the `@timestamp` field will be populated with the time of the upload). Have a look at [logs discovery](discovery/intro) and [pipelines](pipelines) for more details on parsing.
+Note that the above will ship every line in the file as the `message` field. It will not parse the lines, for example if you have a timestamp (the `@timestamp` field will be populated with the time of the upload). Have a look at [logs discovery](/docs/logs/discovery/intro) and [pipelines](/docs/logs/pipelines) for more details on parsing.
 
 ## Ways to Ship Logs
 
 In production, you're probably going to use a syslog daemon. Details on configuring syslog daemons to send logs over TCP/UDP/RELP are below:
 
-  - [rsyslog](rsyslog)
-  - [syslog-ng](syslog-ng)
-  - [traditional syslogd](syslogd)
+  - [rsyslog](/docs/logs/rsyslog)
+  - [syslog-ng](/docs/logs/syslog-ng)
+  - [traditional syslogd](/docs/logs/syslogd)
 
 ### TLS Encryption
 
-In addition to TCP, UDP and RELP, our Logs Management App also supports RFC-5425 compliant Syslog over TLS. See instructions for [rsyslog](rsyslog) and [syslog-ng](syslog-ng) on how to configure them.
+In addition to TCP, UDP and RELP, our Logs Management App also supports RFC-5425 compliant Syslog over TLS. See instructions for [rsyslog](/docs/logs/rsyslog) and [syslog-ng](/docs/logs/syslog-ng) on how to configure them.
 
 ### HTTP or HTTPS
 
-If you use a recent version of rsyslog (6.4.0 or later), you might want to send logs directly to [Sematext's Logs Management Elasticsearch API](index-events-via-elasticsearch-api), through the [omelasticsearch module](http://www.rsyslog.com/doc/omelasticsearch.html). Details on how
-to do that are on the [rsyslog how to page](rsyslog).
+If you use a recent version of rsyslog (6.4.0 or later), you might want to send logs directly to [Sematext's Logs Management Elasticsearch API](/docs/logs/index-events-via-elasticsearch-api), through the [omelasticsearch module](http://www.rsyslog.com/doc/omelasticsearch.html). Details on how
+to do that are on the [rsyslog how to page](/docs/logs/rsyslog).

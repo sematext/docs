@@ -7,23 +7,23 @@ To receive incoming notifications from Sematext add and configure a new integrat
 
 **1.** Go to the **Integrations** page and click **New integration**:
 
-<img class="content-modal-image" alt="Create Spike.sh Integration - New Integration" src="../../images/integrations/create-spikesh-integration-integrations.png" title="Create Spike.sh Integration - New Integration">
+<img class="content-modal-image" alt="Create Spike.sh Integration - New Integration" src="/docs/images/integrations/create-spikesh-integration-integrations.png" title="Create Spike.sh Integration - New Integration">
 
 **2.** Choose the **Sematext** integration from the integrations list: 
 
-<img class="content-modal-image" alt="Create Spike.sh Integration - Sematext" src="../../images/integrations/create-spikesh-integration-sematext.png" title="Create Spike.sh Integration - Sematext">
+<img class="content-modal-image" alt="Create Spike.sh Integration - Sematext" src="/docs/images/integrations/create-spikesh-integration-sematext.png" title="Create Spike.sh Integration - Sematext">
 
 **3.** Provide the name, description of the integration. Choose the service that it should be added to, the escalation policy and the acknowledgment time:
 
-<img class="content-modal-image" alt="Create Spike.sh Integration - Integration Description" src="../../images/integrations/create-spikesh-integration-add-integration.png" title="Create Spike.sh Integration - Integration Description">
+<img class="content-modal-image" alt="Create Spike.sh Integration - Integration Description" src="/docs/images/integrations/create-spikesh-integration-add-integration.png" title="Create Spike.sh Integration - Integration Description">
 
 **4.** Once the account is created click the **Copy Webhook** link:
 
-<img class="content-modal-image" alt="Create Spike.sh Integration - Copy Webhook" src="../../images/integrations/create-spikesh-integration-copy.png" title="Create Spike.sh Integration - Copy ">
+<img class="content-modal-image" alt="Create Spike.sh Integration - Copy Webhook" src="/docs/images/integrations/create-spikesh-integration-copy.png" title="Create Spike.sh Integration - Copy ">
 
 **5.** Finally, click **Copy** button in the displayed modal window:
 
-<img class="content-modal-image" alt="Create Spike.sh Integration - URL copy" src="../../images/integrations/create-spikesh-integration-copy-webhook.png" title="Create Spike.sh Integration - URL copy">
+<img class="content-modal-image" alt="Create Spike.sh Integration - URL copy" src="/docs/images/integrations/create-spikesh-integration-copy-webhook.png" title="Create Spike.sh Integration - URL copy">
 
 With the **Integration** configured we can now use the **Webhook URL** to configure the Spike.sh notification hook in Sematext.
 
@@ -35,7 +35,7 @@ With the **Integration** configured we can now use the **Webhook URL** to config
 
 **2.** Add your Spike.sh **Webhook URL**. 
 
-<img class="content-modal-image" alt="Create Spike.sh Integration" src="../../images/integrations/create-spikesh-integration.png" title="Create Spike.sh Integration">
+<img class="content-modal-image" alt="Create Spike.sh Integration" src="/docs/images/integrations/create-spikesh-integration.png" title="Create Spike.sh Integration">
 
 Next, click the **Send Test Notification** button. Spike.sh should return **OK** indicating everything is configured correctly. Check your Spike.sh integration for the test message from Sematext. 
 

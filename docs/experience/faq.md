@@ -5,7 +5,7 @@ description: FAQ about Sematext Experience, real user monitoring for websites an
 
 ### What should I do if I can't find the answer to my question in this FAQ?
 
-Check the [general FAQ](/faq) for questions that are not strictly
+Check the [general FAQ](/docs/faq) for questions that are not strictly
 about Sematext Experience.  If you can't find the answer to your
 question please email <support@sematext.com> or use our live chat.
 
@@ -58,7 +58,7 @@ small effect on website performance.
 
 ### Is the Experience script open-source?
 
-Yes, the Experience script is open-source. Look at the [Browser SDK](/agents/browser/)
+Yes, the Experience script is open-source. Look at the [Browser SDK](/docs/agents/browser/)
 to learn more. 
 
 ### Can I send data from a different domain?
@@ -78,25 +78,25 @@ bar.example.com are counted as two domains.
 ### What are the user satisfaction scores shown in Experience based on?
 
 The scores are based on the time threshold defined in the [Configure
-Requirements](/experience/configure-requirements) screen. By default these time
+Requirements](/docs/experience/configure-requirements) screen. By default these time
 thresholds are 2 seconds. You can adjust these time thresholds if you have a
 different performance target for your website or webapp. You can read
-[Configure Requirements](/experience/configure-requirements) to learn how to
+[Configure Requirements](/docs/experience/configure-requirements) to learn how to
 adjust the time thresholds or [User
-Satisfaction](/experience/user-satisfaction) to learn more about Apdex scores
+Satisfaction](/docs/experience/user-satisfaction) to learn more about Apdex scores
 in general.
 
 ### Can I see a single visitor's full session?
 
 Yes, with a few caveats:
 
- * Ensure your Experience App doesn't have [sampling](/experience/faq/#when-should-i-use-sampling) enabled
- * Ensure you select the appropriate views/month to accomodate all your monthly page views and [avoid staggering](/experience/faq/#can-i-receive-more-data-than-my-monthly-plan-limit-allows).  You can see your daily page views and change the views/month for each Experience App under App Settings.
- * See also [Why are some page loads not shown in Experience?](/experience/faq/#why-are-some-page-loads-not-shown-in-experience)
+ * Ensure your Experience App doesn't have [sampling](/docs/experience/faq/#when-should-i-use-sampling) enabled
+ * Ensure you select the appropriate views/month to accomodate all your monthly page views and [avoid staggering](/docs/experience/faq/#can-i-receive-more-data-than-my-monthly-plan-limit-allows).  You can see your daily page views and change the views/month for each Experience App under App Settings.
+ * See also [Why are some page loads not shown in Experience?](/docs/experience/faq/#why-are-some-page-loads-not-shown-in-experience)
 
 ### How are memory measurements performed?
 
-Memory measurements requested by the [Browser SDK](/agents/browser/) are requested 
+Memory measurements requested by the [Browser SDK](/docs/agents/browser/) are requested 
 with every page load. In addition to that, the measurements are taken periodically 
 so that you can see the memory usage over time.
 
@@ -157,22 +157,22 @@ load may be outside of it.
 
 ### How can I share my Sematext Apps with other users?
 
-See [sharing FAQ](/faq/#sharing).
+See [sharing FAQ](/docs/faq/#sharing).
 
 ### What is the difference between OWNER, ADMIN, BILLING_ADMIN, and USER roles?
 
-See info about user roles in [sharing FAQ](/faq/#sharing).
+See info about user roles in [sharing FAQ](/docs/faq/#sharing).
 
 ## Alerts
 
 ### Can I send alerts to PagerDuty, Slack, Nagios, or other WebHooks?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What are Threshold-based Alerts?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).
 
 ### What is Anomaly Detection?
 
-See [alerts FAQ](/faq/#alerts).
+See [alerts FAQ](/docs/faq/#alerts).

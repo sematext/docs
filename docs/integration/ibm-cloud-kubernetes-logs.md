@@ -11,7 +11,7 @@ With this integration you can:
 
 IBM Cloud Kubernetes uses Cointainerd as the container engine. In this case Logagent can't use the Docker remote API to retrieve logs and metadata. Instead, logs are collected from Containerd log files, which requires access to the relevant directories.
 
-The Logagent [input-filter for Containerd](../logagent/input-filter-containerd/) supports:
+The Logagent [input-filter for Containerd](/docs/logagent/input-filter-containerd/) supports:
 
 * Tailing log files from `/var/log/containers/`, `/var/log/pods` and `/var/data/kubeletlogs`
 * Enrichment of logs with podName, namespace, containerName, containerId
@@ -134,7 +134,7 @@ Continue reading below to see how to configure more advanced settings.
 
 ### Drop Noisy Container Logs 
 
-Edit the `logagent.conf` to add the [drop-events](../logagent/output-filter-dropevents/) outputFilter.
+Edit the `logagent.conf` to add the [drop-events](/docs/logagent/output-filter-dropevents/) outputFilter.
 
 ```yaml hl_lines="14 15 16 17 18 19"
 # logagent.conf

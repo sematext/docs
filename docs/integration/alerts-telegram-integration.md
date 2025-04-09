@@ -15,7 +15,7 @@ Finally, type the bot username, it has to end with the **_bot** suffix, e.g., **
 
 If everything went successfully you should get a message with the **Bot Token API key**:
 
-<img class="content-modal-image" alt="Create Telegram Bot Token API Key" src="../../images/integrations/create-telegram-integration_bot_key.png" title="Create Telegram Bot Token API Key">
+<img class="content-modal-image" alt="Create Telegram Bot Token API Key" src="/docs/images/integrations/create-telegram-integration_bot_key.png" title="Create Telegram Bot Token API Key">
 
 Copy the **Bot Token API key** somewhere, you will need it to configure the notification hook in Sematext.
 
@@ -23,27 +23,27 @@ Copy the **Bot Token API key** somewhere, you will need it to configure the noti
 
 First, message the bot using the Telegram client of your choice:
 
-<img class="content-modal-image" alt="Create Telegram Integration - Message Bot" src="../../images/integrations/create-telegram-integration_bot_message.png" title="Create Telegram Integration - Message Bot">
+<img class="content-modal-image" alt="Create Telegram Integration - Message Bot" src="/docs/images/integrations/create-telegram-integration_bot_message.png" title="Create Telegram Integration - Message Bot">
 
 Next, click the channel name:
 
-<img class="content-modal-image" alt="Create Telegram Integration - Click Channel Name" src="../../images/integrations/create-telegram-integration_click_channel_name.png" title="Create Telegram Integration - Click Channel Name">
+<img class="content-modal-image" alt="Create Telegram Integration - Click Channel Name" src="/docs/images/integrations/create-telegram-integration_click_channel_name.png" title="Create Telegram Integration - Click Channel Name">
 
 Click the **Administrators** to list the channel administrators:
 
-<img class="content-modal-image" alt="Create Telegram Integration - List Administrators" src="../../images/integrations/create-telegram-integration_add_administrator.png" title="Create Telegram Integration - List Administrators">
+<img class="content-modal-image" alt="Create Telegram Integration - List Administrators" src="/docs/images/integrations/create-telegram-integration_add_administrator.png" title="Create Telegram Integration - List Administrators">
 
 Click the **Add Admin** button:
 
-<img class="content-modal-image" alt="Create Telegram Integration - Add Admin" src="../../images/integrations/create-telegram-integration_add_new_administrator.png" title="Create Telegram Integration - Add Admin">
+<img class="content-modal-image" alt="Create Telegram Integration - Add Admin" src="/docs/images/integrations/create-telegram-integration_add_new_administrator.png" title="Create Telegram Integration - Add Admin">
 
 Find the created bot and click on it:
 
-<img class="content-modal-image" alt="Create Telegram Integration - Add the Bot" src="../../images/integrations/create-telegram-integration_add_bot.png" title="Create Telegram Integration - Add the Bot">
+<img class="content-modal-image" alt="Create Telegram Integration - Add the Bot" src="/docs/images/integrations/create-telegram-integration_add_bot.png" title="Create Telegram Integration - Add the Bot">
 
 Finally, review the permissions and click done:
 
-<img class="content-modal-image" alt="Create Telegram Integration - Review Permissions" src="../../images/integrations/create-telegram-integration_add_bot_finish.png" title="Create Telegram Integration - Review Permissions">
+<img class="content-modal-image" alt="Create Telegram Integration - Review Permissions" src="/docs/images/integrations/create-telegram-integration_add_bot_finish.png" title="Create Telegram Integration - Review Permissions">
 
 **3.** Retrieve the channel identifier for the channel where the bot will send notifications. This can be done by running the following request:
 
@@ -70,7 +70,7 @@ We are now ready to add our Telegram notification hook to Sematext.
 
 **2.** Add your Telegram **bot token** and **chat identifier**. 
 
-<img class="content-modal-image" alt="Create Telegram Integration" src="../../images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
+<img class="content-modal-image" alt="Create Telegram Integration" src="/docs/images/integrations/create-telegram-integration.png" title="Create Telegram Integration">
 
 Next, click the **Send Test Notification** button. Telegram should return status code **200** indicating everything is configured correctly. Check your Telegram channel for the test message from Sematext. 
 

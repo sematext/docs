@@ -3,7 +3,7 @@ description: The following tags are treated as special in Sematext Cloud and can
 
 Tags are sent by the Sematext Agent as part of every data point or log event and they are shown in UI as filters.
 
-The following tags should not be used as [custom tags](./custom-tags) or in in [App agent](../agents/sematext-agent/app-agent/) YAMLs.
+The following tags should not be used as [custom tags](/docs/tags/custom-tags) or in in [App agent](/docs/agents/sematext-agent/app-agent/) YAMLs.
 
 
 ## Common Tags
@@ -26,7 +26,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | os.host | A single-valued field and should contain the ID, typically a hostname, of the device or server sending logs. |
 | source | A single-valued field and should contain the ID or descriptor of where the data is coming from. For example, this could be a file name or even a full path to a filename, or the name of the application or process |
 | message | A string field that can contain any sort of text (usually the original log line or some other free text). |
-| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](../logs/supported-date-formats). |
+| @timestamp | A date field, on which log retention is based. If it's not present, it will be added automatically when the log event is received by Sematext. See [Supported Date Formats](/docs/logs/supported-date-formats). |
 | facility | A single-valued field used by syslog to indicate the [facility level](https://en.wikipedia.org/wiki/Syslog#Facility_levels). Sematext stores the keyword values of these levels (such as *user* or *auth*). |
 | severity | A single-valued field and should contain the log level, such as *error* or *info*. |
 | syslog-tag | A single-valued field used by syslog to indicate the name and the PID of the application generating the event (for example, **httpd\[215\]:**). |
@@ -39,7 +39,7 @@ Refer to this list of default fields for Logs Apps. The tags below are applicabl
 | geo.country_name | The country associated with the log line |
 | geo.country_iso_code | The ISO code associated with the country in the log line |
 | geo.continent_name | The continent associated with the log line |
-| request.id| Synthetics request ID unique to each monitor run. [Learn more](https://sematext.com/docs/synthetics/troubleshoot/troubleshoot-request-id/) |
+| request.id| Synthetics request ID unique to each monitor run. [Learn more](/docs/synthetics/troubleshoot/troubleshoot-request-id/) |
 | error.id | A reserved field for errors |
 | error.message | A reserved field for errors |
 | error.type | A reserved field for errors |
@@ -51,7 +51,7 @@ All of these fields are optional, but their use is strongly encouraged. If found
 
 ## Operating System Tags
 
-Below are the OS related tags sent as part of OS metrics/logs. They are collected from the host the [Sematext Agent](../agents/sematext-agent) is running on. They're mapped to the `os.host` tag.
+Below are the OS related tags sent as part of OS metrics/logs. They are collected from the host the [Sematext Agent](/docs/agents/sematext-agent) is running on. They're mapped to the `os.host` tag.
 
 | Tag Name  | Description
 |:--|:--
@@ -235,7 +235,7 @@ Field Name                    | Field Type   | Required | Notes
 ```tags```                    | []string     | no       | List of custom tags for Kubernetes event
 
 
-When you ship events to Sematext Cloud, we recommend using the common fields listed in this page. This way you can easily correlate between your events, metrics and logs. For example, when you see CPU usage spikes or start seeing more error logs and you want to investigate it further. You can use [Split Screen](../guide/split-screen) and load the Events in the right half of the screen and see if there was any deployment type of event that might be the cause of that spike. Or search for events that are shipped from a specific host that started using more resources than expected. This way you can pinpoint the source of the problems easily.
+When you ship events to Sematext Cloud, we recommend using the common fields listed in this page. This way you can easily correlate between your events, metrics and logs. For example, when you see CPU usage spikes or start seeing more error logs and you want to investigate it further. You can use [Split Screen](/docs/guide/split-screen) and load the Events in the right half of the screen and see if there was any deployment type of event that might be the cause of that spike. Or search for events that are shipped from a specific host that started using more resources than expected. This way you can pinpoint the source of the problems easily.
 
 ### Types
 
@@ -286,4 +286,4 @@ An example below. Notice message field which contains a text formatted with Mark
 }
 ```
 
-![Markdown](../images/events/markdown.png "Markdown")
+![Markdown](/docs/images/events/markdown.png "Markdown")

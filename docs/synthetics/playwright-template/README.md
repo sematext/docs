@@ -31,5 +31,5 @@ For some examples on how to write your scripts with Playwright, check out the fo
 - [The official Playwright documentation](https://playwright.dev/docs/intro)
 - [How to convert Puppeteer scripts into their Playwright equivalents](https://playwright.dev/docs/puppeteer)
 - [Examples of some common use cases](https://github.com/mxschmitt/awesome-playwright?tab=readme-ov-file#showcases)
-- [Examples seen in Sematext Cloud](https://sematext.com/docs/synthetics/user-journey-scripts/examples/)
+- [Examples seen in Sematext Cloud](/docs/synthetics/user-journey-scripts/examples/)
 - [Our 'Tips & Tricks' page](https://github.com/sematext/docs/blob/master/docs/synthetics/playwright-template/README.md)

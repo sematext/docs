@@ -2,10 +2,10 @@ title: Logagent System Service Configuration File
 description: YAML config files for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Define log parser pattern loading and definitions and ship your logs to Elasticsearch or Sematext Cloud for real-time log view. 
 
 
-Logagent is flexible. You can choose to run it as a [system service](./installation) and use the [default configuration file](#default-configuration-file-structure), or pass the CLI tool a `--config custom.yml` flag with a custom configuration.
+Logagent is flexible. You can choose to run it as a [system service](/docs/logagent/installation) and use the [default configuration file](#default-configuration-file-structure), or pass the CLI tool a `--config custom.yml` flag with a custom configuration.
 
 ## Default Configuration File Location
-When Logagent is installed as a [system service](./installation), by running the `logagent-setup` command, the default config file is located in:
+When Logagent is installed as a [system service](/docs/logagent/installation), by running the `logagent-setup` command, the default config file is located in:
 
 ```bash
 /etc/sematext/logagent.conf
@@ -106,7 +106,7 @@ input:
 
 ### Parser
 
-This section defines loading of custom pattern files or inline pattern definitions for the log parser. Check it out in detail [here](./parser).
+This section defines loading of custom pattern files or inline pattern definitions for the log parser. Check it out in detail [here](/docs/logagent/parser).
 
 ```yaml
 # optional, if not specified default patterns are used
@@ -132,7 +132,7 @@ parser:
 
 ### Output
 
-Logs can be shipped to [various destinations](https://sematext.com/docs/logagent/plugins/) including:
+Logs can be shipped to [various destinations](/docs/logagent/plugins/) including:
 
 - Elasticsearch
 - AWS Elasticsearch Service

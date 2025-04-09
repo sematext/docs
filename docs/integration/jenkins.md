@@ -8,18 +8,18 @@ description: Comprehensive view of your Jenkins health and performance with Sema
 
 ## Jenkins Alerts
 
-As soon as you create a Jenkins App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+As soon as you create a Jenkins App, you will receive a set of default [alert rules](/docs/guide/alerts-guide/). These pre-configured rules will [notify](/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 
 ### Health check score anomaly
 
-This alert rule continuously monitors the health check score (the ratio of successful health checks to total health checks) of Jenkins instances using [anomaly detection](https://sematext.com/docs/alerts/#alert-types). When anomalies are detected, it triggers warnings (WARN priority).
+This alert rule continuously monitors the health check score (the ratio of successful health checks to total health checks) of Jenkins instances using [anomaly detection](/docs/alerts/#alert-types). When anomalies are detected, it triggers warnings (WARN priority).
 
 Let's say you have a Jenkins server that typically has a health check score of around 0.9, indicating a healthy system. However, due to a sudden increase in system load or a misconfiguration, the health check score drops significantly to 0.5 within a short period. Upon detecting the anomaly (in this case, a sudden drop in the health check score), the alert rule triggers a warning.
 
 #### Actions to take
 
-- You can examine [system metrics](https://sematext.com/docs/monitoring/infrastructure/) such as CPU usage, memory, disk I/O, and network traffic to find any spikes that may have contributed to the drop in the health check score
+- You can examine [system metrics](/docs/monitoring/infrastructure/) such as CPU usage, memory, disk I/O, and network traffic to find any spikes that may have contributed to the drop in the health check score
 - Review Jenkins logs (system log, build logs, and any plugin-specific logs) to get insights into any errors or warnings in the Jenkins environment
 - Review recent changes to Jenkins configuration, including plugin updates, job configurations, and system settings
 
@@ -46,11 +46,11 @@ Suppose the Jenkins master Web UI experiences a sudden surge in traffic or encou
 
 - Investigate the status and health of backend services that Jenkins depends on, such as databases, application servers, or external APIs
 - Check Jenkins configuration settings, including connection settings to external integrations, resource allocation, and plugin configurations
-- [Monitor resource usage](https://sematext.com/docs/monitoring/infrastructure/) on the Jenkins server, including CPU, memory, disk I/O, and network bandwidth
+- [Monitor resource usage](/docs/monitoring/infrastructure/) on the Jenkins server, including CPU, memory, disk I/O, and network bandwidth
 - If Jenkins is experiencing high traffic, consider scaling up the infrastructure by adding more Jenkins nodes
 
 
-You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 
 ## Metrics

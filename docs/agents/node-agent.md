@@ -2,7 +2,7 @@ title: Sematext Node Agent
 description: Collect Node.js processes' metrics and sends them to Sematext javascript monitoring solution available as npm package
 
 The Node agent is a lightweight open-source agent for [monitoring
-Node.js](../integration/node.js.md) applications.  It is built on top of
+Node.js](/docs/integration/node.js) applications.  It is built on top of
 the open-source [SPM Agent Framework](https://github.com/sematext/spm-agent).
 
 This agent is still in active use.
@@ -15,11 +15,11 @@ Node 4.x and above.
 
 In the past, the same base was used to monitor a few other integrations:
 
-- [MongoDB agent](../integration/mongodb)
-- [Nginx](../integration/nginx)
-- [Apache](../integration/apache)
+- [MongoDB agent](/docs/integration/mongodb)
+- [Nginx](/docs/integration/nginx)
+- [Apache](/docs/integration/apache)
 
-These are now monitored with a new, unified [Sematext Agent](./sematext-agent) that provides numerous
+These are now monitored with a new, unified [Sematext Agent](/docs/agents/sematext-agent) that provides numerous
 other integrations out-of-the-box and enables exciting features like infrastructure monitoring,
 auto-discovery and many more.
 

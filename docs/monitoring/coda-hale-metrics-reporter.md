@@ -3,8 +3,8 @@ description: Sematext extension for Metrics, a powerful toolkit of modules for c
 
 [Sematext-metrics-reporter](https://github.com/sematext/sematext-metrics-reporter)
 is an extension for the [ Coda Hale Metrics](http://metrics.dropwizard.io/) library version 2.2.0 and 3.x for
-sending metrics to [Sematext Monitoring](https://sematext.com/docs/monitoring/).  Under the
-hood sematext-metrics Java library is used to send metrics as [Custom Metrics](custom-metrics) to Sematext Monitoring.
+sending metrics to [Sematext Monitoring](/docs/monitoring/).  Under the
+hood sematext-metrics Java library is used to send metrics as [Custom Metrics](/docs/monitoring/custom-metrics) to Sematext Monitoring.
 
 ### Quick Start
 

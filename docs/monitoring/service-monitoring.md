@@ -9,10 +9,10 @@ Each integration comes with prebuilt alerts based on fine-tuned thresholds, hear
 
 For more information make sure to check:
 
-- [Service Discovery](https://sematext.com/docs/monitoring/autodiscovery/)
-- [Monitoring Integrations](https://sematext.com/docs/integration/#monitoring)
-- [Alerts](https://sematext.com/docs/alerts/)
-- [Dashboard Components and Reports](https://sematext.com/docs/monitoring/reports-and-components/)
-- [Scheduled Reports](https://sematext.com/docs/guide/scheduled-reports/)
-- [Correlation](https://sematext.com/docs/monitoring/correlation/)
-- [Connected Apps](https://sematext.com/docs/guide/connected-apps/)
+- [Service Discovery](/docs/monitoring/autodiscovery/)
+- [Monitoring Integrations](/docs/integration/#monitoring)
+- [Alerts](/docs/alerts/)
+- [Dashboard Components and Reports](/docs/monitoring/reports-and-components/)
+- [Scheduled Reports](/docs/guide/scheduled-reports/)
+- [Correlation](/docs/monitoring/correlation/)
+- [Connected Apps](/docs/guide/connected-apps/)

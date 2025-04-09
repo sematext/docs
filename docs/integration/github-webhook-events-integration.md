@@ -8,7 +8,7 @@ Here is just one of several our of the box Sematext dashboards this integration 
 <img
   class="content-modal-image"
   alt="Github Team Pulse Dashboard"
-  src="../../images/logs/github-webhooks-team-pulse.png"
+  src="/docs/images/logs/github-webhooks-team-pulse.png"
   title="Github Team Pulse Dashboard"
 />
 

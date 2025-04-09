@@ -3,7 +3,7 @@ description: Blacklist/Whitelist log sources when using the File Input Plugin. T
 
 To reduce the noise from logs you do not need or want to track, you can blacklist the log sources entirely. This guide refers to using the File Input Plugin and will explain an advanced approach to using Glob patterns.
 
-This will contain a few examples that show how you can configure the [File Input Plugin](https://sematext.com/docs/logagent/plugins/) to filter log sources.
+This will contain a few examples that show how you can configure the [File Input Plugin](/docs/logagent/plugins/) to filter log sources.
 
 The most efficient way to exclude log sources is to stop collecting logs from noisy data sources. For a full reference on <a href='https://www.npmjs.com/package/glob#glob-primer' target='_blank'>Glob patterns, check this out</a>.
 

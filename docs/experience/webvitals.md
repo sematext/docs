@@ -6,7 +6,7 @@ Supported by Chrome, the [Web Vitals](https://web.dev/vitals/) is a Google initi
 <img
   class="content-modal-image"
   alt="Web Vitals Overview"
-  src="../../images/experience/webvitals/webvitals.png"
+  src="/docs/images/experience/webvitals/webvitals.png"
   title="Web Vitals Overview"
 />
 
@@ -18,7 +18,7 @@ frameborder="0" allow="autoplay; encrypted-media"
 allowfullscreen class="video"></iframe>
 </div>
 
-Both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals) support the Core Web Vitals out of the box and include the following metrics:
+Both [Sematext Experience](/docs/experience/) and [Sematext Synthetics](/docs/synthetics/browser-monitor/#web-vitals) support the Core Web Vitals out of the box and include the following metrics:
 
 #### Largest Contentful Paint (LCP) 
 
@@ -26,7 +26,7 @@ Measures *page loading* performance. Google suggests that **LCP** should be **be
 
 #### First Input Delay (FID)
 
-Measures *interactivity* of the web application. Google suggests that to provide good user experience, pages should have a first input delay of **less than 100 milliseconds**. Please note that FID is not measured in [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals), but it is measured in Sematext Experience.  [Learn more about First Input Delay](https://sematext.com/glossary/first-input-delay/).
+Measures *interactivity* of the web application. Google suggests that to provide good user experience, pages should have a first input delay of **less than 100 milliseconds**. Please note that FID is not measured in [Sematext Synthetics](/docs/synthetics/browser-monitor/#web-vitals), but it is measured in Sematext Experience.  [Learn more about First Input Delay](https://sematext.com/glossary/first-input-delay/).
 
 #### Cumulative Layout Shift (CLS)
 
@@ -34,7 +34,7 @@ Measures *visual* stability of the web page. To provide a good user experience G
 
 ### Other Web Vitals Metrics
 
-In addition to the Core Web Vitals, both [Sematext Experience](/experience/) and [Sematext Synthetics](/synthetics/browser-monitor/#web-vitals) support the supplemental Web Vitals metrics often used to help with diagnostics of specific issues on the web page. Those metrics are:
+In addition to the Core Web Vitals, both [Sematext Experience](/docs/experience/) and [Sematext Synthetics](/docs/synthetics/browser-monitor/#web-vitals) support the supplemental Web Vitals metrics often used to help with diagnostics of specific issues on the web page. Those metrics are:
 
 #### Time to First Byte (TTFB)
 
@@ -53,7 +53,7 @@ The main Web Vitals panel shows the 75th percentile for both the Core and Other 
 <img
   class="content-modal-image"
   alt="Core Web Vitals Panel"
-  src="../../images/experience/webvitals/webvitals_corepanel.png"
+  src="/docs/images/experience/webvitals/webvitals_corepanel.png"
   title="Core Web Vitals Panel"
 />
 
@@ -62,13 +62,13 @@ In addition to the panel showing the 75th percentile, the information is present
 <img
   class="content-modal-image"
   alt="Core Web Vitals Graphs"
-  src="../../images/experience/webvitals/webvitals_coregraphs.png"
+  src="/docs/images/experience/webvitals/webvitals_coregraphs.png"
   title="Core Web Vitals Graphs"
 />
 
 <img
   class="content-modal-image"
   alt="Other Web Vitals"
-  src="../../images/experience/webvitals/webvitals_other.png"
+  src="/docs/images/experience/webvitals/webvitals_other.png"
   title="Other Web Vitals"
 />

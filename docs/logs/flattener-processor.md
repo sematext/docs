@@ -19,14 +19,14 @@ The process involves:
 
 **Selecting the Source Field:** Choose the field you wish to flatten and designate the target field name.
 
-![Flattener Processor](../images/logs/pipelines/flattener-processor.png)
+![Flattener Processor](/docs/images/logs/pipelines/flattener-processor.png)
 
 **Renaming Flattened Objects:** Assign meaningful names to the flattened objects for easy access later
 
-![Rename Processor](../images/logs/pipelines/rename-processor.png)
+![Rename Processor](/docs/images/logs/pipelines/rename-processor.png)
 
 This transformation enables you to utilize these fields effectively for data visualization.
 
-If the extracted field values contain both text and numerical information, such as units, you can use [Field Extractor](../logs/field-extractor-processor) processor and trim the accompanying text, keeping only the numerical value.
+If the extracted field values contain both text and numerical information, such as units, you can use [Field Extractor](/docs/logs/field-extractor-processor) processor and trim the accompanying text, keeping only the numerical value.
 
-Once the numerical fields are obtained, you can navigate to the [Field Editor](https://sematext.com/docs/logs/fields/#field-editor) to set the type of the newly created fields as `float` or `integer`. Then, by using [Logs Table Quick Actions](../logs/logs-table-quick-actions), you can visualize data in this field using  [Chart Builder](https://sematext.com/docs/dashboards/chart-builder/).
+Once the numerical fields are obtained, you can navigate to the [Field Editor](/docs/logs/fields/#field-editor) to set the type of the newly created fields as `float` or `integer`. Then, by using [Logs Table Quick Actions](/docs/logs/logs-table-quick-actions), you can visualize data in this field using  [Chart Builder](/docs/dashboards/chart-builder/).

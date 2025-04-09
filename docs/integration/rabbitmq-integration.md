@@ -1,11 +1,11 @@
 title: RabbitMQ
 description: Comprehensive view of RabbitMQ's health and performance using Sematext's monitoring and logs integration. Monitor real-time metrics, leverage reports and dashboards for proactive issue identification, and troubleshoot various RabbitMQ issues, including connection and access, through detailed logs analysis.
 
-RabbitMQ is an open-source message broker software that facilitates message queuing, enabling communication and transfer of data between distributed applications. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects RabbitMQ metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+RabbitMQ is an open-source message broker software that facilitates message queuing, enabling communication and transfer of data between distributed applications. The [Sematext Agent](/docs/agents/sematext-agent/) collects RabbitMQ metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an RabbitMQ Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an RabbitMQ Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/RabbitMQ/overview](https://apps.sematext.com/ui/howto/RabbitMQ/overview) displayed in the UI.
 3. Install the [RabbitMQ management plugin](https://www.rabbitmq.com/management.html), if it's not already installed
 4. create a user with `administrator` tags, to be able to get all metrics
@@ -13,23 +13,23 @@ RabbitMQ is an open-source message broker software that facilitates message queu
 5. After installing the agent and configuring RabbitMQ, the Discovery tab shows all the RabbitMQ services identified on the host and you will start receiving metrics or logs from RabbitMQ services.
 6. If you've created an RabbitMQ Monitoring App and want to collect RabbitMQ logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from RabbitMQ services and manage log and metric shipping effortlessly.
 
-Having both RabbitMQ Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution.For example, if you see a spike in connection metrics, you can check logs to see what are the sources of these connections. Or if you see an increase in authentication errors, monitoring can tell what's the impact on RabbitMQ's memory usage, garbage collection and CPU.
+Having both RabbitMQ Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution.For example, if you see a spike in connection metrics, you can check logs to see what are the sources of these connections. Or if you see an increase in authentication errors, monitoring can tell what's the impact on RabbitMQ's memory usage, garbage collection and CPU.
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Important RabbitMQ Metrics to Watch
 
 The usual entry point is the Messages report: do you have many messages published in a specific timeframe? Out of those, how many are unacknowledged or redelivered? These could be red flags.
 
-![RabbitMQ Messages Report](../images/agents/rabbitmq_monitoring_messages.png)
+![RabbitMQ Messages Report](/docs/images/agents/rabbitmq_monitoring_messages.png)
 
 If there are any signs of trouble, it's time to dig deeper. Is the RabbitMQ server itself at fault? Check the Nodes metrics, such as Garbage Collection or Run Queue size:
 
-![RabbitMQ Nodes Report](../images/agents/rabbitmq_monitoring_nodes.png)
+![RabbitMQ Nodes Report](/docs/images/agents/rabbitmq_monitoring_nodes.png)
 
 Finally, OS-level metrics can also point out bottlenecks, such as network or CPU:
 
-![RabbitMQ CPU Chart](../images/agents/rabbitmq_monitoring_cpu.png)
+![RabbitMQ CPU Chart](/docs/images/agents/rabbitmq_monitoring_cpu.png)
 
 ## Metrics
 
@@ -86,13 +86,13 @@ redelivered messages<br>**queues.messages.redelivered** <br>*(counter)*  |  Coun
 
 Once data is in, you can explore it via the built-in reports: 
 
-![RabbitMQ Logs Overview](../images/agents/rabbitmq_overview.png)
+![RabbitMQ Logs Overview](/docs/images/agents/rabbitmq_overview.png)
 
 ## Exploring logs
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Authentication report to check on granted and denied connections:
 
-![RabbitMQ Authentication Overview](../images/agents/rabbitmq_auth.png)
+![RabbitMQ Authentication Overview](/docs/images/agents/rabbitmq_auth.png)
 
 Other built-in reports include:
 
@@ -101,4 +101,4 @@ Other built-in reports include:
 
 ## Troubleshooting
 
-If you are having trouble sending logs, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you are having trouble sending logs, try out the latest version of the [Sematext Agent](/docs/agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.

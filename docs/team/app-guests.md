@@ -24,7 +24,7 @@ To share one of your Apps with other users, go to the
 
 To see the list of all the Apps you can access click on the **Apps** section. 
 
-![Apps You Can Access](../images/team/apps_you_can_access.png)
+![Apps You Can Access](/docs/images/team/apps_you_can_access.png)
 
 If you have a pending invite, a red circle is displayed next to the **Team** menu item in the main navigation 
 as well as next to the **Apps** section. 
@@ -38,11 +38,11 @@ Apps that you have access to are in the **Accepted** state and by clicking on th
 
 To see the list of your Apps that other users can access navigate to **App Guests** and then click on the **Guests** section. For detailed information about a specific user click on the member email. That will open a flyout with the list of all Apps that user can access.
 
-![Apps Other Users Can Access](../images/team/apps_other_can_access.png)
+![Apps Other Users Can Access](/docs/images/team/apps_other_can_access.png)
 
 To see the list of your Apps with a count of users with access, on the **App Guests** page click on the **Accessible Apps** section.
 For detailed information about a specific App click on the App name. That will open a flyout with a list of all the users that can access it.
 
-![Apps Other Users Can Access](../images/team/accessible_apps.png)
+![Apps Other Users Can Access](/docs/images/team/accessible_apps.png)
 
 

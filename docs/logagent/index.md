@@ -18,12 +18,12 @@ sudo npm i -g @sematext/logagent
 sudo logagent-setup -i <LOGS_TOKEN or ES_INDEX>
 ```
 
-To read more jump to [Installation](./installation) right away.
+To read more jump to [Installation](/docs/logagent/installation) right away.
 
 ## Features
-Logagent contains an installer when you want to use it as a [log shipper](./installation).  Configuration is done via a simple [`YAML` configuration file](./config-file). It has a library that supports **patterns for log parsing**, and it can also be used as a **command line tool**.
+Logagent contains an installer when you want to use it as a [log shipper](/docs/logagent/installation).  Configuration is done via a simple [`YAML` configuration file](/docs/logagent/config-file). It has a library that supports **patterns for log parsing**, and it can also be used as a **command line tool**.
 
-- [Install Logagent](./installation) with:
+- [Install Logagent](/docs/logagent/installation) with:
     - Linux Systemd
     - Linux Upstart
     - Windows service
@@ -43,13 +43,13 @@ Logagent contains an installer when you want to use it as a [log shipper](./inst
 - Node.js API
 
 ## Installation Options
-- Install as a [system service](./installation)
-- Run as a [Docker Container](./installation-docker) 
-- [Deploy to Heroku](./installation-heroku) as Heroku Log drain
+- Install as a [system service](/docs/logagent/installation)
+- Run as a [Docker Container](/docs/logagent/installation-docker) 
+- [Deploy to Heroku](/docs/logagent/installation-heroku) as Heroku Log drain
 - Deployment to Cloud Foundry as Cloud Foundry Log drain (thus usable with Pivotal, IBM Bluemix, etc.)
 
 ## Configuration
-After installing Logagent, run `logagent-setup` to create a system service and start shipping logs right away. This will also create a simple [`YAML` configuration file](./config-file) for you in `/etc/sematext/logagent.conf`.
+After installing Logagent, run `logagent-setup` to create a system service and start shipping logs right away. This will also create a simple [`YAML` configuration file](/docs/logagent/config-file) for you in `/etc/sematext/logagent.conf`.
 
 ```yaml hl_lines="18 19 24 25 27 29 30 35"
 # /etc/sematext/logagent.conf
@@ -122,7 +122,7 @@ Logagent can also be **used as a command-line tool**. To use Logagent only as a 
         logagent -e http://localhost:9200 -i logs
 
 ## Built-in Log Parser
-You can configure [custom data patterns for parsing logs](./parser).
+You can configure [custom data patterns for parsing logs](/docs/logagent/parser).
 
 - Log format detection and intelligent pattern matching
 - The pattern library includes a set of popular log formats for databases, web servers, message queues, etc.
@@ -133,7 +133,7 @@ You can configure [custom data patterns for parsing logs](./parser).
 - GeoIP lookup
 
 ## Plugins 
-A comprehensive collection of plugins for data input, processing, and output are available. See the complete list of [Logagent Plugins](./plugins).   
+A comprehensive collection of plugins for data input, processing, and output are available. See the complete list of [Logagent Plugins](/docs/logagent/plugins).   
 
 ## API 
 Logagent is an [npm package](https://www.npmjs.com/package/@sematext/logagent) and can add log parsing to Node.js applications.

@@ -1,9 +1,9 @@
 title: Logs Usage Screen
 description: Learn about Daily Log Volume, its impact on pricing, and how Sematext provides transparent cost structures, empowering informed decisions for optimized log storage.
 
-The Logs Usage screen provides insights into historical data concerning daily log volumes received and stored for Admins and Owners of the Logs Apps. It's important to note that there are no predefined limits to the number of logs you can store within your Logs App. However, selecting the optimal Daily Volume plan is crucial, as it directly impacts the $/GB price, ensuring cost-effectiveness. See [Plan Recommendations](../logs/plan-recommendations).
+The Logs Usage screen provides insights into historical data concerning daily log volumes received and stored for Admins and Owners of the Logs Apps. It's important to note that there are no predefined limits to the number of logs you can store within your Logs App. However, selecting the optimal Daily Volume plan is crucial, as it directly impacts the $/GB price, ensuring cost-effectiveness. See [Plan Recommendations](/docs/logs/plan-recommendations).
 
-![Logs Usage Stored and Received](../images/logs/logs-usage-stored-received.png)
+![Logs Usage Stored and Received](/docs/images/logs/logs-usage-stored-received.png)
 
 The costs are affected by the volume of data you send to a Logs App. When you transmit raw log messages to Sematext, a fixed rate of $0.1 per GB applies (received price), regardless of your plan, daily log volume, and retention selection. Once Sematext receives the logs, but before storing them, any defined pipeline processors are applied to structure or discard logs or portions of logs based on your specified pipeline conditions. Storage prices vary across plans, daily log volumes, and retention periods. Therefore, while you can send large amounts of data to Sematext, it's beneficial to filter out noise or unnecessary data to minimize storage expenses. This will not only reduce your costs, but also make your noise cleaner and easier to use.
 
@@ -17,7 +17,7 @@ Instead, any data over the chosen daily volume is tracked and added to the month
 
 The **Daily Volume Limit** and **Max Daily Volume Limit** can be easily set and modified from the Usage screen at any time. Additionally, the estimated monthly amount is displayed on the top right of the screen.
 
-![Logs Usage Daily Limits](../images/logs/logs-usage-dlv.png)
+![Logs Usage Daily Limits](/docs/images/logs/logs-usage-dlv.png)
 
 ## Optimizing Daily Volume Selection
 
@@ -27,7 +27,7 @@ Transparency in cost structures is a core value for us.  We analyze the average 
 
 Once a better plan is detected, a green '$' icon will appear in the left menu panel of the Logs App and the plan suggestions will become visible in the Usage Screen, App Settings, and Manage Plan sections.
 
-![Logs Usage Plan Recommendations](../images/logs/logs-usage-plan-recommendations.png)
+![Logs Usage Plan Recommendations](/docs/images/logs/logs-usage-plan-recommendations.png)
 
 
-See [Plan Recommendations](../logs/plan-recommendations) for more information.
+See [Plan Recommendations](/docs/logs/plan-recommendations) for more information.

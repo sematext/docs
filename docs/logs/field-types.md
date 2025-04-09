@@ -85,7 +85,7 @@ Example of a document containing string field:
 ## Date
 
 Use this type for all date and time fields. One such field is @timestamp, which
-contains log event creation time. See [examples](supported-date-formats).
+contains log event creation time. See [examples](/docs/logs/supported-date-formats).
 
 ## Geo
 
@@ -140,4 +140,4 @@ data in a format presented above. Alternatively, you can use Field
 Editor to manually create a field of the geo-point type.
 
 If you want to adjust the structure of your data you can use the Field Editor 
-functionality in your Logs App settings or use the [Templates and Mappings](/logs/mappings-templates) functionality.
+functionality in your Logs App settings or use the [Templates and Mappings](/docs/logs/mappings-templates) functionality.

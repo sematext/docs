@@ -4,7 +4,7 @@ description: Trace code execution from beginning to end, see insights into opera
 ## What is Transaction Tracing
 
 Transaction tracing lets one trace code execution from beginning to end.
-It also enables [Database Operations](database-operations) reporting. In case of
+It also enables [Database Operations](/docs/tracing/database-operations) reporting. In case of
 Sematext Monitoring, transaction tracing can also cross applications, networks, and
 servers.
 
@@ -29,12 +29,12 @@ running applications and troubleshoot performance issues.
 
 ## Notes
 
-  - Transaction Tracing requires App Agent running in [embedded mode](/agents/sematext-agent/app-agent/spm-monitor-javaagent/).
+  - Transaction Tracing requires App Agent running in [embedded mode](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/).
   - Enabling/disabling the tracing agent requires Sematext Agent restart,
     which means it requires the restart of the application running the
     embedded App Agent.
   - Enabling transaction traces adds only about 1% CPU overhead.
-  - Transaction Tracing is different from [On Demand Profiling](/monitoring/on-demand-profiling).
+  - Transaction Tracing is different from [On Demand Profiling](/docs/monitoring/on-demand-profiling).
 
 ## Resources
 

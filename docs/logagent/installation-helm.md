@@ -38,5 +38,5 @@ helm install st-logagent \
 
 To see detailed configuration params and manuals, see:
 
-- [Container Configuration Parameters](./container-config-parameters)
-- [Container Configuration Manual](./container-config-manual)
+- [Container Configuration Parameters](/docs/logagent/container-config-parameters)
+- [Container Configuration Manual](/docs/logagent/container-config-manual)

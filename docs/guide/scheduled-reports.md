@@ -3,7 +3,7 @@ description: Sematext Scheduled Reports let you receive emails with dashboards o
 
 ## What are Scheduled Reports
 
-Scheduled Reports let you receive emails with [dashboards](https://sematext.com/docs/dashboards/) or [reports](https://sematext.com/docs/dashboards/reports-and-components/) embedded in them at a specified frequency (one time, daily, weekly, monthly, etc.). They can include information on system performance, application logs, and more. The reports are delivered via email, providing a convenient and automated way for teams to stay informed about their applications and infrastructure health and performance.
+Scheduled Reports let you receive emails with [dashboards](/docs/dashboards/) or [reports](/docs/dashboards/reports-and-components/) embedded in them at a specified frequency (one time, daily, weekly, monthly, etc.). They can include information on system performance, application logs, and more. The reports are delivered via email, providing a convenient and automated way for teams to stay informed about their applications and infrastructure health and performance.
 
 ## What you can do with Scheduled Reports
 
@@ -24,20 +24,20 @@ To use Scheduled Reports in Sematext, follow these steps:
 
 1. Navigate to any available Report in Sematext Cloud or create a new report by selecting the metrics and logs you want to include in the report.
 2. Select “Email Report” from the Report’s menu. <br>
-![Scheduled Reports Icon](../images/guide/scheduled-reports/scheduled-reports-icon.png)
+![Scheduled Reports Icon](/docs/images/guide/scheduled-reports/scheduled-reports-icon.png)
 3. Select whether you need to send a one time email or a scheduled email.
 4. Choose a message that will appear on top of your delivered Scheduled Report email.
 5. Select the frequency for the Scheduled Report (every 5 minutes, daily, weekly, monthly, quarterly).
 6. Select the preferred time range.
 7. Set the list of email recipients.
 8. Save the report and it will be automatically generated and delivered at the specified frequency. <br>
-![Scheduled Reports Settings](../images/guide/scheduled-reports/scheduled-reports-settings.png)
+![Scheduled Reports Settings](/docs/images/guide/scheduled-reports/scheduled-reports-settings.png)
 9. You can view, edit, or delete existing reports by selecting “Manage scheduled reports” in the Report Settings. <br>
-![Manage Scheduled Reports](../images/guide/scheduled-reports/scheduled-reports-manage.png)
+![Manage Scheduled Reports](/docs/images/guide/scheduled-reports/scheduled-reports-manage.png)
 
 The generated Report will look like the one below. In this example you can spot the disk usage that is slowly creeping up and that may not trigger alerts for low available disk space until later.  By seeing this trend in Scheduled Reports you can take action early, such as adding capacity, or troubleshooting the root cause.
 
-![Manage Scheduled Email](../images/guide/scheduled-reports/scheduled-reports-email-full.png)
+![Manage Scheduled Email](/docs/images/guide/scheduled-reports/scheduled-reports-email-full.png)
 
 That's it! With Scheduled Reports, you can have the performance and log information you need, when you need it, without having to manually generate reports.
 

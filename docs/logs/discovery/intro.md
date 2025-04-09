@@ -1,9 +1,9 @@
 title: Logs Discovery
 description: Logs Discovery Introduction
 
-Logs discovery, a component of [Fleet & Discovery](https://sematext.com/docs/fleet/), automates the classification and shipping of your infrastructure, application, and container log files. With a user-friendly interface, you can easily explore and manage discovered log sources across bare-metal/virtual machines and containers.
+Logs discovery, a component of [Fleet & Discovery](/docs/fleet/), automates the classification and shipping of your infrastructure, application, and container log files. With a user-friendly interface, you can easily explore and manage discovered log sources across bare-metal/virtual machines and containers.
 
-![Logs Discovery](../../images/fleet/fnd-discovery-services.png)
+![Logs Discovery](/docs/images/fleet/fnd-discovery-services.png)
 
 ## Features
 
@@ -17,7 +17,7 @@ Setting up log shipping is straightforward and it boils down to selecting your l
 
 ### Log parsing
 
-A predefined set of regular expression patterns are automatically applied to a log file making it convenient to get started without additional hassle. Log parsing structures the raw log events into events with meaningful fields out of the box making them suitable for dashboarding and the creation of precise alert rules. Sematext Logs supports a wide array of [integrations](https://sematext.com/docs/integration/#logging) with prebuilt reports and alert rules.
+A predefined set of regular expression patterns are automatically applied to a log file making it convenient to get started without additional hassle. Log parsing structures the raw log events into events with meaningful fields out of the box making them suitable for dashboarding and the creation of precise alert rules. Sematext Logs supports a wide array of [integrations](/docs/integration/) with prebuilt reports and alert rules.
 
 ### Glob patterns
 

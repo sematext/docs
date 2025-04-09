@@ -5,54 +5,54 @@ Logagent features a modular architecture. Each input or output module is impleme
 
 | Plugin              | Type                      | Description                                                                                              |
 |---------------------|---------------------------|----------------------------------------------------------------------------------------------------------|
-| [stdin (default)](input-plugin-stdin)                       | input   | Reads from standard input                                                          |
-| [files](input-plugin-files)           | input   | Watching and tailing files                                                                               |
-| [docker-logs](input-plugin-dockerlogs)           | input   | Collection of Docker container logs                                                           |
-| [input-kubernetes-events](input-kubernetes-events)           | input   | Collection of Kubernetes events                                                         |
-| [input-kubernetes-audit](input-kubernetes-audit)           | input   | Receive Kubernetes audit logs via http / webhook                                    |
+| [stdin (default)](/docs/logagent/input-plugin-stdin)                       | input   | Reads from standard input                                                          |
+| [files](/docs/logagent/input-plugin-files)           | input   | Watching and tailing files                                                                               |
+| [docker-logs](/docs/logagent/input-plugin-dockerlogs)           | input   | Collection of Docker container logs                                                           |
+| [input-kubernetes-events](/docs/logagent/input-kubernetes-events)           | input   | Collection of Kubernetes events                                                         |
+| [input-kubernetes-audit](/docs/logagent/input-kubernetes-audit)           | input   | Receive Kubernetes audit logs via http / webhook                                    |
 | [logagent-input-windows-events](https://www.npmjs.com/package/logagent-input-windows-events) | input  | Collect Windows Events. Available as separate npm package |
 | [logagent-input-elasticsearch-stats](https://www.npmjs.com/package/logagent-input-elasticsearch-stats) | input | Monitoring of Elasticsearch metrics. Available as separate npm package |
-| [syslog](input-plugin-syslog.md)      | input | Receive Syslog messages via UDP |
-| [input-journald-upload](input-plugin-journald-upload)         | input | Receive data via HTTP from the systemd-journal-upload.service          |
-| [elasticsearch-query](input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
-| [input-elasticsearch-http](input-plugin-elasticsearch-http) | input | Receive documents via Elasticsearch HTTP indexing API (bulk and post) |
-| [input-tcp](input-plugin-tcp)         | input | Receive data via TCP                                                                                     |
-| [input-mqtt-client](input-plugin-mqtt-client) | input | Receive data via MQTT client (subscriber for N topics)                          |
-| [input-mqtt-broker](input-plugin-mqtt-broker) | input | Starts an MQTT broker and emits all received events from all topics to Logagent |
-| [input-gelf](input-plugin-gelf) | input | Receive data via GELF protocol                                                                |
-| [heroku](installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                              |
-| [cloudfoundry](input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)           |
-| [command](input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically         |
-| [mysql-query](input-plugin-mysql)     | input | Receive results from SQL queries, which could run once or periodically                  |
-| [mssql-query](input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                  |
-| [postgresql-query](input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
-| [logagent-input-kafka](input-plugin-kafka)         | input          | Receives messages from Apache Kafka topics. 3rd party module.  
-| [input-influxdb-http](input-plugin-influxdb-http)         | input          | Receives metrics from InfluxDB compatible monitoring agents like Telegraf. |
-| [logagent-apple-location](logagent-apple-location)         | input          | Tracking of GPS positions from Apple devices via "find-my-iphone" API |
-| [logagent-novasds](logagent-novasds)         | input          | Read PM10 and PM2.5 values from Nova SDS011 dust sensor (USB to serial interface) |
-| [input-azure-eventhub](input-plugin-azure-eventhub)         | input          | Receives events from Azure Event Hubs |
-| [grep](input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
-| [input-filter-k8s-containerd](input-filter-containerd.md) | Processor / input filter  | Parsing cri-o log format and add Kubernetes context to container logs  |
-| [sql](output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
-| [aes-encrypt-fields](output-filter-aesencryptfields) | Processor / output filter | Encrypt field values with AES before any output happens |
-| [hash-fields](output-filter-hashfields) | Processor / output filter | Hashing of field values before any output happens |
-| [ip-truncate-fields](output-filter-iptruncatefields) | Processor / output filter | Replaces the last block of IPv4 and IPv6 address fields with "0" to anonymize IP addresses |
-| [remove-fields](output-filter-removefields) | Processor / output filter | Removes fields before any output happens |
-| [drop-events](output-filter-dropevents) | Processor / output filter | Drop events via value filters for fields |
-| [docker-enrichment](output-filter-dockerenrichment) | Processor / output filter | Metadata enrichment for docker logs, including log routing options |
-| [kubernetes-enrichment](output-filter-kubernetes) | Processor / output filter | Metadata enrichment for pod logs, including log routing options |
-| [geoip](output-filter-geoip) | Processor / output filter | Add Geo-IP information to logs |
-| [stdout (default)](output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
-| [elasticsearch](output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
-| [output-gelf](output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
-| [output-mqtt](output-plugin-mqtt)         | output | Sends messages via MQTT protocol |
-| [output-influxdb](output-plugin-influxdb)     | output                    | Stores parsed messages in InfluxDb |
-| [output-aws-elasticsearch](output-plugin-aws-elasticsearch)     | output                    | Stores parsed messages in Amazon Elasticsearch |
-| [output-files](output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
-| [output-clickhouse](output-plugin-clickhouse)       | output                   | Sends parsed messages to Yandex ClickHouse DB |
-| [logagent-output-kafka](output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
-| [output-http](output-plugin-http)       | output                   | Sends parsed messages via HTTP or HTTPS |
-| [slack-webhook](output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
+| [syslog](/docs/logagent/input-plugin-syslog)      | input | Receive Syslog messages via UDP |
+| [input-journald-upload](/docs/logagent/input-plugin-journald-upload)         | input | Receive data via HTTP from the systemd-journal-upload.service          |
+| [elasticsearch-query](/docs/logagent/input-plugin-elasticsearch-query) | input | Receive results from Elasticsearch queries, which could run once or periodically                         |
+| [input-elasticsearch-http](/docs/logagent/input-plugin-elasticsearch-http) | input | Receive documents via Elasticsearch HTTP indexing API (bulk and post) |
+| [input-tcp](/docs/logagent/input-plugin-tcp)         | input | Receive data via TCP                                                                                     |
+| [input-mqtt-client](/docs/logagent/input-plugin-mqtt-client) | input | Receive data via MQTT client (subscriber for N topics)                          |
+| [input-mqtt-broker](/docs/logagent/input-plugin-mqtt-broker) | input | Starts an MQTT broker and emits all received events from all topics to Logagent |
+| [input-gelf](/docs/logagent/input-plugin-gelf) | input | Receive data via GELF protocol                                                                |
+| [heroku](/docs/logagent/installation-heroku)         | input | Receive logs from Heroku log drains (HTTP)                                              |
+| [cloudfoundry](/docs/logagent/input-plugin-cloudfoundry)                         | input | Receive logs from Cloud Foundry log drains (HTTP)           |
+| [command](/docs/logagent/input-plugin-command)       | input | Receive logs from the output of a command, which could run once or periodically         |
+| [mysql-query](/docs/logagent/input-plugin-mysql)     | input | Receive results from SQL queries, which could run once or periodically                  |
+| [mssql-query](/docs/logagent/input-plugin-mssql)     | input | Receive results from SQL queries, which could run once or periodically                  |
+| [postgresql-query](/docs/logagent/input-plugin-postgresql) | input | Receive results from SQL queries, which could run once or periodically                                   |
+| [logagent-input-kafka](/docs/logagent/input-plugin-kafka)         | input          | Receives messages from Apache Kafka topics. 3rd party module.  
+| [input-influxdb-http](/docs/logagent/input-plugin-influxdb-http)         | input          | Receives metrics from InfluxDB compatible monitoring agents like Telegraf. |
+| [logagent-apple-location](/docs/logagent/logagent-apple-location)         | input          | Tracking of GPS positions from Apple devices via "find-my-iphone" API |
+| [logagent-novasds](/docs/logagent/logagent-novasds)         | input          | Read PM10 and PM2.5 values from Nova SDS011 dust sensor (USB to serial interface) |
+| [input-azure-eventhub](/docs/logagent/input-plugin-azure-eventhub)         | input          | Receives events from Azure Event Hubs |
+| [grep](/docs/logagent/input-filter-grep) | Processor / input filter  | Filters text with regular expressions before parsing                                                     |
+| [input-filter-k8s-containerd](/docs/logagent/input-filter-containerd) | Processor / input filter  | Parsing cri-o log format and add Kubernetes context to container logs  |
+| [sql](/docs/logagent/output-filter-sql)  | Processor / output filter | Transforms and aggregates parsed messages with SQL statements                                            |
+| [aes-encrypt-fields](/docs/logagent/output-filter-aesencryptfields) | Processor / output filter | Encrypt field values with AES before any output happens |
+| [hash-fields](/docs/logagent/output-filter-hashfields) | Processor / output filter | Hashing of field values before any output happens |
+| [ip-truncate-fields](/docs/logagent/output-filter-iptruncatefields) | Processor / output filter | Replaces the last block of IPv4 and IPv6 address fields with "0" to anonymize IP addresses |
+| [remove-fields](/docs/logagent/output-filter-removefields) | Processor / output filter | Removes fields before any output happens |
+| [drop-events](/docs/logagent/output-filter-dropevents) | Processor / output filter | Drop events via value filters for fields |
+| [docker-enrichment](/docs/logagent/output-filter-dockerenrichment) | Processor / output filter | Metadata enrichment for docker logs, including log routing options |
+| [kubernetes-enrichment](/docs/logagent/output-filter-kubernetes) | Processor / output filter | Metadata enrichment for pod logs, including log routing options |
+| [geoip](/docs/logagent/output-filter-geoip) | Processor / output filter | Add Geo-IP information to logs |
+| [stdout (default)](/docs/logagent/output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
+| [elasticsearch](/docs/logagent/output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
+| [output-gelf](/docs/logagent/output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
+| [output-mqtt](/docs/logagent/output-plugin-mqtt)         | output | Sends messages via MQTT protocol |
+| [output-influxdb](/docs/logagent/output-plugin-influxdb)     | output                    | Stores parsed messages in InfluxDb |
+| [output-aws-elasticsearch](/docs/logagent/output-plugin-aws-elasticsearch)     | output                    | Stores parsed messages in Amazon Elasticsearch |
+| [output-files](/docs/logagent/output-plugin-files)     | output                    | Stores parsed messages files. Log rotation and dynamic file name generation are supported.                                                                  |
+| [output-clickhouse](/docs/logagent/output-plugin-clickhouse)       | output                   | Sends parsed messages to Yandex ClickHouse DB |
+| [logagent-output-kafka](/docs/logagent/output-plugin-kafka)       | output                   | Sends parsed messages to Apache Kafka topics. 3rd party module. 3rd party module.                                                             |
+| [output-http](/docs/logagent/output-plugin-http)       | output                   | Sends parsed messages via HTTP or HTTPS |
+| [slack-webhook](/docs/logagent/output-plugin-slack)      | output                    | Sends parsed messages to Slack chat. Should be combined with SQL filter plugin or filter function to define alert criterias. |
 | [@sematext/logagent-nodejs-monitor](https://www.npmjs.com/package/@sematext/logagent-nodejs-monitor) | other | Monitors server and  nodejs metrics of the Logagent process using [spm-agent-nodejs](https://www.npmjs.com/package/spm-agent-nodejs) |
 
 ## Find plugins on npm 

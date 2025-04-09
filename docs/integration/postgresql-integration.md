@@ -1,36 +1,36 @@
 title: PostgreSQL
 description: Comprehensive view of your database's health and performance through Sematext's monitoring and logs integration. Monitor real-time metrics, leverage reports and dashboards for proactive issue identification, while diving deeper into statement durations and user access logs for extensive analysis and troubleshooting.
 
-PostgreSQL is a powerful open-source relational database management system (RDBMS) known for its robustness, extensibility, and compliance with SQL standards. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects PostgreSQL metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+PostgreSQL is a powerful open-source relational database management system (RDBMS) known for its robustness, extensibility, and compliance with SQL standards. The [Sematext Agent](/docs/agents/sematext-agent/) collects PostgreSQL metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an PostgreSQL Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an PostgreSQL Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/PostgreSQL/overview](https://apps.sematext.com/ui/howto/PostgreSQL/overview) displayed in the UI.
 4. After installing the agent, the Discovery tab shows all the PostgreSQL services identified on the host and you will start receiving metrics or logs from PostgreSQL services.
 5. If you've created an PostgreSQL Monitoring App and want to collect PostgreSQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from PostgreSQL services and manage log and metric shipping effortlessly.
 
-Having both PostgreSQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, if you see a spike in number of rows fetched, you can check logs to see which queries fetch too many rows. A concrete example of doing that can be found in [this article](https://sematext.com/blog/postgresql-slow-queries/). Or if you notice expensive queries in the logs, monitoring can tell you whether they hit the indices or they were mostly scans.
+Having both PostgreSQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see a spike in number of rows fetched, you can check logs to see which queries fetch too many rows. A concrete example of doing that can be found in [this article](https://sematext.com/blog/postgresql-slow-queries/). Or if you notice expensive queries in the logs, monitoring can tell you whether they hit the indices or they were mostly scans.
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 From number of rows and connections to index and function-specific metrics, all the relevant stats are collected and displayed in built-in dashboards:
 
-![PostgreSQL Monitoring Overview](../images/agents/postgresql_monitoring_overview.png)
+![PostgreSQL Monitoring Overview](/docs/images/agents/postgresql_monitoring_overview.png)
 
 ## Important PostgreSQL Metrics to Watch
 
 You'd normally start from the Overview screen to check the higher-level metrics, such as number of rows or connections over time. Other high-level metrics can be found under Activity or Tables dashboards:
 
-![PostgreSQL Monitoring Tables](../images/agents/postgresql_monitoring_tables.png)
+![PostgreSQL Monitoring Tables](/docs/images/agents/postgresql_monitoring_tables.png)
 
 Then, if necessary, you can dive deeper into a specific direction. For example, if you think that indexes are over-used or not used enough, you can check their metrics in the Indexes dashboard. Like how often the index blocks are hit:
 
-![PostgreSQL Monitoring Indexes](../images/agents/postgresql_monitoring_indexes.png)
+![PostgreSQL Monitoring Indexes](/docs/images/agents/postgresql_monitoring_indexes.png)
 
 Finally, OS-level metrics can also point out bottlenecks, such as network or CPU:
 
-![PostgreSQL CPU Chart](../images/agents/postgresql_monitoring_cpu.png)
+![PostgreSQL CPU Chart](/docs/images/agents/postgresql_monitoring_cpu.png)
 
 You can find a full list of PostgreSQL-specific metrics that are collected below.
 
@@ -96,20 +96,20 @@ hit TOAST buffer<br>**statio.tidx.blocks.hit** <br>*(counter)*                  
 
 Once data is in, you can explore it via the built-in reports: 
 
-![PostgreSQL Logs Overview](../images/agents/postgresql_overview.png)
+![PostgreSQL Logs Overview](/docs/images/agents/postgresql_overview.png)
 
 ## Exploring logs
 
 Once data is in, you can explore it using the built-in reports or create your own. For example, you can use the Statement Duration report to check on your queries:
 
-![PostgreSQL Statement Duration Report](../images/agents/postgresql_statement.png)
+![PostgreSQL Statement Duration Report](/docs/images/agents/postgresql_statement.png)
 
 ## Troubleshooting
 
-If you are having trouble sending logs, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you are having trouble sending logs, try out the latest version of the [Sematext Agent](/docs/agents/sematext-agent/installation/). Additionally, make sure to check out the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
 If you are having issues with Sematext Monitoring, i.e. not seeing PostgreSQL metrics, see
-[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-For more troubleshooting information please look at the [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information please look at the [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.
 

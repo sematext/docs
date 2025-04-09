@@ -3,7 +3,7 @@ description: Shows multiple time series from different Apps.
 
 The timeseries chart displays the progression of one or multiple metrics or log events over time. The displayed time window depends on the selected data time picker located at the top right of the dashboard.
 
-![Time Series Chart](../images/dashboards/time-series-chart.png)
+![Time Series Chart](/docs/images/dashboards/time-series-chart.png)
 
 ## Configuration
 
@@ -12,14 +12,14 @@ You can configure the Time Series chart either during its initial creation or af
 - Choose All Apps or a specific App that you want to fetch data from.
 - Choose one or more metrics metric
 - Enter optional parameters such as:
-  - [Transformation](https://sematext.com/docs/dashboards/chart-builder/#transformation)
-  - [Filter By](https://sematext.com/docs/dashboards/chart-builder/#filter-by)
-  - [Group by](https://sematext.com/docs/dashboards/chart-builder/#group-by)
-  - [Rollup By](https://sematext.com/docs/dashboards/chart-builder/#rollup-by)
+  - [Transformation](/docs/dashboards/chart-builder/#transformation)
+  - [Filter By](/docs/dashboards/chart-builder/#filter-by)
+  - [Group by](/docs/dashboards/chart-builder/#group-by)
+  - [Rollup By](/docs/dashboards/chart-builder/#rollup-by)
     
 While building the chart, a preview is available on the top left. Additionally, you have the option to add multiple data series, clone existing ones, adjust visibility, and configure the legend's position from the 'Legend' tab.
 
-![Time Series Chart Configuration](../images/dashboards/time-series-configuration.gif)
+![Time Series Chart Configuration](/docs/images/dashboards/time-series-configuration.gif)
 
 ## Style
 

@@ -8,12 +8,12 @@ To get started, select the appropriate environment or deployment method from the
 
 Installation, upgrades and uninstalling by environment:
 
-- [Linux](https://sematext.com/docs/agents/sematext-agent/linux-installation/)
-- [Windows](https://sematext.com/docs/agents/sematext-agent/windows-installation)
-- [Docker](https://sematext.com/docs/agents/sematext-agent/containers/installation/)
-- [Kubernetes](https://sematext.com/docs/agents/sematext-agent/kubernetes/installation/)
+- [Linux](/docs/agents/sematext-agent/linux-installation/)
+- [Windows](/docs/agents/sematext-agent/windows-installation)
+- [Docker](/docs/agents/sematext-agent/containers/installation/)
+- [Kubernetes](/docs/agents/sematext-agent/kubernetes/installation/)
 
 Automated deployment:
 
-- [Ansible](https://sematext.com/docs/agents/sematext-agent/ansible/)
-- [Windows Group Policy](https://sematext.com/docs/agents/sematext-agent/windows-installation/#deploying-using-group-policy)
+- [Ansible](/docs/agents/sematext-agent/ansible/)
+- [Windows Group Policy](/docs/agents/sematext-agent/windows-installation/#deploying-using-group-policy)

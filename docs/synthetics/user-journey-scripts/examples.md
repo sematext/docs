@@ -3,7 +3,7 @@ description: Examples of how to write User Journey scripts to perform various ta
 
 Several examples of some common use-cases which can be used as a starting point are available when creating a new monitor. These can be accessed by clicking the `Browse Examples` button on the `Configure URL/Script` page when creating a new monitor.
 
-![Browse Examples](../../images/synthetics/browse-ujs-examples.png)
+![Browse Examples](/docs/images/synthetics/browse-ujs-examples.png)
 
 These examples are also publicly available [here](https://github.com/sematext/docs/tree/master/docs/synthetics/playwright-scripts), while a description for each of these can be found below.
 
@@ -42,7 +42,7 @@ This script loads the web page, navigates to the login page, fills in the login 
 
 ### [Use Sensitive Data](https://github.com/sematext/docs/tree/master/docs/synthetics/playwright-scripts/use-sensitive-data.js)
 
-This script utilizes our [Sensitive Data protection feature](./sensitive-data.md) to load possible user secrets such as usernames and passwords. We navigate to our desired page and fill in the form. For sensitive data we use the secret keys instead of the actual credentials. When this script is run, our script manager will automatically replace the secret key with the actual value.
+This script utilizes our [Sensitive Data protection feature](/docs/synthetics/user-journey-scripts/sensitive-data) to load possible user secrets such as usernames and passwords. We navigate to our desired page and fill in the form. For sensitive data we use the secret keys instead of the actual credentials. When this script is run, our script manager will automatically replace the secret key with the actual value.
 
 
 
@@ -50,7 +50,7 @@ This script utilizes our [Sensitive Data protection feature](./sensitive-data.md
 
 This script demonstrates how to fetch a token from an authentication API, then use that token in a different request to a secure endpoint.
 
-We recommend using our [Sensitive Data](./sensitive-data.md) feature (mentioned in the previous example) to store the passwords and other credentials you use for performing the authentication. 
+We recommend using our [Sensitive Data](/docs/synthetics/user-journey-scripts/sensitive-data) feature (mentioned in the previous example) to store the passwords and other credentials you use for performing the authentication. 
 
 
 
@@ -104,7 +104,7 @@ The script waits for the reviews elements to appear, and then extracts the App's
 
 ### [Extract Page Load Timings](https://github.com/sematext/docs/tree/master/docs/synthetics/playwright-scripts/multiple-page-load-times.js)
 
-This script visits multiple pages and records their individual load times as [custom metrics](https://sematext.com/docs/synthetics/metrics/#custom-metrics), which can then be charted using our [dashboards](https://sematext.com/docs/dashboards/).
+This script visits multiple pages and records their individual load times as [custom metrics](/docs/synthetics/metrics/#custom-metrics), which can then be charted using our [dashboards](/docs/dashboards/).
 
 ### [Multiple Browser Tabs](https://github.com/sematext/docs/tree/master/docs/synthetics/playwright-scripts/multi-tab.js)
 

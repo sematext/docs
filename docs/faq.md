@@ -7,16 +7,16 @@ description: Sematext Cloud Frequently Asked Questions
 
 Check out the FAQs for each of Sematext Cloud solutions:
 
-- [Sematext Monitoring FAQ](/monitoring/spm-faq)
-- [Sematext Logs FAQ](/logs/faq)
-- [Sematext Synthetics FAQ](/synthetics/faq)
-- [Sematext Experience FAQ](/experience/faq)
+- [Sematext Monitoring FAQ](/docs/monitoring/spm-faq)
+- [Sematext Logs FAQ](/docs/logs/faq)
+- [Sematext Synthetics FAQ](/docs/synthetics/faq)
+- [Sematext Experience FAQ](/docs/experience/faq)
 
 If you can't find the answer to your question please email <support@sematext.com> or use our live chat.
 
 ### Does Sematext integrate with Slack? How about PagerDuty or custom WebHooks?
 
-Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](/alerts).
+Yes, see [integrations](/docs/integration), [alerts FAQ](#alerts), and [alerts docs](/docs/alerts).
 
 ## Organizing Apps
 
@@ -24,15 +24,15 @@ Yes, see [integrations](/integration), [alerts FAQ](#alerts), and [alerts docs](
 
 Keep data separate between environments: you'll get better visibility if you see aggregate metrics/logs per environment instead of overall. It will cost less because you can choose different plans: for example, shorter retention for testing than for production.
 
-The easiest way is to have different [Infra Apps](/monitoring/infrastructure) for each environment, then a [Logs](/logs)/[Monitoring](/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/logs/discovery/intro) and to the right Monitoring App via [Service Discovery](/monitoring/autodiscovery). An alternative to using separate Apps is using a shared App and relying on [Custom Tags](/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/guide/saved-views).
+The easiest way is to have different [Infra Apps](/docs/monitoring/infrastructure) for each environment, then a [Logs](/docs/logs)/[Monitoring](/docs/monitoring) App for each environment as well. The Infra App of each enviromnet will be linked to the right Logs App via [Logs Discovery](/docs/logs/discovery/intro) and to the right Monitoring App via [Service Discovery](/docs/monitoring/autodiscovery). An alternative to using separate Apps is using a shared App and relying on [Custom Tags](/docs/tags/custom-tags) to keep your data separate. The data can then be further isolated with the use of [Saved Views](/docs/guide/saved-views).
 
 ### Can you give me an example?
 
-Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/monitoring/infrastructure), you'll need to have those Infra Apps.  You can have them on the [Basic plan](https://sematext.com/pricing/#spm) to keep your costs at minimum. Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/monitoring/quick-start).
+Say you want to monitor two Solr clusters: one in production and one in staging. You'll start by creating two [Infra Apps](/docs/monitoring/infrastructure): one for each environment. Even if you don't need [Infrastructure Monitoring](/docs/monitoring/infrastructure), you'll need to have those Infra Apps.  You can have them on the [Basic plan](https://sematext.com/pricing/#spm) to keep your costs at minimum. Install Sematext Agent on all hosts and make them send data to their respective App, as written in the [instructions](/docs/monitoring/quick-start).
 
-Then you'd set up [Solr Monitoring](/integration/solr) Apps: one per environment. At this point, you shouldn't need to touch the hosts: when it comes to shipping Solr metrics, simply select the corresponding Infra App and use [Autodiscovery](/monitoring/autodiscovery) to set up monitoring.
+Then you'd set up [Solr Monitoring](/docs/integration/solr) Apps: one per environment. At this point, you shouldn't need to touch the hosts: when it comes to shipping Solr metrics, simply select the corresponding Infra App and use [Autodiscovery](/docs/monitoring/autodiscovery) to set up monitoring.
 
-You'll do the same with [Solr Logs](/integration/solr-logs): create one App per environment, select the right Infra App and use [Logs Discovery](/logs/discovery/intro).
+You'll do the same with [Solr Logs](/docs/integration/solr-logs): create one App per environment, select the right Infra App and use [Logs Discovery](/docs/logs/discovery/intro).
 
 At this point, if you add a new host in an environment, all you have to do is to install Sematext Agent and point it to the right Infra App. Your Solr logs and metrics will automatically be shipped to the right Apps.
 
@@ -46,10 +46,10 @@ There are two options:
  - App sharing
 
 Account sharing is recommended for teams.  It's easier to add and remove access, easier to manage.
-We recommend creating a [team account](/team/#team-account) and sharing that with the team members.
-If you've already set up Apps, Alert Rules, etc. under your own account you can [convert your account to team account](/team/#converting-to-team-account).
+We recommend creating a [team account](/docs/team/#team-account) and sharing that with the team members.
+If you've already set up Apps, Alert Rules, etc. under your own account you can [convert your account to team account](/docs/team/#converting-to-team-account).
 
-See [Team Account Members](/team/#account-members) for more info about account sharing and [App Guests](/team/#app-guests) for info about App sharing.
+See [Team Account Members](/docs/team/#account-members) for more info about account sharing and [App Guests](/docs/team/#app-guests) for info about App sharing.
 
 Account sharing and App sharing is not exclusive.  You can use both of
 these two sharing types at the same time. You could share your account with
@@ -89,7 +89,7 @@ This role has all rights as the standard ADMIN, but can also access/edit
 billing-related info. The only thing this role cannot do is change
 password of your account.
 
-See [typical roles in an organization](/team/#typical-use-of-roles-in-an-organization-or-team) and [Sematext user roles](/team/user-roles/) for more info.
+See [typical roles in an organization](/docs/team/#typical-use-of-roles-in-an-organization-or-team) and [Sematext user roles](/docs/team/user-roles/) for more info.
 
 ### When would I want to add someone as BILLING_ADMIN?
 
@@ -127,7 +127,7 @@ credit cards and choose plans to be used for Apps under your account.
 
 Sematext has integrations for Slack, PagerDuty, VictorOps,
 OpsGenie, BigPanda, general WebHooks, email, and more.  See
-[integrations](/integration) and [alerts docs](/alerts).
+[integrations](/docs/integration) and [alerts docs](/docs/alerts).
 
 ### What are Threshold-based Alerts?
 
@@ -156,12 +156,12 @@ choose it yourself when you create a Heartbeat Alert.
 
 ## Managing Report Updates
 ### What are my options when a report is updated?
-When a report is updated, you can choose to fetch the updates, overwrite your existing report or keep your current customized version. Learn more in the [Managing Report Updates](https://sematext.com/docs/guide/reports-guide/#managing-report-updates) section.
+When a report is updated, you can choose to fetch the updates, overwrite your existing report or keep your current customized version. Learn more in the [Managing Report Updates](/docs/guide/reports-guide/#managing-report-updates) section.
 
 ### Will my customized reports be automatically overwritten?
-No, customized reports are not automatically overwritten. You can decide whether to apply the updates, overwrite the report, or keep your existing version. See details in the [Managing Report Updates](https://sematext.com/docs/guide/reports-guide/#managing-report-updates) section.
+No, customized reports are not automatically overwritten. You can decide whether to apply the updates, overwrite the report, or keep your existing version. See details in the [Managing Report Updates](/docs/guide/reports-guide/#managing-report-updates) section.
 
 ## Security
 
-See [monitoring FAQ](/monitoring/spm-faq) and [logging FAQ](/logs/faq).
+See [monitoring FAQ](/docs/monitoring/spm-faq) and [logging FAQ](/docs/logs/faq).
 

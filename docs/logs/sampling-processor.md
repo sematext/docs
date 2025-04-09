@@ -9,4 +9,4 @@ One example might be to filter by events from one specific service. The sample r
 
 Below is an example where we leave only 30% of log events with severity `Information`, while events with all other severities will be processed without any sampling.
 
-![Processor_Sampling](../images/logs/pipelines/processor-sampling.png)
+![Processor_Sampling](/docs/images/logs/pipelines/processor-sampling.png)

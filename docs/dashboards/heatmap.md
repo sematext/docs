@@ -5,7 +5,7 @@ The Heatmap is a two-dimensional representation of data, where values are repres
 
 With Heatmap you can visually represent historical data to gain actionable insight into how to improve performance.
 
-![Bar Chart](../images/dashboards/heatmap.png)
+![Bar Chart](/docs/images/dashboards/heatmap.png)
 
 ## Configuration
 
@@ -14,8 +14,8 @@ You can configure the chart either during its initial creation or afterward by c
 - Choose All Apps or a specific App that you want to fetch data from.
 - Choose one or more metrics metric
 - Enter optional parameters such as:
-  - [Transformation](https://sematext.com/docs/dashboards/chart-builder/#transformation)
-  - [Filter By](https://sematext.com/docs/dashboards/chart-builder/#filter-by)
-  - [Group by](https://sematext.com/docs/dashboards/chart-builder/#group-by)
-  - [Rollup By](https://sematext.com/docs/dashboards/chart-builder/#rollup-by)
+  - [Transformation](/docs/dashboards/chart-builder/#transformation)
+  - [Filter By](/docs/dashboards/chart-builder/#filter-by)
+  - [Group by](/docs/dashboards/chart-builder/#group-by)
+  - [Rollup By](/docs/dashboards/chart-builder/#rollup-by)
 

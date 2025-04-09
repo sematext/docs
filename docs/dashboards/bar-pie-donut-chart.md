@@ -7,7 +7,7 @@ Pie chart is a circular statistical graphic divided into slices to show numerica
 
 The displayed values depends on the selected data time picker located at the top right of the dashboard.
 
-![Bar Chart](../images/dashboards/bar-chart.png)
+![Bar Chart](/docs/images/dashboards/bar-chart.png)
 
 ## Configuration
 
@@ -16,13 +16,13 @@ You can configure these charts either during their initial creation or afterward
 - Choose All Apps or a specific App that you want to fetch data from.
 - Choose one or more metric
 - Enter optional parameters such as:
-  - [Transformation](https://sematext.com/docs/dashboards/chart-builder/#transformation)
-  - [Filter By](https://sematext.com/docs/dashboards/chart-builder/#filter-by)
-  - [Group by](https://sematext.com/docs/dashboards/chart-builder/#group-by)
-  - [Rollup By](https://sematext.com/docs/dashboards/chart-builder/#rollup-by)
+  - [Transformation](/docs/dashboards/chart-builder/#transformation)
+  - [Filter By](/docs/dashboards/chart-builder/#filter-by)
+  - [Group by](/docs/dashboards/chart-builder/#group-by)
+  - [Rollup By](/docs/dashboards/chart-builder/#rollup-by)
     
 While building the chart, a preview is available on the top left. Additionally, you have the option to add multiple data series, clone existing ones, adjust visibility.
 
-![Bar Chart Configuration](../images/dashboards/bar-chart-configuration.gif)
+![Bar Chart Configuration](/docs/images/dashboards/bar-chart-configuration.gif)
 
 > You can also click on a data series to instantly apply its associated filter, query, and grouped field's value to the report, making it easier to drill down into specific logs or metrics.

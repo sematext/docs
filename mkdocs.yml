@@ -555,6 +555,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
 
+# use_directory_urls: false
+
 validation:
   links:
     absolute_links: relative_to_docs

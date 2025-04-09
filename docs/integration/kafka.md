@@ -163,7 +163,7 @@ The Sematext Kafka monitoring agent collects the following metrics.
 
 
 ## Kafka Alerts
-As soon as you create a Kafka App, you will receive a set of default [alert rules](https://sematext.com/docs/guide/alerts-guide/). These pre-configured rules will [notify](https://sematext.com/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
+As soon as you create a Kafka App, you will receive a set of default [alert rules](/docs/guide/alerts-guide/). These pre-configured rules will [notify](/docs/alerts/alert-notifications/) you of important events that may require your attention, as shown below.
 
 ### Consumer lag anomaly
 
@@ -259,14 +259,14 @@ Suppose a Kafka broker typically handles fetch requests without encountering fai
 - Monitor disk I/O metrics for the Kafka broker for any bottlenecks or performance issues related to disk read/write operations
 - Review fetch request settings such as fetch size, timeout, and max fetch retries
 
-You can [create additional alerts](https://sematext.com/docs/alerts) on any metric.
+You can [create additional alerts](/docs/alerts) on any metric.
 
 ## Troubleshooting
 
 If you are having issues with Sematext Monitoring, i.e. not seeing Kafka metrics, see
-[How do I create the diagnostics package](/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
+[How do I create the diagnostics package](/docs/monitoring/spm-faq/#how-do-i-create-the-diagnostics-package).
 
-For more troubleshooting information look at [Troubleshooting](/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information look at [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.
 
 ## Integration
 

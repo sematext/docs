@@ -8,11 +8,11 @@ line to your **/etc/syslog.conf**:
 *.* @logsene-syslog-receiver.sematext.com
 ```
 
-Before you restart syslogd, **[register your public IP](authorizing-ips-for-syslog).** If you're behind a NAT
+Before you restart syslogd, **[register your public IP](/docs/logs/authorizing-ips-for-syslog).** If you're behind a NAT
 or registering IPs doesn't suit your use-case, there are other options:
 
   - if you just want to test sending a few logs to Logs Management App, you can use
-    your application token in a [CEE-formatted JSON message](json-messages-over-syslog). For
+    your application token in a [CEE-formatted JSON message](/docs/logs/json-messages-over-syslog). For
 example:
 
 <!-- end list -->
@@ -22,8 +22,8 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
 ```
 
   - change your syslog daemon from syslogd to
-    [rsyslog](rsyslog) or
-    [syslog-ng](syslog-ng) or anything else that lets you
+    [rsyslog](/docs/logs/rsyslog) or
+    [syslog-ng](/docs/logs/syslog-ng) or anything else that lets you
     format your messages, so you can build a JSON containing your
     Logs Management application token like the one above
   - similar to the solution above, you can use a separate machine for

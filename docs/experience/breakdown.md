@@ -12,7 +12,7 @@ To better understand which part of the loading process is slow, we've added a de
 <img
   class="content-modal-image"
   alt="Experience Timing Breakdown"
-  src="../../images/experience/breakdown.png"
+  src="/docs/images/experience/breakdown.png"
   title="Experience Timing Breakdown"
   width=800
   height=86
@@ -32,5 +32,5 @@ The parts shown above are based on the Navigation Timing API and the timestamps 
 
 Soft page loads and cross-origin HTTP requests are not included in the breakdown.
 
-See [Cross-Origin Resource Sharing (CORS) restrictions](/experience/resources/#cross-origin-resource-sharing-cors-restrictions) on how to enable detailed timing attributes for cross-origin HTTP requests.
+See [Cross-Origin Resource Sharing (CORS) restrictions](/docs/experience/resources/#cross-origin-resource-sharing-cors-restrictions) on how to enable detailed timing attributes for cross-origin HTTP requests.
 

@@ -1,7 +1,7 @@
 title: Standalone Agent Mode
 description: Sematext standalone monitoring App Agent is started as a separate process on each machine running the application, and used to retrieve various devops metrics from Solr, HBase, Kafka, Cassandra, Elasticsearch and more
 
-Unlike the [Embedded](spm-monitor-javaagent) App Agent, the Standalone App Agent
+Unlike the [Embedded](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent) App Agent, the Standalone App Agent
 is started as a separate process on each machine running the
 application(s) you want to monitor. A separate App Agent process should be
 started for each application monitored on a machine. The installer adds
@@ -299,7 +299,7 @@ exist yet.
 Below is the image of CDH UI:
 
 
-![](../../../monitoring/attachments/7766020/8978434.png)
+![](/docs/monitoring/attachments/7766020/8978434.png)
 
 ### ZooKeeper
 

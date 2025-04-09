@@ -1,42 +1,42 @@
 title: Varnish Cache
 description: Monitor Varnish Cache comprehensively with pre-built dashboards showcasing client and backend connections, cache hits and misses, thread details, bans, and more, while leveraging Sematext's Varnish Cache Logs integration to analyze response times, initial byte served, traffic distribution across servers, and requests between clients and the backend.
 
-Varnish Cache is an open-source HTTP accelerator and reverse proxy designed to significantly enhance web performance by caching and serving web content swiftly. The [Sematext Agent](https://sematext.com/docs/agents/sematext-agent/) collects Varnish Cache metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+Varnish Cache is an open-source HTTP accelerator and reverse proxy designed to significantly enhance web performance by caching and serving web content swiftly. The [Sematext Agent](/docs/agents/sematext-agent/) collects Varnish Cache metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an Varnish Cache Logs or Monitoring [App](https://sematext.com/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an Varnish Cache Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/varnishcache/overview](https://apps.sematext.com/ui/howto/varnishcache/overview) displayed in the UI.
 4. After installing the agent, the Discovery tab shows all the Varnish Cache services identified on the host and you will start receiving metrics or logs from Varnish Cache services.
 5. If you've created an Varnish Cache Monitoring App and want to collect Varnish Cache logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Varnish Cache services and manage log and metric shipping effortlessly.
 
-Having both Varnish Cache Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](https://sematext.com/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
+Having both Varnish Cache Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 
-To [explore logs and services](https://sematext.com/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](https://sematext.com/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
+To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 
 
 ## Important Metrics to Watch and Alert on
 
 ### Backend Connections and Requests
 High backend connections might indicate that your Varnish cache is making frequent requests to the backend servers. This could be due to cache misses, ineffective caching rules, or other issues. Also, if backend connections suddenly spike or drop, it could be a sign of issues such as misconfigurations, network problems, or changes in traffic patterns.
 
-![Backend Conns and Reqs](../images/integrations/varnish-cache-backend-reqs.png)
+![Backend Conns and Reqs](/docs/images/integrations/varnish-cache-backend-reqs.png)
 
 Sudden spikes or drops in the backend request rate can be indicative of issues in your infrastructure, such as sudden traffic spikes, misconfigured cache rules, or even attacks on your system. Also it might imply that your cache is frequently missing and fetching content from the backend.
 
 ### Client Metrics
 Monitoring changes in client requests can help you to identify potential problems in your infrastructure. Additionally, tracking client requests by response code allows you to quickly identify and address errors and issues in your applications. Common HTTP response codes like 500 (Internal Server Error) can indicate broken links, missing resources, or server-side problems that need immediate attention.
 
-![Client Conns and Reqs](../images/integrations/varnish-cache-client-reqs.png)
+![Client Conns and Reqs](/docs/images/integrations/varnish-cache-client-reqs.png)
 
 ### Cache Hits and Misses
 Cache hits indicate that Varnish is serving content directly from its cache, reducing the load on backend servers and improving response times. On the other hand, cache misses represent requests that Varnish Cache couldn't fulfill from its cache and had to pass through to the backend. Monitoring these metrics helps assess how efficiently Varnish Cache is utilizing its cache to reduce server load and improve performance.
 
-![Cache Hits](../images/integrations/varnish-cache-hits.png)
+![Cache Hits](/docs/images/integrations/varnish-cache-hits.png)
 
 ### Bans
 Bans are a mechanism in Varnish Cache to invalidate or purge specific objects from the cache. Monitoring bans allows you to understand when and why cache invalidations are occurring. This is important to ensure that stale or outdated content is removed from the cache promptly.
 
-![Bans](../images/integrations/varnish-cache-bans.png)
+![Bans](/docs/images/integrations/varnish-cache-bans.png)
 
 ## Metrics
 
@@ -276,37 +276,37 @@ You should provide the full path to the `st_varnishncsa_format` file in the comm
 
 Once data is in, you can explore it via the built-in reports or create your own.  Moreover, the pre-configured anomaly alert rules will notify you about increasing **4xx** and **5xx** response rates.
 
-![Varnish Cache Logs Overview Report](../images/integrations/varnishcache-logs-overview.png)
+![Varnish Cache Logs Overview Report](/docs/images/integrations/varnishcache-logs-overview.png)
 
 #### Traffic Insight Report
 
 You can use the Traffic Insight report to see top clients, referrers, average response time and time to serve the first byte based on servers and "zoom in" to the ones you're interested in:
 
-![Varnish Cache Traffic Insight Report](../images/integrations/varnishcache-traffic-insight.png)
+![Varnish Cache Traffic Insight Report](/docs/images/integrations/varnishcache-traffic-insight.png)
 
 #### Traffic Distribution Report
 
 You can use the Traffic Distribution report to see the traffic distribution across servers for resource planning by analyzing data volume and bytes served:
 
-![Varnish Cache Traffic Distribution Report](../images/integrations/varnishcache-traffic-distribution.png)
+![Varnish Cache Traffic Distribution Report](/docs/images/integrations/varnishcache-traffic-distribution.png)
 
 #### Client Side Logs Report
 
 You can use the Client Side Logs report to see the requests made to the client side:
 
-![Varnish Cache Client Side Logs Report](../images/integrations/varnishcache-client-side-logs.png)
+![Varnish Cache Client Side Logs Report](/docs/images/integrations/varnishcache-client-side-logs.png)
 
 #### Backend Side Logs Report
 
 You can use the Backend Side Logs report to see the requests made to the backend side:
 
-![Varnish Cache Backend Side Logs Report](../images/integrations/varnishcache-backend-side-logs.png)
+![Varnish Cache Backend Side Logs Report](/docs/images/integrations/varnishcache-backend-side-logs.png)
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](../agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Varnish Cache Logs App. Lastly, check the [Log Agents panel](https://sematext.com/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](https://sematext.com/docs/logs/faq/) for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Varnish Cache Logs App. Lastly, check the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
-If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](../agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](https://sematext.com/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](https://sematext.com/docs/monitoring/spm-faq/) for useful tips.
+If you are having trouble sending metrics, try out the latest version of the [Sematext Agent](/docs/agents/sematext-agent/installation/). Additionally, make sure to check out the [Agents Information panel](/docs/fleet/#agent-information-panel) for any errors, and refer to our [Sematext Monitoring FAQ](/docs/monitoring/spm-faq/) for useful tips.
 
 ### Varnish Permissions
 In case you encounter issues getting metrics from Varnish Cache, make sure that the Sematext `spmon` user is a member of the `varnish` group. It can be added using the command below:

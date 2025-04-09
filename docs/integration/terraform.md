@@ -180,14 +180,14 @@ Refer to our [examples repo](https://github.com/sematext/terraform-examples) for
 
 - [Terraform Registry Sematext Provider](https://registry.terraform.io/providers/sematext/sematext/latest)
 - [Sematext Provider Github](https://github.com/sematext/terraform-provider-sematext)
-- [Sematext Manual Integration Guide](https://sematext.com/docs/integration/)
+- [Sematext Manual Integration Guide](/docs/integration/)
 - [Terraform Website](https://www.terraform.io)
 - [Terraform Mailing List [Google Groups] ](http://groups.google.com/group/terraform-tool)
 - [![Gitter chat](https://badges.gitter.im/hashicorp-terraform/Lobby.svg)](https://gitter.im/hashicorp-terraform/Lobby)
 
 ## Recommendations for learning more about Sematext products and services:
 
-- Infrastructure [integrations documentation](/integration/)
+- Infrastructure [integrations documentation](/docs/integration/)
 - Our [website](https://sematext.com/)
 - For open-source integrations and other Sematext contribution to the open-source community, check our [GitHub](https://github.com/sematext/) repositories.
 - or just talk to us using chat located in right bottom corner of any page, and one of our engineers will help you navigate Sematext waters.

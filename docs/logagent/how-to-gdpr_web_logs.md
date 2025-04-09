@@ -23,7 +23,7 @@ In the following examples, we will tail log files and ship the anonymized logs t
 
 ### Truncate IP address fields in logs
 
-The [ip-truncate-fields output filter](output-filter-iptruncatefields.md) replaces IP addresses with an anonymized string, replacing the last block of an IP address with "0".
+The [ip-truncate-fields output filter](/docs/logagent/output-filter-iptruncatefields) replaces IP addresses with an anonymized string, replacing the last block of an IP address with "0".
 Example (client_ip field):
 
 IPv4: 192.168.1.22 results in 192.168.1.0
@@ -62,7 +62,7 @@ The output shows then the last IP block with the value "0" in the field client_i
 
 ### Hash fields in logs
 
-The [hash-fields output filter](output-filter-hashfields.md) replaces field values with its hash code. All occurrences of the original field value are replaced in the log "message" field with the hash code.
+The [hash-fields output filter](/docs/logagent/output-filter-hashfields) replaces field values with its hash code. All occurrences of the original field value are replaced in the log "message" field with the hash code.
 
 __Configuration:__
 
@@ -98,7 +98,7 @@ The output shows has codes in the fields user and client_ip.
 
 ### Encrypt fields in logs 
 
-The [aes-encrypt-fields output filter](output-filter-aesencryptfields) encrypts data fields with AES. The original field value gets replaced with its AES encrypted HEX string. All occurrences of the original field value are replaced in the log "message" field with the encrypted value. 
+The [aes-encrypt-fields output filter](/docs/logagent/output-filter-aesencryptfields) encrypts data fields with AES. The original field value gets replaced with its AES encrypted HEX string. All occurrences of the original field value are replaced in the log "message" field with the encrypted value. 
 
 Encrypting the same text with the same password results in the same encrypted text. This could be helpful when you need to search for specific encrypted field value. You could encrypt your search term and search the encrypted term in Elasticsearch to find relevant log entries. 
 
@@ -147,7 +147,7 @@ The output shows the encrypted values in the fields client_ip and user.
 
 ### Remove fields from logs
 
-The [remove-fields output filter](output-filter-removefields) removes fields before the output happens. All occurrences of the original field value are replaced in the log "message" field with the string "!REMOVED!".
+The [remove-fields output filter](/docs/logagent/output-filter-removefields) removes fields before the output happens. All occurrences of the original field value are replaced in the log "message" field with the string "!REMOVED!".
 
 
 __Configuration:__

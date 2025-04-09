@@ -1,12 +1,12 @@
 title: Sematext Service Discovery
 description: Sematext Autodiscovery Monitoring automatically scans for services that can be monitored using Sematext Agent and, depending on your configuration, automatically sets up monitoring agents. 
 
-The centerpiece of Service Discovery is [Sematext Agent](../agents/sematext-agent). When Sematext Agent is installed and running on a server/node/instance it scans for services that can be monitored by Sematext
-[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It also [discovers logs](https://sematext.com/docs/logs/discovery/intro/) you can ship to Sematext and monitor.
+The centerpiece of Service Discovery is [Sematext Agent](/docs/agents/sematext-agent). When Sematext Agent is installed and running on a server/node/instance it scans for services that can be monitored by Sematext
+[supported integrations](autodiscovery/#which-integrations-allow-autodiscovery). It also [discovers logs](/docs/logs/discovery/intro/) you can ship to Sematext and monitor.
 
 The discovered services and logs are displayed under `Fleet & Discovery > Discovery > Services`.  From there, one can set up both monitoring and log shipping via the UI without any additional installation or configuration.  Moreover, this is where auto-monitoring of supported integrations can be enabled, allowing Sematext Agent to automatically start monitoring newly discovered instances of the service for which you've set up monitoring. For example, if you have set up monitoring for Elasticsearch and enabled automatic monitoring then any new Elasticsearch nodes that are added to the cluster will automatically get monitored.
 
-<img class="content-modal-image" alt="Sematext Service Discovery" src="../../images/fleet/fnd-discovery-services.png" title="Sematext Service Discovery">
+<img class="content-modal-image" alt="Sematext Service Discovery" src="/docs/images/fleet/fnd-discovery-services.png" title="Sematext Service Discovery">
 
 ## Autodiscovery-based Monitoring
 Autodiscovered services can be monitored in two ways:
@@ -61,28 +61,28 @@ Simply go to [Fleet & Discovery > Services](https://apps.sematext.com/ui/fleet-a
 
 You will be presented with instructions to install Sematext Agent in case you haven't done this already.
 
-<img class="content-modal-image" alt="Sematext Agent Installation" src="../../images/fleet/fnd-discovery-services-agent-install.png" title="Sematext Agent Installation">
+<img class="content-modal-image" alt="Sematext Agent Installation" src="/docs/images/fleet/fnd-discovery-services-agent-install.png" title="Sematext Agent Installation">
 
 
 On each host, Kubernetes, Swarm, or Docker Enterprise cluster where Sematext Agent is installed, it will instantly start discovering services that can be monitored. Discovered services will be displayed in Services.
 
 Clicking the setup button in the Metrics or Logs column of each service will open the setup wizard. 
 
-<img class="content-modal-image" alt="Sematext Discovery Setup Wizard" src="../../images/fleet/fnd-discovery-services-wizard.png" title="Sematext Discovery Setup Wizard">
+<img class="content-modal-image" alt="Sematext Discovery Setup Wizard" src="/docs/images/fleet/fnd-discovery-services-wizard.png" title="Sematext Discovery Setup Wizard">
 
 From there, you can follow the provided instructions to enable automatic monitoring and automatic log shipping for that specific service. You can also choose to use existing Monitoring and Logs Apps or create new ones.
 
-<img class="content-modal-image" alt="Sematext Discovery Automatic Monitoring" src="../../images/fleet/fnd-discovery-services-auto-monitoring.png" title="Sematext Discovery Automatic Monitoring">
+<img class="content-modal-image" alt="Sematext Discovery Automatic Monitoring" src="/docs/images/fleet/fnd-discovery-services-auto-monitoring.png" title="Sematext Discovery Automatic Monitoring">
 
-<img class="content-modal-image" alt="Sematext Discovery Automatic Log Shipping" src="../../images/fleet/fnd-discovery-services-auto-shipping.png" title="Sematext Discovery Automatic Log Shipping">
+<img class="content-modal-image" alt="Sematext Discovery Automatic Log Shipping" src="/docs/images/fleet/fnd-discovery-services-auto-shipping.png" title="Sematext Discovery Automatic Log Shipping">
 
 Manual Monitoring is also available by following the Agent installation instructions:
 
-<img class="content-modal-image" alt="Sematext Discovery Manual Monitoring" src="../../images/fleet/fnd-discovery-services-manual-monitoring.png" title="Sematext Discovery Manual Monitoring">
+<img class="content-modal-image" alt="Sematext Discovery Manual Monitoring" src="/docs/images/fleet/fnd-discovery-services-manual-monitoring.png" title="Sematext Discovery Manual Monitoring">
 
-This will also enable the automatic connection of those Apps which will enable you to correlate their data via [Split Screen](https://sematext.com/docs/guide/split-screen/).
+This will also enable the automatic connection of those Apps which will enable you to correlate their data via [Split Screen](/docs/guide/split-screen/).
 
-<img class="content-modal-image" alt="Sematext Discovery Connected Apps" src="../../images/fleet/fnd-discovery-services-connected-apps.png" title="Sematext Discovery Connected Apps">
+<img class="content-modal-image" alt="Sematext Discovery Connected Apps" src="/docs/images/fleet/fnd-discovery-services-connected-apps.png" title="Sematext Discovery Connected Apps">
 
 In most cases Sematext Agent knows how to start monitoring the discovered services without requiring you to take any additional actions. This means service metrics and logs will start appearing a few seconds after you enable automatic monitoring in the relevant Monitoring and/or Logs Apps. In other cases you may have to provide credentials so monitoring agents can connect to the service you wish to monitor. In either case, the Discovery screen will guide you and provide the exact instructions.
 
@@ -116,7 +116,7 @@ As soon as Sematext Agent discovers the Elasticsearch container with a `MONITORI
 
 ### Which Sematext Agent version do I need?
 
-Ensure you are using the latest available agent version. For more information, please visit our [release notes](https://sematext.com/docs/agents/sematext-agent/releasenotes/).
+Ensure you are using the latest available agent version. For more information, please visit our [release notes](/docs/agents/sematext-agent/releasenotes/).
 
 ### Can I have a mix of manually and automatically monitored services?
 
@@ -156,7 +156,7 @@ Sematext Agent will notice the change in few minutes and, if you enabled automat
 ### Additional Configuration for Sematext Agent
 For special cases, such as defining different sets of credentials in Kubernetes, additional steps are required to properly configure service discovery. 
 
-- Defining monitoring agent [credential sets](../agents/sematext-agent/autodisco/credential-sets) in Kubernetes
-- Providing [MySQL JDBC driver](../agents/sematext-agent/autodisco/mysql-driver) in container environments
-- [JMX Attaching](../agents/sematext-agent/jmx-attaching/)
-- [Removing stale](../agents/sematext-agent/autodisco/removing-stale-resources) Sematext Agent resources after deinstallation
+- Defining monitoring agent [credential sets](/docs/agents/sematext-agent/autodisco/credential-sets) in Kubernetes
+- Providing [MySQL JDBC driver](/docs/agents/sematext-agent/autodisco/mysql-driver) in container environments
+- [JMX Attaching](/docs/agents/sematext-agent/jmx-attaching/)
+- [Removing stale](/docs/agents/sematext-agent/autodisco/removing-stale-resources) Sematext Agent resources after deinstallation

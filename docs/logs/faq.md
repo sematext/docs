@@ -23,17 +23,17 @@ logs.
 
 ### We are getting "Too many fields present in the index". What does that mean and how can we fix it?
 
-This means you have more than the allowed number of distinct fields in your Logs App.  To manually remove some fields use the [Field Editor](https://sematext.com/docs/logs/fields/#field-editor), but if you continue shipping logs with fields you've removed via Field Editor those fields will be recreated.
+This means you have more than the allowed number of distinct fields in your Logs App.  To manually remove some fields use the [Field Editor](/docs/logs/fields/#field-editor), but if you continue shipping logs with fields you've removed via Field Editor those fields will be recreated.
 
-To prevent unwanted fields to be created you can exclude them with [Logs Pipelines](https://sematext.com/docs/logs/pipelines/). 
+To prevent unwanted fields to be created you can exclude them with [Logs Pipelines](/docs/logs/pipelines/). 
 
 * You can use Drop Processor to drop unwanted log events that match a specific condition.
 * You can use Remove Fields Processor to drop nested fields that contain redundant data.
 * You have many different deeply nested fields (e.g. foo.bar.bar, foo.bar.bam, etc.), perhaps because you log "objects" with attributes.  Often times you don't want all attributes to turn into individual fields. You can use Rename Fields Processor to extract useful information from a nested field and then use Remove Fields Processor to drop the nested field.
 
-See [Pipeline Processsors](https://sematext.com/docs/logs/processors-overview/) for more info.
+See [Pipeline Processsors](/docs/logs/processors-overview/) for more info.
   
-If you have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](https://sematext.com/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.
+If you have a high number of different types of log events with different sets of fields, maybe from different sources.  You may want to [consider using multiple Logs Apps](/docs/logs/faq/#i-have-multiple-log-sources-should-i-send-them-all-to-the-same-logs-app) in such cases.
 
 ### What is @timestamp field?
 
@@ -46,11 +46,11 @@ From the application, click the `App Actions` button and select
 `Usage`. There's also `Settings` button next to [any of your Logs apps](https://apps.sematext.com/ui/logs) in
 the `Logs > All Logs Apps` section in our centralized logging and monitoring management solution.
 
-<img alt="Logs App Usage Menu" src="../../images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
+<img alt="Logs App Usage Menu" src="/docs/images/logs/logging-usage-menu.png" title="Logs App Usage Menu">
 
 On click, `App Settings > Usage` page will present both Total Volume in Gb and Total Count of indexed logs for that particular Logs App.
 
-<img alt="Logs App Log Count" src="../../images/logs/logging-app-usage-page.png" title="Logs App usage page">
+<img alt="Logs App Log Count" src="/docs/images/logs/logging-app-usage-page.png" title="Logs App usage page">
 
 ### How can I check the number of logs I currently have in a Logs App?
 
@@ -58,7 +58,7 @@ Total Count of indexed logs is displayed in `App Settings > Usage` page.
 
 The number of logs will be also displayed in the right corner of the Log Counts panel just below the App's search input. It will change as you perform search queries, change time and apply filters in your Logs App.
 
-<img alt="Logs App Log Count" src="../../images/logs/logging-app-logs-count.png" title="Logs App Log Count">
+<img alt="Logs App Log Count" src="/docs/images/logs/logging-app-logs-count.png" title="Logs App Log Count">
 
 ### How long are my logs stored?
 
@@ -69,7 +69,7 @@ retention, volume, and plan at any time.
 
 Click the `App Actions` button and select `App Settings`. App Info page will open where you can see and change Daily Retention, Daily Volume, and Plan for that particular Logs App.
 
-<img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="../../images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
+<img alt="Logs App Daily Retention, Daily Volume, and Plan Info" src="/docs/images/logs/logging-app-settings.png" title="Logs App Daily Retention, Daily Volume, and Plan Info ">
 
 ### Can I send old logs?
 
@@ -94,7 +94,7 @@ This depends on the data retention you selected for each of your logging
 Apps.  Backups are stored in S3 and kept for 90 days.
 
 ### How do I configure archiving for my Logs?
-Please see [Log Archiving](https://sematext.com/docs/logs/archiving/)
+Please see [Log Archiving](/docs/logs/archiving/)
 
 ### Is data retention based on index/import/upload/receive time or the actual log event @timestamp?
 
@@ -168,7 +168,7 @@ App or make sure there are no conflicting fields.
 Yes, when you change your index structure using Field Editor you will
 be given the opportunity to reindex your data.
 
-<img alt="Logs App Log Count" src="../../images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
+<img alt="Logs App Log Count" src="/docs/images/logs/reindex-field-editor.png" title="Reindex your data using Field Editor">
           
 Please keep in mind that the speed of reindexing depends on how much
 data needs to be reindexed and that reindexing is treated like original
@@ -182,7 +182,7 @@ the normal plan charges apply. Because reindexing counts just like
 the original data ingestion, before reindexing the estimated cost of
 reindexing is shown in the UI.
 
-![](../images/logs/reindex-estimate.png?width=300)
+![](/docs/images/logs/reindex-estimate.png?width=300)
 
 If the amount of data ingested for the day, plus data to be reindexed
 is smaller than your Max Daily Log Volume Limit then no additional charges
@@ -190,17 +190,17 @@ will be applied.
 
 ### Audit-proof logging
 
-Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Elasticsearch API](https://sematext.com/docs/logs/search-through-the-elasticsearch-api/) or using the UI:
+Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Elasticsearch API](/docs/logs/search-through-the-elasticsearch-api/) or using the UI:
 
-<img alt="Logs JSON View" src="../../images/logs/logs_source.png" title="Logs JSON View">
+<img alt="Logs JSON View" src="/docs/images/logs/logs_source.png" title="Logs JSON View">
 
-It is also possible to store the log events in external, S3 compatible storage via the [logs archiving](https://sematext.com/docs/logs/archiving/) functionality.
+It is also possible to store the log events in external, S3 compatible storage via the [logs archiving](/docs/logs/archiving/) functionality.
 
 ## Log Shipping
 
 ### Which log shippers, logging libraries, and platform integrations are supported?
 
-You can use [numerous log shippers, logging libraries, and platform integrations](/integration/#logging).
+You can use [numerous log shippers, logging libraries, and platform integrations](/docs/integration/).
 
 ### How can I import logs from my existing Elasticsearch / ELK / Elastic stack?
 
@@ -347,7 +347,7 @@ The Infrastructure group inside each Logs App provides a holistic view of your e
 ### I've deleted all my Apps and created new ones, but now I'm not seeing my logs
 
 If you've deleted all your Logs and Infra Apps, created new ones, and you can't see your logs,
-it is suggested to restart the Sematext Agent as described in the [Agent starting / stopping](https://sematext.com/docs/agents/sematext-agent/starting-stopping/) 
+it is suggested to restart the Sematext Agent as described in the [Agent starting / stopping](/docs/agents/sematext-agent/starting-stopping/) 
 instructions.
 
 ### How to check if there are any network connectivity issues?
@@ -491,7 +491,7 @@ security and compliance certifications see:
 <http://aws.amazon.com/security> and <https://aws.amazon.com/compliance/>.
 
 Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
-your API calls using `apiKey`. You can read more about this [here](search-through-the-elasticsearch-api) and [here](/api).
+your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-elasticsearch-api) and [here](/docs/api).
 
 ### Where is my data stored?
 
@@ -506,9 +506,9 @@ field that doesn't contain any time zone information. Fortunately,
 there's a [new specification](https://tools.ietf.org/html/rfc5424) (RFC
 5424) that uses [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 timestamp. That's why we recommend using the new format for syslog
-daemons that support it, such as [rsyslog](rsyslog) or
-[syslog-ng](syslog-ng). If you use an older
-[syslogd](syslogd) implementation, or you simply prefer to
+daemons that support it, such as [rsyslog](/docs/logs/rsyslog) or
+[syslog-ng](/docs/logs/syslog-ng). If you use an older
+[syslogd](/docs/logs/syslogd) implementation, or you simply prefer to
 use the older format, you have two options to have a correct timestamp:
 
   - set the system time on your server to UTC, or
@@ -523,7 +523,7 @@ use the older format, you have two options to have a correct timestamp:
 
 ### What are the supported timestamp formats?
 
-If you send your logs via the [Elasticsearch API](index-events-via-elasticsearch-api), you can use:
+If you send your logs via the [Elasticsearch API](/docs/logs/index-events-via-elasticsearch-api), you can use:
 
   - **ISO8601**. For example, **2001-06-08T08:00:01.123Z** or
     **2001-06-08T08:00:01+03:00**. A timezone must be there after the
@@ -540,7 +540,7 @@ timestamp** (like **Oct 11 22:14:15**). The legacy format assumes UTC
 and assumes the current year. It doesn't have sub-second precision,
 either.
 
-See [Supported Date Formats](supported-date-formats) for
+See [Supported Date Formats](/docs/logs/supported-date-formats) for
 more examples of supported date and time
 formats.
 
@@ -564,7 +564,7 @@ later.
 If your log events are sent to Sematext Cloud with a format that is not supported in our 
 platform the **@timestamp** field value will be set to the current date and time using the UTC timezone.
 
-See [Supported Date Formats](supported-date-formats) for
+See [Supported Date Formats](/docs/logs/supported-date-formats) for
 more examples of supported date and time formats.
 
 
@@ -582,13 +582,13 @@ anomalies.
 ### How to create Alerts in Logs App?
 
 Alerts are added by clicking the bell icon located next to the Logs App input field. Here you enter query info. The alerts panel
-will expand and allow you to customize alert specific to that particular search query. [Read more](../alerts/creating-logs-alerts.md)
+will expand and allow you to customize alert specific to that particular search query. [Read more](/docs/alerts/creating-logs-alerts)
 
 ### How to view Alert Rules?
 
 Click on the Alert Icon located in the left navigation and then select Alert Rules.
 
-<img alt="Alert Rules" src="../../images/logs/alert-rules.png" title="Alert Rules">
+<img alt="Alert Rules" src="/docs/images/logs/alert-rules.png" title="Alert Rules">
 
 ### What is the difference between threshold-based Alerts and Anomaly Detection (aka Algolerts)?
 
@@ -619,6 +619,6 @@ logs).
 ### Can I send Alerts to Slack, PagerDuty, Nagios, or other WebHooks and ChatOps services?
 
 Yes. Our centralized logging management solution lets one configure arbitrary WebHooks to call with Alert
-event information when Alert events are triggered. See [alerts FAQ](/faq#alerts) for more info.
+event information when Alert events are triggered. See [alerts FAQ](/docs/faq#alerts) for more info.
 
 

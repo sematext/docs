@@ -53,7 +53,7 @@ object StatisticsService extends App {
 } 
 ```
 
-[Custom pointcuts](custom-pointcuts) definition:
+[Custom pointcuts](/docs/tracing/custom-pointcuts) definition:
 
 ``` xml
 <instrumentation-descriptor name="scala">
