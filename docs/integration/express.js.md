@@ -4,7 +4,7 @@ description: Sematext Express.js monitoring integration is available as an npm p
 This is the Express.js monitoring and logging agent for Sematext, written entirely in Node.js without CPU and memory overhead. It's easy to install and require in your source code.
 
 ## Sematext Express.js Agent Quick Start
-This lightweight, open-source [Express.js monitoring agent](https://github.com/sematext/sematext-agent-express) collects Node.js process and performance metrics and sends them to Sematext. It is available as an [npm package](https://nodei.co/npm/sematext-agent-express/) that can be added to Node.js source code like any other npm module.
+This lightweight, open-source [Express.js monitoring agent](https://github.com/sematext/sematext-agent-express/) collects Node.js process and performance metrics and sends them to Sematext. It is available as an [npm package](https://nodei.co/npm/sematext-agent-express/) that can be added to Node.js source code like any other npm module.
 
 First you install the npm module.
 ```bash

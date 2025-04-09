@@ -3,7 +3,7 @@ description: Guide for running HTTP and Browser monitors from your CI/CD pipelin
 
 In addition to scheduled monitor runs, you can also trigger monitor runs by using an API. You can use this API to trigger monitor runs as part of your CI/CD pipeline and block deployments if runs fail. When a run fails, you'll be alerted via your configured alert [notification hooks](/docs/alerts/alert-notifications).
 
-If you're interested in using our API, you can find more information about it on the [Using the API](/docs/using-the-api) page.
+If you're interested in using our API, you can find more information about it on the [Using the API](/docs/synthetics/using-the-api/) page.
 
 
 ## Collecting necessary information
@@ -26,7 +26,7 @@ Once that's done, you'll also need the API key for your Sematext Cloud account. 
 
 ## Integrations
 
-Using the run monitor API, you can integrate [Sematext Synthetics](/docs/index) to your CI/CD pipeline. Below are the steps to trigger monitor runs from various CI/CD tools.
+Using the run monitor API, you can integrate [Sematext Synthetics](/docs/synthetics/) to your CI/CD pipeline. Below are the steps to trigger monitor runs from various CI/CD tools.
 
 - [Jenkins](/docs/synthetics/ci-cd/jenkins)
 - [Travis CI](/docs/synthetics/ci-cd/travis-ci)

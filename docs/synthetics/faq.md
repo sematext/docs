@@ -15,7 +15,7 @@ Use a [Browser monitor](/docs/synthetics/browser-monitor) when you want to:
 * Simulate and monitor [user journey/click path/web transactions](/docs/synthetics/user-journey-scripts/overview) using a real browser
 * [Monitor SSL certificates](/docs/synthetics/ssl-certificate-monitoring) of your website
 
-Use an [HTTP monitor](/docs/synthetics/http-monitor) when you want to:
+Use an [HTTP monitor](/docs/synthetics/http-monitor/) when you want to:
 
 * Monitor the uptime of your APIs, web URLs or any HTTP endpoint
 * Monitor the [performance](/docs/synthetics/metrics/#http-monitor-metrics) of your APIs

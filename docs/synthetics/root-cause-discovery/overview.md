@@ -48,7 +48,7 @@ If no Apps exist, you can create them from the tab, and they will be automatical
 
 Trace request tab lets you look at logs related to a specific failed synthetic monitor run by adding the Synthetics request IDs to your applications and services logs.
 
-For more information, including how to set that up, refer to [How to troubleshoot with Synthetics Request ID](/docs/synthetics/troubleshoot/troubleshoot-request-id/).
+For more information, including how to set that up, refer to [How to troubleshoot with Synthetics Request ID](/docs/synthetics/root-cause-discovery/root-cause-discovery-with-request-id/).
 
 ## Troubleshooting
 

@@ -374,7 +374,7 @@ come to the "kernel" facility with a severity/level of "error" as both
 in the Logsene web application, which you can then use for filtering,
 sorting, ...
 
-To achieve this, define a template similar to the ones [described above](rsyslog/#configuring-outputs),
+To achieve this, define a template similar to the ones [described above](/docs/logs/rsyslog/#configuring-outputs),
 where you'd add a **tags** field. Then, you'd use a
 [conditional](http://www.rsyslog.com/doc/rsyslog_conf_filter.html) to
 match those messages and send them to Sematext using the newly defined

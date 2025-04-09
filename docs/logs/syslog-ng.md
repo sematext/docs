@@ -185,7 +185,7 @@ special kind of logs. For example, you could tag events that come to the
 
 To achieve this, you can define a
 filter that matches such events. Then, you'd define a destination similar to
-the ones [described above](syslog-ng/#configure-destinations),
+the ones [described above](/docs/logs/syslog-ng/#configure-destinations),
 where you'd add a **tags** field. Finally, you'd define a **log**
 statement where you bind your source, the newly defined filter and the
 newly defined destination:

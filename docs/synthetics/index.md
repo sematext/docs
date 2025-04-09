@@ -32,4 +32,4 @@ Synthetics monitors can be scheduled to run from the following public locations:
 
 
 
-You can also install and run the [agents](/docs/docs/synthetics/private-locations) in your private network to monitor your internal applications that are not accessible from the Internet.
+You can also install and run the [agents](/docs/synthetics/private-locations) in your private network to monitor your internal applications that are not accessible from the Internet.

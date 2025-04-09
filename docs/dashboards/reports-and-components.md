@@ -21,7 +21,7 @@ Our tools will help your DevOps team find common exceptions, detect patterns in 
 
 ### Saved Views
 
-With [Saved Views](/guide/saved-views) you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
+With [Saved Views](/docs/guide/saved-views) you can save your filters and groups for faster access later. If you find yourself often applying the same filters on your data then this feature can be a time saver.
 
 ### Report Variables
 

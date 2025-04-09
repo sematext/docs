@@ -53,7 +53,7 @@ It's also possible for the website to have a lot of network activity, which prev
 
 The pages you are monitoring may send network requests to other domains, such as those for third party plugins, ads, or social media. Connections to these domains might simply be unnecessary overhead for your script, and by blocking them you can speed up page load times and prevent timeouts. You may also want to block domains for your internal user tracking tools to avoid polluting their data with behavior from Synthetics monitors.
 
-You can use `page.route()` function to to block requests to certain domains with a matching pattern. An example of how to block domains can be seen [here](/docs/playwright-scripts/request-interception.js).
+You can use `page.route()` function to to block requests to certain domains with a matching pattern. An example of how to block domains can be seen [here](/docs/synthetics/user-journey-scripts/examples/#request-interception).
 
 
 ### Use AI to help you write scripts

@@ -40,7 +40,7 @@ logger '@cee: {"logsene-app-token": "LOGSENE_APP_TOKEN_GOES_HERE", "message": "h
 
 If your central machine is running syslog-ng, you'll have to add an
 [udp() option](http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/reference_source_tcpudp.html)
-to your [source() statement](syslog-ng/#configure-sources)
+to your [source() statement](/docs/logs/syslog-ng/#configure-sources)
 in **/etc/syslog-ng/syslog-ng.conf**:
 
 ``` bash
