@@ -257,7 +257,7 @@ See [The Slow Query Log](https://dev.mysql.com/doc/refman/8.0/en/slow-query-log.
 
 Connections report displays each connection made to MySQL servers, providing user, IP address, connection type, and status information. Additionally, it highlights failed login attempts, allowing you to identify potential security threats. Please note that connection logs can only be collected when using MySQL Enterprise Audit.
 
-[Sematext Agent](/docs/agents/sematext-agent/index) accepts log files in JSON format. See [Audit Logs Format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-file-formats.html#:~:text=By%20default%2C%20audit%20log%20file,JSON%20%2C%20set%20audit_log_file%20to%20audit) for more details. 
+[Sematext Agent](/docs/agents/sematext-agent/) accepts log files in JSON format. See [Audit Logs Format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-file-formats.html#:~:text=By%20default%2C%20audit%20log%20file,JSON%20%2C%20set%20audit_log_file%20to%20audit) for more details. 
 
 ![MySQL Connections Report](/docs/images/integrations/mysql-logs-connections.png)
 

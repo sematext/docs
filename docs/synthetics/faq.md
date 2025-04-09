@@ -55,8 +55,8 @@ See [HTTP](/docs/synthetics/http-monitor/#configuration) or [Browser](/docs/synt
 ### What are the default timeouts for HTTP & Browser monitors?
 The default timeouts for the monitors are covered in their respective documentation pages, in the run environment section:
 
-* [HTTP Monitor](/docs/synthetics/http-monitor.md#run-environment)
-* [Browser Monitor](/docs/synthetics/browser-monitor.md#run-environment)
+* [HTTP Monitor](/docs/synthetics/http-monitor/#run-environment)
+* [Browser Monitor](/docs/synthetics/browser-monitor/#run-environment)
 
 ### Is there an API available?
 Yes. Please see [using the API](/docs/synthetics/using-the-api).
