@@ -617,7 +617,7 @@ kubectl create -f nodejs-service.yml
 
 ## Integration
 
-- Agent: [https://github.com/sematext/sematext-express-agent](https://github.com/sematext/sematext-express-agent)
+- Agent: [https://github.com/sematext/sematext-agent-express](https://github.com/sematext/sematext-agent-express)
 <!-- - Tutorial: [https://sematext.com/blog/nodejs-monitoring-made-easy-with-sematext/](https://sematext.com/blog/nodejs-monitoring-made-easy-with-sematext/) -->
 - Instructions: [https://apps.sematext.com/ui/howto/Node.js/overview](https://apps.sematext.com/ui/howto/Node.js/overview)
 
