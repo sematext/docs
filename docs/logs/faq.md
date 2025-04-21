@@ -190,7 +190,7 @@ will be applied.
 
 ### Audit-proof logging
 
-Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Elasticsearch API](/docs/logs/search-through-the-opensearch-api/) or using the UI:
+Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [OpenSearch API](/docs/logs/search-through-the-opensearch-api/) or using the UI:
 
 <img alt="Logs JSON View" src="/docs/images/logs/logs_source.png" title="Logs JSON View">
 
