@@ -34,7 +34,7 @@ https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search?
 -H 'Authorization: apiKey 1111111-2222-3333-4444-555555555555'
 ```
 
-For more info about ```apiKey``` [see](/docs/logs/search-through-the-elasticsearch-api) .
+For more info about ```apiKey``` [see](/docs/logs/search-through-the-opensearch-api) .
 
 More complex queries are available when using [request body search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
 e.g.:
