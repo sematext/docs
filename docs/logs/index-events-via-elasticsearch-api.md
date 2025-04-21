@@ -10,7 +10,7 @@ If you have to ship logs yourself, or you want to send them directly from your a
 You can:
   - send log events to the Sematext's Elasticsearch/OpenSearch bulk index API from your application, using
     any Elasticsearch library that can ship logs to an Open Source version of Elasticsearch.
-  - send log events by using existing application such as the Open Source versions of Logstash or Filebeat, [Logagent](/docs/logagent), Fluentbit, Vector, [Fluentd plugin](https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=fluentd), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
+  - send log events by using existing application such as the Open Source versions of [Logstash](https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=logstash) or Filebeat, [Logagent](/docs/logagent), Fluentbit, Vector, [Fluentd plugin](https://apps.sematext.com/ui/howto/Logsene/overview?activeSection=fluentd), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
   - [search for logs from your own application](/docs/logs/search-through-the-elasticsearch-api)
   - optionally define [custom mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html) for
     your log types, so you can tweak the way your logs are indexed
