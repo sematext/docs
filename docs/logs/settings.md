@@ -56,7 +56,7 @@ Once you create a Logs App, and start shipping data, you will get a **default Re
 
 Alerts and Logs are integrated into a single reports pane, and used to search logs, create alerts for anomalies, and much more. 
 
-Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [Elasticsearch API](/docs/logs/search-through-the-elasticsearch-api/) as well as using simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google.
+Our [log management platform](https://sematext.com/logsene/) gives you the ability to create your own queries through its [OpenSearch API](/docs/logs/search-through-the-opensearch-api/) as well as using simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google.
 
 You can also create and integrate [alerts](/docs/alerts/) with commonly used collaboration and messaging software such as [Hipchat](/docs/integration/alerts-hipchat-integration/), [Slack](/docs/integration/alerts-slack-integration/), [Big Panda](/docs/integration/alerts-bigpanda-integration/), [PagerDuty](/docs/integration/alerts-pagerduty-integration/), [VictorOps](/docs/integration/alerts-victorops-integration/), [OpsGenie](/docs/integration/alerts-opsgenie-integration/) or simply by using your email address(es). Use these services to continuously monitor large volume of data and logs, and ensure that you are alerted in time.
 
