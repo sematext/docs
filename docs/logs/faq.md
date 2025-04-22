@@ -523,7 +523,7 @@ use the older format, you have two options to have a correct timestamp:
 
 ### What are the supported timestamp formats?
 
-If you send your logs via the [Elasticsearch API](/docs/logs/index-events-via-opensearch-api), you can use:
+If you send your logs via the [OpenSearch API](/docs/logs/index-events-via-opensearch-api), you can use:
 
   - **ISO8601**. For example, **2001-06-08T08:00:01.123Z** or
     **2001-06-08T08:00:01+03:00**. A timezone must be there after the
