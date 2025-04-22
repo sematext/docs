@@ -1,7 +1,7 @@
 title: Mappings and Templates
 description: Field mappings and index template supported by Sematext Cloud
 
-To adjust structure of log events you can create templates and configure mapping via Sematext's [Elasticsearch-compatible API](/docs/logs/index-events-via-elasticsearch-api/) as shown below.
+To adjust structure of log events you can create templates and configure mapping via Sematext's [Elasticsearch-compatible API](/docs/logs/index-events-via-opensearch-api/) as shown below.
 
 ## Index Templates
 In Sematext logs are stored in indexes. Each Logs App has its own index and its own, independent log event structure. A template provides information about the structure - fields and their types - of log events in a given App and its underlying index. Every time an index is created all the defined templates are used to pre-create the fields with their types in such index. By defining a template you provide information on what fields and types you expect in your data. 
