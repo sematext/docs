@@ -56,5 +56,5 @@ In addition to TCP, UDP and RELP, our Logs Management App also supports RFC-5425
 
 ### HTTP or HTTPS
 
-If you use a recent version of rsyslog (6.4.0 or later), you might want to send logs directly to [Sematext's Logs Management Elasticsearch API](/docs/logs/index-events-via-opensearch-api), through the [omelasticsearch module](http://www.rsyslog.com/doc/omelasticsearch.html). Details on how
+If you use a recent version of rsyslog (6.4.0 or later), you might want to send logs directly to [Sematext's Logs Management OpenSearch API](/docs/logs/index-events-via-opensearch-api), through the [omelasticsearch module](http://www.rsyslog.com/doc/omelasticsearch.html). Details on how
 to do that are on the [rsyslog how to page](/docs/logs/rsyslog).
