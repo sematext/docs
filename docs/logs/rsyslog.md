@@ -19,7 +19,7 @@ you lots of ways to forward your logs with rsyslog:
   - [TCP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imudp.html) (you can also encrypt logs with TLS)
   - [RELP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imrelp.html) (uses application-level
     acknowledgement for increased reliability over plain TCP)
-  - HTTP / HTTPS over the [Elasticsearch API](/docs/logs/index-events-via-opensearch-api)
+  - HTTP / HTTPS over the [OpenSearch API](/docs/logs/index-events-via-opensearch-api)
 
 You can also send [JSON over syslog](/docs/logs/json-messages-over-syslog) if you need support for
 structured data.
