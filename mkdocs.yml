@@ -434,7 +434,7 @@ nav:
             - GELF: logagent/output-plugin-gelf.md
             - MQTT: logagent/output-plugin-mqtt.md
             - Files: logagent/output-plugin-files.md
-            - Elasticsearch: logagent/output-opensearch.md
+            - Elasticsearch: logagent/output-elasticsearch.md
             - Amazon Elasticsearch: logagent/output-plugin-aws-elasticsearch.md
             - InfluxDB: logagent/output-plugin-influxdb.md
             - Apache Kafka: logagent/output-plugin-kafka.md
