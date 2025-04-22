@@ -145,7 +145,7 @@ Logs can be shipped to [various destinations](/docs/logagent/plugins/) including
 - ClickHouse DB
 - ...
 
-The Elasticsearch output supports HTTPS and username/password in the URL. It is possible to use [**multiple indices** to route logs from **different files** to **different indices**](./output-elasticsearch/#log-routing-to-multiple-targets) in Elasticsearch. All logs that don't match any rules in the indices section are **routed to the default** Elasticsearch **index**. 
+The Elasticsearch output supports HTTPS and username/password in the URL. It is possible to use [**multiple indices** to route logs from **different files** to **different indices**](./output-opensearch/#log-routing-to-multiple-targets) in Elasticsearch. All logs that don't match any rules in the indices section are **routed to the default** Elasticsearch **index**. 
 
 ```yaml hl_lines="4 7 16 22 23 28"
 output:
