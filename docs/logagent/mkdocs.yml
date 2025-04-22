@@ -15,7 +15,7 @@ pages:
     - Command input: input-plugin-command.md
     - Elasticsearch query: input-plugin-elasticsearch-query.md
   - Output plugins: 
-    - Elasticsearch: output-elasticsearch.md
+    - OpenSearch: output-opensearch.md
     - Slack webhook: output-plugin-slack.md
 - Filter: 
   - About filters: filters.md
