@@ -1,23 +1,23 @@
-title: Ingest data in OpenSearch
-description: Forwards parsed logs with OpenSearch output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to OpenSearch and Sematext logs management platform
+title: Ingest data in Elasticsearch
+description: Forwards parsed logs with Elasticsearch output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
 
-## OpenSearch Output Plugin
+## Elasticsearch Output Plugin
 
-The OpenSearch output plugin forwards parsed logs to [OpenSearch](https://opensearch.org/) or [Sematext Logs](https://sematext.com/logsene). 
+The Elasticsearch output plugin forwards parsed logs to [Elasticsearch](https://www.elastic.co/products/elasticsearch) or [Sematext Logs](https://sematext.com/logsene). 
 
 ### Features
-- log routing by log source to multiple OpenSearch servers
-- log routing by log source to multiple OpenSearch indices (or Sematext Logs Apps)
+- log routing by log source to multiple Elasticsearch servers
+- log routing by log source to multiple Elasticearch indices (or Sematext Logs Apps)
 - SSL/TLS by default, when using Sematext
 - Two-way SSL Authentication, also known as Mutual Authentication as part of PKI, secure client authentication with SSL client certificates
 - bulk indexing with timeout (1000 docs or 10 second timeout by default)
-- disk buffer an re-transmit when connection to OpenSearch fails
+- disk buffer an re-transmit when connection to Elasticsearch fails
 - renaming of invalid field names
 - limit field size (240k by default)
 
 ## Simple config
 
-The following example configuration ships all log files in /var/log (including sub-directories) to one OpenSearch index. 
+The following example configuration ships all log files in /var/log (including sub-directories) to one Elasticsearch index. 
 
 ```yml
 input:
@@ -32,11 +32,11 @@ output:
 
 ## Log routing to multiple targets
 
-In some situations, it is required to ship data from different sources to different OpenSearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the OpenSearch output module. 
+In some situations, it is required to ship data from different sources to different Elasticsearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the Elasticsearch output module. 
 
-Each OpenSearch output might have a list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
+Each Elasticsearch output might have a list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
 
-The following example ships logs from wireless devices and authentication log to a local OpenSearch server and other server logs to multiple Sematext Logs Apps. 
+The following example ships logs from wireless devices and authentication log to a local Elasticsearch server and other server logs to multiple Sematext Logs Apps. 
 
 ```yaml
 input:
@@ -44,7 +44,7 @@ input:
       - '/var/log/**/*.log'
 
 output:
-  # index logs in OpenSearch or Sematext
+  # index logs in Elasticsearch or Sematext
   local-elasticsearch: 
     module: elasticsearch
     url: http://localhost:9200
@@ -72,7 +72,7 @@ output:
 
 ## HTTP, HTTPS and authentication options
 
-The OpenSearch output module accepts [http(s) options](https://nodejs.org/api/https.html#https_https_request_options_callback). Client side certificates and keys are specified with a file name. If you use self-signed certificates, set _rejectUnauthorized_ to _false_.
+The Elasticsearch output module accepts [http(s) options](https://nodejs.org/api/https.html#https_https_request_options_callback). Client side certificates and keys are specified with a file name. If you use self-signed certificates, set _rejectUnauthorized_ to _false_.
 
 ```yaml
 output:
