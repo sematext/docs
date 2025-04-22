@@ -18,7 +18,7 @@ rsyslog is a modern syslog daemon focused on performance. Sematext Logs Manageme
   - TCP (you can also encrypt logs with TLS)
   - [RELP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/omrelp.html#omrelp-relp-output-module) (uses application-level
     acknowledgement for increased reliability over plain TCP)
-  - HTTP / HTTPS over the [Elasticsearch API](/docs/logs/index-events-via-elasticsearch-api)
+  - HTTP / HTTPS over the [OpenSearch API](/docs/logs/index-events-via-opensearch-api)
 
 You can also send [JSON over syslog](/docs/logs/json-messages-over-syslog) if you need support for
 structured data.
