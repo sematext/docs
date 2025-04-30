@@ -83,7 +83,7 @@ is a way to define how your logs are indexed - which fields are in each log even
     [Special Fields](/docs/tags/common-schema) that are not analyzed, which enables only exact matches (you can still use wildcards, for example
     to search for **web-server\*** and get **web-server01**)
   - all string fields are analyzed by whitespace and lowercased by
-    default, thus makign it possible to search for **message:hello** and match events
+    default, thus making it possible to search for **message:hello** and match events
     with **Hello World** in the **message** field
 
 ## Custom Log Index Mapping
