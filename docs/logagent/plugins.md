@@ -43,7 +43,7 @@ Logagent features a modular architecture. Each input or output module is impleme
 | [kubernetes-enrichment](/docs/logagent/output-filter-kubernetes) | Processor / output filter | Metadata enrichment for pod logs, including log routing options |
 | [geoip](/docs/logagent/output-filter-geoip) | Processor / output filter | Add Geo-IP information to logs |
 | [stdout (default)](/docs/logagent/output-plugin-stdout)                          | output                    | Prints parsed messages to standard output. Supported formats: YAML, JSON, Line delimited JSON (default). |
-| [elasticsearch](/docs/logagent/output-elasticsearch)     | output | Stores parsed messages in OpenSearch 
+| [elasticsearch](/docs/logagent/output-elasticsearch)     | output | Stores parsed messages in Elasticsearch 
 | [output-gelf](/docs/logagent/output-plugin-gelf) | output | Sends data via GELF protocol                                                                           |
 | [output-mqtt](/docs/logagent/output-plugin-mqtt)         | output | Sends messages via MQTT protocol |
 | [output-influxdb](/docs/logagent/output-plugin-influxdb)     | output                    | Stores parsed messages in InfluxDb |
