@@ -20,7 +20,7 @@ Example:
 2. Input Filter: Grep URLs of interest 'login|register|upgrade'   
 3. Parser: Parse Log and generate fields like URL, status code, size, referrer, country etc.
 4. Output Filter: Drop irelevant log events like redirects (status=302)
-5. Output Plugin: Store filtered log-events in Elasticsearch
+5. Output Plugin: Store filtered log-events in Elasticsearch/Opensearch
 ```
 
 Filters can be declared inline as JavaScript in function or as a reference to npm modules in a Logagent config file. 
