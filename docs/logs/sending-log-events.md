@@ -1,5 +1,5 @@
 title: Sending Log Events to Sematext
-description: Send new log events to Sematext using Sematext Agent, Elasticsearch API or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
+description: Send new log events to Sematext using Sematext Agent, Sematext API -compatible with Elasticsearch and Opensearch- or syslog, and log shippers such as  Logstash, Fluentd, rsyslog, syslog-ng, Fluentbit and more
 
 ## Logs Discovery
 
@@ -57,7 +57,7 @@ Furthermore, at any time, you can navigate to the Discovery screen to view the l
 
 ## Custom Integration Options
 
-Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Elasticsearch API](/docs/logs/index-events-via-elasticsearch-api), [syslog-ng](/docs/logs/syslog-ng), various programming languages, and popular log shippers such as [rsyslog](/docs/logs/rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and navigating to the Custom Integrations tab.  We recommend you use this only if, for some reason, setting up log shipping from Discovery screen in Sematext Cloud UI doesn't work and our support is unable to help you.
+Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Sematext API](/docs/logs/index-events-via-elasticsearch-api) which is compatible with Elasticsearch and Opensearch, [syslog-ng](/docs/logs/syslog-ng), various programming languages, and popular log shippers such as [rsyslog](/docs/logs/rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and navigating to the Custom Integrations tab.  We recommend you use this only if, for some reason, setting up log shipping from Discovery screen in Sematext Cloud UI doesn't work and our support is unable to help you.
 
 ![Logs App Custom Integrations](/docs/images/logs/custom-integrations.png)
 
