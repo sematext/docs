@@ -1,12 +1,12 @@
 title: Aggregate and filter logs with SQL
-description: Filter and aggregate parsed logs with SQL with Logagent's SQL output filter, before they get shipped to Elasticsearch or Logsene, Sematext's logging management platform and SaaS ELK Stack. The result of the query is emitted as a new event, while the original events are omitted.
+description: Filter and aggregate parsed logs with SQL with Logagent's SQL output filter, before they get shipped to Sematext's logging management platform and SaaS ELK Stack. The result of the query is emitted as a new event, while the original events are omitted.
 
 ## SQL output filter
 Filter and aggregate parsed logs with SQL.
 
 This filter applies SQL queries on parsed log events. The result of the query is emitted as a new event, while the original events are omitted. 
 
-Using SQL it is very easy to aggregate values, e.g. group HTTP requests by status codes. The SQL WHERE statement is used to filter events before they get shipped to Elasticsearch or [Logsene](https://sematext.com/logsene). 
+Using SQL it is very easy to aggregate values, e.g. group HTTP requests by status codes. The SQL WHERE statement is used to filter events before they get shipped to Elasticsearch/Opensearch or [Sematext Logs](https://sematext.com/logsene). 
 
 
 ### Configuration 
