@@ -13,7 +13,7 @@ Applications:
 
 - centralize Kubernetes Audit logs
 - act as webhook to receive Kubernetes Audit logs
-- index Kubernetes Audit logs in Elasticsearch or Sematext Cloud
+- index Kubernetes Audit logs in Elasticsearch/Opensearch or Sematext Cloud
 - create alerts on Kubernetes Audit logs
 
 
