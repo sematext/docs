@@ -1,10 +1,10 @@
 Title: Sematext Logagent Log Shipper
-Description: Logagent is lightweight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch, Kafka, and Sematext
+Description: Logagent is lightweight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch, Opensearch, Kafka, and Sematext
 
 ## What is Logagent?
 [Logagent](https://sematext.com/logagent) is a modern, open-source, lightweight **log shipper** with a low memory footprint and low CPU overhead!
 
-It comes with out of the box and extensible **log parsing**, **on-disk buffering**, **secure transport**, and **log shipping** with **bulk indexing** to any **Elasticsearch endpoint**, including [Sematext Logs](https://sematext.com/logsene), Kafka, etc.
+It comes with out of the box and extensible **log parsing**, **on-disk buffering**, **secure transport**, and **log shipping** with **bulk indexing** to any **Elasticsearch/Opensearch endpoint**, including [Sematext Logs](https://sematext.com/logsene), Kafka, etc.
 
 If you're eager to get started, here's how you start shipping logs.
 
@@ -38,7 +38,7 @@ Logagent contains an installer when you want to use it as a [log shipper](/docs/
 - Plugins:
     - Inputs (files, streams, sockets, databases)
     - Input filters (grep/grok filters)
-    - Outputs (Elasticsearch, Sematext Cloud, Kafka, etc.)
+    - Outputs (Elasticsearch, Opensearch, Sematext Cloud, Kafka, etc.)
     - Output filters (SQL aggregation of parsed data, enrichment of data)
 - Node.js API
 
@@ -72,7 +72,7 @@ input:
     - '/var/log/**/*.log'
 
 output:
-  # index logs in Elasticsearch or Sematext Logs
+  # index logs in Sematext Logs
   sematext: # output a name, e.g., elasticsearch, sematext, etc.
     module: elasticsearch
     url: https://logsene-receiver.sematext.com
