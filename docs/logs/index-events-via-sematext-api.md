@@ -1,4 +1,4 @@
-title: Index Logs Events in Sematext via Sematext API
+title: Index Logs Events via Sematext API
 description: Sending, custom & default mapping, and indexing log events using Sematext API
 
 Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs. 
