@@ -19,7 +19,7 @@ you lots of ways to forward your logs with rsyslog:
   - [TCP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imudp.html) (you can also encrypt logs with TLS)
   - [RELP](https://www.rsyslog.com/doc/v8-stable/configuration/modules/imrelp.html) (uses application-level
     acknowledgement for increased reliability over plain TCP)
-  - HTTP / HTTPS over the [Sematext API](/docs/logs/index-events-via-elasticsearch-api)
+  - HTTP / HTTPS over the [Sematext API](/docs/logs/index-events-via-sematext-api)
 
 You can also send [JSON over syslog](/docs/logs/json-messages-over-syslog) if you need support for
 structured data.
@@ -107,7 +107,7 @@ in the Logs App settings.
 
 ### HTTP/HTTPS via the Sematext API
 
-The recommended method is to use the [Sematext API](/docs/logs/index-events-via-elasticsearch-api) to send logs over
+The recommended method is to use the [Sematext API](/docs/logs/index-events-via-sematext-api) to send logs over
 HTTP or HTTPS. This will give you maximum flexibility, reliability and
 encryption, if you need it. This requires rsyslog 6.4.0 or later, and
 the installation of the [Elasticsearch output module](http://www.rsyslog.com/doc/omelasticsearch.html). HTTPS is
