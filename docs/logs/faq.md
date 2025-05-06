@@ -190,7 +190,7 @@ will be applied.
 
 ### Audit-proof logging
 
-Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Sematext API](/docs/logs/search-through-the-elasticsearch-api/) or using the UI:
+Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Sematext API](/docs/logs/search-through-the-sematext-api/) or using the UI:
 
 <img alt="Logs JSON View" src="/docs/images/logs/logs_source.png" title="Logs JSON View">
 
@@ -491,7 +491,7 @@ security and compliance certifications see:
 <http://aws.amazon.com/security> and <https://aws.amazon.com/compliance/>.
 
 Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
-your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-elasticsearch-api) and [here](/docs/api).
+your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-sematext-api) and [here](/docs/api).
 
 ### Where is my data stored?
 
