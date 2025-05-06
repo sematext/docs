@@ -1,7 +1,7 @@
 title: Sematext App - Logs
 description: Sematext App is a modern monitoring, log management, transaction tracing, and real user monitoring system that aggregates and structures your logs across various languages and platforms. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix production issues
 
-[Sematext logging platform](https://sematext.com/logsene/) provides both ability to create your own queries through its [Sematext API](/docs/logs/search-through-the-elasticsearch-api/) which is compatible with both Elasticsearch and Opensearch. It offers rich, yet simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google. 
+[Sematext logging platform](https://sematext.com/logsene/) provides both ability to create your own queries through its [Sematext API](/docs/logs/search-through-the-sematext-api/) which is compatible with both Elasticsearch and Opensearch. It offers rich, yet simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google. 
 
 We also have a [command line tool](https://sematext.com/blog/logsene-cli/) used for viewing, searching, filtering, and analyzing of log entries across all your logs from all your apps. 
 
