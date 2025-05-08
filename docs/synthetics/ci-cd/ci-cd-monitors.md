@@ -42,7 +42,7 @@ Creating a **CI/CD Group** is simple:
 
 ![CI/CD Group Creation](/docs/images/synthetics/cicd-group-creation.png)
 
-Once you have created a CI/CD Group, you'll need to invoke it from your GitHub repository. Refer to [this page](/docs/synthetics/ci-cd/ci-cd-installation/) for installation instructions and examples.
+Once you have created a CI/CD Group, you'll need to invoke it from your GitHub repository. Refer to [the installation page](/docs/synthetics/ci-cd/ci-cd-installation/) for installation instructions and examples.
 
 
 ### Group Runs
