@@ -134,7 +134,6 @@ You can also see browse additional details, including individual monitor runs, l
 
 If your setup is such that your deployments are handled by systems outside of GitHub (such as Jenkins and ArgoCD), then you'll need to add some extra steps because GitHub won't know which commit to associate the tests with otherwise. We'll invoke the action with a `repository_dispatch` event, pass the commit SHA we're running the tests for in the event payload, and manually create checks which will be linked to the commit.
 
-
 ```yaml
 name: Deployment Complete Test
 
@@ -259,6 +258,24 @@ jobs:
               -F "status=completed" \
               -F "conclusion=failure"
           fi
+```
+
+Here's an example of what the `repository_dispatch` event should look like when you send it from whichever tool you're using to deploy your environments. You can send this `POST` request from cURL or Postman to your repository at `https://api.github.com/repos/{{YOUR_ORGANIZATION}}/{{YOUR_REPOSITORY}}/dispatches` to try out the integration before implementing the logic for sending this event in your deployment tools. Make sure to also specify these headers:
+
+- `Accept: application/vnd.github+json`
+- `Authorization: token {{gh_token_private}}`
+  - `{{gh_token_private}}` has to be a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) which you can create [here](https://github.com/settings/personal-access-tokens/new)
+
+```json
+{
+    "event_type": "environment_ready",
+    "client_payload": {
+        "commitHash": "85ef87c316d02ca34fca49ad974781f340cb6d8e", // Mandatory
+        // sourceName can be the URL of the deployed environment,
+        // or any information you need to construct the URL (such as the PR number)
+        "sourceName": "https://deployment1234.example.com"        
+    }
+}
 ```
 
 This is an example of what gets displayed when you open the check details on GitHub. Tweak the code of the `Update Job Status` step to modify this to your liking.
