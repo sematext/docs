@@ -29,13 +29,14 @@ When running tests for your projects, you'll most likely want to test a number o
 
 ![CI/CD Groups in the Sidebar](/docs/images/synthetics/cicd-group-sidebar.png)
 
+Note that, just like for [Status Pages](/docs/synthetics/status-pages/) and [Scheduled Pauses](/docs/synthetics/scheduled-pauses/), **CI/CD Groups** will only show up in the sidebar when you're in the general Synthetics overview, not in the overview for a specific Synthetics App. This also means that you can add monitors from any Synthetics App to any **CI/CD Group**, so you don't need to worry about having to keep all your CI/CD Monitors in the same App.
+
 
 ### Creating a CI/CD Group
 
 Creating a **CI/CD Group** is simple:
 - Select which monitors you want to add
   - Keep in mind that only **CI/CD Monitors** can be assigned to **CI/CD Groups**
-  - Similarly to [Status Pages](/docs/synthetics/status-pages/) and [Scheduled Pauses](/docs/synthetics/scheduled-pauses/), **CI/CD Groups** let you add monitors from various Synthetics Apps, so you don't need to worry about having to keep all your CI/CD Monitors in the same App.
 - Assign a name to the group, which will be displayed in the sidebar
 - Add a description to know what this **CI/CD Group** will be used for
 - Add a GitHub URL to your repository, which will be used to quickly allow you to open commits and branches which were tested
