@@ -136,7 +136,12 @@ nav:
         - Troubleshooting: synthetics/user-journey-scripts/troubleshooting.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration:
-        - Overview: synthetics/ci-cd/overview.md
+        - Overview: synthetics/ci-cd/ci-cd-monitors.md
+        - Installation: synthetics/ci-cd/ci-cd-installation.md
+        - Simple Workflow Example: synthetics/ci-cd/ci-cd-example-simple.md
+        - Complex Workflow Example: synthetics/ci-cd/ci-cd-example-complex.md
+        - Optional Check Run Fix: synthetics/ci-cd/ci-cd-check-run-fix.md
+        - Overview2: synthetics/ci-cd/overview.md
         - Jenkins: synthetics/ci-cd/jenkins.md
         - Travis CI: synthetics/ci-cd/travis-ci.md
         - Circle CI: synthetics/ci-cd/circle-ci.md
