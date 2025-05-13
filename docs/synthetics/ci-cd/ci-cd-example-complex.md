@@ -21,6 +21,9 @@ Make sure to also specify these headers:
 
 **Note**: `{{gh_token_private}}` has to be a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) which you can create [here](https://github.com/settings/personal-access-tokens/new).
 
+- When editing the access privileges of Fine-Grained tokens, you can select only the repository which you'll use the integration with
+- Under permissions just set **Contents** to **Read and Write** as per [GitHub's official recommendations](https://docs.github.com/en/rest/repos/repos#create-a-repository-dispatch-event--fine-grained-access-tokens)
+
 This is the body of the request which we'll base our workflow around.
 - `commitHash` is mandatory - the SHA of the commit you want to create checks for
 - `sourceName` can be the URL of the deployed environment, or any information you need to construct the URL (such as the PR number)
