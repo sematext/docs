@@ -54,6 +54,17 @@ jobs:
           echo "Test Result: ${{ steps.sematext_action.outputs.result }}"
 ```
 
+Here's an quick overview of how the workflow works:
+
+- It's initiated on the `deployment_status` event
+  - Note that this means it can also initiate if the deployment isn't successful, so tweak the workflow as needed if you also create events for deployments in progress or failed deployments
+- Minimal permissions are needed - to read the deployment event from which we extract the URL of the deployed environment
+- The first step (`vercel_deployment_url`) fetches the URL that'll be used as the replacement for [Dynamic URL monitors](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls) from the deployment event
+  - If your deployment setup handles the URL differently, then update this step to change how you fetch the URL
+- The second step (`sematext_action`) calls the main action which runs the **CI/CD Monitors** associated with our **CI/CD Group**
+  - Remember to update the variables that are passed here so that they match your setup
+- The third and final step processes the results to inform us whether the tests were successful or not, logging out the information for review
+
 
 ## Triggering the workflow
 
