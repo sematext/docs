@@ -34,7 +34,7 @@ steps:
       MONITOR_GROUP_ID: 42                                          # Replace with your actual Monitor Group ID
       REGION: 'US'                                                  # Replace with your Sematext Cloud Region ('EU' or 'US')
       SEMATEXT_API_KEY: ${{ secrets.SEMATEXT_API_KEY }}             # Make sure to add your Sematext API key as a repository secret first
-      TARGET_URL: 'https://your-deployment-url.com'                 # Pass dynamically from your setup
+      TARGET_URL: 'https://your-deployment-url.com'                 # Pass dynamically from your setup, used as the replacement for <DYNAMIC_URL>
       GIT_COMMIT_HASH: '5a24a0f8cd48be7f315787dcc23ad418ecdb36f2'   # Pass dynamically from your setup
       USE_HEAD_SHA: false                                           # Set to true if the invoking event is linked to the commit you're testing
 ```

@@ -99,7 +99,7 @@ jobs:
           MONITOR_GROUP_ID: ${{ env.MONITOR_GROUP_ID }}       # Manually set near the top of the workflow
           REGION: ${{ env.REGION }}                           # Manually set near the top of the workflow
           SEMATEXT_API_KEY: ${{ env.SEMATEXT_API_KEY }}       # Set as a repository secret
-          TARGET_URL: ${{ env.TARGET_URL }}                   # The URL of the deployment which you want to test
+          TARGET_URL: ${{ env.TARGET_URL }}                   # The URL of the deployment which you want to test, the replacement for <DYNAMIC_URL>
           USE_HEAD_SHA: false                                 # Set to true to use the HEAD SHA for the check run instead of GIT_COMMIT_HASH
 
       - name: Update Job Status

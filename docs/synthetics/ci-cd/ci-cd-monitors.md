@@ -60,7 +60,7 @@ You can then use that information to quickly see what went wrong, navigate to th
 
 ## Dynamic URLs
 
-To enable Synthetics monitors to run tests against different environments with different URLs, you can use the **Dynamic URL** feature for **CI/CD Monitors**. This feature, available for both HTTP and Browser monitors, lets you mark a certain part of a URL as dynamic - thus letting it change from run to run. This is done by using a placeholder `<DYNAMIC_URL>` as part of your URLs, which will be replaced during the actual run execution with the URL that you provide within the run request.
+To enable Synthetics monitors to run tests against different environments with different URLs, you can use the **Dynamic URL** feature for **CI/CD Monitors**. This feature, available for both HTTP and Browser monitors, lets you mark a certain part of the monitored URL as dynamic - thus letting it change from run to run. This is done by using a placeholder `<DYNAMIC_URL>` as part of your URLs, which will be replaced during the actual run execution with the URL that you provide within the run request.
 
 
 ### An example of Dynamic URLs in action

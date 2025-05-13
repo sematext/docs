@@ -35,7 +35,7 @@ jobs:
           MONITOR_GROUP_ID: 42                                # Replace with your actual Monitor Group ID
           REGION: 'US'                                        # Replace with your Sematext Cloud Region ('EU' or 'US')
           SEMATEXT_API_KEY: ${{ secrets.SEMATEXT_API_KEY }}   # Make sure to add your Sematext API key as a repository secret first
-          TARGET_URL: ${{ env.DEPLOYMENT_URL }}               # Use the URL that's autodeployed by Vercel
+          TARGET_URL: ${{ env.DEPLOYMENT_URL }}               # Use the URL that's autodeployed by Vercel as the replacement for <DYNAMIC_URL>
           USE_HEAD_SHA: true
 
       - name: Process Results
