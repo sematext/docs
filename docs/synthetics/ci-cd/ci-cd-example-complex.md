@@ -185,6 +185,6 @@ Here's an quick overview of how the workflow works:
   - This step always runs if the GitHub check was created, so that the GitHub check is updated regardless of whether the previous steps failed or not
   - Feel free to add your own modifications here if you'd like some additional information to be logged out
 
-This is an example of what gets displayed when you open the check details on GitHub. Tweak the code of the `Update Job Status` step to modify this to your liking.
+This is an example of what gets displayed when you open the check's details on GitHub. Tweak the code of the `Update Job Status` step to modify this to your liking.
 
 ![Check Run Details Example](/docs/images/synthetics/cicd-check-run-example.jpg)

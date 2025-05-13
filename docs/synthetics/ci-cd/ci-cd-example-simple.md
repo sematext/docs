@@ -77,6 +77,6 @@ Here's what this check will look like next to your commits.
 ![Commit Check on a PR](/docs/images/synthetics/cicd-check-commit-pr.png)
 
 
-You can also see browse additional details, including individual monitor runs, links to further details in the Sematext Cloud UI, and the URL for the Group Run. The `Run` step above the results contains additional information such as which URL and commit hash is being used, which can be useful for troubleshooting issues if they arise.
+You can also see see additional details, including individual monitor runs, links to further details in the Sematext Cloud UI, and the URL for the Group Run. The `Run` step above the results contains additional information such as which URL and commit hash is being used, which can be useful for troubleshooting issues if they arise.
 
 ![Check Details](/docs/images/synthetics/cicd-check-details.png)
