@@ -192,4 +192,4 @@ This is an example of what gets displayed when you open the check's details on G
 
 ## Fix for check runs not showing up next to commits
 
-Due to limitations tied to GitHub's check-runs API, sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well. For more information on this issue and instructions on how to fix it, refer to [this page](/docs/synthetics/ci-cd/ci-cd-check-run-fix.md).
+Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/community/discussions/24616), sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well. For more information on this issue and instructions on how to fix it, refer to [this page](/docs/synthetics/ci-cd/ci-cd-check-run-fix.md).

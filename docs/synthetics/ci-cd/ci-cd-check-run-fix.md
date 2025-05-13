@@ -1,7 +1,7 @@
 title: Fixing issues with check runs not showing up next to commits
 description: A description of a potential issue that happens due to certain GitHub limitations, as well as instructions on how to circumvent the problem
 
-Due to limitations tied to GitHub's check-runs API, sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well.
+Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/community/discussions/24616), sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well.
 
 A way to circumvent this issue is by creating a private GitHub Application and using a [helper action](https://github.com/tibdex/github-app-token) which "impersonates" this Application to make it seem like it was what initiated the check runs.
 
