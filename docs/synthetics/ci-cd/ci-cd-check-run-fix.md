@@ -1,49 +1,33 @@
-title: Example - Complex Deployment Setup
-description: A showcase of how to set up the CI/CD integration when our deployment setup is handled outside of GitHub, meaning one has to invoke GitHub actions through `repository_dispatch` events
+title: Fixing issues with check runs not showing up next to commits
+description: A description of a potential issue that happens due to certain GitHub limitations, as well as instructions on how to circumvent the problem
 
-If your setup is such that your deployments are handled by systems outside of GitHub (such as Jenkins and ArgoCD), then you'll need to add some extra steps because GitHub won't know which commit to associate the tests with otherwise.
+Due to limitations tied to GitHub's check-runs API, sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well.
 
-The action will be invoked with a `repository_dispatch` event, pass the commit SHA we're running the tests for in the event payload, and manually create checks which will be linked to the commit. Because of this, it needs permissions to read the repository and create/update check runs.
+A way to circumvent this issue is by creating a private GitHub Application and using a [helper action](https://github.com/tibdex/github-app-token) which "impersonates" this Application to make it seem like it was what initiated the check runs.
 
+The GitHub Application can be created [here](https://github.com/settings/apps/new). Here's what you should do during the setup:
+- Pick a fitting name that'll let you associate this with the testing suite, since it will be displayed as the name of your check runs next to commits
+- For the Homepage URL field you can paste in whatever, since you won't really be using the action for anything aside from its tokens to "impersonate" it with
+- Under `Webhook`, untick `Active`, since we won't need it
+- Under `Permissions`, open up `Repository permissions` and add `Read and Write` to `Checks`, as well as `Read-only` to `Contents` (just like the Action itself requires)
+- Create the GitHub Application
 
-## Triggering the workflow
+When you finish creating the App, you'll automatically be redirected to its overview.
+- From here you need to copy the `App ID` found at the top of the page and save it as a repository secret called `GH_APP_ID` in the repository where you're having problems with checks not showing up
+- Then, scroll down to the `Private keys` section and generate a private key
+  - This will download a file containing the private key - open it with a text editor of your choice and copy the entirety of the file, then save it as a repository secret called `GH_APP_TOKEN`
 
-In this use-case we'll have to write some custom logic to send a request and trigger the workflow when a deployment is created (from whichever tool you're using to deploy your environments), so let's first take a look at what this request should look like in order to better understand the workflow. Since the deployment is being handled with some setup that operates outside of GitHub, we'll have to send a `repository_dispatch` event to GitHub in order to notify it about the finished deployment.
+Now all you have to do is add this step to the beginning of the workflow you use to invoke the Sematext CI/CD Action (before creating a Check Run):
 
-You can send this `POST` request from cURL or Postman to your repository's GitHub API endpoint (located at `https://api.github.com/repos/{{YOUR_ORGANIZATION}}/{{YOUR_REPOSITORY}}/dispatches`) in order to try out the integration before adding the logic for sending this event to your deployment tools.
-
-Make sure to also specify these headers:
-
-| **Header** | **Value** |
-|------------|-----------|
-| `Accept` | `application/vnd.github+json` |
-| `Authorization` | `token {{gh_token_private}}` |
-
-**Note**: `{{gh_token_private}}` has to be a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) which you can create [here](https://github.com/settings/personal-access-tokens/new).
-
-- When editing the access privileges of Fine-Grained tokens, you can select only the repository which you'll use the integration with
-- Under permissions just set **Contents** to **Read and Write** as per [GitHub's official recommendations](https://docs.github.com/en/rest/repos/repos#create-a-repository-dispatch-event--fine-grained-access-tokens)
-
-This is the body of the request which we'll base our workflow around.
-- `commitHash` is mandatory - the SHA of the commit you want to create checks for
-- `sourceName` can be the URL of the deployed environment, or any information you need to construct the URL (such as the PR number)
-
-```json
-{
-    "event_type": "environment_ready",
-    "client_payload": {
-        "commitHash": "85ef87c316d02ca34fca49ad974781f340cb6d8e",
-        "sourceName": "https://deployment1234.example.com"        
-    }
-}
+```yaml
+      - id: fetch_gh_app_token
+        uses: tibdex/github-app-token@v2.1.0
+        with:
+          app_id: ${{ secrets.GH_APP_ID }}
+          private_key: ${{ secrets.GH_APP_TOKEN }}
 ```
 
-
-## Workflow example
-
-Save the following file as `.github/workflows/sematext_synthetics_check.yaml`. Make sure to push it to your main branch, as that's where GitHub fetches workflows from when it's about to execute them.
-
-Remember that you should edit the variables at the top of the workflow as per the instructions provided in the comments next to them. Also take a look at how you'll set the `TARGET_URL` variable, as that's specific to how you assign URLs to your deployed environments. If there's only one URL that you plan on monitoring, then you can turn the **Dynamic URL** option off for your monitors and avoid passing any `TARGET_URL` to the action.
+Adding it to the `repository_dispatch` workflow example, it should look like this:
 
 ```yaml
 name: Deployment Complete Test
@@ -69,6 +53,12 @@ jobs:
       SOURCE: ${{ github.event.client_payload.sourceName }}      # Additional info you may need to create your deployment URL, passed from the invoking event
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}                      # Automatically created by GitHub for every repository
     steps:
+      - id: fetch_gh_app_token
+        uses: tibdex/github-app-token@v2.1.0
+        with:
+          app_id: ${{ secrets.GH_APP_ID }}
+          private_key: ${{ secrets.GH_APP_TOKEN }}
+
       - name: Print info
         run: |
           echo "Current time is $(date)"
@@ -169,27 +159,4 @@ jobs:
           fi
 ```
 
-Here's an quick overview of how the workflow works:
-
-- It's initiated on the `repository_dispatch` event of the `environment_ready` type
-- The only required permissions are for
-  - reading the contents of the repository in order to find the appropriate branch for the commit hash we're targeting
-  - creating and updating GitHub check runs, since a `repository_dispatch` isn't automatically linked to a commit, so the workflow has to handle that as well
-- Most of the variables passed to the action are handled near the top of the file for easy overview, so make sure to edit these to match your setup
-- Next, some basic information is logged out so it can help with troubleshooting in the event of unexpected errors
-  - This is also where the `TARGET_URL` (which replaces the `<DEPLOYMENT_URL>` placeholder for [Dynamic URL monitors](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls)) is set, so make sure to modify this logic so it uses the actual URL you want
-- After that comes the `create_check` step, which creates the GitHub check that's linked to the commit found in the `commitHash` field of the event which invoked the action, as seen in the example at the top of this page
-- Then the `sematext_action` step calls the main action which runs the **CI/CD Monitors** associated with our **CI/CD Group**
-  - Review the variables sent to the actions once more
-- Lastly, the `update_status` step checks the results of the action and creates a handy result overview page from the outputs of the action, then updates the GitHub check created earlier with the results
-  - This step always runs if the GitHub check was created, so that the GitHub check is updated regardless of whether the previous steps failed or not
-  - Feel free to add your own modifications here if you'd like some additional information to be logged out
-
-This is an example of what gets displayed when you open the check's details on GitHub. Tweak the code of the `Update Job Status` step to modify this to your liking.
-
-![Check Run Details Example](/docs/images/synthetics/cicd-check-run-example.jpg)
-
-
-## Fix for check runs not showing up next to commits
-
-Due to limitations tied to GitHub's check-runs API, sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well. For more information on this issue and instructions on how to fix it, refer to [this page](/docs/synthetics/ci-cd/ci-cd-check-run-fix.md).
+That's it. Now run the workflow again to try it out. You should see the commit check, and its name should match the name of the GitHub Application you just created.
