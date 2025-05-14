@@ -22,9 +22,11 @@ The Sematext CI/CD GitHub Action is a straightforward way to execute a **CI/CD G
 ![CI/CD GitHub Secret](/docs/synthetics/ci-cd/images/ci-cd-github-secret.png)
 
 
-### Usage
+### Steps in the GitHub Workflow
 
-Add the following to your GitHub workflow file:
+Once everything is set up, you'll need to add a GitHub workflow file. Refer to the [Examples](#examples) section below for a step-by-step guide on adding a GitHub workflow file for both simple and complex scenarios.
+
+Here’s a quick overview of the steps and key elements in the workflow file:
 
 ```yaml
 steps:
