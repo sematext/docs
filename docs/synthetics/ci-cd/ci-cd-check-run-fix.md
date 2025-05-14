@@ -17,6 +17,8 @@ When you finish creating the App, you'll automatically be redirected to its over
 - Then, scroll down to the `Private keys` section and generate a private key
   - This will download a file containing the private key - open it with a text editor of your choice and copy the entirety of the file, then save it as a repository secret called `GH_APP_TOKEN`
 
+Lastly, you have to install the GitHub Application you just created. You can do so by following [this short guide](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app).
+
 Now all you have to do is add this step to the beginning of the workflow you use to invoke the Sematext CI/CD Action (before creating a Check Run):
 
 ```yaml
