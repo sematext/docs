@@ -8,7 +8,14 @@ If your setup is such that you create deployments within GitHub (like through au
 
 Save the following file as `.github/workflows/sematext_synthetics_check.yaml`. Make sure to push it to your **main branch**, as that's where GitHub fetches workflows from when it's about to execute them.
 
-Remember that you should edit the variables which are sent to the action as per the instructions provided in the comments next to them. If you're not using Vercel, then simply extract the URL you want to run the tests for (the `DEPLOYMENT_URL` variable) in a way compatible with how your setup is configured. If there's only one URL that you plan on monitoring, then you can turn the **Dynamic URL** option off for your monitors and avoid passing any `TARGET_URL` to the action.
+Remember that you should edit the variables which are sent to the action as per the instructions provided in the comments next to them. 
+
+```
+MONITOR_GROUP_ID: <your_monitor_group_id>               # Replace with your actual [Monitor Group ID](/docs/synthetics/ci-cd/ci-cd-installation#the-sematext-cicd-github-action)
+REGION: <region>                                        # Replace with your Sematext Cloud Region ('EU' or 'US')
+```
+
+The first step is to extract the URLs. If you're using Vercel, this is already handled for you, so no further action is needed.  If you're not using Vercel, then simply extract the URL you want to run the tests for (the `DEPLOYMENT_URL` variable) in a way compatible with how your setup is configured. If there's only one URL that you plan on monitoring, then you can turn the **Dynamic URL** option off for your monitors and avoid passing any `TARGET_URL` to the action.
 
 ```yaml
 name: Trigger Sematext Synthetics Tests
@@ -80,3 +87,13 @@ Here's what this check will look like next to your commits.
 You can also see see additional details, including individual monitor runs, links to further details in the Sematext Cloud UI, and the URL for the Group Run. The `Run` step above the results contains additional information such as which URL and commit hash is being used, which can be useful for troubleshooting issues if they arise.
 
 ![Check Details](/docs/images/synthetics/cicd-check-details.png)
+
+### Run Results in Sematext Cloud
+
+Each workflow trigger is linked to multiple monitors, which we've organized into CI/CD groups on [this page](docs/synthetics/ci-cd/github-overview#cicd-groups). After the workflow is triggered, you can view the run results for each group in Sematext Cloud, providing a clear overview of the number of successful and failed monitors. You'll also find additional information, such as the associated Git commit SHA and Git branch, for each G**roup Run**.
+
+![CI/CD Group Runs Overview](/docs/images/synthetics/cicd-group-run-list.png)
+
+You can then use that information to quickly see what went wrong, navigate to the relevant changes and speed up the process of troubleshooting the buggy code.
+
+![CI/CD Group Run](/docs/images/synthetics/cicd-group-run.png)
