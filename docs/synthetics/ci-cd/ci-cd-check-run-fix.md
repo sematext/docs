@@ -5,7 +5,17 @@ Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/com
 
 A way to circumvent this issue is by creating a private GitHub Application and using a [helper action](https://github.com/tibdex/github-app-token) which "impersonates" this Application to make it seem like it was what initiated the check runs.
 
-The GitHub Application can be created [here](https://github.com/settings/apps/new). Here's what you should do during the setup:
+The GitHub Application can be created:
+- For your personal account, by clicking [here](https://github.com/settings/apps/new)
+- For your organization
+  - Navigate to your account settings
+  - Click `Your organizations`
+  - To the right of the organization, click `Settings`
+  - In the left sidebar, click `<> Developer Settings`
+  - In the left sidebar, click `GitHub Apps`
+  - Click `New GitHub App`
+
+Here are the steps you need to take in order to create your GitHub Application:
 - Pick a fitting name that'll let you associate this with the testing suite, since it will be displayed as the name of your check runs next to commits
 - For the Homepage URL field you can paste in whatever, since you won't really be using the action for anything aside from its tokens to "impersonate" it with
 - Under `Webhook`, untick `Active`, since we won't need it
@@ -17,9 +27,9 @@ When you finish creating the App, you'll automatically be redirected to its over
 - Then, scroll down to the `Private keys` section and generate a private key
   - This will download a file containing the private key - open it with a text editor of your choice and copy the entirety of the file, then save it as a repository secret called `GH_APP_TOKEN`
 
-Lastly, you have to install the GitHub Application you just created. You can do so by following [this short guide](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app).
+Lastly, you have to install the GitHub Application you just created. You can do so by following [this short guide](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app). Keep in mind how you created the Application - for your account or for your organization.
 
-Now all you have to do is add this step to the beginning of the workflow you use to invoke the Sematext CI/CD Action (before creating a Check Run):
+Now all you have to do is add these steps to the beginning of the workflow you use to invoke the Sematext CI/CD Action (before creating a Check Run):
 
 ```yaml
       - id: fetch_gh_app_token
@@ -27,9 +37,16 @@ Now all you have to do is add this step to the beginning of the workflow you use
         with:
           app_id: ${{ secrets.GH_APP_ID }}
           private_key: ${{ secrets.GH_APP_TOKEN }}
+
+      - name: Set GH_TOKEN to the GH App token
+        id: set_gh_token
+        run: |
+          # Use the GH App token to create the check run, to avoid GH API limitations with regard to check run grouping
+          GH_TOKEN=${{ steps.fetch_gh_app_token.outputs.token }}
+          echo "GH_TOKEN=$GH_TOKEN" >> $GITHUB_ENV
 ```
 
-Adding it to the `repository_dispatch` workflow example, it should look like this:
+After adding them to the `repository_dispatch` workflow example, it should look like this:
 
 ```yaml
 name: Deployment Complete Test
@@ -60,6 +77,13 @@ jobs:
         with:
           app_id: ${{ secrets.GH_APP_ID }}
           private_key: ${{ secrets.GH_APP_TOKEN }}
+
+      - name: Set GH_TOKEN to the GH App token
+        id: set_gh_token
+        run: |
+          # Use the GH App token to create the check run, to avoid GH API limitations with regard to check run grouping
+          GH_TOKEN=${{ steps.fetch_gh_app_token.outputs.token }}
+          echo "GH_TOKEN=$GH_TOKEN" >> $GITHUB_ENV
 
       - name: Print info
         run: |
