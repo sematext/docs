@@ -59,6 +59,10 @@ After entering the appropriate URL, select the location from which you want to r
 
 However, if you want to set up alert conditions or customize request parameters, you can do that now or adjust these settings later as needed.
 
+> You'll notice that you'll no longer be able to select the interval between automatically scheduled runs for a **CI/CD Monitor**. This is because these monitors run only when you explicitly send a run request, meaning you'll execute them on-demand and avoid cluttering their run results with potentially irrelevant automatically scheduled runs. The idea here is to use Synthetics monitors as regression tests for your projects by integrating them into your CI/CD pipeline, thus catching issues before they make it to production. To reflect this lack of a regularly scheduled interval, these monitors are marked with a special badge in the **Interval** column of the Monitors Overview table.
+
+![CI/CD Monitors in the Monitors Overview Table](/docs/images/synthetics/cicd-monitors-overview.png)
+
 ## CI/CD Groups
 
 When running tests for your projects, you’ll often need to monitor multiple endpoints and user journeys. For example, if you want to test the following endpoints on each commit:
