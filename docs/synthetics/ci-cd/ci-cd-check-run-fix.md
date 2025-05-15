@@ -186,3 +186,7 @@ jobs:
 ```
 
 That's it. Now run the workflow again to try it out. You should see the commit check, and its name should match the name of the GitHub Application you just created.
+
+Here's a comparison of this check when it was running on its own, versus what it looks like when it runs while impersonating an action. You can see that the old approach incorrectly placed the workflow run into the wrong check suite, whereas the new one correctly shows up as its own action. The custom logo also helps quickly differentiate it from other generic workflows at a glance.
+
+![Check Run Comparison](/docs/images/synthetics/cicd-application.png)
