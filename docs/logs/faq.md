@@ -429,10 +429,10 @@ Address: 52.44.248.43
 
 ### How to avoid 'failed events'?
 
-Sematext Cloud is a schema-less storage and uses Opensearch as log storage. 
+Sematext Cloud is a schema-less storage and uses OpenSearch as log storage. 
 When your App receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
-So you don't need to specify a schema (called 'mapping' in Opensearch) upfront. 
-When you ship logs (Opensearch document) with the same field name and different types (string, number, object) an error called `mapper_parsing_exception` happens in Opensearch. This means the document can't be indexed because of a mismatch in the data schema. 
+So you don't need to specify a schema (called 'mapping' in OpenSearch) upfront. 
+When you ship logs (OpenSearch document) with the same field name and different types (string, number, object) an error called `mapper_parsing_exception` happens in OpenSearch. This means the document can't be indexed because of a mismatch in the data schema. 
 Sematext Cloud catches this error and produces a `failed event` entry in your Logs App. 
 The `failed event` entry contains the error message and the original document as JSON string in the field `logsene_orig_log`. 
 
