@@ -1,5 +1,5 @@
 title: Logagent input plugin for Apache Cassandra
-description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use Cassandra queries as input and stream the output into Logagent. Export data from Cassandra , run queries frequently, choose time zone and format for query time, use multiple CQL query statements features, index CQL data to Elasticsearch/Opensearch and create analytics and monitoring graph event as well as alerts based on series in database
+description: Logagent features modular logging architecture framework where each input or output module is implemented as a plugin. Use Cassandra queries as input and stream the output into Logagent. Export data from Cassandra , run queries frequently, choose time zone and format for query time, use multiple CQL query statements features, index CQL data to Elasticsearch/OpenSearch and create analytics and monitoring graph event as well as alerts based on series in database
 
 ## Input Plugin: Apache Cassandra
 
@@ -13,7 +13,7 @@ Features:
 
 Applications:
 
-- index CQL data to elasticsearch/Opensearch
+- index CQL data to elasticsearch/OpenSearch
 - create alerts based on series in Cassandra database
 - create analytics and monitoring graph event stored in Cassandra 
 
