@@ -1,7 +1,7 @@
 title: Mappings and Templates
 description: Field mappings and index template supported by Sematext Cloud
 
-To adjust structure of log events you can create templates and configure mapping via Sematext's [Elasticsearch/Opensearch-compatible API](/docs/logs/index-events-via-sematext-api/) as shown below.
+To adjust structure of log events you can create templates and configure mapping via Sematext's [Elasticsearch/OpenSearch-compatible API](/docs/logs/index-events-via-sematext-api/) as shown below.
 
 ## Index Templates
 In Sematext logs are stored in indexes. Each Logs App has its own index and its own, independent log event structure. A template provides information about the structure - fields and their types - of log events in a given App and its underlying index. Every time an index is created all the defined templates are used to pre-create the fields with their types in such index. By defining a template you provide information on what fields and types you expect in your data. 
@@ -74,7 +74,7 @@ When adding or changing fields ensure that they are not present in the [Common S
 Once you successfully create a new template your index will be rolled over. That means that an internal mechanism will create a new index and will apply the new template for you. 
 
 ## Index Mappings
-In addition to the templates mechanism Sematext Logs supports mappings, mostly to remain compatible with the Elasticsearch/Opensearch API. In Opensearch mappings are used to provide the data structure during index creation or by updating the data structure for an already created index. That wouldn't work in case of Sematext Logs App, so a mappings request is simply translated into a template creation request under the hood. 
+In addition to the templates mechanism Sematext Logs supports mappings, mostly to remain compatible with the Elasticsearch/OpenSearch API. In OpenSearch mappings are used to provide the data structure during index creation or by updating the data structure for an already created index. That wouldn't work in case of Sematext Logs App, so a mappings request is simply translated into a template creation request under the hood. 
 
 ---
 **NOTE:**
