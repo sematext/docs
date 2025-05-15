@@ -37,12 +37,12 @@ By running the `logagent-setup` command, Logagent will detect the init system an
         
         sudo logagent-setup -i LOGS_TOKEN -u logsene-receiver.eu.sematext.com
 
-- *Ship logs to any Elasticsearch/Opensearch endpoint*
+- *Ship logs to any Elasticsearch/OpenSearch endpoint*
     <!-- language: bash -->
         
         sudo logagent-setup -i index -u http://localhost:9200
 
-Changing the Elasticsearch/Opensearch `index` and `endpoint` lets you ship logs to any Elasticsearch/Opensearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
+Changing the Elasticsearch/OpenSearch `index` and `endpoint` lets you ship logs to any Elasticsearch/OpenSearch cluster. After running `logagent-setup` the agent will start shipping logs immediately.
 
 ##### Location of service scripts
 - Systemd: `/etc/systemd/system/logagent.service`
