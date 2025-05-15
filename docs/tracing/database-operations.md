@@ -1,15 +1,15 @@
 title: Database Operations
-description: Detailed insight report into operations about various data stores such as Solr, Elasticsearch, Opensearch or any backend with which your application communicates using SQL - MySQL, Apache Cassandra (CQL), Apache Phoenix, Drill, Impala, and any other backend apps talk to via JDBC
+description: Detailed insight report into operations about various data stores such as Solr, Elasticsearch, OpenSearch or any backend with which your application communicates using SQL - MySQL, Apache Cassandra (CQL), Apache Phoenix, Drill, Impala, and any other backend apps talk to via JDBC
 
 Database Operations reports provide detailed insight (details further
 below) into operations about various data stores - this includes
-operations executed against Solr, Elasticsearch or Opensearch clusters, as well as
+operations executed against Solr, Elasticsearch or OpenSearch clusters, as well as
 other types of data stores.
 
 Important:
 
   - To get this information **add App Agent to the *application that is
-    talking to a data store* **(e.g. Solr, Elasticsearch, Opensearch or any
+    talking to a data store* **(e.g. Solr, Elasticsearch, OpenSearch or any
     backend with which your application communicates using SQL - MySQL,
     Apache Cassandra (CQL), Apache Phoenix, Drill, Impala, and any other
     backend apps talk to via JDBC). This is because the *App Agent
