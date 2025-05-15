@@ -6,6 +6,7 @@ If your setup is such that your deployments are handled by systems outside of Gi
 The action will be invoked with a `repository_dispatch` event, pass the commit SHA we're running the tests for in the event payload, and manually create checks which will be linked to the commit. Because of this, it needs permissions to read the repository and create/update check runs.
 
 
+
 ## Triggering the workflow
 
 In this use-case we'll have to write some custom logic to send a request and trigger the workflow when a deployment is created (from whichever tool you're using to deploy your environments), so let's first take a look at what this request should look like in order to better understand the workflow. Since the deployment is being handled with some setup that operates outside of GitHub, we'll have to send a `repository_dispatch` event to GitHub in order to notify it about the finished deployment.
@@ -190,6 +191,20 @@ This is an example of what gets displayed when you open the check's details on G
 ![Check Run Details Example](/docs/images/synthetics/cicd-check-run-example.jpg)
 
 
+
+## Run Results in Sematext Cloud
+
+Each workflow trigger creates a single [**Group Run**](/docs/synthetics/ci-cd/ci-cd-overview/#group-runs). After the workflow is triggered, you can view the run results for each group in Sematext Cloud, providing a clear overview of the number of successful and failed monitors. You'll also find additional information, such as the associated Git commit SHA and Git branch, for each *Group Run*.
+
+![CI/CD Group Runs Overview](/docs/images/synthetics/cicd-group-run-list.png)
+
+You can then use that information to quickly see what went wrong, navigate to the relevant changes and speed up the process of troubleshooting the problematic code by narrowing down to the exact diff where the bug was introduced.
+
+![CI/CD Group Run](/docs/images/synthetics/cicd-group-run.png)
+
+
+
 ## Fix for check runs not showing up next to commits
 
-Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/community/discussions/24616), sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well. For more information on this issue and instructions on how to fix it, refer to [this page](/docs/synthetics/ci-cd/ci-cd-check-run-fix.md).
+Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/community/discussions/24616), sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well. For more information on this issue and instructions on how to fix it, refer to [this page](/docs/synthetics/ci-cd/ci-cd-check-run-fix/).
+

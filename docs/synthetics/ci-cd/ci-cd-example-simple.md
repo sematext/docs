@@ -8,7 +8,7 @@ If your setup is such that you create deployments within GitHub (like through au
 
 Save the following file as `.github/workflows/sematext_synthetics_check.yaml`. Make sure to push it to your main branch, as that's where GitHub fetches workflows from when it's about to execute them.
 
-Remember that you should edit the variables which are sent to the action as per the instructions provided in the comments next to them. If you're not using Vercel, then simply extract the URL you want to run the tests for (the `DEPLOYMENT_URL` variable) in a way compatible with how your setup is configured. If there's only one URL that you plan on monitoring, then you can turn the **Dynamic URL** option off for your monitors and avoid passing any `TARGET_URL` to the action.
+Remember that ***you should edit the variables*** which are sent to the action as per the instructions provided in the comments next to them. If you're not using Vercel, then simply extract the URL you want to run the tests for (the `DEPLOYMENT_URL` variable) in a way compatible with how your deployment setup is configured. If there's only one URL that you plan on monitoring, then you can turn the **Dynamic URL** option off for your monitors and avoid passing any `TARGET_URL` to the action.
 
 ```yaml
 name: Trigger Sematext Synthetics Tests
@@ -23,9 +23,11 @@ jobs:
   sematext_synthetics_check:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Vercel Deployment URL
-        id: vercel_deployment_url
+      - name: Get Deployment URL
+        id: get_deployment_url
         run: |
+          # This extracts the URL from Vercel's deployment_status event
+          # Tweak this to make it work for your specific deployment setup
           echo "DEPLOYMENT_URL=$(cat "$GITHUB_EVENT_PATH" | jq .deployment_status.target_url)" >> $GITHUB_ENV
 
       - name: Run Sematext Synthetics CI/CD Integration
@@ -59,7 +61,7 @@ Here's an quick overview of how the workflow works:
 - It's initiated on the `deployment_status` event
   - Note that this means it can also initiate if the deployment isn't successful, so tweak the workflow as needed if you also create events for deployments in progress or failed deployments
 - Minimal permissions are needed - to read the deployment event from which we extract the URL of the deployed environment
-- The first step (`vercel_deployment_url`) fetches the URL that'll be used as the replacement for [Dynamic URL monitors](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls) from the deployment event
+- The first step (`get_deployment_url`) fetches the URL that'll be used as the replacement for [Dynamic URL monitors](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls) from the deployment event
   - If your deployment setup handles the URL differently, then update this step to change how you fetch the URL
 - The second step (`sematext_action`) calls the main action which runs the **CI/CD Monitors** associated with our **CI/CD Group**
   - Remember to update the variables that are passed here so that they match your setup
@@ -80,3 +82,14 @@ Here's what this check will look like next to your commits.
 You can also see see additional details, including individual monitor runs, links to further details in the Sematext Cloud UI, and the URL for the Group Run. The `Run` step above the results contains additional information such as which URL and commit hash is being used, which can be useful for troubleshooting issues if they arise.
 
 ![Check Details](/docs/images/synthetics/cicd-check-details.png)
+
+
+## Run Results in Sematext Cloud
+
+Each workflow trigger creates a single [**Group Run**](/docs/synthetics/ci-cd/ci-cd-overview/#group-runs). After the workflow is triggered, you can view the run results for each group in Sematext Cloud, providing a clear overview of the number of successful and failed monitors. You'll also find additional information, such as the associated Git commit SHA and Git branch, for each *Group Run*.
+
+![CI/CD Group Runs Overview](/docs/images/synthetics/cicd-group-run-list.png)
+
+You can then use that information to quickly see what went wrong, navigate to the relevant changes and speed up the process of troubleshooting the problematic code by narrowing down to the exact diff where the bug was introduced.
+
+![CI/CD Group Run](/docs/images/synthetics/cicd-group-run.png)
