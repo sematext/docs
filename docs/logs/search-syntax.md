@@ -2,7 +2,7 @@ title: Sematext Logs Search Syntax
 description: Create your own queries with Sematext logging management solution using terms and term modifiers, regular expressions, fuzzy searches, boolean operators, proximity and range searches, field grouping and more
 
 Although Sematext's centralized logging management solution  provides the ability to create your own queries through
-[its Sematext API](/docs/logs/search-through-the-sematext-api) which is compatible with both Elasticsearch and Opensearch. It offers rich, yet simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google.
+[its Sematext API](/docs/logs/search-through-the-sematext-api) which is compatible with both Elasticsearch and OpenSearch. It offers rich, yet simple query syntax very much like the [query syntax](/docs/logs/search-syntax/) used by Google.
 
 ## Terms
 
