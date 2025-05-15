@@ -29,7 +29,7 @@ When you use the API, here are the things you need to know:
 
 ## Searching
 
-Sematext supports a subset of its own Search API —compatible with Elasticsearch and Opensearch—, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search APIs include, but are not limited to:
+Sematext API supports a subset of Elasticsearch / OpenSearch APIs, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search APIs include, but are not limited to:
 
   - URI based search
   - Request body based search
