@@ -1,7 +1,7 @@
 title: Using Sematext API
-description: Analyze your logs, URI and request body searches, get operations, index events or change the mapping using Sematext API (Elasticsearch and Opensearch Compatible) and Sematext logging management and analytics app
+description: Analyze your logs, URI and request body searches, get operations, index events or change the mapping using Sematext API (Elasticsearch and OpenSearch Compatible) and Sematext logging management and analytics app
 
-Sematext provides a powerful search API—referred to as the Sematext API—that is compatible with both Elasticsearch and Opensearch query languages. This API allows you to perform rich queries and efficiently search through your log data.
+Sematext provides a powerful search API—referred to as the Sematext API—that is compatible with both Elasticsearch and OpenSearch query languages. This API allows you to perform rich queries and efficiently search through your log data.
 You can also use this API to [index events or change the mapping](/docs/logs/index-events-via-sematext-api).
 
 When you use the API, here are the things you need to know:
@@ -113,7 +113,7 @@ curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sem
 
 #### Response format
 
-Our Logs App, just like Elasticsearch/Opensearch, talks to you using JSON. Here's an
+Our Logs App, just like Elasticsearch/OpenSearch, talks to you using JSON. Here's an
 example response:
 
 ``` JSON
