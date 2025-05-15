@@ -10,4 +10,4 @@ Logs are aggregated by time and shown in the logging management web application,
 Also check related [Field Types](/docs/logs/field-types/), [Supported Date Formats](/docs/logs/supported-date-formats/), special fields,
 and [FAQ](/docs/logs/faq/) about our log management platform features.
 
-Upload logs from all your servers to our centralized log management solution using the Sematext API, compatible with both Elasticsearch and Opensearch, and experience the first true hosted ELK Stack.
+Upload logs from all your servers to our centralized log management solution using the Sematext API, compatible with both Elasticsearch and Opensearch.
