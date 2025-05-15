@@ -7,7 +7,7 @@ The elasticsearch output plugin forwards parsed logs to [Sematext Logs](https://
 
 ### Features
 - log routing by log source to multiple Elasticsearch-compatible endpoints
-- log routing by log source to multiple Opensearch/Elasticsearch indices (or Sematext Logs Apps
+- log routing by log source to multiple OpenSearch/Elasticsearch indices (or Sematext Logs Apps
 - SSL/TLS by default, when using Sematext
 - Two-way SSL Authentication, also known as Mutual Authentication as part of PKI, secure client authentication with SSL client certificates
 - bulk indexing with timeout (1000 docs or 10 second timeout by default)
@@ -17,7 +17,7 @@ The elasticsearch output plugin forwards parsed logs to [Sematext Logs](https://
 
 ## Simple config
 
-The following example configuration ships all log files in /var/log (including sub-directories) to one Opensearch/Elasticsearch index. 
+The following example configuration ships all log files in /var/log (including sub-directories) to one /Elasticsearch index. 
 
 ```yml
 input:
@@ -32,11 +32,11 @@ output:
 
 ## Log routing to multiple targets
 
-In some situations, it is required to ship data from different sources to different Opensearch/Elasticsearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the Elasticsearch output module. 
+In some situations, it is required to ship data from different sources to different OpenSearch/Elasticsearch servers or clusters. The output section in the Logagent configuration file accepts multiple definitions for the Elasticsearch output module. 
 
 Each Elasticsearch output might have a list of indices followed by a list of regular expressions matching the log source (e.g. file name of the log file). 
 
-The following example ships logs from wireless devices and authentication log to a local Opensearch/Elasticsearch server and other server logs to multiple Sematext Logs Apps. 
+The following example ships logs from wireless devices and authentication log to a local OpenSearch/Elasticsearch server and other server logs to multiple Sematext Logs Apps. 
 
 ```yaml
 input:
