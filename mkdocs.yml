@@ -187,7 +187,7 @@ nav:
         - HBase: integration/hbase.md
         - MongoDB: integration/mongodb.md
         - MySQL: integration/mysql-integration.md
-        - Opensearch: integration/opensearch-integration.md
+        - OpenSearch: integration/opensearch-integration.md
         - PostgreSQL: integration/postgresql-integration.md
         - Redis: integration/redis.md
         - Solr: integration/solr-integration.md
