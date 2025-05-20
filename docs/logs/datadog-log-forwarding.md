@@ -12,7 +12,7 @@ Transitioning your logs from Datadog to Sematext requires no installation, and i
 - Log in to your Sematext account and create a new [Logs App](/docs/logs/).
 - While creating Logs App, you can select [service-specific integrations](/docs/integration/) for out-of-the-box dashboards and alerts. If you don't see the integration type that matches the source of your logs in the list, select a [generic Logs App](/docs/integration/generic-logs-integration/). You can later create customized reports and alert rules within your generic Logs App.
 - Login to your Datadog account and access the Logs Configuration section.
-- Switch to the Log Forwarding tab and designate Elasticsearch as your destination. This works because Sematext’s log ingestion API is compatible with Elasticsearch.
+- Switch to the Log Forwarding tab and designate Elasticsearch as your destination. This works because Sematext’s log ingestion API is compatible with Elasticsearch and OpenSearch.
 
 ![DD Log Forwarding](/docs/images/logs/dd_log_forwarding.png)
 

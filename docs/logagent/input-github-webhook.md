@@ -13,7 +13,7 @@ Applications:
 
 - centralize GitHub Webhook Events
 - act as Webhook to receive GitHub Webhook Events
-- index GitHub Webhook Events in Elasticsearch or Sematext Cloud
+- index GitHub Webhook Events in Elasticsearch/OpenSearch or Sematext Cloud
 - create alerts on GitHub Webhook Events in Sematext Cloud
 
 

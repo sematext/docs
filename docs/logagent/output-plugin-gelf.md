@@ -1,5 +1,5 @@
 title: Store logs in Graylog 
-description: Send data to a GELF server using protocol v1.1 via UDP with Gelf output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
+description: Send data to a GELF server using protocol v1.1 via UDP with Gelf output plugin for Logagent, light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch/OpenSearch and Sematext logs management platform
 
 ## Output Plugin: GELF output plugin
 This plugin sends data to a GELF server using protocol v1.1 via UDP.

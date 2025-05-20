@@ -10,7 +10,7 @@ An everyday use case is to enrich web server logs, or any logs with IP addresses
  
 Things you do not need to think about at all:
 
-- Elasticsearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geo.ip` field out of the box. Check out the [common schema](/docs/tags/common-schema) for more info.
+- OpenSearch mapping for the Geo-Coordinates in Sematext Logs for geographic queries and map displays. Sematext Logs indices support the `geo.ip` field out of the box. Check out the [common schema](/docs/tags/common-schema) for more info.
 
 ### Configuration 
 

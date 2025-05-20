@@ -4,7 +4,7 @@ description: Sematext Cloud Apps Guide. Using Apps to control access to metrics,
 Apps act as containers for your data. You can store performance
 metrics or logs about servers, containers, software, programming
 languages and databases. Our Apps have dozens of monitoring
-integrations with software like Docker, AWS, Solr, Elasticsearch, [and
+integrations with software like Docker, AWS, Solr, Elasticsearch, OpenSearch, [and
 many more](/docs/integration/), while our log
 integration works with several different [log
 shippers](/docs/integration/#log-shippers). Every

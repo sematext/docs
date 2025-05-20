@@ -1,5 +1,5 @@
 title: Parse logs 
-description: Logagent parser detects log formats based on a pattern library and converts it to a JSON object and the default patterns and regular expressions for web server and database logs, such as Elasticsearch, MySql, Nginx, Redis, Apache, Zookeeper, Cassandra, Kafka, Hbase, Solr and more
+description: Logagent parser detects log formats based on a pattern library and converts it to a JSON object and the default patterns and regular expressions for web server and database logs, such as Elasticsearch, OpenSearch, MySql, Nginx, Redis, Apache, Zookeeper, Cassandra, Kafka, Hbase, Solr and more
 
 ## How does the parser work?
 
@@ -23,6 +23,7 @@ The default pattern definition file comes with patterns for:
 - Nginx
 - Redis
 - Elasticsearch
+- OpenSearch
 - Webserver (Nginx, Apache Httpd)
 - Zookeeper
 - Cassandra
@@ -48,7 +49,7 @@ Properties:
 - sourceName: regular expression matching the name of the log source (e.g. file or container image name)
 - regex: JS regular expression 
 - fields: field list of extracted match groups from the regex e.g. `[url:string, size:number]`
-- type: type used in Logsene (Elasticsearch Mapping)
+- type: type used in Logsene (Elasticsearch/OpenSearch Mapping)
 - dateFormat: format of the special fields 'ts'.  If the date format matches, a new field @timestamp is generated.
   The format string needs to be recognized by [date-fns parse function](https://date-fns.org/v2.0.0-alpha.6/docs/parse). 
 - transform: JavaScript function to manipulate the result of regex and date parsing

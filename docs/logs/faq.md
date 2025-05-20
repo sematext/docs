@@ -190,7 +190,7 @@ will be applied.
 
 ### Audit-proof logging
 
-Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Elasticsearch API](/docs/logs/search-through-the-elasticsearch-api/) or using the UI:
+Sematext Cloud Logs supports audit-proof logging by automatically including the timestamp of the log event along with the original log event that was sent to the platform. Each log event can be retrieved in the form it was sent to Sematext Cloud using the logs export functionality, via the [Sematext API](/docs/logs/search-through-the-sematext-api/) or using the UI:
 
 <img alt="Logs JSON View" src="/docs/images/logs/logs_source.png" title="Logs JSON View">
 
@@ -429,10 +429,10 @@ Address: 52.44.248.43
 
 ### How to avoid 'failed events'?
 
-Sematext Cloud is a schema-less storage and uses Elasticsearch as log storage. 
+Sematext Cloud is a schema-less storage and uses OpenSearch as log storage. 
 When your App receives new log lines, containing unknown fields, those fields are automatically created with the data type of the field value (string, number, object). 
-So you don't need to specify a schema (called 'mapping' in Elasticsearch) upfront. 
-When you ship logs (Elasticsearch document) with the same field name and different types (string, number, object) an error called `mapper_parsing_exception` happens in Elasticsearch. This means the document can't be indexed because of a mismatch in the data schema. 
+So you don't need to specify a schema (called 'mapping' in OpenSearch) upfront. 
+When you ship logs (OpenSearch document) with the same field name and different types (string, number, object) an error called `mapper_parsing_exception` happens in OpenSearch. This means the document can't be indexed because of a mismatch in the data schema. 
 Sematext Cloud catches this error and produces a `failed event` entry in your Logs App. 
 The `failed event` entry contains the error message and the original document as JSON string in the field `logsene_orig_log`. 
 
@@ -491,7 +491,7 @@ security and compliance certifications see:
 <http://aws.amazon.com/security> and <https://aws.amazon.com/compliance/>.
 
 Your data is protected from unauthorized reads. If you want to read data using scripts you can authorize
-your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-elasticsearch-api) and [here](/docs/api).
+your API calls using `apiKey`. You can read more about this [here](/docs/logs/search-through-the-sematext-api) and [here](/docs/api).
 
 ### Where is my data stored?
 
@@ -523,7 +523,7 @@ use the older format, you have two options to have a correct timestamp:
 
 ### What are the supported timestamp formats?
 
-If you send your logs via the [Elasticsearch API](/docs/logs/index-events-via-elasticsearch-api), you can use:
+If you send your logs via the [Sematext API](/docs/logs/index-events-via-sematext-api), you can use:
 
   - **ISO8601**. For example, **2001-06-08T08:00:01.123Z** or
     **2001-06-08T08:00:01+03:00**. A timezone must be there after the

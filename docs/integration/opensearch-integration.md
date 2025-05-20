@@ -1,16 +1,16 @@
-title: Opensearch
+title: OpenSearch
 description: Covers critical metrics—Cluster States, Pending Tasks, shard memory, search latency, request and cache stats—with anomaly detection and diverse alerting options. Correlate events, logs, filter metrics, and visualize cluster health using standard graphs and custom dashboards. Additionally, the OpenSearch Logs integration offers insights into query distribution, error analysis, deprecations, and cluster manager logs for troubleshooting and analysis.
 
-OpenSearch is a powerful, open-source search and analytics engine built for scalability, flexibility, and advanced data exploration capabilities. The [Sematext Agent](/docs/agents/sematext-agent/) collects Opensearch metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
+OpenSearch is a powerful, open-source search and analytics engine built for scalability, flexibility, and advanced data exploration capabilities. The [Sematext Agent](/docs/agents/sematext-agent/) collects OpenSearch metrics and logs, transmits them to Sematext Cloud; installing the agent takes less than 5 minutes.
 
 ## Install Sematext Agent
 
-1. Create an Opensearch Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+1. Create an OpenSearch Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Opensearch/overview](https://apps.sematext.com/ui/howto/Opensearch/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the Opensearch services identified on the host and you will start receiving metrics or logs from Opensearch services.
-5. If you've created an Opensearch Monitoring App and want to collect Opensearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Opensearch services and manage log and metric shipping effortlessly.
+4. After installing the agent, the Discovery tab shows all the OpenSearch services identified on the host and you will start receiving metrics or logs from OpenSearch services.
+5. If you've created an OpenSearch Monitoring App and want to collect OpenSearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from OpenSearch services and manage log and metric shipping effortlessly.
 
-Having both Opensearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
+Having both OpenSearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 
 
 To [explore logs and services](/docs/monitoring/autodiscovery/) across multiple hosts, navigate to [Fleet & Discovery > Discovery > Services](https://apps.sematext.com/ui/fleet-and-discovery/discovery/services) (or  [Sematext Cloud Europe](https://apps.eu.sematext.com/ui/fleet-and-discovery/discovery/services)). From there, you can create additional [Apps](/docs/guide/app-guide/) or stream data to existing ones without requiring any additional installations. 

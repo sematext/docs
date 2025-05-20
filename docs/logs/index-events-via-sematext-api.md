@@ -1,5 +1,5 @@
-title: Index Logs Events in Sematext via Elasticsearch API
-description: Sending, custom & default mapping, and indexing log events using Elasticsearch API
+title: Index Logs Events via Sematext API
+description: Sending, custom & default mapping, and indexing log events using Sematext API
 
 Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs. 
 
@@ -10,9 +10,9 @@ If you have to ship logs yourself, or you want to send them directly from your a
 You can:
   - send log events to the Sematext's Elasticsearch/OpenSearch bulk index API from your application, using
     any Elasticsearch library that can ship logs to an Open Source version of Elasticsearch.
-  - send log events by using existing application such as the Open Source versions of Logstash or Filebeat, [Logagent](/docs/logagent), Fluentbit, Vector, [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to Elasticsearch. You can also implement your own "log shipper".
-  - [search for logs from your own application](/docs/logs/search-through-the-elasticsearch-api)
-  - optionally define [custom mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html) for
+  - send log events by using existing application such as the Open Source versions of Logstash or Filebeat, [Logagent](/docs/logagent), Fluentbit, Vector, [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to OpenSearch. You can also implement your own "log shipper".
+  - [search for logs from your own application](/docs/logs/search-through-the-sematext-api)
+  - optionally define [custom mappings](https://docs.opensearch.org/docs/latest/field-types/) for
     your log types, so you can tweak the way your logs are indexed
 
 When you use the API, here are the things you need to know:
@@ -53,7 +53,7 @@ would have the current timestamp and will be indexed in the App whose token is s
 Typically, you'd put events with different structures in different
 Apps. For example, syslog messages in one App, Apache logs in another App, etc. See [this FAQ entry](/docs/logs/faq/#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that).
 
-For performance reasons we highly recommend using the [Bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html),
+For performance reasons we highly recommend using the [Bulk API](https://docs.opensearch.org/docs/latest/api-reference/document-apis/bulk/),
 because it allows you to send multiple events with a single request. For
 example, the following request sends three events:
 
@@ -72,12 +72,12 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 
 ## Default Log Index Mapping
 
-A [mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html)
+A [mapping](https://docs.opensearch.org/docs/latest/field-types/)
 is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/docs/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the fields editor or by using the [mappings and templates](/docs/logs/mappings-templates) functionality. There are some [special fields](/docs/tags/common-schema) though.
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date.  See [Supported Date Formats](/docs/logs/supported-date-formats).
-  - the **geoip** field is an object that contains a **location** [geo point](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html)
+  - the **geoip** field is an object that contains a **location** [geo point](https://docs.opensearch.org/docs/latest/data-prepper/pipelines/configuration/processors/geoip/)
     field (this works well if you're using Logstash)
   - **host**, **facility**, **severity**, **syslog-tag**, **source**, and **tags** are
     [Special Fields](/docs/tags/common-schema) that are not analyzed, which enables only exact matches (you can still use wildcards, for example

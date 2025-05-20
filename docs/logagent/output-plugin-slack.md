@@ -1,5 +1,5 @@
 title: Send data to Slack 
-description: Forward messages or alerts via Slack "Incoming-Webhook" integration and Slack output plugin for Logagent, log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
+description: Forward messages or alerts via Slack "Incoming-Webhook" integration and Slack output plugin for Logagent, log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch/OpenSearch and Sematext logs management platform
 
 ## Output Plugin: Slack 
 

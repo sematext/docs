@@ -1,5 +1,5 @@
 title: Send data to ZeroMQ
-description: Logagent message consumer plugin to ZeroMQ. Logagent is light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform
+description: Logagent message consumer plugin to ZeroMQ. Logagent is light-weight log shipper, filebeat, fluentd or rsyslog alternative with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch/OpenSearch and Sematext logs management platform
 
 ## Logagent Plugin: ZeroMQ
 

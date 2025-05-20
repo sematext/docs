@@ -9,7 +9,7 @@ Use cases:
 
 - Use the powerful Logagent features with lightweight `systemd` integration service `systemd-journal-upload.service` 
 - Filter by SYSTEMD_UNIT, remove fields, and add tags to each log
-- Receive system journal events via HTTP and fan out processed data to multiple outputs like Elasticsearch, Sematext Cloud, InfluxDB, Kafka, or MQTT
+- Receive system journal events via HTTP and fan out processed data to multiple outputs like Elasticsearch, OpenSearch, Sematext Cloud, InfluxDB, Kafka, or MQTT
 
 ![](/docs/logagent/systemd-journal-upload.png)
 

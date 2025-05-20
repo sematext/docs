@@ -12,8 +12,7 @@ See [here](adding.md#adding-events-via-api).
 
 ### Event Search API
 
-Sematext exposes the Events Search HTTP API - as [Elasticsearch search API](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) - so
-events can be searched and retrieved programmatically via HTTP(S), using curl or any other Elasticsearch client.  The API endpoint is:
+Sematext exposes the Events Search HTTP API, which is compatible with both [Elasticsearch](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) and [OpenSearch](https://docs.opensearch.org/docs/latest/query-dsl/) query DSLs. This allows you to search and retrieve events programmatically over HTTP(S), using curl or any standard Elasticsearch/OpenSearch client. The API endpoint is:
 
 `https://event-receiver.sematext.com/APP_TOKEN`
 
@@ -25,7 +24,7 @@ events will be limited to the type specified in the URI:
 https://event-receiver.sematext.com/APP_TOKEN/event
 ```
 
-The simplest way to run a query is using [URI search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html),
+The simplest way to run a query is using [URI search](https://docs.opensearch.org/docs/latest/api-reference/search/),
 like this:
 
 ```bash
@@ -34,9 +33,9 @@ https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555555/_search?
 -H 'Authorization: apiKey 1111111-2222-3333-4444-555555555555'
 ```
 
-For more info about ```apiKey``` [see](/docs/logs/search-through-the-elasticsearch-api) .
+For more info about ```apiKey``` [see](/docs/logs/search-through-the-sematext-api) .
 
-More complex queries are available when using [request body search](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-body.html),
+More complex queries are available when using [request body search](https://docs.opensearch.org/docs/latest/api-reference/search),
 e.g.:
 
 ```json
@@ -52,4 +51,4 @@ curl -XGET "https://event-receiver.sematext.com/1111111-2222-3333-4444-555555555
 ```
 
 This example shows how to use one of the simplest query types: `query_string`. To see which other query types are available, please
-check [Elasticsearch docs](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html).
+check [OpenSearch docs](https://docs.opensearch.org/docs/latest/query-dsl/).

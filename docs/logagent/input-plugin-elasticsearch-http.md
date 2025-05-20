@@ -9,7 +9,7 @@ Use cases:
 
 - Use the powerful Logagent parser with lightweight shippers like Rsyslog or Filebeat
 - Act as 'Elasticsearch indexing proxy' with disk buffer using elasticsearch output plugin
-- Receive events via Elasticsearch bulk API and fan out processed data to multiple outputs like Elasticsearch, Kafka or MQTT. 
+- Receive events via Elasticsearch bulk API and fan out processed data to multiple outputs like [Sematext Logs](https://sematext.com/logsene), Kafka or MQTT. 
 
 ### Configuration
 

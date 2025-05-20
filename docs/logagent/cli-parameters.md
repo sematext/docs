@@ -1,8 +1,8 @@
 title: Logagent Command-line Parameters
-description: Command Line Parameters for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch and Sematext logs management platform. Low memory footprint and low CPU overhead make it suitable for deploying on edge nodes and devices, while its ability to parse and structure logs makes it a great Logstash alternative.
+description: Command Line Parameters for Logagent, light-weight log shipper with out of the box and extensible log parsing, on-disk buffering, secure transport, bulk indexing to Elasticsearch/OpenSearch and Sematext logs management platform. Low memory footprint and low CPU overhead make it suitable for deploying on edge nodes and devices, while its ability to parse and structure logs makes it a great Logstash alternative.
 
 ```bash
-# Parse all logs and stream them to Sematext Logs 1-Click managed Elasticsearch 
+# Parse all logs and stream them to Sematext Logs
 $ logagent -i LOGSENE_TOKEN /var/log/*.log 
 
 # stream logs to local Elasticsearch
@@ -74,9 +74,9 @@ $ logagent [options] [file list]
 | `-y, --yaml` | prints parsed messages in YAML format to stdout|
 | `-p, --pretty` | prints parsed messages in pretty JSON format to stdout|
 | `-j, --ldjson` | print parsed messages in line-delimited JSON format to stdout |
-| __Elasticsearch or Sematext Cloud__| Log storage |
+| __Elasticsearch/OpenSearch or Sematext Cloud__| Log storage |
 | `-e, --elasticsearchUrl <url>` | Elasticsearch URL e.g. https://localhost:9200, default `htpps://logsene-receiver.sematext.com`|
-| `-i, --index <index>` | [Logs App token](https://sematext.com/logsene) to ship data to Sematext Cloud Apps or Elasticsearch index (see `--elasticsearchUrl`) |
+| `-i, --index <index>` | [Logs App token](https://sematext.com/logsene) to ship data to Sematext Cloud Apps or Elasticsearch/OpenSearch index (see `--elasticsearchUrl`) |
 | `--httpProxy <url>` | HTTP proxy url |
 | `--httpsProxy <url>` | HTTPS proxy url |
 
@@ -91,9 +91,9 @@ The default output is line-delimited JSON for parsed log lines, as long as no fo
 |LOGS_TMP_DIR | Directory to store failed bulk requests for later retransmission.|
 |LOG_INTERVAL | Time to batch logs before a bulk request is done. Default is 10000 ms (10 seconds)|
 |LOGS_BULK_SIZE | Maximum size of a bulk request. Default is 1000.|
-|LOGS_RECEIVER_URL | URL for the Logsene receiver. For a local Elasticsearch server or for Sematext Enterprise version of Logsene. Defaults to Sematext Logsene SaaS receiver https://logsene-receiver.sematext.com/_bulk. Example for Elasticsearch: ```LOGSENE_URL=https://localhost:9200/_bulk```|
+|LOGS_RECEIVER_URL | URL for the Logsene receiver. For a local Elasticsearch/OpenSearch server. Defaults to Sematext Logs receiver https://logsene-receiver.sematext.com/_bulk. Example for Elasticsearch: ```LOGSENE_URL=https://localhost:9200/_bulk```|
 |HTTPS_PROXY| Proxy URL for HTTPS endpoints, like Logsene receiver. ```export HTTPS_PROXY=https://my-proxy.example```|
-|HTTP_PROXY| Proxy URL for HTTP endpoints (e.g. On-Premises or local Elasticsearch). ```export HTTP_PROXY=https://my-proxy.example```|
+|HTTP_PROXY| Proxy URL for HTTP endpoints (e.g. On-Premises or local Elasticsearch/OpenSearch). ```export HTTP_PROXY=https://my-proxy.example```|
 |LOGAGENT_CONFIG | Filename to read Logagent CLI parameters from a file, defaults to ```/etc/sematext/logagent.conf`` |
 |PATTERN_MATCHING_ENABLED | Default is 'true'. The value 'false' disables parsing of logs. |
 |SCAN_ALL_PATTERNS | Default is 'false'. For performance reasons, patterns are matched by source name. Setting the value to 'true' enables pattern search regardless of source name |

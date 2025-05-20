@@ -1,12 +1,12 @@
-title: Using Sematext Elasticsearch API
-description: Analyze your logs, URI and request body searches, get operations, index events or change the mapping using Elasticsearch API and Sematext logging management and analytics app
+title: Using Sematext API
+description: Analyze your logs, URI and request body searches, get operations, index events or change the mapping using Sematext API (Elasticsearch and OpenSearch Compatible) and Sematext logging management and analytics app
 
-With Logs App, we expose the [Elasticsearch API](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html) so you can search your logs from your own application, or by configuring/adapting existing Elasticsearch UIs, such as Kibana.
-You can also use this API to [index events or change the mapping](/docs/logs/index-events-via-elasticsearch-api).
+Sematext provides a powerful search API—referred to as the Sematext API—that is compatible with both Elasticsearch and OpenSearch query languages. This API allows you to perform rich queries and efficiently search through your log data.
+You can also use this API to [index events or change the mapping](/docs/logs/index-events-via-sematext-api).
 
 When you use the API, here are the things you need to know:
 
-  - host name: **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
+  - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
   - port: **80** (**443** for HTTPS)
   - index name: your [Logs App token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
   - apiKey provided in one of the following ways:
@@ -29,7 +29,7 @@ When you use the API, here are the things you need to know:
 
 ## Searching
 
-Sematext supports a subset of Elasticsearch APIs, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search APIs include, but are not limited to:
+Sematext API supports a subset of Elasticsearch / OpenSearch APIs, with rich query language and extensive capabilities of searching through data you've sent to it. The supported Search APIs include, but are not limited to:
 
   - URI based search
   - Request body based search
@@ -37,7 +37,7 @@ Sematext supports a subset of Elasticsearch APIs, with rich query language and e
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logs App token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-syslog-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
+For each of the operations you'll need your [Logs App token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
 
 In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logs management app token, of course.
 
@@ -55,7 +55,7 @@ You need to provide the query using the *q* parameter. For example, to search fo
 
 The request body based search lets us leverage full [Elasticsearch query DSL language](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) along with its [filtering capabilities](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html) and [aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html).
 
-With full featured Elasticsearch query API we can search and find any
+With full featured Sematext query API we can search and find any
 data we are really looking for.
 
 For example, to find log events that match the *internal* and
@@ -113,7 +113,7 @@ curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sem
 
 #### Response format
 
-Our Logs App, just like Elasticsearch, talks to you using JSON. Here's an
+Our Logs App, just like Elasticsearch/OpenSearch, talks to you using JSON. Here's an
 example response:
 
 ``` JSON
@@ -257,7 +257,7 @@ For example, to retrieve a log event with identifier  *AU29tJz0UV2O9bWZ\_KkU* a
 
 ### Multiple GET operations in a single request
 
-In addition to supporting the real time GET functionality, Logsene lets one leverage [Elasticsearch MGet API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-multi-get.html), which allows us to retrieve multiple log events using the real time GET API in a single request. 
+In addition to supporting the real time GET functionality, Sematext Logs lets one leverage [Elasticsearch MGet API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-multi-get.html), which allows us to retrieve multiple log events using the real time GET API in a single request. 
 
 For example, to retrieve a log event with identifier *AU29tJz0UV2O9bWZ\_KkU* and *AU29rlOPUV2O9bWZ-Daw* 
 which are of type *apache* from our example App identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following request:

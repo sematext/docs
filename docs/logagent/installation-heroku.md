@@ -9,7 +9,7 @@ heroku drain:add --app HerokuAppName URL
 ```
 Here are the steps:
 
-To ship your Heroku logs to Sematext or Elasticsearch deploy Logagent on Heroku. It will act as an HTTPS log drain.
+To ship your Heroku logs to Sematext or Elasticsearch/OpenSearch deploy Logagent on Heroku. It will act as an HTTPS log drain.
 
 1. Get a free account [apps.sematext.com](https://apps.sematext.com/ui/registration)
 2. Create a [Logs](https://www.sematext.com/logsene/) App to obtain the App Token
