@@ -39,7 +39,7 @@ nav:
       - Logs Table Quick Actions: logs/logs-table-quick-actions.md
       - Shipping Logs:
         - Overview: logs/sending-log-events.md
-        - Using Elasticsearch API: logs/index-events-via-sematext-api.md
+        - Using Sematext API: logs/index-events-via-sematext-api.md
         - Syslog:
           - Overview: logs/syslog.md
           - JSON Messages over Syslog: logs/json-messages-over-syslog.md
@@ -52,7 +52,7 @@ nav:
       - Searching Logs:
         - Overview: logs/searching-log-events.md
         - Search Syntax: logs/search-syntax.md
-        - Using Elasticsearch API: logs/search-through-the-sematext-api.md
+        - Using Sematext API: logs/search-through-the-sematext-api.md
       - Context View: logs/context-view.md
       - Correlating Logs: logs/correlation.md
       - Logs Archiving: logs/archiving.md
