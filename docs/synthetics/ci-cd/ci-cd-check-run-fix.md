@@ -6,6 +6,7 @@ Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/com
 A way to circumvent this issue is by creating a private GitHub Application and using a [helper action](https://github.com/tibdex/github-app-token) which "impersonates" this Application to make it seem like it was what initiated the check runs.
 
 The GitHub Application can be created:
+
 - For your personal account, by clicking [here](https://github.com/settings/apps/new)
 - For your organization
   - Navigate to your account settings
@@ -16,6 +17,7 @@ The GitHub Application can be created:
   - Click `New GitHub App`
 
 Here are the steps you need to take in order to create your GitHub Application:
+
 - Pick a fitting name that'll let you associate this with the testing suite, since it will be displayed as the name of your check runs next to commits
 - For the Homepage URL field you can paste in whatever, since you won't really be using the action for anything aside from its tokens to "impersonate" it with
 - Under `Webhook`, untick `Active`, since we won't need it
@@ -23,6 +25,7 @@ Here are the steps you need to take in order to create your GitHub Application:
 - Create the GitHub Application
 
 When you finish creating the App, you'll automatically be redirected to its overview.
+
 - From here you need to copy the `App ID` found at the top of the page and save it as a repository secret called `GH_APP_ID` in the repository where you're having problems with checks not showing up
 - Then, scroll down to the `Private keys` section and generate a private key
   - This will download a file containing the private key - open it with a text editor of your choice and copy the entirety of the file, then save it as a repository secret called `GH_APP_TOKEN`

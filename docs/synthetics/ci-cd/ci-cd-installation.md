@@ -75,6 +75,7 @@ When running tests for your projects, you'll most likely want to test a number o
 ![CI/CD Groups in the Sidebar](/docs/images/synthetics/cicd-group-sidebar.png)
 
 Creating a *CI/CD Group* is simple:
+
 - Select which monitors you want to add
   - Keep in mind that only *CI/CD Monitors* can be assigned to *CI/CD Groups*
 - Assign a name to the group, which will be displayed in the sidebar
@@ -156,5 +157,6 @@ You can also check out the [workflow examples](#examples) for different deployme
 ## Examples
 
 These two examples illustrate how the action can be set up depending on how complex your deployment setup is:
+
 - [Workflow that triggers on the `deployment_status` event](/docs/synthetics/ci-cd/ci-cd-example-simple/) (simpler)
 - [Workflow that triggers on the `repository_dispatch` event](/docs/synthetics/ci-cd/ci-cd-example-complex/) (more complex)
