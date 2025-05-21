@@ -84,7 +84,7 @@ Creating a *CI/CD Group* is simple:
 
 ![CI/CD Group Creation](/docs/images/synthetics/cicd-group-creation.png)
 
-After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs within your CI/CD pipelines. To accomplish this, we've created the [Sematext CI/CD GitHub Action](https://github.com/sematext/synthetics-cicd) which you can call within your GitHub workflows.
+After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs within your CI/CD pipelines. To accomplish this, we've created the [Sematext CI/CD GitHub Action](https://github.com/marketplace/actions/sematext-synthetics-ci-cd) which you can call within your GitHub workflows.
 
 
 
