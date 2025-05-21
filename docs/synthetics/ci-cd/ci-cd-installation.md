@@ -84,7 +84,7 @@ Creating a *CI/CD Group* is simple:
 
 ![CI/CD Group Creation](/docs/images/synthetics/cicd-group-creation.png)
 
-After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs within your CI/CD pipelines. To accomplish this, we've created the [Sematext CI/CD GitHub Action](TODO_INSERT_OFFICIAL_GH_ACTION_LINK) which you can call within your GitHub workflows.
+After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs within your CI/CD pipelines. To accomplish this, we've created the [Sematext CI/CD GitHub Action](https://github.com/sematext/synthetics-cicd) which you can call within your GitHub workflows.
 
 
 
@@ -115,7 +115,7 @@ You can simply add the following step to a GitHub Workflow file in order to trig
 ```yaml
 steps:
   - name: Run Sematext Synthetics Tests
-    uses: sematext/synthetics-cicd@v1.0
+    uses: sematext/synthetics-cicd@v1.0.0
     with:
       MONITOR_GROUP_ID: 42                                          # Replace with your actual Monitor Group ID
       REGION: 'US'                                                  # Replace with your Sematext Cloud account's region('EU' or 'US')

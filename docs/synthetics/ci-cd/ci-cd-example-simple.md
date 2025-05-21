@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Sematext Synthetics CI/CD Integration
         id: sematext_action
-        uses: hssalman/cicd-repo-action@v0.9.3
+        uses: sematext/synthetics-cicd@v1.0.0
         with:
           MONITOR_GROUP_ID: 42                                # Replace with your actual Monitor Group ID
           REGION: 'US'                                        # Replace with your Sematext Cloud Region ('EU' or 'US')

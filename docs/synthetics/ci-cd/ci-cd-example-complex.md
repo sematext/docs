@@ -98,7 +98,7 @@ jobs:
       
       - name: Run Sematext Synthetics CI/CD Integration
         id: sematext_action
-        uses: hssalman/cicd-repo-action@v0.9.3
+        uses: sematext/synthetics-cicd@v1.0.0
         with:                                                 # All of these inputs are set near the top of the workflow
           GIT_COMMIT_HASH: ${{ env.SHA }}                     # Pass the SHA of the commit for which you're running the tests
           MONITOR_GROUP_ID: ${{ env.MONITOR_GROUP_ID }}       # Manually set near the top of the workflow
