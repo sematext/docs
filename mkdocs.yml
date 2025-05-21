@@ -205,8 +205,6 @@ nav:
         - GitHub Webhook Events: integration/github-webhook-events-integration.md
         - Jenkins: integration/jenkins.md
         - Terraform: integration/terraform.md
-        - Synthetics for CI/CD:
-          - GitHub Actions: synthetics/ci-cd/overview.md
       - Cloud Services:
         - AWS: integration/aws.md
         - AWS ECS: integration/aws-ecs-logs.md
