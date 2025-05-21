@@ -40,6 +40,7 @@ This is the body of the request which we'll base our workflow around.
 ```
 
 
+
 ## Workflow example
 
 Save the following file as `.github/workflows/sematext_synthetics_check.yaml`. Make sure to push it to your main branch, as that's where GitHub fetches workflows from when it's about to execute them.
@@ -178,7 +179,7 @@ Here's an quick overview of how the workflow works:
   - creating and updating GitHub check runs, since a `repository_dispatch` isn't automatically linked to a commit, so the workflow has to handle that as well
 - Most of the variables passed to the action are handled near the top of the file for easy overview, so make sure to edit these to match your setup
 - Next, some basic information is logged out so it can help with troubleshooting in the event of unexpected errors
-  - This is also where the `TARGET_URL` (which replaces the `<DEPLOYMENT_URL>` placeholder for [Dynamic URL monitors](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls)) is set, so make sure to modify this logic so it uses the actual URL you want
+  - This is also where the `TARGET_URL` (which replaces the `<DEPLOYMENT_URL>` placeholder for [Dynamic URL monitors](/docs/synthetics/ci-cd/overview/#dynamic-urls)) is set, so make sure to modify this logic so it uses the actual URL you want
 - After that comes the `create_check` step, which creates the GitHub check that's linked to the commit found in the `commitHash` field of the event which invoked the action, as seen in the example at the top of this page
 - Then the `sematext_action` step calls the main action which runs the **CI/CD Monitors** associated with our **CI/CD Group**
   - Review the variables sent to the actions once more

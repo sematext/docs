@@ -4,7 +4,9 @@ description: A detailed guide on how to set up the CI/CD integration from scratc
 This page will show you how to set up the Sematext Synthetics CI/CD integration with your CI/CD pipeline. To learn more about the features included in the integration, head over to its [overview page](/docs/synthetics/ci-cd/overview/).
 
 
+
 ## Prerequisites
+
 Before you begin, make sure you have the following:
 
 - A [Synthetics App](https://sematext.com/docs/synthetics/getting-started/) in Sematext Cloud to create and manage monitors
@@ -84,6 +86,7 @@ Creating a *CI/CD Group* is simple:
 After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs within your CI/CD pipelines. To accomplish this, we've created the [Sematext CI/CD GitHub Action](TODO_INSERT_OFFICIAL_GH_ACTION_LINK) which you can call within your GitHub workflows.
 
 
+
 ## The Sematext CI/CD GitHub Action
 
 The Sematext CI/CD GitHub Action is a straightforward way to execute a *CI/CD Group Run* and collect its results. To set it up, you'll need the following:
@@ -102,6 +105,7 @@ The Sematext CI/CD GitHub Action is a straightforward way to execute a *CI/CD Gr
 ![CI/CD GitHub Secret](/docs/synthetics/ci-cd/images/ci-cd-github-secret.png)
 
 
+
 ### Usage
 
 You can simply add the following step to a GitHub Workflow file in order to trigger the Sematext CI/CD Action and invoke the monitors in the *CI/CD Group* which you configured.
@@ -109,10 +113,10 @@ You can simply add the following step to a GitHub Workflow file in order to trig
 ```yaml
 steps:
   - name: Run Sematext Synthetics Tests
-    uses: sematext/synthetics-cicd-action@v1
+    uses: sematext/synthetics-cicd@v1.0
     with:
       MONITOR_GROUP_ID: 42                                          # Replace with your actual Monitor Group ID
-      REGION: 'US'                                                  # Replace with your Sematext Cloud Region ('EU' or 'US')
+      REGION: 'US'                                                  # Replace with your Sematext Cloud account's region('EU' or 'US')
       SEMATEXT_API_KEY: ${{ secrets.SEMATEXT_API_KEY }}             # Make sure to add your Sematext API key as a repository secret first
       TARGET_URL: 'https://your-deployment-url.com'                 # Pass dynamically from your setup, used as the replacement for <DYNAMIC_URL>
       GIT_COMMIT_HASH: '5a24a0f8cd48be7f315787dcc23ad418ecdb36f2'   # Pass dynamically from your setup
@@ -122,18 +126,20 @@ steps:
 You can also check out the [workflow examples](#examples) for different deployment setups if you want to grab a template.
 
 
+
 ### Inputs
 
 | Input | Description | Required |
 |-------|-------------|----------|
 | `MONITOR_GROUP_ID` | The ID of the *CI/CD Group* which contains the tests (e.g., `42`) | Yes |
-| `REGION` | The region where your Sematext Cloud account is located (`EU` or `US`) | Yes |
+| `REGION` | The region where your Sematext Cloud account is registered (`EU` or `US`) | Yes |
 | `SEMATEXT_API_KEY` | Your Sematext Cloud account's API key | Yes |
-| `TARGET_URL` | The URL to run the Synthetics tests against, mandatory for monitors with [Dynamic URLs](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls) | No |
+| `TARGET_URL` | The URL to run the Synthetics tests against - mandatory for monitors with [Dynamic URLs](/docs/synthetics/ci-cd/overview/#dynamic-urls) | No |
 | `GIT_COMMIT_HASH` | The commit hash that the Synthetics tests will be triggered for | No |
 | `USE_HEAD_SHA` | Whether to use the HEAD SHA for the Synthetics tests | No |
 
 > **Note**: Either `GIT_COMMIT_HASH` must be provided or `USE_HEAD_SHA` must be set to `true`.
+
 
 
 ### Outputs
@@ -144,6 +150,7 @@ You can also check out the [workflow examples](#examples) for different deployme
 | `status` | The status of the *Group Run* (`passed` or `failed`) |
 | `error` | The error message if the *Group Run* failed |
 | `group_run_url` | The URL of the *Group Run* in the Sematext Cloud UI |
+
 
 
 ## Examples

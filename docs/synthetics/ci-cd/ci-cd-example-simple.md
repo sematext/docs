@@ -4,6 +4,7 @@ description: A showcase of how to set up the CI/CD integration when our deployme
 If your setup is such that you create deployments within GitHub (like through automatic deployment tools such as Vercel), you can make the workflow for this action trigger on the `deployment_status` event and simply configure the variables needed for the action. Because of the simplicity of such a setup, the only required permissions are those that allow the workflow to read the deployment event and extract the URL of the environment that's being tested.
 
 
+
 ## Workflow example
 
 Save the following file as `.github/workflows/sematext_synthetics_check.yaml`. Make sure to push it to your main branch, as that's where GitHub fetches workflows from when it's about to execute them.
@@ -61,11 +62,12 @@ Here's an quick overview of how the workflow works:
 - It's initiated on the `deployment_status` event
   - Note that this means it can also initiate if the deployment isn't successful, so tweak the workflow as needed if you also create events for deployments in progress or failed deployments
 - Minimal permissions are needed - to read the deployment event from which we extract the URL of the deployed environment
-- The first step (`get_deployment_url`) fetches the URL that'll be used as the replacement for [Dynamic URL monitors](/docs/synthetics/ci-cd/ci-cd-monitors/#dynamic-urls) from the deployment event
+- The first step (`get_deployment_url`) fetches the URL that'll be used as the replacement for [Dynamic URL monitors](/docs/synthetics/ci-cd/overview/#dynamic-urls) from the deployment event
   - If your deployment setup handles the URL differently, then update this step to change how you fetch the URL
 - The second step (`sematext_action`) calls the main action which runs the **CI/CD Monitors** associated with our **CI/CD Group**
   - Remember to update the variables that are passed here so that they match your setup
 - The third and final step processes the results to inform us whether the tests were successful or not, logging out the information for review
+
 
 
 ## Triggering the workflow
@@ -82,6 +84,7 @@ Here's what this check will look like next to your commits.
 You can also see see additional details, including individual monitor runs, links to further details in the Sematext Cloud UI, and the URL for the Group Run. The `Run` step above the results contains additional information such as which URL and commit hash is being used, which can be useful for troubleshooting issues if they arise.
 
 ![Check Details](/docs/images/synthetics/cicd-check-details.png)
+
 
 
 ## Run Results in Sematext Cloud
