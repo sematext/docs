@@ -70,7 +70,7 @@ You can also configure other settings, such as certain headers, cookies, query p
 
 ### Creating a *CI/CD Group*
 
-When running tests for your projects, you'll most likely want to test a number of endpoints and User Journeys. To make managing and running all your CI/CD monitors easier, you can group them together using [**CI/CD Monitor Groups**](/docs/synthetics/ci-cd/#cicd-groups), which can be created and viewed in the Synthetics sidebar.
+When running tests for your projects, you'll most likely want to test a number of endpoints and User Journeys. To make managing and running all your CI/CD monitors easier, you can group them together using [**CI/CD Monitor Groups**](/docs/synthetics/ci-cd/overview/#cicd-groups), which can be created and viewed in the Synthetics sidebar.
 
 ![CI/CD Groups in the Sidebar](/docs/images/synthetics/cicd-group-sidebar.png)
 
