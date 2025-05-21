@@ -91,6 +91,7 @@ After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs wi
 ## The Sematext CI/CD GitHub Action
 
 The Sematext CI/CD GitHub Action is a straightforward way to execute a *CI/CD Group Run* and collect its results. To set it up, you'll need the following:
+
 - A Sematext Cloud account with a Synthetics *CI/CD Group* configured
   - You'll need the ID of your *CI/CD Group*, which you can see in the initial installation instructions when creating the group, or in the URL (for example for `https://apps.sematext.com/ui/synthetics/groups/15` the ID is `15`)
 - Your Sematext Cloud account's API key
