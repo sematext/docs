@@ -194,7 +194,7 @@ This is an example of what gets displayed when you open the check's details on G
 
 ## Run Results in Sematext Cloud
 
-Each workflow trigger creates a single [**Group Run**](/docs/synthetics/ci-cd/ci-cd-overview/#group-runs). After the workflow is triggered, you can view the run results for each group in Sematext Cloud, providing a clear overview of the number of successful and failed monitors. You'll also find additional information, such as the associated Git commit SHA and Git branch, for each *Group Run*.
+Each workflow trigger creates a single [**Group Run**](/docs/synthetics/ci-cd/overview/#group-runs). After the workflow is triggered, you can view the run results for each group in Sematext Cloud, providing a clear overview of the number of successful and failed monitors. You'll also find additional information, such as the associated Git commit SHA and Git branch, for each *Group Run*.
 
 ![CI/CD Group Runs Overview](/docs/images/synthetics/cicd-group-run-list.png)
 

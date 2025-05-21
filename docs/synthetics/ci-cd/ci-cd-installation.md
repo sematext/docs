@@ -1,7 +1,7 @@
 title: CI/CD GitHub Integration Installation
 description: A detailed guide on how to set up the CI/CD integration from scratch
 
-This page will show you how to set up the Sematext Synthetics CI/CD integration with your CI/CD pipeline. To learn more about the features included in the integration, head over to its [overview page](/docs/synthetics/ci-cd/ci-cd-overview/).
+This page will show you how to set up the Sematext Synthetics CI/CD integration with your CI/CD pipeline. To learn more about the features included in the integration, head over to its [overview page](/docs/synthetics/ci-cd/overview/).
 
 
 ## Prerequisites
@@ -23,7 +23,7 @@ Now that the prerequisites are taken care of, you can proceed with the rest of t
 
 ### Choosing a monitor type
 
-When creating a Synthetics monitor, you'll see that there's an option to designate that monitor as a [**CI/CD Monitor**](/docs/synthetics/ci-cd/ci-cd-overview/#cicd-monitors).
+When creating a Synthetics monitor, you'll see that there's an option to designate that monitor as a [**CI/CD Monitor**](/docs/synthetics/ci-cd/overview/#cicd-monitors).
 
 ![Creating CI/CD Monitors](/docs/images/synthetics/cicd-monitor-creation.png)
 
@@ -39,7 +39,7 @@ Configuring *CI/CD Monitors* follows a similar process to regular monitors, with
 
 #### Configuring the URL
 
-While creating a monitor, you'll be prompted to enter a URL. You can either use a static URL (if you only want to monitor one specific testing environment) like for regular monitors, or the [*Dynamic URL*](/docs/synthetics/ci-cd/ci-cd-overview/#dynamic-urls) feature unique to *CI/CD Monitors* if you'll be monitoring multiple preview environments with different URLs.
+While creating a monitor, you'll be prompted to enter a URL. You can either use a static URL (if you only want to monitor one specific testing environment) like for regular monitors, or the [*Dynamic URL*](/docs/synthetics/ci-cd/overview/#dynamic-urls) feature unique to *CI/CD Monitors* if you'll be monitoring multiple preview environments with different URLs.
 
 For example, let's say you want to monitor the `health` endpoint of your website `example.com` - located at `example.com/health`.
 - By setting your monitor's URL to `<DYNAMIC_URL>/health`, you can pass the base URL of your ***various preview environments*** (such as `test-12.example.com` and `test-17.example.com`) in the test creation requests and have those tests point to the appropriate endpoint on those preview environments once the placeholder is replaced  (`test-12.example.com/health` and `test-17.example.com/health`)

@@ -136,7 +136,7 @@ nav:
         - Troubleshooting: synthetics/user-journey-scripts/troubleshooting.md
       - SSL Certificate Monitoring: synthetics/ssl-certificate-monitoring.md
       - CI/CD Integration:
-        - Overview: synthetics/ci-cd/ci-cd-overview.md
+        - Overview: synthetics/ci-cd/overview.md
         - Installation: synthetics/ci-cd/ci-cd-installation.md
         - Simple Workflow Example: synthetics/ci-cd/ci-cd-example-simple.md
         - Complex Workflow Example: synthetics/ci-cd/ci-cd-example-complex.md
@@ -206,7 +206,7 @@ nav:
         - Jenkins: integration/jenkins.md
         - Terraform: integration/terraform.md
         - Synthetics for CI/CD:
-          - GitHub Actions: synthetics/ci-cd/ci-cd-overview.md
+          - GitHub Actions: synthetics/ci-cd/overview.md
       - Cloud Services:
         - AWS: integration/aws.md
         - AWS ECS: integration/aws-ecs-logs.md
