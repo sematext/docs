@@ -52,7 +52,7 @@ Records creation, updates, removal, enabling, and disabling of [processors](http
 
 Tracks creation and updates of reports at both App and Dashboard levels, updates to [report components](https://sematext.com/docs/dashboards/reports-and-components/), and creation or deletion of [dashboards](https://sematext.com/docs/dashboards/).
 
-> When multiple settings are changed at once—for example, if several fields in an alert rule are edited—Audit Trail groups them into a single event. Each recorded entry shows what was changed, along with the previous and new values for each field.
+> When multiple settings are changed at once — such as editing several fields in an alert rule — Audit Trail records them as a single grouped event. Within the event flyout, we show each changed item along with its previous and new values.
 
 ![Audit Trail Flyout](/docs/images/guide/audit-trail/audit-trail-event-flyout.png)
 
