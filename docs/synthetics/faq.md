@@ -198,6 +198,17 @@ To send a `POST` request, open the `Body` tab, set the content type to `JSON` an
 
 ![GraphQL POST](/docs/images/synthetics/synthetics-faq-graphql-post.png)
 
+### Why might I receive certificate errors even when the certificate is valid and not expired?
+
+This issue typically arises due to differences in how HTTP and Browser Monitors verify SSL certificates.
+
+- [HTTP Monitors](https://sematext.com/docs/synthetics/http-monitor/) rely on the **OS-level CA (Certificate Authority) bundle** to validate SSL certificates. This means if the certificate chain of the monitored endpoint includes a root or intermediate certificate not trusted by the underlying OS, the monitor will fail with a certificate verification error.
+- [Browser Monitors](https://sematext.com/docs/synthetics/browser-monitor/), on the other hand, comes with its own **internal CA bundle**. This bundle is often more up-to-date and broader than what many OS environments have, which is why the Browser Monitor may succeed even when the HTTP Monitor fails.
+
+**Why does this happen?**
+
+Some institutions use **internal or less commonly trusted certificate authorities** for their web services. These are not part of the default OS CA bundle, leading to SSL verification failures in tools that rely on system trust stores (like our HTTP Monitors). In such cases, we recommend either disabling SSL certificate validation for the affected HTTP Monitors via the **Configure Alerts → SSL Monitoring** section, or switching to a Browser Monitor instead, which may succeed due to its built-in CA bundle.
+
 
 ## Sharing
 
