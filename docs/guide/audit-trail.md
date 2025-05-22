@@ -67,5 +67,5 @@ You can access the Audit Trail from your Sematext Cloud account. It allows you t
 
 ![Audit Trail Usage](/docs/images/guide/audit-trail/audit-trail-usage.gif)
 
-Audit Trail can be enabled or disabled at any time from your account settings.
+Audit Trail can be enabled or disabled at any time from your account settings. Only users with the Account OWNER role can change this setting. If you want to share Apps, Dashboards, and Alert Rules with others or use Sematext as a team or company, we recommend creating a [Team Account](https://sematext.com/docs/team/#team-account) using a shared group email (e.g., dev@..., engineering@..., monitoring@...). This account isn’t tied to any individual’s email and doesn’t incur additional costs. You can then invite everyone who needs access to collaborate within that account.
 
