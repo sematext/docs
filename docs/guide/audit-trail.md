@@ -1,14 +1,14 @@
 title: Audit Trail
-description: Track user activities and changes across your account to see who did what, when, and where—making it easier to monitor usage and maintain compliance.
+description: Track user activities and changes across your account to see who did what, when, and where — making it easier to monitor usage and maintain compliance.
 
 Audit Trail helps you track changes made by users across your account. It shows what was changed, who made the change, and when. This includes actions like creating, updating, or deleting [Alerts](https://sematext.com/docs/guide/alerts-guide/), [Apps](https://sematext.com/docs/guide/app-guide/), [Pipelines](https://sematext.com/docs/logs/pipelines/), and other important resources.
-This feature is useful for reviewing changes over time, identifying who changed what and when, troubleshooting issues by checking recent updates, and improving visibility and accountability across your team.
+This feature is useful for reviewing changes over time, identifying who changed what and when, troubleshooting account issues by checking recent updates, and improving visibility and accountability across your team.
 
 ![Audit Trail](/docs/images/guide/audit-trail/audit-trail.png)
 
 ## What It Tracks
 
-Every time a user makes a change, an event is recorded in the Audit Trail. In addition to tracking manual user actions, Audit Trail also tracks certain changes that are automatically made by the Sematext system to help setup and configuration. For example, when you create a new [App](https://sematext.com/docs/guide/app-guide/), we automatically create default alert rules tailored to the selected integration type. These defaults are designed to help you start monitoring key metrics and logs with minimal setup. These system-initiated actions appear in the Audit Trail with the user listed as `sc-system@sematext.com`.
+Every time a user makes a change, an event is recorded in the Audit Trail. In addition to tracking manual user actions, Audit Trail also tracks certain changes that are automatically made by the Sematext system to help with the setup and configuration. For example, when you create a new [App](https://sematext.com/docs/guide/app-guide/), we automatically create default alert rules tailored to the selected integration type. These defaults are designed to help you start monitoring key metrics and logs with minimal setup. These system-initiated actions appear in the Audit Trail with the user listed as `sc-system@sematext.com`.
 
 Below is the full list of tracked event types:
 
