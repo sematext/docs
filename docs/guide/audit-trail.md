@@ -60,7 +60,7 @@ Tracks creation and updates of reports at both App and Dashboard levels, updates
 
 You can access the Audit Trail from your Sematext Cloud account. It allows you to:
 
-- Filter events by user, event type, or related App
+- Filter events by user, event type, or by the App where the user performed the action
 - View the most frequent actions in the Top Events section
 - Click from an event to open the related App, Alert Rule, Pipeline, or other resource
 - See a timestamp and the user responsible for each action
