@@ -3,7 +3,7 @@ description: GitHub Webhooks allow you to build or set up integrations, such as 
 
 By configuring the GitHub Webhooks to point to Sematext you can store information about Github repository commits, opened or closed PRs, PR comments, etc. in one place. This provides insight into the entire GitHub workflow for your team. Github Webooks can be configured at the level of individual repositories and/or organization. By configuring the Github Webhooks at the organization level you can quickly and easily have events for all repositories sent to Sematext. 
 
-Here is just one of several our of the box Sematext dashboards this integration provides:
+Here is just one of several out of the box Sematext dashboards this integration provides:
 
 <img
   class="content-modal-image"
