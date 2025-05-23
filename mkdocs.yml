@@ -202,6 +202,7 @@ nav:
         - Node.js: integration/node.js.md
         - PHP: integration/php.md
       - CI/CD Tools:
+        - GitHub Actions: integration/github-actions.md
         - GitHub Webhook Events: integration/github-webhook-events-integration.md
         - Jenkins: integration/jenkins.md
         - Terraform: integration/terraform.md
