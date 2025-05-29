@@ -521,13 +521,16 @@ export http_proxy=http://username:password@yourproxyaddress:proxyport
 Yes. You can update the proxy settings using the following command:
 
 ```bash
-sudo bash /opt/spm/bin/setup-env --proxy-host "HOST" --proxy-port "PORT" --proxy-user "USER" --proxy-password "PASSWORD"
+sudo bash /opt/spm/bin/setup-env --proxy-host "HOST" --proxy-port "PORT" --proxy-user "USER" --proxy-password "PASSWORD" --proxy-secure "false"
 ```
 
 After this, run the following command to apply the settings:
 
 ```
 sudo service sematext-agent restart 
+```
+```
+sudo service sematext-vector restart
 ```
 
 ### Can I change the region settings for the Sematext Agent installation?
