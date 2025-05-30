@@ -212,7 +212,7 @@ spec:
       dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: agent
-        image: sematext/agent:latest
+        image: sematext/agent:latest-3
         imagePullPolicy: Always
         env:
         - name: AUTODISCO_VECTOR_SERVICE_ACCOUNT
@@ -300,7 +300,7 @@ To update the Sematext Agent when installed manually, you need to modify the Dae
 
 ```yaml
     - name: agent
-      image: sematext/agent:latest
+      image: sematext/agent:latest-3
 ```
 
 2. **Apply the updated DaemonSet:**
