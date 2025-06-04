@@ -9,7 +9,7 @@ In Kubernetes deployments, Sematext Agent will make sure to remove any lingering
 You have to run the following command on your Docker hosts:
 
 ```bash
-sudo docker ps -q -f "ancestor=sematext/app-agent:latest-3" | xargs  docker rm -f
+sudo docker ps -q -f "ancestor=sematext/app-agent:latest" | xargs  docker rm -f
 ```
 
 
