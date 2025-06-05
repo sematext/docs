@@ -1,4 +1,4 @@
-title: Self-hosting a GH Actions runner
+title: Self-hosting a GitHub Actions runner
 description: An example of how to work around limitations regarding GitHub Actions Minutes
 
 If your setup is such that you find yourself running a lot of GitHub Actions, you've probably noticed how quickly those action minutes can add up. We certainly did! This page talks about how we circumvented those issues, in order to hopefully give you an idea about how you can reduce your GitHub Actions spending as well.
