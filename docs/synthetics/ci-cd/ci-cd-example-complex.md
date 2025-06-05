@@ -175,17 +175,17 @@ Here's an quick overview of how the workflow works:
 
 - It's initiated on the `repository_dispatch` event of the `environment_ready` type
 - The only required permissions are for
-  - reading the contents of the repository in order to find the appropriate branch for the commit hash we're targeting
-  - creating and updating GitHub check runs, since a `repository_dispatch` isn't automatically linked to a commit, so the workflow has to handle that as well
+    - reading the contents of the repository in order to find the appropriate branch for the commit hash we're targeting
+    - creating and updating GitHub check runs, since a `repository_dispatch` isn't automatically linked to a commit, so the workflow has to handle that as well
 - Most of the variables passed to the action are handled near the top of the file for easy overview, so make sure to edit these to match your setup
 - Next, some basic information is logged out so it can help with troubleshooting in the event of unexpected errors
-  - This is also where the `TARGET_URL` (which replaces the `<DEPLOYMENT_URL>` placeholder for [Dynamic URL monitors](/docs/synthetics/ci-cd/overview/#dynamic-urls)) is set, so make sure to modify this logic so it uses the actual URL you want
+    - This is also where the `TARGET_URL` (which replaces the `<DEPLOYMENT_URL>` placeholder for [Dynamic URL monitors](/docs/synthetics/ci-cd/overview/#dynamic-urls)) is set, so make sure to modify this logic so it uses the actual URL you want
 - After that comes the `create_check` step, which creates the GitHub check that's linked to the commit found in the `commitHash` field of the event which invoked the action, as seen in the example at the top of this page
 - Then the `sematext_action` step calls the main action which runs the **CI/CD Monitors** associated with our **CI/CD Group**
-  - Review the variables sent to the actions once more
+    - Review the variables sent to the actions once more
 - Lastly, the `update_status` step checks the results of the action and creates a handy result overview page from the outputs of the action, then updates the GitHub check created earlier with the results
-  - This step always runs if the GitHub check was created, so that the GitHub check is updated regardless of whether the previous steps failed or not
-  - Feel free to add your own modifications here if you'd like some additional information to be logged out
+    - This step always runs if the GitHub check was created, so that the GitHub check is updated regardless of whether the previous steps failed or not
+    - Feel free to add your own modifications here if you'd like some additional information to be logged out
 
 This is an example of what gets displayed when you open the check's details on GitHub. Tweak the code of the `Update Job Status` step to modify this to your liking.
 
@@ -208,4 +208,3 @@ You can then use that information to quickly see what went wrong, navigate to th
 ## Fix for check runs not showing up next to commits
 
 Due to [limitations tied to GitHub's check-runs API](https://github.com/orgs/community/discussions/24616), sometimes manually created check runs can fail to show up even though the workflow itself executed, or get incorrectly added to the wrong check suite. Depending on your setup, you may experience this as well. For more information on this issue and instructions on how to fix it, refer to [this page](/docs/synthetics/ci-cd/ci-cd-check-run-fix/).
-

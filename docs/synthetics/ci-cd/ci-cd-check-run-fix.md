@@ -9,12 +9,12 @@ The GitHub Application can be created:
 
 - For your personal account, by clicking [here](https://github.com/settings/apps/new)
 - For your organization
-  - Navigate to your account settings
-  - Click `Your organizations`
-  - To the right of the organization, click `Settings`
-  - In the left sidebar, click `<> Developer Settings`
-  - In the left sidebar, click `GitHub Apps`
-  - Click `New GitHub App`
+    - Navigate to your account settings
+    - Click `Your organizations`
+    - To the right of the organization, click `Settings`
+    - In the left sidebar, click `<> Developer Settings`
+    - In the left sidebar, click `GitHub Apps`
+    - Click `New GitHub App`
 
 Here are the steps you need to take in order to create your GitHub Application:
 
@@ -28,7 +28,7 @@ When you finish creating the App, you'll automatically be redirected to its over
 
 - From here you need to copy the `App ID` found at the top of the page and save it as a repository secret called `GH_APP_ID` in the repository where you're having problems with checks not showing up
 - Then, scroll down to the `Private keys` section and generate a private key
-  - This will download a file containing the private key - open it with a text editor of your choice and copy the entirety of the file, then save it as a repository secret called `GH_APP_TOKEN`
+    - This will download a file containing the private key - open it with a text editor of your choice and copy the entirety of the file, then save it as a repository secret called `GH_APP_TOKEN`
 
 Lastly, you have to install the GitHub Application you just created. You can do so by following [this short guide](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app). Keep in mind how you created the Application - for your account or for your organization.
 

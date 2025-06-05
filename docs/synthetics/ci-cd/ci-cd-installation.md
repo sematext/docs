@@ -10,9 +10,9 @@ This page will show you how to set up the Sematext Synthetics CI/CD integration 
 Before you begin, make sure you have the following:
 
 - A [Synthetics App](https://sematext.com/docs/synthetics/getting-started/) in Sematext Cloud to create and manage monitors
-  - Don't worry about creating monitors just yet; simply have the App ready, and we'll guide you step by step on how to create a *CI/CD Monitor*
+    - Don't worry about creating monitors just yet; simply have the App ready, and we'll guide you step by step on how to create a *CI/CD Monitor*
 - A GitHub repository where you wish to run *CI/CD Monitors*
-  -  You'll need Admin permissions on the repository to access the settings and add repository secrets
+    -  You'll need Admin permissions on the repository to access the settings and add repository secrets
 
 Once you have these prerequisites ready, we can start by creating *CI/CD Monitors* in Sematext Cloud.
 
@@ -77,7 +77,7 @@ When running tests for your projects, you'll most likely want to test a number o
 Creating a *CI/CD Group* is simple:
 
 - Select which monitors you want to add
-  - Keep in mind that only *CI/CD Monitors* can be assigned to *CI/CD Groups*
+    - Keep in mind that only *CI/CD Monitors* can be assigned to *CI/CD Groups*
 - Assign a name to the group, which will be displayed in the sidebar
 - Add a description to know what this *CI/CD Group* will be used for
 - Add a GitHub URL to your repository, which will be used to quickly allow you to open commits and branches which were tested
@@ -93,16 +93,16 @@ After you've created a *CI/CD Group*, you'll need a way to trigger Group Runs wi
 The Sematext CI/CD GitHub Action is a straightforward way to execute a *CI/CD Group Run* and collect its results. To set it up, you'll need the following:
 
 - A Sematext Cloud account with a Synthetics *CI/CD Group* configured
-  - You'll need the ID of your *CI/CD Group*, which you can see in the initial installation instructions when creating the group, or in the URL (for example for `https://apps.sematext.com/ui/synthetics/groups/15` the ID is `15`)
+    - You'll need the ID of your *CI/CD Group*, which you can see in the initial installation instructions when creating the group, or in the URL (for example for `https://apps.sematext.com/ui/synthetics/groups/15` the ID is `15`)
 - Your Sematext Cloud account's API key
-  - You can copy your API key from the `Settings` -> `API` page in the UI, which can be found:
-    - [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
-    - [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
-  - You then have to add the API key as a repository secret to the GitHub repository you wish to run these CI/CD monitors for.
-    - Go to your repository's `Settings`
-      - If you can't see the `Settings` tab for your repository, then you might not have permissions to edit them - contact your repository's administrator to take care of this step
-    - In the sidebar under `Security` click `Secrets and variables` and then `Actions`
-    - Create a new repository secret and name it `SEMATEXT_API_KEY`, then paste in your Sematext Cloud account's API key
+    - You can copy your API key from the `Settings` -> `API` page in the UI, which can be found:
+        - [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
+        - [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
+    - You then have to add the API key as a repository secret to the GitHub repository you wish to run these CI/CD monitors for.
+        - Go to your repository's `Settings`
+            - If you can't see the `Settings` tab for your repository, then you might not have permissions to edit them - contact your repository's administrator to take care of this step
+        - In the sidebar under `Security` click `Secrets and variables` and then `Actions`
+        - Create a new repository secret and name it `SEMATEXT_API_KEY`, then paste in your Sematext Cloud account's API key
 
 ![CI/CD GitHub Secret](/docs/synthetics/ci-cd/images/ci-cd-github-secret.png)
 
