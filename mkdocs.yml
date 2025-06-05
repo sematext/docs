@@ -141,6 +141,7 @@ nav:
         - Simple Workflow Example: synthetics/ci-cd/ci-cd-example-simple.md
         - Complex Workflow Example: synthetics/ci-cd/ci-cd-example-complex.md
         - Optional Check Run Fix: synthetics/ci-cd/ci-cd-check-run-fix.md
+        - Self-hosting a GitHub Actions Runner: synthetics/ci-cd/ci-cd-self-hosting.md
       - Status Pages: synthetics/status-pages.md
       - Private Locations: synthetics/private-locations.md
       - Scheduled Monitor Pauses: synthetics/scheduled-pauses.md
