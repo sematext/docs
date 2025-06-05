@@ -210,6 +210,11 @@ This issue typically arises due to differences in how HTTP and Browser Monitors 
 Some institutions use **internal or less commonly trusted certificate authorities** for their web services. These are not part of the default OS CA bundle, leading to SSL verification failures in tools that rely on system trust stores (like our HTTP Monitors). In such cases, we recommend either disabling SSL certificate validation for the affected HTTP Monitors via the **Configure Alerts → SSL Monitoring** section, or switching to a Browser Monitor instead, which may succeed due to its built-in CA bundle.
 
 
+### I'm running out of GitHub Actions Minutes when using your Synthetics CI/CD integration. How can I work around this?
+
+We had a similar issue since we run many other workflows too, so the usage added up for us as well. You can try a self-hosted approach, for which we provided an example [here](/docs/synthetics/ci-cd/ci-cd-self-hosting).
+
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
