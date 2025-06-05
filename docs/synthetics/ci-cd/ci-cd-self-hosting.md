@@ -21,6 +21,7 @@ The problem? GitHub bills Actions usage with ***minute-level granularity***. Thi
 To optimize our GitHub Actions usage, we converted this frequently-run workflow into [a lightweight self-hosted Go service](https://github.com/sematext/gh-runner). This simple change reduced our total GitHub Actions minutes usage by 40% without sacrificing any functionality.
 
 The self-hosted runner is a small application written in Go that:
+
 - Runs persistently on the Kubernetes cluster for our test environment
 - Listens for deployment events that occur when a preview environment becomes available
 - Fetches commit information from our deployment repository
@@ -70,6 +71,7 @@ The service is designed to be lightweight and stateless, making it perfect for r
 - `README.md` - Setup and configuration instructions
 
 **Note:** Since this implementation is tailored to our specific workflow at Sematext, you'll need to adapt it to match your own CI/CD setup. The code serves as an example of how to:
+
 - Convert a GitHub workflow to a self-hosted application
 - Interact with GitHub's APIs programmatically
 - Handle repository dispatch events outside of GitHub Actions
