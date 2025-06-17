@@ -3,7 +3,7 @@ description: This guide explains how to monitor remote databases (MySQL, Postgre
 
 ## Overview
 
-When monitoring remote databases, you'll install the Sematext Agent on a monitoring host (which can be different from the database server) and configure it to connect to the remote database instance. This approach is particularly useful for:
+When monitoring remote databases, you'll install the [Sematext Agent](/docs/agents/sematext-agent/) on a monitoring host (which can be different from the database server) and configure it to connect to the remote database instance. This approach is particularly useful for:
 
 - Monitoring cloud-hosted databases (AWS RDS, Google Cloud SQL, Azure Database, etc.)
 - Monitoring databases on remote servers or VMs
@@ -12,7 +12,7 @@ When monitoring remote databases, you'll install the Sematext Agent on a monitor
 
 Before you begin, make sure you have:
 
-- A Sematext App created for your database monitoring
+- A [Sematext App](/docs/monitoring/quick-start/) created for your database monitoring
 - Network connectivity from your monitoring host to the remote database
 - Appropriate database credentials with monitoring privileges
 - A Linux host where you'll install the Sematext Agent
@@ -51,7 +51,7 @@ CREATE USER 'spm-user'@'127.0.0.1' IDENTIFIED BY 'spm-password';
 
 #### For Other Database Types
 
-Sematext supports monitoring for many other database and data store types. Refer to your specific database documentation for creating monitoring users with appropriate privileges.
+Sematext supports monitoring for [many other database and data store types](/docs/integration/#databases-data-stores). Refer to your specific database documentation for creating monitoring users with appropriate privileges.
 
 ### Option B: Use Existing Database Credentials
 
@@ -144,6 +144,6 @@ After configuration, verify that monitoring is working:
 
 Once your remote database monitoring is configured:
 
-- Set up alerts for key database metrics
-- Create custom dashboards for your specific use case  
+- [Set up alerts](/docs/guide/alerts-guide) for key database metrics
+- [Create custom dashboards](/docs/dashboards/) for your specific use case  
 - Consider monitoring multiple database instances from the same monitoring host
