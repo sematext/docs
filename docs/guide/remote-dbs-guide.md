@@ -139,7 +139,7 @@ For other database types, refer to your database's documentation for read-only m
 --ST_MONITOR_MYSQL_DB_HOST_PORT '192.168.1.100:3307'
 ```
 
-**Azure Database for MySQL*
+**Azure Database for MySQL**
 ```bash
 --ST_MONITOR_MYSQL_DB_HOST_PORT 'myserver.mysql.database.azure.com:3306'
 ```
