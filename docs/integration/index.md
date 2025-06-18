@@ -35,7 +35,7 @@ Integrations for popular web and application servers.
 ## Databases & Data Stores
 Integrations to monitor various databases and data storage solutions.
 
-**Note:** For monitoring remote or managed databases (AWS RDS, Google Cloud SQL, etc.), see our [Remote Database Monitoring Guide](/docs/guide/remote-dbs-guide.md).
+**Note:** For monitoring remote or managed databases (AWS RDS, Google Cloud SQL, etc.), see our [Remote Database Monitoring Guide](/docs/guide/remote-dbs-guide).
 
 
 | Integration | Description | Solution   |
