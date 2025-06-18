@@ -18,7 +18,7 @@ nav:
       - Connected Apps: guide/connected-apps.md
       - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
-      - Scheduled Reports: guide/scheduled-reports.md      
+      - Scheduled Reports: guide/scheduled-reports.md
     - Fleet and Discovery: 
       - Overview: fleet/index.md
       - Fleet: fleet/fleet.md
@@ -190,6 +190,7 @@ nav:
         - Redis: integration/redis.md
         - Solr: integration/solr-integration.md
         - SolrCloud: integration/solrcloud.md
+        - Remote & Managed Databases: guide/remote-dbs-guide.md 
       - Big Data & Messaging:
         - Hadoop: integration/hadoop.md
         - Kafka: integration/kafka.md

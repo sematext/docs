@@ -393,6 +393,17 @@ Yes, switching a host to another Infra App is possible by reconfiguring the Sema
 - Select your environment and the new Infra App that you wish to switch to
 - Follow the installation instructions. If you are using a baremetal/VM environment, you can skip steps 1-3 from the Agent Installation section and follow only the instructions in the Agent Setup section.
 
+### Can I monitor remote databases or managed database services?
+
+**Yes!** You can monitor databases hosted on remote servers, cloud providers (AWS RDS, Google Cloud SQL, Azure Database), or any managed database service using Sematext Agent.
+
+The key difference from local database monitoring is that you'll:
+- Install the Sematext Agent on a separate monitoring host (not on the database server itself)
+- Configure the agent to connect to the remote database by replacing `localhost` with the actual database host/port
+- Make sure proper network connectivity and credentials
+
+For step-by-step instructions, see our [Remote Database Monitoring Guide](/docs/guide/remote-dbs-guide.md).
+
 ## Sharing
 
 ### How can I share my Sematext Apps with other users?
