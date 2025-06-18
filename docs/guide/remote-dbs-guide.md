@@ -57,6 +57,25 @@ Sematext supports monitoring for [many other database and data store types](/doc
 
 If you prefer to use existing database credentials, you can skip this step and provide those credentials directly in Step 3. Make sure the existing user has sufficient privileges for monitoring operations.
 
+#### Required Privileges by Database Type
+
+**MySQL/MariaDB:**
+```sql
+GRANT SELECT ON *.* TO 'your-user';
+GRANT PROCESS ON *.* TO 'your-user';
+GRANT REPLICATION CLIENT ON *.* TO 'your-user';
+```
+
+**PostgreSQL:**
+```sql
+GRANT SELECT ON ALL TABLES IN SCHEMA information_schema TO your_user;
+GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO your_user;
+-- For specific monitoring views
+GRANT pg_monitor TO your_user;
+```
+
+For other database types, refer to your database's documentation for read-only monitoring privileges.
+
 ## Step 3: Configure Sematext Agent for Remote Database
 
 **Important:** Each database integration has specific configuration parameters. Always refer to the Agent Installation instructions provided in your specific Sematext App for the exact command and parameters.
@@ -72,7 +91,7 @@ If you prefer to use existing database credentials, you can skip this step and p
 
 ### Common Parameter Patterns by Integration Type
 
-#### MySQL
+#### MySQL / MariaDB
 ```bash
 --ST_MONITOR_MYSQL_DB_HOST_PORT 'remote-host:3306'
 --ST_MONITOR_MYSQL_DB_USER 'your-username'
@@ -89,9 +108,16 @@ If you prefer to use existing database credentials, you can skip this step and p
 
 #### OpenSearch
 ```bash
---ST_MONITOR_OPENSEARCH_NODE_HOSTPORT 'https://remote-host:9200'
+--ST_MONITOR_OPENSEARCH_NODE_HOSTPORT 'remote-host:9200'
 --ST_MONITOR_OPENSEARCH_NODE_BASICAUTH_USERNAME 'your-username'
 --ST_MONITOR_OPENSEARCH_NODE_BASICAUTH_PASSWORD 'your-password'
+```
+
+#### Elasticsearch
+```bash
+    --ST_MONITOR_ES_NODE_HOSTPORT 'remote-host:9200'
+    --ST_MONITOR_ES_NODE_BASICAUTH_USERNAME 'your-username'
+    --ST_MONITOR_ES_NODE_BASICAUTH_PASSWORD 'your-password'
 ```
 
 ### Examples for Different Remote Database Scenarios
@@ -128,6 +154,7 @@ If you prefer to use existing database credentials, you can skip this step and p
 
 ### Monitoring Host Placement
 - Place the monitoring host in the same network region/data center as the database when possible to minimize network latency
+- For cloud databases, deploy the monitoring host in the same region/availability zone when possible to avoid cross-AZ data transfer costs
 
 ## Verification
 
