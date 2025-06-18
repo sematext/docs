@@ -34,7 +34,7 @@ This step is **optional**. You can either create dedicated monitoring credential
 
 ### Option A: Create Dedicated Monitoring User (Recommended)
 
-#### For MySQL/MariaDB
+**A. For MySQL/MariaDB**
 
 Connect to your remote MySQL database and create a monitoring user:
 
@@ -44,12 +44,13 @@ CREATE USER 'spm-user'@'127.0.0.1' IDENTIFIED BY 'spm-password';
 ```
 
 **Important Notes:**
+
 - Replace `spm-user` and `spm-password` with your desired credentials
 - The `'%'` allows connections from any host, including your monitoring server
 - Grant appropriate privileges based on your security requirements
 - For enhanced security, replace `'%'` with the specific IP address of your monitoring host
 
-#### For Other Database Types
+**B. For Other Database Types**
 
 Sematext supports monitoring for [many other database and data store types](/docs/integration/#databases-data-stores). Refer to your specific database documentation for creating monitoring users with appropriate privileges.
 
@@ -57,16 +58,17 @@ Sematext supports monitoring for [many other database and data store types](/doc
 
 If you prefer to use existing database credentials, you can skip this step and provide those credentials directly in Step 3. Make sure the existing user has sufficient privileges for monitoring operations.
 
-#### Required Privileges by Database Type
+**Required Privileges by Database Type**
 
-**MySQL/MariaDB:**
+**A. MySQL/MariaDB:**
 ```sql
 GRANT SELECT ON *.* TO 'your-user';
 GRANT PROCESS ON *.* TO 'your-user';
 GRANT REPLICATION CLIENT ON *.* TO 'your-user';
 ```
 
-**PostgreSQL:**
+**B. PostgreSQL:**
+
 ```sql
 GRANT SELECT ON ALL TABLES IN SCHEMA information_schema TO your_user;
 GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO your_user;
@@ -91,14 +93,14 @@ For other database types, refer to your database's documentation for read-only m
 
 ### Common Parameter Patterns by Integration Type
 
-#### MySQL / MariaDB
+**MySQL / MariaDB**
 ```bash
 --ST_MONITOR_MYSQL_DB_HOST_PORT 'remote-host:3306'
 --ST_MONITOR_MYSQL_DB_USER 'your-username'
 --ST_MONITOR_MYSQL_DB_PASSWORD 'your-password'
 ```
 
-#### PostgreSQL
+**PostgreSQL**
 ```bash
 --ST_MONITOR_POSTGRESQL_HOST_PORT 'remote-host:5432'
 --ST_MONITOR_POSTGRESQL_DB_USER 'your-username'
@@ -106,14 +108,14 @@ For other database types, refer to your database's documentation for read-only m
 --ST_MONITOR_POSTGRESQL_DB_NAME 'your-database'
 ```
 
-#### OpenSearch
+**OpenSearch**
 ```bash
 --ST_MONITOR_OPENSEARCH_NODE_HOSTPORT 'remote-host:9200'
 --ST_MONITOR_OPENSEARCH_NODE_BASICAUTH_USERNAME 'your-username'
 --ST_MONITOR_OPENSEARCH_NODE_BASICAUTH_PASSWORD 'your-password'
 ```
 
-#### Elasticsearch
+**Elasticsearch**
 ```bash
     --ST_MONITOR_ES_NODE_HOSTPORT 'remote-host:9200'
     --ST_MONITOR_ES_NODE_BASICAUTH_USERNAME 'your-username'
@@ -122,22 +124,22 @@ For other database types, refer to your database's documentation for read-only m
 
 ### Examples for Different Remote Database Scenarios
 
-#### AWS RDS MySQL Instance
+**AWS RDS MySQL Instance**
 ```bash
 --ST_MONITOR_MYSQL_DB_HOST_PORT 'mydb.cluster-xyz.us-east-1.rds.amazonaws.com:3306'
 ```
 
-#### Google Cloud SQL PostgreSQL Instance  
+**Google Cloud SQL PostgreSQL Instance**  
 ```bash
 --ST_MONITOR_POSTGRESQL_HOST_PORT 'google-cloud-ip:5432'
 ```
 
-#### Remote Server with Custom Port
+**Remote Server with Custom Port**
 ```bash
 --ST_MONITOR_MYSQL_DB_HOST_PORT '192.168.1.100:3307'
 ```
 
-#### Azure Database for MySQL
+**Azure Database for MySQL*
 ```bash
 --ST_MONITOR_MYSQL_DB_HOST_PORT 'myserver.mysql.database.azure.com:3306'
 ```
@@ -145,6 +147,7 @@ For other database types, refer to your database's documentation for read-only m
 ## Important Considerations
 
 ### Network Connectivity
+
 - Make sure the monitoring host can reach the remote database on the specified port
 - Configure security groups, firewalls, and network ACLs accordingly
 - Test connectivity before running the setup command:
@@ -153,6 +156,7 @@ For other database types, refer to your database's documentation for read-only m
   ```
 
 ### Monitoring Host Placement
+
 - Place the monitoring host in the same network region/data center as the database when possible to minimize network latency
 - For cloud databases, deploy the monitoring host in the same region/availability zone when possible to avoid cross-AZ data transfer costs
 
