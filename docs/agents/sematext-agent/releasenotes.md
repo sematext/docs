@@ -39,6 +39,30 @@ NULL
 
 -->
 
+## Version 3.9.0
+
+Date: June 20, 2025
+
+### New Features
+
+- **OpenTelemetry (OTel) Support (Preview)**: Initial support for OpenTelemetry is now available, allowing the agent to collect metrics, logs, and traces. This feature is currently in testing and is disabled by default.
+
+### Improvements
+
+- **Proxy Support Enhancements**:
+  - Added proxy support for communication between the Sematext Cloud Command Server and the agent.
+  - Introduced new proxy configuration options for the Monitoring Agent in Kubernetes and Docker.
+  - Enabled proxy usage for the Logs-shipper.
+- Added a mechanism to remove orphaned Monitoring Agent processes.
+
+### Bug Fixes
+
+- Resolved issues with re-spawning the Monitoring Agent and incorrect Apache PID selection.
+
+### Packaging and Installation
+
+- Docker image aliases have changed. The `latest` alias will no longer be published. Instead, we will publish `latest-{major}` tags to provide more stable releases when breaking changes occur.
+
 ## Version 3.8.0
 
 Date: January 15, 2025
@@ -72,7 +96,7 @@ Date: September 23, 2024
 ### Improvements
 
 - The agent owner reference has been added to the Log-shipper DaemonSet, ensuring automatic deletion of the Log-shipper DaemonSet when the Sematext Agent DaemonSet is deleted.
-- A new error message has been added to notify users when Java is not present. This is a case for using AppAgent without Java.
+- A new error message has been added to notify users when Java is not present. This is a case for using Monitoring Agent without Java.
 
 ### Bug Fixes
 
@@ -159,7 +183,7 @@ Date: January 8, 2024
 
 ### Bug Fixes
 
-- Addressed a bug that was preventing the Sematext Agent from spawning monitoring [App Agent](/docs/agents/sematext-agent/app-agent/) pods in Google Kubernetes Engine (GKE) environments.
+- Addressed a bug that was preventing the Sematext Agent from spawning monitoring [Monitoring Agent](/docs/agents/sematext-agent/app-agent/) pods in Google Kubernetes Engine (GKE) environments.
 
 ## Version 3.2.1
 
