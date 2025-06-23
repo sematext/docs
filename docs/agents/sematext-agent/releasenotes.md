@@ -39,6 +39,30 @@ NULL
 
 -->
 
+## Version 3.9.0
+
+Date: June 20, 2025
+
+### New Features
+
+- **OpenTelemetry (OTel) Support (Preview)**: Initial support for OpenTelemetry is now available, allowing the agent to collect metrics, logs, and traces. This feature is currently in testing and is disabled by default.
+
+### Improvements
+
+- **Proxy Support Enhancements**:
+  - Added proxy support for communication between the Sematext Cloud Command Server and the agent.
+  - Introduced new proxy configuration options for the App Agent in Kubernetes and Docker.
+  - Enabled proxy usage for the Logs-shipper.
+- Added a mechanism to remove orphaned App Agent processes.
+
+### Bug Fixes
+
+- Resolved issues with re-spawning the App Agent and incorrect Apache PID selection.
+
+### Packaging and Installation
+
+- Docker image aliases have changed. The `latest` alias will no longer be published. Instead, we will publish `latest-{major}` tags to provide more stable releases when breaking changes occur.
+
 ## Version 3.8.0
 
 Date: January 15, 2025
