@@ -1,7 +1,7 @@
 title: Using the Synthetics API for fetching and creating monitors
 description: How to use the Synthetics API for fetching and creating monitors.
 
-You can also use the Synthetics API to trigger monitor runs, retrieve monitors, create or update monitors (individually or [in bulk](/docs/synthetics/bulk-add-monitors-api)), or schedule monitor pauses. To send any of these API requests, you'll need your account's API Key, which you can copy from the **Settings → API** page.
+You can also use the Synthetics API to trigger monitor runs, retrieve monitors, create or edit monitors (individually or [in bulk](/docs/synthetics/bulk-add-monitors-api)), or schedule monitor pauses. To send any of these API requests, you'll need your account's API Key, which you can copy from the **Settings → API** page.
 
 - [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
 - [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
@@ -487,6 +487,65 @@ curl -L -X PUT 'https://apps.eu.sematext.com/synthetics-api/api/apps/17174/monit
 }'
 ```
 
+## Get all Monitors for an App
+
+To get all the available monitors for an App, the API can be triggered by sending an HTTP request with the below configuration:
+
+| Region | Endpoint
+| --- | --- |
+| US | `https://apps.sematext.com/synthetics-api/api/apps/<appId>/monitors` |
+| EU | `https://apps.eu.sematext.com/synthetics-api/api/apps/<appId>/monitors` |
+
+**HTTP Method** - `GET`
+
+**Request Headers** - `Authorization: apiKey <apiKey>`
+
+Example:
+
+In order to get all the available monitors for the App with an `<appId>` of `17174`, we would send an HTTP request as follows:
+```
+curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors' \
+-H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
+```
+Result:
+```
+{
+  "success": true,
+  "data": {
+    "id": 3124,
+    "name": "Example HTTP monitor",
+```
+
+In the above example we can see that the `<monitorId>` for the `Example HTTP monitor` is `3124`. Using the obtained `<monitorId>`, we can then perform an API request to retrieve only information on the `Example HTTP monitor`.
+
+## Get a single Monitor for an App
+
+To get information on a single monitor for an App, the API can be triggered by sending an HTTP request with the below configuration:
+
+| Region | Endpoint
+| --- | --- |
+| US | `https://apps.sematext.com/synthetics-api/api/apps/<appId>/monitors/<monitorId>` |
+| EU | `https://apps.eu.sematext.com/synthetics-api/api/apps/<appId>/monitors/<monitorId>` |
+
+**HTTP Method** - `GET`
+
+**Request Headers** - `Authorization: apiKey <apiKey>`
+
+Example:
+
+In order to get information on the monitor with a `<monitorId>` of `3124` for the App with `<appId>` equal to `17174`, we would send an HTTP request as follows:
+```
+curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitors/3124' \
+-H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
+```
+Result:
+```
+{
+  "success": true,
+  "data": {
+    "id": 3124,
+    "name": "Example HTTP monitor",
+```
 
 ## API Reference
 
