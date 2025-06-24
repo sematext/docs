@@ -547,6 +547,12 @@ Result:
     "name": "Example HTTP monitor",
 ```
 
+## TODO: Run Monitors using the API
+
+and also check if we need anything represented under Monitor Overview API (the api reference)
+
+## TODO: Create/Edit Scheduled Pauses using the API
+
 ## API Reference
 
 ### API Reference: HTTP Monitor
