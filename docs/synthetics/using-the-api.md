@@ -160,7 +160,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 
 > Make sure you’re using the correct API endpoint for your region, and replace the placeholders with your actual API Key and App ID.
 
-You can adjust the request body parameters to fit your needs. Check [here](#api-refenrence-http-monitor) to see the full list of available parameters.
+You can adjust the request body parameters to fit your needs. Check [here](#api-reference-http-monitor) to see the full list of available parameters.
 
 > Refer to the [Bulk Add Monitors via Apps Script](/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit HTTP monitors using Google Sheets and Apps Script.
 
@@ -370,7 +370,7 @@ curl -L -X POST 'https://apps.sematext.com/synthetics-api/api/apps/17174/monitor
 
 > Make sure you’re using the correct API endpoint for your region, and replace the placeholders with your actual API Key and App ID.
 
-You can adjust the request body parameters to fit your needs. Check [here](#api-refenrence-browser-monitor) to see the full list of available parameters.
+You can adjust the request body parameters to fit your needs. Check [here](#api-reference-browser-monitor) to see the full list of available parameters.
 
 Refer to the [Bulk Add Monitors via Apps Script](/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit Browser monitors using Google Sheets and Apps Script.
 
