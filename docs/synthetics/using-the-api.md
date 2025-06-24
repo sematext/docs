@@ -374,6 +374,119 @@ You can adjust the request body parameters to fit your needs. Check [here](#api-
 
 Refer to the [Bulk Add Monitors via Apps Script](/docs/synthetics/bulk-add-monitors-api/) page to learn how to bulk add or edit Browser monitors using Google Sheets and Apps Script.
 
+## Edit Monitors Using the API
+
+To edit monitors using the API, you need to send a **PUT** request with the full request body with the updated parameters, depending on what you want to change. In the example below, we've added an additional location to the User Journey script-based Browser monitor we created above.
+
+You’ll also need to include the ID of the monitor you want to edit in the URL.
+
+The `<monitorId>` can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `monitorId` is `monitorId` is `276`.
+
+```
+curl -L -X PUT 'https://apps.eu.sematext.com/synthetics-api/api/apps/17174/monitors/browser/11605' \
+-H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd' \
+-H 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Example Browser Monitor with a User Journey script",
+    "interval": "10m",
+    "enabled": true,
+    "locations": [
+        1,
+        2,
+		9
+	],
+    "url": "",
+    "script": "// Example script\n async function testPage(page) {\n   await page.goto(\"https://www.google.com/\");\n   await page.screenshot({ path: '\''screenshot.jpg'\'' });\n }\n module.exports = testPage;",
+    "scriptBased": true,
+	"isPlaywright": true,
+    "conditions": [
+        {
+            "id": 1,
+            "type": "ERROR",
+            "operator": "=",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "id": 2,
+            "type": "METRIC",
+            "key": "synthetics.time.response",
+            "operator": "<",
+            "value": "20000",
+            "enabled": true
+        }
+    ],
+    "alertRule": {
+        "schedule": [
+            {
+                "day": "Monday",
+                "index": 2,
+                "label": "MON",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Tuesday",
+                "index": 3,
+                "label": "TUE",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Wednesday",
+                "index": 4,
+                "label": "WED",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Thursday",
+                "index": 5,
+                "label": "THU",
+                "intervals": [
+                  {
+                     "start": "12:00",
+                     "end": "13:00"
+                  },
+                  {
+                     "start": "12:00",
+                     "end": "13:00"
+                  }
+                ],
+                "type": "CUSTOM"
+            },
+            {
+                "day": "Friday",
+                "index": 6,
+                "label": "FRI",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Saturday",
+                "index": 7,
+                "label": "SAT",
+                "intervals": [],
+                "type": "ACTIVE"
+            },
+            {
+                "day": "Sunday",
+                "index": 1,
+                "label": "SUN",
+                "intervals": [],
+                "type": "ACTIVE"
+            }
+        ],
+        "priority": "WARN",
+        "minDelayBetweenNotificationsInMinutes": "10",
+        "backToNormalNeeded": true,
+        "failedRunCountToAlert": 1,
+        "notificationsEnabled": true,
+        "useOnlyAlertRuleIntegrations": false
+    }
+}'
+```
+
 
 ## API Reference
 
