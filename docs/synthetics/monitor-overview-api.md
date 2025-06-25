@@ -1,7 +1,7 @@
 title: Using the Synthetics API for fetching monitors
 description: How to use the Synthetics API for fetching monitors.
 
-### Get all Monitors for an App
+## Get all Monitors for an App
 
 To get all the available monitors for an App, the API can be triggered by sending an HTTP request with the below configuration:
 
@@ -32,7 +32,7 @@ Result:
 
 In the above example we can see that the `<monitorId>` for the `Example HTTP monitor` is `3124`. Using the obtained `<monitorId>`, we can then perform an API request to retrieve only information on the `Example HTTP monitor`.
 
-### Get a single Monitor for an App
+## Get a single Monitor for an App
 
 To get information on a single monitor for an App, the API can be triggered by sending an HTTP request with the below configuration:
 
