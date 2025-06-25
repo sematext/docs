@@ -3,6 +3,8 @@ description: How to use the Synthetics API to run monitors.
 
 ## Run Monitors using the API
 
+> You’ll need your [API key](/docs/synthetics/using-the-api#getting-the-api-key), [App ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id), and [Monitor ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id) for the API requests below.
+
 The run monitor API can be triggered by sending an HTTP request with the below configuration:
 
 **US Region Endpoint**
