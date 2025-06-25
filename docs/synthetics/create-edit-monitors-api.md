@@ -345,7 +345,7 @@ To edit monitors using the API, you need to send a **PUT** request with the full
 
 You’ll also need to include the ID of the monitor you want to edit in the URL.
 
-The `<monitorId>` can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `monitorId` is `monitorId` is `276`.
+The `<monitorId>` can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `monitorId` is `276`.
 
 ```
 curl -L -X PUT 'https://apps.eu.sematext.com/synthetics-api/api/apps/17174/monitors/browser/11605' \
