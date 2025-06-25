@@ -51,3 +51,34 @@ curl -L -X PUT 'https://apps.eu.sematext.com/synthetics-api/api/scheduledpauses/
   "monitorIds": [11599,10617]
 }'
 ```
+
+## Get Scheduled Pauses using the API
+
+To get all the Scheduled Pauses, the API can be triggered by sending an HTTP GET request.
+
+```
+curl -L -X GET 'https://apps.sematext.com/synthetics-api/api/scheduledpauses' \
+-H 'Authorization: apiKey 9bddb0a6-xxxx-xxxx-xxxx-397d15806cfd'
+```
+Result:
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 261,
+      "name": "test sp",
+      "startsAt": "2025-06-17T00:00:00Z",
+      "endsAt": "2025-06-28T00:00:00Z",
+      "monitorCount": 0
+    },
+    {
+      "id": 262,
+      "name": "Example Scheduled Pause",
+      "startsAt": "2025-07-26T09:00:00Z",
+      "endsAt": "2025-07-26T18:00:00Z",
+      "monitorCount": 2
+    }
+  ]
+}
+```
