@@ -47,5 +47,3 @@ Response:
 From the above response, we can determine that the `<appId>` for the Synthetics App named `Bulk API Test` is `17174`.
 
 
-You can also create or edit [scheduled pauses](/docs/synthetics/scheduled-pauses/) using the Synthetics API.
-
