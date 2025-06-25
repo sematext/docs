@@ -26,6 +26,6 @@ To edit a schedule, you can either click on the schedule within the tooltip or u
 
 ![Schedule Pause Edit](/docs/images/synthetics/schedule-pause-edit.png)
 
-
+You can also use [Synthetics API](/docs/synthetics/using-the-api) to create/edit Scheduled Pauses.
 
 
