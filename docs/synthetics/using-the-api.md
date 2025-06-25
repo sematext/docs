@@ -49,5 +49,3 @@ From the above response, we can determine that the `<appId>` for the Synthetics 
 
 You can also create or edit [scheduled pauses](/docs/synthetics/scheduled-pauses/) using the Synthetics API.
 
-### Create a Scheduled Pause
-
