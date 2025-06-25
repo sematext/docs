@@ -588,14 +588,16 @@ curl --request POST \
   --data '[
     {
         "monitorId": 276,
-        "regions": ["us-east-1","ap-south-1"]
+        "regions": [1,3]
     },
     {
         "monitorId": 335,
-        "regions": ["us-east-1","eu-west-1"]
+        "regions": [1,2]
     }
 ]'
 ```
+
+See [API Reference](#api-reference) to get the location IDs.
 
 ## TODO: Create/Edit Scheduled Pauses using the API
 
