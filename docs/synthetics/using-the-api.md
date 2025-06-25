@@ -557,6 +557,7 @@ curl -L -X PUT 'https://apps.eu.sematext.com/synthetics-api/api/apps/17174/monit
 | | | 6 | Frankfurt, Germany | |
 | | | 7 | Sao Paulo, Brazil | |
 | | | 8 | N. California, USA| |
+| | | 9 | Montreal, Canada|
 | url | STRING | User-defined | URL to monitor | YES - Empty for User Journey |
 | script | STRING | User-defined | User Journey script | YES - Empty for Website Monitor |
 | scriptBased | BOOLEAN | -- | Browser Monitor mode | YES |
@@ -847,6 +848,7 @@ Result:
 | | | 6 | Frankfurt, Germany |
 | | | 7 | Sao Paulo, Brazil |
 | | | 8 | N. California, USA|
+| | | 9 | Montreal, Canada|
 | lastScheduledAt | INTEGER | Variable | Last scheduled run of the monitor (Epoch milliseconds) |
 | status | STRING | -- | Current status of the monitor |
 | | | PASSING | Monitor is passing |
@@ -963,7 +965,7 @@ curl --request POST \
 ]'
 ```
 
-See [API Reference](#api-reference) to get the location IDs.
+See [API Reference](#api-reference-data) to get the location IDs.
 
 ## Create/Edit Scheduled Pauses using the API
 
