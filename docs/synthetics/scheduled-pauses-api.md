@@ -1,9 +1,7 @@
 title: Using the Synthetics API for fetching, creating, editing scheduled pauses
 description: How to use the Synthetics API for fetching, creating, editing scheduled pauses.
 
-## Create Scheduled Pauses using the API
-
-> You’ll need your [API key](/docs/synthetics/using-the-api#getting-the-api-key) for the API requests below.
+You’ll need your [API key](/docs/synthetics/using-the-api#getting-the-api-key) for the API requests below.
 
 To create a [Scheduled Pause](/docs/synthetics/scheduled-pauses/), you'll send an HTTP request with the below configuration:
 
