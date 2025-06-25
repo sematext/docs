@@ -17,7 +17,7 @@ Your account's API Key can be found under **Settings → API** page.
 - [here](https://apps.sematext.com/ui/account/api), if your account is registered in the US region, or
 - [here](https://apps.eu.sematext.com/ui/account/api), for the EU region
 
-### Getting the appId
+### Getting the App ID & Monitor ID
 
 * The `<appId>` and `<monitorId>` values can be extracted from the URL of the Monitor Overview page. For example, if the Monitor Overview page URL is `https://apps.sematext.com/ui/synthetics/12345/monitors/276` then the `appId` is `12345` and `monitorId` is `276`.
 * The `<appId>` can also be obtained by sending a GET request using the above request header and `<apiKey>` to the required endpoint:
