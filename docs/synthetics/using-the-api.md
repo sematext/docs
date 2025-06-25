@@ -810,7 +810,7 @@ Result:
     "name": "Example HTTP monitor",
 ```
 
-### Get Monitors: API Reference
+## Get Monitors: API Reference
 
 | Key | Type | Value | Description
 | --- | --- | --- | --- |
@@ -965,7 +965,9 @@ curl --request POST \
 
 See [API Reference](#api-reference) to get the location IDs.
 
-## TODO: Create/Edit Scheduled Pauses using the API
+## Create/Edit Scheduled Pauses using the API
 
+You can also create or edit [scheduled pauses](/docs/synthetics/scheduled-pauses/) using the Synthetics API.
 
+### Create a Scheduled Pause
 
