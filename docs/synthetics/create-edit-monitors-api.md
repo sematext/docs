@@ -3,6 +3,8 @@ description: How to use the Synthetics API for creating and editing monitors.
 
 ## Create Monitors Using the API
 
+> You’ll need your [API key](/docs/synthetics/using-the-api#getting-the-api-key) and [App ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id) for the API requests below.
+
 The create monitor API can be triggered by sending an HTTP request with the below configuration:
 
 | Type | Region | Endpoint
