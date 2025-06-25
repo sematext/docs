@@ -8,7 +8,7 @@ You can use the Synthetics API to:
 - [Create or Edit Monitors](/docs/synthetics/create-edit-monitors-api)
 - [Schedule Monitor Pauses](/docs/synthetics/scheduled-pauses-api)
 
-To use the API, you'll need your API key for all requests and your Synthetics App ID for some requests.
+To use the API, you'll need your API key for all requests and your Synthetics App ID and Monitor ID for some requests.
 
 ### Getting the API Key
 
