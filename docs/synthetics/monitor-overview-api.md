@@ -1,9 +1,7 @@
 title: Using the Synthetics API for fetching monitors
 description: How to use the Synthetics API for fetching monitors.
 
-## Get all Monitors for an App
-
-> You’ll need your [API key](/docs/synthetics/using-the-api#getting-the-api-key), [App ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id), and [Monitor ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id) for the API requests below.
+You’ll need your [API key](/docs/synthetics/using-the-api#getting-the-api-key), [App ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id), and [Monitor ID](/docs/synthetics/using-the-api#getting-the-app-id-monitor-id) for the API requests below.
 
 To get all the available monitors for an App, the API can be triggered by sending an HTTP request with the below configuration:
 
