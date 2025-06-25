@@ -161,7 +161,7 @@ nav:
           - Using the API: synthetics/create-edit-monitors-api.md   
           - Bulk Add Monitors via Apps Script: synthetics/bulk-add-monitors-api.md
           - Bulk Edit Monitors via Apps Script: synthetics/bulk-edit-monitors-api.md
-        - Scheduled Pauses API: scheduled-pauses-api.md
+        - Scheduled Pauses API: synthetics/scheduled-pauses-api.md
       - Creative Use Cases: synthetics/use-cases.md
       - Changelog: changelog.md
       - FAQ: synthetics/faq.md
