@@ -36,7 +36,7 @@ Yes. This can be done using an HTTP Monitor, please see [authentication](/docs/s
 Yes. This can be done using an HTTP Monitor, please see [authentication](/docs/synthetics/http-monitor/#authentication). For Browser monitors, refer to the examples visible in the UI by clicking the *Browse Examples* button on the screen where User Journey scripts are edited.
 
 ### Can I stop Synthetics Alerts during scheduled maintenance?
-Yes. You can temporarily disable the notifications from **Edit Configuration** -> **Configure Alerts** -> **Notifications**. Once the maintenance window is over, you can re-enable the notifications.
+Yes. You can temporarily disable the notifications from **Edit Configuration** -> **Configure Alerts** -> **Notifications**. Once the maintenance window is over, you can re-enable the notifications. You can also use the [Scheduled Pauses API](/docs/synthetics/scheduled-pauses-api/).
 
 ![Disable Notifications](/docs/images/synthetics/synthetics-faq-notifications-1.png)
 
