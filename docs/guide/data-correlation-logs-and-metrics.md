@@ -11,7 +11,7 @@ In Sematext, `os.host` is a common tag that is part of a [common schema](/docs/t
 
 ## Why is this useful?
 
-Let’s say you’re using [Sematext Monitoring](https://sematext.com/spm/) to collect metrics from your [system](/docs/monitoring/infrastructure/) or [service](/docs/monitoring/service-monitoring/), such as CPU, memory usage, disk I/O, and more. You notice a spike in memory usage on a particular host. Of course, you could also be looking at some service-specific metrics spiking. For example, via an [anomaly detection alert](/docs/alerts/#alert-types) you might get notified about a sudden change in the number of MySQL connections. Instead of guessing what might have caused it, you can click on that host's name to check logs from the same machine, around the same time the spike happened. This gives you context that metrics alone can’t offer. Depending on which logs you are shipping to Sematext from that host, you might want to look at host-level logs, or logs specific to some service running on that host.
+Let’s say you’re using [Sematext Monitoring](/docs/monitoring/infrastructure/) to collect metrics from your [system](/docs/monitoring/infrastructure/) or [service](/docs/monitoring/service-monitoring/), such as CPU, memory usage, disk I/O, and more. You notice a spike in memory usage on a particular host. Of course, you could also be looking at some service-specific metrics spiking. For example, via an [anomaly detection alert](/docs/alerts/#alert-types) you might get notified about a sudden change in the number of MySQL connections. Instead of guessing what might have caused it, you can click on that host's name to check logs from the same machine, around the same time the spike happened. This gives you context that metrics alone can’t offer. Depending on which logs you are shipping to Sematext from that host, you might want to look at host-level logs, or logs specific to some service running on that host.
 
 For more detailed information on memory leaks, debugging techniques, and OOM killer errors, check out related articles on the [Sematext Blog](https://sematext.com/?s=memory).
 
@@ -30,7 +30,7 @@ For more detailed information on memory leaks, debugging techniques, and OOM kil
 
 **Another common scenario, going from logs to metrics:**
 
-- You receive an [anomaly alert]((/docs/alerts/#alert-types)) signaling an unexpected surge in the number of warning and error logs coming from the OpenSearch cluster.
+- You receive an [anomaly alert](/docs/alerts/#alert-types) signaling an unexpected surge in the number of warning and error logs coming from the OpenSearch cluster.
 - To investigate, you open the Logs App that is receiving logs from that cluster.
 - There, you observe a flood of warning and error messages related to disk pressure occurring within a short time window for a data node around the time you’ve received the alert.
 - Next, you open the OpenSearch Monitoring App in [Split Screen](/docs/guide/split-screen/) to view metrics specific to that data node and logs side by side without switching context.
