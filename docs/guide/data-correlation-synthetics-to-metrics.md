@@ -18,7 +18,9 @@ You’re monitoring your public website using a [Browser Monitor](/docs/syntheti
 
 These resource metrics suggest the host is under pressure, potentially explaining the slow page loads captured by Synthetics.
 
-TO DO: VIDEO HERE
+<video style="display:block; width:100%; height:auto;" controls autoplay>
+  <source src="https://sematext.com/wp-content/uploads/2025/07/cross-connect-synthetics-to-metrics_1.mp4" type="video/mp4" />
+</video>
 
 ## Another Use Case: API Timeout During Synthetic Check
 
@@ -28,7 +30,10 @@ TO DO: VIDEO HERE
 - Looking at metrics, you notice that during the failure window, the database latency metric spiked, and the number of open connections dropped, indicating a problem in the DB layer.
 - Further investigation shows a spike in container restarts due to OOM events, confirming the service wasn’t healthy at the time the synthetic checks failed.
 
-TO DO: VIDEO HERE
+<video style="display:block; width:100%; height:auto;" controls autoplay>
+  <source src="https://sematext.com/wp-content/uploads/2025/07/cross-connect-synthetics-to-metrics_2.mp4" type="video/mp4" />
+</video>
+
 
 ## What You Need in Sematext Cloud to Catch These Issues
 
