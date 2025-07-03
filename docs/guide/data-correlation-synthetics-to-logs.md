@@ -28,7 +28,9 @@ To make it even easier to discover issues introduced by new deployments, add [de
 
 > While this example shows how you can pinpoint issues in production by jumping from Synthetics to Logs, our CI/CD integration lets you catch such issues earlier in the pipeline before they reach production. [Learn more](/docs/synthetics/ci-cd/overview/) on shift left testing with Synthetics.
 
-TO DO: VIDEO HERE
+<video style="display:block; width:100%; height:auto;" controls autoplay>
+  <source src="https://sematext.com/wp-content/uploads/2025/07/cross-connect-synthetics-to-logs_1.mp4" type="video/mp4" />
+</video>
 
 **Another Example: Page Load Test Failing During Checkout**
 
@@ -38,7 +40,9 @@ TO DO: VIDEO HERE
 - You open the **Logs App for your backend service**, with the same time window, and look for logs with status code 504 or error level logs.
 - You find timeouts in the logs for the payment processor service and errors about slow database queries.
 
-TO DO: VIDEO HERE
+<video style="display:block; width:100%; height:auto;" controls autoplay>
+  <source src="https://sematext.com/wp-content/uploads/2025/07/cross-connect-synthetics-to-logs_2.mp4" type="video/mp4" />
+</video>
 
 This cross-view confirms the backend service that your frontend depends on is struggling, possibly due to high load or DB issues.
 
