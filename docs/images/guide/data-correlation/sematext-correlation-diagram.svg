@@ -1,0 +1,238 @@
+<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+    Sematext Data Correlation: From Symptom to Root Cause
+  </text>
+  
+  <!-- Data Flow Section -->
+  <g id="data-flow">
+    <!-- Section Title -->
+    <text x="50" y="80" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#374151">
+      Data Flow Architecture
+    </text>
+    
+    <!-- User/Browser -->
+    <circle cx="100" cy="130" r="25" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+    <text x="100" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">User</text>
+    <text x="100" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4b5563">Browser</text>
+    
+    <!-- Flow Arrow 1 -->
+    <path d="M 135 130 L 180 130" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="157" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Request</text>
+    
+    <!-- Public Endpoint -->
+    <rect x="190" y="105" width="80" height="50" rx="5" fill="#10b981" stroke="#059669" stroke-width="2"/>
+    <text x="230" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Public</text>
+    <text x="230" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Endpoint</text>
+    
+    <!-- Flow Arrow 2 -->
+    <path d="M 280 130 L 325 130" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Backend Services -->
+    <rect x="335" y="105" width="80" height="50" rx="5" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+    <text x="375" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Backend</text>
+    <text x="375" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Services</text>
+    
+    <!-- Flow Arrow 3 -->
+    <path d="M 425 130 L 470 130" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Database -->
+    <rect x="480" y="105" width="80" height="50" rx="5" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+    <text x="520" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Database</text>
+  </g>
+  
+  <!-- Data Collection Layer -->
+  <g id="data-collection">
+    <!-- Synthetics -->
+    <rect x="50" y="220" width="120" height="70" rx="8" fill="#ef4444" stroke="#dc2626" stroke-width="3"/>
+    <text x="110" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">SYNTHETICS</text>
+    <text x="110" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Response Time</text>
+    <text x="110" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Errors, UI Behavior</text>
+    
+    <!-- Logs -->
+    <rect x="240" y="220" width="120" height="70" rx="8" fill="#06b6d4" stroke="#0891b2" stroke-width="3"/>
+    <text x="300" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">LOGS</text>
+    <text x="300" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Backend Services</text>
+    <text x="300" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Infrastructure, Database</text>
+    
+    <!-- Metrics -->
+    <rect x="430" y="220" width="120" height="70" rx="8" fill="#84cc16" stroke="#65a30d" stroke-width="3"/>
+    <text x="490" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">METRICS</text>
+    <text x="490" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">CPU, Memory, Disk</text>
+    <text x="490" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Containers, Services</text>
+    
+    <!-- Collection arrows from flow to data types -->
+    <path d="M 110 180 L 110 210" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowhead-red)"/>
+    <path d="M 300 180 L 300 210" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead-cyan)"/>
+    <path d="M 490 180 L 490 210" stroke="#84cc16" stroke-width="2" fill="none" marker-end="url(#arrowhead-green)"/>
+    <path d="M 520 180 L 300 210" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead-cyan)"/>
+  </g>
+  
+  <!-- Cross Connection Workflows -->
+  <g id="cross-connections">
+    <!-- Section Title -->
+    <text x="50" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#374151">
+      Cross Connection Investigation Paths
+    </text>
+    
+    <!-- Workflow 1: Synthetics to Logs -->
+    <g id="workflow1">
+      <rect x="50" y="380" width="280" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="60" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e">
+        1. Synthetics → Logs
+      </text>
+      <text x="60" y="420" font-family="Arial, sans-serif" font-size="11" fill="#78350f">
+        Failed/slow browser test → Backend logs
+      </text>
+      <text x="60" y="435" font-family="Arial, sans-serif" font-size="11" fill="#78350f">
+        Root cause analysis in application logs
+      </text>
+      <text x="60" y="450" font-family="Arial, sans-serif" font-size="11" fill="#78350f">
+        Trace API errors, timeouts, exceptions
+      </text>
+      
+      <!-- Arrow from Synthetics to Logs -->
+      <path d="M 110 290 Q 110 320 190 380" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrowhead-yellow)"/>
+    </g>
+    
+    <!-- Workflow 2: Synthetics to Metrics -->
+    <g id="workflow2">
+      <rect x="350" y="380" width="280" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+      <text x="360" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#15803d">
+        2. Synthetics → Metrics
+      </text>
+      <text x="360" y="420" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+        Synthetic check failures → System metrics
+      </text>
+      <text x="360" y="435" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+        Correlate with CPU, memory, disk usage
+      </text>
+      <text x="360" y="450" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+        Identify resource bottlenecks
+      </text>
+      
+      <!-- Arrow from Synthetics to Metrics -->
+      <path d="M 110 290 Q 110 320 490 380" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrowhead-green)"/>
+    </g>
+    
+    <!-- Workflow 3: Metrics ↔ Logs -->
+    <g id="workflow3">
+      <rect x="650" y="380" width="280" height="80" rx="10" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+      <text x="660" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3730a3">
+        3. Metrics ↔ Logs
+      </text>
+      <text x="660" y="420" font-family="Arial, sans-serif" font-size="11" fill="#312e81">
+        CPU spike → Why? Check logs
+      </text>
+      <text x="660" y="435" font-family="Arial, sans-serif" font-size="11" fill="#312e81">
+        Error in logs → Impact? Check metrics
+      </text>
+      <text x="660" y="450" font-family="Arial, sans-serif" font-size="11" fill="#312e81">
+        Bidirectional correlation
+      </text>
+      
+      <!-- Bidirectional arrow between Logs and Metrics -->
+      <path d="M 300 290 Q 350 320 490 290" stroke="#4f46e5" stroke-width="3" fill="none" marker-end="url(#arrowhead-indigo)"/>
+      <path d="M 490 290 Q 450 320 300 290" stroke="#4f46e5" stroke-width="3" fill="none" marker-end="url(#arrowhead-indigo)"/>
+    </g>
+  </g>
+  
+  <!-- Benefits Section -->
+  <g id="benefits">
+    <!-- Section Title -->
+    <text x="50" y="520" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#374151">
+      Why Correlation Matters
+    </text>
+    
+    <!-- Benefit boxes -->
+    <rect x="50" y="540" width="200" height="120" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+    <text x="60" y="560" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">
+      Complete Picture
+    </text>
+    <text x="60" y="580" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • User impact visibility
+    </text>
+    <text x="60" y="595" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Internal system state
+    </text>
+    <text x="60" y="610" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Connected insights
+    </text>
+    <text x="60" y="625" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Pattern identification
+    </text>
+    <text x="60" y="640" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Reduced MTTR
+    </text>
+    
+    <rect x="270" y="540" width="200" height="120" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+    <text x="280" y="560" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">
+      Faster Investigation
+    </text>
+    <text x="280" y="580" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • No tool switching
+    </text>
+    <text x="280" y="595" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Context preservation
+    </text>
+    <text x="280" y="610" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Symptom to root cause
+    </text>
+    <text x="280" y="625" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Actionable insights
+    </text>
+    <text x="280" y="640" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Effective troubleshooting
+    </text>
+    
+    <rect x="490" y="540" width="200" height="120" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+    <text x="500" y="560" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">
+      Multi-Layer Monitoring
+    </text>
+    <text x="500" y="580" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Infrastructure
+    </text>
+    <text x="500" y="595" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Services &amp; APIs
+    </text>
+    <text x="500" y="610" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • Frontend experience
+    </text>
+    <text x="500" y="625" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • User journeys
+    </text>
+    <text x="500" y="640" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      • End-to-end visibility
+    </text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="500" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">
+    Sematext: Connecting the Dots from Symptom to Root Cause
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#84cc16"/>
+    </marker>
+    <marker id="arrowhead-yellow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowhead-indigo" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4f46e5"/>
+    </marker>
+  </defs>
+</svg>
