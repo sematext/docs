@@ -7,10 +7,10 @@ nav:
       - What is an App?: guide/app-guide.md
       - Pricing Guide: guide/pricing-guide.md
       - Data Correlation:
-        - Overview: guide/overview.md
-        - How to take advantage of cross connect via os.host: guide/correlating-logs-and-metrics.md
-        - How to Troubleshoot with Synthetics-to-Logs Correlation: guide/synthetics-to-logs.md
-        - How to Troubleshoot with Synthetics-to-Metrics Correlation: guide/synthetics-to-metrics.md
+        - Overview: guide/data-correlation-overview.md
+        - How to take advantage of cross connect via os.host: guide/data-correlation-logs-and-metrics.md
+        - How to Troubleshoot with Synthetics-to-Logs Correlation: guide/data-correlation-synthetics-to-logs.md
+        - How to Troubleshoot with Synthetics-to-Metrics Correlation: guide/data-correlation-synthetics-to-metrics.md
         - Connected Apps: guide/connected-apps.md
         - Split Screen: guide/split-screen.md
       - What is a Report?: guide/reports-guide.md
