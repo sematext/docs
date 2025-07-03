@@ -24,7 +24,9 @@ For more detailed information on memory leaks, debugging techniques, and OOM kil
 - You notice repeated **slow query logs** from that host appearing around the same time, suggesting that a resource-heavy query may have caused the CPU spike.
 - To fully resolve the issue, you might look into which service or application is generating that query and consider adjusting the code or optimizing the query to reduce resource usage and prevent similar spikes in the future.
 
-TODO: VIDEO HERE
+<video style="display:block; width:100%; height:auto;" controls autoplay>
+  <source src="https://sematext.com/wp-content/uploads/2025/07/os-cross-connect-metrics-to-logs.mp4" type="video/mp4" />
+</video>
 
 **Another common scenario, going from logs to metrics:**
 
@@ -36,7 +38,9 @@ TODO: VIDEO HERE
 - If the issue continues, the system is at risk of running out of disk space entirely.
 - This correlation suggests that the spike in warning and error logs is contributing to excessive disk usage, potentially affecting the stability and performance of the cluster.
 
-TODO: VIDEO HERE
+<video style="display:block; width:100%; height:auto;" controls autoplay>
+  <source src="https://sematext.com/wp-content/uploads/2025/07/os-cross-connect-logs-to-metrics.mp4" type="video/mp4" />
+</video>
 
 ## What You Need in Sematext Cloud to Catch These Issues
 
