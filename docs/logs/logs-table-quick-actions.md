@@ -70,3 +70,4 @@ And you will see related Infrastructure performance metrics automatically filter
 
 ![Host Flyout](/docs/images/logs/host-flyout.png)
 
+Want to understand how field-based correlation works between Logs and Metrics using fields like `os.host`? [Learn more about data correlation in Sematext](/docs/guide/data-correlation-logs-and-metrics/).
