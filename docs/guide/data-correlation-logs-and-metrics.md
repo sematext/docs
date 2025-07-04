@@ -5,8 +5,6 @@ When you're troubleshooting infrastructure or a service, say because of poor per
 
 ## What is os.host?
 
-In Sematext, `os.host` is a common tag that is part of Sematext Cloud’s unified schema. It is used across multiple monitoring solutions to correlate 
-
 In Sematext, `os.host` is a common tag that is part of a [common schema](/docs/tags/common-schema/#common-tags). It is used across multiple Sematext monitoring solutions to connect [metrics](/docs/monitoring/) and [logs](/docs/logs/) coming from the same host. It appears automatically in both Monitoring and Logs [Apps](/docs/guide/app-guide/) when you’re shipping data from a host using [Sematext Agent](/docs/agents/sematext-agent/). This makes it easy to switch from viewing metrics to viewing logs (or vice versa) for the same machine.
 
 ## Why is this useful?
