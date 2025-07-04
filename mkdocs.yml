@@ -6,6 +6,13 @@ nav:
     - User Guide:
       - What is an App?: guide/app-guide.md
       - Pricing Guide: guide/pricing-guide.md
+      - Data Correlation:
+        - Overview: guide/data-correlation-overview.md
+        - Correlate using os.host: guide/data-correlation-logs-and-metrics.md
+        - Synthetics to Logs Correlation: guide/data-correlation-synthetics-to-logs.md
+        - Synthetics to Metrics Correlation: guide/data-correlation-synthetics-to-metrics.md
+        - Connected Apps: guide/connected-apps.md
+        - Split Screen: guide/split-screen.md
       - What is a Report?: guide/reports-guide.md
       - Features in This Screen Flyout: guide/features-in-this-screen.md
       - Integrations Guide: guide/integrations-guide.md
@@ -15,8 +22,6 @@ nav:
       - Events Guide: guide/events-guide.md
       # - Dashboards Guide: guide/dashboards-guide.md
       - Audit Trail: guide/audit-trail.md
-      - Connected Apps: guide/connected-apps.md
-      - Split Screen: guide/split-screen.md
       - Saved Views: guide/saved-views.md
       - Scheduled Reports: guide/scheduled-reports.md
     - Fleet and Discovery: 
