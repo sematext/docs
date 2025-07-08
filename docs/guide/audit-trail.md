@@ -69,3 +69,6 @@ You can access the Audit Trail from your Sematext Cloud account. It allows you t
 
 If you want to share Apps, Dashboards, and Alert Rules with others or use Sematext as a team or company, we recommend creating a [Team Account](https://sematext.com/docs/team/#team-account) using a shared group email (e.g., dev@..., engineering@..., monitoring@...). This account isn’t tied to any individual’s email and doesn’t incur additional costs. You can then invite everyone who needs access to collaborate within that account.
 
+## Pricing
+
+Audit Trail can be enabled or disabled at any time from your account settings, though you will still be charged for the current month. The cost is 2% on top of your monthly bill for annual plans, and 3% for monthly plans. Only users with the Account Owner role can change this setting.
