@@ -71,4 +71,5 @@ If you want to share Apps, Dashboards, and Alert Rules with others or use Semate
 
 ## Pricing
 
-Audit Trail can be enabled or disabled at any time from your account settings, though you will still be charged for the current month. The cost is 2% on top of your monthly bill for annual plans, and 3% for monthly plans. Only users with the Account Owner role can change this setting.
+Audit Trail can be enabled or disabled at any time from your account settings. Only users with the Account Owner role can change this setting. The cost is 2% of the monthly spend for annual plans, and 3% for monthly plans. This amount will be applied if Audit Trail was enabled for any period of time during the month.
+
