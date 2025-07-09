@@ -43,7 +43,7 @@ All of our plans include support via live chat and email. For Standard and Pro P
 
 ### Audit Trail Pricing
 
-[Audit Trail](/docs/guide/audit-trail/) provides visibility into user activities like creating or updating alerts, dashboards, apps, and more. It helps teams track configuration changes, see who did what and when.
+[Audit Trail](/docs/guide/audit-trail/) provides visibility into user activities like creating or updating alerts, dashboards, Apps, and more. It helps teams track configuration changes, see who did what and when.
 
 When enabled:
 
