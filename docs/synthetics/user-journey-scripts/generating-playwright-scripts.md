@@ -3,7 +3,7 @@ description: A short guide on how you can write Playwright scripts using GenAI t
 
 Generative AI tools such as ChatGPT and Claude are getting better and better at writing code, including Playwright scripts. They can help you generate a general outline for your script which you may have to fix up a little depending on how descriptive you are with the requirements and how complex your flow is. If the flow you're looking to implement is very simple, then these AI models might even generate a working script outright.
 
-
+>We wrote a guide that shows how to do it step by step using Chrome and ChatGPT: [How to Create Playwright Scripts for Website Monitoring with Chrome, ChatGPT](https://sematext.com/blog/how-to-create-playwright-scripts-for-website-monitoring-with-chrome-chatgpt-sematext/)
 
 ## Prompting generative AI to create Playwright scripts
 
