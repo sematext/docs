@@ -166,6 +166,9 @@ Please see the `same-origin` question right above this one, this issue could ver
 ### How do I avoid intermittent issues from affecting the availability of my monitors?
 The consecutive runs feature available in the **General** section for both HTTP and Browser monitors allows you to automatically run the monitor again after a failed run. Since the retried run will be run as soon as the failed run is reported, this can help avoid network errors or similar intermittent issues from affecting your overall availability, while still alerting you on issues which persist after multiple retries. Note that we reserve an extra 5% of the monitor's currently reserved runs per retry, with these extra runs being figured into the calculation at the bottom of the **General** page.
 
+### Do you have a script recorder for creating Playwright scripts?
+We don’t have a built-in recorder, but you can still create Playwright scripts easily. We wrote a guide that shows how to do it step by step using Chrome and ChatGPT: [How to Create Playwright Scripts for Website Monitoring with Chrome, ChatGPT](https://sematext.com/blog/how-to-create-playwright-scripts-for-website-monitoring-with-chrome-chatgpt-sematext/)
+
 ### How do I do X in a User Journey script?
 Please see the section on [User Journey script examples](/docs/synthetics/user-journey-scripts/examples).
 
