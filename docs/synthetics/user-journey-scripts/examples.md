@@ -7,6 +7,7 @@ Several examples of some common use-cases which can be used as a starting point 
 
 These examples are also publicly available [here](https://github.com/sematext/docs/tree/master/docs/synthetics/playwright-scripts), while a description for each of these can be found below.
 
+>If you’re not familiar with writing scripts, don’t worry. You do not need to be a developer or write code from scratch. Our step-by-step guide shows how to create Playwright scripts easily using Chrome and ChatGPT: [How to Create Playwright Scripts for Website Monitoring with Chrome, ChatGPT](https://sematext.com/blog/how-to-create-playwright-scripts-for-website-monitoring-with-chrome-chatgpt-sematext/).
 
 ## Examples List
 
