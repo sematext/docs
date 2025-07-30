@@ -50,6 +50,8 @@ The **Alert after N Consecutive Failures from a Specific Location** setting is l
 
 On the other hand, the **Consecutive Runs** setting can be found in the **General** tab. It won't consider the monitor as failed after N retry attempts, and the retries will occur immediately after the run fails, instead of waiting for the usual interval. Because the retried runs are not treated as failed, these two settings will thus affect the monitor's availability statistics differently.
 
+Multiple retries of the same failed run are not displayed in Sematext in order to avoid clutter and to maintain accurate SLA reporting. Only the final outcome of a run is displayed, regardless of whether it was retried once or multiple times.
+
 See [HTTP](/docs/synthetics/http-monitor/#configuration) or [Browser](/docs/synthetics/browser-monitor/#configuration) monitor configuration for more information on these settings.
 
 ### What are the default timeouts for HTTP & Browser monitors?
@@ -222,5 +224,5 @@ See info about user roles in [sharing FAQ](/docs/faq/#sharing).
 
 ## Alerts
 
-### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
+### Can I send alerts to PagerDuty, Slack, MS Teams, or other WebHooks?
 See [alerts FAQ](/docs/faq/#alerts).
