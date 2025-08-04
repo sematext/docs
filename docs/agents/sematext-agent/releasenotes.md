@@ -39,6 +39,28 @@ NULL
 
 -->
 
+## Version 3.10.0
+
+Date: August 4, 2025
+
+### New Features
+
+- **Kubernetes/Docker OpenTelemetry Support**: Added support for OpenTelemetry in Kubernetes and Docker environments via environment variables, including Helm chart support.
+- **OTel Token Groups**: Introduced bulk service names support for OpenTelemetry configurations, allowing for more efficient management of multiple services.
+
+### Improvements
+
+- **Performance Optimizations**: 
+  - Optimized journal retry loop and reduced memory usage for better system resource utilization.
+  - Enhanced OTel receivers and Elasticsearch client performance to significantly reduce CPU usage.
+- **Traces Configuration**: Added fallback support for `traces_receiver_url` property to improve trace collection reliability.
+
+### Bug Fixes
+
+- **Custom Logs**: Muted excessive logging for example `myapp-logs` application to reduce log noise.
+- **Log File Management**: Enhanced log file lifecycle tracking to prevent duplicate log entries and improve data accuracy.
+- **OTel Logs**: Disabled payload writing for OpenTelemetry logs to optimize performance and reduce storage overhead.
+
 ## Version 3.9.0
 
 Date: June 20, 2025
