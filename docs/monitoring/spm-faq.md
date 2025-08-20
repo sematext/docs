@@ -585,7 +585,7 @@ sudo apt install gnupg
 
 After that, you should be able to add the key to your system.  
 ```bash
-wget -O - https://pub-repo.sematext.com/debian/sematext.gpg.key | sudo apt-key add -
+curl -fsSL https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/sematext-archive-keyring.gpg
 ```
 
 ### How to prevent "Pending" status when installing Sematext Agent on a Kubernetes Cluster?

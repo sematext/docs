@@ -22,8 +22,9 @@ Before you begin, make sure you have:
 Add the Sematext repository and install the agent:
 
 ```bash
-echo "deb http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null && \
-wget -O - https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo apt-key add - && \
+sudo apt-get install ca-certificates && \
+curl -fsSL https://pub-repo.sematext.com/ubuntu/sematext.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/sematext-archive-keyring.gpg && \
+echo "deb [signed-by=/usr/share/keyrings/sematext-archive-keyring.gpg] http://pub-repo.sematext.com/ubuntu sematext main" | sudo tee /etc/apt/sources.list.d/sematext.list > /dev/null && \
 sudo apt-get update && \
 sudo apt-get install sematext-agent
 ```
