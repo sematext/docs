@@ -39,6 +39,22 @@ NULL
 
 -->
 
+## Version 3.10.1
+
+Date: August 22, 2025
+
+### New Features
+
+- **OpenTelemetry Windows Support**: Added OpenTelemetry GUI support to the Windows installer, enabling OTel functionality on Windows environments.
+
+### Improvements
+
+- **Service Permissions**: Added services permission for service catalog functionality in the Helm chart.
+
+### Bug Fixes
+
+- **OTel CLI Type Flag**: Fixed type flag requirement for OpenTelemetry services commands in the CLI.
+
 ## Version 3.10.0
 
 Date: August 4, 2025
