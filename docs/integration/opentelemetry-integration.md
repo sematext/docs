@@ -19,7 +19,7 @@ For now, you can start shipping logs. With logs you can monitor your application
 
 ### Standard Info Added Automatically
 
-After following the SKD-specific instructions, your logs will automatically have useful metadata in every log.
+After following the SDK-specific instructions, your logs will automatically have useful metadata in every log.
 
 Common fields include:
 
