@@ -42,7 +42,7 @@ Overview report provides a view of your system's observability with visual analy
 
 ![OTEL Logs Explore](/docs/images/integrations/otel-logs-explore.png)
 
-Explore report lets you see raw logs in the Logs Table. Here you can use Quick Actions such as creating alerts, adding logs to dashboards, or applying filters. You can save common queries as Saved Views for faster access later. You can also correlate logs with Events such as deployments, scaling actions, or configuration changes to understand when and why issues started. This makes troubleshooting faster because you can connect changes in your system directly with the log activity they caused.
+Explore report lets you see raw logs in the Logs Table. Here you can use [Quick Actions](/docs/logs/logs-table-quick-actions/) such as creating alerts, adding logs to dashboards, or applying filters. You can save common queries as [Saved Views](/docs/guide/saved-views/) for faster access later. You can also correlate logs with Events such as deployments, scaling actions, or configuration changes to understand when and why issues started. This makes troubleshooting faster because you can connect changes in your system directly with the log activity they caused.
 
 ## Default Alert Rules
 
@@ -79,6 +79,6 @@ The recording below shows how events can help when you receive an anomaly alert 
 
 ## Troubleshooting
 
-If you have trouble sending logs, try out the latest version of Sematext Agent. Also, make sure Sematext Agent is configured to send logs to your OpenTelemetry Logs App. Lastly, check the Log Agents panel for any errors, and refer to our Sematext Logs FAQ for useful tips.
+If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your OpenTelemetry Logs App. Lastly, check the [Log Agents panel](/docs/fleet/#log-agents) panel for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
-For more troubleshooting information please look at Troubleshooting section.
+For more troubleshooting information please look at [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.
