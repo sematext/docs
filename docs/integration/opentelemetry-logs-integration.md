@@ -69,7 +69,13 @@ For example, if an error surge happens after a new release, the event log helps 
 
 Once your events are in Sematext Cloud, you can view them by toggling on the Events heatbar in your OpenTelemetry Logs App’s Explore report. Hovering over the heat bar shows the number of events that occurred within a specific timeframe. Clicking on a section opens a flyout where you can see detailed event information and directly correlate with your logs.
 
-[Video here]
+For example, the recording below shows how events can help when you receive an anomaly alert about a sudden spike in errors in your logs.
+- Open the OpenTelemetry Logs App and filter for errors
+- Toggle on the Events heatmap to see recent changes
+- Notice two new events in the last five minutes
+- Open the details and see a deployment that likely caused the spike
+
+![OTel Logs Events Correlation](/docs/images/integrations/otel-logs-events-correlation.gif)
 
 ## Troubleshooting
 
