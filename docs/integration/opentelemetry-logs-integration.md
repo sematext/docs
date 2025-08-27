@@ -36,11 +36,11 @@ Once data is in, you can explore it via the built-in reports:
 
 Overview report provides a view of your system's observability with visual analytics including total log counts, severity distribution (info, warning, error, debug, trace), SDK breakdown, service-by-service activity monitoring, host distribution analysis, and timeline visualizations showing activity patterns over time. You can drill down from these visualizations to investigate issues and understand how your system behaves across services and environments.
 
-![OTEL Logs Overview](docs/images/integrations/otel-logs-overview.png)
+![OTEL Logs Overview](/docs/images/integrations/otel-logs-overview.png)
 
 ### Explore Report
 
-![OTEL Logs Explore](docs/images/integrations/otel-logs-explore.png)
+![OTEL Logs Explore](/docs/images/integrations/otel-logs-explore.png)
 
 Explore report lets you see raw logs in the Logs Table. Here you can use Quick Actions such as creating alerts, adding logs to dashboards, or applying filters. You can save common queries as Saved Views for faster access later. You can also correlate logs with Events such as deployments, scaling actions, or configuration changes to understand when and why issues started. This makes troubleshooting faster because you can connect changes in your system directly with the log activity they caused.
 
