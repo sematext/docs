@@ -28,7 +28,7 @@ Common fields include:
 - `deployment.environment` - Where it's running (dev, prod, etc.)
 - `host.name` - Server name
 - `container.name` - Docker container name
-- `trace.id` and `span.id` - Identifiers that connect a log entry with a specific trace or span. These fields are useful because they allow you to move from a log message to the exact request trace and see the full context of what happened before and after that log entry.
+- `trace.id` and `span.id` - Identifiers that connect a log entry with a specific trace or span. These fields are useful because they allow you to start from a trace or span and then find the related logs to see detailed context about what happened during that request.
 
 Once data is in, you can explore it via the built-in reports:
 
