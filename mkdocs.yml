@@ -210,7 +210,7 @@ nav:
         - Storm: integration/storm.md
         - ZooKeeper: integration/zookeeper.md
       - OpenTelemetry:
-        - Logs: integration/opentelemetry-logs-integration.md
+        - Logs: integration/opentelemetry-integration.md
       - Programming Languages & Frameworks:
         - Akka: integration/akka.md
         - Express.js: integration/express.js.md
