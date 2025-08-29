@@ -26,7 +26,7 @@ Common fields include:
 - `service.name` - Your applications's name
 - `service.version` - Your applications's version
 - `deployment.environment` - Where it's running (dev, prod, etc.)
-- `host.name` - Server name
+- `os.host` - Server name
 - `container.name` - Docker container name
 - `trace.id` and `span.id` - Identifiers that connect a log entry with a specific trace or span. These fields are useful because they allow you to start from a trace or span and then find the related logs to see detailed context about what happened during that request.
 
