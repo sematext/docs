@@ -10,7 +10,7 @@ For now, you can start shipping logs. With logs you can monitor your application
 ## Create OpenTelemetry Logs App & Install Sematext Agent
 
 - Create an OpenTelemetry [Logs App](/docs/guide/app-guide). This App is where your logs will be stored and analyzed.
-- Install the [Sematext Agent](/docs/agents/sematext-agent/releasenotes) using the instructions shown in the App creation flow. The Agent works as an OpenTelemetry collector and ships logs from your OpenTelemetry SDKs to Sematext Cloud.
+- Install the [Sematext Agent](/docs/agents/sematext-agent/releasenotes) using the instructions shown in the App creation flow. The Agent works as an OpenTelemetry collector and ships logs from your application that has been instrumented with an OpenTelemetry SDKs to Sematext Cloud.
 - Set up log exporting in your application. After installing the Agent, follow the SDK-specific instructions provided in the UI. Choose your language and integrate OpenTelemetry logging into your code.
 
 > OpenTelemetry logging is supported in `Python`, `Go`, `Node.js`, `.NET`, `Java`, `Ruby`, and `PHP`. The SDK setup instructions for these languages are shown after you create an OpenTelemetry Logs App and install the Sematext Agent.
