@@ -34,7 +34,7 @@ Once data is in, you can explore it via the built-in reports:
 
 ### Overview Report
 
-Overview report provides a view of your system's observability with visual analytics including total log counts, severity distribution (info, warning, error, debug, trace), SDK breakdown, service-by-service activity monitoring, host distribution analysis, and timeline visualizations showing activity patterns over time. You can drill down from these visualizations to investigate issues and understand how your system behaves across services and environments.
+Overview report provides a view of your system's state/status/health with visual analytics including total log counts, severity distribution (info, warning, error, debug, trace), SDK breakdown, service-by-service activity monitoring, host distribution analysis, and timeline visualizations showing activity patterns over time. You can drill down from these visualizations to investigate issues and understand how your system behaves across services and environments.
 
 ![OTEL Logs Overview](/docs/images/integrations/otel-logs-overview.png)
 
