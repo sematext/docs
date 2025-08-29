@@ -39,6 +39,51 @@ NULL
 
 -->
 
+## Version 4.0.0
+
+Date: August 28, 2025
+
+### Improvements
+
+- Migrated leader election mechanism from ConfigMaps to Leases for improved Kubernetes compatibility.
+- Performance improvements.
+
+### Breaking Changes
+
+Due to our leader election changes, updating cluster roles is required.
+
+#### kubectl Installation
+
+Please re-apply `sematext-clusterroles.yaml` to your cluster.
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+After applying the new cluster roles, follow the agent upgrade steps from Sematext Cloud.
+
+#### Helm Installation
+
+Please update your `sematext` Helm repository.
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
+
+Ensure you have at least version **1.8.0** of the `sematext-agent` Helm package.
+```
+> helm search repo sematext
+NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
+sematext/sematext-agent	1.8.0        	1.0        	Helm chart for deploying Sematext Agent and Log...
+```
+
+After updating the Helm chart, follow the agent upgrade steps from Sematext Cloud.
+
+#### Troubleshooting
+
+For any errors, check our [Sematext Monitoring FAQ](/docs/monitoring/spm-faq/).
+
 ## Version 3.10.1
 
 Date: August 22, 2025
