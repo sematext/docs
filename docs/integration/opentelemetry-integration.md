@@ -81,4 +81,4 @@ The recording below shows how events can help when you receive an anomaly alert 
 
 If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your OpenTelemetry Logs App. Lastly, check the [Log Agents panel](/docs/fleet/#log-agents) panel for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
-For more troubleshooting information please look at [Troubleshooting](/docs/monitoring/spm-faq/#troubleshooting) section.
+For more troubleshooting information please look at [Troubleshooting](/docs/logs/faq/#troubleshooting) section.
