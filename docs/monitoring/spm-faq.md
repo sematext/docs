@@ -455,7 +455,7 @@ docker run -d  --restart always --memory 168m --memory-swap=236m --privileged -P
   -v /etc/group:/etc/group:ro \
   -e INFRA_TOKEN=<your-infra-token> \
   -e REGION=US \
-  sematext/agent:latest-3
+  sematext/agent:latest-4
 ```
 
 ### What's the CPU usage overhead for Sematext Agent running in a container?

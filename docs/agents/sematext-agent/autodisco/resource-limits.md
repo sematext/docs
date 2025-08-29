@@ -32,7 +32,7 @@ docker run ... \
 ... \
 -e AUTODISCO_AGENT_CONTAINER_MEM_LIMIT=1024 \ # Override default memory limit to 1024Mi
 -e AUTODISCO_AGENT_CONTAINER_CPU_SET=0-3 \ # Assign CPU cores 0-3 to the container
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 By using these environment variables, you can fine-tune the resource allocation for non-Kubernetes containers based on your specific requirements.

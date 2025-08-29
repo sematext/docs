@@ -17,7 +17,7 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /etc/group:/etc/group:ro \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 _[Read more](/docs/agents/sematext-agent/permission-requirements/#bind-mounts) about why Sematext Agent needs access to host files and directories._
@@ -33,7 +33,7 @@ By default, the US region receiver endpoints are used to ship data to Sematext C
 To update or upgrade the Sematext Agent to the latest version, you can pull the latest image and recreate the container:
 
 ```bash
-docker pull sematext/agent:latest-3
+docker pull sematext/agent:latest-4
 docker rm -f st-agent
 docker run -d  --restart always --privileged -P --name st-agent \
 -v /:/hostfs:ro \
@@ -44,7 +44,7 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /etc/group:/etc/group:ro \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 ### Uninstalling Sematext Agent on Docker
@@ -72,7 +72,7 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /var/run/docker.sock:/var/run/docker.sock:ro \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 Docker on OSX relies on virtualization capabilities to spawn the containers inside the VM. The side effect is that Sematext Agent will report the OS metrics of the VM box and not the bare-metal machine where OSX is running.
@@ -82,7 +82,7 @@ Docker on OSX relies on virtualization capabilities to spawn the containers insi
 To update the Sematext Agent on Docker for OSX, follow the same steps as for Docker:
 
 ```bash
-docker pull sematext/agent:latest-3
+docker pull sematext/agent:latest-4
 docker rm -f st-agent
 docker run -d  --restart always --privileged -P --name st-agent \
 -v /:/hostfs:ro \
@@ -94,7 +94,7 @@ docker run -d  --restart always --privileged -P --name st-agent \
 -v /var/run/docker.sock:/var/run/docker.sock:ro \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 ### Uninstalling Sematext Agent on Docker for OSX
@@ -120,7 +120,7 @@ $ docker run -d  --restart always --privileged -P --name st-agent \
 -v /dev:/hostfs/dev:ro \
 -e INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE> \
 -e REGION=<US or EU> \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 ## Docker Compose
@@ -132,7 +132,7 @@ For the deployments that are orchestrated by Docker Compose, you can use the fol
 version: '3'
 services:
   sematext-agent:
-    image: 'sematext/agent:latest-3'
+    image: 'sematext/agent:latest-4'
     environment:
       - affinity:container!=*sematext-agent*
       - INFRA_TOKEN=<YOUR_INFRA_APP_TOKEN_HERE>
@@ -188,7 +188,7 @@ The following `docker-compose.yml` file provides a working configuration that ca
 version: '3'
 services:
   sematext-agent:
-    image: 'sematext/agent:latest-3'
+    image: 'sematext/agent:latest-4'
     environment:
       - INFRA_TOKEN: <YOUR_INFRA_APP_TOKEN_HERE>
       - REGION: <US or EU>
@@ -225,7 +225,7 @@ _[Read more](/docs/agents/sematext-agent/permission-requirements/#bind-mounts) a
 To update the Sematext Agent on Docker Swarm, follow these steps:
 
 ```bash
-docker service update --image sematext/agent:latest-3 sematext-agent
+docker service update --image sematext/agent:latest-4 sematext-agent
 ```
 
 This command will update the Sematext Agent service to the latest image.

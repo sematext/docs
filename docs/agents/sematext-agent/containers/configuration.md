@@ -79,7 +79,7 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 -e LOGS_RECEIVER_URL=https://logsene-receiver.sematext.com \
 -e EVENTS_RECEIVER_URL=https://event-receiver.sematext.com \
 -e COMMAND_SERVER_URL=https://command.sematext.com \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 You can add different environment variables preceded by the `-e` argument. For example, if you want to ignore the discovery of `nginx` processes, add `-e CONTAINER_SKIP_BY_IMAGE=nginx`. Remember to place the last `\` right after:
@@ -100,7 +100,7 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 -e EVENTS_RECEIVER_URL=https://event-receiver.sematext.com \
 -e COMMAND_SERVER_URL=https://command.sematext.com \
 -e CONTAINER_SKIP_BY_IMAGE=nginx \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 To skip multiple images simply separate them with a comma. In the example below we ignore containers whose names contain `nginx` or `httpd`.
@@ -111,7 +111,7 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 -v /sys/:/hostfs/sys:ro \
 # ...
 -e CONTAINER_SKIP_BY_IMAGE=nginx,apache/httpd \
-sematext/agent:latest-3
+sematext/agent:latest-4
 ```
 
 **Note:** The `CONTAINER_SKIP_BY_IMAGE` values will search for any substring match among the discovered images. Therefore, if you wish to skip the `apache/httpd` image, you can simply use `httpd`. This applies similarly to other matching and skipping options such as `CONTAINER_MATCH_BY_IMAGE`, `CONTAINER_MATCH_BY_NAME`, and `CONTAINER_SKIP_BY_NAME`.
@@ -123,7 +123,7 @@ If you are using Docker Swarm, append the new line in the `environment` section 
 version: "3"
 services:
   st-agent:
-    image: sematext/agent:latest-3
+    image: sematext/agent:latest-4
     privileged: true
     environment:
       - INFRA_TOKEN=<your-infra-token>
