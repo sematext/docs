@@ -120,6 +120,8 @@ nav:
       - Traces Explorer: tracing/explorer/index.md
       - Trace Details: tracing/trace-details/index.md
       - Alerts: tracing/alerts/creating-alerts.md
+      - Sampling: tracing/sampling.md
+      - Troubleshooting: tracing/troubleshooting.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
