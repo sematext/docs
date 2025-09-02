@@ -1,43 +1,101 @@
-title: Transaction Tracing
-description: Trace code execution from beginning to end, see insights into operations about various data stores with database operations report, and trace arbitrary applications, including backend and command-line apps, batch jobs like MapReduce and more
+title: Sematext Tracing
+description: Distributed tracing with OpenTelemetry for monitoring microservices, APIs, and distributed systems
 
-## What is Transaction Tracing
+## What is Sematext Tracing?
 
-Transaction tracing lets one trace code execution from beginning to end.
-It also enables [Database Operations](/docs/tracing/database-operations) reporting. In case of
-Sematext Monitoring, transaction tracing can also cross applications, networks, and
-servers.
+Sematext Tracing is a modern, OpenTelemetry-based distributed tracing solution that helps you monitor and troubleshoot complex microservices architectures and distributed systems. Built on the industry-standard OpenTelemetry protocol, it provides deep insights into your application's performance, latency patterns, and error propagation across services.
 
-For example, you can trace code execution from a beginning of
-an HTTP request made to a web application through any calls this web
-application makes to relational, NoSQL, or any other databases or
-backend servers and services like Elasticsearch or Solr or Kafka, etc.,
-all the way to the response the application returns to the original
-caller.
+## Key Features
 
-Transaction tracing is not limited to HTTP requests - one can
-also trace arbitrary applications, including backend apps, command-line
-apps, batch jobs like MapReduce, etc.  Such tracing makes it possible to
-find performance bottlenecks in running code, whether in production or
-some other environment.
+### OpenTelemetry Native
+- **Industry Standard**: Built on OpenTelemetry (OTel), the vendor-neutral standard for observability
+- **OTLP Support**: Native support for OpenTelemetry Protocol (OTLP) via HTTP and gRPC
+- **Auto-Instrumentation**: Automatic instrumentation for popular frameworks and libraries
+- **Language Support**: SDKs for Java, Python, Node.js, Go, .NET, Ruby, PHP, and more
 
-Starting with version 1.24.10, the Sematext Agent provides ability to track
-application transactions, thus making it easier to find bottleneck in
-running applications and troubleshoot performance issues.
+### Comprehensive Trace Analysis
+- **End-to-End Visibility**: Track requests across multiple services and infrastructure components
+- **Service Maps**: Visualize service dependencies and communication patterns
+- **Latency Analysis**: Identify performance bottlenecks with P50, P95, and P99 percentiles
+- **Error Tracking**: Pinpoint errors and exceptions with detailed stack traces
 
-[![](https://sematext.files.wordpress.com/2015/08/appmap1_annotated.png)](https://blog.sematext.com/blog/introducing-appmap/)
+### Powerful Search and Filtering
+- **Traces Explorer**: Search and filter traces by service, operation, duration, and custom attributes
+- **Timeline View**: Visualize trace distribution over time
+- **Advanced Filters**: Filter by response status, span errors, database operations, and more
 
-## Notes
+### Intelligent Alerting
+- **Threshold-Based Alerts**: Set alerts on latency, error rates, and trace volume
+- **Anomaly Detection**: Automatic detection of unusual patterns
+- **Alert Integrations**: Connect with PagerDuty, Slack, email, and other notification channels
 
-  - Transaction Tracing requires App Agent running in [embedded mode](/docs/agents/sematext-agent/app-agent/spm-monitor-javaagent/).
-  - Enabling/disabling the tracing agent requires Sematext Agent restart,
-    which means it requires the restart of the application running the
-    embedded App Agent.
-  - Enabling transaction traces adds only about 1% CPU overhead.
-  - Transaction Tracing is different from [On Demand Profiling](/docs/monitoring/on-demand-profiling).
+### Seamless Correlation
+- **Logs Integration**: Jump from traces to related logs for deeper investigation
+- **Metrics Correlation**: View infrastructure and application metrics alongside traces
+- **Unified Observability**: Part of the complete Sematext Cloud observability platform
 
-## Resources
+## How It Works
 
-  - <https://blog.sematext.com/blog/transaction-tracing-performance-monitoring/>
-  - <https://blog.sematext.com/blog/transaction-tracing-reports/>
-  - <https://blog.sematext.com/blog/introducing-appmap/>
+1. **Instrument Your Application**: Add OpenTelemetry SDK to your application (auto or manual instrumentation)
+2. **Configure Sematext Agent**: Deploy Sematext Agent with OTLP receiver enabled
+3. **Send Traces**: Your application sends traces to the local Sematext Agent
+4. **View and Analyze**: Access traces through the Sematext Cloud UI
+
+```mermaid
+graph LR
+    A[Application<br/>with OTel SDK] -->|OTLP| B[Sematext Agent<br/>OTLP Receiver]
+    B -->|Secure Export| C[Sematext Cloud]
+    C --> D[Trace Analysis<br/>& Visualization]
+```
+
+## Benefits
+
+### Faster Problem Resolution
+- Quickly identify the root cause of performance issues
+- Understand error propagation across services
+- Reduce mean time to resolution (MTTR)
+
+### Optimize Performance
+- Identify slow database queries and API calls
+- Find inefficient service communication patterns
+- Optimize critical user journeys
+
+### Scale with Confidence
+- Monitor distributed systems at any scale
+- Understand system behavior under load
+- Plan capacity based on real usage patterns
+
+### Developer-Friendly
+- Easy integration with existing code
+- No vendor lock-in with OpenTelemetry
+- Rich SDKs for all major languages
+
+## Use Cases
+
+- **Microservices Monitoring**: Track requests across complex microservices architectures
+- **API Performance**: Monitor API latency and error rates
+- **Database Performance**: Identify slow queries and connection issues
+- **User Journey Analysis**: Understand end-to-end user experience
+- **Troubleshooting**: Quickly diagnose production issues
+
+## Getting Started
+
+Ready to start tracing your applications?
+
+1. [Create a Tracing App](/docs/tracing/create-tracing-app/) in Sematext Cloud
+2. [Choose your SDK](/docs/tracing/sdks/) and instrument your application
+3. [Install Sematext Agent](/docs/agents/sematext-agent/opentelemetry/) with OpenTelemetry support
+4. [Explore your traces](/docs/tracing/explorer/) and gain insights
+
+## Related Documentation
+
+- [OpenTelemetry Configuration](/docs/agents/sematext-agent/opentelemetry/)
+- [Tracing SDKs](/docs/tracing/sdks/)
+- [Tracing Alerts](/docs/tracing/alerts/creating-alerts/)
+- [Troubleshooting](/docs/tracing/troubleshooting/)
+
+## Need Help?
+
+- **Documentation**: You're already here!
+- **Support**: Contact us via [live chat](#) or [support@sematext.com](mailto:support@sematext.com)
+- **Status**: Check [status.sematext.com](https://status.sematext.com) for service status

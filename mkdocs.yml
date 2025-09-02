@@ -104,6 +104,22 @@ nav:
       - Custom Metrics: monitoring/custom-metrics.md
       - Changelog: changelog.md
       - FAQ: monitoring/spm-faq.md
+    - Tracing:
+      - Overview: tracing/index.md
+      - Getting Started: tracing/getting-started.md
+      - Creating a Tracing App: tracing/create-tracing-app.md
+      - OpenTelemetry SDKs:
+        - Overview: tracing/sdks/index.md
+        - Java: tracing/sdks/java.md
+        - Python: tracing/sdks/python.md
+        - Node.js: tracing/sdks/nodejs.md
+        - Go: tracing/sdks/go.md
+        - .NET: tracing/sdks/dotnet.md
+        - Ruby: tracing/sdks/ruby.md
+      - Tracing Overview: tracing/dashboard/index.md
+      - Traces Explorer: tracing/explorer/index.md
+      - Trace Details: tracing/trace-details/index.md
+      - Alerts: tracing/alerts/creating-alerts.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
@@ -339,6 +355,7 @@ nav:
           - Embedded Mode: agents/sematext-agent/app-agent/spm-monitor-javaagent.md
           - Standalone Mode: agents/sematext-agent/app-agent/spm-monitor-standalone.md
           - Switching Modes: agents/sematext-agent/app-agent/spm-monitor-switching-modes.md
+        - OpenTelemetry: agents/sematext-agent/opentelemetry/index.md
         - Containers:
           - Configuration: agents/sematext-agent/containers/configuration.md
           - Metrics: agents/sematext-agent/containers/metrics.md
