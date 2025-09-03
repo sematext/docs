@@ -23,6 +23,7 @@ export OTEL_TRACES_SAMPLER=always_on
 ```
 
 Use when:
+
 - Developing and testing
 - Debugging specific issues
 - Low traffic environments
@@ -36,6 +37,7 @@ export OTEL_TRACES_SAMPLER=always_off
 ```
 
 Use when:
+
 - Temporarily disabling tracing
 - Feature flags for tracing control
 
@@ -58,6 +60,7 @@ export OTEL_TRACES_SAMPLER_ARG=0.5
 ```
 
 Use when:
+
 - Production environments
 - High-traffic applications
 - Predictable sampling needed
@@ -76,6 +79,7 @@ export OTEL_TRACES_SAMPLER_ARG=0.1
 ```
 
 Use when:
+
 - Microservices architectures
 - Maintaining trace continuity across services
 - Default behavior for most SDKs
@@ -288,6 +292,7 @@ console.log(`Sampling rate: ${(sampledRequests/totalRequests * 100).toFixed(2)}%
 ### Validate Coverage
 
 Ensure important operations are being sampled:
+
 - Error traces captured
 - Critical business transactions included
 - Performance outliers detected
