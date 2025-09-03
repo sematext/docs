@@ -217,7 +217,7 @@ deployment.environment=${ENVIRONMENT}
 ### Documentation
 - Language-specific guides in this section
 - [OpenTelemetry official documentation](https://opentelemetry.io/docs/)
-- [Sematext Agent OpenTelemetry setup](../agents/sematext-agent/opentelemetry/index.md)
+- [Sematext Agent OpenTelemetry setup](/docs/agents/sematext-agent/opentelemetry/)
 
 ### Examples and Code
 - [Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples)
