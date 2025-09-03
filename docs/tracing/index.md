@@ -15,7 +15,7 @@ Sematext Tracing is a modern, OpenTelemetry-based distributed tracing solution t
 
 ### Trace Analysis
 - End-to-End Visibility: Track requests across multiple services and infrastructure components
-- Service Maps: Visualize service dependencies and communication patterns
+- Service Maps (coming soon): Visualize service dependencies and communication patterns
 - Latency Analysis: Identify performance bottlenecks with P50, P95, and P99 percentiles
 - Error Tracking: Pinpoint errors and exceptions with detailed stack traces
 
