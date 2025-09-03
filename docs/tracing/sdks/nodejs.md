@@ -56,18 +56,22 @@ Or add it to your package.json:
 ### Framework-Specific Considerations
 
 **Express.js**
+
 - Automatically instrumented out of the box
 - Captures HTTP requests, responses, and route information
 
 **Koa**
+
 - Automatically instrumented
 - Supports Koa v2+ applications
 
 **Fastify**
+
 - Automatically instrumented
 - Captures request/response cycles
 
 **HTTP/HTTPS**
+
 - Client and server requests automatically traced
 - Works with built-in http/https modules
 
@@ -503,17 +507,20 @@ app.listen(3000, () => {
 ### Common Issues
 
 **No Traces Appearing**
+
 - Ensure the Sematext Agent is running and accessible
 - Check the OTLP endpoint configuration
 - Verify service name is set correctly
 
 **Module Not Found Errors**
+
 ```bash
 # Make sure all dependencies are installed
 npm install @opentelemetry/auto-instrumentations-node @opentelemetry/sdk-node @opentelemetry/exporter-trace-otlp-http
 ```
 
 **Performance Issues**
+
 ```javascript
 // Configure batch span processor
 const { BatchSpanProcessor } = require('@opentelemetry/sdk-trace-base');

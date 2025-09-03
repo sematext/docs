@@ -574,6 +574,7 @@ end
 ### Common Issues
 
 **No Traces Appearing**
+
 - Verify Sematext Agent is running
 - Check OTLP endpoint configuration
 - Ensure proper gem installation

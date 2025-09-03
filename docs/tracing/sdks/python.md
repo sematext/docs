@@ -385,11 +385,13 @@ AioHttpClientInstrumentor().instrument()
 ### Common Issues
 
 **No Traces Appearing**
+
 - Check that the Sematext Agent is running
 - Verify OTLP endpoint configuration
 - Ensure proper service name configuration
 
 **Import Errors**
+
 ```bash
 # Make sure all required packages are installed
 pip install opentelemetry-distro[otlp]
@@ -397,6 +399,7 @@ opentelemetry-bootstrap -a install
 ```
 
 **High Memory Usage**
+
 ```python
 # Configure batch processor settings
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
@@ -452,6 +455,7 @@ if __name__ == "__main__":
 ## Best Practices
 
 ### Span Management
+
 ```python
 # Use context managers for automatic span lifecycle management
 with tracer.start_as_current_span("operation") as span:
@@ -460,6 +464,7 @@ with tracer.start_as_current_span("operation") as span:
 ```
 
 ### Error Handling
+
 ```python
 try:
     # Business logic
@@ -471,6 +476,7 @@ except Exception as e:
 ```
 
 ### Attributes
+
 ```python
 # Use semantic conventions
 span.set_attribute("http.method", "GET")
@@ -482,6 +488,7 @@ span.set_attribute("user.id", "12345")
 ```
 
 ### Resource Configuration
+
 ```python
 resource = Resource.create({
     "service.name": "my-service",

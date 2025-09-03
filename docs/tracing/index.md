@@ -8,38 +8,38 @@ Sematext Tracing is a modern, OpenTelemetry-based distributed tracing solution t
 ## Key Features
 
 ### OpenTelemetry Native
-- **Industry Standard**: Built on OpenTelemetry (OTel), the vendor-neutral standard for observability
-- **OTLP Support**: Native support for OpenTelemetry Protocol (OTLP) via HTTP and gRPC
-- **Auto-Instrumentation**: Automatic instrumentation for popular frameworks and libraries
-- **Language Support**: SDKs for Java, Python, Node.js, Go, .NET, Ruby, PHP, and more
+- Industry Standard: Built on OpenTelemetry (OTel), the vendor-neutral standard for observability
+- OTLP Support: Native support for OpenTelemetry Protocol (OTLP) via HTTP and gRPC
+- Auto-Instrumentation: Automatic instrumentation for popular frameworks and libraries
+- Language Support: SDKs for Java, Python, Node.js, Go, .NET, Ruby, PHP, and more
 
-### Comprehensive Trace Analysis
-- **End-to-End Visibility**: Track requests across multiple services and infrastructure components
-- **Service Maps**: Visualize service dependencies and communication patterns
-- **Latency Analysis**: Identify performance bottlenecks with P50, P95, and P99 percentiles
-- **Error Tracking**: Pinpoint errors and exceptions with detailed stack traces
+### Trace Analysis
+- End-to-End Visibility: Track requests across multiple services and infrastructure components
+- Service Maps: Visualize service dependencies and communication patterns
+- Latency Analysis: Identify performance bottlenecks with P50, P95, and P99 percentiles
+- Error Tracking: Pinpoint errors and exceptions with detailed stack traces
 
 ### Powerful Search and Filtering
-- **Traces Explorer**: Search and filter traces by service, operation, duration, and custom attributes
-- **Timeline View**: Visualize trace distribution over time
-- **Advanced Filters**: Filter by response status, span errors, database operations, and more
+- Traces Explorer: Search and filter traces by service, operation, duration, and custom attributes
+- Timeline View: Visualize trace distribution over time
+- Advanced Filters: Filter by response status, span errors, database operations, and more
 
 ### Intelligent Alerting
-- **Threshold-Based Alerts**: Set alerts on latency, error rates, and trace volume
-- **Anomaly Detection**: Automatic detection of unusual patterns
-- **Alert Integrations**: Connect with PagerDuty, Slack, email, and other notification channels
+- Threshold-Based Alerts: Set alerts on latency, error rates, and trace volume
+- Anomaly Detection: Automatic detection of unusual patterns
+- Alert Integrations: Connect with PagerDuty, Slack, email, and other notification channels
 
 ### Seamless Correlation
-- **Logs Integration**: Jump from traces to related logs for deeper investigation
-- **Metrics Correlation**: View infrastructure and application metrics alongside traces
-- **Unified Observability**: Part of the complete Sematext Cloud observability platform
+- Logs Integration: Jump from traces to related logs for deeper investigation
+- Metrics Correlation: View infrastructure and application metrics alongside traces
+- Unified Observability: Part of the complete Sematext Cloud observability platform
 
 ## How It Works
 
-1. **Instrument Your Application**: Add OpenTelemetry SDK to your application (auto or manual instrumentation)
-2. **Configure Sematext Agent**: Deploy Sematext Agent with OTLP receiver enabled
-3. **Send Traces**: Your application sends traces to the local Sematext Agent
-4. **View and Analyze**: Access traces through the Sematext Cloud UI
+1. Instrument Your Application: Add OpenTelemetry SDK to your application (auto or manual instrumentation)
+2. Configure Sematext Agent: Deploy Sematext Agent with OTLP receiver enabled
+3. Send Traces: Your application sends traces to the local Sematext Agent
+4. View and Analyze: Access traces through the Sematext Cloud UI
 
 ```mermaid
 graph LR
@@ -72,11 +72,11 @@ graph LR
 
 ## Use Cases
 
-- **Microservices Monitoring**: Track requests across complex microservices architectures
-- **API Performance**: Monitor API latency and error rates
-- **Database Performance**: Identify slow queries and connection issues
-- **User Journey Analysis**: Understand end-to-end user experience
-- **Troubleshooting**: Quickly diagnose production issues
+- Microservices Monitoring: Track requests across complex microservices architectures
+- API Performance: Monitor API latency and error rates
+- Database Performance: Identify slow queries and connection issues
+- User Journey Analysis: Understand end-to-end user experience
+- Troubleshooting: Quickly diagnose production issues
 
 ## Getting Started
 
@@ -96,6 +96,6 @@ Ready to start tracing your applications?
 
 ## Need Help?
 
-- **Documentation**: You're already here!
-- **Support**: Contact us via [live chat](#) or [support@sematext.com](mailto:support@sematext.com)
-- **Status**: Check [status.sematext.com](https://status.sematext.com) for service status
+- Documentation: You're already here!
+- Support: Contact us via [live chat](#) or [support@sematext.com](mailto:support@sematext.com)
+- Status: Check [status.sematext.com](https://status.sematext.com) for service status

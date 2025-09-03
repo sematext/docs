@@ -7,10 +7,10 @@ Sampling helps control the volume of traces sent to Sematext Cloud, reducing cos
 
 ## Why Sampling?
 
-- **Cost Management**: Reduce the amount of trace data stored and processed
-- **Performance**: Lower overhead on your application
-- **Network Traffic**: Reduce bandwidth usage between your app and Sematext
-- **Focus on Important Data**: Sample strategically to capture relevant traces
+- Cost Management: Reduce the amount of trace data stored and processed
+- Performance: Lower overhead on your application
+- Network Traffic: Reduce bandwidth usage between your app and Sematext
+- Focus on Important Data: Sample strategically to capture relevant traces
 
 ## Sampling Strategies
 
@@ -22,7 +22,7 @@ Sample all traces - useful for development and debugging:
 export OTEL_TRACES_SAMPLER=always_on
 ```
 
-**Use when:**
+Use when:
 - Developing and testing
 - Debugging specific issues
 - Low traffic environments
@@ -35,7 +35,7 @@ Disable all tracing:
 export OTEL_TRACES_SAMPLER=always_off
 ```
 
-**Use when:**
+Use when:
 - Temporarily disabling tracing
 - Feature flags for tracing control
 
@@ -57,7 +57,7 @@ export OTEL_TRACES_SAMPLER=traceidratio
 export OTEL_TRACES_SAMPLER_ARG=0.5
 ```
 
-**Use when:**
+Use when:
 - Production environments
 - High-traffic applications
 - Predictable sampling needed
@@ -75,7 +75,7 @@ export OTEL_TRACES_SAMPLER=parentbased_traceidratio
 export OTEL_TRACES_SAMPLER_ARG=0.1
 ```
 
-**Use when:**
+Use when:
 - Microservices architectures
 - Maintaining trace continuity across services
 - Default behavior for most SDKs

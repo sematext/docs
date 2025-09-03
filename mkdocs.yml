@@ -117,7 +117,7 @@ nav:
         - .NET: tracing/sdks/dotnet.md
         - Ruby: tracing/sdks/ruby.md
       - Reports:
-        - Overview Report: tracing/reports/overview.md
+        - Tracing Overview: tracing/reports/overview.md
         - Traces Explorer: tracing/reports/explorer.md
         - Trace Details: tracing/reports/trace-details.md
       - Alerts: tracing/alerts/creating-alerts.md
