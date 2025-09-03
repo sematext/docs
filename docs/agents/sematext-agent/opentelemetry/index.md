@@ -16,6 +16,7 @@ Your Application → OpenTelemetry SDK → Sematext Agent → Sematext Cloud
 ```
 
 The Sematext Agent provides:
+
 - **OTLP Receiver**: Accepts traces via gRPC and HTTP protocols
 - **Token Management**: Routes traces to appropriate Sematext applications using token groups
 - **Service Mapping**: Matches application service names to configured token groups
@@ -68,9 +69,9 @@ token-groups:
 
 ## Trace Flow
 
-1. **Application sends traces** → `sematext-agent:4337/4338` 
-2. **Agent matches service name** → Looks up appropriate traces token for that service
-3. **Agent forwards traces** → Sends to Sematext Cloud with the corresponding token
+1. Application sends traces → `sematext-agent:4337/4338` 
+2. Agent matches service name → Looks up appropriate traces token for that service
+3. Agent forwards traces → Sends to Sematext Cloud with the corresponding token
 
 ## Configuration by Platform
 
@@ -78,23 +79,23 @@ token-groups:
 
 Use the `st-agent otel` command to manage OpenTelemetry settings for tracing.
 
-#### 1. Enable OpenTelemetry Tracing
+##### 1. Enable OpenTelemetry Tracing
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel enable --type traces
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel enable --type traces
 ```
 
-#### 2. Configure Token Groups
+##### 2. Configure Token Groups
 
 Create token groups and add your traces token:
 
-**Linux:**
+Linux:
 ```bash
 # Add traces token to web-services group
 sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
@@ -114,52 +115,52 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
   --token "your-logs-token"
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
 st-agent-amd64 otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
 st-agent-amd64 otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
 ```
 
-#### 3. Map Services to Token Groups
+##### 3. Map Services to Token Groups
 
 Map your application service names to token groups:
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
   --service-names "frontend,backend,api" \
   --token-group "web-services"
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel services add --service-names "frontend,backend,api" --token-group "web-services"
 ```
 
-#### 4. Restart Agent
+##### 4. Restart Agent
 
-**Linux:**
+Linux:
 ```bash
 sudo systemctl restart sematext-agent
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 windows-service restart
 ```
 
-#### Optional: Configure Custom Receiver Ports
+##### Optional: Configure Custom Receiver Ports
 
 You can configure custom receiver ports if needed:
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protocol grpc --port 4337
 sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protocol http --port 4338
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel receivers set --type traces --protocol grpc --port 4337
 st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
@@ -169,13 +170,13 @@ st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
 
 Configure OpenTelemetry tracing by setting environment variables in your Docker container.
 
-#### Environment Variable Format
+##### Environment Variable Format
 
 For token groups, use this pattern:
-- **Traces token**: `OTEL_{GROUP_NAME}_TOKEN_GROUP_TRACES_TOKEN`
-- **Service list**: `OTEL_{GROUP_NAME}_TOKEN_GROUP_SERVICES` (comma-separated)
+- Traces token: `OTEL_{GROUP_NAME}_TOKEN_GROUP_TRACES_TOKEN`
+- Service list: `OTEL_{GROUP_NAME}_TOKEN_GROUP_SERVICES` (comma-separated)
 
-#### Docker Run Example
+##### Docker Run Example
 
 ```bash
 docker run -d \
@@ -203,7 +204,7 @@ For metrics and logs support, also add:
   -p 4328:4328 \
 ```
 
-#### Docker Compose Example
+##### Docker Compose Example
 
 ```yaml
 version: '3.8'
@@ -248,7 +249,7 @@ services:
 
 Use the Sematext Helm chart version 1.7.0 or later with OpenTelemetry tracing configuration.
 
-#### Configuration with values.yaml
+##### Configuration with values.yaml
 
 ```yaml
 # values.yaml
@@ -306,7 +307,7 @@ otel:
       logs-token: "worker-logs-token"
 ```
 
-#### Deploy with Helm
+##### Deploy with Helm
 
 ```bash
 helm repo add sematext https://helm.sematext.com
@@ -315,7 +316,7 @@ helm repo update
 helm install sematext-agent sematext/sematext-agent -f values.yaml
 ```
 
-#### Configuration with --set Flags
+##### Configuration with --set Flags
 
 For tracing-focused deployment:
 
@@ -344,7 +345,7 @@ helm install sematext-agent sematext/sematext-agent \
   --set otel.token-groups.nodejs-group.logs-token=your-logs-token
 ```
 
-#### Custom Receiver Endpoints
+##### Custom Receiver Endpoints
 
 For testing or development environments:
 
@@ -363,7 +364,7 @@ helm install sematext-agent sematext/sematext-agent \
 
 For kubectl deployments, set environment variables in your deployment manifests.
 
-#### Deployment Example
+##### Deployment Example
 
 ```yaml
 apiVersion: apps/v1
@@ -431,7 +432,7 @@ spec:
           path: /var/run/docker.sock
 ```
 
-#### Service for OTLP Endpoints
+##### Service for OTLP Endpoints
 
 ```yaml
 apiVersion: v1
@@ -470,7 +471,7 @@ spec:
     protocol: TCP
 ```
 
-#### Apply Configuration
+##### Apply Configuration
 
 ```bash
 kubectl apply -f sematext-agent-deployment.yaml
@@ -481,12 +482,12 @@ kubectl apply -f sematext-agent-service.yaml
 
 ### View Current Configuration
 
-**Linux:**
+Linux:
 ```bash
 cat /opt/spm/properties/otel.yml
 ```
 
-**Windows:**
+Windows:
 ```cmd
 type "C:\Program Files\Sematext Agent\properties\otel.yml"
 ```
@@ -495,12 +496,12 @@ type "C:\Program Files\Sematext Agent\properties\otel.yml"
 
 Remove a service from token group mapping:
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel services remove --service-name "frontend"
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel services remove --service-name "frontend"
 ```
@@ -509,24 +510,24 @@ st-agent-amd64 otel services remove --service-name "frontend"
 
 Remove tokens from a group:
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups remove --token-group "web-services" --type traces
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel token-groups remove --token-group "web-services" --type traces
 ```
 
 ### Disable OpenTelemetry
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel disable --type traces
 ```
 
-**Windows:**
+Windows:
 ```cmd
 st-agent-amd64 otel disable --type traces
 ```
@@ -552,17 +553,17 @@ export OTEL_TRACES_SAMPLER_ARG=0.1
 
 View OpenTelemetry configuration and status:
 
-**Linux:**
+Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel --help
 ```
 
-**Docker:**
+Docker:
 ```bash
 docker exec sematext-agent st-agent otel --help
 ```
 
-**Kubernetes:**
+Kubernetes:
 ```bash
 kubectl exec -n sematext deployment/sematext-agent -- st-agent otel --help
 ```
@@ -581,17 +582,17 @@ grpcurl -plaintext localhost:4337 list
 
 ### View Agent Logs
 
-**Linux:**
+Linux:
 ```bash
 sudo journalctl -u sematext-agent -f
 ```
 
-**Docker:**
+Docker:
 ```bash
 docker logs -f sematext-agent
 ```
 
-**Kubernetes:**
+Kubernetes:
 ```bash
 kubectl logs -n sematext deployment/sematext-agent -f
 ```
@@ -600,22 +601,26 @@ kubectl logs -n sematext deployment/sematext-agent -f
 
 ### Common Issues
 
-**Agent not receiving traces:**
+Agent not receiving traces:
+
 - Verify OTLP endpoints are accessible and ports 4337/4338 are open
 - Check firewall rules for trace ports
 - Confirm service names in your application match agent configuration exactly
 
-**Authentication errors:**
+Authentication errors:
+
 - Validate traces token is correct
 - Ensure token group configuration matches service names
 - Verify token permissions in Sematext Cloud
 
-**Service name mismatches:**
+Service name mismatches:
+
 - Check that `service.name` from your application exactly matches configured service names
 - Review case sensitivity and spelling
 - Use agent logs to see incoming service names
 
-**No traces appearing in Sematext:**
+No traces appearing in Sematext:
+
 - Verify agent is forwarding traces (check agent logs)
 - Confirm traces token is valid and has permissions
 - Ensure application is actually sending traces to the agent
@@ -624,17 +629,17 @@ kubectl logs -n sematext deployment/sematext-agent -f
 
 View the OpenTelemetry configuration file:
 
-**Linux:**
+Linux:
 ```bash
 sudo cat /opt/spm/properties/otel.yml
 ```
 
-**Windows:**
+Windows:
 ```cmd
 type "C:\Program Files\Sematext Agent\properties\otel.yml"
 ```
 
-**Docker:**
+Docker:
 ```bash
 docker exec sematext-agent cat /opt/spm/properties/otel.yml
 ```
@@ -667,8 +672,3 @@ docker exec sematext-agent cat /opt/spm/properties/otel.yml
 - [Complete the Tracing App creation process](/docs/tracing/create-tracing-app/)
 - [Get started with Sematext Tracing](/docs/tracing/getting-started/)
 - [View complete tracing examples in our repository](https://github.com/sematext/sematext-opentelemetry-examples)
-
-Additional tracing features (coming soon):
-- Tracing Dashboard - Understanding the tracing UI
-- Traces Explorer - Search and analyze your traces  
-- Tracing Alerts - Set up performance alerts for traces
