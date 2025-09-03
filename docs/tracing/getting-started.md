@@ -127,7 +127,7 @@ Once everything is configured and running:
 After setting up your first Tracing App:
 
 1. **[Set Up Alerts](/docs/tracing/alerts/creating-alerts/)**: Get notified of performance issues
-2. **[Explore Advanced Features](/docs/tracing/dashboard/)**: Learn about all dashboard components
+2. **[Explore Advanced Features](/docs/tracing/reports/overview/)**: Learn about all dashboard components
 3. **[Add Custom Instrumentation](/docs/tracing/sdks/)**: Enhance trace details with manual instrumentation
 4. **[Configure Sampling](/docs/tracing/sampling/)**: Optimize costs and performance
 

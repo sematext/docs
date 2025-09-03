@@ -116,9 +116,10 @@ nav:
         - Go: tracing/sdks/go.md
         - .NET: tracing/sdks/dotnet.md
         - Ruby: tracing/sdks/ruby.md
-      - Tracing Overview: tracing/dashboard/index.md
-      - Traces Explorer: tracing/explorer/index.md
-      - Trace Details: tracing/trace-details/index.md
+      - Reports:
+        - Overview Report: tracing/reports/overview.md
+        - Traces Explorer: tracing/reports/explorer.md
+        - Trace Details: tracing/reports/trace-details.md
       - Alerts: tracing/alerts/creating-alerts.md
       - Sampling: tracing/sampling.md
       - Troubleshooting: tracing/troubleshooting.md

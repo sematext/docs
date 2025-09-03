@@ -28,9 +28,9 @@ Typical alerts you might want to configure for tracing include:
 
 ## Next Steps
 
-- [View Traces Explorer](/docs/tracing/explorer/)
-- [Analyze Trace Details](/docs/tracing/trace-details/)
-- [Return to Tracing Overview](/docs/tracing/dashboard/)
+- [View Traces Explorer](/docs/tracing/reports/explorer/)
+- [Analyze Trace Details](/docs/tracing/reports/trace-details/)
+- [Return to Tracing Overview](/docs/tracing/reports/overview/)
 
 ## Related Documentation
 

@@ -312,7 +312,7 @@ Ensure important operations are being sampled:
 ## Next Steps
 
 - [Configure your SDKs](/docs/tracing/sdks/)
-- [Monitor trace volume](/docs/tracing/dashboard/)
+- [Monitor trace volume](/docs/tracing/reports/overview/)
 - [Set up alerts](/docs/tracing/alerts/creating-alerts/)
 - [Troubleshooting Guide](/docs/tracing/troubleshooting/)
 

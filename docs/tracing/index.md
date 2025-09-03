@@ -85,7 +85,7 @@ Ready to start tracing your applications?
 1. [Create a Tracing App](/docs/tracing/create-tracing-app/) in Sematext Cloud
 2. [Choose your SDK](/docs/tracing/sdks/) and instrument your application
 3. [Install Sematext Agent](/docs/agents/sematext-agent/opentelemetry/) with OpenTelemetry support
-4. [Explore your traces](/docs/tracing/explorer/) and gain insights
+4. [Explore your traces](/docs/tracing/reports/explorer/) and gain insights
 
 ## Related Documentation
 

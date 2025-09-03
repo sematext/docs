@@ -211,7 +211,7 @@ For complete setup instructions, the wizard provides detailed, language-specific
 
 After completing app creation:
 
-1. **Explore Traces**: Navigate to [Traces Explorer](/docs/tracing/explorer/) to see your traces
+1. **Explore Traces**: Navigate to [Traces Explorer](/docs/tracing/reports/explorer/) to see your traces
 2. **Set Up Alerts**: Create [performance alerts](/docs/tracing/alerts/creating-alerts/) for key metrics  
 3. **Add Custom Instrumentation**: Learn about [manual instrumentation in SDKs](/docs/tracing/sdks/)
 4. **Optimize Performance**: Configure [sampling strategies](/docs/tracing/sampling/)
@@ -220,7 +220,7 @@ After completing app creation:
 
 - [OpenTelemetry SDKs](/docs/tracing/sdks/) - Detailed SDK documentation
 - [Agent Configuration](/docs/agents/sematext-agent/opentelemetry/) - Agent setup details  
-- [Tracing Dashboard](/docs/tracing/dashboard/) - Understanding the tracing UI
+- [Tracing Dashboard](/docs/tracing/reports/overview/) - Understanding the tracing UI
 - [Troubleshooting](/docs/tracing/troubleshooting/) - Common issues and solutions
 
 ## Need Help?

@@ -2,3 +2,4 @@ myenv/
 /site
 /.project
 .DS_Store
+venv/

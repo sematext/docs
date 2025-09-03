@@ -151,9 +151,9 @@ The histogram at the top shows:
 
 ## Next Steps
 
-- [View detailed trace analysis](/docs/tracing/trace-details/)
+- [View detailed trace analysis](/docs/tracing/reports/trace-details/)
 - [Set up alerts for trace conditions](/docs/tracing/alerts/creating-alerts/)
-- [Return to Tracing Overview](/docs/tracing/dashboard/)
+- [Return to Tracing Overview](/docs/tracing/reports/overview/)
 
 ## Related Documentation
 

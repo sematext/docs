@@ -636,7 +636,7 @@ const resource = new Resource({
 ## Next Steps
 
 - [Configure Sematext Agent](/docs/agents/sematext-agent/opentelemetry/)
-- [Explore Traces](/docs/tracing/explorer/)
+- [Explore Traces](/docs/tracing/reports/explorer/)
 - [Set Up Alerts](/docs/tracing/alerts/creating-alerts/)
 - [Other SDK Languages](/docs/tracing/sdks/)
 

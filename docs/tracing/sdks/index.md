@@ -236,6 +236,6 @@ deployment.environment=${ENVIRONMENT}
 2. **Install Sematext Agent**: Set up the [agent with OpenTelemetry support](/docs/agents/sematext-agent/opentelemetry/)
 3. **Follow SDK Guide**: Complete the language-specific instrumentation guide
 4. **Explore Examples**: Check out the [examples repository](https://github.com/sematext/sematext-opentelemetry-examples)
-5. **View Your Traces**: Start analyzing traces in [Sematext Cloud](/docs/tracing/explorer/)
+5. **View Your Traces**: Start analyzing traces in [Sematext Cloud](/docs/tracing/reports/explorer/)
 
 The OpenTelemetry-based approach provides excellent performance, broad language support, and vendor-neutral instrumentation that works with any observability platform.
