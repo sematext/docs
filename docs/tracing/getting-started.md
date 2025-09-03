@@ -33,7 +33,7 @@ Setting up tracing involves creating a Tracing App and following the configurati
 ### 1. Create Your Tracing App
 The wizard walks you through:
 
-- App Creation: Name your app and choose a plan (Basic, Standard, or Pro)
+- App Creation: Name your App and choose a plan (Basic, Standard, or Pro)
 - Infrastructure Setup: Select an existing Infra App or create a new one
 - SDK Configuration: Choose your programming language and configure services
 - Agent Installation: Deploy the Sematext Agent using your preferred method

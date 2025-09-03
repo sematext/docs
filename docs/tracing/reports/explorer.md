@@ -12,6 +12,7 @@ Expandable section for filtering by trace-level attributes.
 
 ### Duration
 Set minimum and maximum duration in milliseconds:
+
 - MIN: Show only traces longer than this threshold
 - MAX: Show only traces shorter than this threshold
 
