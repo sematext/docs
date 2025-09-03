@@ -25,6 +25,14 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     [:octicons-arrow-right-24: Learn more](/docs/monitoring)
 
+-   :fontawesome-solid-route:{ .lg .middle .tracing-icon } __Tracing__
+
+    ---
+
+    Distributed tracing with OpenTelemetry for microservices
+    
+    [:octicons-arrow-right-24: Learn more](/docs/tracing)
+
 -   :fontawesome-solid-gauge-high:{ .lg .middle .experience-icon } __Experience__
 
     ---
