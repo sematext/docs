@@ -30,15 +30,18 @@ java -javaagent:opentelemetry-javaagent.jar \
 ### Framework-Specific Considerations
 
 **Spring Boot**
+
 - No additional configuration needed
 - Auto-instrumentation works out of the box
 - Captures HTTP requests, database calls, and more
 
 **Tomcat**
+
 - Works with WAR deployments
 - Add the agent to your Tomcat startup script
 
 **Jetty**
+
 - Supported out of the box
 - Add the agent to your Jetty configuration
 
@@ -287,15 +290,18 @@ public class OrderService {
 ### Common Issues
 
 **No Traces Appearing**
+
 - Verify the Sematext Agent is running and accessible
 - Check the OTLP endpoint configuration
 - Ensure service name is set correctly
 
 **High Memory Usage**
+
 - Reduce sampling rate for production environments
 - Configure batch span processor settings
 
 **Performance Impact**
+
 - Use async span processors
 - Configure appropriate batch sizes
 - Consider using traceidratio sampler
@@ -310,6 +316,7 @@ Enable debug logging to troubleshoot issues:
 ```
 
 **logging.properties**:
+
 ```properties
 io.opentelemetry.level=FINE
 io.opentelemetry.exporter.level=FINE
