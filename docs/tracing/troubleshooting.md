@@ -29,11 +29,13 @@ kubectl logs -n sematext -l name=sematext-agent
 
 ### Verify OTLP Configuration
 
-1. **Check ports are open:**
-   - HTTP: Port 4338
-   - gRPC: Port 4337
+1. Check ports are open:
 
-2. **Test connectivity:**
+    - HTTP: Port 4338
+    - gRPC: Port 4337
+
+2. Test connectivity:
+
 ```bash
 # Test HTTP endpoint
 curl -v http://localhost:4338/v1/traces
@@ -42,7 +44,8 @@ curl -v http://localhost:4338/v1/traces
 grpcurl -plaintext localhost:4337 list
 ```
 
-3. **Verify environment variables:**
+3. Verify environment variables:
+
 ```bash
 echo $OTEL_SERVICE_NAME
 echo $OTEL_EXPORTER_OTLP_ENDPOINT
@@ -100,7 +103,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
 
 ### High Memory Usage
 
-1. **Check sampling rate:**
+1. Check sampling rate:
 ```bash
 # Development (100% sampling)
 export OTEL_TRACES_SAMPLER=always_on
@@ -110,9 +113,9 @@ export OTEL_TRACES_SAMPLER=traceidratio
 export OTEL_TRACES_SAMPLER_ARG=0.1
 ```
 
-2. **Reduce batch size in SDK configuration**
+2. Reduce batch size in SDK configuration
 
-3. **Check agent resource limits (Kubernetes):**
+3. Check agent resource limits (Kubernetes):
 ```yaml
 resources:
   limits:
@@ -123,13 +126,13 @@ resources:
 
 ### Slow Trace Export
 
-1. **Check network latency to agent**
-2. **Verify agent isn't overloaded:**
+1. Check network latency to agent
+2. Verify agent isn't overloaded:
 ```bash
 # Check CPU and memory
 top | grep st-agent
 ```
-3. **Consider using gRPC instead of HTTP for better performance**
+3. Consider using gRPC instead of HTTP for better performance
 
 ## SDK-Specific Issues
 
@@ -274,19 +277,20 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set \
 
 ### Container Can't Connect to Agent
 
-1. **Check network connectivity:**
+1. Check network connectivity:
+
 ```bash
 # From application container
 ping sematext-agent
 telnet sematext-agent 4338
 ```
 
-2. **Verify service discovery (Kubernetes):**
+2. Verify service discovery (Kubernetes):
 ```bash
 kubectl get svc -n sematext | grep sematext-agent
 ```
 
-3. **Check firewall rules and network policies**
+3. Check firewall rules and network policies
 
 ### Environment Variables Not Set
 
@@ -332,14 +336,15 @@ env:
 
 If these troubleshooting steps don't resolve your issue:
 
-1. **Check agent logs** for detailed error messages
-2. **Enable debug logging** in your OpenTelemetry SDK
-3. **Verify configuration** against the [SDK documentation](/docs/tracing/sdks/)
-4. **Contact support** at support@sematext.com with:
-   - Agent version
-   - SDK language and version
-   - Error messages and logs
-   - Configuration details
+1. Check agent logs for detailed error messages
+2. Enable debug logging in your OpenTelemetry SDK
+3. Verify configuration against the [SDK documentation](/docs/tracing/sdks/)
+4. Contact support at support@sematext.com with:
+
+    - Agent version
+    - SDK language and version
+    - Error messages and logs
+    - Configuration details
 
 ## Related Documentation
 
