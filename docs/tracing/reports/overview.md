@@ -3,6 +3,8 @@ description: Understanding the Tracing Overview report in Sematext Cloud
 
 The Tracing Overview provides a summary of your distributed traces, showing service performance, error rates, and trace volume for the selected time period. This report helps you understand how your application is performing and identify issues that need attention.
 
+![Tracing Overview Dashboard](/docs/images/tracing/tracing-overview-01.png)
+
 ## Key Metrics
 
 ### Trace Volume

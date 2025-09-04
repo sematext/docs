@@ -21,6 +21,8 @@ This guide walks you through the complete Tracing App creation process in Semate
 
 1.2 Configure App Settings:
 
+![Create Tracing App](/docs/images/tracing/tracing-new-app-creation-1a.png)
+
 `App Name`:
 
 - Enter a descriptive name for your Tracing App
@@ -42,6 +44,8 @@ This guide walks you through the complete Tracing App creation process in Semate
 
 After App creation, the wizard continues with SDK configuration:
 
+![SDK Selection](/docs/images/tracing/tracing-new-app-creation-2.png)
+
 2.1 Select Your Programming Language.
 
 Choose from the available programming languages:
@@ -56,6 +60,8 @@ Choose from the available programming languages:
 - JavaScript
 
 2.2 Configure Service Names and Follow Instructions:
+
+![Service Configuration](/docs/images/tracing/tracing-new-app-creation-3a.png)
 
 Name the Service:
 
@@ -79,6 +85,8 @@ Add Multiple Services (Optional):
 ### Step 3: Install and Configure Sematext Agent
 
 The wizard continues with agent installation options:
+
+![Agent Installation Options](/docs/images/tracing/tracing-new-app-creation-4a.png)
 
 3.1 Choose Deployment Method:
 

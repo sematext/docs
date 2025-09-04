@@ -3,6 +3,8 @@ description: Browse and analyze traces in Sematext Cloud
 
 The Traces Explorer lets you browse through your distributed traces to find specific requests, investigate issues, and analyze application behavior. You can filter traces by various criteria and drill down into individual trace details.
 
+![Traces Explorer](/docs/images/tracing/trace-explorer-01.png)
+
 ## Filters Panel
 
 The filters panel on the right provides several categories to narrow down your trace search:

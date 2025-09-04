@@ -3,6 +3,8 @@ description: Understanding individual trace waterfall views and span details
 
 When you click on a trace in the Traces Explorer, you enter the detailed trace view that shows the complete execution flow of that request through your system.
 
+![Trace Details View](/docs/images/tracing/trace-details-01.png)
+
 ## Trace Overview
 
 At the top of the trace details page, you'll see:
@@ -35,6 +37,8 @@ The main area displays a waterfall chart showing the execution flow:
 ## Span Details Panel
 
 Clicking on any span in the waterfall opens a detailed panel with multiple tabs:
+
+![Span Details Panel](/docs/images/tracing/span-details-01.png)
 
 ### Span Header
 Shows key information about the selected span:
