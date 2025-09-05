@@ -9,6 +9,7 @@ Check out the FAQs for each of Sematext Cloud solutions:
 
 - [Sematext Monitoring FAQ](/docs/monitoring/spm-faq)
 - [Sematext Logs FAQ](/docs/logs/faq)
+- [Sematext Tracing FAQ](/docs/tracing/troubleshooting)
 - [Sematext Synthetics FAQ](/docs/synthetics/faq)
 - [Sematext Experience FAQ](/docs/experience/faq)
 
