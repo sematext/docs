@@ -116,6 +116,7 @@ nav:
         - Go: tracing/sdks/go.md
         - .NET: tracing/sdks/dotnet.md
         - Ruby: tracing/sdks/ruby.md
+        - Browser JavaScript: tracing/sdks/javascript-browser.md
       - Reports:
         - Tracing Overview: tracing/reports/overview.md
         - Traces Explorer: tracing/reports/explorer.md

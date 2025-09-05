@@ -40,13 +40,15 @@ This guide walks you through the complete Tracing App creation process in Semate
 - Create new Infra App: If none exists, a new one will be automatically created
 - The Infra App is required for agent communication and will be configured for tracing
 
+![Plan and Infra App Selection](/docs/images/tracing/tracing-new-app-creation-2.png)
+
 ### Step 2: Configure OpenTelemetry SDK
 
 After App creation, the wizard continues with SDK configuration:
 
-![SDK Selection](/docs/images/tracing/tracing-new-app-creation-2.png)
-
 2.1 Select Your Programming Language.
+
+![SDK Language Selection](/docs/images/tracing/tracing-new-app-creation-4b.png)
 
 Choose from the available programming languages:
 
@@ -61,12 +63,12 @@ Choose from the available programming languages:
 
 2.2 Configure Service Names and Follow Instructions:
 
-![Service Configuration](/docs/images/tracing/tracing-new-app-creation-3a.png)
-
 Name the Service:
 
 - Enter a meaningful name for your application service
 - This should match your actual service name in your application
+
+![Service Configuration](/docs/images/tracing/tracing-new-app-creation-4d.png)
 
 Follow SDK Instructions:
 The UI will provide complete, language-specific instructions including:
@@ -77,6 +79,10 @@ The UI will provide complete, language-specific instructions including:
 - Environment variables and configuration options
 - Framework-specific guidance
 
+The wizard shows detailed instructions like this PHP example:
+
+![PHP SDK Instructions](/docs/images/tracing/tracing-new-app-creation-4c.png)
+
 Add Multiple Services (Optional):
 
 - Click "Add Another Service" to configure multiple services at once
@@ -84,13 +90,13 @@ Add Multiple Services (Optional):
 
 ### Step 3: Install and Configure Sematext Agent
 
-The wizard continues with agent installation options:
-
-![Agent Installation Options](/docs/images/tracing/tracing-new-app-creation-4a.png)
+The wizard continues with agent installation options.
 
 3.1 Choose Deployment Method:
 
 Select from four deployment methods:
+
+![Select Deployment Method](/docs/images/tracing/tracing-new-app-creation-5-2.png)
 
 Single Host:
 
@@ -120,6 +126,8 @@ Kubernetes:
 
 The UI provides step-by-step installation commands for your chosen method:
 
+![Single Host Installation Instructions](/docs/images/tracing/tracing-new-app-creation-5-3.png)
+
 Agent Configuration:
 The agent will be automatically configured with:
 
@@ -139,6 +147,8 @@ Custom Port Configuration (Optional):
 
 - The wizard will show "Host Detected" when the agent is running correctly
 - Services will appear as "Healthy" when properly configured
+
+![Setup Completion](/docs/images/tracing/tracing-new-app-creation-5-4.png)
 
 4.2 Generate Test Traffic:
 

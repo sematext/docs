@@ -11,18 +11,40 @@ Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, 
 Your Application → OpenTelemetry SDK → Sematext Agent → Sematext Cloud
 ```
 
-1. Your Application: Instrumented with OpenTelemetry SDK
-2. OpenTelemetry SDK: Captures traces and sends them via OTLP protocol
-3. Sematext Agent: Receives traces via OTLP receiver and exports them to Sematext Cloud
-4. Sematext Cloud: Stores, analyzes, and visualizes your traces
+1. **Your Application**: Instrumented with OpenTelemetry SDK using one of two approaches:
+
+    - **Auto-Instrumentation**: Automatic trace capture with zero or minimal code changes - only configuration needed
+    - **Manual Instrumentation**: Explicit code changes to create spans and add trace context
+
+2. **OpenTelemetry SDK**: Captures traces from your application and sends them via OTLP protocol
+
+3. **Sematext Agent**: Receives traces via OTLP receiver and securely forwards them to Sematext Cloud
+
+4. **Sematext Cloud**: Stores, analyzes, and visualizes your traces
+
+### Instrumentation Approaches
+
+**Auto-Instrumentation** (Recommended for most use cases):
+
+- Zero to minimal code changes required
+- Automatic detection and instrumentation of popular frameworks and libraries
+- Only configuration changes needed (environment variables, agent setup)
+- Best for: Getting started quickly, standard application stacks
+
+**Manual Instrumentation** (Advanced use cases):
+
+- Explicit code changes to create custom spans
+- Fine-grained control over trace data and span attributes
+- Required for custom business logic tracing
+- Best for: Complex applications, custom frameworks, detailed business metrics
 
 > **Important**: The Sematext Agent with OTLP support is required for all SDK configurations. The agent acts as a local collector that receives traces from your application and securely forwards them to Sematext Cloud.
 
 ## Supported Languages
 
-### Auto-Instrumentation Available
+### Auto-Instrumentation Recommended
 
-These languages provide automatic instrumentation that captures traces with minimal code changes:
+These languages have excellent auto-instrumentation support, making them ideal for getting started quickly. Manual instrumentation is also available for advanced use cases:
 
 ##### [Java](java.md)
 - Auto-instrumentation: Java agent with zero code changes
@@ -48,7 +70,15 @@ These languages provide automatic instrumentation that captures traces with mini
 - Libraries: Entity Framework, HTTP clients, SQL Server
 - Platforms: .NET Core, .NET Framework, .NET 5+
 
-### Manual Instrumentation
+##### [Browser JavaScript](javascript-browser.md)
+- Auto-instrumentation: Automatic web instrumentation with `getWebAutoInstrumentations()`
+- Frameworks: React, Vue.js, Angular, vanilla JavaScript
+- Features: User interaction tracking, API call tracing, fetch/XHR instrumentation
+- Deployment: Web server proxy, backend API proxy, development proxy
+
+### Manual Instrumentation Focused
+
+These languages typically require manual instrumentation, though some limited auto-instrumentation may be available:
 
 ##### [Go](go.md)
 - Manual instrumentation: Easy-to-use instrumentation libraries

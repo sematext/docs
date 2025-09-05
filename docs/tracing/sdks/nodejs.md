@@ -645,6 +645,7 @@ const resource = new Resource({
 - [Configure Sematext Agent](/docs/agents/sematext-agent/opentelemetry/)
 - [Explore Traces](/docs/tracing/reports/explorer/)
 - [Set Up Alerts](/docs/tracing/alerts/creating-alerts/)
+- [Add Browser Tracing](/docs/tracing/sdks/javascript-browser/) - Connect frontend traces with your Node.js backend
 - [Other SDK Languages](/docs/tracing/sdks/)
 
 ## Related Documentation
