@@ -29,11 +29,6 @@ Sematext Tracing is a modern, OpenTelemetry-based distributed tracing solution t
 - Anomaly Detection: Automatic detection of unusual patterns
 - Alert Integrations: Connect with PagerDuty, Slack, email, and other notification channels
 
-### Seamless Correlation
-- Logs Integration: Jump from traces to related logs for deeper investigation
-- Metrics Correlation: View infrastructure and application metrics alongside traces
-- Unified Observability: Part of the complete Sematext Cloud observability platform
-
 ## How It Works
 
 1. Instrument Your Application: Add OpenTelemetry SDK to your application (auto or manual instrumentation)
@@ -97,5 +92,5 @@ Ready to start tracing your applications?
 ## Need Help?
 
 - Documentation: You're already here!
-- Support: Contact us via [live chat](#) or [support@sematext.com](mailto:support@sematext.com)
+- Support: Contact us via live chat or [support@sematext.com](mailto:support@sematext.com)
 - Status: Check [status.sematext.com](https://status.sematext.com) for service status

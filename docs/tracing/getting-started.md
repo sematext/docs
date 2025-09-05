@@ -88,7 +88,7 @@ The wizard provides similar examples for all supported languages.
 
 Once everything is configured and running:
 
-### Tracing Overview Dashboard
+### Tracing Overview
 - Key Metrics: Total traces, error rates, latency percentiles (P50, P95, P99)
 - Service Health: Current status and performance trends for each service
 - Recent Alerts: Any threshold violations or anomalies detected

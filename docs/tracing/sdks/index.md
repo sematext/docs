@@ -147,7 +147,6 @@ Complete working examples for all supported languages are available in our publi
 The repository includes:
 
 - Ready-to-run applications for each language
-- Docker Compose setups with Sematext Agent
 - Configuration examples for different frameworks
 - Best practices and common patterns
 - Integration examples with databases, message queues, and HTTP clients

@@ -132,8 +132,6 @@ The agent will be automatically configured with:
 Custom Port Configuration (Optional):
 
 - Modify default OTLP ports if needed
-- Configure TLS certificates if not using defaults
-- Add custom environment variables
 
 ### Step 4: Complete Setup
 
@@ -145,7 +143,7 @@ Custom Port Configuration (Optional):
 4.2 Generate Test Traffic:
 
 - Make requests to your instrumented application
-- Traces should appear in the Sematext Cloud UI within seconds
+- Traces should appear in the newly created Tracing App within seconds
 
 ## What You'll Have After Completion
 
@@ -157,7 +155,7 @@ Custom Port Configuration (Optional):
 
 ### Ready-to-Use Features
 
-- Tracing Overview Dashboard: Key metrics and service health
+- Tracing Overview: Key metrics and service health
 - Traces Explorer: Search and filter traces
 - Individual Trace Analysis: Detailed span inspection
 - Alert Configuration: Ready to set up performance alerts

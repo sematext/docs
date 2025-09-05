@@ -17,7 +17,7 @@ At the top of the trace details page, you'll see:
 - Total Spans: Number of spans in the trace
 
 ### Trace ID
-The unique trace identifier is shown in the breadcrumb (e.g., "4c5793716f430b033f07b9322adc") with a copy button for easy sharing.
+The unique trace identifier is shown in the breadcrumb (e.g., `4c5793716f430b033f07b9322adc`) with a copy button for easy sharing.
 
 ## Waterfall Visualization
 
