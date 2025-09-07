@@ -227,9 +227,9 @@ For complete setup instructions, the wizard provides detailed, language-specific
 
 ### Planning Your Setup
 
-- One App per Service: Separate Tracing Apps for different microservices
-- Environment Separation: Different Apps for prod/staging/dev
-- Infrastructure Apps: Reuse for related services on same infrastructure
+- One App per Business Domain: Group related microservices that communicate with each other (e.g., all e-commerce services, all analytics services)
+- Environment Separation: Different Apps for prod/staging/dev environments  
+- Cross-Service Visibility: Keep communicating services in the same App to see end-to-end traces
 
 ## Troubleshooting
 
