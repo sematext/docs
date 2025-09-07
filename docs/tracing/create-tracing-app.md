@@ -169,10 +169,10 @@ Custom Port Configuration (Optional):
 
 ### Ready-to-Use Features
 
-- Tracing Overview: Key metrics and service health
-- Traces Explorer: Search and filter traces
-- Individual Trace Analysis: Detailed span inspection
-- Alert Configuration: Ready to set up performance alerts
+- [Tracing Overview](/docs/tracing/reports/overview/): Key metrics and service health
+- [Traces Explorer](/docs/tracing/reports/explorer/): Search and filter traces
+- [Individual Trace Analysis](/docs/tracing/reports/trace-details/): Detailed span inspection
+- [Alert Configuration](/docs/tracing/alerts/creating-alerts/): Ready to set up performance alerts
 
 ## SDK Examples
 
