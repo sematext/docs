@@ -305,6 +305,7 @@ public class OrderService {
 - Use async span processors
 - Configure appropriate batch sizes
 - Consider using traceidratio sampler
+- Use gRPC endpoint (http://localhost:4337) instead of HTTP for better performance
 
 ### Debug Configuration
 
