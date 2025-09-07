@@ -245,7 +245,7 @@ For complete setup instructions, the wizard provides detailed, language-specific
 - Confirm Infra App token is correct
 - Check network connectivity between agent and application
 - Verify ports 4337/4338 are accessible
-- Review agent logs for configuration errors
+- Review [agent logs](/docs/agents/sematext-agent/agent-troubleshooting/) for configuration errors
 
 ## Next Steps
 
