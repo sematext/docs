@@ -17,9 +17,9 @@ Sample traces at the application level before they're sent:
 
 Production Environments:
 
-- High-traffic services: 1-5% sampling (0.01-0.05)
-- Medium-traffic services: 5-10% sampling (0.05-0.1)
-- Low-traffic services: 10-50% sampling (0.1-0.5)
+- High-traffic services: Keep 1-5% of traces (0.01-0.05 sampling rate)
+- Medium-traffic services: Keep 5-10% of traces (0.05-0.1 sampling rate)
+- Low-traffic services: Keep 10-50% of traces (0.1-0.5 sampling rate)
 
 Development/Staging:
 - Use 100% sampling for complete visibility during testing
@@ -37,7 +37,7 @@ Critical Services (Higher Sampling):
 
 Support Services (Lower Sampling):
 
-- Health checks: 0.1-1%
+- Health checks: 100% (always sample - low volume, critical error detection)
 - Static content: 0.1-1%
 - Internal utilities: 1-5%
 
@@ -118,21 +118,21 @@ Tier 1 (Business Critical):
 - Customer-facing APIs
 - Payment processing
 - Authentication services
-- Sampling: 10-50%
+- Sampling: Keep 10-50% of traces
 
 Tier 2 (Important):
 
 - Internal APIs
 - Data processing
 - Integration services
-- Sampling: 5-20%
+- Sampling: Keep 5-20% of traces
 
 Tier 3 (Supporting):
 
 - Health checks
 - Metrics collection
 - Background tasks
-- Sampling: 1-5%
+- Sampling: Keep 1-5% of traces (except health checks - keep 100%)
 
 ## Retention and Plan Optimization
 
@@ -224,7 +224,7 @@ Cost Optimization Alerts:
 ### Phase 2: Quick Wins
 - [ ] Implement basic sampling (5-10% for high-traffic services)
 - [ ] Remove unnecessary attributes from spans
-- [ ] Filter out health check and monitoring traces
+- [ ] Consider filtering static content traces (keep health checks for error detection)
 - [ ] Optimize span naming conventions
 
 ### Phase 3: Advanced Optimization
