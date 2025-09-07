@@ -104,7 +104,7 @@ Select from four deployment methods:
 
 Single Host:
 
-- Best for: Development environments, single servers, or testing
+- Best for: Individual server installation (development, testing, or small production deployments)
 - Platforms: Linux (various distributions), Windows  
 - Installation: GUI installer (Windows) or command-line installation (Windows / Linux)
 
