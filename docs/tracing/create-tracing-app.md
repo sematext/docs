@@ -36,6 +36,8 @@ This guide walks you through the complete Tracing App creation process in Semate
 - Standard: Enhanced capabilities with longer data retention  
 - Pro: Full-featured tracing with advanced analytics
 
+See detailed features and pricing at [sematext.com/pricing](https://sematext.com/pricing)
+
 `Infra App Selection`:
 
 - Select existing Infra App: Choose from available Infra Apps if you have any
