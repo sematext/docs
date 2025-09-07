@@ -10,14 +10,14 @@ Sematext Tracing helps you monitor and troubleshoot distributed applications by 
 Before you begin, ensure you have:
 
 - A Sematext Cloud account ([sign up free](https://apps.sematext.com/ui/registration))
-- Access to your application's source code or deployment configuration
+- Access to your application's deployment configuration (auto-instrumentation requires no code changes) or source code (for manual instrumentation)
 - Ability to install the Sematext Agent on your infrastructure
 
 ## How It Works
 
 Sematext Tracing works by:
 
-1. Instrumenting Your Application: Add OpenTelemetry libraries to your code to automatically capture traces
+1. Instrumenting Your Application: Add OpenTelemetry libraries via auto-instrumentation (deployment configuration only) or manual code changes
 2. Collecting Traces: The Sematext Agent receives traces from your application via OTLP protocol
 3. Forwarding to Cloud: The agent securely sends trace data to Sematext Cloud
 4. Analysis & Visualization: View traces in the Sematext UI with powerful search and analysis tools
@@ -47,6 +47,7 @@ The wizard provides detailed instructions for each step, including code examples
 **Programming Languages Supported**:
 
 - Java (including Kotlin), Python, Node.js, Go, .NET, Ruby, PHP, JavaScript
+- See detailed [SDK documentation](/docs/tracing/sdks/) for language-specific setup guides
 
 **Agent Deployment Options**:
 
@@ -54,10 +55,11 @@ The wizard provides detailed instructions for each step, including code examples
 - Server Fleet: Deploy across multiple servers using Ansible or Group Policy  
 - Containerized: Run as containers in Docker, Swarm, Nomad, or AWS ECS
 - Kubernetes: Deploy as DaemonSet on any Kubernetes distribution
+- See complete [agent installation guide](/docs/agents/sematext-agent/installation/) and [OpenTelemetry configuration](/docs/agents/sematext-agent/opentelemetry/)
 
 **Configuration Includes**:
 
-- OpenTelemetry SDK setup with automatic instrumentation
+- OpenTelemetry SDK setup with automatic instrumentation (zero code changes required)
 - Service name configuration and multi-service support
 - OTLP endpoint configuration (gRPC port 4337, HTTP port 4338)
 - Agent authentication and secure trace forwarding
@@ -93,16 +95,19 @@ Once everything is configured and running:
 - Service Health: Current status and performance trends for each service
 - Recent Alerts: Any threshold violations or anomalies detected
 - Error Analysis: Recent errors and their distribution across services
+- Learn more: [Tracing Overview Dashboard](/docs/tracing/reports/overview/)
 
 ### Traces Explorer
 - Search Capabilities: Find traces by service, duration, status, or custom attributes
 - Timeline View: See trace volume and patterns over time
 - Advanced Filtering: Filter by response codes, span errors, database operations
+- Learn more: [Traces Explorer Guide](/docs/tracing/reports/explorer/)
 
 ### Individual Trace Analysis
 - Waterfall View: Visual representation of the complete request flow
 - Span Details: Examine individual operations with attributes, events, and errors
 - Performance Insights: Identify slow operations and optimization opportunities
+- Learn more: [Trace Details Analysis](/docs/tracing/reports/trace-details/)
 
 ## Common Use Cases
 
@@ -134,6 +139,7 @@ After setting up your first Tracing App:
 2. [Explore Advanced Features](/docs/tracing/reports/overview/): Learn about all dashboard components
 3. [Add Custom Instrumentation](/docs/tracing/sdks/): Enhance trace details with manual instrumentation
 4. [Configure Sampling](/docs/tracing/sampling/): Optimize costs and performance
+5. [Cost Optimization](/docs/tracing/cost-optimization/): Advanced strategies to reduce tracing costs
 
 ## Common Configuration
 
