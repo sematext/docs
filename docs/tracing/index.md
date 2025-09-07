@@ -87,6 +87,7 @@ Ready to start tracing your applications?
 - [OpenTelemetry Configuration](/docs/agents/sematext-agent/opentelemetry/)
 - [Tracing SDKs](/docs/tracing/sdks/)
 - [Tracing Alerts](/docs/tracing/alerts/creating-alerts/)
+- [Cost Optimization](/docs/tracing/cost-optimization/)
 - [Troubleshooting](/docs/tracing/troubleshooting/)
 
 ## Need Help?

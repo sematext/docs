@@ -254,7 +254,7 @@ After completing App creation:
 1. Explore Traces: Navigate to [Traces Explorer](/docs/tracing/reports/explorer/) to see your traces
 2. Set Up Alerts: Create [performance alerts](/docs/tracing/alerts/creating-alerts/) for key metrics  
 3. Add Custom Instrumentation: Learn about [manual instrumentation in SDKs](/docs/tracing/sdks/)
-4. Optimize Performance: Configure [sampling strategies](/docs/tracing/sampling/)
+4. Optimize Performance: Configure [sampling strategies](/docs/tracing/sampling/) and [cost optimization](/docs/tracing/cost-optimization/)
 
 ## Related Documentation
 

@@ -123,6 +123,7 @@ nav:
         - Trace Details: tracing/reports/trace-details.md
       - Alerts: tracing/alerts/creating-alerts.md
       - Sampling: tracing/sampling.md
+      - Cost Optimization: tracing/cost-optimization.md
       - Troubleshooting: tracing/troubleshooting.md
     - Experience:
       - Overview: experience/index.md

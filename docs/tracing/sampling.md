@@ -318,6 +318,7 @@ Ensure important operations are being sampled:
 
 - [Configure your SDKs](/docs/tracing/sdks/)
 - [Monitor trace volume](/docs/tracing/reports/overview/)
+- [Optimize costs with advanced strategies](/docs/tracing/cost-optimization/)
 - [Set up alerts](/docs/tracing/alerts/creating-alerts/)
 - [Troubleshooting Guide](/docs/tracing/troubleshooting/)
 
