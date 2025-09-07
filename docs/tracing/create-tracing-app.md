@@ -8,7 +8,7 @@ This guide walks you through the complete Tracing App creation process in Semate
 ## Prerequisites
 
 - A Sematext Cloud account ([sign up free](https://apps.sematext.com/ui/registration))
-- Access to your application's source code or deployment configuration
+- Access to your application's deployment configuration (auto-instrumentation requires no code changes) or source code (for manual instrumentation)
 - Ability to install the Sematext Agent ([installation guide](/docs/agents/sematext-agent/installation/)) with [OpenTelemetry support](/docs/agents/sematext-agent/opentelemetry/)
 
 ## Complete App Creation Flow
