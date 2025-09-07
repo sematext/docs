@@ -75,7 +75,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 
 ### Invalid Token
 
-1. Verify your traces token in Sematext Cloud
+1. Verify your Tracing App token in Sematext Cloud
 2. Check token configuration in agent:
 
 **Linux:**
