@@ -9,7 +9,7 @@ Distributed tracing can generate significant data volumes, especially in high-tr
 
 ## Sampling Strategies
 
-Sampling is the most effective way to reduce tracing costs while maintaining statistical significance.
+Sampling is the most effective way to reduce tracing costs while maintaining statistical significance. For detailed configuration instructions, see the [Sampling Configuration Guide](/docs/tracing/sampling/).
 
 ### Head-Based Sampling (Recommended Start)
 
@@ -275,7 +275,6 @@ Cost Optimization Alerts:
 
 ## Next Steps
 
-- [Configure Sampling Strategies](/docs/tracing/sampling/)
 - [Set Up Performance Alerts](/docs/tracing/alerts/creating-alerts/)
 - [Monitor Trace Volume](/docs/tracing/reports/overview/)
 - [Optimize Agent Configuration](/docs/agents/sematext-agent/opentelemetry/)
