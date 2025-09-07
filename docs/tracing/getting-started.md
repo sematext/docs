@@ -17,10 +17,11 @@ Before you begin, ensure you have:
 
 Sematext Tracing works by:
 
-1. Instrumenting Your Application: Add OpenTelemetry libraries via auto-instrumentation (deployment configuration only) or manual code changes
+1. Instrumenting Your Application: Configure OpenTelemetry libraries through deployment settings (environment variables, startup parameters, agent configs) or add custom instrumentation for advanced use cases
 2. Collecting Traces: The Sematext Agent receives traces from your application via OTLP protocol
 3. Forwarding to Cloud: The agent securely sends trace data to Sematext Cloud
 4. Analysis & Visualization: View traces in the Sematext UI with powerful search and analysis tools
+5. Alerting: Get notified of performance issues, errors, and anomalies automatically
 
 ```
 Your App → OpenTelemetry SDK → Sematext Agent → Sematext Cloud
