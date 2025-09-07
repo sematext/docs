@@ -222,6 +222,7 @@ For complete setup instructions, the wizard provides detailed, language-specific
 
 - Apps: Use environment prefixes (`prod-api`, `staging-web`)
 - Services: Use descriptive names (`user-authentication`, `payment-processor`)
+- Avoid spaces: Use hyphens or underscores instead (`my-service`, not `my service`)
 - Keep names concise but clear
 
 ### Planning Your Setup
