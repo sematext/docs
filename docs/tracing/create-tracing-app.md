@@ -164,7 +164,7 @@ Custom Port Configuration (Optional):
 ### Tokens and Configuration
 
 - Infra App Token: For agent authentication
-- Traces Token: For sending trace data to Sematext Cloud
+- Tracing App Token: For sending trace data to Sematext Cloud
 - Service Configuration: All configured services ready to send traces
 
 ### Ready-to-Use Features
