@@ -93,13 +93,13 @@ For agent-specific optimizations, see the [Agent OpenTelemetry Configuration](/d
 
 ### Environment Separation
 
-**Production:**
+Production:
 
 - Lower sampling rates (1-10%)
 - Focus on error and performance traces
 - Longer retention for critical paths
 
-**Staging:**
+Staging:
 
 - Medium sampling rates (10-50%)
 - Comprehensive error tracking
