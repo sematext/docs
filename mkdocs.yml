@@ -117,6 +117,8 @@ nav:
         - .NET: tracing/sdks/dotnet.md
         - Ruby: tracing/sdks/ruby.md
         - Browser JavaScript: tracing/sdks/javascript-browser.md
+        - Android: tracing/sdks/android.md
+        - iOS/Swift: tracing/sdks/ios-swift.md
       - Reports:
         - Tracing Overview: tracing/reports/overview.md
         - Traces Explorer: tracing/reports/explorer.md

@@ -76,9 +76,23 @@ These languages have excellent auto-instrumentation support, making them ideal f
 - Features: User interaction tracking, API call tracing, fetch/XHR instrumentation
 - Deployment: Web server proxy, backend API proxy, development proxy
 
+##### [Android](android.md)
+- Auto-instrumentation: OkHttp, Retrofit, Room database via OpenTelemetry Android agent
+- Languages: Java and Kotlin
+- Features: Activity lifecycle tracking, network requests, user interactions
+- Platform: Android 5.0+ (API level 21+)
+- Requires backend proxy for trace export
+
 ### Manual Instrumentation Focused
 
 These languages typically require manual instrumentation, though some limited auto-instrumentation may be available:
+
+##### [iOS/Swift](ios-swift.md)
+- Manual instrumentation: Swift SDK with explicit span creation
+- Frameworks: SwiftUI and UIKit support
+- Features: View lifecycle tracking, URLSession instrumentation, user interactions
+- Platform: iOS 13.0+, macOS 10.15+, tvOS 13.0+, watchOS 6.0+
+- Requires backend proxy for trace export
 
 ##### [Go](go.md)
 - Manual instrumentation: Easy-to-use instrumentation libraries
@@ -99,7 +113,6 @@ Don't see your language? OpenTelemetry supports many more languages:
 - Rust: Growing ecosystem with basic instrumentation
 - C++: Core OpenTelemetry C++ SDK
 - Erlang/Elixir: Community-driven instrumentations
-- Swift: iOS and server-side Swift support
 
 For languages not covered in detail, you can:
 
