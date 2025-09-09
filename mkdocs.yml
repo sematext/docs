@@ -126,6 +126,13 @@ nav:
       - Alerts: tracing/alerts/creating-alerts.md
       - Sampling: tracing/sampling.md
       - Cost Optimization: tracing/cost-optimization.md
+      - Migration:
+        - Overview: tracing/migration/index.md
+        - From Jaeger: tracing/migration/jaeger.md
+        - From Zipkin: tracing/migration/zipkin.md
+        - From DataDog: tracing/migration/datadog.md
+        - From New Relic: tracing/migration/newrelic.md
+        - From Dynatrace: tracing/migration/dynatrace.md
       - Troubleshooting: tracing/troubleshooting.md
     - Experience:
       - Overview: experience/index.md
