@@ -309,7 +309,7 @@ export OTEL_TRACES_SAMPLER=always_on
 sampler = TraceIdRatioBasedSampler(ratio=0.1)
 ```
 
-#### Tag Migration
+##### Tag Migration
 
 Zipkin Tags:
 ```java

@@ -102,23 +102,6 @@ Covers:
 
 ---
 
-##### Migrating from AppDynamics
-
-**Common migration drivers**:
-
-- License cost reduction  
-- Simplified architecture
-- Better developer experience
-
-**Migration challenges**:
-
-- Java agent replacement
-- Business transaction mapping to traces
-- Custom metrics and KPIs migration
-- Alert policies recreation
-
----
-
 ## General Migration Strategy
 
 Regardless of your current solution, follow this proven migration approach:
