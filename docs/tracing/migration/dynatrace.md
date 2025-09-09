@@ -94,7 +94,7 @@ Integration Assessment:
 
 ### Step 2: Application Migration by Technology
 
-##### Java Applications
+#### Java Applications
 
 Current Dynatrace Setup:
 ```bash
@@ -150,7 +150,7 @@ public void processBusinessTransaction(String transactionId) {
 }
 ```
 
-##### .NET Applications
+#### .NET Applications
 
 Current Dynatrace Setup:
 ```csharp
@@ -207,7 +207,7 @@ public async Task<ProcessResult> ProcessOrderAsync(Order order)
 }
 ```
 
-##### Node.js Applications
+#### Node.js Applications
 
 Current Dynatrace Setup:
 ```javascript
@@ -267,7 +267,7 @@ async function processCustomerRequest(customerId, requestType) {
 }
 ```
 
-##### Python Applications
+#### Python Applications
 
 Current Dynatrace Setup:
 ```python
@@ -324,7 +324,7 @@ def process_data_pipeline(dataset_id, pipeline_config):
 
 ### Step 3: Service Discovery and Mapping Migration
 
-##### Dynatrace Smartscape to OpenTelemetry Service Map
+#### Dynatrace Smartscape to OpenTelemetry Service Map
 
 Dynatrace Approach:
 
@@ -347,7 +347,7 @@ Migration Strategy:
 
 ### Step 4: Monitoring and Alerting Migration
 
-##### Problem Detection Rules Migration
+#### Problem Detection Rules Migration
 
 Dynatrace Problem Detection:
 ```yaml
@@ -374,7 +374,7 @@ Migration Steps:
 3. Adjust Baselines: Manually set thresholds based on historical data
 4. Test Alerting: Validate alert delivery and escalation paths
 
-##### Dashboard Migration
+#### Dashboard Migration
 
 Dynatrace Dashboards:
 
@@ -397,7 +397,7 @@ Sematext Provides Out-of-the-Box:
 
 ### Step 5: Custom Extensions and Integrations
 
-##### OneAgent Extensions Migration
+#### OneAgent Extensions Migration
 
 Dynatrace Extensions:
 
@@ -413,7 +413,7 @@ OpenTelemetry Equivalent:
 - Define business transactions through span attributes
 - Configure explicit service discovery
 
-##### API Integration Migration
+#### API Integration Migration
 
 Dynatrace API Usage:
 ```python

@@ -93,7 +93,7 @@ Dashboard and Alert Review:
 
 ### Step 2: Application Migration by Language
 
-##### Java Applications
+#### Java Applications
 
 Current DataDog Setup:
 ```bash
@@ -153,7 +153,7 @@ public void processOrder(String orderId) {
 }
 ```
 
-##### Python Applications
+#### Python Applications
 
 Current DataDog Setup:
 ```python
@@ -202,7 +202,7 @@ def process_data(data):
     return process(data)
 ```
 
-##### Node.js Applications
+#### Node.js Applications
 
 Current DataDog Setup:
 ```javascript
@@ -256,7 +256,7 @@ span.setAttributes({
 span.end();
 ```
 
-##### Go Applications
+#### Go Applications
 
 Current DataDog Setup:
 ```go
@@ -315,7 +315,7 @@ defer span.End()
 
 ### Step 3: Configuration Migration
 
-##### Environment Variables Mapping
+#### Environment Variables Mapping
 
 **DataDog Environment Variables:**
 ```bash
@@ -335,7 +335,7 @@ OTEL_TRACES_SAMPLER=traceidratio
 OTEL_TRACES_SAMPLER_ARG=0.1
 ```
 
-##### Sampling Configuration
+#### Sampling Configuration
 
 **DataDog Sampling:**
 
@@ -412,7 +412,7 @@ services:
 
 ### Step 5: Dashboard and Monitoring Migration
 
-##### DataDog Dashboard Elements to Recreate
+#### DataDog Dashboard Elements to Recreate
 
 DataDog Dashboard Elements:
 
@@ -436,7 +436,7 @@ Sematext Provides Out-of-the-Box:
 - [Trace Details](/docs/tracing/reports/trace-details/) with waterfall visualization
 - Custom alerts based on any OpenTelemetry attribute
 
-##### DataDog Monitor Migration
+#### DataDog Monitor Migration
 
 Common DataDog Monitors:
 ```yaml

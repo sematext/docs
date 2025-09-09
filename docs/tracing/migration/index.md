@@ -20,7 +20,7 @@ This section provides guides for migrating from various tracing solutions to Sem
 
 ### Open Source Tracing Solutions
 
-##### [Jaeger Migration Guide](jaeger.md)
+#### [Jaeger Migration Guide](jaeger.md)
 **Best for**: Teams currently using Jaeger for distributed tracing
 
 Covers:
@@ -36,7 +36,7 @@ Covers:
 
 ---
 
-##### [Zipkin Migration Guide](zipkin.md)
+#### [Zipkin Migration Guide](zipkin.md)
 **Best for**: Organizations with existing Zipkin deployments
 
 Covers:
@@ -54,7 +54,7 @@ Covers:
 
 ### Commercial APM Solutions
 
-##### [DataDog APM Migration Guide](datadog.md)
+#### [DataDog APM Migration Guide](datadog.md)
 **Best for**: Teams currently using DataDog APM and looking to optimize costs
 
 Covers:
@@ -70,7 +70,7 @@ Covers:
 
 ---
 
-##### [New Relic APM Migration Guide](newrelic.md)
+#### [New Relic APM Migration Guide](newrelic.md)
 **Best for**: Organizations migrating from New Relic APM to reduce licensing costs
 
 Covers:
@@ -86,7 +86,7 @@ Covers:
 
 ---
 
-##### [Dynatrace APM Migration Guide](dynatrace.md)
+#### [Dynatrace APM Migration Guide](dynatrace.md)
 **Best for**: Teams moving from Dynatrace OneAgent to OpenTelemetry standards
 
 Covers:

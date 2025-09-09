@@ -71,7 +71,7 @@ Migrate one service at a time:
 
 ### Step 2: Application Migration by Language
 
-##### Java Applications
+#### Java Applications
 
 Current Jaeger Setup:
 ```java
@@ -116,7 +116,7 @@ try (Scope scope = span.makeCurrent()) {
 }
 ```
 
-##### Python Applications
+#### Python Applications
 
 Current Jaeger Setup:
 ```python
@@ -162,7 +162,7 @@ with tracer.start_as_current_span("operation-name") as span:
         span.set_status(Status(StatusCode.ERROR, str(e)))
 ```
 
-##### Node.js Applications
+#### Node.js Applications
 
 Current Jaeger Setup:
 ```javascript
@@ -192,7 +192,7 @@ sdk.start();
 // Run: node -r ./tracing.js my-app.js
 ```
 
-##### Go Applications
+#### Go Applications
 
 Current Jaeger Setup:
 ```go
@@ -229,7 +229,7 @@ tracer := tp.Tracer("my-service")
 
 ### Step 3: Configuration Migration
 
-##### Sampling Configuration
+#### Sampling Configuration
 
 Jaeger Sampling:
 ```yaml
@@ -250,7 +250,7 @@ export OTEL_TRACES_SAMPLER_ARG=0.1
 sampler = TraceIdRatioBasedSampler(0.1)
 ```
 
-##### Service Tags / Resource Attributes
+#### Service Tags / Resource Attributes
 
 Jaeger Tags:
 ```yaml

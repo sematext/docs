@@ -94,7 +94,7 @@ Licensing and Usage Review:
 
 ### Step 2: Application Migration by Language
 
-##### Java Applications
+#### Java Applications
 
 Current New Relic Setup:
 ```bash
@@ -163,7 +163,7 @@ public void processOrder(String orderId) {
 }
 ```
 
-##### .NET Applications
+#### .NET Applications
 
 Current New Relic Setup:
 ```xml
@@ -224,7 +224,7 @@ builder.Services.AddOpenTelemetry()
         }));
 ```
 
-##### Python Applications
+#### Python Applications
 
 Current New Relic Setup:
 ```python
@@ -275,7 +275,7 @@ def process_user_request(user_id):
         return handle_request(user_id)
 ```
 
-##### Node.js Applications
+#### Node.js Applications
 
 Current New Relic Setup:
 ```javascript
@@ -377,7 +377,7 @@ registerInstrumentations({
 
 ### Step 4: Configuration and Environment Migration
 
-##### New Relic Configuration Mapping
+#### New Relic Configuration Mapping
 
 New Relic Environment Variables:
 ```bash
@@ -397,7 +397,7 @@ OTEL_RESOURCE_ATTRIBUTES=environment=production,service.version=1.0
 OTEL_LOG_LEVEL=info
 ```
 
-##### Sampling Configuration
+#### Sampling Configuration
 
 New Relic Sampling:
 
@@ -418,7 +418,7 @@ export OTEL_TRACES_SAMPLER_ARG=0.1
 
 ### Step 5: Dashboard and Alert Migration
 
-##### New Relic Insights to Sematext Analytics
+#### New Relic Insights to Sematext Analytics
 
 New Relic NRQL Queries:
 ```sql
@@ -438,7 +438,7 @@ Sematext Equivalent:
 - [Trace Details View](/docs/tracing/reports/trace-details/) - Examine distributed traces across services with waterfall visualization
 - [Span Details Panel](/docs/tracing/reports/trace-details/#span-details-panel) - View detailed span timing and attributes
 
-##### Alert Migration Strategy
+#### Alert Migration Strategy
 
 New Relic Alert Conditions:
 ```yaml

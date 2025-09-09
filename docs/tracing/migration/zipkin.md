@@ -87,7 +87,7 @@ zipkin.sampler.probability=0.1
 
 ### Step 2: Application Migration by Language
 
-##### Java Applications
+#### Java Applications
 
 Current Zipkin Setup:
 ```java
@@ -145,7 +145,7 @@ otel:
       probability: 0.1
 ```
 
-##### Python Applications
+#### Python Applications
 
 Current Zipkin Setup:
 ```python
@@ -187,7 +187,7 @@ def my_function():
     span.set_attribute("custom.tag", "value")
 ```
 
-##### Node.js Applications
+#### Node.js Applications
 
 Current Zipkin Setup:
 ```javascript
@@ -235,7 +235,7 @@ process.env.OTEL_EXPORTER_OTLP_PROTOCOL = 'http/protobuf';
 // Run: node -r ./tracing.js my-app.js
 ```
 
-##### Go Applications
+#### Go Applications
 
 Current Zipkin Setup:
 ```go
@@ -285,7 +285,7 @@ tracer := tp.Tracer("my-service")
 
 ### Step 3: Configuration Migration
 
-##### Sampling Migration
+#### Sampling Migration
 
 Zipkin Sampling:
 ```properties
@@ -309,7 +309,7 @@ export OTEL_TRACES_SAMPLER=always_on
 sampler = TraceIdRatioBasedSampler(ratio=0.1)
 ```
 
-##### Tag Migration
+#### Tag Migration
 
 Zipkin Tags:
 ```java
