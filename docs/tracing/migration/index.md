@@ -31,7 +31,7 @@ Covers:
 - Dashboard and alert recreation
 - Parallel operation strategies
 
-**Migration complexity**: Medium (OpenTelemetry compatible)  
+**Migration approach**: Straightforward OpenTelemetry transition  
 **Timeline**: 2-3 weeks depending on service count
 
 ---
@@ -47,7 +47,7 @@ Covers:
 - Dual export configuration
 - Performance optimization
 
-**Migration complexity**: Medium (Good OpenTelemetry support)  
+**Migration approach**: Smooth transition with OpenTelemetry compatibility  
 **Timeline**: 2-3 weeks for most deployments
 
 ---
@@ -65,8 +65,8 @@ Covers:
 - Cost comparison and optimization strategies (see [Sematext pricing](https://sematext.com/pricing))
 - Dual export configuration for safe migration
 
-**Migration complexity**: High (proprietary formats and integrations)  
-**Timeline**: 3-5 weeks for most deployments
+**Migration approach**: Agent replacement with comprehensive OpenTelemetry migration  
+**Timeline**: 3-4 weeks for most deployments
 
 ---
 
@@ -81,7 +81,7 @@ Covers:
 - Browser monitoring migration strategies
 - Alert and dashboard recreation (see [Sematext pricing](https://sematext.com/pricing) for cost benefits)
 
-**Migration complexity**: High (proprietary APIs and data models)  
+**Migration approach**: Agent replacement with feature parity recreation  
 **Timeline**: 3-4 weeks depending on customization level
 
 ---
@@ -97,8 +97,8 @@ Covers:
 - Management zone and tagging strategy migration
 - Cost optimization post-migration (see [Sematext pricing](https://sematext.com/pricing))
 
-**Migration complexity**: Very High (automatic discovery vs explicit config)  
-**Timeline**: 4-6 weeks for complex environments
+**Migration approach**: Transition from automatic to configured instrumentation  
+**Timeline**: 4-5 weeks for complex environments
 
 ---
 
