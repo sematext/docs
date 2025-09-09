@@ -538,6 +538,8 @@ extra:
     - icon: 'fontawesome/solid/rss'
       link: 'https://feeds.feedburner.com/SematextBlog'
 
+extra_css:
+  - 'stylesheets/extra.css'
 
 #extra_javascript:
 #  - 'javascripts/extra.js'
