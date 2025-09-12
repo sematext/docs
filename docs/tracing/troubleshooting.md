@@ -310,6 +310,75 @@ env:
   value: "http://sematext-agent-otlp.sematext:4338"
 ```
 
+## Database Tracing
+
+### SQL Query Visibility
+
+OpenTelemetry automatically handles SQL queries to protect sensitive data:
+
+- Parameterized queries (e.g., `SELECT * FROM users WHERE id = ?`) are shown as-is
+- Non-parameterized queries have literal values replaced with `?` placeholders  
+- Query parameters are not captured by default for security reasons
+
+Example of what you'll see in traces:
+- Original query: `SELECT * FROM users WHERE email = 'john@example.com' AND status = 'active'`
+- In traces: `SELECT * FROM users WHERE email = ? AND status = ?`
+
+### Missing Database Operations
+
+If database operations aren't appearing in traces:
+
+1. Verify database instrumentation is loaded:
+
+   - Java: Database drivers are auto-instrumented
+   - Python: `opentelemetry-instrumentation-sqlalchemy`, `opentelemetry-instrumentation-psycopg2`, etc.
+   - Node.js: `@opentelemetry/instrumentation-mysql`, `@opentelemetry/instrumentation-pg`, etc.
+   - Go: Requires manual instrumentation or `otelsql` wrapper
+
+2. Check supported databases:
+
+   - PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Memcached
+   - Most JDBC drivers (Java)
+   - Most database clients with OpenTelemetry instrumentation libraries
+
+3. Common issues:
+
+   - ORM queries may need additional instrumentation
+   - Connection pooling libraries might need specific instrumentation
+   - Native database drivers may not be auto-instrumented
+
+### Database Performance Troubleshooting
+
+To identify slow queries in traces:
+
+1. Filter by operation type:
+
+   - Look for spans with `db.system` attribute (postgresql, mysql, etc.)
+   - Filter by `db.operation` (SELECT, INSERT, UPDATE, DELETE)
+
+2. Analyze query patterns:
+
+   - Check `db.statement` for query structure
+   - Look for N+1 query problems (many similar queries in sequence)
+   - Identify missing indexes (slow SELECT operations)
+
+3. Connection issues:
+
+   - High latency on connection acquisition spans
+   - Many short-lived connections (connection pool exhaustion)
+
+### Database Span Attributes
+
+Common database attributes you'll see:
+
+- `db.system`: Database type (postgresql, mysql, mongodb, redis)
+- `db.name`: Database/schema name
+- `db.statement`: SQL query with placeholders
+- `db.operation`: Operation type
+- `db.user`: Database user (if not filtered)
+- `net.peer.name`: Database host
+- `net.peer.port`: Database port
+
 ## Common Error Messages
 
 ### "Connection refused"

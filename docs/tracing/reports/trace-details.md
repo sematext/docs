@@ -69,7 +69,17 @@ Displays span attributes organized by category:
 Database-related attributes if the span involves database operations:
 
 - db.name: Database name (e.g., "otel")
-- Additional database-specific attributes
+- db.statement: SQL query with sensitive values replaced by `?` placeholders
+- db.operation: Operation type (SELECT, INSERT, UPDATE, DELETE)
+- db.system: Database system (postgresql, mysql, mongodb, redis, etc.)
+- db.user: Database username (if not filtered for security)
+- net.peer.name: Database server hostname
+- net.peer.port: Database server port
+
+**Note on SQL queries:** For security, OpenTelemetry replaces actual parameter values with placeholders. You'll see query structure but not the actual data values. For example:
+
+- Query executed: `SELECT * FROM orders WHERE user_id = 12345 AND status = 'pending'`
+- Shown in trace: `SELECT * FROM orders WHERE user_id = ? AND status = ?`
 
 ### Events Tab
 Shows events that occurred during span execution:
@@ -147,7 +157,12 @@ Full stack trace showing:
 1. Identify the longest duration spans in the waterfall
 2. Check if long spans are sequential or have gaps
 3. Look for repeated operations that could be optimized
-4. Examine database query spans for slow queries
+4. Examine database query spans for slow queries:
+
+    - Check `db.statement` attribute for query structure
+    - Look for N+1 query patterns (multiple similar queries)
+    - Identify queries without proper indexing (high duration SELECTs)
+    - Watch for connection pool exhaustion (connection acquisition delays)
 
 ### Service Communication
 1. Follow the indentation to understand service calls
@@ -168,6 +183,8 @@ Full stack trace showing:
 - Look for patterns in slow operations
 - Check for sequential operations that could be parallelized
 - Identify repeated database queries or API calls
+- Review `db.statement` attributes to understand query complexity
+- Look for N+1 patterns in database operations
 
 ### Understanding Context
 - Review service attributes to understand the environment
