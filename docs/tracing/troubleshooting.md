@@ -321,6 +321,7 @@ OpenTelemetry automatically handles SQL queries to protect sensitive data:
 - Query parameters are not captured by default for security reasons
 
 Example of what you'll see in traces:
+
 - Original query: `SELECT * FROM users WHERE email = 'john@example.com' AND status = 'active'`
 - In traces: `SELECT * FROM users WHERE email = ? AND status = ?`
 
