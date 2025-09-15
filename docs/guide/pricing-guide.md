@@ -41,6 +41,17 @@ Custom plans and pricing is available. Contact our [Customer Success Manager](ht
 
 All of our plans include support via live chat and email. For Standard and Pro Plans, we also provide phone support and a dedicated account manager for any questions about Sematext, such as pricing, best practices, and demos.
 
+### Audit Trail Pricing
+
+[Audit Trail](/docs/guide/audit-trail/) provides visibility into user activities like creating or updating alerts, dashboards, Apps, and more. It helps teams track configuration changes, see who did what and when.
+
+When enabled:
+
+- 2% is added to your monthly bill on annual plans
+- 3% is added to your monthly bill on monthly plans
+
+Disabling Audit Trail stops data collection but charges still apply for the current billing month.
+
 ## Payment Methods
 
 - Credit Card - charged at the first of the month for the previous month’s usage

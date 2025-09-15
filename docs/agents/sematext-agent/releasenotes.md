@@ -39,6 +39,89 @@ NULL
 
 -->
 
+## Version 4.0.0
+
+Date: August 28, 2025
+
+### Improvements
+
+- Migrated leader election mechanism from ConfigMaps to Leases for improved Kubernetes compatibility.
+- Performance improvements.
+
+### Breaking Changes
+
+Due to our leader election changes, updating cluster roles is required.
+
+#### kubectl Installation
+
+Please re-apply `sematext-clusterroles.yaml` to your cluster.
+
+```
+kubectl apply -f https://sematext-installer.s3.amazonaws.com/sematext-clusterroles.yaml
+```
+
+After applying the new cluster roles, follow the agent upgrade steps from Sematext Cloud.
+
+#### Helm Installation
+
+Please update your `sematext` Helm repository.
+
+```
+helm repo add sematext https://cdn.sematext.com/helm-charts
+helm repo update
+```
+
+Ensure you have at least version **1.8.0** of the `sematext-agent` Helm package.
+```
+> helm search repo sematext
+NAME                   	CHART VERSION	APP VERSION	DESCRIPTION                                       
+sematext/sematext-agent	1.8.0        	1.0        	Helm chart for deploying Sematext Agent and Log...
+```
+
+After updating the Helm chart, follow the agent upgrade steps from Sematext Cloud.
+
+#### Troubleshooting
+
+For any errors, check our [Sematext Monitoring FAQ](/docs/monitoring/spm-faq/).
+
+## Version 3.10.1
+
+Date: August 22, 2025
+
+### New Features
+
+- **OpenTelemetry Windows Support**: Added OpenTelemetry GUI support to the Windows installer, enabling OTel functionality on Windows environments.
+
+### Improvements
+
+- **Service Permissions**: Added services permission for service catalog functionality in the Helm chart.
+
+### Bug Fixes
+
+- **OTel CLI Type Flag**: Fixed type flag requirement for OpenTelemetry services commands in the CLI.
+
+## Version 3.10.0
+
+Date: August 4, 2025
+
+### New Features
+
+- **Kubernetes/Docker OpenTelemetry Support**: Added support for OpenTelemetry in Kubernetes and Docker environments via environment variables, including Helm chart support.
+- **OTel Token Groups**: Introduced bulk service names support for OpenTelemetry configurations, allowing for more efficient management of multiple services.
+
+### Improvements
+
+- **Performance Optimizations**: 
+  - Optimized journal retry loop and reduced memory usage for better system resource utilization.
+  - Enhanced OTel receivers and Elasticsearch client performance to significantly reduce CPU usage.
+- **Traces Configuration**: Added fallback support for `traces_receiver_url` property to improve trace collection reliability.
+
+### Bug Fixes
+
+- **Custom Logs**: Muted excessive logging for example `myapp-logs` application to reduce log noise.
+- **Log File Management**: Enhanced log file lifecycle tracking to prevent duplicate log entries and improve data accuracy.
+- **OTel Logs**: Disabled payload writing for OpenTelemetry logs to optimize performance and reduce storage overhead.
+
 ## Version 3.9.0
 
 Date: June 20, 2025

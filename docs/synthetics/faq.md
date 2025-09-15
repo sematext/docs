@@ -50,6 +50,8 @@ The **Alert after N Consecutive Failures from a Specific Location** setting is l
 
 On the other hand, the **Consecutive Runs** setting can be found in the **General** tab. It won't consider the monitor as failed after N retry attempts, and the retries will occur immediately after the run fails, instead of waiting for the usual interval. Because the retried runs are not treated as failed, these two settings will thus affect the monitor's availability statistics differently.
 
+Multiple retries of the same failed run are not displayed in Sematext in order to avoid clutter and to maintain accurate SLA reporting. Only the final outcome of a run is displayed, regardless of whether it was retried once or multiple times.
+
 See [HTTP](/docs/synthetics/http-monitor/#configuration) or [Browser](/docs/synthetics/browser-monitor/#configuration) monitor configuration for more information on these settings.
 
 ### What are the default timeouts for HTTP & Browser monitors?
@@ -166,6 +168,9 @@ Please see the `same-origin` question right above this one, this issue could ver
 ### How do I avoid intermittent issues from affecting the availability of my monitors?
 The consecutive runs feature available in the **General** section for both HTTP and Browser monitors allows you to automatically run the monitor again after a failed run. Since the retried run will be run as soon as the failed run is reported, this can help avoid network errors or similar intermittent issues from affecting your overall availability, while still alerting you on issues which persist after multiple retries. Note that we reserve an extra 5% of the monitor's currently reserved runs per retry, with these extra runs being figured into the calculation at the bottom of the **General** page.
 
+### Do you have a script recorder for creating Playwright scripts?
+We don’t have a built-in recorder, but you can still create Playwright scripts easily. We wrote a guide that shows how to do it step by step using Chrome and ChatGPT: [How to Create Playwright Scripts for Website Monitoring with Chrome, ChatGPT](https://sematext.com/blog/how-to-create-playwright-scripts-for-website-monitoring-with-chrome-chatgpt-sematext/)
+
 ### How do I do X in a User Journey script?
 Please see the section on [User Journey script examples](/docs/synthetics/user-journey-scripts/examples).
 
@@ -219,5 +224,5 @@ See info about user roles in [sharing FAQ](/docs/faq/#sharing).
 
 ## Alerts
 
-### Can I send alerts to HipChat, Slack, Nagios, or other WebHooks?
+### Can I send alerts to PagerDuty, Slack, MS Teams, or other WebHooks?
 See [alerts FAQ](/docs/faq/#alerts).

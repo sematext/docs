@@ -4,6 +4,8 @@ This folder contains some common use-cases to get you started with writing your 
 
 We have added these as part of our public repository so users can improve these or add their own.
 
+>If you’re not familiar with writing scripts, don’t worry. You do not need to be a developer or write code from scratch. Our step-by-step guide shows how to create Playwright scripts easily using Chrome and ChatGPT: [How to Create Playwright Scripts for Website Monitoring with Chrome, ChatGPT](https://sematext.com/blog/how-to-create-playwright-scripts-for-website-monitoring-with-chrome-chatgpt-sematext/).
+
 ## Examples List
 
 ### [Load a web page](/docs/synthetics/playwright-scripts/load-web-page.js)
