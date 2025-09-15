@@ -134,6 +134,7 @@ nav:
         - From New Relic: tracing/migration/newrelic.md
         - From Dynatrace: tracing/migration/dynatrace.md
       - Troubleshooting: tracing/troubleshooting.md
+      - Limits: tracing/tracing-limits.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
