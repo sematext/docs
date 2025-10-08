@@ -39,6 +39,16 @@ NULL
 
 -->
 
+## Version 4.1.0
+
+Date: October 8, 2025
+
+### Bug Fixes
+
+- Resolved issue where we weren't able to get metrics for Elasticsearch deployments which have tiered data nodes.
+- We now automatically detect if a service being monitored by our App Agent modifies and automatically trigger redeployment for the App Agent
+
+
 ## Version 4.0.0
 
 Date: August 28, 2025
