@@ -43,7 +43,7 @@ Playwright also offers their excellent Test Generator tool that opens up a brows
 
 Here's a demo on how it works.
 <div class="video_container">
-<iframe src="https://www.youtube.com/watch?v=5XIZPqKkdBA" 
+<iframe src="https://www.youtube.com/embed/5XIZPqKkdBA"
 frameborder="0" allow="autoplay; encrypted-media" 
 allowfullscreen class="video"></iframe>
 </div>
