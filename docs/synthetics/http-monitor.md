@@ -10,7 +10,7 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 * **Name** - Name of the monitor. Max length is 255 characters.
 * **HTTP Method** - HTTP Method.
 * **URL** - URL of the HTTP monitor of format `<http(s)>://hostname:port/path`.
-* **Interval** - Monitor execution interval.
+* **Interval** - Monitor execution interval. (1m, 5m, 10m, 15m)
 * **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations to run the monitor.
 * **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
