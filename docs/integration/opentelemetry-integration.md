@@ -17,6 +17,13 @@ With logs, you can monitor your applications and infrastructure, troubleshoot is
 
 # Metrics
 Explain zero-code vs manual instrumentation here
+
+Metric Name<br> Key *(Type)* *(Unit)*                                                                          |  Description
+---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
+parent max size<br>**es.circuitBreaker.parent.size.max** <br>*(long gauge)* *(bytes)*                    |  max parent circuit breaker size
+parent estimated size<br>**es.circuitBreaker.parent.size.estimate** <br>*(long gauge)* *(bytes)*                    |  estimated parent circuit breaker size
+parent overhead<br>**es.circuitBreaker.parent.size.overhead** <br>*(double gauge)*                   |  parent circuit breaker overhead
+
 Explain why zero-code is not supported in the instructions for some SDKs yet.
 ## Zero-code metrics
 list zero code metrics
