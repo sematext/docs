@@ -18,11 +18,59 @@ With logs, you can monitor your applications and infrastructure, troubleshoot is
 # Metrics
 Explain zero-code vs manual instrumentation here
 
-Metric Name<br> Key *(Type)* *(Unit)*                                                                          |  Description
----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------
-parent max size<br>**es.circuitBreaker.parent.size.max** <br>*(long gauge)* *(bytes)*                    |  max parent circuit breaker size
-parent estimated size<br>**es.circuitBreaker.parent.size.estimate** <br>*(long gauge)* *(bytes)*                    |  estimated parent circuit breaker size
-parent overhead<br>**es.circuitBreaker.parent.size.overhead** <br>*(double gauge)*                   |  parent circuit breaker overhead
+| Metric Name<br> Key *(Type)* *(Unit)* | Description |
+|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| HTTP Server Request Duration Count<br>**otel.http_server_request_duration.count** <br>*(long counter)* | Count of HTTP server request durations |
+| HTTP Server Request Duration Sum<br>**otel.http_server_request_duration.sum** <br>*(double counter)* *(milliseconds)* | Sum of HTTP server request durations |
+| HTTP Server Request Duration Max<br>**otel.http_server_request_duration.max** <br>*(double gauge)* *(milliseconds)* | Maximum HTTP server request duration |
+| HTTP Server Request Duration Bucket<br>**otel.http_server_request_duration.bucket** <br>*(long counter)* | Histogram bucket for HTTP server request durations |
+| HTTP Client Request Duration Max<br>**otel.http_client_request_duration.max** <br>*(double gauge)* *(milliseconds)* | Maximum HTTP client request duration |
+| HTTP Client Request Duration Sum<br>**otel.http_client_request_duration.sum** <br>*(double counter)* *(milliseconds)* | Sum of HTTP client request durations |
+| HTTP Client Request Duration Count<br>**otel.http_client_request_duration.count** <br>*(long counter)* | Count of HTTP client request durations |
+| HTTP Client Request Duration Bucket<br>**otel.http_client_request_duration.bucket** <br>*(long counter)* | Histogram bucket for HTTP client request durations |
+| Database Client Connection Count<br>**otel.db_client_connection_count** <br>*(long counter)* | Count of database client connections |
+| Database Client Connection Timeouts<br>**otel.db_client_connection_timeouts** <br>*(long counter)* | Count of database client connection timeouts |
+| Database Client Connection Wait Time Sum<br>**otel.db_client_connection_wait_time.sum** <br>*(double counter)* *(milliseconds)* | Sum of database client connection wait times |
+| Database Client Connection Wait Time Count<br>**otel.db_client_connection_wait_time.count** <br>*(long counter)* | Count of database client connection wait time measurements |
+| Database Client Connection Max<br>**otel.db_client_connection_max** <br>*(long gauge)* | Maximum database client connections |
+| Database Client Connection Pending Requests<br>**otel.db_client_connection_pending_requests** <br>*(long gauge)* | Number of pending database client connection requests |
+| Database Client Connection Create Time Sum<br>**otel.db_client_connection_create_time.sum** <br>*(double counter)* *(milliseconds)* | Sum of database client connection creation times |
+| Database Client Connection Create Time Count<br>**otel.db_client_connection_create_time.count** <br>*(long counter)* | Count of database client connection creation time measurements |
+| Database Client Connection Use Time Sum<br>**otel.db_client_connection_use_time.sum** <br>*(double counter)* *(milliseconds)* | Sum of database client connection use times |
+| Database Client Connection Use Time Count<br>**otel.db_client_connection_use_time.count** <br>*(long counter)* | Count of database client connection use time measurements |
+| JVM Memory Used<br>**otel.jvm_memory_used** <br>*(long gauge)* *(bytes)* | JVM memory currently used |
+| JVM Memory Committed<br>**otel.jvm_memory_committed** <br>*(long gauge)* *(bytes)* | JVM memory committed |
+| JVM Thread Count<br>**otel.jvm_thread_count** <br>*(long gauge)* | Number of JVM threads |
+| JVM Class Loaded<br>**otel.jvm_class_loaded** <br>*(long counter)* | Number of JVM classes loaded |
+| JVM Class Count<br>**otel.jvm_class_count** <br>*(long gauge)* | Current number of JVM classes |
+| JVM GC Duration Sum<br>**otel.jvm_gc_duration.sum** <br>*(double counter)* *(milliseconds)* | Sum of JVM garbage collection durations |
+| JVM GC Duration Max<br>**otel.jvm_gc_duration.max** <br>*(double gauge)* *(milliseconds)* | Maximum JVM garbage collection duration |
+| JVM Memory Used After Last GC<br>**otel.jvm_memory_used_after_last_gc** <br>*(long gauge)* *(bytes)* | JVM memory used after last garbage collection |
+| JVM CPU Recent Utilization<br>**otel.jvm_cpu_recent_utilization** <br>*(double gauge)* *(ratio)* | Recent JVM CPU utilization |
+| Process CPU Count<br>**otel.process_cpu_count** <br>*(long gauge)* | Number of process CPUs |
+| Process CPU Time<br>**otel.process_cpu_time** <br>*(double counter)* *(seconds)* | Process CPU time |
+| Process Memory Usage<br>**otel.process_memory_usage** <br>*(long gauge)* *(bytes)* | Process memory usage |
+| Process Thread Count<br>**otel.process_thread_count** <br>*(long gauge)* | Number of process threads |
+| Process Runtime .NET GC Collections Count<br>**otel.process_runtime_dotnet_gc_collections_count** <br>*(long counter)* | .NET garbage collection count |
+| Process Runtime .NET GC Objects Size<br>**otel.process_runtime_dotnet_gc_objects_size** <br>*(long gauge)* *(bytes)* | .NET garbage collection objects size |
+| Process Runtime .NET Assemblies Count<br>**otel.process_runtime_dotnet_assemblies_count** <br>*(long gauge)* | Number of .NET assemblies loaded |
+| Process Runtime .NET Exceptions Count<br>**otel.process_runtime_dotnet_exceptions_count** <br>*(long counter)* | .NET exceptions count |
+| Process Runtime CPython CPU Utilization<br>**otel.process_runtime_cpython_cpu_utilization** <br>*(double gauge)* *(ratio)* | CPython CPU utilization |
+| Process Runtime CPython CPU Time<br>**otel.process_runtime_cpython_cpu_time** <br>*(double counter)* *(seconds)* | CPython CPU time |
+| Process Runtime CPython Thread Count<br>**otel.process_runtime_cpython_thread_count** <br>*(long gauge)* | Number of CPython threads |
+| Process Runtime CPython Context Switches<br>**otel.process_runtime_cpython_context_switches** <br>*(long counter)* | CPython context switches count |
+| Process Runtime CPython Memory<br>**otel.process_runtime_cpython_memory** <br>*(long gauge)* *(bytes)* | CPython memory usage |
+| System Memory Usage<br>**otel.system_memory_usage** <br>*(long gauge)* *(bytes)* | System memory usage |
+| System Memory Utilization<br>**otel.system_memory_utilization** <br>*(double gauge)* *(ratio)* | System memory utilization |
+| System CPU Utilization<br>**otel.system_cpu_utilization** <br>*(double gauge)* *(ratio)* | System CPU utilization |
+| System Disk IO<br>**otel.system_disk_io** <br>*(long counter)* *(bytes)* | System disk I/O |
+| System Disk Operations<br>**otel.system_disk_operations** <br>*(long counter)* | System disk operations count |
+| System Network IO<br>**otel.system_network_io** <br>*(long counter)* *(bytes)* | System network I/O |
+| System Network Packets<br>**otel.system_network_packets** <br>*(long counter)* | System network packets count |
+| System Network Errors<br>**otel.system_network_errors** <br>*(long counter)* | System network errors count |
+| System Network Dropped Packets<br>**otel.system_network_dropped_packets** <br>*(long counter)* | System network dropped packets count |
+| System Network Connections<br>**otel.system_network_connections** <br>*(long gauge)* | Number of system network connections |
+| System Thread Count<br>**otel.system_thread_count** <br>*(long gauge)* | Number of system threads |
 
 Explain why zero-code is not supported in the instructions for some SDKs yet.
 ## Zero-code metrics
