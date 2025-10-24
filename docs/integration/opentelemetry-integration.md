@@ -85,13 +85,6 @@ Metrics collected through zero-code instrumentation and used in out-of-the-box r
 | System Network Connections<br>**otel.system_network_connections** <br>*(long gauge)* | Number of system network connections |
 | System Thread Count<br>**otel.system_thread_count** <br>*(long gauge)* | Number of system threads |
 
-Explain why zero-code is not supported in the instructions for some SDKs yet.
-## Zero-code metrics
-list zero code metrics
-.........
-.........
-Explain the importance of matching zero code metrics if they choose manual instrumentation in order to benefit from out-of-the-box reports and alert rules
-
 ## Reports
 
 Explain the SDK generic report and language specific reports and why.
