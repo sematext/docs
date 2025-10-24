@@ -1,23 +1,70 @@
 Title: OpenTelemetry Logs
-Description: Complete guide for integrating OpenTelemetry logging with Sematext Cloud. Learn how to set up the Sematext Agent as an OpenTelemetry collector, configure SDK-specific logging for Python, Go, Node.js, .NET, Java, Ruby, and PHP applications, explore built-in reports and visualizations, pre-defined alert rules.
+Description: Complete guide for integrating OpenTelemetry metrics and logs with Sematext Cloud. Learn how to set up the Sematext Agent as an OpenTelemetry collector, configure SDK-specific instrumentation for Python, Go, Node.js, .NET, Java, Ruby, and PHP applications, and explore built-in dashboards, visualizations, and alert rules.
 
 OpenTelemetry is an observability framework that helps you collect data from your applications and servers. It can gather logs, metrics, and traces in one place. Sematext Cloud works with OpenTelemetry to store and display this data.
 
-This page explains how to integrate OpenTelemetry logs in your application and how to use the [Sematext Agent](/docs/agents/sematext-agent) to ship logs from the application that's been instrumented with OpenTelemetry to Sematext Cloud. Support for OpenTelemetry metrics and traces will be added soon. Once available, you will be able to correlate logs, metrics, and traces together in Sematext Cloud.
+This page explains how to integrate OpenTelemetry metrics and logs in your application and how to use the [Sematext Agent](/docs/agents/sematext-agent) to ship logs and metrics from the application that's been instrumented with OpenTelemetry to Sematext Cloud. With the support for [OpenTelemetry Tracing](todo:link to tracing), you will be collecting metrics, logs, and traces in a single platform, giving you the ability to correlate them easily and understand how metrics trends, log events, and traces relate to each other across your applications.
 
-For now, you can start shipping logs. With logs you can monitor your applications and infrastructure, troubleshoot issues faster, detect anomalies, and connect logs to [events](/docs/events) such as deployments or restarts. Later, when metrics and tracing support is added, you will be able to see the full picture: metrics for system performance, traces for request flows, and logs for detailed context, all in one place. Features like [Split Screen](/docs/guide/split-screen) and [Connected Apps](/docs/guide/connected-apps) in Sematext Cloud will let you view and correlate this data side by side.
+With logs, you can monitor your applications and infrastructure, troubleshoot issues faster, detect anomalies, and connect logs to [events](/docs/events) such as deployments or restarts. Metrics provide insights into system and application performance, while traces let you analyze request flows and latency across services. Together, they give you the full picture in one platform. Features like [Split Screen](/docs/guide/split-screen) and [Connected Apps](/docs/guide/connected-apps) in Sematext Cloud let you view and correlate this data side by side for faster and deeper root-cause analysis.
+ 
+# Install Sematext Agent
 
-## Create OpenTelemetry Logs App & Install Sematext Agent
-
-- Create an OpenTelemetry [Logs App](/docs/guide/app-guide). This App is where your logs will be stored and analyzed.
+- Create an OpenTelemetry Logs or Monitoring [App](/docs/guide/app-guide). This will let you install the agent and control access to your monitoring and logs data.
+- Set up log and metrics exporting in your application. Follow the SDK-specific instructions provided in the UI. Choose your language and integrate OpenTelemetry metrics and logging into your code.
 - Install the [Sematext Agent](/docs/agents/sematext-agent/releasenotes) using the instructions shown in the App creation flow. The Agent works as an OpenTelemetry collector and ships logs from your application that has been instrumented with an OpenTelemetry SDKs to Sematext Cloud.
-- Set up log exporting in your application. After installing the Agent, follow the SDK-specific instructions provided in the UI. Choose your language and integrate OpenTelemetry logging into your code.
 
-> OpenTelemetry logging is supported in `Python`, `Go`, `Node.js`, `.NET`, `Java`, `Ruby`, and `PHP`. The SDK setup instructions for these languages are shown after you create an OpenTelemetry Logs App and install the Sematext Agent.
+> OpenTelemetry metrics and logging is supported in `Python`, `Go`, `Node.js`, `.NET`, `Java`, `Ruby`, and `PHP`. The SDK setup instructions for these languages are shown after you create an OpenTelemetry Logs App.
 
-## Logs
+# Metrics
+Explain zero-code vs manual instrumentation here
+Explain why zero-code is not supported in the instructions for some SDKs yet.
+## Zero-code metrics
+list zero code metrics
+.........
+.........
+Explain the importance of matching zero code metrics if they choose manual instrumentation in order to benefit from out-of-the-box reports and alert rules
 
-### Standard Info Added Automatically
+## Reports
+
+Explain the SDK generic report and language specific reports and why.
+
+### Service Health Report
+
+### Performance Summary Report
+
+### Cross-Service Report
+
+### Client Performance Report
+
+### Database Performance Report
+
+### Java-specific JVM Runtime Report
+
+### Java-specific Memory Analysis Report
+
+### Java-specific System Resource Report
+
+### .Net-specific CPU & Memory Report
+
+### .Net-specific Garbage Collection Report
+
+### .Net-specific Asembly & Exceptions Report
+
+### Python-specific CPython Runtime Report
+
+### Python-specific Memory Management Report
+
+### Python-specific System Performance Report
+
+### Python-specific Process Analysis Report
+
+## Default Metric Alerts
+
+# Logs
+
+Explain zero-code vs manual instrumentation.
+Explain why zero-code is not supported in the instructions for some SDKs yet.
+## Standard Info Added Automatically
 
 After following the SDK-specific instructions, your logs will automatically have useful metadata in every log.
 
@@ -32,19 +79,19 @@ Common fields include:
 
 Once data is in, you can explore it via the built-in reports:
 
-### Overview Report
+## Overview Report
 
 Overview report provides a view of your system's state/status/health with visual analytics including total log counts, severity distribution (info, warning, error, debug, trace), SDK breakdown, service-by-service activity monitoring, host distribution analysis, and timeline visualizations showing activity patterns over time. You can drill down from these visualizations to investigate issues and understand how your system behaves across services and environments.
 
 ![OTEL Logs Overview](/docs/images/integrations/otel-logs-overview.png)
 
-### Explore Report
+## Explore Report
 
 ![OTEL Logs Explore](/docs/images/integrations/otel-logs-explore.png)
 
 Explore report lets you see raw logs in the Logs Table. Here you can use [Quick Actions](/docs/logs/logs-table-quick-actions/) such as creating alerts, adding logs to dashboards, or applying filters. You can save common queries as [Saved Views](/docs/guide/saved-views/) for faster access later. You can also correlate logs with Events such as deployments, scaling actions, or configuration changes to understand when and why issues started. This makes troubleshooting faster because you can connect changes in your system directly with the log activity they caused.
 
-## Default Alert Rules
+## Default Log Alerts
 
 Moreover, the pre-configured [alert rules](/docs/guide/alerts-guide) will notify you about:
 
@@ -77,8 +124,6 @@ The recording below shows how events can help when you receive an anomaly alert 
 
 ![OTel Logs Events Correlation](/docs/images/integrations/otel-logs-events-correlation.gif)
 
-## Troubleshooting
+# Troubleshooting
 
-If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your OpenTelemetry Logs App. Lastly, check the [Log Agents panel](/docs/fleet/#log-agents) panel for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
-
-For more troubleshooting information please look at [Troubleshooting](/docs/logs/faq/#troubleshooting) section.
+If you have trouble sending logs or metrics, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs and metrics to your OpenTelemetry Logs or Monitoring App. 
