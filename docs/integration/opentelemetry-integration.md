@@ -87,9 +87,37 @@ Metrics collected through zero-code instrumentation and used in out-of-the-box r
 
 ## Reports
 
-Explain the SDK generic report and language specific reports and why.
+OpenTelemetry Monitoring integration reports help you monitor your services and understand how they behave. The first set consists of **generic reports** under the main category, which support metrics from multiple SDKs and provide a high-level view of service performance. These reports help you quickly identify potential issues and can be grouped or filtered by service for more detailed investigation. The second set consists of **SDK-specific reports**, which capture metrics unique to each service and provide insights tailored to the particular behavior and characteristics of that programming language. Together, these reports offer both a broad overview and SDK-specific visibility, helping you understand and optimize your applications.
 
 ### Service Health Report
+
+Provides HTTP service monitoring focused on request performance, reliability, and traffic patterns using OpenTelemetry metrics.
+
+#### Operational Health Metrics
+
+- **Total Requests** - Volume of incoming traffic to track usage patterns
+- **Average Response Time** - Calculate from duration sum/count to identify performance trends
+- **Success Rate** - Ratio of 2XX responses vs total requests to measure reliability
+
+#### Performance Analysis
+
+- **Hourly Request Count** - Traffic patterns over time to identify peak hours and unusual spikes
+- **Max Durations** - Outlier detection for slowest requests (client-side)
+- **Duration Analysis** - Compare max vs average response times to spot performance degradation
+
+#### Response Time Distribution
+
+- Categorizes requests into **fast** (<750ms), **moderate** (1-7.5s), and **slow** (>7.5s) buckets
+- Helps identify if slowdowns affect all requests or specific segments
+- Enables capacity planning by understanding response time patterns
+
+#### Error Tracking
+
+- **HTTP Status Distribution** pie chart breaks down 1XX, 2XX, 3XX, 4XX, and 5XX responses
+- Quickly spot error rate increases or unusual redirect patterns
+
+
+TODO: image here
 
 ### Performance Summary Report
 
