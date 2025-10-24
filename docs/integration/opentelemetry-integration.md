@@ -16,7 +16,20 @@ With logs, you can monitor your applications and infrastructure, troubleshoot is
 > OpenTelemetry metrics and logging is supported in `Python`, `Go`, `Node.js`, `.NET`, `Java`, `Ruby`, and `PHP`. The SDK setup instructions for these languages are shown after you create an OpenTelemetry Logs App.
 
 # Metrics
-Explain zero-code vs manual instrumentation here
+
+OpenTelemetry metrics can be collected in two main ways: **zero-code** instrumentation and **manual** instrumentation. Zero-code instrumentation automatically collects common metrics such as request rate, latency, and error counts from supported frameworks and libraries without requiring any changes to your application code. It is quick to set up and ideal for gaining standard visibility out of the box. Manual instrumentation, on the other hand, gives developers full control over what metrics to collect and how to label them. It involves adding OpenTelemetry API calls directly in the code to emit custom metrics that reflect specific business or application logic. In short, zero code instrumentation provides convenience and standardization, while manual instrumentation offers flexibility and precision.
+
+### ✅ Zero-Code (Automatic) Instrumentation - **Recommended**
+- **What it is**: Automatic metric collection with no code changes required
+- **What you get**: Pre-built dashboards, alerts, and reports that work out-of-the-box
+- **Maintenance**: Fully supported and maintained by our platform team
+
+### 🛠️ Manual Instrumentation - **Custom Implementation Required**
+- **What it is**: Hand-coded metric collection and custom business logic metrics
+- **What you get**: Complete control over what metrics are collected
+- **Important**: **You need to ensure that manually shipped OpenTelemetry metric names match the ones expected by zero-code instrumentation to take full advantage of built-in reports and default alert rules. Otherwise, you will need to create custom reports and alerts based on your custom metrics.**
+
+Metrics collected through zero-code instrumentation and used in out-of-the-box reports and alerts are listed below. If your SDK doesn’t support OpenTelemetry zero-code instrumentation, or if you choose to use manual instrumentation for full control over your metrics, we recommend that the metrics you ship from your application code match those in the list below to take advantage of out-of-the-box reports and alerts. However, if you prefer to ship additional metrics and create custom reports you can always use the [Chart Builder](/docs/dashboards/chart-builder/) or define your own [alert rules](/alerts/creating-metrics-alerts/).
 
 | Metric Name<br> Key *(Type)* *(Unit)* | Description |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
