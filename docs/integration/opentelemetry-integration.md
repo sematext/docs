@@ -117,35 +117,63 @@ Provides HTTP service monitoring focused on request performance, reliability, an
 - Quickly spot error rate increases or unusual redirect patterns
 
 
-![OTELMonitoring service Health](/docs/images/integrations/otel-monitoring-service-health.png)
+![OTEL Monitoring Service Health](/docs/images/integrations/otel-monitoring-service-health.png)
 
 ### Performance Summary Report
 
+![OTEL Monitoring Performance Summary](/docs/images/integrations/otel-monitoring-performance-summary.png)
+
 ### Cross-Service Report
+
+![OTEL Monitoring Cross Service](/docs/images/integrations/otel-monitoring-cross-service.png)
 
 ### Client Performance Report
 
+![OTEL Monitoring Client Performance](/docs/images/integrations/otel-monitoring-client-performance.png)
+
 ### Database Performance Report
+
+![OTEL Monitoring Database Performance](/docs/images/integrations/otel-monitoring-database-performance.png)
 
 ### Java-specific JVM Runtime Report
 
+![OTEL Monitoring Java JVM Runtime](/docs/images/integrations/otel-monitoring-java-jvm-runtime.png)
+
 ### Java-specific Memory Analysis Report
+
+![OTEL Monitoring Java Memory Analysis](/docs/images/integrations/otel-monitoring-java-memory-analysis.png)
 
 ### Java-specific System Resource Report
 
+![OTEL Monitoring Java System Resource](/docs/images/integrations/otel-monitoring-java-system-resource.png)
+
 ### .Net-specific CPU & Memory Report
+
+![OTEL Monitoring Dotnet CPU & Memory](/docs/images/integrations/otel-monitoring-dotnet-cpu-memory.png)
 
 ### .Net-specific Garbage Collection Report
 
+![OTEL Monitoring Dotnet Garbage Collection](/docs/images/integrations/otel-monitoring-dotnet-garbage-collection.png)
+
 ### .Net-specific Asembly & Exceptions Report
+
+![OTEL Monitoring Dotnet Assembly & Exceptions](/docs/images/integrations/otel-monitoring-dotnet-assembly-exceptions.png)
 
 ### Python-specific CPython Runtime Report
 
+![OTEL Monitoring Python Runtime](/docs/images/integrations/otel-monitoring-python-runtime.png)
+
 ### Python-specific Memory Management Report
+
+![OTEL Monitoring Python Memory Management](/docs/images/integrations/otel-monitoring-python-memory-management.png)
 
 ### Python-specific System Performance Report
 
+![OTEL Monitoring Python System Performance](/docs/images/integrations/otel-monitoring-python-system-performance.png)
+
 ### Python-specific Process Analysis Report
+
+![OTEL Monitoring Python Process Analysis](/docs/images/integrations/otel-monitoring-python-process-analysis.png)
 
 ## Default Metric Alerts
 
