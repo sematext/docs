@@ -1,4 +1,4 @@
-Title: OpenTelemetry Logs
+Title: OpenTelemetry Integration
 Description: Complete guide for integrating OpenTelemetry metrics and logs with Sematext Cloud. Learn how to set up the Sematext Agent as an OpenTelemetry collector, configure SDK-specific instrumentation for Python, Go, Node.js, .NET, Java, Ruby, and PHP applications, and explore built-in dashboards, visualizations, and alert rules.
 
 OpenTelemetry is an observability framework that helps you collect data from your applications and servers. It can gather logs, metrics, and traces in one place. Sematext Cloud works with OpenTelemetry to store and display this data.
@@ -116,62 +116,348 @@ Provides HTTP service monitoring focused on request performance, reliability, an
 - **HTTP Status Distribution** pie chart breaks down 1XX, 2XX, 3XX, 4XX, and 5XX responses
 - Quickly spot error rate increases or unusual redirect patterns
 
-
 ![OTEL Monitoring Service Health](/docs/images/integrations/otel-monitoring-service-health.png)
 
 ### Performance Summary Report
+
+Request duration and latency analysis across all services
+
+#### Performance Comparison Metrics
+- **Avg Server Response Time** - Calculated server-side request processing time in milliseconds
+- **Avg Client Call Duration** - Outbound HTTP request duration from client perspective in milliseconds
+- **Average Response Time Comparison** - Side-by-side trend chart comparing server vs client average response times over time
+
+#### Response Time Distribution Analysis
+- **Response Time Comparison (server vs client requests)** - Categorizes both server and client requests into three performance tiers:
+  - **Fast** (<750ms) - Optimal performance range displayed in green tones
+  - **Moderate** (1-7.5s) - Acceptable performance range in orange tones
+  - **Slow** (>7.5s) - Concerning performance requiring attention in red/brown tones
+- Enables identification of whether latency originates from server processing or client-side calls
+
+#### Error Analysis
+- **Error Rate Comparison** - Tracks total errors (4XX + 5XX) for both server and client requests
+- **Server 5XX vs Client 5XX** - Isolates server errors to distinguish infrastructure issues from client-side problems
+- Helps pinpoint whether errors stem from internal services or external dependencies
 
 ![OTEL Monitoring Performance Summary](/docs/images/integrations/otel-monitoring-performance-summary.png)
 
 ### Cross-Service Report
 
+Compare HTTP performance between different services
+
+#### Service Performance Metrics
+- **Avg Response Time per Service** - Big number display showing average response time grouped by service name
+- Calculated from duration sum/count metrics, converted to milliseconds
+- Enables quick identification of slowest services
+
+#### Service Comparison Chart
+- **Avg Response Time per Service** - Time-series chart displaying response time trends for each service
+- Grouped by `service.name` tag to track individual service performance
+- Helps identify service degradation patterns and compare relative performance
+
 ![OTEL Monitoring Cross Service](/docs/images/integrations/otel-monitoring-cross-service.png)
 
 ### Client Performance Report
+
+Monitor outbound HTTP requests made by your services
+
+#### Request Duration by Method
+- **HTTP Client Request Duration** - Tracks average response time for each HTTP method:
+  - GET (blue)
+  - POST (green)
+  - PUT (orange)
+  - DELETE (red)
+  - PATCH (purple)
+- Calculated as (sum/count) × 1000 for millisecond precision
+
+#### Request Volume Analysis
+- **Client Request** bar chart - Shows request count distribution across HTTP methods
+- Helps understand which operations dominate client-side traffic
+
+#### Status Code Tracking
+- **Response Status Distribution** pie chart - Breaks down client responses by status category:
+  - 1XX (informational)
+  - 2XX (success) - green
+  - 3XX (redirection) - orange
+  - 4XX (client errors) - red
+  - 5XX (server errors) - purple
+
+#### Error Rate Monitoring
+- **Client Error Rate** - Displays both error count (4XX + 5XX) and total requests
+- Enables calculation of error percentage for client-side calls
 
 ![OTEL Monitoring Client Performance](/docs/images/integrations/otel-monitoring-client-performance.png)
 
 ### Database Performance Report
 
+Monitor database connection pool health and query performance
+
+#### Connection Pool Overview
+- **Total Active Connections** - Current number of active database connections
+- **Connection Timeouts** - Count of connection timeout events
+- **Avg Response Time** - Average wait time for connection acquisition in milliseconds
+
+#### Pool Efficiency Metrics
+- **Pool Efficiency** - Displays used, idle, and total connections
+- **Connection Pool Status** pie chart - Visual breakdown of used vs idle connections
+  - Used connections (green)
+  - Idle connections (red)
+
+#### Capacity Management
+- **Pool Capacity vs Usage** - Stacked bar chart comparing used connections against max pool size
+- Grouped by connection pool name for multi-database monitoring
+- Helps identify pools approaching capacity limits
+
+#### Performance Bottlenecks
+- **Pending Requests Over Time** - Area chart tracking queued connection requests by pool
+- **Connection Timeouts by Pool** - Bar chart highlighting which pools experience timeout issues
+
+#### Connection Lifecycle Metrics
+- **Connection Performance Metrics** - Tracks three key timing phases:
+  - **Create Time** - Time to establish new database connections (purple line)
+  - **Wait Time** - Time spent waiting in queue for available connection (blue line)
+  - **Use Time** - Active connection usage duration (green line)
+- All metrics converted to milliseconds for consistent measurement
+
 ![OTEL Monitoring Database Performance](/docs/images/integrations/otel-monitoring-database-performance.png)
 
 ### Java-specific JVM Runtime Report
+
+Complete JVM runtime monitoring
+
+#### Memory Metrics
+- **Memory Used** - Current JVM memory consumption in bytes
+- **Memory Utilization** - Percentage of committed memory being used
+  - Color-coded thresholds:
+    - Red: >85% utilization (critical)
+    - Orange: >70% utilization (warning)
+    - Blue: ≤70% utilization (healthy)
+
+#### Resource Tracking
+- **Thread Count** - Maximum number of active JVM threads
+- **Loaded Classes** - Current count of loaded classes in JVM
+
+#### Detailed Charts
+- **Memory Utilization** - Stacked area chart showing:
+  - Memory used (blue, with conditional coloring)
+  - Memory committed (light blue gradient)
+- **GC Duration** - Bar chart displaying maximum garbage collection pause times
+- **Thread Count** - Line chart tracking thread count over time
+- **Class Count** - Line chart monitoring total loaded classes
 
 ![OTEL Monitoring Java JVM Runtime](/docs/images/integrations/otel-monitoring-java-jvm-runtime.png)
 
 ### Java-specific Memory Analysis Report
 
+JVM memory usage and garbage collection analysis
+
+#### Current State Metrics
+- **Current Memory** - Real-time memory usage in bytes (average aggregation)
+- **Avg GC Duration** - Average garbage collection duration in milliseconds
+- **Max GC Pause** - Longest garbage collection pause time (critical for latency-sensitive applications)
+
+#### Memory & GC Correlation
+- **Memory Usage & GC Events** - Dual-metric chart displaying:
+  - Average memory used (line)
+  - Memory after last GC (marked with points)
+- Helps identify memory leak patterns and GC efficiency
+
+#### GC Performance Analysis
+- **GC Duration Analysis** - Compares average vs maximum GC duration
+  - Average GC Duration (blue bars)
+  - Max GC Duration (red bars)
+- Identifies GC pause outliers affecting application performance
+
 ![OTEL Monitoring Java Memory Analysis](/docs/images/integrations/otel-monitoring-java-memory-analysis.png)
 
 ### Java-specific System Resource Report
+
+System-level resource consumption tracking
+
+#### CPU Monitoring
+- **System CPU Usage** - Displays both average and max CPU utilization percentages
+  - AVG CPU Usage (blue)
+  - Max CPU Usage (red)
+- **System CPU Utilization** - Area chart with gradient showing average CPU usage trends
+
+#### Memory Tracking
+- **Memory Usage** - Dual metric display:
+  - Memory usage in bytes
+  - Memory utilization as percentage of committed memory
+- **System CPU Utilization** (Memory view) - Stacked area chart showing:
+  - Used Memory (green stacked area)
+  - Free Memory (light blue stacked area)
 
 ![OTEL Monitoring Java System Resource](/docs/images/integrations/otel-monitoring-java-system-resource.png)
 
 ### .Net-specific CPU & Memory Report
 
+Track process CPU and memory utilization for .NET applications
+
+#### Resource Usage Metrics
+- **CPU Usage** - Calculated as (cpu_time / cpu_count) × 100 for percentage utilization
+- **Physical Memory Usage** - RSS (Resident Set Size) in bytes showing actual RAM consumption
+- **Thread Count** - Displays average and maximum thread counts
+  - AVG (default color)
+  - MAX (orange)
+
+#### CPU Utilization Breakdown
+- **CPU Usage** - Stacked area chart separating:
+  - User CPU time (default color)
+  - System CPU time (purple)
+- Helps identify whether CPU is spent in application code vs system calls
+
 ![OTEL Monitoring Dotnet CPU & Memory](/docs/images/integrations/otel-monitoring-dotnet-cpu-memory.png)
 
 ### .Net-specific Garbage Collection Report
+
+Monitor .NET garbage collection patterns and heap management
+
+#### Generation Collection Rates
+- **Gen 0 Collections** - Frequent, fast collections for short-lived objects (example: 15.9/min)
+- **Gen 1 Collections** - Medium-lived objects (example: 5.4/min, purple)
+- **Gen 2 Collections** - Expensive collections for long-lived objects (example: 1.0/min, red)
+  - High Gen2 rates indicate potential memory issues or large object heap problems
+- **Total Heap Occupied** - Current heap size in bytes (green)
+
+#### Collection Trends
+- **Cumulative GC Collections Over Time** - Stacked area chart showing total collections by generation
+  - Gen 0 (default, gradient)
+  - Gen 1 (purple, gradient)
+  - Gen 2 (red, gradient)
+
+#### Collection Rate Analysis
+- **GC Collection Rate by Generation** - Line chart with points tracking collection frequency
+- **GC Collection Distribution** pie chart - Proportional breakdown of collections across generations
 
 ![OTEL Monitoring Dotnet Garbage Collection](/docs/images/integrations/otel-monitoring-dotnet-garbage-collection.png)
 
 ### .Net-specific Asembly & Exceptions Report
 
+Monitor assembly loading and exception patterns
+
+#### Assembly Management
+- **Loaded Assemblies** - Current count of loaded assemblies (orange)
+  - Useful for detecting assembly leak issues
+- **Assembly Growth** - Line chart tracking assembly count over time (orange)
+  - Sudden increases may indicate dynamic loading issues
+
+#### Exception Monitoring
+- **Total Exceptions** - Cumulative exception count (red)
+- **Exception Rate** - Average exception rate over time (red line)
+- Helps identify error hotspots and application stability issues
+
 ![OTEL Monitoring Dotnet Assembly & Exceptions](/docs/images/integrations/otel-monitoring-dotnet-assembly-exceptions.png)
 
 ### Python-specific CPython Runtime Report
+
+CPython runtime performance monitoring
+
+#### CPU Metrics
+- **CPU Utilization** - Process CPU usage as percentage (area chart with gradient)
+  - Converted to percentage by multiplying by 100
+- **CPU Time (Cumulative)** - Tracks total CPU time consumed:
+  - User CPU time (blue line)
+  - System CPU time (orange line)
+
+#### Thread & Context Management
+- **Thread Count** - Average number of active Python threads (purple gradient area)
+- **Context Switches** - Cumulative context switch tracking:
+  - Voluntary switches (green bars) - normal thread yielding
+  - Involuntary switches (red bars) - forced preemption indicating CPU contention
 
 ![OTEL Monitoring Python Runtime](/docs/images/integrations/otel-monitoring-python-runtime.png)
 
 ### Python-specific Memory Management Report
 
+Python process memory usage patterns
+
+#### Memory Overview
+- **Memory Usage** - Dual display showing:
+  - RSS (Resident Set Size) - Physical RAM usage (purple)
+  - VMS (Virtual Memory Size) - Total virtual memory (blue)
+
+#### System Memory Analysis
+- **System Memory** - Stacked area chart with gradient showing:
+  - Used memory (light blue)
+  - Free memory (light green)
+- **System Memory Utilization** - Percentage view of memory usage (converted to percentage)
+
+#### Process Memory Tracking
+- **Process Memory Usage** - Stacked area chart comparing:
+  - VMS (Virtual) - blue gradient, stacked
+  - RSS (Physical) - purple gradient, stacked
+- Helps identify memory leaks and allocation patterns
+
 ![OTEL Monitoring Python Memory Management](/docs/images/integrations/otel-monitoring-python-memory-management.png)
 
 ### Python-specific System Performance Report
 
+System-level performance and context switching
+
+#### CPU Monitoring
+- **CPU User** - System CPU usage for user processes as percentage
+  - Conditional coloring:
+    - Red: >80% utilization
+    - Orange: >60% utilization
+    - Light blue: ≤60% utilization
+- **System CPU Utilization by State** - Area chart breaking down CPU usage by state (user, system, idle, etc.)
+
+#### Disk Performance
+- **Disk** - Tracks I/O operations:
+  - Write (per sec) - purple gradient (converted from bytes)
+  - Receive (per sec) - blue gradient
+- **Disk I/O** - Line chart with points showing:
+  - Write operations (purple)
+  - Read operations (blue)
+- **Disk Operations** - Stacked area chart with gradient for write/read operations
+
+#### Network Monitoring
+- **Net Errors** - Count of network errors (red, area with gradient)
+- **Network I/O** - Line chart tracking:
+  - Receive (light green)
+  - Transmit (orange)
+- **Network Packets** - Line chart showing packet counts:
+  - Receive (light green)
+  - Transmit (orange)
+- **Network Errors & Dropped Packets** - Combined view:
+  - Errors (red line)
+  - Dropped packets (orange line)
+  
 ![OTEL Monitoring Python System Performance](/docs/images/integrations/otel-monitoring-python-system-performance.png)
 
 ### Python-specific Process Analysis Report
+
+Process thread management and CPU analysis
+
+#### Process Metrics
+- **Process Threads** - Average thread count (orange)
+- **Process CPU** - CPU utilization percentage (blue)
+- **System User CPU** - System-wide user CPU percentage (blue, filtered by state=user)
+- **RSS Memory** - Physical memory usage (blue, filtered by type=rss)
+- **Active Connections** - Number of established network connections (purple, filtered by state=ESTABLISHED)
+
+#### Comparative Analysis
+- **Thread Count Comparison** - Compares:
+  - Process Threads (orange line)
+  - System Threads (light blue area)
+- **CPU Utilization Comparison** - Overlays:
+  - Process CPU (orange line)
+  - System CPU (light blue dashed line, user state only)
+
+#### CPU Percentiles
+- **CPU Utilization Percentiles** - Multi-percentile view:
+  - P50 (Median) - green line
+  - P95 - orange line
+  - P99 - red line
+- Helps identify CPU usage distribution and outliers
+
+#### Network Connections
+- **Network Connections by State** - Tracks connections:
+  - Established (green line)
+  - Time Wait (orange line)
+  - Close Wait (red line)
+- Useful for identifying connection leak or timeout issues
 
 ![OTEL Monitoring Python Process Analysis](/docs/images/integrations/otel-monitoring-python-process-analysis.png)
 
