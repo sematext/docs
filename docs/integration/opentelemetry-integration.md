@@ -117,7 +117,7 @@ Provides HTTP service monitoring focused on request performance, reliability, an
 - Quickly spot error rate increases or unusual redirect patterns
 
 
-TODO: image here
+![OTELMonitoring service Health](/docs/images/integrations/otel-monitoring-service-health.png)
 
 ### Performance Summary Report
 
