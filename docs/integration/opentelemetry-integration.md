@@ -205,7 +205,6 @@ Monitor database connection pool health and query performance
   - **Create Time** - Time to establish new database connections
   - **Wait Time** - Time spent waiting in queue for available connection
   - **Use Time** - Active connection usage duration
-- All metrics converted to milliseconds for consistent measurement
 
 ![OTEL Monitoring Database Performance](/docs/images/integrations/otel-monitoring-database-performance.png)
 
