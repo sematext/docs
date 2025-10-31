@@ -400,6 +400,20 @@ Process thread management and CPU analysis
 
 ## Default Metric Alerts
 
+Pre-configured [alert rules](/docs/guide/alerts-guide) will notify you about:
+
+- **HTTP Server Error Rate Anomaly Alert**: Alerts when services exhibit abnormal spikes in 4xx/5xx HTTP response codes, indicating application issues, bad requests, or service degradation. 
+- **HTTP Client Error Rate Anomaly Alert**: Alerts when services experience abnormal spikes in 4xx/5xx errors from outbound HTTP calls to dependencies. Indicates issues with downstream services, API misconfigurations, or authentication problems affecting external integrations.
+- **HTTP Client Latency Anomaly Alert**: Alerts on unusual increases in outbound HTTP request response times, grouped by service and route. Detects performance degradation in downstream dependencies that often precedes complete failures and impacts user experience.
+- **HTTP Server Latency Anomaly Alert**: Alerts on unusual increases in server-side request processing time, grouped by service and HTTP route. Detects performance degradation from application code issues, resource contention, or downstream dependency slowness that impacts user-facing response times.
+- **Database Connection Pool Timeout Alert**: Alerts when database connection timeout events exceed 5 occurrences within a 10-minute period, indicating the database layer is struggling to handle connection requests. Early warning sign of database saturation or connectivity issues.
+- **Database Connection Pool Saturation Alert**: Alerts when pending database connection requests exceed 10 within a 10-minute window, signaling that the connection pool is at or near capacity. Indicates insufficient database connection resources or slow query execution blocking connections.
+- **JVM Memory Pressure Alert**: Alerts when JVM memory utilization exceeds 85% of committed memory for 5 minutes, indicating potential memory exhaustion. Warns of approaching out-of-memory conditions that could cause application crashes or severe performance degradation.
+- **JVM Long Garbage Collection Pauses Alert**: Alerts when JVM garbage collection pauses exceed 1 second within a 5-minute window. Long GC pauses cause application freezes, request timeouts, and degraded user experience, often indicating memory pressure or inefficient memory usage patterns.
+- **High CPU Usage Alert**: Alerts when process CPU utilization exceeds 70% over a 10-minute period. Indicates compute resource saturation that can lead to request queueing, increased latency, and potential service instability.
+- **Database Query Performance Degradation Alert**: Alerts on anomalous increases in average database query execution time over a 10-minute window. Detects performance degradation from inefficient queries, missing indexes, lock contention, or database resource constraints before they cause widespread application slowdowns.
+
+
 # Logs
 
 Explain zero-code vs manual instrumentation.
