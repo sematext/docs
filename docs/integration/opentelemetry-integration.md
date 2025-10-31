@@ -102,7 +102,7 @@ Provides HTTP service monitoring focused on request performance, reliability, an
 #### Performance Analysis
 
 - **Hourly Request Count** - Traffic patterns over time to identify peak hours and unusual spikes
-- **Max Durations** - Outlier detection for slowest requests (client-side)
+- **Max Durations** - Outlier detection for slowest requests
 - **Duration Analysis** - Compare max vs average response times to spot performance degradation
 
 #### Response Time Distribution
