@@ -162,12 +162,7 @@ Compare HTTP performance between different services
 Monitor outbound HTTP requests made by your services
 
 #### Request Duration by Method
-- **HTTP Client Request Duration** - Tracks average response time for each HTTP method:
-  - GET (blue)
-  - POST (green)
-  - PUT (orange)
-  - DELETE (red)
-  - PATCH (purple)
+- **HTTP Client Request Duration** - Tracks average response time for each HTTP method
 - Calculated as (sum/count) × 1000 for millisecond precision
 
 #### Request Volume Analysis
