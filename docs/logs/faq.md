@@ -113,6 +113,14 @@ This Daily Volume Limit prevents run-away logging
 from causing over-billing. Logs App will send email notifications before
 this limit is reached, so if you need to temporarily increase it, you can do that without losing any logs.
 
+### How does Sematext calculate daily log volume when I ship historical data?
+
+We calculate daily log volume based on the time we receive your logs, not on the timestamps in your log data.
+
+Each log event typically includes a `@timestamp` field, which represents when the event actually occurred. However, when we calculate daily log volume and apply your plan’s daily volume limit, we use the `@timestamp_received` field, which is the time when Sematext Cloud receives your data.
+
+This means that if you send a month’s worth of historical logs in a single day, even though the logs have `@timestamp` values spread across different days, all that data will count toward the daily log volume for the day it was received.
+
 ### What is the maximum log size Logs App will accept?
 
 That depends on the plan you selected for your application. If your
