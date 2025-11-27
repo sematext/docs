@@ -33,6 +33,22 @@ The [Services View](services-view.md) shows your business applications and their
 
 The [Infrastructure View](infrastructure-view.md) shows your physical and virtual infrastructure hierarchy. For Kubernetes, you can drill down from clusters to nodes to pods to containers. For bare-metal hosts, you see your servers and the services running on them. This view is perfect for capacity planning, identifying noisy neighbors, and understanding resource distribution.
 
+## Use Cases
+
+Beyond day-to-day monitoring, Network Map helps with scenarios that are hard to tackle with traditional tools:
+
+**Discover unknown dependencies.** "I didn't know service X talks to database Y" - these surprises often surface during incidents. Network Map shows all connections, including ones that weren't in the original architecture design or that were added without updating documentation.
+
+**Detect suspicious connections.** See which external IPs and destinations your services communicate with. Spot unexpected outbound connections that might indicate compromised services or misconfigured applications reaching unintended endpoints.
+
+**Identify data exfiltration.** Unusual outbound data volumes from databases or internal services can indicate a security breach. Network Map shows traffic volumes on every connection, making abnormal patterns visible.
+
+**Find rogue processes.** Detect unexpected processes making network calls. Malware, cryptocurrency miners, or unauthorized applications often reveal themselves through their network activity.
+
+**Uncover cross-region cost leakage.** Cloud providers charge for cross-region and cross-zone traffic. Network Map reveals connections you didn't know existed - like a US service regularly calling an EU database - so you can address unexpected bandwidth costs.
+
+**Audit third-party integrations.** See exactly which external services your infrastructure communicates with. Useful for security reviews, compliance audits, and understanding your actual attack surface.
+
 ## Getting Started
 
 To use Network Map, you need:
