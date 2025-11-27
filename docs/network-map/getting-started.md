@@ -7,9 +7,9 @@ Getting Network Map up and running takes just a few minutes if you already have 
 
 Network Map requires two things:
 
-**An [Infra App](../monitoring/infrastructure.md)** to collect and store your infrastructure data. If you're already using Sematext for infrastructure monitoring, you have this. If not, you'll create one as part of the setup process.
+**An [Infra App](/docs/monitoring/infrastructure/)** to collect and store your infrastructure data. If you're already using Sematext for infrastructure monitoring, you have this. If not, you'll create one as part of the setup process.
 
-**[Sematext Agent](../agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need version 4.1.x or later.
+**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need version 4.1.x or later.
 
 For best results, your hosts should be running **Linux kernel 5.8 or later**. Older kernels (4.15+) work but with some limitations. Check your kernel version with `uname -r`.
 
@@ -27,7 +27,7 @@ Each Infra App typically represents one environment. Many teams have separate In
 
 ### If You Have an Infra App But No Agents
 
-You'll see instructions to install [Sematext Agent](../agents/sematext-agent/installation/). The installation is straightforward - you'll get a command to run on each host that includes your Infra App token.
+You'll see instructions to install [Sematext Agent](/docs/agents/sematext-agent/installation/). The installation is straightforward - you'll get a command to run on each host that includes your Infra App token.
 
 For Kubernetes environments, you'll deploy the agent as a DaemonSet so it runs on every node automatically.
 
@@ -59,7 +59,7 @@ After a few minutes, you should see:
 - Connection lines between services showing protocols and traffic
 - Your Kubernetes clusters and nodes (if applicable) in the Infrastructure view
 
-If nothing appears after 10 minutes, check the [Troubleshooting](troubleshooting.md) guide.
+If nothing appears after 10 minutes, check the [Troubleshooting](/docs/network-map/troubleshooting/) guide.
 
 ## Using the Quick Guide
 
@@ -75,7 +75,7 @@ For Network Map pricing details, visit [sematext.com/pricing](https://sematext.c
 
 Once Network Map is running:
 
-- [Services View](services-view.md) - Explore your services organized by tier
-- [Infrastructure View](infrastructure-view.md) - Drill down into Kubernetes clusters and standalone hosts
-- [Filtering & Search](filtering-search.md) - Learn to find and filter specific services
-- [Thresholds](thresholds.md) - Customize warning and critical levels for your environment
+- [Services View](/docs/network-map/services-view/) - Explore your services organized by tier
+- [Infrastructure View](/docs/network-map/infrastructure-view/) - Drill down into Kubernetes clusters and standalone hosts
+- [Filtering & Search](/docs/network-map/filtering-search/) - Learn to find and filter specific services
+- [Thresholds](/docs/network-map/thresholds/) - Customize warning and critical levels for your environment

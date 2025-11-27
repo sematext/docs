@@ -17,7 +17,7 @@ Each service card tells you everything you need to know at a glance:
 
 The service name and icon tell you what type of service it is. A badge shows whether it's running in Kubernetes ("k8s") or on a standalone host ("VM"). You'll also see tags indicating the service type (like "Data" for databases or "Application" for your business services), the workload type (Deployment, StatefulSet, etc.), and how many active connections the service has.
 
-The CPU and memory percentages show current resource usage. These numbers change color based on your [threshold settings](thresholds.md) - green means healthy, yellow means warning, red means critical. When a service turns red, you know immediately where to focus your attention.
+The CPU and memory percentages show current resource usage. These numbers change color based on your [threshold settings](/docs/network-map/thresholds/) - green means healthy, yellow means warning, red means critical. When a service turns red, you know immediately where to focus your attention.
 
 For Kubernetes services, you'll also see the namespace and the host where the service is running, giving you context about where the service lives in your infrastructure.
 
@@ -25,7 +25,7 @@ For Kubernetes services, you'll also see the namespace and the host where the se
 
 The lines between services represent actual network connections. Each line shows:
 
-The protocol being used - HTTP, PostgreSQL, MongoDB, Kafka, or any of the [dozens of protocols](supported-services.md#supported-protocols) Network Map detects. The traffic volume appears as a label on the line, like "HTTP (1.2MB)", so you can see which connections are handling the most data.
+The protocol being used - HTTP, PostgreSQL, MongoDB, Kafka, or any of the [dozens of protocols](/docs/network-map/supported-services/#supported-protocols) Network Map detects. The traffic volume appears as a label on the line, like "HTTP (1.2MB)", so you can see which connections are handling the most data.
 
 Connection lines are color-coded. Green connections are healthy. Yellow indicates elevated latency or traffic approaching your thresholds. Red means the connection is experiencing problems - high latency, errors, or traffic beyond your critical threshold.
 
@@ -39,7 +39,7 @@ Click on any service to open its details panel:
 
 The **Service Overview** section shows where the service is running - the host name and IP address. This helps you quickly identify the physical or virtual location of the service.
 
-The **Service Metrics** section displays real-time resource utilization with visual bars for CPU, memory, network I/O, and disk I/O. The bars are color-coded based on your [threshold settings](thresholds.md), so you can immediately see if a service is resource-constrained.
+The **Service Metrics** section displays real-time resource utilization with visual bars for CPU, memory, network I/O, and disk I/O. The bars are color-coded based on your [threshold settings](/docs/network-map/thresholds/), so you can immediately see if a service is resource-constrained.
 
 The **Network Connections** section lists every connection to and from this service. You can filter to show All, Incoming, or Outgoing connections, and sort by Traffic Volume, Service Name, or Protocol. Each connection entry shows the direction (an arrow indicates whether this service is the client or server), the connected service name, the protocol being used, and the traffic volume.
 
@@ -73,7 +73,7 @@ Use the zoom controls in the bottom-left corner, or scroll to zoom. The zoom ind
 
 ## Automatic Service Detection
 
-Network Map automatically recognizes [over 100 service types](supported-services.md) without any configuration. It identifies services based on container images, process names, network signatures, and Kubernetes metadata.
+Network Map automatically recognizes [over 100 service types](/docs/network-map/supported-services/) without any configuration. It identifies services based on container images, process names, network signatures, and Kubernetes metadata.
 
 Supported services include:
 
@@ -91,6 +91,6 @@ When Network Map detects a service, it shows the appropriate icon and applies ty
 
 Once you're comfortable with the Services View, explore:
 
-- [Infrastructure View](infrastructure-view.md) to drill down into your Kubernetes clusters and standalone hosts
-- [Filtering & Search](filtering-search.md) to focus on specific services or find high-resource consumers
-- [Thresholds](thresholds.md) to customize the warning and critical levels for your environment
+- [Infrastructure View](/docs/network-map/infrastructure-view/) to drill down into your Kubernetes clusters and standalone hosts
+- [Filtering & Search](/docs/network-map/filtering-search/) to focus on specific services or find high-resource consumers
+- [Thresholds](/docs/network-map/thresholds/) to customize the warning and critical levels for your environment

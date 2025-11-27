@@ -11,7 +11,7 @@ The search bar at the top of Network Map lets you quickly find specific services
 
 ## Quick Filters for Common Problems
 
-Click the Filters button to open the Services Filters panel. At the top, you'll find Quick Filters - pre-configured filters based on your [threshold settings](thresholds.md) that highlight common problem areas:
+Click the Filters button to open the Services Filters panel. At the top, you'll find Quick Filters - pre-configured filters based on your [threshold settings](/docs/network-map/thresholds/) that highlight common problem areas:
 
 **High Network** (>10MB/s) shows services with high network I/O. Use this to find services that might be bandwidth-constrained or experiencing unusual traffic.
 
@@ -21,7 +21,7 @@ Click the Filters button to open the Services Filters panel. At the top, you'll 
 
 **High Memory** (>80% usage) displays services approaching their memory limits. Catching these early helps prevent OOM kills and service disruptions.
 
-These quick filters are especially useful during incident response - instead of scanning the entire map, click "High CPU" to immediately see which services are struggling. The threshold values shown are defined in your [Threshold Settings](thresholds.md).
+These quick filters are especially useful during incident response - instead of scanning the entire map, click "High CPU" to immediately see which services are struggling. The threshold values shown are defined in your [Threshold Settings](/docs/network-map/thresholds/).
 
 ## Filtering by Environment
 
@@ -69,7 +69,7 @@ Choose the metric most relevant to your current investigation. Traffic volume he
 
 The color scale uses green for healthy values (below your warning threshold), yellow for warning levels (between warning and critical), and red for critical values (above your critical threshold). Gray indicates no data is available.
 
-This color coding works with your [threshold configuration](thresholds.md), so you can customize what "healthy" and "critical" mean for your environment.
+This color coding works with your [threshold configuration](/docs/network-map/thresholds/), so you can customize what "healthy" and "critical" mean for your environment.
 
 ## Combining Filters
 
@@ -99,6 +99,6 @@ To reset your view, click "Clear All" in the filters panel or close the panel to
 
 ## Next Steps
 
-- [Thresholds](thresholds.md) to customize what "High CPU" and other quick filters mean for your environment
-- [Services View](services-view.md) to understand the tier-based service layout
-- [Infrastructure View](infrastructure-view.md) to drill down into Kubernetes and standalone host infrastructure
+- [Thresholds](/docs/network-map/thresholds/) to customize what "High CPU" and other quick filters mean for your environment
+- [Services View](/docs/network-map/services-view/) to understand the tier-based service layout
+- [Infrastructure View](/docs/network-map/infrastructure-view/) to drill down into Kubernetes and standalone host infrastructure

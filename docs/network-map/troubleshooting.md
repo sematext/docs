@@ -9,7 +9,7 @@ Network Map requires:
 
 **An Infra App** in your Sematext Cloud account. The Infra App collects infrastructure metrics and provides the foundation for Network Map's topology visualization. If you don't have one, create one at [Sematext Cloud](https://apps.sematext.com/ui/infrastructure/create).
 
-**[Sematext Agent](../agents/sematext-agent/installation/) version 4.1.x or later** installed on your hosts. The agent collects the eBPF-based network connection data that powers Network Map. Check your agent version with `sematext-agent --version`.
+**[Sematext Agent](/docs/agents/sematext-agent/installation/) version 4.1.x or later** installed on your hosts. The agent collects the eBPF-based network connection data that powers Network Map. Check your agent version with `sematext-agent --version`.
 
 **Linux kernel 5.8 or later** for optimal performance. Network Map uses eBPF with ring buffers, which requires kernel 5.8+. Older kernels (4.15+) work but with reduced performance and some limitations. Check your kernel version with `uname -r`.
 
@@ -27,7 +27,7 @@ To resolve this:
 2. Update those agents to version 4.1.x or later
 3. The warning disappears once all agents are current
 
-Follow the [Sematext Agent update instructions](../agents/sematext-agent/installation/) to upgrade your agents to the latest version.
+Follow the [Sematext Agent update instructions](/docs/agents/sematext-agent/installation/) to upgrade your agents to the latest version.
 
 ## No Data Showing
 
@@ -73,7 +73,7 @@ ps aux | grep <service-name>
 
 **Look for network connectivity issues.** If the agent can't reach Sematext Cloud, data won't be transmitted. Check firewall rules and proxy settings.
 
-**Consider unrecognized services.** Network Map detects [over 100 service types](supported-services.md), but custom or unusual services might appear with generic names rather than specific icons. They should still show up as processes or connections.
+**Consider unrecognized services.** Network Map detects [over 100 service types](/docs/network-map/supported-services/), but custom or unusual services might appear with generic names rather than specific icons. They should still show up as processes or connections.
 
 ## Missing Connections
 
@@ -93,7 +93,7 @@ If Network Map is slow or your browser struggles:
 
 **Zoom out.** At lower zoom levels, Network Map renders less detail per element, improving performance. Use the zoom controls to find a balance between detail and responsiveness.
 
-**Apply filters.** Instead of displaying your entire infrastructure, use [filters](filtering-search.md) to focus on specific services, namespaces, or service types. Fewer elements means better performance.
+**Apply filters.** Instead of displaying your entire infrastructure, use [filters](/docs/network-map/filtering-search/) to focus on specific services, namespaces, or service types. Fewer elements means better performance.
 
 **Use Quick Filters.** If you're troubleshooting, Quick Filters like "High CPU" immediately narrow the view to relevant services.
 
@@ -113,7 +113,7 @@ Currently, service detection is automatic and cannot be manually overridden. The
 
 If you're still experiencing issues:
 
-Check the [Sematext Agent troubleshooting guide](../agents/sematext-agent/agent-troubleshooting/) for agent-specific issues.
+Check the [Sematext Agent troubleshooting guide](/docs/agents/sematext-agent/agent-troubleshooting/) for agent-specific issues.
 
 Check the [Sematext status page](https://status.sematext.com) for any ongoing platform issues.
 
@@ -127,6 +127,6 @@ Contact Sematext support with details about your environment, the issue you're e
 
 ## Next Steps
 
-- [Getting Started](getting-started.md) to review prerequisites and setup
-- [Services View](services-view.md) to understand how services are displayed
-- [Infrastructure View](infrastructure-view.md) to navigate your infrastructure hierarchy
+- [Getting Started](/docs/network-map/getting-started/) to review prerequisites and setup
+- [Services View](/docs/network-map/services-view/) to understand how services are displayed
+- [Infrastructure View](/docs/network-map/infrastructure-view/) to navigate your infrastructure hierarchy

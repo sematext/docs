@@ -85,6 +85,6 @@ Use the zoom indicator to see your current zoom level, which affects how much in
 
 ## Next Steps
 
-- [Services View](services-view.md) to understand service-level dependencies and connections
-- [Filtering & Search](filtering-search.md) to find specific pods, filter by namespace, or focus on resource-heavy workloads
-- [Thresholds](thresholds.md) to set appropriate warning and critical levels for your infrastructure
+- [Services View](/docs/network-map/services-view/) to understand service-level dependencies and connections
+- [Filtering & Search](/docs/network-map/filtering-search/) to find specific pods, filter by namespace, or focus on resource-heavy workloads
+- [Thresholds](/docs/network-map/thresholds/) to set appropriate warning and critical levels for your infrastructure

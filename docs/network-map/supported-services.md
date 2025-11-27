@@ -301,6 +301,6 @@ Services not matching any known patterns appear with generic names based on thei
 
 ## Next Steps
 
-- [Services View](services-view.md) to see how detected services are displayed
-- [Filtering & Search](filtering-search.md) to filter by service type
-- [Troubleshooting](troubleshooting.md) if services aren't being detected correctly
+- [Services View](/docs/network-map/services-view/) to see how detected services are displayed
+- [Filtering & Search](/docs/network-map/filtering-search/) to filter by service type
+- [Troubleshooting](/docs/network-map/troubleshooting/) if services aren't being detected correctly
