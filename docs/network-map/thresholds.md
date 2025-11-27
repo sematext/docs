@@ -55,7 +55,7 @@ High network I/O isn't always bad - it might mean your service is busy doing its
 
 Disk I/O thresholds are in MB/s. Database servers and logging systems naturally have high disk I/O. Adjust these thresholds based on your storage tier's capabilities. An NVMe drive handles very different loads than a network-attached volume.
 
-Sustained high disk I/O can indicate queries without proper indexes, logging verbosity issues, or storage subsystem problems.
+Sustained high disk I/O can indicate database queries without proper indexes, logging verbosity issues, or storage subsystem problems.
 
 ### Traffic Volume
 
