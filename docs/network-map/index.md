@@ -1,5 +1,5 @@
 title: Network Map
-description: Visualize your entire infrastructure topology in real-time with eBPF-powered network insights. See Kubernetes clusters, standalone hosts, and communication patterns.
+description: Visualize your entire infrastructure topology in real-time with eBPF-powered network insights. See Kubernetes clusters, standalone hosts, databases, containers, processes, and communication patterns.
 
 Network Map gives you a real-time, visual representation of your entire infrastructure topology. Using eBPF-powered network insights collected by the Sematext Agent, you can see how your services, pods, containers, and processes communicate across Kubernetes clusters and standalone hosts.
 

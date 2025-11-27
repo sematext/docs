@@ -49,7 +49,7 @@ Once enabled, here's what to expect:
 
 **The map becomes more complete over time.** Services that haven't made network connections yet won't appear until they do. As your infrastructure communicates, Network Map captures more of the topology.
 
-**No restart required.** Your agents don't need to restart when you enable Network Map. The feature activates dynamically.
+**No restart required.** Your agents don't need to restart when you enable Network Map. The feature activates and deactivates dynamically.
 
 ## Verifying It's Working
 
