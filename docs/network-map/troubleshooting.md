@@ -73,7 +73,7 @@ ps aux | grep <service-name>
 
 **Look for network connectivity issues.** If the agent can't reach Sematext Cloud, data won't be transmitted. Check firewall rules and proxy settings.
 
-**Consider unrecognized services.** Network Map detects over 100 service types, but custom or unusual services might appear with generic names rather than specific icons. They should still show up as processes or connections.
+**Consider unrecognized services.** Network Map detects [over 100 service types](supported-services.md), but custom or unusual services might appear with generic names rather than specific icons. They should still show up as processes or connections.
 
 ## Missing Connections
 

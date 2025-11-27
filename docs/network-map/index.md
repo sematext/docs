@@ -19,7 +19,7 @@ With Network Map, you can:
 
 **Navigate complex Kubernetes environments.** Drill down from cluster to node to pod to container to process. See inter-node traffic, identify which pods are communicating across nodes, and understand your namespace topology.
 
-**Discover your services automatically.** Network Map detects over 100 service types including databases, caches, message queues, and web servers. You don't need to configure anything - it recognizes PostgreSQL, Redis, Kafka, Nginx, and many more from their network signatures.
+**Discover your services automatically.** Network Map detects [over 100 service types](supported-services.md) including databases, caches, message queues, and web servers. You don't need to configure anything - it recognizes PostgreSQL, Redis, Kafka, Nginx, and many more from their network signatures.
 
 **Reduce infrastructure costs.** Identify over-provisioned services that are consuming resources but barely being used. Spot redundant connections, find services that could be consolidated, and discover unused infrastructure. When you can see exactly what's running and how it's being used, you can make informed decisions about where to cut costs without impacting performance.
 

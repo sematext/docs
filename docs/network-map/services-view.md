@@ -73,7 +73,7 @@ Use the zoom controls in the bottom-left corner, or scroll to zoom. The zoom ind
 
 ## Automatic Service Detection
 
-Network Map automatically recognizes over 100 service types without any configuration. It identifies services based on container images, process names, network signatures, and Kubernetes metadata.
+Network Map automatically recognizes [over 100 service types](supported-services.md) without any configuration. It identifies services based on container images, process names, network signatures, and Kubernetes metadata.
 
 Supported services include:
 

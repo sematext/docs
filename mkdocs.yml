@@ -111,6 +111,7 @@ nav:
       - Infrastructure View: network-map/infrastructure-view.md
       - Filtering & Search: network-map/filtering-search.md
       - Thresholds: network-map/thresholds.md
+      - Supported Services: network-map/supported-services.md
       - Troubleshooting: network-map/troubleshooting.md
     - Tracing:
       - Overview: tracing/index.md
