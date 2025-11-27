@@ -9,13 +9,13 @@ The Services View shows your business applications and their connections. You ca
 
 Services are displayed as cards on the canvas, with connection lines showing how they communicate. The layout helps you visualize your application topology - you can see which services connect to databases, which ones communicate with message queues, and how traffic flows between components.
 
-Each service card shows at a glance whether it's running in Kubernetes (marked with a "k8s" badge) or on bare-metal infrastructure (marked with "VM"). The connections between services are labeled with the protocol and traffic volume, making it easy to identify your busiest communication paths.
+Each service card shows at a glance whether it's running in Kubernetes (marked with a "k8s" badge) or on a standalone host (marked with "VM"). The connections between services are labeled with the protocol and traffic volume, making it easy to identify your busiest communication paths.
 
 ## Reading the Service Cards
 
 Each service card tells you everything you need to know at a glance:
 
-The service name and icon tell you what type of service it is. A badge shows whether it's running in Kubernetes ("k8s") or on bare-metal ("VM"). You'll also see tags indicating the service type (like "Data" for databases or "Application" for your business services), the workload type (Deployment, StatefulSet, etc.), and how many active connections the service has.
+The service name and icon tell you what type of service it is. A badge shows whether it's running in Kubernetes ("k8s") or on a standalone host ("VM"). You'll also see tags indicating the service type (like "Data" for databases or "Application" for your business services), the workload type (Deployment, StatefulSet, etc.), and how many active connections the service has.
 
 The CPU and memory percentages show current resource usage. These numbers change color based on your [threshold settings](thresholds.md) - green means healthy, yellow means warning, red means critical. When a service turns red, you know immediately where to focus your attention.
 
@@ -91,6 +91,6 @@ When Network Map detects a service, it shows the appropriate icon and applies ty
 
 Once you're comfortable with the Services View, explore:
 
-- [Infrastructure View](infrastructure-view.md) to drill down into your Kubernetes clusters and bare-metal hosts
+- [Infrastructure View](infrastructure-view.md) to drill down into your Kubernetes clusters and standalone hosts
 - [Filtering & Search](filtering-search.md) to focus on specific services or find high-resource consumers
 - [Thresholds](thresholds.md) to customize the warning and critical levels for your environment

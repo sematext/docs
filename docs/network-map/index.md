@@ -1,7 +1,7 @@
 title: Network Map
-description: Visualize your entire infrastructure topology in real-time with eBPF-powered network insights. See Kubernetes clusters, bare-metal hosts, and communication patterns.
+description: Visualize your entire infrastructure topology in real-time with eBPF-powered network insights. See Kubernetes clusters, standalone hosts, and communication patterns.
 
-Network Map gives you a real-time, visual representation of your entire infrastructure topology. Using eBPF-powered network insights collected by the Sematext Agent, you can see how your services, pods, containers, and processes communicate across Kubernetes clusters and bare-metal hosts.
+Network Map gives you a real-time, visual representation of your entire infrastructure topology. Using eBPF-powered network insights collected by the Sematext Agent, you can see how your services, pods, containers, and processes communicate across Kubernetes clusters and standalone hosts.
 
 Instead of mentally piecing together your infrastructure from logs, metrics, and configuration files, Network Map shows you the actual connections happening right now. When something breaks, you can immediately see which services are affected and trace the problem to its source.
 
@@ -31,7 +31,7 @@ Network Map offers two complementary views, accessible via tabs at the top of th
 
 The [Services View](services-view.md) shows your business applications and their connections. This is ideal for understanding service dependencies and troubleshooting application-level issues. You can see at a glance which services connect to your databases, how traffic flows between components, and where bottlenecks occur.
 
-The [Infrastructure View](infrastructure-view.md) shows your physical and virtual infrastructure hierarchy. For Kubernetes, you can drill down from clusters to nodes to pods to containers. For bare-metal hosts, you see your servers and the services running on them. This view is perfect for capacity planning, identifying noisy neighbors, and understanding resource distribution.
+The [Infrastructure View](infrastructure-view.md) shows your physical and virtual infrastructure hierarchy. For Kubernetes, you can drill down from clusters to nodes to pods to containers. For standalone hosts, you see your servers and the services running on them. This view is perfect for capacity planning, identifying noisy neighbors, and understanding resource distribution.
 
 ## Use Cases
 
@@ -64,7 +64,7 @@ See [Getting Started](getting-started.md) for detailed setup instructions.
 
 - [Getting Started](getting-started.md) - Prerequisites and enabling Network Map
 - [Services View](services-view.md) - Understand service dependencies and connections
-- [Infrastructure View](infrastructure-view.md) - Navigate Kubernetes and bare-metal infrastructure
+- [Infrastructure View](infrastructure-view.md) - Navigate Kubernetes and standalone host infrastructure
 - [Filtering & Search](filtering-search.md) - Find specific services and focus on what matters
 - [Thresholds](thresholds.md) - Customize warning and critical levels for your environment
 - [Troubleshooting](troubleshooting.md) - Common issues and solutions

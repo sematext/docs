@@ -95,4 +95,4 @@ After configuring your thresholds, click the "Update Thresholds" button to apply
 
 - [Filtering & Search](filtering-search.md) to use Quick Filters based on your threshold settings
 - [Services View](services-view.md) to see threshold-based coloring in action
-- [Infrastructure View](infrastructure-view.md) to apply these thresholds to your Kubernetes and bare-metal infrastructure
+- [Infrastructure View](infrastructure-view.md) to apply these thresholds to your Kubernetes and standalone host infrastructure

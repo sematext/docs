@@ -76,6 +76,6 @@ For Network Map pricing details, visit [sematext.com/pricing](https://sematext.c
 Once Network Map is running:
 
 - [Services View](services-view.md) - Explore your services organized by tier
-- [Infrastructure View](infrastructure-view.md) - Drill down into Kubernetes clusters and bare-metal hosts
+- [Infrastructure View](infrastructure-view.md) - Drill down into Kubernetes clusters and standalone hosts
 - [Filtering & Search](filtering-search.md) - Learn to find and filter specific services
 - [Thresholds](thresholds.md) - Customize warning and critical levels for your environment

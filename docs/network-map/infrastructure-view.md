@@ -1,7 +1,7 @@
 title: Infrastructure View
-description: Navigate your Kubernetes clusters and bare-metal hosts with drill-down capabilities.
+description: Navigate your Kubernetes clusters and standalone hosts with drill-down capabilities.
 
-The Infrastructure View shows your physical and virtual infrastructure in a hierarchical layout. For Kubernetes environments, you can drill down from clusters to nodes to pods to containers. For bare-metal hosts, you see your servers and what's running on them.
+The Infrastructure View shows your physical and virtual infrastructure in a hierarchical layout. For Kubernetes environments, you can drill down from clusters to nodes to pods to containers. For standalone hosts, you see your servers and what's running on them.
 
 This view is essential for understanding resource distribution, identifying noisy neighbors, troubleshooting node-level issues, and capacity planning.
 
@@ -51,15 +51,15 @@ At the node level, you'll see connections between nodes with traffic volume labe
 
 The connections are color-coded by traffic volume, so high-traffic connections stand out immediately.
 
-## Bare-Metal Hosts
+## Standalone Hosts
 
-Toggle to "Bare-Metal Hosts" to see your non-Kubernetes infrastructure. This view shows your physical or virtual servers as cards on the canvas.
+Toggle to the "Bare-Metal" tab to see your non-Kubernetes infrastructure. This view shows your standalone hosts (VMs or physical servers) as cards on the canvas.
 
 ![Bare-Metal Hosts View](../images/network-map/network-map-bare-metal-hosts.png)
 
-Each host card displays the hostname, a "VM" badge indicating it's a bare-metal or virtual machine, the primary service detected running on that host (like MySQL or Apache), and current CPU and memory utilization.
+Each host card displays the hostname, a "VM" badge, the primary service detected running on that host (like MySQL or Apache), and current CPU and memory utilization.
 
-Click on any host to open the Bare-Metal Details panel, which shows the node ID, environment, and resource utilization bars for CPU, memory, disk, and network I/O.
+Click on any host to open the Host Details panel, which shows the node ID, environment, and resource utilization bars for CPU, memory, disk, and network I/O.
 
 This view is appropriate for traditional infrastructure that isn't containerized, or for mixed environments where you have both Kubernetes and standalone servers.
 
