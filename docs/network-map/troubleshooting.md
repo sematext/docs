@@ -7,7 +7,7 @@ This guide helps you resolve common issues with Network Map and understand its r
 
 Network Map requires:
 
-**An Infra App** in your Sematext Cloud account. The Infra App collects infrastructure metrics and provides the foundation for Network Map's topology visualization. If you don't have one, create one at [Sematext Cloud](https://apps.sematext.com/ui/infrastructure/create).
+**An Infra App** in your Sematext Cloud account. The Infra App collects infrastructure metrics and provides the foundation for Network Map's topology visualization. If you don't have one, create one at [Sematext Cloud US](https://apps.sematext.com/ui/infrastructure/create) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/infrastructure/create).
 
 **[Sematext Agent](/docs/agents/sematext-agent/installation/) version 4.1.x or later** installed on your hosts. The agent collects the eBPF-based network connection data that powers Network Map. Check your agent version with `sematext-agent --version`.
 
