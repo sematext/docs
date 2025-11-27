@@ -7,4 +7,4 @@ Monitor Kubernetes clusters with a lightweight [Agent](/docs/agents/sematext-age
 
 For more info, check out our [Kubernetes Monitoring](/docs/integration/kubernetes/) integration that comes pre-loaded with every Infra App.
 
-For a visual topology of your Kubernetes clusters with drill-down from clusters to nodes, pods, and containers, see [Network Map](/docs/network-map/infrastructure-view/).
+For a visual topology of your Kubernetes clusters with drill-down from clusters to nodes, pods, containers, and processes, see [Network Map](/docs/network-map/infrastructure-view/).

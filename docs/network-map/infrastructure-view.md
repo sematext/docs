@@ -9,7 +9,7 @@ This view is essential for understanding resource distribution, identifying nois
 
 ## Navigating Kubernetes Infrastructure
 
-When you switch to the Infrastructure tab and select Kubernetes, you start at the cluster level. From here, you can drill down through four levels of hierarchy:
+When you switch to the Infrastructure tab and select Kubernetes, you start at the cluster level. From here, you can drill down through five levels of hierarchy:
 
 **Clusters** show all your Kubernetes clusters. Each cluster card displays the cluster name, namespaces, CPU and memory utilization, and the count of nodes, pods, and containers. Click on a cluster to see its nodes.
 
@@ -37,7 +37,9 @@ Click on a node to see the Node Details panel with resource utilization (CPU cor
 
 ![Container Details](../images/network-map/network-map-k8s-container-details.png)
 
-Click on a container to see the Container Details panel with the container name, image, runtime, container ID, and a list of running processes with their CPU, memory, PID, and TGID.
+Click on a container to see the Container Details panel with the container name, image, runtime, container ID, and resource utilization.
+
+**Processes** are the deepest level. When viewing a container, you can see all running processes with their CPU usage, memory consumption, PID, and TGID. This helps you identify exactly what's executing inside each container and which processes are consuming resources.
 
 A breadcrumb trail at the top tracks your navigation path. For example: `K8s Clusters → prod-us-west → k8s-node-01 → frontend-nginx → Containers`. Click any level in the breadcrumb to jump back up the hierarchy.
 
