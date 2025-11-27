@@ -53,7 +53,7 @@ Look for connection errors, authentication failures, or eBPF-related warnings.
 
 **Confirm Network Map is enabled.** Visit the Network Map page in Sematext Cloud and confirm it's enabled. If it shows options to enable, click to enable it.
 
-**Wait for data collection.** After enabling Network Map or installing a new agent, data takes a few minutes to appear. The agent needs time to observe network connections and send the data to Sematext.
+**Wait for data collection.** After enabling Network Map or installing a new agent, initially, data takes a few minutes to appear. The agent needs time to observe network connections and send the data to Sematext.
 
 **Check kernel compatibility.** If you're running a kernel older than 4.15, eBPF features may not work. Check with `uname -r`.
 
