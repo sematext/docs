@@ -31,7 +31,7 @@ Network Map offers two complementary views, accessible via tabs at the top of th
 
 The [Services View](/docs/network-map/services-view/) shows your business applications and their connections. This is ideal for understanding service dependencies and troubleshooting application-level issues. You can see at a glance which services connect to your databases, how traffic flows between components, and where bottlenecks occur.
 
-The [Infrastructure View](/docs/network-map/infrastructure-view/) shows your physical and virtual infrastructure hierarchy. For Kubernetes, you can drill down from clusters to nodes to pods to containers. For standalone hosts, you see your servers and the services running on them. This view is perfect for capacity planning, identifying noisy neighbors, and understanding resource distribution.
+The [Infrastructure View](/docs/network-map/infrastructure-view/) shows your physical and virtual infrastructure hierarchy. For Kubernetes, you can drill down from clusters to nodes to pods to containers to processes. For standalone hosts, you see your servers and the services running on them. This view is perfect for capacity planning, identifying noisy neighbors, and understanding resource distribution.
 
 ## Use Cases
 

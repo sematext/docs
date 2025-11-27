@@ -1,7 +1,7 @@
 title: Infrastructure View
 description: Navigate your Kubernetes clusters and standalone hosts with drill-down capabilities.
 
-The Infrastructure View shows your physical and virtual infrastructure in a hierarchical layout. For Kubernetes environments, you can drill down from clusters to nodes to pods to containers. For standalone hosts, you see your servers and what's running on them.
+The Infrastructure View shows your physical and virtual infrastructure in a hierarchical layout. For Kubernetes environments, you can drill down from clusters to nodes to pods to containers to processes. For standalone hosts, you see your servers and what's running on them.
 
 This view is essential for understanding resource distribution, identifying noisy neighbors, troubleshooting node-level issues, and capacity planning.
 
