@@ -76,3 +76,4 @@ Infrastructure Monitoring provides:
 - [Kubernetes](/docs/agents/sematext-agent/kubernetes/metrics/) metrics and details
 - [Inventory](/docs/monitoring/inventory)
 - [Processes details and metrics](/docs/monitoring/processes)
+- [Network Map](/docs/network-map/) - Visualize your infrastructure topology and service connections
