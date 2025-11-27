@@ -639,19 +639,21 @@ pre {
 .node-icon { color: white; }
 .browser-icon { color: white; }
 .mobile-icon { color: white; }
+.network-map-icon { color: white; }
 
 /* Main categories - first grid */
 .grid.cards > ul > li:nth-child(1) { background-color: #1a237e; } /* Logs - Deep Indigo */
 .grid.cards > ul > li:nth-child(2) { background-color: #0277bd; } /* Monitoring - Ocean Blue */
-.grid.cards > ul > li:nth-child(3) { background-color: #00695c; } /* Experience - Deep Teal */
-.grid.cards > ul > li:nth-child(4) { background-color: #ef6c00; } /* Synthetics - Warm Orange */
-.grid.cards > ul > li:nth-child(5) { background-color: #d32f2f; } /* Alerts - Urgent Red */
-.grid.cards > ul > li:nth-child(6) { background-color: #2e7d32; } /* Events - Forest Green */
-.grid.cards > ul > li:nth-child(7) { background-color: #1565c0; } /* Dashboards - Royal Blue */
-.grid.cards > ul > li:nth-child(8) { background-color: #6a1b9a; } /* Tags - Deep Purple */
-.grid.cards > ul > li:nth-child(9) { background-color: #00838f; } /* Team - Cyan */
-.grid.cards > ul > li:nth-child(10) { background-color: #00695c; } /* Fleet - Teal */
-
+.grid.cards > ul > li:nth-child(3) { background-color: #00695c; } /* Tracing - Deep Teal */
+.grid.cards > ul > li:nth-child(4) { background-color: #7986cb; } /* Network Map - Light Indigo */
+.grid.cards > ul > li:nth-child(5) { background-color: #ef6c00; } /* Experience - Warm Orange */
+.grid.cards > ul > li:nth-child(6) { background-color: #d32f2f; } /* Synthetics - Urgent Red */
+.grid.cards > ul > li:nth-child(7) { background-color: #2e7d32; } /* Alerts - Forest Green */
+.grid.cards > ul > li:nth-child(8) { background-color: #1565c0; } /* Events - Royal Blue */
+.grid.cards > ul > li:nth-child(9) { background-color: #6a1b9a; } /* Dashboards - Deep Purple */
+.grid.cards > ul > li:nth-child(10) { background-color: #00838f; } /* Tags - Cyan */
+.grid.cards > ul > li:nth-child(11) { background-color: #00695c; } /* Team - Teal */
+.grid.cards > ul > li:nth-child(12) { background-color: #5e35b1; } /* Fleet - Purple */
 
 /* Improve contrast for card text and icons */
 .grid.cards > ul > li a,
