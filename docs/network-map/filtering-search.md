@@ -27,7 +27,7 @@ These quick filters are especially useful during incident response - instead of 
 
 The Environment & Infrastructure section lets you focus on specific parts of your infrastructure:
 
-Use the **Environment Type** checkboxes to filter by **Kubernetes** or **Bare-Metal** (standalone hosts) services. Each option displays a count of matching services, so you know how many elements will appear after filtering. You can select both to see your entire infrastructure, or focus on just one environment type.
+Use the **Environment Type** checkboxes to filter by **Kubernetes** or **Bare-Metal** (standalone hosts - VMs, cloud instances like EC2, or physical servers). Each option displays a count of matching services, so you know how many elements will appear after filtering. You can select both to see your entire infrastructure, or focus on just one environment type.
 
 ## Filtering by Service Type
 
