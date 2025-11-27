@@ -25,7 +25,7 @@ For Kubernetes services, you'll also see the namespace and the host where the se
 
 The lines between services represent actual network connections. Each line shows:
 
-The protocol being used - HTTP, PostgreSQL, MongoDB, Kafka, or any of the 80+ protocols Network Map detects. The traffic volume appears as a label on the line, like "HTTP (1.2MB)", so you can see which connections are handling the most data.
+The protocol being used - HTTP, PostgreSQL, MongoDB, Kafka, or any of the [dozens of protocols](supported-services.md#supported-protocols) Network Map detects. The traffic volume appears as a label on the line, like "HTTP (1.2MB)", so you can see which connections are handling the most data.
 
 Connection lines are color-coded. Green connections are healthy. Yellow indicates elevated latency or traffic approaching your thresholds. Red means the connection is experiencing problems - high latency, errors, or traffic beyond your critical threshold.
 

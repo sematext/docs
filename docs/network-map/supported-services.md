@@ -187,6 +187,98 @@ Network Map automatically detects and identifies over 100 service types across y
 |---------|---------------|
 | MinIO | 9000 |
 
+## Supported Protocols
+
+Network Map also detects the network protocol used in each connection. This helps you understand not just which services are communicating, but how they're communicating.
+
+### Web & API
+
+| Protocol | Default Ports |
+|----------|---------------|
+| HTTP | 80, 8080 |
+| HTTPS | 443, 8443 |
+
+### Database
+
+| Protocol | Default Ports |
+|----------|---------------|
+| MySQL | 3306 |
+| PostgreSQL | 5432 |
+| MongoDB | 27017 |
+| Redis | 6379 |
+| Cassandra | 9042 |
+
+### Messaging
+
+| Protocol | Default Ports |
+|----------|---------------|
+| Kafka | 9092 |
+| AMQP (RabbitMQ) | 5672 |
+| NATS | 4222 |
+
+### Search
+
+| Protocol | Default Ports |
+|----------|---------------|
+| Elasticsearch HTTP | 9200 |
+| Elasticsearch Transport | 9300 |
+
+### Monitoring
+
+| Protocol | Default Ports |
+|----------|---------------|
+| Prometheus | 9090 |
+| Grafana | 3000 |
+| InfluxDB | 8086 |
+
+### Container & Orchestration
+
+| Protocol | Default Ports |
+|----------|---------------|
+| Kubernetes API | 6443 |
+| Kubelet | 10250 |
+| Docker API | 2375, 2376 |
+| etcd | 2379 |
+
+### Service Mesh
+
+| Protocol | Default Ports |
+|----------|---------------|
+| Envoy Admin | 15000 |
+| Consul | 8500 |
+
+### Infrastructure
+
+| Protocol | Default Ports |
+|----------|---------------|
+| DNS | 53 |
+| SSH | 22 |
+| LDAP | 389, 636 |
+
+### Email
+
+| Protocol | Default Ports |
+|----------|---------------|
+| SMTP | 25, 465, 587 |
+| IMAP | 143, 993 |
+| POP3 | 110, 995 |
+
+### File Transfer
+
+| Protocol | Default Ports |
+|----------|---------------|
+| FTP | 21 |
+| TFTP | 69 |
+
+### Remote Access
+
+| Protocol | Default Ports |
+|----------|---------------|
+| RDP | 3389 |
+| VNC | 5900 |
+
+Connections on unrecognized ports appear with generic labels showing the port number.
+
 ## Detection Methods
 
 Network Map uses multiple detection methods with varying confidence levels:
