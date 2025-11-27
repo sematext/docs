@@ -9,7 +9,7 @@ Instead of mentally piecing together your infrastructure from logs, metrics, and
 
 ## Why Use Network Map?
 
-Traditional monitoring tells you that a service is slow or throwing errors. Network Map shows you *why* - maybe a downstream database is overloaded, or traffic is being routed through an unexpected path, or a new service deployment broke a critical connection.
+Traditional monitoring tells you that a service is slow or throwing errors. Network Map shows you *why* and exactly *where* - maybe a downstream database is overloaded, or traffic is being routed through an unexpected path, or a new service deployment broke a critical connection.
 
 With Network Map, you can:
 
@@ -21,7 +21,7 @@ With Network Map, you can:
 
 **Discover your services automatically.** Network Map detects [over 100 service types](/docs/network-map/supported-services/) including databases, caches, message queues, and web servers. You don't need to configure anything - it recognizes PostgreSQL, Redis, Kafka, Nginx, and many more from their network signatures.
 
-**Reduce infrastructure costs.** Identify over-provisioned services that are consuming resources but barely being used. Spot redundant connections, find services that could be consolidated, and discover unused infrastructure. When you can see exactly what's running and how it's being used, you can make informed decisions about where to cut costs without impacting performance.
+**Reduce infrastructure costs.** Identify over-provisioned services that are consuming resources but are barely being used. Spot redundant connections, find services that could be consolidated, and discover unused infrastructure. When you can see exactly what's running and how it's being used, you can make informed decisions about where to cut costs without impacting performance.
 
 **Replace outdated architecture diagrams.** Static diagrams get stale the moment they're created, and nobody wants to maintain them. Network Map shows your actual architecture as it exists right now - no more onboarding new engineers with outdated documentation or hunting for the "latest" version of a diagram that doesn't exist.
 
