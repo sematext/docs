@@ -7,7 +7,7 @@ When you're managing dozens or hundreds of services, you need ways to focus on w
 
 ## Finding Services with Search
 
-The search bar at the top of Network Map lets you quickly find specific services, nodes, pods, or hosts by name. Just start typing and matching elements are highlighted on the map.
+The search bar at the top of Network Map lets you quickly find specific services, nodes, pods, containers, processes, or hosts by name. Just start typing and matching elements are highlighted on the map.
 
 ## Quick Filters for Common Problems
 
