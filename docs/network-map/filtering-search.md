@@ -1,4 +1,4 @@
-title: Filtering & Search
+title: Network Map Filtering & Search
 description: Find and filter specific services, infrastructure, and connections in Network Map.
 
 When you're managing dozens or hundreds of services, you need ways to focus on what matters. Network Map provides powerful filtering and search capabilities that help you cut through the noise and find exactly what you're looking for.
