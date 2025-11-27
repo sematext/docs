@@ -17,7 +17,7 @@ Click the Filters button to open the Services Filters panel. At the top, you'll 
 
 **High Disk I/O** (>70MB/s) reveals services with elevated disk activity. This helps identify storage bottlenecks or services that might benefit from caching.
 
-**High CPU** (>70% usage) filters to services consuming significant CPU. When your cluster is running hot, this immediately shows you where the load is coming from.
+**High CPU** (>70% usage) filters to services consuming significant CPU. When your cluster is running hot, this immediately shows you where the bottleneck might be.
 
 **High Memory** (>80% usage) displays services approaching their memory limits. Catching these early helps prevent OOM kills and service disruptions.
 
