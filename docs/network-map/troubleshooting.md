@@ -23,7 +23,7 @@ This typically happens when you've added Network Map to an environment where age
 
 To resolve this:
 
-1. Click the warning banner to see which hosts have outdated agents
+1. Click the warning banner to see which hosts have outdated agents, or use [Fleet](/docs/fleet/) to view all your agents and their versions
 2. Update those agents to version 4.1.x or later
 3. The warning disappears once all agents are current
 
@@ -69,7 +69,7 @@ If some services you expect aren't appearing:
 ps aux | grep <service-name>
 ```
 
-**Check that the agent is on that host.** Each host needs its own agent instance. If you've added new hosts to your infrastructure, ensure they have agents installed.
+**Check that the agent is on that host.** Each host needs its own agent instance. Use [Fleet](/docs/fleet/) to see which hosts have agents installed. If you've added new hosts to your infrastructure, ensure they have agents installed.
 
 **Look for network connectivity issues.** If the agent can't reach Sematext Cloud, data won't be transmitted. Check firewall rules and proxy settings.
 
