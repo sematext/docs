@@ -41,9 +41,9 @@ Consider your workload patterns. Batch processing jobs might regularly spike to 
 
 ### Memory Usage
 
-Memory thresholds are percentages. Be careful with memory thresholds - unlike CPU, high memory often means you're approaching OOM conditions. Many teams keep these thresholds conservative to catch memory leaks early.
+Memory thresholds are percentages. For services, Network Map shows RSS (Resident Set Size) - the actual physical memory allocated to the process. Watching for unexpected growth can help catch memory leaks early.
 
-For JVM-based services, remember that heap usage patterns differ from system memory. A JVM might show 90% heap usage but be perfectly healthy if garbage collection is working well.
+For JVM-based services, heap usage patterns differ from RSS. A JVM might show high heap usage but be perfectly healthy if garbage collection is working well.
 
 ### Network I/O
 
