@@ -23,6 +23,8 @@ With Network Map, you can:
 
 **Reduce infrastructure costs.** Identify over-provisioned services that are consuming resources but barely being used. Spot redundant connections, find services that could be consolidated, and discover unused infrastructure. When you can see exactly what's running and how it's being used, you can make informed decisions about where to cut costs without impacting performance.
 
+**Replace outdated architecture diagrams.** Static diagrams get stale the moment they're created, and nobody wants to maintain them. Network Map shows your actual architecture as it exists right now - no more onboarding new engineers with outdated documentation or hunting for the "latest" version of a diagram that doesn't exist.
+
 ## Two Ways to View Your Infrastructure
 
 Network Map offers two complementary views, accessible via tabs at the top of the interface:
