@@ -49,7 +49,7 @@ journalctl -u sematext-agent -f
 
 Look for connection errors, authentication failures, or eBPF-related warnings.
 
-**Verify your Infra App token is configured correctly.** The agent needs a valid token to send data. Check your agent configuration and ensure the token matches an Infra App in your Sematext account.
+**Verify your Infra App token is configured correctly.** The agent needs a valid token to send data. Check your agent configuration and ensure the token matches an Infra App in your Sematext account. To find your Infra App token, go to the Monitoring page in [Sematext Cloud US](https://apps.sematext.com/ui/monitoring) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/monitoring), find your Infra App in the list, click the three dots in the Actions column, and select "Application Settings". The token is displayed on that page.
 
 **Confirm Network Map is enabled.** Visit the Network Map page in Sematext Cloud and confirm it's enabled. If it shows options to enable, click to enable it.
 
