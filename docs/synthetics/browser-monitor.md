@@ -13,8 +13,18 @@ The Browser monitor can be used to monitor a single web page or a user journey a
 * **Consecutive Runs** - Reruns the monitor immediately after a failure, with the option to retry up to five times before marking the run as failed, thus preventing intermittent issues from producing false positive alerts or affecting monitor availability.
 * **Locations** - List of locations the monitor will be run from.
 * **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
+* **Headed Mode** - Headless mode runs the browser in the background for fast routine checks, while headed mode runs a visible browser to handle sites that block headless scripts or for debugging user interactions.
 
 Note that multiple monitors created in the same **Create Browser Monitor** flow will have different names, intervals and devices, but share the same locations, **User Journey** settings and **Alert Conditions**, which lets you quickly set up multiple monitors with different devices for the same use case.
+
+#### Headed vs Headless Mode
+When configuring a browser monitor, you can choose how the browser runs:
+
+**Headless (None Headed):** The browser runs in the background without displaying a UI. This mode is faster and uses fewer resources and is best for routine monitoring of websites that work correctly in headless mode.
+
+**Headed:** The browser runs with a visible UI. This mode uses more CPU and memory, so monitor runs may take longer and be slightly slower, and is useful for sites that block headless browsers or for testing user interactions that require a full browser.
+
+**Recommendation:** Use headless mode for regular monitoring and switch to headed mode only when you need to access sites that detect or block headless browsers, or when debugging user interactions.
 
 ### User Journeys / Transactions
 
