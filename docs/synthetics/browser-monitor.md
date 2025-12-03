@@ -22,7 +22,7 @@ When configuring a browser monitor, you can choose how the browser runs:
 
 **Headless:** The browser runs in the background without displaying a UI. This mode is faster and uses fewer resources and is best for routine monitoring of websites that work correctly in headless mode.
 
-**Headed:** The browser runs with a visible UI. This mode uses more CPU and memory, so monitor runs may take longer and be slightly slower, and is useful for sites that block headless browsers or for testing user interactions that require a full browser.
+**Headed:** The browser runs as a full, standard browser instance. This mode uses more CPU and memory, so monitor runs may take longer and be slightly slower, and is useful for sites that block headless browsers or for testing user interactions that require a full browser.
 
 **Recommendation:** Use headless mode for regular monitoring and switch to headed mode only when you need to access sites that detect or block headless browsers, or when debugging user interactions.
 
