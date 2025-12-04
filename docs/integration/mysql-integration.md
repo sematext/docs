@@ -7,8 +7,8 @@ MySQL is an open-source relational database management system (RDBMS) that enabl
 
 1. Create an MySQL Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/MySQL/overview](https://apps.sematext.com/ui/howto/MySQL/overview) displayed in the UI.
-3. After installing the agent, the Discovery tab shows all the MySQL services identified on the host and you will start receiving metrics or logs from MySQL services.
-4. If you've created an MySQL Monitoring App and want to collect MySQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from MySQL services and manage log and metric shipping effortlessly.
+4. After installing the agent, discovered logs or metrics from MySQL services detected on the host will start shipping automatically.
+5. If you've created an MySQL Monitoring App and want to collect MySQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from MySQL services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both MySQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as query execution time, throughput, and resource utilization) with logs (query execution logs, error logs) helps in identifying slow queries, inefficient indexing, or resource bottlenecks. This correlation aids in optimizing queries, refining indexing strategies, and fine-tuning resource allocation for better MySQL performance.
 
