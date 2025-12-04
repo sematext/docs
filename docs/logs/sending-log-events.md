@@ -54,9 +54,7 @@ If you don’t see your environment in the Install Sematext Agent step, you can 
 
 ### Shipping to the Same App from Additional Sources
 
-If you want to ship logs from additional hosts and containers to the same Logs App, you can always navigate to the Ship Logs screen from the left Menu panel and repeat the steps to install the agent to another host.
-
-![Logs App Ship Logs](/docs/images/logs/ship-logs.png)
+If you want to ship logs from additional hosts and containers to the same Logs App, you can always navigate to the **Ship Logs --> Install Agent** screen from the left Menu panel and repeat the steps to install the agent to another host.
 
 Furthermore, at any time, you can navigate to the Discovery screen to view the log sources and services identified across your infrastructure, from all the containers and hosts where the [Sematext Agent](/docs/agents/sematext-agent/) is installed. From this screen, you have the option to configure automatic log shipping or metrics without the need for any additional installations.
 
