@@ -5,12 +5,10 @@ JVM is an abstract computing machine enabling Java bytecode execution and provid
 
 ## Install Sematext Agent
 
-2. Create a JVM Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
-3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/JVM/overview](https://apps.sematext.com/ui/howto/JVM/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the JVMs identified on the host and you will start receiving metrics or garbage collection logs from JVM services.
-5. If you've created a JVM Monitoring App and want to collect JVM garbage collection logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from JVM services and manage log and metric shipping effortlessly.
-
-![JVM Counterpart](/docs/images/integrations/jvm-counterpart.gif)
+1. Create a JVM Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
+2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/JVM/overview](https://apps.sematext.com/ui/howto/JVM/overview) displayed in the UI.
+3. After installing the agent, discovered logs or metrics from JVM services detected on the host will start shipping automatically.
+4. If you've created an JVM Monitoring App and want to collect JVM logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from JVM services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both JVM Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, correlating JVM memory metrics (heap usage, garbage collection frequency) with garbage collection logs (types of garbage collections, pause times), you can identify memory allocation patterns, potential memory leaks, or inefficient memory utilization. This correlation helps optimize memory settings, tune garbage collection strategies, and prevent memory-related performance issues.
 
