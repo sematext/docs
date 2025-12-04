@@ -6,9 +6,9 @@ PostgreSQL is a powerful open-source relational database management system (RDBM
 ## Install Sematext Agent
 
 1. Create an PostgreSQL Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
-3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/PostgreSQL/overview](https://apps.sematext.com/ui/howto/PostgreSQL/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the PostgreSQL services identified on the host and you will start receiving metrics or logs from PostgreSQL services.
-5. If you've created an PostgreSQL Monitoring App and want to collect PostgreSQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from PostgreSQL services and manage log and metric shipping effortlessly.
+2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/PostgreSQL/overview](https://apps.sematext.com/ui/howto/PostgreSQL/overview) displayed in the UI.
+3. After installing the agent, discovered logs or metrics from PostgreSQL services detected on the host will start shipping automatically.
+4. If you've created an PostgreSQL Monitoring App and want to collect PostgreSQL logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from PostgreSQL services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both PostgreSQL Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see a spike in number of rows fetched, you can check logs to see which queries fetch too many rows. A concrete example of doing that can be found in [this article](https://sematext.com/blog/postgresql-slow-queries/). Or if you notice expensive queries in the logs, monitoring can tell you whether they hit the indices or they were mostly scans.
 
