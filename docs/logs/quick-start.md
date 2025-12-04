@@ -59,14 +59,23 @@ Complete the steps up to step 4. If the selected Infra App is already receiving 
 
 ## Generic Logs App
 
-If you don’t see your platform in the Automatic Integrations list navigate to the Custom Integrations section to set up log shipping manually. Custom integrations screen tells you how to [manually send data to your new Logs App](/docs/logs/sending-log-events).
+If you don’t see your service in the Integrations list, create a Generic Logs App to ship logs from any part of your infrastructure. 
 
-You can add more log sources into your Logs App by navigating to the Ship Logs section from the left menu panel. Pick an environment to install Sematext Agent to another host or set up log shipping from the custom integrations section with [manual instructions](/docs/logs/sending-log-events). 
+From there you will be provided with 2 options to ship logs from. 
 
+### Use Sematext Agent to ship custom logs
+
+Install the Sematext Agent, which can automatically discover log sources on your hosts. After the agent is installed, you can choose which logs to ship from the list of discovered log sources.
+
+### Use Custom Integrations
+
+If you don’t see your environment in the Install Sematext Agent step, you can use your own log shipper, such as Logstash, Fluentd, Syslog, cloud libraries, or send log events directly from your application using any Elasticsearch or OpenSearch compatible library to set up log shipping manually. The Custom Integrations screen explains how to [manually send data to your new Logs App](/docs/logs/sending-log-events/#custom-integration-options)
+
+![Custom Integrations Selected](/docs/images/logs/custom-integrations-selected.png)
 
 ![Custom Integrations](/docs/images/logs/custom-integrations.png)
 
-![Custom Integrations](/docs/images/logs/logs-app.png)
+> If you are shipping custom logs to Sematext Cloud, we recommend reviewing the [Logs Pipelines guide](/docs/logs/pipelines/) to structure, enrich, or transform your log documents.
 
 ## Troubleshooting With Logs
 
