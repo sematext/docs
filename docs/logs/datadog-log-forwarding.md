@@ -20,9 +20,9 @@ Transitioning your logs from Datadog to Sematext requires no installation, and i
     - For US: [https://logsene-receiver.sematext.com](https://logsene-receiver.sematext.com) 
     - For EU: [https://logsene-receiver.eu.sematext.com]( https://logsene-receiver.eu.sematext.com) 
     
-  Make sure to include your Sematext Logs App token as  the index name. Your Logs App token can be found on the Ship Logs → Custom Integrations screen.
-
-![Logs App Token](/docs/images/logs/logs-app-token.png)
+  Make sure to include your Sematext Logs App token as  the index name. Your Logs App token can be found on the **Custom Integrations** page, which you can access from the left navigation menu by clicking Ship Logs → Install Agent and selecting Custom Integrations.
+    
+![Logs App Token](/docs/images/logs/custom-integrations.png)
 
 Save your changes and within a few minutes you will see the logs coming into your Sematext Logs App.
 
