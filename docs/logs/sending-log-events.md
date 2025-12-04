@@ -45,16 +45,12 @@ After creating the Infra App, select the environment where you want to install t
 Click on the **Set Up** button next to the services from which you want to ship logs and enable automatic log shipping for the selected service.
 
 ![Generic Logs Discovery Setup](/docs/images/logs/generic-logs-discovery-setup.png)
+
+> If you are shipping custom logs to Sematext Cloud, we recommend reviewing the [Logs Pipelines guide](/docs/logs/pipelines/) to structure, enrich, or transform your log documents.
                                 
 #### Use Custom Integrations
 
 If you don’t see your environment in the Install Sematext Agent step, you can use your own log shipper, such as Logstash, Fluentd, Syslog, cloud libraries, or send log events directly from your application using any Elasticsearch or OpenSearch compatible library to set up log shipping manually. The Custom Integrations screen explains how to [manually send data to your new Logs App](/docs/logs/sending-log-events/#custom-integration-options)
-
-![Custom Integrations Selected](/docs/images/logs/custom-integrations-selected.png)
-
-![Custom Integrations](/docs/images/logs/custom-integrations.png)
-
-> If you are shipping custom logs to Sematext Cloud, we recommend reviewing the [Logs Pipelines guide](/docs/logs/pipelines/) to structure, enrich, or transform your log documents.
 
 ### Shipping to the Same App from Additional Sources
 
@@ -68,9 +64,11 @@ Furthermore, at any time, you can navigate to the Discovery screen to view the l
 
 ## Custom Integration Options
 
-Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Sematext API](/docs/logs/index-events-via-sematext-api) which is compatible with Elasticsearch and OpenSearch, [syslog-ng](/docs/logs/syslog-ng), various programming languages, and popular log shippers such as [rsyslog](/docs/logs/rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and navigating to the Custom Integrations tab.  We recommend you use this only if, for some reason, setting up log shipping from Discovery screen in Sematext Cloud UI doesn't work and our support is unable to help you.
+Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Sematext API](/docs/logs/index-events-via-sematext-api) which is compatible with Elasticsearch and OpenSearch, [syslog-ng](/docs/logs/syslog-ng), various programming languages, and popular log shippers such as [rsyslog](/docs/logs/rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and picking Custom Integrations option.  We recommend you use this only if, for some reason, setting up log shipping from Discovery screen in Sematext Cloud UI doesn't work and our support is unable to help you.
 
-![Logs App Custom Integrations](/docs/images/logs/custom-integrations.png)
+![Custom Integrations Selected](/docs/images/logs/custom-integrations-selected.png)
+
+![Custom Integrations](/docs/images/logs/custom-integrations.png)
 
 For further insights, refer to [Logging Libraries vs Log Shippers](https://sematext.com/blog/logging-libraries-vs-log-shippers/).
 
