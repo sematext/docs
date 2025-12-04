@@ -65,7 +65,15 @@ From there you will be provided with 2 options to ship logs from.
 
 ### Use Sematext Agent to ship custom logs
 
-Install the Sematext Agent, which can automatically discover log sources on your hosts. After the agent is installed, you can choose which logs to ship from the list of discovered log sources.
+Install the Sematext Agent, which can automatically discover log sources on your hosts. When you select this option, you will be asked to choose an Infra App. If you don’t have one, we will create it automatically for you. An [Infra App](/docs/monitoring/infrastructure/)  works with the [Sematext Agent](/docs/agents/sematext-agent) to discover available log sources on the host where the agent is installed.
+
+After creating the Infra App, select the environment where you want to install the Sematext Agent. Once the agent is installed, you can choose which logs to ship from the list of discovered log sources. 
+
+![Generic Logs Discovery](/docs/images/logs/generic-logs-discovery.png)
+
+Click **Set Up** on each log source you want to ship, which will open a flyout allowing you to enable log shipping from that source.
+
+![Generic Logs Discovery Setup](/docs/images/logs/generic-logs-discovery-setup.png)
 
 ### Use Custom Integrations
 
