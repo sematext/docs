@@ -59,7 +59,7 @@ Complete the steps up to step 4. If the selected Infra App is already receiving 
 
 ## Generic Logs App
 
-If you don’t see your service in the Integrations list, create a Generic Logs App to ship logs from any part of your infrastructure. 
+If you don’t see your service in the [integrations](/docs/guide/integrations-guide) list, create a Generic Logs App to ship logs from any part of your infrastructure. 
 
 From there you will be provided with 2 options to ship logs from. 
 
