@@ -42,7 +42,7 @@ After creating the Infra App, select the environment where you want to install t
 
 ![Generic Logs Discovery](/docs/images/logs/generic-logs-discovery.png)
 
-Click on the **Set Up** button next to the services from which you want to ship logs. This enables automatic log shipping for the selected services. For example, you can configure the system to send all log sources from Linux daemon services to Sematext Cloud as soon as they are discovered.
+Click on the **Set Up** button next to the services from which you want to ship logs and enable automatic log shipping for the selected service.
 
 ![Generic Logs Discovery Setup](/docs/images/logs/generic-logs-discovery-setup.png)
                                 
