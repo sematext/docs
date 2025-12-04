@@ -11,17 +11,35 @@ You create an App by pressing the **Create Logs App** button in the Logs tab.
 
 ![Create a new Logs App](/docs/images/logs/create-logs-app.png)
 
-Choose one of the many available [integrations](/docs/guide/integrations-guide).
+You’ll then see a screen with the steps required to create a Logs App.
+
+1. Choose one of the many available [integrations](/docs/guide/integrations-guide).
 
 ![Logs Integrations](/docs/images/logs/integrations.png)
 
- Click on your desired integration, add a name, and press **Create App**.
+If you don’t see the service you want to ship logs from, create a Generic Logs App. With a Generic Logs App, you can use the Sematext Agent or Custom Integrations to set up log shipping manually. If that’s the case, jump to the [Generic Logs App](#generic-logs-app) section.
+
+2. Name your App and select a plan for it.
+
+Note that you won’t be charged during the 14-day trial period, so we recommend selecting the Pro plan to explore [all its features](https://sematext.com/pricing/) during the free trial. Unless a payment method is added, your Apps will be disabled once the trial ends. If a payment method is added, your selected plan will continue. You can downgrade or switch plans at any time without commitment.
+
+3. Select an Infra App.
+
+**What is an Infra App?**
+
+An [Infra App](/docs/monitoring/infrastructure/) works with the Sematext Agent to automatically discover available log sources on the host where the agent is installed. Once these sources are discovered, you can enable log shipping from them at any time with a single click, without any additional installation. If you don't have an Infra App, we will create one for you. Just click Next Step to continue and choose the platform on which you want to install the [Sematext Agent](/docs/agents/sematext-agent).
  
- Then choose the platform you want to install [Sematext Agent](/docs/agents/sematext-agent).
+4. Then choose the platform you want to install [Sematext Agent](/docs/agents/sematext-agent).
 
 ![Logs App Environments](/docs/images/logs/environments.png)
 
 And this will open up the agent installation instruction page for the selected environment.
+
+5. Once the Sematext Agent is up and running, we will automatically start shipping logs from your selected service integration to your Logs App.
+
+Once you start sending data, you can start [searching and analyzing these logs](/docs/logs/searching-log-events) in the Logs App.
+
+See [Reports And Components](/docs/logs/reports-and-components) for more details. 
 
 If you don’t see your platform in the Automatic Integrations list navigate to the Custom Integrations section to set up log shipping manually. Custom integrations screen tells you how to [manually send data to your new Logs App](/docs/logs/sending-log-events).
 
@@ -37,6 +55,7 @@ See [Reports And Components](/docs/logs/reports-and-components) for more details
 
 You can add more log sources into your Logs App by navigating to the Ship Logs section from the left menu panel. Pick an environment to install Sematext Agent to another host or set up log shipping from the custom integrations section with [manual instructions](/docs/logs/sending-log-events). 
 
+## Generic Logs App
 
 ## Troubleshooting With Logs
 
