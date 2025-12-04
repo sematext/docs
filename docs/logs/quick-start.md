@@ -17,11 +17,11 @@ You’ll then see a screen with the steps required to create a Logs App.
 
 ![Logs Integrations](/docs/images/logs/integrations.png)
 
-If you don’t see the service you want to ship logs from, create a Generic Logs App. With a Generic Logs App, you can use the Sematext Agent or Custom Integrations to set up log shipping manually. If that’s the case, jump to the [Generic Logs App](#generic-logs-app) section.
+If you don’t see the service you want to ship logs from, create a Generic Logs App. With a Generic Logs App, you can use the Sematext Agent or Custom Integrations to set up log shipping manually. If that’s the case, name your App and jump to the [Generic Logs App](#generic-logs-app) section.
 
 2. Name your App and select a plan for it.
 
-Note that you won’t be charged during the 14-day trial period, so we recommend selecting the Pro plan to explore [all its features](https://sematext.com/pricing/) during the free trial. Unless a payment method is added, your Apps will be disabled once the trial ends. If a payment method is added, your selected plan will continue. You can downgrade or switch plans at any time without commitment.
+Note that **you won’t be charged during the 14-day trial period**, so we recommend selecting the Pro plan to explore [all its features](https://sematext.com/pricing/) during the free trial. Unless a payment method is added, your Apps will be disabled once the trial ends. If a payment method is added, your selected plan will continue. **You can downgrade or switch plans at any time without commitment**.
 
 3. Select an Infra App.
 
