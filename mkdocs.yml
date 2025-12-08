@@ -104,6 +104,15 @@ nav:
       - Custom Metrics: monitoring/custom-metrics.md
       - Changelog: changelog.md
       - FAQ: monitoring/spm-faq.md
+    - Network Map:
+      - Overview: network-map/index.md
+      - Getting Started: network-map/getting-started.md
+      - Services View: network-map/services-view.md
+      - Infrastructure View: network-map/infrastructure-view.md
+      - Filtering & Search: network-map/filtering-search.md
+      - Thresholds: network-map/thresholds.md
+      - Supported Services: network-map/supported-services.md
+      - Troubleshooting: network-map/troubleshooting.md
     - Tracing:
       - Overview: tracing/index.md
       - Getting Started: tracing/getting-started.md

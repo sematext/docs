@@ -30,8 +30,16 @@ _If you're new here, read below for a high-level overview of Sematext._
     ---
 
     Distributed tracing with OpenTelemetry for microservices
-    
+
     [:octicons-arrow-right-24: Learn more](/docs/tracing)
+
+-   :fontawesome-solid-diagram-project:{ .lg .middle .network-map-icon } __Network Map__
+
+    ---
+
+    Visualize infrastructure topology and service connections
+
+    [:octicons-arrow-right-24: Learn more](/docs/network-map)
 
 -   :fontawesome-solid-gauge-high:{ .lg .middle .experience-icon } __Experience__
 
@@ -92,9 +100,9 @@ _If you're new here, read below for a high-level overview of Sematext._
 -   :fontawesome-solid-server:{ .lg .middle .fleet-icon } __Fleet & Discovery__
 
     ---
-    
+
     Agent fleet, discovery & automatic setup of services and logs
-    
+
     [:octicons-arrow-right-24: Learn more](/docs/fleet)
 
 </div>
