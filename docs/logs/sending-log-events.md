@@ -18,38 +18,43 @@ It is important to note that _most_ Logs Apps are "typed".  That is, most Logs A
 
 ![Nginx Logs App](/docs/images/logs/nginx-logpack.png)
 
+If you select a specific integration, you will be asked to create an Infra App. The [Infra App](/docs/monitoring/infrastructure/) works with the Sematext Agent to automatically discover log sources on your host for the selected service. 
+
+Next, choose the environment where you want to install the [Sematext Agent](/docs/agents/sematext-agent). 
+
+![Logs App Environments](/docs/images/logs/environments.png)
+
+Once the agent is installed, the log sources are discovered automatically, and logs from your selected service will start shipping to Sematext Cloud without any additional setup.
+
+![Logs App Finish Setup](/docs/images/logs/finish-setup.png)
+
 #### Generic Logs App
 
 If you need to ship logs whose "type" you don't see among the list of offered Logs Apps types, create a `Generic Logs App`.  This type of Logs App has log search, alerting, and all other capabilities, but has _general reports_ that work for _all_ types of logs regardless of their format.  You can later create additional reports, charts, etc. to customize things to your liking.
 
-### Select Your Environment Type
+From there you will be provided with 2 options to ship logs from. 
 
-After creating the Logs App, the environment selection screen for agent installation will be displayed.
+#### Use Sematext Agent to ship custom logs
 
-![Logs App Select an Environment](/docs/images/logs/select-environment.png)
+Install the Sematext Agent, which can automatically discover log sources on your hosts. When you select this option, you will be asked to choose an Infra App. If you don’t have one, we will create it automatically for you. An [Infra App](/docs/monitoring/infrastructure/)  works with the [Sematext Agent](/docs/agents/sematext-agent) to discover available log sources on the host where the agent is installed.
 
-Choose the environment in which you intend to install the [Sematext Agent](/docs/agents/sematext-agent/). The installation instructions specific to that environment will be displayed.
-Follow the provided instructions to install the agent. Once installed, the Logs App will identify the host and display the discovered log sources within it.
+After creating the Infra App, select the environment where you want to install the Sematext Agent. Once the agent is installed, you can choose which logs to ship from the list of discovered log sources. 
 
-### View Discovered Logs
+![Generic Logs Discovery](/docs/images/logs/generic-logs-discovery.png)
 
-Discovered Logs shows a list of log sources discovered within the host grouped by service type.
+Click on the **Set Up** button next to the services from which you want to ship logs and enable automatic log shipping for the selected service.
 
-![Logs App Discovered Logs](/docs/images/logs/discovered-logs.png)
+![Generic Logs Discovery Setup](/docs/images/logs/generic-logs-discovery-setup.png)
 
-### Set Up Automatic Log Shipping
+> If you are shipping custom logs to Sematext Cloud, we recommend reviewing the [Logs Pipelines guide](/docs/logs/pipelines/) to structure, enrich, or transform your log documents.
+                                
+#### Use Custom Integrations
 
-Click on the **Set Up** button next to the services from which you want to ship logs. This enables automatic log shipping for the selected services. For example, you can configure the system to send all log sources from Linux daemon services to Sematext Cloud as soon as they are discovered.
-
-![Logs App Set Up Log Shipping](/docs/images/logs/set-up-log-shipping.png)
-
-Congratulations! You have successfully configured automatic log shipping for logs discovered under Linux daemon services without any additional configuration.
+If you don’t see your environment in the Install Sematext Agent step, you can use your own log shipper, such as Logstash, Fluentd, Syslog, cloud libraries, or send log events directly from your application using any Elasticsearch or OpenSearch compatible library to set up log shipping manually. The Custom Integrations screen explains how to [manually send data to your new Logs App](/docs/logs/sending-log-events/#custom-integration-options)
 
 ### Shipping to the Same App from Additional Sources
 
-If you want to ship logs from additional hosts and containers to the same Logs App, you can always navigate to the Ship Logs screen from the left Menu panel and repeat the steps to install the agent to another host.
-
-![Logs App Ship Logs](/docs/images/logs/ship-logs.png)
+If you want to ship logs from additional hosts and containers to the same Logs App, you can always navigate to the **Ship Logs --> Install Agent** screen from the left Menu panel and repeat the steps to install the agent to another host.
 
 Furthermore, at any time, you can navigate to the Discovery screen to view the log sources and services identified across your infrastructure, from all the containers and hosts where the [Sematext Agent](/docs/agents/sematext-agent/) is installed. From this screen, you have the option to configure automatic log shipping or metrics without the need for any additional installations.
 
@@ -57,9 +62,11 @@ Furthermore, at any time, you can navigate to the Discovery screen to view the l
 
 ## Custom Integration Options
 
-Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Sematext API](/docs/logs/index-events-via-sematext-api) which is compatible with Elasticsearch and OpenSearch, [syslog-ng](/docs/logs/syslog-ng), various programming languages, and popular log shippers such as [rsyslog](/docs/logs/rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and navigating to the Custom Integrations tab.  We recommend you use this only if, for some reason, setting up log shipping from Discovery screen in Sematext Cloud UI doesn't work and our support is unable to help you.
+Alternatively, you can explore various custom integration options for shipping log events to Sematext. These include support for [Sematext API](/docs/logs/index-events-via-sematext-api) which is compatible with Elasticsearch and OpenSearch, [syslog-ng](/docs/logs/syslog-ng), various programming languages, and popular log shippers such as [rsyslog](/docs/logs/rsyslog), Logstash, Fluentd, and many many more. You can discover all supported custom integrations by accessing any Logs App, clicking 'Ship Logs' on the left menu panel, and picking Custom Integrations option.  We recommend you use this only if, for some reason, setting up log shipping from Discovery screen in Sematext Cloud UI doesn't work and our support is unable to help you.
 
-![Logs App Custom Integrations](/docs/images/logs/custom-integrations.png)
+![Custom Integrations Selected](/docs/images/logs/custom-integrations-selected.png)
+
+![Custom Integrations](/docs/images/logs/custom-integrations.png)
 
 For further insights, refer to [Logging Libraries vs Log Shippers](https://sematext.com/blog/logging-libraries-vs-log-shippers/).
 

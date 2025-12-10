@@ -6,9 +6,9 @@ OpenSearch is a powerful, open-source search and analytics engine built for scal
 ## Install Sematext Agent
 
 1. Create an OpenSearch Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
-3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Opensearch/overview](https://apps.sematext.com/ui/howto/Opensearch/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the OpenSearch services identified on the host and you will start receiving metrics or logs from OpenSearch services.
-5. If you've created an OpenSearch Monitoring App and want to collect OpenSearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from OpenSearch services and manage log and metric shipping effortlessly.
+2. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Opensearch/overview](https://apps.sematext.com/ui/howto/Opensearch/overview) displayed in the UI.
+3. After installing the agent, discovered logs or metrics from OpenSearch services detected on the host will start shipping automatically.
+4. If you've created an OpenSearch Monitoring App and want to collect OpenSearch logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from OpenSearch services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both OpenSearch Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 

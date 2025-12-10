@@ -14,10 +14,8 @@ Apache is an open-source web server software that serves web pages to users over
 
 2. Create an Apache Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Apache/overview](https://apps.sematext.com/ui/howto/Apache/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the Apache services identified on the host and you will start receiving metrics or logs from Apache services.
-5. If you've created an Apache Monitoring App and want to collect Apache logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Apache services and manage log and metric shipping effortlessly.
-
-![Apache Counterpart](/docs/images/integrations/apache-counterpart.gif)
+4. After installing the agent, discovered logs or metrics from Apache services detected on the host will start shipping automatically.
+5. If you've created an Apache Monitoring App and want to collect Apache logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from Apache services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both Apache Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see an increase in 4XX errors, monitoring can tell what's the impact on Apache's response times and CPU usage.
 

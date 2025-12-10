@@ -7,8 +7,8 @@ Varnish Cache is an open-source HTTP accelerator and reverse proxy designed to s
 
 1. Create an Varnish Cache Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/varnishcache/overview](https://apps.sematext.com/ui/howto/varnishcache/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the Varnish Cache services identified on the host and you will start receiving metrics or logs from Varnish Cache services.
-5. If you've created an Varnish Cache Monitoring App and want to collect Varnish Cache logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Varnish Cache services and manage log and metric shipping effortlessly.
+4. After installing the agent, discovered logs or metrics from Varnish Cache services detected on the host will start shipping automatically.
+5. If you've created an Varnish Cache Monitoring App and want to collect Varnish Cache logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from Varnish Cache services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both Varnish Cache Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, if you see logs of a node restarting, metrics let you see the impact on the rest of the cluster in terms of CPU, GC, and other metrics. Including query time metrics, even if you don't collect slowlogs from [all] queries.
 

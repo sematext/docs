@@ -1,7 +1,7 @@
 title: Index Logs Events via Sematext API
 description: Sending, custom & default mapping, and indexing log events using Sematext API
 
-Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs. 
+Because Sematext exposes an API compatible with Elasticsearch and OpenSearch, any of the numerous log shippers or log libraries that have Elasticsearch outputs (or "adapters") can be used to ship logs to a Generic Logs App. 
 
 > **Note** the recommended way of shipping logs to Sematext us using [log discovery](/docs/logs/discovery/intro/) screen, which lets you set up log shipping without installing any additional agents.
 
@@ -21,9 +21,9 @@ When you use the API, here are the things you need to know:
   - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (only if using Sematext Cloud Europe)
   - port: **80** or **443** (depending on whether you want to use plain HTTP or HTTPS)**
     **
-  - index name: your Logs App token which can be seen under Custom Integrations page
+  - index name: Your Logs App token can be found on the **Custom Integrations** page, which you can access from the left navigation menu by clicking Ship Logs → Install Agent and selecting Custom Integrations.
     
-    ![Logs App Token](/docs/images/logs/logs-app-token.png)
+    ![Logs App Token](/docs/images/logs/custom-integrations.png)
 
     Note: **this token should be kept secret** (n.b. you can have N Logs Apps, each with its own token)
 

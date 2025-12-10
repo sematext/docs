@@ -14,10 +14,8 @@ Nginx is a high-performance, open-source web server and reverse proxy that handl
 
 2. Create an Nginx Logs or Monitoring [App](/docs/guide/app-guide/). This will let you install the agent and control access to your monitoring and logs data.
 3. Install the Sematext Agent according to the [https://apps.sematext.com/ui/howto/Nginx/overview](https://apps.sematext.com/ui/howto/Nginx/overview) displayed in the UI.
-4. After installing the agent, the Discovery tab shows all the Nginx services identified on the host and you will start receiving metrics or logs from Nginx services.
-5. If you've created an Nginx Monitoring App and want to collect Nginx logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will navigate you to the 'Create Logs App' (or Monitoring App) page, where you'll find all the discovered log sources from Nginx services and manage log and metric shipping effortlessly.
-
-![Nginx Counterpart](/docs/images/integrations/nginx-counterpart.gif)
+4. After installing the agent, discovered logs or metrics from Nginx services detected on the host will start shipping automatically.
+5. If you've created an Nginx Monitoring App and want to collect Nginx logs as well, or vice versa, click on the **Create Logs App** button from the left menu panel. This will take you to the **Create Logs App** (or Monitoring App) page. When you select **Use Existing Agent**, all discovered log sources from Nginx services are listed, allowing you to set up log and metric shipping easily without any additional installation.
 
 Having both Nginx Logs and Monitoring Apps lets you correlate performance metrics and logs, and accelerate troubleshooting using [Split Screen](/docs/guide/split-screen/) for faster resolution. For example, correlating metrics (such as request rate, response times, error rates) with logs (access logs, error logs) helps identify performance bottlenecks, anomalies, or errors. For instance, by linking high request rates in metrics with specific errors or slow response times in logs, you can efficiently optimize configurations, fine-tune caching strategies, or address code-level issues to enhance NGINX performance. Or if you see an increase in 4XX errors in Nginx logs, monitoring can tell what's the impact on Nginx's response times and CPU usage.
 

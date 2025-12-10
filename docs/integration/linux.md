@@ -58,9 +58,9 @@ Refer to our [infrastructure default alerts](/docs/monitoring/servers/#core-infr
 
 1. Create a Linux Logs [App](/docs/guide/app-guide/). This will let you install the agent and control access to your logs data.
 2. Install [Sematext Agent](/docs/agents/sematext-agent/releasenotes/) on each host you want to monitor according to the instructions displayed in the UI
-3. Once you install the agent, you will see discovered file and journaId logs from your Linux operating system in your [App](/docs/guide/app-guide/) within a few minutes.
+3. Once the Sematext Agent is up and running, discovered file and journaId logs from your Linux operating system will be shipped to your Logs App automatically.
 
-When you configure log shipping from systemd service units via [Fleet & Discovery](/docs/logs/discovery/intro/), the following values will be automatically set in the agent, and the agent will ship service start-stop logs, audit logs, kernel logs, etc.
+When automatic log shipping starts from systemd service units or when you configure the log shipping via [Fleet & Discovery](/docs/logs/discovery/intro/), the following values will be automatically set in the agent, and the agent will ship service start-stop logs, audit logs, kernel logs, etc.
 
 ```
 include-linux-matches:
