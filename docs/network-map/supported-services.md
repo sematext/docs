@@ -222,6 +222,8 @@ Network Map also detects the network protocol used in each connection. This help
 |----------|---------------|
 | Elasticsearch HTTP | 9200 |
 | Elasticsearch Transport | 9300 |
+| OpenSearch HTTP | 9200 |
+| OpenSearch Performance Analyzer | 9600 |
 
 ### Monitoring
 
