@@ -8,6 +8,7 @@ Even though it might seem daunting at first to dive right in and start writing y
 ## Make use of the various examples we provide
 
 If you haven't already, then check out our [various examples](/docs/synthetics/user-journey-scripts/examples) on tackling various use-cases with Playwright, such as:
+
 * Logging in
 * Searching for text on a page
 * Adding an item to a shopping cart
@@ -49,6 +50,7 @@ allowfullscreen class="video"></iframe>
 </div>
 
 You can use the Playwright Test Generator with or without Visual Studio Code.
+
 * If you want to use it with [Visual Studio Code](https://code.visualstudio.com/download), you can follow [this guide](https://playwright.dev/docs/codegen) to set everything up and start recording scripts.
 * If you'd like to run it without Visual Studio Code, you first have to [download and install Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your computer, after which you can follow [this guide](https://playwright.dev/docs/codegen#generate-tests-with-the-playwright-inspector) to get started
 
