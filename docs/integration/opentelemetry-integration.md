@@ -13,7 +13,7 @@ With logs, you can monitor your applications and infrastructure, troubleshoot is
 - Set up log and metrics exporting in your application. Follow the SDK-specific instructions provided in the UI. Choose your language and integrate OpenTelemetry metrics and logging into your code.
 - Install the [Sematext Agent](/docs/agents/sematext-agent/releasenotes) using the instructions shown in the App creation flow. The Agent works as an OpenTelemetry collector and ships logs from your application that has been instrumented with an OpenTelemetry SDKs to Sematext Cloud.
 
-> OpenTelemetry metrics and logging is supported in `Python`, `Go`, `Node.js`, `.NET`, `Java`, `Ruby`, and `PHP`. The SDK setup instructions for these languages are shown after you create an OpenTelemetry Logs App.
+> OpenTelemetry metrics and logging is supported in `Python`, `Node.js`, `.NET`, `Java`. The SDK setup instructions for these languages are shown after you create an OpenTelemetry Logs App.
 
 # Metrics
 
