@@ -416,10 +416,6 @@ Pre-configured [alert rules](/docs/guide/alerts-guide) will notify you about:
 
 # Logs
 
-Explain zero-code vs manual instrumentation.
-Explain why zero-code is not supported in the instructions for some SDKs yet.
-## Standard Info Added Automatically
-
 After following the SDK-specific instructions, your logs will automatically have useful metadata in every log.
 
 Common fields include:
