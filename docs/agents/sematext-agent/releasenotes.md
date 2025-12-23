@@ -39,6 +39,34 @@ NULL
 
 -->
 
+## Version 4.2.0
+
+Date: December 23, 2025
+
+### New Features
+
+- **OTel CLI All-Services Support**: Added support for managing all OpenTelemetry services at once via the CLI, making it easier to configure and control multiple OTel services simultaneously.
+- **Image Pull Secrets for Auto-Discovery**: Added support for defining `imagePullSecrets` for pods spawned by auto-discovery, enabling use of private container registries.
+
+### Improvements
+
+- **Monitoring Agent Resource Configuration**: Removed hardcoded CPU and memory limits for Elasticsearch and Solr Monitoring Agents. These services now use the same configurable defaults as other services.
+- **Log Shipper Resource Management**: Added configurable CPU and memory limits for the log shipper in both Kubernetes and Docker environments.
+- **Log Shipper Reliability Enhancements**: Added disk buffer, retry configuration, and rate limiting options for the Elasticsearch sink to prevent data loss and backend overload during high-volume scenarios.
+
+### Bug Fixes
+
+- Resolved OpenSearch mapping conflict where `connection.remote_endpoint` was being used as both a primitive string and an object with nested fields.
+- Custom Logs no longer generates empty include patterns for non-JSON files.
+- CronJob metrics collection no longer crashes when a job has no StartTime.
+- Changing a monitoring rule's token now properly detaches the old monitoring process.
+- Resolved goroutine leaks in auto-discovery terminate handler and Monitoring Agent log publishers that could cause OOMKill.
+- Log shipper pods in Kubernetes now use isolated emptyDir storage, preventing data directory conflicts on multi-pod nodes.
+- Log shipper now uses memory buffer when running in containers.
+- Resolved log shipper VRL syntax error that caused crash loops on nodes with journald log sources.
+- Journal storage for Kubernetes metrics now registers all required gob types.
+- Resolved concurrent map access issues that caused intermittent agent restarts.
+
 ## Version 4.1.0
 
 Date: October 8, 2025
