@@ -3,6 +3,8 @@ description: Navigating Sematext Cloud: Left Menu Guide
 
 The left navigation menu provides access to all primary product areas and features, organized into functional categories. It supports hierarchical navigation, where main menu items may contain sub-level menus when applicable. Both the main menu and sub-level menus are collapsible and expandable. Each level includes a pin control in the top-right corner that allows the menu to remain expanded or collapse automatically, enabling users to optimize screen space while maintaining quick access to frequently used sections.
 
+![Left Navigation Getting Started](docs/images/guide/left-navigation/left-navigation-getting-started.png)
+
 ## Search
 
 The Search bar provides global querying across logs, monitoring, tracing, synthetics, experience, and infrastructure Apps. It supports fast navigation and direct access to an App without requiring manual traversal of the left navigation menu.
