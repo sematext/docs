@@ -42,7 +42,7 @@ This category includes core observability capabilities covering metrics, logs, t
 
 ### Monitoring
 
-[Monitoring](/docs/monitoring/) involves the collection and visualization of performance and health metrics from services that run in your infrastructure. It supports more than 40 integrations to automatically gather data at scale across servers, containers, services, and cloud resources. Monitoring is used to analyze trends, surface anomalies, correlate performance metrics and trigger alert rules based on metric conditions to detect issues and track system behavior over time. 
+[Monitoring](/docs/monitoring/) involves the collection and visualization of performance and health metrics from services that run in your infrastructure. It supports [more than 40 integrations](/docs/integration/) to automatically gather data at scale across servers, containers, services, and cloud resources. Monitoring is used to analyze trends, surface anomalies, correlate performance metrics and trigger alert rules based on metric conditions to detect issues and track system behavior over time. 
 
 ### Logs
 
