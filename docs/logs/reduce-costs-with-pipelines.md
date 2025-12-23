@@ -1,4 +1,4 @@
-title: How Logs Pipelines Can Reduce Your Log Monitoring Costs
+title: Reduce Your Log Monitoring Costs
 description: Use Logs Pipeline processor to drop noise events and extract vital information from long text fields to reduce your costs.
 
 Log [pipelines](/docs/logs/pipelines) offer a range of [processors](/docs/logs/processors-overview) designed to improve signal to noise ratio in your logs, help you derive more value from logs both business and IT. Decreasing daily log volume subsequently leads to lower costs. Below are several strategies for using log pipelines effectively for cost-saving purposes.
