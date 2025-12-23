@@ -61,10 +61,7 @@ Date: December 23, 2025
 - CronJob metrics collection no longer crashes when a job has no StartTime.
 - Changing a monitoring rule's token now properly detaches the old monitoring process.
 - Resolved goroutine leaks in auto-discovery terminate handler and Monitoring Agent log publishers that could cause OOMKill.
-- Log shipper pods in Kubernetes now use isolated emptyDir storage, preventing data directory conflicts on multi-pod nodes.
-- Log shipper now uses memory buffer when running in containers.
 - Resolved log shipper VRL syntax error that caused crash loops on nodes with journald log sources.
-- Journal storage for Kubernetes metrics now registers all required gob types.
 - Resolved concurrent map access issues that caused intermittent agent restarts.
 
 ## Version 4.1.0
