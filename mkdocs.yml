@@ -4,6 +4,7 @@ site_url: https://sematext.com/docs/
 nav:
     - Getting Started: index.md
     - User Guide:
+      - Navigation Guide: guide/navigation-guide.md
       - What is an App?: guide/app-guide.md
       - Pricing Guide: guide/pricing-guide.md
       - Data Correlation:
