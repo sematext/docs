@@ -1,4 +1,4 @@
-title: OpenTelemetry Integration
+title: OpenTelemetry
 description: Complete guide for integrating OpenTelemetry metrics and logs with Sematext Cloud. Learn how to set up the Sematext Agent as an OpenTelemetry collector, configure SDK-specific instrumentation for Python, Go, Node.js, .NET, Java, Ruby, and PHP applications, and explore built-in dashboards, visualizations, and alert rules.
 
 OpenTelemetry is an observability framework that helps you collect data from your applications and servers. It can gather logs, metrics, and traces in one place. Sematext Cloud works with OpenTelemetry to store and display this data.
@@ -19,12 +19,12 @@ With logs, you can monitor your applications and infrastructure, troubleshoot is
 
 OpenTelemetry metrics can be collected in two main ways: **zero-code** instrumentation and **manual** instrumentation. Zero-code instrumentation automatically collects common metrics such as request rate, latency, and error counts from supported frameworks and libraries without requiring any changes to your application code. It is quick to set up and ideal for gaining standard visibility out of the box. Manual instrumentation, on the other hand, gives developers full control over what metrics to collect and how to label them. It involves adding OpenTelemetry API calls directly in the code to emit custom metrics that reflect specific business or application logic. In short, zero code instrumentation provides convenience and standardization, while manual instrumentation offers flexibility and precision.
 
-### ✅ Zero-Code (Automatic) Instrumentation - **Recommended**
+### Zero-Code (Automatic) Instrumentation - **Recommended**
 - **What it is**: Automatic metric collection with no code changes required
 - **What you get**: Pre-built dashboards, alerts, and reports that work out-of-the-box
 - **Maintenance**: Fully supported and maintained by our platform team
 
-### 🛠️ Manual Instrumentation - **Custom Implementation Required**
+### Manual Instrumentation - **Custom Implementation Required**
 - **What it is**: Hand-coded metric collection and custom business logic metrics
 - **What you get**: Complete control over what metrics are collected
 - **Important**: **You need to ensure that manually shipped OpenTelemetry metric names match the ones expected by zero-code instrumentation to take full advantage of built-in reports and default alert rules. Otherwise, you will need to create custom reports and alerts based on your custom metrics.**
