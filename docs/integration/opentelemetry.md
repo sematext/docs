@@ -6,6 +6,20 @@ OpenTelemetry is an observability framework that helps you collect data from you
 This page explains how to integrate OpenTelemetry metrics and logs in your application and how to use the [Sematext Agent](/docs/agents/sematext-agent) to ship logs and metrics from the application that's been instrumented with OpenTelemetry to Sematext Cloud. With the support for [OpenTelemetry Tracing](/docs/tracing/), you will be collecting metrics, logs, and traces in a single platform, giving you the ability to correlate them easily and understand how metrics trends, log events, and traces relate to each other across your applications.
 
 With logs, you can monitor your applications and infrastructure, troubleshoot issues faster, detect anomalies, and connect logs to [events](/docs/events) such as deployments or restarts. Metrics provide insights into system and application performance, while traces let you analyze request flows and latency across services. Together, they give you the full picture in one platform. Features like [Split Screen](/docs/guide/split-screen) and [Connected Apps](/docs/guide/connected-apps) in Sematext Cloud let you view and correlate this data side by side for faster and deeper root-cause analysis.
+
+## Why use OpenTelemetry with Sematext Cloud?
+
+OpenTelemetry provides a standard way to instrument applications, and Sematext Cloud lets you store, visualize, and alert on the telemetry data they produce.
+
+With OpenTelemetry Logs and Metrics in Sematext Cloud, you can:
+
+- Monitor your **applications as first-class entities**, not just the infrastructure they run on
+- Track **application-level performance** such as request rates, latency, errors, and custom business metrics
+- **Alert on application behavior**, not just resource usage
+- **Correlate logs, metrics, and traces** to quickly understand what happened and why
+- Connect telemetry with **events** like deployments or restarts to spot regressions faster
+
+Below, you’ll find step-by-step instructions for setting up OpenTelemetry and configuring your applications to ship logs and metrics.
  
 ## Install Sematext Agent
 
