@@ -4,6 +4,7 @@ site_url: https://sematext.com/docs/
 nav:
     - Getting Started: index.md
     - User Guide:
+      - Navigation Guide: guide/navigation-guide.md
       - What is an App?: guide/app-guide.md
       - Pricing Guide: guide/pricing-guide.md
       - Data Correlation:
@@ -78,7 +79,7 @@ nav:
       - Handling Sensitive Data: logs/handle-sensitive-data-with-pipelines.md
       - Too many fields in the index: logs/too-many-fields-in-index.md
       - Trim Big Logs to Cut Costs: logs/identify-log-volume-spikes.md
-      - Reducing Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
+      - Reduce Your Log Monitoring Costs: logs/reduce-costs-with-pipelines.md
       - Plan Recommendations: logs/plan-recommendations.md
       - Logs Usage Screen: logs/logs-usage-screen.md
       - Extracting Fields & Metrics from Logs: logs/extracting-metrics-and-insights-from-logs.md

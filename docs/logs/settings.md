@@ -14,26 +14,36 @@ The settings include:
 
 ## Side Navigation
 
-The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
+The left navigation menu provides access to [all primary product areas and features](/docs/guide/navigation-guide), organized into functional categories. When you click on Logs, you will see a list of your Logs Apps. Selecting any Logs App opens a contextual sub-menu that contains actions and sections specific to that Logs App. 
 
-Side navigation top level sections for infrastructure and application performance monitoring, log management, and real user monitoring:
+Sub-level sections for a Logs App include:
 
-- [Discovery](/docs/logs/discovery/intro/)
-- [Infrastructure](/docs/monitoring/infrastructure/)
-- [Monitoring](/docs/monitoring/)
-- [Logs](/docs/logs/)
-- [Synthetics](/docs/synthetics/)
-- [Experience](/docs/experience/)
-- [Alerts](/docs/experience/)
-- [Events](/docs/events/)
-- [Dashboards](/docs/dashboards/)
+### Reports 
 
-Side navigation sections for team features and settings:
+Provides out-of-the-box reports based on the selected integrations. You can also use the **+ Add Report** button to create custom reports tailored to your Logs App.
 
-- [Team](/docs/team/)
-- Settings
+### Alerts 
 
-![](/docs/images/guide/logs/side-navigation_2.png)
+The [Alerts](/docs/guide/alerts-guide/). section shows recently triggered alerts for your Logs App. It also includes Alert Rules, where you can view, manage, and create new alert rules to get notified based on log patterns, thresholds, or anomalies.
+
+### Setup & Configuration
+
+This section contains all options for shipping logs to your Logs App, including:
+
+- Installing the **[Sematext Agent](/docs/agents/)** on additional hosts
+- Configuring log shipping from **[discovered log sources](/docs/logs/discovery/intro/)** on existing hosts without additional installation
+- [Manual log shipping methods](/docs/logs/sending-log-events/#custom-integration-options) such as the Sematext Logs API (compatible with Elasticsearch and OpenSearch), integrations with syslog-ng, rsyslog, Logstash, Fluentd, and other popular log shippers, as well as language-specific logging libraries and frameworks.
+
+It also includes:
+
+- **[Logs Pipelines](/docs/logs/pipelines/)** – Define and manage Logs Pipelines to parse, filter, enrich, transform, or route logs before indexing.
+- **App Settings** – Configure App level settings such as retention, data access, integrations, and general preferences.
+
+### Tools & Resources
+
+- **[Custom Dashboards](/docs/dashboards/)** – Build and manage dashboards to visualize and aggregate your logs using the Chart Builder.
+- **Troubleshooting** – Tools and guidance to help diagnose log ingestion issues.
+- **Documentation** – Direct access to relevant documentation, guides, and examples for working with your Logs App.
 
 ## App Actions
 
