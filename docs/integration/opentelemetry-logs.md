@@ -30,7 +30,7 @@ Explore report lets you see raw logs. Here you can use [Quick Actions](/docs/log
 
 Moreover, the pre-configured [alert rules](/docs/guide/alerts-guide) will notify you about:
 
-- **Anomaly alerts**: Alerts when there are abnormal spikes in error and warning logs
+- **Anomaly alerts**: Alerts when there are abnormal spikes or dips in error and warning logs
 - **Service Heartbeat Alert**: Alerts when a service stops sending logs for an extended period, indicating the service may have crashed, been terminated, or lost connectivity.
 - **Infrastructure Resource Exhaustion Alert**: Alerts on critical resource exhaustion events by detecting keywords indicating system limits have been reached. Triggers immediately on memory, disk, or connection pool depletion to enable rapid intervention before complete service failure.
 - **Authentication Attack Detection Alert**: Alerts on potential brute force or credential stuffing attacks by monitoring failed authentication attempts.
