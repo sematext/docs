@@ -256,7 +256,7 @@ nav:
         - Node.js: integration/node.js.md
         - OpenTelemetry: 
           - Overview: integration/opentelemetry.md
-          - Monitoring: integration/opentelemetry-monitoring.md
+          - Metrics: integration/opentelemetry-monitoring.md
           - Logs: integration/opentelemetry-logs.md
         - PHP: integration/php.md
       - CI/CD Tools:
