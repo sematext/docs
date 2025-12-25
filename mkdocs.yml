@@ -254,7 +254,10 @@ nav:
         - Express.js: integration/express.js.md
         - JVM: integration/jvm-integration.md
         - Node.js: integration/node.js.md
-        - OpenTelemetry: integration/opentelemetry-integration.md
+        - OpenTelemetry: 
+          - Overview: integration/opentelemetry.md
+          - Metrics: integration/opentelemetry-monitoring.md
+          - Logs: integration/opentelemetry-logs.md
         - PHP: integration/php.md
       - CI/CD Tools:
         - GitHub Actions: integration/github-actions.md
