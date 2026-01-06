@@ -22,9 +22,9 @@ Explore our [extensive list of integrations](/docs/integration/), each designed 
 
 An [App](/docs/guide/app-guide) is a core concept in Sematext.  As part of the monitoring setup you will create an App for the desired integration type.
 
-Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page to create a new App. Pick a solution type and all the available integrations for that solution will be listed. 
+Go to the [Apps](https://apps.sematext.com/ui/integrations/apps) page by clicking the Sematext icon at the top of the left navigation menu to create a new App. Pick a solution type and all the available integrations for that solution will be listed. 
 
-![Sematext Cloud - Add New App](/docs/images/guide/integrations/add-new-solution.jpg)
+![Sematext Cloud - Add New App](/docs/images/guide/integrations/add-new-solution.png)
 
 Hover over any integration card and click to create the respective App.
 
