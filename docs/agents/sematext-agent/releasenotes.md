@@ -39,6 +39,16 @@ NULL
 
 -->
 
+## Version 4.2.1
+
+Date: January 8, 2026
+
+### Bug Fixes
+
+- Log shipper checkpoint entries now automatically clean up after 24 hours, preventing stale inode accumulation that could cause log shipping to stop after log rotation.
+- Resolved goroutine leaks during command server outages that could cause OOMKills.
+- Reverted log shipper data directory changes that were causing log duplications in Kubernetes.
+
 ## Version 4.2.0
 
 Date: December 23, 2025
