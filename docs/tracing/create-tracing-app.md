@@ -1,7 +1,7 @@
 title: Creating a Tracing App
 description: Complete guide to creating and configuring a new Tracing App in Sematext Cloud
 
-This guide walks you through the complete Tracing App creation process in Sematext Cloud, from initial setup through SDK configuration and agent installation.
+This guide walks you through the complete Tracing App creation process in Sematext Cloud, from initial setup through agent installation and application instrumentation.
 
 **What is a Tracing App?** In Sematext, an [App](/docs/guide/app-guide/) is a container for your data. A Tracing App specifically collects and stores distributed traces from your applications, providing a dedicated space to analyze performance, errors, and dependencies. Each App is isolated and can have its own access controls, retention settings, and alert configurations.
 
@@ -21,164 +21,131 @@ This guide walks you through the complete Tracing App creation process in Semate
 2. Click "Create App" or "Create New Tracing App" in the main navigation
 3. Select "Tracing" as the App type
 
-1.2 Configure App Settings:
+1.2 Name Your App:
 
-![Create Tracing App](/docs/images/tracing/tracing-new-app-creation-1a.png)
+![Name Your App](/docs/images/tracing/tracing-new-app-step1-name.png)
 
-`App Name`:
+Enter a descriptive name for your Tracing App. Use names that reflect your service or environment (e.g., "production-api", "user-service", "payment-gateway").
 
-- Enter a descriptive name for your Tracing App
-- Use names that reflect your service or environment (e.g., "production-api", "user-service", "payment-gateway")
+### Step 2: Select Plan and Infra App
 
-`Plan Selection`:
+2.1 Plan Selection:
 
-- Basic: Entry-level tracing with essential features
-- Standard: Enhanced capabilities with longer data retention  
-- Pro: Full-featured tracing with advanced analytics
+![Plan and Infra App Selection](/docs/images/tracing/tracing-new-app-step2-plan-infra.png)
 
-See detailed features and pricing at [sematext.com/pricing](https://sematext.com/pricing)
+Choose your plan based on your needs, see detailed features and pricing at [sematext.com/pricing](https://sematext.com/pricing).
 
-`Infra App Selection`:
+2.2 Select Infra App:
 
-- Select existing Infra App: Choose from available Infra Apps if you have any
-- Create new Infra App: If none exists, a new one will be automatically created
-- The Infra App is required for agent communication and will be configured for tracing
+- Select an existing Infra App from your available Apps, or
+- Create a new Infra App (click "+ New Infra App")
+- The Infra App is required for agent communication and infrastructure monitoring
 
-![Plan and Infra App Selection](/docs/images/tracing/tracing-new-app-creation-2.png)
-
-### Step 2: Configure OpenTelemetry SDK
-
-After App creation, the wizard continues with SDK configuration:
-
-2.1 Select Your Programming Language.
-
-![SDK Language Selection](/docs/images/tracing/tracing-new-app-creation-4b.png)
-
-Choose from the available programming languages:
-
-- Java (including Kotlin)
-- Python 
-- Node.js
-- Go
-- .NET
-- Ruby
-- PHP
-- JavaScript
-
-2.2 Configure Service Names and Follow Instructions:
-
-Name the Service:
-
-- Enter a meaningful name for your application service
-- This should match your actual service name in your application
-
-![Service Configuration](/docs/images/tracing/tracing-new-app-creation-4d.png)
-
-Follow SDK Instructions:
-The UI will provide complete, language-specific instructions including:
-
-- Required dependencies and installation commands
-- Code examples for auto-instrumentation (recommended)
-- Manual instrumentation examples (advanced)
-- Environment variables and configuration options
-- Framework-specific guidance
-
-The wizard shows detailed instructions like this PHP example:
-
-![PHP SDK Instructions](/docs/images/tracing/tracing-new-app-creation-4c.png)
-
-Add Multiple Services (Optional):
-
-- Click "Add Another Service" to configure multiple services at once
-- Each service will have its own configuration and will appear in the service list
+Once configured, your Tracing App will be created and you'll see a success message.
 
 ### Step 3: Install and Configure Sematext Agent
 
-The wizard continues with agent installation options.
+After App creation, the wizard continues with agent installation. The agent must be installed before you can receive traces.
 
-3.1 Choose Deployment Method:
+![Agent Installation](/docs/images/tracing/tracing-new-app-step3-agent-install.png)
 
-Select from four deployment methods:
+3.1 Use Existing Agent (if available):
 
-![Select Deployment Method](/docs/images/tracing/tracing-new-app-creation-5-2.png)
+If you already have Sematext Agent installed on your infrastructure, it will be detected and you can configure it for tracing by running the displayed commands.
 
-Single Host:
+3.2 Install New Agent:
 
-- Best for: Individual server installation (development, testing, or small production deployments)
-- Platforms: Linux (various distributions), Windows  
-- Installation: GUI installer (Windows) or command-line installation (Windows / Linux)
+Choose your deployment method:
 
-Server Fleet:
+**Single Host**
+
+- Best for: Development environments, single servers, or testing
+- Platforms: Linux, Windows
+- Installation: Command-line or GUI installer (Windows)
+
+**Server Fleet**
 
 - Best for: Production environments with multiple servers managed centrally
 - Management: Ansible, Windows Group Policy
 - Approach: Configuration management for multiple hosts
 
-Containerized:
+**Containerized**
 
 - Best for: Docker environments, container orchestration platforms
 - Platforms: Docker, Swarm, Nomad, AWS ECS
 - Deployment: As a container in your containerized environment
 
-Kubernetes:
+![Containerized Installation](/docs/images/tracing/tracing-new-app-step3-containerized.png)
+
+**Kubernetes**
 
 - Best for: Kubernetes clusters (AKS, EKS, GKE, OpenShift, Rancher)
 - Methods: Helm, kubectl, Sematext Operator
 - Deployment: As a DaemonSet across your Kubernetes cluster
 
-3.2 Follow Installation Instructions:
+Follow the installation commands provided in the UI for your chosen deployment method.
 
-The UI provides step-by-step installation commands for your chosen method:
+3.3 Verify Agent Installation:
 
-![Single Host Installation Instructions](/docs/images/tracing/tracing-new-app-creation-5-3.png)
+Once the agent is running, the wizard will show "Host Detected" when the agent is communicating correctly.
 
-Agent Configuration:
-The agent will be automatically configured with:
+![Host Detected](/docs/images/tracing/tracing-new-app-step3-host-detected.png)
 
-- Your Infra App token for authentication
-- OTLP receiver enabled for trace collection  
-- Your Traces token for sending data to Sematext Cloud
-- Service names you configured in Step 2
-- Default ports: 4337 (gRPC), 4338 (HTTP)
+### Step 4: Instrument Your Application
 
-Custom Port Configuration (Optional):
+With the agent installed and running, the final step is to instrument your application to send traces.
 
-- Modify default OTLP ports if needed
+![Instrument Your Application](/docs/images/tracing/tracing-new-app-step4-instrument.png)
 
-### Step 4: Complete Setup
+The wizard directs you to the **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples)**, which contains complete, working examples for instrumenting your applications.
 
-4.1 Verify Installation:
+**Available Languages:**
 
-- The wizard will show "Host Detected" when the agent is running correctly
-- Services will appear as "Healthy" when properly configured
+| Language | Framework | Repository Link |
+|----------|-----------|-----------------|
+| **Java** | Spring Boot | [java/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/java) |
+| **Python** | Flask | [python/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/python) |
+| **Node.js** | Express | [nodejs/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/nodejs) |
+| **.NET** | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/dotnet) |
 
-![Setup Completion](/docs/images/tracing/tracing-new-app-creation-5-4.png)
+**Available Environments:**
 
-4.2 Generate Test Traffic:
+Each language includes examples for:
 
-- Make requests to your instrumented application
-- Traces should appear in the newly created Tracing App within seconds
+- **Baremetal / Local Machine**: Direct installation on your server or development machine
+- **Docker / Docker Compose**: Containerized deployments
+- **Kubernetes**: Kubernetes cluster deployments
 
-## What You'll Have After Completion
+**Instrumentation Types:**
 
-### Tokens and Configuration
+- **Auto-Instrumentation**: Zero code changes, automatic trace capture (recommended for getting started)
+- **Manual Instrumentation**: Full control with custom spans and complete observability
 
-- Infra App Token: For agent authentication
-- Tracing App Token: For sending trace data to Sematext Cloud
-- Service Configuration: All configured services ready to send traces
+**Your Tokens:**
 
-### Ready-to-Use Features
+The wizard displays your tokens needed for configuration:
 
-- [Tracing Overview](/docs/tracing/reports/overview/): Key metrics and service health
-- [Traces Explorer](/docs/tracing/reports/explorer/): Search and filter traces
-- [Individual Trace Analysis](/docs/tracing/reports/trace-details/): Detailed span inspection
-- [Alert Configuration](/docs/tracing/alerts/creating-alerts/): Ready to set up performance alerts
+- **Tracing Token**: Used in your application's OpenTelemetry configuration
+- **Infra Token**: Used for agent authentication
 
-## SDK Examples
+![Tokens and Endpoints](/docs/images/tracing/tracing-new-app-step4-endpoints.png)
 
-Here are quick examples for popular languages:
+**Agent Endpoints Reference:**
 
-### Java
+Your application sends telemetry to the Sematext Agent on these OTLP endpoints:
+
+| Environment | Traces (HTTP) | Traces (gRPC) |
+|-------------|---------------|---------------|
+| **Baremetal / Docker** | `http://localhost:4338` | `http://localhost:4337` |
+| **Kubernetes** | `http://st-agent-sematext-agent.sematext.svc.cluster.local:4338` | `http://st-agent-sematext-agent.sematext.svc.cluster.local:4337` |
+
+Additional endpoints for metrics and logs are also available (ports 4318 for metrics, 4328 for logs).
+
+## Quick Start Examples
+
+Once your agent is installed, follow the examples in the repository. Here's a quick overview:
+
+### Java (Spring Boot)
 ```bash
 # Download OpenTelemetry Java agent
 wget https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar
@@ -191,7 +158,7 @@ java -javaagent:opentelemetry-javaagent.jar \
   -jar your-application.jar
 ```
 
-### Python
+### Python (Flask)
 ```bash
 # Install OpenTelemetry packages
 pip install opentelemetry-distro[otlp]
@@ -205,7 +172,7 @@ export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
 opentelemetry-instrument python your_app.py
 ```
 
-### Node.js
+### Node.js (Express)
 ```bash
 # Install dependencies
 npm install @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-trace-otlp-http @opentelemetry/sdk-node
@@ -214,22 +181,36 @@ npm install @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-tr
 node -r ./tracing.js your-app.js
 ```
 
-For complete setup instructions, the wizard provides detailed, language-specific guidance.
+For complete setup instructions including Docker and Kubernetes deployments, visit the [Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples).
+
+## What You'll Have After Completion
+
+### Tokens and Configuration
+
+- **Infra App Token**: For agent authentication
+- **Tracing App Token**: For sending trace data to Sematext Cloud
+
+### Ready-to-Use Features
+
+- [Tracing Overview](/docs/tracing/reports/overview/): Key metrics and service health
+- [Traces Explorer](/docs/tracing/reports/explorer/): Search and filter traces
+- [Individual Trace Analysis](/docs/tracing/reports/trace-details/): Detailed span inspection
+- [Alert Configuration](/docs/tracing/alerts/creating-alerts/): Ready to set up performance alerts
 
 ## Best Practices
 
 ### Naming Conventions
 
-- Apps: Use environment prefixes (`prod-api`, `staging-web`)
-- Services: Use descriptive names (`user-authentication`, `payment-processor`)
+- **Apps**: Use environment prefixes (`prod-api`, `staging-web`)
+- **Services**: Use descriptive names (`user-authentication`, `payment-processor`)
 - Avoid spaces: Use hyphens or underscores instead (`my-service`, not `my service`)
 - Keep names concise but clear
 
 ### Planning Your Setup
 
-- One App per Business Domain: Group related microservices that communicate with each other (e.g., all e-commerce services, all analytics services)
-- Environment Separation: Different Apps for prod/staging/dev environments  
-- Cross-Service Visibility: Keep communicating services in the same App to see end-to-end traces
+- **One App per Business Domain**: Group related microservices that communicate with each other (e.g., all e-commerce services, all analytics services)
+- **Environment Separation**: Different Apps for prod/staging/dev environments
+- **Cross-Service Visibility**: Keep communicating services in the same App to see end-to-end traces
 
 ## Troubleshooting
 
@@ -237,7 +218,7 @@ For complete setup instructions, the wizard provides detailed, language-specific
 
 - Verify agent is running and shows "Host Detected"
 - Check OTLP endpoint configuration in your application
-- Ensure service names match between App configuration and code
+- Ensure the service name is configured (`OTEL_SERVICE_NAME`)
 - Review the [Troubleshooting Guide](/docs/tracing/troubleshooting/)
 
 ### Agent Issues
@@ -251,15 +232,16 @@ For complete setup instructions, the wizard provides detailed, language-specific
 
 After completing App creation:
 
-1. Explore Traces: Navigate to [Traces Explorer](/docs/tracing/reports/explorer/) to see your traces
-2. Set Up Alerts: Create [performance alerts](/docs/tracing/alerts/creating-alerts/) for key metrics  
-3. Add Custom Instrumentation: Learn about [manual instrumentation in SDKs](/docs/tracing/sdks/)
-4. Optimize Performance: Configure [sampling strategies](/docs/tracing/sampling/) and [cost optimization](/docs/tracing/cost-optimization/)
+1. **Explore Traces**: Navigate to [Traces Explorer](/docs/tracing/reports/explorer/) to see your traces
+2. **Set Up Alerts**: Create [performance alerts](/docs/tracing/alerts/creating-alerts/) for key metrics
+3. **Add Custom Instrumentation**: Learn about [manual instrumentation in SDKs](/docs/tracing/sdks/)
+4. **Optimize Performance**: Configure [sampling strategies](/docs/tracing/sampling/) and [cost optimization](/docs/tracing/cost-optimization/)
 
 ## Related Documentation
 
 - [OpenTelemetry SDKs](/docs/tracing/sdks/) - Detailed SDK documentation
-- [Agent Configuration](/docs/agents/sematext-agent/opentelemetry/) - Agent setup details  
+- [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples) - Working code examples
+- [Agent Configuration](/docs/agents/sematext-agent/opentelemetry/) - Agent setup details
 - [Tracing Dashboard](/docs/tracing/reports/overview/) - Understanding the tracing UI
 - [Troubleshooting](/docs/tracing/troubleshooting/) - Common issues and solutions
 

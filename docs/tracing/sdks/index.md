@@ -5,6 +5,19 @@ description: Overview of supported OpenTelemetry SDKs and language-specific inst
 
 Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, to collect traces from your applications. This section provides comprehensive guides for instrumenting applications in various programming languages.
 
+<div class="mdl-tabs__panel is-active" markdown>
+
+**Looking for working examples?** Check out our **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.
+
+| Language | Framework | Examples |
+|----------|-----------|----------|
+| Java | Spring Boot | [java/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/java) |
+| Python | Flask | [python/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/python) |
+| Node.js | Express | [nodejs/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/nodejs) |
+| .NET | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/dotnet) |
+
+</div>
+
 ## How It Works
 
 ```

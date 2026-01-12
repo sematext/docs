@@ -5,6 +5,12 @@ description: Complete guide to instrumenting Python applications with OpenTeleme
 
 This guide covers how to instrument Python applications with OpenTelemetry to send traces to Sematext Tracing.
 
+<div class="mdl-tabs__panel is-active" markdown>
+
+**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Python Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/python)**.
+
+</div>
+
 ## Auto-Instrumentation (Recommended)
 
 Auto-instrumentation is the easiest way to get started. It automatically instruments popular frameworks and libraries without requiring code changes.
