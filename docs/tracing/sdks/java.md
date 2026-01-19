@@ -5,6 +5,12 @@ description: Complete guide to instrumenting Java applications with OpenTelemetr
 
 This guide covers how to instrument Java applications with OpenTelemetry to send traces to Sematext Tracing.
 
+<div class="mdl-tabs__panel is-active" markdown>
+
+**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Java Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/java)**.
+
+</div>
+
 > **Note**: Kotlin applications can use the same Java instrumentation. All examples below work with Kotlin code.
 
 ## Auto-Instrumentation (Recommended)

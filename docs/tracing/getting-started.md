@@ -36,19 +36,20 @@ The wizard walks you through:
 
 - App Creation: Name your App and choose a plan (Basic, Standard, or Pro)
 - Infrastructure Setup: Select an existing Infra App or create a new one
-- SDK Configuration: Choose your programming language and configure services
 - Agent Installation: Deploy the Sematext Agent using your preferred method
+- Application Instrumentation: Follow the examples in our [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples) for your language and environment
 
 **👉 [Complete Step-by-Step Guide](/docs/tracing/create-tracing-app/)**
 
-The wizard provides detailed instructions for each step, including code examples and configuration commands.
+The wizard guides you through each step and provides your tokens and OTLP endpoints for configuration.
 
 ### 2. What You'll Set Up
 
 **Programming Languages Supported**:
 
 - Java (including Kotlin), Python, Node.js, Go, .NET, Ruby, PHP, JavaScript
-- See detailed [SDK documentation](/docs/tracing/sdks/) for language-specific setup guides
+- See [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples) for working examples
+- See [SDK documentation](/docs/tracing/sdks/) for detailed reference guides
 
 **Agent Deployment Options**:
 
@@ -85,7 +86,7 @@ Here's what the process looks like for a Python application:
    opentelemetry-instrument python app.py
    ```
 
-The wizard provides similar examples for all supported languages.
+For complete working examples with Docker and Kubernetes deployments, see our [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples).
 
 ## What You'll See After Setup
 
@@ -158,7 +159,8 @@ export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
 
 ## Need Help?
 
-- Check [SDK documentation](/docs/tracing/sdks/) for language-specific setup
+- Try working examples from [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples)
+- Check [SDK documentation](/docs/tracing/sdks/) for language-specific reference
 - Review [Agent OpenTelemetry configuration](/docs/agents/sematext-agent/opentelemetry/)
 - See the [Troubleshooting Guide](/docs/tracing/troubleshooting/)
 - Contact [support@sematext.com](mailto:support@sematext.com)

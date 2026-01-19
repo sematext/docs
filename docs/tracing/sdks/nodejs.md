@@ -5,6 +5,12 @@ description: Complete guide to instrumenting Node.js applications with OpenTelem
 
 This guide covers how to instrument Node.js applications with OpenTelemetry to send traces to Sematext Tracing.
 
+<div class="mdl-tabs__panel is-active" markdown>
+
+**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Node.js Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/nodejs)**.
+
+</div>
+
 ## Auto-Instrumentation (Recommended)
 
 Auto-instrumentation automatically instruments popular frameworks and libraries without requiring code changes.
