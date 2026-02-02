@@ -39,6 +39,24 @@ NULL
 
 -->
 
+## Version 4.3.0
+
+Date: February 2, 2026
+
+### New Features
+
+- **Container CPU Limit Percentage**: Added new `container.cpu.limit.percent` metric showing CPU usage as a percentage of the configured CPU limit. Enables meaningful alerting based on pod resource limits rather than node capacity, helping identify over-provisioned and under-provisioned pods.
+
+### Improvements
+
+- **Docker Runtime Images**: Upgraded Docker runtime images from Debian Bullseye to Bookworm (Debian 12), providing updated security packages and modern base images for containerized deployments.
+
+### Bug Fixes
+
+- Kubernetes NodeConditions now correctly reports the node name, fixing an issue where multiple nodes could overwrite each other's data.
+- Resolved data race in hostname resolution that could cause intermittent agent restarts.
+- kube-controller-manager metrics no longer fail to parse when zone labels contain embedded null bytes.
+
 ## Version 4.2.1
 
 Date: January 8, 2026
