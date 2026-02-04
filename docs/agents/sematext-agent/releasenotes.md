@@ -39,6 +39,14 @@ NULL
 
 -->
 
+## Version 4.3.1
+
+Date: February 4, 2026
+
+### Bug Fixes
+
+- Resolved high CPU usage during log discovery on systems with heavy I/O workloads.
+
 ## Version 4.3.0
 
 Date: February 2, 2026
