@@ -39,6 +39,14 @@ NULL
 
 -->
 
+## Version 4.3.2
+
+Date: February 11, 2026
+
+### Improvements
+
+- **Log Auto-Discovery**: Improved how log file paths are detected in eBPF-based discovery, significantly reducing CPU overhead on systems with heavy I/O workloads.
+
 ## Version 4.3.1
 
 Date: February 4, 2026
