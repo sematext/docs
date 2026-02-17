@@ -204,25 +204,25 @@ For more troubleshooting information please look at [Troubleshooting](/docs/moni
 
 ## FAQ
 
-** How do I enable JMX in Solr? **
+### How do I enable JMX in Solr?
 
 Add or uncomment the **<jmx/\>** directive in ```solrconfig.xml``` and
 restart Solr.  See <https://wiki.apache.org/solr/SolrJmx> for more
 info.
 
-** I don't see any data on Solr and JVM reports, what is the problem? **
+### I don't see any data on Solr and JVM reports, what is the problem?
 
 You should probably enable JMX in your Solr. Add or uncomment
 the **<jmx /\>** directive in ```solrconfig.xml``` and restart Solr.
  See <https://wiki.apache.org/solr/SolrJmx> for more info.
 
-** I don't see any data only in Solr Components or Errors reports, what should I do? **
+### I don't see any data only in Solr Components or Errors reports, what should I do?
 
 Most likely you are using the standalone variant of App Agent. In
 that case, App Agent can't collect metrics which are available only
 when running in-process. If so, switch to in-process (javaagent) version
 of App Agent.
 
-** Why don't I see Solr index file size metric? **
+### Why don't I see Solr index file size metric? 
 
 App Agent runs as 'spmmon' user.  Make sure this user has appropriate access permissions on Solr's index directories.  If you cannot give 'spmmon' user the read permissions you can switch to the in-process (javaagent) version of the App Agent.
