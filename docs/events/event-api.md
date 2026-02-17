@@ -10,7 +10,7 @@ The API Key needs to be passed as Header parameter with name Authorization and v
 
 See [here](adding.md#adding-events-via-api).
 
-### Event Search API
+## Event Search API
 
 Sematext exposes the Events Search HTTP API, which is compatible with both [Elasticsearch](https://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html) and [OpenSearch](https://docs.opensearch.org/docs/latest/query-dsl/) query DSLs. This allows you to search and retrieve events programmatically over HTTP(S), using curl or any standard Elasticsearch/OpenSearch client. The API endpoint is:
 
