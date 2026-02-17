@@ -402,9 +402,9 @@ Let’s see how to actually create some alert rules for Elasticsearch metrics in
 
 If you have trouble sending logs, try out the latest version of [Sematext Agent](/docs/agents/sematext-agent/installation/). Also, make sure Sematext Agent is configured to send logs to your Elasticsearch Logs App. Last, check the [Log Agents panel](/docs/fleet/#log-agents) for any errors, and refer to our [Sematext Logs FAQ](/docs/logs/faq/) for useful tips.
 
-### FAQ
+## FAQ
 
-** Why doesn't the number of documents I see in Sematext match the number of documents in my Elasticsearch index **
+### Why doesn't the number of documents I see in Sematext match the number of documents in my Elasticsearch index
 
 Sematext collects index stats from primary shards only.  To see the
 total number of documents in an index, select all shards in that index
@@ -412,7 +412,7 @@ and choose "sum".  The list of shards and the "sum" function can be
 found in the "Shard filter" in the Index Stats
 report.
 
-** Can Sematext Agent collect metrics even when Elasticsearch HTTP API is disabled **
+### Can Sematext Agent collect metrics even when Elasticsearch HTTP API is disabled
 
 Each Sematext Agent collects Elasticsearch metrics only from the local
 node by accessing the Stats API via HTTP.  To allow only local access
@@ -423,7 +423,7 @@ node to whose elasticsearch.yml you add this.
 http.host: "127.0.0.1"
 ```
 
-** Can I point Sematext Agent to a non-localhost Elasticsearch node **
+### Can I point Sematext Agent to a non-localhost Elasticsearch node
 
 Yes.  Adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
@@ -432,7 +432,7 @@ default localhost:9200 value to use an alternative hostname:port.  After
 that restart Sematext Agent (if you are running a standalone App Agent version) or
 Elasticsearch process(es) with embedded App Agent.
 
-** My Elasticsearch is protected by basic HTTP authentication, can I use Sematext Agent  **
+### My Elasticsearch is protected by basic HTTP authentication, can I use Sematext Agent
 
 Yes. You just need to adjust
 /opt/spm/spm-monitor/conf/spm-monitor-config-*TOKEN\_HERE*-default.properties
@@ -449,7 +449,7 @@ spm-monitor restart** in case of standalone App Agent or by restarting
 Elasticsearch node if you are using in-process
 App Agent).
 
-** I am using Sematext Agent and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that **
+### I am using Sematext Agent and I don't see Index (and/or Refresh/Flush/Merge) stats, why is that
 
 Sematext Agent collects Index stats only from
 primary shards, so it is possible that you installed Sematext Agent on some
