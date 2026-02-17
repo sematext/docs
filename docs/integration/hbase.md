@@ -327,19 +327,19 @@ applied replication hfiles<br>**hbase.rs.replication.hfiles.applied** <br>*(long
 
 ## FAQ
 
-** How do I enable JMX in HBase **
+### How do I enable JMX in HBase
 
 Please see [HBase Metrics](http://hbase.apache.org/metrics.html)
 page for instructions.
 
-** Do I need to add a separate Monitoring App for each HBase server/node I want to monitor **
+### Do I need to add a separate Monitoring App for each HBase server/node I want to monitor
 
 No, one App is enough. To monitor N HBase servers that belong to the
 same cluster create just a single Monitoring App and use its
 Token in the agent configuration file on all HBase servers that are a part of
 the same cluster. See [App Guide](/docs/guide/app-guide/) for more info.
 
-** Why don't some HBase metrics graphs have any data **
+### Why don't some HBase metrics graphs have any data
 
 There could be 2 possible reasons:
 
