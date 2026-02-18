@@ -44,7 +44,6 @@ After the App is created:
 [Service Monitoring](/docs/monitoring/service-monitoring/) collects metrics specific to a particular service such as a database, web server, message queue, or application runtime. Examples include query rate for a database, request count for a web server, or JVM metrics for a Java application.
 Infrastructure Monitoring gives you visibility into the host. Service Monitoring gives you visibility into the service running on that host.
 
-### Creating a Service Monitoring App
 If you do not have any Apps and want to monitor metrics from a specific service such as a database or web server, you should create a Service Monitoring App.
 During this process you will also be asked to create an Infrastructure Monitoring App. This is required because Infrastructure Monitoring Apps are the foundation of Sematext Cloud.
 The Sematext Agent that you install on your hosts is bound to an Infrastructure Monitoring App. The agent can collect:
