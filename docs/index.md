@@ -29,7 +29,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     ---
 
-    Map and monitor your whole infrastructure in real-time
+    Map and monitor your service-level performance metrics in real-time
     
     [:octicons-arrow-right-24: Learn more](/docs/monitoring)
 
