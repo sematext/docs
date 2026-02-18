@@ -40,6 +40,7 @@ After the App is created:
 ### Service Monitoring vs Infrastructure Monitoring
 
 [Infrastructure Monitoring](/docs/monitoring/infrastructure/) collects system level metrics from your hosts. This includes CPU, memory, disk, network, and other operating system metrics. These metrics help you understand the health and resource usage of your machines, virtual machines, or containers.
+
 [Service Monitoring](/docs/monitoring/service-monitoring/) collects metrics specific to a particular service such as a database, web server, message queue, or application runtime. Examples include query rate for a database, request count for a web server, or JVM metrics for a Java application.
 Infrastructure Monitoring gives you visibility into the host. Service Monitoring gives you visibility into the service running on that host.
 
