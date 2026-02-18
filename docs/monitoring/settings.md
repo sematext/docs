@@ -16,30 +16,37 @@ From the App Actions drop down menu, the horizontal elipsis icon (⋯) shows you
 
 ![](/docs/images/guide/monitoring/monitoring-app-actions.png)
 
-
 ## Side Navigation
 
-The persistent region on the left that can be collapsed, is used to easily switch across monitoring, log management, real user monitoring, and other user & team features. All side navigation tabs are selectable. If they have chevrons, it indicates that the top level section is collapsible and contains additional subitems. The subitems will let you explore all your Apps, or choose a particular App.
+The left navigation menu provides access to [all primary product areas and features](/docs/guide/navigation-guide), organized into functional categories. When you click on Monitoring under Observability Suite section, you will see a list of your Service Monitoring and Infrastructure Monitoring Apps. Selecting any Monitoring App opens a contextual sub-menu that contains actions and sections specific to that Monitoring App. 
 
-![Sematext Monitoring App Sidenav](/docs/images/monitoring/left-side-navigation.png)
+Sub-level sections for a Service Monitoring App include:
 
-Side navigation top level sections for infrastructure and application performance monitoring, log management, and real user monitoring:
+### Reports 
 
-- [Fleet & Discovery](/docs/fleet/)
-- [Infrastructure](/docs/monitoring/infrastructure/)
-- [Monitoring](/docs/monitoring/)
-- [Logs](/docs/logs/)
-- [Synthetics](/docs/synthetics/)
-- [Experience](/docs/experience/)
-- [Alerts](/docs/alerts/)
-- [Events](/docs/events/)
-- [Dashboards](/docs/dashboards/)
+Provides out-of-the-box reports based on the selected integrations. You can also use the **+ Add Report** button to create custom reports tailored to your Service Monitoring App.
 
-Side navigation sections for team features and settings:
+### Alerts 
 
-- [Team](/docs/team/)
-- Notifications
-- Settings
+The [Alerts](/docs/guide/alerts-guide/). section shows recently triggered alerts for your Service Monitoring App. It also includes Alert Rules, where you can view, manage, and create new alert rules to get notified based on thresholds, or anomalies.
+
+### Setup & Configuration
+
+This section contains all options for shipping metrics to your Monitoring App, including:
+
+- Installing the **[Sematext Agent](/docs/agents/)** on additional hosts
+- Configuring metrics shipping from **[discovered metrics](/docs/monitoring/autodiscovery/)** on existing hosts without additional installation
+
+It also includes:
+
+- **[Agent Fleet](/docs/fleet/fleet/)** – A centralized view of all the Sematext Agents installed throughout your infrastructure.
+- **App Settings** – Configure App level settings such as retention, data access, integrations, and general preferences.
+
+### Tools & Resources
+
+- **[Custom Dashboards](/docs/dashboards/)** – Build and manage dashboards to visualize and aggregate your metrics using the Chart Builder.
+- **Troubleshooting** – Tools and guidance to help diagnose log ingestion issues.
+- **Documentation** – Direct access to relevant documentation, guides, and examples for working with your Monitoring App.
 
 ## Report Settings
 
