@@ -35,10 +35,12 @@ After the App is created:
 - Service Monitoring Apps are visible under Observability Suite → Monitoring
 - Infrastructure metrics are listed under the Infrastructure Monitoring section
 
+<img class="content-modal-image" alt="Sematext Monitoring Create New App UI screen" src="/docs/images/monitoring/create-new-app.png" title="New Infrastructure or Monitoring App">
+
 ### Service Monitoring vs Infrastructure Monitoring
 
-**Infrastructure Monitoring** collects system level metrics from your hosts. This includes CPU, memory, disk, network, and other operating system metrics. These metrics help you understand the health and resource usage of your machines, virtual machines, or containers.
-**Service Monitoring** collects metrics specific to a particular service such as a database, web server, message queue, or application runtime. Examples include query rate for a database, request count for a web server, or JVM metrics for a Java application.
+[Infrastructure Monitoring](/docs/monitoring/infrastructure/) collects system level metrics from your hosts. This includes CPU, memory, disk, network, and other operating system metrics. These metrics help you understand the health and resource usage of your machines, virtual machines, or containers.
+[Service Monitoring](/docs/monitoring/service-monitoring/) collects metrics specific to a particular service such as a database, web server, message queue, or application runtime. Examples include query rate for a database, request count for a web server, or JVM metrics for a Java application.
 Infrastructure Monitoring gives you visibility into the host. Service Monitoring gives you visibility into the service running on that host.
 
 ### Creating a Service Monitoring App
@@ -50,7 +52,7 @@ The Sematext Agent that you install on your hosts is bound to an Infrastructure 
 - Service specific metrics when enabled
 - Logs when log collection is configured
 
-When you install the Sematext Agent, service discovery is automatically enabled. This feature is available when you have an **Infrastructure Monitoring** App, which is why the Infrastructure App is the foundation of Sematext Cloud.
+When you install the Sematext Agent, [service discovery](/docs/fleet/discovery/) is automatically enabled. This feature is available when you have an **Infrastructure Monitoring** App, which is why the Infrastructure App is the foundation of Sematext Cloud.
 Discovery scans the host where the agent is installed and detects:
 - Running services
 - Available integrations
