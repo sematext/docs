@@ -25,19 +25,7 @@ And you can additionally send any kind of [**custom metrics**](/docs/monitoring/
 
 If you haven't [signed up for free](https://apps.sematext.com/ui/registration) yet, check it out or [sign in](https://apps.sematext.com/ui/login/) to get started by creating a Sematext Monitoring App with a wide selection of integrations to choose from.
 
-
-## Creating Monitoring Apps
-
-The first step to monitoring with Sematext is to create a **Service Monitoring** App or an **Infrastructure Monitoring** App.
-After creating an account, go to the **All Apps** page by clicking the Octi icon in the top left corner of the main navigation menu. From there, create either an Infrastructure Monitoring App or a Service Monitoring App.
-After the App is created:
-
-- Service Monitoring Apps are visible under Observability Suite → Monitoring
-- Infrastructure metrics are listed under the Infrastructure Monitoring section
-
-<img class="content-modal-image" alt="Sematext Monitoring Create New App UI screen" src="/docs/images/monitoring/create-new-app.png" title="New Infrastructure or Monitoring App">
-
-### Service Monitoring vs Infrastructure Monitoring
+## Service Monitoring vs Infrastructure Monitoring
 
 [Infrastructure Monitoring](/docs/monitoring/infrastructure/) collects system level metrics from your hosts. This includes CPU, memory, disk, network, and other operating system metrics. These metrics help you understand the health and resource usage of your machines, virtual machines, or containers.
 
