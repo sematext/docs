@@ -1,9 +1,17 @@
 title: Sematext Monitoring Quick Start
 description: Sematext Cloud is a modern monitoring, log management, transaction tracing, and real user monitoring system that includes over 40 monitoring integrations. It is a suite of products that combine high-quality logging experience with other monitoring and alerting devops tools helping fix IT production issues
 
-After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a Monitoring App. An App is an independent namespace for your data.
+After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <https://apps.eu.sematext.com> if using Sematext Cloud Europe), the first step is to create a **Service Monitoring** App or an **Infrastructure Monitoring** App.
 
-For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
+Go to the **All Apps** page by clicking the Octi icon in the top left corner of the main navigation menu. From there, create either an Infrastructure Monitoring App or a Service Monitoring App.
+
+After the App is created:
+- Service Monitoring Apps are visible under Observability Suite → Monitoring
+- Infrastructure metrics are listed under the Infrastructure Monitoring section
+
+<img class="content-modal-image" alt="Sematext Monitoring Create New App UI screen" src="/docs/images/monitoring/create-new-app.png" title="New Infrastructure or Monitoring App">
+
+An App is an independent namespace for your data. For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
 ## Creating a Monitoring App
 
