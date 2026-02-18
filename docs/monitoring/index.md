@@ -5,15 +5,13 @@ Sematext [**Application**](/docs/monitoring/service-monitoring/) and [**Infrastr
 
 Get started in minutes with **out-of-the-box dashboards** that include prebuilt charts and other numeric components for the most notable metrics. Get notified with automatic [**alerts**](https://sematext.com/alerts/) powered by [**anomaly detection**](https://sematext.com/alerts/) rules, and ability to **analyze metrics** by a number of context-aware filters.
 
+## Infrastructure Monitoring
+Monitor your core infrastructure in minutes, simply install [Sematext Agent](/docs/agents/sematext-agent). Get performance and health metrics from a single (Infra) Monitoring App. Keep an eye on everything, from servers and Kubernetes clusters to cloud instances, containers, processes, inventory, events, and beyond. Read more in the [Infrastructure Monitoring Overview](/docs/monitoring/infrastructure/).
+
 ## Application and Service Monitoring
 No matter how complex your infrastructure is, you can benefit from service autodiscovery functionality and get all the important metrics from your applications and services easily and quickly. Simply choose one of the available monitoring integrations and monitor performance and health metrics for all your applications. 
 
 Get dedicated dashboards and reports for each application to extract the most value from the metrics we track. Useful tips are presented alongside the charts and other report components. Of course, if you prefer to be notified of important events, we have you covered with automatic alert rules. Read more in the [Application Monitoring Overview](/docs/monitoring/service-monitoring/).
-
-
-## Infrastructure Monitoring
-Monitor your core infrastructure in minutes, simply install [Sematext Agent](/docs/agents/sematext-agent). Get performance and health metrics from a single (Infra) Monitoring App. Keep an eye on everything, from servers and Kubernetes clusters to cloud instances, containers, processes, inventory, events, and beyond. Read more in the [Infrastructure Monitoring Overview](/docs/monitoring/infrastructure/).
-
 
 Sematext Monitoring goes beyond just collecting metrics. 
 
@@ -30,11 +28,38 @@ If you haven't [signed up for free](https://apps.sematext.com/ui/registration) y
 
 ## Creating Monitoring Apps
 
-The first step to monitoring with Sematext is to create a Monitoring App. Go to [monitoring view](https://apps.sematext.com/ui/monitoring), click on New Monitoring App button, select your integration and create monitoring App.
+The first step to monitoring with Sematext is to create a **Service Monitoring** App or an **Infrastructure Monitoring** App.
+After creating an account, go to the **All Apps** page by clicking the Octi icon in the top left corner of the main navigation menu. From there, create either an Infrastructure Monitoring App or a Service Monitoring App.
+After the App is created:
+
+- Service Monitoring Apps are visible under Observability Suite → Monitoring
+- Infrastructure metrics are listed under the Infrastructure Monitoring section
+
+### Service Monitoring vs Infrastructure Monitoring
+
+**Infrastructure Monitoring** collects system level metrics from your hosts. This includes CPU, memory, disk, network, and other operating system metrics. These metrics help you understand the health and resource usage of your machines, virtual machines, or containers.
+**Service Monitoring** collects metrics specific to a particular service such as a database, web server, message queue, or application runtime. Examples include query rate for a database, request count for a web server, or JVM metrics for a Java application.
+Infrastructure Monitoring gives you visibility into the host. Service Monitoring gives you visibility into the service running on that host.
+
+### Creating a Service Monitoring App
+If you do not have any Apps and want to monitor metrics from a specific service such as a database or web server, you should create a Service Monitoring App.
+During this process you will also be asked to create an Infrastructure Monitoring App. This is required because Infrastructure Monitoring Apps are the foundation of Sematext Cloud.
+The Sematext Agent that you install on your hosts is bound to an Infrastructure Monitoring App. The agent can collect:
+
+- System level metrics such as CPU, memory, disk, and network
+- Service specific metrics when enabled
+- Logs when log collection is configured
+
+When you install the Sematext Agent, service discovery is automatically enabled. This feature is available when you have an **Infrastructure Monitoring** App, which is why the Infrastructure App is the foundation of Sematext Cloud.
+Discovery scans the host where the agent is installed and detects:
+- Running services
+- Available integrations
+- Log files that can be collected
+
+Because the agent is bound to an Infrastructure Monitoring App, it can continuously observe what is running on the host. This allows Sematext Cloud to present discovered services and logs directly in the UI.
+If you later decide to collect metrics or logs from a discovered service, you can enable them directly from the Sematext Cloud UI. You do not need to reinstall or reconfigure the agent. In most cases, enabling monitoring for a discovered service requires only a few clicks.
 
 Follow along the [Quick Start](/docs/monitoring/quick-start) guide to learn how.
-
-<img class="content-modal-image" alt="Sematext Monitoring App Settings UI screen" src="/docs/images/monitoring/create-new-monitoring-app.gif" title="New Monitoring App">
 
 ## App Settings
 
