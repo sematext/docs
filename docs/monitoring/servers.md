@@ -4,11 +4,12 @@ description: Monitor bare metal servers and VMs with a simple Agent and use Sema
 Monitor bare metal servers with a simple [Agent](/docs/agents/sematext-agent/) and use Sematext Cloud to show everything in a single App.
 
 ## Create a Sematext Infra App
-Creating a Sematext Infra App is as easy as choosing one of our integrations and giving the App a name.
 
-![New Infra App](/docs/images/monitoring/new-infra-app-env.gif)
+Go to the **All Apps** page by clicking the Octi icon in the top-left corner of the main navigation menu, or click any of the reports listed under the Infrastructure Monitoring section. From there, select Create App and choose Infrastructure Monitoring to create your Infra App. Give it a name, select [plan](https://sematext.com/pricing/) and click 'Create App'.
 
-Sematext can easily monitor your Infrastructure with the Sematext Agent. You can install the agent during the Infra App creation process by following the Bare-Metal / VM instructions.
+Install the agent during the Infra App creation process by following the Bare-Metal / VM instructions.
+
+![New Infra App](/docs/images/monitoring/create-infra-app.gif)
 
 ## See host metrics in Sematext Monitoring
 Sematext Agent collects a plethora of metrics about hosts (CPU, memory, disk, network, processes).
