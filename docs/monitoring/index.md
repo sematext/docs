@@ -33,8 +33,8 @@ If you haven't [signed up for free](https://apps.sematext.com/ui/registration) y
 Infrastructure Monitoring gives you visibility into the host. Service Monitoring gives you visibility into the service running on that host.
 
 If you do not have any Apps and want to monitor metrics from a specific service such as a database or web server, you should create a Service Monitoring App.
-During this process you will also be asked to create an Infrastructure Monitoring App. This is required because Infrastructure Monitoring Apps are the foundation of Sematext Cloud.
-The Sematext Agent that you install on your hosts is bound to an Infrastructure Monitoring App. The agent can collect:
+
+During this process you will also be asked to create an Infrastructure Monitoring App. If you do not already have one, it will be created automatically for you. This is required because Infrastructure Monitoring Apps are the foundation of Sematext Cloud. The Sematext Agent that you install on your hosts is bound to an Infrastructure Monitoring App. The agent can collect:
 
 - System level metrics such as CPU, memory, disk, and network
 - Service specific metrics when enabled
