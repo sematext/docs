@@ -5,7 +5,7 @@ After you get logged into Sematext Cloud at <https://apps.sematext.com> (or <htt
 
 Refer to [Service Monitoring vs Infrastructure Monitoring](/docs/monitoring/#service-monitoring-vs-infrastructure-monitoring) for more details.
 
-An App is an independent namespace for your data. For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
+An [App](/docs/guide/app-guide/) is an independent namespace for your data. For example, if you have a development and a production environment, it might make sense to have one App for each. You can create as many Apps as you want.
 
 ## Creating an Infrastructure Monitoring App
 
