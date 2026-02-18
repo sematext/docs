@@ -4,11 +4,10 @@ description: Monitor Docker and containerd containers, container orchestration s
 Monitor [Docker](https://www.docker.com/) and containerd containers, container orchestration systems like Swarm and Nomad, or cloud container orchestration services EKS, ECS, AKS, GKE with Sematext by installing [Sematext Agent](/docs/agents/sematext-agent/) and using our interface that shows everything in one simple screen.
 
 ## Create a Sematext Monitoring App
-Creating a Sematext Infra App is as easy as choosing one of our integrations and giving the App a name.
 
-![New Infra App](/docs/images/monitoring/new-infra-app-env.gif)
+Go to the **All Apps** page by clicking the Octi icon in the top-left corner of the main navigation menu, or click any of the reports listed under the Infrastructure Monitoring section. From there, select Create App and choose Infrastructure Monitoring to create your Infra App. Give it a name, select [plan](https://sematext.com/pricing/) and click 'Create App'.
 
-Sematext can easily monitor your infrastructure with the Sematext Agent. You can install the agent during the Infra App creation process by following the Container instructions during environment selection.
+During the Infra App creation process, you will get a screen displaying Sematext Agent installation instructions for various supported environments.  You can install the agent during the Infra App creation process by following the Container instructions during environment selection.
 
 Check also:
 
