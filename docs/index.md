@@ -23,7 +23,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     Map and monitor your whole infrastructure in real-time
     
-    [:octicons-arrow-right-24: Learn more](/docs/monitoring)
+    [:octicons-arrow-right-24: Learn more](/docs/monitoring/infrastructure/)
 
     -   :fontawesome-solid-chart-line:{ .lg .middle .monitoring-icon } __Service Monitoring__
 
@@ -31,7 +31,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     Map and monitor your service-level performance metrics in real-time
     
-    [:octicons-arrow-right-24: Learn more](/docs/monitoring)
+    [:octicons-arrow-right-24: Learn more](/docs/monitoring/service-monitoring/)
 
 -   :fontawesome-solid-route:{ .lg .middle .tracing-icon } __Tracing__
 
