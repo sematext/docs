@@ -17,19 +17,19 @@ _If you're new here, read below for a high-level overview of Sematext._
     
     [:octicons-arrow-right-24: Learn more](/docs/logs)
     
--   :fontawesome-solid-magnifying-glass-chart:{ .lg .middle .new-icon } __New Feature__
+-   :fontawesome-solid-chart-line:{ .lg .middle .new-icon } __Infrastructure Monitoring__
     ---
-    Your feature description here
-    
-    [:octicons-arrow-right-24: Learn more](/docs/new-feature)
-
--   :fontawesome-solid-chart-line:{ .lg .middle .monitoring-icon } __Monitoring__
-
-    ---
-
     Map and monitor your whole infrastructure in real-time
     
-    [:octicons-arrow-right-24: Learn more](/docs/monitoring)
+    [:octicons-arrow-right-24: Learn more](/docs/monitoring/infrastructure/)
+
+-   :fontawesome-solid-chart-line:{ .lg .middle .monitoring-icon } __Service Monitoring__
+
+    ---
+
+    Map and monitor your service-level performance metrics in real-time
+    
+    [:octicons-arrow-right-24: Learn more](/docs/monitoring/service-monitoring/)
 
 -   :fontawesome-solid-route:{ .lg .middle .tracing-icon } __Tracing__
 
