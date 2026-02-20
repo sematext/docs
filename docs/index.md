@@ -18,7 +18,9 @@ _If you're new here, read below for a high-level overview of Sematext._
     [:octicons-arrow-right-24: Learn more](/docs/logs)
     
 -   :fontawesome-solid-chart-line:{ .lg .middle .new-icon } __Infrastructure Monitoring__
+
     ---
+
     Map and monitor your whole infrastructure in real-time
     
     [:octicons-arrow-right-24: Learn more](/docs/monitoring/infrastructure/)
