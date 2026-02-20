@@ -18,9 +18,13 @@ For each of the four solutions, you can create multiple [Apps](/docs/guide/app-g
     - Plan
     - Daily log volume
     - Data retention duration
-- [Monitoring](https://sematext.com/pricing/#infrastructure) Apps:
+- [Infrastructure Monitoring](https://sematext.com/pricing/) Apps:
     - Plan
     - Number of hosts and containers
+    - Data retention duration
+- [Service Monitoring](https://sematext.com/pricing/) Apps:
+    - Plan
+    - Number of agents
     - Data retention duration
 - [Experience](https://sematext.com/pricing/#experience) Apps:
     - Plan

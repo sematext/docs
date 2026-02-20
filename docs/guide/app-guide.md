@@ -42,7 +42,8 @@ After learning what an App is, you can check out our main features and solutions
 
 - [Integrations](/docs/guide/integrations-guide/)
 - [Logs](/docs/logs/)
-- [Monitoring](/docs/monitoring/)
+- [Infrastructure Monitoring](/docs/monitoring/infrastructure/)
+- [Service Monitoring](/docs/monitoring/service-monitoring/)
 - [Experience](/docs/experience/)
 - [Synthetics](/docs/synthetics/)
 - [Dashboards](/docs/dashboards/)

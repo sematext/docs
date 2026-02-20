@@ -34,11 +34,11 @@ The Infra App also includes data about your containerized environments. Installa
 
 ## Create an Infra App
 
-Creating a new Infra App is the same process as with any App in Sematext. In the Apps screen you choose New App > Monitoring > Infra App. Give it a name and click 'Create App'.
-
-![New Infra App](/docs/images/monitoring/new-infra-app-env.gif)
+Go to the **All Apps** page by clicking the Octi icon in the top-left corner of the main navigation menu, or click any of the reports listed under the Infrastructure Monitoring section. From there, select Create App and choose Infrastructure Monitoring to create your Infra App. Give it a name, select [plan](https://sematext.com/pricing/) and click 'Create App'.
 
 During the Infra App creation process, you will get a screen displaying Sematext Agent installation instructions for various supported environments. You will need to follow these instructions to use of the Infra App.
+
+![New Infra App](/docs/images/monitoring/create-infra-app.gif)
 
 ## Infra App Metrics
 
