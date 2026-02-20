@@ -16,6 +16,12 @@ _If you're new here, read below for a high-level overview of Sematext._
     Hassle-free log monitoring & analysis
     
     [:octicons-arrow-right-24: Learn more](/docs/logs)
+    
+-   :fontawesome-solid-magnifying-glass-chart:{ .lg .middle .new-icon } __New Feature__
+    ---
+    Your feature description here
+    
+    [:octicons-arrow-right-24: Learn more](/docs/new-feature)
 
 -   :fontawesome-solid-chart-line:{ .lg .middle .monitoring-icon } __Monitoring__
 
