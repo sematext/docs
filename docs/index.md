@@ -105,7 +105,7 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     [:octicons-arrow-right-24: Learn more](/docs/fleet)
 
-</div
+</div>
 
 ## Latest Updates
 
