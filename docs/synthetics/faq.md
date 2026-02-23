@@ -26,8 +26,8 @@ Yes. You can use [private agents](/docs/synthetics/private-locations) to monitor
 
 If you do not want to run private agents yourself, you can also configure the firewall to allow the requests from Synthetics agents running in the cloud. Configure your firewall to allow HTTP requests with specific headers. All requests from HTTP Monitor will contain `x-sematext-origin: synthetics` in their headers. For Browser monitors, you can [configure](https://playwright.dev/docs/network#modify-requests) the script to include a custom header for all requests. Please refer to [fetch-use-token](/docs/synthetics/playwright-scripts/fetch-use-token.js) for an example of how to modify the request body or headers.
 
-### Do HTTP Monitors support IPv6?
-Yes. HTTP Monitors support IPv6 endpoints. When a hostname has both IPv4 (A) and IPv6 (AAAA) DNS records, the monitor will connect using IPv4.  If the endpoint is IPv6-only, the monitor will still work as long as the hostname or URL resolves correctly. No additional configuration is required to enable IPv6.
+### Do HTTP and Browser Monitors support IPv6?
+Yes. Both [HTTP](/docs/synthetics/http-monitor/) and [Browser](/docs/synthetics/browser-monitor/) Monitors support IPv6 endpoints. When a hostname has both IPv4 (A) and IPv6 (AAAA) DNS records, the monitor will connect using IPv4.  If the endpoint is IPv6-only, the monitor will still work as long as the hostname or URL resolves correctly. No additional configuration is required to enable IPv6.
 
 ### Can I monitor API endpoints protected by OAuth authentication?
 Yes. This can be done using an HTTP Monitor, please see [authentication](/docs/synthetics/http-monitor/#authentication). For Browser monitors, refer to the examples.
