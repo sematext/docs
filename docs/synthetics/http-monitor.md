@@ -15,6 +15,8 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 * **Locations** - List of locations to run the monitor.
 * **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 
+> HTTP Monitors support endpoints that resolve to IPv6 addresses. When a hostname has both IPv4 (A) and IPv6 (AAAA) DNS records, the monitor will connect using IPv4.  If the endpoint is IPv6-only, the monitor will still work as long as the hostname or URL resolves correctly. No additional configuration is required to enable IPv6.
+
 ### Request Settings
 
 * **Authentication** - Fetch token for each run and pass it in your API requests, or pass username and password to connect to your protected APIs.
