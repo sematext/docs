@@ -15,6 +15,8 @@ The Browser monitor can be used to monitor a single web page or a user journey a
 * **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 * **Headed Mode** - Headless mode runs the browser in the background for fast routine checks, while headed mode runs a visible browser to handle sites that block headless scripts or for debugging user interactions.
 
+> Browser Monitors support endpoints that resolve to IPv6 addresses. When a hostname has both IPv4 (A) and IPv6 (AAAA) DNS records, the monitor will connect using IPv4.  If the endpoint is IPv6-only, the monitor will still work as long as the hostname or URL resolves correctly. No additional configuration is required to enable IPv6.
+
 Note that multiple monitors created in the same **Create Browser Monitor** flow will have different names, intervals and devices, but share the same locations, **User Journey** settings and **Alert Conditions**, which lets you quickly set up multiple monitors with different devices for the same use case.
 
 #### Headed vs Headless Mode
