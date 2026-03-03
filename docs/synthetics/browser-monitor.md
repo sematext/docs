@@ -113,7 +113,7 @@ Each Browser monitor run is executed in an isolated environment using a fresh in
 
 * **Node.js** - 20.x
 * **Google Chrome** - 125
-* **Playwright** - 1.51.1
+* **Playwright** - 1.58.2
 
 Default runtime configuration values are:
 
