@@ -114,6 +114,7 @@ nav:
       - Thresholds: network-map/thresholds.md
       - Supported Services: network-map/supported-services.md
       - Troubleshooting: network-map/troubleshooting.md
+    - Service Map: service-map/index.md
     - Tracing:
       - Overview: tracing/index.md
       - Getting Started: tracing/getting-started.md

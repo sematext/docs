@@ -162,6 +162,7 @@ The histogram at the top shows:
 ## Next Steps
 
 - [View detailed trace analysis](/docs/tracing/reports/trace-details/)
+- [Visualize service dependencies](/docs/service-map/)
 - [Set up alerts for trace conditions](/docs/tracing/alerts/creating-alerts/)
 - [Return to Tracing Overview](/docs/tracing/reports/overview/)
 

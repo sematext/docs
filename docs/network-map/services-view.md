@@ -94,3 +94,4 @@ Once you're comfortable with the Services View, explore:
 - [Infrastructure View](/docs/network-map/infrastructure-view/) to drill down into your Kubernetes clusters and standalone hosts
 - [Filtering & Search](/docs/network-map/filtering-search/) to focus on specific services or find high-resource consumers
 - [Thresholds](/docs/network-map/thresholds/) to customize the warning and critical levels for your environment
+- [Service Map](/docs/service-map/) for application-level service dependencies derived from OpenTelemetry traces

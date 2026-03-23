@@ -49,6 +49,14 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     [:octicons-arrow-right-24: Learn more](/docs/network-map)
 
+-   :fontawesome-solid-share-nodes:{ .lg .middle .tracing-icon } __Service Map__
+
+    ---
+
+    Visualize service dependencies from distributed traces
+
+    [:octicons-arrow-right-24: Learn more](/docs/service-map)
+
 -   :fontawesome-solid-gauge-high:{ .lg .middle .experience-icon } __Experience__
 
     ---

@@ -29,8 +29,11 @@ This section contains tools used for analysis, correlation, and high-level visib
 
 ### Network Map
 
-[Network Map](/docs/network-map/) provides an eBPF-powered real-time topology view of your infrastructure showing how services, pods, containers, and processes communicate with each other across hosts and Kubernetes clusters. It automatically discovers network connections without code changes, visualizes traffic flows and dependencies, and supports drill-down from high-level cluster views to individual processes. Network Map helps engineers understand service relationships, identify unexpected paths or missing connections, and analyze resource usage and communication patterns across the network. 
-sematext.com
+[Network Map](/docs/network-map/) provides an eBPF-powered real-time topology view of your infrastructure showing how services, pods, containers, and processes communicate with each other across hosts and Kubernetes clusters. It automatically discovers network connections without code changes, visualizes traffic flows and dependencies, and supports drill-down from high-level cluster views to individual processes. Network Map helps engineers understand service relationships, identify unexpected paths or missing connections, and analyze resource usage and communication patterns across the network.
+
+### Service Map
+
+[Service Map](/docs/service-map/) visualizes service dependencies and communication patterns derived from OpenTelemetry distributed traces. It automatically discovers services and their relationships from trace data, showing request rate, latency percentiles, and error rate for each service. Nodes are color-coded by health status, and edges indicate dependency health based on latency and error presence. Service Map helps engineers understand how services interact, identify performance bottlenecks, and investigate incidents by seeing which upstream and downstream services are affected. While [Network Map](/docs/network-map/) shows infrastructure-level connectivity using eBPF, Service Map shows application-level service dependencies from trace data.
 
 ### Dashboards
 

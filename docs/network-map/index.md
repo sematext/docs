@@ -60,6 +60,10 @@ Once enabled, Network Map starts collecting data immediately. Within a few minut
 
 See [Getting Started](/docs/network-map/getting-started/) for detailed setup instructions.
 
+## Network Map vs. Service Map
+
+Sematext also offers [Service Map](/docs/service-map/), a complementary topology visualization available in Tracing Apps. While Network Map shows infrastructure-level connectivity using eBPF (traffic bytes, CPU, memory, I/O), Service Map shows application-level service dependencies derived from OpenTelemetry traces (request rate, latency, error rate). Use both together for full-stack visibility - Network Map for infrastructure and network traffic, Service Map for application request flow and service health.
+
 ## Learn More
 
 - [Getting Started](/docs/network-map/getting-started/) - Prerequisites and enabling Network Map

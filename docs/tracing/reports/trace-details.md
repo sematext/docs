@@ -195,6 +195,7 @@ Full stack trace showing:
 ## Next Steps
 
 - [Return to Traces Explorer](/docs/tracing/reports/explorer/)
+- [Visualize service dependencies](/docs/service-map/)
 - [Set up alerts for errors](/docs/tracing/alerts/creating-alerts/)
 - [View Tracing Overview](/docs/tracing/reports/overview/)
 
