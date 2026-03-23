@@ -89,8 +89,8 @@ Clicking on any node opens a details panel with deeper insights into that servic
 Jump directly to filtered trace views:
 
 - **View All Traces**: Opens [Traces Explorer](/docs/tracing/reports/explorer/) filtered to this service
-- **View Slow Traces**: Shows only high-latency traces for this service
-- **View Error Traces**: Shows only traces with errors for this service
+- **View Slow Traces**: Opens [Traces Explorer](/docs/tracing/reports/explorer/) filtered to high-latency traces for this service
+- **View Error Traces**: Opens [Traces Explorer](/docs/tracing/reports/explorer/) filtered to traces with errors for this service
 
 ### Overview
 
@@ -206,28 +206,6 @@ The toolbar at the top of the Service Map provides:
 - **Filters**: Apply additional filtering criteria
 - **Quick Guide**: Reference card for node and edge visual indicators
 - **Pause/Play**: Pause or resume real-time data updates
-
-## Common Use Cases
-
-### Incident Investigation
-
-When an alert fires for a service, open Service Map to immediately see:
-
-- Which upstream services send traffic to the affected service
-- Which downstream dependencies it relies on
-- Whether the issue is isolated or propagating across services
-
-### Architecture Discovery
-
-For teams onboarding to a new codebase or reviewing their architecture, Service Map provides an always-up-to-date view of how services actually communicate - based on real traffic, not documentation that may be outdated.
-
-### Performance Optimization
-
-Identify services with high latency or error rates and trace the problem through their dependencies. The latency distribution in the details panel helps distinguish between systemic slowness and occasional spikes.
-
-### Deployment Validation
-
-After deploying a new service or making changes to service communication, use Service Map to verify that the expected dependencies are present and that no unexpected connections have appeared.
 
 ## Service Map vs. Network Map
 
