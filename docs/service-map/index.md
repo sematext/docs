@@ -108,7 +108,78 @@ A histogram showing how request latencies are distributed, helping you understan
 
 ### Dependencies
 
-Lists the downstream services this node communicates with, along with their top endpoints and request counts.
+Lists the downstream services this node communicates with. You can filter dependencies by direction (All, Incoming, Outgoing) and sort by Requests, Response Time, or Error Rate. Each dependency entry shows:
+
+- Request rate
+- Average response time
+- Error rate
+
+### Top Endpoints
+
+Shows the most frequently called endpoints for this service with their request counts.
+
+## Edge Details Panel
+
+Clicking on any edge (connection line) between two services opens a details panel showing the health and characteristics of that dependency.
+
+![Edge Details](../images/tracing/service-map-edge-details.png)
+
+The panel header shows the source and target services with their key metrics (request rate, error rate, P95 latency) and the dependency direction.
+
+### Quick Actions
+
+- **View Traces (Both)**: Opens [Traces Explorer](/docs/tracing/reports/explorer/) showing traces that involve both services
+- **View Slow Requests**: Shows only high-latency traces between the two services
+- **View Failed Requests**: Shows only traces with errors between the two services
+
+### Request Metrics
+
+- **Total Requests**: Number of requests between the two services
+- **Successful**: Count and percentage of successful requests
+- **Errors**: Count and percentage of failed requests
+
+### Latency Metrics
+
+- **Avg Latency**: Mean response time for requests between the services
+- **P50 Latency**: Median response time
+- **P95 Latency**: 95th percentile response time
+- **P99 Latency**: 99th percentile response time
+
+### Protocol Information
+
+Shows the communication protocol (e.g., HTTP) and the breakdown of primary methods used (e.g., GET, POST) with their percentages.
+
+### Top Endpoints
+
+Lists the most frequently called endpoints in this service-to-service communication.
+
+## Filtering the Map
+
+Click the **Filters** button in the toolbar to open the filters panel, which lets you focus the map on specific services or conditions.
+
+![Service Filters](../images/tracing/service-map-filters.png)
+
+### Health Status
+
+Filter nodes by their health status: Healthy, Degraded, Critical, or No Data.
+
+### Service Kind
+
+Filter by service role: Server or Client.
+
+### Performance Metrics
+
+Set range filters on key metrics to highlight services matching specific criteria:
+
+- **Error Rate Range**: Show only services within a specific error rate range (e.g., 0-5%)
+- **Latency Range**: Show only services within a specific latency range
+
+### Topology Filter
+
+Focus on specific parts of the service graph:
+
+- **Only services with errors**: Show only services that have errors
+- **Only services with high latency**: Show only services exceeding the latency threshold
 
 ## Customizing Thresholds
 
