@@ -79,4 +79,3 @@ Infrastructure Monitoring provides:
 - [Inventory](/docs/monitoring/inventory)
 - [Processes details and metrics](/docs/monitoring/processes)
 - [Network Map](/docs/network-map/) - Visualize your infrastructure topology and service connections
-- [Service Map](/docs/service-map/) - Visualize application-level service dependencies from distributed traces

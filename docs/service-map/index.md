@@ -7,7 +7,7 @@ Instead of digging through individual traces to understand your architecture, Se
 
 ![Service Map](../images/tracing/service-map.png)
 
-**Note:** Service Map is currently available as a **beta** feature. During the beta period, it is accessible to all Tracing plans at no additional cost. Pricing and tier availability will be announced before general availability.
+**Note:** Service Map is currently available as a **beta** feature.
 
 ## Why Use Service Map?
 
@@ -29,12 +29,15 @@ With Service Map, you can:
 
 ## Accessing Service Map
 
-There are two ways to access Service Map:
+There are several ways to access Service Map:
 
 1. **From the top-level navigation**: Click **Service Map** under Insights and Analysis in the left menu, select a Tracing App, and click **Go to Service Map**
 2. **From within a Tracing App**: Open any Tracing App and click **Service Map** in the left sidebar
+3. **From Logs or Synthetics Apps**: Navigate to Service Map from within your Logs or Synthetics Apps to quickly visualize the service dependencies related to your troubleshooting context
 
 ![Service Map App Selection](../images/tracing/service-map-top-level.png)
+
+Being accessible from multiple entry points - Tracing, Logs, and Synthetics - means you can jump to Service Map during any troubleshooting workflow without losing context.
 
 The map is generated from trace data flowing into your Tracing App, so it reflects actual service communication patterns - not static configuration.
 
@@ -116,7 +119,9 @@ Lists the downstream services this node communicates with. You can filter depend
 
 ### Top Endpoints
 
-Shows the most frequently called endpoints for this service with their request counts.
+Shows the most frequently called endpoints for this service with their request counts. This is valuable for understanding which endpoints are actively being used - helping you identify unused endpoints, discover undocumented APIs, and verify that traffic is flowing where you expect it.
+
+![Top Endpoints](../images/tracing/service-map-top-endpoints.png)
 
 ## Edge Details Panel
 
