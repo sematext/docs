@@ -19,4 +19,5 @@ other metric sources.
 - [Process monitoring](/docs/monitoring/processes) that helps out identifying top CPU or memory consumers.
 - [Service discovery](/docs/monitoring/autodiscovery/) and automated monitoring for vanilla Docker and Kubernetes workloads.
 - [Network Map](/docs/network-map/) for visualizing infrastructure topology and service connections using eBPF-powered network insights.
+- [Service Map](/docs/service-map/) for visualizing application-level service dependencies from distributed traces.
 - [Logs discovery](/docs/logs/discovery/intro/) and parsing.

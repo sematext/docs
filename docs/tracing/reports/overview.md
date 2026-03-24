@@ -86,7 +86,8 @@ Compare performance before and after deployments and monitor error rates during 
 
 ## Next Steps
 
-- [Search and analyze traces](/docs/tracing/reports/explorer/) 
+- [Search and analyze traces](/docs/tracing/reports/explorer/)
+- [Visualize service dependencies](/docs/service-map/)
 - [Set up performance alerts](/docs/tracing/alerts/creating-alerts/)
 - [View detailed trace analysis](/docs/tracing/reports/trace-details/)
 

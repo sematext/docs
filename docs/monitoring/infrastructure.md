@@ -10,7 +10,7 @@ Sematext Infrastructure Monitoring provides complete insight into your infrastru
 - [inventory](/docs/monitoring/inventory/)
 - [events](/docs/events/), etc.
 
-For a visual topology of your infrastructure showing service connections and dependencies, see [Network Map](/docs/network-map/).
+For a visual topology of your infrastructure showing service connections and dependencies, see [Network Map](/docs/network-map/). For application-level service dependencies derived from distributed traces, see [Service Map](/docs/service-map/).
 
 For application and service monitoring, make sure to check our [dedicated guide](/docs/monitoring/service-monitoring/).
 
