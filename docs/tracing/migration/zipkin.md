@@ -21,7 +21,7 @@ Advantages over self-hosted Zipkin:
 
 - Managed Service: No server maintenance, scaling, or storage management
 - Integrated Observability: Combine tracing with logs, metrics, and alerts in one platform
-- Advanced Analytics: Service maps (coming soon), performance analysis, and anomaly detection
+- Advanced Analytics: [Service Map](/docs/service-map/), performance analysis, and anomaly detection
 - OpenTelemetry Standard: Future-proof with industry-standard instrumentation
 - Cost Efficiency: Built-in sampling, retention policies, and optimization tools
 - Better Performance: Optimized ingestion and query performance

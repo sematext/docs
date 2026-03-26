@@ -21,7 +21,7 @@ Advantages over self-hosted Jaeger:
 
 - Managed Infrastructure: No need to manage Jaeger collectors, storage, or scaling
 - Integrated Observability: Combine tracing with logs, metrics, and alerts in one platform
-- Advanced Analytics: Built-in performance analysis, service maps, and anomaly detection
+- Advanced Analytics: Built-in performance analysis, [Service Map](/docs/service-map/), and anomaly detection
 - OpenTelemetry Native: Future-proof with the industry standard
 - Cost Optimization: Built-in sampling strategies and retention management
 

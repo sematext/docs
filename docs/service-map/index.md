@@ -33,11 +33,11 @@ There are several ways to access Service Map:
 
 1. **From the top-level navigation**: Click **Service Map** under Insights and Analysis in the left menu, select a Tracing App, and click **Go to Service Map**
 2. **From within a Tracing App**: Open any Tracing App and click **Service Map** in the left sidebar
-3. **From Logs or Synthetics Apps**: Navigate to Service Map from within your Logs or Synthetics Apps to quickly visualize the service dependencies related to your troubleshooting context
+3. **From other Apps**: Navigate to Service Map from within your Logs, Synthetics, Monitoring, or Infra Apps, or from Alerts, to quickly visualize the service dependencies related to your troubleshooting context
 
 ![Service Map App Selection](../images/tracing/service-map-top-level.png)
 
-Being accessible from multiple entry points - Tracing, Logs, and Synthetics - means you can jump to Service Map during any troubleshooting workflow without losing context.
+Being accessible from multiple entry points across Sematext Cloud means you can jump to Service Map during any troubleshooting workflow without losing context.
 
 The map is generated from trace data flowing into your Tracing App, so it reflects actual service communication patterns - not static configuration.
 

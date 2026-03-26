@@ -12,7 +12,7 @@ This section provides guides for migrating from various tracing solutions to Sem
 - **OpenTelemetry Native**: Built on the industry-standard observability framework
 - **Unified Observability**: Combine tracing with logs, metrics, and alerts in one platform
 - **Managed Service**: No infrastructure to maintain or scale
-- **Advanced Analytics**: Service maps (coming soon), anomaly detection, and performance insights
+- **Advanced Analytics**: [Service Map](/docs/service-map/), anomaly detection, and performance insights
 - **Enterprise Ready**: RBAC, advanced alerting
 - **Cost Optimization**: Built-in sampling strategies and retention management
 
