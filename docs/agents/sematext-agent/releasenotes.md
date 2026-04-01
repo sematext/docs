@@ -39,6 +39,24 @@ NULL
 
 -->
 
+## Version 4.3.3
+
+Date: April 1, 2026
+
+### New Features
+
+- **Logs-Only Mode**: New `infra.enabled` configuration flag allows running Sematext Agent in logs-only mode, disabling infrastructure metrics collection (CPU, memory, disk, network). Container discovery and leader election remain functional to support log rule delivery and DaemonSet management.
+
+### Improvements
+
+- **Metrics Publishing**: Added gzip compression for metrics payloads.
+- **Log Auto-Discovery**: Reduced log noise by changing unrecognized file warnings from Warn to Debug level.
+
+### Bug Fixes
+
+- Sematext Agent no longer fails to fall through to containerd on containerd-only Kubernetes clusters when Docker is not available.
+- Resolved an issue where an empty logs token could cause journal panics on oversized events. Added defense-in-depth guards to skip oversized journal entries and drop poisoned events during replay.
+
 ## Version 4.3.2
 
 Date: February 11, 2026
