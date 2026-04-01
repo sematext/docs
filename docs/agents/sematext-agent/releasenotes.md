@@ -49,7 +49,7 @@ Date: April 1, 2026
 
 ### Improvements
 
-- **Metrics Publishing**: Added gzip compression for metrics payloads, resolving HTTP 413 errors on high-density nodes with 80+ containers.
+- **Metrics Publishing**: Added gzip compression for metrics payloads.
 - **Log Auto-Discovery**: Reduced log noise by changing unrecognized file warnings from Warn to Debug level.
 
 ### Bug Fixes
