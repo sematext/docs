@@ -39,6 +39,15 @@ NULL
 
 -->
 
+## Version 4.3.4
+
+Date: April 15, 2026
+
+### Bug Fixes
+
+- ClickHouse multiline log parsing now correctly groups stack traces as single events instead of splitting them into individual entries. Timestamp parsing also handles both dot-separated (`YYYY.MM.DD`) and dash-separated (`YYYY-MM-DD`) formats.
+- Auto-discovery no longer misattributes ClickHouse log files to the `clickhouse-watchdog` process. Both `.log` and `.err.log` files now correctly appear under the `clickhouse` service.
+
 ## Version 4.3.3
 
 Date: April 1, 2026
