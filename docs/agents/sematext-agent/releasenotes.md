@@ -39,6 +39,25 @@ NULL
 
 -->
 
+## Version 4.3.5
+
+Date: May 11, 2026
+
+### Improvements
+
+- **Log Shipper Compression**: Enabled gzip compression on the Sematext logs sink, reducing outbound bandwidth by an expected 5–10× on JSON-heavy log streams.
+- **Trace Payload Compression**: Added zstd compression for OpenTelemetry trace payloads, preventing rejected requests when shipping large trace batches.
+- **Metrics Compression**: Switched InfluxDB metrics publishing from gzip to zstd for better compression ratios and lower CPU overhead.
+- **Log Shipper DaemonSet Tolerations**: The log shipper DaemonSet now inherits tolerations from the Sematext Agent DaemonSet, so log collection works on tainted nodes (e.g., control-plane) without extra configuration.
+- **Auto-Discovery Log Noise**: Downgraded the `regcred` image pull secret warning to debug level on clusters that don't use image pull secrets.
+
+### Bug Fixes
+
+- Kubernetes log filters now correctly combine multiple include conditions. Label include rows are joined with OR instead of AND, while scope conditions (container name, namespace, message regex/contains) and excludes remain AND-joined.
+- Resolved an issue where the log shipper could stop shipping logs after Kubernetes pod replacements (rolling restarts, scaling events) due to file handle and checkpoint state accumulation. Added `rotate_wait_secs` and `ignore_older_secs` to the `kubernetes_logs` source for safer state cleanup.
+- Log shipper topology manager no longer panics on concurrent map writes during configuration reloads.
+- Kubernetes `cluster.node.count` metric no longer reports inflated values caused by a race condition between scheduler startup and concurrent pipeline runs.
+
 ## Version 4.3.4
 
 Date: April 15, 2026
