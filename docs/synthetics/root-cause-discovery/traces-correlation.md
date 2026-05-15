@@ -7,7 +7,7 @@ The Traces tab in the failed run flyout finds distributed traces from [connected
 
 If you don't have a Tracing App yet, the Traces section in the Troubleshoot tab will prompt you to create one and connect it to your Synthetics App automatically. If you already have Tracing Apps in your account, you can select and connect the relevant one directly from the same tab.
 
-To learn how to create a Tracing App and instrument your services to start shipping traces, see [Getting Started with Tracing](/docs/tracing/getting-started/) and the [OpenTelemetry SDKs](/docs/tracing/sdks/) documentation.
+To learn how to create a Tracing App and instrument your services to start shipping traces, see [Getting Started with Tracing](/docs/tracing/getting-started/) and the [OpenTelemetry SDKs](/docs/tracing/sdks/) documentation. The [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples) repo shows end-to-end how to instrument and ship traces, which is exactly what someone setting up a Tracing App needs.
 
 ## How Traces Are Matched
 
