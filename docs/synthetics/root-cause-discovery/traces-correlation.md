@@ -1,7 +1,7 @@
 title: Traces Correlation
 description: Correlate failed Synthetics monitor runs with distributed traces to see the full backend request journey.
 
-The Traces tab in the failed run flyout finds distributed traces from connected Tracing Apps that match the failed request. Depending on your setup, traces are matched by exact trace ID or by URL and time window.
+The Traces tab in the failed run flyout finds distributed traces from [connected](/docs/guide/connected-apps/) Tracing Apps that match the failed request. Depending on your setup, traces are matched by exact trace ID or by URL and time window.
 
 ## Connecting a Tracing App
 
