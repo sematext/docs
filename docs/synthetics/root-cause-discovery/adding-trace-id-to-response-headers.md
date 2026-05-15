@@ -105,4 +105,5 @@ Once Sematext detects the trace ID, the Logs and Traces tabs in the Troubleshoot
 - [Logs Correlation](/docs/synthetics/root-cause-discovery/logs-correlation/)
 - [Traces Correlation](/docs/synthetics/root-cause-discovery/traces-correlation/)
 - [OpenTelemetry SDKs](/docs/tracing/sdks/)
+- [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples)
 - [Getting Started with Tracing](/docs/tracing/getting-started/)
