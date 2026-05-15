@@ -7,7 +7,7 @@ The Logs tab in the failed run flyout finds logs from [connected](/docs/guide/co
 
 If you don't have a Logs App, the Logs section in the Troubleshoot tab will prompt you to create one and connect it to your Synthetics App automatically. If you already have Logs Apps in your account, you can select and connect the relevant one directly from the same tab.
 
-We recommend using the [OpenTelemetry Logs integration](/docs/integration/opentelemetry-logs/) for two reasons: if you expose your trace ID in response headers, Sematext can filter logs to the exact failing request; and even without a trace ID, OTel logs are structured and enriched, making it easier to spot errors and correlate across services.
+We recommend using the [OpenTelemetry Logs integration](/docs/integration/opentelemetry-logs/) for two reasons: if you expose your trace ID in response headers, Sematext can filter logs to the exact failing request; and even without a trace ID, OTel logs are structured and enriched, making it easier to spot errors and correlate across services. The [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples) repo includes log shipping examples alongside the tracing and metrics setup.
 
 If Sematext detects a known service on the monitored host, such as [Nginx](/docs/integration/nginx-integration/) or [Apache](/docs/integration/apache-integration/), it will also suggest creating a service-specific Logs App. These come with out-of-the-box dashboards and alerts tailored to that service. Connecting both gives you application-level events from OTel logs and infrastructure-level events from the service logs in one place.
 
