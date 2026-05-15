@@ -1,7 +1,7 @@
 title: Metrics Correlation
 description: Correlate failed Synthetics monitor runs with infrastructure and service metrics.
 
-The Metrics tab in the failed run flyout lists all Monitoring Apps connected to your Synthetics App. It gives you a direct path to the metrics of the services hosting your monitored endpoint, scoped to the time of the failure.
+The Metrics tab in the failed run flyout lists all Monitoring Apps [connected](/docs/guide/connected-apps/) to your Synthetics App. It gives you a direct path to the metrics of the services hosting your monitored endpoint, scoped to the time of the failure.
 
 ## Connecting a Monitoring App
 
