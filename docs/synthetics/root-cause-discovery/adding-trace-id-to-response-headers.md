@@ -9,6 +9,8 @@ Adding a trace ID to your response headers is a small, one-time change to your a
 
 Your service must already be instrumented with OpenTelemetry and shipping traces to a Sematext Tracing App. If you haven't set that up yet, see [Getting Started with Tracing](/docs/tracing/getting-started/) and the [OpenTelemetry SDKs](/docs/tracing/sdks/) documentation.
 
+For complete working examples, see the [sematext-opentelemetry-examples](https://github.com/sematext/sematext-opentelemetry-examples) repository.
+
 ## Java / Spring Boot
 
 Add a servlet filter that reads the active span context from the OTel agent and writes the trace ID to the response headers before the request is processed.
