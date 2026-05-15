@@ -1,7 +1,7 @@
 title: Logs Correlation
 description: Correlate failed Synthetics monitor runs with application and service logs.
 
-The Logs tab in the failed run flyout finds logs from connected Logs Apps that match the failed request. Depending on your setup, logs are matched by exact trace ID or by URL and time window.
+The Logs tab in the failed run flyout finds logs from [connected](/docs/guide/connected-apps/) Logs Apps that match the failed request. Depending on your setup, logs are matched by exact trace ID or by URL and time window.
 
 ## Connecting a Logs App
 
