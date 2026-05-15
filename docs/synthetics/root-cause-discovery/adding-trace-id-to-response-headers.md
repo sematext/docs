@@ -88,7 +88,7 @@ def add_trace_id(response):
 
 ## Verifying It Works
 
-How you verify the header depends on the monitor type.
+How you verify the header depends on the Synthetics Monitor type.
 
 **HTTP Monitor** — open the monitor's run details and check the **Request** tab. You should see the `X-Trace-Id` header in the response headers section.
 
