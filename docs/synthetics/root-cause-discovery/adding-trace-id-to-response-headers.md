@@ -7,7 +7,7 @@ Adding a trace ID to your response headers is a small, one-time change to your a
 
 ## Prerequisites
 
-Your service must already be instrumented with OpenTelemetry and shipping traces to a Sematext [Tracing App](/docs/tracing/getting-started/). If you haven't set that up yet, see [Getting Started with Tracing](/docs/tracing/getting-started/) and the [OpenTelemetry SDKs](/docs/tracing/sdks/) documentation.
+Your service must already be instrumented with OpenTelemetry and shipping traces to a Sematext Tracing App. If you haven't set that up yet, see [Getting Started with Tracing](/docs/tracing/getting-started/) and the [OpenTelemetry SDKs](/docs/tracing/sdks/) documentation.
 
 ## Java / Spring Boot
 
