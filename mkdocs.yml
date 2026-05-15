@@ -199,7 +199,10 @@ nav:
       - Correlating: synthetics/correlation.md
       - Root Cause Discovery:
         - Overview: synthetics/root-cause-discovery/overview.md
-        - Request ID for Troubleshooting: synthetics/root-cause-discovery/root-cause-discovery-with-request-id.md
+        - Traces Correlation: synthetics/root-cause-discovery/traces-correlation.md
+        - Logs Correlation: synthetics/root-cause-discovery/logs-correlation.md
+        - Metrics Correlation: synthetics/root-cause-discovery/metrics-correlation.md
+        - Expose Trace ID in Response Headers: synthetics/root-cause-discovery/adding-trace-id-to-response-headers.md
       - API:
         - Overview: synthetics/using-the-api.md
         - Monitor Overview API: synthetics/monitor-overview-api.md
