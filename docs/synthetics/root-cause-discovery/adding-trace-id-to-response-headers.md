@@ -96,7 +96,7 @@ How you verify the header depends on the Synthetics Monitor type.
 
 ![Trace ID in Response Headers](/docs/images/synthetics/root-cause-discovery/trace-id-response-header.png)
 
-Once Sematext detects the trace ID, the Logs and Traces tabs in the Troubleshoot section will filter results to the exact request instead of the URL and time window.
+Once Sematext detects the trace ID, the Logs and Traces tabs in the Troubleshoot section will let you drill into the exact logs and the individual trace associated with the failed monitor run. Without trace ID, logs and traces will be filtered by the URL and time window, which could include logs and traces from other requests as well.
 
 ## Further Reading
 
