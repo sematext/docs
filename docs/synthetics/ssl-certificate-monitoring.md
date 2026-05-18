@@ -14,7 +14,7 @@ Both the HTTP and Browser monitors perform these checks, though certificate chan
 
 ## Certificate Validation
 
-Synthetics performs a set of validity checks on SSL certificates sent by the server for every monitor run. Synthetics will mark the monitor status as failing if any of these checks fail. Synthetics will raise a run failure alert with the details of the failure. Self-signed certificates are not supported and any websites or APIs using self-signed certificates will fail unless you select the **Relaxed** type of SSL certificate check under **Configure Alerts** -> **SSL Monitoring**.
+Synthetics performs a set of validity checks on SSL certificates sent by the server for every monitor run. Synthetics will mark the monitor status as failing if any of these checks fail. Synthetics will raise a run failure alert with the details of the failure. Self-signed certificates are not supported and any websites or APIs using self-signed certificates will fail unless you select the **Relaxed** type of SSL certificate check under **Advanced Settings** -> **Show Alerts** -> **SSL Monitoring**.
 
 ![Relaxed SSL certificate check](/docs/images/synthetics/ssl-check-type.png)
 
@@ -40,11 +40,11 @@ The Browser monitor loads the website in a real Google Chrome browser and perfor
 
 Sematext Synthetics checks the certificate expiry every day and alerts you via the monitor's configured [alert notification hooks](/docs/alerts/alert-notifications) multiple times before it expires. We make sure you're reminded about the expiry multiple times.
 
-You can set the certificate expiry alert condition within the Conditions tab for both HTTP and Browser monitors
+You can set the certificate expiry alert condition within the **Advanced Settings** -> **Show Alerts** -> **Conditions** tab for both HTTP and Browser monitors
 
 ![Certificate expiry BM](/docs/images/synthetics/cert-expiry2.png)
 
-Or from SSL Monitoring tab for HTTP Monitors
+Or from **Advanced Settings** -> **Show Alerts** -> **SSL Monitoring** tab for HTTP Monitors
 
 ![Relaxed SSL certificate check](/docs/images/synthetics/ssl-check-type.png)
 
@@ -56,7 +56,7 @@ The monitor performs the expiry check for all the certificates in the chains - l
 
 Sematext Synthetics checks the certificate authority for both Root or Intermediate level and alerts you via the monitor's configured [alert notification hooks](/docs/alerts/alert-notifications) if the conditions are not met.
 
-The alert condition is supported for both HTTP and Browser monitors and can be set from the Conditions tab
+The alert condition is supported for both HTTP and Browser monitors and can be set from the **Advanced Settings** -> **Configure Alerts** -> **Conditions** tab
 
 ![CA check](/docs/images/synthetics/cert-authority.png)
 

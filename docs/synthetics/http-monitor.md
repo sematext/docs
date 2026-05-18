@@ -15,7 +15,9 @@ The HTTP monitor sends a single HTTP request with its configured request setting
 * **Locations** - List of locations to run the monitor.
 * **[Scheduled Monitor Pauses](/docs/synthetics/scheduled-pauses/)** - Specify one or more time periods a monitor should be paused
 
-### Request Settings
+### Advanced Settings
+
+#### Request Settings
 
 * **Authentication** - Fetch token for each run and pass it in your API requests, or pass username and password to connect to your protected APIs.
 * **Headers** - List of HTTP headers to be sent.
@@ -35,7 +37,7 @@ By default, the HTTP monitor adds the headers below for all requests sent from t
 | `x-sematext-synthetics-id` | `<run-id>` | Uniquely identifies this request. Can be used for tracing and correlation in the back end. |
 
 
-### Response Settings
+#### Response Settings
 
 * **Save Response Body** - Disable this option to prevent response body from being saved at runtime. This can be helpful to ensure no sensitive data gets featured in your test results.
 
@@ -62,7 +64,7 @@ To monitor pages protected by some form of authentication each monitor can be co
 
 You can **dynamically fetch a token** for each run with token support and pass that token in your API requests. 
 
-When creating an HTTP monitor, navigate to the Authentication tab and select **Bearer/Access Token** authentication option.
+When creating an HTTP monitor, expand the **Show Advanced Settings** and navigate to the Authentication tab and select **Bearer/Access Token** authentication option.
 
 ![Access Token Authentication](/docs/images/synthetics/authentication-token.png)
 

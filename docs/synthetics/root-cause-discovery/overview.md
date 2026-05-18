@@ -1,105 +1,41 @@
-title: Overview
-description: Troubleshoot endpoint issues by correlating with metrics & logs around the time your monitor failed.
+title: Root Cause Discovery
+description: Correlate failed Synthetics monitor runs with metrics, logs, and traces to find the backend cause of failures.
 
-While Synthetics monitors detect website and API performance and availability issues, pinpointing backend issues that caused or are related to a failed monitor can be challenging. By leveraging Sematext all-in-one-platform capabilities you can identify the root cause of backend issues that caused your Synthetic monitor to fail. To do that you’ll want to connect your Monitoring and Logs Apps with your Synthetics Apps, as described below.
+When a Synthetics monitor run fails, the run details flyout shows a **Troubleshoot** tab with **Metrics**, **Logs**, and **Traces** sections. These sections will prompt you to create or connect Tracing, Logs, and Monitoring Apps. Once connected, each section surfaces the backend data around the time of the failure that explains *why* the monitor failed: with metrics you can check CPU usage, memory, and request rates; with logs you can see error messages and warnings from your application; with traces you can follow the full request journey and identify which service or database call caused the problem. There are multiple ways to set this up and correlate data, all explained in detail in the sections below.
 
-When a Synthetics monitor run fails, a Troubleshoot tab, shown below, is introduced under the failed runs flyout. This tab provides options to troubleshoot backend issues by correlating with metrics and logs.
+## Traces
 
-![Troubleshoot Tab](/docs/images/synthetics/troubleshoot/troubleshoot-tab.png)
+Connect a [Tracing App](/docs/tracing/). Instrument your services with [OpenTelemetry](/docs/tracing/getting-started/) and traces will appear automatically when a monitor hits an instrumented endpoint. With distributed traces you can see exactly where time was spent across your services, identify slow database queries, service timeouts, or errors propagating across microservices.
 
-### Correlating with Metrics
+[Traces correlation →](/docs/synthetics/root-cause-discovery/traces-correlation/)
 
-Whenever a Synthetic monitor checks an endpoint, it triggers the execution of something that handles that endpoint. This might be an application, a serverless function, or something else.  Digging into their performance metrics around the time when a monitor failed can provide clues about the failure. Perhaps the application or the underlying infrastructure were overloaded at the time. Maybe some process was using 100% of the CPU. Maybe the underlying database had too many open connections. These are the sorts of things that you will be able to correlate with the failed monitor run when you make use of this new functionality.
+## Logs
 
-### Correlating with Logs
-Similarly, examining error messages or warnings in logs related to the endpoint around the time of failure can offer valuable insights. Logs may reveal issues such as misconfigurations, server resource limitations, application errors, connectivity problems, etc.
+Connect a [Logs App](/docs/logs/). We recommend shipping logs via [OpenTelemetry](/docs/integration/opentelemetry-logs/) for the same reasons — structured, enriched telemetry that correlates well across signals and gives you more context when investigating failures. In addition, if we detect a known service on the monitored host, such as [Nginx](/docs/integration/nginx-integration/) or [Apache](/docs/integration/apache-integration/), we will suggest creating a dedicated Logs App for that service. These come with out-of-the-box dashboards and alerts tailored to each service, so you can start collecting the logs that matter immediately after installing the [Sematext Agent](/docs/agents/sematext-agent/) on your host. 
 
-## Setting up Troubleshooting
+[Logs correlation →](/docs/synthetics/root-cause-discovery/logs-correlation/)
 
-During monitor runs, we attempt to detect the type of service that is hosting the endpoint being monitored, such as Nginx or Apache.
+## Metrics
 
-**If the Service is Known by Sematext:**
+Connect a [Monitoring App](/docs/monitoring/). We recommend shipping metrics via [OpenTelemetry](/docs/integration/opentelemetry-monitoring/) — it produces structured, enriched telemetry that correlates well across signals and gives you more context when investigating failures. Similar to logs, if we detect a known service running on the monitored host, we will suggest creating a dedicated Monitoring App for that service.
 
-Sematext integrates with popular web servers such as Nginx, Apache, and more, providing out-of-the-box dashboards and alert rules tailored to each service type. If you don’t have any Monitoring or Logs Apps in your account for the [supported service](/docs/integration/#monitoring-logs), we will recommend creating one in the troubleshoot tab, as shown below. This will lead you to the [Monitoring](/docs/monitoring/) or [Logs](/docs/logs/) App creation. There you can install the [Sematext Agent](/docs/agents/sematext-agent/) based on the environment you choose and start shipping metrics and logs from that service.
+[Metrics correlation →](/docs/synthetics/root-cause-discovery/metrics-correlation/)
 
-![Apache Troubleshoot Tab](/docs/images/synthetics/troubleshoot/apache-troubleshoot-tab.png)
+## Adding a Trace ID to Response Headers
 
-Let’s imagine you’ve created a Monitoring App for Apache, installed [Sematext Agent](/docs/agents/sematext-agent/), and started monitoring Apache metrics. Now the Troubleshoot tab will change to Metrics and Logs tabs as shown in the screenshot below. The next time you go into the troubleshooting tab, if you want to add Logs on top of it, you don’t need to install anything additionally. 
+Once connected, a failed monitor run gives you metrics from the host, logs from the service, and the full distributed trace for the request, all filtered to the moment of failure. For your **OpenTelemetry Logs and Tracing Apps**, you can take correlation a step further by adding a trace ID to your HTTP response headers:
 
-![Logs Tab](/docs/images/synthetics/troubleshoot/logs-tab.png)
+- **Without trace ID** — results are filtered by URL and time window, which may include logs or traces from unrelated requests happening at the same time
+- **With trace ID** — Sematext matches the trace ID from the response header directly against your OpenTelemetry logs and traces, filtering to the exact request that failed with no noise
 
-We will just direct you to the [Discovery](/docs/fleet/discovery/) page, where you can easily set up log shipping from the service type with a couple of clicks without needing any additional installation. 
+The trace ID comes from your existing OpenTelemetry instrumentation. The change is small: read the active span's trace ID in your request handler and write it to a response header. See [Adding a Trace ID to Response Headers](/docs/synthetics/root-cause-discovery/adding-trace-id-to-response-headers/).
 
-![Apache Logs Discovery](/docs/images/synthetics/troubleshoot/apache-logs-discovery.png)
+## Getting the Most Out of Root Cause Discovery
 
-Upon creating the Apps or connecting existing ones, you will start seeing metrics and logs around the time your monitor failed within the Troubleshoot tab, allowing you to drill down to the root cause from a single page. For more details, refer to the [Troubleshooting](#troubleshooting) section.
+Connecting Monitoring, Logs, and Tracing Apps to your Synthetics App gives you the full picture when a monitor fails:
 
-**If the Service is Unknown by Sematext:**
+- **Metrics** show whether the failure coincided with resource exhaustion, a traffic spike, or a drop in service health
+- **Logs** show what your application was reporting at the time, including errors, warnings, and application-level events
+- **Traces** show the full request path through your backend services, pinpointing which service call was slow or failed
 
-In cases where the service type is unknown, all existing Monitoring and Logs Apps associated with your account are listed. You can choose to connect relevant Apps directly from the Troubleshoot tab, as seen here
-
-![List of Logs Apps](/docs/images/synthetics/troubleshoot/list-of-logs-apps.png)
-
-If no Apps exist, you can create them from the tab, and they will be automatically connected with your [Synthetics App](/docs/synthetics/), where you can view metrics and logs the next time your monitor fails. For more details, refer to the [Troubleshooting](#troubleshooting) section.
-
-![Create Apps](/docs/images/synthetics/troubleshoot/create-apps.png)
-
-## Trace Request
-
-Trace request tab lets you look at logs related to a specific failed synthetic monitor run by adding the Synthetics request IDs to your applications and services logs.
-
-For more information, including how to set that up, refer to [How to troubleshoot with Synthetics Request ID](/docs/synthetics/root-cause-discovery/root-cause-discovery-with-request-id/).
-
-## Troubleshooting
-
-Once you have configured metrics and log shipping, whether for a known or unknown service type, all Monitoring and Logs Apps that are connected to your [Synthetics App](/docs/synthetics/) will appear under the Troubleshoot  tab.
-
-### Metrics
-
-Under the Metrics tab, you'll find a list of Monitoring Apps connected with your [Synthetics App](/docs/synthetics/):
-
-![List Of Monitoring Apps](/docs/images/synthetics/troubleshoot/list-of-monitoring-apps.png)
-
-To analyze metrics around the time your monitor failed, you can open the relevant Monitoring Apps either in a Split Screen or in a new tab. Look for any sudden spikes or anomalies in metrics that are critical for your endpoint. Use these metrics to identify potential root causes of the failure.
-
-In the image below, our sematext.com endpoint has failed, which is hosted by an Apache server. We are shipping metrics from that server into an Apache Monitoring App called EU.Frontend, which is connected to our [Synthetics App](/docs/synthetics/).
-
-We navigate to the Troubleshoot tab and then open the Apache Monitoring App in a new tab by clicking on the App name or within the same screen using the Split Screen button.
-
-![Monitoring App Actions](/docs/images/synthetics/troubleshoot/monitoring-app-actions.png)
-
-An automatic filter is applied to show the metrics around the time our monitor failed. Sematext 
-From there, we would want to check basics first, such as CPU and Memory charts around the time the monitor failed.
-
-![Apache CPU Memory](/docs/images/synthetics/troubleshoot/apache-cpu-memory.png)
-
-Then, we can check charts for request rate and traffic rate to observe trends, along with CPU/Memory utilization charts.
-
-![Apache Request Rate](/docs/images/synthetics/troubleshoot/apache-request-rate.png)
-
-If you don't find anomalies in these charts, we move on to the logs!
-
-### Logs
-
-Any connected Logs Apps will appear under the Logs tab. Each Logs App will display the number of error and warning logs detected around the time your monitor failed. If you have multiple hosts shipping logs to the same App, you will see errors and warnings specific to each host.
-
-![Logs and Hosts](/docs/images/synthetics/troubleshoot/logs-and-hosts.png)
-
-You can analyze logs around the time your monitor failed directly within the same page using Split Screen. Alternatively, you can open the logs in a new tab to further drill down into the root cause of your endpoint failures. 
-
-In the image below, our monitor has failed. The monitored endpoint is a service that runs in a Kubernetes cluster. We are shipping logs from that cluster into a logs App called EU.Logs.k8s, which is connected to our Synthetics App. We navigate to the Troubleshoot tab, where we can see the number of error and warning logs from the Kubernetes cluster from 5 minutes before and after the time our monitor failed.
-
-![Logs Errors and Warnings](/docs/images/synthetics/troubleshoot/logs-errors-and-warnings2.png)
-
-Then, we open the Logs App either in a new tab by clicking on the App name or within the same screen using the Split Screen button.
-
-![Logs App Actions](/docs/images/synthetics/troubleshoot/logs-app-actions.png)
-
-Automatic filters are applied to display only warning and error logs around the time our monitor failed. In this particular example We can add a filter to view logs exclusively from the pods that run our service endpoint.
-
-![K8s Warnings and Errors](/docs/images/synthetics/troubleshoot/k8s-warnings-and-errors.png)
-
-From there we can look at log events and potentially find the backend issue that is a likely cause of the monitor failure. 
-
-You can also use the [Context View](/docs/logs/context-view/) when troubleshooting your failed monitor runs' application logs. The Context View lets you see logs from before and after an individual log, which helps you understand the sequence of events leading up to and following the failed endpoint request.
-
+Used together, these three data types significantly reduce the time it takes to go from a failed monitor run to the underlying cause.
