@@ -671,4 +671,4 @@ docker exec sematext-agent cat /opt/spm/properties/otel.yml
 - [Configure your applications with OpenTelemetry SDKs](/docs/tracing/sdks/)
 - [Complete the Tracing App creation process](/docs/tracing/create-tracing-app/)
 - [Get started with Sematext Tracing](/docs/tracing/getting-started/)
-- [View complete tracing examples in our repository](https://github.com/sematext/sematext-opentelemetry-examples)
+- [View complete tracing examples in our repository](https://github.com/sematext/sematext-otel-onboarding)

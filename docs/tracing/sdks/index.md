@@ -7,14 +7,14 @@ Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, 
 
 <div class="mdl-tabs__panel is-active" markdown>
 
-**Looking for working examples?** Check out our **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.
+**Looking for working examples?** Check out our **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.
 
 | Language | Framework | Examples |
 |----------|-----------|----------|
-| Java | Spring Boot | [java/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/java) |
-| Python | Flask | [python/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/python) |
-| Node.js | Express | [nodejs/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/nodejs) |
-| .NET | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/dotnet) |
+| Java | Spring Boot | [java/](https://github.com/sematext/sematext-otel-onboarding/tree/main/java) |
+| Python | Flask | [python/](https://github.com/sematext/sematext-otel-onboarding/tree/main/python) |
+| Node.js | Express | [nodejs/](https://github.com/sematext/sematext-otel-onboarding/tree/main/nodejs) |
+| .NET | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-otel-onboarding/tree/main/dotnet) |
 
 </div>
 
@@ -198,7 +198,7 @@ The agent provides:
 
 Complete working examples for all supported languages are available in our public repository:
 
-**🔗 [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples)**
+**🔗 [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-otel-onboarding)**
 
 The repository includes:
 
@@ -279,7 +279,7 @@ deployment.environment=${ENVIRONMENT}
 - [Sematext Agent OpenTelemetry setup](/docs/agents/sematext-agent/opentelemetry/)
 
 ### Examples and Code
-- [Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples)
+- [Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding)
 - Working applications for all supported languages
 - Docker Compose configurations
 - Production-ready examples
@@ -294,7 +294,7 @@ deployment.environment=${ENVIRONMENT}
 1. Choose Your Language: Select your programming language from the list above
 2. Install Sematext Agent: Set up the [agent with OpenTelemetry support](/docs/agents/sematext-agent/opentelemetry/)
 3. Follow SDK Guide: Complete the language-specific instrumentation guide
-4. Explore Examples: Check out the [examples repository](https://github.com/sematext/sematext-opentelemetry-examples)
+4. Explore Examples: Check out the [examples repository](https://github.com/sematext/sematext-otel-onboarding)
 5. View Your Traces: Start analyzing traces in [Sematext Cloud](/docs/tracing/reports/explorer/)
 
 The OpenTelemetry-based approach provides excellent performance, broad language support, and vendor-neutral instrumentation that works with any observability platform.

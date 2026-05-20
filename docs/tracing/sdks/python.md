@@ -7,7 +7,7 @@ This guide covers how to instrument Python applications with OpenTelemetry to se
 
 <div class="mdl-tabs__panel is-active" markdown>
 
-**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Python Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/python)**.
+**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Python Examples Repository](https://github.com/sematext/sematext-otel-onboarding/tree/main/python)**.
 
 </div>
 
