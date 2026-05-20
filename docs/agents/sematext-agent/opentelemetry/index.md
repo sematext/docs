@@ -7,6 +7,9 @@ The Sematext Agent includes built-in OpenTelemetry support, acting as a local co
 
 OpenTelemetry support is available starting from version [3.10.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-3100).
 
+!!! tip "Using an AI coding agent?"
+    Load the [sematext-otel skill](/docs/guide/ai-powered-otel-onboarding/) into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any agent that can read a markdown URL) and it will walk you through both the agent-based flow described here and the managed-OTLP-endpoint alternative, producing the exact env-var block for your language and deployment.
+
 > **Note**: While this guide focuses on tracing configuration, the agent also supports OpenTelemetry metrics and logs, with full documentation for those coming soon.
 
 ## Architecture Overview

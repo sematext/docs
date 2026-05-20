@@ -3,6 +3,9 @@ description: Complete guide to creating and configuring a new Tracing App in Sem
 
 This guide walks you through the complete Tracing App creation process in Sematext Cloud, from initial setup through agent installation and application instrumentation.
 
+!!! tip "Using an AI coding agent?"
+    Load the [sematext-otel skill](/docs/guide/ai-powered-otel-onboarding/) into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any agent that can read a markdown URL) and it will walk you through the instrumentation conversationally — picking the right SDK, endpoint, protocol, and headers — and produce the exact env-var block ready to paste.
+
 **What is a Tracing App?** In Sematext, an [App](/docs/guide/app-guide/) is a container for your data. A Tracing App specifically collects and stores distributed traces from your applications, providing a dedicated space to analyze performance, errors, and dependencies. Each App is isolated and can have its own access controls, retention settings, and alert configurations.
 
 ## Prerequisites

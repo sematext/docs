@@ -5,6 +5,9 @@ description: Learn how to set up distributed tracing with OpenTelemetry and Sema
 
 Sematext Tracing helps you monitor and troubleshoot distributed applications by tracking requests as they flow through your services. Built on OpenTelemetry, it provides visibility into performance bottlenecks, error propagation, and service dependencies.
 
+!!! tip "Using an AI coding agent?"
+    Load the [sematext-otel skill](/docs/guide/ai-powered-otel-onboarding/) into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any agent that can read a markdown URL) and it will walk you through OpenTelemetry instrumentation interactively, producing the env-var block and code changes for your stack.
+
 ## Prerequisites
 
 Before you begin, ensure you have:
