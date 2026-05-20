@@ -37,7 +37,7 @@ The wizard walks you through:
 - App Creation: Name your App and choose a plan (Basic, Standard, or Pro)
 - Infrastructure Setup: Select an existing Infra App or create a new one
 - Agent Installation: Deploy the Sematext Agent using your preferred method
-- Application Instrumentation: Follow the examples in our [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples) for your language and environment
+- Application Instrumentation: Follow the examples in our [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding) for your language and environment
 
 **👉 [Complete Step-by-Step Guide](/docs/tracing/create-tracing-app/)**
 
@@ -48,7 +48,7 @@ The wizard guides you through each step and provides your tokens and OTLP endpoi
 **Programming Languages Supported**:
 
 - Java (including Kotlin), Python, Node.js, Go, .NET, Ruby, PHP, JavaScript
-- See [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples) for working examples
+- See [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding) for working examples
 - See [SDK documentation](/docs/tracing/sdks/) for detailed reference guides
 
 **Agent Deployment Options**:
@@ -86,7 +86,7 @@ Here's what the process looks like for a Python application:
    opentelemetry-instrument python app.py
    ```
 
-For complete working examples with Docker and Kubernetes deployments, see our [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples).
+For complete working examples with Docker and Kubernetes deployments, see our [OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding).
 
 ## What You'll See After Setup
 
@@ -159,7 +159,7 @@ export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
 
 ## Need Help?
 
-- Try working examples from [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples)
+- Try working examples from [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-otel-onboarding)
 - Check [SDK documentation](/docs/tracing/sdks/) for language-specific reference
 - Review [Agent OpenTelemetry configuration](/docs/agents/sematext-agent/opentelemetry/)
 - See the [Troubleshooting Guide](/docs/tracing/troubleshooting/)

@@ -7,7 +7,7 @@ This guide covers how to instrument Node.js applications with OpenTelemetry to s
 
 <div class="mdl-tabs__panel is-active" markdown>
 
-**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Node.js Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/nodejs)**.
+**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[Node.js Examples Repository](https://github.com/sematext/sematext-otel-onboarding/tree/main/nodejs)**.
 
 </div>
 

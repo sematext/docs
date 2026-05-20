@@ -7,7 +7,7 @@ This guide covers how to instrument .NET applications with OpenTelemetry to send
 
 <div class="mdl-tabs__panel is-active" markdown>
 
-**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[.NET Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/dotnet)**.
+**Quick Start:** For complete, working examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes, see our **[.NET Examples Repository](https://github.com/sematext/sematext-otel-onboarding/tree/main/dotnet)**.
 
 </div>
 

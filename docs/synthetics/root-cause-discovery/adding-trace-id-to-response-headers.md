@@ -9,7 +9,7 @@ Adding a trace ID to your response headers is a small, one-time change to your a
 
 Your service must already be instrumented with OpenTelemetry and shipping traces to a Sematext Tracing App. If you haven't set that up yet, see [Getting Started with Tracing](/docs/tracing/getting-started/) and the [OpenTelemetry SDKs](/docs/tracing/sdks/) documentation.
 
-For complete working examples, see the [sematext-opentelemetry-examples](https://github.com/sematext/sematext-opentelemetry-examples) repository.
+For complete working examples, see the [sematext-otel-onboarding](https://github.com/sematext/sematext-otel-onboarding) repository.
 
 ## Java / Spring Boot
 
@@ -105,5 +105,5 @@ Once Sematext detects the trace ID, the Logs and Traces tabs in the Troubleshoot
 - [Logs Correlation](/docs/synthetics/root-cause-discovery/logs-correlation/)
 - [Traces Correlation](/docs/synthetics/root-cause-discovery/traces-correlation/)
 - [OpenTelemetry SDKs](/docs/tracing/sdks/)
-- [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples)
+- [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-otel-onboarding)
 - [Getting Started with Tracing](/docs/tracing/getting-started/)

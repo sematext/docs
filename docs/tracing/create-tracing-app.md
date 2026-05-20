@@ -97,16 +97,16 @@ With the agent installed and running, the final step is to instrument your appli
 
 ![Instrument Your Application](/docs/images/tracing/tracing-new-app-step4-instrument.png)
 
-The wizard directs you to the **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples)**, which contains complete, working examples for instrumenting your applications.
+The wizard directs you to the **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding)**, which contains complete, working examples for instrumenting your applications.
 
 **Available Languages:**
 
 | Language | Framework | Repository Link |
 |----------|-----------|-----------------|
-| **Java** | Spring Boot | [java/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/java) |
-| **Python** | Flask | [python/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/python) |
-| **Node.js** | Express | [nodejs/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/nodejs) |
-| **.NET** | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-opentelemetry-examples/tree/main/dotnet) |
+| **Java** | Spring Boot | [java/](https://github.com/sematext/sematext-otel-onboarding/tree/main/java) |
+| **Python** | Flask | [python/](https://github.com/sematext/sematext-otel-onboarding/tree/main/python) |
+| **Node.js** | Express | [nodejs/](https://github.com/sematext/sematext-otel-onboarding/tree/main/nodejs) |
+| **.NET** | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-otel-onboarding/tree/main/dotnet) |
 
 **Available Environments:**
 
@@ -181,7 +181,7 @@ npm install @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-tr
 node -r ./tracing.js your-app.js
 ```
 
-For complete setup instructions including Docker and Kubernetes deployments, visit the [Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-opentelemetry-examples).
+For complete setup instructions including Docker and Kubernetes deployments, visit the [Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding).
 
 ## What You'll Have After Completion
 
@@ -240,7 +240,7 @@ After completing App creation:
 ## Related Documentation
 
 - [OpenTelemetry SDKs](/docs/tracing/sdks/) - Detailed SDK documentation
-- [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-opentelemetry-examples) - Working code examples
+- [Sematext OpenTelemetry Examples](https://github.com/sematext/sematext-otel-onboarding) - Working code examples
 - [Agent Configuration](/docs/agents/sematext-agent/opentelemetry/) - Agent setup details
 - [Tracing Dashboard](/docs/tracing/reports/overview/) - Understanding the tracing UI
 - [Troubleshooting](/docs/tracing/troubleshooting/) - Common issues and solutions
