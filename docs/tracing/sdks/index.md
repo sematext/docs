@@ -89,6 +89,7 @@ These languages have excellent auto-instrumentation support, making them ideal f
 ##### [Browser JavaScript](javascript-browser.md)
 - Auto-instrumentation: Automatic web instrumentation with `getWebAutoInstrumentations()`
 - Frameworks: React, Vue.js, Angular, vanilla JavaScript
+- TypeScript: First-class support — official `@types/*` packages and code samples in TypeScript throughout the guide
 - Features: User interaction tracking, API call tracing, fetch/XHR instrumentation
 - Deployment: Web server proxy, backend API proxy, development proxy
 
@@ -98,6 +99,12 @@ These languages have excellent auto-instrumentation support, making them ideal f
 - Features: Activity lifecycle tracking, network requests, user interactions
 - Platform: Android 5.0+ (API level 21+)
 - Requires backend proxy for trace export
+
+##### [PHP](php.md)
+- Auto-instrumentation: Requires the OpenTelemetry PHP extension (`ext-opentelemetry`) plus framework packages
+- Frameworks: Laravel, Symfony, Slim, vanilla PHP
+- Libraries: PDO, Guzzle HTTP, MySQL, Redis (via per-package instrumentations)
+- Platform: PHP 8.2+
 
 ### Manual Instrumentation Focused
 
@@ -125,7 +132,6 @@ These languages typically require manual instrumentation, though some limited au
 
 Don't see your language? OpenTelemetry supports many more languages:
 
-- PHP: OpenTelemetry PHP with framework support
 - Rust: Growing ecosystem with basic instrumentation
 - C++: Core OpenTelemetry C++ SDK
 - Erlang/Elixir: Community-driven instrumentations
@@ -245,6 +251,7 @@ export OTEL_TRACES_SAMPLER_ARG=0.1
 | Python   | ✅ Excellent        | ✅ Full      | ✅ Yes        | ✅ Comprehensive  | ⚡ Good     |
 | Node.js  | ✅ Excellent        | ✅ Full      | ✅ Native     | ✅ Comprehensive  | ⚡ Excellent |
 | .NET     | ✅ Good             | ✅ Full      | ✅ Yes        | ✅ Good           | ⚡ Excellent |
+| PHP      | ✅ Good             | ✅ Full      | ✅ Partial    | ⚡ Good           | ⚡ Good     |
 | Go       | ⚠️ Manual          | ✅ Full      | ✅ Yes        | ⚡ Growing       | ⚡ Excellent |
 | Ruby     | ⚠️ Limited         | ✅ Full      | ✅ Partial    | ⚡ Good          | ⚡ Good     |
 
