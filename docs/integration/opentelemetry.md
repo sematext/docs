@@ -5,6 +5,9 @@ OpenTelemetry is an observability framework that helps you collect data from you
 
 This page explains how to integrate OpenTelemetry metrics and logs in your application and use the [Sematext Agent](/docs/agents/sematext-agent) to ship them to Sematext Cloud. With support for [OpenTelemetry Tracing](/docs/tracing/), you can collect metrics, logs, and traces in a single platform, making it easy to correlate data across your applications. This unified view helps you monitor performance, troubleshoot issues, detect anomalies, and connect logs to [events](/docs/events) such as deployments or restarts. Features like [Split Screen](/docs/guide/split-screen) and [Connected Apps](/docs/guide/connected-apps) allow side-by-side analysis of metrics, logs, and traces for faster and deeper root-cause investigation.
 
+!!! info "Don't want to run the agent?"
+    You can also ship OpenTelemetry telemetry directly to Sematext's [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/), no local agent required. The agent flow described on this page additionally enables eBPF metrics, Network Map, and infrastructure monitoring on top of OTel shipping; pick whichever fits your setup.
+
 ## Why use OpenTelemetry with Sematext Cloud?
 
 With OpenTelemetry Logs and Metrics in Sematext Cloud, you can:
