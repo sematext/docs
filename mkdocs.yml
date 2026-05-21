@@ -128,6 +128,7 @@ nav:
         - Node.js: tracing/sdks/nodejs.md
         - Go: tracing/sdks/go.md
         - .NET: tracing/sdks/dotnet.md
+        - PHP: tracing/sdks/php.md
         - Ruby: tracing/sdks/ruby.md
         - Browser JavaScript: tracing/sdks/javascript-browser.md
         - Android: tracing/sdks/android.md
