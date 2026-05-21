@@ -48,8 +48,6 @@ export OTEL_EXPORTER_OTLP_METRICS_HEADERS=X-API-TOKEN=<monitoring-app-token>
 
 A Tracing App, a Logs App, and a Monitoring App in Sematext Cloud are three separate Apps, each with its own token. The OpenTelemetry HTTP exporter uses **per-signal headers** (`TRACES_HEADERS`, `LOGS_HEADERS`, `METRICS_HEADERS`), so you map each signal to the right App's token. Omit the header for a signal you're not shipping — the SDK just won't try to export it.
 
-This also means you can ship traces to one Sematext account / region and metrics to another, if that's what you need.
-
 ## Full env-var block
 
 A complete, ready-to-paste configuration for an EU account shipping all three signals to managed OTLP over HTTP:
@@ -113,6 +111,7 @@ A complete worked example using React + Express lives in the [sematext-otel-onbo
 
 - [AI-Powered OTel Onboarding](ai-powered-otel-onboarding.md) — interactive setup walkthrough
 - [Sematext Agent OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) — the alternative flow
+- [Setup OpenTelemetry with Sematext Cloud for Metrics and Logs](/docs/integration/opentelemetry/) — Logs App + Monitoring App onboarding via the agent
 - [Creating a Tracing App](/docs/tracing/create-tracing-app/)
 - [OpenTelemetry SDKs](/docs/tracing/sdks/) — per-language reference
 - [sematext-otel-onboarding repository](https://github.com/sematext/sematext-otel-onboarding) — runnable reference examples per language and an end-to-end multi-service demo
