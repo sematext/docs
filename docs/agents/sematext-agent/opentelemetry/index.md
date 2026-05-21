@@ -7,6 +7,9 @@ The Sematext Agent includes built-in OpenTelemetry support, acting as a local co
 
 OpenTelemetry support is available starting from version [3.10.0](https://sematext.com/docs/agents/sematext-agent/releasenotes/#version-3100).
 
+!!! info "Not using the agent?"
+    You can also ship OTLP telemetry directly to Sematext's managed endpoint instead of routing it through the agent. See [Managed OTLP Endpoint](/docs/guide/managed-otlp-endpoint/) for endpoints, headers, and per-signal env vars. The agent flow on this page adds infrastructure monitoring features (eBPF metrics, Network Map) on top; the managed endpoint is simpler if you only need OpenTelemetry shipping.
+
 !!! tip "Using an AI coding agent?"
     Load the [sematext-otel skill](/docs/guide/ai-powered-otel-onboarding/) into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any agent that can read a markdown URL) and it will walk you through both the agent-based flow described here and the managed-OTLP-endpoint alternative, producing the exact env-var block for your language and deployment.
 

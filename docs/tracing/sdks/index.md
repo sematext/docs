@@ -5,6 +5,9 @@ description: Overview of supported OpenTelemetry SDKs and language-specific inst
 
 Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, to collect traces from your applications. This section provides comprehensive guides for instrumenting applications in various programming languages.
 
+!!! info "Where does your telemetry get sent?"
+    Independently of which SDK you pick, you choose one of two shipping flows: the [**managed OTLP endpoint**](/docs/guide/managed-otlp-endpoint/) (directly to Sematext, fastest setup) or the [**Sematext Agent**](/docs/agents/sematext-agent/opentelemetry/) (local agent that also enables infrastructure monitoring). The SDK init code is the same in both flows — only the endpoint URL and auth headers differ.
+
 <div class="mdl-tabs__panel is-active" markdown>
 
 **Looking for working examples?** Check out our **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.

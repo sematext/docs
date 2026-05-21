@@ -3,6 +3,9 @@ description: Complete guide to creating and configuring a new Tracing App in Sem
 
 This guide walks you through the complete Tracing App creation process in Sematext Cloud, from initial setup through agent installation and application instrumentation.
 
+!!! info "Choosing how your app sends telemetry"
+    The wizard's "Send Traces To Sematext" step offers two flows: the [**managed OTLP endpoint**](/docs/guide/managed-otlp-endpoint/) (ship directly, simplest setup) or the [**Sematext Agent**](/docs/agents/sematext-agent/opentelemetry/) (routes through a local agent and adds eBPF metrics, Network Map, infrastructure monitoring). Pick whichever fits — you can also mix flows across services.
+
 !!! tip "Using an AI coding agent?"
     Load the [sematext-otel skill](/docs/guide/ai-powered-otel-onboarding/) into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any agent that can read a markdown URL) and it will walk you through the instrumentation conversationally — picking the right SDK, endpoint, protocol, and headers — and produce the exact env-var block ready to paste.
 
