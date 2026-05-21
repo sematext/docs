@@ -140,7 +140,7 @@ try {
 
 The SDK reads its exporter config from the same `OTEL_EXPORTER_OTLP_*` env vars as auto-instrumentation, so the same Flow A / Flow B blocks above apply.
 
-## Running a worked example
+## Running a working example
 
 The [`sematext-otel-onboarding`](https://github.com/sematext/sematext-otel-onboarding) repository has a complete Laravel example with both auto and manual instrumentation, for baremetal / Docker / Kubernetes:
 
