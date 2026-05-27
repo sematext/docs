@@ -13,8 +13,6 @@ You can:
     any Elasticsearch library that can ship logs to an Open Source version of Elasticsearch.
   - send log events by using existing application such as the Open Source versions of Logstash or Filebeat, [Logagent](/docs/logagent), Fluentbit, Vector, [Fluentd Elasticsearch plugin](https://github.com/uken/fluent-plugin-elasticsearch), or anything that can output to OpenSearch. You can also implement your own "log shipper".
   - [search for logs from your own application](/docs/logs/search-through-the-sematext-api)
-  - optionally define [custom mappings](https://docs.opensearch.org/docs/latest/field-types/) for
-    your log types, so you can tweak the way your logs are indexed
 
 When you use the API, here are the things you need to know:
 
@@ -74,7 +72,7 @@ curl -XPOST https://logsene-receiver.sematext.com/_bulk --data-binary @req; echo
 ## Default Log Index Mapping
 
 A [mapping](https://docs.opensearch.org/docs/latest/field-types/)
-is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/docs/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the fields editor or by using the [mappings and templates](/docs/logs/mappings-templates) functionality. There are some [special fields](/docs/tags/common-schema) though.
+is a way to define how your logs are indexed - which fields are in each log event and how each field is indexed. Each Logs App comes with a default mappings definition which includes pre-defined [fields](/docs/logs/fields/). In addition to that Sematext automatically creates the mapping in each Logs App when you first ship your logs. Each App can have its own mapping and it can be changed at any time from within Sematext using the [field editor](https://sematext.com/docs/logs/fields/#field-editor). There are some [special fields](/docs/tags/common-schema) though.
 
   - the **@timestamp** field is an
     [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) date.  See [Supported Date Formats](/docs/logs/supported-date-formats).
@@ -87,20 +85,14 @@ is a way to define how your logs are indexed - which fields are in each log even
     default, thus making it possible to search for **message:hello** and match events
     with **Hello World** in the **message** field
 
-## Custom Log Index Mapping
+## Multiple Log Structures
 
-If the default log index fields (also known as index mapping) don't fit
-your needs you can create completely custom index mapping. See [Mappings and Templates](/docs/logs/mappings-templates) section.
+If you have multiple types of logs, each with their own very different log structures, and if you do not need to be able to access them as a single stream of logs for troubleshooting, dashboarding, or alerting, we recommend you create a separate Log App for each.
 
-Note that if you have N different log structures, the best way to
-handle that is by creating N Logs Apps, each with its own index
-mapping. For example, you may have web server logs, your system logs in
-/var/log/messages, and your custom application logs. Each of these 3
-types of logs has a different structure.
+For example, you may have web server logs, your system logs in /var/log/messages, and your custom application logs. Each of these 3 types of logs has a different structure.
 
-The web server logs probably use Apache Common Log format, the logs in /var/log/messages have syslog
-structure, and your own application's logs can be in any format your
-application happens to use.
+The web server logs probably use Apache Common Log format, the logs in /var/log/messages might have the syslog structure, while your own application's logs can be in any format your application happens to use.
 
-To handle all 3 log formats elegantly simply create 3 separate Logs Management apps and use a different format for
-each of them. See [Custom Logsene Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/) for details.
+To handle all 3 log formats elegantly simply create 3 separate Logs Apps for them.
+
+If you do need to access them as a single stream of logs for troubleshooting, dashboarding, or alerting you can still send them all to the same Logs App.
