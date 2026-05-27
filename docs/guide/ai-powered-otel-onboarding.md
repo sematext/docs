@@ -3,7 +3,7 @@ description: Use an AI coding agent like Claude Code to instrument your applicat
 
 Instrumenting an application with OpenTelemetry has a lot of moving parts — which SDK, which auto-instrumentation package, which endpoint and protocol, which auth header, which signals you actually want to ship. None of it is hard, but all of it is fiddly. Multiply by every service in your stack and the time adds up.
 
-Sematext publishes an open-source [Agent Skill](https://github.com/sematext/sematext-otel-onboarding/blob/main/skills/sematext-otel.md) that walks you through the decisions and assembles the exact configuration for your situation. Load it into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any AI agent that can read a markdown URL) and answer six short questions; it produces the env-var block ready to paste plus a pointer to a runnable reference example in the [sematext-otel-onboarding](https://github.com/sematext/sematext-otel-onboarding) repo.
+Sematext publishes an open-source [Agent Skill](https://github.com/sematext/sematext-otel-onboarding/blob/main/skills/SKILL.md) that walks you through the decisions and assembles the exact configuration for your situation. Load it into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any AI agent that can read a markdown URL) and answer six short questions; it produces the env-var block ready to paste plus a pointer to a runnable reference example in the [sematext-otel-onboarding](https://github.com/sematext/sematext-otel-onboarding) repo.
 
 ## What the skill does
 
@@ -23,7 +23,7 @@ It then produces the exact env-var block for your case (with the Sematext-specif
 In [Claude Code](https://docs.claude.com/en/docs/claude-code), from your project directory:
 
 ```text
-Use https://github.com/sematext/sematext-otel-onboarding/blob/main/skills/sematext-otel.md
+Use https://github.com/sematext/sematext-otel-onboarding/blob/main/skills/SKILL.md
 to instrument this codebase for Sematext.
 Region: US. App type: Tracing. Token: <your-tracing-app-token>.
 ```
