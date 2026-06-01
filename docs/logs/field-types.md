@@ -135,9 +135,7 @@ In Sematext Logs it will be enriched and look like this:
 
 **Note:**
 
-If you want to use this field type you can send events with a field name and
-data in a format presented above. Alternatively, you can use Field
+If you want to use this field type you can send log events with a field name and data in a format presented above. Alternatively, you can use Field
 Editor to manually create a field of the geo-point type.
 
-If you want to adjust the structure of your data you can use the Field Editor 
-functionality in your Logs App settings or use the [Templates and Mappings](/docs/logs/mappings-templates) functionality.
+If you want to adjust the structure of your data you can use the [Field Editor](https://sematext.com/docs/logs/fields/#field-editor).

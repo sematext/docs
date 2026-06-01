@@ -130,13 +130,6 @@ will allow logs up to 128 KB. If your application is using the *Pro*
 plan, it will accept logs up to 256 KB in size. If your logs are
 larger than the mentioned limits, please reach out to us for a custom plan.
 
-### My logs have special structure.  Can Logs App handle that?
-
-Yes, if the default log index fields (also known as index mapping)
-don't fit your needs you can create completely custom index mapping.
-See [Custom Mapping Template How-To](https://sematext.com/blog/custom-elasticsearch-index-templates-in-logsene/).
-
-
 ### I have multiple log sources - should I send them all to the same Logs App?
 
 Sending logs from multiple log sources to the same Logs App is not
@@ -478,7 +471,7 @@ The renaming could take place in your Apps logging code, or in a log shipper con
 
 Option #2 is probably the simplest way to resolve the issue. 
 
-In case you created only one time logs with a wrong structure, you could use the Field Editor to change the schmema/mapping. Please refer to related FAQ section: [I have multiple different log structures, each with a different set of fields.  How should I handle that](#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that)
+In case you created only one time logs with a wrong structure, you could use the Field Editor to change the schema/mapping. Please refer to related FAQ section: [I have multiple different log structures, each with a different set of fields.  How should I handle that](#i-have-multiple-different-log-structures-each-with-a-different-set-of-fields-how-should-i-handle-that)
 
 ## Security
 
