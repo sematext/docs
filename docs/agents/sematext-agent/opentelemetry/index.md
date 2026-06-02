@@ -195,7 +195,7 @@ docker run -d \
   -p 4337:4337 \
   -p 4338:4338 \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
-  sematext/agent:latest-3
+  sematext/agent:latest-4
 ```
 
 For metrics and logs support, also add:
@@ -216,7 +216,7 @@ For metrics and logs support, also add:
 version: '3.8'
 services:
   sematext-agent:
-    image: sematext/agent:latest-3
+    image: sematext/agent:latest-4
     container_name: sematext-agent
     environment:
       - INFRA_TOKEN=your-infra-token
@@ -390,7 +390,7 @@ spec:
     spec:
       containers:
       - name: sematext-agent
-        image: sematext/agent:latest-3
+        image: sematext/agent:latest-4
         env:
         - name: INFRA_TOKEN
           valueFrom:
