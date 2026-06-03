@@ -36,224 +36,8 @@ This guide covers both approaches, starting with auto-instrumentation for quick 
 
 ## Prerequisites
 
-- A Sematext Tracing App ([create one here](/docs/tracing/create-tracing-app/))
-- Sematext Agent running with OpenTelemetry support
-- One of the proxy approaches configured (see [Sending Traces from Browser](#sending-traces-from-browser))
-
-## Sending Traces from Browser
-
-Browser applications require a proxy to send traces to the Sematext Agent due to browser security restrictions (CORS policy). Here are the available approaches:
-
-### 1. Web Server Proxy (Production Recommended)
-
-Configure your web server to proxy OTLP requests to the Sematext Agent.
-
-**Nginx Configuration:**
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    # Serve your frontend application
-    location / {
-        root /var/www/html;
-        try_files $uri $uri/ /index.html;
-    }
-
-    # Proxy traces to Sematext Agent
-    location /v1/traces {
-        proxy_pass http://localhost:4338/v1/traces;
-        proxy_set_header Content-Type application/x-protobuf;
-        proxy_set_header Host $host;
-        
-        # Enable CORS for browser requests
-        if ($request_method = 'OPTIONS') {
-            add_header 'Access-Control-Allow-Origin' '*';
-            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-            add_header 'Access-Control-Allow-Headers' 'Content-Type';
-            add_header 'Access-Control-Max-Age' 1728000;
-            add_header 'Content-Type' 'text/plain; charset=utf-8';
-            add_header 'Content-Length' 0;
-            return 204;
-        }
-        
-        if ($request_method = 'POST') {
-            add_header 'Access-Control-Allow-Origin' '*';
-            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-            add_header 'Access-Control-Allow-Headers' 'Content-Type';
-        }
-    }
-}
-```
-
-**Apache Configuration:**
-```apache
-<VirtualHost *:80>
-    ServerName yourdomain.com
-    DocumentRoot /var/www/html
-
-    # Serve frontend application
-    <Directory /var/www/html>
-        Options -Indexes +FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    # Proxy traces to Sematext Agent
-    ProxyPass /v1/traces http://localhost:4338/v1/traces
-    ProxyPassReverse /v1/traces http://localhost:4338/v1/traces
-    
-    # Enable CORS
-    Header always set Access-Control-Allow-Origin "*"
-    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
-    Header always set Access-Control-Allow-Headers "Content-Type"
-</VirtualHost>
-```
-
-### 2. Backend API Proxy (Most Flexible)
-
-Create an API endpoint in your backend that forwards traces to the agent.
-
-**Node.js/Express Example:**
-```javascript
-// routes/traces.js
-const express = require('express');
-const fetch = require('node-fetch');
-const router = express.Router();
-
-router.post('/api/traces', async (req, res) => {
-  try {
-    // Optional: Add server-side filtering or validation
-    const traceData = req.body;
-    
-    // Forward to Sematext Agent
-    const response = await fetch('http://localhost:4338/v1/traces', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-protobuf',
-      },
-      body: req.body
-    });
-
-    if (response.ok) {
-      res.status(200).json({ success: true });
-    } else {
-      console.error('Failed to forward traces:', response.statusText);
-      res.status(500).json({ error: 'Failed to send traces' });
-    }
-  } catch (error) {
-    console.error('Trace proxy error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-module.exports = router;
-```
-
-**Python/Flask Example:**
-```python
-from flask import Flask, request, jsonify
-import requests
-
-app = Flask(__name__)
-
-@app.route('/api/traces', methods=['POST', 'OPTIONS'])
-def proxy_traces():
-    if request.method == 'OPTIONS':
-        # Handle CORS preflight
-        response = jsonify({'status': 'ok'})
-        response.headers.add('Access-Control-Allow-Origin', '*')
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
-        response.headers.add('Access-Control-Allow-Methods', 'POST')
-        return response
-    
-    try:
-        # Forward traces to Sematext Agent
-        response = requests.post(
-            'http://localhost:4338/v1/traces',
-            data=request.data,
-            headers={'Content-Type': 'application/x-protobuf'}
-        )
-        
-        if response.status_code == 200:
-            result = jsonify({'success': True})
-            result.headers.add('Access-Control-Allow-Origin', '*')
-            return result
-        else:
-            return jsonify({'error': 'Failed to send traces'}), 500
-            
-    except Exception as e:
-        print(f"Trace proxy error: {e}")
-        return jsonify({'error': 'Internal server error'}), 500
-```
-
-### 3. Development Proxy Setup
-
-For local development, configure your development server to proxy trace requests.
-
-**React (Create React App) - Package.json:**
-```json
-{
-  "name": "your-react-app",
-  "proxy": "http://localhost:4338",
-  "scripts": {
-    "start": "react-scripts start"
-  }
-}
-```
-
-**React (Vite) - vite.config.js:**
-```javascript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      '/v1/traces': {
-        target: 'http://localhost:4338',
-        changeOrigin: true,
-      }
-    }
-  }
-})
-```
-
-**Vue.js (Vue CLI) - vue.config.js:**
-```javascript
-module.exports = {
-  devServer: {
-    proxy: {
-      '/v1/traces': {
-        target: 'http://localhost:4338',
-        changeOrigin: true,
-      }
-    }
-  }
-}
-```
-
-**Angular - proxy.conf.json:**
-```json
-{
-  "/v1/traces": {
-    "target": "http://localhost:4338",
-    "secure": false,
-    "changeOrigin": true
-  }
-}
-```
-
-Then update angular.json:
-```json
-"serve": {
-  "builder": "@angular-devkit/build-angular:dev-server",
-  "options": {
-    "proxyConfig": "proxy.conf.json"
-  }
-}
-```
+- A Sematext Tracing App ([create one here](/docs/tracing/create-tracing-app/)) and its token
+- That's it — the managed OTLP receiver is CORS-enabled, so the browser can POST traces directly to it. No agent or reverse proxy is required.
 
 ## Basic Browser Setup
 
@@ -278,17 +62,10 @@ import { getWebAutoInstrumentations } from '@opentelemetry/auto-instrumentations
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
 import { registerInstrumentations } from '@opentelemetry/instrumentation';
 
-// Determine the endpoint based on your proxy setup
-const getTraceEndpoint = () => {
-  if (process.env.NODE_ENV === 'development') {
-    // For development with proxy
-    return '/v1/traces';
-  } else {
-    // For production (adjust based on your setup)
-    return '/v1/traces'; // Web server proxy
-    // OR return '/api/traces'; // Backend API proxy
-  }
-};
+// Managed OTLP receiver — pick US or EU based on your account region.
+// The receiver is CORS-enabled, so the browser POSTs directly (no proxy).
+const OTLP_ENDPOINT = 'https://otlp-receiver.sematext.com/v1/traces'; // EU: https://otlp-receiver.eu.sematext.com/v1/traces
+const TRACING_APP_TOKEN = '<your-tracing-app-token>';
 
 const resource = new Resource({
   'service.name': 'your-frontend-app',
@@ -301,7 +78,8 @@ const provider = new WebTracerProvider({
 });
 
 const exporter = new OTLPTraceExporter({
-  url: getTraceEndpoint(),
+  url: OTLP_ENDPOINT,
+  headers: { 'X-API-TOKEN': TRACING_APP_TOKEN },
 });
 
 provider.addSpanProcessor(new BatchSpanProcessor(exporter));
@@ -824,7 +602,8 @@ const provider = new WebTracerProvider({
 });
 
 const exporter = new OTLPTraceExporter({
-  url: getTraceEndpoint(),
+  url: OTLP_ENDPOINT,
+  headers: { 'X-API-TOKEN': TRACING_APP_TOKEN },
 });
 
 // Optimize batch processing
@@ -838,6 +617,7 @@ provider.addSpanProcessor(new BatchSpanProcessor(exporter, {
 
 ### Security Considerations
 
+- The Tracing App token ships in client-side code and is visible to anyone who inspects the page. It is a write-only ingestion token (it cannot read your data), but treat it as public — use a token dedicated to the browser app, and rotate it if abused.
 - Never expose sensitive data in span attributes
 - Be careful with user inputs in span names
 - Consider sampling rates for high-traffic applications
@@ -911,9 +691,8 @@ const getTracingConfig = () => {
     serviceName: process.env.REACT_APP_SERVICE_NAME || 'frontend-app',
     serviceVersion: process.env.REACT_APP_VERSION || 'dev',
     environment: process.env.NODE_ENV || 'development',
-    endpoint: isDevelopment 
-      ? '/v1/traces'  // Development proxy
-      : '/v1/traces', // Production proxy
+    endpoint: process.env.REACT_APP_OTLP_ENDPOINT,
+    token: process.env.REACT_APP_TRACING_APP_TOKEN,
     samplingRate: isProduction ? 0.01 : 1.0,
     debug: isDevelopment,
   };
@@ -981,27 +760,15 @@ const fetchWithManualPropagation = async (url, options = {}) => {
 
 No traces appearing in Sematext:
 
-- Verify your proxy configuration is working
-- Check browser developer console for network errors
-- Ensure the Sematext Agent is running and accessible
+- Check the browser developer console / Network tab for failed requests to the OTLP endpoint
+- Confirm the endpoint region matches your account (US vs EU)
 - Check sampling rate isn't too low
-
-CORS errors:
-
-- Verify your proxy is handling CORS headers correctly
-- Check that OPTIONS requests are handled properly
 
 High performance impact:
 
 - Reduce sampling rate in production
 - Optimize batch span processor settings
 - Disable unused auto-instrumentations
-
-Proxy not working:
-
-- Check proxy configuration in your build tool
-- Verify the agent endpoint is accessible
-- Test the proxy endpoint directly
 
 ### Debug Mode
 
@@ -1077,6 +844,7 @@ window.addEventListener('load', testTracing);
 ## Related Documentation
 
 - [Getting Started with Tracing](/docs/tracing/getting-started/)
+- [Managed OTLP Endpoint](/docs/guide/managed-otlp-endpoint/) — the CORS-enabled direct-to-Sematext endpoint, US/EU matrix
 - [Sematext Agent OpenTelemetry Configuration](/docs/agents/sematext-agent/opentelemetry/)
 - [Node.js SDK (for backend APIs)](/docs/tracing/sdks/nodejs/)
 - [Troubleshooting Guide](/docs/tracing/troubleshooting/)
