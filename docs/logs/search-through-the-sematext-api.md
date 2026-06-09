@@ -6,7 +6,7 @@ You can also use this API to [index events or change the mapping](/docs/logs/ind
 
 When you use the API, here are the things you need to know:
 
-  - host name: **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (if using Sematext Cloud Europe)
+  - host name: **logsene-search.sematext.com** / **logsene-search.eu.sematext.com** (if using Sematext Cloud Europe)
   - port: **80** (**443** for HTTPS)
   - index name: your [Logs App token](https://apps.sematext.com/ui/logs) - note that this token should be kept secret
   - apiKey provided in one of the following ways:
@@ -37,7 +37,7 @@ Sematext API supports a subset of Elasticsearch / OpenSearch APIs, with rich que
   - Multiple GET operations in a single request
   - Multiple Search operations in a single request
 
-For each of the operations you'll need your [Logs App token](https://apps.sematext.com/ui/logs) when calling **logsene-receiver.sematext.com** / **logsene-receiver.eu.sematext.com** (if using Sematext Cloud Europe).
+For each of the operations you'll need your [Logs App token](https://apps.sematext.com/ui/logs) when calling **logsene-search.sematext.com** / **logsene-search.eu.sematext.com** (if using Sematext Cloud Europe).
 
 In the following examples we will use a "dummy token" - *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* as the token. You should use your real Logs management app token, of course.
 
@@ -47,7 +47,7 @@ The simplest search method to get your logs from Sematext is fully compatible wi
 
 You need to provide the query using the *q* parameter. For example, to search for the *internal* and *connection* terms you would run the following:
 
-    curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
+    curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-search.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty&q=+internal%20+connection'
 
 **Note:** Please check [logs search syntax](/docs/logs/search-syntax/) for reference.
 
@@ -62,7 +62,7 @@ For example, to find log events that match the *internal* and
 *connection* terms run the following:
 
 ``` bash
-curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-search.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
  "query" : {
   "bool" : {
    "must" : [
@@ -84,7 +84,7 @@ curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sem
 To analyze this data further we can [add aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html) to our query to find common status responses for example:
 
 ```bash
-curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-search.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912/_search?pretty' -d '{
  "query" : {
   "bool" : {
    "must" : [
@@ -253,7 +253,7 @@ need to provide Logs App with the following information:
 
 For example, to retrieve a log event with identifier  *AU29tJz0UV2O9bWZ\_KkU* and type *apache* from our example App identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token (App is free, which means that we need to append the token with *\_free* postfix to get the index name) we would run the following command:
 
-    curl -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/apache/AU29tJz0UV2O9bWZ_KkU'
+    curl -XGET 'logsene-search.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/apache/AU29tJz0UV2O9bWZ_KkU'
 
 ### Multiple GET operations in a single request
 
@@ -263,7 +263,7 @@ For example, to retrieve a log event with identifier *AU29tJz0UV2O9bWZ\_KkU* an
 which are of type *apache* from our example App identified by *cc5e9c1b-3046-4e43-998e-2a0b2c01b912* token we would run the following request:
 
 ``` bash
-curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/_mget?pretty' -d '{
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-search.sematext.com/cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free/_mget?pretty' -d '{
  "docs" : [
   { "_index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free", "_type" : "apache", "_id" : "AU29tJz0UV2O9bWZ_KkU"},
   { "_index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free", "_type" : "apache", "_id" : "AU29rlOPUV2O9bWZ-Daw"}
@@ -303,7 +303,7 @@ The request needs to be run against \_msearch REST end-point and each query need
 For example, the following example shows the usage of Multiple Search API:
 
 ``` bash    
-curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-receiver.sematext.com/_msearch?pretty' --data-binary '{ "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
+curl  -u apiKey:31d28ff8-ae02-4ff9-b504-ea8013661412 -XGET 'logsene-search.sematext.com/_msearch?pretty' --data-binary '{ "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
 { "query" : { "match_all" : {} }, "size" : 1 }
 { "index" : "cc5e9c1b-3046-4e43-998e-2a0b2c01b912_free" }
 { "query" : { "term" : { "status" : 200 } }, "size" : 1 }'
