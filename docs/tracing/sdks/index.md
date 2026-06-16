@@ -91,14 +91,14 @@ These languages have excellent auto-instrumentation support, making them ideal f
 - Frameworks: React, Vue.js, Angular, vanilla JavaScript
 - TypeScript: First-class support — official `@types/*` packages and code samples in TypeScript throughout the guide
 - Features: User interaction tracking, API call tracing, fetch/XHR instrumentation
-- Deployment: Direct to the CORS-enabled managed OTLP endpoint — no proxy needed
+- Deployment: Direct to the managed OTLP endpoint
 
 ##### [Android](android.md)
 - Auto-instrumentation: OkHttp, Retrofit, Room database via OpenTelemetry Android agent
 - Languages: Java and Kotlin
 - Features: Activity lifecycle tracking, network requests, user interactions
 - Platform: Android 5.0+ (API level 21+)
-- Ships directly to the managed OTLP endpoint — no proxy needed
+- Ships directly to the managed OTLP endpoint
 
 ##### [PHP](php.md)
 - Auto-instrumentation: Requires the OpenTelemetry PHP extension (`ext-opentelemetry`) plus framework packages
@@ -115,7 +115,7 @@ These languages typically require manual instrumentation, though some limited au
 - Frameworks: SwiftUI and UIKit support
 - Features: View lifecycle tracking, URLSession instrumentation, user interactions
 - Platform: iOS 13.0+, macOS 10.15+, tvOS 13.0+, watchOS 6.0+
-- Ships directly to the managed OTLP endpoint — no proxy needed
+- Ships directly to the managed OTLP endpoint
 
 ##### [Go](go.md)
 - Manual instrumentation: Easy-to-use instrumentation libraries

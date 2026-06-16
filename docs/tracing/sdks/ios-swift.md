@@ -81,8 +81,7 @@ class TracingConfiguration {
         ])
         
         // Ship traces directly to the Sematext managed OTLP receiver over HTTPS.
-        // Mobile apps aren't subject to browser CORS rules, so no agent or proxy is needed.
-        // US endpoint shown; EU: https://otlp-receiver.eu.sematext.com/v1/traces
+        // US endpoint shown; for EU use https://otlp-receiver.eu.sematext.com/v1/traces
         let otlpConfiguration = OtlpConfiguration(
             endpoint: URL(string: "https://otlp-receiver.sematext.com/v1/traces")!,
             headers: ["Authorization": "Bearer your-api-key"]  // Add authentication
@@ -408,7 +407,7 @@ Button("Submit") {
 
 ## Sending Traces to Sematext
 
-iOS apps ship spans straight to the Sematext [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/) over HTTPS — no Sematext Agent and no backend proxy required. Authenticate with your Tracing App token (shown in the exporter config above), and pick the endpoint for your account region:
+iOS apps ship spans straight to the Sematext [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/) over HTTPS. Authenticate with your Tracing App token (shown in the exporter config above), and pick the endpoint for your account region:
 
 | Region | HTTP endpoint |
 |---|---|

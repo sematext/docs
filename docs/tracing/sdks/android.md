@@ -101,8 +101,7 @@ class MyApplication : Application() {
             ))
         
         // Ship traces directly to the Sematext managed OTLP receiver.
-        // Mobile apps aren't subject to browser CORS rules, so no agent or proxy is needed.
-        // US gRPC endpoint shown; EU: https://otlp-receiver-grpc.eu.sematext.com:443
+        // US gRPC endpoint shown; for EU use https://otlp-receiver-grpc.eu.sematext.com:443
         val spanExporter = OtlpGrpcSpanExporter.builder()
             .setEndpoint("https://otlp-receiver-grpc.sematext.com:443")
             .addHeader("Authorization", "Bearer your-api-key")
@@ -175,8 +174,8 @@ public class MyApplication extends Application {
                     .build()
             ));
         
-        // Ship traces directly to the Sematext managed OTLP receiver (no agent or proxy needed).
-        // US gRPC endpoint shown; EU: https://otlp-receiver-grpc.eu.sematext.com:443
+        // Ship traces directly to the Sematext managed OTLP receiver.
+        // US gRPC endpoint shown; for EU use https://otlp-receiver-grpc.eu.sematext.com:443
         OtlpGrpcSpanExporter spanExporter = OtlpGrpcSpanExporter.builder()
             .setEndpoint("https://otlp-receiver-grpc.sematext.com:443")
             .addHeader("Authorization", "Bearer your-api-key")
@@ -360,7 +359,7 @@ class UserInteractionTracker {
 
 ## Sending Traces to Sematext
 
-Android apps ship spans straight to the Sematext [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/) over HTTPS — no Sematext Agent and no backend proxy required. Authenticate with your Tracing App token (shown in the exporter config above), and pick the endpoint for your account region:
+Android apps ship spans straight to the Sematext [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/) over HTTPS. Authenticate with your Tracing App token (shown in the exporter config above), and pick the endpoint for your account region:
 
 | Region | gRPC endpoint | HTTP endpoint |
 |---|---|---|
