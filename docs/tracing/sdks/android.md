@@ -16,12 +16,10 @@ Most Android applications benefit from combining both approaches - auto-instrume
 
 ## Prerequisites
 
-- A Sematext Tracing App ([create one here](/docs/tracing/create-tracing-app/))
-- [Sematext Agent](/docs/agents/sematext-agent/opentelemetry/) running with OpenTelemetry support
+- A Sematext Tracing App ([create one here](/docs/tracing/create-tracing-app/)) and its token
 - Android API level 21+ (Android 5.0 Lollipop or higher)
 - Gradle 7.0 or higher
 - Kotlin 1.6+ or Java 8+
-- A backend proxy endpoint to forward traces (see [Backend Proxy Configuration](#backend-proxy-configuration))
 
 ## Installation
 
@@ -102,11 +100,12 @@ class MyApplication : Application() {
                     .build()
             ))
         
-        // Configure OTLP exporter to send traces to your backend proxy
-        // Note: Direct connection to Sematext Agent not possible from mobile
-        // You need a backend proxy endpoint
+        // Ship traces directly to the Sematext managed OTLP receiver.
+        // Mobile apps aren't subject to browser CORS rules, so no agent or proxy is needed.
+        // US gRPC endpoint shown; EU: https://otlp-receiver-grpc.eu.sematext.com:443
         val spanExporter = OtlpGrpcSpanExporter.builder()
-            .setEndpoint("https://your-backend.com/traces")  // Your proxy endpoint
+            .setEndpoint("https://otlp-receiver-grpc.sematext.com:443")
+            .addHeader("Authorization", "Bearer your-api-key")
             .build()
         
         // Build the tracer provider
@@ -176,9 +175,11 @@ public class MyApplication extends Application {
                     .build()
             ));
         
-        // Configure OTLP exporter
+        // Ship traces directly to the Sematext managed OTLP receiver (no agent or proxy needed).
+        // US gRPC endpoint shown; EU: https://otlp-receiver-grpc.eu.sematext.com:443
         OtlpGrpcSpanExporter spanExporter = OtlpGrpcSpanExporter.builder()
-            .setEndpoint("https://your-backend.com/traces")
+            .setEndpoint("https://otlp-receiver-grpc.sematext.com:443")
+            .addHeader("Authorization", "Bearer your-api-key")
             .build();
         
         // Build tracer provider
@@ -357,36 +358,17 @@ class UserInteractionTracker {
 }
 ```
 
-## Backend Proxy Configuration
+## Sending Traces to Sematext
 
-Since mobile applications cannot directly connect to the Sematext Agent, you need a backend proxy. Here's a simple example:
+Android apps ship spans straight to the Sematext [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/) over HTTPS — no Sematext Agent and no backend proxy required. Authenticate with your Tracing App token (shown in the exporter config above), and pick the endpoint for your account region:
 
-### Express.js Proxy
-```javascript
-const express = require('express');
-const { NodeSDK } = require('@opentelemetry/sdk-node');
-const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http');
+| Region | gRPC endpoint | HTTP endpoint |
+|---|---|---|
+| US | `https://otlp-receiver-grpc.sematext.com:443` | `https://otlp-receiver.sematext.com` |
+| EU | `https://otlp-receiver-grpc.eu.sematext.com:443` | `https://otlp-receiver.eu.sematext.com` |
 
-const app = express();
-app.use(express.json());
-
-// Configure OpenTelemetry to forward to Sematext Agent
-const traceExporter = new OTLPTraceExporter({
-  url: 'http://localhost:4338/v1/traces'  // Sematext Agent endpoint
-});
-
-app.post('/traces', async (req, res) => {
-  // Validate and forward traces
-  // Add authentication/authorization as needed
-  try {
-    // Forward to Sematext Agent
-    await forwardTraces(req.body);
-    res.status(200).send({ status: 'ok' });
-  } catch (error) {
-    res.status(500).send({ error: 'Failed to forward traces' });
-  }
-});
-```
+!!! warning "Region matters"
+    Tokens are region-bound. A US-region token sent to the EU endpoint (or vice versa) silently drops data. Match the endpoint to the region of the Sematext Cloud account that owns your App.
 
 ## Performance Considerations
 
@@ -439,7 +421,6 @@ class AppLifecycleObserver : DefaultLifecycleObserver {
 
 - Never include sensitive user data in traces (passwords, tokens, PII)
 - Use HTTPS for all trace exports
-- Implement authentication on your proxy endpoint
 - Consider data residency requirements
 
 ### Mobile-Specific Attributes
@@ -475,10 +456,10 @@ try {
 
 No Traces Appearing:
 
-- Verify your proxy endpoint is accessible
+- Confirm the OTLP endpoint region matches your account (US vs EU)
+- Verify the auth header carries a valid Tracing App token
 - Check network permissions in AndroidManifest.xml
 - Ensure the Application class is registered
-- Review proxy logs for incoming requests
 
 High Battery Usage:
 
@@ -513,7 +494,7 @@ if (BuildConfig.DEBUG) {
 
 ## Next Steps
 
-- [Configure your backend proxy](/docs/tracing/sdks/javascript-browser/#proxy-configuration)
+- [Managed OTLP Endpoint](/docs/guide/managed-otlp-endpoint/)
 - [Set up alerts](/docs/tracing/alerts/creating-alerts/)
 - [Explore traces](/docs/tracing/reports/explorer/)
 - [iOS/Swift SDK](/docs/tracing/sdks/ios-swift/)

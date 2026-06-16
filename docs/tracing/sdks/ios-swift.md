@@ -17,12 +17,10 @@ While this requires more initial setup than auto-instrumentation, it results in 
 
 ## Prerequisites
 
-- A Sematext Tracing App ([create one here](/docs/tracing/create-tracing-app/))
-- [Sematext Agent](/docs/agents/sematext-agent/opentelemetry/) running with OpenTelemetry support
+- A Sematext Tracing App ([create one here](/docs/tracing/create-tracing-app/)) and its token
 - iOS 13.0+ / macOS 10.15+ / tvOS 13.0+ / watchOS 6.0+
 - Xcode 13.0+
 - Swift 5.5+
-- A backend proxy endpoint to forward traces (see [Backend Proxy Configuration](#backend-proxy-configuration))
 
 ## Installation
 
@@ -82,10 +80,11 @@ class TracingConfiguration {
             "os.version": .string(UIDevice.current.systemVersion)
         ])
         
-        // Configure OTLP exporter to send traces to your backend proxy
-        // Note: Direct connection to Sematext Agent not possible from mobile
+        // Ship traces directly to the Sematext managed OTLP receiver over HTTPS.
+        // Mobile apps aren't subject to browser CORS rules, so no agent or proxy is needed.
+        // US endpoint shown; EU: https://otlp-receiver.eu.sematext.com/v1/traces
         let otlpConfiguration = OtlpConfiguration(
-            endpoint: URL(string: "https://your-backend.com/v1/traces")!,
+            endpoint: URL(string: "https://otlp-receiver.sematext.com/v1/traces")!,
             headers: ["Authorization": "Bearer your-api-key"]  // Add authentication
         )
         
@@ -407,34 +406,17 @@ Button("Submit") {
 }
 ```
 
-## Backend Proxy Configuration
+## Sending Traces to Sematext
 
-Since iOS applications cannot directly connect to the Sematext Agent, you need a backend proxy. See the [Browser JavaScript proxy configuration](/docs/tracing/sdks/javascript-browser/#proxy-configuration) for examples that work with mobile apps.
+iOS apps ship spans straight to the Sematext [managed OTLP endpoint](/docs/guide/managed-otlp-endpoint/) over HTTPS — no Sematext Agent and no backend proxy required. Authenticate with your Tracing App token (shown in the exporter config above), and pick the endpoint for your account region:
 
-### Swift Backend Proxy (Vapor)
+| Region | HTTP endpoint |
+|---|---|
+| US | `https://otlp-receiver.sematext.com/v1/traces` |
+| EU | `https://otlp-receiver.eu.sematext.com/v1/traces` |
 
-If you're using Swift on the server side:
-
-```swift
-import Vapor
-import OpenTelemetryProtocolExporterHTTP
-
-func routes(_ app: Application) throws {
-    app.post("traces") { req async throws -> HTTPStatus in
-        // Validate request
-        guard let authHeader = req.headers["Authorization"].first,
-              validateAuth(authHeader) else {
-            throw Abort(.unauthorized)
-        }
-        
-        // Forward traces to Sematext Agent
-        let traces = try req.content.decode(TracesRequest.self)
-        try await forwardToSematextAgent(traces)
-        
-        return .ok
-    }
-}
-```
+!!! warning "Region matters"
+    Tokens are region-bound. A US-region token sent to the EU endpoint (or vice versa) silently drops data. Match the endpoint to the region of the Sematext Cloud account that owns your App.
 
 ## Performance Considerations
 
@@ -579,10 +561,10 @@ extension Span {
 
 No Traces Appearing:
 
-- Verify your proxy endpoint is accessible
+- Confirm the OTLP endpoint region matches your account (US vs EU)
+- Verify the auth header carries a valid Tracing App token
 - Check Info.plist for App Transport Security settings
 - Ensure TracingConfiguration is initialized early
-- Review proxy logs for incoming requests
 
 High Battery Usage:
 
@@ -640,7 +622,7 @@ class TracingTests: XCTestCase {
 
 ## Next Steps
 
-- [Configure your backend proxy](/docs/tracing/sdks/javascript-browser/#proxy-configuration)
+- [Managed OTLP Endpoint](/docs/guide/managed-otlp-endpoint/)
 - [Set up alerts](/docs/tracing/alerts/creating-alerts/)
 - [Explore traces](/docs/tracing/reports/explorer/)
 - [Android SDK](/docs/tracing/sdks/android/)

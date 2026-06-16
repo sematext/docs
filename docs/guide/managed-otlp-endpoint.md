@@ -93,9 +93,9 @@ For existing Apps, the token is available in: Sematext Cloud → open the App �
 
 ## Browser-side OpenTelemetry
 
-The managed OTLP endpoint doesn't currently accept cross-origin requests from browsers, so browser-side OpenTelemetry can't POST spans to it directly. The standard workaround is to have your backend act as a same-origin proxy — the browser ships to `/api/otel-proxy/v1/traces` on its own backend, and the backend forwards to the managed endpoint with the `X-API-TOKEN` header attached.
+The managed OTLP endpoint is CORS-enabled, so browser-side OpenTelemetry can POST spans to it directly — no backend proxy required. Point the OTLP exporter at the receiver for your region and authenticate with your Tracing App token.
 
-A complete worked example using React + Express lives in the [sematext-otel-onboarding repository](https://github.com/sematext/sematext-otel-onboarding/tree/main/e2e/react-express), including the CORS handling and a four-span end-to-end trace tree.
+See the [Browser JavaScript SDK guide](/docs/tracing/sdks/javascript-browser/) for the full setup.
 
 ## Troubleshooting
 
@@ -105,7 +105,6 @@ A complete worked example using React + Express lives in the [sematext-otel-onbo
 | `Connection refused` on the endpoint | `OTEL_EXPORTER_OTLP_PROTOCOL=grpc` with the HTTP endpoint URL, or the opposite — pair must match |
 | `401` / `403` from the receiver | Header is being sent as `Authorization: Bearer …` instead of `X-API-TOKEN=…`. Use the `OTEL_EXPORTER_OTLP_*_HEADERS` env vars rather than hand-coding the exporter. |
 | Traces ship but metrics don't (or vice versa) | The signal-specific header isn't set, or the SDK's auto-instrumentation doesn't enable that signal by default — many language SDKs require a flag to opt into metrics |
-| Browser-side OTel POST blocked by CORS | Expected — see [Browser-side OpenTelemetry](#browser-side-opentelemetry) above |
 
 ## Related
 
