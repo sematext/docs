@@ -8,6 +8,9 @@ Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, 
 !!! info "Where does your telemetry get sent?"
     Independently of which SDK you pick, you choose one of two shipping flows: the [**managed OTLP endpoint**](/docs/guide/managed-otlp-endpoint/) (directly to Sematext, fastest setup) or the [**Sematext Agent**](/docs/agents/sematext-agent/opentelemetry/) (local agent that also enables infrastructure monitoring). The SDK init code is the same in both flows — only the endpoint URL and auth headers differ.
 
+!!! tip "Using an AI coding agent?"
+    Load the [sematext-otel skill](/docs/guide/ai-powered-otel-onboarding/) into [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any agent that can read a markdown URL) and it will walk you through both the agent-based flow described here and the managed-OTLP-endpoint alternative, producing the exact env-var block for your language and deployment.
+
 <div class="mdl-tabs__panel is-active" markdown>
 
 **Looking for working examples?** Check out our **[Sematext OpenTelemetry Onboarding Repository](https://github.com/sematext/sematext-otel-onboarding)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.
@@ -18,7 +21,7 @@ Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, 
 | Python | Flask | [python/](https://github.com/sematext/sematext-otel-onboarding/tree/main/python) |
 | Node.js | Express | [nodejs/](https://github.com/sematext/sematext-otel-onboarding/tree/main/nodejs) |
 | .NET | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-otel-onboarding/tree/main/dotnet) |
-| PHP | Laravel | [php/](https://github.com/sematext/sematext-otel-onboarding/tree/main/php)) |
+| PHP | Laravel | [php/](https://github.com/sematext/sematext-otel-onboarding/tree/main/php) |
 
 </div>
 
