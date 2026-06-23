@@ -10,7 +10,7 @@ Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, 
 
 <div class="mdl-tabs__panel is-active" markdown>
 
-**Looking for working examples?** Check out our **[Sematext OpenTelemetry Examples Repository](https://github.com/sematext/sematext-otel-onboarding)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.
+**Looking for working examples?** Check out our **[Sematext OpenTelemetry Onboarding Repository](https://github.com/sematext/sematext-otel-onboarding)** for complete, ready-to-run examples with auto and manual instrumentation for Baremetal, Docker, and Kubernetes environments.
 
 | Language | Framework | Examples |
 |----------|-----------|----------|
@@ -18,6 +18,7 @@ Sematext Tracing uses OpenTelemetry, the vendor-neutral observability standard, 
 | Python | Flask | [python/](https://github.com/sematext/sematext-otel-onboarding/tree/main/python) |
 | Node.js | Express | [nodejs/](https://github.com/sematext/sematext-otel-onboarding/tree/main/nodejs) |
 | .NET | ASP.NET Core | [dotnet/](https://github.com/sematext/sematext-otel-onboarding/tree/main/dotnet) |
+| PHP | Laravel | [php/](https://github.com/sematext/sematext-otel-onboarding/tree/main/php)) |
 
 </div>
 
