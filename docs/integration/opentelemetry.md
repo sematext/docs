@@ -10,7 +10,7 @@ This page explains how to get your application's metrics, logs, and traces by us
 
 ## Why use OpenTelemetry with Sematext Cloud?
 
-With OpenTelemetry Logs and Metrics in Sematext Cloud, you can:
+With OpenTelemetry Traces, Logs and Metrics in Sematext Cloud, you can:
 
 - Monitor your **applications as first-class entities**, not just the infrastructure they run on
 - Track **application-level performance** such as request rates, latency, errors, and custom business metrics
@@ -29,6 +29,3 @@ Below, you’ll find step-by-step instructions for setting up OpenTelemetry and 
 OpenTelemetry metrics and logging is supported in `Python`, `Node.js`, `.NET`, `Java`. The SDK setup instructions for these languages **are shown after you create an OpenTelemetry Logs or Monitoring App**.
 
 After completing the SDK-specific setup, logs and metrics will begin flowing into your App. The following sections describe the available OpenTelemetry [metrics](/docs/integration/opentelemetry-monitoring) and [logs](/docs/integration/opentelemetry-logs) in Sematext Cloud, including built-in dashboards, visualizations, and alert rules.
-
-
-
