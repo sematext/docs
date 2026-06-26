@@ -78,6 +78,7 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 -e SERVER_BASE_URL=https://spm-receiver.sematext.com \
 -e LOGS_RECEIVER_URL=https://logsene-receiver.sematext.com \
 -e EVENTS_RECEIVER_URL=https://event-receiver.sematext.com \
+-e AIMONITORING_RECEIVER_URL=https://aimonitoring-receiver.sematext.com \
 -e COMMAND_SERVER_URL=https://command.sematext.com \
 sematext/agent:latest-4
 ```
@@ -98,6 +99,7 @@ docker run -d --restart always --privileged -P --name st-agent --memory 512MB \
 -e SERVER_BASE_URL=https://spm-receiver.sematext.com \
 -e LOGS_RECEIVER_URL=https://logsene-receiver.sematext.com \
 -e EVENTS_RECEIVER_URL=https://event-receiver.sematext.com \
+-e AIMONITORING_RECEIVER_URL=https://aimonitoring-receiver.sematext.com \
 -e COMMAND_SERVER_URL=https://command.sematext.com \
 -e CONTAINER_SKIP_BY_IMAGE=nginx \
 sematext/agent:latest-4
@@ -130,6 +132,7 @@ services:
       - SERVER_BASE_URL=https://spm-receiver.sematext.com
       - LOGS_RECEIVER_URL=https://logsene-receiver.sematext.com
       - EVENTS_RECEIVER_URL=https://event-receiver.sematext.com
+      - AIMONITORING_RECEIVER_URL=https://aimonitoring-receiver.sematext.com
       - COMMAND_SERVER_URL=https://command.sematext.com
       - CONTAINER_SKIP_BY_IMAGE=nginx
     cap_add:
