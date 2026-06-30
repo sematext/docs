@@ -24,7 +24,7 @@ _[Read more](/docs/agents/sematext-agent/permission-requirements/#bind-mounts) a
 
 Besides providing several bind mounts for Docker socket, _procfs_ and journal directory, App tokens are required to ship data to the appropriate Monitoring Apps. Sematext Agent will gather data about running processes on the system, basic operating system metrics, machine/instance-related information, and ship it to the Infra App token. It will also detect active containers and start collecting different container metrics such as memory usage, network I/O statistics, disk throughput, etc.
 
-By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by either passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL` and `EVENTS_RECEIVER_URL` for log and event receivers respectively, or specify an alternative (`EU`) region via the `REGION` environment variable.
+By default, the US region receiver endpoints are used to ship data to Sematext Cloud. You can override receiver addresses by either passing `SERVER_BASE_URL` for metrics receivers, `LOGS_RECEIVER_URL`, `EVENTS_RECEIVER_URL`, and `AIMONITORING_RECEIVER_URL` for log, event, and AI agent monitoring receivers respectively, or specify an alternative (`EU`) region via the `REGION` environment variable.
 
 **Note that if any of the** `*_URL` **environment variables are set, region-specific receiver endpoints are ignored.**
 
