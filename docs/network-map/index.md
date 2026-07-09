@@ -54,7 +54,7 @@ Beyond day-to-day monitoring, Network Map helps with scenarios that are hard to 
 To use Network Map, you need:
 
 1. At least one [Infra App](/docs/monitoring/infrastructure/) created in Sematext Cloud
-2. [Sematext Agent](/docs/agents/sematext-agent/) installed on your hosts (version 4.1.x or later)
+2. [Sematext Agent](/docs/agents/sematext-agent/) installed on your hosts — **4.4.0 or later** on Kubernetes/Docker, or the **`sematext-agent` 4.11.15 or later** package on bare metal
 
 Once enabled, Network Map starts collecting data immediately. Within a few minutes, you'll see your first topology visualization.
 

@@ -9,7 +9,7 @@ Network Map requires:
 
 **An Infra App** in your Sematext Cloud account. The Infra App collects infrastructure metrics and provides the foundation for Network Map's topology visualization. If you don't have one, create one at [Sematext Cloud US](https://apps.sematext.com/ui/infrastructure/create) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/infrastructure/create).
 
-**[Sematext Agent](/docs/agents/sematext-agent/installation/) version 4.1.x or later** installed on your hosts. The agent collects the eBPF-based network connection data that powers Network Map. Check your agent version with `sematext-agent --version`.
+**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on your hosts — **version 4.4.0 or later** on Kubernetes/Docker, or the **`sematext-agent` 4.11.15 or later** package on bare-metal Linux hosts. The agent collects the eBPF-based network connection data that powers Network Map. Check each host's agent version in [Fleet](/docs/fleet/).
 
 **Linux kernel 5.8 or later** for optimal performance. Network Map uses eBPF with ring buffers, which requires kernel 5.8+. Older kernels (4.15+) work but with reduced performance and some limitations. Check your kernel version with `uname -r`.
 
@@ -24,7 +24,7 @@ This typically happens when you've added Network Map to an environment where age
 To resolve this:
 
 1. Click the warning banner to see which hosts have outdated agents, or use [Fleet](/docs/fleet/) to view all your agents and their versions
-2. Update those agents to version 4.1.x or later
+2. Update those agents — to **4.4.0 or later** on Kubernetes/Docker, or the **`sematext-agent` 4.11.15 or later** package on bare metal
 3. The warning disappears once all agents are current
 
 Follow the [Sematext Agent update instructions](/docs/agents/sematext-agent/installation/) to upgrade your agents to the latest version.
