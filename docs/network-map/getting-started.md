@@ -9,7 +9,7 @@ Network Map requires two things:
 
 **An [Infra App](/docs/monitoring/infrastructure/)** to collect and store your infrastructure data. If you're already using Sematext for infrastructure monitoring, you have this. If not, you'll create one as part of the setup process.
 
-**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.4.0 or later** on Kubernetes/Docker, or the **`sematext-agent` 4.11.15 or later** package on bare-metal Linux hosts.
+**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.4.0 or later**.
 
 For best results, your hosts should be running **Linux kernel 5.8 or later**. Older kernels (4.15+) work but with some limitations. Check your kernel version with `uname -r`.
 
