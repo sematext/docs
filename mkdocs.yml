@@ -508,6 +508,9 @@ nav:
         - FAQ: logagent/faq.md
       - Mobile App SDKs: agents/mobile.md
       - Browser SDK: agents/browser.md
+    - MCP:
+      - Overview: mcp/index.md
+      - Getting Started: mcp/getting-started.md
     - API: api/index.md
     - FAQ: faq.md
 
