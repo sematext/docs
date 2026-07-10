@@ -84,7 +84,7 @@ opencode mcp list
 
 The output should contain this message (example for US account):
 ```
-●  ✓ sematext-us connected
+●  ✓ sematext-cloud connected
 │      https://mcp.sematext.com/mcp
 ```
 
