@@ -128,7 +128,7 @@ By following these steps your VS Code will automatically open generated `mcp.jso
 
     {
     	"servers": {
-    		"sematext-eu": {
+    		"sematext-cloud": {
     			"url": "https://mcp.eu.sematext.com/mcp",
     			"type": "http",
     			"headers": {
