@@ -200,7 +200,7 @@ Field Name | Field Type | Required | Notes
 ```type``` | string | yes | Event type which could be e.g. ```alert```, ```deployment```, etc. Events are later grouped in timeline based on event type which significantly improves visibility.
 ```message``` | string       | yes       | Short description of event, e.g. ```Elasticsearch node03 on host somehost06 restarted```. This is a default search field in Sematext UI, so it is good to keep it concise, but search-friendly. Data in this field can be stored in Markdown format to make your messages more pretty and easier to read. For more details [see](#markdown-in-events).
 ```title``` | string       | no       | Event title, can be used as a short label for event, e.g. ```Elasticsearch restart```.
-```tags``` | string array     | no       | Multivalued field. Each tag should be specified as aseparate array element e.g., <br> ```"tags":[ "elasticsearch", "restart", "emergency fix"]```
+```tags``` | string array     | no       | Multivalued field. Each tag should be specified as a separate array element e.g., <br> ```"tags":[ "elasticsearch", "restart", "emergency fix"]```
 ```severity``` | string | no | A single-valued field which says what kind of an event it is. It should have such values as ```error```,  ```info``` or ```warning``` and lets you easily navigate through important and less important events.
 ```creator``` | string       | no       | Person, application, or component that created an event. E.g. ```John Smith```, ```Elasticsearch```, ```Some Batch Job```
 ```data``` | string       | no       | Additional event data. It can be anything you may find useful to have along inside of event object. E.g., it could be  stacktrace in case of ```app_error``` event, base64 encoded content of file, etc.
