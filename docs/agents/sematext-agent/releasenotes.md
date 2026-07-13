@@ -39,6 +39,25 @@ NULL
 
 -->
 
+## Version 4.4.0
+
+Date: July 13, 2026
+
+### New Features
+
+- **Network Map**: This release introduces Network Map, a real-time view of your infrastructure topology powered by eBPF. The agent observes network connections at the kernel level and builds a live map of your services, hosts, pods, containers, and processes, and how they communicate, across Kubernetes clusters and standalone hosts. It shows traffic volume, latency, and protocol details on every connection, resolves the domains your services talk to, and reports per-host CPU, memory, and disk and network I/O. To get started, upgrade the Sematext Agent to 4.4.0 and enable Network Map for your Infra App in Sematext Cloud. See the [Network Map documentation](/docs/network-map/) for details.
+- **Container Lifecycle State**: The agent reports full container lifecycle state matching the Kubernetes containerStatus API. This includes termination details (exit code, signal, reason, start and finish times), waiting reasons such as CrashLoopBackOff and ImagePullBackOff, and the last termination state alongside the restart count.
+
+### Improvements
+
+- **Auto-Discovery Diagnostics**: When a discovered service cannot be enriched with container or pod metadata, the agent now logs a clear, user-visible message naming the service and the likely cause (unreachable container runtime socket or Kubernetes API, missing volume mounts or RBAC). Previously the service was dropped silently and discovery just looked empty.
+- **Structured Agent Logs**: The agent's own logs moved to a structured format with key=value attributes, making them easier to filter and parse. Log severity levels are now uppercase (for example, ERROR).
+
+### Bug Fixes
+
+- Apache access log parsing now coerces the CLF `-` size placeholder to 0, so responses without a body (errors, HEAD requests, 304s) are no longer dropped during ingestion. Timestamp parsing also handles the Apache CLF time format, so events appear correctly in time-based views.
+- Container restart counts are now tracked per container and sourced from the same pod data as termination state. This fixes rows where a restart count of zero appeared next to a termination reason, or the other way around.
+
 ## Version 4.3.5
 
 Date: May 11, 2026
