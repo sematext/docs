@@ -52,43 +52,44 @@ If you see any errors, please check that you have provided the correct API key.
 
 ### OpenCode
 
-Installing the Sematext MCP Server for OpenCode is still simple, but requires a bit of tinkering in the OpenCode config file. 
+Installing the Sematext MCP Server for OpenCode is simple, but requires a bit of tinkering in the OpenCode config file. 
 
-First, locate and open the `opencode.json` file that you use for OpenCode settings. On various linux distributions (WSL included) it can be found either in `~/.config/opencode/opencode.json` or `~/.opencode/opencode.json`, if current linux user is the one who installed OpenCode.
+First, locate and open the `opencode.json` file that you use for OpenCode settings. On various Linux distributions (WSL included) it can be found either in `~/.config/opencode/opencode.json` or `~/.opencode/opencode.json`, if the current Linux user is the one who installed OpenCode.
 
-Under `"mcp"` block add the following content if your Sematext Cloud account is in the US region:
+Add the following content under the `"mcp"` block if your Sematext Cloud account is in the US region:
+```
+"sematext-cloud": {
+  "type": "remote",
+  "url": "https://mcp.sematext.com/mcp",
+  "headers": {
+    "Authorization": "apiKey xxxx-xx-xx-xxxx"
+  }
+}
+```
 
-    "sematext-cloud": {
-      "type": "remote",
-      "url": "https://mcp.sematext.com/mcp",
-      "headers": {
-        "Authorization": "apiKey xxxx-xx-xx-xxxx"
-      }
-    }
-
-and if your Sematext Cloud account is in the EU region:
-
-    "sematext-cloud": {
-      "type": "remote",
-      "url": "https://mcp.eu.sematext.com/mcp",
-      "headers": {
-        "Authorization": "apiKey xxxx-xx-xx-xxxx"
-      }
-    }
+Or this, if your Sematext Cloud account is in the EU region:
+```
+"sematext-cloud": {
+  "type": "remote",
+  "url": "https://mcp.eu.sematext.com/mcp",
+  "headers": {
+    "Authorization": "apiKey xxxx-xx-xx-xxxx"
+  }
+}
+```
 
 Saving the file and reloading/opening OpenCode should install the Sematext MCP server, so verify that it works with the following command:
-
 ```bash
 opencode mcp list
 ```
 
-The output should contain this message (example for US account):
+The output should contain this message (example for a US account):
 ```
 ●  ✓ sematext-cloud connected
 │      https://mcp.sematext.com/mcp
 ```
 
-If you see any errors, please check that you provided the correct Sematext Cloud API key. If you did and there is still a failure connecting to an MCP server, there might be a misconfiguration issue or a bug regarding regarding HTTP handler. So instead of "remote MCP server type" instructions mentioned above, put the following content under your `"mcp"` block inside `opencode.json` file:
+If you see any errors, please check that you provided the correct Sematext Cloud API key. If you did and there is still a failure connecting to an MCP server, there might be a misconfiguration issue or a bug regarding regarding the HTTP handler. So instead of the "remote MCP server type" instructions mentioned above, put the following content under your `"mcp"` block inside `opencode.json` file:
 
     "sematext-cloud": {
       "type": "local",
@@ -100,45 +101,49 @@ If you see any errors, please check that you provided the correct Sematext Cloud
       "enabled": true
     }
 
-Note: in order for this "local MCP server type" approach to work with Sematext MCP Server, your machine (under the user you are running OpenCode) should have `nodejs` and `npx` packages installed and accessible.
+**Note:** In order for this "local MCP server type" approach to work with the Sematext MCP Server, your machine (under the user which is running OpenCode) should have `nodejs` and `npx` packages installed and accessible.
 
 
 
 ### Visual Studio Code MCP servers
 
-In order to use Sematext MCP server via VS Code Chat interface (regardless of an AI model that is currently "powering" your VS Code panel), put the following content into the `mcp.json` file under `"servers"` block that you created by following the [official VS Code instructions](https://code.visualstudio.com/docs/agent-customization/mcp-servers) (US account example):
-
-    		"sematext-cloud": {
-    			"url": "https://mcp.sematext.com/mcp",
-    			"type": "http",
-    			"headers": {
-    				"Authorization": "apiKey xxxx-xx-xx-xxxx"
-    			}
-    		}
+In order to use Sematext MCP Server via VS Code Chat interface (regardless of the AI model that is currently "powering" your VS Code panel), put the following content into the `mcp.json` file under the `"servers"` block that you created by following the [official VS Code instructions](https://code.visualstudio.com/docs/agent-customization/mcp-servers) (US account example):
+```
+"sematext-cloud": {
+  "url": "https://mcp.sematext.com/mcp",
+  "type": "http",
+  "headers": {
+    "Authorization": "apiKey xxxx-xx-xx-xxxx"
+  }
+}
+```
 
 If you are unsure which `mcp.json` file to use or you don't have any such file at all, follow these steps:
-1. In VS Code, open `Command Pallete...` (Under `View` tab in uppermost Action Bar)
-2. Type and select `MCP: Add Server...`
-3. Choose `HTTP (HTTP or Server-Sent Events)`
-4. For URL type `https://mcp.sematext.com/mcp`
-5. For MCP server label type `sematext-cloud`
-6. choose `Remote` as a handler
+- In VS Code, open `Command Pallete...` (Under `View` tab in uppermost Action Bar)
+- Type and select `MCP: Add Server...`
+- Choose `HTTP (HTTP or Server-Sent Events)`
+- For URL type the following, based on which region your Sematext Cloud account is on
+  - US region: `https://mcp.sematext.com/mcp`
+  - EU region: `https://mcp.eu.sematext.com/mcp`
+- For MCP server label type `sematext-cloud`
+- Choose `Remote` as a handler
 
-By following these steps your VS Code will automatically open the generated `mcp.json` file for you. Make sure that the contents of that file looks like this:
-
-    {
-    	"servers": {
-    		"sematext-cloud": {
-    			"url": "https://mcp.eu.sematext.com/mcp",
-    			"type": "http",
-    			"headers": {
-    				"Authorization": "apiKey xxxx-xx-xx-xxxx"
-    			}
-    		}
-    	},
-    	"inputs": []
+By following these steps your VS Code will automatically open the generated `mcp.json` file for you. Make sure that the contents of that file look like this (URL depends on the region):
+```
+{
+  "servers": {
+    "sematext-cloud": {
+      "url": "https://mcp.eu.sematext.com/mcp",
+      "type": "http",
+      "headers": {
+        "Authorization": "apiKey xxxx-xx-xx-xxxx"
+      }
     }
+  },
+  "inputs": []
+}
+```
 
-Finally, start the MCP server: one way to do it is to click on "Start" option that is shown above MCP server's name (in your case, `sematext-cloud`) inside `mcp.json` file.
+Finally, start the MCP server. One way to do it is to click on "Start" option that is shown above the MCP server's name (in this case `sematext-cloud`) inside `mcp.json` file.
 
-If you are presented with a pop-up message titled "Dynamic Client Registration not supported", do not proceed or add OAuth client id information - select "Cancel" or press ESC key. Instead, check if your `mcp.json` file content is actually saved and if you have provided the correct API key, then try starting the server again.
+If you are presented with a pop-up message titled `Dynamic Client Registration not supported`, do not proceed or add OAuth client id information - select `Cancel` or press the ESC key. Instead, check if your `mcp.json` file content is actually saved and if you have provided the correct API key, then try starting the server again.
