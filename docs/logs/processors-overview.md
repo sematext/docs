@@ -1,5 +1,5 @@
 title: Processors
-description: Add or change a field using a script
+description: Overview of Processors available in Logs Pipelines
 
 Processors are units of processing in Pipelines. They can change, drop, or even produce additional events. They are chained to form a Pipeline. The output of one Processor is the input for the next Processor.
 
@@ -14,8 +14,8 @@ Processors available in Logs Pipelines are:
 - **Rename Fields Processor**: Change the names of log event fields.
 - **Remove Fields Processor**: Remove fields that contain [sensitive information](/docs/logs/handle-sensitive-data-with-pipelines) or redundant data to save from costs. See [Reducing Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines) for more information.
 - [**Field Extractor Processor**](/docs/logs/field-extractor-processor): Extract fields using a grok pattern.
-- [**Field Masking Processor**](/docs/logs/field-masking-processor): Mask fields using a regex pattern and hide sensitive data. See [Handle Sensitive Data](/docs/logs/handle-sensitive-data-with-pipelines) for more information.
-- [**Script Field Processor**](/docs/logs/script-field-processor): Add or change a field using a script.
+- [**Field Masking Processor**](/docs/logs/field-masking-processor): Mask fields using an [RE2](https://github.com/google/re2/wiki/Syntax) regular expression and hide sensitive data. See [Handle Sensitive Data](/docs/logs/handle-sensitive-data-with-pipelines) for more information.
+- [**Script Field Processor**](/docs/logs/script-field-processor): Add or change a field using a [CEL](https://cel.dev/) expression.
 - [**Sampling Processor**](/docs/logs/sampling-processor): Keep only a certain percentage of your data using random sampling.
 - **Geo Processor**: Enrich log events with reverse geocoding location or IP address.
 
