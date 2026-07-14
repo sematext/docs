@@ -7,6 +7,8 @@ Alert events are critical indicators that inform you when certain conditions wit
 
 In the **Alerts** page ([US](https://apps.sematext.com/ui/alerts/events) or [EU](https://apps.eu.sematext.com/ui/alerts/events)), you can easily observe and analyze triggered alerts. This view includes a 24/7 heatmap, histogram, and a detailed table displaying alerts triggered within the selected time period.
 
+You can also have your AI agents analyze your alert events using the [Sematext Cloud MCP Server](/docs/mcp/index).
+
 ### Visualizations
 
 - **Heatmap:** Offers a quick visual representation of alert frequency over time, allowing you to identify patterns at a glance.

@@ -3,7 +3,7 @@ description: How to use Split screen to correlate performance metrics with any o
 
 ## Why and When to Correlate Performance Metrics
 
-Correlating performance metrics is a great way to troubleshoot faster than with traditional monitoring tools.
+Correlating performance metrics is a great way to troubleshoot faster than with traditional monitoring tools. Correlation can be performed manually via the Sematext Cloud UI, or with your AI agent of choice using the [Sematext Cloud MCP Server](/docs/mcp/index).
 
 ## What to Correlate
 
