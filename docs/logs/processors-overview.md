@@ -15,7 +15,7 @@ Processors available in Logs Pipelines are:
 - **Remove Fields Processor**: Remove fields that contain [sensitive information](/docs/logs/handle-sensitive-data-with-pipelines) or redundant data to save from costs. See [Reducing Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines) for more information.
 - [**Field Extractor Processor**](/docs/logs/field-extractor-processor): Extract fields using a grok pattern.
 - [**Field Masking Processor**](/docs/logs/field-masking-processor): Mask fields using a regex pattern and hide sensitive data. See [Handle Sensitive Data](/docs/logs/handle-sensitive-data-with-pipelines) for more information.
-- [**Script Field Processor**](/docs/logs/script-field-processor): Add or change a field using a script.
+- [**Script Field Processor**](/docs/logs/script-field-processor): Add, copy or change a field using a script.
 - [**Sampling Processor**](/docs/logs/sampling-processor): Keep only a certain percentage of your data using random sampling.
 - **Geo Processor**: Enrich log events with reverse geocoding location or IP address.
 
