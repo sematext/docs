@@ -36,3 +36,8 @@ and that we want to extract the number of kilobytes. The script might look somet
 int kbIdx = ((String)doc['message']).indexOf(' kb');
 ((String)doc['message']).substring(17, kbIdx)
 ```
+
+To copy the whole field to Target Field, which can be a completely new field, simply use the following:
+```java
+doc['nameOfSourceFieldHere']
+```
