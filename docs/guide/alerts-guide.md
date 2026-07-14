@@ -64,4 +64,6 @@ You can view all the default and custom Alerts on the [Alert Rules](https://apps
 
 ![Sematext Cloud Alerts Rules Window](https://sematext.com/docs/images/guide/alerts-and-events/alert-rules-window.png "Sematext Cloud Alerts Rules Window")
 
+You can also have your preferred AI agent review your alerts and how frequently they trigger via the [Sematext Cloud MCP Server](/docs/mcp/index).
+
 More detailed instructions are provided in [Alerts Rules Overview](/docs/alerts/alert-rules).
