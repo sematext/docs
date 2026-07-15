@@ -27,5 +27,5 @@ The following Perl and Java extensions are not part of RE2 and do not compile:
 
 A pattern that does not compile is shown as an error in the pipeline builder preview. During ingestion such a processor is skipped: log events keep flowing through the rest of the pipeline, but **without this masking applied**, until the pattern is fixed.
 
-The entire match is masked, not a capture group. To keep part of the matched text visible, use the prefix or suffix masking options. Patterns that used lookaround can usually be rewritten as a more specific direct match — for example, instead of `(?<=password=)[^ ]*`, match `password=([^ ]*)` and keep the `password=` prefix visible with the prefix option.
+The entire match is masked, not a capture group. To keep part of the matched text visible, use the prefix or suffix masking options. Patterns that use lookaround can usually be rewritten as a more specific direct match — for example, instead of `(?<=password=)[^ ]*`, match `password=([^ ]*)` and keep the `password=` prefix visible with the prefix option.
 
