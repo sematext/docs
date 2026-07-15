@@ -219,6 +219,7 @@ nav:
       - FAQ: synthetics/faq.md
     - Integrations:
       - Overview: integration/index.md
+      - AI Agents: integration/ai-agents.md
       - Servers, Containers & Orchestration:
         - Infra: integration/infra.md
         - Kubernetes: integration/kubernetes.md
