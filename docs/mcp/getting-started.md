@@ -21,6 +21,20 @@ Your account's API Key can be found on the **Settings → API** page:
 This section contains the setup guides for different agent providers.
 
 
+### Codex
+
+Add the Sematext MCP Server to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.sematext-cloud]
+# For EU accounts, use https://mcp.eu.sematext.com/mcp
+url = "https://mcp.sematext.com/mcp"
+http_headers = { Authorization = "apiKey xxxx-xx-xx-xxxx" }
+```
+
+Replace the example API Key, save the file, and restart Codex. Run `codex mcp list` or type `/mcp` in the Codex CLI to check the connection.
+
+
 ### Claude Code
 
 Installing the Sematext MCP Server for Claude Code is super simple - it can be done with a single command! Just make sure to replace the `apiKey` here with your real API Key.
