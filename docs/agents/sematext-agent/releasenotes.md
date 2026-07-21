@@ -39,6 +39,18 @@ NULL
 
 -->
 
+## Version 4.4.1
+
+Date: July 21, 2026
+
+### Improvements
+
+- **Network Map Disk I/O on Standalone Hosts**: Disk I/O rates for services on standalone (non-Kubernetes) hosts are now read from the service's cgroup instead of individual processes, so services show real disk read and write rates in Network Map. Previously these values often appeared as zero.
+
+### Bug Fixes
+
+- Network Map connections no longer intermittently lose their protocol label. The periodic connection scan could re-report an already-classified connection as unclassified, causing edges with HTTP status codes to show a blank or Unknown protocol.
+
 ## Version 4.4.0
 
 Date: July 13, 2026
