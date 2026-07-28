@@ -194,6 +194,7 @@ nav:
         - Self-hosting a GitHub Actions Runner: synthetics/ci-cd/ci-cd-self-hosting.md
         - FAQ: synthetics/ci-cd/faq.md
       - Status Pages: synthetics/status-pages.md
+      - SLOs: synthetics/slo.md
       - Private Locations: synthetics/private-locations.md
       - Scheduled Monitor Pauses: synthetics/scheduled-pauses.md
       - Response Codes: synthetics/response-codes.md
