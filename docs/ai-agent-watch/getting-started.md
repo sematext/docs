@@ -22,7 +22,7 @@ After connecting a host, open the AI Agent Watch Overview screen for the App. Yo
 
 ![Overview](/docs/images/aiam/overview.png)
 
-**No AI Agents Detected Yet**
+## No AI Agents Detected Yet
 
 [Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents running on your infrastructure and automatically begins monitoring their activity. If no AI agents are currently installed on the monitored hosts, no AI agent data will appear.
 
