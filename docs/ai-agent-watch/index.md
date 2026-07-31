@@ -29,7 +29,7 @@ AI Agent Watch runs alongside your AI agent processes and reports on their activ
 AI Agent Watch can be enabled per [Infra App](/docs/monitoring/infrastructure/). See [Getting Started](getting-started.md) for enabling it on an App and connecting your first host.
 
 
-**No AI Agents Detected Yet**
+## No AI Agents Detected Yet
 
 If you don't see any data right away after enabling AI Agent Watch, that's expected - [Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents running on your infrastructure, but if none are installed on the monitored hosts yet, there's simply nothing yet to report.
 
