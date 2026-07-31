@@ -148,6 +148,16 @@ nav:
         - From Dynatrace: tracing/migration/dynatrace.md
       - Troubleshooting: tracing/troubleshooting.md
       - Limits: tracing/tracing-limits.md
+    - AI Agent Watch:
+      - Overview: ai-agent-watch/index.md
+      - Getting Started: ai-agent-watch/getting-started.md
+      - Reports: ai-agent-watch/reports.md
+      - Captured Events: ai-agent-watch/captured-events.md
+      - Trusted Agents & Hosts: ai-agent-watch/trusted-agents-hosts.md
+      - PII Categories: ai-agent-watch/pii-categories.md
+      - Alert Rules: ai-agent-watch/alert-rules.md
+      - Risk Scores & Priorities: ai-agent-watch/risk-scores.md
+      - Cost Tracking & Governance: ai-agent-watch/cost-tracking-governance.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md
