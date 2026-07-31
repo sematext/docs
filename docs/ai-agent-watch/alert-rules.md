@@ -29,7 +29,7 @@ A rule only sends a notification if it's enabled, has notifications turned on, a
 
 Enabling AI Agent Watch seeds your account with a set of default rules covering common risk patterns, including:
 
-- New, untrusted agent detected (disabled by default - enable it if you want to be notified the moment an unrecognized agent shows up)
+- New, untrusted agent detected (To be notified the moment an unrecognized agent shows up)
 - Connection to an untrusted host (disabled by default)
 - Connection to a suspicious port (for example 22, 1080, 4444, 8080, 9200)
 - High outbound data volume in a session
