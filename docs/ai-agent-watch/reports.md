@@ -51,7 +51,7 @@ A general-purpose events browser - the place to start when you're looking for so
 
 - An events-over-time chart, colored by priority.
 - A full events table: time, priority, event type, agent, message, PII category (if any), and matched rules.
-- The Filters panel here is the most complete one, covering priority, session risk score, PII category, and event type all at once.
+- The Filters panel here has the most detail, covering priority, session risk score, PII category, and event type all at once.
 
 See [Captured Events](captured-events.md) for what each event type and field means.
 
