@@ -81,7 +81,7 @@ A closer look at everything caught by your [PII categories](pii-categories.md).
 
 ## Network Events
 
-Outbound connectivity from your agents, with a focus on what's trusted and what isn't.
+Outbound connectivity from detected agents, with a focus on what's trusted and what isn't.
 
 - Tiles: **Outbound Hosts**, **Untrusted Hosts**, **Bytes Transferred**.
 - **Network Activity Timeline**, toggleable between all connections and untrusted-only.
@@ -93,7 +93,7 @@ Outbound connectivity from your agents, with a focus on what's trusted and what 
 
 ## Tool Execution
 
-Shell commands and other subprocesses your agents have spawned.
+Shell commands and other subprocesses detected agents have spawned.
 
 - Tiles: **Total Tool Executions**, **Exit Errors**, **Shell Executions**.
 - **Tool Execution Timeline**, plotting executions against exit errors.
