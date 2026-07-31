@@ -19,7 +19,7 @@ Every event carries, among others:
 |---|---|
 | `agent_session_started` | An AI agent process/session began. Carries the command line used to start it. |
 | `agent_session_end` | The session ended. Carries the session's rolled-up totals - duration, [session risk score](risk-scores.md#session-risk-score), number of tool executions, connections, requests, file reads/writes, and bytes sent/received. |
-| `tool_executed` | The agent spawned a tool, shell command, or subprocess. Carries the command, its full command line, and the spawned process's PID. |
+| `tool_executed` | The agent spawned a tool, shell command, or subprocess. Carries the command, its full command line, and the spawned process' PID. |
 | `tool_exit` | A previously spawned tool/subprocess exited. Carries its exit code. |
 | `file_read` | The agent read a file. Carries the file path and extension. |
 | `file_write` | The agent wrote to a file. Carries the file path and extension. |
