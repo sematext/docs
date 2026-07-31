@@ -30,4 +30,4 @@ Every event carries, among others:
 | `exec_failed` | The kernel blocked the agent from executing a binary - due to an existing OS-level permission or security policy, not anything AI Agent Watch enforces. Carries an error code/reason. |
 | `file_open_failed` | The kernel blocked the agent from opening a file, for the same reason. Carries the file path/extension and an error code/reason. |
 
-`exec_failed` and `file_open_failed` are purely observational - AI Agent Watch is just reporting a denial the kernel already made, not the one making it. AI Agent Watch has no enforcement capability of its own yet; that's what the upcoming [Governance & Enforcement](cost-tracking-governance.md#governance) feature will add.
+`exec_failed` and `file_open_failed` are purely observational - AI Agent Watch simply reports denials that have already been enforced by the kernel. It does not block actions itself or enforce policies. AI Agent Watch does not yet have its own enforcement capability; that's what the upcoming [Governance](cost-tracking-governance.md#governance) feature will add. 
