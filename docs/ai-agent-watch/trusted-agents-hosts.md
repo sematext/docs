@@ -5,7 +5,7 @@ AI Agent Watch tracks two kinds of trust: which **ai agents** are running on you
 
 ## Trusted agents
 
-Every distinct AI agent AI Agent Watch sees - identified by its type, version, host, cluster, and namespace - is added to your account's list of detected agents the first time it's observed. New agents start out **untrusted**.
+Every distinct AI agent that AI Agent Watch sees - identified by its type, version, host, cluster, and namespace - is added to your account's list of detected agents the first time it's observed. New agents start out **untrusted**.
 
 ![Detected Agents](/docs/images/aiam/detected-agents.png)
 
