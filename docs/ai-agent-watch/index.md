@@ -28,6 +28,15 @@ AI Agent Watch runs alongside your AI agent processes and reports on their activ
 
 AI Agent Watch can be enabled per [Infra App](/docs/monitoring/infrastructure/). See [Getting Started](getting-started.md) for enabling it on an App and connecting your first host.
 
+
+**No AI Agents Detected Yet**
+
+If you don't see any data right away after enabling AI Agent Watch, that's expected - [Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents running on your infrastructure, but if none are installed on the monitored hosts yet, there's simply nothing yet to report.
+
+Leaving AI Agent Watch enabled is still valuable in the meantime: it gives you continuous visibility into your environment and immediate awareness when new AI agents are introduced, whether intentionally or without authorization. Early detection helps identify potentially malicious, misconfigured, or high-risk AI agents before they become a security or compliance concern.
+
+For the best coverage and strongest security posture, deploy Sematext Agent on as many hosts as possible. The broader your deployment, the greater the likelihood of discovering AI agents wherever they appear across your infrastructure.
+
 ## Coming soon
 
 Two features are currently in development: **Governance & Enforcement**, which will let you actively block agent actions rather than just observe them, and **LLM Cost Tracking**, which will surface per-agent and per-session LLM spend. See [Cost Tracking & Governance](cost-tracking-governance.md) for details.

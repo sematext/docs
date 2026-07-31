@@ -22,7 +22,14 @@ After connecting a host, open the AI Agent Watch Overview screen for the App. Yo
 
 ![Overview](/docs/images/aiam/overview.png)
 
-> It's normal to see no agents or events here right after enabling AI Agent Watch - since it monitors activity as it happens, data only starts appearing once an AI agent actually runs somewhere in your infrastructure. Keep it enabled even if the screen stays empty for now: the moment an agent runs anywhere on your infrastructure, AI Agent Watch will start capturing its activity and alerting you automatically, so you're covered from day one rather than only from whenever you happen to check back.
+**No AI Agents Detected Yet**
+
+[Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents running on your infrastructure and automatically begins monitoring their activity. If no AI agents are currently installed on the monitored hosts, no AI agent data will appear.
+
+This is expected—and valuable. Leaving Sematext Agent running provides continuous visibility into your environment and gives you immediate awareness when new AI agents are introduced, whether intentionally or without authorization. Early detection helps identify potentially malicious, misconfigured, or high-risk AI agents before they become a security or compliance concern.
+
+For the best coverage and strongest security posture, deploy Sematext Agent on as many hosts as possible. The broader your deployment, the greater the likelihood of discovering AI agents wherever they appear across your infrastructure.
+
 
 ## Next steps
 
