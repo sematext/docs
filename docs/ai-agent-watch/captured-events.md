@@ -26,7 +26,7 @@ Every event carries, among others:
 | `file_rename` | The agent renamed or moved a file. Carries the old and new paths. |
 | `net_connect_started` | The agent opened an outbound connection. Carries the destination host/IP/port and whether that destination is a [trusted host](trusted-agents-hosts.md#trusted-hosts). |
 | `network_activity` | A rollup of traffic to a given destination. Carries bytes sent/received and request count. |
-| `pii_detection` | Outbound data matched one of your [PII categories](pii-categories.md). Carries the category, the matched payload, the HTTP method/URL, and the destination. |
+| `pii_detection` | Outbound data matched one of your [PII categories](pii-categories.md). Carries the category, the masked/one-way-encrypted payload (see [PII Categories](pii-categories.md)), the HTTP method/URL, and the destination. |
 | `exec_failed` | The kernel blocked the agent from executing a binary - due to an existing OS-level permission or security policy, not anything AI Agent Watch enforces. Carries an error code/reason. |
 | `file_open_failed` | The kernel blocked the agent from opening a file, for the same reason. Carries the file path/extension and an error code/reason. |
 

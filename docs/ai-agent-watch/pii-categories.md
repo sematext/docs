@@ -3,7 +3,7 @@ description: Detecting sensitive data in outbound AI agent traffic with PII cate
 
 A PII category is a named group of regex patterns AI Agent Watch matches against outbound data - for example the body or URL of a request an agent sends out. When a match is found, it's recorded as a `pii_detection` event carrying the category name, the matched payload, the destination, and the HTTP method/URL involved. See [Captured Events](captured-events.md).
 
-The matched payload is masked before it's shown in the UI, so the actual sensitive value - the credential, key, or personal data that matched - isn't exposed to everyone who can view your account's events.
+Masking happens on the agent, not after the fact: the moment a match is detected, the sensitive value is one-way encrypted right there on the host. It's never sent over the wire in clear text and never stored in clear text - Sematext Cloud only ever receives and stores the masked, one-way-encrypted value, not the original credential, key, or personal data that matched.
 
 ## Default categories
 
