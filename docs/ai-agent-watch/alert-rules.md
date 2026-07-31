@@ -23,7 +23,7 @@ An event can match more than one rule. When that happens, the **highest-priority
 
 ## Notifications
 
-A rule only sends a notification if it's enabled, has notifications turned on, and has at least one recipient (email addresses and/or a notification hook) configured. Notifications can be restricted to a schedule (specific days/time windows) and are throttled so a rule that keeps matching doesn't send a new alert every time - see [Alert Notification Hooks](/docs/alerts/alert-notifications/) for the supported delivery channels.
+A rule only sends a notification if it's enabled, has notifications turned on, and has at least one recipient (email addresses and/or a notification hook) configured. Notifications can be [restricted to a schedule (specific days/time windows)](/docs/alerts/alert-scheduling/) and are throttled so a rule that keeps matching doesn't send a new alert every time - see [Alert Notification Hooks](/docs/alerts/alert-notifications/) for the supported delivery channels.
 
 ## Default rules
 
