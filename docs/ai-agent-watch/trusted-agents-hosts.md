@@ -15,7 +15,7 @@ Use this to distinguish agents you've deliberately deployed and reviewed from on
 
 ## Trusted hosts
 
-A trusted host is an outbound destination - a hostname, IP address, or CIDR block - that you've allow-listed. You manage the list from the AI Agent Watch settings for your App.
+A trusted host is an outbound destination - a hostname, IP address, or CIDR block - that you've whitelisted. You manage the list from the AI Agent Watch settings for your App.
 
 ![Trusted Hosts](/docs/images/aiam/trusted-hosts.png)
 
