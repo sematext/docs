@@ -38,8 +38,8 @@ Charts provide click to navigate shortcuts into other reports, pre-filtered for 
 The account-wide summary: how many agents you have, how much risky activity showed up, and where to look next.
 
 - Tiles: **Total Agents**, **Critical Events**, **PII Detections**, **OS Blocks** (the `exec_failed`/`file_open_failed` [events](captured-events.md#event-types) where the kernel denied an agent's action), **Untrusted Agents**, and **Untrusted Hosts**, each with the percentage change versus the previous period.
-- **Events Timeline - by Priority**, with a matching donut breakdown.
-- **Events Timeline - by Event Type**, with a matching donut breakdown.
+- **Events Timeline - by Priority**, with a matching doughnut breakdown.
+- **Events Timeline - by Event Type**, with a matching doughnut breakdown.
 - **Top Agents** table - per-agent rollup of trust status, sessions, network traffic, PII events, alerts, and Critical/High/Warning counts, plus a peak risk indicator (shown as "session in progress" while an agent has an active session).
 
 ![Overview](/docs/images/aiam/overview.png)
@@ -73,7 +73,7 @@ A session-centric view - useful for judging whole sessions rather than individua
 A closer look at everything caught by your [PII categories](pii-categories.md).
 
 - Tiles: **Total PII**, plus one tile per top category (for example Bearer Token, OpenAI API Key, Phone).
-- **PII Detection Timeline - by Category**, with a matching donut breakdown - custom categories you've added show up here alongside the defaults.
+- **PII Detection Timeline - by Category**, with a matching doughnut breakdown - custom categories you've added show up here alongside the defaults.
 - **Top Agents by PII Events**.
 - **High-Risk Sessions with PII Activity** table, sorted by session risk score, showing PII event counts and duration per session.
 
