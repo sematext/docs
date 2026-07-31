@@ -18,7 +18,7 @@ Enabling it also seeds the account with a set of default [PII categories](pii-ca
 
 ## Verifying data is flowing
 
-After connecting a host, open the AI Agent Watch Overview screen for the App. You should see [captured events](captured-events.md) - starting with an `agent_session_started` event - within a few minutes.
+After completing the setup, open the AI Agent Watch Overview screen for the App. You should see [captured events](captured-events.md) - starting with an `agent_session_started` event - within a few minutes.
 
 ![Overview](/docs/images/aiam/overview.png)
 
