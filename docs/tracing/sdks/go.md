@@ -332,8 +332,7 @@ func callExternalAPI(ctx context.Context, userID string) error {
 
 ### SQL Database
 
-There is no `otelsql` package under `go.opentelemetry.io/contrib`. The widely used
-community driver wrapper is [`github.com/XSAM/otelsql`](https://github.com/XSAM/otelsql):
+There is no `otelsql` package under `go.opentelemetry.io/contrib`. The widely used community driver wrapper is [`github.com/XSAM/otelsql`](https://github.com/XSAM/otelsql):
 
 ```bash
 go get github.com/XSAM/otelsql
@@ -401,8 +400,7 @@ func fetchUserFromDB(ctx context.Context, db *sql.DB, userID string) (*User, err
 
 ### Redis
 
-`go-redis` ships its own OpenTelemetry integration as `redisotel`. Use the `v9`
-client — `go-redis/v8` and the old contrib `otelredis` package are superseded:
+`go-redis` ships its own OpenTelemetry integration as `redisotel`. Use the `v9` client — `go-redis/v8` and the old contrib `otelredis` package are superseded:
 
 ```bash
 go get github.com/redis/go-redis/v9
@@ -558,8 +556,7 @@ func childOperation(ctx context.Context) error {
 
 ## Metrics
 
-Traces answer "what happened in this request". Metrics answer "how is the service
-behaving overall", and feed the Sematext Monitoring App.
+Traces answer "what happened in this request". Metrics answer "how is the service behaving overall", and feed the Sematext Monitoring App.
 
 ```bash
 go get go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp
@@ -607,8 +604,7 @@ func initMeter(res *resource.Resource) func(context.Context) error {
 
 ### Creating Metrics
 
-Create instruments once at startup and reuse them — creating one per request is a
-common and costly mistake.
+Create instruments once at startup and reuse them — creating one per request is a common and costly mistake.
 
 ```go
 package main
@@ -666,9 +662,7 @@ func handleWork(ctx context.Context) {
 }
 ```
 
-> Keep attribute values bounded. Attributes such as a user ID or a raw URL create
-> a new time series per value, which inflates cardinality quickly — use the route
-> pattern (`/users/:id`) rather than the resolved path (`/users/12345`).
+> Keep attribute values bounded. Attributes such as a user ID or a raw URL create a new time series per value, which inflates cardinality quickly — use the route pattern (`/users/:id`) rather than the resolved path (`/users/12345`).
 
 ### Go Runtime Metrics
 
@@ -697,9 +691,7 @@ func initRuntimeMetrics() {
 
 ## Logs
 
-Logs exported through OpenTelemetry are automatically stamped with the `trace_id`
-and `span_id` of the active span, which is what lets you jump from a log line to
-its trace in Sematext.
+Logs exported through OpenTelemetry are automatically stamped with the `trace_id` and `span_id` of the active span, which is what lets you jump from a log line to its trace in Sematext.
 
 ```bash
 go get go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp
@@ -768,16 +760,13 @@ func doThing(ctx context.Context, id string) {
 }
 ```
 
-**The `Context` suffix is the whole trick.** `logger.InfoContext(ctx, ...)`
-correlates; `logger.Info(...)` does not. This is the single most common reason
-logs and traces fail to line up in Sematext.
+**The `Context` suffix is the whole trick.** `logger.InfoContext(ctx, ...)` correlates; `logger.Info(...)` does not. This is the single most common reason logs and traces fail to line up in Sematext.
 
 ## Configuration Options
 
 ### Environment Variables
 
-Every exporter reads the standard `OTEL_*` variables, so endpoints and tokens do
-not need to be hardcoded:
+Every exporter reads the standard `OTEL_*` variables, so endpoints and tokens do not need to be hardcoded:
 
 ```bash
 export OTEL_SERVICE_NAME=my-go-service
@@ -797,12 +786,9 @@ export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://localhost:4328
 | Metrics | 4318 | 4317 |
 | Logs | 4328 | 4327 |
 
-> There is no `OTEL_SERVICE_VERSION` variable — set `service.version` through
-> `OTEL_RESOURCE_ATTRIBUTES` as shown above.
+> There is no `OTEL_SERVICE_VERSION` variable — set `service.version` through `OTEL_RESOURCE_ATTRIBUTES` as shown above.
 >
-> A per-signal endpoint is used verbatim. Only the generic
-> `OTEL_EXPORTER_OTLP_ENDPOINT` has `/v1/traces`, `/v1/metrics` or `/v1/logs`
-> appended to it.
+> A per-signal endpoint is used verbatim. Only the generic `OTEL_EXPORTER_OTLP_ENDPOINT` has `/v1/traces`, `/v1/metrics` or `/v1/logs` appended to it.
 
 ### gRPC Configuration
 
@@ -994,16 +980,13 @@ func setSpanAttributes(span trace.Span, r *http.Request) {
 }
 ```
 
-> Instrumentation libraries such as `otelgin`, `otelecho` and `otelhttp` already
-> set the HTTP semantic-convention attributes for you. Add these manually only
-> when you create spans yourself.
+> Instrumentation libraries such as `otelgin`, `otelecho` and `otelhttp` already set the HTTP semantic-convention attributes for you. Add these manually only when you create spans yourself.
 
 ## Troubleshooting
 
 ### Debug Configuration
 
-Print spans to stdout instead of shipping them, to confirm instrumentation works
-before involving the network:
+Print spans to stdout instead of shipping them, to confirm instrumentation works before involving the network:
 
 ```bash
 go get go.opentelemetry.io/otel/exporters/stdout/stdouttrace
