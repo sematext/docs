@@ -3,11 +3,21 @@ description: Complete guide to instrumenting Go applications with OpenTelemetry 
 
 ## Go OpenTelemetry SDK
 
-This guide covers how to instrument Go applications with OpenTelemetry to send traces to Sematext Tracing.
+This guide covers how to instrument Go applications with OpenTelemetry and send telemetry to Sematext: traces to the Tracing App, [metrics](#metrics) to the Monitoring App, and [logs](#logs) to the Logs App.
+
+## Instrumentation Options
+
+Go compiles to a static binary, so there is no runtime agent that attaches to a running process the way there is for Java or Node.js. Instrumentation happens in one of three places instead:
+
+| Approach | Code changes | Notes |
+|---|---|---|
+| **SDK + instrumentation libraries** (this guide) | Yes | The stable, mainstream path. Full control over spans, metrics and logs. |
+| **Compile-time** ([`otelc`](https://github.com/open-telemetry/opentelemetry-go-compile-instrumentation)) | None | Instrumentation woven in during `go build`. No runtime overhead, no privileged container. |
+| **eBPF** ([OBI](https://opentelemetry.io/docs/zero-code/obi/)) | None | Watches the kernel; no rebuild needed. Linux only, requires privileged containers, and is still `v0`. |
+
+This guide covers the SDK approach, which is what you want when you need spans around your own business logic or correlated logs. For runnable examples of all three, see the [Sematext OTel onboarding examples](https://github.com/sematext/sematext-otel-onboarding/tree/main/go).
 
 ## Installation
-
-Go doesn't have comprehensive auto-instrumentation like other languages, but provides easy-to-use instrumentation libraries for popular frameworks.
 
 ### 1. Install Dependencies
 
@@ -26,39 +36,46 @@ package main
 import (
     "context"
     "log"
-    
+
     "go.opentelemetry.io/otel"
     "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
-    "go.opentelemetry.io/otel/sdk"
     "go.opentelemetry.io/otel/sdk/resource"
-    "go.opentelemetry.io/otel/semconv/v1.21.0"
+    sdktrace "go.opentelemetry.io/otel/sdk/trace"
+    semconv "go.opentelemetry.io/otel/semconv/v1.27.0"
 )
 
 func initTracer() func(context.Context) error {
     ctx := context.Background()
-    
+
+    // Endpoint, headers and protocol are also readable from the standard
+    // OTEL_EXPORTER_OTLP_* environment variables — see Configuration below.
     exporter, err := otlptracehttp.New(ctx,
-        otlptracehttp.WithEndpoint("http://localhost:4338"),
-        otlptracehttp.WithInsecure(),
+        otlptracehttp.WithEndpointURL("http://localhost:4338"),
     )
     if err != nil {
         log.Fatalf("Failed to create exporter: %v", err)
     }
-    
-    res := resource.NewWithAttributes(
-        semconv.SchemaURL,
-        semconv.ServiceName("your-service-name"),
-        semconv.ServiceVersion("1.0.0"),
-        semconv.DeploymentEnvironment("production"),
+
+    res, err := resource.New(ctx,
+        resource.WithFromEnv(),
+        resource.WithTelemetrySDK(),
+        resource.WithAttributes(
+            semconv.ServiceName("your-service-name"),
+            semconv.ServiceVersion("1.0.0"),
+            semconv.DeploymentEnvironmentName("production"),
+        ),
     )
-    
-    tracerProvider := sdk.NewTracerProvider(
-        sdk.WithBatcher(exporter),
-        sdk.WithResource(res),
+    if err != nil {
+        log.Fatalf("Failed to create resource: %v", err)
+    }
+
+    tracerProvider := sdktrace.NewTracerProvider(
+        sdktrace.WithBatcher(exporter),
+        sdktrace.WithResource(res),
     )
-    
+
     otel.SetTracerProvider(tracerProvider)
-    
+
     return tracerProvider.Shutdown
 }
 
@@ -69,10 +86,12 @@ func main() {
             log.Printf("Failed to shutdown TracerProvider: %v", err)
         }
     }()
-    
+
     // Your application code here
 }
 ```
+
+> **Note**: the tracer provider lives in `go.opentelemetry.io/otel/sdk/trace`, not `go.opentelemetry.io/otel/sdk` (which only carries a version constant). `WithEndpointURL` takes a full URL; the older `WithEndpoint` expects a bare `host:port` with no scheme.
 
 ## Framework Integration
 
@@ -94,7 +113,6 @@ import (
     "go.opentelemetry.io/otel"
     "go.opentelemetry.io/otel/attribute"
     "go.opentelemetry.io/otel/codes"
-    "go.opentelemetry.io/otel/trace"
 )
 
 func main() {
@@ -314,8 +332,11 @@ func callExternalAPI(ctx context.Context, userID string) error {
 
 ### SQL Database
 
+There is no `otelsql` package under `go.opentelemetry.io/contrib`. The widely used
+community driver wrapper is [`github.com/XSAM/otelsql`](https://github.com/XSAM/otelsql):
+
 ```bash
-go get go.opentelemetry.io/contrib/instrumentation/database/sql/otelsql
+go get github.com/XSAM/otelsql
 go get github.com/lib/pq # for PostgreSQL
 ```
 
@@ -325,28 +346,31 @@ package main
 import (
     "context"
     "database/sql"
-    
-    "go.opentelemetry.io/contrib/instrumentation/database/sql/otelsql"
+
+    "github.com/XSAM/otelsql"
     _ "github.com/lib/pq"
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/attribute"
+    semconv "go.opentelemetry.io/otel/semconv/v1.27.0"
 )
 
 func initDB() (*sql.DB, error) {
-    // Register the wrapped driver
-    driverName, err := otelsql.Register("postgres",
-        otelsql.WithAttributes(
-            semconv.DBSystemPostgreSQL,
-        ),
+    // otelsql.Open wraps the driver so every query produces a span.
+    db, err := otelsql.Open("postgres",
+        "postgresql://user:password@localhost/dbname?sslmode=disable",
+        otelsql.WithAttributes(semconv.DBSystemPostgreSQL),
     )
     if err != nil {
         return nil, err
     }
-    
-    // Open database with the wrapped driver
-    db, err := sql.Open(driverName, "postgresql://user:password@localhost/dbname?sslmode=disable")
-    if err != nil {
+
+    // Optional: also export connection-pool metrics.
+    if _, err := otelsql.RegisterDBStatsMetrics(db,
+        otelsql.WithAttributes(semconv.DBSystemPostgreSQL),
+    ); err != nil {
         return nil, err
     }
-    
+
     return db, nil
 }
 
@@ -377,9 +401,12 @@ func fetchUserFromDB(ctx context.Context, db *sql.DB, userID string) (*User, err
 
 ### Redis
 
+`go-redis` ships its own OpenTelemetry integration as `redisotel`. Use the `v9`
+client — `go-redis/v8` and the old contrib `otelredis` package are superseded:
+
 ```bash
-go get go.opentelemetry.io/contrib/instrumentation/github.com/go-redis/redis/v8/otelredis
-go get github.com/go-redis/redis/v8
+go get github.com/redis/go-redis/v9
+go get github.com/redis/go-redis/extra/redisotel/v9
 ```
 
 ```go
@@ -387,34 +414,41 @@ package main
 
 import (
     "context"
-    
-    "github.com/go-redis/redis/v8"
-    "go.opentelemetry.io/contrib/instrumentation/github.com/go-redis/redis/v8/otelredis"
+    "fmt"
+
+    "github.com/redis/go-redis/extra/redisotel/v9"
+    "github.com/redis/go-redis/v9"
+    "go.opentelemetry.io/otel"
     "go.opentelemetry.io/otel/attribute"
 )
 
-func initRedis() *redis.Client {
+func initRedis() (*redis.Client, error) {
     rdb := redis.NewClient(&redis.Options{
         Addr: "localhost:6379",
     })
-    
-    // Add OpenTelemetry hook
-    rdb.AddHook(otelredis.NewTracingHook())
-    
-    return rdb
+
+    // Instrument commands with traces, and optionally metrics.
+    if err := redisotel.InstrumentTracing(rdb); err != nil {
+        return nil, err
+    }
+    if err := redisotel.InstrumentMetrics(rdb); err != nil {
+        return nil, err
+    }
+
+    return rdb, nil
 }
 
 func cacheUser(ctx context.Context, rdb *redis.Client, userID string, user *User) error {
     tracer := otel.Tracer("user-service")
-    
+
     ctx, span := tracer.Start(ctx, "cache-user")
     defer span.End()
-    
+
     span.SetAttributes(
         attribute.String("user.id", userID),
         attribute.String("cache.operation", "SET"),
     )
-    
+
     return rdb.Set(ctx, fmt.Sprintf("user:%s", userID), user, 0).Err()
 }
 ```
@@ -426,9 +460,12 @@ func cacheUser(ctx context.Context, rdb *redis.Client, userID string, user *User
 ```go
 import (
     "context"
+    "fmt"
+
     "go.opentelemetry.io/otel"
     "go.opentelemetry.io/otel/attribute"
     "go.opentelemetry.io/otel/codes"
+    "go.opentelemetry.io/otel/trace"
 )
 
 func businessOperation(ctx context.Context, data string) error {
@@ -489,6 +526,13 @@ func processData(ctx context.Context, data string) ([]string, error) {
 ### Context Propagation
 
 ```go
+import (
+    "context"
+
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/attribute"
+)
+
 func parentOperation(ctx context.Context) error {
     tracer := otel.Tracer("service")
     
@@ -512,17 +556,253 @@ func childOperation(ctx context.Context) error {
 }
 ```
 
+## Metrics
+
+Traces answer "what happened in this request". Metrics answer "how is the service
+behaving overall", and feed the Sematext Monitoring App.
+
+```bash
+go get go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp
+```
+
+### Meter Provider Setup
+
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "time"
+
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp"
+    sdkmetric "go.opentelemetry.io/otel/sdk/metric"
+    "go.opentelemetry.io/otel/sdk/resource"
+)
+
+func initMeter(res *resource.Resource) func(context.Context) error {
+    ctx := context.Background()
+
+    // Note the port: the Sematext Agent listens for metrics on 4318,
+    // separately from traces on 4338.
+    exporter, err := otlpmetrichttp.New(ctx,
+        otlpmetrichttp.WithEndpointURL("http://localhost:4318"),
+    )
+    if err != nil {
+        log.Fatalf("Failed to create metric exporter: %v", err)
+    }
+
+    provider := sdkmetric.NewMeterProvider(
+        sdkmetric.WithResource(res),
+        sdkmetric.WithReader(sdkmetric.NewPeriodicReader(exporter,
+            sdkmetric.WithInterval(30*time.Second),
+        )),
+    )
+
+    otel.SetMeterProvider(provider)
+    return provider.Shutdown
+}
+```
+
+### Creating Metrics
+
+Create instruments once at startup and reuse them — creating one per request is a
+common and costly mistake.
+
+```go
+package main
+
+import (
+    "context"
+    "time"
+
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/attribute"
+    "go.opentelemetry.io/otel/metric"
+)
+
+var (
+    requestCount    metric.Int64Counter
+    requestDuration metric.Float64Histogram
+    activeRequests  metric.Int64UpDownCounter
+)
+
+func initMetrics() error {
+    meter := otel.Meter("my-go-service")
+
+    var err error
+    if requestCount, err = meter.Int64Counter("app.requests",
+        metric.WithDescription("Total requests handled"),
+        metric.WithUnit("{request}"),
+    ); err != nil {
+        return err
+    }
+    if requestDuration, err = meter.Float64Histogram("app.request.duration",
+        metric.WithDescription("Request duration"),
+        metric.WithUnit("s"),
+    ); err != nil {
+        return err
+    }
+    if activeRequests, err = meter.Int64UpDownCounter("app.requests.active",
+        metric.WithDescription("In-flight requests"),
+        metric.WithUnit("{request}"),
+    ); err != nil {
+        return err
+    }
+    return nil
+}
+
+func handleWork(ctx context.Context) {
+    attrs := metric.WithAttributes(attribute.String("route", "/users/:id"))
+
+    activeRequests.Add(ctx, 1, attrs)
+    defer activeRequests.Add(ctx, -1, attrs)
+
+    start := time.Now()
+    // ... handle the request ...
+    requestCount.Add(ctx, 1, attrs)
+    requestDuration.Record(ctx, time.Since(start).Seconds(), attrs)
+}
+```
+
+> Keep attribute values bounded. Attributes such as a user ID or a raw URL create
+> a new time series per value, which inflates cardinality quickly — use the route
+> pattern (`/users/:id`) rather than the resolved path (`/users/12345`).
+
+### Go Runtime Metrics
+
+GC, goroutine and heap metrics with no manual instruments:
+
+```bash
+go get go.opentelemetry.io/contrib/instrumentation/runtime
+```
+
+```go
+package main
+
+import (
+    "log"
+
+    "go.opentelemetry.io/contrib/instrumentation/runtime"
+)
+
+func initRuntimeMetrics() {
+    // Uses the global meter provider set up by initMeter above.
+    if err := runtime.Start(); err != nil {
+        log.Fatalf("Failed to start runtime metrics: %v", err)
+    }
+}
+```
+
+## Logs
+
+Logs exported through OpenTelemetry are automatically stamped with the `trace_id`
+and `span_id` of the active span, which is what lets you jump from a log line to
+its trace in Sematext.
+
+```bash
+go get go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp
+go get go.opentelemetry.io/contrib/bridges/otelslog
+```
+
+### Logger Provider Setup
+
+```go
+package main
+
+import (
+    "context"
+    "log"
+
+    "go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp"
+    "go.opentelemetry.io/otel/log/global"
+    sdklog "go.opentelemetry.io/otel/sdk/log"
+    "go.opentelemetry.io/otel/sdk/resource"
+)
+
+func initLogger(res *resource.Resource) func(context.Context) error {
+    ctx := context.Background()
+
+    // Logs go to yet another Agent port: 4328.
+    exporter, err := otlploghttp.New(ctx,
+        otlploghttp.WithEndpointURL("http://localhost:4328"),
+    )
+    if err != nil {
+        log.Fatalf("Failed to create log exporter: %v", err)
+    }
+
+    provider := sdklog.NewLoggerProvider(
+        sdklog.WithResource(res),
+        sdklog.WithProcessor(sdklog.NewBatchProcessor(exporter)),
+    )
+
+    global.SetLoggerProvider(provider)
+    return provider.Shutdown
+}
+```
+
+### Logging with Trace Correlation
+
+The `otelslog` bridge lets you keep using the standard library's `slog`:
+
+```go
+package main
+
+import (
+    "context"
+    "log/slog"
+
+    "go.opentelemetry.io/contrib/bridges/otelslog"
+)
+
+var logger = otelslog.NewLogger("my-go-service")
+
+func doThing(ctx context.Context, id string) {
+    // Pass ctx: the bridge reads the active span from it and attaches
+    // trace_id/span_id, making this log line clickable from the trace.
+    logger.InfoContext(ctx, "fetching user", slog.String("user.id", id))
+
+    // No ctx: still exported, but NOT correlated with any trace.
+    slog.Info("not correlated")
+}
+```
+
+**The `Context` suffix is the whole trick.** `logger.InfoContext(ctx, ...)`
+correlates; `logger.Info(...)` does not. This is the single most common reason
+logs and traces fail to line up in Sematext.
+
 ## Configuration Options
 
 ### Environment Variables
 
+Every exporter reads the standard `OTEL_*` variables, so endpoints and tokens do
+not need to be hardcoded:
+
 ```bash
 export OTEL_SERVICE_NAME=my-go-service
-export OTEL_SERVICE_VERSION=1.0.0
-export OTEL_RESOURCE_ATTRIBUTES=environment=production,team=backend
-export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4338
+export OTEL_RESOURCE_ATTRIBUTES=service.version=1.0.0,deployment.environment=production,team=backend
 export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+
+# The Sematext Agent listens on a DIFFERENT PORT PER SIGNAL, so set each
+# endpoint rather than a single shared OTEL_EXPORTER_OTLP_ENDPOINT.
+export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=http://localhost:4338
+export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://localhost:4318
+export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://localhost:4328
 ```
+
+| Signal | Agent HTTP port | Agent gRPC port |
+|---|---|---|
+| Traces | 4338 | 4337 |
+| Metrics | 4318 | 4317 |
+| Logs | 4328 | 4327 |
+
+> There is no `OTEL_SERVICE_VERSION` variable — set `service.version` through
+> `OTEL_RESOURCE_ATTRIBUTES` as shown above.
+>
+> A per-signal endpoint is used verbatim. Only the generic
+> `OTEL_EXPORTER_OTLP_ENDPOINT` has `/v1/traces`, `/v1/metrics` or `/v1/logs`
+> appended to it.
 
 ### gRPC Configuration
 
@@ -531,31 +811,51 @@ go get go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc
 ```
 
 ```go
+package main
+
 import (
+    "context"
+    "log"
+
+    "go.opentelemetry.io/otel"
     "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
+    "go.opentelemetry.io/otel/sdk/resource"
+    sdktrace "go.opentelemetry.io/otel/sdk/trace"
     "google.golang.org/grpc"
     "google.golang.org/grpc/credentials/insecure"
 )
 
 func initTracerGRPC() func(context.Context) error {
     ctx := context.Background()
-    
-    conn, err := grpc.DialContext(ctx, "localhost:4337",
+
+    // grpc.NewClient replaces the deprecated grpc.DialContext. Note that
+    // grpc.WithBlock() is also deprecated and unsupported here — the
+    // connection is established lazily.
+    conn, err := grpc.NewClient("localhost:4337",
         grpc.WithTransportCredentials(insecure.NewCredentials()),
-        grpc.WithBlock(),
     )
     if err != nil {
         log.Fatalf("Failed to create gRPC connection: %v", err)
     }
-    
+
     exporter, err := otlptracegrpc.New(ctx,
         otlptracegrpc.WithGRPCConn(conn),
     )
     if err != nil {
         log.Fatalf("Failed to create exporter: %v", err)
     }
-    
-    // Rest of the setup...
+
+    res, err := resource.New(ctx, resource.WithFromEnv(), resource.WithTelemetrySDK())
+    if err != nil {
+        log.Fatalf("Failed to create resource: %v", err)
+    }
+
+    tracerProvider := sdktrace.NewTracerProvider(
+        sdktrace.WithBatcher(exporter),
+        sdktrace.WithResource(res),
+    )
+    otel.SetTracerProvider(tracerProvider)
+
     return tracerProvider.Shutdown
 }
 ```
@@ -564,21 +864,34 @@ func initTracerGRPC() func(context.Context) error {
 
 ```go
 import (
-    "go.opentelemetry.io/otel/sdk/trace"
+    "context"
+
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/sdk/resource"
+    sdktrace "go.opentelemetry.io/otel/sdk/trace"
 )
 
-func initTracerWithSampling() func(context.Context) error {
-    // ... exporter setup ...
-    
-    tracerProvider := sdk.NewTracerProvider(
-        sdk.WithBatcher(exporter),
-        sdk.WithResource(res),
-        sdk.WithSampler(trace.TraceIDRatioBased(0.1)), // 10% sampling
+func initTracerWithSampling(exporter sdktrace.SpanExporter, res *resource.Resource) func(context.Context) error {
+    tracerProvider := sdktrace.NewTracerProvider(
+        sdktrace.WithBatcher(exporter),
+        sdktrace.WithResource(res),
+        // Sample 10% of traces, but always follow an upstream sampling
+        // decision so distributed traces are not truncated mid-path.
+        sdktrace.WithSampler(
+            sdktrace.ParentBased(sdktrace.TraceIDRatioBased(0.1)),
+        ),
     )
-    
+
     otel.SetTracerProvider(tracerProvider)
     return tracerProvider.Shutdown
 }
+```
+
+Sampling is also configurable without code changes:
+
+```bash
+export OTEL_TRACES_SAMPLER=parentbased_traceidratio
+export OTEL_TRACES_SAMPLER_ARG=0.1
 ```
 
 ## Best Practices
@@ -586,14 +899,23 @@ func initTracerWithSampling() func(context.Context) error {
 ### Resource Management
 
 ```go
+import (
+    "context"
+    "log"
+
+    "go.opentelemetry.io/otel/attribute"
+    "go.opentelemetry.io/otel/sdk/resource"
+    semconv "go.opentelemetry.io/otel/semconv/v1.27.0"
+)
+
 func initTracer() func(context.Context) error {
     ctx := context.Background()
-    
+
     res, err := resource.New(ctx,
         resource.WithAttributes(
             semconv.ServiceName("my-go-service"),
             semconv.ServiceVersion("1.0.0"),
-            semconv.DeploymentEnvironment("production"),
+            semconv.DeploymentEnvironmentName("production"),
             attribute.String("service.team", "backend"),
         ),
         resource.WithProcess(),
@@ -611,10 +933,15 @@ func initTracer() func(context.Context) error {
 
 ```go
 import (
+    "context"
+
+    "go.opentelemetry.io/otel"
     "go.opentelemetry.io/otel/codes"
     "go.opentelemetry.io/otel/trace"
 )
 
+// handleError records an error on the span and marks it failed, so it shows up
+// in the Sematext Tracing App's error views.
 func handleError(span trace.Span, err error) error {
     if err != nil {
         span.RecordError(err)
@@ -623,65 +950,117 @@ func handleError(span trace.Span, err error) error {
     return err
 }
 
-// Usage
-if err := someOperation(); err != nil {
-    return handleError(span, err)
+// Usage inside an instrumented function:
+func doWork(ctx context.Context) error {
+    ctx, span := otel.Tracer("service").Start(ctx, "do-work")
+    defer span.End()
+
+    if err := someOperation(ctx); err != nil {
+        return handleError(span, err)
+    }
+    return nil
 }
 ```
 
 ### Span Attributes
 
 ```go
-// Use semantic conventions when possible
-span.SetAttributes(
-    semconv.HTTPMethod(r.Method),
-    semconv.HTTPURL(r.URL.String()),
-    semconv.HTTPStatusCode(200),
-    semconv.UserID("12345"),
+import (
+    "net/http"
+
+    "go.opentelemetry.io/otel/attribute"
+    semconv "go.opentelemetry.io/otel/semconv/v1.27.0"
+    "go.opentelemetry.io/otel/trace"
 )
 
-// Custom attributes
-span.SetAttributes(
-    attribute.String("business.operation", "user-registration"),
-    attribute.Int("batch.size", 100),
-    attribute.Bool("feature.enabled", true),
-)
+func setSpanAttributes(span trace.Span, r *http.Request) {
+    // Use semantic conventions when possible. Names changed in the HTTP
+    // conventions v1.21 -> v1.27 (http.method became http.request.method,
+    // http.url became url.full, and so on), so pin one semconv version and
+    // use the helpers from it rather than hand-writing attribute keys.
+    span.SetAttributes(
+        semconv.HTTPRequestMethodKey.String(r.Method),
+        semconv.URLFull(r.URL.String()),
+        semconv.HTTPResponseStatusCode(200),
+    )
+
+    // Attributes with no semantic convention: use your own namespaced keys.
+    span.SetAttributes(
+        attribute.String("app.user.id", "12345"),
+        attribute.String("business.operation", "user-registration"),
+        attribute.Int("batch.size", 100),
+        attribute.Bool("feature.enabled", true),
+    )
+}
 ```
+
+> Instrumentation libraries such as `otelgin`, `otelecho` and `otelhttp` already
+> set the HTTP semantic-convention attributes for you. Add these manually only
+> when you create spans yourself.
 
 ## Troubleshooting
 
 ### Debug Configuration
 
+Print spans to stdout instead of shipping them, to confirm instrumentation works
+before involving the network:
+
+```bash
+go get go.opentelemetry.io/otel/exporters/stdout/stdouttrace
+```
+
 ```go
+package main
+
 import (
-    "go.opentelemetry.io/otel/sdk/trace"
+    "log"
+
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
+    "go.opentelemetry.io/otel/sdk/resource"
+    sdktrace "go.opentelemetry.io/otel/sdk/trace"
 )
 
-func initDebugTracer() {
-    // Add console exporter for debugging
+func initDebugTracer(res *resource.Resource) {
     consoleExporter, err := stdouttrace.New(
         stdouttrace.WithPrettyPrint(),
     )
     if err != nil {
         log.Fatal(err)
     }
-    
-    tracerProvider := sdk.NewTracerProvider(
-        sdk.WithSyncer(consoleExporter), // Use Syncer for immediate output
-        sdk.WithResource(res),
+
+    tracerProvider := sdktrace.NewTracerProvider(
+        // WithSyncer exports immediately instead of batching — useful for
+        // debugging, but do not use it in production.
+        sdktrace.WithSyncer(consoleExporter),
+        sdktrace.WithResource(res),
     )
-    
+
     otel.SetTracerProvider(tracerProvider)
 }
+```
+
+The same thing without code changes:
+
+```bash
+export OTEL_TRACES_EXPORTER=console
 ```
 
 ### Verification
 
 ```go
+import (
+    "context"
+    "fmt"
+
+    "go.opentelemetry.io/otel"
+    "go.opentelemetry.io/otel/attribute"
+)
+
 func testTracing() {
     tracer := otel.Tracer("test-service")
-    
-    ctx, span := tracer.Start(context.Background(), "test-span")
+
+    _, span := tracer.Start(context.Background(), "test-span")
     defer span.End()
     
     span.SetAttributes(
@@ -699,6 +1078,7 @@ func testTracing() {
 - [Explore Traces](/docs/tracing/reports/explorer/)
 - [Set Up Alerts](/docs/tracing/alerts/creating-alerts/)
 - [Other SDK Languages](/docs/tracing/sdks/)
+- [Runnable Go examples](https://github.com/sematext/sematext-otel-onboarding/tree/main/go) — SDK, compile-time and eBPF, with Docker Compose
 
 ## Related Documentation
 
