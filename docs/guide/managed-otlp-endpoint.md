@@ -36,13 +36,23 @@ Default to HTTP unless you have a specific reason for gRPC (lower per-payload ov
 
 ## Authentication
 
-Sematext uses a custom header `X-API-TOKEN=<token>` instead of the standard `Authorization: Bearer …` shown in many generic OpenTelemetry examples on the web. The OpenTelemetry SDKs let you pass arbitrary headers via the per-signal headers environment variables, which is the recommended path — works uniformly across all language SDKs.
+The managed OTLP endpoint accepts your App token in either of two headers. `X-API-TOKEN` is the recommended form and is what the rest of this page uses. The OpenTelemetry SDKs let you pass arbitrary headers via the per-signal headers environment variables, which is the recommended path — works uniformly across all language SDKs.
 
 ```bash
 export OTEL_EXPORTER_OTLP_TRACES_HEADERS=X-API-TOKEN=<tracing-app-token>
 export OTEL_EXPORTER_OTLP_LOGS_HEADERS=X-API-TOKEN=<logs-app-token>
 export OTEL_EXPORTER_OTLP_METRICS_HEADERS=X-API-TOKEN=<monitoring-app-token>
 ```
+
+The standard `Authorization: Bearer <token>` header works too, which is useful when a tool or SDK only exposes a generic bearer-token setting:
+
+```bash
+export OTEL_EXPORTER_OTLP_TRACES_HEADERS=Authorization=Bearer%20<tracing-app-token>
+```
+
+Header values in `OTEL_EXPORTER_OTLP_*_HEADERS` are URL-decoded, so `%20` is the safest way to write the space after `Bearer` — it survives shells and config files that would otherwise split on whitespace.
+
+The `Bearer ` prefix itself is required and case-sensitive: a raw token in `Authorization`, or a lowercase `bearer`, is ignored and the request is rejected as unauthenticated. If both headers are present, `X-API-TOKEN` takes precedence.
 
 ## One token per App
 
@@ -93,7 +103,7 @@ For existing Apps, the token is available in: Sematext Cloud → open the App �
 
 ## Browser-side OpenTelemetry
 
-The managed OTLP endpoint is CORS-enabled, so browser-side OpenTelemetry can POST spans to it directly — no backend proxy required. Point the OTLP exporter at the receiver for your region and authenticate with your Tracing App token.
+The managed OTLP endpoint is CORS-enabled, so browser-side OpenTelemetry can POST spans to it directly — no backend proxy required. Point the OTLP exporter at the receiver for your region and authenticate with your Tracing App token. Both `X-API-TOKEN` and `Authorization` are on the CORS allow-list, so either authentication header works from the browser.
 
 See the [Browser JavaScript SDK guide](/docs/tracing/sdks/javascript-browser/) for the full setup.
 
@@ -103,7 +113,7 @@ See the [Browser JavaScript SDK guide](/docs/tracing/sdks/javascript-browser/) f
 |---|---|
 | No data within ~60 seconds | Token-region mismatch (US token sent to EU endpoint or vice versa), or the wrong endpoint URL paired with the wrong protocol setting |
 | `Connection refused` on the endpoint | `OTEL_EXPORTER_OTLP_PROTOCOL=grpc` with the HTTP endpoint URL, or the opposite — pair must match |
-| `401` / `403` from the receiver | Header is being sent as `Authorization: Bearer …` instead of `X-API-TOKEN=…`. Use the `OTEL_EXPORTER_OTLP_*_HEADERS` env vars rather than hand-coding the exporter. |
+| `401` / `403` from the receiver | No usable token reached the receiver. Check that the token belongs to the App type for that signal (a Logs token will not authenticate traces), and that the header name is `X-API-TOKEN` or `Authorization: Bearer <token>` — a raw token in `Authorization`, or a lowercase `bearer`, is ignored. Use the `OTEL_EXPORTER_OTLP_*_HEADERS` env vars rather than hand-coding the exporter. |
 | Traces ship but metrics don't (or vice versa) | The signal-specific header isn't set, or the SDK's auto-instrumentation doesn't enable that signal by default — many language SDKs require a flag to opt into metrics |
 
 ## Related
