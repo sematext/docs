@@ -121,6 +121,14 @@ _If you're new here, read below for a high-level overview of Sematext._
 
     [:octicons-arrow-right-24: Learn more](/docs/fleet)
 
+-   :fontawesome-solid-robot:{ .lg .middle .aiam-icon } __AI Agent Watch__
+
+    ---
+
+    Detect and alert on risky AI agent activity across your infrastructure
+
+    [:octicons-arrow-right-24: Learn more](/docs/ai-agent-watch)
+
 </div>
 
 ## Latest Updates
