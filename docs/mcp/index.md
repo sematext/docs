@@ -68,7 +68,7 @@ This is a brief overview of what the specific tools that the MCP Server provides
 | `query_traces` | Searches traces by service, duration, status, and attributes |
 | `get_trace` | Full span tree for a single trace |
 | `get_traces_overview` | Tracing health snapshot with error rate and latency percentiles |
-
+| `get_network_map` | Live network topology: network connections between services/servers/pods/containers/processes, with per-connection throughput, TCP round-trip latency, retransmits, error rate and HTTP status codes |
 
 
 ## Setting up the MCP Server
