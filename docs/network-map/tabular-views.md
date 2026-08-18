@@ -11,14 +11,14 @@ All data is neatly tabulated, easily filterable and easily sortable.
 
 For auto-detected services you can see where each service is deployed, and its key metrics, including the number of network connections.
 
-[Connections by Service](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-services.png)
+![Connections by Service](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-services.png)
 
 
 ## Hosts
 
 The hosts view shows what you might expect, plus the number of network connections and the number of discovered services.
 
-[Connections by Host](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-hosts.png)
+![Connections by Host](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-hosts.png)
 
 
 ## Kubernetes
@@ -27,7 +27,7 @@ Each Kubernetes cluster is listed separately, allowing you to drill into each cl
 
 Kubernetes screen additionally has dedicated views for clusters, pods, and underlying containers.
 
-[Connections by Kubernetes Cluster](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-kubernetes.png)
+![Connections by Kubernetes Cluster](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-kubernetes.png)
 
 
 ## Connections
@@ -38,11 +38,11 @@ For each source-destination network pair you can see the network protocol used, 
 
 The Connections screen additionally includes all network connection sources and destinations, as well as top sources and top destinations, letting you easily find out which services generate or receive the most network traffic.
 
-[Connections by Source and Destination](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-connections-full.png)
+![Connections by Source and Destination](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-connections-full.png)
 
 
 ## Details & Cross-Connect
 
 Each row in each view can be clicked to open the side panel with additional details. The details vary depending on the type of entity. From the side panel you can click on “View on Map” to zoom into that item on the Map.
 
-[Connection Details](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-details.png)
+![Connection Details](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-details.png)
