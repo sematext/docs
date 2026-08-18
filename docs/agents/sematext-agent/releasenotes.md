@@ -39,6 +39,26 @@ NULL
 
 -->
 
+## Version 4.5.0
+
+Date: August 14, 2026
+
+### New Features
+
+- **AI Agent Watch**: This release introduces AI Agent Watch, visibility into the AI agents running on your infrastructure. Sematext Agent continuously discovers AI agents on the hosts it monitors, with no configuration and no changes to the agents themselves, and reports what they do: when a session starts and ends, which tools and shell commands they execute, which files they read, write, or rename, and which hosts they connect to. Outbound data is inspected on the host before it is encrypted, so credentials, keys, and personal data leaving through an HTTPS request are detected without a proxy in front of your agents. Every match is one-way encrypted on the host, so Sematext Cloud only ever receives the masked value. Collection happens in the kernel through eBPF, and every event is attributed to the host, cluster, namespace, and pod it came from. To get started, upgrade the Sematext Agent to 4.5.0 and enable AI Agent Watch for your Infra App in Sematext Cloud. AI Agent Watch requires a Linux kernel of 5.8 or newer. See the [AI Agent Watch documentation](/docs/ai-agent-watch/) for details.
+
+### Improvements
+
+- **Network Map Protocol Classification**: Protocol detection now stops after a bounded number of attempts per connection instead of re-running on every syscall for the life of the connection, lowering CPU overhead on hosts with long-lived TLS, Redis, MySQL, and Kafka connections.
+
+### Bug Fixes
+
+- Network Map no longer attributes live traffic to a closed connection's peer after the operating system reuses a file descriptor, which could show OpenSearch writes against a closed MySQL peer.
+- Network Map now captures connections that reach the established state before the connect call returns. Same-node and loopback connections, such as an Nginx upstream dial to a ClusterIP on the same node, were missing from the map entirely.
+- Enabling Network Map from Sematext Cloud no longer fails silently on the host when capture cannot start. The failure is now reported.
+- A monitored service that restarted could stay unmonitored until Sematext Agent itself was restarted. Stale process entries are now reconciled periodically, so the restarted service is rediscovered.
+- Resolved a race where the Monitoring Agent failed to attach to a service that was still starting up, for example OpenSearch binding its transport port before its HTTP port. The attach is now retried with backoff instead of latching as a permanent failure.
+
 ## Version 4.4.1
 
 Date: July 21, 2026

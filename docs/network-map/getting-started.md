@@ -11,7 +11,7 @@ Network Map requires two things:
 
 **[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.4.0 or later**.
 
-For best results, your hosts should be running **Linux kernel 5.8 or later**. Older kernels (4.15+) work but with some limitations. Check your kernel version with `uname -r`.
+For best results, your hosts should be running **Linux kernel 5.8 or later**. Older kernels work but with some limitations. Check your kernel version with `uname -r`.
 
 ## Enabling Network Map
 

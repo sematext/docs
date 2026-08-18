@@ -11,7 +11,15 @@ Network Map requires:
 
 **[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on your hosts — **version 4.4.0 or later**. The agent collects the eBPF-based network connection data that powers Network Map. Check each host's agent version in [Fleet](/docs/fleet/).
 
-**Linux kernel 5.8 or later** for optimal performance. Network Map uses eBPF with ring buffers, which requires kernel 5.8+. Older kernels (4.15+) work but with reduced performance and some limitations. Check your kernel version with `uname -r`.
+**Linux kernel 5.8 or later** for optimal performance. Network Map uses eBPF ring buffers, which require kernel 5.8+. Older kernels work but with reduced performance and some limitations. Check your kernel version with `uname -r`.
+
+Your kernel must also expose BTF, which is what lets the agent's eBPF programs run across different kernel versions. Every current distribution kernel provides it, but some minimal and appliance kernels do not. To check:
+
+```
+ls /sys/kernel/btf/vmlinux
+```
+
+If that file is missing, the kernel was built without BTF and Network Map cannot collect data.
 
 ## Outdated Agents Warning
 
