@@ -114,6 +114,7 @@ nav:
       - Filtering & Search: network-map/filtering-search.md
       - Thresholds: network-map/thresholds.md
       - Supported Services: network-map/supported-services.md
+      - Tabular Views: network-map/tabular-views.md
       - Troubleshooting: network-map/troubleshooting.md
     - Service Map: service-map/index.md
     - Tracing:
