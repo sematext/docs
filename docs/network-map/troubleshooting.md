@@ -9,7 +9,7 @@ Network Map requires:
 
 **An Infra App** in your Sematext Cloud account. The Infra App collects infrastructure metrics and provides the foundation for Network Map's topology visualization. If you don't have one, create one at [Sematext Cloud US](https://apps.sematext.com/ui/infrastructure/create) or [Sematext Cloud EU](https://apps.eu.sematext.com/ui/infrastructure/create).
 
-**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on your hosts — **version 4.4.0 or later**. The agent collects the eBPF-based network connection data that powers Network Map. Check each host's agent version in [Fleet](/docs/fleet/).
+**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on your hosts — **version 4.4.1 or later**. The agent collects the eBPF-based network connection data that powers Network Map. Check each host's agent version in [Fleet](/docs/fleet/).
 
 **Linux kernel 5.8 or later** for optimal performance. Network Map uses eBPF ring buffers, which require kernel 5.8+. Older kernels work but with reduced performance and some limitations. Check your kernel version with `uname -r`.
 
