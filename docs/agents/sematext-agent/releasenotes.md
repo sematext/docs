@@ -39,6 +39,17 @@ NULL
 
 -->
 
+## Version 4.5.1
+
+Date: August 27, 2026
+
+### Bug Fixes
+
+- An AI agent is now identified by the hostname it presents in its own TLS handshake rather than by a reverse lookup of the destination address. Shared cloud frontends serve many hostnames from the same addresses, so an agent talking to one LLM provider could be labeled with another provider's domain.
+- AI agents that write their TLS handshake with vectored I/O, some Java HTTP clients among them, are now detected. They previously produced no hostname signal at all and stayed invisible.
+- Sensitive data scanning now covers requests that write their headers and body in separate calls, as Python's `http.client` does. The body was previously dropped as an unrecognized message.
+- Traffic totals for the window in progress are now shipped when Sematext Agent stops, instead of being discarded. An ending agent session also flushes its own rollup only, rather than every session being tracked on the host.
+
 ## Version 4.5.0
 
 Date: August 14, 2026
