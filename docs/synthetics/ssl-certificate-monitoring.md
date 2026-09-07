@@ -6,7 +6,7 @@ Issues with SSL/TLS certificates doesn't only cause downtime of APIs and website
 * **Certificate Validation** - Validates the SSL certificates of the API/websites in every run
 * **Certificate Expiry** - Checks for the expiration of the certificates every day and alerts you 28, 14, 7 and 3 days before the expiry
 * **Certificate Change** - Checks for certificate change every 10 minutes and alerts you on detecting any changes, with a detailed change report
-* **Certificate Authority** - Checks Root/Intermediate certificate authorities and alerts you if they don't match with the expected authority
+* **Certificate Check** - Checks the leaf, intermediate, and root certificates and alerts you if they don't match with the expected value
 
 Sematext Synthetics alerts you on the failure of these checks via the monitor's configured [alert notification hooks](/docs/alerts/alert-notifications). Apart from these checks, Synthetics also provides an SSL certificate report, with details of all the certificates in the chain.
 
@@ -52,9 +52,9 @@ The monitor performs the expiry check for all the certificates in the chains - l
 
 ![Certificate expiry](/docs/images/synthetics/cert-expiry.png)
 
-## Certificate Authority
+## Certificate Check
 
-Sematext Synthetics checks the certificate authority for both Root or Intermediate level and alerts you via the monitor's configured [alert notification hooks](/docs/alerts/alert-notifications) if the conditions are not met.
+Sematext Synthetics checks the common name of the leaf, intermediate, or root certificate and alerts you via the monitor's configured [alert notification hooks](/docs/alerts/alert-notifications) if the conditions are not met.
 
 The alert condition is supported for both HTTP and Browser monitors and can be set from the **Advanced Settings** -> **Configure Alerts** -> **Conditions** tab
 
@@ -71,6 +71,10 @@ Visiting a http:// instead of a https:// website, or a https:// website that doe
 In modern, dynamic application environments, the SSL certificates are managed by a certificate manager, which can update the certificates automatically. This could sometimes cause issues like missing `hostname` in certificates or if the client time is not correct, certificate validation will fail. 
 
 Sematext Synthetics checks for the certificate change every 10 minutes and notifies you via the monitor's configured [alert notification hooks](/docs/alerts/alert-notifications) about the change. The monitor detects the change based on the fingerprint of the certificate. The change alert contains a detailed change report.
+
+The alert identifies which certificate in the chain changed - leaf, intermediate, or root - which of its fields changed, and the values before and after. This is most useful on a routine renewal, where the common name and the issuer stay the same and only the fingerprint and the validity dates move, so the certificate can look unchanged at a glance. When a chain contains more than one intermediate certificate, each one is numbered so you can tell them apart.
+
+Only the levels present in both the previous and the current chain are compared. A server can legitimately present a different, equally valid certificate path from one run to the next, so a difference in chain length on its own is not reported as a change.
 
 **Certificate Change Alert**
 ![Certificate change alert](/docs/images/synthetics/cert-change-alert.png)
