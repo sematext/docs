@@ -64,6 +64,42 @@ sematext-cloud: https://mcp.sematext.com/mcp (HTTP) - ✔ Connected
 If you see any errors, please check that you have provided the correct API key.
 
 
+### Claude Web/Desktop
+
+Claude uses the same UI for both its Web and Desktop apps, so the installation is the same.
+
+First, open the **Settings** screen by clicking your name in the bottom left and accessing it via the menu there.
+
+![Settings screen](/docs/images/mcp/claude-web-setup/settings.png)
+
+
+Next, click on **Connectors** at the bottom left sidebar. The Connectors screen will now show, with an **Add** in the top right. Click that, then then click **Add custom connector**.
+
+![Connectors screen](/docs/images/mcp/claude-web-setup/connectors.png)
+
+
+Fill in the basic info, specifying the MCP Server name and the URL depending on your region:
+- For US: `https://mcp.sematext.com/mcp` 
+- For EU: `https://mcp.eu.sematext.com/mcp`
+
+![Connector basic information](/docs/images/mcp/claude-web-setup/basic-info.png)
+
+
+When prompted for the authentication type, select `None`, since you will use your Sematext Cloud API key to authenticate.
+
+![Authentication type](/docs/images/mcp/claude-web-setup/auth-type.png)
+
+
+Copy your API key from your Sematext Cloud account, which you can find as described at the top of this page. The next step will ask for you to specify an `authorization` header, and its value will be `apiKey YOUR_API_KEY_HERE`.
+
+![Authorization header](/docs/images/mcp/claude-web-setup/auth-header.png)
+
+
+Click `Add` at the bottom of the connector creation screen and you should be greeted by the list of the MCP Server's tools. The setup is done!
+
+![Setup complete](/docs/images/mcp/claude-web-setup/done.png)
+
+
 ### OpenCode
 
 Installing the Sematext MCP Server for OpenCode is simple, but requires a bit of tinkering in the OpenCode config file. 
