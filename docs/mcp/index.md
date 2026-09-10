@@ -30,6 +30,7 @@ Currently, the MCP Server gives your AI agents access to the following features:
 - Querying metrics from your various [Monitoring Apps](../monitoring/index.md) to preemptively detect issues or troubleshoot live ones
 - Viewing the [Alerts](../alerts/index.md) you have configured and which ones fired, letting you quickly correlate between different App types
 - Browsing your Traces - both the general overview and the individual Traces - to check exactly which services cause errors and under which conditions
+- Checking your [Synthetics](../synthetics/index.md) monitors to see which ones are failing, digging into individual check runs, and comparing availability across locations
 
 
 ### Usage examples
@@ -46,6 +47,9 @@ Since the tools which provide these features come with detailed descriptions for
 - *I want to understand our alert health. Which of our alert rules have actually fired recently? Are there rules that are configured but never trigger (maybe the thresholds are too loose)? And are there rules firing constantly that we've become numb to?*
 - *I think someone disabled some alerts for maintenance last week and forgot to turn them back on. Can you check if we have any disabled alert rules? Especially the high-priority ones, those should never stay off.*
 - *We deployed at 14:00 UTC today. Is the error rate worse since then compared to the hour before the deploy?*
+- *Are any of our Synthetics monitors failing right now? If so, when did they start failing and from which locations?*
+- *Our checkout monitor has been flaky. Can you show me the failed runs from the last 7 days and what the actual errors were?*
+- *Is our API slow everywhere or just in one region? Break the availability down by location for the last week.*
 
 
 
@@ -69,6 +73,10 @@ This is a brief overview of what the specific tools that the MCP Server provides
 | `get_trace` | Full span tree for a single trace |
 | `get_traces_overview` | Tracing health snapshot with error rate and latency percentiles |
 | `get_network_map` | Live network topology: network connections between services/servers/pods/containers/processes, with per-connection throughput, TCP round-trip latency, retransmits, error rate and HTTP status codes |
+| `list_synthetics_monitors` | Lists Synthetics monitors with their current status and availability over 24h, 7d and 30d |
+| `list_synthetics_failed_runs` | Lists failed monitor runs, either account-wide or for a single monitor |
+| `get_synthetics_run` | Full detail for a single monitor run, including per-condition results, errors and screenshots |
+| `get_synthetics_availability` | Availability for a single monitor, broken down by location |
 
 
 ## Setting up the MCP Server
