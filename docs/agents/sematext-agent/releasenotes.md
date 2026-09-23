@@ -39,6 +39,24 @@ NULL
 
 -->
 
+## Version 4.5.2
+
+Date: September 22, 2026
+
+### Improvements
+
+- **AI Agent Watch PII Scanning**: Scanning now runs over the conversation itself rather than the whole request body.
+- **AI Agent Watch PII Findings**: A finding now shows the part of the value its rule matched, with masked context either side, instead of a row of stars. The value is still masked inside the Sematext Agent, on the host.
+- **AI Agent Watch CPU Overhead**: The TLS resolution cache is keyed on the binary instead of the process, so a binary is scanned once rather than once per launch. Ten sequential runs of one Go binary went from ten scans to one.
+- **AI Agent Watch Memory Use**: TLS capture queues now carry a byte budget alongside their slot count, lowering the worst case from several GB of retained copies to 128 MiB. WebSocket and HTTP/2 reassembly buffers are bounded as well.
+
+### Bug Fixes
+
+- AI agents built against recent BoringSSL are now detected, and the library is no longer fingerprinted by details that shift between its upstream builds. They previously produced no events at all, neither LLM calls nor PII findings.
+- Request bodies larger than one TLS record are now read. A 40KB request arrives as three separate writes and only the first carries a start line, so everything above roughly 16KB was dropped and went unscanned.
+- Agents running in several pods of the same image are no longer missed. Each container sees the image through an overlay mount of its own, so one file looked like several and the duplicate captures broke request reassembly.
+- Network Map no longer ships host inventory records for accounts that have it disabled. One of the two emission paths skipped the account check, sending a record per host per minute for the receiver to reject.
+
 ## Version 4.5.1
 
 Date: August 27, 2026
