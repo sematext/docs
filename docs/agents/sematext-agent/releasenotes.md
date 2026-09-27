@@ -39,6 +39,14 @@ NULL
 
 -->
 
+## Version 4.5.3
+
+Date: September 25, 2026
+
+### Bug Fixes
+
+- Sematext Agent 4.5.2 did not start on Linux hosts with glibc older than 2.34, such as Ubuntu 16.04 and CentOS 7, failing with `version 'GLIBC_2.32' not found`. The Linux binaries are now built against glibc 2.17. The Docker image and earlier versions were not affected.
+
 ## Version 4.5.2
 
 Date: September 22, 2026
