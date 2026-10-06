@@ -395,6 +395,7 @@ nav:
             - Operator: agents/sematext-agent/kubernetes/operator.md
           - Ansible: agents/sematext-agent/ansible.md
           - Permission requirements: agents/sematext-agent/permission-requirements.md
+        - Configuration: agents/sematext-agent/configuration.md
         - Starting/stopping: agents/sematext-agent/starting-stopping.md
         - Shipping Custom Logs: agents/sematext-agent/custom-logs.md
         - OS Metrics: agents/sematext-agent/os-metrics.md
