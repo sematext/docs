@@ -1,7 +1,7 @@
 title: Configuring Process Monitoring
 description: Process Monitoring is enabled by default in the [Sematext Agent configuration.
 
-Process Monitoring is enabled by default in the [Sematext Agent configuration](/docs/containers/configuration/). You can *disable* process metrics/metadata collection by setting the following properties:
+Process Monitoring is enabled by default in the [Sematext Agent configuration](/docs/agents/sematext-agent/configuration/). You can *disable* process metrics/metadata collection by setting the following properties:
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
  <div class="mdl-tabs__tab-bar">
