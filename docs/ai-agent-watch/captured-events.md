@@ -33,6 +33,6 @@ Every event carries, among others:
 | `file_access_denied` | A governance policy denied file access based on a path or extension. |
 | `net_denied` | A governance policy blocked network activity based on an IP, port, CIDR, or destination-host match. |
 
-`exec_failed` and `file_open_failed` report denials caused by existing OS permissions or security policies. `exec_denied`, `file_access_denied`, and `net_denied` report AI Agent Watch Governance enforcement. See [Governance](governance.md) for policy configuration and notifications.
+`exec_failed` and `file_open_failed` report denials caused by existing OS permissions or security policies. `exec_denied`, `file_access_denied`, and `net_denied` report AI Agent Watch Governance enforcement. See [Governance](governance/index.md) for policy configuration and notifications.
 
 Governance events record the matched condition for the blocked operation. Depending on the event type, they also carry the binary, file path, or destination IP and port.

@@ -3,7 +3,7 @@ description: Block AI agent operations that match governance policies and report
 
 AI Agent Watch Governance lets you define which commands, files, and network destinations your AI agents can use. Sematext Agent enforces these policies on the host and reports each matching action as a governance event. You can review those events in the **Governance** report and use [alert rules](/docs/ai-agent-watch/alert-rules/) to assign priorities and send notifications.
 
-Governance policies control what happens on the host. Alert rules control how the resulting events are [scored](risk-scores.md) and whether you are notified. Enforcement does not require notifications to be enabled.
+Governance policies control what happens on the host. Alert rules control how the resulting events are [scored](../risk-scores.md) and whether you are notified. Enforcement does not require notifications to be enabled.
 
 ## How enforcement works
 
@@ -11,9 +11,9 @@ When an operation matches an enabled governance policy's conditions and scope, S
 
 For example, a File Access policy can deny opening a credential file, and a Tool Execution policy can deny `git push --force` while allowing other Git commands. A denied operation returns an error to the agent. The exact error depends on the operation: file access can return `EPERM`, while a blocked command can fail with exit code 126.
 
-Governance requires **Sematext Agent 4.6 or later** and **Linux kernel 5.17 or later**, with BPF-LSM enabled. See [Governance Compatibility](governance-compatibility.md) for compatibility checks and configuration.
+Governance requires **Sematext Agent 4.6 or later** and **Linux kernel 5.17 or later**, with BPF-LSM enabled. See [Governance Compatibility](compatibility.md) for compatibility checks and configuration.
 
-See [Governance Policies](governance-policies.md) to configure conditions, scope, and notifications.
+See [Governance Policies](policies.md) to configure conditions, scope, and notifications.
 
 ## Governance report
 

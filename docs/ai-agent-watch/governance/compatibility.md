@@ -99,7 +99,7 @@ The active list should now include `bpf`. Ubuntu's [AppArmor documentation](http
 
 ## Verify enforcement
 
-After checking host compatibility, enable a narrowly scoped [governance policy](governance-policies.md#create-a-governance-policy) on a test host. Use a harmless test target, such as a disposable file denied by an exact-path File Access policy.
+After checking host compatibility, enable a narrowly scoped [governance policy](policies.md#create-a-governance-policy) on a test host. Use a harmless test target, such as a disposable file denied by an exact-path File Access policy.
 
 Allow up to five minutes for the policy change to take effect. Have a monitored AI agent attempt the matching operation, then check the **Governance** report for `file_access_denied` for the matching blocked operation. Check the affected host in **Settings → Governance Compatibility** as well.
 

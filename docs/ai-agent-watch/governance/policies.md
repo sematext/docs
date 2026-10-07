@@ -1,7 +1,7 @@
 title: Governance Policies
 description: Configure AI Agent Watch enforcement conditions, scope, default policies, and notifications
 
-Governance policies define which operations Sematext Agent blocks and which agents and hosts are affected. Configure them under **AI Agent Watch → Event Alerting → Governance Policies**. See [Governance](governance.md) for enforcement behavior and [Governance Compatibility](governance-compatibility.md) for host requirements.
+Governance policies define which operations Sematext Agent blocks and which agents and hosts are affected. Configure them under **AI Agent Watch → Event Alerting → Governance Policies**. See [Governance](index.md) for enforcement behavior and [Governance Compatibility](compatibility.md) for host requirements.
 
 ## What you can control
 
@@ -22,7 +22,7 @@ The available conditions depend on the policy type: **Tool Execution**, **File A
 
 Conditions define **which operation to block**. Scope defines **which agents or hosts the policy applies to**. All condition rows must match (AND logic). Comma-separated values within an entry match any listed value (OR logic).
 
-Conditions match the values you specify. For example, an Args condition containing `token` blocks any command line containing that text. A Destination Host condition blocks matching TLS hostnames; it does not use your [Trusted Hosts](trusted-agents-hosts.md#trusted-hosts) list.
+Conditions match the values you specify. For example, an Args condition containing `token` blocks any command line containing that text. A Destination Host condition blocks matching TLS hostnames; it does not use your [Trusted Hosts](../trusted-agents-hosts.md#trusted-hosts) list.
 
 ## Scope a policy
 

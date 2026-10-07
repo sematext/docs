@@ -111,4 +111,4 @@ Enforcement activity from enabled governance policies.
 
 [TODO SCREENSHOT OF GOVERNANCE REPORT]
 
-Sematext Agent reports blocked operations as governance events. See [Governance Policies](governance-policies.md) for policy configuration and alerting, and [Governance Compatibility](governance-compatibility.md) for host requirements.
+Sematext Agent reports blocked operations as governance events. See [Governance Policies](governance/policies.md) for policy configuration and alerting, and [Governance Compatibility](governance/compatibility.md) for host requirements.

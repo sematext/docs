@@ -154,13 +154,14 @@ nav:
       - Getting Started: ai-agent-watch/getting-started.md
       - Reports: ai-agent-watch/reports.md
       - Captured Events: ai-agent-watch/captured-events.md
-      - Governance: ai-agent-watch/governance.md
-      - Governance Policies: ai-agent-watch/governance-policies.md
-      - Governance Compatibility: ai-agent-watch/governance-compatibility.md
       - Trusted Agents & Hosts: ai-agent-watch/trusted-agents-hosts.md
       - PII Categories: ai-agent-watch/pii-categories.md
       - Alert Rules: ai-agent-watch/alert-rules.md
       - Risk Scores & Priorities: ai-agent-watch/risk-scores.md
+      - Governance:
+        - Overview: ai-agent-watch/governance/index.md
+        - Policies: ai-agent-watch/governance/policies.md
+        - Compatibility: ai-agent-watch/governance/compatibility.md
       - LLM Cost Tracking: ai-agent-watch/cost-tracking-governance.md
     - Experience:
       - Overview: experience/index.md

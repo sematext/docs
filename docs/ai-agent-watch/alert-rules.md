@@ -45,4 +45,4 @@ Enabling AI Agent Watch seeds your account with a set of default rules covering 
 
 ## Governance events
 
-Alert rules can match `exec_denied`, `file_access_denied`, and `net_denied` events emitted when a governance policy blocks an operation. Governance policies enforce restrictions on the host; alert rules assign event priorities and send notifications. Disabling notifications does not disable enforcement. See [Governance Policies](governance-policies.md#get-notified-when-a-policy-matches) for configuration.
+Alert rules can match `exec_denied`, `file_access_denied`, and `net_denied` events emitted when a governance policy blocks an operation. Governance policies enforce restrictions on the host; alert rules assign event priorities and send notifications. Disabling notifications does not disable enforcement. See [Governance Policies](governance/policies.md#get-notified-when-a-policy-matches) for configuration.

@@ -3,7 +3,7 @@ description: Upcoming LLM cost tracking for AI Agent Watch
 
 ## Governance
 
-Governance is available. Use [governance policies](governance.md) to block operations that match your conditions and scope, review enforcement events, and configure notifications. See [Governance Compatibility](governance-compatibility.md) for host compatibility and BPF-LSM configuration.
+Governance is available. Use [governance policies](governance/index.md) to block operations that match your conditions and scope, review enforcement events, and configure notifications. See [Governance Compatibility](governance/compatibility.md) for host compatibility and BPF-LSM configuration.
 
 ## LLM Cost Tracking
 
