@@ -22,9 +22,7 @@ The available conditions depend on the policy type: **Tool Execution**, **File A
 
 Conditions define **which operation to block**. Scope defines **which agents or hosts the policy applies to**. All condition rows must match (AND logic). Comma-separated values within an entry match any listed value (OR logic).
 
-For the condition fields and supported matching behavior, see the [Sematext Agent enforcement reference](https://github.com/sematext/agent/blob/master/docs/enforcement.md#what-you-can-match-on-conditions).
-
-These are matches against the values you configure. For example, an Args condition containing `token` matches that string; it does not establish that the command contains a valid credential. A Destination Host condition matches TLS hostname/SNI, rather than every connection to an IP associated with that domain. It does not automatically use your [trusted hosts](/docs/ai-agent-watch/trusted-agents-hosts/#trusted-hosts) list.
+Conditions match the values you specify. For example, an Args condition containing `token` blocks any command line containing that text. A Destination Host condition blocks matching TLS hostnames; it does not use your [Trusted Hosts](trusted-agents-hosts.md#trusted-hosts) list.
 
 ## Scope a policy
 
@@ -47,7 +45,10 @@ With no scope entries, the policy applies to every tracked agent in the account.
 2. Click **Add Policy** and choose **Tool Execution**, **File Access**, or **Network Activity**.
 3. Enter a policy name and add at least one condition defining the operation to block.
 4. Set the **Scope** to limit which agents and hosts the policy applies to. Choose the fields and operators from the [scope table](#scope-a-policy). With no scope, the policy applies to every tracked agent in the account.
-5. Save the policy and enable it when you are ready to enforce it.
+5. Optionally, in the **Alert Rules** section, click **Create Alert Rule** to create a rule for this policy's enforcement event type. The alert rule assigns a priority to matching events and can send notifications when enabled with notifications and recipients configured. It can also match events from other policies with the same event type. See [Get notified when a policy matches](#get-notified-when-a-policy-matches) for details.
+6. Click **Save Policy** and enable the policy when you are ready to enforce it.
+
+Blocked operations are recorded as events even if you do not create an alert rule. You can review existing rules in the policy editor and manage them later from the **Alert Rules** tab.
 
 Policy changes can take up to five minutes to take effect. Start with a specific host or workload, check the resulting events, and expand the scope after verifying the policy matches the intended activity.
 
@@ -80,7 +81,7 @@ Each row below is a separate policy, so you can enable or customize one without 
 
 The credential-file examples cover only the listed suffixes. Add policies for other sensitive paths or extensions. The command examples match substrings, so they can also match legitimate commands containing those strings. The private-network examples can block connections to internal APIs and databases. Replace the sample domain suffix with destinations you want to restrict.
 
-## Worked examples
+## Examples of scoped policies
 
 | Policy | Conditions | Scope | Effect |
 |---|---|---|---|

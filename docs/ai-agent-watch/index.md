@@ -1,15 +1,16 @@
 title: AI Agent Watch
-description: An overview of AI Agent Watch, Sematext's monitoring solution for AI agent activity running on your hosts
+description: Monitor AI agent activity on your hosts, block operations with governance policies, and get notified about risky behavior
 
-AI agents - coding assistants, autonomous scripts, agentic workflows - increasingly run directly on your infrastructure with real permissions: they execute shell commands, read and write files, and talk to external services on your behalf. [AI Agent Watch](https://sematext.com/docs/ai-agent-watch/) gives you visibility into what those agents are actually doing on a host, so you can catch risky behavior - credential access, connections to unexpected destinations, PII leaving your systems - before it becomes an incident.
+AI agents - coding assistants, autonomous scripts, agentic workflows - increasingly run directly on your infrastructure with real permissions: they execute shell commands, read and write files, and talk to external services on your behalf. [AI Agent Watch](https://sematext.com/docs/ai-agent-watch/) gives you visibility into what those agents are actually doing on a host, so you can catch risky behavior - credential access, connections to unexpected destinations, PII leaving your systems - before it becomes an incident. With [Governance](governance.md), you can also block tool executions, file access, and network activity that match your policies.
 
-AI Agent Watch runs alongside your AI agent processes and reports on their activity: when a session starts and ends, which tools/commands it executes, which files it reads, writes, or renames, which hosts it connects to, and whether any outbound data matches a PII pattern you care about. Each event is automatically compared against your alert rules, given a priority and a risk score, and rolled up into an overall risk score for the session.
+AI Agent Watch runs alongside your AI agent processes and reports on their activity: when a session starts and ends, which tools/commands it executes, which files it reads, writes, or renames, which hosts it connects to, and whether any outbound data matches a PII pattern you care about. On [compatible hosts](governance-compatibility.md), Sematext Agent also enforces enabled [governance policies](governance-policies.md) and reports blocked operations as events. Each event is automatically compared against your alert rules, given a priority and a risk score, and rolled up into an overall risk score for the session.
 
 ![Overview](/docs/images/aiam/overview.png)
 
 ## Why use it
 
 - **See what your agents actually do.** Session start/end, shell/tool executions, file reads and writes, outbound connections - all captured as [structured events](captured-events.md).
+- **Control what your agents can do.** [Governance policies](governance-policies.md) block matching commands, access to sensitive files, and network activity. Scope policies to specific hosts, workloads, agent types, or [untrusted agents](trusted-agents-hosts.md#trusted-agents). Default policies are disabled until you enable them.
 - **Know when something looks wrong.** [Alert rules](alert-rules.md) match on event fields - event type, [trusted/untrusted](trusted-agents-hosts.md) status, destination, PII category, and more.
 - **Catch sensitive data leaving your systems.** [PII categories](pii-categories.md) scan outbound payloads for things like credentials, API keys, and personal data, and flag matches as their own event type.
 - **Separate agents and destinations you trust from ones you don't.** [Trusted agents and hosts](trusted-agents-hosts.md) let you tune alerting so a known, expected agent or destination doesn't trigger the same scrutiny as a brand-new one.
@@ -18,7 +19,8 @@ AI Agent Watch runs alongside your AI agent processes and reports on their activ
 ## How it works
 
 1. [Sematext Agent](/docs/agents/sematext-agent) running on the same host as your AI agent observes its process activity and sends events to Sematext Cloud.
-2. The event is evaluated against your account's [alert rules](alert-rules.md). If one or more rules match, the event gets tagged with a priority (Info, Medium, High, or Critical) and a risk score; if a matching rule has notifications enabled, an alert is sent.
+2. On [compatible hosts](governance-compatibility.md), enabled [governance policies](governance-policies.md) are enforced locally. Sematext Agent blocks matching operations and sends governance events to Sematext Cloud.
+3. The event is evaluated against your account's [alert rules](alert-rules.md). If one or more rules match, the event gets tagged with a priority (Info, Medium, High, or Critical) and a risk score; if a matching rule has notifications enabled, an alert is sent.
 4. When the session ends, we combine the risk scores of everything that happened during the session into a single [session risk score](risk-scores.md#session-risk-score).
 5. You review activity, sessions, and alerts in the AI Agent Watch.
 

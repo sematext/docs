@@ -1,7 +1,7 @@
 title: Governance Compatibility
 description: Check host compatibility for AI Agent Watch Governance and enable BPF-LSM on Linux
 
-Governance requires **Sematext Agent 4.6 or later** and a Linux host with BPF-LSM enabled. Enable AI Agent Watch for the host's Infra App first; see [Getting Started](/docs/ai-agent-watch/getting-started/).
+Governance requires **Sematext Agent 4.6 or later** and a Linux host with BPF-LSM enabled.
 
 ## Host requirements
 
@@ -13,7 +13,7 @@ A recent kernel alone does not establish that enforcement is available.
 
 If the requirements are not met, Sematext Agent falls back to observe-only mode. You can still review captured activity and configure alerts, but should not rely on governance policies to enforce restrictions on that host.
 
-For containers and Kubernetes workloads, check the **host or node kernel**. Installing a kernel package inside a container does not change the kernel on which it runs.
+Containers use the host's Linux kernel. For Kubernetes workloads, check the kernel version and BPF-LSM configuration on each worker node running your AI agents. Any required kernel upgrade or BPF-LSM configuration change must be made on that host or node.
 
 ## Check compatibility in AI Agent Watch
 
@@ -22,8 +22,6 @@ Open **Settings → Governance Compatibility**. The screen lists each host's **O
 - **READY** - the kernel meets the requirement and a governance event has been received from the host.
 - **NOT READY: kernel too old** - upgrade the host kernel.
 - **NOT READY: BPF-LSM unconfirmed** - the kernel is new enough, but enforcement has not yet been confirmed. Check the kernel configuration and active LSM list below.
-
-A host with no governance events can remain unconfirmed even if BPF-LSM is configured correctly. No observed event is not proof that BPF-LSM is disabled. Check the host directly before changing its boot configuration.
 
 ## Check the host
 
@@ -60,6 +58,8 @@ Reboot into the updated kernel and run the checks again. Installing a newer kern
 ## Enable BPF in the active LSM list
 
 If `CONFIG_BPF_LSM=y` but `bpf` is missing from the active list, configure the kernel's `lsm=` boot parameter to include it. The parameter overrides the kernel's configured LSM list, so preserve the existing security modules and their order. See the official [Linux kernel boot parameter reference](https://docs.kernel.org/admin-guide/kernel-parameters.html).
+
+For Ubuntu, see Canonical's [guide to modifying kernel boot parameters](https://ubuntu.com/real-time/docs/how-to/modify-kernel-boot-parameters/) for bootloader configuration and verification. The guide covers setting boot parameters; use the `lsm=` value described below to enable BPF-LSM.
 
 ### Ubuntu or Debian hosts using GRUB
 
@@ -101,4 +101,4 @@ After checking host compatibility, enable a narrowly scoped [governance policy](
 
 Allow up to five minutes for the policy change to take effect. Have a monitored AI agent attempt the matching operation, then check the **Governance** report for `file_access_denied` for the matching blocked operation. Check the affected host in **Settings → Governance Compatibility** as well.
 
-If no event appears, check that the policy is enabled, its scope includes the host and agent, its conditions match the operation, and Sematext Agent is sending data to an Infra App with AI Agent Watch enabled. Review Sematext Agent logs for enforcement initialization or attachment errors.
+If no event appears, check that the policy is enabled, its scope includes the host and agent, its conditions match the operation, and Sematext Agent is sending data to an Infra App with AI Agent Watch enabled.

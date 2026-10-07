@@ -3,7 +3,7 @@ description: Block AI agent operations that match governance policies and report
 
 AI Agent Watch Governance lets you define which commands, files, and network destinations your AI agents can use. Sematext Agent enforces these policies on the host and reports each matching action as a governance event. You can review those events in the **Governance** report and use [alert rules](/docs/ai-agent-watch/alert-rules/) to assign priorities and send notifications.
 
-Governance policies control what happens on the host. Alert rules control how the resulting events are scored and whether you are notified. Enforcement does not require notifications to be enabled.
+Governance policies control what happens on the host. Alert rules control how the resulting events are [scored](risk-scores.md) and whether you are notified. Enforcement does not require notifications to be enabled.
 
 ## How enforcement works
 

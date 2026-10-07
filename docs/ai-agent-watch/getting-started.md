@@ -37,4 +37,4 @@ For the best coverage and strongest security posture, deploy Sematext Agent on a
 - Mark known agents and destinations as [trusted](trusted-agents-hosts.md) to tune alerting
 - Review or customize the default [PII categories](pii-categories.md) and [alert rules](alert-rules.md)
 
-- Check [Governance Compatibility](governance-compatibility.md) before enabling [Governance Policies](governance-policies.md). The 16 default governance policies are examples and remain disabled until you enable them.
+- Review the default [governance policies](governance-policies.md) or create your own, define their conditions and scope, and enable them on [compatible hosts](governance-compatibility.md) to block the operations you want to restrict.
