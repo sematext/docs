@@ -37,17 +37,24 @@ Leaving AI Agent Watch enabled is still valuable in the meantime: it gives you c
 
 For the best coverage and strongest security posture, deploy Sematext Agent on as many hosts as possible. The broader your deployment, the greater the likelihood of discovering AI agents wherever they appear across your infrastructure.
 
+## Governance
+
+[Governance](governance.md) lets you block tool executions, file access, and network activity that match your policies. Review enforcement activity in the Governance report and configure alert rules for notifications. See [Governance Compatibility](governance-compatibility.md) for host requirements.
+
 ## Coming soon
 
-Two features are currently in development: **Governance & Enforcement**, which will let you actively block agent actions rather than just observe them, and **LLM Cost Tracking**, which will surface per-agent and per-session LLM spend. See [Cost Tracking & Governance](cost-tracking-governance.md) for details.
+**LLM Cost Tracking** is currently in development and will surface per-agent and per-session LLM spend. See [LLM Cost Tracking](cost-tracking-governance.md) for details.
 
 ## In this section
 
 - [Getting Started](getting-started.md) - enabling AI Agent Watch and connecting a host
 - [Reports](reports.md) - the built-in reports and how filtering works across them
 - [Captured Events](captured-events.md) - the event types AI Agent Watch records and what each one contains
+- [Governance](governance.md) - enforcement policies, reports, and notifications
+- [Governance Policies](governance-policies.md) - conditions, scope, default policies, and notifications
+- [Governance Compatibility](governance-compatibility.md) - host compatibility and BPF-LSM configuration
 - [Trusted Agents & Hosts](trusted-agents-hosts.md) - marking known agents and destinations as trusted
 - [PII Categories](pii-categories.md) - detecting sensitive data in outbound traffic
 - [Alert Rules](alert-rules.md) - defining what counts as risky and getting notified about it
 - [Risk Scores & Priorities](risk-scores.md) - how event and session risk scores are calculated and used
-- [Cost Tracking & Governance](cost-tracking-governance.md) - upcoming features: Governance & Enforcement and LLM Cost Tracking
+- [LLM Cost Tracking](cost-tracking-governance.md) - upcoming LLM Cost Tracking

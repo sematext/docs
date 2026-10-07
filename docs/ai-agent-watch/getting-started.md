@@ -36,3 +36,5 @@ For the best coverage and strongest security posture, deploy Sematext Agent on a
 - Review the [captured events](captured-events.md) AI Agent Watch records
 - Mark known agents and destinations as [trusted](trusted-agents-hosts.md) to tune alerting
 - Review or customize the default [PII categories](pii-categories.md) and [alert rules](alert-rules.md)
+
+- Check [Governance Compatibility](governance-compatibility.md) before enabling [Governance Policies](governance-policies.md). The 16 default governance policies are examples and remain disabled until you enable them.
