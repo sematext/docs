@@ -24,6 +24,8 @@ Open **AI Agent Watch → Governance** to review enforcement activity in the sel
 - The timeline shows governance events by event type.
 - The events table lets you inspect the agent, session, target, and enforcement context. Use the report filters to narrow the results by priority and event type.
 
+[TODO SCREENSHOT OF GOVERNANCE REPORT]
+
 The report contains three event types:
 
 | Event type | What it records |

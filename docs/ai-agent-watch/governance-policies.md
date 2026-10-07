@@ -48,6 +48,8 @@ With no scope entries, the policy applies to every tracked agent in the account.
 5. Optionally, in the **Alert Rules** section, click **Create Alert Rule** to create a rule for this policy's enforcement event type. The alert rule assigns a priority to matching events and can send notifications when enabled with notifications and recipients configured. It can also match events from other policies with the same event type. See [Get notified when a policy matches](#get-notified-when-a-policy-matches) for details.
 6. Click **Save Policy** and enable the policy when you are ready to enforce it.
 
+![Governance Rules](/docs/images/aiam/governance-rules.png)
+
 Blocked operations are recorded as events even if you do not create an alert rule. You can review existing rules in the policy editor and manage them later from the **Alert Rules** tab.
 
 Policy changes can take up to five minutes to take effect. Start with a specific host or workload, check the resulting events, and expand the scope after verifying the policy matches the intended activity.

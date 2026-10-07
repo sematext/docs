@@ -23,6 +23,8 @@ Open **Settings → Governance Compatibility**. The screen lists each host's **O
 - **NOT READY: kernel too old** - upgrade the host kernel.
 - **NOT READY: BPF-LSM unconfirmed** - the kernel is new enough, but enforcement has not yet been confirmed. Check the kernel configuration and active LSM list below.
 
+![Governance Compatibility](/docs/images/aiam/governance-compatibility.png)
+
 ## Check the host
 
 Run these commands on the monitored Linux host:
