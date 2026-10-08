@@ -11,7 +11,7 @@ Governance requires **Sematext Agent 4.6 or later** and a Linux host with BPF-LS
 
 Using a recent kernel does not guarantee that the required BPF-LSM is enabled. See below how to check that.
 
-If the requirements are not met, Sematext Agent falls back to observe-only mode. You can still review captured activity and configure alerts, but should not rely on governance policies to enforce restrictions on hosts where BPF-LSM is not enabled..
+If the requirements are not met, Sematext Agent falls back to observe-only mode. You can still review captured activity and configure alerts, but should not rely on governance policies to enforce restrictions on hosts where BPF-LSM is not enabled.
 
 Containers use the host's Linux kernel. For Kubernetes workloads, check the kernel version and BPF-LSM configuration on each worker node running your AI agents. Any required kernel upgrade or BPF-LSM configuration change must be made on that host or node.
 
