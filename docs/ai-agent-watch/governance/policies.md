@@ -3,6 +3,8 @@ description: Configure AI Agent Watch enforcement conditions, scope, default pol
 
 Governance policies define which operations Sematext Agent blocks and which agents and hosts are affected. Configure them under **AI Agent Watch → Event Alerting → Governance Policies**. See [Governance](index.md) for enforcement behavior and [Governance Compatibility](compatibility.md) for host requirements.
 
+Governance policies, alert rules, and notifications work independently. An enabled policy blocks matching operations and records governance events even without an alert rule. An enabled alert rule can assign a priority to matching events without sending notifications, so you can review those events later. Notifications are optional and configured separately.
+
 ## What you can control
 
 Each policy applies to one action type and has at least one condition. The supported match fields are:
@@ -107,7 +109,5 @@ Use an alert rule to notify you when a governance event is received.
 5. Enable the alert rule, turn on notifications, and configure at least one email recipient or [notification hook](/docs/alerts/alert-notifications/).
 
 For example, a rule matching `file_access_denied` with no additional conditions alerts on all governance file-access events. It can match events from both the credential-file policy and the Docker-socket policy. Creating it from a governance policy does not restrict it to that policy alone.
-
-Define target matches such as paths, binaries, and IPs in governance policies. The generic alert-rule editor for governance events exposes common host and agent fields, rather than a second set of enforcement conditions.
 
 Notifications follow the same [scheduling](/docs/alerts/alert-scheduling/) and throttling behavior as other AI Agent Watch alerts. An enabled governance policy continues enforcing even if its alert rule is disabled or notifications are turned off. Event priority and risk scoring follow the matching [alert rules](/docs/ai-agent-watch/alert-rules/) and [risk-score rules](/docs/ai-agent-watch/risk-scores/).

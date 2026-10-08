@@ -3,7 +3,7 @@ description: Block AI agent operations that match governance policies and report
 
 AI Agent Watch Governance lets you define which commands, files, and network destinations your AI agents can use. Sematext Agent enforces these policies on the host and reports each matching action as a governance event. You can review those events in the **Governance** report and use [alert rules](/docs/ai-agent-watch/alert-rules/) to assign priorities and send notifications.
 
-Governance policies control what happens on the host. Alert rules control how the resulting events are [scored](../risk-scores.md) and whether you are notified. Enforcement does not require notifications to be enabled.
+Governance policies, alert rules, and notifications work independently. An enabled policy blocks matching operations and records governance events even without an alert rule. An enabled alert rule can assign a priority to matching events without sending notifications, so you can review those events later. Notifications are optional and configured separately.
 
 ## How enforcement works
 
@@ -36,5 +36,4 @@ The report contains three event types:
 
 Sematext Agent sends a governance event when a policy blocks an operation. The event records the matched condition and, depending on its type, the binary, file, or destination IP and port.
 
-Governance events differ from `exec_failed` and `file_open_failed`, which report denials caused by existing OS permissions or security policies. See [Captured Events](/docs/ai-agent-watch/captured-events/) for the other event types.
-
+Governance events differ from `exec_failed` and `file_open_failed`, which report denials caused by existing operating system permissions or security policies. See [Captured Events](/docs/ai-agent-watch/captured-events/) for the other event types.
