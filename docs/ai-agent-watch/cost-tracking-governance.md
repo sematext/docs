@@ -1,18 +1,13 @@
-title: Cost Tracking & Governance
-description: Upcoming AI Agent Watch features - Governance & Enforcement and LLM Cost Tracking
-
-> The features on this page are in development and not yet available. 
+title: LLM Cost Tracking
+description: Upcoming LLM cost tracking for AI Agent Watch
 
 ## Governance
 
-Today, AI Agent Watch monitors and alerts, but doesn't intervene. Governance will add the ability to actively block AI agents from carrying out actions that violate your security policies, rather than only reporting on them after the fact. You'll be able to define governance rules per agent, per action type, or across your entire infrastructure.
-
-- **Block unauthorized agent actions** - stop a specific agent from executing shell commands, accessing sensitive files, or connecting to untrusted endpoints, before the action happens rather than after.
-- **Control agent spawning** - restrict which agents are allowed to spawn new agent processes; block unrecognized agents from launching entirely, or limit spawning to a pre-approved list.
-- **Granular per-agent policies** - scope enforcement rules to individual agents or agent groups, so one agent can run `bash` while another is blocked from doing the same.
-- **Real-time enforcement feed** - see every blocked action as it happens: who tried what, which rule triggered it, and the full event context.
+Governance is available. Use [governance policies](governance/index.md) to block operations that match your conditions and scope, review enforcement events, and configure notifications. See [Governance Compatibility](governance/compatibility.md) for host compatibility and BPF-LSM configuration.
 
 ## LLM Cost Tracking
+
+> LLM Cost Tracking is in development and not yet available.
 
 LLM Cost Tracking will show exactly what every agent, session, and model is costing you, with cache savings, cost anomalies, and infrastructure breakdowns surfaced automatically. You'll be able to set your own negotiated rates and get alerted before a runaway session or a stuck model quietly inflates your bill.
 

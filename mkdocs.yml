@@ -158,7 +158,11 @@ nav:
       - PII Categories: ai-agent-watch/pii-categories.md
       - Alert Rules: ai-agent-watch/alert-rules.md
       - Risk Scores & Priorities: ai-agent-watch/risk-scores.md
-      - Cost Tracking & Governance: ai-agent-watch/cost-tracking-governance.md
+      - Governance:
+        - Overview: ai-agent-watch/governance/index.md
+        - Policies: ai-agent-watch/governance/policies.md
+        - Compatibility: ai-agent-watch/governance/compatibility.md
+      - LLM Cost Tracking: ai-agent-watch/cost-tracking-governance.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md

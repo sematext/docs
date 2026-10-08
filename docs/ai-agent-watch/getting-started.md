@@ -36,3 +36,5 @@ For the best coverage and strongest security posture, deploy Sematext Agent on a
 - Review the [captured events](captured-events.md) AI Agent Watch records
 - Mark known agents and destinations as [trusted](trusted-agents-hosts.md) to tune alerting
 - Review or customize the default [PII categories](pii-categories.md) and [alert rules](alert-rules.md)
+
+- Review the default [governance policies](governance/policies.md) or create your own, define their conditions and scope, and enable them on [compatible hosts](governance/compatibility.md) to block the operations you want to restrict.

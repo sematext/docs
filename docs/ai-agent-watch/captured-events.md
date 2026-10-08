@@ -29,5 +29,10 @@ Every event carries, among others:
 | `pii_detection` | Outbound data matched one of your [PII categories](pii-categories.md). Carries the category, the masked/one-way-encrypted payload (see [PII Categories](pii-categories.md)), the HTTP method/URL, and the destination. |
 | `exec_failed` | The kernel blocked the agent from executing a binary - due to an existing OS-level permission or security policy, not anything AI Agent Watch enforces. Carries an error code/reason. |
 | `file_open_failed` | The kernel blocked the agent from opening a file, for the same reason. Carries the file path/extension and an error code/reason. |
+| `exec_denied` | A governance policy blocked tool execution based on a binary or command-argument match. |
+| `file_access_denied` | A governance policy denied file access based on a path or extension. |
+| `net_denied` | A governance policy blocked network activity based on an IP, port, CIDR, or destination-host match. |
 
-`exec_failed` and `file_open_failed` are purely observational - AI Agent Watch simply reports denials that have already been enforced by the kernel. It does not block actions itself or enforce policies. AI Agent Watch does not yet have its own enforcement capability; that's what the upcoming [Governance](cost-tracking-governance.md#governance) feature will add. 
+`exec_failed` and `file_open_failed` report denials caused by existing OS permissions or security policies. `exec_denied`, `file_access_denied`, and `net_denied` report AI Agent Watch Governance enforcement. See [Governance](governance/index.md) for policy configuration and notifications.
+
+Governance events record the matched condition for the blocked operation. Depending on the event type, they also carry the binary, file path, or destination IP and port.

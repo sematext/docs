@@ -1,7 +1,7 @@
 title: Reports
 description: The built-in AI Agent Watch reports, what each one shows, and how filtering works across them
 
-AI Agent Watch ships with a set of built-in reports, available from the left-hand menu: **Overview**, **Explore**, **Agent Sessions**, **PII Detections**, **Network Events**, and **Tool Execution**.
+AI Agent Watch ships with a set of built-in reports, available from the left-hand menu: **Overview**, **Explore**, **Agent Sessions**, **PII Detections**, **Network Events**, **Tool Execution**, and **Governance**.
 
 ## Shared elements
 
@@ -100,3 +100,15 @@ Shell commands and other subprocesses detected agents have spawned.
 - **Top Tool Executions** table - tool path, execution count, error count, and error rate, sorted to surface the tools failing most often.
 
 ![Tool Execution](/docs/images/aiam/tool-execution.png)
+
+## Governance
+
+Enforcement activity from enabled governance policies.
+
+- Tiles: Enforcement counts and **Hosts Ready**. Click Hosts Ready to open **Settings → Governance Compatibility**.
+- A timeline of governance events by event type.
+- An events table for `exec_denied`, `file_access_denied`, and `net_denied`, with enforcement context and priority and event-type filtering.
+
+![Governance report with enforcement counts, event timeline, filters, and event details](/docs/images/aiam/governance-report.png)
+
+Sematext Agent reports blocked operations as governance events. See [Governance Policies](governance/policies.md) for policy configuration and alerting, and [Governance Compatibility](governance/compatibility.md) for host requirements.
