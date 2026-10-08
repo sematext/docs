@@ -109,6 +109,6 @@ Enforcement activity from enabled governance policies.
 - A timeline of governance events by event type.
 - An events table for `exec_denied`, `file_access_denied`, and `net_denied`, with enforcement context and priority and event-type filtering.
 
-[TODO SCREENSHOT OF GOVERNANCE REPORT]
+![Governance report with enforcement counts, event timeline, filters, and event details](/docs/images/aiam/governance-report.png)
 
 Sematext Agent reports blocked operations as governance events. See [Governance Policies](governance/policies.md) for policy configuration and alerting, and [Governance Compatibility](governance/compatibility.md) for host requirements.

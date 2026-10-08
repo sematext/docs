@@ -1,7 +1,7 @@
 title: Governance Policies
 description: Configure AI Agent Watch enforcement conditions, scope, default policies, and notifications
 
-Governance policies define which operations Sematext Agent blocks and which agents and hosts are affected. Configure them under **AI Agent Watch → Event Alerting → Governance Policies**. See [Governance](index.md) for enforcement behavior and [Governance Compatibility](compatibility.md) for host requirements.
+Governance policies block AI agent operations that violate your security requirements, such as accessing credentials, running destructive commands, or connecting to restricted destinations. Each policy defines which operations to block and which agents and hosts are affected. Configure them under **AI Agent Watch → Event Alerting → Governance Policies**. See [Governance](index.md) for enforcement behavior and [Governance Compatibility](compatibility.md) for host requirements.
 
 Governance policies, alert rules, and notifications work independently. An enabled policy blocks matching operations and records governance events even without an alert rule. An enabled alert rule can assign a priority to matching events without sending notifications, so you can review those events later. Notifications are optional and configured separately.
 
