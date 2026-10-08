@@ -51,7 +51,7 @@ The Linux kernel documents the [active LSM list](https://docs.kernel.org/admin-g
 
 Install a supported kernel from your distribution that meets the Governance version requirement and includes `CONFIG_BPF_LSM=y`. If your current distribution cannot provide one, upgrade the distribution or use a supported host image with the required configuration.
 
-Use your distribution's kernel update procedure. For Ubuntu, see the official [release upgrade documentation](https://ubuntu.com/server/docs/how-to/software/upgrade-your-release/). For managed Kubernetes nodes, update the node image or node pool through your provider.
+Use your distribution's kernel update procedure. For managed Kubernetes nodes, update the node image or node pool through your provider.
 
 Reboot into the updated kernel and run the checks again. Installing a newer kernel does not change the running kernel until the host boots into it.
 
@@ -61,7 +61,7 @@ Reboot into the updated kernel and run the checks again. Installing a newer kern
 
 If `CONFIG_BPF_LSM=y` but `bpf` is missing from the active list, configure the kernel's `lsm=` boot parameter to include it. The parameter overrides the kernel's configured LSM list, so preserve the existing security modules and their order. See the official [Linux kernel boot parameter reference](https://docs.kernel.org/admin-guide/kernel-parameters.html).
 
-For Ubuntu, see Canonical's [guide to modifying kernel boot parameters](https://ubuntu.com/real-time/docs/how-to/modify-kernel-boot-parameters/) for bootloader configuration and verification. The guide covers setting boot parameters; use the `lsm=` value described below to enable BPF-LSM.
+For Ubuntu, see Canonical's [guide to modifying kernel boot parameters](https://documentation.ubuntu.com/core/how-to-guides/manage-ubuntu-core/modify-kernel-options/) for bootloader configuration and verification. The guide covers setting boot parameters; use the `lsm=` value described below to enable BPF-LSM.
 
 ### Ubuntu or Debian hosts using GRUB
 
@@ -95,7 +95,7 @@ For Ubuntu, see Canonical's [guide to modifying kernel boot parameters](https://
    cat /sys/kernel/security/lsm
    ```
 
-The active list should now include `bpf`. Ubuntu's [AppArmor documentation](https://ubuntu.com/server/docs/how-to/security/apparmor/) describes its GRUB configuration and reboot procedure for LSM boot settings. Other bootloaders and managed images have different procedures; use their supported method to set the same kernel parameter.
+The active list should now include `bpf`. Ubuntu's [AppArmor documentation](https://apparmor.net/) describes its GRUB configuration and reboot procedure for LSM boot settings. Other bootloaders and managed images have different procedures; use their supported method to set the same kernel parameter.
 
 ## Verify enforcement
 
