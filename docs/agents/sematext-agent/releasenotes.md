@@ -39,6 +39,28 @@ NULL
 
 -->
 
+## Version 4.6.0
+
+Date: October 12, 2026
+
+### New Features
+
+- **AI Agent Watch Governance**: AI Agent Watch can now block what AI agents do, not only report it. Policies set in Sematext Cloud deny commands, file access and network destinations before they happen, can be scoped by host, cluster, namespace, pod or agent, and every block is reported as an event. Requires Linux kernel 5.17 or newer with BPF-LSM. See the [Governance documentation](/docs/ai-agent-watch/governance/).
+- **API Radar**: This release introduces API Radar, a catalog of the HTTP APIs your services serve and call, built from their traffic with no instrumentation. Each endpoint shows method, route, status codes and latency, attributed to the serving and calling workloads. It is enabled together with Network Map.
+- **macOS Support**: Sematext Agent now runs on macOS, on Apple Silicon and Intel. Macs report infra metrics, top processes, hardware inventory and launchd services, and can receive OpenTelemetry data.
+
+### Bug Fixes
+
+- An AI agent no longer shows up twice in AI Agent Watch, once with its version and once with an empty one. The version is now resolved before the session starts, so the first events of a session carry it too.
+
+### Action Required Changes
+
+- Governance enforcement is on by default. `st-agent.yml` is a package config file, so a host where `aiagent.enforcement.enabled: false` was set explicitly keeps that value after the upgrade and will not enforce policies until the line is removed.
+
+### Packaging and Installation
+
+- macOS packages are published as the Homebrew casks `sematext/tap/sematext-agent` (stable releases) and `sematext/tap/sematext-agent-beta` (every release, including release candidates).
+
 ## Version 4.5.3
 
 Date: September 25, 2026
