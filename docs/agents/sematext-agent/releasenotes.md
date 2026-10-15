@@ -39,6 +39,18 @@ NULL
 
 -->
 
+## Version 4.6.1
+
+Date: October 15, 2026
+
+### Improvements
+
+- **Solr 10 Monitoring**: Solr 10 is now supported. Solr 10 replaced its JMX metrics with a Prometheus endpoint, so it reported JVM metrics only. Its metrics now arrive under the existing names and tags, so the current Solr dashboards work unchanged.
+
+### Bug Fixes
+
+- Automatic setup now connects to JVMs running a Java security manager, which is Solr's default on Java 17 to 23. The JMX connector it injects failed to start there, so Solr 9 and 10 sent no Solr metrics. The connector also uses one port now instead of two.
+
 ## Version 4.6.0
 
 Date: October 12, 2026
