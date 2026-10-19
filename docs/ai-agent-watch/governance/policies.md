@@ -26,7 +26,7 @@ Conditions define **which operation to block**. Scope defines **which agents or 
 
 Conditions match the values you specify. For example, an Args condition containing `token` blocks any command line containing that text. A Destination Host condition blocks matching TLS hostnames; it does not use your [Trusted Hosts](../trusted-agents-hosts.md#trusted-hosts) list.
 
-Text conditions are case-sensitive, except Destination Host matching, which is case-insensitive. For example, an Extension condition matching `.pem` does not match `.PEM`, while a Destination Host condition matching `example.com` also matches `EXAMPLE.COM`.
+Text conditions are case-insensitive, except for short command-line flags in Args conditions, which remain case-sensitive. For example, an Extension condition matching `.pem` also matches `.PEM`, and a Destination Host condition matching `example.com` also matches `EXAMPLE.COM`. Short flags such as `-r` and `-R` are treated as distinct options.
 
 ## Scope a policy
 
@@ -41,8 +41,7 @@ Use scope to restrict a policy to particular hosts, workloads, agent types, or t
 
 All scope entries must match (AND logic). Comma-separated values match any listed value (OR logic). Trust status is a boolean: use `is false` to target untrusted agents. `in` and `not_in` are not supported for this field.
 
-Text scope values are case-sensitive. Use the exact capitalization reported for the host, workload, or agent type. For example, an Agent Type scope of `is Codex` does not match `codex`.
-
+Text scope values are case-insensitive. For example, an Agent Type scope of `is Codex` also matches `codex`, and a Host Name scope of `starts_with ci-` also matches host names beginning with `CI-`.
 With no scope entries, the policy applies to every tracked agent in the account. A hostname scope of `starts_with ci-`, for example, applies across CI hosts sharing that prefix.
 
 ## Create a governance policy
