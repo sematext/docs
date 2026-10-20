@@ -3,7 +3,7 @@ description: Network topology displayed in tabular views for easy filtering and 
 
 
 
-All data visible in the Network Map can also be accessed via alternative non-map interface. 
+Open **Service Monitoring → Network** to choose **Services**, **Kubernetes**, **Hosts**, or **Connections**. These tables provide an alternative to the Network Map visualization.
 There are screens with all discovered services, kubernetes clusters hosts, network connections, and more. 
 All data is neatly tabulated, easily filterable and easily sortable.
 
@@ -46,3 +46,10 @@ The Connections screen additionally includes all network connection sources and 
 Each row in each view can be clicked to open the side panel with additional details. The details vary depending on the type of entity. From the side panel you can click on “View on Map” to zoom into that item on the Map.
 
 ![Connection Details](https://sematext.com/wp-content/uploads/2026/08/nm-tabular-details.png)
+
+
+## API and service context
+
+Use [API Radar](../service-monitoring/api-radar/index.md) to inspect observed endpoints and [Service Details](../service-monitoring/service-details.md) for navigation between network and API context.
+
+[Screenshot placeholder: Current Network tabular navigation and service details cross-navigation.]
