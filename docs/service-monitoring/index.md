@@ -34,6 +34,8 @@ See [API Radar](api-radar/index.md) for endpoint metrics and investigation workf
 
 Start with automatically discovered API and network data, then add [tracing](../tracing/index.md) to the services that need deeper investigation.
 
+When a service is slow or failing, [assess its potential blast radius](service-details.md#assess-the-potential-blast-radius) by identifying the services that depend on it and checking them for related problems.
+
 ## Getting started
 
 See [Getting Started](getting-started.md) for requirements and verification. Network and API Radar have different minimum Sematext Agent versions; a host reporting topology does not necessarily report API traffic.

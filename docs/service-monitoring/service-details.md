@@ -22,3 +22,19 @@ An endpoint details panel describes a particular method and path. A service deta
 ![Network Map service details with Open in API Radar](../images/service-monitoring/network-map-service-details.png)
 
 <!-- Release check: confirm final shared service details tabs and labels against production. Do not copy mock endpoint tabs into the service panel description. -->
+
+## Assess the potential blast radius
+
+A slow or failing service can affect the services that depend on it. The potential blast radius is the set of services and workflows that could be affected, directly or through a chain of dependencies.
+
+For example, API Radar may show elevated latency on a payment endpoint. Open **Network Map** from the endpoint details to investigate:
+
+1. Identify services with connections **to the payment service**, such as checkout or subscription processing. These callers may be affected by its slowdown.
+2. Follow the dependency chain to identify other services that could be affected.
+3. Check those services for corresponding errors or delays to distinguish potential impact from observed problems.
+
+Use the service details panel's **Network Connections** section to inspect incoming connections. See [Services View](../network-map/services-view.md#investigating-a-service) for how to identify callers and connection direction.
+
+**Investigate inside the application.** For deeper analysis, instrument the affected service with [OpenTelemetry](../tracing/sdks/index.md) and send its [traces](../tracing/index.md) to Sematext. Follow individual requests through the application to identify operations contributing to errors or delays.
+
+Start with automatically discovered API and network data, then add [tracing](../tracing/index.md) to the services that need deeper investigation.

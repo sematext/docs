@@ -18,7 +18,7 @@ Open **Service Monitoring → API Radar**. API Radar requires **Sematext Agent 4
 
 ## How to investigate
 
-Start with [Services Overview](services-overview.md) to find a service driving traffic or errors. Open [Endpoints](endpoints.md), select an operation, and inspect its time series and status codes. Click [Open in Network Map](../../network-map/index.md) to see which services the selected service communicates with and where it runs, including its hosts or Kubernetes workloads.
+Start with [Services Overview](services-overview.md) to find a service driving traffic or errors. Open [Endpoints](endpoints.md), select an operation, and inspect its time series and status codes. Click [Open in Network Map](../../network-map/index.md) to see which services the selected service communicates with and where it runs, including its hosts or Kubernetes workloads. Follow incoming connections to identify callers and [assess the potential blast radius](../service-details.md#assess-the-potential-blast-radius): the other services and workflows that could be affected.
 
 API Radar discovers endpoints from observed traffic. An endpoint may not appear if it received no requests during the selected time range.
 

@@ -45,6 +45,8 @@ The **Network Connections** section lists every connection to and from this serv
 
 The **Process Details** section at the bottom shows the underlying process information - the detected service type, host, process ID (TGID), listening ports, and the full command line. This is invaluable for debugging configuration issues or identifying exactly what's running.
 
+Incoming connections identify callers that depend on the selected service. In **Network Connections**, select **Incoming** to focus on those callers. If the selected service is slow or failing, inspect its callers and their dependencies to understand which other services could be affected. A connection indicates potential impact, not proof that the caller is experiencing a problem. See [Assess the potential blast radius](../service-monitoring/service-details.md#assess-the-potential-blast-radius) for an example investigation.
+
 ## Investigating a Connection
 
 Click on any connection line to open the Connection Details panel:
