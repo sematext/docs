@@ -33,7 +33,7 @@ The analysis window defines the period the rule examines. The minimum notificati
 
 Expected latency varies between services and endpoints. A response time that is normal for one operation may indicate a problem for another, so the default p95 and p99 rules are provided as examples and remain disabled until you enable them.
 
-Duplicate a latency rule, select the service or endpoint it should apply to, and configure a threshold appropriate for that operation. Review the analysis window and notification settings, then enable the rule. Create separate rules where services or endpoints need different latency limits.
+Duplicate a latency rule, select the service or endpoint it should apply to, and configure a threshold appropriate for that operation. Review the analysis window and notification settings, then enable the rule. Create separate alert rules for services or endpoints that need different latency alert thresholds.
 ## Notifications and recovery
 
 All five default definitions have notifications and back-to-normal notifications configured. ![API Radar error-rate alert identifying the affected service and endpoint](../../images/service-monitoring/api-radar/api-radar-alert.png)
