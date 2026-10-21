@@ -40,8 +40,7 @@ sudo st-agent macos-service restart
 Windows, as Administrator:
 
 ```
-cd 'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service restart
+st-agent windows-service restart
 ```
 
 The agent log then shows `AI agent OTLP receiver started` with both endpoints.
