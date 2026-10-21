@@ -11,7 +11,7 @@ The summary includes **Services**, **Endpoints**, **Requests**, **HTTPS**, **Ful
 
 ## Traffic by Service
 
-The service chart shows which services account for observed request traffic. Switch between **Traffic** and **Error Rate** to compare volume with server errors. A busy service is not necessarily the service with the highest error rate.
+The service chart shows which services account for observed request traffic. Switch between **Traffic** and **Error Rate** to compare volume with server errors. A busy service is not necessarily the service with the highest error rate. Services with lower traffic can still have a high proportion of failing requests, so switch to **Error Rate** to find issues that may be less prominent in the Traffic view.
 
 ## Top Endpoints by Error Rate
 
