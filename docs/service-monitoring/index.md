@@ -1,7 +1,7 @@
 title: Service Monitoring
 description: Explore service connections and API traffic with Network Map and API Radar
 
-Service Monitoring automatically discovers services, network connections, and HTTP API endpoints from traffic observed by Sematext Agent, without requiring code instrumentation. Use **Network** to explore service dependencies and **API Radar** to identify endpoints with high error rates or slow responses.
+Service Monitoring automatically discovers services, network connections, and HTTP API endpoints from traffic observed by [Sematext Agent](../agents/sematext-agent/index.md), without requiring code instrumentation. Use **Network** to explore service dependencies and **API Radar** to identify endpoints with high error rates or slow responses.
 
 ## Why use it
 
@@ -28,7 +28,7 @@ See [API Radar](api-radar/index.md) for endpoint metrics and investigation workf
 
 ## From discovery to investigation
 
-1. **Discover services and endpoints.** Install Sematext Agent to discover network connections and HTTP API endpoints automatically, without code instrumentation.
+1. **Discover services and endpoints.** Install [Sematext Agent](../agents/sematext-agent/index.md) to discover network connections and HTTP API endpoints automatically, without code instrumentation.
 2. **Find the affected endpoint.** Use API Radar to identify high error rates or slow responses, then inspect the endpoint's metrics and network dependencies to narrow down the problem.
 3. **Investigate inside the application.** For deeper analysis, instrument the affected service with [OpenTelemetry](../tracing/sdks/index.md) and send its [traces](../tracing/index.md) to Sematext. Follow individual requests through the application to identify operations contributing to errors or delays.
 
