@@ -950,7 +950,7 @@ Note:
 ## Plans & Pricing
 
 How much does your monitoring solution cost? Do you offer different plans?
-Check the [Infra Monitoring and Service Monitoring Pricing](https://sematext.com/pricing/#infrastructure).
+Check the [Infrastructure Monitoring and Monitoring Integrations Pricing](https://sematext.com/pricing/#infrastructure).
 
 ## Billing
 

@@ -96,7 +96,7 @@ nav:
         - Kubernetes: monitoring/kubernetes.md
         - Inventory: monitoring/inventory.md
         - Processes: monitoring/processes.md
-      - Service Monitoring:
+      - Monitoring Integrations:
         - Overview: monitoring/service-monitoring.md
         - Service Discovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md

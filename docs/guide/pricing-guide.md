@@ -22,7 +22,7 @@ For each of the four solutions, you can create multiple [Apps](/docs/guide/app-g
     - Plan
     - Number of hosts and containers
     - Data retention duration
-- [Service Monitoring](https://sematext.com/pricing/) Apps:
+- [Monitoring Apps](https://sematext.com/pricing/) for service-specific integrations:
     - Plan
     - Number of agents
     - Data retention duration
