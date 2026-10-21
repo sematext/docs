@@ -23,7 +23,7 @@ If that file is missing, the kernel was built without BTF and Network Map cannot
 
 ## Outdated Agents Warning
 
-![Outdated Agents Warning](../images/network-map/network-map-outdated-agents.png)
+![Outdated Agents Warning](../images/service-monitoring/network/network-map-outdated-agents.png)
 
 If you see a warning like "Update 9 outdated Agents to see the full Network Map", some of your agents are running older versions that don't support all Network Map features.
 
