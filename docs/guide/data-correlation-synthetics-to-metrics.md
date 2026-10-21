@@ -26,7 +26,7 @@ These resource metrics suggest the host is under pressure, potentially explainin
 
 - You receive an alert that one of your [HTTP Monitors](/docs/synthetics/http-monitor/), which is monitoring your /auth endpoint, has started failing.
 - Upon reviewing the run details, you see that the failures are caused by timeout errors.
-- You switch to your [Service Monitoring App](/docs/monitoring/service-monitoring/) or open it in [Split Screen](/docs/guide/split-screen/) for the authentication service.
+- You switch to your [Monitoring App](/docs/monitoring/service-monitoring/) or open it in [Split Screen](/docs/guide/split-screen/) for the authentication service.
 - Looking at metrics, you notice that during the failure window, the database latency metric spiked, and the number of open connections dropped, indicating a problem in the DB layer.
 - Further investigation shows a spike in container restarts due to OOM events, confirming the service wasn’t healthy at the time the synthetic checks failed.
 
