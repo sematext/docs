@@ -32,7 +32,7 @@ See [API Radar](api-radar/index.md) for endpoint metrics and investigation workf
 2. **Find the affected endpoint.** Use API Radar to identify high error rates or slow responses, then inspect the endpoint's metrics and network dependencies to narrow down the problem.
 3. **Investigate inside the application.** For deeper analysis, instrument the affected service with [OpenTelemetry](../tracing/sdks/index.md) and send its [traces](../tracing/index.md) to Sematext. Follow individual requests through the application to identify operations contributing to errors or delays.
 
-Start with automatically discovered API and network data, then add tracing to the services that need deeper investigation.
+Start with automatically discovered API and network data, then add [tracing](../tracing/index.md) to the services that need deeper investigation.
 
 ## Getting started
 
