@@ -7,8 +7,6 @@ Open **Service Monitoring → API Radar → Services Overview** for a summary of
 
 The summary includes **Services**, **Endpoints**, **Requests**, **HTTPS**, **Full Duplex**, **Error Rate**, **SSL Issues**, and **Proxied**. **Full Duplex** shows the percentage of traffic for which both requests and responses were observed, allowing API Radar to show response status codes, error rates, and latency. With **Egress Only**, only outgoing requests are observed: request activity is visible, but response status codes, error rates, and latency are unavailable.
 
-The time picker and refresh controls determine the range shown in the report.
-
 ![Services Overview summary and Traffic by Service chart](../../images/service-monitoring/api-radar/api-radar-services-overview.png)
 
 ## Traffic by Service
