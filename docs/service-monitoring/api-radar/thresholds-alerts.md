@@ -1,13 +1,17 @@
 title: Thresholds & Alerts
 description: Configure API Radar thresholds, default alert rules, and notifications for endpoint errors, latency, certificate expiry, and missing Authorization headers
 
-API Radar provides metric thresholds for report coloring and filtering, and alert rules for detecting endpoint conditions. Configure alert rules separately from visual thresholds: changing a report's color bands does not change an alert rule's configured limit.
+API Radar uses configurable thresholds to highlight endpoint error rates and latency in reports. These settings help you spot endpoints that need attention; alert rules separately determine when an alert is triggered.
 
 ## Metric thresholds
 
-Thresholds for **Error Rate**, **p95 Latency**, and **p99 Latency** control visual health bands and metric quick filters. Error rate is a percentage; latency thresholds are measured in milliseconds.
+Open **Services Overview** or **Endpoints**, then click **Thresholds** in the top-right toolbar. Set warning and critical levels for **Error Rate**, **p95 Latency**, and **p99 Latency**, then click **Save Changes**. Error rate is measured as a percentage and latency in milliseconds.
 
 ![API Radar Thresholds dialog for error rate, p95 latency, and p99 latency](../../images/service-monitoring/api-radar/api-radar-thresholds.png)
+
+These thresholds determine the Healthy, Warning, and Critical classifications used for endpoint metric coloring and the **Quick Filters** in the Endpoints filter panel. Changes apply across API Radar reports.
+
+For example, with the p99 critical threshold set to 300 ms, a p99 value of 311 ms appears red in the endpoint table. Changing this threshold updates the report coloring and filtering; it does not change the threshold configured in an alert rule.
 
 ## Default alert rules
 
