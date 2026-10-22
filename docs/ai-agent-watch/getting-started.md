@@ -11,7 +11,7 @@ Once enabled, AI Agent Watch will start collecting AI agent events from all host
 
 If you already have one or more Infra Apps receiving infrastructure data from multiple hosts, no additional installation is required. Simply enable AI Agent Watch for the desired Infra App(s) from the UI, and AI agent events will begin flowing automatically from all connected hosts.
 
-On Linux that is all. On macOS and Windows, Claude Code has to send its telemetry to Sematext Agent first; see [AI Agent Watch on macOS and Windows](macos-windows.md).
+On Linux that is all. On macOS and Windows, Claude Code or Codex has to send its telemetry to Sematext Agent first; see [AI Agent Watch on macOS and Windows](macos-windows.md).
 
 ![Infra Apps](/docs/images/aiam/pick-infra-apps.png)
 
