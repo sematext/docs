@@ -7,7 +7,7 @@ Service Monitoring uses an [Infra App](/docs/monitoring/infrastructure/) and [Se
 
 | Feature | Minimum Sematext Agent version |
 |---|---|
-| Network Map | 4.4.0 |
+| Network Map | 4.5.2 |
 | API Radar | 4.6.0 |
 
 See the [Network Map setup guide](../network-map/getting-started.md) for network collection requirements and enabling topology collection. API Radar shows an outdated-agent banner when monitored hosts need an agent update. Use [Go to Fleet](/docs/fleet/fleet/) to identify those hosts.
