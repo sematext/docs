@@ -9,7 +9,7 @@ Network Map requires two things:
 
 **An [Infra App](/docs/monitoring/infrastructure/)** to collect and store your infrastructure data. If you're already using Sematext for infrastructure monitoring, you have this. If not, you'll create one as part of the setup process.
 
-**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.4.0 or later**.
+**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.5.2 or later**.
 
 For best results, your hosts should be running **Linux kernel 5.8 or later**. Older kernels work but with some limitations. Check your kernel version with `uname -r`.
 
@@ -83,6 +83,6 @@ Once Network Map is running:
 
 ## API Radar
 
-Network Map and API Radar are grouped under [Service Monitoring](../service-monitoring/index.md). API Radar requires Sematext Agent 4.6.0 or later, separately from Network Map's 4.4.0 minimum. See [Service Monitoring Getting Started](../service-monitoring/getting-started.md) to verify API traffic.
+Network Map and API Radar are grouped under [Service Monitoring](../service-monitoring/index.md). API Radar requires Sematext Agent 4.6.0 or later, separately from Network Map's 4.5.2 minimum. See [Service Monitoring Getting Started](../service-monitoring/getting-started.md) to verify API traffic.
 
 [Screenshot placeholder: Updated Service Monitoring onboarding and Network navigation.]
