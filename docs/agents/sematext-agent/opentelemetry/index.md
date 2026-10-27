@@ -647,7 +647,7 @@ grpcurl -plaintext localhost:4337 list
 
 Linux:
 ```bash
-sudo journalctl -u sematext-agent -f
+sudo journalctl -u spm-monitor-st-agent -f
 ```
 
 macOS:

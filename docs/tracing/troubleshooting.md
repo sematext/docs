@@ -11,8 +11,8 @@ This guide helps you resolve common issues with Sematext Tracing, OpenTelemetry 
 
 **Linux:**
 ```bash
-sudo systemctl status sematext-agent
-sudo journalctl -u sematext-agent -f
+sudo systemctl status spm-monitor-st-agent
+sudo journalctl -u spm-monitor-st-agent -f
 ```
 
 **Docker:**
