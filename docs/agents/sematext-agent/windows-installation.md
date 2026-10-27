@@ -17,7 +17,7 @@ To see your Windows host metrics in Sematext Cloud, you need to [create an Infra
 3. Set the Infra App token
 4. Select a region (EU or US) based on where you created your account in Sematext Cloud
 5. Set the Logs App token
-   - This is optional. If you want to ship your Windows Logs, set your Logs App token. You can find this token under your Windows Logs App's Agent Installation page. If left blank, Windows Logs collection won't be activated.
+   - This is optional. If you want to ship your Windows Logs, set your Logs App token. You can find this token under your Windows Logs App's Agent Installation page. If left blank, Windows Logs collection won't be activated. The Logs App token is also the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs.
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
 
@@ -33,7 +33,7 @@ Run the following command as Administrator from the folder where you downloaded 
 Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_INSTALLER'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US"
 ```
 
-If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page.
+If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page. The Logs App token is also the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs.
 
 ```
 Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US LOGS_TOKEN=YOUR_LOGS_APP_TOKEN"
@@ -60,7 +60,7 @@ Run the following command as Administrator from the folder where you downloaded 
 start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
 ```
 
-If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page.
+If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page. The Logs App token is also the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs.
 
 ```
 start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US LOGS_TOKEN=YOUR_LOGS_APP_TOKEN

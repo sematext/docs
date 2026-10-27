@@ -27,6 +27,8 @@ sudo st-agent macos-service install --infra-token YOUR_INFRA_APP_TOKEN --region 
 
 The daemon starts right away and again at every boot.
 
+If your applications send OpenTelemetry logs, also pass `--logs-token YOUR_LOGS_APP_TOKEN`. The Logs App token is the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs. The agent falls back to it when no [token group](/docs/agents/sematext-agent/opentelemetry/#2-configure-token-groups) has a logs token for the service.
+
 ## How to check the Sematext Agent service status
 
 ```bash
@@ -65,13 +67,15 @@ sudo tail -f /opt/spm/spm-monitor/logs/st-agent/st-agent.log
 
 If the agent crashes or fails to start, launchd writes its output to `/opt/spm/spm-monitor/logs/st-agent/launchd.log`.
 
-## How to change the Infra App token or region
+## How to change App tokens or region
 
 Run the install command again with the new values. It keeps the rest of the configuration and restarts the daemon:
 
 ```bash
-sudo st-agent macos-service install --infra-token YOUR_INFRA_APP_TOKEN --region US
+sudo st-agent macos-service install --infra-token YOUR_INFRA_APP_TOKEN --logs-token YOUR_LOGS_APP_TOKEN --region US
 ```
+
+Pass only the values you want to change.
 
 ## How to upgrade Sematext Agent
 
