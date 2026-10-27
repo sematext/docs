@@ -234,8 +234,7 @@ Open Windows Services and find the Sematext Agent service:
 Run the following command:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service status
+st-agent-amd64 windows-service status
 ```
 
 ## How to start / stop / restart Sematext Agent
@@ -251,22 +250,19 @@ Alternatively, you can use the command-line interface by running one of the foll
 Start:
 
 ```
-cd 'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service start
+st-agent-amd64 windows-service start
 ```
 
 Stop:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service stop
+st-agent-amd64 windows-service stop
 ```
 
 Restart:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service restart
+st-agent-amd64 windows-service restart
 ```
 
 ## How to check Sematext Agent logs
@@ -286,16 +282,15 @@ notepad.exe .\logs\st-agent.log
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-st-agent-amd64.exe windows-config set-token -t "YOUR_INFRA_TOKEN"
-st-agent-amd64.exe windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
-st-agent-amd64.exe windows-config set-region -r "EU/US"
+st-agent-amd64 windows-config set-token -t "YOUR_INFRA_TOKEN"
+st-agent-amd64 windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
+st-agent-amd64 windows-config set-region -r "EU/US"
 ```
 
 After the changes, you need to restart the agent:
 
 ```
-.\st-agent-amd64.exe windows-service restart
+st-agent-amd64 windows-service restart
 ```
 
 ## How to unistall Sematext Agent
@@ -320,5 +315,4 @@ To completely remove all configuration files and logs, execute the following com
 The Sematext Agent for Windows is still a work in progress and has some limitations:
 
 - Discovery and configuration of services and log sources are not yet supported
-- Inventory functionality is not yet available
-- Custom tags cannot be created
+- [Inventory](/docs/monitoring/inventory/) shows server details; package and container image inventory are Linux-only

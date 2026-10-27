@@ -9,23 +9,40 @@ This guide helps you resolve common issues with Sematext Tracing, OpenTelemetry 
 
 ### Check Agent Status
 
-**Linux:**
-```bash
-sudo systemctl status sematext-agent
-sudo journalctl -u sematext-agent -f
-```
+=== "Linux"
 
-**Docker:**
-```bash
-docker ps | grep sematext-agent
-docker logs sematext-agent
-```
+    ```bash
+    sudo systemctl status sematext-agent
+    sudo journalctl -u spm-monitor-st-agent -f
+    ```
 
-**Kubernetes:**
-```bash
-kubectl get pods -n sematext | grep sematext-agent
-kubectl logs -n sematext -l name=sematext-agent
-```
+=== "Windows"
+
+    ```powershell
+    st-agent-amd64 windows-service status
+    Get-Content "C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent\logs\st-agent.log" -Wait
+    ```
+
+=== "macOS"
+
+    ```bash
+    st-agent macos-service status
+    sudo tail -f /opt/spm/spm-monitor/logs/st-agent/st-agent.log
+    ```
+
+=== "Docker"
+
+    ```bash
+    docker ps | grep sematext-agent
+    docker logs sematext-agent
+    ```
+
+=== "Kubernetes"
+
+    ```bash
+    kubectl get pods -n sematext | grep sematext-agent
+    kubectl logs -n sematext -l name=sematext-agent
+    ```
 
 ### Verify OTLP Configuration
 
@@ -78,15 +95,29 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 1. Verify your Tracing App token in Sematext Cloud
 2. Check token configuration in agent:
 
-**Linux:**
-```bash
-cat /opt/spm/properties/otel.yml
-```
+=== "Linux"
 
-**Docker:**
-```bash
-docker exec sematext-agent cat /opt/spm/properties/otel.yml
-```
+    ```bash
+    sudo cat /opt/spm/properties/otel.yml
+    ```
+
+=== "Windows"
+
+    ```cmd
+    type "C:\Program Files\Sematext Agent\properties\otel.yml"
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo cat /opt/spm/properties/otel.yml
+    ```
+
+=== "Docker"
+
+    ```bash
+    docker exec sematext-agent cat /opt/spm/properties/otel.yml
+    ```
 
 ### Token Not Configured
 
@@ -254,7 +285,7 @@ sudo systemctl restart sematext-agent
 
 ```bash
 # List current services
-cat /opt/spm/properties/otel.yml | grep -A 5 services
+sudo cat /opt/spm/properties/otel.yml | grep -A 5 services
 
 # Add missing service
 sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
@@ -266,7 +297,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 
 ```bash
 # Check current port configuration
-cat /opt/spm/properties/otel.yml | grep -A 10 receivers
+sudo cat /opt/spm/properties/otel.yml | grep -A 10 receivers
 
 # Update ports if needed
 sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set \

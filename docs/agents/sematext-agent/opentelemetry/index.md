@@ -85,96 +85,139 @@ token-groups:
 
 ## Configuration by Platform
 
-### Linux/Windows
+### Linux, Windows and macOS
 
-Use the `st-agent otel` command to manage OpenTelemetry settings.
+Use the `st-agent otel` command to manage OpenTelemetry settings. On Windows, run the commands in a terminal opened as Administrator.
 
 ##### 1. Enable OpenTelemetry Tracing
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel enable --type traces
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 otel enable --type traces
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel enable --type traces
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel enable --type traces
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel enable --type traces
+    ```
 
 ##### 2. Configure Token Groups
 
 Create token groups and add your traces token:
 
-Linux:
-```bash
-# Add traces token to web-services group
-sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
-  --token-group "web-services" \
-  --type traces \
-  --token "your-traces-token"
+=== "Linux"
 
-# Optionally add metrics and logs tokens for the same services
-sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
-  --token-group "web-services" \
-  --type metrics \
-  --token "your-monitoring-token"
+    ```bash
+    # Add traces token to web-services group
+    sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
+      --token-group "web-services" \
+      --type traces \
+      --token "your-traces-token"
 
-sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
-  --token-group "web-services" \
-  --type logs \
-  --token "your-logs-token"
-```
+    # Optionally add metrics and logs tokens for the same services
+    sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
+      --token-group "web-services" \
+      --type metrics \
+      --token "your-monitoring-token"
 
-Windows:
-```cmd
-st-agent-amd64 otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
-st-agent-amd64 otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
-st-agent-amd64 otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
-```
+    sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
+      --token-group "web-services" \
+      --type logs \
+      --token "your-logs-token"
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
+    st-agent-amd64 otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
+    st-agent-amd64 otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
+    sudo st-agent otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
+    sudo st-agent otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
+    ```
 
 ##### 3. Map Services to Token Groups
 
 Map your application service names to token groups:
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
-  --service-names "frontend,backend,api" \
-  --token-group "web-services"
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 otel services add --service-names "frontend,backend,api" --token-group "web-services"
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
+      --service-names "frontend,backend,api" \
+      --token-group "web-services"
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel services add --service-names "frontend,backend,api" --token-group "web-services"
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel services add --service-names "frontend,backend,api" --token-group "web-services"
+    ```
 
 ##### 4. Restart Agent
 
-Linux:
-```bash
-sudo systemctl restart sematext-agent
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 windows-service restart
-```
+    ```bash
+    sudo systemctl restart sematext-agent
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 windows-service restart
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent macos-service restart
+    ```
 
 ##### Optional: Configure Custom Receiver Ports
 
 You can configure custom receiver ports if needed:
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protocol grpc --port 4337
-sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protocol http --port 4338
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 otel receivers set --type traces --protocol grpc --port 4337
-st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protocol grpc --port 4337
+    sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protocol http --port 4338
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel receivers set --type traces --protocol grpc --port 4337
+    st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel receivers set --type traces --protocol grpc --port 4337
+    sudo st-agent otel receivers set --type traces --protocol http --port 4338
+    ```
 
 ### Docker
 
@@ -492,55 +535,87 @@ kubectl apply -f sematext-agent-service.yaml
 
 ### View Current Configuration
 
-Linux:
-```bash
-cat /opt/spm/properties/otel.yml
-```
+=== "Linux"
 
-Windows:
-```cmd
-type "C:\Program Files\Sematext Agent\properties\otel.yml"
-```
+    ```bash
+    sudo cat /opt/spm/properties/otel.yml
+    ```
+
+=== "Windows"
+
+    ```cmd
+    type "C:\Program Files\Sematext Agent\properties\otel.yml"
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo cat /opt/spm/properties/otel.yml
+    ```
 
 ### Remove Services
 
 Remove a service from token group mapping:
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel services remove --service-name "frontend"
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 otel services remove --service-name "frontend"
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel services remove --service-name "frontend"
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel services remove --service-name "frontend"
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel services remove --service-name "frontend"
+    ```
 
 ### Remove Token Groups
 
 Remove tokens from a group:
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups remove --token-group "web-services" --type traces
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 otel token-groups remove --token-group "web-services" --type traces
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups remove --token-group "web-services" --type traces
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel token-groups remove --token-group "web-services" --type traces
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel token-groups remove --token-group "web-services" --type traces
+    ```
 
 ### Disable OpenTelemetry
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel disable --type traces
-```
+=== "Linux"
 
-Windows:
-```cmd
-st-agent-amd64 otel disable --type traces
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel disable --type traces
+    ```
+
+=== "Windows"
+
+    ```cmd
+    st-agent-amd64 otel disable --type traces
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo st-agent otel disable --type traces
+    ```
 
 ## Application Configuration
 
@@ -563,20 +638,29 @@ export OTEL_TRACES_SAMPLER_ARG=0.1
 
 View OpenTelemetry configuration and status:
 
-Linux:
-```bash
-sudo /opt/spm/spm-monitor/bin/st-agent otel --help
-```
+=== "Linux"
 
-Docker:
-```bash
-docker exec sematext-agent st-agent otel --help
-```
+    ```bash
+    sudo /opt/spm/spm-monitor/bin/st-agent otel --help
+    ```
 
-Kubernetes:
-```bash
-kubectl exec -n sematext deployment/sematext-agent -- st-agent otel --help
-```
+=== "macOS"
+
+    ```bash
+    st-agent otel --help
+    ```
+
+=== "Docker"
+
+    ```bash
+    docker exec sematext-agent st-agent otel --help
+    ```
+
+=== "Kubernetes"
+
+    ```bash
+    kubectl exec -n sematext deployment/sematext-agent -- st-agent otel --help
+    ```
 
 ### Test OTLP Connectivity
 
@@ -592,20 +676,29 @@ grpcurl -plaintext localhost:4337 list
 
 ### View Agent Logs
 
-Linux:
-```bash
-sudo journalctl -u sematext-agent -f
-```
+=== "Linux"
 
-Docker:
-```bash
-docker logs -f sematext-agent
-```
+    ```bash
+    sudo journalctl -u spm-monitor-st-agent -f
+    ```
 
-Kubernetes:
-```bash
-kubectl logs -n sematext deployment/sematext-agent -f
-```
+=== "macOS"
+
+    ```bash
+    sudo tail -f /opt/spm/spm-monitor/logs/st-agent/st-agent.log
+    ```
+
+=== "Docker"
+
+    ```bash
+    docker logs -f sematext-agent
+    ```
+
+=== "Kubernetes"
+
+    ```bash
+    kubectl logs -n sematext deployment/sematext-agent -f
+    ```
 
 ## Troubleshooting
 
@@ -639,20 +732,29 @@ No traces appearing in Sematext:
 
 View the OpenTelemetry configuration file:
 
-Linux:
-```bash
-sudo cat /opt/spm/properties/otel.yml
-```
+=== "Linux"
 
-Windows:
-```cmd
-type "C:\Program Files\Sematext Agent\properties\otel.yml"
-```
+    ```bash
+    sudo cat /opt/spm/properties/otel.yml
+    ```
 
-Docker:
-```bash
-docker exec sematext-agent cat /opt/spm/properties/otel.yml
-```
+=== "Windows"
+
+    ```cmd
+    type "C:\Program Files\Sematext Agent\properties\otel.yml"
+    ```
+
+=== "macOS"
+
+    ```bash
+    sudo cat /opt/spm/properties/otel.yml
+    ```
+
+=== "Docker"
+
+    ```bash
+    docker exec sematext-agent cat /opt/spm/properties/otel.yml
+    ```
 
 ## Best Practices
 
