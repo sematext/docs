@@ -40,12 +40,7 @@ Not every feature is available on every operating system. Containers and Kuberne
 
 See [Installing Sematext Agent on Linux](/docs/agents/sematext-agent/linux-installation/).
 
-??? note "Kernel requirements for eBPF-based features"
-    Log discovery, Auto-Discovery, system metrics collection, Network Map and AI Agent Watch use eBPF. The minimum **Linux kernel** version for them is **5.5**, and we recommend **5.8 or newer**. Between 5.5 and 5.8 the agent falls back to an older event transport, so log discovery, Auto-Discovery and Network Map keep working with reduced performance. Features that require a newer kernel, such as AI Agent Watch, are unavailable rather than degraded.
-
-    Enterprise distributions backport eBPF features into older kernels, so a release such as Red Hat Enterprise Linux 8 can meet these requirements even though it reports an older kernel version. Sematext Agent checks what the kernel actually supports rather than relying on its version number.
-
-    This is also why releases such as Red Hat Enterprise Linux 7, CentOS 7, Ubuntu 18.04 and SUSE Linux Enterprise Server 12 are not listed above: their kernels are older than 5.5, so Sematext Agent runs on them and collects metrics and logs, but Network Map, AI Agent Watch and eBPF-based discovery are unavailable.
+> **Note:** Log discovery, Auto-Discovery, system metrics collection, Network Map and AI Agent Watch use eBPF. The minimum **Linux kernel** version for them is **5.5**, and we recommend **5.8 or newer**. Between 5.5 and 5.8 the agent falls back to an older event transport, so log discovery, Auto-Discovery and Network Map keep working with reduced performance. Features that require a newer kernel, such as AI Agent Watch, are unavailable rather than degraded. Enterprise distributions backport eBPF features into older kernels, so a release such as Red Hat Enterprise Linux 8 can meet these requirements even though it reports an older kernel version. Sematext Agent checks what the kernel actually supports rather than relying on its version number. This is also why releases such as Red Hat Enterprise Linux 7, CentOS 7, Ubuntu 18.04 and SUSE Linux Enterprise Server 12 are not listed above: their kernels are older than 5.5, so Sematext Agent runs on them and collects metrics and logs, but Network Map, AI Agent Watch and eBPF-based discovery are unavailable.
 
 ## Windows
 
