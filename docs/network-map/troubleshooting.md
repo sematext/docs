@@ -44,7 +44,7 @@ If Network Map is enabled but shows no services or connections, work through the
 **Verify the agent is running:**
 
 ```bash
-systemctl status spm-monitor-st-agent
+systemctl status sematext-agent
 ```
 
 If it's not running, start it with `sudo service sematext-agent restart`.

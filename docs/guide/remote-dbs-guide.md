@@ -167,7 +167,7 @@ After configuration, verify that monitoring is working:
 
 1. Check agent status:
    ```bash
-   sudo systemctl status spm-monitor-st-agent
+   sudo systemctl status sematext-agent
    ```
 
 2. Check your Sematext App for incoming metrics
