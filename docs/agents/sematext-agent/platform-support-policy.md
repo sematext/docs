@@ -1,7 +1,7 @@
 title: Platform Support Policy
 description: Supported distributions and platforms for the Sematext Agent
 
-The Sematext Agent runs on Linux, Windows and macOS, in containers and on Kubernetes. We support each platform below for its whole vendor lifecycle. If a version is not listed, Sematext Agent is still very likely to run on it, and we encourage you to try it.
+The Sematext Agent runs on Linux, Windows and macOS, in containers and on Kubernetes. We support the releases listed below, including the ones past their vendor's standard support noted under Linux. If a version is not listed, Sematext Agent is still very likely to run on it, and we encourage you to try it.
 
 ## Feature availability
 
@@ -11,7 +11,8 @@ Not every feature is available on every operating system. Containers and Kuberne
 |:--|:-:|:-:|:-:|
 | Host metrics (CPU, memory, disk, network) | ✅ | ✅ | ✅ |
 | [Processes](/docs/monitoring/processes/) | ✅ | ✅ | ✅ |
-| Host details (OS, CPU, memory) | ✅ | ✅ | ✅ |
+| [Server inventory](/docs/monitoring/inventory/#servers) (OS, CPU, memory, disks) | ✅ | ✅ | ✅ |
+| [Package and container image inventory](/docs/monitoring/inventory/#packages) | ✅ | ❌ | ❌ |
 | Service status | systemd | [Windows Services](/docs/integration/windows/#windows-services) | launchd |
 | [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) metrics, traces and logs | ✅ | ✅ | ✅ |
 | Log collection beyond OpenTelemetry | [Log discovery](/docs/logs/discovery/intro/) | [Windows Events](/docs/integration/windows/#logs) | ❌ |

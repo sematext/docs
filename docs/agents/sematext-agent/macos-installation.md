@@ -1,7 +1,7 @@
 title: Installing Sematext Agent on macOS
 description: Install, run, upgrade and uninstall the Sematext Agent on macOS with Homebrew
 
-Sematext Agent collects host metrics (CPU, memory, disk, network), processes, host details and launchd service statuses from Macs, and receives [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) metrics, traces and logs from your applications. It is installed with Homebrew and runs as a root LaunchDaemon (`com.sematext.agent`).
+Sematext Agent collects host metrics (CPU, memory, disk, network), processes, server inventory and launchd service statuses from Macs, and receives [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) metrics, traces and logs from your applications. It is installed with Homebrew and runs as a root LaunchDaemon (`com.sematext.agent`).
 
 ## Preconditions
 
@@ -99,4 +99,4 @@ Release candidates are published to a separate cask, `sematext/tap/sematext-agen
 
 ## Limitations
 
-Log collection beyond OpenTelemetry logs, containers, Kubernetes, Auto-Discovery, Network Map and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
+Log collection beyond OpenTelemetry logs, package inventory, containers, Kubernetes, Auto-Discovery, Network Map and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
