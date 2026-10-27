@@ -9,7 +9,7 @@ Check the [platform support policy](/docs/agents/sematext-agent/platform-support
 
 You need [Homebrew](https://brew.sh/) and an account that can run `sudo`.
 
-To see your Mac's metrics in Sematext Cloud, [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app). Its Infra App token links Sematext Agent to Sematext Cloud.
+To see your Mac's metrics in Sematext Cloud, [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app). The Infra App token links Sematext Agent to Sematext Cloud.
 
 ## Install
 
@@ -27,7 +27,7 @@ sudo st-agent macos-service install --infra-token YOUR_INFRA_APP_TOKEN --region 
 
 The daemon starts right away and again at every boot.
 
-If your applications send OpenTelemetry logs, also pass `--logs-token YOUR_LOGS_APP_TOKEN`. The Logs App token is the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs. The agent falls back to it when no [token group](/docs/agents/sematext-agent/opentelemetry/#2-configure-token-groups) has a logs token for the service.
+To ship OpenTelemetry logs, create a Logs App in Sematext Cloud and add its token to a [token group](/docs/agents/sematext-agent/opentelemetry/#2-configure-token-groups) with `sudo st-agent otel token-groups add --type logs`.
 
 ## How to check the Sematext Agent service status
 
@@ -67,12 +67,12 @@ sudo tail -f /opt/spm/spm-monitor/logs/st-agent/st-agent.log
 
 If the agent crashes or fails to start, launchd writes its output to `/opt/spm/spm-monitor/logs/st-agent/launchd.log`.
 
-## How to change App tokens or region
+## How to change the Infra App token or region
 
 Run the install command again with the new values. It keeps the rest of the configuration and restarts the daemon:
 
 ```bash
-sudo st-agent macos-service install --infra-token YOUR_INFRA_APP_TOKEN --logs-token YOUR_LOGS_APP_TOKEN --region US
+sudo st-agent macos-service install --infra-token YOUR_INFRA_APP_TOKEN --region US
 ```
 
 Pass only the values you want to change.
@@ -103,4 +103,4 @@ Release candidates are published to a separate cask, `sematext/tap/sematext-agen
 
 ## Limitations
 
-Log shipping (other than OpenTelemetry logs), service metrics with Auto-Discovery, package inventory, containers, Kubernetes, Network Map and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
+Log shipping (other than OpenTelemetry logs), Monitoring Integrations, package inventory, containers, Kubernetes, Service Monitoring and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.

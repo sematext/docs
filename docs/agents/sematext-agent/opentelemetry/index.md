@@ -100,7 +100,7 @@ Use the `st-agent otel` command to manage OpenTelemetry settings. On Windows, ru
 === "Windows"
 
     ```cmd
-    st-agent otel enable --type traces
+    st-agent-amd64 otel enable --type traces
     ```
 
 === "macOS"
@@ -137,9 +137,9 @@ Create token groups and add your traces token:
 === "Windows"
 
     ```cmd
-    st-agent otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
-    st-agent otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
-    st-agent otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
+    st-agent-amd64 otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
+    st-agent-amd64 otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
+    st-agent-amd64 otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
     ```
 
 === "macOS"
@@ -165,7 +165,7 @@ Map your application service names to token groups:
 === "Windows"
 
     ```cmd
-    st-agent otel services add --service-names "frontend,backend,api" --token-group "web-services"
+    st-agent-amd64 otel services add --service-names "frontend,backend,api" --token-group "web-services"
     ```
 
 === "macOS"
@@ -185,7 +185,7 @@ Map your application service names to token groups:
 === "Windows"
 
     ```cmd
-    st-agent windows-service restart
+    st-agent-amd64 windows-service restart
     ```
 
 === "macOS"
@@ -208,8 +208,8 @@ You can configure custom receiver ports if needed:
 === "Windows"
 
     ```cmd
-    st-agent otel receivers set --type traces --protocol grpc --port 4337
-    st-agent otel receivers set --type traces --protocol http --port 4338
+    st-agent-amd64 otel receivers set --type traces --protocol grpc --port 4337
+    st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
     ```
 
 === "macOS"
@@ -566,7 +566,7 @@ Remove a service from token group mapping:
 === "Windows"
 
     ```cmd
-    st-agent otel services remove --service-name "frontend"
+    st-agent-amd64 otel services remove --service-name "frontend"
     ```
 
 === "macOS"
@@ -588,7 +588,7 @@ Remove tokens from a group:
 === "Windows"
 
     ```cmd
-    st-agent otel token-groups remove --token-group "web-services" --type traces
+    st-agent-amd64 otel token-groups remove --token-group "web-services" --type traces
     ```
 
 === "macOS"
@@ -608,7 +608,7 @@ Remove tokens from a group:
 === "Windows"
 
     ```cmd
-    st-agent otel disable --type traces
+    st-agent-amd64 otel disable --type traces
     ```
 
 === "macOS"

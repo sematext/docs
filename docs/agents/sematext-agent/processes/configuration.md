@@ -34,7 +34,7 @@ After that the [Sematext Agent](/docs/agents/sematext-agent) needs to be [restar
 === "Windows"
 
     ```cmd
-    st-agent windows-service restart
+    st-agent-amd64 windows-service restart
     ```
 
 === "macOS"

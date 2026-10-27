@@ -19,7 +19,7 @@ This guide helps you resolve common issues with Sematext Tracing, OpenTelemetry 
 === "Windows"
 
     ```powershell
-    st-agent windows-service status
+    st-agent-amd64 windows-service status
     Get-Content "C:\Windows\System32\config\systemprofile\AppData\Local\sematext-agent\logs\st-agent.log" -Wait
     ```
 

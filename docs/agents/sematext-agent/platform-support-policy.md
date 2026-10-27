@@ -17,8 +17,8 @@ Not every feature is available on every operating system. Containers and Kuberne
 | [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) metrics, traces and logs | ✅ | ✅ | ✅ |
 | Log shipping ([log discovery](/docs/logs/discovery/intro/), [Custom Logs](/docs/agents/sematext-agent/custom-logs/)) | ✅ | [Windows Events](/docs/integration/windows/#logs) only | ❌ |
 | Containers and Kubernetes | ✅ | ❌ | ❌ |
-| Service metrics ([Monitoring Integrations](/docs/monitoring/service-monitoring/) with [Auto-Discovery](/docs/monitoring/autodiscovery/)) | ✅ | ❌ | ❌ |
-| [Network Map](/docs/network-map/) | ✅ | ❌ | ❌ |
+| [Monitoring Integrations](/docs/monitoring/service-monitoring/) | ✅ | ❌ | ❌ |
+| [Service Monitoring](/docs/service-monitoring/) | ✅ | ❌ | ❌ |
 | [AI Agent Watch](/docs/ai-agent-watch/) | ✅ | ❌ | ❌ |
 
 ## Linux
@@ -59,6 +59,7 @@ See [Installing Sematext Agent on Windows](/docs/agents/sematext-agent/windows-i
 - macOS 26 Tahoe
 - macOS 15 Sequoia
 - macOS 14 Sonoma
+- macOS 13 Ventura
 
 Both Apple Silicon and Intel Macs are supported. macOS 27 runs only on Apple Silicon, so Intel Macs are supported up to macOS 26. See [Installing Sematext Agent on macOS](/docs/agents/sematext-agent/macos-installation/).
 

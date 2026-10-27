@@ -17,7 +17,7 @@ To see your Windows host metrics in Sematext Cloud, you need to [create an Infra
 3. Set the Infra App token
 4. Select a region (EU or US) based on where you created your account in Sematext Cloud
 5. Set the Logs App token
-   - This is optional. If you want to ship your Windows Logs, set your Logs App token. You can find this token under your Windows Logs App's Agent Installation page. If left blank, Windows Logs collection won't be activated. The Logs App token is also the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs.
+   - This is optional. If you want to ship your Windows Logs, set your Logs App token. You can find this token under your Windows Logs App's Agent Installation page. If left blank, Windows Logs collection won't be activated.
 
 After completing these steps, Sematext Agent will be automatically started as a Windows Service.
 
@@ -33,7 +33,7 @@ Run the following command as Administrator from the folder where you downloaded 
 Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'AGENT_MSI_INSTALLER'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_APP_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US"
 ```
 
-If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page. The Logs App token is also the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs.
+If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page.
 
 ```
 Start-Process -Wait msiexec -ArgumentList "/qn /i $($msiFileName = 'sematext-agent-latest.msi'; $msiFileName) /L*V `"$msiFileName.log`" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US LOGS_TOKEN=YOUR_LOGS_APP_TOKEN"
@@ -60,7 +60,7 @@ Run the following command as Administrator from the folder where you downloaded 
 start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US
 ```
 
-If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page. The Logs App token is also the default token for [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) logs.
+If you want to ship your Windows logs, be sure to also set your Logs App token. You can find this token on your Windows Logs App's Agent Installation page.
 
 ```
 start /wait msiexec /qn /i "AGENT_MSI_INSTALLER" /L*V "AGENT_MSI_INSTALLER.log" INFRA_TOKEN=YOUR_INFRA_APP_TOKEN REGION=YOUR_REGION_EU_or_US LOGS_TOKEN=YOUR_LOGS_APP_TOKEN
@@ -234,7 +234,7 @@ Open Windows Services and find the Sematext Agent service:
 Run the following command:
 
 ```
-st-agent windows-service status
+st-agent-amd64 windows-service status
 ```
 
 ## How to start / stop / restart Sematext Agent
@@ -250,19 +250,19 @@ Alternatively, you can use the command-line interface by running one of the foll
 Start:
 
 ```
-st-agent windows-service start
+st-agent-amd64 windows-service start
 ```
 
 Stop:
 
 ```
-st-agent windows-service stop
+st-agent-amd64 windows-service stop
 ```
 
 Restart:
 
 ```
-st-agent windows-service restart
+st-agent-amd64 windows-service restart
 ```
 
 ## How to check Sematext Agent logs
@@ -282,15 +282,15 @@ notepad.exe .\logs\st-agent.log
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
 ```
-st-agent windows-config set-token -t "YOUR_INFRA_TOKEN"
-st-agent windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
-st-agent windows-config set-region -r "EU/US"
+st-agent-amd64 windows-config set-token -t "YOUR_INFRA_TOKEN"
+st-agent-amd64 windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
+st-agent-amd64 windows-config set-region -r "EU/US"
 ```
 
 After the changes, you need to restart the agent:
 
 ```
-st-agent windows-service restart
+st-agent-amd64 windows-service restart
 ```
 
 ## How to unistall Sematext Agent
