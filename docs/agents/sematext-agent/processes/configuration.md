@@ -32,8 +32,7 @@ sudo service sematext-agent restart
 On Windows, as Administrator:
 
 ```
-cd 'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service restart
+st-agent windows-service restart
 ```
 
 On macOS:

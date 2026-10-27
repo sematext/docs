@@ -234,8 +234,7 @@ Open Windows Services and find the Sematext Agent service:
 Run the following command:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service status
+st-agent windows-service status
 ```
 
 ## How to start / stop / restart Sematext Agent
@@ -251,22 +250,19 @@ Alternatively, you can use the command-line interface by running one of the foll
 Start:
 
 ```
-cd 'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service start
+st-agent windows-service start
 ```
 
 Stop:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service stop
+st-agent windows-service stop
 ```
 
 Restart:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-.\st-agent-amd64.exe windows-service restart
+st-agent windows-service restart
 ```
 
 ## How to check Sematext Agent logs
@@ -286,16 +282,15 @@ notepad.exe .\logs\st-agent.log
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
 ```
-cd  'C:\Program Files\Sematext Agent\'
-st-agent-amd64.exe windows-config set-token -t "YOUR_INFRA_TOKEN"
-st-agent-amd64.exe windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
-st-agent-amd64.exe windows-config set-region -r "EU/US"
+st-agent windows-config set-token -t "YOUR_INFRA_TOKEN"
+st-agent windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
+st-agent windows-config set-region -r "EU/US"
 ```
 
 After the changes, you need to restart the agent:
 
 ```
-.\st-agent-amd64.exe windows-service restart
+st-agent windows-service restart
 ```
 
 ## How to unistall Sematext Agent

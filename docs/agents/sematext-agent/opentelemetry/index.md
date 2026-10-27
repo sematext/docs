@@ -98,7 +98,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel enable --type traces
 
 Windows:
 ```cmd
-st-agent-amd64 otel enable --type traces
+st-agent otel enable --type traces
 ```
 
 macOS:
@@ -132,9 +132,9 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups add \
 
 Windows:
 ```cmd
-st-agent-amd64 otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
-st-agent-amd64 otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
-st-agent-amd64 otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
+st-agent otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
+st-agent otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
+st-agent otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
 ```
 
 macOS:
@@ -157,7 +157,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 
 Windows:
 ```cmd
-st-agent-amd64 otel services add --service-names "frontend,backend,api" --token-group "web-services"
+st-agent otel services add --service-names "frontend,backend,api" --token-group "web-services"
 ```
 
 macOS:
@@ -174,7 +174,7 @@ sudo systemctl restart sematext-agent
 
 Windows:
 ```cmd
-st-agent-amd64 windows-service restart
+st-agent windows-service restart
 ```
 
 macOS:
@@ -194,8 +194,8 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set --type traces --protoc
 
 Windows:
 ```cmd
-st-agent-amd64 otel receivers set --type traces --protocol grpc --port 4337
-st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
+st-agent otel receivers set --type traces --protocol grpc --port 4337
+st-agent otel receivers set --type traces --protocol http --port 4338
 ```
 
 macOS:
@@ -546,7 +546,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services remove --service-name "fron
 
 Windows:
 ```cmd
-st-agent-amd64 otel services remove --service-name "frontend"
+st-agent otel services remove --service-name "frontend"
 ```
 
 macOS:
@@ -565,7 +565,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel token-groups remove --token-group "w
 
 Windows:
 ```cmd
-st-agent-amd64 otel token-groups remove --token-group "web-services" --type traces
+st-agent otel token-groups remove --token-group "web-services" --type traces
 ```
 
 macOS:
@@ -582,7 +582,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel disable --type traces
 
 Windows:
 ```cmd
-st-agent-amd64 otel disable --type traces
+st-agent otel disable --type traces
 ```
 
 macOS:
