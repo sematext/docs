@@ -15,9 +15,9 @@ Not every feature is available on every operating system. Containers and Kuberne
 | [Package and container image inventory](/docs/monitoring/inventory/#packages) | ✅ | ❌ | ❌ |
 | Service status | systemd | [Windows Services](/docs/integration/windows/#windows-services) | launchd |
 | [OpenTelemetry](/docs/agents/sematext-agent/opentelemetry/) metrics, traces and logs | ✅ | ✅ | ✅ |
-| Log collection beyond OpenTelemetry | [Log discovery](/docs/logs/discovery/intro/) | [Windows Events](/docs/integration/windows/#logs) | ❌ |
+| Log shipping ([log discovery](/docs/logs/discovery/intro/), [Custom Logs](/docs/agents/sematext-agent/custom-logs/)) | ✅ | [Windows Events](/docs/integration/windows/#logs) only | ❌ |
 | Containers and Kubernetes | ✅ | ❌ | ❌ |
-| [Auto-Discovery](/docs/monitoring/autodiscovery/) | ✅ | ❌ | ❌ |
+| Service metrics ([Monitoring Integrations](/docs/monitoring/service-monitoring/) with [Auto-Discovery](/docs/monitoring/autodiscovery/)) | ✅ | ❌ | ❌ |
 | [Network Map](/docs/network-map/) | ✅ | ❌ | ❌ |
 | [AI Agent Watch](/docs/ai-agent-watch/) | ✅ | ❌ | ❌ |
 

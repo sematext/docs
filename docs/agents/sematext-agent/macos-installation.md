@@ -103,4 +103,4 @@ Release candidates are published to a separate cask, `sematext/tap/sematext-agen
 
 ## Limitations
 
-Log collection beyond OpenTelemetry logs, package inventory, containers, Kubernetes, Auto-Discovery, Network Map and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
+Log shipping (other than OpenTelemetry logs), service metrics with Auto-Discovery, package inventory, containers, Kubernetes, Network Map and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
