@@ -538,7 +538,7 @@ kubectl apply -f sematext-agent-service.yaml
 === "Linux"
 
     ```bash
-    cat /opt/spm/properties/otel.yml
+    sudo cat /opt/spm/properties/otel.yml
     ```
 
 === "Windows"

@@ -98,7 +98,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 === "Linux"
 
     ```bash
-    cat /opt/spm/properties/otel.yml
+    sudo cat /opt/spm/properties/otel.yml
     ```
 
 === "Windows"
@@ -285,7 +285,7 @@ sudo systemctl restart sematext-agent
 
 ```bash
 # List current services
-cat /opt/spm/properties/otel.yml | grep -A 5 services
+sudo cat /opt/spm/properties/otel.yml | grep -A 5 services
 
 # Add missing service
 sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
@@ -297,7 +297,7 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 
 ```bash
 # Check current port configuration
-cat /opt/spm/properties/otel.yml | grep -A 10 receivers
+sudo cat /opt/spm/properties/otel.yml | grep -A 10 receivers
 
 # Update ports if needed
 sudo /opt/spm/spm-monitor/bin/st-agent otel receivers set \
