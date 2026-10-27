@@ -85,7 +85,7 @@ token-groups:
 
 ## Configuration by Platform
 
-### Linux/Windows
+### Linux, Windows and macOS
 
 Use the `st-agent otel` command to manage OpenTelemetry settings.
 
@@ -99,6 +99,11 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel enable --type traces
 Windows:
 ```cmd
 st-agent-amd64 otel enable --type traces
+```
+
+macOS:
+```bash
+sudo st-agent otel enable --type traces
 ```
 
 ##### 2. Configure Token Groups
@@ -132,6 +137,13 @@ st-agent-amd64 otel token-groups add --token-group "web-services" --type metrics
 st-agent-amd64 otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
 ```
 
+macOS:
+```bash
+sudo st-agent otel token-groups add --token-group "web-services" --type traces --token "your-traces-token"
+sudo st-agent otel token-groups add --token-group "web-services" --type metrics --token "your-monitoring-token"
+sudo st-agent otel token-groups add --token-group "web-services" --type logs --token "your-logs-token"
+```
+
 ##### 3. Map Services to Token Groups
 
 Map your application service names to token groups:
@@ -148,6 +160,11 @@ Windows:
 st-agent-amd64 otel services add --service-names "frontend,backend,api" --token-group "web-services"
 ```
 
+macOS:
+```bash
+sudo st-agent otel services add --service-names "frontend,backend,api" --token-group "web-services"
+```
+
 ##### 4. Restart Agent
 
 Linux:
@@ -158,6 +175,11 @@ sudo systemctl restart sematext-agent
 Windows:
 ```cmd
 st-agent-amd64 windows-service restart
+```
+
+macOS:
+```bash
+sudo st-agent macos-service restart
 ```
 
 ##### Optional: Configure Custom Receiver Ports
@@ -174,6 +196,12 @@ Windows:
 ```cmd
 st-agent-amd64 otel receivers set --type traces --protocol grpc --port 4337
 st-agent-amd64 otel receivers set --type traces --protocol http --port 4338
+```
+
+macOS:
+```bash
+sudo st-agent otel receivers set --type traces --protocol grpc --port 4337
+sudo st-agent otel receivers set --type traces --protocol http --port 4338
 ```
 
 ### Docker
@@ -502,6 +530,11 @@ Windows:
 type "C:\Program Files\Sematext Agent\properties\otel.yml"
 ```
 
+macOS:
+```bash
+sudo cat /opt/spm/properties/otel.yml
+```
+
 ### Remove Services
 
 Remove a service from token group mapping:
@@ -514,6 +547,11 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services remove --service-name "fron
 Windows:
 ```cmd
 st-agent-amd64 otel services remove --service-name "frontend"
+```
+
+macOS:
+```bash
+sudo st-agent otel services remove --service-name "frontend"
 ```
 
 ### Remove Token Groups
@@ -530,6 +568,11 @@ Windows:
 st-agent-amd64 otel token-groups remove --token-group "web-services" --type traces
 ```
 
+macOS:
+```bash
+sudo st-agent otel token-groups remove --token-group "web-services" --type traces
+```
+
 ### Disable OpenTelemetry
 
 Linux:
@@ -540,6 +583,11 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel disable --type traces
 Windows:
 ```cmd
 st-agent-amd64 otel disable --type traces
+```
+
+macOS:
+```bash
+sudo st-agent otel disable --type traces
 ```
 
 ## Application Configuration
@@ -566,6 +614,11 @@ View OpenTelemetry configuration and status:
 Linux:
 ```bash
 sudo /opt/spm/spm-monitor/bin/st-agent otel --help
+```
+
+macOS:
+```bash
+st-agent otel --help
 ```
 
 Docker:
@@ -595,6 +648,11 @@ grpcurl -plaintext localhost:4337 list
 Linux:
 ```bash
 sudo journalctl -u sematext-agent -f
+```
+
+macOS:
+```bash
+sudo tail -f /opt/spm/spm-monitor/logs/st-agent/st-agent.log
 ```
 
 Docker:
@@ -647,6 +705,11 @@ sudo cat /opt/spm/properties/otel.yml
 Windows:
 ```cmd
 type "C:\Program Files\Sematext Agent\properties\otel.yml"
+```
+
+macOS:
+```bash
+sudo cat /opt/spm/properties/otel.yml
 ```
 
 Docker:

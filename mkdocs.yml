@@ -404,6 +404,7 @@ nav:
           - Overview: agents/sematext-agent/installation.md
           - Linux: agents/sematext-agent/linux-installation.md
           - Windows: agents/sematext-agent/windows-installation.md
+          - macOS: agents/sematext-agent/macos-installation.md
           - Docker: agents/sematext-agent/containers/installation.md
           - Kubernetes:
             - Installation: agents/sematext-agent/kubernetes/installation.md
