@@ -23,22 +23,24 @@ Process Monitoring is enabled by default in the [Sematext Agent configuration](/
  </div>
 </div>
 
-After that the [Sematext Agent](/docs/agents/sematext-agent) needs to be [restarted](/docs/agents/sematext-agent/starting-stopping/). On Linux:
+After that the [Sematext Agent](/docs/agents/sematext-agent) needs to be [restarted](/docs/agents/sematext-agent/starting-stopping/). On Windows, run the command as Administrator.
 
-```
-sudo service sematext-agent restart
-```
+=== "Linux"
 
-On Windows, as Administrator:
+    ```bash
+    sudo service sematext-agent restart
+    ```
 
-```
-st-agent windows-service restart
-```
+=== "Windows"
 
-On macOS:
+    ```cmd
+    st-agent windows-service restart
+    ```
 
-```
-sudo st-agent macos-service restart
-```
+=== "macOS"
+
+    ```bash
+    sudo st-agent macos-service restart
+    ```
 
 There are numerous settings you can configure for Process Monitoring in the Sematext Agent. Check out the [Metrics](/docs/agents/sematext-agent/processes/metrics) first!
