@@ -8,7 +8,7 @@ Think of it as a **Split by** rather than the traditional Group by: instead of c
 
 Simply click and drag over the time range you're interested in to open the Context Menu, then select **Explode by tag**. Let’s look at one example.
 
-**Select what to explode**
+#### Select what to explode
 
 Suppose you spotted a spike in a chart and want to understand what caused that spike. The chart below shows the number of deleted documents in an OpenSearch cluster.
 
@@ -20,19 +20,19 @@ Selecting the spike in the above chart revealed it was two hosts that held the m
 
 ![Explode by host](/docs/images/dashboards/explode-by-host-example.webp)
 
-**Select what to split by**
+#### Select what to split by
 
 If we change the tag to split by to opensearch.index we discover that an index called metrics-mapping-2026-09-24 had the most deletions and that the deletions are ongoing, while another index called metrics-metainfo-2026-09-23 had a big one-time spike of deletions, and it was that one-time deletion that contributed the most to the spike of deleted documents that started this data exploration.
 
 ![Explode by index](/docs/images/dashboards/explode-by-index-example.webp)
 
-**Filter the report**
+#### Filter the report
 
 From the flyout you filter the underlying report using each chart’s tag and value as either include or exclude filter. As soon as you include or exclude filters the report will update. The flyout will remain open so you can add more filters or keep exploring.
 
 ![Apply report filter from explode](/docs/images/dashboards/explode-apply-report-filter.webp)
 
-**View more charts**
+#### View more charts
 
 The number of charts displayed in the flyout  depends on how many distinct values the selected tag has. Initially, a maximum or 12 charts are displayed, but you can incrementally show more, up to all available values.
 
