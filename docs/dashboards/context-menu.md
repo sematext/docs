@@ -6,7 +6,7 @@ Here’s an example of the Context Menu. This one is from a time-series chart sh
 
 Here is another example from a time-series chart in a Logs App. Here we didn’t actually click and drag on the chart \- **we simply clicked on one of the bars**.
 
-![Context menu example][/docs/images/dashboards/context-menu-logs-app.webp]
+![Context menu example](/docs/images/dashboards/context-menu-logs-app.webp)
 
 Here is another one for a bar chart, **not a time-series chart**.
 
