@@ -32,7 +32,7 @@ Shows the alerts screen where you will see all alerts triggered in the selected 
 
 Use this to pivot to *other telemetry* and *other signals* in Sematext, so you can more quickly connect the dots when troubleshooting or simply observing your systems.
 
-![Context menu - video](/docs/images/dashboards/context-menu-example-video.mp4)
+![Video](/docs/images/dashboards/context-menu-example-video.mp4)
 
 #### This App
 
