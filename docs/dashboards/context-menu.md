@@ -2,7 +2,7 @@ To open a Context Menu simply click and drag on a time-series chart. You can als
 
 Here’s an example of the Context Menu. This one is from a time-series chart showing five OpenSearch metrics in a Monitoring App.  
 
-![Context menu example][/docs/images/dashboards/context-menu-example.png]  
+![Context menu example](/docs/images/dashboards/context-menu-example.png)
 
 Here is another example from a time-series chart in a Logs App. Here we didn’t actually click and drag on the chart \- **we simply clicked on one of the bars**.
 
@@ -10,7 +10,7 @@ Here is another example from a time-series chart in a Logs App. Here we didn’t
 
 Here is another one for a bar chart, **not a time-series chart**.
 
-![Context menu example][/docs/images/dashboards/context-menu-bar-chart.png]
+![Context menu example](/docs/images/dashboards/context-menu-bar-chart.png)
 
 ### Zooming in
 
@@ -32,7 +32,7 @@ Shows the alerts screen where you will see all alerts triggered in the selected 
 
 Use this to pivot to *other telemetry* and *other signals* in Sematext, so you can more quickly connect the dots when troubleshooting or simply observing your systems.
 
-![Context menu - video][/docs/images/dashboards/context-menu-example-video.mp4]
+![Context menu - video](/docs/images/dashboards/context-menu-example-video.mp4)
 
 #### This App
 
@@ -46,7 +46,7 @@ Thus, the “This App” entry points “back” to “App Foo”. You might won
 
 In this case, when you are on the Foo Dashboard \> Report Bar screen and looking at a chart showing some telemetry from App Baz, it is handy to be able to go to the source, to App Baz, for example to see other metrics or logs or … related to whatever was shown on that chart from App Baz.
 
-![Context menu - this and Connected Apps][/docs/images/dashboards/context-menu-this-and-connected-apps.webp]
+![Context menu - this and Connected Apps](/docs/images/dashboards/context-menu-this-and-connected-apps.webp)
 
 #### Connected Apps
 
@@ -58,7 +58,7 @@ The **View in App** entry in the Context Menu lets you jump to all other Apps di
 
 Pivoting to logs and traces is valuable because they typically hold answers to performance, (un)availability, and similar issues. For example, in [Service Monitoring](/docs/service-monitoring/) \> [API Radar](/docs/service-monitoring/api-radar/) (see screenshot below) you will find [endpoints](/docs/service-monitoring/api-radar/endpoints/) and their error rates. When your services' APIs are erroring, where can you see their errors? In those services’ logs or traces. And when you want to drill into the root cause? In their logs and traces. So being able to easily go from error rate alerts and charts to logs and traces that hold answers is key.
 
-![Context menu - pivoting][/docs/images/dashboards/context-menu-from-apiradar-error-rates.webp]
+![Context menu - pivoting](/docs/images/dashboards/context-menu-from-apiradar-error-rates.webp)
 
 #### Data series
 
