@@ -6,7 +6,7 @@ Think of it as a **Split by** rather than the traditional Group by: instead of c
 
 ### How it works
 
-Simply click and drag over the time range you're interested in to open the Context Menu, then select **Explode by tag**. Let’s look at one example.
+Simply click and drag over the time range you're interested in to open the [Context Menu](/docs/dashboards/context-menu.md), then select **Explode by tag**. Let’s look at one example.
 
 #### Select what to explode
 
@@ -34,7 +34,7 @@ From the flyout you filter the underlying report using each chart’s tag and va
 
 #### View more charts
 
-The number of charts displayed in the flyout  depends on how many distinct values the selected tag has. Initially, a maximum or 12 charts are displayed, but you can incrementally show more, up to all available values.
+The number of charts displayed in the flyout depends on how many distinct values the selected tag has. Initially, a maximum or 12 charts are displayed, but you can incrementally show more, up to all available values.
 
 ### Use cases
 
