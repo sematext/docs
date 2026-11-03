@@ -6,7 +6,7 @@ Think of it as a **Split by** rather than the traditional Group by: instead of c
 
 ### How it works
 
-Simply click and drag over the time range you're interested in to open the [Context Menu](/docs/dashboards/context-menu.md), then select **Explode by tag**. Let’s look at one example.
+Simply click and drag over the time range you're interested in to open the [Context Menu](/docs/dashboards/context-menu), then select **Explode by tag**. Let’s look at one example.
 
 #### Select what to explode
 
