@@ -1,5 +1,7 @@
 To open a Context Menu simply click and drag on a time-series chart. You can also simply click on individual data points on time-series as well as some non-time series charts.
 
+### Examples
+
 Here’s an example of the Context Menu. This one is from a time-series chart showing five OpenSearch metrics in a Monitoring App.  
 
 ![Context menu example](/docs/images/dashboards/context-menu-example.png)
