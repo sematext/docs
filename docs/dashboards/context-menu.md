@@ -18,7 +18,7 @@ On time-series charts the option to zoom in is at the top because that’s what 
 
 ### Explode by tag
 
-Some Context Menus let you explode aggregated charts into a series of charts with a single data series.
+Some Context Menus let you [explode aggregated charts](/docs/dashboards/explode-by-tag/) into a series of charts with a single data series.
 
 ### View Events
 
