@@ -372,6 +372,7 @@ nav:
       - Quick Start: dashboards/quick-start.md
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
+      - Context Menu: dashboards/context-menu.md
       - Explode by Tag: dashboards/explode-by-tag.md
       - Components:
         - Overview: dashboards/components-overview.md
