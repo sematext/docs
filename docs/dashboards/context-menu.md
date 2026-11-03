@@ -64,7 +64,7 @@ Pivoting to logs and traces is valuable because they typically hold answers to p
 
 ![Context menu - pivoting](/docs/images/dashboards/context-menu-from-apiradar-error-rates.webp)
 
-#### Data series
+### Data series
 
 In addition to letting you pivot to other observability signals you have in Sematext the new Context Menu shows the list of all data series present on the chart. Each data series’ minimal, average, and maximal value in the selected time period is shown. Sorting by min, avg or max will reorder the series in the Context Menu.
 
