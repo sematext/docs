@@ -8,7 +8,7 @@ The [Sematext Agent for Windows](/docs/agents/sematext-agent/windows-installatio
 Windows logs are identified by an Event ID and a Source. For instance, **Event ID 4625** with **Source: Microsoft-Windows-Security-Auditing** signifies an unsuccessful logon attempt. You don’t need to memorize each Event ID and Source because the agent includes a built-in dictionary that translates these IDs and sources into more meaningful names. For example, when the agent encounters a log with **Event ID 4625** and **Source: Microsoft-Windows-Security-Auditing**, it assigns the name `ACCOUNT_LOGON_FAILED`.
 Although the agent provides a default dictionary, you can add or customize event names as needed by following these steps:
 
-1. Navigate to `C:\Program Files\SematextAgent\properties\` and open the `st-agent.yml` file.
+1. Navigate to `C:\Program Files\Sematext Agent\properties\` and open the `st-agent.yml` file.
 2. Locate the section labeled `#Define custom names for specific event IDs and sources`.
 3. Uncomment the `names`: line if it is commented out, and then add your custom event names. For example:
 
@@ -30,7 +30,7 @@ By default, the agent collects logs from the following Windows Event Viewer chan
 
 You can customize which channels the agent collects logs from by following these steps:
 
-1. Navigate to `C:\Program Files\SematextAgent\properties\` and open the `st-agent.yml` file.
+1. Navigate to `C:\Program Files\Sematext Agent\properties\` and open the `st-agent.yml` file.
 2. Locate the section labeled paths and add or remove channels according to your needs.
 
 ```

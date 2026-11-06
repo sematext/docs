@@ -543,6 +543,8 @@ kubectl apply -f sematext-agent-service.yaml
 
 === "Windows"
 
+    In a terminal opened as Administrator:
+
     ```cmd
     type "C:\Program Files\Sematext Agent\properties\otel.yml"
     ```
@@ -739,6 +741,8 @@ View the OpenTelemetry configuration file:
     ```
 
 === "Windows"
+
+    In a terminal opened as Administrator:
 
     ```cmd
     type "C:\Program Files\Sematext Agent\properties\otel.yml"
