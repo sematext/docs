@@ -103,6 +103,8 @@ sudo /opt/spm/spm-monitor/bin/st-agent otel services add \
 
 === "Windows"
 
+    In a terminal opened as Administrator:
+
     ```cmd
     type "C:\Program Files\Sematext Agent\properties\otel.yml"
     ```
