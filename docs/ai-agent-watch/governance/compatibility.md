@@ -3,7 +3,7 @@ description: Check host compatibility for AI Agent Watch Governance and enable B
 
 Governance requires **Sematext Agent 4.6 or later** and a Linux host with BPF-LSM enabled.
 
-This page covers Linux. On macOS and Windows, governance works through the hooks of Claude Code and Codex and needs no kernel support; see [AI Agent Watch on macOS and Windows](../macos-windows.md#install-the-hooks-for-governance).
+This page covers Linux. On macOS and Windows, governance works through the hooks of Claude Code and Codex and needs no kernel support; see [AI Agent Watch on macOS and Windows](../macos-windows.md).
 
 ## Host requirements
 
