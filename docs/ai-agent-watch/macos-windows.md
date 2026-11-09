@@ -44,6 +44,7 @@ sudo st-agent ai-agent-watch init
 This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it. `aiaw` is short for `ai-agent-watch`.
 
 - It writes only the machine-wide files: Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) and Codex's `requirements.toml`. Every other setting in them stays, and a setting someone else already gave a value, such as `OTEL_LOG_USER_PROMPTS`, keeps it.
+- It refuses a file, or a folder above it, that a user other than an administrator owns: that user could turn the hooks off. It also leaves a file that is a link, or that it cannot read, as it is, and says why.
 - A file is backed up next to itself before it changes. Running it again changes nothing.
 - `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
 - It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
@@ -64,11 +65,11 @@ Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
   up to date
 ```
 
-`command did not run` means the hook could not be started, `agent not reachable` that Sematext Agent is not running, `no policy loaded` that no Governance policy blocks anything for this app. The check call creates no event.
+`command did not run` means the hook could not be started, `agent not reachable` that Sematext Agent is not running. `no policy loaded` means AI Agent Monitoring is off for this app, enforcement is off in `st-agent.yml` (`aiagent.enforcement.enabled`), or no Governance policy blocks anything. The check call creates no event.
 
-**After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run `init` again.
+**After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run the `init` command it prints.
 
-**Before uninstalling Sematext Agent**, run `sudo st-agent ai-agent-watch remove` (on Windows, as Administrator). It takes out what `init` wrote and leaves everything else.
+**Before uninstalling Sematext Agent**, run `sudo st-agent ai-agent-watch remove` (on Windows, as Administrator). It takes out what `init` wrote and leaves everything else. Codex's `[features] hooks = true` stays, as do settings someone changed after `init`.
 
 ## Set up by hand
 
