@@ -48,7 +48,7 @@ This sets up both Claude Code and Codex: the hooks that let Sematext Agent check
 - A file is backed up next to itself before it changes. Running it again changes nothing.
 - `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
 - It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
-- It warns when Claude Code will not read the file: when your organization delivers Claude Code policy through MDM or claude.ai server-managed settings, Claude Code ignores the file's hooks. Add the hooks there, see [Set up by hand](#set-up-by-hand).
+- It warns when Claude Code will not read the file's hooks: when your organization delivers Claude Code policy through MDM or claude.ai server-managed settings, Claude Code uses that source's hooks only. Set `"managedSourcesBehavior": "merge"` there (Claude Code 2.1.242 or later), and the file's hooks run next to it. The telemetry settings apply either way.
 
 Then check it, as any user (on Windows, `& 'C:\Program Files\Sematext Agent\st-agent.exe' ai-agent-watch check`):
 
@@ -77,7 +77,7 @@ For deploying through Jamf, Intune or Group Policy, or to Claude Code policy del
 
 ### Claude Code
 
-1. **Find where Claude Code reads policy from.** Run `/status` in Claude Code; `Setting sources` names it. If your organization delivers Claude Code policy through MDM (a macOS configuration profile or the Windows `HKLM\SOFTWARE\Policies\ClaudeCode` registry value) or through server-managed settings on claude.ai, add the block below there. Claude Code then ignores the file in the next step.
+1. **Find where Claude Code reads policy from.** Run `/status` in Claude Code; `Setting sources` names it. If your organization delivers Claude Code policy through MDM (a macOS configuration profile or the Windows `HKLM\SOFTWARE\Policies\ClaudeCode` registry value) or through server-managed settings on claude.ai, add `"managedSourcesBehavior": "merge"` there (Claude Code 2.1.242 or later); without it Claude Code skips the hooks in the file in the next step. Adding the hooks block to server-managed settings instead works only when every machine runs the same OS: that one block reaches every machine, and the hook names a per-OS path.
 2. **Add the block** for your OS to Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) file, next to any keys already in it:
     - macOS: `/Library/Application Support/ClaudeCode/managed-settings.json`
     - Windows: `C:\Program Files\ClaudeCode\managed-settings.json`
@@ -132,7 +132,7 @@ Windows:
 
 ### Codex
 
-1. **Add this block** to `requirements.toml`: `/etc/codex/requirements.toml` on macOS, `%ProgramData%\OpenAI\Codex\requirements.toml` on Windows. If the file already has a `[features]` table, add `hooks = true` to it instead of adding a second one. Users cannot change these settings.
+1. **Add this block** to `requirements.toml`: `/etc/codex/requirements.toml` on macOS, `%ProgramData%\OpenAI\Codex\requirements.toml` on Windows. When the `RequirementsPath` value under `HKLM\SOFTWARE\Policies\OpenAI\Codex` names another file, Codex 0.164 or later reads that file instead, and older versions still read the default one. If the file already has a `[features]` table, add `hooks = true` to it instead of adding a second one. Users cannot change these settings.
 
     ```toml
     [features]
