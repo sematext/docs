@@ -13,6 +13,8 @@ For example, a File Access policy can deny opening a credential file, and a Tool
 
 Governance requires **Sematext Agent 4.6 or later** and **Linux kernel 5.17 or later**, with BPF-LSM enabled. See [Governance Compatibility](compatibility.md) for compatibility checks and configuration.
 
+On macOS and Windows, Sematext Agent 4.7 or later enforces the same policies on the tool calls Claude Code and Codex make, through their hooks, instead of on the operations underneath. See [AI Agent Watch on macOS and Windows](../macos-windows.md#install-the-hooks-for-governance) for setup and what that covers.
+
 See [Governance Policies](policies.md) to configure conditions, scope, and notifications.
 
 ## Governance report
