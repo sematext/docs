@@ -1,7 +1,7 @@
 title: AI Agent Watch on macOS and Windows
 description: Set up AI Agent Watch and Governance for Claude Code and Codex on macOS and Windows workstations
 
-AI Agent Watch and [Governance](governance/index.md) work on macOS and Windows workstations for **Claude Code** and **Codex** (the CLI, `codex exec` and the IDE extension). On Linux they need no setup. On macOS and Windows, Claude Code and Codex need a one-time setup per machine, done by an administrator, so they report to Sematext Agent.
+AI Agent Watch and [Governance](governance/index.md) work on macOS and Windows workstations for **Claude Code** and **Codex** (the CLI, `codex exec` and the IDE extension). On Linux they need no setup. On macOS and Windows, Claude Code and Codex need a one-time setup per machine, done by an administrator with one command, so they report to Sematext Agent.
 
 Requires **Sematext Agent 4.7 or later**. Sematext Agent needs no configuration for this: it listens for Claude Code and Codex on `127.0.0.1` by default.
 
@@ -27,7 +27,55 @@ Treat it as a guardrail for the AI agent's own actions, not as a sandbox. On Lin
 
 If Sematext Agent is stopped or does not answer within half a second, the tool call goes ahead, so Sematext Agent never blocks a developer's work by being down.
 
-## Set up Claude Code
+## Set up
+
+As an administrator, on each machine:
+
+```bash
+# macOS
+sudo st-agent ai-agent-watch init
+```
+
+```powershell
+# Windows, in PowerShell run as Administrator
+& 'C:\Program Files\Sematext Agent\st-agent.exe' ai-agent-watch init
+```
+
+This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it. `aiaw` is short for `ai-agent-watch`.
+
+- It writes only the machine-wide files: Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) and Codex's `requirements.toml`. Every other setting in them stays, and a setting someone else already gave a value, such as `OTEL_LOG_USER_PROMPTS`, keeps it.
+- A file is backed up next to itself before it changes. Running it again changes nothing.
+- `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
+- It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
+- It warns when Claude Code will not read the file: when your organization delivers Claude Code policy through MDM or claude.ai server-managed settings, Claude Code ignores the file's hooks. Add the hooks there, see [Set up by hand](#set-up-by-hand).
+
+Then check it, as any user (on Windows, `& 'C:\Program Files\Sematext Agent\st-agent.exe' ai-agent-watch check`):
+
+```bash
+st-agent ai-agent-watch check
+```
+
+`check` runs the hook command the way Claude Code and Codex run it, with a tool call Sematext Agent refuses, and shows the answer. It needs at least one [Governance policy](governance/policies.md) that blocks something. A working setup shows `pass` for each:
+
+```
+Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
+  hook     /opt/spm/spm-monitor/bin/st-agent hook claude
+  shell    /bin/sh -c
+  pass  a tool call came back refused: Sematext Agent blocked this (check): the hook works.
+  up to date
+```
+
+`command did not run` means the shell could not run the hook, `agent not reachable` that Sematext Agent is not running, `no policy loaded` that no Governance policy blocks anything for this app. The check call creates no event.
+
+**After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run `init` again.
+
+**Before uninstalling Sematext Agent**, run `sudo st-agent ai-agent-watch remove` (on Windows, as Administrator). It takes out what `init` wrote and leaves everything else.
+
+## Set up by hand
+
+For deploying through Jamf, Intune or Group Policy, or to Claude Code policy delivered by MDM or claude.ai, these are the blocks `init` writes.
+
+### Claude Code
 
 1. **Find where Claude Code reads policy from.** Run `/status` in Claude Code; `Setting sources` names it. If your organization delivers Claude Code policy through MDM (a macOS configuration profile or the Windows `HKLM\SOFTWARE\Policies\ClaudeCode` registry value) or through server-managed settings on claude.ai, add the block below there. Claude Code then ignores the file in the next step.
 2. **Add the block** for your OS to Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) file, next to any keys already in it:
@@ -82,28 +130,17 @@ Windows:
 - Users cannot remove these settings. To also stop them from adding hooks of their own, add `"allowManagedHooksOnly": true`.
 - Claude Code reads the settings when a session starts.
 
-## Set up Codex
+### Codex
 
-Codex needs two files: one for its telemetry, one for its hooks.
-
-1. **Telemetry.** Add this block to the file for your OS:
-
-    ```toml
-    [otel]
-    exporter = { otlp-grpc = { endpoint = "http://127.0.0.1:4347" } }
-    log_user_prompt = true
-    ```
-
-    | OS | File | Can users change it? |
-    |---|---|---|
-    | macOS | `/etc/codex/managed_config.toml` | No. |
-    | Windows | `%ProgramData%\OpenAI\Codex\config.toml` | Yes. A user's own `config.toml` overrides it. |
-
-2. **Hooks.** Add this block to `requirements.toml`: `/etc/codex/requirements.toml` on macOS, `%ProgramData%\OpenAI\Codex\requirements.toml` on Windows. If the file already has a `[features]` table, add `hooks = true` to it instead of adding a second one.
+1. **Add this block** to `requirements.toml`: `/etc/codex/requirements.toml` on macOS, `%ProgramData%\OpenAI\Codex\requirements.toml` on Windows. If the file already has a `[features]` table, add `hooks = true` to it instead of adding a second one. Users cannot change these settings.
 
     ```toml
     [features]
     hooks = true
+
+    [otel]
+    exporter = { otlp-grpc = { endpoint = "http://127.0.0.1:4347" } }
+    log_user_prompt = true
 
     [[hooks.PreToolUse]]
     [[hooks.PreToolUse.hooks]]
@@ -126,6 +163,10 @@ Codex needs two files: one for its telemetry, one for its hooks.
     commandWindows = '''& 'C:\Program Files\Sematext Agent\st-agent.exe' hook codex'''
     timeout = 5
     ```
+
+    Codex reads `[otel]` from `requirements.toml` from version 0.166; older versions skip it and run the hooks only.
+
+2. **Telemetry managed elsewhere.** If `requirements.toml` already has an `[otel]` table, Codex sends its telemetry there and not to Sematext Agent; leave the `[otel]` block out.
 
 3. **Check it.** From a terminal on the machine, `codex exec "run the shell command: nc -h"`, with a Governance policy on `nc`, must be refused with `Sematext Agent blocked this: governance rule (binary) matches nc.` A broken `requirements.toml` stops Codex from starting a session, so run this after every change.
 
