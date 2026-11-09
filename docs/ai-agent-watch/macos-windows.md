@@ -10,37 +10,29 @@ The AI agent reports in two ways, and you can set up either or both:
 - **Telemetry** (OpenTelemetry logs): sessions, token usage, tool calls, files and connections.
 - **Hooks**: the AI agent asks Sematext Agent before each tool call. This is what enforces Governance policies, and it adds PII scanning of tool output and the exit code of shell commands.
 
-Setup has three parts:
+Sematext Agent needs no setup: it listens for the AI agent on `127.0.0.1` out of the box. What is left is on the AI agent's side:
 
-1. Turn on the AI agent receiver in Sematext Agent.
-2. Point the AI agent's telemetry at it.
-3. Install the hooks, for Governance.
+1. Point the AI agent's telemetry at Sematext Agent.
+2. Install the hooks, for Governance.
 
-Use managed settings for steps 2 and 3, so developers can't turn them off. Everything stays on the machine: the AI agent talks to `127.0.0.1` only, and Sematext Agent ships the same events it ships on Linux.
+Use managed settings for both, so developers can't turn them off. Everything stays on the machine: the AI agent talks to `127.0.0.1` only, and Sematext Agent ships the same events it ships on Linux.
 
-## Enable the receiver in Sematext Agent
+## Sematext Agent
 
-The receiver is off by default. Open `st-agent.yml`:
+Sematext Agent listens on `127.0.0.1:4347` (telemetry, gRPC), `127.0.0.1:4348` (telemetry, HTTP) and `127.0.0.1:4349` (hooks). Its log shows `AI agent OTLP receiver started` with both telemetry endpoints, and `AI agent hook endpoint started endpoint=127.0.0.1:4349`. If another process already holds one of these ports, the agent logs a warning and keeps the ones it could bind.
+
+To turn either off, set it in `st-agent.yml` and restart Sematext Agent:
 
 - macOS: `/opt/spm/properties/st-agent.yml`
 - Windows: `C:\Program Files\Sematext Agent\properties\st-agent.yml`
 
-Uncomment the `aiagent` block, or add it if your file has none:
-
 ```yaml
 aiagent:
   otlp:
-    enabled: true
-    grpc-endpoint: 127.0.0.1:4347
-    http-endpoint: 127.0.0.1:4348
+    enabled: false
   hook:
-    enabled: true
-    endpoint: 127.0.0.1:4349
+    enabled: false
 ```
-
-`otlp` receives telemetry and `hook` answers the hooks. Turn on the ones you use.
-
-Then restart Sematext Agent.
 
 macOS:
 
@@ -53,8 +45,6 @@ Windows, as Administrator:
 ```
 st-agent windows-service restart
 ```
-
-The agent log then shows `AI agent OTLP receiver started` with both telemetry endpoints, and `AI agent hook endpoint started endpoint=127.0.0.1:4349`.
 
 ## Configure Claude Code
 
