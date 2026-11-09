@@ -3,7 +3,7 @@ description: Find and filter specific services, infrastructure, and connections 
 
 When you're managing dozens or hundreds of services, you need ways to focus on what matters. Network Map provides powerful filtering and search capabilities that help you cut through the noise and find exactly what you're looking for.
 
-![Services Filters Panel](../images/network-map/network-map-filters.png)
+![Services Filters Panel](../images/service-monitoring/network/network-map-filters.png)
 
 ## Finding Services with Search
 
@@ -51,7 +51,7 @@ These sliders work as minimum thresholds - services above your selected value ap
 
 The "Color By" dropdown in the top-right corner controls how services and connections are visually represented:
 
-![Color By Options](../images/network-map/network-map-color-by.png)
+![Color By Options](../images/service-monitoring/network/network-map-color-by.png)
 
 **Nodes** (service cards and infrastructure elements):
 

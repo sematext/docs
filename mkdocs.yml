@@ -96,7 +96,7 @@ nav:
         - Kubernetes: monitoring/kubernetes.md
         - Inventory: monitoring/inventory.md
         - Processes: monitoring/processes.md
-      - Service Monitoring:
+      - Monitoring Integrations:
         - Overview: monitoring/service-monitoring.md
         - Service Discovery: monitoring/autodiscovery.md
       - Settings: monitoring/settings.md
@@ -106,19 +106,31 @@ nav:
       - Custom Metrics: monitoring/custom-metrics.md
       - Changelog: changelog.md
       - FAQ: monitoring/spm-faq.md
-    - Network Map:
-      - Overview: network-map/index.md
-      - Getting Started: network-map/getting-started.md
-      - Services View: network-map/services-view.md
-      - Infrastructure View: network-map/infrastructure-view.md
-      - Filtering & Search: network-map/filtering-search.md
-      - Thresholds: network-map/thresholds.md
-      - Supported Services: network-map/supported-services.md
-      - Tabular Views: network-map/tabular-views.md
-      - Troubleshooting: network-map/troubleshooting.md
-    - Service Map: service-map/index.md
+    - Service Monitoring:
+      - Overview: service-monitoring/index.md
+      - Getting Started: service-monitoring/getting-started.md
+      - Service Details: service-monitoring/service-details.md
+      - Network:
+        - Overview: network-map/index.md
+        - Map:
+          - Services View: network-map/services-view.md
+          - Infrastructure View: network-map/infrastructure-view.md
+        - Tabular Views: network-map/tabular-views.md
+        - Filtering & Search: network-map/filtering-search.md
+        - Thresholds: network-map/thresholds.md
+        - Supported Services: network-map/supported-services.md
+        - Troubleshooting: network-map/troubleshooting.md
+      - API Radar:
+        - Overview: service-monitoring/api-radar/index.md
+        - Services Overview: service-monitoring/api-radar/services-overview.md
+        - Endpoints: service-monitoring/api-radar/endpoints.md
+        - Ignored Endpoints: service-monitoring/api-radar/ignored-endpoints.md
+        - SSL Certificates: service-monitoring/api-radar/ssl-certificates.md
+        - Thresholds & Alerts: service-monitoring/api-radar/thresholds-alerts.md
+        - Coming Soon: service-monitoring/api-radar/coming-soon.md
     - Tracing:
       - Overview: tracing/index.md
+      - Service Map: service-map/index.md
       - Getting Started: tracing/getting-started.md
       - Creating a Tracing App: tracing/create-tracing-app.md
       - OpenTelemetry SDKs:
@@ -361,6 +373,8 @@ nav:
       - Quick Start: dashboards/quick-start.md
       - Reports and Components: dashboards/reports-and-components.md
       - Chart Builder: dashboards/chart-builder.md
+      - Context Menu: dashboards/context-menu.md
+      - Explode by Tag: dashboards/explode-by-tag.md
       - Components:
         - Overview: dashboards/components-overview.md
         - Time Series Chart: dashboards/time-series-chart.md
@@ -393,6 +407,7 @@ nav:
           - Overview: agents/sematext-agent/installation.md
           - Linux: agents/sematext-agent/linux-installation.md
           - Windows: agents/sematext-agent/windows-installation.md
+          - macOS: agents/sematext-agent/macos-installation.md
           - Docker: agents/sematext-agent/containers/installation.md
           - Kubernetes:
             - Installation: agents/sematext-agent/kubernetes/installation.md

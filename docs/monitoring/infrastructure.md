@@ -12,7 +12,7 @@ Sematext Infrastructure Monitoring provides complete insight into your infrastru
 
 For a visual topology of your infrastructure showing service connections and dependencies, see [Network Map](/docs/network-map/). For application-level service dependencies derived from distributed traces, see [Service Map](/docs/service-map/).
 
-For application and service monitoring, make sure to check our [dedicated guide](/docs/monitoring/service-monitoring/).
+For service-specific metrics, see the [Monitoring Integrations guide](/docs/monitoring/service-monitoring/).
 
 The centerpiece is an Infra App which acts as a container for all data about your infrastructure. As with other App types, you can create as many Infra Apps under your account as you wish.
 

@@ -3,7 +3,7 @@ description: Visualize your services and their connections with real-time metric
 
 The Services View shows your business applications and their connections. You can see how services communicate, identify which databases and caches your applications depend on, and trace request flows through your infrastructure.
 
-![Services View](../images/network-map/network-map-services-view.png)
+![Services View](../images/service-monitoring/network/network-map-services-view.png)
 
 ## Understanding the Layout
 
@@ -35,7 +35,7 @@ The lines animate to show active traffic flow, and a red line immediately draws 
 
 Click on any service to open its details panel:
 
-![Service Details Panel](../images/network-map/network-map-service-details.png)
+![Service Details Panel](../images/service-monitoring/network/network-map-service-details.png)
 
 The **Service Overview** section shows where the service is running - the host name and IP address. This helps you quickly identify the physical or virtual location of the service.
 
@@ -45,11 +45,13 @@ The **Network Connections** section lists every connection to and from this serv
 
 The **Process Details** section at the bottom shows the underlying process information - the detected service type, host, process ID (TGID), listening ports, and the full command line. This is invaluable for debugging configuration issues or identifying exactly what's running.
 
+Incoming connections identify callers that depend on the selected service. In **Network Connections**, select **Incoming** to focus on those callers. If the selected service is slow or failing, inspect its callers and their dependencies to understand which other services could be affected. A connection indicates potential impact, not proof that the caller is experiencing a problem. See [Assess the potential blast radius](../service-monitoring/service-details.md#assess-the-potential-blast-radius) for an example investigation.
+
 ## Investigating a Connection
 
 Click on any connection line to open the Connection Details panel:
 
-![Connection Details Panel](../images/network-map/network-map-connection-details.png)
+![Connection Details Panel](../images/service-monitoring/network/network-map-connection-details.png)
 
 The **Traffic Metrics** section shows the total data transferred over this connection and the connection status (like ESTABLISHED for active connections).
 
@@ -95,3 +97,10 @@ Once you're comfortable with the Services View, explore:
 - [Filtering & Search](/docs/network-map/filtering-search/) to focus on specific services or find high-resource consumers
 - [Thresholds](/docs/network-map/thresholds/) to customize the warning and critical levels for your environment
 - [Service Map](/docs/service-map/) for application-level service dependencies derived from OpenTelemetry traces
+
+
+## Related API activity
+
+The Services map is available under **Service Monitoring → Network → Map → Services**. For endpoint request metrics, open [API Radar](../service-monitoring/api-radar/endpoints.md). See [Service Details](../service-monitoring/service-details.md) for navigating between service and endpoint investigations.
+
+[Screenshot placeholder: Service details with available API Radar navigation.]

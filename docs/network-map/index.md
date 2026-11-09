@@ -1,11 +1,11 @@
 title: Network Map
 description: Visualize your entire infrastructure topology in real-time with eBPF-powered network insights. See Kubernetes clusters, standalone hosts, databases, containers, processes, and communication patterns.
 
-Network Map gives you a real-time, visual representation of your entire infrastructure topology. Using eBPF-powered network insights collected by the Sematext Agent, you can see how your services, pods, containers, and processes communicate across Kubernetes clusters and standalone hosts.
+Network Map, under **Service Monitoring → Network → Map**, gives you a real-time, visual representation of your entire infrastructure topology. Using eBPF-powered network insights collected by the Sematext Agent, you can see how your services, pods, containers, and processes communicate across Kubernetes clusters and standalone hosts.
 
 Instead of mentally piecing together your infrastructure from logs, metrics, and configuration files, Network Map shows you the actual connections happening right now. When something breaks, you can immediately see which services are affected and trace the problem to its source.
 
-![Network Map Services View](../images/network-map/network-map-services-view.png)
+![Network Map Services View](../images/service-monitoring/network/network-map-services-view.png)
 
 ## Why Use Network Map?
 
@@ -60,9 +60,15 @@ Once enabled, Network Map starts collecting data immediately. Within a few minut
 
 See [Getting Started](/docs/network-map/getting-started/) for detailed setup instructions.
 
+## API and service context
+
+Network is part of [Service Monitoring](../service-monitoring/index.md). Use [API Radar](../service-monitoring/api-radar/index.md) for observed endpoint request counts, server errors, response-time percentiles, and certificate information. Move between API and network context when an investigation needs both.
+
+[Screenshot placeholder: Network Map with Service Monitoring navigation and a link to related API activity.]
+
 ## Network Map vs. Service Map
 
-Sematext also offers [Service Map](/docs/service-map/), a complementary topology visualization available in Tracing Apps. While Network Map shows infrastructure-level connectivity using eBPF (traffic bytes, CPU, memory, I/O), Service Map shows application-level service dependencies derived from OpenTelemetry traces (request rate, latency, error rate). Use both together for full-stack visibility - Network Map for infrastructure and network traffic, Service Map for application request flow and service health.
+Sematext also offers [Service Map](/docs/service-map/), a complementary topology visualization available in Tracing Apps. While Network Map shows infrastructure-level connectivity using eBPF (traffic bytes, CPU, memory, I/O), Service Map shows application-level service dependencies derived from OpenTelemetry traces (request rate, latency, error rate). API Radar adds aggregate API request metrics to Service Monitoring. Service Map remains the trace-derived view of application dependencies, with request-level investigation available through distributed tracing.
 
 ## Learn More
 

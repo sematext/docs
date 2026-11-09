@@ -24,6 +24,22 @@ To remove the agent, run distribution-specific command to remove the sematext-ag
 
 Check the Windows installation page [for starting, stoping or restarting Sematext Agent in Windows](/docs/agents/sematext-agent/windows-installation/#how-to-start-stop-restart-sematext-agent).
 
+## macOS
+
+To stop the agent, run:
+
+```
+sudo st-agent macos-service stop
+```
+
+To restart the agent, run:
+
+```
+sudo st-agent macos-service restart
+```
+
+To remove the agent, run `brew uninstall --cask sematext/tap/sematext-agent`. See the [macOS installation page](/docs/agents/sematext-agent/macos-installation/#how-to-uninstall-sematext-agent) for removing its configuration too.
+
 ## Docker
 
 In Docker environment agent can be started using `docker run` command or using a docker-compose config. 

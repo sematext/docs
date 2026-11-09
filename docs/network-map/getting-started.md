@@ -9,17 +9,17 @@ Network Map requires two things:
 
 **An [Infra App](/docs/monitoring/infrastructure/)** to collect and store your infrastructure data. If you're already using Sematext for infrastructure monitoring, you have this. If not, you'll create one as part of the setup process.
 
-**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.4.0 or later**.
+**[Sematext Agent](/docs/agents/sematext-agent/installation/)** installed on the hosts you want to monitor. The agent collects eBPF-based network connection data that powers Network Map's topology visualization. You need **version 4.5.2 or later**.
 
 For best results, your hosts should be running **Linux kernel 5.8 or later**. Older kernels work but with some limitations. Check your kernel version with `uname -r`.
 
 ## Enabling Network Map
 
-Navigate to Network Map in the Sematext Cloud sidebar. What you see next depends on your current setup:
+Open **Service Monitoring → Network → Map** in the Sematext Cloud sidebar. What you see next depends on your current setup:
 
 ### If You Don't Have an Infra App
 
-![No Infra App](../images/network-map/network-map-enable-no-infra-app.png)
+![No Infra App](../images/service-monitoring/network/network-map-enable-no-infra-app.png)
 
 You'll be prompted to create an Infra App first. Click "Create New Infra App" to create one, give it a name (like "Production Infrastructure" or "Staging Environment"), and you're set.
 
@@ -35,7 +35,7 @@ For Kubernetes environments, you'll deploy the agent as a DaemonSet so it runs o
 
 When you have an Infra App and agents installed, you'll see a summary of your infrastructure showing the number of hosts, Kubernetes clusters, pods, and containers that Network Map will monitor. If you've already enabled Network Map, you'll skip this screen and see your data directly.
 
-![Network Map Enable](../images/network-map/network-map-enable-ready.png)
+![Network Map Enable](../images/service-monitoring/network/network-map-enable-ready.png)
 
 Click the Enable button to activate Network Map. There's no need to configure anything on your agents - the backend automatically enables Network Map data collection when you enable the feature. Your agents will start sending topology data right away.
 
@@ -65,7 +65,7 @@ If nothing appears after 10 minutes, check the [Troubleshooting](/docs/network-m
 
 Click the **Quick Guide** button in the top-right corner of Network Map to see a visual legend explaining the interface. The Quick Guide shows you what the different node colors mean (green for healthy, yellow for warning, red for critical), how connection lines are colored based on traffic volume and health, and what controls are available. It's a handy reference while you're learning the interface.
 
-![Quick Guide](../images/network-map/network-map-quick-guide.png)
+![Quick Guide](../images/service-monitoring/network/network-map-quick-guide.png)
 
 ## Pricing
 
@@ -79,3 +79,10 @@ Once Network Map is running:
 - [Infrastructure View](/docs/network-map/infrastructure-view/) - Drill down into Kubernetes clusters and standalone hosts
 - [Filtering & Search](/docs/network-map/filtering-search/) - Learn to find and filter specific services
 - [Thresholds](/docs/network-map/thresholds/) - Customize warning and critical levels for your environment
+
+
+## API Radar
+
+Network Map and API Radar are grouped under [Service Monitoring](../service-monitoring/index.md). API Radar requires Sematext Agent 4.6.0 or later, separately from Network Map's 4.5.2 minimum. See [Service Monitoring Getting Started](../service-monitoring/getting-started.md) to verify API traffic.
+
+[Screenshot placeholder: Updated Service Monitoring onboarding and Network navigation.]

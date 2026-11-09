@@ -5,7 +5,7 @@ Thresholds determine when services and connections change color from green (heal
 
 Every environment is different. A database server that normally runs at 70% CPU is healthy, while an API server at 70% might indicate a problem. Thresholds let you define what "normal" means for your specific infrastructure.
 
-![Edit Thresholds Dialog](../images/network-map/network-map-thresholds.png)
+![Edit Thresholds Dialog](../images/service-monitoring/network/network-map-thresholds.png)
 
 ## Accessing Threshold Settings
 

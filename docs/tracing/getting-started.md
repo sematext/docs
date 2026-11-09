@@ -59,7 +59,7 @@ The wizard guides you through each step and provides your tokens and OTLP endpoi
 
 **Agent Deployment Options**:
 
-- Single Host: Install directly on individual servers (Linux/Windows)
+- Single Host: Install directly on individual servers (Linux, Windows, macOS)
 - Server Fleet: Deploy across multiple servers using Ansible or Group Policy  
 - Containerized: Run as containers in Docker, Swarm, Nomad, or AWS ECS
 - Kubernetes: Deploy as DaemonSet on any Kubernetes distribution

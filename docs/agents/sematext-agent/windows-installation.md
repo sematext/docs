@@ -315,5 +315,4 @@ To completely remove all configuration files and logs, execute the following com
 The Sematext Agent for Windows is still a work in progress and has some limitations:
 
 - Discovery and configuration of services and log sources are not yet supported
-- Inventory functionality is not yet available
-- Custom tags cannot be created
+- [Inventory](/docs/monitoring/inventory/) shows server details; package and container image inventory are Linux-only

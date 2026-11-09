@@ -18,17 +18,17 @@ From the App Actions drop down menu, the horizontal elipsis icon (⋯) shows you
 
 ## Side Navigation
 
-The left navigation menu provides access to [all primary product areas and features](/docs/guide/navigation-guide), organized into functional categories. When you click on Monitoring under Observability Suite section, you will see a list of your Service Monitoring and Infrastructure Monitoring Apps. Selecting any Monitoring App opens a contextual sub-menu that contains actions and sections specific to that Monitoring App. 
+The left navigation menu provides access to [all primary product areas and features](/docs/guide/navigation-guide), organized into functional categories. When you click on Monitoring under Observability Suite section, you will see a list of your integration-based Monitoring Apps and Infrastructure Monitoring Apps. Selecting any Monitoring App opens a contextual sub-menu that contains actions and sections specific to that Monitoring App.
 
-Sub-level sections for a Service Monitoring App include:
+Sub-level sections for a Monitoring App include:
 
 ### Reports 
 
-Provides out-of-the-box reports based on the selected integrations. You can also use the **+ Add Report** button to create custom reports tailored to your Service Monitoring App.
+Provides out-of-the-box reports based on the selected integrations. You can also use the **+ Add Report** button to create custom reports tailored to your Monitoring App.
 
 ### Alerts 
 
-The [Alerts](/docs/guide/alerts-guide/). section shows recently triggered alerts for your Service Monitoring App. It also includes Alert Rules, where you can view, manage, and create new alert rules to get notified based on thresholds, or anomalies.
+The [Alerts](/docs/guide/alerts-guide/). section shows recently triggered alerts for your Monitoring App. It also includes Alert Rules, where you can view, manage, and create new alert rules to get notified based on thresholds, or anomalies.
 
 ### Setup & Configuration
 
