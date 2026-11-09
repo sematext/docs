@@ -59,13 +59,12 @@ st-agent ai-agent-watch check
 
 ```
 Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
-  hook     /opt/spm/spm-monitor/bin/st-agent hook claude
-  shell    /bin/sh -c
+  runs     /opt/spm/spm-monitor/bin/st-agent hook claude
   pass  a tool call came back refused: Sematext Agent blocked this (check): the hook works.
   up to date
 ```
 
-`command did not run` means the shell could not run the hook, `agent not reachable` that Sematext Agent is not running, `no policy loaded` that no Governance policy blocks anything for this app. The check call creates no event.
+`command did not run` means the hook could not be started, `agent not reachable` that Sematext Agent is not running, `no policy loaded` that no Governance policy blocks anything for this app. The check call creates no event.
 
 **After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run `init` again.
 
@@ -96,10 +95,10 @@ macOS:
     "OTEL_LOG_TOOL_DETAILS": "1"
   },
   "hooks": {
-    "PreToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent hook claude", "timeout": 5}]}],
-    "PostToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent hook claude", "timeout": 5}]}],
-    "PostToolUseFailure": [{"matcher": "*", "hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent hook claude", "timeout": 5}]}],
-    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent hook claude", "timeout": 5}]}]
+    "PreToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent", "args": ["hook", "claude"], "timeout": 5}]}],
+    "PostToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent", "args": ["hook", "claude"], "timeout": 5}]}],
+    "PostToolUseFailure": [{"matcher": "*", "hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent", "args": ["hook", "claude"], "timeout": 5}]}],
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "/opt/spm/spm-monitor/bin/st-agent", "args": ["hook", "claude"], "timeout": 5}]}]
   }
 }
 ```
@@ -117,16 +116,16 @@ Windows:
     "OTEL_LOG_TOOL_DETAILS": "1"
   },
   "hooks": {
-    "PreToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "\"C:/Program Files/Sematext Agent/st-agent.exe\" hook claude", "timeout": 5}]}],
-    "PostToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "\"C:/Program Files/Sematext Agent/st-agent.exe\" hook claude", "timeout": 5}]}],
-    "PostToolUseFailure": [{"matcher": "*", "hooks": [{"type": "command", "command": "\"C:/Program Files/Sematext Agent/st-agent.exe\" hook claude", "timeout": 5}]}],
-    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "\"C:/Program Files/Sematext Agent/st-agent.exe\" hook claude", "timeout": 5}]}]
+    "PreToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "C:\\Program Files\\Sematext Agent\\st-agent.exe", "args": ["hook", "claude"], "timeout": 5}]}],
+    "PostToolUse": [{"matcher": "*", "hooks": [{"type": "command", "command": "C:\\Program Files\\Sematext Agent\\st-agent.exe", "args": ["hook", "claude"], "timeout": 5}]}],
+    "PostToolUseFailure": [{"matcher": "*", "hooks": [{"type": "command", "command": "C:\\Program Files\\Sematext Agent\\st-agent.exe", "args": ["hook", "claude"], "timeout": 5}]}],
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "C:\\Program Files\\Sematext Agent\\st-agent.exe", "args": ["hook", "claude"], "timeout": 5}]}]
   }
 }
 ```
 
 - `env` sends Claude Code's activity to Sematext Agent; `hooks` lets Sematext Agent check each tool call. Without `OTEL_LOG_USER_PROMPTS` prompts are not scanned, and without `OTEL_LOG_TOOL_DETAILS` tool calls show their name only.
-- On Windows, keep the hook path quoted and with forward slashes, exactly as above. Claude Code runs hook commands in Git Bash, and a path with backslashes does not run.
+- `args` makes Claude Code start Sematext Agent directly, with no shell (Claude Code 2.1.139 or later). Without it, Claude Code runs the command in Git Bash on Windows, or in PowerShell when Git for Windows is not installed, and a path that one shell runs, the other does not.
 - Users cannot remove these settings. To also stop them from adding hooks of their own, add `"allowManagedHooksOnly": true`.
 - Claude Code reads the settings when a session starts.
 
