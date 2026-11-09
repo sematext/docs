@@ -44,7 +44,7 @@ sudo st-agent ai-agent-watch init
 This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it. `aiaw` is short for `ai-agent-watch`.
 
 - It writes only the machine-wide files: Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) and Codex's `requirements.toml`. Every other setting in them stays, and a setting someone else already gave a value, such as `OTEL_LOG_USER_PROMPTS`, keeps it.
-- It refuses a file, or a folder above it, that a user could change to turn the hooks off: on macOS one not owned by root or writable by other users, on Windows one not owned by an administrator, or a link or junction. It also leaves a file that is a link, or that it cannot read, as it is, and says why. On Windows, a folder it creates under `ProgramData` gets permissions that let only administrators add files.
+- It refuses a file, or a folder above it, that a user could change to turn the hooks off: on macOS one not owned by root or writable by other users, on Windows one not owned by an administrator, one that lets other users change it, or a link or junction. It also refuses when Sematext Agent's own binary is one a user could replace. It also leaves a file that is a link, or that it cannot read, as it is, and says why. On Windows, a folder it creates under `ProgramData` gets permissions that let only administrators add files.
 - A file is backed up next to itself before it changes. Running it again changes nothing.
 - `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
 - It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
