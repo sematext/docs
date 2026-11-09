@@ -139,6 +139,20 @@ Start a Claude Code or Codex session and give it a prompt that uses a tool. With
 
 If nothing arrives, check that the Sematext Agent log shows `AI agent OTLP receiver started` and `AI agent hook endpoint started`. For Claude Code, run `/status` and check that `Setting sources` lists the managed settings. For Codex, check that the `[otel]` block is in the file Codex reads and points at `127.0.0.1:4347`.
 
+## Ports and turning it off
+
+Sematext Agent listens on `127.0.0.1:4347` (telemetry, gRPC), `127.0.0.1:4348` (telemetry, HTTP) and `127.0.0.1:4349` (hooks). If another process already holds one of these ports, Sematext Agent logs a warning and keeps the ones it could bind.
+
+To turn either off, set it in `st-agent.yml` (`/opt/spm/properties/st-agent.yml` on macOS, `C:\Program Files\Sematext Agent\properties\st-agent.yml` on Windows) and restart Sematext Agent:
+
+```yaml
+aiagent:
+  otlp:
+    enabled: false
+  hook:
+    enabled: false
+```
+
 ## Events compared to Linux
 
 | Event | Claude Code | Codex |
