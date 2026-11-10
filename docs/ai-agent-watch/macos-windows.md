@@ -33,13 +33,15 @@ As an administrator, on each machine:
 
 ```bash
 # macOS
-sudo st-agent ai-agent-watch init
+sudo st-agent ai-agent-watch install
 ```
 
 ```powershell
 # Windows, in PowerShell run as Administrator
-& 'C:\Program Files\Sematext Agent\st-agent.exe' ai-agent-watch init
+st-agent ai-agent-watch install
 ```
+
+On Windows the installer adds Sematext Agent to `PATH`; a PowerShell window opened before the install does not see it, so open a new one.
 
 This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it. `aiaw` is short for `ai-agent-watch`.
 
@@ -48,9 +50,10 @@ This sets up both Claude Code and Codex: the hooks that let Sematext Agent check
 - A file is backed up next to itself before it changes. Running it again changes nothing.
 - `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
 - It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
+- The hooks need Claude Code 2.1.139 or later. Older versions ignore the hook's arguments and start Sematext Agent itself instead, so nothing is checked.
 - It warns when Claude Code will not read the file's hooks: when your organization delivers Claude Code policy through MDM or claude.ai server-managed settings, Claude Code uses that source's hooks only. Set `"managedSourcesBehavior": "merge"` there (Claude Code 2.1.242 or later), and the file's hooks run next to it. The telemetry settings still apply, unless that source sets its own OpenTelemetry exporter: Claude Code takes those settings from one source as a whole.
 
-Then check it, as any user (on Windows, `& 'C:\Program Files\Sematext Agent\st-agent.exe' ai-agent-watch check`):
+Then check it, as any user:
 
 ```bash
 st-agent ai-agent-watch check
@@ -67,13 +70,13 @@ Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
 
 `command did not run` means the hook could not be started, `agent not reachable` that Sematext Agent is not running, or AI Agent Watch or its hook endpoint is off in `st-agent.yml` (`aiagent.enabled`, `aiagent.hook.enabled`). `no policy loaded` means AI Agent Monitoring is off for this app, enforcement is off in `st-agent.yml` (`aiagent.enforcement.enabled`), or no Governance policy blocks anything. The check call creates no event.
 
-**After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run the `init` command it prints.
+**After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run the `install` command it prints.
 
-**Before uninstalling Sematext Agent**, run `sudo st-agent ai-agent-watch remove` (on Windows, as Administrator). It takes out what `init` wrote and leaves everything else. Codex's `[features] hooks = true` stays, as do Claude Code `env` values someone changed after `init`. Claude Code's telemetry settings all stay when the file sends logs somewhere else, and its telemetry switch stays while other telemetry settings use it.
+**Before uninstalling Sematext Agent**, run `sudo st-agent ai-agent-watch remove` (on Windows, as Administrator). It takes out what `install` wrote and leaves everything else. Codex's `[features] hooks = true` stays, as do Claude Code `env` values someone changed after `install`. Claude Code's telemetry settings all stay when the file sends logs somewhere else, and its telemetry switch stays while other telemetry settings use it.
 
 ## Set up by hand
 
-For deploying through Jamf, Intune or Group Policy, or to Claude Code policy delivered by MDM or claude.ai, these are the blocks `init` writes.
+For deploying through Jamf, Intune or Group Policy, or to Claude Code policy delivered by MDM or claude.ai, these are the blocks `install` writes.
 
 ### Claude Code
 
