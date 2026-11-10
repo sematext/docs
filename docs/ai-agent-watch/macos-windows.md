@@ -50,7 +50,7 @@ This sets up both Claude Code and Codex: the hooks that let Sematext Agent check
 - A file is backed up next to itself before it changes. Running it again changes nothing.
 - `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
 - It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
-- The hooks need Claude Code 2.1.139 or later. Older versions ignore the hook's arguments and start Sematext Agent itself instead, so nothing is checked.
+- The hooks need Claude Code 2.1.139 or later. Older versions ignore the hook's arguments, so the hook does not run as one and nothing is checked.
 - It warns when Claude Code will not read the file's hooks: when your organization delivers Claude Code policy through MDM or claude.ai server-managed settings, Claude Code uses that source's hooks only. Set `"managedSourcesBehavior": "merge"` there (Claude Code 2.1.242 or later), and the file's hooks run next to it. The telemetry settings still apply, unless that source sets its own OpenTelemetry exporter: Claude Code takes those settings from one source as a whole.
 
 Then check it, as any user:
