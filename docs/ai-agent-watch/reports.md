@@ -1,7 +1,7 @@
 title: Reports
 description: The built-in AI Agent Watch reports, what each one shows, and how filtering works across them
 
-AI Agent Watch ships with a set of built-in reports, available from the left-hand menu: **Overview**, **Explore**, **Agent Sessions**, **PII Detections**, **Network Events**, **Tool Execution**, **Governance**, **LLM Costs**, and **Cost by Infrastructure**.
+AI Agent Watch includes built-in reports for exploring agent activity, reviewing sessions and security findings, monitoring governance, and tracking costs. You can find them in the left-hand menu.
 
 ## Shared elements
 
