@@ -16,7 +16,7 @@ For example, a File Access policy can deny opening a credential file, and a Tool
 | Linux | Sematext Agent **4.6 or later**, Linux kernel **5.17 or later**, BPF-LSM enabled | Kernel operations, including activity from the AI agent's child processes. |
 | macOS and Windows | Sematext Agent **4.7 or later**, supported Claude Code or Codex, configured hooks | Known tool calls before they run. Shell commands are checked as text on a best-effort basis. |
 
-On workstations, governance does not observe everything a command's child processes do, and it does not check MCP tool calls. If Sematext Agent is stopped or its answer arrives later than the hook's 500 ms deadline, the call proceeds unchecked. See [workstation setup and limitations](../macos-windows.md) and [Governance Compatibility](compatibility.md).
+On macOS and Windows, governance does not observe everything a command's child processes do, and it does not check MCP tool calls. If Sematext Agent is stopped or its answer arrives later than the hook's 500 ms deadline, the call proceeds unchecked. See [workstation setup and limitations](../macos-windows.md) and [Governance Compatibility](compatibility.md).
 
 See [Governance Policies](policies.md) to configure conditions, scope, and notifications.
 

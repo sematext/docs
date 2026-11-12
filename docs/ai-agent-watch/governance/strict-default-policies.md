@@ -33,7 +33,7 @@ The following are examples of separate policies. Adapt them to your environment:
 | Tool Execution | Binary basename `nc` | Is Trusted Agent is false | Block execution of the netcat binary with this name. |
 | Network Activity | CIDR `10.0.0.0/8` | Is Trusted Agent is false | Block matching connections to this private IPv4 range. |
 
-The filename examples do not cover every credential file. The command example does not block every networking tool. The network example can also block legitimate internal services; on workstations, it only checks supported tool-call targets and does not resolve hostnames into IP addresses. See [platform boundaries](#platform-boundaries) before choosing conditions.
+The filename examples do not cover every credential file. The command example does not block every networking tool. The network example can also block legitimate internal services; on macOS and Windows, it only checks supported tool-call targets and does not resolve hostnames into IP addresses. See [platform boundaries](#platform-boundaries) before choosing conditions.
 
 ## 2. Create and enable the policies
 
@@ -52,10 +52,10 @@ Policies must be enabled to enforce anything. The provided default example polic
 
 ## 3. Verify the restrictions
 
-Allow policy changes to reach Sematext Agent; updates can take up to five minutes. On workstations, also run `st-agent ai-agent-watch check` to verify the hooks.
+Allow policy changes to reach Sematext Agent; updates can take up to five minutes. On macOS and Windows, also run `st-agent ai-agent-watch check` to verify the hooks.
 
 1. Start an untrusted AI agent on the test machine.
-2. Ask it to perform an operation matching one test policy. For example, use a harmless test file ending in `.pem` and ask the agent to read it. On a workstation, use a supported file-reading tool rather than assuming a shell command provides the same coverage.
+2. Ask it to perform an operation matching one test policy. For example, use a harmless test file ending in `.pem` and ask the agent to read it. On macOS or Windows, use a supported file-reading tool rather than assuming a shell command provides the same coverage.
 3. Confirm that the operation is refused. In **AI Agent Watch → Governance**, find the corresponding `file_access_denied`, `exec_denied`, or `net_denied` event and inspect the agent, host, and matched condition.
 4. Verify the other policy types you plan to use. An allowed action alone does not prove enforcement is working.
 

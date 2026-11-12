@@ -22,7 +22,7 @@ On company infrastructure, AI Agent Watch helps you discover AI agents, investig
 
 On employee workstations, it brings visibility to everyday AI-assisted development. Review coding-agent sessions and tool activity, identify sensitive-data exposure, apply governance, and understand how employees' agents use models and tokens.
 
-Together, these views help you manage AI use across your organization as it expands from shared infrastructure to individual development machines. See [macOS and Windows](macos-windows.md) for supported workstation agents and capabilities.
+Together, these views help you manage AI use across your organization as it expands from shared infrastructure to individual development machines.
 
 ## Understand AI spending across your organization
 
@@ -40,12 +40,12 @@ Enforcement capabilities vary by platform. See [Governance](governance/index.md)
 
 ## Get started
 
-Follow [Getting Started](getting-started.md) to connect your servers or workstations and begin reviewing activity. For workstation installation and configuration, see [AI Agent Watch on macOS and Windows](macos-windows.md).
+Follow [Getting Started](getting-started.md) to connect your servers or workstations and begin reviewing activity.
 
 ## In this section
 
 - [Getting Started](getting-started.md) - connect servers and workstations
-- [macOS and Windows](macos-windows.md) - supported coding agents, setup, and coverage
+- [Platform Support](platform-support.md) - supported platforms and capabilities
 - [Reports](reports.md) - explore activity and investigate sessions
 - [Captured Events](captured-events.md) - available activity and platform coverage
 - [Governance](governance/index.md) - policies, enforcement, and requirements

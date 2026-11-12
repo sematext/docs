@@ -9,10 +9,10 @@ If you don't already have an Infra App, create one first. Then open the **AI Age
 
 ## Connect servers or workstations
 
-Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machine and configure it with the token for the selected Infra App.
+Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machine and configure it with the token for the selected Infra App. Workstations can run Linux, macOS, or Windows; choose the setup path by operating system. See [Platform Support](platform-support.md) for requirements and capability differences.
 
-- **Linux:** On supported hosts, Sematext Agent automatically discovers AI agents. Existing compatible installations need no additional AI-agent configuration; enable AI Agent Watch for their Infra App.
-- **macOS and Windows:** Use Sematext Agent **4.7 or later**, then configure **Claude Code or Codex** to send telemetry and run hooks. Follow [AI Agent Watch on macOS and Windows](macos-windows.md), including its verification steps. Enabling the Infra App alone does not configure those coding agents.
+- **Linux servers and workstations:** Follow [Linux installation](/docs/agents/sematext-agent/linux-installation/). On supported hosts, Sematext Agent automatically discovers AI agents. Existing compatible installations need no additional AI-agent configuration; enable AI Agent Watch for their Infra App.
+- **macOS and Windows:** Use Sematext Agent **4.7 or later**, then configure **Claude Code or Codex** to send telemetry and run hooks. Follow [macOS and Windows Setup](macos-windows.md), including its verification steps. Enabling the Infra App alone does not configure those coding agents.
 
 For a company deployment, connect employees' machines to the organization's Infra Apps. Recognizable hostnames help you compare workstation agents in [cost reports](cost-tracking/reports.md).
 
@@ -38,6 +38,7 @@ For the best coverage and strongest security posture, deploy Sematext Agent on a
 
 ## Next steps
 
+- Check [Platform Support](platform-support.md) for available capabilities
 - Explore [Cost Tracking](cost-tracking/index.md) and configure [cost alerts](cost-alert-rules.md)
 - Review the [captured events](captured-events.md) AI Agent Watch records
 - Mark known agents and destinations as [trusted](trusted-agents-hosts.md) to tune alerting
