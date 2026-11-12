@@ -15,7 +15,7 @@ Every event carries, among others:
 
 ## Event types
 
-Available event types and fields depend on the platform and collection method. See [Platform coverage](#platform-coverage) and the [workstation event matrix](macos-windows.md#events-compared-to-linux).
+Available event types and fields vary by platform. See [Events compared to Linux](macos-windows.md#events-compared-to-linux) for macOS and Windows differences.
 
 | Event type | What it represents |
 |---|---|
@@ -45,17 +45,3 @@ Governance events record the matched condition for the blocked operation. Depend
 `llm_usage` reports a model call's provider, model, available input/output/cache token counts, and, where available, reasoning tokens and service-tier metadata. Sematext calculates the call's cost and records its pricing status. At `agent_session_end`, captured usage and costs are aggregated for the session.
 
 See [Cost Tracking](cost-tracking/index.md) and [Pricing and Calculations](cost-tracking/pricing.md) for collection requirements and billing boundaries.
-
-## Platform coverage
-
-| Capability | Linux | macOS and Windows |
-|---|---|---|
-| Discovery and collection | Automatic discovery and kernel-based observation on supported hosts. | Claude Code and Codex must be configured to report telemetry and run hooks. |
-| Sessions and tool calls | Observed process activity. | Derived from reported sessions, tool calls, hooks, and process lifecycle information. |
-| File activity | Kernel file operations. | Supported agents' reported file tools and patches; shell reads remain command events. |
-| Network activity | Observed connections and traffic. | Limited reported destinations; no network byte totals or visibility into shell-child connections. |
-| PII detections | Scanned captured outbound content. | Scanned prompts, tool arguments, and hook-reported tool output. |
-| Governance | Kernel enforcement on compatible Linux hosts. | Known tool-call checks; shell commands are best effort, MCP calls and underlying child-process activity are not checked. |
-| LLM usage | Supported captured model requests. | Token usage reported by the configured coding agent. |
-
-See the [per-agent event matrix](macos-windows.md#events-compared-to-linux) for details.

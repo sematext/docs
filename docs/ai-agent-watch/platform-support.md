@@ -45,4 +45,4 @@ The macOS and Windows column applies to Claude Code and Codex after completing t
 | Block actions with governance policies | Yes — blocks matching actions at the operating-system level, including actions from processes the agent starts. Requires [kernel support](governance/compatibility.md); without it, activity is monitored but policies are not enforced. | Limited — configured hooks check supported tool calls. Shell checks are best effort; MCP calls and activity inside commands are not checked. See [coverage](macos-windows.md#what-you-get). |
 | Track token usage and calculated costs | Yes | Yes |
 
-Event availability depends on the agent and version. See [Captured Events](captured-events.md#platform-coverage) and the [Claude Code/Codex event matrix](macos-windows.md#events-compared-to-linux) for details.
+Event availability depends on the agent and version. See [Captured Events](captured-events.md#event-types) and the [Claude Code/Codex event matrix](macos-windows.md#events-compared-to-linux) for details.
