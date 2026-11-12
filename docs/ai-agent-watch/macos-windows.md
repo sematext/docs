@@ -53,7 +53,7 @@ Run these with the same administrator privileges as the install command above.
 
 | Task | Command |
 |---|---|
-| Preview changes without writing files | `st-agent ai-agent-watch install --dry-run` |
+| See what setup will change before applying it | `st-agent ai-agent-watch install --dry-run` |
 | Configure only Claude Code | `st-agent ai-agent-watch install --claude` |
 | Configure only Codex | `st-agent ai-agent-watch install --codex` |
 | Install hooks while keeping telemetry configured elsewhere | `st-agent ai-agent-watch install --hooks-only` |
