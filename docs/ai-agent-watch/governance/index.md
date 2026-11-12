@@ -20,6 +20,10 @@ On workstations, governance does not observe everything a command's child proces
 
 See [Governance Policies](policies.md) to configure conditions, scope, and notifications.
 
+## Restrict newly discovered agents automatically
+
+Apply blocking policies to untrusted agents, then review agents before marking them trusted. Follow [Strict Policies for Newly Discovered Agents](strict-default-policies.md) for the walkthrough, examples, and limitations.
+
 ## Governance report
 
 Open **AI Agent Watch → Governance** to review enforcement activity in the selected time range.

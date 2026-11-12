@@ -44,6 +44,8 @@ All scope entries must match (AND logic). Comma-separated values match any liste
 Text scope values are case-insensitive. For example, an Agent Type scope of `is Codex` also matches `codex`, and a Host Name scope of `starts_with ci-` also matches host names beginning with `CI-`.
 With no scope entries, the policy applies to every tracked agent in the account. A hostname scope of `starts_with ci-`, for example, applies across CI hosts sharing that prefix.
 
+For a walkthrough that automatically restricts new agents until they are reviewed, see [Strict Policies for Newly Discovered Agents](strict-default-policies.md). It explains untrusted-agent scope and how it differs from an allowlist.
+
 ## Create a governance policy
 
 1. Open **AI Agent Watch → Event Alerting → Governance Policies**.

@@ -175,11 +175,13 @@ nav:
         - Overview: ai-agent-watch/governance/index.md
         - Policies: ai-agent-watch/governance/policies.md
         - Compatibility: ai-agent-watch/governance/compatibility.md
+        - Strict Default Policies: ai-agent-watch/governance/strict-default-policies.md
       - Cost Tracking:
         - Overview: ai-agent-watch/cost-tracking/index.md
         - Reports: ai-agent-watch/cost-tracking/reports.md
         - Pricing and Calculations: ai-agent-watch/cost-tracking/pricing.md
         - Cost Alerts: ai-agent-watch/cost-alert-rules.md
+      - FAQ: ai-agent-watch/faq.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md

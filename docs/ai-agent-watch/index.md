@@ -49,6 +49,8 @@ Follow [Getting Started](getting-started.md) to connect your servers or workstat
 - [Reports](reports.md) - explore activity and investigate sessions
 - [Captured Events](captured-events.md) - available activity and platform coverage
 - [Governance](governance/index.md) - policies, enforcement, and requirements
+- [Strict Default Policies](governance/strict-default-policies.md) - automatically restrict unreviewed agents
+- [FAQ](faq.md) - common questions about trust and governance
 - [LLM Cost Tracking](cost-tracking/index.md) - usage, reports, pricing, and cost alerts
 - [Trusted Agents & Hosts](trusted-agents-hosts.md) - distinguish expected agents and destinations
 - [PII Categories](pii-categories.md) - detect sensitive information

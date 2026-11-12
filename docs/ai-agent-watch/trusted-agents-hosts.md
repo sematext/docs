@@ -1,7 +1,7 @@
 title: Trusted Agents & Hosts
-description: Marking known AI agents and known outbound destinations as trusted to tune AI Agent Watch alerting
+description: Use agent trust for alerting and governance scope and destination trust for alerting
 
-AI Agent Watch tracks two kinds of trust: which **ai agents** are running on your hosts, and which **destinations** they're expected to talk to. Neither affects whether events are collected - trust status is just another field on an event, which you can then use in [alert rules](alert-rules.md) and reports to separate expected activity from activity worth a closer look.
+AI Agent Watch tracks two kinds of trust: which **ai agents** are running on your hosts, and which **destinations** they're expected to talk to. Neither affects whether events are collected. Use trust in [alert rules](alert-rules.md) and reports to separate expected activity from activity worth a closer look. Agent trust can also scope [governance policies](governance/policies.md); destination trust does not override network governance policies.
 
 ## Trusted agents
 
@@ -12,6 +12,12 @@ Every distinct AI agent that AI Agent Watch sees - identified by its type, versi
 From this list you can mark an agent as trusted, either one at a time or by its identity (so future instances of the same agent type/version on the same host are trusted automatically). Every event produced by that agent is then stamped as coming from a trusted agent.
 
 Use this to distinguish agents you've deliberately deployed and reviewed from ones that show up unexpectedly. A new, untrusted agent appearing on a host is usually worth a look, which is why AI Agent Watch ships with a default alert rule, **New Agent Detected**, that notifies you the moment an `agent_session_started` event comes in from an agent that isn't yet marked trusted.
+
+### Use trust to scope governance
+
+Trust can also determine which [governance policies](governance/policies.md) apply. Policies scoped to **Is Trusted Agent is false** restrict matching operations for untrusted agents, including newly discovered ones. Marking an agent trusted removes it from those policies after the update reaches the host; other matching policies still apply.
+
+See [Strict Policies for Newly Discovered Agents](governance/strict-default-policies.md) for setup, verification, and the distinction between trusting an agent and allowing individual operations.
 
 ## Trusted hosts
 
@@ -25,7 +31,7 @@ Notifications for that rule are **disabled by default**. Your trusted host list 
 
 ## How trust is used
 
-Trust status doesn't change anything automatically on its own - it's exposed as an `isTrustedAgent` field (and `isTrustedHost` for destinations) that becomes available as a condition on any [alert rule](alert-rules.md), for any event type. The default "New Agent Detected" rule is just one example of a rule built on `isTrustedAgent = false`; you can build your own the same way.
+For event alerting, trust status is exposed as an `isTrustedAgent` field (and `isTrustedHost` for destinations) that becomes available as a condition on any [alert rule](alert-rules.md), for any event type. The default "New Agent Detected" rule is just one example of a rule built on `isTrustedAgent = false`; you can build your own the same way.
 
 For example:
 
