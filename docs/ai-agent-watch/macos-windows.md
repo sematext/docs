@@ -3,8 +3,6 @@ description: Set up AI Agent Watch and Governance for Claude Code and Codex on m
 
 AI Agent Watch and [Governance](governance/index.md) work on macOS and Windows workstations for **Claude Code** and **Codex** (the CLI, `codex exec` and the IDE extension). On macOS and Windows, Claude Code and Codex need a one-time setup per machine, done by an administrator with one command, so they report to Sematext Agent.
 
-Install [Sematext Agent on macOS](/docs/agents/sematext-agent/macos-installation/) or [Windows](/docs/agents/sematext-agent/windows-installation/), connect it to your organization's Infra App, and [enable AI Agent Watch](getting-started.md). Requires **Sematext Agent 4.7 or later**. Sematext Agent needs no configuration for this: it listens for Claude Code and Codex on `127.0.0.1` by default.
-
 ## What you get
 
 - [AI Agent Watch events](captured-events.md) for every session: token usage, tool calls, the files Claude Code and Codex read and edit.
