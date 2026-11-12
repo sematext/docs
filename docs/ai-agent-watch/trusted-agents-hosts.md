@@ -15,7 +15,7 @@ Use this to distinguish agents you've deliberately deployed and reviewed from on
 
 ### Use trust to scope governance
 
-Trust can also determine which [governance policies](governance/policies.md) apply. Policies scoped to **Is Trusted Agent is false** restrict matching operations for untrusted agents, including newly discovered ones. Marking an agent trusted removes it from those policies after the update reaches the host; other matching policies still apply.
+Trust can also determine which [governance policies](governance/policies.md) apply. Policies scoped to **Is Trusted Agent is false** restrict matching operations for untrusted agents, including newly discovered ones. Marking an agent trusted removes it from those policies; other matching policies still apply.
 
 See [Strict Policies for Newly Discovered Agents](governance/strict-default-policies.md) for setup, verification, and the distinction between trusting an agent and allowing individual operations.
 
