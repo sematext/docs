@@ -5,21 +5,18 @@ description: How to enable AI Agent Watch on an App and start sending AI agent a
 
 AI Agent Watch is enabled on a per-[Infra App](/docs/monitoring/infrastructure/) basis.
 
-If you don't already have an Infra App, create one first. Then open the **AI Agent Watch** page, click **Enable**, and select the Infra App(s) for which you want to enable AI Agent Watch.
-
-## Connect servers or workstations
-
-Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machine and configure it with the token for the selected Infra App. Workstations can run Linux, macOS, or Windows; choose the setup path by operating system. See [Platform Support](platform-support.md) for requirements and capability differences.
-
-- **Linux servers and workstations:** Follow [Linux installation](/docs/agents/sematext-agent/linux-installation/). On supported hosts, Sematext Agent automatically discovers AI agents. Existing compatible installations need no additional AI-agent configuration; enable AI Agent Watch for their Infra App.
-- **macOS and Windows:** Use Sematext Agent **4.7 or later**, then configure **Claude Code or Codex** to send telemetry and run hooks. Follow [macOS and Windows Setup](macos-windows.md), including its verification steps. Enabling the Infra App alone does not configure those coding agents.
-
-For a company deployment, connect employees' machines to the organization's Infra Apps. Recognizable hostnames help you compare workstation agents in [cost reports](cost-tracking/reports.md).
+If you don't already have an Infra App, [create one first](/docs/monitoring/infrastructure/#create-an-infra-app). Then open the **AI Agent Watch** page, click **Enable**, and select the Infra App(s) for which you want to enable AI Agent Watch.
 
 ![Infra Apps](/docs/images/aiam/pick-infra-apps.png)
 
-Enabling it also seeds the account with a set of default [PII categories](pii-categories.md) and default [alert rules](alert-rules.md), and gives you access to the built-in [reports](reports.md) (Overview, Explore, Agent Sessions, PII Detections, Network Events, Tool Execution), so you get useful detections and dashboards out of the box instead of starting from an empty configuration. 
+Enabling it also seeds the account with a set of default [PII categories](pii-categories.md) and default [alert rules](alert-rules.md), and gives you access to the built-in [reports](reports.md) (Overview, Explore, Agent Sessions, PII Detections, Network Events, Tool Execution), so you get useful detections and dashboards out of the box instead of starting from an empty configuration.
 
+## Connect servers or workstations
+
+Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machine with your [Infra App token](/docs/monitoring/infrastructure/#the-setup-infra-command). Workstations can run Linux, macOS, or Windows; choose the setup path by operating system. See [Platform Support](platform-support.md) for requirements and capability differences.
+
+- **Linux servers and workstations:** Follow [Linux installation](/docs/agents/sematext-agent/linux-installation/). On supported hosts, Sematext Agent automatically discovers AI agents.
+- **macOS and Windows:** Use Sematext Agent **4.7 or later**, then configure **Claude Code or Codex** to send telemetry and run hooks. Follow [macOS and Windows Setup](macos-windows.md).
 
 ## Verifying data is flowing
 
