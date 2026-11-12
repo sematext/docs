@@ -18,11 +18,13 @@ Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machin
 - **Linux servers and workstations:** Follow [Linux installation](/docs/agents/sematext-agent/linux-installation/). On supported hosts, Sematext Agent automatically discovers AI agents.
 - **macOS and Windows:** Use Sematext Agent **4.7 or later**, then configure **Claude Code or Codex** to send telemetry and run hooks. Follow [macOS and Windows Setup](macos-windows.md).
 
+    **Note:** AI Agent Watch currently supports only Claude Code and Codex on macOS and Windows.
+
 ### Find your Infra App token
 
 1. In Sematext Cloud, open **Fleet & Discovery → Agents → Install Agent**.
-2. Select the operating system or deployment environment for your machine.
-3. Select the Infra App you enabled for AI Agent Watch. If you need a new one, [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app) first.
+2. Select the Infra App you enabled for AI Agent Watch. If you need a new one, [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app) first.
+3. Select the operating system or deployment environment for your machine.
 4. Copy the token from the installation instructions. On macOS and Windows, it appears under **Infra App Token**; other environments include it in their installation commands or configuration.
 
 Use this token when installing or configuring Sematext Agent so the machine sends data to the intended Infra App.
