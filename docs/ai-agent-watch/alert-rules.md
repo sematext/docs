@@ -49,4 +49,25 @@ Alert rules can match `exec_denied`, `file_access_denied`, and `net_denied` even
 
 ## Cost alerts
 
-To evaluate aggregated LLM spending against fixed limits or historical baselines, use [Cost Alerts](cost-alert-rules.md). Cost alerts notify you about usage; [governance policies](governance/policies.md) control supported operations.
+Cost alerts help you spot unexpected spending, reduced cache reuse, and model calls whose costs cannot be calculated. Unlike the event rules above, they evaluate usage over a time window, using a fixed threshold or a comparison with earlier activity.
+
+### Default cost alerts
+
+AI Agent Watch includes six default cost alert rules, all enabled with **Warning** priority:
+
+| Default rule | When it triggers |
+|---|---|
+| Automatic - Unknown Model Detected | At least one model call in the last hour has no matching pricing data. Evaluated separately for each provider and model. |
+| Automatic - Unrecognized Service Tier Detected | At least one model call in the last hour reports an unrecognized service tier, so its cost cannot be calculated. Evaluated separately for each provider, model, and tier. |
+| Automatic - Unsupported Billing Mode Detected | At least one model call in the last hour uses a fixed-fee tier, such as reserved or scale, that is not priced per token. Evaluated separately for each provider, model, and tier. |
+| Automatic - Provider Cost Spike | A provider's total cost over six hours is more than 30% above its baseline. |
+| Automatic - Agent Cost Spike | An agent's total cost over six hours is more than 30% above its baseline. Agents are compared separately by host, cluster, namespace, and agent type. |
+| Automatic - Cache Hit Rate Drop | A model's cache hit rate over six hours is more than 40% below its baseline. Evaluated separately for each provider and model. |
+
+The three baseline rules compare the current six-hour window with the median for the same hours over the previous seven days, excluding weekends. Provider and agent cost spikes use successfully priced calls; cache hit rate uses reported token usage.
+
+### Manage cost alerts
+
+Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules. Notifications are enabled in the defaults; review recipients and schedules to control delivery. The three pricing-related rules have a minimum notification interval of 24 hours, while the baseline rules have a six-hour interval and send recovery notifications when activity returns to normal.
+
+See [Cost Alerts](cost-alert-rules.md) for configuration and investigation steps. Cost alerts notify you about usage; they do not stop agents or enforce a spending cap. Use [governance policies](governance/policies.md) to control supported operations.
