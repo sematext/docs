@@ -54,7 +54,7 @@ See [Cost Tracking](cost-tracking/index.md) and [Pricing and Calculations](cost-
 | Sessions and tool calls | Observed process activity. | Derived from reported sessions, tool calls, hooks, and process lifecycle information. |
 | File activity | Kernel file operations. | Supported agents' reported file tools and patches; shell reads remain command events. |
 | Network activity | Observed connections and traffic. | Limited reported destinations; no network byte totals or visibility into shell-child connections. |
-| PII detections | Scanned captured outbound content. | Scanned prompts, tool arguments, and hook-reported tool output. Only masked findings are sent. |
+| PII detections | Scanned captured outbound content. | Scanned prompts, tool arguments, and hook-reported tool output. |
 | Governance | Kernel enforcement on compatible Linux hosts. | Known tool-call checks; shell commands are best effort, MCP calls and underlying child-process activity are not checked. |
 | LLM usage | Supported captured model requests. | Token usage reported by the configured coding agent. |
 
