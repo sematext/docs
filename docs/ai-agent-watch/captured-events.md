@@ -42,7 +42,7 @@ Governance events record the matched condition for the blocked operation. Depend
 
 ## LLM usage and session costs
 
-`llm_usage` reports a model call's provider, model, available input/output/cache token counts, and, where available, reasoning tokens and service-tier metadata. Sematext calculates the call's cost and records its pricing status. At `agent_session_end`, captured usage and costs are aggregated for the session. A missing cost is not zero, and a session with unpriced calls is marked `PARTIAL_COST`.
+`llm_usage` reports a model call's provider, model, available input/output/cache token counts, and, where available, reasoning tokens and service-tier metadata. Sematext calculates the call's cost and records its pricing status. At `agent_session_end`, captured usage and costs are aggregated for the session.
 
 See [Cost Tracking](cost-tracking/index.md) and [Pricing and Calculations](cost-tracking/pricing.md) for collection requirements and billing boundaries.
 
