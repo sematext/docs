@@ -9,7 +9,7 @@ If you don't already have an Infra App, [create one first](/docs/monitoring/infr
 
 ![Infra Apps](/docs/images/aiam/pick-infra-apps.png)
 
-Enabling it also seeds the account with a set of default [PII categories](pii-categories.md) and default [alert rules](alert-rules.md), and gives you access to the built-in [reports](reports.md) (Overview, Explore, Agent Sessions, PII Detections, Network Events, Tool Execution), so you get useful detections and dashboards out of the box instead of starting from an empty configuration.
+Enabling AI Agent Watch adds default [PII categories](pii-categories.md), [alert rules](alert-rules.md), and [governance policies](governance/policies.md), and gives you access to built-in [activity and security reports](reports.md) and [cost tracking](cost-tracking/index.md). Governance policies are disabled by default; review and enable them when you’re ready to enforce restrictions.
 
 ## Connect servers or workstations
 
