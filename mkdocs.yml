@@ -163,9 +163,10 @@ nav:
       - Limits: tracing/tracing-limits.md
     - AI Agent Watch:
       - Overview: ai-agent-watch/index.md
-      - Getting Started: ai-agent-watch/getting-started.md
-      - Platform Support: ai-agent-watch/platform-support.md
-      - macOS and Windows Setup: ai-agent-watch/macos-windows.md
+      - Setup & Platform Support:
+        - Getting Started: ai-agent-watch/getting-started.md
+        - Platform Support: ai-agent-watch/platform-support.md
+        - macOS and Windows Setup: ai-agent-watch/macos-windows.md
       - Reports: ai-agent-watch/reports.md
       - Captured Events: ai-agent-watch/captured-events.md
       - Trusted Agents & Hosts: ai-agent-watch/trusted-agents-hosts.md
