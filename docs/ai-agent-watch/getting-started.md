@@ -37,7 +37,7 @@ After completing the setup, open the AI Agent Watch Overview screen for the App.
 
 ## No AI Agents Detected Yet
 
-[Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents on supported Linux hosts and automatically begins monitoring their activity. If none are running, no AI agent data will appear. On macOS and Windows, start a configured Claude Code or Codex session and use the [workstation verification steps](macos-windows.md#verify) to check telemetry and hooks.
+[Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents and automatically begins monitoring their activity. If none are running, no AI agent data will appear.
 
 This is expected—and valuable. Leaving Sematext Agent running provides continuous visibility into your environment and gives you immediate awareness when new AI agents are introduced, whether intentionally or without authorization. Early detection helps identify potentially malicious, misconfigured, or high-risk AI agents before they become a security or compliance concern.
 
