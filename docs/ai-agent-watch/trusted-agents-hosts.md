@@ -1,7 +1,7 @@
 title: Trusted Agents & Hosts
 description: Use agent trust for alerting and governance scope and destination trust for alerting
 
-AI Agent Watch tracks two kinds of trust: which **ai agents** are running on your hosts, and which **destinations** they're expected to talk to. Neither affects whether events are collected. Use trust in [alert rules](alert-rules.md) and reports to separate expected activity from activity worth a closer look. Agent trust can also scope [governance policies](governance/policies.md); destination trust does not override network governance policies.
+AI Agent Watch tracks two kinds of trust: which **ai agents** are running on your hosts, and which **destinations** they're expected to talk to. Neither affects whether events are collected. Use trust in [alert rules](alert-rules.md) and reports to separate expected activity from activity worth a closer look.
 
 ## Trusted agents
 
