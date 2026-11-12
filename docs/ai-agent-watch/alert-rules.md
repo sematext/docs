@@ -55,19 +55,17 @@ Cost alerts help you spot unexpected spending, reduced cache reuse, and model ca
 
 AI Agent Watch includes the following default cost alert rules:
 
-| Default rule | When it triggers |
+| Default rule | What it helps you catch |
 |---|---|
-| Automatic - Unknown Model Detected | At least one model call in the last hour has no matching pricing data. Evaluated separately for each provider and model. |
-| Automatic - Unrecognized Service Tier Detected | At least one model call in the last hour reports an unrecognized service tier, so its cost cannot be calculated. Evaluated separately for each provider, model, and tier. |
-| Automatic - Unsupported Billing Mode Detected | At least one model call in the last hour uses a fixed-fee tier, such as reserved or scale, that is not priced per token. Evaluated separately for each provider, model, and tier. |
-| Automatic - Provider Cost Spike | A provider's total cost over six hours is more than 30% above its baseline. |
-| Automatic - Agent Cost Spike | An agent's total cost over six hours is more than 30% above its baseline. Agents are compared separately by host, cluster, namespace, and agent type. |
-| Automatic - Cache Hit Rate Drop | A model's cache hit rate over six hours is more than 40% below its baseline. Evaluated separately for each provider and model. |
-
-The three baseline rules compare the current six-hour window with the median for the same hours over the previous seven days, excluding weekends. Provider and agent cost spikes use successfully priced calls; cache hit rate uses reported token usage.
+| Automatic - Unknown Model Detected | Lets you know an agent is using a model whose pricing is missing, so you know that spending is not included in your cost totals. |
+| Automatic - Unrecognized Service Tier Detected | Flags a service tier Sematext does not recognize, so you can investigate why its usage has no calculated cost. |
+| Automatic - Unsupported Billing Mode Detected | Highlights usage billed through arrangements such as reserved capacity, where token-based calculations cannot represent the cost. |
+| Automatic - Provider Cost Spike | Draws your attention to an unusual increase in spending with a provider, so you can investigate what is driving it. |
+| Automatic - Agent Cost Spike | Helps you find an agent spending more than usual and investigate its sessions, model choices, and token usage. |
+| Automatic - Cache Hit Rate Drop | Warns you when an agent is reusing less cached input, which can make its model requests more expensive. |
 
 ### Manage cost alerts
 
-Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules. Notifications are enabled in the defaults; review recipients and schedules to control delivery. The three pricing-related rules have a minimum notification interval of 24 hours, while the baseline rules have a six-hour interval and send recovery notifications when activity returns to normal.
+Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules. Choose recipients and notification schedules that suit your team.
 
 See [Cost Alerts](cost-alert-rules.md) for configuration and investigation steps. Cost alerts notify you about usage; they do not stop agents or enforce a spending cap. Use [governance policies](governance/policies.md) to control supported operations.
