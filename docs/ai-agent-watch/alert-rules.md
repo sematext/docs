@@ -53,7 +53,7 @@ Cost alerts help you spot unexpected spending, reduced cache reuse, and model ca
 
 ### Default cost alerts
 
-AI Agent Watch includes the following default cost alert rules, enabled with **Warning** priority:
+AI Agent Watch includes the following default cost alert rules:
 
 | Default rule | When it triggers |
 |---|---|
