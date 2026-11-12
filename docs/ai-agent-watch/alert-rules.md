@@ -49,11 +49,11 @@ Alert rules can match `exec_denied`, `file_access_denied`, and `net_denied` even
 
 ## Cost alerts
 
-Cost alerts help you spot unexpected spending, reduced cache reuse, and model calls whose costs cannot be calculated. Unlike the event rules above, they evaluate usage over a time window, using a fixed threshold or a comparison with earlier activity.
+Cost alerts help you spot unexpected spending, reduced cache reuse, and model calls whose costs cannot be calculated.
 
 ### Default cost alerts
 
-AI Agent Watch includes six default cost alert rules, all enabled with **Warning** priority:
+AI Agent Watch includes the following default cost alert rules, enabled with **Warning** priority:
 
 | Default rule | When it triggers |
 |---|---|
