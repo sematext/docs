@@ -116,3 +116,7 @@ Sematext Agent reports blocked operations as governance events. See [Governance 
 ## LLM Costs
 
 Review calculated spend, model breakdowns, cache reuse, Top Agents by Cost, Top Sessions by Cost, and recent cost alerts. Compare agents across employee workstations and servers, then drill into an expensive agent's sessions and usage events. See [Cost Reports](cost-tracking/reports.md#llm-costs).
+
+![LLM Costs summary, seven-day cost heatmap, and cost breakdown by model](/docs/images/aiam/llm-costs-summary.png)
+
+![Top Agents by Cost and Top Sessions by Cost with token usage, cache hit rates, and model breakdowns](/docs/images/aiam/llm-costs-agents-sessions.png)
