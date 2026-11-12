@@ -27,6 +27,8 @@ If Sematext Agent is stopped or does not answer within half a second, the tool c
 
 ## Set up
 
+First, follow [Getting Started](getting-started.md) to enable AI Agent Watch and install Sematext Agent.
+
 As an administrator, on each machine:
 
 ```bash
