@@ -21,8 +21,6 @@ The Linux collection path applies to both personal development machines and shar
 - **Installation:** Follow [Linux installation](/docs/agents/sematext-agent/linux-installation/) for a workstation or server, or the relevant [Sematext Agent deployment instructions](/docs/agents/sematext-agent/) for containers and Kubernetes.
 - **Governance:** Requires Sematext Agent **4.6 or later**, Linux kernel **5.17 or newer**, and BPF-LSM enabled. Check [Governance Compatibility](governance/compatibility.md) before relying on enforcement.
 
-For containers and Kubernetes, kernel requirements apply to the host or worker node. A supported Linux workstation uses the same collection and enforcement mechanisms as a supported Linux server.
-
 ## macOS and Windows
 
 AI Agent Watch supports **Claude Code** and **Codex** on these platforms. Supported Codex use includes the CLI, `codex exec`, and the IDE extension. Claude Code support includes the CLI and the desktop app's Code tab.
