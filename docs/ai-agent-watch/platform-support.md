@@ -52,7 +52,3 @@ Event availability depends on the agent and version. See [Captured Events](captu
 Linux governance requires the kernel support described above. Hosts without it can still provide supported activity data, but should not be treated as enforcing governance policies.
 
 On macOS and Windows, governance depends on the configured coding-agent hooks. Shell-command checks inspect command text on a best-effort basis; they do not observe everything the command or its children do. A call proceeds unchecked if Sematext Agent is unavailable or its answer arrives after the hook's deadline. See [macOS and Windows governance coverage](macos-windows.md#what-you-get).
-
-## Costs across servers and workstations
-
-[Cost Tracking](cost-tracking/index.md) uses captured model token usage, regardless of whether it comes from a workstation or server. Compare agents by host, model, and session in [Cost Reports](cost-tracking/reports.md). Missing usage or pricing can make costs incomplete; see [Pricing and Calculations](cost-tracking/pricing.md#missing-and-partial-costs).
