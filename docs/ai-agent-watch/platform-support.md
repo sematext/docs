@@ -32,23 +32,17 @@ AI Agent Watch supports **Claude Code** and **Codex** on these platforms. Suppor
 
 ## Capability comparison
 
-The macOS and Windows columns apply to Claude Code and Codex after completing their setup. Requirements for each platform are listed above.
+The macOS and Windows column applies to Claude Code and Codex after completing their setup. Requirements for each platform are listed above.
 
-| Capability | Linux | macOS | Windows |
-|---|---|---|---|
-| Discover AI agents automatically | Yes | No — configure Claude Code or Codex first. | No — configure Claude Code or Codex first. |
-| Review agent sessions | Yes | Yes | Yes |
-| See commands and tools used | Yes — includes activity from processes the agent starts. | Yes — tool calls reported by Claude Code or Codex. Activity inside a command is not shown separately. | Yes — tool calls reported by Claude Code or Codex. Activity inside a command is not shown separately. |
-| See which files agents access | Yes | Limited — files accessed through supported tools and patches. Shell commands do not produce separate file-read events. | Limited — files accessed through supported tools and patches. Shell commands do not produce separate file-read events. |
-| See network connections and traffic volume | Yes | Limited — some reported destinations; no traffic volume or connections made inside shell commands. | Limited — some reported destinations; no traffic volume or connections made inside shell commands. |
-| Detect sensitive information | Yes — scans captured outbound content for credentials and personal data. | Yes — scans reported prompts, tool inputs, and tool results. | Yes — scans reported prompts, tool inputs, and tool results. |
-| Block actions with governance policies | Yes — blocks matching actions at the operating-system level, including actions from processes the agent starts. Requires a compatible host. | Limited — checks supported tool calls. Shell-command checks have limitations; MCP calls and activity inside commands are not checked. | Limited — checks supported tool calls. Shell-command checks have limitations; MCP calls and activity inside commands are not checked. |
-| Track token usage and calculated costs | Yes | Yes | Yes |
+| Capability | Linux | macOS and Windows |
+|---|---|---|
+| Discover AI agents automatically | Yes | No — configure Claude Code or Codex first. |
+| Review agent sessions | Yes | Yes |
+| See commands and tools used | Yes — includes activity from processes the agent starts. | Yes — tool calls reported by Claude Code or Codex. Activity inside a command is not shown separately. |
+| See which files agents access | Yes | Limited — files accessed through supported tools and patches. Shell commands do not produce separate file-read events. |
+| See network connections and traffic volume | Yes | Limited — some reported destinations; no traffic volume or connections made inside shell commands. |
+| Detect sensitive information | Yes — scans captured outbound content for credentials and personal data. | Yes — scans reported prompts, tool inputs, and tool results. |
+| Block actions with governance policies | Yes — blocks matching actions at the operating-system level, including actions from processes the agent starts. Requires [kernel support](governance/compatibility.md); without it, activity is monitored but policies are not enforced. | Limited — configured hooks check supported tool calls. Shell checks are best effort; MCP calls and activity inside commands are not checked. Calls proceed unchecked if Sematext Agent is unavailable or responds too late. See [coverage](macos-windows.md#what-you-get). |
+| Track token usage and calculated costs | Yes | Yes |
 
 Event availability depends on the agent and version. See [Captured Events](captured-events.md#platform-coverage) and the [Claude Code/Codex event matrix](macos-windows.md#events-compared-to-linux) for details.
-
-## Governance boundaries
-
-Linux governance requires the kernel support described above. Hosts without it can still provide supported activity data, but should not be treated as enforcing governance policies.
-
-On macOS and Windows, governance depends on the configured coding-agent hooks. Shell-command checks inspect command text on a best-effort basis; they do not observe everything the command or its children do. A call proceeds unchecked if Sematext Agent is unavailable or its answer arrives after the hook's deadline. See [macOS and Windows governance coverage](macos-windows.md#what-you-get).
