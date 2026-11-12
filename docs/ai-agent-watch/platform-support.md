@@ -11,7 +11,7 @@ AI Agent Watch supports Linux, macOS, and Windows. The operating system and the 
 | macOS | Employee workstations and other supported macOS hosts. | Only Claude Code and Codex are currently supported. See [configuration instructions](macos-windows.md). |
 | Windows | Employee workstations and supported Windows Server hosts. | Only Claude Code and Codex are currently supported. See [configuration instructions](macos-windows.md). |
 
-Start with [Getting Started](getting-started.md). For supported operating-system releases, see the [Sematext Agent Platform Support Policy](/docs/agents/sematext-agent/platform-support-policy/).
+For supported operating-system releases, see the [Sematext Agent Platform Support Policy](/docs/agents/sematext-agent/platform-support-policy/).
 
 ## Linux
 
