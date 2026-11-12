@@ -7,9 +7,9 @@ AI Agent Watch supports Linux, macOS, and Windows. The operating system and the 
 
 | Platform | Where it can be used | Setup |
 |---|---|---|
-| Linux | Employee workstations, servers, containers, and Kubernetes workloads. | Install Sematext Agent and enable AI Agent Watch for its Infra App. Supported AI agents are discovered automatically. |
-| macOS | Employee workstations and other supported macOS hosts. | Install Sematext Agent, enable AI Agent Watch, and configure Claude Code or Codex telemetry and hooks. |
-| Windows | Employee workstations and supported Windows Server hosts. | Install Sematext Agent, enable AI Agent Watch, and configure Claude Code or Codex telemetry and hooks. |
+| Linux | Employee workstations, servers, containers, and Kubernetes workloads. | Install Sematext Agent and enable AI Agent Watch for its Infra App. AI agents are discovered automatically. |
+| macOS | Employee workstations and other supported macOS hosts. | Only Claude Code and Codex are currently supported. See [configuration instructions](macos-windows.md). |
+| Windows | Employee workstations and supported Windows Server hosts. | Only Claude Code and Codex are currently supported. See [configuration instructions](macos-windows.md). |
 
 Start with [Getting Started](getting-started.md). For supported operating-system releases, see the [Sematext Agent Platform Support Policy](/docs/agents/sematext-agent/platform-support-policy/).
 
