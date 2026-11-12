@@ -257,5 +257,3 @@ aiagent:
 | `pii_detection` | Prompts, tool arguments and tool output. Not the system prompt or model replies. | Same. |
 | `exec_denied`, `file_access_denied`, `net_denied` | Yes, for the tool calls in [What you get](#what-you-get). | Same. |
 | `exec_failed`, `network_activity` | No. | No. |
-
-A subagent's activity appears in the session of the agent that started it, as on Linux.
