@@ -25,14 +25,6 @@ Treat it as a guardrail for the AI agent's own actions, not as a sandbox. On Lin
 
 If Sematext Agent is stopped or does not answer within half a second, the tool call goes ahead, so Sematext Agent never blocks a developer's work by being down.
 
-## Workstation coverage and costs
-
-Use the same organization Infra App for workstations you want to review together, or separate Apps to organize your deployment. The AI provider account an employee signs into does not determine which Sematext account receives the data; the Sematext Agent's Infra App token does.
-
-[Cost Tracking](cost-tracking/index.md) uses the token usage reported by Claude Code and Codex. Compare agents by host in [Top Agents by Cost](cost-tracking/reports.md#compare-agents-across-workstations), then investigate expensive sessions and models. Calculated token costs do not allocate an employee's flat-rate AI subscription fee.
-
-Collection and governance depend on the configured telemetry and hooks. Local administrators can change managed settings; organizations can deploy and maintain them through their device-management tools. MCP tool activity can be reported, but MCP calls are not checked by the workstation governance hooks. See [Captured Events](captured-events.md#platform-coverage) for reporting differences.
-
 ## Set up
 
 As an administrator, on each machine:
