@@ -1,7 +1,7 @@
 title: AI Agent Watch Platform Support
 description: Compare AI Agent Watch requirements, setup, and capabilities on Linux, macOS, and Windows
 
-AI Agent Watch supports Linux, macOS, and Windows. Employee workstations can run any of these operating systems; server and workstation use cases do not determine the collection method. The operating system and the AI agent determine how activity is collected and which capabilities are available.
+AI Agent Watch supports Linux, macOS, and Windows. The operating system and the AI agent determine how activity is collected and which capabilities are available.
 
 ## Choose your setup path
 
