@@ -1,13 +1,13 @@
 title: Reports
 description: The built-in AI Agent Watch reports, what each one shows, and how filtering works across them
 
-AI Agent Watch ships with a set of built-in reports, available from the left-hand menu: **Overview**, **Explore**, **Agent Sessions**, **PII Detections**, **Network Events**, **Tool Execution**, and **Governance**.
+AI Agent Watch ships with a set of built-in reports, available from the left-hand menu: **Overview**, **Explore**, **Agent Sessions**, **PII Detections**, **Network Events**, **Tool Execution**, **Governance**, **LLM Costs**, and **Cost by Infrastructure**.
 
 ## Shared elements
 
 A few things behave the same way across every report:
 
-- **Time range** - shown top-right, next to a refresh button and an auto-refresh (play) toggle. Every tile, chart, and table on the page reflects this range.
+- **Time range** - shown top-right, next to a refresh button and an auto-refresh (play) toggle. Charts and tables reflect this range unless a fixed comparison period is stated. The LLM Costs daily average and monthly projection use a trailing seven-day average; its heatmap also uses the trailing seven days.
 - **Filters** - click **Filters** below the breadcrumb to open a filter panel. Available fields depend on the report, but commonly include priority, event type, PII category, and session risk score. Risk score can be filtered with an operator (`=`, `≥`, `≤`, or `between`) and a value, or with quick presets for the four risk bands - **Clean** (0-30), **Medium** (31-60), **High** (61-80), and **Critical** (81-100). See [Risk Scores & Priorities](risk-scores.md).
 
 ![Explore Filters](/docs/images/aiam/filters.png)
@@ -112,3 +112,15 @@ Enforcement activity from enabled governance policies.
 ![Governance report with enforcement counts, event timeline, filters, and event details](/docs/images/aiam/governance-report.png)
 
 Sematext Agent reports blocked operations as governance events. See [Governance Policies](governance/policies.md) for policy configuration and alerting, and [Governance Compatibility](governance/compatibility.md) for host requirements.
+
+## LLM Costs
+
+Review calculated spend, model breakdowns, cache reuse, Top Agents by Cost, Top Sessions by Cost, and recent cost alerts. Compare agents across employee workstations and servers, then drill into an expensive agent's sessions and usage events. See [Cost Reports](cost-tracking/reports.md#llm-costs).
+
+## Cost by Infrastructure
+
+Locate spending by host, Kubernetes namespace, and cluster. Workstation agents appear in host-based comparisons. See [Cost by Infrastructure](cost-tracking/reports.md#cost-by-infrastructure).
+
+## Platform coverage
+
+Reports reflect the events available from each platform. macOS and Windows report configured Claude Code and Codex activity rather than observing all kernel activity. Network byte totals, shell-child connections, and some file events are unavailable there. See [platform coverage](captured-events.md#platform-coverage) before interpreting an empty chart as an absence of activity.

@@ -1,11 +1,26 @@
 title: AI Agent Watch
 description: Monitor AI agent activity on your hosts, block operations with governance policies, and get notified about risky behavior
 
-AI agents - coding assistants, autonomous scripts, agentic workflows - increasingly run directly on your infrastructure with real permissions: they execute shell commands, read and write files, and talk to external services on your behalf. [AI Agent Watch](https://sematext.com/docs/ai-agent-watch/) gives you visibility into what those agents are actually doing on a host, so you can catch risky behavior - credential access, connections to unexpected destinations, PII leaving your systems - before it becomes an incident. With [Governance](governance/index.md), you can also block tool executions, file access, and network activity that match your policies.
+AI agents - coding assistants, autonomous scripts, agentic workflows - increasingly run on company servers and employee workstations with real permissions: they execute shell commands, read and write files, and talk to external services on your behalf. [AI Agent Watch](https://sematext.com/docs/ai-agent-watch/) gives you visibility into what those agents are actually doing on a host, so you can catch risky behavior - credential access, connections to unexpected destinations, PII leaving your systems - before it becomes an incident. With [Governance](governance/index.md), you can also block tool executions, file access, and network activity that match your policies.
 
 AI Agent Watch runs alongside your AI agent processes and reports on their activity: when a session starts and ends, which tools/commands it executes, which files it reads, writes, or renames, which hosts it connects to, and whether any outbound data matches a PII pattern you care about. On [compatible hosts](governance/compatibility.md), Sematext Agent also enforces enabled [governance policies](governance/policies.md) and reports blocked operations as events. Each event is automatically compared against your alert rules, given a priority and a risk score, and rolled up into an overall risk score for the session.
 
 ![Overview](/docs/images/aiam/overview.png)
+
+## Servers and employee workstations
+
+Use AI Agent Watch to review AI activity across your organization's infrastructure and employees' development machines in Sematext Cloud.
+
+| Environment | Setup and coverage | What you can investigate |
+|---|---|---|
+| Linux servers and workloads | Sematext Agent automatically discovers supported AI agents and observes their activity through eBPF. Governance requires a compatible kernel. | Agent activity, risky operations, sensitive-data detections, governance events, and LLM usage and costs. |
+| macOS and Windows workstations | Configure Claude Code or Codex to send telemetry and run Sematext Agent hooks. Coverage depends on the tool calls and telemetry they report. | Coding-agent sessions, tool activity, sensitive-data findings, hook-based governance, and LLM usage and costs. |
+
+### Understand AI spending across your organization
+
+Connect employee workstations to your organization's Infra Apps to compare their agents' token usage and calculated costs alongside agents on servers. [Top Agents by Cost](cost-tracking/reports.md#compare-agents-across-workstations) helps you identify which agents and workstations drive spend, which models they use, and which sessions deserve a closer look. Use recognizable hostnames to associate an agent with a workstation; an AI-provider login alone does not identify its owner in Sematext.
+
+See [Getting Started](getting-started.md) for the setup paths and [macOS and Windows](macos-windows.md) for workstation coverage and limitations.
 
 ## Why use it
 
@@ -33,7 +48,7 @@ AI Agent Watch can be enabled per [Infra App](/docs/monitoring/infrastructure/).
 
 ## No AI Agents Detected Yet
 
-If you don't see any data right away after enabling AI Agent Watch, that's expected - [Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents running on your infrastructure, but if none are installed on the monitored hosts yet, there's simply nothing yet to report.
+If you don't see any data right away after enabling AI Agent Watch, that's expected - [Sematext Agent](/docs/agents/sematext-agent) continuously discovers AI agents on supported Linux hosts, but if none are running there, there is nothing yet to report. On macOS and Windows, start a configured Claude Code or Codex session and follow the [workstation verification steps](macos-windows.md#verify).
 
 Leaving AI Agent Watch enabled is still valuable in the meantime: it gives you continuous visibility into your environment and immediate awareness when new AI agents are introduced, whether intentionally or without authorization. Early detection helps identify potentially malicious, misconfigured, or high-risk AI agents before they become a security or compliance concern.
 
@@ -43,9 +58,9 @@ For the best coverage and strongest security posture, deploy Sematext Agent on a
 
 [Governance](governance/index.md) lets you block tool executions, file access, and network activity that match your policies. Review enforcement activity in the Governance report and configure alert rules for notifications. See [Governance Compatibility](governance/compatibility.md) for host requirements.
 
-## Coming soon
+## LLM Cost Tracking
 
-**LLM Cost Tracking** is currently in development and will surface per-agent and per-session LLM spend. See [LLM Cost Tracking](cost-tracking-governance.md) for details.
+[Cost Tracking](cost-tracking/index.md) shows token usage and calculated spend by agent, session, model, and infrastructure. Investigate cost spikes, compare cache usage, configure your negotiated [pricing](cost-tracking/pricing.md), and set [cost alerts](cost-alert-rules.md).
 
 ## In this section
 
@@ -59,4 +74,5 @@ For the best coverage and strongest security posture, deploy Sematext Agent on a
 - [PII Categories](pii-categories.md) - detecting sensitive data in outbound traffic
 - [Alert Rules](alert-rules.md) - defining what counts as risky and getting notified about it
 - [Risk Scores & Priorities](risk-scores.md) - how event and session risk scores are calculated and used
-- [LLM Cost Tracking](cost-tracking-governance.md) - upcoming LLM Cost Tracking
+- [LLM Cost Tracking](cost-tracking/index.md) - usage, reports, pricing, and cost alerts
+- [macOS and Windows](macos-windows.md) - workstation setup, coverage, and limitations

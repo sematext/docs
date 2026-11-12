@@ -310,6 +310,10 @@ To completely remove all configuration files and logs, execute the following com
    rmdir /s /q "C:\Program Files\Sematext Agent"
 ```
 
+## AI Agent Watch
+
+Sematext Agent **4.7 or later** supports AI Agent Watch for Claude Code and Codex. After installing the agent, follow [workstation setup](/docs/ai-agent-watch/macos-windows/) to configure telemetry and hooks. This provides visibility and governance for reported tool calls; it does not provide Linux kernel-level coverage.
+
 ## Limitations / Known Issues
 
 The Sematext Agent for Windows is still a work in progress and has some limitations:
