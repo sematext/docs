@@ -29,6 +29,8 @@ If Sematext Agent is stopped or does not answer within half a second, the tool c
 
 First, follow [Getting Started](getting-started.md) to enable AI Agent Watch and install Sematext Agent.
 
+For Claude Code, use version **2.1.139 or later**. If your organization manages Claude Code through MDM or claude.ai, also follow [Centrally managed Claude Code](#centrally-managed-claude-code).
+
 As an administrator, on each machine:
 
 ```bash
@@ -45,13 +47,22 @@ On Windows the installer adds Sematext Agent to `PATH`; a PowerShell window open
 
 This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it.
 
-- It writes only the machine-wide files: Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) and Codex's `requirements.toml`. Every other setting in them stays, and a setting someone else already gave a value, such as `OTEL_LOG_USER_PROMPTS`, keeps it.
-- It refuses a file, or a folder above it, that a user could change to turn the hooks off: on macOS one not owned by root or writable by other users, on Windows one not owned by an administrator, one that lets other users change it, or a link or junction. It also refuses when Sematext Agent's own binary is one a user could replace. It also leaves a file that is a link, or that it cannot read, as it is, and says why. On Windows, a folder it creates under `ProgramData` gets permissions that let only administrators add files.
-- A file is backed up next to itself before it changes. Running it again changes nothing.
-- `--dry-run` shows what would change and writes nothing. `--claude` or `--codex` sets up one of them. `--hooks-only` leaves telemetry alone.
-- It sets up Claude Code or Codex even if it is not installed yet; the settings apply once it is.
-- The hooks need Claude Code 2.1.139 or later. Older versions ignore the hook's arguments, so the hook does not run as one and nothing is checked.
-- It warns when Claude Code will not read the file's hooks: when your organization delivers Claude Code policy through MDM or claude.ai server-managed settings, Claude Code uses that source's hooks only. Set `"managedSourcesBehavior": "merge"` there (Claude Code 2.1.242 or later), and the file's hooks run next to it. The telemetry settings still apply, unless that source sets its own OpenTelemetry exporter: Claude Code takes those settings from one source as a whole.
+The command updates Claude Code's machine-wide managed settings and Codex's `requirements.toml`. It preserves unrelated settings and existing telemetry values, and backs up each file before changing it. Running the command again leaves an up-to-date configuration unchanged.
+
+### Optional setup commands
+
+Run these with the same administrator privileges as the install command above.
+
+| Task | Command |
+|---|---|
+| Preview changes without writing files | `st-agent ai-agent-watch install --dry-run` |
+| Configure only Claude Code | `st-agent ai-agent-watch install --claude` |
+| Configure only Codex | `st-agent ai-agent-watch install --codex` |
+| Install hooks while keeping telemetry configured elsewhere | `st-agent ai-agent-watch install --hooks-only` |
+
+The hooks-only option does not set up telemetry for token usage and cost tracking. See [troubleshooting](#troubleshooting) if the command refuses to update a file.
+
+### Check the setup
 
 > **Screenshot placeholder — Workstation setup:** Show a successful `st-agent ai-agent-watch check` result and the corresponding host in AI Agent Watch.
 
@@ -70,7 +81,7 @@ Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
   up to date
 ```
 
-`command did not run` means the hook could not be started, `agent not reachable` that Sematext Agent is not running, or AI Agent Watch or its hook endpoint is off in `st-agent.yml` (`aiagent.enabled`, `aiagent.hook.enabled`). `no policy loaded` means AI Agent Monitoring is off for this app, enforcement is off in `st-agent.yml` (`aiagent.enforcement.enabled`), or no Governance policy blocks anything. The check call creates no event.
+If a check fails, see [Troubleshooting](#troubleshooting). The check call creates no event.
 
 **After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run the `install` command it prints.
 
@@ -80,9 +91,22 @@ Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
 
 For deploying through Jamf, Intune or Group Policy, or to Claude Code policy delivered by MDM or claude.ai, these are the blocks `install` writes.
 
+### Centrally managed Claude Code
+
+If your organization delivers Claude Code settings through MDM or claude.ai, check that the Sematext hooks will run alongside them:
+
+1. Use Claude Code **2.1.242 or later**.
+2. Run `/status` in Claude Code and inspect **Setting sources** to find the active policy source.
+3. Add `"managedSourcesBehavior": "merge"` to that policy source. Without it, Claude Code ignores the hooks in the local managed-settings file.
+4. Start a new session and [check the setup](#check-the-setup).
+
+If the central policy sets its own OpenTelemetry exporter, coordinate the telemetry configuration there too: Claude Code takes telemetry settings from one source as a whole. Installing local hooks does not redirect centrally managed telemetry to Sematext Agent.
+
+For manual deployment, use the configuration blocks below. Putting the hooks directly into claude.ai server-managed settings works only when all target machines use the same operating system, because the hook command has an OS-specific path.
+
 ### Claude Code
 
-1. **Find where Claude Code reads policy from.** Run `/status` in Claude Code; `Setting sources` names it. If your organization delivers Claude Code policy through MDM (a macOS configuration profile or the Windows `HKLM\SOFTWARE\Policies\ClaudeCode` registry value) or through server-managed settings on claude.ai, add `"managedSourcesBehavior": "merge"` there (Claude Code 2.1.242 or later); without it Claude Code skips the hooks in the file in the next step. Adding the hooks block to server-managed settings instead works only when every machine runs the same OS: that one block reaches every machine, and the hook names a per-OS path.
+1. **Check centrally managed settings.** If your organization uses MDM or claude.ai settings, complete [Centrally managed Claude Code](#centrally-managed-claude-code) first.
 2. **Add the block** for your OS to Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) file, next to any keys already in it:
     - macOS: `/Library/Application Support/ClaudeCode/managed-settings.json`
     - Windows: `C:\Program Files\ClaudeCode\managed-settings.json`
@@ -184,6 +208,29 @@ Windows:
 Start a Claude Code or Codex session and give it a prompt that uses a tool. Within a minute, the AI Agent Watch Overview shows an `agent_session_started` event for the host, followed by `llm_usage` and `tool_executed` events. A blocked call shows up as an `exec_denied`, `file_access_denied` or `net_denied` event in the [Governance report](governance/index.md#governance-report).
 
 If nothing arrives, check that the Sematext Agent log shows `AI agent OTLP receiver started` and `AI agent hook endpoint started`. For Claude Code, run `/status` and check that `Setting sources` lists the managed settings. For Codex, check that the `[otel]` block is in the file Codex reads and points at `127.0.0.1:4347`.
+
+## Troubleshooting
+
+### The installer refuses to update a file
+
+Read the path and reason printed by the command. Run setup as an administrator, then check the affected file, its parent folders, and the Sematext Agent executable:
+
+- On macOS, they must be owned by root and must not be writable by other users.
+- On Windows, they must be owned by an administrator and must not grant ordinary users permission to change them.
+- Use real files and directories rather than symbolic links or Windows junctions, and make sure the administrator can read existing settings.
+
+Ask the machine's administrator to correct the reported ownership, permissions, or path issue, then rerun the install command. The installer leaves files it cannot safely update unchanged.
+
+### A setup check fails
+
+| Result | What to check |
+|---|---|
+| `command did not run` | Confirm that Sematext Agent is installed and the configured hook command can start. |
+| `agent not reachable` | Start Sematext Agent and check that `aiagent.enabled` and `aiagent.hook.enabled` are enabled in `st-agent.yml`. |
+| `no policy loaded` | Enable AI Agent Watch for the Infra App, check `aiagent.enforcement.enabled`, and enable at least one governance policy with a blocking condition. |
+| `out of date` | Rerun the install command printed by the check, then check again. |
+
+If Claude Code is centrally managed and hooks are ignored, follow [Centrally managed Claude Code](#centrally-managed-claude-code).
 
 ## Ports and turning it off
 
