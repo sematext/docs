@@ -25,11 +25,9 @@ Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machin
 1. In Sematext Cloud, open **Fleet & Discovery → Agents → Install Agent**.
 2. Select the Infra App you enabled for AI Agent Watch. If you need a new one, [create an Infra App](/docs/monitoring/infrastructure/#create-an-infra-app) first.
 3. Select the operating system or deployment environment for your machine.
-4. Copy the token from the installation instructions. On macOS and Windows, it appears under **Infra App Token**; other environments include it in their installation commands or configuration.
+4. Copy the token from the installation instructions.
 
-Use this token when installing or configuring Sematext Agent so the machine sends data to the intended Infra App.
-
-> **Screenshot placeholder — Find your Infra App token:** Show the Install Agent screen, the selected Infra App and environment, and where the token appears. Replace the token with a sample value.
+Use this token when installing or configuring Sematext Agent.
 
 ## Verifying data is flowing
 
