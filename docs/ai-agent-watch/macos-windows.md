@@ -43,7 +43,7 @@ st-agent ai-agent-watch install
 
 On Windows the installer adds Sematext Agent to `PATH`; a PowerShell window opened before the install does not see it, so open a new one.
 
-This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it. `aiaw` is short for `ai-agent-watch`.
+This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it.
 
 - It writes only the machine-wide files: Claude Code's [managed settings](https://code.claude.com/docs/en/managed-settings) and Codex's `requirements.toml`. Every other setting in them stays, and a setting someone else already gave a value, such as `OTEL_LOG_USER_PROMPTS`, keeps it.
 - It refuses a file, or a folder above it, that a user could change to turn the hooks off: on macOS one not owned by root or writable by other users, on Windows one not owned by an administrator, one that lets other users change it, or a link or junction. It also refuses when Sematext Agent's own binary is one a user could replace. It also leaves a file that is a link, or that it cannot read, as it is, and says why. On Windows, a folder it creates under `ProgramData` gets permissions that let only administrators add files.
