@@ -32,17 +32,20 @@ AI Agent Watch supports **Claude Code** and **Codex** on these platforms. Suppor
 
 ## Capability comparison
 
-| Capability | Linux | macOS and Windows |
-|---|---|---|
-| Agent discovery and activity collection | Automatic discovery and kernel-based observation of supported AI agents. | Configure supported Claude Code or Codex telemetry and hooks. |
-| Sessions and tool activity | Observed agent and child-process activity. | Reported coding-agent sessions and tool calls. |
-| File activity | Supported kernel file operations. | Supported file tools and patches. Files read inside shell commands are not captured as separate file reads. |
-| Network activity | Observed connections and traffic, including byte counts. | Limited reported destinations; no network byte totals or visibility into shell-child connections. |
-| PII detection | Scanning of captured outbound content. | Scanning of reported prompts, tool arguments, and hook-reported tool output. |
-| Governance | Enforcement of supported kernel operations on compatible hosts, including child-process activity. | Checks of known tool calls. Shell checks are best effort; MCP calls and underlying child-process activity are not checked. |
-| Token usage and calculated costs | Supported captured model requests. | Token usage reported by the configured coding agent. |
+The macOS and Windows columns apply to Claude Code and Codex after completing their setup. Requirements for each platform are listed above.
 
-These are collection boundaries, not a guarantee that every action or model request is captured. Event availability depends on the agent, version, and collection mechanism. See [Captured Events](captured-events.md#platform-coverage) and the [Claude Code/Codex event matrix](macos-windows.md#events-compared-to-linux) for details.
+| Capability | Linux | macOS | Windows |
+|---|---|---|---|
+| Discover AI agents automatically | Yes | No — configure Claude Code or Codex first. | No — configure Claude Code or Codex first. |
+| Review agent sessions | Yes | Yes | Yes |
+| See commands and tools used | Yes — includes activity from processes the agent starts. | Yes — tool calls reported by Claude Code or Codex. Activity inside a command is not shown separately. | Yes — tool calls reported by Claude Code or Codex. Activity inside a command is not shown separately. |
+| See which files agents access | Yes | Limited — files accessed through supported tools and patches. Shell commands do not produce separate file-read events. | Limited — files accessed through supported tools and patches. Shell commands do not produce separate file-read events. |
+| See network connections and traffic volume | Yes | Limited — some reported destinations; no traffic volume or connections made inside shell commands. | Limited — some reported destinations; no traffic volume or connections made inside shell commands. |
+| Detect sensitive information | Yes — scans captured outbound content for credentials and personal data. | Yes — scans reported prompts, tool inputs, and tool results. | Yes — scans reported prompts, tool inputs, and tool results. |
+| Block actions with governance policies | Yes — blocks matching actions at the operating-system level, including actions from processes the agent starts. Requires a compatible host. | Limited — checks supported tool calls. Shell-command checks have limitations; MCP calls and activity inside commands are not checked. | Limited — checks supported tool calls. Shell-command checks have limitations; MCP calls and activity inside commands are not checked. |
+| Track token usage and calculated costs | Yes | Yes | Yes |
+
+Event availability depends on the agent and version. See [Captured Events](captured-events.md#platform-coverage) and the [Claude Code/Codex event matrix](macos-windows.md#events-compared-to-linux) for details.
 
 ## Governance boundaries
 
