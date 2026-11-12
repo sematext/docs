@@ -56,7 +56,7 @@ Run these with the same administrator privileges as the install command above.
 | See what setup will change before applying it | `st-agent ai-agent-watch install --dry-run` |
 | Configure only Claude Code | `st-agent ai-agent-watch install --claude` |
 | Configure only Codex | `st-agent ai-agent-watch install --codex` |
-| Install hooks while keeping telemetry configured elsewhere | `st-agent ai-agent-watch install --hooks-only` |
+| Set up governance checks only; keep your existing telemetry settings | `st-agent ai-agent-watch install --hooks-only` |
 
 The hooks-only option does not set up telemetry for token usage and cost tracking. See [troubleshooting](#troubleshooting) if the command refuses to update a file.
 
