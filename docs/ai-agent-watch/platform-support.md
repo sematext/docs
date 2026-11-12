@@ -26,7 +26,7 @@ The Linux collection path applies to both personal development machines and shar
 AI Agent Watch supports **Claude Code** and **Codex** on these platforms. Supported Codex use includes the CLI, `codex exec`, and the IDE extension. Claude Code support includes the CLI and the desktop app's Code tab.
 
 - **Sematext Agent:** Version **4.7 or later** is required.
-- **Collection:** Configure the coding agent to report telemetry to Sematext Agent. Unlike Linux, installing the collector and enabling the Infra App alone does not configure AI-agent activity reporting.
+- **Collection:** [Configure the coding agent](macos-windows.md#set-up) to report telemetry to Sematext Agent. Unlike Linux, installing the collector and enabling the Infra App alone does not configure AI-agent activity reporting.
 - **Governance and additional scanning:** Configure the coding agent's hooks. Governance checks known tool calls before they run; it does not enforce policy on the underlying operating-system activity.
 - **Setup and verification:** Follow [macOS and Windows Setup](macos-windows.md) for the installer command, supported coding-agent versions, managed settings, and checks.
 
