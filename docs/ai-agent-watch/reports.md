@@ -116,11 +116,3 @@ Sematext Agent reports blocked operations as governance events. See [Governance 
 ## LLM Costs
 
 Review calculated spend, model breakdowns, cache reuse, Top Agents by Cost, Top Sessions by Cost, and recent cost alerts. Compare agents across employee workstations and servers, then drill into an expensive agent's sessions and usage events. See [Cost Reports](cost-tracking/reports.md#llm-costs).
-
-## Cost by Infrastructure
-
-Locate spending by host, Kubernetes namespace, and cluster. Workstation agents appear in host-based comparisons. See [Cost by Infrastructure](cost-tracking/reports.md#cost-by-infrastructure).
-
-## Platform coverage
-
-Reports reflect the events available from each platform. macOS and Windows report configured Claude Code and Codex activity rather than observing all kernel activity. Network byte totals, shell-child connections, and some file events are unavailable there. See [platform coverage](captured-events.md#platform-coverage) before interpreting an empty chart as an absence of activity.
