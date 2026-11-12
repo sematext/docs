@@ -47,8 +47,6 @@ On Windows the installer adds Sematext Agent to `PATH`; a PowerShell window open
 
 This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it.
 
-The command updates Claude Code's machine-wide managed settings and Codex's `requirements.toml`. It preserves unrelated settings and existing telemetry values, and backs up each file before changing it. Running the command again leaves an up-to-date configuration unchanged.
-
 ### Optional setup commands
 
 Run these with the same administrator privileges as the install command above.
@@ -82,6 +80,8 @@ Claude Code  /Library/Application Support/ClaudeCode/managed-settings.json
 ```
 
 If a check fails, see [Troubleshooting](#troubleshooting). The check call creates no event.
+
+Once the check passes, start a new Claude Code or Codex session and [verify that events appear](#verify). For centrally managed deployments or manual configuration, see [Set up by hand](#set-up-by-hand).
 
 **After upgrading Sematext Agent**, run `check`. If it says `out of date`, the new version changed the hooks; run the `install` command it prints.
 
