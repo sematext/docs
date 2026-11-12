@@ -62,10 +62,6 @@ The hooks-only option does not set up telemetry for token usage and cost trackin
 
 ### Check the setup
 
-> **Screenshot placeholder — Workstation setup:** Show a successful `st-agent ai-agent-watch check` result and the corresponding host in AI Agent Watch.
-
-Then check it, as any user:
-
 ```bash
 st-agent ai-agent-watch check
 ```
