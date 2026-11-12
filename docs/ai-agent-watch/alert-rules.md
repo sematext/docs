@@ -39,6 +39,8 @@ Enabling AI Agent Watch seeds your account with a set of default rules covering 
 - Shell command execution, and credential-looking strings passed on a command line
 - A session's overall [risk score](risk-scores.md#session-risk-score) crossing a critical threshold
 
+Open **AI Agent Watch → Event Alerting → Alert Rules** to review the defaults, edit their conditions, enable or disable rules, or create your own. Configure recipients and notification schedules for the rules you want to hear about.
+
 ![Alert Rules](/docs/images/aiam/alert-rules.png)
 
 
