@@ -58,4 +58,4 @@ See [Cost Tracking](cost-tracking/index.md) and [Pricing and Calculations](cost-
 | Governance | Kernel enforcement on compatible Linux hosts. | Known tool-call checks; shell commands are best effort, MCP calls and underlying child-process activity are not checked. |
 | LLM usage | Supported captured model requests. | Token usage reported by the configured coding agent. |
 
-See the [per-agent event matrix](macos-windows.md#events-compared-to-linux) for details. An absent event can reflect a collection limitation; it does not prove that an operation did not happen.
+See the [per-agent event matrix](macos-windows.md#events-compared-to-linux) for details.
