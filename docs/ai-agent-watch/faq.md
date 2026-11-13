@@ -11,4 +11,4 @@ AI Agent Watch does not currently provide a general allowlist mode or allow rule
 
 ## Does marking an agent trusted disable governance?
 
-Only policies scoped to untrusted agents stop applying to that agent after the update reaches the host. Other matching policies remain active, and activity collection continues. See [Review and trust an agent](governance/strict-default-policies.md#5-review-and-trust-an-agent).
+Only policies scoped to untrusted agents stop applying to that agent after the update reaches the host. Other matching policies remain active, and activity collection continues. See [Trusted Agents](trusted-agents-hosts.md#trusted-agents).

@@ -22,7 +22,7 @@ The following are examples of separate policies. Adapt them to your environment:
 | Tool Execution | Binary basename `nc` | Is Trusted Agent is false | Block execution of the netcat binary with this name. |
 | Network Activity | CIDR `10.0.0.0/8` | Is Trusted Agent is false | Block matching connections to this private IPv4 range. |
 
-See [platform boundaries](#platform-boundaries) before choosing conditions.
+See [Platform Support](../platform-support.md#capability-comparison) before choosing conditions.
 
 ## 2. Create and enable the policies
 
@@ -49,27 +49,6 @@ Allow policy changes to reach Sematext Agent; updates can take up to five minute
 4. Verify the other policy types you plan to use. An allowed action alone does not prove enforcement is working.
 
 When you are satisfied, remove the test-host scope or replace it with the hosts or workloads you want to protect. Keep **Is Trusted Agent is false** on every policy intended for this workflow.
-
-## 4. Apply the restrictions to future agents
-
-For account-wide coverage, keep only **Is Trusted Agent is false** in the scope. A policy restricted to one host or namespace does not become a default for agents elsewhere.
-
-## 5. Review and trust an agent
-
-Review the agent's identity, host, sessions, and governance events. If it is approved, mark it trusted from the [Detected Agents list](../trusted-agents-hosts.md#trusted-agents). Account owners and admins can change trust status.
-
-The trust change refreshes the account's policies. After the update reaches Sematext Agent, policies scoped to **Is Trusted Agent is false** no longer apply to that agent. Other matching policies continue to apply, and activity collection continues. Verify the resulting behavior rather than assuming a trust change has already reached the host.
-
-Trust applies to the detected agent identity, not every agent belonging to an employee. A different identity, such as another host or version, may need separate review. On macOS and Windows, hook-based trust matching does not distinguish agent versions; see [workstation coverage](../macos-windows.md).
-
-To restore the untrusted-only restrictions, mark the agent untrusted again and allow the policy update to reach the host.
-
-> **Screenshot placeholder — Review and trust:** Show an untrusted agent in Detected Agents and its governance events before changing trust status.
-
-## Platform boundaries
-
-- **Linux:** Governance operates on supported kernel activity and requires BPF-LSM. See [compatibility requirements](compatibility.md).
-- **macOS and Windows:** Governance checks known Claude Code and Codex tool calls through hooks. Shell-command checks are best effort. MCP calls and the underlying activity of a command's child processes are not checked. Calls proceed unchecked if Sematext Agent is unavailable or its answer arrives after the hook's deadline. See [workstation limitations](../macos-windows.md#what-you-get).
 
 ## What this workflow does and does not provide
 
