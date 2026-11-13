@@ -49,15 +49,3 @@ Allow policy changes to reach Sematext Agent; updates can take up to five minute
 4. Verify the other policy types you plan to use. An allowed action alone does not prove enforcement is working.
 
 When you are satisfied, remove the test-host scope or replace it with the hosts or workloads you want to protect. Keep **Is Trusted Agent is false** on every policy intended for this workflow.
-
-## What this workflow does and does not provide
-
-| Requirement | Current behavior |
-|---|---|
-| Automatically restrict newly discovered, untrusted agents | Enabled policies with Is Trusted Agent is false apply to matching agents as they are discovered and policy configuration reaches the host. |
-| Exempt a reviewed agent from those restrictions | Mark it trusted; untrusted-only policies stop applying after the update reaches the host. |
-| Block everything except specific paths, commands, or destinations | No general allowlist or allow-override mode is available. Define explicit blocking conditions instead. |
-| Use Trusted Hosts as governance exceptions | Trust affects event classification and alerting; it does not override network governance policies. |
-| Guarantee a sandbox across all platforms | Enforcement is limited to each platform's supported operations and collection mechanism. |
-
-For shorter answers, see the [AI Agent Watch FAQ](../faq.md). For the full policy grammar, see [Governance Policies](policies.md).
