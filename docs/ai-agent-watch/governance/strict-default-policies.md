@@ -5,7 +5,7 @@ You can apply a set of governance restrictions to newly discovered AI agents aut
 
 For example, an organization can restrict unreviewed agents from accessing credential files, running selected commands, or connecting to private networks. After reviewing an agent, an administrator can mark it trusted to remove it from these untrusted-only policies. Policies with other matching scopes continue to apply.
 
-The workflow below establishes automatic restrictions for untrusted agents using the operations you explicitly choose to block. Operations outside those conditions remain unaffected by these policies.
+The workflow below establishes automatic restrictions for untrusted agents using the operations you explicitly choose to block.
 
 ## 1. Prepare a host and define the restrictions
 
