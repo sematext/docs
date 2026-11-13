@@ -37,7 +37,7 @@ Each policy controls one action type. Create separate policies for file access, 
 
 ![File Access policy for .pem files scoped to untrusted agents on test-host](/docs/images/aiam/strict-policy-scope.png)
 
-Policies must be enabled to enforce anything. The provided default example policies are disabled until you enable them; add the untrusted-agent scope before using them for this workflow.
+Policies must be enabled to enforce anything. The provided [default example policies](policies.md#default-example-policies) are disabled until you enable them; add the untrusted-agent scope before using them for this workflow.
 
 ## 3. Verify the restrictions
 
