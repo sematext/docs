@@ -9,7 +9,7 @@ Governance policies, alert rules, and notifications work independently. An enabl
 
 When an operation matches an enabled governance policy's conditions and scope, Sematext Agent blocks that operation and sends an event to Sematext Cloud. The AI agent process continues running; the policy denies the action rather than terminating the process.
 
-For example, a File Access policy can deny opening a credential file, and a Tool Execution policy can deny `git push --force` while allowing other Git commands. A denied operation returns an error to the agent. On Linux, the exact error depends on the operation: file access can return `EPERM`, while a blocked command can fail with exit code 126.
+For example, a File Access policy can deny opening a credential file, and a Tool Execution policy can deny `git push --force` while allowing other Git commands. A denied operation returns an error to the agent.
 
 | Platform | Requirements | Enforcement boundary |
 |---|---|---|
