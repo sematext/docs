@@ -52,7 +52,7 @@ When you are satisfied, remove the test-host scope or replace it with the hosts 
 
 ## 4. Apply the restrictions to future agents
 
-For account-wide coverage, keep only **Is Trusted Agent is false** in the scope. A policy restricted to one host or namespace does not become a default for agents elsewhere. Detection, policy delivery, host compatibility, and platform coverage still determine when and where enforcement takes effect; this is not a guarantee that every operation is blocked from the instant an unknown process starts.
+For account-wide coverage, keep only **Is Trusted Agent is false** in the scope. A policy restricted to one host or namespace does not become a default for agents elsewhere.
 
 ## 5. Review and trust an agent
 
