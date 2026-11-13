@@ -67,5 +67,3 @@ AI Agent Watch includes the following default cost alert rules:
 | Automatic - Cache Hit Rate Drop | Warns you when an agent is reusing less cached input, which can make its model requests more expensive. |
 
 Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules.
-
-See [Cost Alerts](cost-alert-rules.md) for configuration and investigation steps. Cost alerts notify you about usage; they do not stop agents or enforce a spending cap. Use [governance policies](governance/policies.md) to control supported operations.
