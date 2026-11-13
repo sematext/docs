@@ -22,7 +22,7 @@ The following are examples of separate policies. Adapt them to your environment:
 | Tool Execution | Binary basename `nc` | Is Trusted Agent is false | Block execution of the netcat binary with this name. |
 | Network Activity | CIDR `10.0.0.0/8` | Is Trusted Agent is false | Block matching connections to this private IPv4 range. |
 
-The filename examples do not cover every credential file. The command example does not block every networking tool. The network example can also block legitimate internal services; on macOS and Windows, it only checks supported tool-call targets and does not resolve hostnames into IP addresses. See [platform boundaries](#platform-boundaries) before choosing conditions.
+See [platform boundaries](#platform-boundaries) before choosing conditions.
 
 ## 2. Create and enable the policies
 
