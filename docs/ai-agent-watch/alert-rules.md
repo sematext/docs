@@ -66,6 +66,6 @@ AI Agent Watch includes the following default cost alert rules:
 | Automatic - Agent Cost Spike | Helps you find an agent spending more than usual and investigate its sessions, model choices, and token usage. |
 | Automatic - Cache Hit Rate Drop | Warns you when an agent is reusing less cached input, which can make its model requests more expensive. |
 
-Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules. Choose recipients and notification schedules that suit your team.
+Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules.
 
 See [Cost Alerts](cost-alert-rules.md) for configuration and investigation steps. Cost alerts notify you about usage; they do not stop agents or enforce a spending cap. Use [governance policies](governance/policies.md) to control supported operations.
