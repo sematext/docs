@@ -5,6 +5,8 @@ Cost alerts evaluate aggregated AI Agent Watch data and notify you when it meets
 
 Open **AI Agent Watch → Event Alerting → Cost Alerts** to manage rules.
 
+AI Agent Watch includes [default cost alerts](alert-rules.md#default-cost-alerts) to help you spot unusual spending, reduced cache reuse, and usage with missing pricing. You can customize these rules or create your own.
+
 ## Choose an alert type
 
 Select the alert type (**Threshold** or **Baseline**), then choose the metric, aggregation, and analyzing window.
@@ -25,6 +27,8 @@ Use filters to select the usage you care about and grouping to evaluate origins 
 Baseline rules compare against the median of eligible windows. Windows without data are excluded. **Skip weekends** is available for ALIGNED comparisons and excludes Saturday and Sunday windows from the baseline.
 
 Choose a percentage deviation for proportional changes or an absolute deviation for a fixed difference in the metric's units.
+
+![Baseline cost alert configuration showing the comparison window, percentage deviation, and preview](/docs/images/aiam/baseline-cost-alert.png)
 
 ## Investigate a cost alert
 
