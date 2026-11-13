@@ -5,49 +5,53 @@ Use **AI Agent Watch → LLM Costs** to understand spending and **Cost by Infras
 
 ## LLM Costs
 
-The report combines summary tiles, cost trends, model breakdowns, agent and session tables, and recent cost alerts.
+The **LLM Costs** report helps you understand how much your agents are spending and what is driving that spend. See your total cost for the selected period, your recent daily average, and an estimate of monthly spending based on the last seven days.
 
-| Element | What to look for |
-|---|---|
-| Total Cost | Calculated cost for the selected period and filters. |
-| Daily Average and Monthly Estimate | A trailing seven-day average and its monthly projection. These two values are independent of the selected date range; the projection is not a bill or budget commitment. |
-| Cache Savings | The cache hit rate, shown as a percentage. It describes cache reuse, not a dollar amount saved. |
-| Cost Alerts | Alerts that warrant investigation. |
-| Cost heatmap | Recurring expensive hours and unusual cost concentrations over the trailing seven days, independent of the selected date range. |
-| Cost by Model | Which models contribute most to spend and how that changes over time. |
-| Top Agents by Cost | Cost, sessions, average session cost, cache hit rate, model breakdown, and input/output/cache tokens for each agent origin. |
-| Top Sessions by Cost | Expensive sessions, their model breakdown, cache hit rate, and cost compared with the agent's seven-day average. |
+Use **Cost by Model** to see which models account for most of your spending and whether that mix has changed. The cost heatmap highlights busy and expensive hours over the last seven days, helping you spot recurring patterns or an unexpected burst of activity.
 
-> **Screenshot placeholder — LLM Costs:** Show summary tiles, heatmap, model charts, Top Agents, Top Sessions, and the cost-alert feed.
+**Top Agents by Cost** helps you compare agents across your organization. Look at session counts, average session cost, and token usage to understand whether an agent costs more because it is doing more work or because its individual sessions are more expensive. **Top Sessions by Cost** lets you follow up on unusually costly sessions and compare them with that agent's usual spending.
 
-### Compare agents across workstations
+Cache hit rates show how much input is being reused from cache. Comparing cache reuse alongside model choices and token usage can help explain differences in cost. Recent cost alerts draw your attention to unusual spending or changes in usage so you know where to investigate next.
 
-1. Select the Infra Apps receiving the workstations' data and choose a representative time range.
-2. In **Top Agents by Cost**, identify each agent by its host and agent type. For example, compare Claude Code on Bora's workstation with Codex on Nikhil's workstation.
-3. Compare total cost alongside session count, average session cost, and token usage. A higher total may reflect more sessions rather than a more expensive model.
-4. Inspect model breakdown and cache hit rate to understand differences in usage.
-5. Open a row's context menu to view that agent's events or costs by infrastructure. Use **Top Sessions by Cost** to locate individual expensive sessions and open their events.
+![LLM Costs summary, seven-day cost heatmap, and cost breakdown by model](/docs/images/aiam/llm-costs-summary.png)
 
-> **Screenshot placeholder — Top Agents and session drilldown:** Show identifiable workstation hosts, token columns, model breakdowns, and the context menu used to investigate an agent or session.
+![Top Agents by Cost and Top Sessions by Cost with token usage, cache hit rates, and model breakdowns](/docs/images/aiam/llm-costs-agents-sessions.png)
 
-A workstation can be shared, and an employee can use more than one workstation. Treat host-based comparisons as agent-origin comparisons, not automatic employee or department accounting.
+## LLM Usage
+
+The **LLM Usage** report helps you understand which models your agents rely on and how that usage changes over time. Switch between calls, tokens, and cost to see whether a model is used frequently, handles large amounts of context, or accounts for a large share of spending.
+
+**Usage by Model** brings token usage and calculated costs together so you can compare models alongside their cache hit rates. Input, output, cache, and reasoning token columns help explain how each model is being used.
+
+Use **Cache Hit Rate by Model** to spot changes in cache reuse, and **Unpriced Calls by Model** to find usage whose cost could not be calculated. Pricing-status labels help you identify missing model prices, unrecognized service tiers, or unsupported billing modes. See [Pricing and Calculations](pricing.md) for details.
+
+![LLM Usage report with model usage trends, token and cost comparisons, cache hit rates, and unpriced calls](/docs/images/aiam/llm-usage.png)
+
+## Session Usage
+
+The **Session Usage** report helps you understand what a typical agent session costs, how many tokens it uses, and which sessions stand out. Compare the average with the median (p50) to see whether a few expensive or token-heavy sessions are pulling the average up. The p95 and p99 values show the higher end of session costs and token usage, helping you understand how large those outliers can be.
+
+**Top 50 Sessions by Duration** helps you find long-running sessions and compare their duration with cost, token usage, and models used. In-progress labels and the last-event time help you see which sessions are still running and how recently they produced activity.
+
+![Session Usage report showing average and percentile costs and token counts alongside the longest-running sessions](/docs/images/aiam/session-usage.png)
+
 
 ## Cost by Infrastructure
 
-Use this report to find where spending originates:
+The **Cost by Infrastructure** report helps you understand where AI spending is concentrated across your organization. Use **Cost by Host** to compare employee workstations and servers outside Kubernetes and identify which machines account for the largest share of spending.
 
-- **Cost by Host** covers host origins, including employee workstations and servers outside Kubernetes.
-- **Cost by Namespace** groups Kubernetes usage by namespace.
-- **Cost by Cluster** compares Kubernetes clusters.
+For Kubernetes workloads, **Cost by Namespace** helps you find the namespaces driving costs, while **Cost by Cluster** shows how spending is distributed across clusters. These views help you see whether an increase is concentrated in one part of your infrastructure or spread across several workloads.
 
-Kubernetes origins are represented in the Kubernetes breakdowns rather than treated as bare-metal host spending. Inspect the agent, provider, and model details to understand what drives an expensive origin, and use context menus to continue the investigation.
+Once you find an expensive host or workload, look at its agents, providers, and models to understand what is driving the cost. Use the context menus to open the related activity and continue your investigation.
 
-> **Screenshot placeholder — Cost by Infrastructure:** Show the summary, host distribution, namespace breakdown, and cluster distribution with both workstation and server examples.
+![Cost by Infrastructure report showing total cost, host counts, and spending by host, model, and provider](/docs/images/aiam/cost-by-infrastructure.png)
 
 ## Investigate a spike
 
 Start with the model timeline or cost heatmap, narrow the period, then compare Top Agents and Top Sessions. Follow the expensive origin into its usage events. Check whether a change in session count, model choice, token volume, or cache reuse explains the increase. If an alert fired, open it to inspect its condition and contributing events; see [Cost Alerts](../cost-alert-rules.md#investigate-a-cost-alert).
 
+![Provider cost spike alert showing current spending, historical baseline windows, and the alert threshold](/docs/images/aiam/llm-cost-alert.png)
+
 ## Interpret missing or incomplete costs
 
-A missing cost is not the same as zero usage. Requests can report tokens without an applicable model price or supported billing mode. A session with some unpriced calls has a partial cost; one with no captured usage has no calculated session cost. Review usage events and [pricing status](pricing.md#missing-and-partial-costs) before treating a small total as a complete account of spending.
+A missing cost is not the same as zero usage. Requests can report tokens without an applicable model price or supported billing mode. A session with some unpriced calls has a partial cost. See [Pricing and Calculations](pricing.md) for supported service tiers and billing models.

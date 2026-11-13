@@ -120,3 +120,11 @@ Review calculated spend, model breakdowns, cache reuse, Top Agents by Cost, Top 
 ![LLM Costs summary, seven-day cost heatmap, and cost breakdown by model](/docs/images/aiam/llm-costs-summary.png)
 
 ![Top Agents by Cost and Top Sessions by Cost with token usage, cache hit rates, and model breakdowns](/docs/images/aiam/llm-costs-agents-sessions.png)
+
+## LLM Usage
+
+Compare model usage by calls, tokens, and cost, understand cache reuse, and identify usage with missing pricing. See [LLM Usage](cost-tracking/reports.md#llm-usage) for details.
+
+## Session Usage
+
+Understand typical session costs and token usage, spot outliers, and investigate long-running sessions. See [Session Usage](cost-tracking/reports.md#session-usage) for details.
