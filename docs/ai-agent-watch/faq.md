@@ -3,7 +3,7 @@ description: Common questions about default restrictions, agent trust, and gover
 
 ## Can I apply strict policies to every newly discovered agent?
 
-Yes. Create and enable governance policies with **Is Trusted Agent is false** in their scope. New agents start untrusted, so matching policies apply automatically. Additional scope entries limit which hosts or workloads are covered. See [Strict Policies for Newly Discovered Agents](governance/strict-default-policies.md) for the complete setup and verification walkthrough.
+Yes. Create and enable governance policies with **Is Trusted Agent is false** in their scope. New agents start untrusted, so matching policies apply automatically. See [Strict Policies for Newly Discovered Agents](governance/strict-default-policies.md) for the complete setup and verification walkthrough.
 
 ## Can I block everything except approved paths or destinations?
 
