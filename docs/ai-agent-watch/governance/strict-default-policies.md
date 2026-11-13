@@ -5,17 +5,6 @@ You can apply a set of governance restrictions to newly discovered AI agents aut
 
 For example, an organization can restrict unreviewed agents from accessing credential files, running selected commands, or connecting to private networks. After reviewing an agent, an administrator can mark it trusted to remove it from these untrusted-only policies. Policies with other matching scopes continue to apply.
 
-## Can I block everything except specific exceptions?
-
-AI Agent Watch currently supports policies that **block matching operations**. It does not provide an allow-rule mode or an allow rule that overrides a matching block. Consequently, it does not provide a complete allowlist configuration such as:
-
-```text
-Block every file path except /project/path
-Block every network destination except approved services
-```
-
-These describe desired behavior, not configuration syntax. Adding a destination to [Trusted Hosts](../trusted-agents-hosts.md#trusted-hosts) does not exempt it from a network governance policy. Marking an agent trusted exempts that agent from policies scoped to untrusted agents; it does not create path, command, or destination exceptions.
-
 The workflow below establishes automatic restrictions for untrusted agents using the operations you explicitly choose to block. Operations outside those conditions remain unaffected by these policies.
 
 ## 1. Prepare a host and define the restrictions

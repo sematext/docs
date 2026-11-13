@@ -7,7 +7,7 @@ Yes. Create and enable governance policies with **Is Trusted Agent is false** in
 
 ## Can I block everything except approved paths or destinations?
 
-AI Agent Watch does not currently provide a general allowlist mode or allow rules that override blocks. You can automatically apply explicit blocking policies to untrusted agents, but this is different from denying every operation except a few exceptions. See [the supported workflow and limitations](governance/strict-default-policies.md#can-i-block-everything-except-specific-exceptions).
+AI Agent Watch does not currently provide a general allowlist mode or allow rules that override blocks. You can automatically apply explicit blocking policies to untrusted agents, but this is different from denying every operation except a few exceptions. See [the supported workflow and limitations](governance/strict-default-policies.md#what-this-workflow-does-and-does-not-provide).
 
 ## Does marking an agent trusted disable governance?
 
