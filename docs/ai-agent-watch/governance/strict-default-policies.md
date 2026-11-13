@@ -35,7 +35,7 @@ See [platform boundaries](#platform-boundaries) before choosing conditions.
 
 Each policy controls one action type. Create separate policies for file access, tool execution, and network activity. Additional scope entries are combined with AND, so a test-host scope restricts enforcement to untrusted agents on that host.
 
-> **Screenshot placeholder — Strict policy scope:** Show an enabled File Access policy for `.pem`, with Is Trusted Agent is false and a test-host scope.
+![File Access policy for .pem files scoped to untrusted agents on test-host](/docs/images/aiam/strict-policy-scope.png)
 
 Policies must be enabled to enforce anything. The provided default example policies are disabled until you enable them; add the untrusted-agent scope before using them for this workflow.
 
