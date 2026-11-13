@@ -52,8 +52,6 @@ When you are satisfied, remove the test-host scope or replace it with the hosts 
 
 ## 4. Apply the restrictions to future agents
 
-There is no separate “make default” switch for this workflow. The enabled policies remain in place, and their untrusted-agent scope covers newly discovered agents that match any additional host, agent-type, or workload scopes.
-
 For account-wide coverage, keep only **Is Trusted Agent is false** in the scope. A policy restricted to one host or namespace does not become a default for agents elsewhere. Detection, policy delivery, host compatibility, and platform coverage still determine when and where enforcement takes effect; this is not a guarantee that every operation is blocked from the instant an unknown process starts.
 
 ## 5. Review and trust an agent
