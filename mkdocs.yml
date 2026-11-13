@@ -163,7 +163,10 @@ nav:
       - Limits: tracing/tracing-limits.md
     - AI Agent Watch:
       - Overview: ai-agent-watch/index.md
-      - Getting Started: ai-agent-watch/getting-started.md
+      - Setup & Platform Support:
+        - Getting Started: ai-agent-watch/getting-started.md
+        - Platform Support: ai-agent-watch/platform-support.md
+        - macOS and Windows Setup: ai-agent-watch/macos-windows.md
       - Reports: ai-agent-watch/reports.md
       - Captured Events: ai-agent-watch/captured-events.md
       - Trusted Agents & Hosts: ai-agent-watch/trusted-agents-hosts.md
@@ -174,7 +177,13 @@ nav:
         - Overview: ai-agent-watch/governance/index.md
         - Policies: ai-agent-watch/governance/policies.md
         - Compatibility: ai-agent-watch/governance/compatibility.md
-      - LLM Cost Tracking: ai-agent-watch/cost-tracking-governance.md
+        - Strict Default Policies: ai-agent-watch/governance/strict-default-policies.md
+      - Cost Tracking:
+        - Overview: ai-agent-watch/cost-tracking/index.md
+        - Reports: ai-agent-watch/cost-tracking/reports.md
+        - Pricing and Calculations: ai-agent-watch/cost-tracking/pricing.md
+        - Cost Alerts: ai-agent-watch/cost-alert-rules.md
+      - FAQ: ai-agent-watch/faq.md
     - Experience:
       - Overview: experience/index.md
       - Getting Started: experience/getting-started.md

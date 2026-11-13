@@ -101,6 +101,10 @@ brew uninstall --zap --cask sematext/tap/sematext-agent
 
 Release candidates are published to a separate cask, `sematext/tap/sematext-agent-beta`, which also gets every stable release. Only one of the two casks can be installed at a time.
 
+## AI Agent Watch
+
+Sematext Agent **4.7 or later** supports AI Agent Watch for Claude Code and Codex. After installing the agent, follow [workstation setup](/docs/ai-agent-watch/macos-windows/) to configure telemetry and hooks. This provides visibility and governance for reported tool calls; it does not provide Linux kernel-level coverage.
+
 ## Limitations
 
-Log shipping (other than OpenTelemetry logs), Monitoring Integrations, package inventory, containers, Kubernetes, Service Monitoring and AI Agent Watch are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
+Log shipping (other than OpenTelemetry logs), Monitoring Integrations, package inventory, containers, Kubernetes, and Service Monitoring are not available on macOS. See [feature availability](/docs/agents/sematext-agent/platform-support-policy/#feature-availability) for the full list.
