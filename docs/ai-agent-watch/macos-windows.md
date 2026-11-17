@@ -47,19 +47,6 @@ On Windows the installer adds Sematext Agent to `PATH`; a PowerShell window open
 
 This sets up both Claude Code and Codex: the hooks that let Sematext Agent check each tool call, and the telemetry they send it.
 
-### Optional setup commands
-
-Run these with the same administrator privileges as the install command above.
-
-| Task | Command |
-|---|---|
-| See what setup will change before applying it | `st-agent ai-agent-watch install --dry-run` |
-| Configure only Claude Code | `st-agent ai-agent-watch install --claude` |
-| Configure only Codex | `st-agent ai-agent-watch install --codex` |
-| Set up governance checks only; keep your existing telemetry settings | `st-agent ai-agent-watch install --hooks-only` |
-
-The hooks-only option does not set up telemetry for token usage and cost tracking. See [troubleshooting](#troubleshooting) if the command refuses to update a file.
-
 ### Check the setup
 
 ```bash
