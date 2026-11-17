@@ -16,7 +16,9 @@ Each `llm_usage` event carries the available model, provider, and token counts. 
 
 Input, output, cache reads, and cache writes can have different rates. Reasoning tokens are included in output tokens. See [Pricing and Calculations](pricing.md) for rate selection, overrides, and missing costs.
 
-These are calculated usage costs, not a reconciliation of your provider invoice. Flat-rate subscriptions, reserved capacity, credits, and other contractual arrangements may differ from token-based pricing.
+Costs are estimates; reported token counts are exact. Linux uses the service tier reported in each LLM usage event, while macOS and Windows use standard API rates when no service tier is reported. See [Understanding estimated costs](pricing.md#understanding-estimated-costs) for details.
+
+If you have a fixed monthly subscription or use reserved or scale tiers, token reports still help you compare consumption across agents, models, machines, and sessions. Calculated costs do not allocate a subscription fee, and usage explicitly reported as reserved or scale is left unpriced. See [Subscriptions, reserved capacity, and scale tiers](pricing.md#subscriptions-reserved-capacity-and-scale-tiers) for how to interpret these reports and respond to pricing alerts.
 
 ## Investigate and control spending
 
