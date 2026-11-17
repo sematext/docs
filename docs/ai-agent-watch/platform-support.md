@@ -28,7 +28,7 @@ AI Agent Watch supports **Claude Code** and **Codex** on these platforms. Suppor
 - **Sematext Agent:** Version **4.7 or later** is required.
 - **Collection:** [Configure the coding agent](macos-windows.md#set-up) to report telemetry to Sematext Agent. Unlike Linux, installing the collector and enabling the Infra App alone does not configure AI-agent activity reporting.
 - **Governance and additional scanning:** Configure the coding agent's hooks. Governance checks known tool calls before they run; it does not enforce policy on the underlying operating-system activity.
-- **Setup and verification:** Follow [macOS and Windows Setup](macos-windows.md) for the installer command, supported coding-agent versions, managed settings, and checks.
+- **Setup and verification:** Follow [macOS, Windows and WSL Setup](macos-windows.md) for the installer command, supported coding-agent versions, managed settings, and checks.
 
 ## Capability comparison
 
@@ -42,7 +42,7 @@ The macOS and Windows column applies to Claude Code and Codex after completing t
 | See which files agents access | Yes | Limited — files accessed through supported tools and patches. Shell commands do not produce separate file-read events. |
 | See network connections and traffic volume | Yes | No |
 | Detect sensitive information | Yes — scans captured outbound content for credentials and personal data. | Yes — scans reported prompts, tool inputs, and tool results. |
-| Block actions with governance policies | Yes — blocks matching actions at the operating-system level, including actions from processes the agent starts. Requires [kernel support](governance/compatibility.md); without it, activity is monitored but policies are not enforced. | Limited — configured hooks check supported tool calls. Shell checks are best effort; MCP calls and activity inside commands are not checked. See [coverage](macos-windows.md#what-you-get). |
+| Block actions with governance policies | Yes — blocks matching actions at the operating-system level, including actions from processes the agent starts. Requires [kernel support](governance/compatibility.md); without it, activity is monitored but policies are not enforced. | Limited — configured hooks check supported tool calls. Shell checks are best effort; MCP calls and activity inside commands are not checked. See [coverage](macos-windows.md#what-governance-checks). |
 | Track token usage and calculated costs | Yes | Yes |
 
-Event availability depends on the agent and version. See [Captured Events](captured-events.md#event-types) and the [Claude Code/Codex event matrix](macos-windows.md#events-compared-to-linux) for details.
+Event availability depends on the agent and version. See [Captured Events](captured-events.md#event-types) for details.

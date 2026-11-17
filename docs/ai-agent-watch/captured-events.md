@@ -15,7 +15,7 @@ Every event carries, among others:
 
 ## Event types
 
-Available event types and fields vary by platform. See [Events compared to Linux](macos-windows.md#events-compared-to-linux) for macOS and Windows differences.
+Available event types and fields vary by platform. See [Platform Support](platform-support.md#capability-comparison) for macOS and Windows differences.
 
 | Event type | What it represents |
 |---|---|

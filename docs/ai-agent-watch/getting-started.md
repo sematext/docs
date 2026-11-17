@@ -16,7 +16,7 @@ Enabling AI Agent Watch adds default [PII categories](pii-categories.md), [alert
 Install or upgrade [Sematext Agent](/docs/agents/sematext-agent/) on each machine with your [Infra App token](#find-your-infra-app-token). Workstations can run Linux, macOS, or Windows; choose the setup path by operating system. See [Platform Support](platform-support.md) for requirements and capability differences.
 
 - **Linux servers and workstations:** Follow [Linux installation](/docs/agents/sematext-agent/linux-installation/). On supported hosts, Sematext Agent automatically discovers AI agents.
-- **macOS and Windows:** Use Sematext Agent **4.7 or later**, then configure **Claude Code or Codex** to send telemetry and run hooks. Follow [macOS and Windows Setup](macos-windows.md).
+- **macOS, Windows and WSL:** Use Sematext Agent **4.7 or later**, then set up **Claude Code and Codex** with one command. Follow [macOS, Windows and WSL Setup](macos-windows.md).
 
     > AI Agent Watch currently supports only Claude Code and Codex on macOS and Windows.
 
