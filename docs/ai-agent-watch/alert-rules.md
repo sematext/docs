@@ -39,6 +39,8 @@ Enabling AI Agent Watch seeds your account with a set of default rules covering 
 - Shell command execution, and credential-looking strings passed on a command line
 - A session's overall [risk score](risk-scores.md#session-risk-score) crossing a critical threshold
 
+Open **AI Agent Watch → Event Alerting → Alert Rules** to review the defaults, edit their conditions, enable or disable rules, or create your own. Configure recipients and notification schedules for the rules you want to hear about.
+
 ![Alert Rules](/docs/images/aiam/alert-rules.png)
 
 
@@ -46,3 +48,22 @@ Enabling AI Agent Watch seeds your account with a set of default rules covering 
 ## Governance events
 
 Alert rules can match `exec_denied`, `file_access_denied`, and `net_denied` events emitted when a governance policy blocks an operation. Governance policies enforce restrictions on the host; alert rules assign event priorities and send notifications. Disabling notifications does not disable enforcement. See [Governance Policies](governance/policies.md#get-notified-when-a-policy-matches) for configuration.
+
+## Cost alerts
+
+Cost alerts help you spot unexpected spending, reduced cache reuse, and model calls whose costs cannot be calculated.
+
+### Default cost alerts
+
+AI Agent Watch includes the following default cost alert rules:
+
+| Default rule | What it helps you catch |
+|---|---|
+| Automatic - Unknown Model Detected | Lets you know an agent is using a model whose pricing is missing, so you know that spending is not included in your cost totals. |
+| Automatic - Unrecognized Service Tier Detected | Flags a service tier Sematext does not recognize, so you can investigate why its usage has no calculated cost. |
+| Automatic - Unsupported Billing Mode Detected | Highlights usage billed through arrangements such as reserved capacity, where token-based calculations cannot represent the cost. |
+| Automatic - Provider Cost Spike | Draws your attention to an unusual increase in spending with a provider, so you can investigate what is driving it. |
+| Automatic - Agent Cost Spike | Helps you find an agent spending more than usual and investigate its sessions, model choices, and token usage. |
+| Automatic - Cache Hit Rate Drop | Warns you when an agent is reusing less cached input, which can make its model requests more expensive. |
+
+Open **AI Agent Watch → Event Alerting → Cost Alerts** to review the defaults, adjust their conditions, or create your own rules.

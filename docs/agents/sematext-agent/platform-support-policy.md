@@ -19,7 +19,9 @@ Not every feature is available on every operating system. Containers and Kuberne
 | Containers and Kubernetes | ✅ | ❌ | ❌ |
 | [Monitoring Integrations](/docs/monitoring/service-monitoring/) | ✅ | ❌ | ❌ |
 | [Service Monitoring](/docs/service-monitoring/) | ✅ | ❌ | ❌ |
-| [AI Agent Watch](/docs/ai-agent-watch/) | ✅ | ❌ | ❌ |
+| [AI Agent Watch](/docs/ai-agent-watch/) | ✅ | Claude Code and Codex, with setup | Claude Code and Codex, with setup |
+
+AI Agent Watch on macOS and Windows requires Sematext Agent **4.7 or later** and [coding-agent configuration](/docs/ai-agent-watch/macos-windows/). It observes reported tool calls and telemetry rather than kernel activity. Governance and event coverage differ from Linux; see [workstation coverage](/docs/ai-agent-watch/macos-windows/#what-you-get).
 
 ## Linux
 

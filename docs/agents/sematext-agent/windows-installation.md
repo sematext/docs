@@ -234,7 +234,7 @@ Open Windows Services and find the Sematext Agent service:
 Run the following command:
 
 ```
-st-agent-amd64 windows-service status
+st-agent windows-service status
 ```
 
 ## How to start / stop / restart Sematext Agent
@@ -250,19 +250,19 @@ Alternatively, you can use the command-line interface by running one of the foll
 Start:
 
 ```
-st-agent-amd64 windows-service start
+st-agent windows-service start
 ```
 
 Stop:
 
 ```
-st-agent-amd64 windows-service stop
+st-agent windows-service stop
 ```
 
 Restart:
 
 ```
-st-agent-amd64 windows-service restart
+st-agent windows-service restart
 ```
 
 ## How to check Sematext Agent logs
@@ -282,15 +282,15 @@ notepad.exe .\logs\st-agent.log
 You can either reinstall Sematext Agent through GUI or by running the following command from command line:
 
 ```
-st-agent-amd64 windows-config set-token -t "YOUR_INFRA_TOKEN"
-st-agent-amd64 windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
-st-agent-amd64 windows-config set-region -r "EU/US"
+st-agent windows-config set-token -t "YOUR_INFRA_TOKEN"
+st-agent windows-config set-logs-token -t "YOUR_LOGS_TOKEN"
+st-agent windows-config set-region -r "EU/US"
 ```
 
 After the changes, you need to restart the agent:
 
 ```
-st-agent-amd64 windows-service restart
+st-agent windows-service restart
 ```
 
 ## How to unistall Sematext Agent
@@ -309,6 +309,10 @@ To completely remove all configuration files and logs, execute the following com
 ```cmd
    rmdir /s /q "C:\Program Files\Sematext Agent"
 ```
+
+## AI Agent Watch
+
+Sematext Agent **4.7 or later** supports AI Agent Watch for Claude Code and Codex. After installing the agent, follow [workstation setup](/docs/ai-agent-watch/macos-windows/) to configure telemetry and hooks. This provides visibility and governance for reported tool calls; it does not provide Linux kernel-level coverage.
 
 ## Limitations / Known Issues
 

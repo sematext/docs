@@ -1,9 +1,14 @@
 title: Governance Compatibility
-description: Check host compatibility for AI Agent Watch Governance and enable BPF-LSM on Linux
+description: Check Linux, macOS, and Windows requirements for AI Agent Watch Governance
 
-Governance requires **Sematext Agent 4.6 or later** and a Linux host with BPF-LSM enabled.
+Governance requirements depend on the platform.
 
-## Host requirements
+- **Linux:** Sematext Agent **4.6 or later** and BPF-LSM support. The Linux checks and configuration below apply to kernel enforcement.
+- **macOS and Windows:** Sematext Agent **4.7 or later** with Claude Code or Codex hooks configured. No BPF-LSM support is required. Follow [workstation setup](../macos-windows.md) and run `st-agent ai-agent-watch check` to verify the hooks. Enforcement covers known tool calls, with best-effort shell-command checks, rather than kernel operations.
+
+See [How enforcement works](index.md#how-enforcement-works) for the platform boundaries.
+
+## Linux host requirements
 
 - Linux kernel **5.17 or later**.
 - A kernel built with **`CONFIG_BPF_LSM=y`**.
