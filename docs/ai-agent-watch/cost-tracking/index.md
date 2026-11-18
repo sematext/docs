@@ -12,7 +12,7 @@ LLM Cost Tracking shows which AI agents, sessions, models, and hosts drive your 
 
 ## How costs are calculated
 
-Each `llm_usage` event carries the available model, provider, and token counts. Sematext applies the model's applicable pricing, including your account's overrides, to calculate the call's cost. At session end, captured call costs are summed into a session total.
+Each `llm_usage` event carries the available model, provider, and token counts. Sematext calculates the call's cost using the model's default pricing rates, which you can override to reflect negotiated rates or discounts agreed with your provider. At session end, captured call costs are summed into a session total.
 
 Input, output, cache reads, and cache writes can have different rates. Reasoning tokens are included in output tokens. See [Pricing and Calculations](pricing.md) for rate selection, overrides, and missing costs.
 

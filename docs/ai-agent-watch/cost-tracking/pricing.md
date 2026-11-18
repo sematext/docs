@@ -43,10 +43,10 @@ Saving an override creates pricing effective from that point onward. Previously 
 
 ## Missing and partial costs
 
-Not every captured request can be priced. Usage events include a pricing status so missing cost is distinguishable from a successful zero-cost calculation.
+When AI Agent Watch cannot calculate a cost for an `llm_usage` event, its pricing status explains why. Token usage remains available even when the cost is missing.
 
-- **Unknown model:** There is no matching default pricing entry for the reported provider/model.
-- **Unsupported billing mode:** Reserved and scale service tiers are not priced as pay-as-you-go usage.
-- **Unknown service tier:** An unrecognized tier is left unpriced rather than assigned a guessed rate.
+- **Unknown model:** No matching pricing entry exists for the reported model and provider.
+- **Unsupported billing mode:** The event reports a reserved or scale service tier, which cannot be priced using the supported per-token calculation.
+- **Unknown service tier:** The event reports a service tier that Sematext does not recognize, so its cost is left uncalculated.
 
-At session end, costs from captured, priced calls are summed. The session is marked `PARTIAL_COST` if some captured calls could not be priced.
+At session end, costs from successfully priced calls are added together. If some captured calls could not be priced, the session is marked `PARTIAL_COST` to indicate that its total includes only the priced calls.

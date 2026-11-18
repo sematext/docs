@@ -33,9 +33,12 @@ See [Platform Support](../platform-support.md#capability-comparison) before choo
 5. Save and enable the policy. Repeat for the other restrictions.
 6. Optionally configure [alert rules and notifications](policies.md#get-notified-when-a-policy-matches) for the resulting governance events.
 
-Each policy controls one action type. Create separate policies for file access, tool execution, and network activity. Additional scope entries are combined with AND, so a test-host scope restricts enforcement to untrusted agents on that host.
+<video style="display:block; width:100%; height:auto;" controls preload="metadata" aria-label="Create a governance policy">
+  <source src="/docs/images/aiam/create-policy.mp4" type="video/mp4" />
+  <a href="/docs/images/aiam/create-policy.mp4">Watch how to create a governance policy</a>.
+</video>
 
-![File Access policy for .pem files scoped to untrusted agents on test-host](/docs/images/aiam/strict-policy-scope.png)
+Each policy controls one action type (file access, tool execution, or network activity), so create separate policies for each type you want to restrict. Additional scope entries are combined with AND, so a test-host scope restricts enforcement to untrusted agents on that host.
 
 Policies must be enabled to enforce anything. The provided [default example policies](policies.md#default-example-policies) are disabled until you enable them; add the untrusted-agent scope before using them for this workflow.
 
