@@ -40,7 +40,7 @@ See [Platform Support](../platform-support.md#capability-comparison) before choo
 
 Each policy controls one action type (file access, tool execution, or network activity), so create separate policies for each type you want to restrict. Additional scope entries are combined with AND, so a test-host scope restricts enforcement to untrusted agents on that host.
 
-Policies must be enabled to enforce anything. The provided [default example policies](policies.md#default-example-policies) are disabled until you enable them; add the untrusted-agent scope before using them for this workflow.
+Policies must be enabled to enforce restrictions. The provided [default example policies](policies.md#default-example-policies) are disabled by default. Before enabling them, add **Is Trusted Agent is false** to their scope if you want the restrictions to apply only to untrusted agents.
 
 ## 3. Verify the restrictions
 
