@@ -155,7 +155,13 @@ If you're setting up your own machine, choose the **macOS**, **Windows**, or **W
 
 ## Additional settings for WSL
 
-<!-- TODO: Add the additional WSL settings required after organization setup. -->
+After your administrator applies the organization settings, open a regular PowerShell window from the Windows account you use for WSL and run:
+
+```powershell
+st-agent ai-agent-watch install --wsl Ubuntu
+```
+
+Replace `Ubuntu` with your distro's name. Run `wsl -l -v` to list your distros, and repeat the command for each one you use.
 
 Once these additional settings are applied, activity from Claude Code and Codex sessions running in WSL will also be collected, including sessions signed in with personal Claude or Codex accounts.
 
