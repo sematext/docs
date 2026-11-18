@@ -41,11 +41,11 @@ If Sematext Agent is unavailable or does not respond before the hook times out, 
 - **Claude Code 2.1.139 or later.**
 - **Codex 0.166 or later.** Older versions are still checked by Governance and PII detection, but send no session or usage events.
 - **An enabled governance policy to verify blocking.** The [default example policies](governance/policies.md#default-example-policies) are disabled by default. Review and enable one, or create a test policy that blocks a tool call you can safely try, such as running `nc -h`.
-- If your organization manages Claude Code settings through **MDM or claude.ai**, also follow [Organization setup](#organization-setup), or Claude Code will ignore the hooks.
+- If your organization manages Claude Code settings through **MDM or claude.ai**, also follow the **Org (Claude Code)** tab under [Set up](#set-up), or Claude Code will ignore the hooks.
 
 ## Set up
 
-Run this once per machine. It sets up both Claude Code and Codex, even if they are not installed yet.
+If you're setting up your own machine, choose the **macOS**, **Windows**, or **Windows (WSL)** tab. If you manage coding agent settings for your organization and want to configure AI Agent Watch across your team's machines, use **Org (Claude Code)** or **Org (Codex)**.
 
 === "macOS"
 
@@ -69,8 +69,6 @@ Run this once per machine. It sets up both Claude Code and Codex, even if they a
 
 === "Windows (WSL)"
 
-    Configure each WSL distro where you use Claude Code or Codex. Sematext Agent runs on Windows, so you do not need to install it inside WSL.
-
     Open a regular PowerShell window from the Windows account you use for WSL. You do not need to run it as Administrator. Run:
 
     ```powershell
@@ -78,8 +76,6 @@ Run this once per machine. It sets up both Claude Code and Codex, even if they a
     ```
 
     Replace `Ubuntu` with your distro's name. Run `wsl -l -v` to list your distros, and repeat the setup command for each one you use.
-
-    If you also use Claude Code or Codex directly on Windows, complete the setup in the **Windows** tab as well.
 
     **Additional setup for WSL2**
 
@@ -94,39 +90,9 @@ Run this once per machine. It sets up both Claude Code and Codex, even if they a
 
     WSL1 does not require this additional configuration.
 
-After running the setup command, start a new Claude Code or Codex session for the changes to take effect. Existing sessions continue using their previous configuration.
+=== "Org (Claude Code)"
 
-## Verify
-
-1. **Check the governance hooks.** Run:
-
-    ```bash
-    st-agent ai-agent-watch check
-    ```
-
-    For WSL, specify your distro:
-
-    ```powershell
-    st-agent ai-agent-watch check --wsl Ubuntu
-    ```
-
-    Look for `pass` for each coding agent you configured. This confirms that the hook can reach Sematext Agent and receive a blocking response. The check requires an enabled governance policy and does not create an event. If it fails, see [Troubleshooting](#troubleshooting).
-
-2. **Confirm blocking in a new session.** Ask Claude Code or Codex to make a tool call that matches an enabled policy. For example, if your policy blocks `nc`, ask it to run `nc -h`.
-
-    The call should be blocked with an explanation from Sematext Agent. This confirms that the coding agent loaded the hooks for the session.
-
-3. **Confirm activity and token usage in Sematext Cloud.** Open the AI Agent Watch Overview and look for the new session. Check the [Governance report](governance/index.md#governance-report) for the blocked call. After the session makes a model request that reports usage, check [LLM Usage](cost-tracking/reports.md#llm-usage) for its token counts.
-
-    If blocking works but activity or token usage is missing, see [No events, but blocking works](#no-events-but-blocking-works).
-
-## Organization setup
-
-Use this section when you deploy settings through claude.ai, Jamf, Intune or Group Policy instead of running `install` on each machine, or when your organization already manages Claude Code or Codex.
-
-=== "Claude Code"
-
-    The same block works on macOS, Windows and WSL:
+    Ask your organization Owner or Primary Owner to open **Organization settings → Claude Code → Managed settings** in claude.ai and add the JSON below to the existing settings. Make sure [Sematext Agent](/docs/agents/sematext-agent/) is installed on each team member's machine. This configuration works on macOS and Windows. For WSL, also complete [Additional settings for WSL](#additional-settings-for-wsl).
 
     ```json
     {
@@ -147,25 +113,13 @@ Use this section when you deploy settings through claude.ai, Jamf, Intune or Gro
     }
     ```
 
-    - `st-agent` must be on the `PATH`. The installers add it, and `install --wsl` adds it in WSL. To pin it, use the full path: `/opt/spm/spm-monitor/bin/st-agent` on macOS, `C:\Program Files\Sematext Agent\st-agent.exe` on Windows.
-    - To stop users adding hooks of their own, add `"allowManagedHooksOnly": true`.
+=== "Org (Codex)"
 
-    ### Where to put it
+    Ask your administrator to add the TOML below to Codex's managed `requirements.toml` file and deploy it to your team's machines using your organization's device-management tools. Make sure [Sematext Agent](/docs/agents/sematext-agent/) is installed on each team member's machine.
 
-    Claude Code reads its policy from one managed source. Run `/status` in Claude Code: **Setting sources** names it.
+    This configuration works on macOS and Windows. For WSL, also complete [Additional settings for WSL](#additional-settings-for-wsl).
 
-    - **claude.ai server-managed settings or MDM:** add the block there. This is the simplest option when your organization already uses one of them. Claude Code uses only that source, so the managed settings file that `install` writes is ignored, even when the central policy sets a single unrelated key.
-    - **Managed settings file:** add the block to `/Library/Application Support/ClaudeCode/managed-settings.json` on macOS, `C:\Program Files\ClaudeCode\managed-settings.json` on Windows, or `/etc/claude-code/managed-settings.json` in WSL, next to any keys already in it. This is the file `install` writes.
-
-    To keep the file that `install` writes and still use a central policy, add `"managedSourcesBehavior": "merge"` to the central policy (Claude Code **2.1.242 or later**). With both MDM and claude.ai, add it to the claude.ai settings, and to MDM too for machines that never receive the claude.ai settings. Setting it in the local file has no effect.
-
-    If your central policy sets its own OpenTelemetry exporter, Claude Code sends its telemetry there, not to Sematext Agent. Governance and PII detection still work; session and usage events do not arrive.
-
-    [Try a blocked call](#verify) in a new session after any change.
-
-=== "Codex"
-
-    Add the block below to Codex's `requirements.toml`. The same block works on macOS, Windows and WSL:
+    Use these file locations:
 
     - macOS and WSL: `/etc/codex/requirements.toml`
     - Windows: `%ProgramData%\OpenAI\Codex\requirements.toml`, or the file the `RequirementsPath` value under `HKLM\SOFTWARE\Policies\OpenAI\Codex` names (Codex 0.164 or later)
@@ -199,11 +153,35 @@ Use this section when you deploy settings through claude.ai, Jamf, Intune or Gro
     # END Sematext Agent
     ```
 
-    - Keep the `BEGIN` and `END` lines: `install` finds the block by them.
-    - `st-agent` must be on the `PATH`, as for Claude Code. To pin it, use `/opt/spm/spm-monitor/bin/st-agent hook codex` on macOS, and add `commandWindows = '''& 'C:\Program Files\Sematext Agent\st-agent.exe' hook codex'''` for Windows.
-    - If the file already has `[features]`, add `hooks = true` to it. If it already has `[otel]`, leave ours out; Governance and PII detection still work.
-    - To stop user hooks from changing a call after the check, add `allow_managed_hooks_only = true` at the top.
-    - A broken file stops Codex from starting, so [try a blocked call](#verify) after every change.
+## Additional settings for WSL
+
+<!-- TODO: Add the additional WSL settings required after organization setup. -->
+
+Once these additional settings are applied, activity from Claude Code and Codex sessions running in WSL will also be collected, including sessions signed in with personal Claude or Codex accounts.
+
+## Verify
+
+1. **Check the governance hooks.** Run:
+
+    ```bash
+    st-agent ai-agent-watch check
+    ```
+
+    For WSL, specify your distro:
+
+    ```powershell
+    st-agent ai-agent-watch check --wsl Ubuntu
+    ```
+
+    Look for `pass` for each coding agent you configured. This confirms that the hook can reach Sematext Agent and receive a blocking response. The check requires an enabled governance policy and does not create an event. If it fails, see [Troubleshooting](#troubleshooting).
+
+2. **Confirm blocking in a new session.** Ask Claude Code or Codex to make a tool call that matches an enabled policy. For example, if your policy blocks `nc`, ask it to run `nc -h`.
+
+    The call should be blocked with an explanation from Sematext Agent. This confirms that the coding agent loaded the hooks for the session.
+
+3. **Confirm activity and token usage in Sematext Cloud.** Open the AI Agent Watch Overview and look for the new session. Check the [Governance report](governance/index.md#governance-report) for the blocked call. After the session makes a model request that reports usage, check [LLM Usage](cost-tracking/reports.md#llm-usage) for its token counts.
+
+    If blocking works but activity or token usage is missing, see [No events, but blocking works](#no-events-but-blocking-works).
 
 ## Troubleshooting
 
@@ -218,7 +196,7 @@ Use this section when you deploy settings through claude.ai, Jamf, Intune or Gro
 
 ### The check passes, but calls are not blocked
 
-Claude Code is probably getting its policy from MDM or claude.ai and ignoring the local hooks. See [Where to put it](#where-to-put-it).
+Claude Code is probably getting its policy from MDM or claude.ai and ignoring the local hooks. Follow the **Org (Claude Code)** tab under [Set up](#set-up).
 
 ### Install refuses to update a file
 
