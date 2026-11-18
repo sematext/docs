@@ -92,7 +92,7 @@ If you're setting up your own machine, choose the **macOS**, **Windows**, or **W
 
 === "Org (Claude Code)"
 
-    Ask your organization Owner or Primary Owner to open **Organization settings → Claude Code → Managed settings** in claude.ai and add the JSON below to the existing settings. Make sure [Sematext Agent](/docs/agents/sematext-agent/) is installed on each team member's machine. This configuration works on macOS and Windows. For WSL, also complete [Additional settings for WSL](#additional-settings-for-wsl).
+    Ask your organization Owner or Primary Owner to open **Organization settings → Claude Code → Managed settings** in claude.ai and add the JSON below to the existing settings. Make sure [Sematext Agent](/docs/agents/sematext-agent/) is installed on each team member's machine. This configuration works on macOS and Windows. For WSL, also complete the **Additional settings for WSL** below.
 
     ```json
     {
@@ -113,11 +113,23 @@ If you're setting up your own machine, choose the **macOS**, **Windows**, or **W
     }
     ```
 
+    **Additional settings for WSL**
+
+    After your administrator applies the organization settings, open a regular PowerShell window from the Windows account you use for WSL and run:
+
+    ```powershell
+    st-agent ai-agent-watch install --wsl Ubuntu
+    ```
+
+    Replace `Ubuntu` with your distro's name. Run `wsl -l -v` to list your distros, and repeat the command for each one you use.
+
+    Once these additional settings are applied, activity from Claude Code and Codex sessions running in WSL will also be collected, including sessions signed in with personal Claude or Codex accounts.
+
 === "Org (Codex)"
 
     Ask your administrator to add the TOML below to Codex's managed `requirements.toml` file and deploy it to your team's machines using your organization's device-management tools. Make sure [Sematext Agent](/docs/agents/sematext-agent/) is installed on each team member's machine.
 
-    This configuration works on macOS and Windows. For WSL, also complete [Additional settings for WSL](#additional-settings-for-wsl).
+    This configuration works on macOS and Windows. For WSL, also complete the **Additional settings for WSL** below.
 
     Use these file locations:
 
@@ -153,17 +165,17 @@ If you're setting up your own machine, choose the **macOS**, **Windows**, or **W
     # END Sematext Agent
     ```
 
-## Additional settings for WSL
+    **Additional settings for WSL**
 
-After your administrator applies the organization settings, open a regular PowerShell window from the Windows account you use for WSL and run:
+    After your administrator applies the organization settings, open a regular PowerShell window from the Windows account you use for WSL and run:
 
-```powershell
-st-agent ai-agent-watch install --wsl Ubuntu
-```
+    ```powershell
+    st-agent ai-agent-watch install --wsl Ubuntu
+    ```
 
-Replace `Ubuntu` with your distro's name. Run `wsl -l -v` to list your distros, and repeat the command for each one you use.
+    Replace `Ubuntu` with your distro's name. Run `wsl -l -v` to list your distros, and repeat the command for each one you use.
 
-Once these additional settings are applied, activity from Claude Code and Codex sessions running in WSL will also be collected, including sessions signed in with personal Claude or Codex accounts.
+    Once these additional settings are applied, activity from Claude Code and Codex sessions running in WSL will also be collected, including sessions signed in with personal Claude or Codex accounts.
 
 ## Verify
 
