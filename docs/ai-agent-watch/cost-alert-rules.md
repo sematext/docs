@@ -34,8 +34,13 @@ Choose **Percentage** to get an alert when spending is, for example, 30% above i
 
 ## Investigate a cost alert
 
-Open a cost alert from the LLM Costs report's alert feed. Review the triggered value, condition, and current value. For a baseline alert, inspect the historical windows, their median, and any excluded windows to understand the comparison.
+Open a cost alert from the **LLM Costs** report's alert feed, then follow the increase back to the activity behind it:
 
-Then inspect the contributing events from the alert's analyzing window, narrowed to its filters and the group that triggered it. Use the events' agent, host, model, and token usage to distinguish a model change from increased activity.
+1. Review the triggered value and the alert condition. For a baseline alert, use **What Triggered This** to compare the alert window with earlier windows and see which windows were excluded.
+2. Review **Triggering Events** to identify the agents, hosts, providers, and models contributing to the alert. This list uses the alert's analyzing window, filters, and the group that triggered it.
+3. Select **See in Explore** to open the matching events with that time window and those filters already applied. Inspect the available session IDs and token usage to narrow down which sessions contributed to the increase.
+4. Review related session activity to understand what changed. More model requests, a more expensive model, larger inputs, or reduced cache reuse can explain higher costs. If the activity is unfamiliar, investigate the affected machine and review related PII detections or governance events.
+
+These steps help you locate the monitored activity behind an increase. A hostname or session ID does not automatically identify an employee or the provider API key used. If you suspect a stolen key, also review usage in the provider's tools, including requests made outside your monitored environment. See [Investigate unexpected usage](cost-tracking/index.md#investigate-unexpected-usage).
 
 ![Provider cost spike alert showing current spending, historical baseline windows, and excluded windows](/docs/images/aiam/llm-cost-alert.png)

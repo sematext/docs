@@ -43,6 +43,8 @@ The report contains three event types:
 | `file_access_denied` | Enforcement triggered by a file path or extension match. |
 | `net_denied` | Enforcement triggered by an IP, port, CIDR, or destination-host match. |
 
+On macOS, Windows, and WSL configured through the Windows agent, the same event types describe policy matches that block tool calls. For example, a File Access policy can produce `file_access_denied` when it blocks a supported file tool or a shell command naming a restricted file. See [What Governance checks](../macos-windows.md#what-governance-checks).
+
 Sematext Agent sends a governance event when a policy blocks an operation. The event records the matched condition and, depending on its type, the binary, file, or destination IP and port.
 
 Governance events differ from `exec_failed` and `file_open_failed`, which report denials caused by existing operating system permissions or security policies. See [Captured Events](/docs/ai-agent-watch/captured-events/) for the other event types.

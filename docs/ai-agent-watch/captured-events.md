@@ -38,6 +38,8 @@ Available event types and fields vary by platform. See [Platform Support](platfo
 
 `exec_failed` and `file_open_failed` report denials caused by existing OS permissions or security policies. `exec_denied`, `file_access_denied`, and `net_denied` report AI Agent Watch Governance enforcement. See [Governance](governance/index.md) for policy configuration and notifications.
 
+On macOS, Windows, and WSL configured through the Windows agent, these governance events come from coding-agent hooks. Their type describes the policy match: file policies produce `file_access_denied`, execution policies produce `exec_denied`, and network policies produce `net_denied`. A `file_access_denied` event can therefore describe a blocked tool call rather than a file operation intercepted by the operating system. See [workstation governance coverage](macos-windows.md#what-governance-checks).
+
 Governance events record the matched condition for the blocked operation. Depending on the event type, they also carry the binary, file path, or destination IP and port.
 
 ## LLM usage and session costs

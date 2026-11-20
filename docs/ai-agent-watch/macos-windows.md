@@ -22,12 +22,16 @@ On Linux, none of this is needed: Sematext Agent discovers AI agents on its own.
 
 ### What Governance checks
 
-Governance checks the tool calls Claude Code and Codex make, not the operating system activity underneath them:
+Governance checks the tool calls Claude Code and Codex make, not the operating system activity underneath them.
+
+**File Access**, **Tool Execution**, and **Network Activity** policies can all apply to supported tool calls. For example, a File Access policy matching `.env` can block a file-reading tool or a shell command such as `cat .env` before it runs. The resulting event is `file_access_denied`: it records the file-policy match, not a file operation intercepted by the operating system.
+
+The same hook-based checks apply to WSL sessions configured through Sematext Agent on Windows.
 
 | Tool call | Checked |
 |---|---|
 | Reading, writing and editing files, Codex patches, viewing images, fetching a URL | Yes. The file or URL is part of the tool call. |
-| Shell commands | Best effort. The command text is checked, so `cat .env`, `nc -h` and `curl http://10.1.2.3` are blocked. A command written to hide what it runs, such as a variable (`x=nc; $x`), an interpreter (`python3 -c`) or a script the AI agent writes and then runs, is not. |
+| Shell commands | Best effort. The command text is checked against enabled policies. For example, matching file, execution, or network policies can block `cat .env`, `nc -h`, or `curl http://10.1.2.3`. A command written to hide what it runs, such as a variable (`x=nc; $x`), an interpreter (`python3 -c`) or a script the AI agent writes and then runs, is not. |
 | MCP tools and web search | No. |
 | What a command's own child processes do | No. |
 
@@ -215,6 +219,14 @@ If you're setting up your own machine, choose the **macOS**, **Windows**, or **W
 ### The check passes, but calls are not blocked
 
 Claude Code is probably getting its policy from MDM or claude.ai and ignoring the local hooks. Follow the **Org (Claude Code)** tab under [Set up](#set-up).
+
+### A command is blocked unexpectedly
+
+Shell commands are checked as text before they run. A file policy can match a filename mentioned in a command even if that command would not read or write the file. For example, a policy matching `.env` can also block `echo .env`. Review the matched condition and target in the governance event to understand why the tool call was refused.
+
+Codex on Windows and WSL does not always identify the shell it will use, so Sematext Agent checks the command against multiple shell syntaxes. A command intended for one shell can therefore be refused because of how another shell interprets it.
+
+If the message says **blocked this (unreadable)**, the command could not be safely parsed. **Blocked this (timeout)** means the command exceeded the governance check's processing deadline. These refusals do not create a policy-match governance event. Review or simplify the command and try again; they are different from a refusal that names a matching governance rule.
 
 ### Install refuses to update a file
 
