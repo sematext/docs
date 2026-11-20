@@ -9,16 +9,16 @@ Governance policies, alert rules, and notifications work independently. An enabl
 
 Each policy applies to one action type and has at least one condition. The supported match fields are:
 
-| Condition | Meaning | Match kinds | Evaluated on Linux |
-|---|---|---|---|
-| Binary (`binary`) | Command or tool name, such as `curl`. | Basename, exact, prefix, suffix, contains | Kernel |
-| Path (`path`) | Full executable or file path. | Basename, exact, prefix, suffix, contains | Kernel |
-| Extension (`extension`) | File extension, such as `.pem` or `.env`. | Suffix (fixed) | Kernel |
-| IP (`ip`) | A single destination IP address. | Exact | Kernel |
-| Port (`port`) | A destination port. | Exact | Kernel |
-| CIDR (`cidr`) | A destination IP range, such as `10.0.0.0/8`. | Longest-prefix | Kernel |
-| Args (`args`) | A substring of the command line, such as `git push`. | Substring | Kernel |
-| Destination Host (`host`) | The TLS hostname / Server Name Indication (SNI), such as `.evil.com` or `*.evil.com`. | Exact or domain-suffix | Kernel |
+| Condition | Meaning | Match kinds | 
+|---|---|---|
+| Binary (`binary`) | Command or tool name, such as `curl`. | Basename, exact, prefix, suffix, contains | 
+| Path (`path`) | Full executable or file path. | Basename, exact, prefix, suffix, contains | 
+| Extension (`extension`) | File extension, such as `.pem` or `.env`. | Suffix (fixed) |
+| IP (`ip`) | A single destination IP address. | Exact | 
+| Port (`port`) | A destination port. | Exact | 
+| CIDR (`cidr`) | A destination IP range, such as `10.0.0.0/8`. | Longest-prefix | 
+| Args (`args`) | A substring of the command line, such as `git push`. | Substring | 
+| Destination Host (`host`) | The TLS hostname / Server Name Indication (SNI), such as `.evil.com` or `*.evil.com`. | Exact or domain-suffix | 
 
 The available conditions depend on the policy type: **Tool Execution**, **File Access**, or **Network Activity**. Path matching can target an executable or a file. 
 
