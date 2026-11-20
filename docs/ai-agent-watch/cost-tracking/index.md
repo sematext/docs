@@ -5,8 +5,8 @@ LLM Cost Tracking shows which AI agents, sessions, models, and hosts drive your 
 
 ## Start collecting usage
 
-1. [Enable AI Agent Watch](../getting-started.md) for the Infra Apps receiving your machines' data, and use a Sematext Agent version that supports cost collection on those hosts.
-2. On macOS and Windows, complete [Claude Code or Codex setup](../macos-windows.md). Telemetry is needed for token usage; hooks alone do not provide complete usage reporting.
+1. [Enable AI Agent Watch](../getting-started.md).
+2. On macOS and Windows, complete [Claude Code or Codex setup](../macos-windows.md).
 3. Start an AI-agent session that makes a model request. In **Explore**, look for `llm_usage` events for that agent and host.
 4. Open **AI Agent Watch → LLM Costs** to compare agents, models, and sessions. Use **Cost by Infrastructure** to locate spending by host, namespace, or cluster.
 
