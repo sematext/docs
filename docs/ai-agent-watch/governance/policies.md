@@ -20,9 +20,9 @@ Each policy applies to one action type and has at least one condition. The suppo
 | Args (`args`) | A substring of the command line, such as `git push`. | Substring | Kernel |
 | Destination Host (`host`) | The TLS hostname / Server Name Indication (SNI), such as `.evil.com` or `*.evil.com`. | Exact or domain-suffix | Kernel |
 
-The available conditions depend on the policy type: **Tool Execution**, **File Access**, or **Network Activity**. Path matching can target an executable or a file. On Linux, command arguments and TLS hostname/SNI are also evaluated in the kernel and used to block the matching operation.
+The available conditions depend on the policy type: **Tool Execution**, **File Access**, or **Network Activity**. Path matching can target an executable or a file. 
 
-On macOS, Windows, and WSL configured through the Windows agent, these policy types check supported tool-call inputs instead. File policies can match tool paths or filenames in shell commands; execution policies check commands; network policies check supported URLs and destinations. A match blocks the tool call before it runs. See [What Governance checks](../macos-windows.md#what-governance-checks) for coverage and limitations.
+Governance blocks operations at the kernel level on Linux and checks supported tool calls on macOS, Windows, and WSL. See [What Governance checks](../macos-windows.md#what-governance-checks) for platform differences.
 
 Conditions define **which operation to block**. Scope defines **which agents or hosts the policy applies to**. All condition rows must match (AND logic). Comma-separated values within an entry match any listed value (OR logic).
 
