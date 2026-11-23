@@ -3,6 +3,8 @@ description: Group similar log lines into patterns and compare two periods, for 
 
 A busy application can write thousands of log lines a minute, but most of them are the same few messages with different numbers, IDs and names in them. Log Patterns groups those lines into patterns, so you read a short list instead of thousands of lines.
 
+<div class="compact-example" markdown>
+
 These three lines, for example:
 
 ```
@@ -11,11 +13,9 @@ Payment declined for order 81731, card expired
 Payment declined for order 81902, card expired
 ```
 
-become one pattern, with `<*>` in place of the part that changes:
+become one pattern, `Payment declined for order <*>, card expired`, with `<*>` in place of the part that changes.
 
-```
-Payment declined for order <*>, card expired
-```
+</div>
 
 Log Patterns compares two periods. The **target** is the time range you are looking at. The **baseline** is a period of the same length that the target is compared with. For each pattern, Log Patterns counts its lines in both periods and shows whether the pattern is new, gone, more frequent or less frequent. Use it to answer questions such as:
 

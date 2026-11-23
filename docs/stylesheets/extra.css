@@ -319,6 +319,16 @@ pre {
     word-wrap: break-word;
     padding: 1.05rem 1.2rem;
  }
+.md-typeset .compact-example > p:first-child {
+    margin-bottom: 0.6em;
+}
+.md-typeset .compact-example pre {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+.md-typeset .compact-example > p:last-child {
+    margin-top: 0.6em;
+}
 
 @media (min-width: 1220px) {
   .md-nav--primary .md-nav__title {
