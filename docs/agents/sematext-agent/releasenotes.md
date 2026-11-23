@@ -45,8 +45,7 @@ Date: November 20, 2026
 
 ### New Features
 
-- **AI Agent Watch on macOS and Windows**: AI Agent Watch now supports Claude Code and Codex on macOS, Windows and WSL, in the terminal, the desktop apps and IDE extensions. Sessions, token usage and cost, tool calls and the files they read and edit show up in the same views as on Linux, and sensitive data in prompts, tool arguments and tool output is masked on the machine before findings are sent. Each machine needs a one-time setup with `st-agent ai-agent-watch install`. Requires Claude Code 2.1.139 or later and Codex 0.166 or later. See [AI Agent Watch on macOS, Windows and WSL](/docs/ai-agent-watch/macos-windows/) and [Platform Support](/docs/ai-agent-watch/platform-support/).
-- **Governance on macOS and Windows**: [Governance policies](/docs/ai-agent-watch/governance/) now block Claude Code and Codex tool calls on macOS and Windows before they run, such as reading sensitive files or running restricted commands, and every block is reported as an event. See [What Governance checks](/docs/ai-agent-watch/macos-windows/#what-governance-checks) for what is covered on these platforms.
+- **AI Agent Watch on macOS, Windows, and WSL**: [AI Agent Watch](/docs/ai-agent-watch/) now supports Claude Code and Codex running in terminals, desktop apps, and IDE extensions on macOS, Windows, and WSL. Review sessions, token usage, calculated costs, tool calls, and file activity alongside Linux agents. Use [PII detection](/docs/ai-agent-watch/pii-categories/) to find sensitive information in prompts, tool arguments, and tool output, and [governance policies](/docs/ai-agent-watch/governance/policies/) to block supported tool calls. Sensitive findings are masked on the machine before being sent to Sematext Cloud. Each machine requires a one-time setup; see [Setup instructions](/docs/ai-agent-watch/macos-windows/) and [Platform Support](/docs/ai-agent-watch/platform-support/).
 - **Network Map Process Types**: Processes that are not a known service are now typed by the language they are written in: Go, Rust, Java, .NET, Python, Ruby, PHP, Node.js or C++.
 
 ### Improvements
@@ -67,7 +66,7 @@ Date: November 20, 2026
 ### Packaging and Installation
 
 - The Windows MSI now also installs the agent as `st-agent.exe` on the system PATH, so commands match Linux and macOS. `st-agent-amd64.exe` stays, so existing scripts keep working.
-- On macOS and Windows, Sematext Agent now listens on `127.0.0.1` ports 4347 and 4348 for telemetry from coding agents and 4349 for Governance hooks by default. See [Ports and turning it off](/docs/ai-agent-watch/macos-windows/#ports-and-turning-it-off).
+- On macOS and Windows, Sematext Agent now listens on `127.0.0.1` ports 4347 and 4348 for telemetry from Claude Code and Codex and 4349 for Governance hooks by default. See [Ports and turning it off](/docs/ai-agent-watch/macos-windows/#ports-and-turning-it-off).
 
 ## Version 4.6.1
 
