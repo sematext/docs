@@ -39,6 +39,35 @@ NULL
 
 -->
 
+## Version 4.7.0
+
+Date: November 20, 2026
+
+### New Features
+
+- **AI Agent Watch on macOS, Windows, and WSL**: [AI Agent Watch](/docs/ai-agent-watch/) now supports Claude Code and Codex running in terminals, desktop apps, and IDE extensions on macOS, Windows, and WSL. Review sessions, token usage, calculated costs, tool calls, and file activity alongside Linux agents. Use [PII detection](/docs/ai-agent-watch/pii-categories/) to find sensitive information in prompts, tool arguments, and tool output, and [governance policies](/docs/ai-agent-watch/governance/policies/) to block supported tool calls. Sensitive findings are masked on the machine before being sent to Sematext Cloud. Each machine requires a one-time setup; see [Setup instructions](/docs/ai-agent-watch/macos-windows/) and [Platform Support](/docs/ai-agent-watch/platform-support/).
+- **Network Map Process Types**: Processes that are not a known service are now typed by the language they are written in: Go, Rust, Java, .NET, Python, Ruby, PHP, Node.js or C++.
+
+### Improvements
+
+- **AI Agent Names**: GitHub Copilot in VS Code now shows up as one agent, GitHub Copilot, instead of one `unknown (<host>)` agent per Copilot host. Cursor, Windsurf, Tabnine, Augment Code, Qodo, Sourcery and PearAI are named after their tool the same way.
+
+### Bug Fixes
+
+- Resolved an issue where Sematext Agent could exceed its memory limit on CI build nodes and on busy hosts with Network Map enabled.
+- On hosts outside Kubernetes, a JVM service with a fixed JMX port, such as Kafka or ZooKeeper, that restarted shortly after Sematext Agent started now gets its Monitoring Agent. It could stay unmonitored until Sematext Agent was restarted.
+- On Linux, AI Agent Watch again reports model, token usage and cost for the latest Claude Code and Codex versions.
+- On Linux, Claude Code's own `grep` and `find` calls, and commands run in Codex's sandbox, no longer show up as separate zero-second sessions. They now count under the session they belong to.
+- AI Agent Watch no longer reports `noreply@anthropic.com`, the address Claude Code adds for commit attribution, as sensitive data.
+- Network Map no longer sends duplicate connection data, or loses some of it, on hosts with many connections.
+- On hosts outside Kubernetes, Network Map now shows OpenSearch, Kafka and ZooKeeper with their own service type instead of switching between it and `jvm`.
+- Network Map and Fleet & Discovery now show the same service type for a process.
+
+### Packaging and Installation
+
+- The Windows MSI now also installs the agent as `st-agent.exe` on the system PATH, so commands match Linux and macOS. `st-agent-amd64.exe` stays, so existing scripts keep working.
+- On macOS and Windows, Sematext Agent now listens on `127.0.0.1` ports 4347 and 4348 for telemetry from Claude Code and Codex and 4349 for Governance hooks by default. See [Ports and turning it off](/docs/ai-agent-watch/macos-windows/#ports-and-turning-it-off).
+
 ## Version 4.6.1
 
 Date: October 15, 2026
