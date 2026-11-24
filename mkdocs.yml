@@ -63,6 +63,7 @@ nav:
         - Search Syntax: logs/search-syntax.md
         - Using Sematext API: logs/search-through-the-sematext-api.md
       - Context View: logs/context-view.md
+      - Log Patterns: logs/log-patterns.md
       - Correlating Logs: logs/correlation.md
       - Logs Archiving: logs/archiving.md
       - Fields: logs/fields.md

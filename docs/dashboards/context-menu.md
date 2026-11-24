@@ -30,6 +30,10 @@ This shows events from the selected time range in a flyout. Events in this flyou
 
 Shows the alerts screen where you will see all alerts triggered in the selected time period.
 
+### Compare Log Patterns
+
+On a chart of logs, this opens [Log Patterns](/docs/logs/log-patterns/) and compares the selected time range with the period right before it. It shows which patterns in your logs are new, gone, more frequent or less frequent in that range.
+
 ### Pivoting with View in App
 
 Use this to pivot to *other telemetry* and *other signals* in Sematext, so you can more quickly connect the dots when troubleshooting or simply observing your systems.
