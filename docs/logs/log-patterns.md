@@ -17,15 +17,34 @@ become one pattern, `Payment declined for order <*>, card expired`, with `<*>` i
 
 </div>
 
-Log Patterns compares two periods. The **target** is the time range you are looking at. The **baseline** is a period of the same length that the target is compared with. For each pattern, Log Patterns counts its logs in both periods and shows whether the pattern is new, gone, more frequent or less frequent. Use it to answer questions such as:
+Log Patterns compares two periods. The **target** is the time range you are looking at. The **baseline** is a period of the same length that the target is compared with. For each pattern, Log Patterns counts its logs in both periods and shows whether the pattern is new, gone, more frequent or less frequent.
 
-- What changed in my logs after this deployment?
+![Log Patterns comparing the target with the period before it](/docs/images/logs/log-patterns/log-patterns-page.png)
+
+## When to Use Log Patterns
+
+### Troubleshooting: Finding What Changed
+
+When something breaks, it usually breaks right after something changed: a deployment, a configuration change, a feature flag, an infrastructure change or a spike in traffic. Reading through thousands of logs to see what is different after such a change is slow. Log Patterns shows it in a short list: the patterns that are new after the change, the ones that became more frequent, and the ones that stopped. Use it to answer questions such as:
+
+- What changed in my logs after this deployment or configuration change?
 - Did the deployment introduce a regression?
 - Was this error fixed in the deployment?
 - Which messages are behind this spike in log volume?
 - Is this error new, or did it happen yesterday as well?
 
-![Log Patterns comparing the target with the period before it](/docs/images/logs/log-patterns/log-patterns-page.png)
+To compare the time before a deployment or another event with the time after it, see [Around an Event](#around-an-event). To check that a change is not just part of a daily or weekly cycle, compare with **1 day earlier** or **7 days earlier**.
+
+### Finding Noisy Logs
+
+A large part of your log volume often comes from just a few messages, such as debug logs left on, health checks, or a warning logged in a loop. These logs make the important ones harder to find, and you pay to store them. Because Log Patterns groups logs into patterns, it shows which messages these are and how many logs each of them writes.
+
+To find them, click the **Target** column header to sort the patterns by how many logs they have. To catch noise that a new release added, look at the patterns marked **New** or **Increased** after the deployment. Once you know which patterns are noise, you can:
+
+- remove them at the source, for example by fixing the code that logs them or by raising the log level
+- drop them before they are stored, with a Drop processor in [Pipelines](/docs/logs/pipelines/). See [Reduce Your Log Monitoring Costs](/docs/logs/reduce-costs-with-pipelines/).
+
+Afterwards, compare the time before the fix with the time after it. The patterns you removed show up as **Gone** or **Decreased**.
 
 ## Opening Log Patterns
 
