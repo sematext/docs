@@ -82,3 +82,9 @@ This is a brief overview of what the specific tools that the MCP Server provides
 ## Setting up the MCP Server
 
 Setting up the MCP Server with your preferred AI agent can be done in under 5 minutes. Depending on which AI provider you use, the setup varies slightly, and you can check out the exact install instructions [here](/docs/mcp/getting-started).
+
+
+
+## Autofixer
+
+[Autofixer](/docs/mcp/autofixer/) builds on the MCP Server. It's an agent skill that reads your production telemetry, finds bugs in your code, files a ticket for each one worth fixing, and fixes them on request, opening pull requests for your review.
